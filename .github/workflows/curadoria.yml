@@ -1,0 +1,32 @@
+name: curadoria
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Lovable-Prescrimed
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Parser de posologia (sem dependencias)
+        run: node --test scripts/workspace/lib/dose.test.mjs
+
+      - name: Gate de curadoria V1-V11
+        run: node scripts/content/build.mjs
+
+      - name: Bundle em sincronia com as fontes
+        run: git -C .. diff --exit-code --ignore-cr-at-eol -- Lovable-Prescrimed/public/prototype/curated-data.js
+
+      - name: Cobertura da assinatura de 27/11
+        run: node scripts/workspace/audit-assinatura.mjs --min 100 --falhar-sem-alvo
