@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "CAR-04",
+    "area": "Cardiovascular",
+    "nome": "Palpitações / taquicardia / bradicardia",
+    "aliases": ["palpitações", "taquicardia", "bradicardia", "arritmia", "coração acelerado", "fibrilação atrial", "taquicardia supraventricular", "extrassístoles"],
+    "contexto": ["hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Palpitação é sintoma, não diagnóstico: o que define a conduta é o ECG de 12 derivações e a estabilidade do paciente. Bradicardia com hipoperfusão é atropina, marca-passo transcutâneo e droga em infusão; taquicardia de QRS estreito e regular é manobra vagal e adenosina; fibrilação atrial de alta resposta é controle de frequência ou cardioversão; extrassístole sem cardiopatia é expectante. Tireoide, potássio, magnésio, cálcio, anemia, sepse, hipovolemia e fármacos são causas reversíveis e precisam ser tratadas junto — sem isso a arritmia volta, mesmo com a dose certa de antiarrítmico.",
+    "inclusao": [
+      "Palpitações com ECG de 12 derivações e paciente estável",
+      "Taquicardia supraventricular de QRS estreito e estável",
+      "Fibrilação atrial com resposta ventricular rápida e sem instabilidade",
+      "Bradicardia sintomática sem choque",
+      "Extrassístoles sintomáticas sem cardiopatia estrutural"
+    ],
+    "exclusao": [
+      { "situacao": "hipotensão, rebaixamento, dor isquêmica ou edema pulmonar", "fluxo": "sala vermelha (instabilidade)" },
+      { "situacao": "taquicardia ventricular ou fibrilação ventricular", "fluxo": "ACLS / desfibrilação" },
+      { "situacao": "suspeita de síndrome coronariana aguda", "fluxo": "dor torácica (CAR-01)" },
+      { "situacao": "parada cardiorrespiratória", "fluxo": "reanimação cardiopulmonar" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "PAS < 90 mmHg ou necessidade de vasopressor", "por_que": "baixo débito por arritmia", "acao": "cardioversão se taquiarritmia; marca-passo se bradiarritmia", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "rebaixamento de consciência, síncope ou convulsão", "por_que": "hipoperfusão cerebral", "acao": "tratamento elétrico imediato", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "dor torácica isquêmica ou alteração de ST no ECG", "por_que": "isquemia desencadeada pela arritmia", "acao": "cardioversão e protocolo de SCA", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "dispneia com crepitações ou ortopneia", "por_que": "edema agudo de pulmão", "acao": "tratamento imediato e ventilação", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "QRS largo com FC > 120 bpm", "por_que": "taquicardia ventricular até prova contrária", "acao": "não tratar como TSV; cardioversão se instável", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "FC < 40 bpm ou pausa > 3 segundos", "por_que": "risco de assistolia", "acao": "atropina e preparar marca-passo", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "QTc > 500 ms ou torsades de pointes", "por_que": "arritmia maligna", "acao": "suspender fármacos de QT, magnésio e desfibrilação se instável", "severidade": "grave" }
+    ],
+    "perguntas_rapidas": [
+      "O início foi súbito, com batimento regular e rápido, ou gradual e irregular?",
+      "Teve síncope, pré-síncope ou dor torácica junto com a palpitação?",
+      "Usa betabloqueador, digitálico, antiarrítmico, descongestionante, cocaína ou anfetamina?",
+      "Tem perda de peso, tremor, calor, insônia ou diarreia (tireoide)?",
+      "Teve vômito, diarreia ou uso recente de diurético (potássio e magnésio)?",
+      "Já tem cardiopatia, insuficiência cardíaca, marca-passo ou morte súbita na família?",
+      "Ronca ou tem apneia presenciada (fibrilação atrial noturna)?",
+      "Bebe café, energético ou álcool em excesso?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Bradicardia instável (FC < 40, PAS < 90, rebaixamento, dor isquêmica ou edema pulmonar)", "escolha": "Atropina 1 mg IV a cada 3–5 min até 3 mg + preparar marca-passo transcutâneo", "porque": "Bloqueio vagal é o mecanismo mais rápido de reverter; o marca-passo é a rede de segurança se a atropina falhar" },
+      { "cenario": "Bloqueio AV de 2º grau Mobitz II ou bloqueio AV total", "escolha": "Marca-passo transcutâneo e transvenoso; atropina pode não responder", "porque": "O bloqueio é infranodal e não depende de tônus vagal; droga não resolve e o atraso leva a assistolia" },
+      { "cenario": "Bradicardia refratária à atropina com instabilidade", "escolha": "Marca-passo transcutâneo + dopamina 5–20 mcg/kg/min ou adrenalina 2–10 mcg/min ou isoproterenol 2–10 mcg/min", "porque": "A infusão mantém o débito enquanto se obtém captura elétrica e o marca-passo definitivo" },
+      { "cenario": "Taquicardia de QRS estreito, regular e estável (TSV)", "escolha": "Manobra vagal modificada; se falhar, adenosina 6 mg IV em bolus rápido e depois 12 mg", "porque": "A adenosina bloqueia o nó AV por segundos e reverte a maioria das TSV por reentrada" },
+      { "cenario": "Taquicardia de QRS estreito irregular (fibrilação atrial) estável e sem insuficiência cardíaca", "escolha": "Controle de frequência com metoprolol IV ou diltiazem IV; alvo inicial < 110 bpm", "porque": "Controlar a resposta ventricular é mais seguro que tentar reverter sem anticoagulação adequada" },
+      { "cenario": "Fibrilação atrial de alta resposta com instabilidade", "escolha": "Cardioversão elétrica sincronizada 100–200 J bifásico sob sedação", "porque": "É a única medida que restaura o débito imediatamente; droga é lenta e hipotensora" },
+      { "cenario": "Fibrilação atrial com insuficiência cardíaca descompensada", "escolha": "Amiodarona IV; evitar diltiazem e verapamil", "porque": "Bloqueador de canal de cálcio não diidropiridínico reduz a contratilidade e piora o edema" },
+      { "cenario": "Taquicardia ventricular monomórfica com pulso e estável", "escolha": "Amiodarona 150 mg IV em 10 min, repetindo até 2,2 g/24 h", "porque": "Reduz recorrência sem a hipotensão da cardioversão em paciente estável" },
+      { "cenario": "Extrassístoles atriais ou ventriculares isoladas sem cardiopatia", "escolha": "Conduta expectante, retirar cafeína e estimulantes, tratar ansiedade e sono; sem antiarrítmico", "porque": "Antiarrítmico em coração normal aumenta mortalidade e não melhora sintoma na maioria" },
+      { "cenario": "Taquicardia ou fibrilação atrial com tireotoxicose", "escolha": "Betabloqueador para controle de frequência + tratar a tireoide; reavaliar ritmo após eutireoidismo", "porque": "A arritmia é consequência do excesso de hormônio; sem tratar a tireoide, a frequência não controla" },
+      { "cenario": "Arritmia com hipocalemia, hipomagnesemia ou hipocalcemia", "escolha": "Corrigir potássio para 4,0–5,0 mEq/L e magnésio para ≥ 2,0 mg/dL antes de antiarrítmico", "porque": "Eletrólito corrigido reverte a arritmia e prevê a resposta ao fármaco" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "anticolinergico",
+        "agente": "atropina",
+        "papel": "primeira_linha",
+        "indicacao": "bradicardia sintomática com instabilidade e ritmo com bloqueio nodal",
+        "dose": "1 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "a cada 3–5 minutos",
+        "duracao": "até resposta ou dose máxima",
+        "dose_maxima": "3 mg",
+        "contraindicacoes": ["glaucoma de ângulo fechado", "retenção urinária", "taquiarritmia instável"],
+        "efeitos_adversos": ["taquicardia", "boca seca", "retenção urinária", "confusão em idoso", "midríase"],
+        "apresentacoes": ["ampola 0,25 mg/mL (1 mL)", "ampola 0,5 mg/mL (1 mL)", "seringa preenchida 0,5 mg/5 mL"],
+        "preparo": "Uso direto; não diluir",
+        "tempo_infusao": "bolus rápido",
+        "monitorizacao": ["FC e ritmo em monitor cardíaco", "PA após cada dose", "nível de consciência", "retenção urinária", "resposta de captura se marca-passo"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Em bloqueio infranodal (Mobitz II ou BAV total) pode não responder: ir direto para marca-passo. Não usar dose < 0,5 mg (efeito parassimpomimético paradoxal)",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS",
+        "claim_id": null
+      },
+      {
+        "classe": "catecolamina",
+        "agente": "adrenalina",
+        "papel": "resgate",
+        "indicacao": "bradicardia refratária à atropina e ao marca-passo transcutâneo",
+        "dose": "2 a 10 mcg/min",
+        "unidade": "mcg/min",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até marca-passo definitivo ou reversão da causa",
+        "dose_maxima": "10 mcg/min",
+        "contraindicacoes": ["taquiarritmia", "isquemia miocárdica ativa", "uso de IMAO"],
+        "efeitos_adversos": ["taquicardia", "hipertensão", "isquemia", "arritmia", "hiperglicemia"],
+        "apresentacoes": ["ampola 1 mg/mL (1 mL)", "frasco ampola 1 mg/mL (10 mL)"],
+        "preparo": "1 mg em 250 mL de SF 0,9% (4 mcg/mL); administrar em bomba de infusão",
+        "tempo_infusao": "infusão contínua",
+        "monitorizacao": ["FC e ritmo", "PA", "dor torácica", "lactato", "glicemia", "local da infusão"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Para bradicardia usar infusão, não bolus. Em parada cardíaca a dose é 1 mg IV em bolus a cada 3–5 min",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS",
+        "claim_id": null
+      },
+      {
+        "classe": "inotropico",
+        "agente": "dopamina",
+        "papel": "alternativa",
+        "indicacao": "bradicardia refratária com hipotensão, como ponte para marca-passo",
+        "dose": "5 a 20 mcg/kg/min",
+        "unidade": "mcg/kg/min",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até marca-passo definitivo",
+        "dose_maxima": "20 mcg/kg/min",
+        "contraindicacoes": ["taquiarritmia", "fibrilação ventricular", "feocromocitoma", "uso de IMAO"],
+        "efeitos_adversos": ["taquicardia", "arritmia", "hipertensão", "necrose por extravasamento", "náusea"],
+        "apresentacoes": ["ampola 50 mg/10 mL", "frasco 50 mg/50 mL", "solução 250 mg/250 mL"],
+        "preparo": "50 mg em 250 mL de SF ou SG 5% (200 mcg/mL); via preferencialmente central",
+        "tempo_infusao": "infusão contínua",
+        "monitorizacao": ["PA", "FC e ritmo", "diurese", "perfusão de extremidades", "local da infusão"],
+        "ajuste_renal": "Sem ajuste; não há benefício renal demonstrado em dose baixa",
+        "observacoes": "Dose abaixo de 5 mcg/kg/min não é dose renal: é apenas dose sub-terapêutica. Preferir adrenalina se o paciente estiver em choque",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS",
+        "claim_id": null
+      },
+      {
+        "classe": "agonista_beta",
+        "agente": "isoproterenol",
+        "papel": "alternativa",
+        "indicacao": "bradicardia por disfunção sinusal ou bloqueio AV, como ponte para marca-passo",
+        "dose": "2 a 10 mcg/min",
+        "unidade": "mcg/min",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até marca-passo definitivo",
+        "dose_maxima": "10 mcg/min",
+        "contraindicacoes": ["isquemia miocárdica", "taquiarritmia", "hipertireoidismo não tratado"],
+        "efeitos_adversos": ["taquicardia", "tremor", "cefaleia", "isquemia", "arritmia ventricular"],
+        "apresentacoes": ["ampola 0,2 mg/mL (1 mL)"],
+        "preparo": "0,2 mg em 100 mL de SF ou SG 5% (2 mcg/mL)",
+        "tempo_infusao": "infusão contínua",
+        "monitorizacao": ["FC e ritmo", "PA", "dor torácica", "ECG para isquemia"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Útil quando o bloqueio é nodal e há betabloqueio excessivo. Evitar em coronariopatia ativa",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS",
+        "claim_id": null
+      },
+      {
+        "classe": "antiarritmico_nucleosideo",
+        "agente": "adenosina",
+        "papel": "primeira_linha",
+        "indicacao": "taquicardia supraventricular de QRS estreito, regular e estável",
+        "dose": "6 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "bolus rápido; repetir 12 mg uma ou duas vezes se necessário",
+        "duracao": "1 a 3 doses",
+        "dose_maxima": "18 mg por episódio",
+        "contraindicacoes": ["asma grave", "broncoespasmo ativo", "bloqueio AV de 2º ou 3º grau sem marca-passo", "fibrilação atrial pré-excitada", "hipotensão"],
+        "efeitos_adversos": ["bradicardia e pausa transitória", "broncoespasmo", "rubor facial", "aperto torácico", "náusea"],
+        "apresentacoes": ["frasco 3 mg/mL (2 mL) — 6 mg", "frasco 3 mg/mL (4 mL) — 12 mg"],
+        "preparo": "Não diluir; administrar em acesso venoso calibroso próximo ao tórax, seguido de flush de 20 mL de SF",
+        "tempo_infusao": "bolus em 1–2 segundos (meia-vida menor que 10 segundos)",
+        "monitorizacao": ["ECG contínuo durante e após o bolus", "PA a cada 2 min", "broncoespasmo", "duração da pausa"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Avisar o paciente sobre rubor e aperto torácico transitório. Registrar o traçado durante o bolus: a pausa revela o mecanismo da taquicardia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS",
+        "claim_id": null
+      },
+      {
+        "classe": "betabloqueador",
+        "agente": "metoprolol",
+        "papel": "primeira_linha",
+        "indicacao": "fibrilação atrial de alta resposta e TSV estável; controle de frequência",
+        "dose": "2,5 a 5 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "a cada 5 minutos, até 3 doses",
+        "duracao": "15 minutos",
+        "dose_maxima": "15 mg",
+        "contraindicacoes": ["asma grave", "IC descompensada", "bradicardia", "bloqueio AV de 2º ou 3º grau", "choque cardiogênico", "cocaína"],
+        "efeitos_adversos": ["bradicardia", "hipotensão", "broncoespasmo", "fadiga", "piora de IC"],
+        "apresentacoes": ["ampola 1 mg/mL (5 mL)", "comprimido 25 mg", "comprimido 50 mg", "comprimido 100 mg"],
+        "preparo": "Uso direto IV; não diluir",
+        "tempo_infusao": "bolus lento em 1–2 minutos",
+        "monitorizacao": ["FC e ritmo", "PA após cada dose", "broncoespasmo", "crepitações pulmonares", "perfusão"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em cirrose; metabolismo hepático",
+        "observacoes": "Evitar em IC descompensada e em intoxicação por cocaína. Não associar a diltiazem IV pela soma de efeitos negativos",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "bloqueador_canal_calcio",
+        "agente": "diltiazem",
+        "papel": "alternativa",
+        "indicacao": "fibrilação atrial de alta resposta quando betabloqueador é contraindicado ou insuficiente",
+        "dose": "0,25 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose inicial; repetir 0,35 mg/kg após 15 min se necessário; manutenção 5–15 mg/h",
+        "duracao": "bolus e infusão por até 24 h",
+        "dose_maxima": "0,35 mg/kg ou 20 mg por bolus",
+        "contraindicacoes": ["IC descompensada com fração de ejeção reduzida", "fibrilação atrial com pré-excitação (WPW)", "hipotensão", "bloqueio AV avançado", "choque"],
+        "efeitos_adversos": ["hipotensão", "bradicardia", "edema", "constipação", "piora de IC"],
+        "apresentacoes": ["ampola 5 mg/mL (2 mL)", "ampola 5 mg/mL (10 mL)", "comprimido 30 mg", "comprimido 60 mg"],
+        "preparo": "Diluir em 50–100 mL de SF 0,9% para infusão; bolus pode ser aplicado direto em 2 min",
+        "tempo_infusao": "bolus em 2 minutos; infusão contínua",
+        "monitorizacao": ["PA e FC a cada 5 min no bolus", "ECG contínuo", "sinais de IC", "função hepática"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em cirrose; metabolismo hepático com biodisponibilidade aumentada",
+        "observacoes": "Nunca usar em fibrilação atrial com pré-excitação: pode acelerar a condução pelo feixe acessório e causar fibrilação ventricular",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "antiarritmico_classe_iii",
+        "agente": "amiodarona",
+        "papel": "condicional",
+        "indicacao": "fibrilação atrial com insuficiência cardíaca, taquicardia ventricular estável e refratariedade a outras drogas",
+        "dose": "150 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "em 10 min; repetir até 3 vezes; manutenção 1 mg/min por 6 h e 0,5 mg/min por 18 h",
+        "duracao": "24 horas",
+        "dose_maxima": "2,2 g em 24 h",
+        "contraindicacoes": ["bradicardia grave", "bloqueio AV sem marca-passo", "tireotoxicose não controlada", "gestação", "choque cardiogênico"],
+        "efeitos_adversos": ["hipotensão", "bradicardia", "flebite", "prolongamento de QT", "disfunção tireoidiana e hepática"],
+        "apresentacoes": ["ampola 50 mg/mL (3 mL)", "comprimido 200 mg"],
+        "preparo": "Diluir 150 mg em 100 mL de SG 5% (não usar SF: precipita); preferir acesso venoso central",
+        "tempo_infusao": "bolus em 10 minutos; infusão contínua de 6 a 24 horas",
+        "monitorizacao": ["PA durante o bolus", "FC e QTc", "função hepática", "TSH e T4 livre", "flebite no acesso"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em cirrose; monitorar enzimas",
+        "observacoes": "Não é primeira linha para fibrilação atrial sem IC. Suspender se QTc > 500 ms. Acumula em tecido adiposo e tem meia-vida de semanas",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS",
+        "claim_id": null
+      },
+      {
+        "classe": "eletrolito",
+        "agente": "sulfato de magnésio",
+        "papel": "condicional",
+        "indicacao": "torsades de pointes com pulso e hipomagnesemia associada a arritmia",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "dose única; repetir uma vez se torsades recorrente",
+        "duracao": "1 a 2 doses",
+        "dose_maxima": "4 g",
+        "contraindicacoes": ["hipermagnesemia", "insuficiência renal grave sem diálise", "bloqueio AV avançado", "miastenia gravis"],
+        "efeitos_adversos": ["hipotensão", "rubor", "depressão respiratória", "perda de reflexos", "bradicardia"],
+        "apresentacoes": ["ampola 10% 10 mL (1 g)", "ampola 50% 10 mL (5 g)", "comprimido 500 mg"],
+        "preparo": "Diluir 2 g em 100 mL de SF 0,9%",
+        "tempo_infusao": "10 a 20 minutos",
+        "monitorizacao": ["reflexo patelar", "frequência respiratória", "PA", "magnésio sérico", "potássio"],
+        "ajuste_renal": "Reduzir para metade se TFG < 30; evitar em anúria sem diálise",
+        "observacoes": "Na torsades, suspender todos os fármacos que prolongam QT e corrigir potássio para 4,5–5,0 mEq/L. Instável = desfibrilação, não magnésio",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Monitorização cardíaca contínua", "detalhe": "ECG contínuo com alarme para FC < 40, FC > 150, pausa > 3 s e QRS largo, em todo paciente com palpitação e instabilidade potencial" },
+      { "medida": "Acesso venoso calibroso", "detalhe": "Dois acessos 18 G ou maior, um deles em veia antecubital para bolus de adenosina" },
+      { "medida": "Oxigênio suplementar", "detalhe": "Somente se saturação < 90%; hiperóxia em pós-parada piora desfecho" },
+      { "medida": "Retirada de estimulantes", "detalhe": "Suspender cafeína, energético, álcool, tabaco, cocaína e anfetamina; revisar descongestionantes e fármacos que prolongam QT" },
+      { "medida": "Reversão da causa", "detalhe": "Corrigir hipovolemia, febre, dor, hipóxia, distúrbio eletrolítico, tireoide e sepse antes de escalar antiarrítmico" },
+      { "medida": "Manobra vagal como primeira medida na TSV", "detalhe": "Valsalva modificado: 15 s de expiração forçada sentado, deitar e elevar as pernas por 15 s; pode repetir uma vez" },
+      { "medida": "Restrição de direção e esforço", "detalhe": "Orientar não dirigir nem operar máquinas até definição diagnóstica, principalmente após síncope" },
+      { "medida": "Tratamento da apneia do sono", "detalhe": "CPAP em apneia moderada a grave reduz recorrência de fibrilação atrial após cardioversão" }
+    ],
+    "procedimentos": [
+      { "nome": "Manobra vagal modificada", "indicacao": "Taquicardia supraventricular de QRS estreito e estável", "tecnica": "Valsalva modificado por 15 s com elevação passiva das pernas; alternativa: massagem do seio carotídeo por 5–10 s em um lado, com monitor", "complicacoes": "Síncope, bradicardia prolongada, embolia rara; não fazer massagem carotídea se houver sopro ou AIT prévio" },
+      { "nome": "Cardioversão elétrica sincronizada", "indicacao": "Taquiarritmia com instabilidade, fibrilação atrial de alta resposta refratária ou flutter", "tecnica": "Sedação com etomidato ou propofol; pás anterolateral; 50–100 J para flutter e TSV, 100–200 J bifásico para fibrilação atrial; sincronizar com o QRS", "complicacoes": "Tromboembolismo, arritmia pós-choque, queimadura de pele, aspiração durante sedação" },
+      { "nome": "Marca-passo transcutâneo", "indicacao": "Bradicardia instável refratária à atropina", "tecnica": "Pás anterior e posterior; frequência 60–80 bpm; aumentar a corrente até captura elétrica e mecânica confirmada por pulso", "complicacoes": "Dor intensa, queimadura, espasmo muscular, falha de captura, pneumotórax raro" },
+      { "nome": "Marca-passo transvenoso temporário", "indicacao": "Ponte para marca-passo definitivo em bloqueio AV avançado ou disfunção sinusal sintomática", "tecnica": "Cateter por acesso jugular ou subclávio sob fluoroscopia ou guia ecográfico, posicionado no ventrículo direito", "complicacoes": "Pneumotórax, perfuração cardíaca, tamponamento, infecção, trombose venosa, deslocamento do cateter" },
+      { "nome": "Implante de marca-passo definitivo", "indicacao": "Bloqueio AV total sintomático, Mobitz II, disfunção sinusal sintomática", "tecnica": "Implante endocárdico em sala de eletrofisiologia, programação de acordo com o bloqueio", "complicacoes": "Infecção de bolsa, pneumotórax, deslocamento de eletrodo, síndrome de marca-passo" },
+      { "nome": "Holter 24 h ou monitor de eventos", "indicacao": "Palpitações intermitentes em paciente estável, sem ECG diagnóstico no pronto-socorro", "tecnica": "Registro ambulatorial contínuo por 24–72 h ou monitor de eventos por 30 dias, com diário de sintomas", "complicacoes": "Baixo rendimento se a palpitação for rara; artefato de movimento" },
+      { "nome": "Ablação por cateter", "indicacao": "TSV recorrente, flutter ou fibrilação atrial sintomática refratária a fármacos", "tecnica": "Estudo eletrofisiológico com mapeamento e aplicação de radiofrequência ou crioterapia no circuito", "complicacoes": "Tamponamento, lesão de artéria femoral, bloqueio AV iatrogênico, recorrência" }
+    ],
+    "metas": [
+      "ECG de 12 derivações realizado e interpretado em até 10 minutos da chegada",
+      "FC entre 60 e 100 bpm após o tratamento inicial",
+      "Fibrilação atrial: FC < 110 bpm em repouso ou < 80 bpm se sintomático ou com IC",
+      "TSV: retorno ao ritmo sinusal em até 30 minutos de tratamento",
+      "Bradicardia: FC ≥ 60 bpm ou perfusão restaurada com marca-passo",
+      "Potássio 4,0–5,0 mEq/L e magnésio ≥ 2,0 mg/dL antes de reintroduzir antiarrítmico",
+      "Ritmo documentado antes e depois de cada intervenção, no mesmo registro"
+    ],
+    "fluxo": [
+      "ABC, monitor cardíaco, acesso venoso e ECG de 12 derivações em até 10 minutos",
+      "Instável (PAS < 90, rebaixamento, dor isquêmica, edema pulmonar)? Bradicardia: atropina e marca-passo. Taquicardia: cardioversão sincronizada",
+      "Estável: bradicardia → revisar fármacos, eletrólitos, tireoide e isquemia; taquicardia → separar QRS estreito de QRS largo",
+      "QRS estreito e regular: manobra vagal, depois adenosina, depois betabloqueador ou diltiazem",
+      "QRS estreito e irregular: fibrilação atrial — controle de frequência, avaliar anticoagulação pelo CHA2DS2-VASc e cardioversão se instável",
+      "QRS largo: tratar como taquicardia ventricular até prova contrária; instável = cardioversão, estável = amiodarona",
+      "Buscar e corrigir causa reversível: tireoide, potássio, magnésio, cálcio, anemia, sepse, hipovolemia e fármacos",
+      "Extrassístoles isoladas sem cardiopatia: expectante, sem antiarrítmico, com Holter se sintomático e seguimento ambulatorial"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "idoso", "ajuste": "Revisar betabloqueador, diltiazem, digoxina e antiarrítmico; atropina em dose cheia pode causar confusão e retenção urinária; preferir marca-passo quando o bloqueio é infranodal", "alerta": "Bradicardia por polifarmácia, queda e síncope" },
+      { "populacao": "gestante", "ajuste": "Adenosina e metoprolol são seguros; evitar amiodarona; cardioversão elétrica é segura em qualquer trimestre", "alerta": "Risco fetal com amiodarona e com hipoperfusão materna" },
+      { "populacao": "cardiopata", "ajuste": "Insuficiência cardíaca com fração de ejeção reduzida: evitar diltiazem e verapamil; preferir amiodarona", "alerta": "Drogas de efeito inotrópico negativo descompensam a IC" },
+      { "populacao": "renal_cronico", "ajuste": "Sem ajuste para atropina e adenosina; reduzir magnésio; monitorar potássio e digoxina", "alerta": "Hipermagnesemia e toxicidade digitálica" },
+      { "populacao": "portador_de_marca_passo", "ajuste": "Avaliar programação e captura antes de tratar como bradicardia primária; usar ímã se houver inibição por interferência", "alerta": "Falha de captura simula bradicardia grave" },
+      { "populacao": "hipertireoideo", "ajuste": "Betabloqueador para controle de frequência e tratamento da tireoide; reavaliar ritmo após eutireoidismo", "alerta": "Fibrilação atrial que não reverte enquanto o TSH estiver suprimido" },
+      { "populacao": "atleta", "ajuste": "Bradicardia sinusal em repouso de 40–50 bpm pode ser fisiológica; não tratar sem sintoma", "alerta": "Marcar como doença um ritmo normal e restringir atividade sem motivo" },
+      { "populacao": "pre_excitacao", "ajuste": "Fibrilação atrial com WPW: evitar diltiazem, verapamil, digoxina e adenosina; preferir cardioversão e amiodarona", "alerta": "Bloqueio do nó AV acelera a condução pelo feixe acessório e pode desencadear fibrilação ventricular" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "ECG de 12 derivações", "indicacao": "todos, em até 10 minutos", "o_que_muda": "define se a taquicardia é de QRS estreito ou largo e se há isquemia" },
+        { "nome": "potássio, magnésio, cálcio e sódio", "indicacao": "todos com arritmia", "o_que_muda": "identifica causa reversível e define reposição antes do antiarrítmico" },
+        { "nome": "TSH e T4 livre", "indicacao": "fibrilação atrial, taquicardia sinusal ou perda de peso", "o_que_muda": "tireotoxicose muda o controle de frequência e o prognóstico" },
+        { "nome": "hemograma e creatinina", "indicacao": "avaliação inicial", "o_que_muda": "anemia como causa e ajuste de dose renal" },
+        { "nome": "troponina e gasometria com lactato", "indicacao": "dor torácica, instabilidade ou suspeita de SCA", "o_que_muda": "isquemia e choque mudam a prioridade" },
+        { "nome": "ecocardiograma", "indicacao": "cardiopatia estrutural, IC ou fibrilação atrial nova", "o_que_muda": "define risco tromboembólico e escolha do antiarrítmico" },
+        { "nome": "Holter 24 h ou monitor de eventos", "indicacao": "palpitação intermitente sem diagnóstico no ECG", "o_que_muda": "documenta a arritmia e define tratamento" },
+        { "nome": "nível sérico de digoxina", "indicacao": "uso de digital com bradicardia ou náusea", "o_que_muda": "toxicidade digitálica exige suspensão e antídoto" }
+      ],
+      "evitar": [
+        { "exame": "liberar o paciente sem ECG", "motivo": "arritmia potencialmente maligna pode ser o único achado" },
+        { "exame": "Holter no pronto-socorro antes do ECG de 12 derivações", "motivo": "atrasa o diagnóstico que muda a conduta imediata" },
+        { "exame": "troponina seriada em palpitação sem dor e com ECG normal", "motivo": "não muda conduta e gera internação desnecessária" },
+        { "exame": "radiografia de tórax de rotina na palpitação sem dispneia", "motivo": "baixo rendimento e não altera o manejo" },
+        { "exame": "painel de toxicologia sem história de uso", "motivo": "custo e tempo sem impacto na conduta inicial" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "Fazer o ECG e levar o traçado ao retorno",
+        "Anotar a duração e o horário das palpitações em um diário",
+        "Retirar cafeína, energético e álcool e dormir 7–8 horas",
+        "Tratar tireoide, anemia e distúrbio eletrolítico antes de repetir antiarrítmico",
+        "Retomar atividade física leve após liberação, se não houver cardiopatia"
+      ],
+      "evitar": [
+        "Dirigir ou operar máquinas após síncope até avaliação",
+        "Automedicar antiarrítmico ou betabloqueador de outra pessoa",
+        "Usar descongestionante, cocaína ou anfetamina",
+        "Ingerir bebida alcoólica em excesso (gatilho de fibrilação atrial)",
+        "Suspender betabloqueador de forma abrupta"
+      ],
+      "retorno": [
+        "síncope ou pré-síncope",
+        "dor torácica ou falta de ar",
+        "palpitação que não cessa em 30 minutos",
+        "frequência cardíaca persistentemente abaixo de 50 ou acima de 120 bpm",
+        "nova palpitação após ajuste de dose"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "atropina", "efeitos": ["taquicardia", "confusão", "retenção urinária"], "observacao": "Reduzir a dose em idoso; avaliar necessidade de sonda vesical" },
+      { "agente": "adrenalina", "efeitos": ["isquemia", "arritmia", "hiperglicemia"], "observacao": "Titular pela menor dose com perfusão; monitorar ECG continuamente" },
+      { "agente": "dopamina", "efeitos": ["arritmia", "necrose por extravasamento"], "observacao": "Preferir acesso central; checar o local a cada hora" },
+      { "agente": "adenosina", "efeitos": ["pausa prolongada", "broncoespasmo", "rubor"], "observacao": "Ter aminofilina e suporte de via aérea à mão em asmático" },
+      { "agente": "metoprolol", "efeitos": ["bradicardia", "hipotensão", "broncoespasmo"], "observacao": "Não administrar em IC descompensada; reavaliar após cada dose" },
+      { "agente": "diltiazem", "efeitos": ["hipotensão", "bradicardia", "piora de IC"], "observacao": "Suspender se PAS < 90 ou sinais de congestão" },
+      { "agente": "amiodarona", "efeitos": ["hipotensão", "flebite", "prolongamento de QT", "disfunção tireoidiana"], "observacao": "Infundir em SG 5% e acesso central; dosar TSH e enzimas hepáticas" },
+      { "agente": "sulfato de magnésio", "efeitos": ["hipotensão", "depressão respiratória", "perda de reflexos"], "observacao": "Checar reflexo patelar e frequência respiratória durante a infusão" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a infusão ou a droga implicada e registrar o evento no prontuário",
+      "Bradicardia por betabloqueador ou diltiazem: suspender, atropina se sintomático e marca-passo se refratário",
+      "Hipotensão por amiodarona: reduzir a velocidade, hidratar e usar vasopressor se necessário",
+      "Broncoespasmo por adenosina: suspender, oxigênio, broncodilatador e corticoide",
+      "Hipermagnesemia: suspender magnésio, gluconato de cálcio se houver depressão respiratória",
+      "Torsades por fármaco de QT: suspender o fármaco, magnésio, corrigir potássio e desfibrilar se instável"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "succinato de metoprolol 50 mg", "dose": "1 comprimido", "via": "VO", "frequencia": "1x/dia", "duracao": "30 dias", "condicao": "controle de frequência em fibrilação atrial ou TSV recorrente", "confirmar_apresentacao_local": true },
+          { "item": "diltiazem 60 mg", "dose": "1 comprimido", "via": "VO", "frequencia": "8/8 h", "duracao": "30 dias", "condicao": "controle de frequência quando betabloqueador é contraindicado", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "atropina", "dose": "1 mg", "via": "IV", "frequencia": "a cada 3–5 min até 3 mg", "monitorizacao": "FC, ritmo e PA", "confirmar_apresentacao_local": true },
+          { "item": "adenosina", "dose": "6 mg (depois 12 mg)", "via": "IV", "frequencia": "bolus rápido com flush", "monitorizacao": "ECG contínuo e PA", "confirmar_apresentacao_local": true },
+          { "item": "metoprolol", "dose": "2,5–5 mg", "via": "IV", "frequencia": "a cada 5 min até 15 mg", "monitorizacao": "FC, PA e broncoespasmo", "confirmar_apresentacao_local": true },
+          { "item": "amiodarona", "dose": "150 mg em 10 min + 1 mg/min", "via": "IV", "frequencia": "infusão contínua", "monitorizacao": "PA, QTc e função hepática", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["ECG de 12 derivações", "potássio", "magnésio", "cálcio", "TSH", "T4 livre", "hemograma", "creatinina", "troponina", "gasometria", "ecocardiograma", "Holter", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de palpitações e arritmia cardíaca, necessitando de afastamento por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": ["destino", "motivo", "resumo", "prioridade"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com palpitações, ritmo documentado no ECG, estabilidade hemodinâmica, tratamento aplicado, causa reversível identificada e plano de seguimento."
+      }
+    },
+    "anamnese": {
+      "campos": ["início e duração", "regularidade do ritmo", "síncope", "dor torácica", "dispneia", "estimulantes e fármacos", "sintomas de tireoide", "diarreia ou diurético", "cardiopatia prévia", "história familiar de morte súbita"],
+      "texto_template": "Paciente com palpitações de início e duração, ritmo regular ou irregular, síncope, dor torácica, dispneia, uso de estimulantes e fármacos, sintomas de tireoide, perdas digestivas ou uso de diurético, cardiopatia prévia e história familiar de morte súbita."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais e saturação", "FC e regularidade do pulso", "ausculta cardíaca e pulmonar", "perfusão e tempo de enchimento capilar", "pressão venosa jugular", "tireoide", "edema de membros inferiores", "nível de consciência"],
+      "texto_template": "Sinais vitais, frequência e regularidade do pulso, ausculta cardíaca e pulmonar, perfusão, pressão venosa jugular, tireoide, edema e nível de consciência."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "protocolo de arritmia e fluxo de sala vermelha", "verificar": true },
+      { "tipo": "sociedade_cardiologia", "o_que_verificar": "diretriz de fibrilação atrial, taquicardia supraventricular e bradicardia", "verificar": true },
+      { "tipo": "acls", "o_que_verificar": "algoritmos de bradicardia, taquicardia e parada", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações, diluições e estabilidade das ampolas", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-CAR04-01", "tipo": "instabilidade", "gatilho": "PAS < 90, rebaixamento, dor isquêmica ou edema pulmonar com arritmia", "severidade": "grave", "mensagem": "Instabilidade: cardioversão sincronizada se taquiarritmia, marca-passo se bradiarritmia. Não atrasar por exames.", "acao": "acionar sala vermelha", "bloqueante": true },
+      { "id": "SA-CAR04-02", "tipo": "qrs_largo", "gatilho": "taquicardia de QRS largo tratada como supraventricular", "severidade": "grave", "mensagem": "Taquicardia de QRS largo é ventricular até prova contrária; verapamil e diltiazem podem causar colapso.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-CAR04-03", "tipo": "asma", "gatilho": "adenosina em asma grave ou broncoespasmo ativo", "severidade": "grave", "mensagem": "Risco de broncoespasmo grave; usar outra estratégia.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-CAR04-04", "tipo": "ic_descompensada", "gatilho": "diltiazem ou verapamil em IC com fração de ejeção reduzida", "severidade": "grave", "mensagem": "Efeito inotrópico negativo descompensa a insuficiência cardíaca.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-CAR04-05", "tipo": "pre_excitacao", "gatilho": "fibrilação atrial com pré-excitação e uso de diltiazem, verapamil, digoxina ou adenosina", "severidade": "grave", "mensagem": "Bloqueio do nó AV acelera o feixe acessório e pode desencadear fibrilação ventricular.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-CAR04-06", "tipo": "qt_longo", "gatilho": "QTc > 500 ms ou uso de fármaco que prolonga QT", "severidade": "precaucao", "mensagem": "Risco de torsades de pointes: corrigir potássio e magnésio e evitar associação de fármacos de QT.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-CAR04-07", "tipo": "bradicardia_farmaco", "gatilho": "FC < 50 em uso de betabloqueador, diltiazem ou digoxina", "severidade": "precaucao", "mensagem": "Bradicardia induzida por fármaco: revisar dose antes de indicar marca-passo.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "ACLS/AHA", "diretriz SBC", "diretriz ESC"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita separando bradiarritmias com instabilidade de taquiarritmias, com atropina, marca-passo transcutâneo e drogas em infusão, manobra vagal, adenosina, betabloqueador, diltiazem, amiodarona e cardioversão; inclui fibrilação atrial de alta resposta, TSV, extrassístoles benignas e tireoide e eletrólitos como causa reversível.", "data": null }
+      ]
+    }
+  }
+}

@@ -1,0 +1,558 @@
+{
+  "id": "ws-gi_05",
+  "nome": "Dispepsia / gastrite / epigastralgia",
+  "cat": "Gastrointestinal",
+  "alias": "dispepsia gastrite epigastralgia dispepsia gastrite epigastralgia dor no estomago queimacao",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-05_dispepsia.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de dispepsia, test-and-treat e critérios de endoscopia",
+      "[verificar] sociedade_gastroenterologia: consenso de H. pylori, escolha do esquema de erradicação e resistência local à claritromicina",
+      "[verificar] anvisa: apresentações e bulas de IBP, bismuto, antibióticos e procinéticos",
+      "[verificar] literatura: dispepsia funcional de Roma IV, eficácia do quádruplo com bismuto e riscos do IBP prolongado"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-05 em 2026-11-27",
+    "fundido_workspace": "GI-05 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: disfagia ou odinofagia progressiva -> endoscopia em até 2 semanas, sem tratar empiricamente antes; perda de peso não intencional maior que 5% em 6 meses -> endoscopia e tomografia de abdome; anemia ferropriva, hematêmese, melena ou vômito em borra de café -> estabilizar, hemograma e endoscopia urgente; vômito persistente, massa epigástrica ou linfonodo supraclavicular -> tomografia e endoscopia prioritárias. 1) Confirmar que é dispepsia: dor ou desconforto epigástrico centrado, com plenitude ou saciedade precoce, por 4 semanas ou mais 2) Procurar primeiro o que mata: ECG e troponina se dor com esforço ou sudorese; ultrassom se dor biliar 3) Classificar risco: sinal de alarme? início após 45 anos? uso de AINE, AAS ou anticoagulante? 4) Com alarme, idade acima de 45 ou AINE: endoscopia com biópsias e pesquisa de H. pylori antes de tratar 5) Sem alarme: test-and-treat de H. pylori por teste respiratório ou antígeno fecal 6) H. pylori positivo: esquema quádruplo com bismuto por 14 dias e confirmação de erradicação depois 7) H. pylori negativo ou erradicado e sintoma persistente: IBP em dose padrão por 4 semanas, escolhendo pelo subtipo 8) Refratário: conferir adesão e horário, dobrar dose por 4 semanas, reavaliar diagnóstico e indicar endoscopia 9) Sem causa orgânica: assumir dispepsia funcional, tratar por subtipo e desprescrever o IBP após 8 semanas",
+  "redFlags": [
+    "disfagia ou odinofagia progressiva -> endoscopia em até 2 semanas, sem tratar empiricamente antes",
+    "perda de peso não intencional maior que 5% em 6 meses -> endoscopia e tomografia de abdome",
+    "anemia ferropriva, hematêmese, melena ou vômito em borra de café -> estabilizar, hemograma e endoscopia urgente",
+    "vômito persistente, massa epigástrica ou linfonodo supraclavicular -> tomografia e endoscopia prioritárias",
+    "dor epigástrica com esforço, sudorese, dispneia ou irradiação para mandíbula -> ECG em até 10 minutos e troponina seriada",
+    "início recente dos sintomas após os 45 anos -> endoscopia antes de test-and-treat",
+    "história familiar de câncer gástrico em parente de primeiro grau -> endoscopia precoce e pesquisa de H. pylori",
+    "uso de AINE, AAS ou anticoagulante com dispepsia -> rever a indicação, suspender se possível e proteger com IBP"
+  ],
+  "naoUsar": [
+    "alergia a benzimidazol",
+    "uso concomitante de nelfinavir",
+    "hipomagnesemia grave não corrigida",
+    "alergia a salicilato",
+    "anticoagulação plena",
+    "insuficiência renal grave",
+    "terceiro trimestre de gestação",
+    "criança com varicela ou influenza"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar o IBP 30 minutos antes do café da manhã, todos os dias, no mesmo horário"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "AINE e AAS por conta própria"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "IBP",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "omeprazol",
+            "pos": "20 mg. Via VO. 1x/dia, 30 minutos antes do café da manhã. 4-8 semanas.",
+            "posTodas": true,
+            "motivo": "dispepsia tipo úlcera, DRGE e proteção gástrica em uso de AINE (1a linha) dispepsia ou DRGE sem alarme",
+            "nota": "Uso direto, em jejum, 30 minutos antes da primeira refeição; se disfagia, abrir a cápsula e dispersar o grânulo em água, sem mastigar - monitorar: resposta dos sintomas em 2 e 4 semanas; monitorar: sinais de sangramento digestivo; monitorar: magnésio se uso acima de 8 semanas; monitorar: adesão ao horário em jejum · NÃO: alergia a benzimidazol; uso concomitante de nelfinavir; hipomagnesemia grave não corrigida · Obs: Dose padrão é 20 mg 1x/dia — não 40 mg. Se não houver resposta em 4 semanas, não aumentar para sempre: conferir adesão e horário, reavaliar o diagnóstico e planejar a retirada. Sem indicação de manutenção,…",
+            "dose": {
+              "texto": "20 mg; 1x/dia, 30 minutos antes do café da manhã; 4-8 semanas; max. 40 mg/dia (80 mg/dia em sangramento digestivo)",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "pantoprazol",
+            "pos": "40 mg. Via VO. 1x/dia em jejum. 4-8 semanas.",
+            "posTodas": true,
+            "motivo": "alternativa ao omeprazol, inclusive em uso concomitante de clopidogrel (alternativa)",
+            "nota": "Uso direto, inteiro, em jejum; não partir nem mastigar - monitorar: resposta em 4 semanas; monitorar: magnésio em uso prolongado · NÃO: alergia a benzimidazol; insuficiência hepática grave sem ajuste · Obs: 40 mg de pantoprazol equivale a 20 mg de omeprazol — é a mesma dose padrão, não dose dobrada. Menor interação com clopidogrel que omeprazol, por inibição menor de CYP2C19.",
+            "dose": {
+              "texto": "40 mg; 1x/dia em jejum; 4-8 semanas; max. 40 mg/dia (80 mg/dia em sangramento)",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Sal de bismuto",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "subsalicilato_de_bismuto",
+              "n": "Subsalicilato de bismuto",
+              "ap": "comprimido 262 mg",
+              "q": "",
+              "pos": "524 mg. Via VO. 4x/dia, após as refeições e ao deitar. 14 dias."
+            },
+            "motivo": "componente do esquema quádruplo de erradicação de H. pylori (1a linha) quádruplo com bismuto",
+            "nota": "Uso direto; agitar bem a suspensão antes de medir - monitorar: adesão ao esquema de 4 tomadas; monitorar: sangramento digestivo; monitorar: cor das fezes esclarecida ao paciente · NÃO: alergia a salicilato; anticoagulação plena; insuficiência renal grave; terceiro trimestre de gestação; criança com varicela ou influenza · Obs: Escurece a língua e as fezes — avisar o paciente para não confundir com melena nem interromper o esquema. Confere ganho de 10–15 pontos percentuais na erradicação quando associado a IBP, tetraciclina e metronidazol. · Renal: Evitar se ClCr < 30 mL/min pelo risco de acúmulo de bismuto e salicilato",
+            "dose": {
+              "texto": "524 mg; 4x/dia, após as refeições e ao deitar; 14 dias; max. 2.096 mg/dia",
+              "status": "ok",
+              "valor": 524,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2096,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "4x/dia",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico betalactamico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "1 g. Via VO. 12/12 h. 14 dias.",
+            "posTodas": true,
+            "motivo": "erradicação de H. pylori em esquema tríplice ou quádruplo (1a linha) tríplice para H. pylori",
+            "nota": "Uso direto, com ou sem alimento; suspensão reconstituir conforme bula e manter refrigerada - monitorar: diarreia; monitorar: rash cutâneo; monitorar: adesão aos 14 dias completos · NÃO: alergia a penicilina; mononucleose infecciosa; antecedente de anafilaxia a betalactâmico · Obs: Base do tratamento: conferir alergia antes de prescrever. Em alergia a penicilina, trocar por esquema quádruplo com metronidazol e tetraciclina, sem perder eficácia. · Renal: ClCr < 30 mL/min: 500 mg 12/12 h",
+            "dose": {
+              "texto": "1 g; 12/12 h; 14 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "metronidazol",
+            "pos": "400 mg. Via VO. 8/8 h. 14 dias.",
+            "posTodas": true,
+            "motivo": "componente do esquema quádruplo com bismuto e alternativa em alérgico a penicilina (1a linha) quádruplo com bismuto",
+            "nota": "Uso direto, com alimento para reduzir náusea - monitorar: náusea e gosto metálico; monitorar: sintomas neurológicos; monitorar: orientação de abstinência alcoólica · NÃO: alergia a nitroimidazol; primeiro trimestre de gestação; uso de dissulfiram nos últimos 14 dias; doença neurológica ativa · Obs: Proibir álcool durante e por 72 h após o esquema. No quádruplo com bismuto pode ser usado 400 mg 8/8 h ou 500 mg 4x/dia, conforme o protocolo local.",
+            "dose": {
+              "texto": "400 mg; 8/8 h; 14 dias; max. 1.500 mg/dia",
+              "status": "ok",
+              "valor": 400,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Procinético antagonista dopamina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "bromoprida",
+            "pos": "10 mg. Via VO. 8/8 h, antes das refeições. Até 5 dias.",
+            "posTodas": true,
+            "motivo": "náusea e plenitude gástrica quando a domperidona não está disponível (alternativa)",
+            "nota": "Uso direto; solução oral medir com seringa graduada - monitorar: sintomas extrapiramidais; monitorar: sonolência; monitorar: prolactina se uso repetido · NÃO: parkinsonismo; histórico de discinesia tardia; obstrução, perfuração ou sangramento digestivo; feocromocitoma; epilepsia não controlada; criança · Obs: Procinético disponível no Brasil, com risco extrapiramidal maior que a domperidona. Não usar por mais de 5 dias, nem em idoso, sem reavaliar. Distonia: difenidramina 50 mg IV ou prometazina 25 mg IM. · Renal: ClCr < 30 mL/min: 5 mg 8/8 h",
+            "dose": {
+              "texto": "10 mg; 8/8 h, antes das refeições; até 5 dias; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "domperidona",
+            "pos": "10 mg. Via VO. 8/8 h, 15-30 minutos antes das refeições. Até 7 dias, com reavaliação antes de prolongar.",
+            "posTodas": true,
+            "motivo": "plenitude pós-prandial, saciedade precoce e náusea da dispepsia funcional (condicional) plenitude pós-prandial",
+            "nota": "Uso direto, antes das refeições; orodispersível dissolve na língua sem água - monitorar: ECG se cardiopata ou uso de outro fármaco que alonga o QT; monitorar: potássio e magnésio; monitorar: prolactina se uso acima de 4 semanas; monitorar: sintomas extrapiramidais · NÃO: QT longo ou cardiopatia com risco de arritmia; insuficiência hepática moderada a grave; insuficiência cardíaca; distúrbio hidroeletrolítico não corrigido; uso de cetoconazol, eritromicina ou outros inibidores potentes de CYP3A4; prolactinoma; obstrução, perfuração ou sangramento digestivo · Obs: Atravessa pouco a barreira hematoencefálica: causa menos distonia que…",
+            "dose": {
+              "texto": "10 mg; 8/8 h, 15-30 minutos antes das refeições; até 7 dias, com reavaliação antes de prolongar; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "claritromicina",
+            "pos": "500 mg. Via VO. 12/12 h. 14 dias.",
+            "posTodas": true,
+            "motivo": "esquema tríplice de erradicação de H. pylori em regiões com resistência abaixo de 15% (condicional) tríplice para H. pylori",
+            "nota": "Uso direto; suspensão reconstituir conforme bula - monitorar: QT se cardiopata; monitorar: diarreia; monitorar: interações medicamentosas; monitorar: adesão aos 14 dias · NÃO: alergia a macrolídeo; síndrome do QT longo; uso de sinvastatina ou lovastatina; uso de ergotamina; uso de cisaprida · Obs: Resistência do H. pylori à claritromicina no Brasil passa de 20% em várias regiões: onde esse dado existe, o quádruplo com bismuto é preferível. Suspender sinvastatina e lovastatina durante os 14 dias. · Renal: ClCr < 30 mL/min: reduzir para 250 mg 12/12 h",
+            "dose": {
+              "texto": "500 mg; 12/12 h; 14 dias; max. 1 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico tetraciclina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "tetraciclina",
+              "n": "Tetraciclina",
+              "ap": "cápsula 500 mg",
+              "q": "",
+              "pos": "500 mg. Via VO. 6/6 h. 14 dias."
+            },
+            "motivo": "componente do esquema quádruplo com bismuto (condicional) quádruplo com bismuto",
+            "nota": "Uso direto com copo cheio de água, em jejum; não deitar por 30 minutos - monitorar: dor retroesternal (esofagite); monitorar: exposição solar; monitorar: adesão aos 14 dias · NÃO: gestação; lactação; menores de 12 anos; insuficiência renal grave; alergia a tetraciclina · Obs: Não tomar com leite, antiácido, ferro ou cálcio: a quelação anula a absorção. É o quarto pilar do esquema quádruplo — sem ela, o esquema perde eficácia. · Renal: Evitar se ClCr < 30 mL/min pelo acúmulo e risco de toxicidade hepática",
+            "dose": {
+              "texto": "500 mg; 6/6 h; 14 dias; max. 2 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Citoprotetor",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "sucralfato",
+            "pos": "1 g (10 mL). Via VO. 4x/dia, 1 hora antes das refeições e ao deitar. 4-8 semanas.",
+            "posTodas": true,
+            "motivo": "gastrite erosiva, refluxo biliar e proteção de mucosa quando IBP não é suficiente (condicional)",
+            "nota": "Uso direto, com estômago vazio; agitar a suspensão - monitorar: alívio da dor epigástrica; monitorar: hábito intestinal; monitorar: intervalo de 2 h dos outros fármacos · NÃO: insuficiência renal grave; disfagia grave; obstrução intestinal · Obs: Forma uma película sobre a mucosa e exige estômago vazio: não tomar junto com IBP, antiácido ou outros fármacos. Não tem papel na erradicação de H. pylori. · Renal: Evitar em ClCr < 30 mL/min pelo acúmulo de alumínio",
+            "dose": {
+              "texto": "1 g (10 mL); 4x/dia, 1 hora antes das refeições e ao deitar; 4-8 semanas; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "4x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiácido",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "hidroxido_de_aluminio_e_hidroxido_de_mag",
+              "n": "Hidróxido de alumínio e hidróxido de magnésio",
+              "ap": "suspensão oral com alumínio 37,5 mg/mL e magnésio 30 mg/mL",
+              "q": "",
+              "pos": "10-20 mL. Via VO. Até 4x/dia, após as refeições e ao deitar. Até 7 dias."
+            },
+            "motivo": "alívio imediato de queimação e de sintoma de escape durante a desprescrição de IBP (resgate) resgate sintomático",
+            "nota": "Uso direto; agitar a suspensão antes de usar - monitorar: alívio sintomático em 30 minutos; monitorar: hábito intestinal; monitorar: magnésio em renal crônico · NÃO: insuficiência renal grave; obstrução intestinal; hipofosfatemia; alergia aos componentes · Obs: Alivia em minutos e dura pouco: não cicatriza úlcera, não erradica H. pylori e não substitui IBP. Separar 2 horas dos demais fármacos (IBP, antibióticos, levotiroxina, ferro). · Renal: Evitar em ClCr < 30 mL/min: risco de hipermagnesemia e acúmulo de alumínio",
+            "dose": {
+              "texto": "10-20 mL; até 4x/dia, após as refeições e ao deitar; até 7 dias; max. 4 doses/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "4x/dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Fracionar as refeições",
+              "ap": "",
+              "q": "",
+              "pos": "Quatro a cinco refeições pequenas ao dia, mastigando devagar; não deitar por 2–3 horas após comer"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Retirar gatilhos identificáveis",
+              "ap": "",
+              "q": "",
+              "pos": "Café acima de 2 xícaras, álcool, refrigerante, tabaco e refeições gordurosas volumosas à noite; orientar redução, não proibição genérica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Perda de peso quando IMC acima de 25",
+              "ap": "",
+              "q": "",
+              "pos": "Perda de 5–10% reduz refluxo e pressão intra-abdominal e melhora o sintoma de plenitude"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Elevar a cabeceira da cama em DRGE noturno",
+              "ap": "",
+              "q": "",
+              "pos": "Elevar 15–20 cm com blocos sob os pés da cama; travesseiro alto não resolve e piora a cervical"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Não prescrever dieta de exclusão empírica",
+              "ap": "",
+              "q": "",
+              "pos": "Restringir lactose, glúten ou gordura sem teste apenas piora a nutrição; testar um gatilho por vez por 2–4 semanas quando houver relação clara"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Explicar o diagnóstico funcional",
+              "ap": "",
+              "q": "",
+              "pos": "Dizer que a mucosa é normal e que o sintoma é real, com mecanismo de hipersensibilidade visceral; isso reduz ansiedade, consultas e uso crônico de IBP"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Revisar AINE, AAS, corticoide, ferro e potássio",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender o que não tem indicação; quando o AINE é inevitável, associar IBP e revisar a cada 6 meses"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-05"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": []
+  },
+  "ws": {
+    "id": "GI-05",
+    "versao": "0.2.0",
+    "arquivo": "GI-05_dispepsia.json",
+    "area": "Gastrointestinal",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

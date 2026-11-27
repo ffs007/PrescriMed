@@ -1,0 +1,474 @@
+{
+  "id": "ws-ped_01",
+  "nome": "Febre sem foco",
+  "cat": "Pediatria",
+  "alias": "febre sem foco febre sem foco febre na crianca sindrome febril aguda febre de origem indeterminada aguda",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (PED-01_febre.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de febre na emergência pediátrica e critérios de coleta no lactente febril",
+      "[verificar] sociedade_pediatria: estratificação de risco do lactente febril de 8 a 90 dias e indicação de punção lombar",
+      "[verificar] diretriz_de_sepse_pediatrica: tempo de antibiótico, dose de expansão e alvo de perfusão",
+      "[verificar] ministerio_da_saude: calendário vacinal, manejo da dengue e notificação",
+      "[verificar] anvisa: apresentações e concentrações dos antitérmicos pediátricos disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "PED-01 em 2026-11-27",
+    "fundido_workspace": "PED-01 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: idade menor de 3 meses -> coleta completa, punção lombar conforme idade e antibiótico empírico; não dar alta; aparência toxêmica, hipoperfusão, tempo de enchimento capilar acima de 3 s ou livedo -> sala vermelha, acesso venoso, expansão com SF 0,9% e antibiótico na primeira hora; petéquias ou púrpura, principalmente em criança com febre -> ceftriaxona IV ou IM imediata e remoção para hospital terciário; rigidez de nuca, fontanela abaulada, convulsão, rebaixamento ou fotofobia -> punção lombar após estabilização e antibiótico em dose de meningite. 1) Triagem com temperatura, frequência cardíaca, frequência respiratória, saturação, perfusão e peso; pesar é obrigatório para calcular a dose 2) Classificar a idade em três faixas: menor de 28 dias, 29 a 90 dias e acima de 3 meses 3) Classificar a aparência: toxemia, petéquias, rigidez de nuca, recusa alimentar e hipoperfusão levam à sala vermelha antes de qualquer exame 4) Menor de 28 dias: internação, coleta completa e antibiótico empírico na primeira hora 5) 29 a 90 dias: urina, hemograma, PCR, hemocultura e punção lombar conforme idade e estado; antibiótico e observação se risco 6) Acima de 3 meses com foco viral e bom estado: antitérmico por peso, hidratação e alta com sinais de retorno 7) Acima de 3 meses sem foco: urina e urocultura; se normais e bom estado, seguimento ambulatorial em 24-48 h 8) Febre há mais de 7 dias: reabrir a investigação com urina, radiografia de tórax, sorologias e critérios de Kawasak",
+  "redFlags": [
+    "idade menor de 3 meses -> coleta completa, punção lombar conforme idade e antibiótico empírico; não dar alta",
+    "aparência toxêmica, hipoperfusão, tempo de enchimento capilar acima de 3 s ou livedo -> sala vermelha, acesso venoso, expansão com SF 0,9% e antibiótico na primeira hora",
+    "petéquias ou púrpura, principalmente em criança com febre -> ceftriaxona IV ou IM imediata e remoção para hospital terciário",
+    "rigidez de nuca, fontanela abaulada, convulsão, rebaixamento ou fotofobia -> punção lombar após estabilização e antibiótico em dose de meningite",
+    "recusa alimentar abaixo de 50% do habitual ou incapacidade de mamar -> avaliar internação, glicemia, hidratação e sonda nasogástrica se necessário",
+    "apneia, gemência ou hipotermia abaixo de 36 °C em lactente -> internação imediata, coleta e antibiótico empírico",
+    "desidratação com diurese abaixo de 1 mL/kg/h, mucosas secas e olhos fundos -> reidratação oral fracionada ou expansão IV conforme gravidade",
+    "febre acima de 40 °C refratária a antitérmico calculado por peso -> conferir dose por peso e reavaliar foco, sem trocar de droga em sequência"
+  ],
+  "naoUsar": [
+    "hipersensibilidade",
+    "hepatopatia grave",
+    "desnutrição grave ou jejum prolongado, situações em que a dose deve ser reduzida",
+    "menor de 3 meses",
+    "hipersensibilidade a pirazolonas",
+    "agranulocitose ou discrasia sanguínea prévia",
+    "porfiria hepática aguda",
+    "deficiência de G6PD e asma induzida por AINE, com cautela"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "medir a temperatura com o mesmo termômetro e anotar horário e valor"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "AAS e antigripais combinados que contenham AAS"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antitérmico analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "paracetamol",
+            "pos": "10-15 mg/kg/dose. Via VO. 4/4 a 6/6 h, se necessário. Até 48-72 h ou enquanto houver febre.",
+            "posTodas": true,
+            "motivo": "febre com desconforto e dor leve a moderada em qualquer idade (1a linha) febre com desconforto; não associar outro antitérmico de horário",
+            "nota": "Uso direto por via oral; medir com seringa graduada e nunca com colher de sopa. Na via IV, infundir a solução pronta sem diluir ou diluída em SF 0,9%, conforme a apresentação local - monitorar: temperatura 30-60 min após a dose; monitorar: soma da dose acumulada em 24 h, incluindo antigripais combinados; monitorar: ace · NÃO: hipersensibilidade; hepatopatia grave; desnutrição grave ou jejum prolongado, situações em que a dose deve ser reduzida · Obs: É o antitérmico de escolha pela segurança e pela apresentação em gotas, que permite dose exata por peso. Não é droga de horário: usar se houver febre com desconforto, e não alternar…",
+            "dose": {
+              "texto": "10-15 mg/kg/dose; 4/4 a 6/6 h, se necessário; até 48-72 h ou enquanto houver febre; max. 75 mg/kg/dia; máximo 4 g/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 15,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Solução reidratante oral",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_sais_de_reidratacao_oral_sro",
+            "pos": "50 mL/kg em 4 h para desidratação leve; 10 mL/kg por evacuação ou episódio de vômito. Via VO ou sonda nasogástrica. Pequenos volumes a cada 10-15 min, ou infusão contínua por sonda. 4 h para reidratação; depois manutenção até a ingestão normalizar.",
+            "posTodas": true,
+            "motivo": "desidratação leve, perdas por febre e taquipneia e manutenção da ingestão em criança que recusa parcialmente a dieta (1a linha) desidratação leve, recusa parcial da dieta ou perdas por febre",
+            "nota": "Diluir o sachê em 1 L de água potável, sem adicionar açúcar ou sal; ofertar em colher, seringa ou copo, com a criança sentada - monitorar: diurese e densidade urinária; monitorar: peso antes e após a reidratação; monitorar: mucosas, turgor e fontanela; monitorar: sódio se desidratação moderada ou grave",
+            "dose": {
+              "texto": "50 mL/kg em 4 h para desidratação leve; 10 mL/kg por evacuação ou episódio de vômito; pequenos volumes a cada 10-15 min, ou infusão contínua por sonda; 4 h para reidratação; depois manutenção até a ingestão normalizar; max. individualizar pelo peso, pela diurese e pelo sódio sérico",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 10-15 min",
+              "freq_min": 10,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "AINE antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "5-10 mg/kg/dose. Via VO. 6/6 a 8/8 h, se necessário. Até 48-72 h.",
+            "posTodas": true,
+            "motivo": "febre e dor em criança acima de 6 meses, bem hidratada, quando o paracetamol e a dipirona não são adequados (alternativa) somente acima de 6 meses, bem hidratado e sem suspeita de dengue",
+            "nota": "Uso direto; agitar a suspensão antes de medir com seringa graduada, administrar com alimento ou após a mamada - monitorar: diurese e hidratação; monitorar: dor abdominal e fezes escuras; monitorar: temperatura e conforto; monitorar: creatinina se uso acima de 3 dias ou em doença renal · NÃO: menor de 6 meses; desidratação ou vômitos persistentes; varicela e suspeita de dengue; doença renal crônica; úlcera ou sangramento digestivo prévio; asma induzida por AINE · Obs: Não é primeira escolha na criança febril: o efeito antipirético é semelhante ao do paracetamol, mas o risco renal na desidratação e o sangramento na dengue são…",
+            "dose": {
+              "texto": "5-10 mg/kg/dose; 6/6 a 8/8 h, se necessário; até 48-72 h; max. 40 mg/kg/dia; máximo 2,4 g/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2.4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Antipirético calculado por peso, com seringa graduada",
+              "ap": "",
+              "q": "",
+              "pos": "Pesar a criança na consulta e escrever a dose em mL na receita; colher de casa subdosa ou superdosa, e a dose estimada por idade é a principal causa de intoxicação por paracetamol na infância"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Hidratação fracionada e frequente",
+              "ap": "",
+              "q": "",
+              "pos": "Oferecer 50–100 mL de líquido por hora em pequenos volumes, alternando água, solução de reidratação oral e leite; manter aleitamento materno em livre demanda, inclusive durante a febre"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Roupa leve, ambiente ventilado e repouso relativo",
+              "ap": "",
+              "q": "",
+              "pos": "Retirar cobertores e agasalhos durante o pico febril, que retêm calor e elevam a temperatura central; manter a criança em atividade tranquila, sem exigir repouso absoluto"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Banho morno, nunca gelado ou com álcool",
+              "ap": "",
+              "q": "",
+              "pos": "Água a 29–32 °C por 10 min, apenas se houver desconforto, e nunca álcool, gelo ou ventilador direto: causam vasoconstrição, tremor e elevação da temperatura central, além de intoxicação alcoólica por absorção cutânea"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Não alternar antipiréticos por rotina",
+              "ap": "",
+              "q": "",
+              "pos": "A alternância aumenta erro de dose, confusão de horário e intoxicação; reservar a troca para falha documentada de uma droga e registrar o motivo no prontuário"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Não prescrever AAS em nenhuma faixa pediátrica",
+              "ap": "",
+              "q": "",
+              "pos": "Risco de síndrome de Reye, com encefalopatia e hepatite fulminante em quadro viral; conferir também antigripais combinados, que podem conter ácido acetilsalicílico na fórmula"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Não prescrever antibiótico sem foco",
+              "ap": "",
+              "q": "",
+              "pos": "Febre viral não melhora com antibiótico; o custo é resistência, diarreia por C. difficile, rash e mascaramento de um quadro bacteriano que precisaria de investigação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Diário de febre com horário, valor, droga e volume",
+              "ap": "",
+              "q": "",
+              "pos": "Entregar ficha simples ao cuidador; o padrão do gráfico e a resposta ao antitérmico orientam a reavaliação em 24–48 h e evitam consultas desnecessárias"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Reavaliação programada e sinais de retorno por escrito",
+              "ap": "",
+              "q": "",
+              "pos": "Alta com retorno em 24 h para o lactente de baixo risco e em 48 h para os demais; escrever os sinais que obrigam retorno imediato e conferir se o cuidador entendeu"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "PED-01"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antitérmico analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "febre com desconforto, alternativa ao paracetamol e útil quando a via oral está preservada e há dor associada (1a linha) alternativa ao paracetamol, não associada de rotina",
+            "nota": "Uso direto por via oral, diluído em água ou suco se necessário. Na via IV, diluir a dose em 10-20 mL de SF 0,9% e infundir lentamente, nunca em bolus rápido - monitorar: pressão arterial antes e após a dose IV; monitorar: temperatura e conforto; monitorar: aparecimento de rash ou palidez; monitorar: hemograma se uso re · NÃO: menor de 3 meses; hipersensibilidade a pirazolonas; agranulocitose ou discrasia sanguínea prévia; porfiria hepática aguda; deficiência de G6PD e asma induzida por AINE, com cautela · Obs: No Brasil é antitérmico de primeira linha e a apresentação em gotas é prática, mas não deve ser usada em menor de 3 meses…",
+            "dose": {
+              "texto": "10-20 mg/kg/dose; 6/6 h, se necessário; até 48-72 h; max. 60 mg/kg/dia; máximo 4 g/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cristaloide isotônico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "soro_fisiologico",
+              "n": "Soro fisiológico 0,9%",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "10-20 mL/kg em bolus, repetido conforme resposta clínica. Via IV. Bolus em 15-30 min, com reavaliação após cada um; em choque, repetir até 40-60 mL/kg na primeira hora. Até perfusão, diurese e nível de consciência restabelecidos. 15-30 min por bolus; em choque, 5-10 min."
+            },
+            "motivo": "desidratação moderada a grave, choque, recusa total da via oral ou necessidade de expansão antes do antibiótico (condicional)",
+            "nota": "Não requer diluição; aquecer a 37 °C para infusão rápida e usar equipo com bureta em lactente para evitar infusão acidental de grande volume - monitorar: frequência cardíaca e pressão arterial; monitorar: perfusão e tempo de enchimento capilar; monitorar: ausculta pulmonar e esforço respiratório; monitorar: diurese; mo · NÃO: sobrecarga cardíaca conhecida, situação em que se fraciona o volume; edema agudo de pulmão; hiponatremia grave com convulsão, que exige correção específica · Obs: Expansão não é tratamento de febre: reservar para desidratação com falha da via oral ou choque. Em criança com anemia falciforme e febre, o acesso…",
+            "dose": {
+              "texto": "10-20 mL/kg em bolus, repetido conforme resposta clínica; bolus em 15-30 min, com reavaliação após cada um; em choque, repetir até 40-60 mL/kg na primeira hora; até perfusão, diurese e nível de consciência restabelecidos; max. 40-60 mL/kg na primeira hora em choque, sempre com reavaliação entre bolus",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cefalosporina 3a",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "sepse, meningite, petéquias febris e lactente jovem com suspeita de infecção bacteriana grave; tratamento empírico até identificação do agente (condicional)",
+            "nota": "Reconstituir em 10 mL de água destilada e diluir em 50-100 mL de SF 0,9% para IV; para IM, dissolver em lidocaína 1%, nunca em neonato - monitorar: bilirrubina e enzimas hepáticas; monitorar: hemograma em uso acima de 7 dias; monitorar: diurese e sinais de melhora clínica; monitorar: sítio de infusão e sinais de flebit · NÃO: hipersensibilidade a cefalosporina; neonato com hiperbilirrubinemia; infusão concomitante com solução contendo cálcio; história de anafilaxia a penicilina, com cautela · Obs: A dose de meningite é o dobro da dose de sepse e precisa ser prescrita por extenso para não haver erro. A via IM é aceitável na…",
+            "dose": {
+              "texto": "50-75 mg/kg/dia; meningite 100 mg/kg/dia; 1x/dia; 12/12 h em meningite; 7-10 dias conforme o foco; 10-14 dias em meningite; max. 2 g/dia; 4 g/dia em meningite",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 75,
+              "unidade": "mg/kg/dia",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Penicilina aminopenicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ampicilina",
+            "motivo": "lactente menor de 3 meses com suspeita de sepse ou meningite, para cobertura de Listeria e enterococo associada ao aminoglicosídeo ou à cefalosporina (condicional)",
+            "nota": "Reconstituir em 5-10 mL de água destilada e diluir em 50 mL de SF 0,9%; infundir imediatamente após o preparo pela instabilidade da solução - monitorar: função renal e diurese; monitorar: rash e sinais de alergia; monitorar: hemograma em uso prolongado; monitorar: sítio de infusão · NÃO: hipersensibilidade a penicilina; mononucleose infecciosa, pelo risco de rash extenso · Obs: Não cobre Staphylococcus produtor de beta-lactamase nem Gram-negativos; por isso é associada. Em lactente de 29 a 90 dias, a associação clássica é ampicilina com gentamicina ou cefotaxima · Renal: Aumentar o intervalo para 12/12 h com clearance entre 10 e…",
+            "dose": {
+              "texto": "50 mg/kg/dose; meningite 100 mg/kg/dose; 6/6 h; 4/4 h em meningite; 7-14 dias conforme o foco; max. 2 g por dose; 400 mg/kg/dia em meningite",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Aminoglicosídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "gentamicina",
+            "motivo": "sepse neonatal e de lactente jovem, em associação à ampicilina, com efeito sinérgico sobre enterococo e Gram-negativos (condicional)",
+            "nota": "Diluir a dose em 20-50 mL de SF 0,9% e infundir em bomba; não misturar com penicilina no mesmo equipo - monitorar: creatinina e diurese a cada 48 h; monitorar: nível de vale antes da terceira dose, com alvo abaixo de 1 mcg/mL; monitorar: audiometria se uso acima de 7 dias; monitorar: magnésio em uso prolongado",
+            "dose": {
+              "texto": "4-7,5 mg/kg/dia em dose única; neonato 4 mg/kg/dose a cada 24-36 h conforme idade pós-natal; 1x/dia; no neonato, intervalo conforme a idade gestacional e pós-natal; 7-10 dias; suspender assim que a cultura permitir descalonamento; max. 7,5 mg/kg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": 7.5,
+              "unidade": "mg/kg/dia",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 7.5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "a cada 24-36 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "PED-01",
+    "versao": "0.2.0",
+    "arquivo": "PED-01_febre.json",
+    "area": "Pediatria",
+    "risco": "B",
+    "populacao": [
+      "pediatrico"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

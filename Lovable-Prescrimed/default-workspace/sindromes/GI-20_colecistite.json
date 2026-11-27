@@ -1,0 +1,1070 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GI-20",
+    "area": "Gastrointestinal",
+    "nome": "Colecistite aguda",
+    "aliases": [
+      "Colecistite aguda",
+      "colecistite",
+      "colecistite calculosa",
+      "colecistite alitiásica",
+      "vesícula inflamada",
+      "Murphy positivo"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Colecistite aguda é inflamação da vesícula, com febre, dor contínua em hipocôndrio direito, Murphy positivo e leucocitose; não é cólica biliar, que é dor episódica que cede em horas e não tem febre. A distinção importa porque cólica biliar recebe analgesia e colecistectomia eletiva, enquanto colecistite exige antibiótico, internação e colecistectomia precoce em até 72 h — ou drenagem percutânea quando o risco cirúrgico é proibitivo. Febre com icterícia e dor (tríade de Charcot) não é colecistite simples: é colangite, com sepse biliar e necessidade de CPRE urgente para descomprimir a via biliar. O erro mais comum e mais caro é tratar como cólica biliar e mandar para casa.",
+    "inclusao": [
+      "Dor contínua em hipocôndrio direito por mais de 6 h com Murphy positivo",
+      "Febre, leucocitose e vesícula com parede espessada ou líquido pericolecístico na ultrassonografia",
+      "Colecistite com sinais de gravidade local (empema, perfuração, abscesso) ou sistêmica",
+      "Colecistite em paciente com alto risco cirúrgico, candidato a drenagem"
+    ],
+    "exclusao": [
+      {
+        "situacao": "dor biliar episódica que cede em menos de 6 h, sem febre e sem leucocitose",
+        "fluxo": "GI-12 cólica biliar — ambulatorial"
+      },
+      {
+        "situacao": "febre + icterícia + dor em hipocôndrio direito, com ou sem confusão e hipotensão",
+        "fluxo": "colangite — CPRE urgente e UTI"
+      },
+      {
+        "situacao": "dor epigástrica irradiada para o dorso com lipase maior que 3 vezes o limite superior",
+        "fluxo": "GI-13 pancreatite aguda"
+      },
+      {
+        "situacao": "dor difusa com defesa e instabilidade sem foco em hipocôndrio direito",
+        "fluxo": "abdome agudo cirúrgico — avaliação imediata"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "febre com icterícia e dor em hipocôndrio direito (tríade de Charcot)",
+        "por_que": "colangite com sepse biliar",
+        "acao": "antibiótico na primeira hora, ressuscitação e CPRE em até 24 h",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "confusão e hipotensão em paciente ictérico (pêntade de Reynolds)",
+        "por_que": "colangite com choque séptico",
+        "acao": "sala vermelha, UTI e drenagem biliar urgente",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "defesa muscular localizada ou dor difusa com descompressão dolorosa",
+        "por_que": "perfuração ou peritonite biliar",
+        "acao": "cirurgia de urgência e antibiótico de amplo espectro",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "febre persistente por mais de 72 h com piora da dor apesar de antibiótico",
+        "por_que": "empema, abscesso pericolecístico ou perfuração contida",
+        "acao": "repetir imagem, drenar e reavaliar indicação cirúrgica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "massa palpável em hipocôndrio direito com febre e vômitos",
+        "por_que": "vesícula distendida, empema ou abscesso",
+        "acao": "tomografia e drenagem percutânea ou cirurgia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "amilase ou lipase acima de 3 vezes o limite superior",
+        "por_que": "pancreatite biliar associada",
+        "acao": "hidratação, analgesia e reavaliação da via biliar",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "idoso, diabético, imunossuprimido ou pós-operatório sem febre",
+        "por_que": "colecistite alitiásica com apresentação atípica e necrose rápida",
+        "acao": "ultrassonografia precoce e internação mesmo sem febre",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "bilirrubina acima de 4 mg/dL ou icterícia progressiva",
+        "por_que": "obstrução de via biliar principal por coledocolitíase",
+        "acao": "colangiorressonância ou CPRE conforme gravidade",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A dor é contínua há mais de 6 h ou vem em crises que passam?",
+      "Tem febre ou calafrios nas últimas 24 h?",
+      "A dor piora ao respirar fundo ou ao tocar o hipocôndrio direito?",
+      "A urina está escura e as fezes claras?",
+      "Já teve cólica biliar, cálculo ou colecistite antes?",
+      "Tem diabetes, cirrose, insuficiência cardíaca ou usa imunossupressor?",
+      "Fez cirurgia, jejum prolongado ou nutrição parenteral recentemente?",
+      "Já operou a vesícula?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Colecistite aguda grau I (leve), sem falência orgânica e sem complicação local",
+        "escolha": "Ceftriaxona 2 g 1x/dia + metronidazol 500 mg 8/8 h IV, analgesia e colecistectomia videolaparoscópica em até 72 h",
+        "porque": "Cobre enterobactérias e anaeróbios com uma dose diária de cefalosporina; operar precocemente reduz conversão, complicação e reinternação em comparação com operar depois"
+      },
+      {
+        "cenario": "Colecistite leve em serviço sem ceftriaxona ou para passo-down oral",
+        "escolha": "Amoxicilina-clavulanato 1,2 g 8/8 h IV ou 875/125 mg 12/12 h VO",
+        "porque": "Monoterapia com cobertura de Gram-negativos e anaeróbios; útil para alta precoce e para completar tratamento em casa"
+      },
+      {
+        "cenario": "Colecistite grau II ou III, sepse, imunossupressão ou uso recente de antibiótico",
+        "escolha": "Piperacilina-tazobactam 4,5 g 6/6 h IV, em infusão estendida de 3–4 h",
+        "porque": "Amplia cobertura para Pseudomonas e produtores de beta-lactamase; infusão estendida melhora o tempo acima da CIM em paciente grave"
+      },
+      {
+        "cenario": "Grave com suspeita de ESBL, falha de piperacilina-tazobactam ou alergia com necessidade de carbapenêmico",
+        "escolha": "Ertapenem 1 g 1x/dia IV",
+        "porque": "Cobre ESBL com dose única diária; reservar para suspeita real, porque uso indiscriminado seleciona resistência"
+      },
+      {
+        "cenario": "Cólica biliar sem febre, dor que já cedeu, sem leucocitose",
+        "escolha": "Analgesia e colecistectomia eletiva ambulatorial em até 6 semanas",
+        "porque": "Não há inflamação instalada; antibiótico e internação não são necessários e a cirurgia eletiva resolve a causa"
+      },
+      {
+        "cenario": "Alto risco cirúrgico (ASA III–IV, choque, coagulopatia grave, cirrose descompensada) com colecistite",
+        "escolha": "Colecistostomia percutânea guiada por ultrassonografia + antibiótico; colecistectomia de intervalo se sobreviver",
+        "porque": "Drenagem controla o foco em horas com anestesia local e menor mortalidade que cirurgia de urgência no paciente frágil"
+      },
+      {
+        "cenario": "Febre + icterícia + dor, ou colédoco dilatado com cálculo",
+        "escolha": "CPRE com papilotomia e extração de cálculo em até 24 h, associada a antibiótico",
+        "porque": "Antibiótico não descomprime via biliar obstruída; a descompressão endoscópica é o que interrompe a sepse biliar"
+      },
+      {
+        "cenario": "Suspeita de colangite com instabilidade ou falha de CPRE",
+        "escolha": "Drenagem biliar percutânea trans-hepática como ponte",
+        "porque": "Descomprime a árvore biliar quando a via endoscópica não está disponível ou falhou"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "cefalosporina_terceira_geracao",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "colecistite aguda comunitária leve a moderada, em associação ao metronidazol",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "até 24 h após a colecistectomia; 7–10 dias se não operar",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina",
+          "anafilaxia prévia a penicilina",
+          "hiperbilirrubinemia neonatal",
+          "uso concomitante de solução com cálcio em neonato"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "colite por C. difficile",
+          "sedimentação biliar",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "frasco 1 g",
+          "frasco 2 g",
+          "solução injetável 1 g"
+        ],
+        "preparo": "Reconstituir 2 g em 20 mL de água para injeção; diluir em 100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "temperatura a cada 6 h",
+          "leucograma em 48–72 h",
+          "bilirrubina e transaminases",
+          "diarreia"
+        ],
+        "ajuste_renal": "Sem ajuste, inclusive em diálise",
+        "ajuste_hepatico": "Sem ajuste; monitorar em hepatopatia grave",
+        "observacoes": "Sempre associar metronidazol para anaeróbios; cobrir Pseudomonas com piperacilina-tazobactam se grave",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "nitroimidazol",
+        "agente": "metronidazol",
+        "papel": "primeira_linha",
+        "indicacao": "cobertura de anaeróbios na colecistite, sempre em associação",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "até 24 h após a colecistectomia; 7–10 dias se não operar",
+        "dose_maxima": "1,5 g/dia",
+        "contraindicacoes": [
+          "alergia a nitroimidazol",
+          "ingesta de álcool",
+          "primeiro trimestre da gestação"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "gosto metálico",
+          "cefaleia",
+          "neuropatia periférica em uso prolongado",
+          "efeito dissulfiram com álcool"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mg/100 mL",
+          "comprimido 250 mg",
+          "comprimido 400 mg"
+        ],
+        "preparo": "Bolsa pronta para infusão; não adicionar outros fármacos na mesma bolsa",
+        "tempo_infusao": "30–60 minutos",
+        "monitorizacao": [
+          "náusea e vômito",
+          "sintomas neurológicos após 10 dias",
+          "INR se usar varfarina"
+        ],
+        "ajuste_renal": "Sem ajuste; repor dose após hemodiálise",
+        "ajuste_hepatico": "Reduzir 50% em Child C",
+        "observacoes": "Proibir álcool durante o tratamento e por 72 h após; é o par obrigatório do Gram-negativo escolhido",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_inibidor_betalactamase",
+        "agente": "amoxicilina-clavulanato",
+        "papel": "alternativa",
+        "indicacao": "colecistite leve quando ceftriaxona indisponível, ou passo-down oral",
+        "dose": "1,2 g (IV) ou 875/125 mg (VO)",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "IV 8/8 h; VO 12/12 h",
+        "duracao": "7 dias",
+        "dose_maxima": "3,6 g/dia (IV); 1.750/250 mg/dia (VO)",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "hepatite colestática prévia por amoxicilina-clavulanato",
+          "mononucleose infecciosa"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "rash",
+          "colite por C. difficile",
+          "hepatite colestática"
+        ],
+        "apresentacoes": [
+          "frasco 1 g/200 mg",
+          "comprimido 500/125 mg",
+          "comprimido 875/125 mg",
+          "suspensão 400/57 mg/5 mL"
+        ],
+        "preparo": "Reconstituir o frasco em 20 mL de água; diluir em 100 mL de SF; VO uso direto com alimento",
+        "tempo_infusao": "30 minutos (IV); não se aplica (VO)",
+        "monitorizacao": [
+          "diarreia",
+          "transaminases se uso acima de 7 dias",
+          "função renal"
+        ],
+        "ajuste_renal": "ClCr < 30 mL/min: 1,2 g 12/12 h; não passar de 500/125 mg 12/12 h na via oral",
+        "ajuste_hepatico": "Evitar em hepatopatia colestática ativa",
+        "observacoes": "Boa opção para alta precoce em paciente que tolera via oral; não cobre Pseudomonas",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_antipseudomonas",
+        "agente": "piperacilina-tazobactam",
+        "papel": "condicional",
+        "indicacao": "colecistite grave, sepse, imunossupressão ou risco de Pseudomonas",
+        "dose": "4,5 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "6/6 h",
+        "duracao": "7–10 dias ou até 24 h após controle cirúrgico",
+        "dose_maxima": "18 g/dia",
+        "contraindicacoes": [
+          "alergia a penicilina ou inibidor de beta-lactamase",
+          "anafilaxia prévia a beta-lactâmico"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "hipocalemia",
+          "trombocitopenia",
+          "nefrotoxicidade quando associada a vancomicina"
+        ],
+        "apresentacoes": [
+          "frasco 2,25 g",
+          "frasco 4,5 g"
+        ],
+        "preparo": "Reconstituir em 20 mL de água; diluir em 100–250 mL de SF 0,9%",
+        "tempo_infusao": "30 minutos em dose usual; 3–4 h em infusão estendida no grave",
+        "monitorizacao": [
+          "creatinina e potássio",
+          "plaquetas",
+          "diarreia",
+          "controle do foco em 48–72 h"
+        ],
+        "ajuste_renal": "ClCr 20–40: 3,375 g 6/6 h; ClCr < 20: 2,25 g 6/6 h; suplementar após diálise",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não é primeira linha na colecistite leve; reservar para gravidade, para não selecionar resistência",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "carbapenemico",
+        "agente": "ertapenem",
+        "papel": "alternativa",
+        "indicacao": "colecistite grave com suspeita de ESBL ou falha de piperacilina-tazobactam",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "7–10 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "alergia a carbapenêmico",
+          "meningite",
+          "convulsão não controlada"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "convulsão",
+          "colite por C. difficile",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "frasco 1 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água; diluir em 50 mL de SF 0,9%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "função renal",
+          "convulsão",
+          "diarreia"
+        ],
+        "ajuste_renal": "ClCr < 30 mL/min: 500 mg 1x/dia",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não cobre Pseudomonas; se houver risco de Pseudomonas, usar meropenem ou manter piperacilina-tazobactam",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide_balanceado",
+        "agente": "Ringer lactato",
+        "papel": "primeira_linha",
+        "indicacao": "hipovolemia, sepse biliar ou vômitos com impossibilidade de ingestão",
+        "dose": "500–1.000 mL em bolus; 30 mL/kg nas primeiras 3 h se sepse",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "repetir conforme resposta",
+        "duracao": "até estabilização hemodinâmica",
+        "dose_maxima": "individualizar; evitar balanço positivo acima de 2 L",
+        "contraindicacoes": [
+          "hipercalemia grave",
+          "insuficiência cardíaca descompensada"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga volêmica",
+          "edema",
+          "alcalose metabólica"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL"
+        ],
+        "preparo": "Pronto para uso",
+        "tempo_infusao": "bolus em 15–30 min; infusão contínua na sepse",
+        "monitorizacao": [
+          "PA e frequência cardíaca",
+          "diurese horária",
+          "ausculta pulmonar",
+          "lactato"
+        ],
+        "ajuste_renal": "Cautela em oligúria com congestão; não suspender por creatinina isolada",
+        "ajuste_hepatico": "Cautela em cirrose com ascite",
+        "observacoes": "Preferir Ringer lactato ao SF 0,9% para reduzir acidose hiperclorêmica; reavaliar em 30 min",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide_forte",
+        "agente": "morfina",
+        "papel": "primeira_linha",
+        "indicacao": "dor intensa da colecistite",
+        "dose": "2–4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "4/4 h se necessário",
+        "duracao": "até controle da dor ou cirurgia",
+        "dose_maxima": "titular conforme resposta e sedação",
+        "contraindicacoes": [
+          "depressão respiratória",
+          "íleo paralítico grave",
+          "alergia"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "sedação",
+          "depressão respiratória",
+          "constipação",
+          "retenção urinária"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "solução oral 10 mg/5 mL",
+          "comprimido 10 mg",
+          "comprimido 30 mg"
+        ],
+        "preparo": "Diluir 10 mg em 10 mL de SF (1 mg/mL) para titulação",
+        "tempo_infusao": "bolus lento em 2–3 minutos",
+        "monitorizacao": [
+          "frequência respiratória",
+          "escala de sedação",
+          "PA",
+          "náusea e prurido"
+        ],
+        "ajuste_renal": "Reduzir dose e espaçar em ClCr < 30 mL/min",
+        "ajuste_hepatico": "Reduzir em hepatopatia grave",
+        "observacoes": "Dor de colecistite é visceral intensa e responde a opioide; não retardar a analgesia esperando imagem",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "dor leve a moderada e febre, isolada ou como adjuvante do opioide",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "6/6 h",
+        "duracao": "até 72 h",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a pirazolona",
+          "discrasia sanguínea",
+          "porfiria hepática aguda",
+          "deficiência de G6PD",
+          "terceiro trimestre da gestação"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "agranulocitose rara",
+          "rash",
+          "dor no local da injeção"
+        ],
+        "apresentacoes": [
+          "ampola 500 mg/mL (2 mL e 5 mL)",
+          "comprimido 500 mg",
+          "comprimido 1 g",
+          "solução oral 500 mg/mL"
+        ],
+        "preparo": "Diluir 1 g em 100 mL de SF ou SG para infusão; não usar em bolus rápido",
+        "tempo_infusao": "15–20 minutos",
+        "monitorizacao": [
+          "PA durante a infusão",
+          "temperatura",
+          "hemograma se uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste em uso curto; evitar em nefropatia grave",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Não substitui opioide na dor intensa; não associar AINE se houver injúria renal ou suspeita de perfuração",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_antagonista_5ht3",
+        "agente": "ondansetrona",
+        "papel": "primeira_linha",
+        "indicacao": "náusea e vômito da colecistite ou do pós-operatório",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "até 48 h",
+        "dose_maxima": "16 mg/dia",
+        "contraindicacoes": [
+          "QT longo congênito",
+          "uso de apomorfina"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "constipação",
+          "prolongamento do QT"
+        ],
+        "apresentacoes": [
+          "ampola 2 mg/mL (2 mL e 4 mL)",
+          "comprimido 4 mg",
+          "comprimido 8 mg"
+        ],
+        "preparo": "IV direto ou diluído em 50 mL de SF",
+        "tempo_infusao": "2–5 minutos",
+        "monitorizacao": [
+          "QT em cardiopata",
+          "potássio e magnésio"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em Child C",
+        "observacoes": "Preferir à metoclopramida em idoso e em quem tem risco de distonia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "heparina_baixo_peso_molecular",
+        "agente": "enoxaparina",
+        "papel": "condicional",
+        "indicacao": "profilaxia de trombose venosa profunda em paciente internado e acamado",
+        "dose": "40 mg",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "1x/dia",
+        "duracao": "enquanto internado",
+        "dose_maxima": "40 mg/dia na profilaxia",
+        "contraindicacoes": [
+          "sangramento ativo",
+          "plaquetas abaixo de 50.000/mm³",
+          "insuficiência renal grave sem ajuste",
+          "anestesia neuroaxial recente"
+        ],
+        "efeitos_adversos": [
+          "hematoma no local",
+          "sangramento",
+          "trombocitopenia induzida por heparina",
+          "hipercalemia"
+        ],
+        "apresentacoes": [
+          "seringa 20 mg/0,2 mL",
+          "seringa 40 mg/0,4 mL",
+          "seringa 60 mg/0,6 mL"
+        ],
+        "preparo": "Pronta para uso; não expelir a bolha de ar da seringa",
+        "tempo_infusao": "não se aplica (via subcutânea)",
+        "monitorizacao": [
+          "plaquetas a cada 2–3 dias",
+          "sinais de sangramento",
+          "função renal"
+        ],
+        "ajuste_renal": "ClCr < 30 mL/min: 20 mg 1x/dia",
+        "ajuste_hepatico": "Cautela em coagulopatia",
+        "observacoes": "Suspender 12 h antes da colecistectomia quando possível; não é tratamento de trombose estabelecida",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "fitomenadiona (vitamina K)",
+        "papel": "condicional",
+        "indicacao": "colangite com coagulopatia, INR alargado ou uso de varfarina",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "1 dose",
+        "dose_maxima": "10 mg",
+        "contraindicacoes": [
+          "alergia"
+        ],
+        "efeitos_adversos": [
+          "reação anafilactoide rara",
+          "flebite"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL"
+        ],
+        "preparo": "Diluir em 50 mL de SF; infundir lentamente",
+        "tempo_infusao": "20–30 minutos",
+        "monitorizacao": [
+          "INR em 6–12 h",
+          "sinais de sangramento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Resposta reduzida em hepatopatia grave",
+        "observacoes": "Necessária antes de punção biliar ou cirurgia quando INR está alargado; não corrige coagulopatia de consumo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Jejum oral com hidratação venosa",
+        "detalhe": "Nada por boca enquanto houver vômito ou dor intensa; reintroduzir líquidos claros assim que tolerar, sem esperar cirurgia"
+      },
+      {
+        "medida": "Monitorização de sinais vitais e diurese",
+        "detalhe": "Temperatura, PA, FC e diurese a cada 6 h; diurese horária se sepse"
+      },
+      {
+        "medida": "Balanço hídrico e controle de glicemia",
+        "detalhe": "Pesar na admissão, balanço diário; glicemia capilar 6/6 h no diabético, alvo 140–180 mg/dL"
+      },
+      {
+        "medida": "Profilaxia de trombose venosa",
+        "detalhe": "Enoxaparina 40 mg SC ou meia elástica em contraindicação; manter até a deambulação"
+      },
+      {
+        "medida": "Decisão cirúrgica registrada na primeira avaliação",
+        "detalhe": "Anotar grau de Tokyo, risco ASA, previsão de colecistectomia em até 72 h ou indicação de drenagem"
+      },
+      {
+        "medida": "Reavaliação clínica em 24 h e 72 h",
+        "detalhe": "Febre, dor, leucograma e aceitação alimentar; ausência de melhora em 72 h obriga reimagem"
+      },
+      {
+        "medida": "Dieta pobre em gordura após resolução",
+        "detalhe": "Orientar refeições fracionadas e sem frituras por 4 semanas, sem evidência de que previna recidiva"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Ultrassonografia de abdome",
+        "indicacao": "Primeiro exame em toda suspeita de colecistite",
+        "tecnica": "Transabdominal, com avaliação de parede vesicular, líquido pericolecístico e colédoco",
+        "complicacoes": "Não se aplica"
+      },
+      {
+        "nome": "Colecistectomia videolaparoscópica precoce",
+        "indicacao": "Colecistite aguda operável, idealmente em até 72 h da admissão",
+        "tecnica": "Quatro portais, dissecção do triângulo de Calot, clipagem do ducto e da artéria cística",
+        "complicacoes": "Lesão de via biliar, conversão para aberta, sangramento, infecção de sítio cirúrgico"
+      },
+      {
+        "nome": "Colecistostomia percutânea",
+        "indicacao": "Alto risco cirúrgico, sepse com instabilidade ou falha clínica sem condições de operar",
+        "tecnica": "Punção trans-hepática guiada por ultrassonografia, cateter pigtail, drenagem em 24–48 h",
+        "complicacoes": "Deslocamento do cateter, bile peritonite, sangramento, recidiva em 10–15%"
+      },
+      {
+        "nome": "CPRE com papilotomia",
+        "indicacao": "Colangite, coledocolitíase ou icterícia obstrutiva associada",
+        "tecnica": "Canulação da papila, esfincterotomia, extração de cálculo e prótese quando necessário",
+        "complicacoes": "Pancreatite pós-CPRE, sangramento, perfuração duodenal"
+      },
+      {
+        "nome": "Tomografia de abdome com contraste",
+        "indicacao": "Suspeita de empema, abscesso, perfuração ou dúvida diagnóstica",
+        "tecnica": "Fase portal, cortes finos em hipocôndrio direito",
+        "complicacoes": "Nefrotoxicidade do contraste, reação alérgica"
+      },
+      {
+        "nome": "Drenagem percutânea de abscesso",
+        "indicacao": "Abscesso pericolecístico ou intra-hepático maior que 3 cm",
+        "tecnica": "Guia por tomografia ou ultrassonografia, cateter calibroso com lavagem",
+        "complicacoes": "Fístula biliar, sangramento, infecção recorrente"
+      }
+    ],
+    "metas": [
+      "Dor controlada em até 6 h do início da analgesia",
+      "Temperatura abaixo de 37,8 °C em 48–72 h de antibiótico",
+      "Leucócitos em queda de pelo menos 30% em 72 h",
+      "Colecistectomia realizada em até 72 h da admissão no paciente operável",
+      "Bilirrubina em queda após descompressão biliar na colangite",
+      "Ausência de conversão, lesão de via biliar ou reinternação em 30 dias"
+    ],
+    "fluxo": [
+      "Confirmar: dor contínua em hipocôndrio direito, Murphy, febre, leucocitose e ultrassonografia com parede espessada ou líquido pericolecístico",
+      "Separar de cólica biliar: dor que já cedeu, sem febre e sem leucocitose não é colecistite",
+      "Classificar gravidade (Tokyo I, II ou III) e procurar colangite: febre + icterícia + dor muda o fluxo",
+      "Iniciar antibiótico, analgesia, antiemético, hidratação e profilaxia de trombose; colher hemocultura antes",
+      "Definir via biliar: bilirrubina, colédoco na ultrassonografia; CPRE em até 24 h se colangite ou cálculo no colédoco",
+      "Decidir o destino: colecistectomia videolaparoscópica em até 72 h se operável; colecistostomia percutânea se alto risco",
+      "Reavaliar em 72 h: sem melhora, reimagem e drenagem; após alta, completar antibiótico e retorno cirúrgico se drenagem"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "Pode não ter febre nem leucocitose; ultrassonografia precoce e limiar baixo para tomografia",
+        "alerta": "Mortalidade e perfuração maiores com o mesmo quadro"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "Controle glicêmico rigoroso e procura ativa de empema; risco cirúrgico maior",
+        "alerta": "Colecistite enfisematosa por Clostridium"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "Ultrassonografia como primeiro exame; colecistectomia no segundo trimestre é segura; evitar ertapenem e dipirona no terceiro trimestre",
+        "alerta": "Recidiva e pancreatite biliar são frequentes"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Ajustar antibiótico, evitar contraste iodado quando possível e não usar AINE",
+        "alerta": "Sobreposição de injúria renal"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "Antibiótico de amplo espectro desde a admissão e limiar baixo para drenagem",
+        "alerta": "Evolução para sepse sem sinais clássicos"
+      },
+      {
+        "populacao": "cirrotico",
+        "ajuste": "Avaliar Child-Pugh, corrigir coagulopatia e preferir drenagem se descompensado",
+        "alerta": "Mortalidade cirúrgica elevada"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "hemograma, PCR e bilirrubinas",
+          "indicacao": "todos",
+          "o_que_muda": "confirma inflamação e sugere colangite quando bilirrubina sobe"
+        },
+        {
+          "nome": "ultrassonografia de abdome",
+          "indicacao": "todos",
+          "o_que_muda": "confirma colecistite e mostra colédoco dilatado"
+        },
+        {
+          "nome": "transaminases, fosfatase alcalina e amilase/lipase",
+          "indicacao": "todos",
+          "o_que_muda": "separa colangite e pancreatite biliar"
+        },
+        {
+          "nome": "hemocultura",
+          "indicacao": "febre, sepse ou antes do antibiótico",
+          "o_que_muda": "permite descalonamento"
+        },
+        {
+          "nome": "tomografia de abdome",
+          "indicacao": "dúvida diagnóstica, gravidade ou piora em 72 h",
+          "o_que_muda": "empema, abscesso, perfuração"
+        },
+        {
+          "nome": "colangiorressonância",
+          "indicacao": "suspeita de coledocolitíase sem colangite",
+          "o_que_muda": "indica CPRE antes da cirurgia"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia simples de abdome como exame principal",
+          "motivo": "não mostra vesícula inflamada nem cálculo"
+        },
+        {
+          "exame": "colecistografia oral ou enema opaco",
+          "motivo": "baixo rendimento e atrasa a conduta"
+        },
+        {
+          "exame": "repetir ultrassonografia a cada 24 h sem mudança clínica",
+          "motivo": "não altera conduta e atrasa a cirurgia"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar o antibiótico até o fim quando não operar",
+        "manter dieta pobre em gordura por 4 semanas",
+        "retornar para colecistectomia eletiva se saiu com drenagem",
+        "procurar atendimento se febre, icterícia ou piora da dor",
+        "informar alergias antes da cirurgia"
+      ],
+      "evitar": [
+        "tratar como cólica biliar e mandar para casa",
+        "AINE em injúria renal ou suspeita de perfuração",
+        "refeição gordurosa nas primeiras semanas",
+        "alta sem plano cirúrgico definido"
+      ],
+      "retorno": [
+        "febre acima de 38 °C",
+        "icterícia ou urina escura",
+        "piora da dor ou defesa abdominal",
+        "vômitos persistentes",
+        "saída de bile pela ferida operatória"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "diarreia",
+          "colite por C. difficile",
+          "sedimentação biliar"
+        ],
+        "observacao": "Avaliar diarreia após 48 h de uso"
+      },
+      {
+        "agente": "piperacilina-tazobactam",
+        "efeitos": [
+          "hipocalemia",
+          "trombocitopenia",
+          "nefrotoxicidade com vancomicina"
+        ],
+        "observacao": "Controle de creatinina e plaquetas"
+      },
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "sedação",
+          "depressão respiratória",
+          "náusea"
+        ],
+        "observacao": "Monitorar frequência respiratória e escala de sedação"
+      },
+      {
+        "agente": "metronidazol",
+        "efeitos": [
+          "gosto metálico",
+          "neuropatia periférica"
+        ],
+        "observacao": "Suspender se parestesia"
+      },
+      {
+        "agente": "enoxaparina",
+        "efeitos": [
+          "sangramento",
+          "trombocitopenia"
+        ],
+        "observacao": "Plaquetas a cada 2–3 dias"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a droga implicada e registrar o evento",
+      "Diarreia com febre após antibiótico: testar C. difficile e tratar",
+      "Hipotensão durante dipirona: interromper a infusão e hidratar",
+      "Sedação excessiva com morfina: reduzir dose, monitorar respiração e considerar naloxona",
+      "Sangramento com enoxaparina: suspender e reverter conforme gravidade"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "amoxicilina-clavulanato 875/125 mg",
+            "dose": "875/125 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "passo-down após alta sem cirurgia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dipirona 1 g",
+            "dose": "1 g",
+            "via": "VO",
+            "frequencia": "6/6 h se dor ou febre",
+            "duracao": "3 dias",
+            "condicao": "dor e febre",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona 4 mg",
+            "dose": "4 mg",
+            "via": "VO",
+            "frequencia": "8/8 h se náusea",
+            "duracao": "3 dias",
+            "condicao": "náusea",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona 2 g",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "temperatura e leucograma",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metronidazol 500 mg",
+            "dose": "500 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "náusea e neurologia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "morfina 10 mg/mL",
+            "dose": "2–4 mg",
+            "via": "IV",
+            "frequencia": "4/4 h se dor",
+            "monitorizacao": "sedação e frequência respiratória",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "enoxaparina 40 mg",
+            "dose": "40 mg",
+            "via": "SC",
+            "frequencia": "1x/dia",
+            "monitorizacao": "plaquetas e sangramento",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma",
+          "PCR",
+          "bilirrubinas",
+          "transaminases",
+          "fosfatase alcalina",
+          "amilase",
+          "lipase",
+          "ureia",
+          "creatinina",
+          "ultrassonografia de abdome",
+          "hemocultura",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado(a) sob meus cuidados nesta data, com colecistite aguda, necessitando de afastamento por __ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com colecistite aguda, grau de Tokyo, antibiótico usado, via biliar avaliada, cirurgia ou drenagem realizada e evolução."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "início e duração da dor",
+        "febre",
+        "irradiação",
+        "icterícia",
+        "cálculo biliar prévio",
+        "comorbidades",
+        "cirurgia abdominal prévia",
+        "alergias"
+      ],
+      "texto_template": "Paciente com dor em hipocôndrio direito há __ horas, contínua, febre __, icterícia __, cálculo biliar prévio __, comorbidades __, cirurgia abdominal prévia __ e alergias __."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "Murphy",
+        "defesa localizada",
+        "massa palpável",
+        "icterícia",
+        "perfusão",
+        "ausculta pulmonar"
+      ],
+      "texto_template": "Sinais vitais, Murphy positivo, dor à palpação em hipocôndrio direito, ausência de defesa generalizada, icterícia e perfusão."
+    },
+    "referencias": [
+      {
+        "tipo": "diretriz_tokyo",
+        "o_que_verificar": "graduação de gravidade e indicação de drenagem",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_gastroenterologia",
+        "o_que_verificar": "momento da colecistectomia e manejo da coledocolitíase",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "antibiótico do serviço e fluxo de CPRE",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e bulas",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GI20-01",
+        "tipo": "colangite",
+        "gatilho": "febre com icterícia e dor em hipocôndrio direito",
+        "severidade": "grave",
+        "mensagem": "Tríade de Charcot: colangite, não colecistite simples. CPRE urgente.",
+        "acao": "bloquear alta e sugerir protocolo de colangite",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI20-02",
+        "tipo": "colecistite_tratada_como_colica",
+        "gatilho": "diagnóstico de cólica biliar com febre, leucocitose ou dor acima de 6 h",
+        "severidade": "grave",
+        "mensagem": "Febre e dor contínua excluem cólica biliar. Internar e tratar colecistite.",
+        "acao": "bloquear item e alertar",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI20-03",
+        "tipo": "atraso_cirurgico",
+        "gatilho": "colecistite operável sem programação de colecistectomia em 72 h",
+        "severidade": "grave",
+        "mensagem": "Colecistectomia precoce reduz complicação; registrar a decisão.",
+        "acao": "sugerir protocolo cirúrgico",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI20-04",
+        "tipo": "aine",
+        "gatilho": "AINE prescrito com creatinina elevada ou suspeita de perfuração",
+        "severidade": "precaucao",
+        "mensagem": "Evitar AINE em injúria renal ou abdome agudo.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GI20-05",
+        "tipo": "reavaliacao",
+        "gatilho": "72 h de antibiótico sem queda de febre ou leucócitos",
+        "severidade": "precaucao",
+        "mensagem": "Sem melhora em 72 h: reimagem e drenagem.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "diretriz de Tóquio"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

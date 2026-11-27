@@ -1,0 +1,1109 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "DERM-10",
+    "area": "Dermatológico",
+    "nome": "Foliculite / impetigo",
+    "aliases": [
+      "foliculite",
+      "impetigo",
+      "infecção de folículo",
+      "feridinha com crosta",
+      "hordéolo",
+      "furúnculo",
+      "carbúnculo",
+      "piodermite"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Foliculite e impetigo são piodermites superficiais, e a diferença está na estrutura acometida e no agente. Foliculite superficial atinge a porção superior do folículo, com pápulas e pústulas centradas em pelo, quase sempre por Staphylococcus aureus; quando as pústulas confluem e formam crosta melicérica, o quadro é impetigo folicular e o tratamento é o mesmo. Foliculite profunda atinge todo o folículo e produz nódulo doloroso: no cílio é o hordéolo, na pele é o furúnculo. Carbúnculo é a confluência de vários furúnculos em placa endurecida, com febre e risco de bacteremia, e na face média há risco de trombose do seio cavernoso. Impetigo não é folicular: é infecção epidérmica com crosta melicérica dourada por S. aureus ou Streptococcus pyogenes, e a forma bolhosa é sempre estafilocócica. A escolha do antibiótico depende da extensão, da profundidade e do risco de MRSA: tópico nas formas limitadas, oral nas extensas, intravenoso no carbúnculo e na face média. Corticoide tópico em lesão impetiginizada mascara e piora o quadro, e drenagem só se faz quando há abscesso formado.",
+    "inclusao": [
+      "Foliculite superficial com pápulas e pústulas isoladas em área pilosa",
+      "Hordéolo único sem celulite periocular",
+      "Impetigo localizado com poucas lesões crostosas",
+      "Furúnculo único sem sinais sistêmicos e sem flutuação",
+      "Surto recorrente de foliculite ou furunculose em investigação de colonização por S. aureus"
+    ],
+    "exclusao": [
+      {
+        "situacao": "celulite extensa, febre ou toxemia",
+        "fluxo": "DERM-01 celulite e erisipela"
+      },
+      {
+        "situacao": "abscesso com flutuação ou coleção à ultrassonografia",
+        "fluxo": "DERM-02 abscesso cutâneo"
+      },
+      {
+        "situacao": "carbúnculo em face média, com edema palpebral, proptose ou dor ocular",
+        "fluxo": "hospitalar, antibiótico intravenoso e avaliação especializada"
+      },
+      {
+        "situacao": "impetigo bolhoso extenso em recém-nascido ou lactente",
+        "fluxo": "hospitalar"
+      },
+      {
+        "situacao": "pústulas pruriginosas em tronco sem pelo central, refratárias a antibiótico",
+        "fluxo": "foliculite por Malassezia, tratamento antifúngico"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "febre, calafrios ou toxemia com placa endurecida e múltiplos pontos de pus",
+        "por_que": "carbúnculo com risco de bacteremia",
+        "acao": "internação, cultura e antibiótico intravenoso",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "carbúnculo em face média com edema palpebral, proptose ou dor à movimentação ocular",
+        "por_que": "trombose do seio cavernoso",
+        "acao": "internação urgente, antibiótico intravenoso e imagem",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "eritema que avança além da lesão, linfangite ou linfonodo doloroso",
+        "por_que": "celulite e disseminação linfática",
+        "acao": "antibiótico sistêmico e reavaliação em 48 horas",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "lesão com pústula e crosta que piorou após corticoide tópico",
+        "por_que": "impetiginização mascarada pelo corticoide",
+        "acao": "suspender o corticoide e tratar a infecção",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "três ou mais episódios de furúnculo em 12 meses, ou vários casos na mesma casa",
+        "por_que": "colonização por S. aureus e MRSA",
+        "acao": "cultura e protocolo de decolonização",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "diabetes descompensado, imunossupressão, neutropenia ou dermatite atópica grave",
+        "por_que": "progressão rápida e infecção recorrente",
+        "acao": "baixar o limiar de antibiótico sistêmico e internação",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "urina escura, edema ou hipertensão duas a três semanas após impetigo",
+        "por_que": "glomerulonefrite pós-estreptocócica",
+        "acao": "urina tipo 1, creatinina e avaliação nefrológica",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "As lesões têm pelo no centro e pus visível na ponta?",
+      "Há crosta amarelada dourada, sobretudo ao redor do nariz e da boca?",
+      "A lesão é endurecida e muito dolorosa, com vários pontos de pus?",
+      "Tem febre, calafrios ou mal-estar?",
+      "Já teve furúnculos no último ano? Quantos episódios?",
+      "Usa corticoide tópico ou sistêmico na lesão?",
+      "Depila, raspa a área ou usa roupa justa e sintética?",
+      "Tem diabetes, dermatite atópica ou usa imunossupressor?",
+      "Alguém na casa ou na escola tem lesão parecida?",
+      "Frequentou piscina, banheira ou academia nos últimos dias?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Impetigo localizado, poucas lesões, sem febre",
+        "escolha": "mupirocina 2% pomada 3x/dia por 5 a 7 dias",
+        "porque": "nas formas limitadas tem eficácia comparável ao antibiótico oral, sem efeito sistêmico e sem induzir resistência de amplo espectro"
+      },
+      {
+        "cenario": "Foliculite superficial isolada em tronco ou coxas",
+        "escolha": "peróxido de benzoíla 5% gel 1x/dia ou mupirocina nas pústulas",
+        "porque": "reduz a carga bacteriana sem pressão seletiva antibiótica e trata a obstrução folicular"
+      },
+      {
+        "cenario": "Impetigo extenso, múltiplas lesões ou surto em escola ou creche",
+        "escolha": "cefalexina 500 mg VO 6/6 h por 7 dias",
+        "porque": "cobre S. aureus e S. pyogenes com espectro estreito, custo baixo e boa adesão"
+      },
+      {
+        "cenario": "Impetigo bolhoso ou suspeita de toxina estafilocócica",
+        "escolha": "clindamicina 300 mg VO 6/6 h por 7 dias",
+        "porque": "além de bactericida, inibe a síntese de toxina, o que reduz a formação de novas bolhas"
+      },
+      {
+        "cenario": "Furúnculo único sem flutuação e sem sinais sistêmicos",
+        "escolha": "cefalexina 500 mg VO 6/6 h por 7 dias e compressa morna",
+        "porque": "o antibiótico trata a disseminação ao redor e a compressa acelera a drenagem espontânea sem trauma"
+      },
+      {
+        "cenario": "Abscesso formado com flutuação",
+        "escolha": "incisão e drenagem, com cefalexina associada se houver celulite ao redor",
+        "porque": "antibiótico não penetra coleção purulenta e a drenagem é o tratamento definitivo"
+      },
+      {
+        "cenario": "Carbúnculo, febre ou risco de bacteremia",
+        "escolha": "internação com oxacilina 2 g IV 4/4 h ou clindamicina 600 mg IV 8/8 h",
+        "porque": "a infecção é profunda, com risco de disseminação hematogênica e necessidade de controle do foco"
+      },
+      {
+        "cenario": "Falha de beta-lactâmico, recidiva ou purulência com risco de MRSA comunitário",
+        "escolha": "sulfametoxazol-trimetoprima 800/160 mg VO 12/12 h por 7 dias",
+        "porque": "é o oral com melhor cobertura de MRSA, com reavaliação obrigatória em 48 a 72 horas"
+      },
+      {
+        "cenario": "Alergia a beta-lactâmico ou necessidade de alternativa oral ao MRSA",
+        "escolha": "doxiciclina 100 mg VO 12/12 h por 7 dias",
+        "porque": "cobre MRSA comunitário, é barata e tem boa penetração cutânea, mas não deve ser usada em criança menor de 8 anos nem em gestante"
+      },
+      {
+        "cenario": "Foliculite pruriginosa em tórax e dorso, sem pus, refratária a antibiótico",
+        "escolha": "itraconazol 200 mg VO 1x/dia por 7 dias",
+        "porque": "o quadro é foliculite por Malassezia, que não responde a antibacteriano e melhora com antifúngico"
+      },
+      {
+        "cenario": "Terceiro episódio de furunculose em 12 meses",
+        "escolha": "decolonização com mupirocina nasal 2x/dia por 5 dias, banho com clorexidina 4% por 5 a 7 dias e lavagem de roupas a 60 graus",
+        "porque": "a recidiva vem da colonização nasal e cutânea, e tratar só a lesão garante novo episódio"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antibiotico_topico",
+        "agente": "mupirocina 2% pomada",
+        "papel": "primeira_linha",
+        "indicacao": "impetigo localizado, foliculite superficial com pústulas isoladas e descolonização nasal de S. aureus",
+        "dose": "camada fina sobre cada lesão; na descolonização nasal, pequena quantidade em cada narina",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "3x/dia nas lesões; 2x/dia na narina",
+        "duracao": "5 a 7 dias nas lesões; 5 dias na descolonização",
+        "dose_maxima": "3 aplicações/dia por até 10 dias",
+        "contraindicacoes": [
+          "alergia a mupirocina ou ao veículo",
+          "uso em ferida extensa com queimadura",
+          "uso prolongado por mais de 10 dias"
+        ],
+        "efeitos_adversos": [
+          "ardência",
+          "prurido local",
+          "ressecamento",
+          "dermatite de contato",
+          "resistência com uso prolongado"
+        ],
+        "apresentacoes": [
+          "pomada 2% bisnaga 15 g",
+          "pomada 2% bisnaga 30 g",
+          "creme 2% bisnaga 15 g"
+        ],
+        "preparo": "Limpar a lesão com soro fisiológico e secar; aplicar camada fina com cotonete ou dedo limpo, sem oclusão",
+        "tempo_infusao": "não se aplica (via tópica)",
+        "monitorizacao": [
+          "regressão das pústulas e da crosta em 48 a 72 horas",
+          "ardência e dermatite de contato",
+          "surgimento de nova lesão fora da área tratada"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É o padrão da descolonização nasal: 2x/dia por 5 dias em cada narina, associado ao banho de clorexidina. Não usar como monoterapia em impetigo extenso nem em lesão com celulite.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_topico",
+        "agente": "ácido fusídico 2% creme",
+        "papel": "alternativa",
+        "indicacao": "impetigo localizado e foliculite superficial quando não há mupirocina ou há intolerância",
+        "dose": "camada fina sobre a lesão",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "3x/dia",
+        "duracao": "7 dias",
+        "dose_maxima": "3 aplicações/dia por até 14 dias",
+        "contraindicacoes": [
+          "alergia ao ácido fusídico",
+          "lesão extensa com infecção profunda",
+          "uso concomitante com estatina em pele extensa"
+        ],
+        "efeitos_adversos": [
+          "ardência",
+          "prurido",
+          "dermatite de contato",
+          "ressecamento"
+        ],
+        "apresentacoes": [
+          "creme 2% bisnaga 15 g",
+          "pomada 2% bisnaga 15 g"
+        ],
+        "preparo": "Limpar e secar a área e aplicar camada fina, sem oclusão",
+        "tempo_infusao": "não se aplica (via tópica)",
+        "monitorizacao": [
+          "regressão da crosta em 72 horas",
+          "irritação local",
+          "falha terapêutica que sugere resistência"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste tópico",
+        "observacoes": "Boa alternativa à mupirocina, com espectro restrito a Gram-positivos. Não associar ácido fusídico tópico e sistêmico pelo risco de seleção de resistência.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_primeira_geracao",
+        "agente": "cefalexina",
+        "papel": "primeira_linha",
+        "indicacao": "impetigo extenso, foliculite profunda, furúnculo e celulite ao redor da lesão",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "7 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina",
+          "anafilaxia prévia a penicilina"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "náusea",
+          "colite por C. difficile"
+        ],
+        "apresentacoes": [
+          "cápsula 500 mg",
+          "comprimido 500 mg",
+          "suspensão oral 250 mg/5 mL",
+          "suspensão oral 500 mg/5 mL"
+        ],
+        "preparo": "Uso direto, com água; tomar com alimento se houver desconforto gástrico",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "regressão das lesões em 48 a 72 horas",
+          "diarreia",
+          "rash",
+          "função renal no idoso"
+        ],
+        "ajuste_renal": "ClCr 30 a 59: 500 mg 8/8 h; ClCr abaixo de 30: 500 mg 12/12 h; diálise: dose adicional após a sessão",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Cobre S. aureus MSSA e S. pyogenes, não cobre MRSA. Em criança, 50 mg/kg/dia divididos 6/6 h, máximo 4 g/dia. Não substitui a drenagem quando há abscesso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "lincosamida",
+        "agente": "clindamicina",
+        "papel": "alternativa",
+        "indicacao": "impetigo bolhoso, suspeita de MRSA comunitário e alergia a beta-lactâmico",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "7 dias",
+        "dose_maxima": "1.800 mg/dia por via oral",
+        "contraindicacoes": [
+          "colite pseudomembranosa prévia",
+          "alergia a lincosamida"
+        ],
+        "efeitos_adversos": [
+          "diarreia por C. difficile",
+          "rash",
+          "gosto metálico",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "cápsula 300 mg",
+          "solução oral 75 mg/5 mL",
+          "ampola 300 mg/2 mL",
+          "ampola 600 mg/4 mL"
+        ],
+        "preparo": "Via oral em uso direto; via intravenosa, diluir 600 mg em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "via oral não se aplica; via intravenosa 30 minutos, sem ultrapassar 30 mg por minuto",
+        "monitorizacao": [
+          "diarreia e dor abdominal",
+          "hemograma em uso acima de 7 dias",
+          "regressão das lesões",
+          "transaminases"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Reduzir para 300 mg 8/8 h em hepatopatia grave",
+        "observacoes": "Vantagem de inibir a toxina estafilocócica no impetigo bolhoso. No carbúnculo internado, 600 mg IV 8/8 h. Em criança, 20 a 30 mg/kg/dia divididos 6/6 h.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfonamida",
+        "agente": "sulfametoxazol-trimetoprima",
+        "papel": "condicional",
+        "indicacao": "falha de beta-lactâmico, recidiva ou suspeita de MRSA comunitário",
+        "dose": "800/160 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "7 dias",
+        "dose_maxima": "1.600/320 mg/dia",
+        "contraindicacoes": [
+          "alergia a sulfonamida",
+          "gestação no primeiro trimestre",
+          "gestação nas duas últimas semanas",
+          "deficiência grave de G6PD",
+          "ClCr abaixo de 15"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "síndrome de Stevens-Johnson",
+          "hipercalemia",
+          "cristalúria",
+          "mielossupressão",
+          "fotossensibilidade"
+        ],
+        "apresentacoes": [
+          "comprimido 800/160 mg",
+          "comprimido 400/80 mg",
+          "suspensão oral 200/40 mg por 5 mL"
+        ],
+        "preparo": "Uso direto com copo cheio de água, mantendo boa hidratação durante o tratamento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "rash cutâneo e lesão de mucosa",
+          "potássio e creatinina",
+          "hemograma em uso acima de 7 dias",
+          "diurese"
+        ],
+        "ajuste_renal": "ClCr 15 a 30: metade da dose; ClCr abaixo de 15: evitar",
+        "ajuste_hepatico": "Evitar em insuficiência hepática grave",
+        "observacoes": "Não cobre S. pyogenes de forma confiável, então não é escolha para impetigo estreptocócico clássico. Em criança acima de 2 meses, 8 mg/kg/dia de trimetoprima divididos 12/12 h.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "tetraciclina",
+        "agente": "doxiciclina",
+        "papel": "condicional",
+        "indicacao": "MRSA comunitário em adulto, quando sulfa é contraindicada ou há intolerância",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "7 dias",
+        "dose_maxima": "200 mg/dia",
+        "contraindicacoes": [
+          "criança menor de 8 anos",
+          "gestação",
+          "amamentação",
+          "alergia a tetraciclina",
+          "insuficiência hepática grave"
+        ],
+        "efeitos_adversos": [
+          "fotossensibilidade",
+          "esofagite",
+          "náusea",
+          "diarreia",
+          "candidíase",
+          "hipertensão intracraniana benigna rara"
+        ],
+        "apresentacoes": [
+          "comprimido 100 mg",
+          "cápsula 100 mg"
+        ],
+        "preparo": "Uso direto com copo cheio de água, em pé e sem deitar por 30 minutos; evitar junto com leite, antiácido e ferro",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "fotossensibilidade e orientação de proteção solar",
+          "dor retroesternal",
+          "regressão das lesões em 72 horas"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Não usar em criança menor de 8 anos pelo risco de manchar o esmalte dentário. Excelente alternativa oral ao MRSA quando a sulfa não pode ser usada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antisseptico",
+        "agente": "clorexidina 4% solução",
+        "papel": "condicional",
+        "indicacao": "banho diário na foliculite extensa e na descolonização cutânea de S. aureus em recorrência",
+        "dose": "30 mL para o corpo, aplicados com esponja ou diretamente na pele molhada",
+        "unidade": "mL",
+        "via": "tópica",
+        "frequencia": "1x/dia",
+        "duracao": "5 a 7 dias na descolonização; até 4 semanas na foliculite recorrente",
+        "dose_maxima": "1 banho ao dia",
+        "contraindicacoes": [
+          "alergia à clorexidina",
+          "uso em face, mucosa, olho e ouvido interno",
+          "pele com queimadura extensa",
+          "lactente com pele irritada"
+        ],
+        "efeitos_adversos": [
+          "ressecamento",
+          "dermatite de contato",
+          "ardência em pele lesionada",
+          "irritação ocular"
+        ],
+        "apresentacoes": [
+          "solução aquosa 4% frasco 100 mL",
+          "solução aquosa 4% frasco 500 mL",
+          "sabonete líquido 2% frasco 500 mL"
+        ],
+        "preparo": "Diluir 30 mL em água morna do banho ou aplicar direto sobre a pele molhada, ensaboar por 30 segundos e enxaguar bem; não usar em cabeça e face",
+        "tempo_infusao": "não se aplica (via tópica)",
+        "monitorizacao": [
+          "irritação e ressecamento da pele",
+          "adesão ao banho diário",
+          "redução de novas lesões em 2 semanas"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Na descolonização, associar sempre à mupirocina nasal: só o banho não erradica o reservatório nasal. Evitar contato com olhos e conduto auditivo, e não usar em recém-nascido sem indicação.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antisseptico_queratolitico",
+        "agente": "peróxido de benzoíla 5% gel",
+        "papel": "alternativa",
+        "indicacao": "foliculite superficial em tronco, ombros e coxas, isolada ou recorrente",
+        "dose": "camada fina nas áreas afetadas",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "1x/dia, à noite",
+        "duracao": "4 a 8 semanas",
+        "dose_maxima": "1 aplicação/dia",
+        "contraindicacoes": [
+          "alergia ao peróxido de benzoíla",
+          "pele muito irritada ou eczematosa",
+          "uso concomitante com tretinoína e dapsona tópica"
+        ],
+        "efeitos_adversos": [
+          "ressecamento",
+          "descamação",
+          "ardência",
+          "descoloração de cabelo e tecidos",
+          "dermatite irritativa"
+        ],
+        "apresentacoes": [
+          "gel 5% bisnaga 30 g",
+          "gel 2,5% bisnaga 30 g",
+          "gel de limpeza 5% frasco 150 mL"
+        ],
+        "preparo": "Lavar e secar a área e aplicar camada fina; iniciar em dias alternados por 1 semana para reduzir irritação",
+        "tempo_infusao": "não se aplica (via tópica)",
+        "monitorizacao": [
+          "irritação e descamação",
+          "redução de novas pústulas em 4 semanas",
+          "clareamento de roupa e cabelo"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não é antibiótico: reduz Cutibacterium acnes e S. aureus sem pressão seletiva, por isso é útil na foliculite recorrente. Mancha tecido e cabelo e aumenta a fotossensibilidade.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antifungico",
+        "agente": "itraconazol",
+        "papel": "condicional",
+        "indicacao": "foliculite por Malassezia, pruriginosa, em tronco e dorso, sem resposta a antibacteriano",
+        "dose": "200 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia após a refeição",
+        "duracao": "7 dias",
+        "dose_maxima": "400 mg/dia",
+        "contraindicacoes": [
+          "gestação",
+          "insuficiência cardíaca congestiva",
+          "uso de sinvastatina, midazolam oral ou derivados do ergot",
+          "alergia a azólico"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "dor abdominal",
+          "cefaleia",
+          "elevação de transaminases",
+          "edema"
+        ],
+        "apresentacoes": [
+          "cápsula 100 mg",
+          "comprimido 100 mg",
+          "solução oral 10 mg/mL"
+        ],
+        "preparo": "Uso direto, logo após refeição, para melhor absorção",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "regressão do prurido em 2 semanas",
+          "TGO e TGP em uso prolongado",
+          "sinais de interação medicamentosa"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: considerar dose menor; não usar solução intravenosa",
+        "ajuste_hepatico": "Evitar em hepatopatia grave; monitorar transaminases",
+        "observacoes": "A pista clínica é pústula sem pelo central, em tórax e dorso de paciente jovem e sudorítico, que não melhora com cefalexina. Nesse caso, trocar o antibacteriano por antifúngico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "dor e febre associadas ao furúnculo, carbúnculo ou impetigo extenso",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h se dor ou febre",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "4 g/dia, ou 2 g/dia em hepatopatia e etilismo",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "alergia"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em overdose",
+          "rash",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "frasco de infusão 10 mg/mL"
+        ],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor pela escala de 0 a 10",
+          "temperatura",
+          "TGO e TGP se uso acima de 5 dias"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: espaçar para 8/8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia; evitar em Child C",
+        "observacoes": "Não associar a outro produto com paracetamol. Evitar AINE no furúnculo pelo risco de piora da infecção cutânea e de necrose.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Banho diário com clorexidina 4%",
+        "detalhe": "30 mL na pele molhada, ensaboar por 30 segundos e enxaguar, por 5 a 7 dias na descolonização e até 4 semanas na foliculite recorrente, evitando face, olhos e ouvido"
+      },
+      {
+        "medida": "Compressa morna nas lesões crostosas e no furúnculo",
+        "detalhe": "gaze embebida em água morna por 10 a 15 minutos, 3 vezes ao dia, para amolecer a crosta e acelerar a drenagem espontânea; não espremer"
+      },
+      {
+        "medida": "Higiene das mãos e unha curta",
+        "detalhe": "lavar as mãos com água e sabão antes e depois de tocar as lesões e manter unha cortada curta e lixada, porque o dedo é o principal vetor de S. aureus"
+      },
+      {
+        "medida": "Não compartilhar toalhas, lençóis e roupas",
+        "detalhe": "toalha própria trocada a cada 2 dias e roupa de cama trocada 2 vezes por semana; lavar a 60 graus e secar ao sol ou em secadora"
+      },
+      {
+        "medida": "Suspender depilação e raspagem na área",
+        "detalhe": "não depilar, raspar ou fazer barba na região afetada até 1 semana após a resolução; se inevitável, lâmina nova, higienizada e no sentido do pelo"
+      },
+      {
+        "medida": "Roupa folgada e de tecido respirável",
+        "detalhe": "algodão ou tecido técnico que não retenha suor, troca diária e evitar bermuda e roupa íntima apertada, que criam atrito e oclusão folicular"
+      },
+      {
+        "medida": "Controle glicêmico no diabético",
+        "detalhe": "glicemia capilar abaixo de 180 mg/dL e HbA1c solicitada, porque hiperglicemia sustenta a colonização e a recidiva"
+      },
+      {
+        "medida": "Afastamento de escola, creche e piscina",
+        "detalhe": "retornar após 24 a 48 horas de antibiótico eficaz e com as lesões cobertas; no impetigo, cobrir as crostas reduz transmissão"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Incisão e drenagem de furúnculo ou abscesso",
+        "indicacao": "flutuação ou coleção confirmada por ultrassonografia",
+        "tecnica": "antissepsia, anestesia local, incisão linear na porção mais dependente, ruptura de lojas com pinça, irrigação com soro fisiológico 0,9%, curativo e cultura do pus, conforme o registro DERM-02",
+        "complicacoes": "sangramento, drenagem incompleta, cicatriz, recidiva, disseminação se drenado antes da coleção e bacteremia"
+      },
+      {
+        "nome": "Coleta de cultura de pus ou de material da lesão",
+        "indicacao": "recidiva, falha de tratamento, suspeita de MRSA ou surto familiar",
+        "tecnica": "antissepsia da pele ao redor, aspirar o pus com seringa ou coletar swab da secreção profunda após limpar a superfície, e enviar para cultura com antibiograma",
+        "complicacoes": "contaminação por flora superficial e resultado falso que induz antibiótico inadequado"
+      },
+      {
+        "nome": "Remoção de crostas do impetigo",
+        "indicacao": "impetigo com crosta espessa que retém secreção",
+        "tecnica": "compressa morna por 10 minutos para amolecer, remoção delicada com gaze sem sangramento e aplicação do tópico em seguida",
+        "complicacoes": "sangramento, escoriação e nova porta de entrada quando a remoção é traumática"
+      },
+      {
+        "nome": "Descolonização nasal de S. aureus",
+        "indicacao": "furunculose de repetição, três ou mais episódios em 12 meses, ou surto domiciliar",
+        "tecnica": "aplicar mupirocina 2% com cotonete em cada narina, 2 vezes ao dia por 5 dias, associada a banho de clorexidina 4% diário por 5 a 7 dias e troca de roupas e toalhas",
+        "complicacoes": "irritação nasal, resistência à mupirocina e falha por adesão incompleta ao conjunto de medidas"
+      },
+      {
+        "nome": "Drenagem espontânea assistida do hordéolo",
+        "indicacao": "hordéolo com ponto de flutuação e dor importante",
+        "tecnica": "compressa morna 4 vezes ao dia e epilação do cílio central quando bem identificado; incisão formal apenas por oftalmologia",
+        "complicacoes": "celulite palpebral, orzuelo recorrente e lesão de margem palpebral quando manipulado"
+      }
+    ],
+    "metas": [
+      "Regressão de 50% das lesões em 72 horas de tratamento correto",
+      "Ausência de novas pústulas em 7 dias",
+      "Febre resolvida em 48 a 72 horas",
+      "Cura clínica do impetigo em 7 a 10 dias",
+      "Nenhum episódio de furunculose nos 6 meses após a decolonização",
+      "Cultura com agente identificado em todo caso de recidiva ou falha terapêutica"
+    ],
+    "fluxo": [
+      "Examinar e classificar a lesão: pústula centrada em pelo, nódulo profundo, placa com múltiplos pontos de pus ou crosta melicérica sem pelo",
+      "Localizar a profundidade: superficial, foliculite profunda, furúnculo, carbúnculo ou impetigo não folicular",
+      "Procurar sinais de gravidade: febre, celulite ao redor, linfangite, face média, imunossupressão e diabetes descompensado",
+      "Decidir a via: tópico nas formas limitadas, oral nas extensas ou profundas, intravenoso e internação no carbúnculo e na face média",
+      "Verificar flutuação: se houver abscesso, drenar; sem flutuação, não incisar e tratar clinicamente",
+      "Reavaliar em 48 a 72 horas; se falhar, colher cultura, considerar MRSA e iniciar decolonização na recorrência"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "crianca",
+        "ajuste": "cefalexina 50 mg/kg/dia, mupirocina tópica nas formas limitadas e clindamicina 20 a 30 mg/kg/dia na suspeita de MRSA; evitar tetraciclina abaixo de 8 anos",
+        "alerta": "impetigo estreptocócico pode evoluir com glomerulonefrite pós-estreptocócica em 2 a 3 semanas"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "cefalexina e mupirocina são seguras; evitar sulfametoxazol-trimetoprima no primeiro trimestre e nas duas últimas semanas, e evitar doxiciclina",
+        "alerta": "impetigo bolhoso extenso aumenta risco de parto prematuro por quadro febril"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "controle glicêmico rigoroso e curso de antibiótico mais longo, de 10 a 14 dias",
+        "alerta": "furúnculo evolui para carbúnculo e bacteremia com mais frequência"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "baixar o limiar para cultura, antibiótico sistêmico e internação",
+        "alerta": "pode evoluir sem febre e sem leucocitose, com progressão rápida"
+      },
+      {
+        "populacao": "obeso",
+        "ajuste": "cuidado com dobras e atrito, banho de clorexidina nas áreas de dobra e roupa que não friccione",
+        "alerta": "foliculite intertriginosa e recidiva por colonização persistente"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "cefalexina com ajuste por ClCr; evitar sulfametoxazol-trimetoprima com ClCr abaixo de 15",
+        "alerta": "acúmulo e toxicidade com doses plenas"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "Cultura de pus com antibiograma",
+          "indicacao": "recidiva, falha terapêutica, suspeita de MRSA ou surto familiar",
+          "o_que_muda": "identifica S. aureus, MRSA ou estreptococo e permite trocar para o antibiótico correto"
+        },
+        {
+          "nome": "Hemograma e PCR",
+          "indicacao": "febre, celulite extensa ou carbúnculo",
+          "o_que_muda": "define gravidade, necessidade de internação e via do antibiótico"
+        },
+        {
+          "nome": "Glicemia e hemoglobina glicada",
+          "indicacao": "furunculose recorrente ou infecção extensa",
+          "o_que_muda": "revela diabetes não diagnosticado e explica a recidiva"
+        },
+        {
+          "nome": "Urina tipo 1 e creatinina",
+          "indicacao": "impetigo estreptocócico, edema ou urina escura após 2 a 3 semanas",
+          "o_que_muda": "detecta glomerulonefrite pós-estreptocócica e indica avaliação nefrológica"
+        },
+        {
+          "nome": "Ultrassonografia de partes moles",
+          "indicacao": "dúvida entre furúnculo e abscesso",
+          "o_que_muda": "confirma coleção e indica drenagem"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "Swab superficial da crosta sem limpeza prévia",
+          "motivo": "cresce flora colonizante e induz antibiótico desnecessário"
+        },
+        {
+          "exame": "Hemograma de rotina na foliculite superficial isolada",
+          "motivo": "não altera a conduta em lesão única sem sinais sistêmicos"
+        },
+        {
+          "exame": "Biópsia de lesão típica de impetigo",
+          "motivo": "o diagnóstico é clínico e o procedimento atrasa o tratamento e deixa cicatriz"
+        },
+        {
+          "exame": "Anticorpo antiestreptolisina O na fase aguda",
+          "motivo": "não muda a conduta imediata nem indica antibiótico"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "lavar as mãos antes e depois de tocar as lesões",
+        "manter as lesões cobertas com curativo limpo",
+        "tomar o antibiótico até o fim do curso",
+        "usar toalha própria",
+        "retornar em 48 a 72 horas se não houver melhora"
+      ],
+      "evitar": [
+        "espremer, furar ou cortar a lesão em casa",
+        "usar corticoide tópico na lesão com pus ou crosta",
+        "compartilhar toalhas, lençóis e roupas",
+        "depilar ou raspar a área afetada",
+        "frequentar piscina até a cura"
+      ],
+      "retorno": [
+        "febre acima de 38 graus",
+        "vermelhidão que se espalha rápido ao redor da lesão",
+        "aumento da dor ou do inchaço",
+        "novas lesões em outras áreas",
+        "urina escura ou inchaço de pernas e face"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "mupirocina 2%",
+        "efeitos": [
+          "ardência",
+          "prurido",
+          "dermatite de contato"
+        ],
+        "observacao": "suspender se irritação intensa e não prolongar além de 10 dias"
+      },
+      {
+        "agente": "cefalexina",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "colite por C. difficile"
+        ],
+        "observacao": "suspender se diarreia aquosa intensa ou dor abdominal"
+      },
+      {
+        "agente": "clindamicina",
+        "efeitos": [
+          "colite por C. difficile",
+          "diarreia",
+          "gosto metálico"
+        ],
+        "observacao": "suspender ao primeiro sinal de diarreia aquosa ou dor abdominal"
+      },
+      {
+        "agente": "sulfametoxazol-trimetoprima",
+        "efeitos": [
+          "rash",
+          "síndrome de Stevens-Johnson",
+          "hipercalemia",
+          "cristalúria"
+        ],
+        "observacao": "suspender ao primeiro sinal de lesão de mucosa"
+      },
+      {
+        "agente": "clorexidina 4%",
+        "efeitos": [
+          "ressecamento",
+          "dermatite de contato",
+          "ardência"
+        ],
+        "observacao": "diluir conforme o rótulo e evitar olhos e conduto auditivo"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação com data, horário e dose",
+      "Diarreia aquosa em uso de clindamicina ou cefalexina: suspender, testar C. difficile e hidratar",
+      "Rash com bolha ou acometimento de mucosa: suspender a sulfa, internar e avaliar com dermatologia",
+      "Irritação intensa com clorexidina ou peróxido de benzoíla: espaçar as aplicações e trocar por sabonete neutro",
+      "Ausência de melhora em 72 horas: colher cultura, reavaliar o diagnóstico e considerar MRSA ou foliculite fúngica"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "mupirocina 2% pomada",
+            "dose": "camada fina",
+            "via": "tópica",
+            "frequencia": "3x/dia",
+            "duracao": "7 dias",
+            "condicao": "impetigo localizado ou foliculite superficial",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cefalexina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "7 dias",
+            "condicao": "impetigo extenso ou furúnculo",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "clindamicina 300 mg",
+            "dose": "300 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "7 dias",
+            "condicao": "impetigo bolhoso, alergia a beta-lactâmico ou suspeita de MRSA",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "sulfametoxazol-trimetoprima 800/160 mg",
+            "dose": "800/160 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "falha de beta-lactâmico ou MRSA confirmado",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "doxiciclina 100 mg",
+            "dose": "100 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "MRSA em adulto com sulfa contraindicada",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "clorexidina 4% solução",
+            "dose": "30 mL no banho",
+            "via": "tópica",
+            "frequencia": "1x/dia",
+            "duracao": "7 dias",
+            "condicao": "descolonização em furunculose recorrente",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "peróxido de benzoíla 5% gel",
+            "dose": "camada fina",
+            "via": "tópica",
+            "frequencia": "1x/dia à noite",
+            "duracao": "4 semanas",
+            "condicao": "foliculite superficial recorrente em tronco",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "3 dias",
+            "condicao": "dor e febre",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "oxacilina 2 g",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "4/4 h",
+            "monitorizacao": "transaminases, hemograma e sítio de infusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "clindamicina 600 mg",
+            "dose": "600 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "diarreia e dor abdominal",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "vancomicina 15 a 20 mg/kg",
+            "dose": "15 a 20 mg/kg",
+            "via": "IV",
+            "frequencia": "8/8 a 12/12 h",
+            "monitorizacao": "AUC ou vale e creatinina a cada 48 horas",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "cultura de pus com antibiograma",
+          "hemograma",
+          "PCR",
+          "glicemia",
+          "hemoglobina glicada",
+          "urina tipo 1",
+          "creatinina",
+          "ultrassonografia",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de foliculite ou impetigo, necessitando de afastamento conforme decisão médica.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e CID são decisão médica no ato"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com piodermite, tipo de lesão, localização, extensão, sinais de gravidade, cultura, antibiótico escolhido, procedimentos realizados e evolução."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tempo de evolução",
+        "localização",
+        "número de lesões",
+        "pelo central e pus",
+        "crosta melicérica",
+        "febre",
+        "dor",
+        "episódios prévios",
+        "diabetes",
+        "imunossupressão",
+        "depilação e atrito",
+        "contato domiciliar",
+        "uso de corticoide"
+      ],
+      "texto_template": "Paciente com lesões cutâneas há X dias, em localização Y, número de lesões, presença de pelo central e pus, crosta melicérica, febre, dor, episódios prévios, diabetes, imunossupressão, depilação e atrito, contato domiciliar e uso de corticoide."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "distribuição e número de lesões",
+        "pelo central e pústula",
+        "crosta melicérica",
+        "flutuação e endurecimento",
+        "celulite e linfangite ao redor",
+        "linfonodos regionais",
+        "exame ocular na lesão facial"
+      ],
+      "texto_template": "Sinais vitais, distribuição e número de lesões, presença de pelo central e pústula, crosta melicérica, flutuação e endurecimento, celulite e linfangite ao redor, linfonodos regionais e exame ocular na lesão facial."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de piodermite e critérios de internação",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_sociedade_dermatologia",
+        "o_que_verificar": "distinção entre foliculite superficial, foliculite profunda, furúnculo, carbúnculo e impetigo",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_sociedade_infectologia",
+        "o_que_verificar": "escolha empírica, duração e manejo de MRSA comunitário em infecção de pele",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e concentrações dos tópicos e antimicrobianos",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-DERM10-01",
+        "tipo": "corticoide_em_impetigo",
+        "gatilho": "corticoide tópico ou sistêmico prescrito em lesão com pústula ou crosta melicérica",
+        "severidade": "grave",
+        "mensagem": "Corticoide em lesão impetiginizada mascara a infecção e piora o quadro: suspender e tratar com antibiótico.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-DERM10-02",
+        "tipo": "carbunculo",
+        "gatilho": "febre com placa endurecida e múltiplos pontos de pus",
+        "severidade": "grave",
+        "mensagem": "Carbúnculo com risco de bacteremia: cultura, antibiótico intravenoso e avaliação para drenagem.",
+        "acao": "acionar internação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-DERM10-03",
+        "tipo": "face_media",
+        "gatilho": "carbúnculo ou furúnculo em face média com edema palpebral ou dor ocular",
+        "severidade": "grave",
+        "mensagem": "Risco de trombose do seio cavernoso: internação urgente, antibiótico intravenoso e imagem; não manipular.",
+        "acao": "acionar oftalmologia e internação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-DERM10-04",
+        "tipo": "drenagem_indevida",
+        "gatilho": "incisão programada sem flutuação ou sem coleção confirmada",
+        "severidade": "precaucao",
+        "mensagem": "Drenagem só se abscesso formado: incisar lesão sem coleção dissemina a infecção.",
+        "acao": "alertar e revisar conduta",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-DERM10-05",
+        "tipo": "recorrencia",
+        "gatilho": "três ou mais episódios de furunculose em 12 meses",
+        "severidade": "precaucao",
+        "mensagem": "Investigação de colonização por S. aureus: cultura e protocolo de decolonização com mupirocina nasal e clorexidina.",
+        "acao": "sugerir decolonização",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-DERM10-06",
+        "tipo": "glomerulonefrite",
+        "gatilho": "urina escura, edema ou hipertensão após impetigo",
+        "severidade": "precaucao",
+        "mensagem": "Suspeita de glomerulonefrite pós-estreptocócica: urina tipo 1, creatinina e avaliação nefrológica.",
+        "acao": "solicitar avaliação",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "diretrizes de dermatologia e infectologia"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita com separação entre foliculite superficial, foliculite profunda, hordéolo, furúnculo, carbúnculo e impetigo; mupirocina e ácido fusídico tópicos, cefalexina, clindamicina, sulfametoxazol-trimetoprima, doxiciclina, banho de clorhexidina, peróxido de benzoíla e itraconazol na foliculite por Malassezia; decolonização de S. aureus, drenagem apenas com abscesso, apresentações, preparo, monitorização e alerta de corticoide em lesão impetiginizada.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

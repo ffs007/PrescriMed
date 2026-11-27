@@ -1,0 +1,514 @@
+{
+  "id": "ws-gi_12",
+  "nome": "Cólica biliar suspeita",
+  "cat": "Gastrointestinal",
+  "alias": "colica biliar suspeita colica biliar pedra na vesicula colelitiase sintomatica dor biliar crise de vesicula",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-12_colica_biliar.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de dor biliar, tempo porta-imagem e indicação de colecistectomia precoce",
+      "[verificar] sociedade_cirurgia: indicação de colecistectomia eletiva e manejo de coledocolitíase",
+      "[verificar] sociedade_gastroenterologia: critérios de colangite e indicação de CPRE",
+      "[verificar] anvisa: apresentações de AINE, antiespasmódicos e antibióticos"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-12 em 2026-11-27",
+    "fundido_workspace": "GI-12 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: febre ≥ 38 °C com calafrios -> hemograma, USG imediata, antibiótico e internação; sinal de Murphy positivo -> USG, antibiótico e avaliação cirúrgica; icterícia, urina escura ou fezes claras -> enzimas hepáticas, USG e colangioRM; CPRE se colestase; dor contínua por mais de 6 horas sem alívio -> USG, leucograma e internação. 1) Caracterizar a dor: início pós-prandial, duração, irradiação, febre e icterícia 2) Exame abdominal dirigido: Murphy, defesa, massa palpável e sinais de sepse 3) Excluir as três imitadoras: colecistite (febre, dor > 6 h, Murphy), colangite (febre + icterícia) e pancreatite (dor dorsal + lipase) 4) Analgesia imediata com AINE em dose plena, sem esperar exame de imagem 5) Solicitar hemograma, AST/ALT, fosfatase alcalina, GGT, bilirrubinas e lipase; ultrassom abdominal 6) Dor que cede e exames sem inflamação: alta com orientação, dieta e encaminhamento para colecistectomia eletiva 7) Febre, leucocitose, parede espessada ou Murphy: internação, antibiótico e cirurgia precoce 8) Icterícia com dilatação de via biliar: colangioRM e CPRE; colangite grave exige drenagem urgente",
+  "redFlags": [
+    "febre ≥ 38 °C com calafrios -> hemograma, USG imediata, antibiótico e internação",
+    "sinal de Murphy positivo -> USG, antibiótico e avaliação cirúrgica",
+    "icterícia, urina escura ou fezes claras -> enzimas hepáticas, USG e colangioRM; CPRE se colestase",
+    "dor contínua por mais de 6 horas sem alívio -> USG, leucograma e internação",
+    "dor irradiada para dorso com vômitos incoercíveis -> lipase, hidratação e internação",
+    "hipotensão, confusão ou oligúria -> sala vermelha, antibiótico na primeira hora e drenagem biliar",
+    "parede vesicular > 3 mm, líquido pericolecístico ou vesícula distendida na USG -> internação, antibiótico e colecistectomia precoce",
+    "amilase ou lipase acima de 3 vezes o limite superior -> internação e protocolo de pancreatite"
+  ],
+  "naoUsar": [
+    "úlcera péptica ativa",
+    "doença renal crônica com ClCr < 30 mL/min",
+    "insuficiência cardíaca descompensada",
+    "anticoagulação plena",
+    "terceiro trimestre de gestação",
+    "alergia a AINE",
+    "insuficiência renal grave",
+    "insuficiência renal"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter dieta pobre em gordura e fracionada"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "refeições gordurosas e frituras"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antiespasmodico intestinal",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "brometo_de_otilonio",
+              "n": "Brometo de otilônio",
+              "ap": "comprimido revestido 40 mg",
+              "q": "",
+              "pos": "40 mg. Via VO. 8/8 h. Até 7 dias."
+            },
+            "motivo": "cólica biliar leve recorrente em regime ambulatorial (alternativa) cólica recorrente leve",
+            "nota": "Uso direto, com meio copo de água, antes das refeições - monitorar: dor por escala diária; monitorar: número de evacuações; monitorar: sinais de retenção urinária · NÃO: obstrução intestinal; megacólon tóxico; hipersensibilidade ao brometo · Obs: Não existe apresentação parenteral no Brasil: não serve para a crise aguda no pronto-socorro, apenas para o controle ambulatorial entre crises",
+            "dose": {
+              "texto": "40 mg; 8/8 h; até 7 dias; max. 120 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 120,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Dieta pobre em gordura durante a crise",
+              "ap": "",
+              "q": "",
+              "pos": "Jejum curto de 4–6 h se houver vômito; depois dieta fracionada com baixo teor de gordura, sem necessidade de dieta zero prolongada"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Hidratação oral ou venosa conforme tolerância",
+              "ap": "",
+              "q": "",
+              "pos": "Vômitos persistentes: SF 0,9% 500–1.000 mL; manter diurese acima de 0,5 mL/kg/h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Reavaliação clínica seriada",
+              "ap": "",
+              "q": "",
+              "pos": "Reavaliar dor, temperatura e exame abdominal em 30, 60 e 120 min; se a dor não ceder, o diagnóstico provavelmente não é cólica simples"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Posicionamento e ambiente",
+              "ap": "",
+              "q": "",
+              "pos": "Paciente costuma melhorar em decúbito lateral direito com joelhos fletidos; evitar refeição antes de reavaliar"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Orientação de retorno por escrito",
+              "ap": "",
+              "q": "",
+              "pos": "Febre, icterícia, dor acima de 6 h, vômitos incoercíveis e urina escura: retornar imediatamente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Agendar colecistectomia eletiva",
+              "ap": "",
+              "q": "",
+              "pos": "Após a crise, encaminhar ao cirurgião em 2–6 semanas; quanto mais crises, maior a chance de complicação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Não prescrever ácido ursodesoxicólico para a crise",
+              "ap": "",
+              "q": "",
+              "pos": "Não dissolve cálculo durante a crise e não alivia dor; seu papel é restrito a casos selecionados de litíase com contraindicação cirúrgica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-12"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "AINE derivado arilpropionico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "diclofenaco_im",
+            "motivo": "crise de cólica biliar em adulto sem contraindicação a AINE (1a linha) crise de cólica biliar",
+            "nota": "IM: aplicação profunda no quadrante superior lateral do glúteo. IV: diluir 75 mg em 100 mL de SF 0,9% - monitorar: intensidade da dor por escala em 30 e 60 min; monitorar: PA e diurese; monitorar: creatinina se uso repetido; monitorar: sangramento digestivo; monitorar: transaminases se uso acima de 48 h",
+            "dose": {
+              "texto": "75 mg; dose única; repetir 12/12 h se necessário; até 48 h; max. 150 mg/dia",
+              "status": "ok",
+              "valor": 75,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 150,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "hosp": "cetoprofeno_ev",
+            "motivo": "crise de cólica biliar quando diclofenaco indisponível ou como alternativa de classe (alternativa)",
+            "nota": "Reconstituir o liofilizado no diluente e diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: dor por escala em 30 e 60 min; monitorar: PA; monitorar: creatinina; monitorar: sinais de sangramento; monitorar: local da infusão · NÃO: úlcera péptica ativa; insuficiência renal grave; insuficiência cardíaca descompensada; anticoagulação plena; terceiro trimestre de gestação · Obs: Equivalente ao diclofenaco na crise; escolher pelo que existe na farmácia, não por preferência teórica · Renal: Contraindicado se ClCr < 30 mL/min; não repetir dose em idoso com ClCr < 60",
+            "dose": {
+              "texto": "100 mg; dose única; repetir 12/12 h se necessário; até 48 h; max. 300 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "AINE oxicam",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "tenoxicam_ev",
+            "motivo": "crise de cólica biliar com necessidade de dose única de longa ação (alternativa)",
+            "nota": "Reconstituir com o diluente próprio; IV diluir em 100 mL de SF; IM aplicar profundamente - monitorar: dor por escala; monitorar: PA e diurese; monitorar: creatinina em idoso e renal crônico; monitorar: sangramento digestivo · NÃO: úlcera péptica ativa; insuficiência renal; insuficiência cardíaca descompensada; anticoagulação; alergia a oxicam; terceiro trimestre de gestação · Obs: Meia-vida longa (cerca de 70 h): uma dose cobre a crise, mas não permite repetição no mesmo dia nem associação com outro AINE · Renal: Contraindicado em ClCr < 30 mL/min; evitar em idoso com ClCr < 60",
+            "dose": {
+              "texto": "20-40 mg; dose única; não repetir no mesmo dia; dose única; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 40,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide fraco",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "tramadol_ev",
+            "motivo": "dor biliar moderada quando morfina indisponível ou como transição oral (alternativa)",
+            "nota": "IV: diluir 100 mg em 100 mL de SF e infundir; VO uso direto - monitorar: dor por escala; monitorar: sedação e frequência respiratória; monitorar: náusea; monitorar: convulsão em paciente epiléptico; monitorar: sódio em idoso",
+            "dose": {
+              "texto": "50-100 mg; 6/6 h ou 8/8 h; até 48 h; max. 400 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiespasmodico antimuscarinico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "butilescopolamina",
+              "n": "Butilescopolamina (hioscina)",
+              "ap": "ampola 20 mg/mL (1 mL)",
+              "via": "IV ou IM",
+              "pos": "20 mg. Via IV ou IM. 8/8 h se necessário. Até 48 h. 2-3 minutos (IV lento)."
+            },
+            "motivo": "cólica biliar leve ou quando AINE é contraindicado (condicional)",
+            "nota": "IV direto lento ou diluído em 10 mL de SF; VO sem preparo - monitorar: dor por escala em 30 e 60 min; monitorar: FC; monitorar: retenção urinária; monitorar: pressão intraocular se glaucoma · NÃO: glaucoma de ângulo fechado; hipertrofia prostática com retenção urinária; íleo paralítico; megacólon; taquicardia paroxística · Obs: Coadjuvante, não base do tratamento: alivia o espasmo da musculatura lisa, mas não reduz a inflamação. Não usar como monoterapia em dor intensa",
+            "dose": {
+              "texto": "20 mg; 8/8 h se necessário; até 48 h; max. 100 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiemético 5ht3",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "náusea e vômito associados à crise biliar (condicional) náusea",
+            "nota": "IV direto ou diluído em 50 mL de SF; VO sem preparo - monitorar: ECG se cardiopata ou QT longo; monitorar: potássio e magnésio; monitorar: número de vômitos",
+            "dose": {
+              "texto": "4 mg; 8/8 h se necessário; 24-48 h; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico cefalosporina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "colecistite aguda e colangite (condicional) colecistite ou colangite",
+            "nota": "Reconstituir em 10 mL de água para injetáveis e diluir em 100 mL de SF 0,9% ou SG 5%; nunca na mesma via de Ringer lactato - monitorar: função hepática e bilirrubinas; monitorar: sinais de sepse; monitorar: diarreia por C. difficile; monitorar: local da infusão · NÃO: alergia a cefalosporina; neonato com hiperbilirrubinemia; uso de solução com cálcio na mesma via · Obs: Só entra quando há inflamação ou infecção biliar; cólica biliar simples não usa antibiótico",
+            "dose": {
+              "texto": "2 g; 1x/dia; até 7 dias (4-5 dias após colecistectomia); max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "cobertura de anaeróbios em colecistite e colangite, associado à ceftriaxona (condicional) colecistite ou colangite",
+            "nota": "Bolsa pronta; não diluir. Proteger da luz durante a infusão - monitorar: função hepática; monitorar: sintomas neurológicos em uso acima de 10 dias; monitorar: náusea; monitorar: resposta clínica em 48-72 h · NÃO: alergia a nitroimidazol; primeiro trimestre de gestação; uso de álcool · Obs: Associar à ceftriaxona apenas quando há suspeita de colecistite ou colangite; não usar em cólica biliar isolada",
+            "dose": {
+              "texto": "500 mg; 8/8 h; até 7 dias; max. 1.500 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide forte",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "morfina_ev",
+            "motivo": "dor biliar refratária a AINE em dose plena (resgate) dor refratária",
+            "nota": "Diluir 1 mL (10 mg) em 9 mL de SF para solução 1 mg/mL; administrar IV lento - monitorar: frequência respiratória e sedação antes e após cada dose; monitorar: PA; monitorar: EVA em 15 min; monitorar: náusea; monitorar: naloxona disponível na beira do leito",
+            "dose": {
+              "texto": "2-4 mg; titular a cada 10-15 min até EVA ≤ 3; até controle da dor; max. individualizar pela resposta e pela função respiratória",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 4,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 10-15 min",
+              "freq_min": 10,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-12",
+    "versao": "0.2.0",
+    "arquivo": "GI-12_colica_biliar.json",
+    "area": "Gastrointestinal",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

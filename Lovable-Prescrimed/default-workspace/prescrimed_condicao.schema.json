@@ -1,0 +1,564 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://prescrimed.app/schemas/condicao/1.0.0",
+  "title": "PrescriMed — Cadastro de condição clínica",
+  "description": "Estrutura de cadastro de condição clínica. Conteúdo clínico deve ser validado antes de status=publicado. Campos com '«' são placeholders e bloqueiam a publicação.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "condicao"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "condicao": { "$ref": "#/$defs/condicao" }
+  },
+  "$defs": {
+    "texto": { "type": ["string", "null"] },
+    "textoObrigatorio": { "type": "string", "minLength": 1 },
+    "listaTexto": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "claimId": { "type": ["string", "null"], "pattern": "^clm_[a-z0-9_]+$" },
+    "dataIso": { "type": ["string", "null"], "format": "date-time" },
+
+    "status": {
+      "enum": ["rascunho", "em_revisao", "aprovado", "publicado", "suspenso", "arquivado"]
+    },
+    "riskClass": { "enum": ["A", "B", "C"] },
+    "populacao": { "enum": ["adulto", "pediatrico", "gestante", "puerpera", "idoso"] },
+    "severidade": { "enum": ["grave", "precaucao", "informativo"] },
+    "destinoAlarme": {
+      "enum": ["sala_vermelha", "observacao", "internacao", "transferencia", "reavaliacao"]
+    },
+
+    "termo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["termo", "tipo", "peso", "testado"],
+      "properties": {
+        "termo": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "tipo": { "enum": ["canonico", "sinonimo", "popular", "abreviacao", "erro_comum", "regional"] },
+        "peso": { "type": "number", "minimum": 0, "maximum": 1 },
+        "justificativa": { "type": ["string", "null"], "maxLength": 200 },
+        "testado": { "type": "boolean" },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      }
+    },
+
+    "sinalAlarme": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "sinal", "por_que", "acao", "destino"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^AL-[0-9]{2}$" },
+        "sinal": { "type": "string", "minLength": 3 },
+        "por_que": { "type": "string", "minLength": 3 },
+        "acao": { "type": "string", "minLength": 3 },
+        "destino": { "$ref": "#/$defs/destinoAlarme" },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      }
+    },
+
+    "campoAnamnese": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "rotulo", "tipo", "obrigatoriedade", "exibicao", "porque"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^AN-[0-9]{2}$" },
+        "rotulo": { "type": "string", "minLength": 2 },
+        "tipo": { "enum": ["texto_curto", "texto_longo", "enum", "multienum", "booleano", "numero", "lista"] },
+        "obrigatoriedade": { "enum": ["O", "C", "F"] },
+        "exibicao": { "type": "string", "minLength": 3 },
+        "porque": { "type": "string", "minLength": 3 },
+        "opcoes": { "$ref": "#/$defs/listaTexto" }
+      }
+    },
+
+    "itemExameFisico": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bloco", "item", "obrigatoriedade", "porque"],
+      "properties": {
+        "bloco": { "enum": ["vitais", "geral", "segmentar", "negativos"] },
+        "item": { "type": "string", "minLength": 2 },
+        "obrigatoriedade": { "enum": ["O", "C", "F"] },
+        "porque": { "type": "string", "minLength": 3 },
+        "achado_que_muda_conduta": { "type": ["string", "null"] }
+      }
+    },
+
+    "dose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valor", "unidade"],
+      "properties": {
+        "valor": { "type": ["number", "null"], "minimum": 0 },
+        "unidade": { "type": "string", "minLength": 1 },
+        "por_kg": { "type": "boolean", "default": false }
+      }
+    },
+
+    "frequencia": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valor", "unidade"],
+      "properties": {
+        "valor": { "type": ["number", "null"], "minimum": 0 },
+        "unidade": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "duracao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valor", "unidade"],
+      "properties": {
+        "valor": { "type": ["number", "null"], "minimum": 0 },
+        "unidade": { "type": "string", "minLength": 1 },
+        "maxima": { "type": "boolean", "default": false }
+      }
+    },
+
+    "itemPrescricao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "classe", "item", "indicacao", "dose", "via", "frequencia", "duracao", "risk_class"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^(PA|PI)-[0-9]{2}$" },
+        "classe": { "enum": ["sintomatico", "antibiotico", "suporte", "resgate", "procedimento", "medida_nao_farmacologica"] },
+        "item": { "type": "string", "minLength": 2 },
+        "indicacao": { "type": "string", "minLength": 3 },
+        "dose": { "$ref": "#/$defs/dose" },
+        "via": { "enum": ["VO", "IV", "IM", "SC", "inalatoria", "topica", "retal", "sublingual", "outra"] },
+        "frequencia": { "$ref": "#/$defs/frequencia" },
+        "duracao": { "$ref": "#/$defs/duracao" },
+        "dose_maxima": { "oneOf": [{ "$ref": "#/$defs/dose" }, { "type": "null" }] },
+        "diluicao": { "type": ["string", "null"] },
+        "tempo_infusao": { "type": ["string", "null"] },
+        "ajustes": { "$ref": "#/$defs/listaTexto" },
+        "precaucoes": { "$ref": "#/$defs/listaTexto" },
+        "monitorizacao": { "$ref": "#/$defs/listaTexto" },
+        "alternativa_de": { "$ref": "#/$defs/listaTexto" },
+        "dupla_checagem": { "type": "boolean", "default": false },
+        "claim_id": { "$ref": "#/$defs/claimId" },
+        "risk_class": { "$ref": "#/$defs/riskClass" }
+      }
+    },
+
+    "medicacaoPrincipal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classe", "papel", "por_que", "quando_evitar"],
+      "properties": {
+        "classe": { "type": "string", "minLength": 2 },
+        "papel": { "enum": ["primeira_linha", "suporte", "resgate"] },
+        "por_que": { "type": "string", "minLength": 3 },
+        "quando_evitar": { "type": "string", "minLength": 3 },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      }
+    },
+
+    "alternativa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alternativa", "criterio_troca", "quando_nao_usar"],
+      "properties": {
+        "alternativa": { "type": "string", "minLength": 2 },
+        "criterio_troca": {
+          "enum": ["indisponivel_local", "alergia", "contraindicacao", "falha", "intolerancia", "custo", "preferencia_institucional"]
+        },
+        "quando_nao_usar": { "type": "string", "minLength": 3 },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      }
+    },
+
+    "ajuste": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["populacao", "dado_entrada", "regra", "monitorizacao", "risco"],
+      "properties": {
+        "populacao": { "enum": ["pediatrico", "gestante", "lactante", "renal", "hepatico", "obeso", "idoso", "cardiopata"] },
+        "dado_entrada": { "type": "string", "minLength": 2 },
+        "regra": { "type": "string", "minLength": 3 },
+        "monitorizacao": { "type": "string", "minLength": 3 },
+        "risco": { "type": "string", "minLength": 3 },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      }
+    },
+
+    "exame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "nome", "tipo", "indicacao", "prazo", "recurso"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^(EU|EC|EN|EV)-[0-9]{2}$" },
+        "nome": { "type": "string", "minLength": 2 },
+        "tipo": { "enum": ["urgencia", "complementar", "nao_rotineiro", "evitar"] },
+        "indicacao": { "type": "string", "minLength": 3 },
+        "o_que_muda": { "type": ["string", "null"] },
+        "prazo": { "type": "string", "minLength": 2 },
+        "recurso": { "enum": ["lab", "rx", "ecg", "us", "tc", "rm", "poc", "outro"] },
+        "codigos": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "tuss": { "type": ["string", "null"] },
+            "sigtap": { "type": ["string", "null"] },
+            "loinc": { "type": ["string", "null"] }
+          }
+        },
+        "motivo": { "type": ["string", "null"] },
+        "alternativa": { "type": ["string", "null"] },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "tipo": { "enum": ["urgencia", "complementar", "nao_rotineiro"] } }, "required": ["tipo"] },
+          "then": { "required": ["o_que_muda"], "properties": { "o_que_muda": { "type": "string", "minLength": 3 } } }
+        },
+        {
+          "if": { "properties": { "tipo": { "const": "evitar" } }, "required": ["tipo"] },
+          "then": { "required": ["motivo", "alternativa"] }
+        }
+      ]
+    },
+
+    "orientacao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "categoria", "texto", "obrigatoria"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^OR-[0-9]{2}$" },
+        "categoria": { "enum": ["cuidados", "medicacao", "alimentacao_hidratacao", "retorno", "sinais_de_alarme"] },
+        "texto": { "type": "string", "minLength": 5 },
+        "obrigatoria": { "type": "boolean" }
+      }
+    },
+
+    "documento": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "aplicavel"],
+      "properties": {
+        "tipo": { "enum": ["atestado", "declaracao_comparecimento", "declaracao_acompanhante", "encaminhamento", "transferencia"] },
+        "aplicavel": { "type": "boolean" },
+        "quando": { "type": ["string", "null"] },
+        "campos": { "$ref": "#/$defs/listaTexto" },
+        "observacao": { "type": ["string", "null"] }
+      }
+    },
+
+    "encaminhamento": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["destino", "criterio", "prioridade"],
+      "properties": {
+        "destino": { "enum": ["psf", "especialidade", "referencia_secundaria", "regulacao"] },
+        "criterio": { "type": "string", "minLength": 3 },
+        "prioridade": { "enum": ["eletiva", "prioritaria", "urgente"] },
+        "informacoes_minimas": { "$ref": "#/$defs/listaTexto" },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      }
+    },
+
+    "criterio": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "tipo", "descricao", "natureza", "verificacao"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^(CA|OB|TR)-[0-9]{2}$" },
+        "tipo": { "enum": ["alta", "observacao", "transferencia"] },
+        "descricao": { "type": "string", "minLength": 3 },
+        "natureza": { "enum": ["obrigatorio", "contraindicador"] },
+        "verificacao": { "type": "string", "minLength": 3 },
+        "tempo_minimo": { "type": ["string", "null"] },
+        "reavaliacao": { "type": ["string", "null"] },
+        "recurso_ausente": { "type": ["string", "null"] },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "tipo": { "const": "observacao" } }, "required": ["tipo"] },
+          "then": { "required": ["tempo_minimo", "reavaliacao"] }
+        }
+      ]
+    },
+
+    "alerta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "tipo", "gatilho", "severidade", "mensagem", "acao", "override_permitido"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^SA-[0-9]{2}$" },
+        "tipo": {
+          "enum": ["alergia", "dose_maxima", "gestacao", "renal", "hepatica", "interacao", "duplicidade", "monitorizacao", "recurso_local"]
+        },
+        "gatilho": { "type": "string", "minLength": 3 },
+        "severidade": { "$ref": "#/$defs/severidade" },
+        "mensagem": { "type": "string", "minLength": 5, "maxLength": 140 },
+        "acao": { "type": "string", "minLength": 3 },
+        "override_permitido": { "type": "boolean" },
+        "reason_codes": { "$ref": "#/$defs/listaTexto" }
+      }
+    },
+
+    "contraindicacao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["situacao", "conduta"],
+      "properties": {
+        "situacao": { "type": "string", "minLength": 3 },
+        "conduta": { "type": "string", "minLength": 3 },
+        "claim_id": { "$ref": "#/$defs/claimId" }
+      }
+    },
+
+    "dadoPaciente": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dado", "obrigatoriedade", "porque"],
+      "properties": {
+        "dado": { "type": "string", "minLength": 2 },
+        "obrigatoriedade": { "enum": ["O", "C", "F"] },
+        "porque": { "type": "string", "minLength": 3 },
+        "validacao": { "type": ["string", "null"] }
+      }
+    },
+
+    "fonte": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "tipo", "titulo", "versao", "data"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^src_[a-z0-9_]+$" },
+        "tipo": {
+          "enum": ["protocolo_institucional", "diretriz_sociedade", "protocolo_ms", "rename", "bula_anvisa", "base_interacoes", "regulacao", "norma", "farmacia", "literatura"]
+        },
+        "titulo": { "type": "string", "minLength": 3 },
+        "localizador": { "type": ["string", "null"] },
+        "versao": { "type": "string", "minLength": 1 },
+        "data": { "type": "string", "minLength": 4 },
+        "acessado_em": { "$ref": "#/$defs/dataIso" },
+        "hash": { "type": ["string", "null"] },
+        "trecho": { "type": ["string", "null"] }
+      }
+    },
+
+    "lacuna": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "bloco", "descricao", "impacto", "o_que_pesquisar", "bloqueia_publicacao"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^L-[0-9]{2}$" },
+        "bloco": { "type": "string", "minLength": 1 },
+        "descricao": { "type": "string", "minLength": 3 },
+        "impacto": { "enum": ["critico", "alto", "medio", "baixo"] },
+        "o_que_pesquisar": { "type": "string", "minLength": 3 },
+        "tipo_fonte": { "type": ["string", "null"] },
+        "responsavel": { "type": ["string", "null"] },
+        "bloqueia_publicacao": { "type": "boolean" }
+      }
+    },
+
+    "auditoria": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["autor", "crm_autor", "revisores", "versao", "datas", "changelog"],
+      "properties": {
+        "autor": { "type": "string", "minLength": 2 },
+        "crm_autor": { "type": "string", "minLength": 3 },
+        "revisores": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 2 },
+          "uniqueItems": true
+        },
+        "versao": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "datas": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "criacao": { "$ref": "#/$defs/dataIso" },
+            "aprovacao": { "$ref": "#/$defs/dataIso" },
+            "publicacao": { "$ref": "#/$defs/dataIso" }
+          }
+        },
+        "proxima_revisao": { "$ref": "#/$defs/dataIso" },
+        "changelog": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["versao", "descricao"],
+            "properties": {
+              "versao": { "type": "string" },
+              "descricao": { "type": "string", "minLength": 3 },
+              "data": { "$ref": "#/$defs/dataIso" }
+            }
+          }
+        },
+        "hash_conteudo": { "type": ["string", "null"] }
+      }
+    },
+
+    "condicao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "status", "risk_class", "nome_canonico", "nome_exibicao", "slug",
+        "cid10", "definicao_operacional", "populacao", "escopo", "termos_busca",
+        "sinais_alarme", "anamnese", "exame_fisico", "prescricoes",
+        "medicacoes_principais", "alternativas", "ajustes", "exames",
+        "orientacoes", "documentos", "encaminhamentos", "criterios",
+        "alertas", "contraindicacoes", "dados_paciente", "fontes", "auditoria", "lacunas"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^cond_[a-z0-9_]+$" },
+        "status": { "$ref": "#/$defs/status" },
+        "risk_class": { "$ref": "#/$defs/riskClass" },
+        "nome_canonico": { "type": "string", "minLength": 3, "maxLength": 120 },
+        "nome_exibicao": { "type": "string", "minLength": 3, "maxLength": 60 },
+        "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+        "cid10": { "type": "array", "items": { "type": "string", "pattern": "^([A-Z][0-9]{2}(\\.[0-9]{1,2})?|«[^»]+»)$" }, "minItems": 1 },
+        "especialidade": { "type": ["string", "null"] },
+        "populacao": { "type": "array", "items": { "$ref": "#/$defs/populacao" }, "minItems": 1, "uniqueItems": true },
+        "definicao_operacional": { "type": "string", "minLength": 20, "maxLength": 600 },
+        "escopo": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["inclusoes", "exclusoes", "diferenciais"],
+          "properties": {
+            "inclusoes": { "$ref": "#/$defs/listaTexto" },
+            "exclusoes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["item", "condicao_alternativa"],
+                "properties": {
+                  "item": { "type": "string", "minLength": 2 },
+                  "condicao_alternativa": { "type": "string", "minLength": 2 },
+                  "observacao": { "type": ["string", "null"] }
+                }
+              }
+            },
+            "diferenciais": { "$ref": "#/$defs/listaTexto" }
+          }
+        },
+        "termos_busca": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["canonico", "termos"],
+          "properties": {
+            "canonico": { "type": "string", "minLength": 3 },
+            "termos": { "type": "array", "items": { "$ref": "#/$defs/termo" } }
+          }
+        },
+        "sinais_alarme": { "type": "array", "items": { "$ref": "#/$defs/sinalAlarme" } },
+        "anamnese": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["campos", "texto_template"],
+          "properties": {
+            "campos": { "type": "array", "items": { "$ref": "#/$defs/campoAnamnese" } },
+            "texto_template": { "type": "string", "minLength": 10 },
+            "negativos_relevantes": { "$ref": "#/$defs/listaTexto" }
+          }
+        },
+        "exame_fisico": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["itens"],
+          "properties": {
+            "itens": { "type": "array", "items": { "$ref": "#/$defs/itemExameFisico" } },
+            "achados_negativos": { "$ref": "#/$defs/listaTexto" }
+          }
+        },
+        "prescricoes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ambulatorial", "intrahospitalar"],
+          "properties": {
+            "ambulatorial": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["itens"],
+              "properties": { "itens": { "type": "array", "items": { "$ref": "#/$defs/itemPrescricao" } } }
+            },
+            "intrahospitalar": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["itens"],
+              "properties": { "itens": { "type": "array", "items": { "$ref": "#/$defs/itemPrescricao" } } }
+            }
+          }
+        },
+        "medicacoes_principais": { "type": "array", "items": { "$ref": "#/$defs/medicacaoPrincipal" } },
+        "alternativas": { "type": "array", "items": { "$ref": "#/$defs/alternativa" } },
+        "ajustes": { "type": "array", "items": { "$ref": "#/$defs/ajuste" } },
+        "exames": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["urgencia", "complementares", "nao_rotineiros", "evitar"],
+          "properties": {
+            "urgencia": { "type": "array", "items": { "$ref": "#/$defs/exame" } },
+            "complementares": { "type": "array", "items": { "$ref": "#/$defs/exame" } },
+            "nao_rotineiros": { "type": "array", "items": { "$ref": "#/$defs/exame" } },
+            "evitar": { "type": "array", "items": { "$ref": "#/$defs/exame" } }
+          }
+        },
+        "orientacoes": { "type": "array", "items": { "$ref": "#/$defs/orientacao" } },
+        "documentos": { "type": "array", "items": { "$ref": "#/$defs/documento" } },
+        "encaminhamentos": { "type": "array", "items": { "$ref": "#/$defs/encaminhamento" } },
+        "criterios": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["alta", "observacao", "transferencia"],
+          "properties": {
+            "alta": { "type": "array", "items": { "$ref": "#/$defs/criterio" } },
+            "observacao": { "type": "array", "items": { "$ref": "#/$defs/criterio" } },
+            "transferencia": { "type": "array", "items": { "$ref": "#/$defs/criterio" } }
+          }
+        },
+        "alertas": { "type": "array", "items": { "$ref": "#/$defs/alerta" } },
+        "contraindicacoes": { "type": "array", "items": { "$ref": "#/$defs/contraindicacao" } },
+        "dados_paciente": { "type": "array", "items": { "$ref": "#/$defs/dadoPaciente" } },
+        "fontes": { "type": "array", "items": { "$ref": "#/$defs/fonte" } },
+        "auditoria": { "$ref": "#/$defs/auditoria" },
+        "lacunas": { "type": "array", "items": { "$ref": "#/$defs/lacuna" } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "publicado" } }, "required": ["status"] },
+          "then": {
+            "properties": {
+              "nome_canonico": { "not": { "pattern": "«" } },
+              "definicao_operacional": { "not": { "pattern": "«" } },
+              "cid10": { "items": { "not": { "pattern": "«" } } },
+              "termos_busca": {
+                "properties": { "termos": { "minItems": 5 } }
+              },
+              "sinais_alarme": { "minItems": 3 },
+              "anamnese": { "properties": { "campos": { "minItems": 1 } } },
+              "exame_fisico": { "properties": { "itens": { "minItems": 1 } } },
+              "criterios": {
+                "properties": { "alta": { "minItems": 1 } }
+              },
+              "alertas": { "minItems": 1 },
+              "dados_paciente": { "minItems": 1 },
+              "fontes": { "minItems": 2 },
+              "auditoria": {
+                "properties": {
+                  "revisores": { "minItems": 2 },
+                  "proxima_revisao": { "type": "string" }
+                }
+              },
+              "lacunas": {
+                "items": { "properties": { "bloqueia_publicacao": { "const": false } } }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

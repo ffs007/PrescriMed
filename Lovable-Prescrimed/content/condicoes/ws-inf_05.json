@@ -1,0 +1,583 @@
+{
+  "id": "ws-inf_05",
+  "nome": "Tuberculose",
+  "cat": "Infectologia",
+  "alias": "tuberculose tuberculose tb tuberculose pulmonar bacilifero tb latente infeccao latente por tuberculose iltb tuberculose resistente",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (INF-05_tuberculose.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] ministerio_da_saude: esquema básico, tabela de peso do comprimido de dose fixa combinada, doses e critérios de retratamento",
+      "[verificar] ministerio_da_saude: tratamento da tuberculose latente, incluindo isoniazida por 6 a 9 meses e rifapentina com isoniazida semanal",
+      "[verificar] oms: esquemas de tuberculose resistente com bedaquilina, linezolida e fluoroquinolona e critérios do esquema curto",
+      "[verificar] protocolo_institucional: fluxo de isolamento aerossol, notificação no SINAN e busca de contatos",
+      "[verificar] anvisa: apresentações e diluições de rifampicina, isoniazida e etambutol disponíveis no serviço",
+      "[verificar] literatura: manejo da hepatotoxicidade, interações da rifampicina com antirretrovirais e papel da piridoxina"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "INF-05 em 2026-11-27",
+    "fundido_workspace": "INF-05 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hemoptise volumosa ou sangue vivo em via aérea -> hospitalizar, decúbito lateral do lado do sangramento, broncoscopia e embolização; rebaixamento de consciência, cefaleia intensa ou rigidez de nuca -> punção lombar, RIPE imediato e prednisona; dispneia em repouso, saturação abaixo de 90% ou cianose -> hospitalizar, oxigênio e investigação de forma disseminada; resistência à rifampicina detectada no TRM-TB -> não iniciar RIPE e encaminhar no mesmo dia ao centro de referência. 1) Identificar o sintomático respiratório: tosse por três semanas ou mais, com febre, sudorese noturna e perda de peso 2) Colher TRM-TB e cultura com teste de sensibilidade, mais radiografia de tórax, antes de qualquer prescrição 3) Solicitar teste de HIV, sorologias de hepatite B e C, hemograma, transaminases, bilirrubinas, ureia e creatinina 4) Se TRM-TB positivo e sensível à rifampicina, iniciar o esquema básico com comprimido de dose fixa combinada e notificar no SINAN 5) Se TRM-TB com resistência à rifampicina, não iniciar RIPE e encaminhar no mesmo dia ao centro de referência 6) Se TRM-TB negativo e suspeita mantida, aguardar cultura e repetir a coleta; não tratar empiricamente enquanto houver alternativa de coleta 7) Antes da primeira dose, revisar interações: ajustar dolutegravir para 12/12 h, suspender cobicistate, trocar anticoncepcional oral e revisar anticoagulante e anticonvulsivante 8) Prescrever piridoxina conforme o risco de neuropatia e orientar sobre urina alaranjada e ",
+  "redFlags": [
+    "hemoptise volumosa ou sangue vivo em via aérea -> hospitalizar, decúbito lateral do lado do sangramento, broncoscopia e embolização",
+    "rebaixamento de consciência, cefaleia intensa ou rigidez de nuca -> punção lombar, RIPE imediato e prednisona",
+    "dispneia em repouso, saturação abaixo de 90% ou cianose -> hospitalizar, oxigênio e investigação de forma disseminada",
+    "resistência à rifampicina detectada no TRM-TB -> não iniciar RIPE e encaminhar no mesmo dia ao centro de referência",
+    "icterícia, vômitos persistentes ou dor em hipocôndrio direito em uso de RIPE -> suspender as três drogas hepatotóxicas, dosar transaminases e bilirrubinas",
+    "parestesia, queimação em pés ou fraqueza distal em uso de isoniazida -> iniciar ou subir piridoxina e reavaliar a manutenção da isoniazida",
+    "perda de visão ou dificuldade para distinguir vermelho e verde em uso de etambutol -> suspender etambutol e avaliação oftalmológica imediata",
+    "febre que retorna ou piora radiológica após o segundo mês de esquema -> colher cultura com teste de sensibilidade e reavaliar adesão"
+  ],
+  "naoUsar": [
+    "hepatite aguda grave ou icterícia",
+    "hipersensibilidade a rifamicina",
+    "uso de inibidor de protease ou cobicistate sem ajuste",
+    "porfiria aguda intermitente",
+    "hepatite aguda ativa",
+    "hipersensibilidade a hidrazida",
+    "neurite periférica grave não tratada",
+    "reações convulsivas prévias ao fármaco"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar todas as doses no mesmo horário, sem interromper por melhora"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "beber álcool durante o tratamento"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Pirazinamida",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "pirazinamida",
+              "n": "Pirazinamida",
+              "ap": "comprimido 500 mg",
+              "q": "",
+              "pos": "25 a 35 mg/kg, ou 1.500 mg para peso entre 51 e 70 kg. Via VO. 1x/dia. 2 meses, apenas na fase intensiva."
+            },
+            "motivo": "fase intensiva do esquema básico, com ação sobre bacilos em meio ácido e formas intracelulares (1a linha) tuberculose sensível confirmada, antes do resultado de cultura",
+            "nota": "Uso direto por via oral, em jejum ou com alimento leve se houver intolerância - monitorar: transaminases quinzenais no primeiro mês e mensais depois; monitorar: ácido úrico e queixa de dor articular; monitorar: glicemia em diabético; monitorar: sinais de hepatite · NÃO: hepatopatia grave ou hepatite aguda; gota com crise ativa; hipersensibilidade; porfiria aguda intermitente · Obs: É a droga mais hepatotóxica do esquema básico e a que mais causa hiperuricemia; artralgia leve não justifica suspensão, mas gota com crise sim · Renal: Com clearance abaixo de 30 mL/min, reduzir a dose ou usar em dias alternados; em…",
+            "dose": {
+              "texto": "25 a 35 mg/kg, ou 1.500 mg para peso entre 51 e 70 kg; 1x/dia; 2 meses, apenas na fase intensiva; max. 2.000 mg/dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 35,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Diamino alcool",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "etambutol",
+              "n": "Etambutol",
+              "ap": "comprimido 400 mg",
+              "q": "",
+              "pos": "15 a 20 mg/kg, ou 1.200 mg para peso acima de 50 kg. Via VO. 1x/dia. 2 meses, na fase intensiva."
+            },
+            "motivo": "fase intensiva do esquema básico, protegendo contra seleção de resistência antes do resultado de sensibilidade (1a linha) tuberculose sensível confirmada, antes do resultado de cultura",
+            "nota": "Uso direto por via oral, com ou sem alimento - monitorar: acuidade visual e visão de cores antes de iniciar e mensalmente; monitorar: ácido úrico se artralgia; monitorar: função renal para ajuste de dose; monitorar: sintomas de neuropatia · NÃO: neurite óptica prévia ou em atividade; incapacidade de relatar sintomas visuais; insuficiência renal grave sem ajuste · Obs: A toxicidade ocular é dose e tempo dependentes e regride se a droga for suspensa cedo; perguntar ativamente sobre visão turva e dificuldade com cores em toda consulta · Renal: Com clearance abaixo de 30 mL/min, usar 15 mg/kg em dias alternados ou três vezes por…",
+            "dose": {
+              "texto": "15 a 20 mg/kg, ou 1.200 mg para peso acima de 50 kg; 1x/dia; 2 meses, na fase intensiva; max. 1.600 mg/dia",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": 20,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1600,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Rifamicina longa ação",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "rifapentina",
+              "n": "Rifapentina",
+              "ap": "comprimido 150 mg",
+              "q": "",
+              "pos": "900 mg (10 a 15 mg/kg, máximo 900 mg) uma vez por semana, com isoniazida 900 mg no mesmo dia. Via VO. 1x/semana, com diretamente observado. 12 semanas (12 doses)."
+            },
+            "motivo": "tratamento da tuberculose latente em esquema semanal de 12 doses associado à isoniazida (3HP) (alternativa) tuberculose latente em quem não é gestante e aceita esquema semanal observado",
+            "nota": "Uso direto por via oral, com alimento para melhorar a absorção - monitorar: transaminases basais e em caso de sintomas; monitorar: adesão às 12 doses semanais; monitorar: sinais de reação de hipersensibilidade nas primeiras doses; monitorar: hemograma se uso prolongado · NÃO: tuberculose ativa; gestação; menores de 2 anos; clearance abaixo de 30 mL/min; uso de antirretroviral incompatível · Obs: Tem meia-vida longa e permite esquema semanal, o que melhora adesão; não é intercambiável com a rifampicina no tratamento da doença ativa · Renal: Evitar com clearance abaixo de 30 mL/min; em diálise, não recomendada",
+            "dose": {
+              "texto": "900 mg (10 a 15 mg/kg, máximo 900 mg) uma vez por semana, com isoniazida 900 mg no mesmo dia; 1x/semana, com diretamente observado; 12 semanas (12 doses); max. 900 mg por semana",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 15,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 900,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dimenidrinato",
+            "pos": "50 mg/dia; 100 a 150 mg/dia em HIV, diabetes, alcoolismo, desnutrição, gestação, insuficiência renal ou uso de anticonvulsivante. Via VO. 1x/dia. Durante todo o esquema com isoniazida.",
+            "posTodas": true,
+            "motivo": "prevenção e tratamento da neuropatia periférica induzida por isoniazida em paciente com fator de risco (condicional) risco de neuropatia por isoniazida",
+            "nota": "Uso direto por via oral - monitorar: pesquisa de parestesia e queimação plantar a cada consulta; monitorar: adesão ao suplemento junto com a isoniazida",
+            "dose": {
+              "texto": "50 mg/dia; 100 a 150 mg/dia em HIV, diabetes, alcoolismo, desnutrição, gestação, insuficiência renal ou uso de anticonvulsivante; 1x/dia; durante todo o esquema com isoniazida; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": 150,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Diarilquinolina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "bedaquilina",
+              "n": "Bedaquilina",
+              "ap": "comprimido 100 mg",
+              "q": "",
+              "pos": "400 mg/dia por 14 dias e depois 200 mg três vezes por semana. Via VO. 1x/dia nas duas primeiras semanas; depois 3x/semana em dias alternados. 6 meses no esquema curto de resistência."
+            },
+            "motivo": "esquema de tuberculose multirresistente, incluindo o esquema curto com bedaquilina, pretomanida, linezolida e moxifloxacino (resgate)",
+            "nota": "Uso direto por via oral, com refeição para melhorar a absorção - monitorar: ECG seriado, com QT corrigido antes de iniciar e a cada duas semanas; monitorar: potássio, magnésio e cálcio antes e durante; monitorar: transaminases mensais; monitorar: amilase e lipase se dor abdominal · NÃO: QT corrigido acima de 500 ms; arritmia ventricular; insuficiência hepática grave; uso concomitante de outros fármacos que prolongam o QT sem monitorização · Obs: Tem meia-vida longa e efeito cardíaco acumulativo; corrigir potássio e magnésio antes de cada ECG e revisar toda prescrição procurando drogas que também prolongam o QT",
+            "dose": {
+              "texto": "400 mg/dia por 14 dias e depois 200 mg três vezes por semana; 1x/dia nas duas primeiras semanas; depois 3x/semana em dias alternados; 6 meses no esquema curto de resistência; max. 400 mg/dia",
+              "status": "ok",
+              "valor": 400,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "por 14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Tratamento diretamente observado (DOT)",
+              "ap": "",
+              "q": "",
+              "pos": "Observar a tomada de cada dose em dias úteis, com registro em ficha própria; nos fins de semana, permitir dose autoadministrada com conferência na segunda-feira e contagem de comprimidos"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Isolamento com precaução de aerossol na forma pulmonar ou laríngea",
+              "ap": "",
+              "q": "",
+              "pos": "Quarto individual com ventilação, porta fechada; máscara cirúrgica no paciente fora do quarto, PFF2 ou N95 na equipe; manter até 15 dias de esquema eficaz com melhora clínica e negativação da baciloscopia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Investigação de contatos domiciliares e institucionais",
+              "ap": "",
+              "q": "",
+              "pos": "Entrevistar o caso índice, listar conviventes das últimas semanas, sintomáticos respiratórios fazem TRM-TB e cultura; assintomáticos fazem prova tuberculínica e radiografia, com tratamento de tuberculose latente se indicado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Notificação compulsória no SINAN e encerramento do caso",
+              "ap": "",
+              "q": "",
+              "pos": "Preencher a ficha de tuberculose na consulta de início, com baciloscopia, cultura, TRM-TB, HIV e testagem de contatos; encerrar como cura, abandono, óbito ou transferência ao final"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Orientação nutricional e controle de comorbidades",
+              "ap": "",
+              "q": "",
+              "pos": "Avaliar peso e índice de massa corporal a cada consulta; tratar desnutrição, diabetes e tabagismo, que pioram o desfecho e a adesão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Testagem de HIV e de hepatites virais em todo caso",
+              "ap": "",
+              "q": "",
+              "pos": "Teste rápido de HIV na primeira consulta, com carga viral e CD4 se positivo; sorologias de hepatite B e C para decidir profilaxia e ajuste do esquema"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Contracepção adequada durante o esquema",
+              "ap": "",
+              "q": "",
+              "pos": "Revisar método contraceptivo antes da primeira dose; trocar anticoncepcional oral por dispositivo intrauterino, injetável trimestral ou preservativo enquanto durar a rifampicina"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Educação sobre efeitos adversos e sinais de retorno",
+              "ap": "",
+              "q": "",
+              "pos": "Explicar que a urina fica alaranjada, que a febre pode persistir por duas semanas e que icterícia, vômitos, dor ocular ou formigamento exigem retorno imediato, não interrupção por conta própria"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Busca ativa de faltosos",
+              "ap": "",
+              "q": "",
+              "pos": "Contato telefônico em até 48 horas da falta e visita domiciliar em até uma semana; faltas repetidas indicam necessidade de esquema alternativo com DOT e avaliação de uso de álcool e drogas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-05"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Rifamicina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "rifampicina",
+              "n": "Rifampicina",
+              "ap": "cápsula 300 mg",
+              "via": "VO (IV disponível em formas graves)",
+              "pos": "10 mg/kg, ou 600 mg fixos para peso acima de 50 kg. Via VO (IV disponível em formas graves). 1x/dia, em jejum. 6 meses no esquema básico (2 meses na fase intensiva e 4 na manutenção); 9 meses na meningite."
+            },
+            "motivo": "componente do esquema básico em todas as fases do tratamento da tuberculose sensível (1a linha) tuberculose sensível confirmada, antes do resultado de cultura",
+            "nota": "Uso direto por via oral, em jejum, uma hora antes ou duas horas depois da refeição; na via intravenosa, reconstituir em água para injeção e diluir em 100 mL de soro glicosado 5% - monitorar: transaminases e bilirrubinas basais, mensais e sempre que houver sintomas digestivos; monitorar: hemograma mensal em uso prolonga · NÃO: hepatite aguda grave ou icterícia; hipersensibilidade a rifamicina; uso de inibidor de protease ou cobicistate sem ajuste; porfiria aguda intermitente · Obs: É o indutor enzimático mais importante do esquema e o principal responsável por interações: reduz antirretrovirais, anticoncepcional oral,…",
+            "dose": {
+              "texto": "10 mg/kg, ou 600 mg fixos para peso acima de 50 kg; 1x/dia, em jejum; 6 meses no esquema básico (2 meses na fase intensiva e 4 na manutenção); 9 meses na meningite; max. 600 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 600,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Hidrazida",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "isoniazida",
+              "n": "Isoniazida",
+              "ap": "comprimido 100 mg",
+              "via": "VO (IM ou IV em formas graves e intolerância digestiva)",
+              "pos": "5 mg/kg, ou 300 mg fixos para adulto. Via VO (IM ou IV em formas graves e intolerância digestiva). 1x/dia, em jejum. 6 meses no esquema básico; 6 a 9 meses na tuberculose latente."
+            },
+            "motivo": "componente do esquema básico e tratamento da tuberculose latente (1a linha) tuberculose sensível confirmada, antes do resultado de cultura",
+            "nota": "Uso direto por via oral, em jejum; na via intramuscular, reconstituir conforme a apresentação e aplicar em glúteo - monitorar: transaminases basais e mensais; monitorar: pesquisa de parestesia, queimação em pés e fraqueza distal a cada consulta; monitorar: sintomas neuropsiquiátricos: insônia, irritabilidade, psicose;  · NÃO: hepatite aguda ativa; hipersensibilidade a hidrazida; neurite periférica grave não tratada; reações convulsivas prévias ao fármaco · Obs: Sempre associar piridoxina em paciente com risco de neuropatia. A acetilação hepática varia entre indivíduos e explica a diferença de tolerância entre pacientes",
+            "dose": {
+              "texto": "5 mg/kg, ou 300 mg fixos para adulto; 1x/dia, em jejum; 6 meses no esquema básico; 6 a 9 meses na tuberculose latente; max. 300 mg/dia (900 mg em dose semanal no esquema com rifapentina)",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Fluoroquinolona",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "levofloxacino_ev",
+            "motivo": "esquema de tuberculose resistente e substituição em hepatotoxicidade quando o esquema precisa ser reduzido (alternativa)",
+            "nota": "Uso direto por via oral, longe de antiácido, ferro, cálcio e zinco; na via intravenosa, infundir sem diluição adicional - monitorar: ECG se risco de QT; monitorar: queixa de dor em tendão, sobretudo Aquiles; monitorar: glicemia em diabético; monitorar: função renal para ajuste de dose; monitorar: transaminases · NÃO: tendinopatia prévia por quinolona; alargamento de QT; gestação sem indicação de referência; menores de 18 anos fora de esquema de referência · Obs: Só deve ser prescrito em conjunto com centro de referência para resistência; uso isolado ou indiscriminado seleciona resistência e compromete o único esquema curto…",
+            "dose": {
+              "texto": "750 a 1.000 mg/dia; 1x/dia; conforme o esquema de resistência, habitualmente 6 a 18 meses; max. 1.000 mg/dia",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": 1000,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticosteroide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "prednisona",
+              "n": "Prednisona",
+              "ap": "comprimido 5 mg",
+              "via": "VO (metilprednisolona IV se vômitos ou rebaixamento)",
+              "pos": "1 mg/kg/dia (40 a 60 mg/dia) na meningite; 0,5 a 1 mg/kg/dia na pericardite. Via VO (metilprednisolona IV se vômitos ou rebaixamento). 1x/dia pela manhã. 4 a 8 semanas, com desmame gradual."
+            },
+            "motivo": "tuberculose meníngea e pericardite tuberculosa, associada ao esquema antituberculose (condicional) meningite ou pericardite tuberculosa, com desmame em 4 a 8 semanas",
+            "nota": "Uso direto por via oral, pela manhã, com alimento - monitorar: glicemia; monitorar: pressão arterial; monitorar: sinais de sangramento digestivo; monitorar: humor e sono; monitorar: força muscular · NÃO: infecção fúngica sistêmica não tratada; tuberculose sem cobertura antituberculose adequada; úlcera péptica com sangramento ativo · Obs: Só tem indicação na meningite e na pericardite; não é rotina na tuberculose pulmonar. Iniciar junto com o esquema, nunca antes dele",
+            "dose": {
+              "texto": "1 mg/kg/dia (40 a 60 mg/dia) na meningite; 0,5 a 1 mg/kg/dia na pericardite; 1x/dia pela manhã; 4 a 8 semanas, com desmame gradual; max. 60 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 60,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Oxazolidinona",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "linezolida",
+              "n": "Linezolida",
+              "ap": "comprimido 600 mg",
+              "via": "VO (IV em intolerância digestiva)",
+              "pos": "600 mg/dia. Via VO (IV em intolerância digestiva). 1x/dia. 2 a 6 meses, conforme o esquema de resistência. 30 a 120 minutos por via intravenosa."
+            },
+            "motivo": "tuberculose multirresistente ou extensivamente resistente em esquema combinado de referência (resgate)",
+            "nota": "Uso direto por via oral; na via intravenosa, infundir a solução pronta sem diluição - monitorar: hemograma semanal; monitorar: acuidade visual e sintomas de neuropatia; monitorar: ácido lático se náusea, taquipneia ou dor muscular; monitorar: glicemia; monitorar: interações serotoninérgicas com antidepressivo · NÃO: uso de inibidor da monoaminoxidase; neutropenia ou trombocitopenia graves; hipersensibilidade · Obs: Nunca é usado isolado nem em monoterapia; a toxicidade hematológica e neurológica exige monitorização semanal e limita a duração",
+            "dose": {
+              "texto": "600 mg/dia; 1x/dia; 2 a 6 meses, conforme o esquema de resistência; max. 600 mg/dia",
+              "status": "ok",
+              "valor": 600,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 600,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "INF-05",
+    "versao": "0.2.0",
+    "arquivo": "INF-05_tuberculose.json",
+    "area": "Infectologia",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

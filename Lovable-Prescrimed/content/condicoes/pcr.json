@@ -1,0 +1,206 @@
+{
+  "id": "leg_2004",
+  "nome": "Parada Cardiorrespiratória",
+  "cat": "Emergência",
+  "alias": "pcr rcp parada cardiaca reanimacao desfibrilacao",
+  "cid": [
+    [
+      "I469",
+      "Parada cardíaca"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "AHA/ILCOR 2020-2025 — BLS/ALS",
+      "AMIB — RCP"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "CAR-11 em 2026-11-27",
+    "fundido_workspace": "CAR-11 em 2026-11-27"
+  },
+  "alerta": "Ciclos de 2 min SEM pausas: compressões 100–120/min, profundidade 5–6 cm, reavaliação de ritmo a cada 2 min com troca de compressor. FV/TV sem pulso: CHOQUE 200 J bifásico imediato (energia máxima) + 5 ciclos → 2º choque + adrenalina 1 mg EV → 3º choque + amiodarona 300 mg EV bolus (2ª dose 150 mg). Atividade sem pulso/assistolia: adrenalina 1 mg EV a cada 3–5 min desde o 1º ciclo. Via aérea: IOT ou supraglótica com capnografia (PetCO2 > 10 confirma RCP eficaz). 5H/5T: hipóxia, hipovolemia, H+/acidose, hipo/hipercalemia, hipotermia; tensão (pneumotórax), tamponamento, toxinas, trombose coronária, trombose pulmonar. Reversíveis rápidos: glicose, K+, TCE? Causa: overdosagem opioide → naloxona. Fim: ROSC → cuidados pós (ventilação SpO2 94–98, PAM ≥ 65, ECG 12 derivações, alvo de temperatura).",
+  "redFlags": [
+    "PetCO2 < 10 após 2 min de RCP — compressões ineficazes ou ROSC impossível: trocar compressor/rever técnica",
+    "Ritmo organizado com pulso não palpável — PEA: continuar e caçar 5H/5T (ultrafoco se disponível)",
+    "PCR em jovem/desportista — cardiopatia estrutural: ECMO/ICP de discussão imediata",
+    "PCR testemunhada com desfibrilador ao alcance — CHOQUE PRIMEIRO (a cada minuto sem choque cai 7–10% de sobrevida)",
+    "Hipercalemia/ intoxicação como causa — revertêvel: tratar durante a RCP",
+    "Grávida > 20 semanas — RCP com deslocamento uterino à esquerda e cesárea perimortal a partir de 4 min"
+  ],
+  "naoUsar": [
+    "Atropina na assistolia (não tem papel)",
+    "Bicarbonato de rotina (só hipercalemia/TCA/intoxicação com acidose grave documentada)",
+    "Corticoide/vasopressina em bolus alto na RCP de rotina",
+    "Pausas > 10 s para qualquer procedimento — adiagnosticar após ritmo"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Drogas da RCP",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "adrenalina_im",
+            "motivo": "Adrenalina 1 mg EV (diluir 1 mg em 9 mL SF) a cada 3–5 min — todas as causas"
+          },
+          {
+            "linha": 1,
+            "hosp": "glicose50",
+            "motivo": "Hipoglicemia como causa/contusão miocárdica pós-ROSC: 40–100 mL EV conforme glicemia"
+          },
+          {
+            "hosp": "naloxona",
+            "motivo": "0,4–2 mg EV repetido — intoxicação opioide como causa"
+          },
+          {
+            "hosp": "tiamina_ev",
+            "motivo": "200–300 mg EV antes de glicose no alcoolista (Wernicke)"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações (ROSC / família)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Pós-ROSC",
+              "ap": "",
+              "pos": "Internação obrigatória (UTI preferencial): alvo de temperatura, ECG seriado, coronariografia se IAM causa, retirada de antiarrítmico só com monitorização. NÃO há alta do PS após ROSC."
+            },
+            "motivo": "Fluxo correto"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Família — comunicação",
+              "ap": "",
+              "pos": "Informar tempo de parada e prognóstico com honestidade; discussão de objetivos de terapia; se óbito: declaração, network de apoio e (se causa cardíaca < 40 anos) rastreio familiar em cardiogenética."
+            },
+            "motivo": "Humanização e rastreio familiar"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Compressão torácica de alta qualidade",
+              "ap": "",
+              "q": "",
+              "pos": "Frequência de 100–120/min, profundidade de 5–6 cm no adulto, retorno completo do tórax entre as compressões, mãos no centro do tórax, operador trocado a cada 2 minutos para não perder profundidade"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Minimizar interrupções",
+              "ap": "",
+              "q": "",
+              "pos": "Pausa menor que 10 segundos, idealmente menor que 5 segundos na troca de operador e no choque; carregar o desfibrilador antes de encostar as pás"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Relação 30:2 sem via aérea avançada",
+              "ap": "",
+              "q": "",
+              "pos": "30 compressões para 2 ventilações com bolsa-máscara; com via aérea avançada, compressões contínuas e 1 ventilação a cada 6 segundos (10/min), sem pausar a compressão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Ventilação sem hiperventilação",
+              "ap": "",
+              "q": "",
+              "pos": "Volume de 500–600 mL (6 mL/kg), 1 segundo por ventilação, apenas até o tórax elevar; hiperventilação eleva a pressão intratorácica e derruba o retorno venoso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Desfibrilação precoce",
+              "ap": "",
+              "q": "",
+              "pos": "Pás anterolateral, gel ou pás adesivas, 120–200 J no bifásico (usar a carga máxima do aparelho quando não especificada) e 360 J no monofásico; segunda carga igual ou maior"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Capnografia contínua",
+              "ap": "",
+              "q": "",
+              "pos": "EtCO2 acima de 10 mmHg confirma compressão eficaz e tubo na traqueia; queda abrupta indica deslocamento do tubo ou perda de débito; salto para 40 mmHg ou mais sugere retorno da circulação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Controle de temperatura pós-parada",
+              "ap": "",
+              "q": "",
+              "pos": "Paciente em coma após retorno da circulação: alvo de 32–36 °C por pelo menos 24 h, com resfriamento ativo ou prevenção de febre, sonda esofágica ou vesical e prevenção de calafrios"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Posicionamento e dispositivo na gestante",
+              "ap": "",
+              "q": "",
+              "pos": "Deslocamento uterino manual para a esquerda e inclinação lateral de 15–30 graus após 20 semanas; compressão na mesma profundidade e frequência"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Organização da equipe e documentação",
+              "ap": "",
+              "q": "",
+              "pos": "Definir líder, quem comprime, quem ventila, quem administra drogas e quem registra o tempo; anotar horário de cada choque, dose e ritmo em quadro visível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-11"
+      }
+    ]
+  }
+}

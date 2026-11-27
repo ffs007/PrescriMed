@@ -1,0 +1,139 @@
+{
+  "id": "leg_2010",
+  "nome": "Hemorragia Digestiva",
+  "cat": "Emergência",
+  "alias": "hda hdb hematemeses melena hematoquesia sangramento digestivo vomito com sangue fezes pretas",
+  "cid": [
+    [
+      "K922",
+      "Hemorragia gastrintestinal"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "AALSD/BG — varizes",
+      "BNF/Internacional — HDA",
+      "Glasgow-Blatchford score"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Dois acessos calibrosos + soro: hipovolêmia agressiva com sangue assim que tipado (cristaloide para não piorar coagulopatia por diluição). Hemograma + tipagem + reserva (2 CH), INR/TTPa, ureia/creatinina, lactato. Glasgow-Blatchford para estratificar (0 = alta com endoscopia ambulatorial possível). IBP: omeprazol/pantoprazol 80 mg EV bolus + 8 mg/h (úlcera sangrante). Suspeita varicosa (cirrose/hepatopatia): ceftriaxona 1 g EV/dia (reduce mortalidade) + terlipressina se sangramento ativo (não no cadastro — discutir disponibilidade) + endoscopia em até 12 h. Não-varicosa: endoscopia ≤ 24 h. Anticoagulados: reverter conforme agente (vitamina K/PCC — farmácia). Transfusão gatilho Hb < 7 g/dL (8 se coronariopatia/instável). Sem SNG rotineiramente.",
+  "redFlags": [
+    "Hematoquesia + hipotensão — sangramento baixo maciço:cirúrgico/intervencionista JÁ",
+    "Hematêmese com cirrose conhecida — varicosa: ceftriaxona + endoscopia ≤ 12 h",
+    "Glasgow-Blatchford ≥ 12 ou sinais de choque — internação/endoscopia urgente",
+    "Paciente anticoagulado/antiagregado — reverter em conjunto com o endoscopista",
+    "Hb normal NÃO exclui sangramento agudo (hemoconcentração demora)",
+    "Vômitos repetidos + hematêmese pequena — laceração de Mallory-Weiss: costuma cessar sozinha"
+  ],
+  "naoUsar": [
+    "Volume excessivo de cristaloide (dilui fatores de coagulação)",
+    "Transfusão de sangue com Hb > 7–8 estável (sobrecarga/mortalidade)",
+    "AINEs e antiagregantes até endoscopia definir",
+    "SNG de rotina (paciente desconfortável, sem mudar conduta)"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "IBP EV em bolus + infusão",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "omeprazol_ev",
+            "motivo": "80 mg EV bolus + 8 mg/h por 72 h — úlcera sangrante"
+          },
+          {
+            "linha": 1,
+            "hosp": "pantoprazol_ev",
+            "motivo": "80 mg EV bolus + 8 mg/h — alternativa"
+          }
+        ]
+      },
+      {
+        "nome": "Profilaxia antibiótica do hepatopata",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1 g EV 1x/dia por até 7 dias — reduz mortalidade na hemorragia varicosa"
+          },
+          {
+            "hosp": "ciprofloxacino_ev",
+            "motivo": "400 mg EV 12/12h — alternativa (alergia)"
+          }
+        ]
+      },
+      {
+        "nome": "Antifibrinolítico (selecionados)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "acido_tranexamico_ev",
+            "motivo": "1 g EV 8/8h — considerar em sangramento maciço/trauma; evidência controversa em HDA (HALT-IT) — a definir com o serviço"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Alta pós-HDA estabilizada (com endoscopia realizada)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "pantoprazol",
+            "pos": "40 mg VO 2x/dia por 7 dias e depois 1x/dia por completar 4–8 semanas (úlcera)",
+            "ped": "0,5–1 mg/kg/dia (máx 40 mg)",
+            "motivo": "Manutenção do IBP pós-bolus"
+          },
+          {
+            "base": "omeprazol",
+            "pos": "20 a 40 mg VO 1x/dia por 4–8 semanas — jejum 30 min antes",
+            "ped": "0,7–1,4 mg/kg/dia",
+            "motivo": "Alternativa IBP"
+          },
+          {
+            "base": "sulfato_ferroso",
+            "pos": "325 mg (1 comprimido) VO 1x/dia com suco/laranja (não com leio/antiácido) por 8–12 semanas se anemia",
+            "ped": "3–6 mg/kg/dia de ferro elementar",
+            "motivo": "Reposição do ferro pós-sangramento"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Voltar se: vômito com sangue novo, fezes pretas ou com sangue de novo, tontura ao levantar, desmaio, dor abdominal forte nova. NÃO usar AINEs/dipirona em excesso sem falar com médico; sem álcool; sem automedicação com aspirina."
+            },
+            "motivo": "Ressangramento"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Teste e erradicação de H. pylori",
+              "ap": "",
+              "pos": "Se biópsia positiva para H. pylori: completar esquema prescrito e repetir teste de controle 4 semanas após fim do antibiótico (respiratório ou fezes) — erradicação incompleta = úlcera volta."
+            },
+            "motivo": "Cura da úlcera"
+          }
+        ]
+      }
+    ]
+  }
+}

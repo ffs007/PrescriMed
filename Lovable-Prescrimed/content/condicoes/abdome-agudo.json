@@ -1,0 +1,292 @@
+{
+  "id": "leg_2009",
+  "nome": "Abdome Agudo",
+  "cat": "Emergência",
+  "alias": "dor abdominal aguda peritonite apendicite colecistite pancreatite obstrucao perfuracao dor em barriga",
+  "cid": [
+    [
+      "R100",
+      "Abdome agudo"
+    ],
+    [
+      "R104",
+      "Dor abdominal não especificada"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "WSES guidelines — apendicite e abdome agudo",
+      "ATLS 10ª ed. — avaliação abdominal",
+      "Toronto/ACS — dor abdominal aguda não traumática",
+      "UpToDate: Evaluation of acute abdomen in adults"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "A – B – C e acesso venoso calibroso; jejum; NPO. Analgesia venosa NÃO retarda diagnóstico — alivie a dor (dipirona EV ± opioide) ANTES da propedêutica completa. Mulher em idade fértil: β-hCG é OBRIGATÓRIO (ectópica). Pedir: hemograma, PCR, EAS, amilase/lipase, TGO/TGP, bilirrubinas, β-hCG, lactato se instável; RX tórax em pé (ar livre) e USG (ou TC com contraste se disponível). Cirúrgico JÁ se: peritonite, obstrução com sofrimento, isquemia, ectópica rota. Antibiótico empírico se suspeita de peritonite/perfuração/colangite (ceftriaxona + metronidazol EV). SNG se obstrução/vômitos incoercíveis. Ped: altogether avalia Alvarado/pediatria; idoso e imunossuprimido têm exame enganosamente brando.",
+  "redFlags": [
+    "Defesa abdominal/rigidez/rebote (peritonite) — cirúrgico JÁ, antibiótico e discussão cirúrgica",
+    "Dor + hipotensão, taquicardia ou palidez — hemorragia (ectópica, AAA, isquemia mesentérica)",
+    "β-hCG positivo — gravidez ectópica até prova contrária: USG imediata",
+    "Parada de eliminação de gases/fezes + distensão + vômitos — obstrução: SNG, jejum, cirúrgico",
+    "Febre > 38,5 °C com dor localizada ou icterícia + hipotensão (colangite) — antibiótico em 1h",
+    "Dor lombar com massa pulsátil/abdominal pulsátil em >50 anos — AAA: não manipular, TC/sala",
+    "Idoso, diabético, imunossuprimido, gestante: exame físico pouco confiável — liberal com imagem",
+    "Dor súbita em 'apunhalada' seguida de alívio e depois peritonite — perfuração de úlcera"
+  ],
+  "naoUsar": [
+    "AINEs até excluir causa hemorrágica/úlcera perfurada",
+    "Laxantes, procinéticos ou enemas na suspeita de obstrução/perfuração",
+    "Retardar analgesia venosa 'para não mascarar' — prática contraindicada pela evidência",
+    "Anticoagulação nova antes de excluir causa hemorrágica"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Analgésico (1ª linha)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "1 g VO a cada 6h SE dor (máx 4 g/dia)",
+            "ped": "10–15 mg/kg/dose a cada 6h (máx 4 doses/dia)",
+            "motivo": "1ª linha; seguramente não mascara o diagnóstico"
+          },
+          {
+            "base": "paracetamol",
+            "pos": "1 g VO a cada 6h se dor (máx 4 g/dia; 3 g se idoso, <50 kg ou hepatopata)",
+            "ped": "10–15 mg/kg/dose a cada 6h",
+            "motivo": "Alternativa segura; preferir se risco de sangramento"
+          },
+          {
+            "base": "cetorolaco",
+            "pos": "10 mg VO a cada 8h por até 3 dias — SOMENTE após excluir perfuração/sangramento e causa biliar",
+            "ped": "≥16 anos; 0,5 mg/kg/dose (máx 10 mg) a cada 8h",
+            "motivo": "Cólica renal/biliar confirmada; evitar se cirúrgico em definição"
+          },
+          {
+            "base": "codeina_paracetamol",
+            "pos": "1 comprimido VO a cada 6h se dor moderada (vigiar constipação)",
+            "ped": "<12 anos: codeína contraindicada",
+            "motivo": "Dor moderada refratária à dipirona"
+          }
+        ]
+      },
+      {
+        "nome": "Cólica (antiespasmódico)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "escopolamina",
+            "pos": "10 mg VO a cada 8h se cólica (máx 3 dias)",
+            "ped": "≥6 anos: 5–10 mg a cada 8h",
+            "motivo": "Cólica entérica/biliar na alta"
+          },
+          {
+            "base": "escopolamina_dipirona",
+            "pos": "1 comprimido VO a cada 8h se cólica ou dor (hioscina 10 mg + dipirona 250 mg; observar somatório de dipirona)",
+            "ped": "≥6 anos: 1/2 comprimido a cada 8h",
+            "motivo": "Cólica + analgesia em 1 comprimido"
+          },
+          {
+            "base": "simeticona",
+            "pos": "40–75 mg VO após refeições se distensão/gases",
+            "ped": "20–40 mg por dose",
+            "motivo": "Distensão gasosa residual"
+          }
+        ]
+      },
+      {
+        "nome": "Opioide se dor refratária (uso curto)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "tramadol",
+            "pos": "50 a 100 mg VO a cada 8h, no máximo 3 dias; reduzir dose em idoso/insuficiente renal",
+            "ped": "≥12 anos: 1–2 mg/kg/dose (máx 100 mg) a cada 8h",
+            "motivo": "Dor moderada-grave na alta quando cirúrgico foi excluído"
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "metoclopramida",
+            "pos": "10 mg VO a cada 8h se vômito (evitar se suspeita de obstrução — usar só na alta com causa definida)",
+            "ped": "0,1–0,15 mg/kg/dose (máx 10 mg) a cada 8h",
+            "motivo": "Vômitos na alta com causa definida"
+          },
+          {
+            "base": "dimenidrinato",
+            "pos": "50 mg VO a cada 6h se vômito/mareo",
+            "ped": "12,5–25 mg a cada 6–8h",
+            "motivo": "Alternativa; seguro na gestação"
+          },
+          {
+            "base": "ondansetrona",
+            "pos": "8 mg VO a cada 8h se vômito (não aumenta o esvaziamento — seguro se obstrução em definição)",
+            "ped": "0,15 mg/kg/dose (máx 8 mg) a cada 8h",
+            "motivo": "Vômitos com causa ainda em investigação ou pós-operatório"
+          },
+          {
+            "base": "bromoprida",
+            "pos": "10 mg VO a cada 8h se vômito",
+            "ped": "<1 ano: não usar; 1–12 anos: 0,15 mg/kg/dose",
+            "motivo": "Alternativa de estoque"
+          }
+        ]
+      },
+      {
+        "nome": "Se dispepsia/úlcera no diagnóstico diferencial",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "omeprazol",
+            "pos": "40 mg VO 1x/dia por 7–14 dias se dispepsia/úlcera confirmada",
+            "ped": "0,7–1,4 mg/kg/dia (máx 20 mg)",
+            "motivo": "Causa gastroduodenal definida"
+          },
+          {
+            "base": "esomeprazol",
+            "pos": "20 a 40 mg VO 1x/dia por 7–14 dias",
+            "ped": "≥12 anos: 20 mg/dia",
+            "motivo": "Alternativa IBP"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações de retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Voltar ao PS se: dor que aumenta ou muda de local, febre, vômitos persistentes, barriga endurecida, ausência de gases/fezes por >24h, sangue nas fezes ou vômito, tontura/desmaio. Não usar laxantes sem orientação."
+            },
+            "motivo": "Abdome em observação ambulatorial é alta com rede de segurança"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Cuidados gerais",
+              "ap": "",
+              "pos": "Dieta leve fracionada conforme tolerância; hidratação oral; retornar ao pronto-socorro em caso de dúvida — dor abdominal que retorna é reavaliação, não repetição da receita."
+            },
+            "motivo": "Reavaliar, não automedicar"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Analgésicos EV (1ª linha)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV 8/8h — primeira linha, não mascara"
+          },
+          {
+            "hosp": "cetorolaco",
+            "motivo": "30 mg EV — cólica renal/biliar confirmada; hipocautela úlcera/renal"
+          },
+          {
+            "hosp": "tramadol_ev",
+            "motivo": "100 mg EV 8/8h se refratária"
+          },
+          {
+            "hosp": "morfina_ev",
+            "motivo": "2–4 mg EV lento, repetir conforme dor — seguro no abdome agudo"
+          }
+        ]
+      },
+      {
+        "nome": "Antiespasmódico EV",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "escopolamina_ev",
+            "motivo": "20 mg EV 8/8h se cólica"
+          },
+          {
+            "hosp": "escopo_dipi_ev",
+            "motivo": "hioscina 20 mg + dipirona (coluna única)"
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético EV",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "10 mg EV 8/8h (evitar se obstrução)"
+          },
+          {
+            "hosp": "dimenidrinato_ev",
+            "motivo": "50 mg EV 6/6h"
+          },
+          {
+            "hosp": "ondansetrona_ev",
+            "motivo": "8 mg EV 8/8h"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico empírico (peritonite/biliar/perfuração)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1–2 g EV 1x/dia — associar ao metronidazol (cobertura gram-negativo + anaeróbios)"
+          },
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "500 mg EV 8/8h — anaeróbios (completar o esquema de 1ª linha)"
+          },
+          {
+            "hosp": "amp_sulb",
+            "motivo": "3 g EV 6/6h — alternativa de 1ª linha em perfuração gastroduodenal"
+          },
+          {
+            "hosp": "ciprofloxacino_ev",
+            "motivo": "400 mg EV 12/12h + metronidazol — alternativa à ceftriaxona"
+          },
+          {
+            "hosp": "cefepima",
+            "motivo": "1–2 g EV 12/12h — grave/imunossuprimido, cobre Pseudomonas"
+          },
+          {
+            "hosp": "gentamicina",
+            "motivo": "5 mg/kg/dia EV — colangite grave em associação (ajustar renal)"
+          }
+        ]
+      },
+      {
+        "nome": "IBP EV (perfuração/úlcera sangrante)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "pantoprazol_ev",
+            "motivo": "80 mg EV em bolus + 8 mg/h em infusão se úlcera sangrante"
+          }
+        ]
+      }
+    ]
+  }
+}

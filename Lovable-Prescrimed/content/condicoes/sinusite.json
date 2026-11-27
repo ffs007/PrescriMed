@@ -1,0 +1,169 @@
+{
+  "id": "sinusite",
+  "nome": "Rinossinusite aguda",
+  "cat": "Respiratório",
+  "alias": "sinusite dor no rosto seio da face coriza amarela obstrucao nasal cacosmia",
+  "cid": [
+    [
+      "J010",
+      "Sinusite aguda maxilar"
+    ],
+    [
+      "J019",
+      "Sinusite aguda não especificada"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "IDSA/EPOS — rinossinusite aguda"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Bacteriana é suspeita quando: sintomas > 10 dias SEM melhora, ou 'double sickening' (melhora e piora de novo), ou início grave (febre > 39 + rinorreia purulenta/dor facial ≥ 3 dias). IVAS viral dura 5–10 dias e não leva antibiótico. Exame: dor à palpação/percussão do seio maxilar, dor inclinando a cabeça. Complicações (raras, mas oftalmologia/imediato): celulite/abscesso periorbitário (edema palpebral, proptose), trombose do seio cavernoso, sinusite frontal com edema de parede — TC + hospitalizar.",
+  "redFlags": [
+    "Edema palpebral, proptose, oftalmoplegia ou queda da acuidade visual — complicaCAO orbitária: TC + EV + oftalmo",
+    "Edema/flutuação da testa (parede frontal) — sinusite frontal complicada: imagem",
+    "Cefaleia intensa + sinais neurológicos/convulsão — extensão intracraniana: TC",
+    "Imunossuprimido/diabético com rinossinusite + febre — fungina invasiva suspeita: EV",
+    "Rinorreia pós-trauma clara/contínua (sinal do lençol) — liquorreia: neurocirurgia",
+    " ≥ 4 episódios/ano — rinossinusite recorrente: encaminhar ORL"
+  ],
+  "naoUsar": [
+    "Antibiótico para IVAS viral (< 10 dias, sem double sickening)",
+    "Descongestionante tópico > 5 dias",
+    "Antibiótico tópico nasal",
+    "Corticoide sistêmico de rotina"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Antibiótico (quando bacteriana)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxclav",
+            "pos": "875/125 mg VO a cada 12 h por 5–7 dias (adulto) — 1ª linha",
+            "ped": "45 mg/kg/dia (amox) dividido 12/12 h × 10 dias",
+            "motivo": "1ª linha (cobertura anaeróbios/H.influenzae)"
+          },
+          {
+            "base": "amoxicilina",
+            "pos": "1 g VO a cada 12 h por 5–7 dias — alternativa se resistência local baixa",
+            "ped": "80–90 mg/kg/dia dividido 12/12 h",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "cefalexina",
+            "pos": "500 mg VO 6/6 h por 7 dias — alergia leve",
+            "ped": "50 mg/kg/dia 6/6 h",
+            "motivo": "Alergia"
+          },
+          {
+            "base": "azitromicina",
+            "pos": "500 mg VO 1x/dia por 3 dias — alergia verdadeira",
+            "ped": "10 mg/kg/dia × 3 dias",
+            "motivo": "Alergia grave"
+          },
+          {
+            "base": "levofloxacino",
+            "pos": "500 mg VO 1x/dia por 5–7 dias — reservar para falha/complicado em adulto",
+            "motivo": "Reserva"
+          }
+        ]
+      },
+      {
+        "nome": "Suporte nasal (sempre)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "lavagem",
+              "n": "Lavagem nasal com soro fisiológico",
+              "ap": "",
+              "pos": "3 a 5 mL em cada narina 3-4x/dia (adulto pode usar 20 mL com seringa) — desobstrói e limpa; é a medida com melhor relação benefício/risco."
+            },
+            "ped": "Desde recém-nascido",
+            "motivo": "Base do tratamento"
+          },
+          {
+            "base": "oximetazolina",
+            "pos": "1 aplicação 0,05% em cada narina 12/12 h por NO MÁXIMO 3–5 dias (adulto e > 6 anos)",
+            "ped": "< 6 anos: não usar sem prescrição",
+            "motivo": "Descongestionamento curto"
+          },
+          {
+            "novo": {
+              "id": "budesonida_nasal",
+              "n": "Corticoide nasal tópico",
+              "ap": "spray",
+              "pos": "2 jatos em cada narina 1x/dia por 10–14 dias — reduz sintomas e acelera resolução (não é o corticoide de 'pump' sistêmico)",
+              "nota": "Prescrever marca disponível no serviço."
+            },
+            "motivo": "EPOS: adjuvante real"
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "1 g VO 6/6 h se dor/febre (máx 4 g/dia)",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Dor facial"
+          },
+          {
+            "base": "ibuprofeno",
+            "pos": "600 mg VO 8/8 h com alimento por até 5 dias — anti-inflamatório ajuda a dor de seio",
+            "ped": "5–10 mg/kg 8/8 h",
+            "motivo": "Dor inflamatória"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno se",
+              "ap": "",
+              "pos": "Inchaço ou vermelhidão ao redor do olho, visão embaçada, dor de cabeça muito forte, febre que não cede em 72 h de antibiótico, vômitos, confusão — PS imediatamente. Hidratação, inalação com vapor morno (conforto), dormir com cabeceira elevada."
+            },
+            "motivo": "Complicações"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Se complicada",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1–2 g EV 1x/dia — complicaÇÃo orbitária/pressoal junto com drenagem"
+          },
+          {
+            "linha": 1,
+            "hosp": "amp_sulb",
+            "motivo": "3 g EV 6/6h — alternativa"
+          }
+        ]
+      }
+    ]
+  }
+}

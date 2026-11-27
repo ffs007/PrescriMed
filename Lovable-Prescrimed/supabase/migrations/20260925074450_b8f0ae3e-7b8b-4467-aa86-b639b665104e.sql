@@ -1,0 +1,2 @@
+REVOKE EXECUTE ON FUNCTION public.fn_em_homologacao(uuid), public.fn_marcar_homologacao(), public.fn_homologacao_editar_vinculo(uuid,text,text,text,text), public.fn_homologacao_desfazer(uuid), public.fn_homologacao_promover(), public.fn_homologacao_resumo(timestamptz) FROM PUBLIC, anon;
+REVOKE EXECUTE ON FUNCTION public.fn_marcar_homologacao() FROM authenticated;

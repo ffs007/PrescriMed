@@ -1,0 +1,1023 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GI-11",
+    "area": "Gastrointestinal",
+    "nome": "Desidratação",
+    "aliases": [
+      "desidratação",
+      "perda de líquido",
+      "hipovolemia",
+      "desidratação grave",
+      "desidratação hipertônica",
+      "desidratação hipotônica"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Desidratação é a perda de água e eletrólitos com redução do volume extracelular, por vômitos, diarreia, febre, diurese excessiva ou baixa ingesta. A conduta não começa pelo soro: começa pela classificação. Primeiro a gravidade pelo déficit estimado em porcentagem do peso e pelos sinais de perfusão (leve 3–5%, moderada 5–9%, grave ≥10%); depois a tonicidade pelo sódio sérico (isotônica 135–145, hipotônica <135, hipertônica >145 mEq/L); só então se define via e velocidade. A via oral resolve a maioria dos casos leves e moderados; a via venosa é para intolerância, rebaixamento ou choque, e o cristaloide inicial é sempre isotônico — SF 0,9% ou Ringer lactato. Dois erros custam caro: reidratar hipovolemia apenas com SG 5%, que se distribui para o intracelular e não expande o intravascular, e corrigir hiponatremia rápido, que causa mielinólise pontina. O desfecho que confirma a reposição é a diurese, não a sensação de boca seca.",
+    "inclusao": [
+      "Perda de água e eletrólitos com sinais clínicos de desidratação leve, moderada ou grave",
+      "Vômitos ou diarreia com intolerância à via oral",
+      "Hipotensão, taquicardia ou oligúria atribuíveis a perda de volume",
+      "Hipernatremia ou hiponatremia com alteração do nível de consciência",
+      "Idoso com redução de ingesta, confusão e oligúria"
+    ],
+    "exclusao": [
+      {
+        "situacao": "choque hemorrágico com sangramento ativo",
+        "fluxo": "GI-09 HDA / cirurgia"
+      },
+      {
+        "situacao": "edema agudo de pulmão ou insuficiência cardíaca congestiva descompensada",
+        "fluxo": "CAR-06 IC descompensada"
+      },
+      {
+        "situacao": "desidratação em criança menor de 5 anos",
+        "fluxo": "PED-03 diarreia pediátrica"
+      },
+      {
+        "situacao": "hipercalemia grave com alteração de ECG",
+        "fluxo": "END-08 hipercalemia"
+      },
+      {
+        "situacao": "politúria com hiperglicemia e cetonúria",
+        "fluxo": "END-02 cetoacidose"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "PAS < 90 mmHg, FC > 120 bpm, extremidades frias, TEC > 3 s",
+        "por_que": "choque hipovolêmico instalado",
+        "acao": "SF 0,9% 30 mL/kg em 30 min, sala vermelha, monitorização contínua",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "confusão, sonolência ou coma",
+        "por_que": "hipoperfusão cerebral ou hiponatremia grave",
+        "acao": "glicemia e sódio imediatos; NaCl 3% se convulsão por hiponatremia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "diurese < 0,5 mL/kg/h por 6 h ou anúria",
+        "por_que": "necrose tubular aguda por hipoperfusão",
+        "acao": "volume, sonda vesical e creatinina seriada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "sódio < 120 ou > 155 mEq/L",
+        "por_que": "distúrbio grave com risco neurológico",
+        "acao": "corrigir com limite de 8–10 mEq/L em 24 h e dosar a cada 4 h",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "perda ponderal ≥ 10% do peso habitual",
+        "por_que": "desidratação grave com déficit estimado alto",
+        "acao": "reposição venosa e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "crepitações pulmonares, SpO2 < 92% ou turgência jugular durante a reposição",
+        "por_que": "sobrecarga volêmica, sobretudo em cardiopata e renal",
+        "acao": "reduzir velocidade, furosemida 40 mg IV, cabeceira elevada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "insuficiência cardíaca, diálise ou cirrose com ascite",
+        "por_que": "margem de segurança volêmica estreita",
+        "acao": "bolus fracionado de 250 mL com reavaliação a cada bolus",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Há quanto tempo e qual o volume da perda (vômitos, diarreia, febre, diurese)?",
+      "Consegue beber e está urinando? Quando foi a última micção?",
+      "Qual o peso habitual e o peso atual?",
+      "Usa diurético, IECA, BRA, lítio ou SGLT2?",
+      "Tem insuficiência cardíaca, cirrose, doença renal crônica ou faz diálise?",
+      "Tem tontura ao levantar, visão escura ou desmaio?",
+      "Fez sódio e potássio recentemente? Qual o valor?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Desidratação leve (déficit 3–5%) tolerando via oral",
+        "escolha": "SRO 50 mL/kg em 4 h + manutenção oral livre",
+        "porque": "A via oral é tão eficaz quanto a venosa no leve e moderado, sem cateter nem flebite"
+      },
+      {
+        "cenario": "Desidratação moderada (5–9%) ou vômito incoercível",
+        "escolha": "SF 0,9% 1.000 mL em 1–2 h + antiemético IV + reavaliação",
+        "porque": "Repõe o extracelular com cristaloide isotônico e devolve a via oral em 4–6 h"
+      },
+      {
+        "cenario": "Desidratação grave (≥ 10%) com hipotensão",
+        "escolha": "SF 0,9% 30 mL/kg na primeira hora (500 mL em bolus sucessivos, reavaliando)",
+        "porque": "Volume é a droga que salva; bolus único grande em cardiopata sobrecarrega"
+      },
+      {
+        "cenario": "Hipotônica (Na < 135 mEq/L)",
+        "escolha": "SF 0,9% na expansão e limite de correção de 8–10 mEq/L em 24 h",
+        "porque": "Expandir com isotônico primeiro; correção rápida causa mielinólise pontina"
+      },
+      {
+        "cenario": "Hipertônica (Na > 145 mEq/L)",
+        "escolha": "SF 0,9% ou Ringer lactato para expansão e depois SG 5% + eletrólitos em bomba",
+        "porque": "Rebaixar o sódio a ≤ 10 mEq/L em 24 h evita edema cerebral; SG 5% puro antes do volume piora a hipovolemia"
+      },
+      {
+        "cenario": "Fase de manutenção após expansão",
+        "escolha": "SG 5% 1.000 mL + KCl 19,1% 10 mL + NaCl 20% 10 mL a 30–40 mL/h",
+        "porque": "Repõe água livre e eletrólitos; potássio só entra depois que a diurese está estabelecida"
+      },
+      {
+        "cenario": "Cardiopata, cirrótico com ascite ou dialítico",
+        "escolha": "Bolus de 250 mL de SF 0,9% com reavaliação a cada bolus; albumina no cirrótico",
+        "porque": "Reduz o risco de edema agudo de pulmão sem atrasar a ressuscitação"
+      },
+      {
+        "cenario": "Hipercalemia com oligúria durante a reposição",
+        "escolha": "Suspender potássio, ECG, gluconato de cálcio se alteração e avaliar diálise",
+        "porque": "Sem diurese, todo potássio infundido se acumula"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "cristaloide_isotônico",
+        "agente": "cloreto de sódio 0,9% (SF 0,9%)",
+        "papel": "primeira_linha",
+        "indicacao": "reposição volêmica em desidratação moderada a grave e choque hipovolêmico",
+        "dose": "30 mL/kg na primeira hora (choque) ou 1.000 mL na expansão",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "em bolus, reavaliando a cada 250–500 mL",
+        "duracao": "até perfusão e diurese restabelecidas",
+        "dose_maxima": "individualizar; 30 mL/kg na primeira hora",
+        "contraindicacoes": [
+          "edema agudo de pulmão",
+          "insuficiência cardíaca descompensada",
+          "anúria sem diálise",
+          "hipernatremia grave com Na > 155 mEq/L"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga volêmica",
+          "acidose hiperclorêmica",
+          "hipernatremia",
+          "flebite",
+          "edema periférico"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL",
+          "frasco de vidro 1.000 mL",
+          "frasco 250 mL"
+        ],
+        "preparo": "Solução pronta, não diluir; acesso periférico calibroso 14–16 G",
+        "tempo_infusao": "15–30 minutos no bolus de ressuscitação; 1–2 h na expansão",
+        "monitorizacao": [
+          "PA e FC a cada 15 min na fase de bolus",
+          "ausculta pulmonar e SpO2 a cada bolus",
+          "diurese horária",
+          "sódio e cloro em 6–12 h",
+          "peso diário"
+        ],
+        "ajuste_renal": "Sem ajuste de composição; reduzir volume e fracionar bolus em oligúria ou anúria",
+        "ajuste_hepatico": "Cautela em cirrose com ascite; usar albumina em grandes volumes",
+        "observacoes": "É o cristaloide de escolha na hipovolemia, inclusive na hiponatremia hipovolêmica; nunca substituir por SG 5% isolado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide_balanceado",
+        "agente": "Ringer lactato",
+        "papel": "alternativa",
+        "indicacao": "reposição volêmica com perdas gastrointestinais volumosas e acidose metabólica",
+        "dose": "30 mL/kg na primeira hora ou 1.000 mL na expansão",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "em bolus, reavaliando a cada 500 mL",
+        "duracao": "até estabilização hemodinâmica",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": [
+          "hipercalemia grave (K > 6,5 mEq/L)",
+          "alcalose metabólica",
+          "insuficiência cardíaca descompensada",
+          "anúria sem diálise"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga volêmica",
+          "alcalose metabólica",
+          "hipercalemia em renal crônico"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL",
+          "frasco 1.000 mL"
+        ],
+        "preparo": "Solução pronta, não diluir; não administrar na mesma via de ceftriaxona (precipitação com cálcio)",
+        "tempo_infusao": "15–30 minutos no bolus; 1–2 h na expansão",
+        "monitorizacao": [
+          "PA, FC e perfusão periférica",
+          "ausculta pulmonar",
+          "potássio sérico",
+          "diurese",
+          "gasometria se infusão > 2 L"
+        ],
+        "ajuste_renal": "Evitar em oligúria por conter 4 mEq/L de potássio",
+        "ajuste_hepatico": "Preferir SF 0,9% em cirrose grave com hiponatremia, pelo risco de piora do sódio",
+        "observacoes": "Tem 4 mEq/L de K e 3 mEq/L de Ca; é a melhor opção em vômitos e diarreia volumosos, mas não em hipercalemia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "reidratante_oral",
+        "agente": "solução de reidratação oral (SRO)",
+        "papel": "primeira_linha",
+        "indicacao": "desidratação leve a moderada com via oral preservada",
+        "dose": "50–100 mL/kg em 4 h, fracionado (déficit leve 50, moderado 75–100)",
+        "unidade": "mL/kg",
+        "via": "VO ou sonda nasogástrica",
+        "frequencia": "colheradas de 5–10 mL a cada 5 min; repor 10 mL/kg por evacuação líquida",
+        "duracao": "até diurese clara e sede resolvida",
+        "dose_maxima": "não se aplica",
+        "contraindicacoes": [
+          "vômitos incoercíveis",
+          "rebaixamento de consciência com risco de aspiração",
+          "íleo paralítico",
+          "obstrução intestinal"
+        ],
+        "efeitos_adversos": [
+          "náusea por volume rápido",
+          "distensão abdominal",
+          "vômito se administrada em goles grandes"
+        ],
+        "apresentacoes": [
+          "sachê 27,9 g para 1 L",
+          "solução pronta 500 mL",
+          "sachê pediátrico para 200 mL"
+        ],
+        "preparo": "Diluir o sachê em 1 L de água potável; não usar refrigerante, suco nem solução caseira com açúcar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "diurese e densidade urinária",
+          "peso em criança e idoso",
+          "turgor cutâneo e mucosas",
+          "número de evacuações",
+          "sódio se déficit grave"
+        ],
+        "ajuste_renal": "Sem ajuste; monitorar volume urinário",
+        "ajuste_hepatico": "Cautela em cirrótico com ascite; volumes altos pioram a hiponatremia",
+        "observacoes": "Subutilizada no adulto: metade dos casos moderados resolve sem acesso venoso; se vomitar, esperar 10 min e reiniciar em colheradas",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "solução_glicosada",
+        "agente": "soro glicosado 5% (SG 5%)",
+        "papel": "condicional",
+        "indicacao": "manutenção após expansão, hipernatremia e veículo de medicamentos — nunca como reposição isolada de hipovolemia",
+        "dose": "1.000 mL com KCl 19,1% 10 mL e NaCl 20% 10 mL a 30–40 mL/h",
+        "unidade": "mL/h",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até restabelecer a ingesta oral",
+        "dose_maxima": "2.500 mL/dia em adulto sem perdas adicionais",
+        "contraindicacoes": [
+          "hipovolemia não corrigida",
+          "hiponatremia dilucional",
+          "hiperglicemia grave",
+          "edema cerebral"
+        ],
+        "efeitos_adversos": [
+          "hiponatremia dilucional",
+          "hiperglicemia",
+          "sobrecarga hídrica",
+          "hipocalemia por diluição"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL",
+          "frasco 500 mL"
+        ],
+        "preparo": "Solução pronta; adicionar eletrólitos em capela e identificar a bolsa",
+        "tempo_infusao": "infusão contínua a 30–40 mL/h (0,5–0,7 mL/kg/h)",
+        "monitorizacao": [
+          "glicemia capilar a cada 6 h",
+          "sódio a cada 12–24 h",
+          "diurese",
+          "balanço hídrico",
+          "peso diário"
+        ],
+        "ajuste_renal": "Reduzir volume em oligúria; risco de hiponatremia dilucional",
+        "ajuste_hepatico": "Reduzir volume em cirrose com ascite",
+        "observacoes": "Erro frequente: prescrever só SG 5% em desidratação hipovolêmica. Dois terços da água vão para o intracelular, o intravascular quase não expande e o sódio cai",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "eletrólito_potássio",
+        "agente": "cloreto de potássio 19,1%",
+        "papel": "condicional",
+        "indicacao": "reposição de potássio na fase de manutenção, após diurese estabelecida",
+        "dose": "20 mEq/L de solução (10 mL de KCl 19,1% por litro)",
+        "unidade": "mEq/L",
+        "via": "IV (diluído) ou VO",
+        "frequencia": "infusão contínua; reposição intermitente se hipocalemia sintomática",
+        "duracao": "até potássio entre 3,5 e 5,0 mEq/L",
+        "dose_maxima": "10–20 mEq/h em acesso periférico; 20–40 mEq/h em acesso central com monitor",
+        "contraindicacoes": [
+          "hipercalemia",
+          "oligúria ou anúria",
+          "bloqueio atrioventricular sem marcapasso",
+          "doença de Addison não tratada"
+        ],
+        "efeitos_adversos": [
+          "hipercalemia e arritmia",
+          "dor e necrose no local da infusão",
+          "flebite",
+          "náusea por via oral"
+        ],
+        "apresentacoes": [
+          "ampola 19,1% 10 mL (2,5 mEq/mL)",
+          "ampola 10% 10 mL (1,3 mEq/mL)",
+          "solução injetável 15% 10 mL",
+          "comprimido liberação prolongada 600 mg (8 mEq)"
+        ],
+        "preparo": "Diluir sempre em SF 0,9% ou SG 5%; nunca infundir puro. Concentração máxima periférica 40 mEq/L, central 60 mEq/L",
+        "tempo_infusao": "infusão contínua; nunca em bolus",
+        "monitorizacao": [
+          "ECG contínuo se > 10 mEq/h",
+          "potássio sérico a cada 4–6 h na correção",
+          "débito urinário antes de cada dose",
+          "local da punção",
+          "magnésio sérico"
+        ],
+        "ajuste_renal": "Contraindicado em anúria; reduzir para metade da dose se ClCr < 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só repor com diurese presente e potássio dosado; em hipocalemia com hipomagnesemia, corrigir o magnésio ou o potássio não sobe",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "solução_hipertônica",
+        "agente": "cloreto de sódio 3%",
+        "papel": "condicional",
+        "indicacao": "hiponatremia grave sintomática (convulsão, coma, rebaixamento) e hiponatremia sintomática refratária",
+        "dose": "100–150 mL em 20 min (ou 3 mL/kg); repetir até elevar 5 mEq/L",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "bolus repetido conforme sódio seriado",
+        "duracao": "fase aguda; depois correção lenta",
+        "dose_maxima": "elevação de 8–10 mEq/L em 24 h e 18 mEq/L em 48 h",
+        "contraindicacoes": [
+          "hipernatremia",
+          "sobrecarga cardíaca",
+          "hiponatremia crônica assintomática"
+        ],
+        "efeitos_adversos": [
+          "mielinólise pontina por correção rápida",
+          "sobrecarga volêmica",
+          "flebite",
+          "desidratação celular"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL 3%",
+          "frasco 250 mL 3%",
+          "ampola 20% 10 mL (para manipulação)"
+        ],
+        "preparo": "Preferir solução pronta 3%; se indisponível, 100 mL de SF 0,9% + 30 mL de NaCl 20% em capela, com dupla checagem",
+        "tempo_infusao": "20 minutos por bolus; acesso calibroso, preferencialmente central",
+        "monitorizacao": [
+          "sódio a cada 2–4 h na fase aguda",
+          "nível de consciência e convulsões",
+          "ECG e diurese",
+          "ausculta pulmonar",
+          "repetir sódio antes de cada novo bolus"
+        ],
+        "ajuste_renal": "Cautela em oligúria; risco de sobrecarga e de correção errática",
+        "ajuste_hepatico": "Cautela em cirrótico com ascite",
+        "observacoes": "Só para hiponatremia sintomática grave. Se ultrapassar o limite de correção, suspender, medir sódio e considerar água livre ou DDAVP; mielinólise é irreversível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_5ht3",
+        "agente": "ondansetrona",
+        "papel": "condicional",
+        "indicacao": "vômitos que impedem a reidratação oral",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h se necessário",
+        "duracao": "24–48 h",
+        "dose_maxima": "16 mg/dia",
+        "contraindicacoes": [
+          "síndrome do QT longo",
+          "uso concomitante de apomorfina"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "constipação",
+          "prolongamento do QT"
+        ],
+        "apresentacoes": [
+          "comprimido 4 mg e 8 mg",
+          "ampola 2 mg/mL (2 mL e 4 mL)",
+          "solução oral 4 mg/5 mL"
+        ],
+        "preparo": "IV direto ou diluído em 50 mL de SF; VO sem preparo",
+        "tempo_infusao": "2–5 minutos (IV lento)",
+        "monitorizacao": [
+          "ECG se cardiopata ou QT longo",
+          "potássio e magnésio",
+          "número de vômitos e aceitação oral"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em Child C",
+        "observacoes": "Serve para devolver a via oral: sem controlar o vômito, a SRO não progride e a conta do soro aumenta",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_procinetico",
+        "agente": "metoclopramida",
+        "papel": "alternativa",
+        "indicacao": "vômitos com intolerância oral quando ondansetrona indisponível",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "até 24 h",
+        "dose_maxima": "30 mg/dia",
+        "contraindicacoes": [
+          "obstrução intestinal",
+          "feocromocitoma",
+          "parkinsonismo",
+          "epilepsia não controlada"
+        ],
+        "efeitos_adversos": [
+          "distonia aguda",
+          "acatisia",
+          "sonolência",
+          "hiperprolactinemia"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "ampola 5 mg/mL (2 mL)",
+          "solução oral 4 mg/mL"
+        ],
+        "preparo": "IV lento, sem diluição obrigatória",
+        "tempo_infusao": "2–3 minutos (lento, para evitar distonia)",
+        "monitorizacao": [
+          "sintomas extrapiramidais",
+          "sonolência",
+          "aceitação da via oral"
+        ],
+        "ajuste_renal": "5 mg se ClCr < 30 mL/min",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave",
+        "observacoes": "Evitar em idoso e em uso prolongado; distonia é real em adulto jovem e responde a difenidramina 50 mg IV",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "diuretico_alca",
+        "agente": "furosemida",
+        "papel": "resgate",
+        "indicacao": "sobrecarga volêmica durante ou após a reposição, em cardiopata ou renal",
+        "dose": "20–40 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única; repetir conforme diurese e ausculta",
+        "duracao": "até resolver a congestão",
+        "dose_maxima": "200 mg/dia",
+        "contraindicacoes": [
+          "hipovolemia não corrigida",
+          "hipocalemia grave",
+          "anúria sem diálise",
+          "coma hepático"
+        ],
+        "efeitos_adversos": [
+          "hipocalemia",
+          "hipomagnesemia",
+          "hipotensão",
+          "lesão renal por depleção",
+          "ototoxicidade em dose alta"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (2 mL)",
+          "comprimido 40 mg",
+          "solução oral 10 mg/mL"
+        ],
+        "preparo": "IV direto lento ou diluído em 50 mL de SF",
+        "tempo_infusao": "2 minutos (IV lento); infusão contínua se resistência",
+        "monitorizacao": [
+          "diurese horária",
+          "potássio e magnésio a cada 12 h",
+          "creatinina",
+          "PA",
+          "ausculta pulmonar e SpO2"
+        ],
+        "ajuste_renal": "Doses maiores em ClCr baixo; efeito reduzido na doença renal avançada",
+        "ajuste_hepatico": "Cautela em cirrose com ascite; monitorar sódio e função renal",
+        "observacoes": "Não é tratamento de desidratação: é o antídoto da reposição excessiva. Nunca usar antes de corrigir a hipovolemia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Dois acessos venosos periféricos calibrosos",
+        "detalhe": "14–16 G; um para reposição e outro para drogas, quando a via oral não é possível"
+      },
+      {
+        "medida": "Pesar o paciente na admissão e diariamente",
+        "detalhe": "O peso é o melhor estimador de déficit: 1 kg ≈ 1 L; comparar com o peso habitual referido"
+      },
+      {
+        "medida": "Balanço hídrico rigoroso",
+        "detalhe": "Registrar ganhos, perdas, diurese, vômitos e evacuações a cada 6 h; reavaliar a meta a cada 12 h"
+      },
+      {
+        "medida": "Sondagem vesical para diurese horária",
+        "detalhe": "Indicada em desidratação grave, choque ou necessidade de balanço preciso; retirar assim que possível"
+      },
+      {
+        "medida": "Reidratação oral precoce e fracionada",
+        "detalhe": "Iniciar antes de qualquer exame; colheradas de 5–10 mL a cada 5 min, mesmo com acesso venoso em uso"
+      },
+      {
+        "medida": "Suspender diurético, IECA, BRA, lítio e SGLT2 na fase de hipovolemia",
+        "detalhe": "Reintroduzir só após diurese e função renal estáveis; lítio exige dosagem sérica"
+      },
+      {
+        "medida": "Aquecer o paciente e elevar membros inferiores",
+        "detalhe": "Hipotermia agrava a coagulopatia e a vasoconstrição; Trendelenburg modificado por 15–30 min enquanto o volume corre"
+      },
+      {
+        "medida": "Educação sobre sinais de retorno",
+        "detalhe": "Orientação escrita: tontura, ausência de urina por 8 h, confusão, vômitos persistentes"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Punção venosa periférica calibrosa",
+        "indicacao": "Toda desidratação moderada a grave que não tolera via oral",
+        "tecnica": "Cateter 14–16 G em veia antecubital; testar refluxo e fixar; se falha em 2 tentativas, acesso central ou intraósseo",
+        "complicacoes": "Flebite, hematoma, extravasamento, infiltração"
+      },
+      {
+        "nome": "Acesso venoso central ou intraósseo",
+        "indicacao": "Choque com acesso periférico impossível ou necessidade de infusão de KCl concentrado e NaCl 3%",
+        "tecnica": "Jugular interna ou subclávia guiada por USG; intraósseo em emergência (tíbia proximal)",
+        "complicacoes": "Pneumotórax, sangramento, infecção de cateter, trombose"
+      },
+      {
+        "nome": "Sondagem vesical de demora",
+        "indicacao": "Desidratação grave, choque ou oligúria sem causa clara",
+        "tecnica": "Técnica asséptica, sonda de Foley 14–16 Fr; medir débito horário",
+        "complicacoes": "Infecção urinária, trauma uretral, falsa diurese por retenção"
+      },
+      {
+        "nome": "Sonda nasogástrica para reidratação enteral",
+        "indicacao": "Via oral impossível por vômito ou disfagia, com abdome sem distensão",
+        "tecnica": "Sonda fina, SRO a 20 mL/kg/h com bomba; reavaliar a cada 2 h",
+        "complicacoes": "Aspiração, epistaxe, distensão, diarreia osmótica"
+      },
+      {
+        "nome": "Hemodiálise de urgência",
+        "indicacao": "Sobrecarga refratária, anúria com hipercalemia, sódio > 160 ou < 110 mEq/L sintomático, acidose grave",
+        "tecnica": "Sessão de 2–4 h, acesso por cateter duplo-lúmen ou fístula; definir ultrafiltração pelo peso seco",
+        "complicacoes": "Hipotensão intradialítica, desequilíbrio, sangramento por heparina"
+      }
+    ],
+    "metas": [
+      "Diurese ≥ 0,5 mL/kg/h (ou 30 mL/h) em até 6 h de reposição",
+      "PAS ≥ 90 mmHg e PAM ≥ 65 mmHg sem bolus adicional",
+      "Repor metade do déficit estimado nas primeiras 8 h e o restante em 24 h",
+      "Sódio entre 135 e 145 mEq/L com variação ≤ 8–10 mEq/L em 24 h",
+      "Potássio entre 3,5 e 5,0 mEq/L",
+      "SpO2 ≥ 94% sem crepitações novas durante a reposição",
+      "Lactato < 2 mmol/L em 6 h no paciente com hipoperfusão"
+    ],
+    "fluxo": [
+      "Classificar a gravidade pelo déficit estimado (% do peso) e pelos sinais de perfusão: leve 3–5%, moderada 5–9%, grave ≥ 10%",
+      "Dosar sódio e classificar a tonicidade: isotônica 135–145, hipotônica < 135, hipertônica > 145 mEq/L",
+      "Definir a via: oral se tolera e déficit leve/moderado; venosa se choque, vômito incoercível ou rebaixamento",
+      "Escolher o cristaloide: SF 0,9% como padrão; Ringer lactato se perdas gastrointestinais volumosas e sem hipercalemia",
+      "Definir a velocidade: 30 mL/kg em 30 min no choque; 1.000 mL em 1–2 h na expansão; reavaliar a cada bolus com PA, ausculta e diurese",
+      "Fase de manutenção: SG 5% + KCl 20 mEq/L + NaCl, 30–40 mL/h; repor potássio apenas com diurese e dosagem",
+      "Corrigir o sódio dentro do limite de 8–10 mEq/L em 24 h; se sobrecarga, reduzir velocidade e usar furosemida",
+      "Confirmar resolução com diurese, peso, sódio e aceitação oral; alta com plano de hidratação por escrito"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "Bolos de 250–500 mL com reavaliação; dosar eletrólitos e creatinina na admissão",
+        "alerta": "Sobrecauda rápida, hiponatremia e queda com fratura"
+      },
+      {
+        "populacao": "cardiopata",
+        "ajuste": "Bolus fracionado, ausculta antes de cada bolus, furosemida disponível na beira do leito",
+        "alerta": "Edema agudo de pulmão durante a reposição"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Volume conforme peso seco; evitar potássio até dosar; diálise se anúria",
+        "alerta": "Hipercalemia e sobrecarga"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "Reidratar cedo com cristaloide isotônico; evitar hipotensão supina",
+        "alerta": "Parto prematuro e insuficiência placentária por hipovolemia"
+      },
+      {
+        "populacao": "crianca",
+        "ajuste": "SRO 50 mL/kg (leve) ou 100 mL/kg (moderada) em 4 h; déficit venoso 20 mL/kg em bolus",
+        "alerta": "Desidratação e hipoglicemia rápidas; usar PED-03"
+      },
+      {
+        "populacao": "cirrótico",
+        "ajuste": "Albumina 1 g/kg em paracentese de grande volume; evitar SF em excesso",
+        "alerta": "Hiponatremia dilucional e disfunção circulatória"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "sódio, potássio, cloro, ureia e creatinina",
+          "indicacao": "toda desidratação moderada ou grave e todo idoso",
+          "o_que_muda": "define a tonicidade, o tipo de soro e o limite de correção"
+        },
+        {
+          "nome": "hemograma com hematócrito",
+          "indicacao": "suspeita de hemoconcentração ou sangramento",
+          "o_que_muda": "gravidade e necessidade de transfusão"
+        },
+        {
+          "nome": "gasometria com lactato",
+          "indicacao": "choque, taquipneia ou rebaixamento",
+          "o_que_muda": "gravidade da hipoperfusão e resposta ao volume"
+        },
+        {
+          "nome": "glicemia capilar",
+          "indicacao": "alteração de consciência ou diabetes",
+          "o_que_muda": "afasta hipoglicemia e hiperglicemia como causa do rebaixamento"
+        },
+        {
+          "nome": "densidade e sódio urinários",
+          "indicacao": "dúvida entre desidratação e perda renal de sal",
+          "o_que_muda": "diferencia hipovolemia de síndrome perdedora de sal"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "hemograma e eletrólitos seriados em desidratação leve com boa resposta oral",
+          "motivo": "não altera conduta e atrasa a alta"
+        },
+        {
+          "exame": "tomografia de abdome na desidratação sem dor abdominal",
+          "motivo": "exposição sem indicação clínica"
+        },
+        {
+          "exame": "reposição de potássio guiada por sensação clínica sem dosagem",
+          "motivo": "risco de hipercalemia iatrogênica"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "beber SRO em colheradas pequenas e frequentes",
+        "manter alimentação leve e salgada",
+        "pesar-se diariamente se tiver balança",
+        "manter diurético suspenso até reavaliação"
+      ],
+      "evitar": [
+        "refrigerante, suco concentrado e bebida alcoólica",
+        "soro caseiro com muito açúcar",
+        "diurético por conta própria",
+        "grande volume de água pura em poucos minutos"
+      ],
+      "retorno": [
+        "tontura ao levantar ou desmaio",
+        "ausência de urina por 8 h",
+        "confusão ou sonolência",
+        "vômitos persistentes por mais de 12 h",
+        "inchaço, falta de ar ou ganho de peso rápido"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "cloreto de sódio 0,9%",
+        "efeitos": [
+          "sobrecarga volêmica",
+          "acidose hiperclorêmica",
+          "edema"
+        ],
+        "observacao": "reduzir velocidade e usar furosemida se crepitações"
+      },
+      {
+        "agente": "cloreto de sódio 3%",
+        "efeitos": [
+          "mielinólise pontina",
+          "sobrecarga"
+        ],
+        "observacao": "suspender se a correção passar de 10 mEq/L em 24 h"
+      },
+      {
+        "agente": "cloreto de potássio",
+        "efeitos": [
+          "hipercalemia",
+          "dor e necrose no local"
+        ],
+        "observacao": "nunca em bolus; diluir e monitorar ECG se > 10 mEq/h"
+      },
+      {
+        "agente": "soro glicosado 5%",
+        "efeitos": [
+          "hiponatremia dilucional",
+          "hiperglicemia"
+        ],
+        "observacao": "não usar como reposição isolada de hipovolemia"
+      },
+      {
+        "agente": "furosemida",
+        "efeitos": [
+          "hipocalemia",
+          "hipotensão",
+          "lesão renal"
+        ],
+        "observacao": "dosar eletrólitos e creatinina após 12 h"
+      },
+      {
+        "agente": "metoclopramida",
+        "efeitos": [
+          "distonia",
+          "acatisia"
+        ],
+        "observacao": "suspender e usar difenidramina 50 mg IV"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Interromper a infusão em curso e reavaliar sinais vitais imediatamente",
+      "Hiponatremia corrigida rápido demais: suspender o NaCl 3%, dosar sódio e considerar água livre ou DDAVP",
+      "Sobrecarga: sentar o paciente, reduzir a velocidade, furosemida 40 mg IV e suporte de oxigênio",
+      "Hipercalemia: suspender potássio, ECG, gluconato de cálcio 10% se alteração e avaliar diálise",
+      "Distonia por metoclopramida: difenidramina 50 mg IV ou prometazina 25 mg IM",
+      "Registrar a reação, revisar a indicação e comunicar a equipe"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "solução de reidratação oral",
+            "dose": "50 mL/kg em 4 h",
+            "via": "VO",
+            "frequencia": "colheradas a cada 5 min",
+            "duracao": "3 dias",
+            "condicao": "desidratação leve a moderada",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona 4 mg",
+            "dose": "4 mg",
+            "via": "VO",
+            "frequencia": "8/8 h se vômito",
+            "duracao": "2 dias",
+            "condicao": "vômitos que impedem a ingestão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cloreto de potássio 600 mg liberação prolongada",
+            "dose": "1 comprimido",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "5 dias",
+            "condicao": "hipocalemia leve com diurese preservada",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "SF 0,9%",
+            "dose": "30 mL/kg na 1ª hora (ou 1.000 mL em 1–2 h)",
+            "via": "IV",
+            "frequencia": "bolus com reavaliação",
+            "monitorizacao": "PA, ausculta, diurese",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "SG 5% 1.000 mL + KCl 19,1% 10 mL + NaCl 20% 10 mL",
+            "dose": "30–40 mL/h",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "glicemia, potássio, sódio",
+            "condicao": "manutenção após expansão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cloreto de sódio 3%",
+            "dose": "100–150 mL em 20 min",
+            "via": "IV",
+            "frequencia": "repetir conforme sódio",
+            "monitorizacao": "sódio a cada 2–4 h",
+            "condicao": "hiponatremia grave sintomática",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "furosemida",
+            "dose": "40 mg",
+            "via": "IV",
+            "frequencia": "dose única, repetir se necessário",
+            "monitorizacao": "diurese, potássio, ausculta",
+            "condicao": "sobrecarga volêmica",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "sódio",
+          "potássio",
+          "cloro",
+          "ureia",
+          "creatinina",
+          "hemograma",
+          "gasometria",
+          "lactato",
+          "glicemia",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de desidratação, necessitando de afastamento por __ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica conforme evolução"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com desidratação __, déficit estimado __%, sódio __, reposição com __, diurese __ e evolução __."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "perdas e volume",
+        "duração",
+        "ingesta hídrica",
+        "diurese",
+        "peso habitual",
+        "tontura postural",
+        "diurético e anti-hipertensivo",
+        "comorbidades",
+        "febre"
+      ],
+      "texto_template": "Paciente com perdas por __ há __ dias, ingesta __, diurese __, peso habitual __ kg, tontura postural __, uso de diurético __, comorbidades __ e febre __."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais com PA sentado e deitado",
+        "peso",
+        "mucosas e turgor",
+        "TEC e perfusão",
+        "ausculta pulmonar",
+        "turgência jugular",
+        "nível de consciência",
+        "diurese"
+      ],
+      "texto_template": "PA __/__ deitado e __/__ sentado, FC __, peso __ kg, mucosas __, turgor __, TEC __, ausculta __, consciência __ e diurese __."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de reidratação, velocidade de bolus e limite de correção do sódio",
+        "verificar": true
+      },
+      {
+        "tipo": "oms",
+        "o_que_verificar": "planos A, B e C de reidratação oral e composição da SRO",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_nefrologia",
+        "o_que_verificar": "limite de correção da hiponatremia e uso de NaCl 3%",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e concentrações de eletrólitos injetáveis",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GI11-01",
+        "tipo": "choque",
+        "gatilho": "PAS < 90 mmHg ou oligúria com hipoperfusão",
+        "severidade": "grave",
+        "mensagem": "Choque hipovolêmico: SF 0,9% 30 mL/kg na primeira hora.",
+        "acao": "acionar sala vermelha e sugerir protocolo de reposição",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI11-02",
+        "tipo": "sg5_isolado",
+        "gatilho": "SG 5% prescrito como única reposição em paciente hipovolêmico",
+        "severidade": "grave",
+        "mensagem": "SG 5% não corrige hipovolemia: usar cristaloide isotônico.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI11-03",
+        "tipo": "hiponatremia",
+        "gatilho": "sódio < 120 mEq/L ou correção acima de 10 mEq/L em 24 h",
+        "severidade": "grave",
+        "mensagem": "Risco de mielinólise pontina: limitar a correção.",
+        "acao": "bloquear ajuste de velocidade",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI11-04",
+        "tipo": "potassio",
+        "gatilho": "KCl prescrito sem potássio dosado ou com anúria",
+        "severidade": "grave",
+        "mensagem": "Não repor potássio sem dosagem e sem diurese.",
+        "acao": "bloquear item e solicitar exame",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI11-05",
+        "tipo": "sobrecarga",
+        "gatilho": "cardiopata ou dialítico com bolus repetido de cristaloide",
+        "severidade": "precaucao",
+        "mensagem": "Risco de edema agudo de pulmão: fracionar bolus de 250 mL.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GI11-06",
+        "tipo": "pediatria",
+        "gatilho": "idade menor de 18 anos",
+        "severidade": "precaucao",
+        "mensagem": "Calcular reposição em mL/kg e conferir com PED-03.",
+        "acao": "sugerir cálculo por peso",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "OMS",
+        "ANVISA",
+        "protocolo institucional",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita com classificação de gravidade por déficit e sinais, separação isotônica/hipotônica/hipertônica, via e velocidade de reposição, SF 0,9%, Ringer lactato, SRO, potássio na manutenção, limite de correção do sódio, risco de sobrecarga, diurese como desfecho e erro do SG 5% isolado.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

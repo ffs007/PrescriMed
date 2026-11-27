@@ -1,0 +1,1195 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "TRA-03",
+    "area": "Pequenos traumas",
+    "nome": "Queimadura química",
+    "aliases": [
+      "queimadura química",
+      "queimadura por ácido",
+      "queimadura por base",
+      "queimadura por álcali",
+      "queimadura ocular química",
+      "ácido fluorídrico",
+      "lesão por cimento"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Queimadura química é a lesão tecidual por contato com ácido, base, fenol, solvente ou cimento, e o dano continua enquanto o agente permanece na pele. Irrigação copiosa com água corrente em temperatura ambiente por 20 a 30 minutos é o tratamento, não a preparação para ele, e começa antes de acesso venoso, analgesia ou imagem. Ácido produz necrose de coagulação, que forma barreira e limita a profundidade; base produz necrose liquefativa, com saponificação da gordura e penetração progressiva, e é pior: exige irrigação de 45 a 60 minutos, reavaliação do pH e limiar baixo para centro de queimados. Fenol é pouco hidrossolúvel, tem toxicidade sistêmica por arritmia, convulsão e lesão hepatorrenal, e pede irrigação prolongada com polietilenoglicol 400 ou glicerina quando disponíveis. Ácido fluorídrico é pequeno e lipofílico, atravessa a pele até o osso, sequestra cálcio e magnésio e causa dor desproporcional à lesão visível, com hipocalcemia e arritmia: trata com gel de gluconato de cálcio 2,5%, infiltração perilesional de gluconato 10% e monitorização de cálcio iônico e QT. Cimento é álcali e libera calor na hidratação, somando lesão química e térmica, costuma chegar tarde e engana pela aparência de abrasão. Olho é emergência à parte: lavagem contínua, eversão palpebral, fluoresceína e pH seriado, com oftalmologia. Na ingestão de cáustico, não se induz vômito, não se passa sonda às cegas e a endoscopia é precoce. O que não se faz: neutralizar quimicamente, aplicar gelo, atrasar a irrigação para examinar e usar pomada caseira.",
+    "inclusao": [
+      "Contato cutâneo ou ocular com ácido, base, fenol, ácido fluorídrico, cimento ou solvente",
+      "Queimadura química com dor desproporcional à lesão visível, mesmo em área pequena",
+      "Ingestão de cáustico com sialorreia, disfagia ou dor retroesternal",
+      "Lesão que exige irrigação copiosa, curativo e revisão do estado vacinal antitetânico"
+    ],
+    "exclusao": [
+      {
+        "situacao": "queimadura térmica, elétrica ou por radiação",
+        "fluxo": "DERM-08 queimadura superficial"
+      },
+      {
+        "situacao": "queimadura química acima de 20% de superfície corporal, face, mãos, pés, períneo ou circunferencial",
+        "fluxo": "centro de queimados após irrigação e estabilização"
+      },
+      {
+        "situacao": "lesão inalatória com estridor, rouquidão ou fuligem em orofaringe",
+        "fluxo": "sala vermelha e via aérea"
+      },
+      {
+        "situacao": "olho vermelho e doloroso sem exposição química",
+        "fluxo": "oftalmologia, corpo estranho ou ceratite"
+      },
+      {
+        "situacao": "ingestão de medicamento sem cáustico",
+        "fluxo": "toxicologia"
+      },
+      {
+        "situacao": "dermatite de contato irritativa sem necrose",
+        "fluxo": "ALG-04 dermatite de contato"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "dor ocular intensa, quemose, opacidade de córnea ou perda de visão após exposição",
+        "por_que": "lesão corneal por álcali continua progredindo por dias e leva a cegueira",
+        "acao": "lavagem contínua imediata com eversão palpebral, fluoresceína, pH seriado e oftalmologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "estridor, rouquidão, disfagia ou queimadura visível em orofaringe",
+        "por_que": "edema de via aérea progride em horas e fecha a glote",
+        "acao": "via aérea difícil, intubação precoce e sala vermelha",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "dor desproporcional à lesão, parestesia, espasmo muscular ou arritmia após ácido fluorídrico",
+        "por_que": "quelação de cálcio e magnésio com hipocalcemia e arritmia ventricular",
+        "acao": "gel de gluconato de cálcio, infiltração perilesional, cálcio intravenoso e monitorização cardíaca",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "pele branca, endurecida e indolor ou necrose com vasos trombosados",
+        "por_que": "queimadura de espessura total com necessidade de desbridamento",
+        "acao": "curativo, analgesia e encaminhamento a centro de queimados",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "extensão acima de 10% da superfície corporal ou queimadura circunferencial de membro",
+        "por_que": "choque por extravasamento capilar, hipotermia e síndrome compartimental",
+        "acao": "reposição volêmica, aquecimento e avaliação cirúrgica para escarotomia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "ingestão de cáustico com sialorreia, odinofagia, dor retroesternal ou vômito",
+        "por_que": "perfuração esofágica, mediastinite e estenose",
+        "acao": "nada por boca, não induzir vômito, não passar sonda às cegas e endoscopia precoce",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "urina escura, oligúria, icterícia ou rebaixamento após fenol ou hidrocarboneto",
+        "por_que": "rabdomiólise e lesão hepatorrenal por toxicidade sistêmica",
+        "acao": "hidratação, creatinina, transaminases, ECG e monitorização",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "contato com cimento por mais de 1 hora, dor persistente ou área endurecida",
+        "por_que": "queimadura alcalina profunda de apresentação tardia",
+        "acao": "irrigação prolongada, desbridamento e reavaliação em 24 a 48 horas",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "exposição no trabalho sem EPI, em criança ou com padrão incompatível com a história",
+        "por_que": "risco de nova exposição e de negligência ou maus-tratos",
+        "acao": "notificar CAT, acionar serviço social e proteção",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Qual produto, qual concentração e há quanto tempo houve o contato?",
+      "É ácido, base, fenol, ácido fluorídrico, cimento ou solvente?",
+      "Atingiu olho, boca ou nariz, ou houve inalação do vapor?",
+      "Engoliu o produto? Tem sialorreia ou dor para engolir?",
+      "Já irrigou no local? Com o quê e por quanto tempo?",
+      "A dor é muito maior do que a lesão visível?",
+      "Aplicou neutralizante, pomada, gelo, leite ou pasta de dente antes de chegar?",
+      "Usa lente de contato?",
+      "A exposição foi no trabalho, com produto de limpeza ou em criança sob seus cuidados?",
+      "Quando foi a última dose da vacina antitetânica e quantas doses ao todo?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Todo contato químico com pele ou olho, independente do agente",
+        "escolha": "irrigação copiosa com água corrente em temperatura ambiente por 20 a 30 minutos, iniciada antes de acesso venoso, analgesia ou imagem",
+        "porque": "a diluição e a remoção mecânica do agente interrompem a progressão da necrose, e cada minuto de atraso aumenta a profundidade; nenhuma outra medida substitui a irrigação"
+      },
+      {
+        "cenario": "Exposição a álcali (soda cáustica, cal, cimento, amônia, hipoclorito concentrado)",
+        "escolha": "irrigação por 45 a 60 minutos, com reavaliação do pH da pele e da conjuntiva e repetição até a normalização",
+        "porque": "a necrose liquefativa saponifica a gordura e o agente continua penetrando depois que a superfície parece limpa; irrigação curta deixa lesão em progressão"
+      },
+      {
+        "cenario": "Exposição a ácido fluorídrico",
+        "escolha": "gel de gluconato de cálcio 2,5% massageado na área por 15 minutos e repetido a cada 4 horas, com infiltração perilesional de gluconato de cálcio 10% se a dor persistir, além de cálcio iônico, magnésio, potássio e QT seriados",
+        "porque": "o fluoreto atravessa a pele e sequestra cálcio tecidual; o cálcio tópico e o infiltrativo formam barreira de fluoreto de cálcio insolúvel, e a hipocalcemia sistêmica é a causa de arritmia e morte"
+      },
+      {
+        "cenario": "Exposição a fenol",
+        "escolha": "irrigação prolongada, remoção com polietilenoglicol 400 ou glicerina quando disponíveis, e eletrocardiograma, transaminases e creatinina",
+        "porque": "o fenol é pouco hidrossolúvel e a água isolada espalha o agente; ele é absorvido e causa arritmia, convulsão e necrose hepática e renal"
+      },
+      {
+        "cenario": "Queimadura por cimento",
+        "escolha": "remover o pó seco antes de molhar, irrigar por 45 a 60 minutos e reavaliar em 24 a 48 horas com desbridamento",
+        "porque": "o cimento é álcali e libera calor ao hidratar, somando lesão química e térmica; a apresentação tardia e a aparência de abrasão fazem subestimar a profundidade"
+      },
+      {
+        "cenario": "Comprometimento ocular por qualquer agente",
+        "escolha": "lavagem contínua com soro fisiológico ou água por 20 a 30 minutos, 60 minutos no álcali, com eversão palpebral, remoção de lente de contato, fluoresceína e pH conjuntival antes e depois",
+        "porque": "a córnea não tolera atraso e o pH conjuntival é o único parâmetro objetivo de que a lavagem foi suficiente; a eversão é obrigatória porque o agente se deposita no fórnice"
+      },
+      {
+        "cenario": "Ingestão de cáustico",
+        "escolha": "nada por boca, não induzir vômito, não passar sonda nasogástrica às cegas, endoscopia em até 24 horas e inibidor de bomba de prótons",
+        "porque": "o vômito reexpõe o esôfago e o estômago, a sonda pode perfurar tecido já necrótico e a endoscopia precoce define extensão e prognóstico de estenose"
+      },
+      {
+        "cenario": "Dor na queimadura química",
+        "escolha": "paracetamol como primeira linha e morfina titulada se a dor for intensa; evitar anti-inflamatório não esteroidal",
+        "porque": "a lesão química dói muito e a analgesia adequada permite irrigação e curativo; o AINE acrescenta risco renal na hipovolemia e sangramento digestivo sem benefício"
+      },
+      {
+        "cenario": "Curativo após irrigação completa",
+        "escolha": "gaze não aderente ou filme de poliuretano; sulfadiazina de prata 1% apenas em queimadura de segundo grau fora da face",
+        "porque": "a cobertura não aderente protege sem macerar e permite reavaliação; a sulfadiazina é irritante ocular e não deve ser usada antes de a irrigação terminar"
+      },
+      {
+        "cenario": "Profilaxia antitetânica",
+        "escolha": "dT conforme o estado vacinal e imunoglobulina antitetânica 250 UI se o esquema for incompleto ou desconhecido",
+        "porque": "queimadura é ferida tetanogênica; a vacina não protege de imediato e a imunoglobulina neutraliza a toxina circulante"
+      },
+      {
+        "cenario": "Extensão e topografia com indicação de centro de queimados",
+        "escolha": "encaminhar após irrigação e estabilização quando houver mais de 20% de superfície corporal, face, mãos, pés, períneo, articulação ou lesão circunferencial",
+        "porque": "essas áreas exigem desbridamento, enxerto e reabilitação que só o centro de queimados oferece, e a transferência precoce reduz sequela"
+      },
+      {
+        "cenario": "O que não fazer diante de uma queimadura química",
+        "escolha": "não neutralizar com ácido ou base, não aplicar gelo, não usar pomada caseira e não atrasar a irrigação para examinar ou colher exames",
+        "porque": "a neutralização gera calor e lesão térmica adicional, o gelo causa vasoconstrição e lesão por frio, e o atraso da irrigação aprofunda a necrose"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "dor de queimadura química, antes do curativo e nas primeiras 72 horas",
+        "dose": "750 mg a 1 g",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h, se dor",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "4 g/dia, ou 2 g/dia em hepatopatia e etilismo",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em overdose",
+          "rash",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "frasco de infusão 10 mg/mL (100 mL)"
+        ],
+        "preparo": "Uso direto por via oral; na via intravenosa, infundir o frasco sem diluir",
+        "tempo_infusao": "não se aplica na via oral; 15 minutos na via intravenosa",
+        "monitorizacao": [
+          "dor pela escala de 0 a 10",
+          "dose total diária somando outros produtos com paracetamol",
+          "TGO e TGP em uso acima de 5 dias"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: espaçar para 8/8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia; evitar em Child C",
+        "observacoes": "Primeira escolha porque não interfere na coagulação nem na cicatrização. Dar 30 minutos antes da troca de curativo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "primeira_linha",
+        "indicacao": "dor intensa de queimadura química ou durante irrigação, desbridamento e troca de curativo",
+        "dose": "2 a 4 mg em bolus, repetidos a cada 5 a 10 minutos até dor abaixo de 3 em 10",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "titulação inicial, depois 2 a 4 mg a cada 4 h se dor",
+        "duracao": "24 a 72 horas, conforme a dor",
+        "dose_maxima": "0,1 mg/kg por dose em idoso ou frágil; reavaliar a cada titulação",
+        "contraindicacoes": [
+          "depressão respiratória não monitorizada",
+          "alergia a opioide",
+          "uso de agonista opioide parcial sem orientação"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "sedação",
+          "náusea e vômito",
+          "constipação",
+          "hipotensão",
+          "prurido"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "ampola 2 mg/mL (2 mL)",
+          "comprimido 10 mg",
+          "comprimido de liberação prolongada 30 mg"
+        ],
+        "preparo": "Diluir 1 mL da ampola de 10 mg/mL em 9 mL de soro fisiológico 0,9% para titular em bolus de 1 mL; não usar a apresentação de liberação prolongada na dor aguda",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos",
+        "monitorizacao": [
+          "frequência respiratória antes e após cada bolus",
+          "escala de sedação",
+          "saturação de oxigênio",
+          "pressão arterial",
+          "dor pela escala de 0 a 10",
+          "presença de náusea"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: reduzir a dose em 50% e espaçar, pelo acúmulo de metabólitos ativos",
+        "ajuste_hepatico": "Reduzir dose e intervalo em Child B e C",
+        "observacoes": "Manter naloxona e material de via aérea disponíveis. Não atrasar a irrigação para esperar analgesia: irrigar dói, e analgesia antes reduz a interrupção do procedimento.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "lidocaína gel 2%",
+        "papel": "alternativa",
+        "indicacao": "analgesia tópica para curativo e desbridamento de área pequena",
+        "dose": "camada fina sobre a área lesada, em extensão máxima de 10% da superfície corporal",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "até 4 vezes ao dia, antes dos procedimentos",
+        "duracao": "alívio por 30 a 60 minutos",
+        "dose_maxima": "4,5 mg/kg de lidocaína; no máximo 10% da superfície corporal por aplicação",
+        "contraindicacoes": [
+          "alergia a anestésico do tipo amida",
+          "aplicação em córnea ou saco conjuntival",
+          "aplicação em mucosa extensa",
+          "ferida com infecção franca"
+        ],
+        "efeitos_adversos": [
+          "ardência local",
+          "zumbido e gosto metálico por absorção sistêmica",
+          "convulsão em absorção excessiva",
+          "metemoglobinemia rara",
+          "dermatite de contato"
+        ],
+        "apresentacoes": [
+          "gel estéril 2% bisnaga 30 g",
+          "gel 2% frasco 100 g",
+          "solução 2% frasco 20 mL"
+        ],
+        "preparo": "Uso direto; retirar o excesso antes de ocluir para não aumentar a absorção",
+        "tempo_infusao": "não se aplica (uso tópico); início do efeito em 2 a 5 minutos",
+        "monitorizacao": [
+          "nível de consciência durante e após a aplicação",
+          "zumbido, gosto metálico ou parestesia",
+          "área total aplicada",
+          "aspecto da pele após a remoção"
+        ],
+        "ajuste_renal": "Sem ajuste na aplicação tópica limitada",
+        "ajuste_hepatico": "Reduzir a área de aplicação em hepatopatia grave, pela menor depuração",
+        "observacoes": "Nunca usar em olho: a lidocaína tópica ocular mascara a lesão e retarda a cicatrização corneal. Em área maior que 10% da superfície corporal, preferir analgesia sistêmica.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidoto_topico_calcio",
+        "agente": "gluconato de cálcio gel 2,5%",
+        "papel": "primeira_linha",
+        "indicacao": "queimadura por ácido fluorídrico",
+        "dose": "massagem de 15 minutos em toda a área atingida, repetida a cada 4 horas",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "a cada 4 h, ou a cada 15 a 20 minutos até a dor ceder",
+        "duracao": "até 24 a 48 horas, conforme a dor",
+        "dose_maxima": "sem teto rígido; reavaliar com cálcio iônico e QT",
+        "contraindicacoes": [
+          "alergia a componentes do gel",
+          "aplicação em córnea"
+        ],
+        "efeitos_adversos": [
+          "ardência local",
+          "irritação cutânea",
+          "hipercalcemia por absorção em uso extenso"
+        ],
+        "apresentacoes": [
+          "gel manipulado 2,5% (10 mL de gluconato de cálcio 10% em 30 g de gel hidrofílico neutro)",
+          "gel comercial 2,5% (conferir disponibilidade na farmácia)",
+          "pomada 2,5% manipulada"
+        ],
+        "preparo": "Manipular na hora: 10 mL de gluconato de cálcio 10% em 30 g de gel hidrofílico neutro; massagear com luva por 15 minutos",
+        "tempo_infusao": "não se aplica (uso tópico); massagem contínua por 15 minutos",
+        "monitorizacao": [
+          "dor pela escala de 0 a 10 a cada 15 minutos na primeira hora",
+          "cálcio iônico",
+          "eletrocardiograma e intervalo QT",
+          "potássio e magnésio",
+          "aspecto da pele e das unhas"
+        ],
+        "ajuste_renal": "Cautela em doença renal crônica pelo risco de hipercalcemia",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Aplicar também sob a unha quando a exposição for subungueal e remover a lâmina ungueal se houver impregnação. Se a dor não ceder em 30 minutos, indicar infiltração perilesional.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidoto_injetavel_calcio",
+        "agente": "gluconato de cálcio 10%",
+        "papel": "condicional",
+        "indicacao": "queimadura por ácido fluorídrico com dor persistente, e hipocalcemia sintomática",
+        "dose": "infiltração perilesional de 0,5 mL por cm² de pele atingida, até 10 mL por sessão; via intravenosa 1 a 2 g se hipocalcemia sintomática ou arritmia",
+        "unidade": "mL",
+        "via": "infiltração perilesional ou IV",
+        "frequencia": "dose única por sessão de infiltração; repetir conforme dor e cálcio",
+        "duracao": "1 a 3 sessões",
+        "dose_maxima": "10 mL de gluconato 10% por sessão infiltrativa; 3 g por via intravenosa em acesso central",
+        "contraindicacoes": [
+          "hipercalcemia",
+          "intoxicação digitálica",
+          "extravasamento em veia periférica de solução concentrada"
+        ],
+        "efeitos_adversos": [
+          "dor e necrose por extravasamento",
+          "bradicardia",
+          "hipotensão",
+          "hipercalcemia",
+          "calcificação de tecidos"
+        ],
+        "apresentacoes": [
+          "ampola 10% 10 mL (1 g)",
+          "ampola 10% 5 mL (0,5 g)",
+          "frasco 10% 100 mL"
+        ],
+        "preparo": "Infiltração: diluir 1:1 em soro fisiológico 0,9% e infiltrar com agulha 30 G na borda da lesão; via IV: diluir 10 mL em 100 mL de soro fisiológico ou glicose 5%",
+        "tempo_infusao": "via intravenosa em 10 a 20 minutos; infiltração local imediata",
+        "monitorizacao": [
+          "cálcio iônico antes e 30 minutos após",
+          "eletrocardiograma e intervalo QT",
+          "frequência cardíaca e pressão arterial",
+          "sítio de infiltração e perfusão distal"
+        ],
+        "ajuste_renal": "Reduzir a dose e monitorar cálcio em doença renal crônica",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Usar gluconato, não cloreto de cálcio, em veia periférica: o cloreto é esclerosante e causa necrose por extravasamento. A infiltração é o que controla a dor do ácido fluorídrico quando o gel falha.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "solucao_irrigacao",
+        "agente": "soro fisiológico 0,9%",
+        "papel": "primeira_linha",
+        "indicacao": "lavagem ocular contínua e irrigação complementar quando não há água corrente disponível",
+        "dose": "500 a 2.000 mL por olho, em fluxo contínuo",
+        "unidade": "mL",
+        "via": "irrigação tópica / lavagem conjuntival",
+        "frequencia": "contínua por 20 a 30 minutos, ou 60 minutos no álcali",
+        "duracao": "até o pH conjuntival normalizar",
+        "dose_maxima": "sem teto; interromper quando o pH estiver entre 7,0 e 7,4",
+        "contraindicacoes": [
+          "nenhuma para irrigação",
+          "uso de solução aberta há mais de 24 horas"
+        ],
+        "efeitos_adversos": [
+          "hipotermia em irrigação extensa",
+          "desconforto local",
+          "diluição de defesas locais em uso prolongado"
+        ],
+        "apresentacoes": [
+          "frasco 500 mL",
+          "bolsa 1.000 mL",
+          "frasco 1.000 mL",
+          "ampola 10 mL"
+        ],
+        "preparo": "Uso direto, à temperatura ambiente ou aquecido a 37 °C; conectar a equipo de irrigação ou seringa de 20 mL sem agulha para lavagem ocular",
+        "tempo_infusao": "irrigação contínua por 20 a 30 minutos, sem interrupção para transporte",
+        "monitorizacao": [
+          "pH conjuntival com fita antes, durante e depois da lavagem",
+          "temperatura corporal em irrigação extensa",
+          "conforto e colaboração do paciente",
+          "aspecto da conjuntiva e da córnea"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Água corrente é a primeira escolha no atendimento inicial porque está disponível de imediato; o soro fisiológico entra na lavagem ocular contínua e na continuidade da irrigação. Aquecer evita hipotermia em área extensa.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antisseptico",
+        "agente": "clorexidina degermante 2%",
+        "papel": "condicional",
+        "indicacao": "antissepsia da pele íntegra ao redor da lesão antes do curativo",
+        "dose": "aplicação em raio de 10 cm ao redor da lesão",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "a cada troca de curativo",
+        "duracao": "enquanto houver ferida",
+        "dose_maxima": "uma aplicação por troca",
+        "contraindicacoes": [
+          "alergia a clorexidina",
+          "aplicação em córnea, ouvido médio ou mucosa",
+          "aplicação dentro da ferida aberta"
+        ],
+        "efeitos_adversos": [
+          "irritação cutânea",
+          "dermatite de contato",
+          "citotoxicidade para fibroblastos na ferida"
+        ],
+        "apresentacoes": [
+          "frasco 100 mL a 2%",
+          "frasco 1.000 mL degermante a 2%",
+          "solução aquosa 2%"
+        ],
+        "preparo": "Diluir 1:1 em água estéril em pele sensível ou em criança; aplicar com gaze e aguardar 30 segundos",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "reação cutânea no campo",
+          "secagem completa antes do curativo"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não instilar dentro da queimadura: é citotóxica e atrasa a reepitelização. Serve para a pele ao redor, não para a superfície lesada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antimicrobiano_topico",
+        "agente": "sulfadiazina de prata 1%",
+        "papel": "alternativa",
+        "indicacao": "queimadura química de segundo grau com risco de colonização, após irrigação completa",
+        "dose": "camada de 1 a 2 mm sobre a lesão",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "12/12 h",
+        "duracao": "5 a 14 dias, até reepitelização ou desbridamento",
+        "dose_maxima": "aplicação em até 20% da superfície corporal",
+        "contraindicacoes": [
+          "alergia a sulfonamida",
+          "deficiência de glicose-6-fosfato desidrogenase",
+          "gestante a termo e recém-nascido",
+          "face, olho e área periorbital",
+          "insuficiência renal avançada"
+        ],
+        "efeitos_adversos": [
+          "ardência local",
+          "leucopenia transitória",
+          "argiria",
+          "irritação ocular",
+          "kernicterus em recém-nascido"
+        ],
+        "apresentacoes": [
+          "creme 1% bisnaga 30 g",
+          "creme 1% pote 400 g",
+          "pomada 1% bisnaga 30 g"
+        ],
+        "preparo": "Uso direto com luva estéril; não diluir; retirar o excesso antes de reaplicar",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "hemograma se uso acima de 7 dias",
+          "função renal",
+          "aspecto da lesão e sinais de infecção",
+          "pigmentação argírica"
+        ],
+        "ajuste_renal": "Evitar em insuficiência renal avançada pela absorção de sulfonamida",
+        "ajuste_hepatico": "Cautela em hepatopatia grave",
+        "observacoes": "Não é rotina em queimadura química: a prioridade é a irrigação e o curativo não aderente. Não usar em face nem perto do olho. Não aplicar antes de completar a irrigação.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "ibp",
+        "agente": "omeprazol",
+        "papel": "condicional",
+        "indicacao": "lesão esofágica ou gástrica por ingestão de cáustico",
+        "dose": "40 mg",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "12/12 h na fase aguda, depois 1x/dia",
+        "duracao": "7 a 14 dias, conforme endoscopia",
+        "dose_maxima": "80 mg/dia",
+        "contraindicacoes": [
+          "alergia a benzimidazol"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "diarreia",
+          "hipomagnesemia em uso prolongado",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "frasco 40 mg (pó para reconstituição)",
+          "ampola 40 mg/5 mL",
+          "cápsula 20 mg",
+          "comprimido 40 mg"
+        ],
+        "preparo": "Reconstituir o frasco em 5 mL de diluente próprio e diluir em 100 mL de soro fisiológico 0,9% para infusão",
+        "tempo_infusao": "20 a 30 minutos",
+        "monitorizacao": [
+          "dor retroesternal e disfagia",
+          "sangramento digestivo",
+          "tolerância à dieta após a endoscopia"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir para 20 mg/dia em Child C",
+        "observacoes": "Reduz a exposição ácida da mucosa lesada e o desconforto, mas não previne estenose. Corticoide não tem papel na prevenção de estenose esofágica.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico",
+        "agente": "ondansetrona",
+        "papel": "alternativa",
+        "indicacao": "vômitos na lesão esofágica por cáustico, para evitar reexposição da mucosa",
+        "dose": "4 a 8 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h, se vômito",
+        "duracao": "24 a 48 horas",
+        "dose_maxima": "16 mg/dia por via intravenosa",
+        "contraindicacoes": [
+          "síndrome do QT longo",
+          "alergia a ondansetrona",
+          "uso concomitante de outro fármaco que prolongue o QT"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "constipação",
+          "prolongamento do intervalo QT",
+          "tontura"
+        ],
+        "apresentacoes": [
+          "ampola 2 mg/mL (2 mL, 4 mg)",
+          "ampola 2 mg/mL (4 mL, 8 mg)",
+          "comprimido 4 mg",
+          "comprimido 8 mg",
+          "solução oral 4 mg/5 mL"
+        ],
+        "preparo": "Diluir a ampola em 50 mL de soro fisiológico 0,9% para infusão; via oral em uso direto",
+        "tempo_infusao": "15 minutos",
+        "monitorizacao": [
+          "número de episódios de vômito",
+          "eletrocardiograma em cardiopata",
+          "potássio e magnésio"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em Child C",
+        "observacoes": "Tratar o vômito é parte do cuidado: cada episódio reexpõe o esôfago lesado. Nunca induzir vômito na ingestão de cáustico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "imunobiologico",
+        "agente": "toxoide tetânico e diftérico (dT)",
+        "papel": "condicional",
+        "indicacao": "reforço ou complementação do esquema antitetânico em queimadura química",
+        "dose": "0,5 mL",
+        "unidade": "mL",
+        "via": "IM",
+        "frequencia": "dose única neste atendimento; completar o esquema de 3 doses quando incompleto",
+        "duracao": "reforço a cada 10 anos",
+        "dose_maxima": "0,5 mL por dose",
+        "contraindicacoes": [
+          "anafilaxia prévia a componente da vacina",
+          "encefalopatia nos 7 dias após dose anterior"
+        ],
+        "efeitos_adversos": [
+          "dor e edema no local",
+          "febre baixa",
+          "anafilaxia rara",
+          "abscesso local por aplicação inadequada"
+        ],
+        "apresentacoes": [
+          "frasco multidose 10 doses de 0,5 mL",
+          "seringa preenchida 0,5 mL",
+          "frasco 5 doses de 0,5 mL"
+        ],
+        "preparo": "Uso direto; agitar antes de aspirar e aplicar no deltoide",
+        "tempo_infusao": "não se aplica (via intramuscular)",
+        "monitorizacao": [
+          "reação local em 24 horas",
+          "febre",
+          "anafilaxia nos primeiros 30 minutos",
+          "registro no cartão vacinal"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Aplicar em sítio diferente do da imunoglobulina antitetânica, com agulha e seringa separadas. Não atrasar a irrigação por causa da vacina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/PNI",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina humana antitetânica",
+        "papel": "condicional",
+        "indicacao": "queimadura química com esquema vacinal incompleto, desconhecido ou última dose há mais de 10 anos",
+        "dose": "250 UI",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "250 UI por atendimento",
+        "contraindicacoes": [
+          "anafilaxia prévia a imunoglobulina humana",
+          "deficiência de IgA com anticorpos anti-IgA"
+        ],
+        "efeitos_adversos": [
+          "dor local",
+          "febre",
+          "anafilaxia rara",
+          "doença do soro em 7 a 14 dias"
+        ],
+        "apresentacoes": [
+          "frasco 250 UI",
+          "frasco 500 UI",
+          "seringa preenchida 250 UI"
+        ],
+        "preparo": "Uso direto, IM profunda no glúteo ou vasto lateral; nunca por via intravenosa",
+        "tempo_infusao": "não se aplica (via intramuscular); observar 30 minutos após",
+        "monitorizacao": [
+          "anafilaxia nos primeiros 30 minutos",
+          "febre e artralgia em 7 a 14 dias",
+          "sítio de aplicação"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Se indisponível, usar soro antitetânico heterólogo 5.000 UI IM após teste de sensibilidade. Queimadura é ferida tetanogênica por definição.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/PNI",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Irrigação copiosa imediata",
+        "detalhe": "água corrente em temperatura ambiente por 20 a 30 minutos; álcali, fenol, ácido fluorídrico e cimento por 45 a 60 minutos ou até o pH da pele normalizar; começar antes de acesso venoso, analgesia e exames"
+      },
+      {
+        "medida": "Remoção do agente e da roupa contaminada",
+        "detalhe": "cortar a roupa em vez de puxar pela cabeça, retirar calçado e adornos, escovar o pó seco de cal ou cimento antes de molhar e proteger a equipe com luvas, avental e óculos"
+      },
+      {
+        "medida": "Controle de hipotermia durante a irrigação",
+        "detalhe": "sala aquecida, água a 37 °C quando disponível, cobertor sobre as áreas não expostas e fluidos aquecidos; irrigação prolongada em área extensa esfria o paciente rápido"
+      },
+      {
+        "medida": "Lavagem ocular contínua com eversão palpebral",
+        "detalhe": "20 a 30 minutos com soro fisiológico ou água, 60 minutos no álcali, evertendo as pálpebras, removendo lente de contato e mantendo a lavagem durante o transporte, sem interrupção"
+      },
+      {
+        "medida": "Nada por boca e não induzir vômito na ingestão de cáustico",
+        "detalhe": "jejum, posição sentada, não oferecer leite, água ou carvão ativado, não passar sonda nasogástrica às cegas e manter acesso venoso para hidratação"
+      },
+      {
+        "medida": "Curativo não aderente com troca programada",
+        "detalhe": "gaze não aderente ou filme de poliuretano após secar a pele, sem algodão, sem compressão circunferencial, troca em 24 a 48 horas e reavaliação da profundidade a cada troca"
+      },
+      {
+        "medida": "Analgesia antes dos procedimentos",
+        "detalhe": "paracetamol 30 minutos antes do curativo e opioide titulado antes do desbridamento; sem analgesia adequada a irrigação e a limpeza são interrompidas pelo paciente"
+      },
+      {
+        "medida": "Notificação e CAT",
+        "detalhe": "preencher a comunicação de acidente de trabalho, notificar o agente químico quando exigido e registrar produto, concentração, tempo de exposição e tempo até a irrigação"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Irrigação e descontaminação cutânea",
+        "indicacao": "todo contato químico com a pele",
+        "tecnica": "retirar o agente e a roupa, escovar o pó seco, irrigar em fluxo contínuo com água corrente a 37 °C por 20 a 30 minutos (45 a 60 no álcali), medir o pH da pele ao final e repetir se estiver alterado",
+        "complicacoes": "hipotermia em área extensa, aprofundamento da lesão quando a irrigação é curta e disseminação do agente para áreas íntegras pela água escorrida"
+      },
+      {
+        "nome": "Lavagem ocular e eversão palpebral",
+        "indicacao": "exposição ocular por qualquer agente químico",
+        "tecnica": "anestesiar com colírio de proximetacaína, evertar as pálpebras, irrigar com soro fisiológico por 20 a 30 minutos (60 no álcali) de medial para lateral, remover lente de contato e usar lente de Morgan quando disponível",
+        "complicacoes": "lesão corneal por irrigação insuficiente, contaminação do fórnice, abrasão por eversão traumática e retenção de corpo estranho"
+      },
+      {
+        "nome": "Teste de fluoresceína e medição de pH conjuntival",
+        "indicacao": "toda exposição ocular, antes e depois da lavagem",
+        "tecnica": "instilar uma gota de fluoresceína 1% e examinar com luz azul de cobalto; medir o pH com fita no saco conjuntival inferior, repetindo a cada 10 a 15 minutos até ficar entre 7,0 e 7,4",
+        "complicacoes": "falso-negativo em lesão profunda, coloração residual que dificulta novo exame e atraso da oftalmologia por confiança no teste"
+      },
+      {
+        "nome": "Desbridamento e curativo da queimadura",
+        "indicacao": "queimadura de segundo grau profundo ou terceiro grau, bolhas rotas e tecido desvitalizado",
+        "tecnica": "após irrigação e analgesia, remover tecido necrótico e bolhas rotas com pinça e tesoura, preservar o teto íntegro, cobrir com gaze não aderente ou filme de poliuretano e reavaliar em 24 a 48 horas",
+        "complicacoes": "sangramento, dor intensa, infecção e aprofundamento da lesão por desbridamento agressivo em área de perfusão limítrofe"
+      },
+      {
+        "nome": "Endoscopia digestiva alta precoce",
+        "indicacao": "ingestão de cáustico com sintomas ou exposição significativa",
+        "tecnica": "realizar em até 24 horas, preferencialmente entre 6 e 24 horas, com insuflação mínima, classificando as lesões de Zargar e evitando biópsia e passagem além da primeira estenose",
+        "complicacoes": "perfuração esofágica ou gástrica, aspiração, sangramento e piora da lesão por insuflação excessiva"
+      },
+      {
+        "nome": "Encaminhamento a centro de queimados",
+        "indicacao": "mais de 20% de superfície corporal, face, mãos, pés, períneo, articulação ou lesão circunferencial",
+        "tecnica": "irrigar e estabilizar antes do transporte, analgesia, curativo com filme ou gaze estéril, aquecimento, acesso venoso e resumo por escrito com agente, concentração, tempo de exposição e condutas realizadas",
+        "complicacoes": "hipotermia no transporte, piora da lesão por atraso na irrigação e perda de informação sobre o agente"
+      }
+    ],
+    "metas": [
+      "Irrigação iniciada em menos de 10 minutos da chegada, antes de qualquer exame",
+      "Irrigação com no mínimo 20 a 30 minutos registrada em prontuário, com o tempo efetivo",
+      "pH conjuntival entre 7,0 e 7,4 ao final da lavagem ocular",
+      "Dor abaixo de 3 em 10 em até 60 minutos da analgesia",
+      "Temperatura corporal acima de 36 °C durante e após a irrigação",
+      "Cálcio iônico normal e ausência de arritmia nas primeiras 24 horas no ácido fluorídrico",
+      "Endoscopia realizada em até 24 horas na ingestão de cáustico",
+      "Esquema antitetânico conferido e registrado antes da alta"
+    ],
+    "fluxo": [
+      "Retirar o agente e a roupa contaminada e iniciar irrigação com água corrente por 20 a 30 minutos, protegendo a equipe",
+      "Identificar o agente, a concentração, o tempo de exposição e a via: pele, olho, ingestão ou inalação",
+      "Tratar o olho em paralelo: lavagem contínua, eversão palpebral, fluoresceína, pH e oftalmologia",
+      "Analisar a dor e aquecer o paciente: paracetamol, morfina titulada se necessário, cobertor e fluidos aquecidos",
+      "Aprofundar a irrigação conforme o agente: 45 a 60 minutos em álcali, fenol e cimento",
+      "No ácido fluorídrico, iniciar gel de gluconato de cálcio, infiltrar se a dor persistir e monitorar cálcio, magnésio, potássio e QT",
+      "Na ingestão de cáustico, manter nada por boca, não induzir vômito, não passar sonda às cegas, iniciar IBP e indicar endoscopia precoce",
+      "Revisar tétano, definir curativo, avaliar critério de centro de queimados e reavaliar em 24 a 48 horas"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "trabalhador exposto a produto industrial",
+        "ajuste": "irrigar no local de trabalho antes do transporte, identificar o produto pela ficha de segurança e preencher CAT",
+        "alerta": "exposições repetidas e concentrações industriais causam lesão mais profunda que o produto doméstico"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "irrigar da mesma forma e evitar sulfadiazina de prata e polietilenoglicol em área extensa",
+        "alerta": "fenol e solventes têm absorção sistêmica com risco fetal; hipotermia materna é mal tolerada"
+      },
+      {
+        "populacao": "crianca",
+        "ajuste": "irrigar com água morna, contenção adequada e analgesia precoce; suspeitar de ingestão de produto de limpeza",
+        "alerta": "superfície corporal proporcionalmente maior, hipotermia rápida e risco de negligência"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "pele fina com maior absorção, limiar baixo para internação e reavaliação em 24 horas",
+        "alerta": "comorbidade cardíaca e renal agrava a toxicidade sistêmica do fenol e do fluoreto"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "controle glicêmico e reavaliação precoce da ferida, com limiar baixo para internação",
+        "alerta": "infecção e retardo de cicatrização com progressão silenciosa da necrose"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "pH da pele e do saco conjuntival com fita",
+          "indicacao": "toda exposição química, antes e depois da irrigação",
+          "o_que_muda": "define se a irrigação foi suficiente e se precisa continuar"
+        },
+        {
+          "nome": "exame ocular com fluoresceína e lâmpada de fenda",
+          "indicacao": "exposição ocular ou dor ocular",
+          "o_que_muda": "identifica lesão corneal e define urgência oftalmológica"
+        },
+        {
+          "nome": "cálcio iônico, magnésio, potássio e eletrocardiograma",
+          "indicacao": "ácido fluorídrico, fenol ou arritmia",
+          "o_que_muda": "indica cálcio intravenoso e monitorização cardíaca contínua"
+        },
+        {
+          "nome": "gasometria, lactato, creatinina e transaminases",
+          "indicacao": "exposição extensa, fenol, solvente ou instabilidade",
+          "o_que_muda": "detecta toxicidade sistêmica, rabdomiólise e necessidade de hidratação"
+        },
+        {
+          "nome": "endoscopia digestiva alta",
+          "indicacao": "ingestão de cáustico",
+          "o_que_muda": "classifica a lesão e define dieta, internação e prognóstico de estenose"
+        },
+        {
+          "nome": "radiografia ou tomografia de tórax e abdome",
+          "indicacao": "suspeita de perfuração esofágica ou gástrica",
+          "o_que_muda": "mostra pneumomediastino ou pneumoperitônio e indica cirurgia"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "neutralização química com ácido ou base",
+          "motivo": "a reação é exotérmica, acrescenta lesão térmica e não reduz a necrose"
+        },
+        {
+          "exame": "indução de vômito ou lavagem gástrica na ingestão de cáustico",
+          "motivo": "reexpõe o esôfago e o estômago e aumenta o risco de perfuração"
+        },
+        {
+          "exame": "sonda nasogástrica às cegas na ingestão de cáustico",
+          "motivo": "pode perfurar mucosa já necrótica"
+        },
+        {
+          "exame": "cultura de rotina da superfície queimada",
+          "motivo": "reflete colonização e induz antibiótico desnecessário"
+        },
+        {
+          "exame": "corticoide para prevenir estenose esofágica",
+          "motivo": "não reduz estenose e aumenta o risco de infecção"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter o curativo limpo e seco, com troca em 24 a 48 horas",
+        "tomar a analgesia antes da troca do curativo",
+        "retornar em 24 horas para reavaliação da profundidade",
+        "manter repouso do membro afetado e elevação quando for membro",
+        "completar o esquema antitetânico se foi iniciado",
+        "usar protetor solar na área cicatrizada por 6 meses",
+        "levar a ficha de segurança do produto quando a exposição for ocupacional"
+      ],
+      "evitar": [
+        "aplicar neutralizante, gelo, manteiga, pasta de dente ou pomada caseira",
+        "romper bolhas ou retirar o teto íntegro por conta própria",
+        "expor a área ao sol durante a cicatrização",
+        "ingerir qualquer coisa após ingestão de cáustico, inclusive leite ou água",
+        "retomar atividade de esforço com ferida aberta"
+      ],
+      "retorno": [
+        "dor que aumenta em vez de ceder",
+        "febre ou secreção purulenta",
+        "área escura, endurecida ou que perde a sensibilidade",
+        "dor para engolir, sialorreia ou dor no peito após ingestão",
+        "dor ocular, fotofobia ou piora da visão",
+        "dormência, palidez ou ausência de pulso no membro"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade em overdose"
+        ],
+        "observacao": "conferir a dose total diária somando outros produtos com paracetamol"
+      },
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "depressão respiratória",
+          "sedação",
+          "náusea",
+          "hipotensão"
+        ],
+        "observacao": "reduzir a dose em idoso e renal crônico; manter naloxona disponível"
+      },
+      {
+        "agente": "lidocaína gel 2%",
+        "efeitos": [
+          "zumbido",
+          "gosto metálico",
+          "convulsão",
+          "metemoglobinemia"
+        ],
+        "observacao": "limitar a 10% da superfície corporal e nunca usar no olho"
+      },
+      {
+        "agente": "gluconato de cálcio 10%",
+        "efeitos": [
+          "bradicardia",
+          "hipotensão",
+          "necrose por extravasamento",
+          "hipercalcemia"
+        ],
+        "observacao": "infundir lentamente, diluído, e conferir o acesso antes de infundir"
+      },
+      {
+        "agente": "sulfadiazina de prata 1%",
+        "efeitos": [
+          "leucopenia",
+          "argiria",
+          "irritação ocular"
+        ],
+        "observacao": "hemograma se uso acima de 7 dias e suspender em área extensa"
+      },
+      {
+        "agente": "omeprazol",
+        "efeitos": [
+          "cefaleia",
+          "diarreia",
+          "hipomagnesemia"
+        ],
+        "observacao": "magnésio se uso acima de 7 dias"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação com data e horário",
+      "Toxicidade por lidocaína: interromper a aplicação, oxigênio, monitorização e suporte avançado se convulsão",
+      "Extravasamento de gluconato de cálcio: interromper a infusão, aspirar quando possível e avaliar cirurgia",
+      "Hipercalcemia ou bradicardia pelo cálcio: suspender, hidratar e controlar o eletrocardiograma",
+      "Leucopenia por sulfadiazina de prata: suspender, hemograma seriado e trocar por curativo não aderente",
+      "Anafilaxia por vacina ou imunoglobulina: adrenalina IM 0,5 mg na face lateral da coxa e suporte"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "3 dias",
+            "condicao": "dor residual de queimadura de pequena extensão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "toxoide tetânico e diftérico (dT)",
+            "dose": "0,5 mL",
+            "via": "IM",
+            "frequencia": "dose única",
+            "duracao": "reforço em 10 anos",
+            "condicao": "esquema vacinal incompleto ou última dose há mais de 10 anos",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "morfina",
+            "dose": "2 a 4 mg",
+            "via": "IV",
+            "frequencia": "titulada a cada 5 a 10 min",
+            "monitorizacao": "frequência respiratória, sedação e saturação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "gluconato de cálcio gel 2,5%",
+            "dose": "massagem por 15 min",
+            "via": "tópica",
+            "frequencia": "a cada 4 h",
+            "monitorizacao": "dor, cálcio iônico e QT",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "omeprazol",
+            "dose": "40 mg",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "monitorizacao": "dor retroesternal e sangramento digestivo",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "pH de pele e conjuntiva",
+          "avaliação oftalmológica com fluoresceína",
+          "cálcio iônico",
+          "eletrocardiograma",
+          "gasometria e lactato",
+          "creatinina e transaminases",
+          "endoscopia digestiva alta",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com queimadura química em sítio e extensão, submetido a irrigação e curativo, necessitando de afastamento conforme decisão médica.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e CID são decisão médica no ato"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com queimadura química por agente, concentração e tempo de exposição, com via de contato, tempo até a irrigação, extensão e profundidade, pH final, conduta analgésica, curativo, profilaxia antitetânica e encaminhamento."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "produto e concentração",
+        "tempo de exposição",
+        "via de contato",
+        "irrigação já realizada e duração",
+        "substâncias aplicadas antes da chegada",
+        "dor e desproporção com a lesão",
+        "sintomas oculares e respiratórios",
+        "disfagia e sialorreia",
+        "estado vacinal antitetânico",
+        "exposição ocupacional"
+      ],
+      "texto_template": "Paciente com queimadura química por produto e concentração, há tempo de exposição, por contato em pele, olho ou ingestão, com irrigação prévia de duração, substâncias aplicadas antes da chegada, dor desproporcional, sintomas oculares, respiratórios e de disfagia, estado vacinal antitetânico e contexto ocupacional."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e temperatura",
+        "extensão e profundidade da lesão",
+        "pH da pele e da conjuntiva",
+        "exame ocular com fluoresceína",
+        "orofaringe e via aérea",
+        "perfusão e pulso distal do membro",
+        "dor e sensibilidade da área",
+        "sinais de necrose e de impregnação do agente"
+      ],
+      "texto_template": "Sinais vitais e temperatura, extensão e profundidade da lesão, pH de pele e conjuntiva, exame ocular com fluoresceína, orofaringe e via aérea, perfusão e pulso distal, dor e sensibilidade da área e sinais de necrose."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de irrigação, tempo por agente e critérios de centro de queimados",
+        "verificar": true
+      },
+      {
+        "tipo": "centro_de_toxicologia",
+        "o_que_verificar": "conduta específica para fenol, ácido fluorídrico e cáustico ingerido",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_oftalmologia",
+        "o_que_verificar": "lavagem ocular, uso de fluoresceína e critério de encaminhamento",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_ms",
+        "o_que_verificar": "profilaxia antitetânica conforme estado vacinal e tipo de ferida",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de gluconato de cálcio, sulfadiazina de prata e analgésicos",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-TRA03-01",
+        "tipo": "neutralizacao",
+        "gatilho": "prescrição ou orientação de neutralizante químico",
+        "severidade": "grave",
+        "mensagem": "Neutralizar gera calor e aprofunda a lesão: a conduta é irrigar com água.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA03-02",
+        "tipo": "gelo",
+        "gatilho": "aplicação de gelo ou produto caseiro na queimadura química",
+        "severidade": "grave",
+        "mensagem": "Gelo causa vasoconstrição e lesão por frio; usar água em temperatura ambiente.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA03-03",
+        "tipo": "ocular",
+        "gatilho": "exposição ocular química registrada",
+        "severidade": "grave",
+        "mensagem": "Lavagem contínua, fluoresceína e pH imediatos, com oftalmologia.",
+        "acao": "acionar oftalmologia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA03-04",
+        "tipo": "ingestao_caustico",
+        "gatilho": "indução de vômito, lavagem gástrica ou sonda nasogástrica na ingestão de cáustico",
+        "severidade": "grave",
+        "mensagem": "Não induzir vômito nem passar sonda às cegas: risco de perfuração esofágica.",
+        "acao": "bloquear procedimento",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA03-05",
+        "tipo": "acido_fluoridrico",
+        "gatilho": "exposição a ácido fluorídrico sem gluconato de cálcio prescrito",
+        "severidade": "grave",
+        "mensagem": "Iniciar gel de gluconato de cálcio e monitorar cálcio iônico e QT.",
+        "acao": "sugerir protocolo",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA03-06",
+        "tipo": "atraso_irrigacao",
+        "gatilho": "irrigação registrada com menos de 20 minutos ou iniciada após exames",
+        "severidade": "precaucao",
+        "mensagem": "Irrigação curta ou tardia aprofunda a necrose.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-TRA03-07",
+        "tipo": "centro_de_queimados",
+        "gatilho": "extensão acima de 20%, face, mãos, pés, períneo ou lesão circunferencial",
+        "severidade": "precaucao",
+        "mensagem": "Critério de encaminhamento a centro de queimados após estabilização.",
+        "acao": "sugerir encaminhamento",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "MS/PNI",
+        "centros de toxicologia",
+        "literatura de queimaduras"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita com irrigação copiosa por agente, separação de ácido, álcali, fenol, ácido fluorídrico e cimento, gluconato de cálcio tópico e infiltrativo, analgesia, curativo não aderente, profilaxia antitetânica, lesão ocular com fluoresceína e pH, lesão esofágica com endoscopia precoce e lista do que não fazer.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

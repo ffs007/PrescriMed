@@ -1,0 +1,606 @@
+{
+  "id": "ws-end_10",
+  "nome": "Hiponatremia",
+  "cat": "Emergência",
+  "alias": "hiponatremia hiponatremia hiponatremia hiponatremia hipotonica hiponatremia dilucional siadh sindrome da secrecao inapropriada de hormonio antidiuretico",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (END-10_hiponatremia.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] diretriz_nefrologia: limites de correção, cálculo do déficit e manejo da correção excessiva",
+      "[verificar] protocolo_institucional: fluxo de NaCl 3%, dupla checagem e plano de dosagem de sódio",
+      "[verificar] sociedade_endocrinologia: SIADH, uso de tolvaptana e ureia",
+      "[verificar] anvisa: apresentações de NaCl 3% e 20%, desmopressina e tolvaptana disponíveis no serviço",
+      "[verificar] literatura: desmielinização osmótica, fatores de risco e velocidade de rebaixamento"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "END-10 em 2026-11-27",
+    "fundido_workspace": "END-10 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: convulsão, coma ou rebaixamento de consciência -> NaCl 3% 100 mL em 10 min imediatamente, sem esperar exames, e unidade de terapia intensiva; vômitos, cefaleia intensa ou sonolência -> avaliar Na imediato e iniciar bolus hipertônico se sintomático; sódio abaixo de 120 mEq/L -> monitorização contínua e correção controlada com teto de 8 mEq/L em 24 h; sódio subindo mais de 10 mEq/L em 24 h -> interromper a correção, iniciar SG 5% e desmopressina e rebaixar o sódio 1 mEq/L por hora. 1) Confirmar que é hipotônica: sódio abaixo de 135, osmolalidade sérica abaixo de 275 e glicemia para excluir pseudoliponatremia 2) Classificar em duas perguntas: há sintoma grave (convulsão, coma, rebaixamento, vômitos)? Qual o estado volêmico (hipo, eu ou hipervolêmica)? 3) Sintomático grave: NaCl 3% 100 mL em 10 min, repetir até 3 vezes até melhora ou elevação de 4-6 mEq/L, sem esperar tomografia ou exames 4) Calcular o déficit de sódio e programar a correção com teto de 8-10 mEq/L em 24 h e 18 mEq/L em 48 h 5) Dosar sódio de 2/2 h na fase ativa; se o delta acumulado ameaçar o teto, interromper a correção 6) Investigar a causa: tiazídico, antidepressivo, carbamazepina, SIADH, cirrose, insuficiência cardíaca, hipotireoidismo e insuficiência adrenal (TSH, cortisol, sódio e osmolalidade urinários) 7) Tratar pela causa: hipovolêmica com SF 0,9%; SIADH com restrição hídrica, sal, ureia ou tolvaptana; hipervolêmica com restrição e furosemida; endócrina com levotiroxina ou hidrocortison",
+  "redFlags": [
+    "convulsão, coma ou rebaixamento de consciência -> NaCl 3% 100 mL em 10 min imediatamente, sem esperar exames, e unidade de terapia intensiva",
+    "vômitos, cefaleia intensa ou sonolência -> avaliar Na imediato e iniciar bolus hipertônico se sintomático",
+    "sódio abaixo de 120 mEq/L -> monitorização contínua e correção controlada com teto de 8 mEq/L em 24 h",
+    "sódio subindo mais de 10 mEq/L em 24 h -> interromper a correção, iniciar SG 5% e desmopressina e rebaixar o sódio 1 mEq/L por hora",
+    "hipocalemia, alcoolismo, desnutrição ou hepatopatia associados -> reduzir o teto para 6 mEq/L em 24 h e dosar sódio de 2/2 h",
+    "hipotensão, taquicardia ou mucosas secas -> SF 0,9% e reavaliação de volume antes de restringir água",
+    "edema, ascite, estertores ou ganho de peso -> restrição hídrica, furosemida e tratamento da doença de base; não infundir soro"
+  ],
+  "naoUsar": [
+    "hiponatremia assintomática",
+    "hiponatremia hipervolêmica sem monitorização",
+    "sobrecarga de volume descompensada",
+    "hiponatremia hipervolêmica",
+    "insuficiência cardíaca descompensada",
+    "infusão sem diluição",
+    "hipercalemia grave",
+    "alcalose metabólica"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "respeitar o limite diário de água prescrito"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "beber água em excesso por sede ou por orientação genérica"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Soluto osmotico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ureia",
+              "n": "Ureia",
+              "ap": "pó 15 g sachê",
+              "q": "",
+              "pos": "15-30 g/dia divididos em 2-3 tomadas. Via VO ou sonda. 8/8 h ou 12/12 h. Enquanto a causa persistir."
+            },
+            "motivo": "SIADH crônico quando tolvaptana não está disponível ou é contraindicada (alternativa) SIADH sem tolvaptana",
+            "nota": "Diluir em 100-200 mL de suco ou água gelada; administrar por sonda se necessário - monitorar: sódio de 6/6 h no início e diário depois; monitorar: ureia e creatinina; monitorar: diurese; monitorar: aceitação e tolerância gástrica · NÃO: insuficiência renal grave; sangramento digestivo ativo; hiperazoemia sintomática · Obs: Osmótico barato e sem taquifilaxia; a diurese osmótica leva água livre embora e o sódio sobe de forma previsível · Renal: Reduzir ou evitar com TFG abaixo de 30",
+            "dose": {
+              "texto": "15-30 g/dia divididos em 2-3 tomadas; 8/8 h ou 12/12 h; enquanto a causa persistir; max. 60 g/dia",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": 30,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antagonista vasopressina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "tolvaptana",
+              "n": "Tolvaptana",
+              "ap": "comprimido 15 mg",
+              "q": "",
+              "pos": "15 mg. Via VO. 1x/dia; titular para 30 e 60 mg conforme o sódio. Enquanto a causa persistir, com reavaliação diária."
+            },
+            "motivo": "SIADH euvolêmico ou hipervolêmico com restrição hídrica insuficiente (condicional) SIADH com sódio estável e dose de sódio programada",
+            "nota": "Uso direto, com ou sem alimento - monitorar: sódio de 4-6 h após a primeira dose e diariamente; monitorar: peso, diurese e sede; monitorar: função hepática; monitorar: nível de consciência · NÃO: hipovolemia; anúria; incapacidade de sentir sede ou de beber; uso concomitante de NaCl hipertônico; cirrose com ascite · Obs: Iniciar sempre em ambiente hospitalar e nunca liberar para casa sem plano de dosagem de sódio; a resposta pode ser de 8 mEq/L em poucas horas",
+            "dose": {
+              "texto": "15 mg; 1x/dia; titular para 30 e 60 mg conforme o sódio; enquanto a causa persistir, com reavaliação diária; max. 60 mg/dia",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Hormonio tireoidiano",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_levotiroxina",
+            "pos": "1,6 mcg/kg/dia. Via VO. 1x/dia em jejum, 30-60 min antes do café. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "hiponatremia por hipotireoidismo (condicional) hipotireoidismo",
+            "nota": "Uso direto, em jejum; separar 4 h de ferro, cálcio e IBP - monitorar: TSH em 6-8 semanas; monitorar: frequência cardíaca; monitorar: sódio e peso; monitorar: sintomas de tireotoxicose · NÃO: tireotoxicose; infarto agudo do miocárdio recente sem avaliação · Obs: No idoso e no cardiopata iniciar 25–50 mcg/dia; o sódio só normaliza depois de semanas de reposição",
+            "dose": {
+              "texto": "1,6 mcg/kg/dia; 1x/dia em jejum, 30-60 min antes do café; uso contínuo; max. individualizar pelo TSH",
+              "status": "ok",
+              "valor": 1.6,
+              "valor_max": null,
+              "unidade": "mcg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Classificar volemia e sintomas antes de prescrever",
+              "ap": "",
+              "q": "",
+              "pos": "pressão, jugulares, edema, ascite, peso e ausculta; registrar hipo, eu ou hipervolêmica e se há sintoma grave"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Restrição hídrica medida e fiscalizada",
+              "ap": "",
+              "q": "",
+              "pos": "500–800 mL/dia no SIADH, com registro em planilha, copo graduado e orientação à equipe e à família"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Proibição de soro glicosado e de água livre como manutenção",
+              "ap": "",
+              "q": "",
+              "pos": "manutenção com SF 0,9%, nunca SG 5% isolado, enquanto o sódio estiver abaixo de 130 mEq/L"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Pesagem diária e balanço hídrico rigoroso",
+              "ap": "",
+              "q": "",
+              "pos": "mesmo horário, mesma balança; ganho acima de 1 kg/dia indica retenção de água e falha da restrição"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Dosagem de sódio em intervalo fixo",
+              "ap": "",
+              "q": "",
+              "pos": "de 2/2 h na fase ativa e de 4/4 h na manutenção; anotar delta acumulado em 24 e 48 h no prontuário"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Revisão farmacológica dirigida",
+              "ap": "",
+              "q": "",
+              "pos": "suspender ou trocar tiazídico, ISRS, carbamazepina e desmopressina; revisar diuréticos e IBP"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Proteção de via aérea e prevenção de aspiração",
+              "ap": "",
+              "q": "",
+              "pos": "decúbito lateral e aspiração prontos na convulsão; nada por boca até o sensório normalizar"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Restrição de água no pós-operatório e na polidipsia",
+              "ap": "",
+              "q": "",
+              "pos": "protocolo de oferta hídrica pós-operatória e tratamento psiquiátrico da polidipsia psicogênica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Educação e plano escrito na alta",
+              "ap": "",
+              "q": "",
+              "pos": "limite hídrico diário, medicamentos suspensos, sintomas de alarme e dosagem de sódio em 48–72 h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "END-10"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Solução hipertonica",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "cloreto_de_sodio",
+              "n": "Cloreto de sódio 3%",
+              "ap": "frasco 3% 250 mL",
+              "via": "IV",
+              "pos": "100 mL em 10 min (cerca de 51 mEq), repetível até 3 vezes. Via IV. Bolus de 10 em 10 min, até 3 doses, até melhora dos sintomas ou elevação de 4-6 mEq/L. Fase aguda, 30-60 min; depois infusão contínua calculada. 10 minutos por bolus de 100 mL, em bomba ou com equipo controlado."
+            },
+            "motivo": "hiponatremia sintomática grave (convulsão, coma, rebaixamento, vômitos) (1a linha) hiponatremia hipovolêmica",
+            "nota": "Pronta para uso; se preparada na farmácia, diluir 75 mL de NaCl 20% em água destilada qsp 500 mL e rotular com validade e concentração - monitorar: sódio de 2/2 h durante a fase ativa e de 4/4 h depois; monitorar: exame neurológico e Glasgow antes e depois de cada bolus; monitorar: diurese horária; monitorar: ausculta  · NÃO: hiponatremia assintomática; hiponatremia hipervolêmica sem monitorização; sobrecarga de volume descompensada · Obs: Via periférica calibrosa é aceitável para o bolus; preferir acesso central se mais de três bolus ou infusão contínua. Não usar em assintomático e nunca programar correção acima de 10 mEq/L em 24 h",
+            "dose": {
+              "texto": "100 mL em 10 min (cerca de 51 mEq), repetível até 3 vezes; bolus de 10 em 10 min, até 3 doses, até melhora dos sintomas ou elevação de 4-6 mEq/L; fase aguda, 30-60 min; depois infusão contínua calculada; max. 300 mL (cerca de 153 mEq) na fase de resgate",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cristaloide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "solucao_fisiologica",
+              "n": "Solução fisiológica 0,9%",
+              "ap": "bolsa 0,9% 500 mL",
+              "via": "IV",
+              "pos": "500-1.000 mL em 1 h (15-20 mL/kg se choque), depois conforme volemia. Via IV. Reposição inicial e manutenção. Até volemia restaurada e sódio estável. 1 h para o volume inicial; depois 100-150 mL/h."
+            },
+            "motivo": "hiponatremia hipovolêmica (1a linha) hiponatremia hipovolêmica",
+            "nota": "Pronta para uso; aquecer se hipotermia - monitorar: sódio de 4/4 h; monitorar: pressão, frequência cardíaca e diurese; monitorar: ausculta pulmonar; monitorar: sódio urinário para confirmar resposta · NÃO: hiponatremia hipervolêmica; insuficiência cardíaca descompensada · Obs: Na hipovolemia, o sódio pode subir mais do que o calculado quando o ADH cessa; medir de 4/4 h e não programar mais de 8 mEq/L em 24 h",
+            "dose": {
+              "texto": "500-1.000 mL em 1 h (15-20 mL/kg se choque), depois conforme volemia; reposição inicial e manutenção; até volemia restaurada e sódio estável; max. individualizar; reavaliar após cada litro",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cristaloide balanceado",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ringer_lactato",
+              "n": "Ringer lactato",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "500-1.000 mL em 1 h. Via IV. Reposição inicial e manutenção. Até volemia restaurada. 1 h para o volume inicial."
+            },
+            "motivo": "hiponatremia hipovolêmica com acidose metabólica (alternativa)",
+            "nota": "Pronta para uso; não adicionar cálcio em via com bicarbonato - monitorar: sódio de 4/4 h; monitorar: potássio e cálcio iônico; monitorar: perfusão e diurese · NÃO: hipercalemia grave; alcalose metabólica; hiponatremia hipervolêmica · Obs: Tem sódio 130 mEq/L e corrige a hiponatremia menos que o SF 0,9%; útil quando há acidose, inadequado quando o objetivo é subir o sódio rápido",
+            "dose": {
+              "texto": "500-1.000 mL em 1 h; reposição inicial e manutenção; até volemia restaurada; max. individualizar",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Carboidrato",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "soro_glicosado",
+              "n": "Soro glicosado 5%",
+              "ap": "bolsa 5% 500 mL",
+              "via": "IV",
+              "pos": "10 mL/kg em 1 h, depois 3-5 mL/kg/h. Via IV. Infusão contínua até o sódio voltar ao alvo. 6-24 h conforme a resposta. Contínua em bomba."
+            },
+            "motivo": "correção excessiva do sódio, associado à desmopressina (condicional)",
+            "nota": "Pronta para uso; via separada da desmopressina - monitorar: sódio de 1/1 h durante o rebaixamento; monitorar: glicemia capilar de 2/2 h; monitorar: balanço hídrico e diurese · NÃO: hiponatremia ainda não corrigida; sobrecarga de volume descompensada · Obs: Água livre endovenosa: só entra para desfazer correção excessiva, sempre com desmopressina para evitar diurese que anula o efeito · Renal: Reduzir o volume em oligúria",
+            "dose": {
+              "texto": "10 mL/kg em 1 h, depois 3-5 mL/kg/h; infusão contínua até o sódio voltar ao alvo; 6-24 h conforme a resposta; max. individualizar pelo balanço hídrico",
+              "status": "ok",
+              "valor": 3,
+              "valor_max": 5,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Diurético de de alça",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "hiponatremia hipervolêmica por insuficiência cardíaca ou cirrose, ou associada ao NaCl 3% no SIADH (condicional)",
+            "nota": "Uso direto IV lento; não diluir com soluções ácidas - monitorar: sódio, potássio e magnésio de 6/6 h; monitorar: diurese horária; monitorar: peso diário; monitorar: função renal · NÃO: hipovolemia; hipocalemia grave; anúria · Obs: Ao excretar água e sódio em proporção, ajuda a evitar a correção excessiva quando usado junto ao NaCl 3%; não substitui a restrição hídrica · Renal: Doses maiores na insuficiência renal; monitorar resposta",
+            "dose": {
+              "texto": "20-40 mg; 12/12 h ou 1x/dia, conforme diurese; até o edema ou a ascite cederem; max. individualizar pela resposta diurética",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 40,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "hidrocortisona_ev",
+            "motivo": "hiponatremia por insuficiência adrenal (condicional)",
+            "nota": "Reconstituir em 2 mL de água bacteriostática; diluir em 50-100 mL de SF para infusão - monitorar: glicemia de 6/6 h; monitorar: potássio; monitorar: pressão arterial; monitorar: sódio e cortisol",
+            "dose": {
+              "texto": "100 mg; 8/8 h ou 50 mg 6/6 h; até confirmação e transição para via oral; max. 400 mg/dia na fase aguda",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Eletrólito",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "cloreto_de_potassio",
+              "n": "Cloreto de potássio",
+              "ap": "ampola 19,1% 10 mL (2,5 mEq/mL)",
+              "via": "IV (periférico até 10 mEq/h; central acima)",
+              "pos": "20-40 mEq por litro de fluido. Via IV (periférico até 10 mEq/h; central acima). Contínuo junto com o fluido. Até potássio de 4,0 mEq/L. Contínua; no máximo 10 mEq/h em veia periférica."
+            },
+            "motivo": "hipocalemia associada, que reduz o sódio e aumenta o risco de desmielinização (condicional) hiponatremia hipovolêmica",
+            "nota": "Nunca em bolus; diluir no litro de fluido e homogeneizar invertendo o frasco cinco vezes - monitorar: potássio de 4/4 h; monitorar: ECG se K abaixo de 3; monitorar: diurese; monitorar: sítio de infusão · NÃO: hipercalemia; anúria sem diálise · Obs: Cada 1 mEq/L de potássio reposto eleva cerca de 1 mEq/L o sódio; contar esse efeito no cálculo do teto de 24 h · Renal: Reduzir pela metade com TFG abaixo de 30",
+            "dose": {
+              "texto": "20-40 mEq por litro de fluido; contínuo junto com o fluido; até potássio de 4,0 mEq/L; max. 40 mEq/h com monitorização contínua",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Hormonio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "desmopressina",
+              "n": "Desmopressina",
+              "ap": "ampola 4 mcg/mL 1 mL",
+              "via": "IV ou SC",
+              "pos": "1-2 mcg. Via IV ou SC. Dose única; repetir 8/8 h enquanto o SG 5% estiver em infusão. Até o sódio retornar ao alvo. Bolus lento em 2-3 min (IV) ou aplicação SC direta."
+            },
+            "motivo": "correção excessiva do sódio ou risco alto de desmielinização (resgate)",
+            "nota": "Diluir a ampola em 10 mL de SF 0,9% para dose fracionada; uso direto quando prescrita a ampola inteira - monitorar: sódio de 1/1 h; monitorar: diurese horária; monitorar: peso diário; monitorar: sinais de sobrecarga · NÃO: hiponatremia grave ainda sintomática; retenção hídrica com sobrecarga · Obs: Bloqueia a diurese de água livre e permite rebaixar o sódio de forma controlada; sem ela, o SG 5% é excretado e o sódio continua subindo",
+            "dose": {
+              "texto": "1-2 mcg; dose única; repetir 8/8 h enquanto o SG 5% estiver em infusão; até o sódio retornar ao alvo; max. 2 mcg por dose",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 2,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "END-10",
+    "versao": "0.2.0",
+    "arquivo": "END-10_hiponatremia.json",
+    "area": "Endócrino",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

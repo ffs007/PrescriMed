@@ -1,0 +1,1157 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "OFT-08",
+    "area": "Oftalmo/Otorrino",
+    "nome": "Glaucoma agudo",
+    "aliases": [
+      "Glaucoma agudo",
+      "glaucoma agudo de ângulo fechado",
+      "crise aguda de ângulo fechado",
+      "glaucoma de ângulo estreito",
+      "bloqueio pupilar",
+      "ataque agudo de glaucoma",
+      "fechamento angular agudo"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Glaucoma agudo de ângulo fechado é a elevação súbita e extrema da pressão intraocular por bloqueio do escoamento do humor aquoso pelo ângulo iridocorneano, quase sempre por bloqueio pupilar em olho com câmara anterior rasa. A pressão sobe para 40 a 70 mmHg e comprime a vascularização do nervo óptico: a perda visual começa em horas e se torna irreversível antes de o paciente ser visto por um oftalmologista. O quadro clássico é dor ocular intensa e latejante com irradiação para a órbita e a fronte, cefaleia, náusea e vômito, halos coloridos em volta da luz, visão borrada, olho vermelho com hiperemia ciliar, córnea edemaciada e fosca, câmara anterior rasa e pupila em midríase média fixa. O diagnóstico é clínico e não espera exames. O tratamento tem duas camadas: baixar a pressão agora, com betabloqueador tópico, agonista alfa-2, inibidor da anidrase carbônica e, na crise refratária, manitol endovenoso, com analgesia e antiemético para o componente doloroso e vagal; e resolver a causa de forma definitiva, com iridotomia periférica a laser, que é o tratamento curativo e deve ser feita também no olho contralateral, onde o risco de nova crise chega a 50 a 80% em cinco a dez anos. A pilocarpina entra depois da queda inicial da pressão, porque o esfíncter pupilar isquêmico responde mal com pressão muito alta. As duas regras que não se negociam: nenhum midriático, nem para examinar o fundo, e nenhum atraso no encaminhamento — não existe glaucoma agudo manejado em casa.",
+    "inclusao": [
+      "Dor ocular intensa e latejante com cefaleia, náusea ou vômito",
+      "Olho vermelho com córnea fosca, halos coloridos e queda de acuidade visual",
+      "Pupila em midríase média fixa com câmara anterior rasa",
+      "Pressão intraocular acima de 30 mmHg com dor e baixa visual",
+      "Suspeita em olho com câmara anterior rasa, hipermetropia alta ou história familiar de glaucoma de ângulo fechado",
+      "Crise desencadeada por midriático, anticolinérgico, escuro prolongado ou estresse"
+    ],
+    "exclusao": [
+      {
+        "situacao": "olho vermelho com secreção, prurido ou dor leve sem baixa visual nem midríase",
+        "fluxo": "OFT-01 olho vermelho / conjuntivite"
+      },
+      {
+        "situacao": "dor com infiltrado ou úlcera corneal e captação de fluoresceína",
+        "fluxo": "OFT-07 ceratite"
+      },
+      {
+        "situacao": "dor ocular surda com cefaleia holocraniana e dor à palpação de têmpora em idoso",
+        "fluxo": "arterite de células gigantes — investigação reumatológica"
+      },
+      {
+        "situacao": "perda visual súbita indolor, sem dor nem hiperemia",
+        "fluxo": "OFT-12 perda visual súbita"
+      },
+      {
+        "situacao": "diplopia, proptose e dor à movimentação ocular com febre",
+        "fluxo": "celulite orbitária — internação"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "dor ocular intensa com midríase média fixa, córnea fosca e náusea",
+        "por_que": "crise aguda de ângulo fechado com isquemia do nervo óptico",
+        "acao": "baixar a pressão imediatamente e acionar oftalmologia no mesmo momento",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "pressão intraocular acima de 40 mmHg",
+        "por_que": "perda de campo visual e de acuidade em horas",
+        "acao": "terapia hipotensora combinada e transferência imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "visão em halos, percepção de névoa ou queda de acuidade",
+        "por_que": "edema corneal por pressão elevada",
+        "acao": "registrar acuidade e tratar como crise até prova contrária",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "vômito persistente com dor ocular",
+        "por_que": "crise com componente vagal, frequentemente confundida com abdome agudo",
+        "acao": "antiemético, analgesia e oftalmologia imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "olho contralateral com câmara anterior rasa",
+        "por_que": "risco de 50 a 80% de nova crise em cinco a dez anos",
+        "acao": "iridotomia profilática e avaliação dos dois olhos",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "rebaixamento de consciência, sudorese e dor precordial durante a crise",
+        "por_que": "resposta vagal ou efeito sistêmico de betabloqueador tópico",
+        "acao": "monitorizar, suspender o betabloqueador se houver bradicardia e tratar a dor",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "uso recente de midriático, ipratrópio, escopolamina ou antiespasmódico",
+        "por_que": "fármaco desencadeante com risco de recidiva se mantido",
+        "acao": "suspender o agente e registrar na evolução",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A dor é intensa, latejante e vai para a fronte ou para a nuca?",
+      "Vê halos coloridos em volta da luz? A visão está embaçada?",
+      "Sentiu náusea ou vomitou junto com a dor?",
+      "As pupilas parecem diferentes no espelho, com a do olho doloroso maior?",
+      "Usou colírio, comprimido ou injeção para dor de estômago, bexiga ou alergia nas últimas 24 h?",
+      "Estava em ambiente escuro, cinema, ou acordou com a dor à noite?",
+      "Já teve crise parecida, glaucoma ou cirurgia ocular?",
+      "Tem asma, bronquite, insuficiência cardíaca, bloqueio cardíaco ou doença renal?",
+      "Tem alergia a sulfonamida ou já teve cálculo renal?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Crise aguda confirmada, com dor, midríase, córnea fosca e pressão acima de 40 mmHg",
+        "escolha": "Timolol 0,5% e brimonidina 0,2% uma gota cada, acetazolamida 500 mg VO, dipirona e antiemético, com oftalmologia imediata",
+        "porque": "A combinação reduz a produção de humor aquoso por três mecanismos diferentes em 30 a 60 minutos e ganha o tempo necessário para a iridotomia"
+      },
+      {
+        "cenario": "Paciente vomitando ou em jejum para procedimento",
+        "escolha": "Acetazolamida 500 mg IV e antiemético endovenoso, mantendo os tópicos",
+        "porque": "A via oral é inútil com vômito persistente e a pressão precisa cair na primeira hora"
+      },
+      {
+        "cenario": "Pressão acima de 50 mmHg sem queda após 30 a 60 minutos de tópicos e acetazolamida",
+        "escolha": "Manitol 20% 1 a 2 g/kg IV em 30 a 45 minutos",
+        "porque": "A diurese osmótica é o resgate que reduz a pressão quando o olho não responde, e é ponte para a iridotomia"
+      },
+      {
+        "cenario": "Córnea já clareou e pressão caiu com o tratamento inicial",
+        "escolha": "Pilocarpina 2% uma gota, repetida em 30 minutos, depois 6/6 h até a iridotomia",
+        "porque": "O miótico traciona a íris para longe do trabeculado; com pressão muito alta o esfíncter pupilar está isquêmico e responde mal, por isso não é a primeira medida"
+      },
+      {
+        "cenario": "Córnea edemaciada que impede a iridotomia a laser",
+        "escolha": "Manitol e hipotensores tópicos para clarear a córnea, iridoplastia periférica com argônio se persistir, e iridotomia em 24 a 48 horas",
+        "porque": "Sem visão da íris não há como fazer o laser; a iridoplastia abre o ângulo por contração da íris periférica e serve de ponte"
+      },
+      {
+        "cenario": "Olho contralateral assintomático com câmara anterior rasa",
+        "escolha": "Iridotomia periférica profilática a laser, com avaliação gonioscópica dos dois olhos",
+        "porque": "Metade a quatro quintos desses olhos terão crise se não forem tratados, e a profilaxia é ambulatorial e de baixo risco"
+      },
+      {
+        "cenario": "Asma, DPOC grave ou bloqueio atrioventricular de segundo ou terceiro grau",
+        "escolha": "Não usar timolol: brimonidina, acetazolamida e manitol na crise, com alternativa de latanoprosta",
+        "porque": "O betabloqueador tópico é absorvido pela mucosa nasal e pode desencadear broncoespasmo e bradiairritmia grave"
+      },
+      {
+        "cenario": "Alergia a sulfonamida, insuficiência renal grave ou cirrose com encefalopatia",
+        "escolha": "Não usar acetazolamida: manitol, brimonidina, timolol e latanoprosta, com oftalmologia imediata",
+        "porque": "A acetazolamida é sulfonamídica, acidificante e acumula na insuficiência renal, com risco de acidose e neurotoxicidade"
+      },
+      {
+        "cenario": "Olho pseudofácico, uveíte ou sinéquia posterior como mecanismo do fechamento",
+        "escolha": "Controlar a pressão, fazer gonioscopia após clarear a córnea e tratar a causa, com iridotomia e cirurgia de catarata quando indicado",
+        "porque": "Nesses olhos o bloqueio não é pupilar puro e a iridotomia isolada pode não resolver; a facoemulsificação abre o ângulo de forma definitiva"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "betabloqueador_topico",
+        "agente": "timolol 0,5% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "crise aguda de ângulo fechado e hipertensão ocular, para reduzir a produção de humor aquoso",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1 gota no olho afetado, repetida uma vez após 30 minutos se a pressão não cair; manutenção 12/12 h",
+        "duracao": "até a iridotomia a laser ou a avaliação especializada",
+        "dose_maxima": "1 gota 12/12 h em cada olho",
+        "contraindicacoes": [
+          "asma brônquica ou DPOC grave",
+          "bloqueio atrioventricular de 2º ou 3º grau",
+          "bradicardia abaixo de 50 bpm",
+          "insuficiência cardíaca descompensada",
+          "hipersensibilidade ao betabloqueador"
+        ],
+        "efeitos_adversos": [
+          "bradicardia",
+          "broncoespasmo",
+          "hipotensão",
+          "ardência",
+          "tontura e fadiga"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 0,25%",
+          "frasco 5 mL a 0,5%",
+          "unidose 0,5 mL a 0,5% sem conservante"
+        ],
+        "preparo": "Uso direto no olho afetado; comprimir o ponto lacrimal por 1 minuto após a instilação para reduzir a absorção sistêmica",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "frequência cardíaca e pressão arterial antes e 30 minutos após",
+          "pico de fluxo ou ausculta em asmático",
+          "pressão intraocular",
+          "broncoespasmo e sibilância"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico; cautela em renal crônico pela absorção sistêmica",
+        "observacoes": "É a primeira gota da crise porque baixa a pressão em 30 a 60 minutos e é barato, mas nunca é tratamento definitivo. Em asmático, substituir por brimonidina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "agonista_alfa2_adrenergico",
+        "agente": "brimonidina 0,2% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "crise aguda de ângulo fechado, associada ao betabloqueador, e alternativa em asmático",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1 gota no olho afetado, repetida após 30 minutos se necessário; manutenção 12/12 h",
+        "duracao": "até a iridotomia a laser",
+        "dose_maxima": "1 gota 12/12 h em cada olho",
+        "contraindicacoes": [
+          "hipersensibilidade ao fármaco",
+          "uso em criança menor de 2 anos",
+          "uso com inibidor da monoaminoxidase"
+        ],
+        "efeitos_adversos": [
+          "boca seca",
+          "sonolência e fadiga",
+          "hiperemia conjuntival",
+          "hipotensão",
+          "apneia em criança"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 0,2%",
+          "frasco 10 mL a 0,2%",
+          "unidose 0,2 mL a 0,2%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 1 minuto",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular",
+          "pressão arterial e frequência cardíaca",
+          "sonolência",
+          "hiperemia de rebote após uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Reduz a produção e aumenta a drenagem uveoscleral; é a alternativa ao betabloqueador no asmático e no cardiopata, sem os efeitos pulmonares",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_anidrase_carbonica",
+        "agente": "acetazolamida 500 mg comprimido",
+        "papel": "primeira_linha",
+        "indicacao": "crise aguda de ângulo fechado, para reduzir rapidamente a produção de humor aquoso",
+        "dose": "500 mg de ataque, seguidos de 250 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "ataque de 500 mg; manutenção 250 mg 6/6 h",
+        "duracao": "24 a 48 h, até a iridotomia ou a avaliação especializada",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "alergia a sulfonamida",
+          "insuficiência renal grave com ClCr abaixo de 30",
+          "acidose metabólica",
+          "cirrose com encefalopatia",
+          "hipocalemia ou hiponatremia graves",
+          "anemia falciforme"
+        ],
+        "efeitos_adversos": [
+          "parestesia de mãos e pés",
+          "acidose metabólica",
+          "hipocalemia",
+          "sonolência",
+          "cálculo renal",
+          "diurese e desidratação"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg"
+        ],
+        "preparo": "Uso direto com alimento, para reduzir o desconforto gástrico",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "pressão intraocular de hora em hora na crise",
+          "potássio, sódio e bicarbonato",
+          "parestesias e sonolência",
+          "diurese e creatinina"
+        ],
+        "ajuste_renal": "Contraindicada com ClCr abaixo de 30; em ClCr 30 a 60 usar 250 mg 12/12 h",
+        "ajuste_hepatico": "Evitar em cirrose com encefalopatia",
+        "observacoes": "É a droga que mais rápido baixa a pressão por via sistêmica, mas não é tratamento definitivo e nunca permite alta. Não prescrever para uso domiciliar isolado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_anidrase_carbonica",
+        "agente": "acetazolamida 500 mg solução injetável",
+        "papel": "alternativa",
+        "indicacao": "crise aguda com vômito, jejum ou impossibilidade de via oral",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "500 mg, depois 250 mg 8/8 h",
+        "duracao": "24 a 48 h, até a iridotomia",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "alergia a sulfonamida",
+          "insuficiência renal grave",
+          "acidose metabólica",
+          "cirrose com encefalopatia"
+        ],
+        "efeitos_adversos": [
+          "parestesia",
+          "acidose metabólica",
+          "hipocalemia",
+          "dor no local da infusão",
+          "tromboflebite"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg (pó liofilizado)"
+        ],
+        "preparo": "Reconstituir em 5 a 10 mL de água para injeção e diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "15 a 30 minutos",
+        "monitorizacao": [
+          "pressão intraocular",
+          "potássio e bicarbonato",
+          "diurese",
+          "sítio de infusão"
+        ],
+        "ajuste_renal": "Contraindicada com ClCr abaixo de 30; reduzir a dose em ClCr 30 a 60",
+        "observacoes": "Usar quando o vômito impede a via oral; a mesma cautela de sulfonamida e acidose se aplica, sem exceção",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "diuretico_osmótico",
+        "agente": "manitol 20% solução",
+        "papel": "resgate",
+        "indicacao": "crise refratária, com pressão acima de 50 mmHg sem resposta a tópicos e acetazolamida",
+        "dose": "1 a 2 g/kg",
+        "unidade": "g/kg",
+        "via": "IV",
+        "frequencia": "dose única, repetida apenas com oftalmologista",
+        "duracao": "dose única na crise",
+        "dose_maxima": "2 g/kg",
+        "contraindicacoes": [
+          "anúria ou insuficiência renal dialítica",
+          "insuficiência cardíaca descompensada",
+          "edema agudo de pulmão",
+          "desidratação grave",
+          "hiponatremia grave"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga de volume e edema agudo de pulmão",
+          "hipotensão por diurese intensa",
+          "distúrbio hidroeletrolítico",
+          "insuficiência renal",
+          "flebite no acesso"
+        ],
+        "apresentacoes": [
+          "frasco 250 mL a 20%",
+          "frasco 500 mL a 20%",
+          "bolsa 250 mL a 20%"
+        ],
+        "preparo": "Não diluir; infundir por acesso venoso calibroso com filtro, na dose calculada pelo peso",
+        "tempo_infusao": "30 a 45 minutos",
+        "monitorizacao": [
+          "diurese e balanço hídrico",
+          "pressão arterial e frequência cardíaca",
+          "sódio, potássio e osmolaridade",
+          "creatinina",
+          "ausculta pulmonar e dispneia"
+        ],
+        "ajuste_renal": "Contraindicado em anúria; na doença renal crônica dialítica usar apenas com nefrologista",
+        "observacoes": "É resgate, não rotina: criar expansão de volume em cardiopata pode precipitar edema agudo de pulmão. Só usar com oftalmologista e monitorização",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "miotico",
+        "agente": "pilocarpina 2% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "crise aguda de ângulo fechado após a queda inicial da pressão, para tracionar a íris e abrir o ângulo",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1 gota, repetida após 30 minutos; depois 6/6 h",
+        "duracao": "até a iridotomia a laser",
+        "dose_maxima": "1 gota 6/6 h no olho afetado",
+        "contraindicacoes": [
+          "crise com pressão muito elevada ainda não controlada",
+          "uveíte com sinéquia posterior total",
+          "hipersensibilidade ao fármaco"
+        ],
+        "efeitos_adversos": [
+          "dor periorbitária e cefaleia",
+          "miose e visão borrada no escuro",
+          "descolamento de retina em predisposto",
+          "cisto iridiano com uso prolongado"
+        ],
+        "apresentacoes": [
+          "frasco 10 mL a 2%",
+          "frasco 15 mL a 2%",
+          "frasco 10 mL a 1%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 1 minuto",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular 30 minutos após",
+          "diâmetro pupilar",
+          "dor ocular",
+          "abertura angular à gonioscopia após clarear a córnea"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Não é a primeira gota: com pressão acima de 50 mmHg o esfíncter pupilar está isquêmico e não responde. Instilar depois de timolol, brimonidina e acetazolamida, e sempre antes da iridotomia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analogo_prostaglandina",
+        "agente": "latanoprosta 0,005% colírio",
+        "papel": "alternativa",
+        "indicacao": "controle adjuvante da pressão quando betabloqueador e acetazolamida são contraindicados, e manutenção após a crise",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1x/dia à noite",
+        "duracao": "uso contínuo conforme a oftalmologia",
+        "dose_maxima": "1 gota/dia no olho afetado",
+        "contraindicacoes": [
+          "hipersensibilidade a análogo de prostaglandina",
+          "uveíte ativa",
+          "edema macular cistoide prévio",
+          "gestação sem avaliação especializada"
+        ],
+        "efeitos_adversos": [
+          "hiperemia conjuntival",
+          "escurecimento da íris",
+          "crescimento de cílios",
+          "irritação ocular",
+          "edema macular"
+        ],
+        "apresentacoes": [
+          "frasco 2,5 mL a 0,005%",
+          "unidose 0,2 mL a 0,005%"
+        ],
+        "preparo": "Uso direto, à noite; retirar a lente antes e recolocar após 15 minutos",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular",
+          "hiperemia e coloração da íris",
+          "acuidade visual",
+          "sintomas de edema macular"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Aumenta a drenagem uveoscleral e tem efeito máximo em 8 a 12 horas: serve para o controle posterior e para o olho contralateral, não para reverter a crise em 30 minutos",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "dipirona 1 g solução injetável",
+        "papel": "primeira_linha",
+        "indicacao": "dor intensa da crise de glaucoma agudo",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "6/6 h enquanto houver dor",
+        "duracao": "24 a 48 h",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a pirazolona",
+          "discrasia sanguínea",
+          "porfiria hepática aguda",
+          "terceiro trimestre de gestação",
+          "deficiência de glicose-6-fosfato desidrogenase"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "agranulocitose rara",
+          "reação alérgica",
+          "dor no local"
+        ],
+        "apresentacoes": [
+          "ampola 1 g/2 mL",
+          "ampola 500 mg/mL",
+          "comprimido 500 mg",
+          "comprimido 1 g"
+        ],
+        "preparo": "Diluir 1 g em 10 a 20 mL de água para injeção ou SF 0,9% para infusão lenta",
+        "tempo_infusao": "5 a 10 minutos (infusão lenta)",
+        "monitorizacao": [
+          "dor em escala 0 a 10",
+          "pressão arterial após a infusão",
+          "hemograma se uso repetido",
+          "sinais de reação alérgica"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: intervalo de 8 h",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "A dor da crise é intensa e o analgésico faz parte do tratamento, não é conforto opcional: dor e vômito aumentam a resposta simpática e dificultam a queda da pressão",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico",
+        "agente": "ondansetrona 4 mg solução injetável",
+        "papel": "condicional",
+        "indicacao": "náusea e vômito da crise de glaucoma agudo",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "24 a 48 h",
+        "dose_maxima": "16 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade ao fármaco",
+          "síndrome do QT longo congênita",
+          "uso concomitante com apomorfina"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "constipação",
+          "prolongamento do QT",
+          "tontura"
+        ],
+        "apresentacoes": [
+          "ampola 4 mg/2 mL",
+          "ampola 8 mg/4 mL",
+          "comprimido 4 mg"
+        ],
+        "preparo": "Diluir em 50 mL de SF 0,9% ou administrar direto por via IV lenta",
+        "tempo_infusao": "2 a 5 minutos (IV lento) ou 15 minutos diluído",
+        "monitorizacao": [
+          "náusea e vômito",
+          "eletrólitos e QT em cardiopata",
+          "cefaleia",
+          "aceitação da via oral após o controle"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em hepatopatia grave",
+        "observacoes": "Controlar o vômito permite usar a via oral e reduz o risco de aspiração; escolher ondansetrona quando houver cardiopatia e metoclopramida quando não houver",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico",
+        "agente": "metoclopramida 10 mg solução injetável",
+        "papel": "alternativa",
+        "indicacao": "náusea e vômito da crise quando a ondansetrona não está disponível",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "24 a 48 h",
+        "dose_maxima": "30 mg/dia",
+        "contraindicacoes": [
+          "obstrução intestinal",
+          "feocromocitoma",
+          "epilepsia",
+          "doença de Parkinson",
+          "história de discinesia tardia"
+        ],
+        "efeitos_adversos": [
+          "acatisia e distonia",
+          "sonolência",
+          "diarreia",
+          "discinesia tardia em uso prolongado"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/2 mL",
+          "comprimido 10 mg",
+          "solução oral 4 mg/mL"
+        ],
+        "preparo": "Administrar direto por via IV lenta, sem diluição",
+        "tempo_infusao": "2 a 3 minutos",
+        "monitorizacao": [
+          "náusea e vômito",
+          "sintomas extrapiramidais",
+          "sonolência",
+          "pressão arterial em idoso"
+        ],
+        "ajuste_renal": "ClCr abaixo de 40: 5 mg 8/8 h",
+        "observacoes": "Alternativa de baixo custo; evitar em idoso com Parkinson e em uso prolongado pelo risco de discinesia tardia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Encaminhamento oftalmológico imediato, com o paciente acompanhado",
+        "detalhe": "Registrar hora do início dos sintomas, pressão intraocular se houver tonômetro, acuidade visual e drogas já instiladas; não dispensar para casa, não marcar retorno ambulatorial e não aguardar vaga eletiva"
+      },
+      {
+        "medida": "Nenhum midriático ou cicloplégico, em nenhuma hipótese",
+        "detalhe": "Não dilatar a pupila para examinar o fundo, não usar tropicamida para facilitar o exame e não instilar atropina como teste: em olho com ângulo estreito esses colírios fecham o ângulo e precipitam ou agravam a crise"
+      },
+      {
+        "medida": "Ambiente iluminado e cabeceira elevada",
+        "detalhe": "Manter o paciente em local claro, com cabeceira a 30 graus, e evitar penumbra, cinema e leitura em luz baixa, porque a midríase fisiológica no escuro piora o bloqueio pupilar"
+      },
+      {
+        "medida": "Suspender anticolinérgicos e simpaticomiméticos quando possível",
+        "detalhe": "Revisar ipratrópio, escopolamina, antiespasmódicos, gotas de atropina, anti-histamínicos e antidepressivos tricíclicos; registrar o agente desencadeante e orientar o paciente a evitá-lo"
+      },
+      {
+        "medida": "Acesso venoso calibroso, jejum e controle de diurese",
+        "detalhe": "Necessário para o manitol e para a via endovenosa no vômito; pesar o paciente antes de calcular a dose e manter sonda vesical se houver diurese osmótica intensa"
+      },
+      {
+        "medida": "Monitorização de sinais vitais, glicemia e dor",
+        "detalhe": "Pressão arterial, frequência cardíaca, saturação e glicemia na chegada e após cada droga; reavaliar a dor a cada 30 minutos e registrar a resposta"
+      },
+      {
+        "medida": "Orientação explícita sobre o olho contralateral",
+        "detalhe": "Explicar que o outro olho tem alto risco de crise e precisa de iridotomia profilática, com folheto escrito e retorno agendado, porque a maioria das crises seguintes ocorre em quem não fez a profilaxia"
+      },
+      {
+        "medida": "Não ocluir o olho e não comprimir o globo",
+        "detalhe": "Oclusão e compressão elevam ainda mais a pressão em olho com ângulo fechado; usar apenas óculos escuros se houver fotofobia"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Tonometria de aplanação com biomicroscopia",
+        "indicacao": "dor ocular com baixa visual, halos, midríase ou suspeita de glaucoma agudo",
+        "tecnica": "Anestésico tópico e tonômetro de aplanação sobre a córnea, medindo os dois olhos; registrar pressão, aspecto da córnea, profundidade da câmara anterior e diâmetro pupilar",
+        "complicacoes": "Abrasão por técnica inadequada, transmissão de infecção sem higienização do tonômetro, leitura falsa em córnea muito edemaciada"
+      },
+      {
+        "nome": "Gonioscopia",
+        "indicacao": "confirmação e classificação do fechamento angular, após o clareamento da córnea",
+        "tecnica": "Anestesia tópica, lente de gonioscopia sobre a córnea e avaliação da abertura do ângulo nos quatro quadrantes, com indentação quando necessário",
+        "complicacoes": "Abrasão corneana, contaminação da lente e exige treinamento em oftalmologia"
+      },
+      {
+        "nome": "Iridotomia periférica a laser",
+        "indicacao": "tratamento definitivo da crise de ângulo fechado por bloqueio pupilar e profilaxia no olho contralateral",
+        "tecnica": "Colírio de pilocarpina para tensionar a íris, anestesia tópica, lente de contato específica e disparos de laser de neodímio-YAG ou argônio na periferia da íris, criando uma comunicação entre câmara anterior e posterior",
+        "complicacoes": "Sangramento da íris, picos transitórios de pressão, fechamento do orifício, inflamação e falha que exige repetição ou iridoplastia"
+      },
+      {
+        "nome": "Iridoplastia periférica com laser de argônio",
+        "indicacao": "córnea edemaciada que impede a iridotomia, crise refratária e ângulo fechado sem bloqueio pupilar",
+        "tecnica": "Anestesia tópica, lente de gonioscopia e aplicação de disparos de argônio na periferia da íris para contrair o tecido e tracionar o ângulo para longe do trabeculado",
+        "complicacoes": "Dor, inflamação, picos de pressão, sinéquia anterior e necessidade de iridotomia posterior"
+      },
+      {
+        "nome": "Paracentese de câmara anterior",
+        "indicacao": "crise refratária com risco iminente de perda visual, como resgate enquanto se aguarda a iridotomia",
+        "tecnica": "Antissepsia, anestesia tópica, lâmina ou agulha fina na periferia da córnea clara com saída lenta de humor aquoso e controle da pressão",
+        "complicacoes": "Lesão de íris ou cristalino, endoftalmite, hifema, hipotonia e descolamento de retina"
+      },
+      {
+        "nome": "Facoemulsificação ou trabeculectomia",
+        "indicacao": "ângulo fechado com catarata significativa, falha da iridotomia ou glaucoma avançado",
+        "tecnica": "Facoemulsificação com implante de lente intraocular, que aprofunda a câmara anterior e abre o ângulo, ou cirurgia filtrante quando o dano do nervo óptico já é avançado",
+        "complicacoes": "Inflamação, picos de pressão, hipotonia, catarata secundária, falência da bolha e endoftalmite"
+      }
+    ],
+    "metas": [
+      "Pressão intraocular abaixo de 21 mmHg em 1 a 2 horas do início do tratamento",
+      "Redução de ao menos 30% da pressão intraocular na primeira hora",
+      "Dor e náusea controladas em 1 a 2 horas",
+      "Iridotomia periférica realizada em até 24 a 48 horas da crise",
+      "Olho contralateral avaliado e com iridotomia profilática agendada",
+      "Acuidade visual e campo visual preservados em relação ao basal",
+      "Nenhum paciente dispensado sem avaliação oftalmológica registrada"
+    ],
+    "fluxo": [
+      "Reconhecer o quadro: dor intensa com halos, náusea, olho vermelho, córnea fosca e midríase média fixa",
+      "Medir a acuidade visual e, se houver tonômetro, a pressão intraocular dos dois olhos antes de instilar qualquer colírio",
+      "Iniciar imediatamente timolol 0,5% e brimonidina 0,2% e dar acetazolamida 500 mg VO, com analgesia e antiemético",
+      "Acionar a oftalmologia no mesmo momento e organizar transferência, sem alta e sem retorno ambulatorial",
+      "Reavaliar pressão, dor e vômito em 30 e 60 minutos; se a pressão não cair, acrescentar manitol 20% e considerar paracentese com o especialista",
+      "Com a pressão mais baixa, instilar pilocarpina 2% e repetir após 30 minutos",
+      "Garantir iridotomia periférica a laser assim que a córnea clarear, e iridoplastia se a córnea permanecer edemaciada",
+      "Agendar iridotomia profilática no olho contralateral e revisar os fármacos desencadeantes antes da alta"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "tratar dor e anisocoria como glaucoma agudo até prova contrária, revisar anticolinérgicos da polifarmácia e dosar eletrólitos pela acetazolamida",
+        "alerta": "perda visual irreversível em horas e confusão por atropina ou acetazolamida"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "timolol e brimonidina com cautela e compressão do ponto lacrimal; acetazolamida e manitol apenas se o benefício superar o risco, com oftalmologia",
+        "alerta": "crise na gestação exige decisão compartilhada e monitorização fetal"
+      },
+      {
+        "populacao": "asmatico_dpoc",
+        "ajuste": "não usar timolol; brimonidina, acetazolamida e manitol, com alternativa de latanoprosta",
+        "alerta": "broncoespasmo grave por betabloqueador tópico absorvido"
+      },
+      {
+        "populacao": "cardiopata",
+        "ajuste": "evitar timolol em bradicardia, bloqueio atrioventricular e insuficiência cardíaca descompensada; evitar manitol em edema agudo de pulmão",
+        "alerta": "bradiairritmia e sobrecarga de volume"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "não usar acetazolamida com ClCr abaixo de 30 e evitar manitol em anúria; usar tópicos e latanoprosta",
+        "alerta": "acidose metabólica, neurotoxicidade e sobrecarga de volume"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "checar glicemia na crise e lembrar que o vômito e o jejum descompensam o diabetes",
+        "alerta": "cetoacidose desencadeada por jejum e estresse"
+      },
+      {
+        "populacao": "monocular",
+        "ajuste": "prioridade máxima de transferência e limiar mais baixo para manitol e paracentese",
+        "alerta": "cegueira funcional definitiva no único olho útil"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "tonometria de aplanação",
+          "indicacao": "toda suspeita de glaucoma agudo",
+          "o_que_muda": "confirma a crise e define a intensidade da terapia"
+        },
+        {
+          "nome": "biomicroscopia com estimativa da câmara anterior",
+          "indicacao": "todos",
+          "o_que_muda": "identifica córnea edemaciada, câmara rasa, inflamação e sinéquia"
+        },
+        {
+          "nome": "gonioscopia",
+          "indicacao": "após clarear a córnea, para confirmar o fechamento angular",
+          "o_que_muda": "define se o mecanismo é bloqueio pupilar e se a iridotomia resolve"
+        },
+        {
+          "nome": "acuidade visual e reflexo pupilar",
+          "indicacao": "todos, antes de instilar colírio",
+          "o_que_muda": "documenta a gravidade e separa glaucoma de outras causas de baixa visual"
+        },
+        {
+          "nome": "eletrólitos, creatinina e glicemia",
+          "indicacao": "antes da acetazolamida e do manitol",
+          "o_que_muda": "contraindica ou ajusta a dose e evita acidose e sobrecarga"
+        },
+        {
+          "nome": "campo visual e tomografia de coerência óptica",
+          "indicacao": "após o controle da crise, para estadiar o dano",
+          "o_que_muda": "define o alvo de pressão e a necessidade de cirurgia"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "dilatação pupilar para fundoscopia durante a crise",
+          "motivo": "o midriático agrava o fechamento angular e pode tornar a crise irreversível"
+        },
+        {
+          "exame": "tomografia de crânio como primeiro passo antes de baixar a pressão",
+          "motivo": "atrasa o único tratamento que evita cegueira e costuma ser normal"
+        },
+        {
+          "exame": "aguardar eletrólitos e creatinina para iniciar a acetazolamida",
+          "motivo": "a pressão precisa cair na primeira hora; coletar em paralelo e ajustar depois"
+        },
+        {
+          "exame": "gonioscopia na fase aguda com córnea edemaciada",
+          "motivo": "não é possível visualizar o ângulo; repetir após o clareamento"
+        },
+        {
+          "exame": "ultrassom ocular de contato em suspeita de perfuração",
+          "motivo": "a compressão do globo extravasa conteúdo intraocular"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "ir imediatamente ao oftalmologista ou ao serviço de emergência indicado, acompanhado",
+        "levar a lista de colírios e comprimidos em uso",
+        "manter o ambiente claro e a cabeceira elevada",
+        "comparecer à iridotomia a laser na data agendada",
+        "agendar a iridotomia profilática do outro olho"
+      ],
+      "evitar": [
+        "usar colírio de dilatação, inclusive por conta própria",
+        "usar atropina, escopolamina ou antiespasmódico sem avisar o médico",
+        "ficar em ambiente escuro, cinema ou leitura em luz baixa",
+        "coçar ou comprimir o olho",
+        "esperar a dor passar para procurar atendimento",
+        "usar colírio de outra pessoa"
+      ],
+      "retorno": [
+        "dor ocular intensa ou que retorna",
+        "nova queda de visão ou halos",
+        "náusea e vômito com dor no olho",
+        "olho vermelho com pupila maior que a do outro",
+        "dor no olho contralateral",
+        "piora após a iridotomia, com dor ou visão turva"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "timolol",
+        "efeitos": [
+          "bradicardia",
+          "broncoespasmo",
+          "hipotensão"
+        ],
+        "observacao": "suspender se frequência cardíaca abaixo de 50 bpm ou sibilância"
+      },
+      {
+        "agente": "brimonidina",
+        "efeitos": [
+          "sonolência",
+          "boca seca",
+          "hipotensão"
+        ],
+        "observacao": "não usar em criança menor de 2 anos pelo risco de apneia"
+      },
+      {
+        "agente": "acetazolamida",
+        "efeitos": [
+          "parestesia",
+          "acidose metabólica",
+          "hipocalemia",
+          "cálculo renal"
+        ],
+        "observacao": "dosar eletrólitos e bicarbonato se o uso passar de 48 h"
+      },
+      {
+        "agente": "manitol",
+        "efeitos": [
+          "sobrecarga de volume",
+          "hipotensão",
+          "insuficiência renal"
+        ],
+        "observacao": "ausculta pulmonar e diurese durante e após a infusão"
+      },
+      {
+        "agente": "pilocarpina",
+        "efeitos": [
+          "cefaleia",
+          "dor periorbitária",
+          "visão borrada no escuro"
+        ],
+        "observacao": "suspender se dor intensa ou descolamento de retina"
+      },
+      {
+        "agente": "latanoprosta",
+        "efeitos": [
+          "hiperemia",
+          "escurecimento da íris",
+          "edema macular"
+        ],
+        "observacao": "reavaliar se queda de visão central"
+      },
+      {
+        "agente": "dipirona",
+        "efeitos": [
+          "hipotensão",
+          "agranulocitose rara",
+          "reação alérgica"
+        ],
+        "observacao": "infundir lentamente e suspender se rash ou febre"
+      },
+      {
+        "agente": "ondansetrona e metoclopramida",
+        "efeitos": [
+          "prolongamento do QT",
+          "acatisia e distonia"
+        ],
+        "observacao": "monitorar ECG na ondansetrona e suspender a metoclopramida se sintoma extrapiramidal"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a droga implicada e registrar a reação na evolução",
+      "Timolol com bradicardia ou broncoespasmo: suspender, monitorizar e trocar por brimonidina",
+      "Acetazolamida com acidose, hipocalemia ou parestesia intensa: suspender, hidratar e dosar eletrólitos e bicarbonato",
+      "Manitol com dispneia ou crepitações: suspender a infusão, sentar o paciente, usar oxigênio e diurético de alça",
+      "Metoclopramida com distonia ou acatisia: suspender e trocar por ondansetrona, com biperideno se necessário",
+      "Dipirona com hipotensão: infundir mais lentamente e reavaliar a via alternativa",
+      "Comunicar a equipe e reavaliar a indicação na consulta seguinte"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "timolol 0,5% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "12/12 h",
+            "duracao": "até a iridotomia",
+            "condicao": "manutenção após o controle da crise",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "brimonidina 0,2% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "12/12 h",
+            "duracao": "até a iridotomia",
+            "condicao": "manutenção após o controle da crise",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "pilocarpina 2% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "6/6 h",
+            "duracao": "até a iridotomia",
+            "condicao": "após queda inicial da pressão",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "acetazolamida 500 mg",
+            "dose": "500 mg de ataque, 250 mg de manutenção",
+            "via": "VO",
+            "frequencia": "250 mg 6/6 h",
+            "monitorizacao": "pressão intraocular, potássio, bicarbonato e diurese",
+            "condicao": "crise de ângulo fechado",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "acetazolamida 500 mg injetável",
+            "dose": "500 mg",
+            "via": "IV",
+            "frequencia": "8/8 h se vômito",
+            "monitorizacao": "pressão intraocular e eletrólitos",
+            "condicao": "vômito ou jejum",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "manitol 20%",
+            "dose": "1 a 2 g/kg",
+            "via": "IV",
+            "frequencia": "dose única",
+            "monitorizacao": "diurese, sódio, creatinina e ausculta pulmonar",
+            "condicao": "crise refratária",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dipirona 1 g",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "dor e pressão arterial",
+            "condicao": "analgesia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona 4 mg",
+            "dose": "4 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "náusea e QT",
+            "condicao": "antiemético",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "acuidade visual dos dois olhos",
+          "pressão intraocular dos dois olhos",
+          "biomicroscopia e câmara anterior",
+          "gonioscopia",
+          "eletrólitos, creatinina e glicemia",
+          "campo visual e tomografia de coerência óptica após a crise",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com crise de glaucoma agudo de ângulo fechado, necessitando de afastamento de suas atividades por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica e dependem da acuidade visual e da atividade exercida"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "hora do início dos sintomas",
+          "acuidade visual dos dois olhos",
+          "pressão intraocular dos dois olhos",
+          "diâmetro pupilar",
+          "drogas administradas e horários",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com crise de glaucoma agudo de ângulo fechado à ___, iniciada há ___, acuidade visual ___ em olho direito e ___ em olho esquerdo, pressão intraocular ___ e ___ mmHg, córnea ___, pupila ___, tratado com ___ e encaminhado à oftalmologia às ___ para iridotomia."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "lado",
+        "início e duração da dor",
+        "halos e baixa visual",
+        "náusea e vômito",
+        "uso de midriático ou anticolinérgico",
+        "ambiente escuro",
+        "crise prévia ou glaucoma",
+        "cirurgia ocular",
+        "comorbidades"
+      ],
+      "texto_template": "Paciente com dor ocular à ___, iniciada há ___, com halos ___, baixa visual ___, náusea ___, vômito ___, uso de midriático ou anticolinérgico ___, exposição a ambiente escuro ___, crise prévia ___, cirurgia ocular ___ e comorbidades ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "acuidade visual",
+        "pupilas e reflexo fotomotor",
+        "conjuntiva e hiperemia ciliar",
+        "córnea e edema",
+        "profundidade da câmara anterior",
+        "pressão intraocular",
+        "gonioscopia após clareamento",
+        "sinais vitais"
+      ],
+      "texto_template": "Acuidade visual ___ em olho direito e ___ em olho esquerdo, pupilas ___, conjuntiva ___, córnea ___, câmara anterior ___, pressão intraocular ___ mmHg e ___ mmHg, gonioscopia ___ e sinais vitais ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de glaucoma agudo, tempo máximo até a oftalmologia e disponibilidade de laser",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_oftalmologia",
+        "o_que_verificar": "manejo da crise de ângulo fechado, iridotomia e profilaxia do olho contralateral",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_glaucoma",
+        "o_que_verificar": "alvos de pressão intraocular, indicação de cirurgia e seguimento",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de acetazolamida, manitol, pilocarpina e betabloqueadores tópicos",
+        "verificar": true
+      },
+      {
+        "tipo": "farmacovigilancia",
+        "o_que_verificar": "fármacos desencadeantes de fechamento angular e reações à acetazolamida",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-OFT08-01",
+        "tipo": "midriatico",
+        "gatilho": "midriático ou cicloplégico prescrito em olho com suspeita ou diagnóstico de glaucoma agudo",
+        "severidade": "grave",
+        "mensagem": "Midriático fecha ainda mais o ângulo e pode tornar a crise irreversível.",
+        "acao": "bloquear item e substituir por hipotensores tópicos",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT08-02",
+        "tipo": "alta_sem_oftalmologia",
+        "gatilho": "crise de glaucoma agudo sem registro de avaliação oftalmológica ou de transferência",
+        "severidade": "grave",
+        "mensagem": "Não existe glaucoma agudo manejado em casa: a perda visual é irreversível em horas.",
+        "acao": "bloquear alta e exigir encaminhamento registrado",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT08-03",
+        "tipo": "atraso_encaminhamento",
+        "gatilho": "mais de 1 hora entre o diagnóstico e o encaminhamento à oftalmologia",
+        "severidade": "grave",
+        "mensagem": "Cada hora sem controle da pressão aumenta o dano definitivo ao nervo óptico.",
+        "acao": "alertar a equipe e registrar o tempo porta-oftalmologia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT08-04",
+        "tipo": "acetazolamida_contraindicada",
+        "gatilho": "acetazolamida prescrita com alergia a sulfonamida, ClCr abaixo de 30 ou cirrose com encefalopatia",
+        "severidade": "grave",
+        "mensagem": "Acetazolamida nesses cenários causa acidose e neurotoxicidade.",
+        "acao": "bloquear item e sugerir manitol ou latanoprosta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT08-05",
+        "tipo": "timolol_contraindicado",
+        "gatilho": "timolol prescrito em asma, DPOC grave, bradicardia ou bloqueio atrioventricular",
+        "severidade": "grave",
+        "mensagem": "Betabloqueador tópico pode desencadear broncoespasmo e bradiairritmia.",
+        "acao": "bloquear item e sugerir brimonidina",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT08-06",
+        "tipo": "manitol_sobrecarga",
+        "gatilho": "manitol prescrito em insuficiência cardíaca descompensada, edema agudo de pulmão ou anúria",
+        "severidade": "precaucao",
+        "mensagem": "Manitol expande o volume intravascular e pode precipitar edema agudo de pulmão.",
+        "acao": "alertar e exigir avaliação de risco antes da infusão",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-OFT08-07",
+        "tipo": "analgesia_ausente",
+        "gatilho": "crise de glaucoma agudo sem analgesia e antiemético prescritos",
+        "severidade": "precaucao",
+        "mensagem": "Dor e vômito não controlados aumentam a resposta simpática e dificultam a queda da pressão.",
+        "acao": "sugerir dipirona e antiemético",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-OFT08-08",
+        "tipo": "pilocarpina_precoce",
+        "gatilho": "pilocarpina prescrita como primeira medida em crise com pressão acima de 50 mmHg",
+        "severidade": "informativo",
+        "mensagem": "Com pressão muito alta o esfíncter pupilar está isquêmico e a pilocarpina responde mal.",
+        "acao": "sugerir hipotensores primeiro e pilocarpina após a queda inicial",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "sociedade de oftalmologia",
+        "diretriz de glaucoma",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade: crise de ângulo fechado como emergência com sequência de hipotensores, 10 fármacos em 8 classes com apresentações, preparo, tempo de infusão, monitorização e ajuste renal; pilocarpina após a queda inicial, brimonidina, acetazolamida por via oral e endovenosa, manitol na crise refratária, analgesia e antiemético, latanoprosta de manutenção; iridotomia periférica a laser como tratamento definitivo e profilaxia do olho contralateral, iridoplastia e paracentese de resgate; regra de não usar midriático e de não atrasar o encaminhamento.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

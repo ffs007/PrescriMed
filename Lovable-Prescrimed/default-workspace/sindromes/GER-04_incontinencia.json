@@ -1,0 +1,1218 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GER-04",
+    "area": "Geriatria",
+    "nome": "Incontinência urinária",
+    "aliases": [
+      "incontinência urinária",
+      "perda de urina",
+      "bexiga hiperativa",
+      "incontinência no idoso"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "idoso"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Incontinência urinária é a perda involuntária de urina, e não um diagnóstico único: são quatro mecanismos com tratamentos diferentes, e tratar o tipo errado piora o paciente. Na incontinência de esforço a perda ocorre com tosse, espirro, levantar peso ou subir escada, por deficiência do assoalho pélvico — o tratamento é fisioterapia, não remédio. Na de urgência há desejo súbito e incontrolável, com perda antes de chegar ao banheiro, por hiperatividade do detrusor — aqui entram treino vesical, redução de cafeína e, se falhar, antimuscarínico ou beta-3. No transbordamento a bexiga nunca esvazia, há perda contínua ou em gotas, jato fraco, esvaziamento incompleto e resíduo pós-miccional alto, por obstrução ou bexiga neurogênica — anticolinérgico aqui é erro grave, porque agrava a retenção e pode levar a lesão renal. Na funcional o trato urinário é normal, mas o paciente não chega ao banheiro a tempo por imobilidade, barreira ambiental, contenção, sedação ou demência — o tratamento é remover a barreira, não prescrever fármaco. Antes de qualquer diagnóstico de bexiga há três coisas a excluir: retenção urinária, impactação fecal e infecção sintomática. Fecaloma comprime a bexiga e causa urgência e transbordamento; tratar a bexiga sem desimpactar não funciona. A retenção não reconhecida é a causa mais comum de fracasso terapêutico e de lesão renal no idoso. O anticolinérgico é o fármaco que mais causa delirium, constipação e retenção no idoso frágil, e a carga anticolinérgica se soma à de outros fármacos — em demência, glaucoma de ângulo fechado e retenção, ele é contraindicado. Mirabegrona, agonista beta-3, é a alternativa sem efeito anticolinérgico e deve ser a primeira escolha no paciente frágil ou com comprometimento cognitivo. A bexiga neurogênica com retenção é manejada com cateterismo intermitente limpo, não com sonda de demora. Toxina botulínica intravesical é resgate após falha de duas classes, e exige que o paciente saiba cateterizar-se. A meta não é 'ficar seco a qualquer custo': é reduzir episódios, preservar pele, sono e função renal, e evitar internação por ITU e retenção.",
+    "inclusao": [
+      "Perda involuntária de urina em idoso com impacto na vida diária, pele ou sono",
+      "Incontinência de esforço, de urgência, mista ou funcional com causa a esclarecer",
+      "Incontinência de transbordamento por retenção crônica com resíduo pós-miccional elevado",
+      "Bexiga neurogênica com retenção, esvaziamento incompleto ou incontinência por hiperatividade",
+      "Noctúria com duas ou mais micções por noite associada a perda",
+      "Incontinência que piorou após iniciar fármaco ou após internação e restrição de mobilidade"
+    ],
+    "exclusao": [
+      {
+        "situacao": "retenção urinária aguda com dor, anúria ou globo vesical",
+        "fluxo": "cateterismo de alívio imediato e urologia"
+      },
+      {
+        "situacao": "hematúria macroscópica ou massa pélvica",
+        "fluxo": "urologia para investigação de neoplasia"
+      },
+      {
+        "situacao": "febre com dor lombar, calafrio ou toxemia (pielonefrite)",
+        "fluxo": "infecção urinária complicada"
+      },
+      {
+        "situacao": "anestesia em sela, fraqueza de membros inferiores ou retenção com déficit neurológico agudo",
+        "fluxo": "emergência neurocirúrgica (cauda equina)"
+      },
+      {
+        "situacao": "fístula vesicovaginal ou lesão medular aguda",
+        "fluxo": "urologia"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "bexiga palpável, dor suprapúbica, anúria ou resíduo pós-miccional acima de 300 mL",
+        "por_que": "retenção urinária com risco de lesão renal, infecção e bexiga de alta pressão",
+        "acao": "cateterismo de alívio imediato e suspender qualquer anticolinérgico",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "hematúria macroscópica ou coágulos",
+        "por_que": "neoplasia urotelial, cálculo ou anticoagulação excessiva",
+        "acao": "encaminhar à urologia com urgência e revisar anticoagulação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "febre, dor lombar, calafrio ou confusão em paciente com incontinência",
+        "por_que": "pielonefrite ou urossepse, agravada por retenção e cateter",
+        "acao": "urocultura, antibiótico e avaliar obstrução",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "massa abdominal palpável, ausência de evacuação por dias e perda urinária em gotas",
+        "por_que": "impactação fecal comprime a bexiga e causa transbordamento e urgência",
+        "acao": "desimpactar antes de qualquer fármaco para a bexiga",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "anestesia em sela, fraqueza de membros inferiores ou retenção com déficit neurológico agudo",
+        "por_que": "síndrome da cauda equina, emergência cirúrgica",
+        "acao": "ressonância imediata e neurocirurgia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "lesão de pele por umidade, dermatite ou úlcera em região sacral e genital",
+        "por_que": "a urina em contato prolongado macera a pele e abre porta para infecção",
+        "acao": "curativo de barreira, troca programada e dispositivo coletor adequado",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "queda noturna em deslocamento ao banheiro",
+        "por_que": "urgência, noctúria, sedativo e diurético noturno somam risco",
+        "acao": "revisar fármacos, deixar comadre ou urinol ao alcance e iluminar o trajeto",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "retenção urinária nova após iniciar antimuscarínico ou toxina botulínica",
+        "por_que": "o próprio tratamento da urgência pode desencadear retenção",
+        "acao": "medir resíduo, suspender o fármaco e ensinar cateterismo intermitente",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A perda acontece ao tossir, espirrar ou levantar peso, ou vem de uma vontade súbita que não dá tempo de chegar ao banheiro?",
+      "Perde urina sem perceber, em gotas contínuas, ou só em episódios?",
+      "A bexiga fica cheia, dura ou dolorida? Sente que não esvazia tudo?",
+      "Quantas vezes levanta à noite para urinar e quantas vezes perde?",
+      "Quando foi a última evacuação? Tem prisão de ventre, esforço ou fezes ressecadas?",
+      "Quais remédios usa? Algum para bexiga, pressão, alergia, dor, sono ou depressão? Usa diurético e em que horário?",
+      "Tem diabetes, Parkinson, AVC, lesão de medula, cirurgia pélvica ou parto difícil?",
+      "Toma café, chá preto, refrigerante ou álcool? Quantas xícaras por dia?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Incontinência de esforço leve a moderada, sem prolapso importante",
+        "escolha": "Fisioterapia do assoalho pélvico com contrações supervisionadas por 8 a 12 semanas, associada a medidas comportamentais e perda de peso",
+        "porque": "É o tratamento com melhor evidência para esforço e não tem efeito adverso; fármaco não trata deficiência de assoalho pélvico. Sem fisioterapia, nenhuma outra medida sustenta o resultado"
+      },
+      {
+        "cenario": "Bexiga hiperativa (urgência) em idoso hígido, sem contraindicação",
+        "escolha": "Treino vesical com diário miccional e redução de cafeína por 4 a 8 semanas; se falhar, solifenacina 5 mg 1x/dia",
+        "porque": "Cerca de um terço responde só com comportamento, e tratar antes de tentar o comportamental expõe o paciente a efeito anticolinérgico sem necessidade. O treino aumenta o intervalo entre micções de forma progressiva e reprograma o detrusor"
+      },
+      {
+        "cenario": "Idoso frágil, demência ou polifarmácia com bexiga hiperativa",
+        "escolha": "Mirabegrona 25 mg 1x/dia como primeira escolha, com controle de pressão arterial",
+        "porque": "É agonista beta-3, sem ação anticolinérgica: não piora cognição, não causa retenção e não soma à carga anticolinérgica de outros fármacos. Em demência, o antimuscarínico pode precipitar delirium e declínio funcional"
+      },
+      {
+        "cenario": "Incontinência de transbordamento por retenção crônica ou bexiga neurogênica",
+        "escolha": "Cateterismo intermitente limpo 4 a 6 vezes ao dia, com controle de volume drenado abaixo de 500 mL; anticolinérgico apenas se houver hiperatividade associada, nunca como tratamento da retenção",
+        "porque": "O problema é esvaziamento incompleto, e o anticolinérgico reduz ainda mais a contração do detrusor, agravando a retenção e a lesão renal. O cateterismo intermitente esvazia sem deixar sonda de demora e sem o risco infeccioso contínuo dela"
+      },
+      {
+        "cenario": "Impactação fecal ou constipação grave com urgência e perda urinária",
+        "escolha": "Desimpactação e limpeza intestinal antes de iniciar qualquer fármaco para a bexiga",
+        "porque": "O fecaloma comprime a bexiga e simula bexiga hiperativa; tratar a bexiga sem desimpactar não funciona e ainda adiciona anticolinérgico que piora a constipação — a cascata se fecha"
+      },
+      {
+        "cenario": "Retenção urinária aguda com dor e globo vesical",
+        "escolha": "Cateterismo vesical de alívio imediato, esvaziamento gradual e investigação da causa obstrutiva",
+        "porque": "A bexiga distendida por horas lesa o detrusor e o rim; aliviar é a prioridade. Deixar sonda de demora só se houver indicação real, pelo risco de infecção e de cronificar a retenção"
+      },
+      {
+        "cenario": "Falha de dois antimuscarínicos ou de um antimuscarínico mais mirabegrona, com urgência incapacitante",
+        "escolha": "Toxina botulínica A 100 U intravesical, após ensinar cateterismo intermitente",
+        "porque": "É o resgate com melhor evidência para bexiga hiperativa refratária. O efeito dura 6 a 9 meses e o risco principal é retenção urinária em 5 a 10%, por isso o paciente precisa saber cateterizar antes da injeção"
+      },
+      {
+        "cenario": "Noctúria refratária com duas ou mais perdas noturnas, sem hiponatremia",
+        "escolha": "Desmopressina 0,1 mg à noite, com sódio basal, controle em 3 a 7 dias e mensal",
+        "porque": "Reduz o volume noturno quando comportamento e horário do diurético falharam. É o fármaco com maior risco de hiponatremia grave no idoso, e a hiponatremia só é evitável com sódio dosado antes e depois de iniciar"
+      },
+      {
+        "cenario": "Incontinência funcional por imobilidade, contenção, sedação ou banheiro distante",
+        "escolha": "Remover a barreira: retirar contenção, aproximar comadre ou urinol, iluminar o trajeto, tratar dor e ajustar sedativo; nenhum fármaco urológico",
+        "porque": "O trato urinário é normal e o problema é acesso. Prescrever anticolinérgico nesse cenário adiciona risco sem resolver a causa e ainda aumenta a chance de retenção e delirium"
+      },
+      {
+        "cenario": "Anticolinérgico em paciente com demência, glaucoma de ângulo fechado ou retenção",
+        "escolha": "Não prescrever; trocar por mirabegrona ou toxina botulínica",
+        "porque": "É contraindicação formal: o antimuscarínico piora cognição, precipita delirium, agrava glaucoma e retenção. A alternativa beta-3 mantém o tratamento da urgência sem esse risco"
+      },
+      {
+        "cenario": "Hematúria ou infecção urinária de repetição com incontinência",
+        "escolha": "Investigar antes de tratar a bexiga: urina tipo 1, urocultura, imagem e urologia",
+        "porque": "Hematúria em idoso exige exclusão de neoplasia, e a ITU de repetição pode ser consequência de retenção ou de sonda. Tratar o sintoma sem investigar atrasa diagnóstico grave"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "agonista_beta3",
+        "agente": "mirabegrona",
+        "papel": "primeira_linha",
+        "indicacao": "bexiga hiperativa com urgência, sobretudo em idoso frágil, demência ou polifarmácia anticolinérgica",
+        "dose": "25–50 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "4 a 8 semanas para avaliar resposta; manter se houver benefício",
+        "dose_maxima": "25 mg/dia com TFG entre 30 e 59; 50 mg/dia com função renal preservada",
+        "contraindicacoes": [
+          "hipertensão não controlada",
+          "TFG abaixo de 30",
+          "insuficiência hepática grave (Child C)",
+          "hipersensibilidade"
+        ],
+        "efeitos_adversos": [
+          "hipertensão arterial",
+          "retenção urinária",
+          "cefaleia",
+          "nasofaringite",
+          "infecção urinária",
+          "taquicardia",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "comprimido de liberação prolongada 25 mg",
+          "comprimido de liberação prolongada 50 mg"
+        ],
+        "preparo": "Uso direto, com ou sem alimento; engolir o comprimido inteiro, sem partir ou mastigar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "pressão arterial antes de iniciar, em 1 mês e periodicamente",
+          "resíduo pós-miccional se aparecer dificuldade para urinar",
+          "frequência cardíaca",
+          "episódios de incontinência por diário miccional",
+          "cefaleia e nasofaringite"
+        ],
+        "ajuste_renal": "Máximo 25 mg/dia com TFG entre 30 e 59; contraindicada com TFG abaixo de 30",
+        "ajuste_hepatico": "Máximo 25 mg/dia em Child B; contraindicada em Child C",
+        "observacoes": "É a escolha de primeira linha no idoso frágil justamente porque não é anticolinérgica: não piora cognição, não causa constipação importante e não soma carga anticolinérgica. O efeito sobre a urgência é comparável ao dos antimuscarínicos, com menos boca seca. O preço e a indisponibilidade na rede pública são a limitação real — quando não há, solifenacina em dose baixa é a alternativa. Medir a pressão antes de prescrever: hipertensão não controlada é contraindicação.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antimuscarinico",
+        "agente": "solifenacina",
+        "papel": "primeira_linha",
+        "indicacao": "bexiga hiperativa com urgência, frequência e noctúria, após medidas comportamentais",
+        "dose": "5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "4 a 8 semanas para avaliar resposta; reavaliar a necessidade a cada 6 meses",
+        "dose_maxima": "10 mg/dia no adulto; 5 mg/dia no idoso, na TFG abaixo de 30 e em Child B",
+        "contraindicacoes": [
+          "retenção urinária",
+          "bexiga neurogênica com resíduo elevado",
+          "glaucoma de ângulo fechado não controlado",
+          "miastenia gravis",
+          "TFG abaixo de 30 com dose acima de 5 mg",
+          "insuficiência hepática grave (Child C)"
+        ],
+        "efeitos_adversos": [
+          "boca seca",
+          "constipação",
+          "visão turva",
+          "retenção urinária",
+          "confusão e delirium",
+          "náusea",
+          "cefaleia"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 10 mg",
+          "solução oral 1 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "resíduo pós-miccional e dificuldade para urinar",
+          "constipação e função intestinal",
+          "cognição e confusão",
+          "boca seca e adesão",
+          "episódios de perda por diário miccional"
+        ],
+        "ajuste_renal": "Máximo 5 mg/dia com TFG abaixo de 30",
+        "ajuste_hepatico": "Máximo 5 mg/dia em Child B; contraindicada em Child C",
+        "observacoes": "Tem menos boca seca e menos penetração no sistema nervoso central que a oxibutinina, por isso é o antimuscarínico preferido no idoso quando não há mirabegrona. Ainda assim é anticolinérgico: em demência, delirium prévio ou associação com outros anticolinérgicos, a escolha é beta-3. Se não houver resposta em 8 semanas, suspender — não aumentar a dose indefinidamente.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antimuscarinico",
+        "agente": "oxibutinina",
+        "papel": "alternativa",
+        "indicacao": "bexiga hiperativa quando solifenacina e mirabegrona não estão disponíveis — com cautela explícita no idoso",
+        "dose": "2,5–5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h (liberação imediata) ou 1x/dia (liberação prolongada)",
+        "duracao": "4 a 8 semanas; reavaliar a cada 6 meses",
+        "dose_maxima": "10 mg/dia no idoso; 15 mg/dia no adulto",
+        "contraindicacoes": [
+          "demência e comprometimento cognitivo",
+          "retenção urinária",
+          "glaucoma de ângulo fechado",
+          "miastenia gravis",
+          "constipação grave ou fecaloma",
+          "TFG abaixo de 30",
+          "idoso frágil com polifarmácia anticolinérgica"
+        ],
+        "efeitos_adversos": [
+          "boca seca intensa",
+          "constipação",
+          "retenção urinária",
+          "confusão e delirium",
+          "queda",
+          "visão turva",
+          "taquicardia",
+          "prejuízo de memória"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido de liberação prolongada 5 mg",
+          "comprimido de liberação prolongada 10 mg",
+          "solução oral 1 mg/mL",
+          "adesivo transdérmico 3,9 mg/24 h"
+        ],
+        "preparo": "Uso direto; o adesivo deve ser aplicado em pele seca e íntegra do abdome ou coxa, trocado a cada 7 dias e em local diferente",
+        "tempo_infusao": "não se aplica (via oral ou transdérmica)",
+        "monitorizacao": [
+          "boca seca e constipação desde a primeira semana",
+          "resíduo pós-miccional e dificuldade para urinar",
+          "cognição, memória e sinais de delirium",
+          "quedas e tontura",
+          "frequência cardíaca"
+        ],
+        "ajuste_renal": "Evitar com TFG abaixo de 30; reduzir a dose entre 30 e 59",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia",
+        "observacoes": "É eficaz e barata, mas é o antimuscarínico com maior passagem pela barreira hematoencefálica: Beers e STOPP a listam como potencialmente inapropriada no idoso. Não usar em demência, delirium prévio, constipação grave ou retenção. Quando for a única opção disponível, usar a menor dose (2,5 mg 12/12 h), pela menor duração possível, e reavaliar cognição e intestino em 2 semanas. A apresentação transdérmica reduz boca seca e constipação, mas não o risco cognitivo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (Beers, STOPP)",
+        "claim_id": null
+      },
+      {
+        "classe": "antimuscarinico",
+        "agente": "tolterodina",
+        "papel": "alternativa",
+        "indicacao": "bexiga hiperativa com urgência e frequência, quando não há mirabegrona ou solifenacina",
+        "dose": "2 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h (liberação imediata) ou 1x/dia (liberação prolongada 4 mg)",
+        "duracao": "4 a 8 semanas; reavaliar a cada 6 meses",
+        "dose_maxima": "4 mg/dia",
+        "contraindicacoes": [
+          "retenção urinária",
+          "glaucoma de ângulo fechado não controlado",
+          "miastenia gravis",
+          "QT longo ou uso de fármaco que alarga o QT (forma de liberação imediata)",
+          "insuficiência hepática grave"
+        ],
+        "efeitos_adversos": [
+          "boca seca",
+          "constipação",
+          "cefaleia",
+          "tontura",
+          "retenção urinária",
+          "prolongamento de QT na forma de liberação imediata",
+          "visão turva"
+        ],
+        "apresentacoes": [
+          "comprimido 1 mg",
+          "comprimido 2 mg",
+          "cápsula de liberação prolongada 2 mg",
+          "cápsula de liberação prolongada 4 mg"
+        ],
+        "preparo": "Uso direto, com ou sem alimento; não abrir a cápsula de liberação prolongada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "resíduo pós-miccional",
+          "constipação",
+          "cognição e confusão",
+          "ECG se cardiopatia ou uso de outro fármaco que alarga o QT",
+          "cefaleia e tontura"
+        ],
+        "ajuste_renal": "Sem ajuste formal; usar a menor dose no idoso e no renal crônico",
+        "ajuste_hepatico": "Máximo 2 mg/dia em hepatopatia",
+        "observacoes": "Metabolizada por CYP2D6; em metabolizadores lentos ou em uso de inibidor potente (fluoxetina, paroxetina, bupropiona) a concentração sobe e o efeito anticolinérgico se aproxima ao da oxibutinina. A forma de liberação prolongada tem menos boca seca e menor efeito sobre o QT. Não é a primeira escolha no idoso frágil.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "toxina_botulinica",
+        "agente": "toxina botulínica A (onabotulinumtoxinA)",
+        "papel": "resgate",
+        "indicacao": "bexiga hiperativa idiopática ou neurogênica refratária a duas classes, após ensinar cateterismo intermitente",
+        "dose": "100 U",
+        "unidade": "U",
+        "via": "intravesical, por cistoscopia",
+        "frequencia": "a cada 3 a 6 meses, com intervalo mínimo de 12 semanas",
+        "duracao": "efeito de 6 a 9 meses",
+        "dose_maxima": "100 U na bexiga hiperativa idiopática; 200 U na bexiga neurogênica",
+        "contraindicacoes": [
+          "infecção urinária ativa",
+          "retenção urinária sem capacidade ou disposição de cateterizar",
+          "bexiga de baixa complacência com refluxo grave sem avaliação urológica",
+          "hipersensibilidade à toxina ou a albumina humana",
+          "miastenia gravis ou doença neuromuscular"
+        ],
+        "efeitos_adversos": [
+          "retenção urinária",
+          "infecção urinária",
+          "hematúria",
+          "disúria",
+          "fadiga",
+          "fraqueza muscular à distância (rara)"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 50 U (pó liofilizado)",
+          "frasco-ampola 100 U (pó liofilizado)",
+          "frasco-ampola 200 U (pó liofilizado)"
+        ],
+        "preparo": "Reconstituir 100 U em 10 mL de SF 0,9% sem agitar, para concentração de 10 U/mL; usar imediatamente após a reconstituição",
+        "tempo_infusao": "não se aplica — injeção intravesical por cistoscopia, em 20 a 30 pontos, poupando o trígono",
+        "monitorizacao": [
+          "resíduo pós-miccional e necessidade de cateterismo nas primeiras 4 semanas",
+          "infecção urinária e urocultura se sintomas",
+          "hematúria",
+          "resposta em 2 a 6 semanas por diário miccional",
+          "volume urinado por cateterismo abaixo de 500 mL"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Resgate com melhor evidência: reduz episódios de urgência em cerca de metade e melhora qualidade de vida. A condição para indicar é o paciente aceitar e saber executar cateterismo intermitente, porque 5 a 10% evoluem com retenção e precisam esvaziar a bexiga. Não repetir antes de 12 semanas pelo risco de fraqueza muscular cumulativa. Tratar ITU antes da injeção.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analogo_vasopressina",
+        "agente": "desmopressina",
+        "papel": "condicional",
+        "indicacao": "noctúria refratária com duas ou mais perdas noturnas, após falha de medidas comportamentais",
+        "dose": "0,1–0,2 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x ao deitar",
+        "duracao": "reavaliar em 4 semanas; manter só se reduzir a noctúria",
+        "dose_maxima": "0,4 mg/dia no idoso, com controle de sódio",
+        "contraindicacoes": [
+          "hiponatremia ou sódio abaixo de 135 mEq/L",
+          "polidipsia psicogênica",
+          "insuficiência cardíaca descompensada",
+          "TFG abaixo de 50",
+          "uso concomitante de diurético de alça"
+        ],
+        "efeitos_adversos": [
+          "hiponatremia grave com convulsão",
+          "cefaleia",
+          "edema",
+          "náusea",
+          "rubor"
+        ],
+        "apresentacoes": [
+          "comprimido 0,1 mg",
+          "comprimido 0,2 mg",
+          "solução nasal 0,1 mg/mL",
+          "ampola 4 mcg/mL"
+        ],
+        "preparo": "Uso direto; restringir a ingestão de líquidos a partir de 1 hora antes da dose até 8 horas depois",
+        "tempo_infusao": "não se aplica (via oral ou nasal)",
+        "monitorizacao": [
+          "sódio basal antes de iniciar, em 3 a 7 dias, em 1 mês e depois mensal por 3 meses",
+          "peso e edema",
+          "cefaleia, náusea, confusão ou convulsão",
+          "número de episódios noturnos"
+        ],
+        "ajuste_renal": "Não usar com TFG abaixo de 50 pelo risco de hiponatremia e acúmulo",
+        "ajuste_hepatico": "Sem ajuste formal",
+        "observacoes": "É o fármaco com maior potencial de dano no idoso por hiponatremia: não iniciar sem sódio basal e não manter sem controle. Suspender se sódio abaixo de 130 mEq/L ou se houver cefaleia, náusea e confusão. Antes de indicar, revisar horário do diurético (nunca à noite), ingestão de líquidos à tarde e cafeína. A forma oral tem menor variação de absorção que a nasal e é preferível no idoso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "estrogeno_topico",
+        "agente": "estradiol vaginal",
+        "papel": "condicional",
+        "indicacao": "urgência, frequência e infecções recorrentes na mulher idosa com atrofia vulvovaginal",
+        "dose": "0,5 g do creme 0,01% ou 10 mcg em comprimido vaginal",
+        "unidade": "g ou mcg",
+        "via": "vaginal",
+        "frequencia": "2x/semana, após 2 semanas de uso diário de indução",
+        "duracao": "uso contínuo enquanto houver sintoma",
+        "dose_maxima": "0,5 g do creme 2x/semana ou 10 mcg 2x/semana",
+        "contraindicacoes": [
+          "câncer de mama em tratamento",
+          "câncer de endométrio",
+          "sangramento vaginal não investigado",
+          "trombose venosa ativa",
+          "hipersensibilidade"
+        ],
+        "efeitos_adversos": [
+          "irritação vaginal local",
+          "sangramento vaginal",
+          "sensibilidade mamária",
+          "corrimento"
+        ],
+        "apresentacoes": [
+          "creme vaginal 0,01% (0,1 mg/g) bisnaga 80 g com aplicador",
+          "comprimido vaginal 10 mcg"
+        ],
+        "preparo": "Aplicar à noite com o aplicador; o comprimido vaginal é inserido com o aplicador descartável fornecido",
+        "tempo_infusao": "não se aplica (via vaginal)",
+        "monitorizacao": [
+          "sintomas de secura, urgência e dispareunia",
+          "sangramento vaginal",
+          "exame das mamas",
+          "infecções urinárias recorrentes"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste na via tópica",
+        "observacoes": "A estrogenoterapia vaginal é tópica, com absorção sistêmica mínima, e por isso não carrega os riscos da terapia sistêmica — é subutilizada no idoso. Trata a atrofia que contribui para urgência, infecções de repetição e dispareunia, e potencializa o efeito do antimuscarínico. Não é tratamento isolado de incontinência de esforço nem substitui fisioterapia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "laxante_osmoticos",
+        "agente": "macrogol 3350",
+        "papel": "primeira_linha",
+        "indicacao": "constipação e desimpactação fecal que causam ou agravam urgência e incontinência por transbordamento",
+        "dose": "17 g",
+        "unidade": "g",
+        "via": "VO",
+        "frequencia": "1 a 2 sachês/dia; na desimpactação, até 8 sachês/dia por 3 dias",
+        "duracao": "até regularização do hábito intestinal",
+        "dose_maxima": "8 sachês/dia por até 3 dias na desimpactação",
+        "contraindicacoes": [
+          "obstrução intestinal",
+          "perfuração ou risco de perfuração",
+          "íleo paralítico",
+          "colite grave"
+        ],
+        "efeitos_adversos": [
+          "distensão abdominal",
+          "diarreia",
+          "náusea",
+          "distúrbio eletrolítico em dose alta"
+        ],
+        "apresentacoes": [
+          "sachê 17 g (pó para solução oral)"
+        ],
+        "preparo": "Dissolver 1 sachê em 250 mL de água ou suco; ingerir imediatamente",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número e consistência das evacuações",
+          "distensão e dor abdominal",
+          "sódio e potássio na desimpactação em dose alta",
+          "hidratação"
+        ],
+        "ajuste_renal": "Cautela pelo volume de líquido na doença renal crônica ou cardíaca",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Primeira escolha para constipação no idoso por ser osmótico e não irritante. Tratar o intestino é parte do tratamento da bexiga: fecaloma comprime a bexiga e causa urgência e transbordamento. Desimpactar antes de iniciar laxante oral em dose plena — laxante sobre impactação causa dor e piora o quadro.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "laxante_osmoticos",
+        "agente": "lactulose",
+        "papel": "alternativa",
+        "indicacao": "constipação associada à incontinência, sobretudo quando há fecaloma ou uso de opioide e anticolinérgico",
+        "dose": "15 mL",
+        "unidade": "mL",
+        "via": "VO ou sonda",
+        "frequencia": "1 a 2x/dia, titulando até 1 a 2 evacuações pastosas",
+        "duracao": "até regularização do hábito intestinal",
+        "dose_maxima": "60 mL/dia",
+        "contraindicacoes": [
+          "íleo paralítico",
+          "obstrução intestinal",
+          "galactosemia"
+        ],
+        "efeitos_adversos": [
+          "distensão",
+          "cólica",
+          "diarreia",
+          "desidratação e hipernatremia"
+        ],
+        "apresentacoes": [
+          "xarope 667 mg/mL (120 mL)",
+          "solução 667 mg/mL (200 mL)"
+        ],
+        "preparo": "Administrar puro ou diluído em água ou suco",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número e aspecto das evacuações",
+          "distensão abdominal",
+          "sódio",
+          "hidratação"
+        ],
+        "ajuste_renal": "Sem ajuste; vigiar desidratação na doença renal crônica",
+        "observacoes": "Titular pela consistência das fezes e evitar diarreia, que desidrata o idoso e piora a urgência. Com fecaloma, desimpactar primeiro. É o laxante que também serve para encefalopatia hepática, quando essa é a comorbidade associada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Diário miccional de 3 dias",
+        "detalhe": "Registrar horário e volume de cada micção, cada perda, ingestão de líquido e cafeína. É o exame que separa os tipos, define a frequência basal e permite mostrar ao paciente a resposta ao tratamento; sem ele, o ajuste de dose é feito no escuro"
+      },
+      {
+        "medida": "Treino vesical com intervalo progressivo",
+        "detalhe": "Partir do intervalo atual tolerado (geralmente 1 a 2 h) e aumentar 15 a 30 min por semana até 3 a 4 h, com ida ao banheiro por horário e não por vontade. Exige 6 a 8 semanas e adesão ao diário; é o que sustenta o efeito do fármaco"
+      },
+      {
+        "medida": "Redução de cafeína, álcool e refrigerante",
+        "detalhe": "Café, chá preto, mate, refrigerante de cola e álcool são irritantes vesicais e diuréticos; reduzir para no máximo 1 a 2 xícaras pela manhã e nada após as 16 h costuma diminuir a urgência em 2 a 4 semanas"
+      },
+      {
+        "medida": "Ajuste da ingestão hídrica e do horário do diurético",
+        "detalhe": "Manter 1,5 a 2 L/dia e concentrar a ingesta até o início da tarde; nunca restringir líquido de forma global, porque concentra a urina, irrita a bexiga e causa infecção. Diurético nunca à noite"
+      },
+      {
+        "medida": "Fisioterapia do assoalho pélvico (exercícios de Kegel)",
+        "detalhe": "Contrações lentas de 8 a 12 segundos e rápidas, em 3 séries diárias, com avaliação de coordenação e biofeedback quando disponível; 8 a 12 semanas de treino supervisionado. É o tratamento de primeira linha da incontinência de esforço"
+      },
+      {
+        "medida": "Acesso ao banheiro e remoção de barreiras",
+        "detalhe": "Retirar contenção física, aproximar comadre ou urinol, iluminar o trajeto noturno, instalar barra de apoio e elevar a altura do vaso; ajustar vestimenta para facilitar. Cada barreira removida vale mais que um anticolinérgico na incontinência funcional"
+      },
+      {
+        "medida": "Cuidado da pele e dispositivo coletor adequado",
+        "detalhe": "Higiene com água morna e sabonete neutro, secagem por contato, creme de barreira com óxido de zinco, troca programada a cada 2 a 4 h e absorvente adequado ao volume. Prevenir dermatite e úlcera é parte do tratamento e evita infecção e dor"
+      },
+      {
+        "medida": "Tratamento da constipação e revisão de fármacos",
+        "detalhe": "Evacuação regular, fibra e hidratação; revisar diurético, anticolinérgico, benzodiazepínico, opioide e bloqueador de canal de cálcio, que causam retenção e incontinência. A revisão farmacológica resolve sozinha parte dos casos"
+      },
+      {
+        "medida": "Perda de peso e cessação do tabagismo",
+        "detalhe": "Perda de 5 a 10% do peso reduz a pressão intra-abdominal e melhora a incontinência de esforço; parar de fumar reduz a tosse crônica, que é gatilho de perda"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Medida do resíduo pós-miccional por ultrassom beira-leito",
+        "indicacao": "Todo idoso com incontinência antes de iniciar fármaco, e sempre que houver dúvida de esvaziamento incompleto",
+        "tecnica": "Paciente urina em volume medido e, em até 10 minutos, mede-se a bexiga por ultrassom ou cateterismo estéril; resíduo acima de 200 mL é anormal e acima de 300 mL indica cateterismo",
+        "complicacoes": "Cateterismo desnecessário se a bexiga estiver vazia, falso resultado se a medida for feita com a bexiga cheia e risco de interpretar resíduo alto isolado sem clínica"
+      },
+      {
+        "nome": "Cateterismo vesical intermitente limpo",
+        "indicacao": "Retenção crônica, bexiga neurogênica e transbordamento com resíduo elevado",
+        "tecnica": "Técnica limpa (não estéril) com sonda de alívio 12 a 14 Fr, 4 a 6 vezes ao dia, volume drenado abaixo de 500 mL por cateterismo, higiene das mãos e dos genitais, sonda de uso único ou reutilizada conforme protocolo; ensinar o paciente ou o cuidador e documentar o volume",
+        "complicacoes": "Infecção urinária, trauma e estenose uretral, hematúria, desconforto, falsa via em próstata aumentada"
+      },
+      {
+        "nome": "Treino vesical supervisionado",
+        "indicacao": "Bexiga hiperativa com urgência e frequência, como primeira linha",
+        "tecnica": "Programa de 6 a 8 semanas com diário miccional, idas ao banheiro por horário, aumento progressivo do intervalo e técnicas de supressão da urgência (respiração lenta, contração rápida do assoalho); revisão a cada 2 semanas",
+        "complicacoes": "Falha por falta de adesão, retenção se o intervalo for aumentado rápido, desmotivação sem retorno programado"
+      },
+      {
+        "nome": "Fisioterapia do assoalho pélvico com biofeedback",
+        "indicacao": "Incontinência de esforço, mista e pós-prostatectomia",
+        "tecnica": "Avaliação digital da contração, ensino da contração correta sem Valsalva, 3 séries diárias de 8 a 12 contrações lentas e rápidas, com biofeedback ou eletroestimulação quando disponível, por 8 a 12 semanas",
+        "complicacoes": "Contração incorreta com esforço abdominal, dor pélvica, piora da urgência se o treino for mal orientado"
+      },
+      {
+        "nome": "Sondagem vesical de alívio e cateter de demora",
+        "indicacao": "Retenção aguda com dor e globo vesical; cateter de demora apenas quando o cateterismo intermitente é inviável ou há indicação de monitorização",
+        "tecnica": "Técnica asséptica, sonda 14 a 16 Fr, esvaziamento gradual em retenção de longa data, fixação adequada e revisão diária da necessidade do cateter",
+        "complicacoes": "Infecção urinária associada ao cateter, trauma uretral, hipotensão por esvaziamento rápido, hematúria, cronificação da retenção e bexiga contraída"
+      },
+      {
+        "nome": "Cistoscopia com injeção intravesical de toxina botulínica",
+        "indicacao": "Bexiga hiperativa refratária a duas classes ou bexiga neurogênica com hiperatividade",
+        "tecnica": "Reconstituir 100 U em 10 mL de SF, injetar 20 a 30 pontos de 0,5 mL no detrusor poupando o trígono, sob anestesia local ou geral; tratar ITU antes e confirmar capacidade de cateterismo",
+        "complicacoes": "Retenção urinária em 5 a 10%, infecção urinária, hematúria, disúria, falha de resposta e necessidade de repetição em 3 a 6 meses"
+      },
+      {
+        "nome": "Estudo urodinâmico",
+        "indicacao": "Suspeita de bexiga neurogênica, falha de tratamento, dúvida entre obstrução e hiperatividade, e antes de cirurgia",
+        "tecnica": "Cistometria com avaliação de complacência, capacidade, atividade do detrusor e pressão de perda; associar estudo de fluxo e resíduo",
+        "complicacoes": "Infecção urinária, desconforto, resultado não representativo se o paciente estiver com bexiga cheia ou infecção ativa"
+      },
+      {
+        "nome": "Desimpactação fecal e enema",
+        "indicacao": "Fecaloma ou constipação grave com sintomas urinários",
+        "tecnica": "Toque retal, desimpactação manual com lubrificante e enema de glicerina ou fosfato; iniciar macrogol após esvaziar e manter hábito intestinal",
+        "complicacoes": "Dor, sangramento retal, perfuração em reto friável, distúrbio eletrolítico por enema de fosfato"
+      }
+    ],
+    "metas": [
+      "Redução de pelo menos 50% dos episódios de perda em 8 semanas, medida por diário miccional",
+      "Resíduo pós-miccional abaixo de 200 mL antes de iniciar qualquer antimuscarínico e durante o seguimento",
+      "Cateterismo intermitente 4 a 6 vezes ao dia com volume drenado abaixo de 500 mL por cateterismo na bexiga neurogênica",
+      "Noctúria reduzida para no máximo 1 a 2 episódios por noite",
+      "Pele íntegra, sem dermatite associada à incontinência ou úlcera por umidade",
+      "Nenhum anticolinérgico prescrito em demência, glaucoma de ângulo fechado ou retenção",
+      "Sódio entre 135 e 145 mEq/L em uso de desmopressina, dosado antes e após iniciar",
+      "Zero episódio de retenção urinária nova após início de antimuscarínico ou toxina botulínica",
+      "Função renal preservada, com creatinina estável em paciente com bexiga neurogênica"
+    ],
+    "fluxo": [
+      "Confirmar a incontinência e classificar pelo diário miccional de 3 dias: esforço, urgência, transbordamento ou funcional",
+      "Excluir as causas que mudam tudo: retenção, impactação fecal, infecção sintomática e fármaco implicado",
+      "Medir o resíduo pós-miccional antes de qualquer decisão farmacológica",
+      "Examinar abdome, bexiga, genitais, tônus esfincteriano, reflexo bulbocavernoso e pele",
+      "Tratar a causa reversível: desimpactar, retirar anticolinérgico ou sedativo, ajustar horário do diurético, tratar ITU sintomática",
+      "Iniciar medidas comportamentais e fisioterapia conforme o tipo, com diário e retorno em 4 semanas",
+      "Persistindo: fármaco conforme o mecanismo — antimuscarínico ou beta-3 na urgência, nada na de esforço, cateterismo no transbordamento",
+      "Reavaliar em 4 a 8 semanas com diário, resíduo e efeitos adversos; suspender o que não funcionou",
+      "Refratário: urodinâmica, toxina botulínica intravesical e encaminhamento à uroginecologia ou urologia",
+      "Manter revisão farmacológica e de pele a cada consulta, e suspender o anticolinérgico ao primeiro sinal cognitivo"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "demencia",
+        "ajuste": "usar mirabegrona ou toxina botulínica; antimuscarínico contraindicado; tratar constipação, revisar sedativos e usar comadre ao alcance",
+        "alerta": "delirium, piora cognitiva e retenção com anticolinérgico"
+      },
+      {
+        "populacao": "idoso_fragil",
+        "ajuste": "priorizar medidas comportamentais e dispositivo coletor; se fármaco, iniciar com metade da dose e reavaliar em 4 semanas",
+        "alerta": "queda noturna, hipotensão e interação com polifarmácia"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "ajustar mirabegrona e solifenacina pela TFG; evitar oxibutinina e desmopressina com TFG abaixo de 50",
+        "alerta": "acúmulo, hiponatremia e retenção"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "suspeitar de bexiga neurogênica diabética e medir resíduo; controle glicêmico e cateterismo intermitente se necessário",
+        "alerta": "retenção silenciosa e infecção de repetição"
+      },
+      {
+        "populacao": "pos_prostatectomia",
+        "ajuste": "fisioterapia do assoalho pélvico precoce; anticolinérgico só se houver urgência associada",
+        "alerta": "incontinência de esforço persistente e estenose de anastomose"
+      },
+      {
+        "populacao": "lesao_medular",
+        "ajuste": "cateterismo intermitente limpo como padrão, com controle de pressão intravesical e urodinâmica periódica; toxina botulínica se hiperatividade",
+        "alerta": "bexiga de alta pressão, refluxo e lesão renal"
+      },
+      {
+        "populacao": "fim_de_vida",
+        "ajuste": "priorizar conforto, dispositivo coletor e proteção de pele; retirar fármacos urológicos sem benefício sintomático",
+        "alerta": "cateterismo e exames que não aliviam sintoma"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "urina tipo 1 e urocultura",
+          "indicacao": "todos, mesmo sem febre, antes de tratar bexiga",
+          "o_que_muda": "infecção sintomática exige antibiótico; bacteriúria assintomática não deve ser tratada e não explica incontinência crônica"
+        },
+        {
+          "nome": "resíduo pós-miccional por ultrassom",
+          "indicacao": "todos, antes de iniciar antimuscarínico",
+          "o_que_muda": "resíduo acima de 200 mL indica transbordamento e contraindica anticolinérgico; acima de 300 mL indica cateterismo"
+        },
+        {
+          "nome": "creatinina e TFG estimada",
+          "indicacao": "todos",
+          "o_que_muda": "define ajuste de mirabegrona, solifenacina e desmopressina e detecta lesão renal por retenção crônica"
+        },
+        {
+          "nome": "sódio sérico",
+          "indicacao": "antes e durante o uso de desmopressina",
+          "o_que_muda": "hiponatremia contraindica ou obriga a suspender o fármaco antes de causar convulsão"
+        },
+        {
+          "nome": "glicemia e HbA1c",
+          "indicacao": "diabético ou neuropatia suspeita",
+          "o_que_muda": "diabetes mal controlado causa bexiga neurogênica e candidíase, e muda para controle glicêmico e cateterismo"
+        },
+        {
+          "nome": "diário miccional de 3 dias",
+          "indicacao": "todos",
+          "o_que_muda": "define o tipo de incontinência, a frequência basal e a meta terapêutica mensurável"
+        },
+        {
+          "nome": "ultrassom de vias urinárias com resíduo",
+          "indicacao": "retenção, hematúria, litíase ou infecção de repetição",
+          "o_que_muda": "identifica hidronefrose, cálculo, resíduo e próstata obstrutiva"
+        },
+        {
+          "nome": "PSA e avaliação prostática",
+          "indicacao": "homem com jato fraco, hesitação ou resíduo elevado",
+          "o_que_muda": "obstrução prostática muda o tratamento para alfa-bloqueador e avaliação urológica, e contraindica anticolinérgico"
+        },
+        {
+          "nome": "urodinâmica",
+          "indicacao": "suspeita de bexiga neurogênica, falha terapêutica ou antes de cirurgia",
+          "o_que_muda": "distingue hiperatividade de obstrução e mede a pressão intravesical, que orienta toxina, cateterismo e cirurgia"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "tratar incontinência sem excluir retenção urinária",
+          "motivo": "o anticolinérgico agrava a retenção e pode causar lesão renal, infecção e bexiga de alta pressão"
+        },
+        {
+          "exame": "tratar incontinência sem excluir impactação fecal",
+          "motivo": "o fecaloma comprime a bexiga e simula bexiga hiperativa; sem desimpactar, o tratamento falha e o anticolinérgico piora a constipação"
+        },
+        {
+          "exame": "anticolinérgico em idoso frágil, demência, glaucoma de ângulo fechado ou retenção",
+          "motivo": "causa delirium, declínio cognitivo, retenção e crise de glaucoma; a alternativa beta-3 existe"
+        },
+        {
+          "exame": "tratar bacteriúria assintomática com antibiótico",
+          "motivo": "não melhora a incontinência, seleciona resistência e expõe a C. difficile; só tratar infecção sintomática"
+        },
+        {
+          "exame": "cateter vesical de demora de rotina para incontinência",
+          "motivo": "aumenta infecção, litíase, estenose e cronifica a retenção; o padrão na bexiga neurogênica é o cateterismo intermitente"
+        },
+        {
+          "exame": "restringir líquidos de forma global para 'não perder urina'",
+          "motivo": "concentra a urina, irrita a bexiga, causa infecção e desidratação; o ajuste é de horário e de tipo de líquido"
+        },
+        {
+          "exame": "urodinâmica de rotina antes de medidas comportamentais",
+          "motivo": "é invasiva e cara, e não muda a conduta inicial na maioria dos casos"
+        },
+        {
+          "exame": "prescrever fármaco urológico na incontinência funcional",
+          "motivo": "o trato urinário é normal e o problema é acesso ao banheiro; o fármaco só adiciona risco"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "anotar por 3 dias quando urina, quanto perde e o que bebeu",
+        "urinar por horário, a cada 2 a 3 horas, sem esperar a vontade apertar",
+        "treinar a musculatura pélvica todos os dias, mesmo sem vontade de urinar",
+        "reduzir café, chá preto, mate, refrigerante e álcool",
+        "beber 1,5 a 2 L de água por dia, concentrando até o início da tarde",
+        "usar creme de barreira e trocar o absorvente a cada 2 a 4 horas",
+        "deixar comadre, urinol ou trajeto iluminado para a noite",
+        "tratar a prisão de ventre e evacuar regularmente",
+        "levar o diário miccional no retorno"
+      ],
+      "evitar": [
+        "parar de beber água para não perder urina",
+        "tomar remédio para bexiga por conta própria ou emprestado",
+        "usar fralda e deixar de ir ao banheiro por comodidade",
+        "tomar diurético à noite",
+        "beber líquido em grande quantidade antes de dormir",
+        "ignorar sangramento na urina ou febre",
+        "manter contenção física ou sedativo que impeça chegar ao banheiro"
+      ],
+      "retorno": [
+        "dor ou urgência para urinar com febre",
+        "sangue na urina",
+        "não conseguir urinar, dor suprapúbica ou barriga inchada",
+        "confusão, sonolência ou queda",
+        "boca muito seca, prisão de ventre intensa ou visão turva após iniciar remédio",
+        "piora da perda urinária ou nenhuma melhora em 8 semanas"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "mirabegrona",
+        "efeitos": [
+          "hipertensão",
+          "retenção urinária",
+          "cefaleia"
+        ],
+        "observacao": "medir pressão antes, em 1 mês e periodicamente; suspender se pressão não controlar"
+      },
+      {
+        "agente": "solifenacina",
+        "efeitos": [
+          "boca seca",
+          "constipação",
+          "confusão",
+          "retenção"
+        ],
+        "observacao": "reduzir para 5 mg se TFG abaixo de 30; suspender se confusão ou resíduo elevado"
+      },
+      {
+        "agente": "oxibutinina",
+        "efeitos": [
+          "boca seca intensa",
+          "constipação",
+          "delirium",
+          "retenção",
+          "queda"
+        ],
+        "observacao": "evitar em demência e idoso frágil; se inevitável, 2,5 mg 12/12 h e reavaliar cognição em 2 semanas"
+      },
+      {
+        "agente": "tolterodina",
+        "efeitos": [
+          "boca seca",
+          "constipação",
+          "QT longo",
+          "tontura"
+        ],
+        "observacao": "ECG se cardiopatia; reduzir em hepatopatia"
+      },
+      {
+        "agente": "toxina botulínica A",
+        "efeitos": [
+          "retenção urinária",
+          "infecção urinária",
+          "hematúria"
+        ],
+        "observacao": "ensinar cateterismo antes da injeção; medir resíduo nas primeiras 4 semanas"
+      },
+      {
+        "agente": "desmopressina",
+        "efeitos": [
+          "hiponatremia",
+          "cefaleia",
+          "edema",
+          "convulsão"
+        ],
+        "observacao": "sódio basal e em 3 a 7 dias; suspender se sódio abaixo de 130 mEq/L"
+      },
+      {
+        "agente": "estradiol vaginal",
+        "efeitos": [
+          "irritação local",
+          "sangramento vaginal",
+          "sensibilidade mamária"
+        ],
+        "observacao": "investigar sangramento vaginal novo; exame de mama anual"
+      },
+      {
+        "agente": "macrogol 3350",
+        "efeitos": [
+          "distensão",
+          "diarreia",
+          "distúrbio eletrolítico"
+        ],
+        "observacao": "ajustar até fezes pastosas; conferir eletrólitos na desimpactação"
+      },
+      {
+        "agente": "lactulose",
+        "efeitos": [
+          "distensão",
+          "cólica",
+          "diarreia",
+          "desidratação"
+        ],
+        "observacao": "titular pela consistência e vigiar sódio"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender ou reduzir o fármaco implicado e registrar a reação em prontuário",
+      "Retenção urinária após antimuscarínico ou toxina: medir resíduo, suspender o fármaco e iniciar cateterismo intermitente",
+      "Confusão, delirium ou piora de memória: suspender o anticolinérgico no mesmo dia e trocar por mirabegrona",
+      "Hiponatremia com desmopressina: suspender, restringir líquido e corrigir sódio conforme gravidade e sintomas",
+      "Constipação intensa: reduzir a dose, tratar com macrogol e reavaliar a necessidade do anticolinérgico",
+      "Hipertensão com mirabegrona: reduzir para 25 mg, revisar anti-hipertensivo e suspender se não controlar",
+      "Dermatite por umidade: curativo de barreira, troca programada e reavaliação da pele em 48 h",
+      "Reavaliar a lista completa após qualquer reação: um efeito adverso no idoso é indicação de revisão, não de nova prescrição"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "mirabegrona 25 mg",
+            "dose": "25 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "30 dias",
+            "condicao": "bexiga hiperativa em idoso frágil, demência ou polifarmácia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "solifenacina 5 mg",
+            "dose": "5 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "30 dias",
+            "condicao": "bexiga hiperativa sem contraindicação anticolinérgica",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "macrogol 3350 sachê 17 g",
+            "dose": "17 g",
+            "via": "VO",
+            "frequencia": "1 a 2 sachês/dia",
+            "duracao": "30 dias",
+            "condicao": "constipação associada",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "estradiol creme vaginal 0,01%",
+            "dose": "0,5 g",
+            "via": "vaginal",
+            "frequencia": "2x/semana após 2 semanas diárias",
+            "duracao": "90 dias",
+            "condicao": "atrofia vulvovaginal com urgência",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "adesivo de oxibutinina 3,9 mg/24 h",
+            "dose": "1 adesivo",
+            "via": "transdérmica",
+            "frequencia": "trocar a cada 7 dias",
+            "duracao": "30 dias",
+            "condicao": "apenas se não houver beta-3 nem solifenacina",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "solifenacina 5 mg",
+            "dose": "5 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "monitorizacao": "resíduo pós-miccional, constipação e cognição",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "macrogol 3350",
+            "dose": "17 g",
+            "via": "VO",
+            "frequencia": "1 a 2x/dia",
+            "monitorizacao": "evacuações e distensão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "desmopressina 0,1 mg",
+            "dose": "0,1 mg",
+            "via": "VO",
+            "frequencia": "1x ao deitar",
+            "monitorizacao": "sódio em 3 a 7 dias",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "urina tipo 1",
+          "urocultura",
+          "resíduo pós-miccional",
+          "creatinina e TFG",
+          "sódio",
+          "glicemia e HbA1c",
+          "diário miccional",
+          "ultrassom de vias urinárias",
+          "PSA",
+          "urodinâmica",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de incontinência urinária em investigação e tratamento, necessitando de afastamento por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino (urologia, uroginecologia, fisioterapia pélvica)",
+          "motivo",
+          "resumo com tipo de incontinência, resíduo e tratamentos já tentados",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente idoso com incontinência urinária do tipo (esforço, urgência, transbordamento ou funcional), diário miccional, resíduo pós-miccional, causas reversíveis excluídas (retenção, impactação, infecção, fármaco), medidas comportamentais e fisioterapia instituídas, fármacos usados com dose e resposta, efeitos adversos e plano de reavaliação em 4 a 8 semanas."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tipo e gatilho da perda",
+        "frequência diurna e noturna",
+        "sensação de esvaziamento incompleto",
+        "hábito intestinal e última evacuação",
+        "fármacos em uso e horário do diurético",
+        "cafeína, álcool e ingestão de líquidos",
+        "comorbidades (diabetes, Parkinson, AVC, lesão medular)",
+        "cirurgia pélvica e partos",
+        "impacto na vida diária, sono e pele",
+        "acesso ao banheiro e uso de contenção"
+      ],
+      "texto_template": "Idoso com incontinência urinária, tipo e gatilho da perda, frequência diurna e noturna, sensação de esvaziamento incompleto, hábito intestinal e data da última evacuação, fármacos em uso com horário do diurético, consumo de cafeína e álcool, comorbidades neurológicas e diabetes, cirurgias pélvicas e partos, impacto em sono, pele e vida diária, e acesso ao banheiro."
+    },
+    "exame_fisico": {
+      "itens": [
+        "abdome e palpação de bexiga",
+        "toque retal e tônus esfincteriano",
+        "exame genital e trofismo vaginal",
+        "pele perineal e sacral",
+        "avaliação neurológica de membros inferiores e reflexo bulbocavernoso",
+        "marcha, mobilidade e transferência",
+        "pressão arterial e hidratação",
+        "exame de próstata em homens"
+      ],
+      "texto_template": "Abdome com palpação de bexiga e globo vesical, toque retal com avaliação de tônus esfincteriano e impactação, exame genital com trofismo vaginal, inspeção da pele perineal e sacral, exame neurológico de membros inferiores com reflexo bulbocavernoso, marcha e mobilidade, pressão arterial, hidratação e exame prostático quando aplicável."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de incontinência urinária, critérios de cateterismo intermitente e de toxina botulínica",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_geriatria",
+        "o_que_verificar": "causas reversíveis, carga anticolinérgica e critérios de Beers para fármacos urológicos",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_urologia",
+        "o_que_verificar": "indicação de urodinâmica, toxina botulínica e manejo da bexiga neurogênica",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_uroginecologia",
+        "o_que_verificar": "fisioterapia do assoalho pélvico, prolapso e incontinência de esforço",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e doses de mirabegrona, solifenacina, oxibutinina, tolterodina, toxina botulínica, desmopressina, estradiol vaginal, macrogol e lactulose",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GER04-01",
+        "tipo": "retencao_urinaria",
+        "gatilho": "bexiga palpável, anúria, dor suprapúbica ou resíduo pós-miccional acima de 300 mL",
+        "severidade": "grave",
+        "mensagem": "Retenção urinária: esvaziar antes de qualquer fármaco para bexiga.",
+        "acao": "sugerir cateterismo de alívio e bloquear anticolinérgico",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER04-02",
+        "tipo": "anticolinergico_em_demencia",
+        "gatilho": "antimuscarínico prescrito em demência, delirium prévio ou idoso frágil com polifarmácia anticolinérgica",
+        "severidade": "grave",
+        "mensagem": "Anticolinérgico em demência piora cognição e precipita delirium.",
+        "acao": "bloquear item e sugerir mirabegrona",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER04-03",
+        "tipo": "retencao_pos_antimuscarinico",
+        "gatilho": "resíduo pós-miccional acima de 200 mL após iniciar antimuscarínico ou toxina botulínica",
+        "severidade": "grave",
+        "mensagem": "Retenção induzida pelo tratamento: suspender e cateterizar.",
+        "acao": "bloquear manutenção e sugerir cateterismo intermitente",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER04-04",
+        "tipo": "desmopressina_sem_sodio",
+        "gatilho": "desmopressina prescrita sem sódio basal documentado",
+        "severidade": "grave",
+        "mensagem": "Desmopressina sem sódio basal: risco de hiponatremia grave.",
+        "acao": "bloquear item até dosar sódio",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER04-05",
+        "tipo": "impactacao_fecal",
+        "gatilho": "ausência de evacuação por mais de 3 dias com massa abdominal ou perda em gotas",
+        "severidade": "grave",
+        "mensagem": "Desimpactar antes de tratar a bexiga.",
+        "acao": "sugerir desimpactação e macrogol",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER04-06",
+        "tipo": "hematuria",
+        "gatilho": "hematúria macroscópica ou coágulos",
+        "severidade": "grave",
+        "mensagem": "Hematúria em idoso exige investigação de neoplasia.",
+        "acao": "encaminhar à urologia com urgência",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER04-07",
+        "tipo": "cateter_de_demora",
+        "gatilho": "cateter vesical de demora sem indicação documentada em incontinência",
+        "severidade": "precaucao",
+        "mensagem": "Sonda de demora aumenta infecção e cronifica a retenção.",
+        "acao": "alertar e sugerir cateterismo intermitente",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER04-08",
+        "tipo": "bacteriuria_assintomatica",
+        "gatilho": "antibiótico prescrito para urocultura positiva sem sintomas urinários",
+        "severidade": "precaucao",
+        "mensagem": "Bacteriúria assintomática não deve ser tratada.",
+        "acao": "alertar e bloquear antibiótico",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "Beers",
+        "STOPP"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: incontinência urinária separada em esforço, urgência, transbordamento e funcional, com conduta distinta para cada mecanismo; exclusão obrigatória de retenção urinária, impactação fecal, infecção sintomática e fármaco implicado antes de qualquer diagnóstico de bexiga; resíduo pós-miccional como exame que muda a conduta; 9 fármacos com apresentações, preparo, tempo de infusão, monitorização, ajuste renal e hepático, cobrindo mirabegrona como primeira escolha no frágil, solifenacina, oxibutinina com cautela explícita em idoso e demência, tolterodina, toxina botulínica intravesical de resgate, desmopressina na noctúria com controle de sódio, estradiol vaginal tópico e laxantes (macrogol e lactulose) para a impactação que causa transbordamento; medidas comportamentais como treino vesical, Kegel, redução de cafeína e ajuste hídrico; cateterismo intermitente limpo no manejo da bexiga neurogênica e da retenção; bloqueios de anticolinérgico em demência e em retenção, de desmopressina sem sódio basal e de cateter de demora sem indicação.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

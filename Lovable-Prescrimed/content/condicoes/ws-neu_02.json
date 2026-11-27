@@ -1,0 +1,710 @@
+{
+  "id": "ws-neu_02",
+  "nome": "Cefaleia com sinais de alarme",
+  "cat": "Emergência",
+  "alias": "cefaleia com sinais de alarme cefaleia de alarme cefaleia secundaria cefaleia subita cefaleia grave",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (NEU-02_cefaleia_alarme.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: protocolo de cefaleia grave, fluxo de tomografia e punção lombar",
+      "[verificar] sociedade_neurologia: bandeiras vermelhas, critérios de hemorragia subaracnóidea e de trombose venosa cerebral",
+      "[verificar] sociedade_infectologia: esquema empírico de meningite, dexametasona e quimioprofilaxia de contactantes",
+      "[verificar] diretriz_obstetrica: trombose venosa cerebral no puerpério e anticoagulação na gestação",
+      "[verificar] anvisa: apresentações, concentrações e disponibilidade de nimodipino, aciclovir e vancomicina"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "NEU-02 em 2026-11-27",
+    "fundido_workspace": "NEU-02 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: início súbito em trovoada, dor máxima em menos de 1 minuto -> tomografia de crânio sem contraste imediata e avaliação de neurocirurgia; pior cefaleia da vida ou cefaleia diferente de todas as anteriores -> imagem antes de qualquer alta, mesmo com exame neurológico normal; febre com rigidez de nuca, fotofobia ou petéquias -> antibiótico e dexametasona na primeira hora, antes da imagem se houver instabilidade; déficit focal, assimetria de força, alteração de fala ou campos visuais -> protocolo de acidente vascular cerebral e tomografia imediata. 1) Reconhecer a bandeira vermelha na triagem e levar imediatamente para sala de emergência com monitor, acesso venoso e glicemia capilar 2) Exame dirigido: Glasgow, pupilas, fundo de olho, sinais meníngeos, temperatura, força e fala, pressão arterial 3) Formular a hipótese sindrômica: hemorragia subaracnóidea, meningite, encefalite, acidente vascular cerebral, trombose venosa, hipertensão intracraniana, arterite, glaucoma ou trauma 4) Tomografia de crânio sem contraste imediata na maioria dos cenários; se instabilidade ou sinais meníngeos com rebaixamento, antibiótico e dexametasona antes da imagem 5) Com tomografia normal e suspeita de hemorragia subaracnóidea persistente, punção lombar após 12 horas ou angiotomografia se a punção for contraindicada 6) Tratar empiricamente a hipótese principal em paralelo aos exames, sem esperar resultado para iniciar antibiótico, antiviral, nimodipino, anticoagulação ou corticoide 7)",
+  "redFlags": [
+    "início súbito em trovoada, dor máxima em menos de 1 minuto -> tomografia de crânio sem contraste imediata e avaliação de neurocirurgia",
+    "pior cefaleia da vida ou cefaleia diferente de todas as anteriores -> imagem antes de qualquer alta, mesmo com exame neurológico normal",
+    "febre com rigidez de nuca, fotofobia ou petéquias -> antibiótico e dexametasona na primeira hora, antes da imagem se houver instabilidade",
+    "déficit focal, assimetria de força, alteração de fala ou campos visuais -> protocolo de acidente vascular cerebral e tomografia imediata",
+    "papiledema, vômitos em jato ou piora ao deitar e ao tossir -> tomografia antes de punção lombar e avaliação de neurocirurgia",
+    "cefaleia nova após 50 anos, com claudicação de mandíbula ou perda visual transitória -> velocidade de hemossedimentação e prednisona imediatos, sem esperar biópsia",
+    "história de câncer, HIV ou imunossupressão com cefaleia nova -> imagem com contraste e punção lombar com painel dirigido",
+    "anticoagulado, coagulopatia ou plaquetopenia com cefaleia -> tomografia imediata, coagulograma e reversão conforme o fármaco"
+  ],
+  "naoUsar": [
+    "alergia grave a cefalosporina",
+    "neonato com hiperbilirrubinemia",
+    "uso simultâneo de solução contendo cálcio em neonato",
+    "alergia grave a vancomicina",
+    "insuficiência renal grave sem ajuste",
+    "infecção fúngica sistêmica não tratada",
+    "imunossupressão grave sem cobertura adequada",
+    "hipotensão grave"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "voltar imediatamente se a dor piorar, surgir fraqueza, febre ou vômitos"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "sair do serviço sem diagnóstico definido"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Bloqueador de canal de cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nimodipino",
+              "n": "Nimodipino",
+              "ap": "comprimido 30 mg",
+              "q": "",
+              "pos": "60 mg. Via VO ou por sonda nasoenteral. 4/4 h. 21 dias."
+            },
+            "motivo": "hemorragia subaracnóidea por aneurisma, para prevenção de déficit isquêmico tardio (1a linha) hemorragia subaracnóidea após alta da unidade",
+            "nota": "VO: deglutir inteiro, sem partir, com ou sem alimento. Via sonda: triturar e administrar imediatamente, lavando a sonda. IV: solução pronta, em bomba de infusão dedicada - monitorar: pressão arterial a cada 4 h, porque a hipotensão é o efeito limitante; monitorar: nível de consciência; monitorar: transaminases · NÃO: hipotensão grave; hipertensão intracraniana com risco iminente de herniação; alergia a diidropiridina · Obs: Nunca administrar em bolus intravenoso: a injeção rápida causa colapso hemodinâmico e morte. Se não houver via oral, usar sonda",
+            "dose": {
+              "texto": "60 mg; 4/4 h; 21 dias; max. 60 mg a cada 4 h",
+              "status": "ok",
+              "valor": 60,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anticoagulante",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa preenchida 20 mg/0,2 mL",
+              "q": "",
+              "pos": "1 mg/kg. Via SC. 12/12 h. Até a transição para anticoagulante oral, em geral 3 a 6 meses e mais em trombofilia."
+            },
+            "motivo": "trombose venosa cerebral, inclusive com infarto hemorrágico associado (1a linha) trombose venosa cerebral confirmada",
+            "nota": "Seringa pronta; não expelir a bolha de ar e não massagear o local após a aplicação - monitorar: plaquetas duas vezes por semana nas primeiras 3 semanas; monitorar: sinais de sangramento e nível de consciência; monitorar: anti-Xa se clearance abaixo de 30 mL/min ou obesidade extrema; monitorar: hemoglobina · NÃO: sangramento ativo com instabilidade; plaquetopenia por heparina prévia; insuficiência renal grave sem ajuste; hipertensão intracraniana com herniação iminente · Obs: A anticoagulação é indicada mesmo com infarto hemorrágico na trombose venosa cerebral; não retardar por causa da imagem · Renal: Clearance abaixo de 30…",
+            "dose": {
+              "texto": "1 mg/kg; 12/12 h; até a transição para anticoagulante oral, em geral 3 a 6 meses e mais em trombofilia; max. 1 mg/kg por dose",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "1 mg/kg. Via VO. 1x/dia pela manhã. Mínimo 4 semanas antes de reduzir, com desmame lento e acompanhamento.",
+            "posTodas": true,
+            "motivo": "suspeita de arterite de células gigantes com cefaleia nova após 50 anos (1a linha) suspeita de arterite de células gigantes em investigação",
+            "nota": "Uso direto pela manhã, com alimento - monitorar: glicemia; monitorar: pressão arterial; monitorar: sintomas visuais a cada consulta; monitorar: densitometria e cálcio em uso prolongado · NÃO: infecção sistêmica não tratada; diabetes descompensado; úlcera péptica ativa; psicose grave · Obs: Iniciar na suspeita clínica, sem esperar biópsia, porque o risco de cegueira irreversível é imediato; a biópsia pode ser feita em até 2 semanas sem perder o diagnóstico",
+            "dose": {
+              "texto": "1 mg/kg; 1x/dia pela manhã; mínimo 4 semanas antes de reduzir, com desmame lento e acompanhamento; max. 60 mg/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Colinergico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "pilocarpina",
+              "n": "Pilocarpina",
+              "ap": "colírio 1%, 2% e 4% (frasco 10 mL)",
+              "q": "",
+              "pos": "1 gota de colírio a 2%. Via oftálmica (colírio). A cada 15 minutos por 1 hora, depois 6/6 h. Até a iridotomia ou a resolução da crise."
+            },
+            "motivo": "glaucoma agudo de ângulo fechado, para promover miose e abrir o ângulo iridocorneano (condicional)",
+            "nota": "Uso direto; comprimir o canto interno do olho por 1 minuto após a instilação para reduzir absorção sistêmica - monitorar: pressão intraocular; monitorar: diâmetro pupilar; monitorar: dor ocular; monitorar: frequência cardíaca e sudorese · NÃO: descolamento de retina; irite aguda; crise de asma grave; hipersensibilidade · Obs: Só funciona depois de baixar a pressão com manitol e acetazolamida; instilar antes disso é ineficaz porque o esfíncter da íris está isquêmico",
+            "dose": {
+              "texto": "1 gota de colírio a 2%; a cada 15 minutos por 1 hora, depois 6/6 h; até a iridotomia ou a resolução da crise; max. 1 gota por aplicação",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Betabloqueador tópico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "timolol",
+              "n": "Timolol",
+              "ap": "colírio 0,25% e 0,5% (frasco 5 mL)",
+              "q": "",
+              "pos": "1 gota de colírio a 0,5%. Via oftálmica (colírio). 12/12 h. Até a iridotomia ou a resolução da crise."
+            },
+            "motivo": "glaucoma agudo de ângulo fechado, para reduzir a produção de humor aquoso (condicional)",
+            "nota": "Uso direto; comprimir o canto interno do olho por 1 minuto após a instilação - monitorar: frequência cardíaca; monitorar: ausculta respiratória; monitorar: pressão intraocular · NÃO: asma brônquica; bradicardia abaixo de 50 bpm; bloqueio atrioventricular de segundo ou terceiro grau; insuficiência cardíaca descompensada · Obs: A absorção sistêmica existe: em asmático e cardiopata, prefere-se outra classe de colírio hipotensor",
+            "dose": {
+              "texto": "1 gota de colírio a 0,5%; 12/12 h; até a iridotomia ou a resolução da crise; max. 1 gota por aplicação",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Monitorização contínua e reavaliação seriada",
+              "ap": "",
+              "q": "",
+              "pos": "Oximetria, frequência cardíaca, pressão, escala de coma de Glasgow e pupilas registrados a cada hora na primeira 24 horas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Dieta zero até definição",
+              "ap": "",
+              "q": "",
+              "pos": "Nada por boca enquanto houver risco de rebaixamento, convulsão, cirurgia ou necessidade de punção lombar imediata"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Cabeceira elevada a 30 graus",
+              "ap": "",
+              "q": "",
+              "pos": "Em suspeita de hipertensão intracraniana, com alinhamento cervical neutro e sem compressão de veias jugulares"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Controle de temperatura, glicemia e oxigenação",
+              "ap": "",
+              "q": "",
+              "pos": "Evitar febre, manter saturação acima de 94% e glicemia entre 140 e 180 mg/dL; hipóxia e hipertermia pioram a lesão cerebral"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Registro do horário exato de início da dor",
+              "ap": "",
+              "q": "",
+              "pos": "Anotar hora do início e hora da primeira tomografia e do primeiro antibiótico, porque a interpretação da imagem e do líquor depende do intervalo"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Notificação compulsória da meningite",
+              "ap": "",
+              "q": "",
+              "pos": "Preencher a ficha de notificação no Sistema de Informação de Agravos de Notificação em até 24 horas, com busca de contactantes e quimioprofilaxia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Ambiente com pouca luz e silêncio",
+              "ap": "",
+              "q": "",
+              "pos": "Reduz o desconforto da fotofobia e da meningite, sem substituir analgesia ou tratamento específico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Evitar manobras que elevem a pressão intracraniana",
+              "ap": "",
+              "q": "",
+              "pos": "Sem Valsalva, sem compressão jugular, sem aspiração traqueal prolongada; tosse e agitação tratadas, pois elevam a pressão intracraniana"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Suspender anticoagulante e antiagregante até a imagem",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender a próxima dose e avaliar reversão; não esperar o exame para reverter se houver déficit ou rebaixamento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "NEU-02"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antibiótico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "meningite bacteriana empírica e meningococcemia suspeita (1a linha)",
+            "nota": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de soro fisiológico 0,9% ou glicose 5% - monitorar: sinais de alergia nas primeiras doses; monitorar: diarreia e febre; monitorar: função hepática em uso prolongado; monitorar: sinais de piora neurológica, que indicam falha do esquema · NÃO: alergia grave a cefalosporina; neonato com hiperbilirrubinemia; uso simultâneo de solução contendo cálcio em neonato · Obs: Não atrasar a primeira dose para aguardar tomografia ou punção lombar; colher hemocultura se isso não custar tempo",
+            "dose": {
+              "texto": "2 g; 12/12 h; 10 a 14 dias (14 dias para pneumococo, 7 dias para meningococo); max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Glicopeptideo",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "vancomicina",
+              "n": "Vancomicina",
+              "ap": "frasco 500 mg (pó)",
+              "via": "IV",
+              "pos": "15 a 20 mg/kg. Via IV. 8/8 h (12/12 h se clearance entre 30 e 60 mL/min). Até identificação do agente, em geral 7 a 14 dias. 60 a 120 minutos (nunca acima de 10 mg/min, para evitar a síndrome do homem vermelho)."
+            },
+            "motivo": "cobertura empírica de pneumococo resistente à penicilina na meningite bacteriana do adulto (1a linha)",
+            "nota": "Reconstituir em 10 mL de água e diluir em 250 a 500 mL de soro fisiológico 0,9%, com concentração final de no máximo 5 mg/mL - monitorar: creatinina a cada 24 a 48 h; monitorar: nível sérico de vale antes da quarta dose, alvo de 15 a 20 mcg/mL; monitorar: infiltração no sítio de infusão; monitorar: hemograma em uso aci · NÃO: alergia grave a vancomicina; insuficiência renal grave sem ajuste · Obs: Só faz sentido associada à ceftriaxona no esquema empírico; suspender se o agente for sensível à penicilina ou à cefalosporina · Renal: Obrigatório: dose e intervalo pelo clearance de creatinina e pelo nível sérico; repor…",
+            "dose": {
+              "texto": "15 a 20 mg/kg; 8/8 h (12/12 h se clearance entre 30 e 60 mL/min); até identificação do agente, em geral 7 a 14 dias; max. 2 g por dose",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": 20,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dexametasona_ev",
+            "motivo": "meningite bacteriana do adulto, antes ou junto com a primeira dose do antibiótico (1a linha)",
+            "nota": "Administrar sem diluição em bolus lento ou diluir em 20 mL de soro fisiológico 0,9% - monitorar: glicemia; monitorar: pressão arterial; monitorar: sangramento digestivo; monitorar: nível de consciência",
+            "dose": {
+              "texto": "10 mg; 6/6 h; 4 dias; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 4,
+              "duracao_texto": "4 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ampicilina",
+            "motivo": "cobertura de Listeria monocytogenes em maior de 50 anos, etilista, gestante, transplantado ou imunossuprimido com meningite (condicional)",
+            "nota": "Reconstituir em 10 mL de água e diluir em 50 a 100 mL de soro fisiológico 0,9% - monitorar: rash e sinais de anafilaxia; monitorar: nível de consciência e convulsão; monitorar: creatinina; monitorar: diarreia · NÃO: alergia a penicilina; mononucleose infecciosa · Obs: Não é cobertura de rotina: entra apenas quando Listeria é provável, e é o que a ceftriaxona não cobre · Renal: Espaçar para 6/6 h ou 8/8 h com clearance abaixo de 30 mL/min",
+            "dose": {
+              "texto": "2 g; 4/4 h; 21 dias na listeriose confirmada; max. 12 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiviral",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "aciclovir",
+              "n": "Aciclovir",
+              "ap": "frasco 250 mg (pó)",
+              "via": "IV",
+              "pos": "10 mg/kg. Via IV. 8/8 h. 14 a 21 dias. 60 minutos (infusão lenta e com hidratação reduz cristalúria)."
+            },
+            "motivo": "suspeita ou confirmação de encefalite por herpes simples (condicional)",
+            "nota": "Reconstituir em 10 ou 20 mL de água e diluir em 250 mL de soro fisiológico 0,9%, garantindo hidratação - monitorar: creatinina a cada 48 h; monitorar: estado de hidratação e diurese; monitorar: confusão atribuível ao fármaco; monitorar: sítio de infusão · NÃO: alergia; insuficiência renal grave sem ajuste · Obs: Iniciar na suspeita clínica, antes da confirmação por reação em cadeia da polimerase; encurtar se o exame for negativo e outra causa definida · Renal: Obrigatório: reduzir dose e espaçar intervalo pelo clearance de creatinina",
+            "dose": {
+              "texto": "10 mg/kg; 8/8 h; 14 a 21 dias; max. 10 mg/kg por dose",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor da anidrase carbonica",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "acetazolamida",
+              "n": "Acetazolamida",
+              "ap": "comprimido 250 mg",
+              "via": "VO ou IV",
+              "pos": "250 mg. Via VO ou IV. 8/8 h. Até definição com oftalmologia ou neurocirurgia. 15 a 30 minutos."
+            },
+            "motivo": "hipertensão intracraniana idiopática e glaucoma agudo de ângulo fechado (condicional) hipertensão intracraniana idiopática",
+            "nota": "VO: uso direto. IV: reconstituir em 5 mL de água e diluir em 100 mL de soro fisiológico 0,9% - monitorar: bicarbonato, potássio e sódio; monitorar: parestesias; monitorar: dor lombar por cálculo renal; monitorar: pressão intraocular quando disponível · NÃO: acidose metabólica; hipocalemia grave; cirrose; insuficiência renal grave; hipersensibilidade a sulfonamida · Obs: Na crise de glaucoma, a via intravenosa na dose de 500 mg é a que baixa a pressão intraocular mais rápido, junto com o manitol · Renal: Evitar com clearance abaixo de 30 mL/min",
+            "dose": {
+              "texto": "250 mg; 8/8 h; até definição com oftalmologia ou neurocirurgia; max. 4 g/dia",
+              "status": "ok",
+              "valor": 250,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "analgesia de dose única durante a investigação, com reavaliação seriada (condicional)",
+            "nota": "VO: uso direto. IV: solução pronta, não diluir - monitorar: nível de consciência e escala de coma de Glasgow antes e 30 a 60 minutos após; monitorar: dor de 0 a 10; monitorar: dose total diária · NÃO: hepatopatia grave; alergia; desnutrição grave · Obs: É a analgesia permitida antes do diagnóstico, em dose única e com registro; nunca opioide, porque sedação e miose mascaram rebaixamento e hipertensão intracraniana · Renal: Espaçar com clearance abaixo de 30 mL/min",
+            "dose": {
+              "texto": "1 g; dose única; repetir somente após reavaliação e com diagnóstico definido; 1 dose na fase de investigação; max. 4 g/dia (3 g/dia em hepatopatia ou peso abaixo de 50 kg)",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiemético",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "vômito e náusea que impedem o exame ou a via oral (condicional)",
+            "nota": "Diluir a ampola em 10 mL de soro fisiológico 0,9% - monitorar: movimentos extrapiramidais; monitorar: nível de consciência antes e depois; monitorar: aceitação da via oral",
+            "dose": {
+              "texto": "10 mg; 8/8 h; até 3 dias; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Osmótico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "manitol",
+              "n": "Manitol",
+              "ap": "frasco 250 mL a 20% (50 g)",
+              "via": "IV",
+              "pos": "0,25 a 1 g/kg. Via IV. Dose única; repetir a cada 4 a 6 horas conforme osmolaridade e resposta. Até controle da hipertensão intracraniana ou descompressão cirúrgica. 15 a 20 minutos em acesso calibroso."
+            },
+            "motivo": "hipertensão intracraniana com rebaixamento ou herniação iminente (resgate)",
+            "nota": "Solução pronta; se houver cristais, aquecer a 37 °C até dissolver e administrar com filtro - monitorar: osmolaridade sérica (manter abaixo de 320 mOsm/kg); monitorar: sódio e potássio; monitorar: diurese horária; monitorar: ausculta pulmonar; monitorar: pressão arterial e nível de consciência · NÃO: anúria; insuficiência cardíaca congestiva; edema pulmonar; hipovolemia grave não corrigida; osmolaridade acima de 320 mOsm/kg · Obs: Medida de resgate para herniação iminente; não é tratamento de cefaleia e não substitui a causa — sangramento, tumor ou hidrocefalia · Renal: Não usar em anúria; em renal crônico, usar dose menor e…",
+            "dose": {
+              "texto": "0,25 a 1 g/kg; dose única; repetir a cada 4 a 6 horas conforme osmolaridade e resposta; até controle da hipertensão intracraniana ou descompressão cirúrgica; max. 1 g/kg por dose",
+              "status": "ok",
+              "valor": 0.25,
+              "valor_max": 1,
+              "unidade": "g",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "NEU-02",
+    "versao": "0.2.0",
+    "arquivo": "NEU-02_cefaleia_alarme.json",
+    "area": "Neurológico",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

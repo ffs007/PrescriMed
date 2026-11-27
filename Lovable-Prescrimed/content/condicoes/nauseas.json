@@ -1,0 +1,148 @@
+{
+  "id": "nauseas",
+  "nome": "Náuseas e vômitos agudos",
+  "cat": "Gastro / Proctologia",
+  "alias": "enjoo vomito nauseas vomitando enjoacao",
+  "cid": [
+    [
+      "R11",
+      "Náuseas e vômitos"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ASGE/ACG — náusea e vômito"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Náusea/vômito é SINTOMA: achar a causa antes de 'tapar'. Causas comuns no PS: gastroenterite, cinetose, medicamentos (opioide/digoxina/quimioterapia), gestação, enxaqueca, intoxicação/álcool. Causas que matam: abdome cirúrgico (obstrução!), cetoacidose, hipertensão intracraniana, IAM (principalmente inferior), insuficiência adrenal, glaucoma agudo (olho vermelho + dor + halos). Vômito bilioso ou fecalóide + distensão = obstrução: SNG e cirurgia. Repôr: glicemia, K, estado volêmico.",
+  "redFlags": [
+    "Vômito bilioso/fecalóide + abdome distendido/cirúrgico — obstrução: SNG, jejum, cirurgia",
+    "Vômitos + polidipsia/poliúria/glicemia alta ou hálito cetônico — CAD: protocolo próprio",
+    "Vômitos + dor torácica ou sudorese — IAM: ECG",
+    "Cefaleia matinal/pior com tosse + vômitos em jato — hipertensão intracraniana: imagem",
+    "Gestante com vômitos persistentes + perda de peso — hiperêmese gravídica: reposição e vitamina B",
+    "Hematemese — HDA: protocolo próprio",
+    "Vômito + dor ocular + visão embaçada — glaucoma agudo: OFTALMOLOGIA JÁ"
+  ],
+  "naoUsar": [
+    "Antiemético em dose alta contínua sem diagnóstico",
+    "Metoclopramida em obstrução mecânica (aumenta contração contra a obstrução)",
+    "Grandes volumes de líquido de uma vez (fracionar 15–30 mL 5/5 min)",
+    "Jejum prolongado em criança (hipoglicemia)"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Antiemético (1ª linha adulto)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "metoclopramida",
+            "pos": "10 mg VO a cada 8 h por até 3 dias (curto: risco extrapiramidal; não usar com obstrução)",
+            "motivo": "1ª linha de baixo custo"
+          },
+          {
+            "base": "ondansetrona",
+            "pos": "8 mg VO a cada 8 h por até 3 dias — melhor escolha se causa central/quimioterapia/embora pós-operatório",
+            "ped": "0,15 mg/kg/dose 8/8 h (máx 8 mg)",
+            "motivo": "Menos efeitos extrapiramidais"
+          },
+          {
+            "base": "dimenidrinato",
+            "pos": "50 mg VO a cada 6 h (útil em cinetose/mareo)",
+            "ped": "12,5–25 mg 6/6 h (> 2 anos)",
+            "motivo": "Cinetose/mareo"
+          },
+          {
+            "base": "bromoprida",
+            "pos": "10 mg VO a cada 8 h por até 3 dias",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "prometazina",
+            "pos": "25 mg VO a cada 8 h (sedante — preferir à noite)",
+            "ped": "0,25–0,5 mg/kg/dose (máx 25 mg)",
+            "motivo": "Alternativa sedante"
+          }
+        ]
+      },
+      {
+        "nome": "Reposição oral",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "sro_nau",
+              "n": "Hidratação fracionada",
+              "ap": "SRO/água de coco/soro caseiro",
+              "pos": "15–30 mL a cada 5–10 min (colherada em criança) — volume pequeno e frequente fica abaixo do reflexo do vômito; aumentar gradualmente. Gelados e levemente ácidos (limão) são tolerados melhor."
+            },
+            "ped": "Idem, com copinho/colher",
+            "motivo": "Base"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno se",
+              "ap": "",
+              "pos": "Vômito com sangue ou 'borra de café', vômito que não para em 24–48 h, sem urinar > 8 h, tontura ao levantar, dor abdominal forte, febre, dor de cabeça intensa, no gestante: qualquer vômito que impede alimentação por > 12 h."
+            },
+            "motivo": "Red flags domiciliares"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Alimentação",
+              "ap": "",
+              "pos": "Após 1–2 h sem vomitar: alimentos secos e leves (torrada, bolacha água e sal, arroz, banana); retomar gradualmente; evitar leite, gordura, café e álcool nas primeiras 24–48 h."
+            },
+            "motivo": "Suporte"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antiemético EV na observação",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "8 mg EV 8/8 h — 1ª escolha EV (perfil de segurança)"
+          },
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "10 mg EV 8/8 h — alternativa (não em obstrução)"
+          },
+          {
+            "hosp": "dimenidrinato_ev",
+            "motivo": "50 mg EV 6/6 h — alternativa/mareo"
+          },
+          {
+            "hosp": "prometazina_im",
+            "motivo": "25–50 mg IM — sedante noturno"
+          }
+        ]
+      }
+    ]
+  }
+}

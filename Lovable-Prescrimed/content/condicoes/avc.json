@@ -1,0 +1,133 @@
+{
+  "id": "avc-agudo",
+  "nome": "AVC agudo (código AVC)",
+  "cat": "Emergência",
+  "alias": "avc derrame isquemico hemorragico deficit neurologico facial braquial afasia codigo avc trombolise",
+  "cid": [
+    [
+      "I630",
+      "Infarto cerebral"
+    ],
+    [
+      "I610",
+      "Hematoma intraparenquimatoso"
+    ],
+    [
+      "I62",
+      "Hemorragia intracraniana não traumática"
+    ],
+    [
+      "G46",
+      "Síndromes vasculares cerebrais"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "AHA/ASA 2019 + diretriz brasileira AVC agudo",
+      "SBN — código AVC",
+      "Joinville/FEBRAS — portarias tempo"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "CÓDIGO AVC: hora do início (ou último visto bem) JÁ + glicemia dígital (hipoglicemia imita AVC!). TC sem contraste em ≤ 25 min do porteiro. Isquêmico dentro de 4,5 h da início sem contraindicações → trombólese com alteplase 0,9 mg/kg (máx 90 mg; 10% bolus + 90% em 60 min) — PAS/Pad < 185/110 antes (labetalol/nicardipina EV conforme serviço; não há no cadastro: providenciar); após tPA PA < 180/105. Trombectomia até 6 h (selecionados até 24 h com imagem avançada) — transferir. Hemorrágico: PA só se > 220/120 ou hipertensão aguda (alvo discutido 140–160 sistólica), Revisar anticoagulação (reverter com PCC/vitamina K se varfarina), neurocirurgião JÁ se: cerebelar, deterioração, ventricular. NÃO: AAS antes da TC, sondas/venopunção arterial difícil durante tPA, tratar febre (>37,5) e glicemia (140–180), nil por via oral até deglutição avaliada, ECG/troponina (FA!).",
+  "redFlags": [
+    "Glasgow caindo + anisocoria/herniação — hematoma expanding: neurocirurgia e medidas de hipertensão intracraniana JÁ",
+    "Paciente anticoagulado (varfarina/DOAC) — reverter conforme agente em paralelo à imagem",
+    "Início dos sintomas desconhecido (acordou assim) — 'última vez visto bem' conta; imagem perfusão se disponível",
+    "FA no ECG — causa cardioembólica: anticoagulação futura muda tudo",
+    "Hipoglicemia/hiperglicemia extremas — imitam AVC: meça antes de acionar o código",
+    "AVC em jovem — dissecção de carótida/vertebral, drogas, trombofilia, RCVS: história de trauma cervical/manipulação"
+  ],
+  "naoUsar": [
+    "AAS antes da TC (até excluir hemorragia)",
+    "Anti-hipertensivo de rotina no isquêmico não-tPA com PA < 220/120",
+    "Sondas nasogástrica/vesical de alívio durante a trombólise sem indicação forte",
+    "Volumes agressivos (manter euvolemia; SF é a escolha)",
+    "Glicose liberada se > 180 — tratar (piora prognóstico)"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Suporte e prevenção de complicações",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "glicose10",
+            "motivo": "Hipoglicemia imitando AVC: corrigir com glicose EV (se < 60, 40–80 mL da 50% diluída)"
+          },
+          {
+            "hosp": "dipirona_ev",
+            "motivo": "Febre > 37,5° piora prognóstico: 1 g EV 6/6h se febre"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Prevenção secundária na alta (isquêmico não cardioembólico)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "aas_avc",
+              "n": "AAS 100 mg (após 24 h da trombólise, se não fez)",
+              "ap": "100 mg comprimido",
+              "pos": "100 mg VO 1x/dia — iniciar 24 h após fim do alteplase se TC sem sangramento; se já trombolisado, a unidade define a janela"
+            },
+            "motivo": "Antiagregação do isquêmico"
+          },
+          {
+            "linha": 1,
+            "base": "atorvastatina",
+            "pos": "40–80 mg VO à noite — LDL alvo < 70 (AVC aterosclerótico)",
+            "motivo": "Estatina de alta intensidade"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Sintomas novos ou piora dos existentes (fraqueza, fala, visão, dor de cabeça súbita pior da vida), vômitos, sonolência — mesmo após alta. AVC pode recorrer ou transformar."
+            },
+            "motivo": "Recorrência/transformação"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Reabilitação e fatores de risco",
+              "ap": "",
+              "pos": "Fisioterapia/fono/nutrição o quanto antes; PA em casa; parar de fumar; controle de DM; adesão total à medicação — a maior queda de recorrência vem da PA e do AAS/estatina. Consulta neurologia em 30 dias com imagem."
+            },
+            "motivo": "Secundária"
+          },
+          {
+            "novo": {
+              "id": "orient3",
+              "n": "Se FA identificada como causa",
+              "ap": "",
+              "pos": "A anticoagulação (varfarina/DOAC) substitui ou soma ao AAS conforme cardiologia — decisão na consulta; NÃO usar os dois por conta."
+            },
+            "motivo": "Cardioembólico"
+          }
+        ]
+      }
+    ]
+  }
+}

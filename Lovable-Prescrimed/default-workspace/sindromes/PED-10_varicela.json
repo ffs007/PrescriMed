@@ -1,0 +1,1264 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-10",
+    "area": "Pediatria",
+    "nome": "Varicela",
+    "aliases": [
+      "Varicela",
+      "varicela",
+      "catapora",
+      "varicela-zóster",
+      "infecção por vírus varicela-zóster",
+      "VZV",
+      "varicela neonatal"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Varicela é a primoinfecção pelo vírus varicela-zóster (VZV), com incubação de 10 a 21 dias e transmissão por aerossol e por contato direto com o líquido das vesículas. O contágio começa 1 a 2 dias antes do exantema e dura até todas as lesões estarem em crosta, em geral 7 a 10 dias. O exantema é polimórfico — máculas, pápulas, vesículas sobre base eritematosa e crostas convivem no mesmo território —, de distribuição centrípeta, com início em couro cabeludo e face, prurido intenso e lesões em mucosa oral, palmas e plantas. Em criança sadia de 1 a 12 anos a doença é autolimitada e o tratamento é suporte: antitérmico, hidratação, anti-histamínico para o prurido e cuidado de pele, sem aciclovir de rotina. O antiviral entra para quem tem risco de doença visceral — maior de 12 anos, menor de 1 ano, imunossuprimido, doença pulmonar ou cutânea crônica, uso de corticoide sistêmico ou de salicilato, gestante e recém-nascido — na dose oral de 20 mg/kg/dose de 6/6 h por 5 dias, iniciada nas primeiras 24 h, e na forma venosa de 10 mg/kg/dose de 8/8 h na doença grave. Três erros matam nessa síndrome: prescrever AAS ou AINE, que causam síndrome de Reye e celulite necrosante; prescrever corticoide, que dissemina o vírus; e não reconhecer a superinfecção bacteriana, a ataxia cerebelar e a pneumonia varicelosa. Isolamento, rastreio de contato de gestante suscetível e de recém-nascido, e notificação compulsória fazem parte da conduta.",
+    "inclusao": [
+      "Criança com exantema vesicular em surtos sobre base eritematosa, com lesões em estágios diferentes e distribuição centrípeta",
+      "Vesículas em couro cabeludo, face, tronco, mucosa oral, palmas e plantas, com prurido",
+      "Febre baixa com exantema vesicular e contato conhecido com caso de varicela nas últimas 3 semanas",
+      "Criança com varicela e fatores de risco: maior de 12 anos, menor de 1 ano, imunossupressão, doença pulmonar ou cutânea crônica, corticoide sistêmico ou salicilato",
+      "Gestante suscetível com exantema vesicular ou contato de varicela",
+      "Recém-nascido de mãe com varicela entre 5 dias antes e 2 dias após o parto",
+      "Criança com varicela e sinais de complicação: infecção bacteriana secundária, ataxia, dispneia, vômito persistente ou lesões hemorrágicas",
+      "Criança com varicela que recebeu AAS, ibuprofeno ou corticoide e precisa de reavaliação imediata"
+    ],
+    "exclusao": [
+      {
+        "situacao": "vesículas agrupadas em faixa dermatomal unilateral, sem disseminação e com dor em queimação",
+        "fluxo": "DERM-06 herpes-zóster — antiviral e analgesia, sem risco de surto escolar"
+      },
+      {
+        "situacao": "vesículas apenas em palmas, plantas e boca, sem lesões em couro cabeludo e tronco",
+        "fluxo": "PED-11 síndrome mão-pé-boca — suporte e hidratação"
+      },
+      {
+        "situacao": "vesículas em gengiva, lábios e mucosa jugal com febre alta e sialorreia, sem lesões em mãos e pés",
+        "fluxo": "gengivoestomatite herpética por HSV — analgesia, hidratação e aciclovir apenas em caso selecionado"
+      },
+      {
+        "situacao": "exantema maculopapular com pródromo de tosse, coriza e conjuntivite, sem vesículas",
+        "fluxo": "PED-08 exantema febril — investigação de sarampo com notificação imediata"
+      },
+      {
+        "situacao": "pústulas e crostas melicéricas isoladas, sem fase vesicular e sem febre",
+        "fluxo": "DERM-01 impetigo ou celulite — antibiótico tópico ou sistêmico"
+      },
+      {
+        "situacao": "bolhas flácidas com descolamento epidérmico, mucosite intensa e sinal de Nikolsky positivo",
+        "fluxo": "farmacodermia grave (Stevens-Johnson ou necrólise epidérmica tóxica) — hospitalização e suporte de queimado"
+      },
+      {
+        "situacao": "pápulas pruriginosas em dedos, punhos e axilas com sulcos e prurido noturno, sem vesículas generalizadas",
+        "fluxo": "DERM-05 escabiose — escabicida e tratamento dos contactantes"
+      },
+      {
+        "situacao": "vesículas hemorrágicas e necrose em criança com febre alta, toxemia e história de picada ou mordedura",
+        "fluxo": "infecção de ferida grave ou sepse — estabilização e antibiótico venoso"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "dor intensa e progressiva em uma lesão, eritema que ultrapassa 2 cm da borda, secreção purulenta, linfangite ou febre que retorna depois do 3º dia",
+        "por_que": "infecção bacteriana secundária por estafilococo ou estreptococo — impetiginização, celulite e fasceíte necrosante, a complicação mais frequente e a que mais mata na varicela",
+        "acao": "antibiótico antiestafilocócico, demarcar a área de eritema com caneta, reavaliar em 24 h e drenar se houver abscesso",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "marcha atáxica, dismetria, tremor, nistagmo ou fala arrastada surgidos cerca de 1 semana após o exantema",
+        "por_que": "ataxia cerebelar pós-varicela, em geral benigna e autolimitada, mas que exige excluir encefalite e síndrome cerebelar de outra causa",
+        "acao": "internar para observação, avaliar nível de consciência e considerar punção lombar com PCR de VZV; não usar corticoide",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "tosse, taquipneia, dispneia, dor torácica, hipoxemia ou cianose entre o 3º e o 5º dia de exantema",
+        "por_que": "pneumonia varicelosa, mais grave no maior de 12 anos, no imunossuprimido, na gestante e no tabagista",
+        "acao": "oxigênio, radiografia de tórax, aciclovir venoso e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "convulsão, rebaixamento de consciência, irritabilidade persistente, déficit focal ou rigidez de nuca",
+        "por_que": "encefalite por VZV, com mortalidade e sequela neurológica",
+        "acao": "sala vermelha, aciclovir venoso imediato, punção lombar quando estável e neuroimagem",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "lesões hemorrágicas, varicela confluente progressiva ou surgimento de novas lesões depois do 7º dia em imunossuprimido",
+        "por_que": "varicela progressiva com disseminação visceral e falência de órgãos",
+        "acao": "aciclovir venoso, isolamento de aerossol e contato, suporte e UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "vômito persistente, dor abdominal, icterícia ou sangramento em criança com varicela",
+        "por_que": "hepatite varicelosa com coagulopatia e risco de síndrome de Reye se houver exposição a salicilato",
+        "acao": "internar, dosar transaminases, bilirrubinas, amônia e coagulograma, e iniciar aciclovir venoso",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "recém-nascido de mãe com varicela entre 5 dias antes e 2 dias após o parto",
+        "por_que": "varicela neonatal, com mortalidade de até 30% sem profilaxia e sem antiviral",
+        "acao": "imunoglobulina específica antivaricela e aciclovir venoso, internação em isolamento",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "gestante suscetível com exantema vesicular ou contato recente de varicela",
+        "por_que": "varicela na gestação causa pneumonia grave e síndrome de varicela congênita",
+        "acao": "referenciar ao pré-natal de alto risco, imunoglobulina específica até 96 h da exposição e aciclovir se houver doença",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "recusa hídrica, ausência de diurese por mais de 12 h, mucosa seca ou prostração por lesões orais",
+        "por_que": "desidratação por odinofagia e por lesões extensas, principal causa de internação na varicela não complicada",
+        "acao": "analgesia plena em horário, hidratação fracionada e, se falhar, hidratação venosa",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-10",
+        "sinal": "vômito persistente com confusão, agitação ou sonolência em criança que usou AAS ou salicilato",
+        "por_que": "síndrome de Reye, encefalopatia com degeneração hepática e mortalidade de até 30%",
+        "acao": "suspender o salicilato, internar, dosar transaminases, amônia e coagulograma, e tratar em UTI",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Qual a idade da criança e ela já teve varicela ou tomou as duas doses da vacina?",
+      "Há quantos dias apareceu o exantema e as lesões ainda estão em vesícula ou já estão em crosta?",
+      "As lesões começaram no couro cabeludo e na face e se espalharam para o tronco?",
+      "Há lesões na boca, nos olhos ou na região genital?",
+      "A coceira é intensa e a criança está se machucando ao coçar?",
+      "Alguma lesão ficou dolorida, vermelha e quente, saiu pus, ou a febre voltou depois do 3º dia?",
+      "A criança manca, está desequilibrada, tem tremor nas mãos ou fala arrastada?",
+      "Tem tosse, falta de ar, dor no peito ou chiado?",
+      "A criança está bebendo, urinando e aceitando alimentos? Há quanto tempo não urina?",
+      "Usa corticoide, quimioterapia, imunossupressor ou AAS? Tem asma, fibrose cística ou doença de pele crônica?",
+      "Houve contato com gestante, recém-nascido ou pessoa imunossuprimida nos últimos 21 dias?",
+      "Alguém deu AAS, ibuprofeno ou outro antitérmico que não seja paracetamol ou dipirona?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Criança sadia de 1 a 12 anos com varicela sem complicação, aceitando líquidos",
+        "escolha": "Suporte: paracetamol 10 a 15 mg/kg/dose de 4/4 a 6/6 h ou dipirona 10 a 15 mg/kg/dose de 6/6 h, hidratação fracionada, banho diário, unhas curtas e hidroxizina se o prurido for intenso. Não prescrever aciclovir, AAS, AINE nem corticoide",
+        "porque": "Nessa faixa a varicela é autolimitada e o antiviral de rotina não reduz complicação nem internação; o que evita desfecho ruim é analgesia, hidratação e higiene, além de bloquear os fármacos que causam síndrome de Reye e celulite necrosante"
+      },
+      {
+        "cenario": "Adolescente ou maior de 12 anos com varicela, mesmo sem complicação",
+        "escolha": "Aciclovir por via oral 20 mg/kg/dose de 6/6 h, máximo de 800 mg por dose, por 5 dias, iniciado nas primeiras 24 h do exantema",
+        "porque": "Acima de 12 anos a varicela tem mais pneumonia, hospitalização e morte, e o antiviral iniciado precocemente reduz a progressão visceral; passado 24 h o benefício cai muito, mas ainda se trata quem tem risco"
+      },
+      {
+        "cenario": "Imunossuprimido, em quimioterapia, transplantado, com HIV ou em uso de corticoide sistêmico que desenvolve varicela",
+        "escolha": "Aciclovir 20 mg/kg/dose de 6/6 h por 5 dias se a doença for leve e o diagnóstico estiver nas primeiras 24 h; aciclovir venoso 10 mg/kg/dose de 8/8 h se houver lesões extensas, progressivas ou viscerais",
+        "porque": "Nesse grupo a disseminação visceral é rápida e a mortalidade alta, e o limiar para a via venosa é baixo: a via oral só se sustenta em doença leve e absorção preservada"
+      },
+      {
+        "cenario": "Doença pulmonar crônica (asma grave, fibrose cística, bronquiolite obliterante, displasia broncopulmonar) ou doença cutânea crônica extensa (dermatite atópica grave, epidermólise, queimadura recente)",
+        "escolha": "Aciclovir por via oral 20 mg/kg/dose de 6/6 h, máximo de 800 mg por dose, por 5 dias, iniciado em até 24 h do exantema",
+        "porque": "Pulmão doente é o terreno da pneumonia varicelosa e pele com barreira rota é a porta da superinfecção bacteriana; o antiviral precoce reduz as duas complicações"
+      },
+      {
+        "cenario": "Menor de 1 ano com varicela, e recém-nascido com varicela ou exposto a mãe com lesões no periparto",
+        "escolha": "Menor de 1 ano: aciclovir por via oral 20 mg/kg/dose de 6/6 h por 5 dias. Recém-nascido e varicela neonatal: aciclovir venoso 10 mg/kg/dose de 8/8 h por 7 a 10 dias, com imunoglobulina específica quando indicada",
+        "porque": "A imunidade passiva é incompleta e a varicela neonatal tem mortalidade alta; no recém-nascido a via venosa é obrigatória porque a absorção e a reserva fisiológica não permitem confiar na via oral"
+      },
+      {
+        "cenario": "Varicela grave: pneumonia, encefalite, hepatite, lesões hemorrágicas ou progressão rápida",
+        "escolha": "Aciclovir venoso 10 mg/kg/dose de 8/8 h por 7 a 10 dias, com internação, oxigênio e suporte",
+        "porque": "Na doença visceral a via oral não garante níveis confiáveis e a progressão é em horas; o antiviral venoso é a única intervenção que muda a mortalidade"
+      },
+      {
+        "cenario": "Prurido intenso com escoriação e risco de infecção secundária",
+        "escolha": "Hidroxizina 0,5 a 1 mg/kg/dose de 6/6 a 8/8 h; cetirizina 0,25 mg/kg/dia a partir de 2 anos quando a sedação é indesejada; compressas frias, banho de aveia coloidal e unhas rentes",
+        "porque": "A coçadura é a porta de entrada da celulite; o anti-H1 controla o sintoma e não encurta a doença. Corticoide tópico ou sistêmico não tem papel e o sistêmico dissemina o VZV"
+      },
+      {
+        "cenario": "Infecção bacteriana secundária das lesões: impetiginização, celulite, linfangite ou abscesso",
+        "escolha": "Cefalexina 50 mg/kg/dia divididos de 6/6 h por 7 a 10 dias; drenagem se houver abscesso; internação com antibiótico venoso e avaliação cirúrgica se houver dor desproporcional, bolhas ou progressão rápida",
+        "porque": "Antisséptico tópico não trata celulite, e fasceíte necrosante exige cirurgia; reconhecer a superinfecção é o que separa a varicela banal da complicação fatal"
+      },
+      {
+        "cenario": "Contato suscetível de alto risco: gestante suscetível, imunossuprimido, menor de 1 ano ou recém-nascido",
+        "escolha": "Imunoglobulina específica antivaricela 125 UI a cada 10 kg, máximo de 625 UI, por via intramuscular, até 96 h da exposição; vacina varicela em até 5 dias para quem não tem contraindicação",
+        "porque": "A profilaxia pós-exposição é a única forma de proteger quem não pode receber vacina de vírus vivo, e o prazo é curto: depois dele resta vigilância e isolamento"
+      },
+      {
+        "cenario": "Febre e dor em criança com varicela",
+        "escolha": "Paracetamol ou dipirona em horário fixo. AAS e ibuprofeno bloqueados em qualquer idade",
+        "porque": "Salicilato em infecção viral causa síndrome de Reye e AINE aumenta risco de celulite necrosante e de injúria renal na criança desidratada; o bloqueio é regra de segurança, não preferência"
+      },
+      {
+        "cenario": "Criança em uso de corticoide sistêmico prolongado que desenvolve varicela",
+        "escolha": "Não aumentar nem iniciar corticoide; manter a menor dose eficaz quando a retirada abrupta causaria insuficiência adrenal e iniciar aciclovir na via definida pela gravidade",
+        "porque": "O corticoide converte varicela simples em doença disseminada, mas suspender de imediato uma dose prolongada provoca crise adrenal; a conduta é reduzir o risco dos dois lados com antiviral precoce"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "febre e desconforto na varicela, inclusive quando há lesões orais e odinofagia",
+        "dose": "10 a 15 mg/kg/dose, a cada 4 a 6 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "4/4 a 6/6 h",
+        "duracao": "3 a 5 dias, enquanto houver febre",
+        "dose_maxima": "75 mg/kg/dia, sem ultrapassar 4 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "náusea",
+          "exantema raro"
+        ],
+        "apresentacoes": [
+          "solução oral 200 mg/mL (gotas), frasco 15 mL",
+          "suspensão oral 160 mg/5 mL, frasco 60 e 100 mL",
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução para infusão 10 mg/mL, frasco 100 mL"
+        ],
+        "preparo": "Via oral: uso direto, medindo com seringa dosadora e conferindo a concentração do frasco. Via venosa: infundir a solução já diluída, sem reconstituição",
+        "tempo_infusao": "15 minutos por via venosa; não se aplica por via oral",
+        "monitorizacao": [
+          "temperatura e conforto",
+          "dose total diária somada com outros produtos que contenham paracetamol",
+          "enzimas hepáticas em uso prolongado",
+          "aceitação hídrica"
+        ],
+        "ajuste_renal": "Ampliar o intervalo para 6 a 8 h se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose máxima diária e evitar em hepatopatia grave",
+        "observacoes": "É o antitérmico de escolha na varicela porque não interfere em plaquetas, não agride a mucosa gástrica e não tem relação com síndrome de Reye. A superdose acidental por soma de apresentações diferentes é a causa mais comum de hepatotoxicidade pediátrica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "febre e dor na varicela quando o paracetamol é insuficiente ou não está disponível",
+        "dose": "10 a 15 mg/kg/dose, a cada 6 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "3 dias",
+        "dose_maxima": "60 mg/kg/dia; 4 g/dia no adolescente",
+        "contraindicacoes": [
+          "menor de 3 meses",
+          "alergia a pirazolona",
+          "discrasia sanguínea ou porfiria",
+          "deficiência de glicose-6-fosfato desidrogenase"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "sudorese e palidez",
+          "agranulocitose rara",
+          "reação cutânea grave rara"
+        ],
+        "apresentacoes": [
+          "solução oral 500 mg/mL (gotas), frasco 10 e 20 mL",
+          "solução oral 50 mg/mL, frasco 100 mL",
+          "comprimido 500 mg e 1 g",
+          "ampola 500 mg/mL, 2 e 5 mL"
+        ],
+        "preparo": "Via oral: uso direto, medindo com seringa dosadora. Via venosa: diluir a dose em 10 a 20 mL de soro fisiológico ou água destilada",
+        "tempo_infusao": "5 minutos por via venosa, em infusão lenta; não se aplica por via oral",
+        "monitorizacao": [
+          "pressão arterial durante e após a infusão",
+          "temperatura e dor",
+          "hemograma se febre prolongada",
+          "lesões cutâneas"
+        ],
+        "ajuste_renal": "Ampliar o intervalo em insuficiência renal grave",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Alternativa segura ao paracetamol na varicela e útil quando a odinofagia limita a aceitação da suspensão. Continua contraindicada abaixo de 3 meses e não deve ser usada em infusão rápida",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico",
+        "agente": "hidroxizina",
+        "papel": "primeira_linha",
+        "indicacao": "prurido intenso da varicela, sobretudo quando há escoriação e risco de infecção secundária",
+        "dose": "0,5 a 1 mg/kg/dose, a cada 6 a 8 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "6/6 a 8/8 h",
+        "duracao": "5 a 7 dias, enquanto durar o prurido",
+        "dose_maxima": "2 mg/kg/dia; 100 mg/dia",
+        "contraindicacoes": [
+          "menor de 6 meses",
+          "prolongamento do intervalo QT",
+          "uso concomitante de fármacos que prolongam o QT",
+          "porfiria"
+        ],
+        "efeitos_adversos": [
+          "sonolência",
+          "boca seca",
+          "agitação paradoxal em criança pequena",
+          "prolongamento do QT"
+        ],
+        "apresentacoes": [
+          "xarope 2 mg/mL, frasco 120 mL",
+          "solução oral 10 mg/mL",
+          "comprimido 25 mg",
+          "comprimido 50 mg"
+        ],
+        "preparo": "Uso direto, medindo com seringa dosadora; pode ser diluída em água para melhorar a aceitação",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sonolência e nível de consciência",
+          "prurido e lesões de coçadura",
+          "frequência cardíaca e QT se cardiopatia ou associação de fármacos",
+          "estado de hidratação"
+        ],
+        "ajuste_renal": "Reduzir a dose e ampliar o intervalo em insuficiência renal",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "O objetivo é impedir a coçadura que infecta a lesão, não encurtar a doença. A sedação é útil à noite e indesejada de dia; nesse caso preferir cetirizina. Nunca substituir a analgesia nem usar anti-H1 no lugar de reavaliar uma lesão que está infeccionando",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico",
+        "agente": "cetirizina",
+        "papel": "alternativa",
+        "indicacao": "prurido da varicela em criança a partir de 2 anos, quando se quer anti-histamínico de segunda geração com menos sedação",
+        "dose": "0,25 mg/kg/dia, em dose única ou dividida de 12/12 h",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia ou 12/12 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": [
+          "menor de 2 anos",
+          "insuficiência renal grave sem ajuste de dose",
+          "alergia a hidroxizina ou a cetirizina"
+        ],
+        "efeitos_adversos": [
+          "sonolência leve",
+          "cefaleia",
+          "boca seca",
+          "irritabilidade"
+        ],
+        "apresentacoes": [
+          "solução oral 1 mg/mL, frasco 100 mL",
+          "comprimido 10 mg"
+        ],
+        "preparo": "Uso direto, medindo com seringa dosadora",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sonolência",
+          "prurido e integridade da pele",
+          "função renal em uso prolongado"
+        ],
+        "ajuste_renal": "Reduzir a dose pela metade se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Sem ajuste na dose habitual",
+        "observacoes": "Entra quando a sedação da hidroxizina atrapalha a criança maior. Não há evidência de que anti-H1 reduza duração ou número de lesões: é sintomático",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir",
+        "papel": "condicional",
+        "indicacao": "varicela em grupo de risco por via oral: maior de 12 anos, menor de 1 ano, imunossuprimido, doença pulmonar ou cutânea crônica, uso de corticoide sistêmico ou de salicilato, gestante e recém-nascido sem doença grave",
+        "dose": "20 mg/kg/dose de 6/6 h, máximo de 800 mg por dose",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "6/6 h, quatro vezes ao dia",
+        "duracao": "5 dias",
+        "dose_maxima": "800 mg por dose; 3.200 mg/dia",
+        "contraindicacoes": [
+          "alergia ao aciclovir",
+          "insuficiência renal grave sem ajuste de dose",
+          "desidratação não corrigida"
+        ],
+        "efeitos_adversos": [
+          "náusea e vômito",
+          "cristalúria e nefrotoxicidade se desidratado",
+          "cefaleia",
+          "neurotoxicidade com confusão em insuficiência renal"
+        ],
+        "apresentacoes": [
+          "suspensão oral 200 mg/5 mL, frasco 100 mL",
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "comprimido 800 mg"
+        ],
+        "preparo": "Uso direto, agitando a suspensão e medindo com seringa dosadora; oferecer água e garantir hidratação adequada em cada tomada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "função renal e diurese",
+          "estado de hidratação",
+          "número e evolução das lesões",
+          "nível de consciência",
+          "hemograma em uso prolongado"
+        ],
+        "ajuste_renal": "Reduzir a dose e ampliar o intervalo conforme a filtração glomerular; ajuste obrigatório em qualquer grau de disfunção",
+        "ajuste_hepatico": "Sem ajuste relevante",
+        "observacoes": "Só tem benefício se iniciado nas primeiras 24 h do exantema. Na criança sadia de 1 a 12 anos com varicela não complicada não se prescreve: o curso é autolimitado e o antiviral de rotina não reduz complicação. A dose é 20 mg/kg/dose de 6/6 h por 5 dias, máximo de 800 mg por dose",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir (via venosa)",
+        "papel": "resgate",
+        "indicacao": "varicela grave: pneumonia, encefalite, ataxia com sinais de encefalite, hepatite, lesões hemorrágicas ou progressivas, imunossuprimido grave e recém-nascido com doença",
+        "dose": "10 mg/kg/dose de 8/8 h; no maior de 12 anos, 500 mg/m²/dose de 8/8 h",
+        "unidade": "mg/kg/dose",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "500 mg por dose; 1.500 mg/m²/dia",
+        "contraindicacoes": [
+          "alergia ao aciclovir",
+          "insuficiência renal sem ajuste de dose",
+          "desidratação não corrigida"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade e cristalúria",
+          "flebite no sítio de infusão",
+          "neurotoxicidade com confusão, tremor e alucinação",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 250 mg",
+          "frasco-ampola 500 mg",
+          "solução injetável 25 mg/mL, frasco 10 e 20 mL"
+        ],
+        "preparo": "Reconstituir o frasco em água destilada e diluir em soro fisiológico 0,9% ou glicosado 5% para concentração máxima de 7 mg/mL",
+        "tempo_infusao": "1 hora por via venosa, com hidratação e bom fluxo urinário",
+        "monitorizacao": [
+          "creatinina e diurese diárias",
+          "balanço hídrico",
+          "nível de consciência e tremor",
+          "sítio de infusão",
+          "hemograma"
+        ],
+        "ajuste_renal": "Reduzir a dose e ampliar o intervalo conforme a filtração glomerular; obrigatório",
+        "ajuste_hepatico": "Sem ajuste relevante",
+        "observacoes": "Na varicela grave, esperar PCR ou melhora clínica para iniciar o antiviral é o erro que leva a ventilação mecânica e morte. A dose é 10 mg/kg/dose de 8/8 h, com infusão em 1 h e hidratação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina específica antivaricela-zóster",
+        "papel": "condicional",
+        "indicacao": "profilaxia pós-exposição em suscetível de alto risco: gestante suscetível, imunossuprimido, menor de 1 ano, recém-nascido de mãe com varicela e contraindicação à vacina",
+        "dose": "125 UI a cada 10 kg de peso, máximo de 625 UI, em dose única",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "1 dia",
+        "dose_maxima": "625 UI por dose",
+        "contraindicacoes": [
+          "deficiência seletiva de IgA com anticorpos anti-IgA",
+          "reação anafilática prévia a imunoglobulina",
+          "trombocitopenia grave com risco de sangramento intramuscular"
+        ],
+        "efeitos_adversos": [
+          "dor e enduração no local",
+          "febre e mal-estar",
+          "rash",
+          "anafilaxia rara"
+        ],
+        "apresentacoes": [
+          "frasco 125 UI",
+          "frasco 250 UI",
+          "frasco 625 UI"
+        ],
+        "preparo": "Não diluir; aplicar por via intramuscular profunda no vasto lateral da coxa ou no deltoide, com agulha adequada ao peso",
+        "tempo_infusao": "aplicação intramuscular lenta em 1 a 2 minutos; não se aplica infusão venosa",
+        "monitorizacao": [
+          "reação local e sistêmica nos primeiros 30 minutos",
+          "surgimento de lesões em 7 a 28 dias",
+          "temperatura",
+          "vínculo epidemiológico com o caso índice"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Indicada idealmente até 96 h após a exposição; passado esse prazo a proteção cai e a conduta passa a ser vigilância clínica, isolamento do suscetível e aciclovir se a doença aparecer",
+        "confirmar_apresentacao_local": true,
+        "fonte": "Ministério da Saúde/SBP/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vacina",
+        "agente": "vacina varicela atenuada",
+        "papel": "condicional",
+        "indicacao": "profilaxia pós-exposição em contato suscetível a partir de 12 meses, sem imunossupressão e sem gestação, até 5 dias da exposição",
+        "dose": "0,5 mL em dose única para bloqueio; esquema de rotina com 2 doses",
+        "unidade": "mL",
+        "via": "SC",
+        "frequencia": "dose única no bloqueio",
+        "duracao": "1 dia",
+        "dose_maxima": "0,5 mL por dose",
+        "contraindicacoes": [
+          "gestante",
+          "imunossuprimido",
+          "alergia a neomicina ou gelatina",
+          "corticoide em dose imunossupressora",
+          "menor de 12 meses"
+        ],
+        "efeitos_adversos": [
+          "dor local",
+          "febre em 1 a 3 semanas",
+          "exantema variceliforme leve em 1 a 3 semanas",
+          "convulsão febril rara"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 0,5 mL com diluente",
+          "frasco multidose de 10 doses com diluente"
+        ],
+        "preparo": "Reconstituir com o diluente próprio e aplicar imediatamente, no máximo em 30 minutos; não congelar",
+        "tempo_infusao": "não se aplica (via subcutânea)",
+        "monitorizacao": [
+          "reação local",
+          "febre e exantema até 3 semanas",
+          "registro na caderneta",
+          "confirmação de ausência de gestação"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Em surto domiciliar, escolar ou hospitalar, vacinar o contato suscetível em até 5 dias reduz a doença e interrompe a cadeia. A vacina não trata quem já tem exantema",
+        "confirmar_apresentacao_local": true,
+        "fonte": "Ministério da Saúde/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_primeira_geracao",
+        "agente": "cefalexina",
+        "papel": "condicional",
+        "indicacao": "infecção bacteriana secundária das lesões de varicela: impetiginização, celulite e linfangite",
+        "dose": "50 mg/kg/dia divididos de 6/6 h",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina",
+          "anafilaxia prévia a penicilina",
+          "colite por Clostridioides difficile prévia"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "rash",
+          "candidíase oral"
+        ],
+        "apresentacoes": [
+          "suspensão oral 250 mg/5 mL, frasco 60 e 100 mL",
+          "cápsula 500 mg",
+          "comprimido 1 g"
+        ],
+        "preparo": "Reconstituir a suspensão com água filtrada até a marca, agitar e conservar em geladeira por até 14 dias",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "regressão do eritema e da dor em 48 h",
+          "diarreia",
+          "progressão para dor desproporcional ou bolhas",
+          "adesão ao esquema"
+        ],
+        "ajuste_renal": "Reduzir a dose ou ampliar o intervalo se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "O que muda o desfecho na varicela complicada por bactéria é reconhecer a superinfecção: dor desproporcional, eritema que avança e febre que retorna depois do 3º dia. Antibiótico profilático na varicela não complicada é erro",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "condicional",
+        "indicacao": "não usar na varicela: item de bloqueio, porque AINE aumenta o risco de síndrome de Reye, de celulite necrosante e de injúria renal; considerar apenas quando a varicela tiver sido excluída e o diagnóstico for outro",
+        "dose": "10 mg/kg/dose, a cada 6 a 8 h, somente fora da varicela",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "6/6 a 8/8 h",
+        "duracao": "3 dias",
+        "dose_maxima": "40 mg/kg/dia; 2.400 mg/dia no adolescente",
+        "contraindicacoes": [
+          "varicela",
+          "desidratação",
+          "injúria renal aguda",
+          "úlcera péptica ou sangramento digestivo",
+          "asma induzida por AINE",
+          "terceiro trimestre de gestação"
+        ],
+        "efeitos_adversos": [
+          "injúria renal aguda",
+          "sangramento digestivo",
+          "broncoespasmo em asmático sensível",
+          "risco de síndrome de Reye em varicela",
+          "celulite necrosante em infecção por estreptococo"
+        ],
+        "apresentacoes": [
+          "suspensão oral 100 mg/5 mL, frasco 100 mL",
+          "solução oral 50 mg/mL (gotas), frasco 20 mL",
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "comprimido 600 mg"
+        ],
+        "preparo": "Uso direto, agitando a suspensão e administrando com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "diurese e estado de hidratação",
+          "dor abdominal e melena",
+          "plaquetas se houver sangramento",
+          "evolução das lesões de pele"
+        ],
+        "ajuste_renal": "Evitar em injúria renal aguda e em filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Item bloqueado na varicela. Prescrever ibuprofeno para criança com vesículas é erro grave e o sistema deve impedir a prescrição: a analgesia é feita com paracetamol ou dipirona",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "salicilato",
+        "agente": "ácido acetilsalicílico (AAS)",
+        "papel": "condicional",
+        "indicacao": "não usar na varicela em nenhuma faixa etária: item de bloqueio pelo risco de síndrome de Reye; a exceção pediátrica ao AAS é a doença de Kawasaki, que não é varicela",
+        "dose": "não se aplica à varicela; no Kawasaki, 30 a 50 mg/kg/dia sob especialista",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "não se aplica à varicela",
+        "duracao": "não se aplica à varicela",
+        "dose_maxima": "não se aplica à varicela",
+        "contraindicacoes": [
+          "varicela",
+          "dengue",
+          "síndrome de Reye prévia",
+          "sangramento ativo",
+          "menor de 3 meses"
+        ],
+        "efeitos_adversos": [
+          "síndrome de Reye",
+          "sangramento digestivo",
+          "zumbido",
+          "broncoespasmo"
+        ],
+        "apresentacoes": [
+          "comprimido 100 mg",
+          "comprimido 500 mg",
+          "solução oral infantil 100 mg/mL"
+        ],
+        "preparo": "Não preparar: item bloqueado na varicela, sem diluição nem fracionamento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "nível de consciência e vômitos se houver exposição",
+          "transaminases e amônia se síndrome de Reye suspeita",
+          "plaquetas e tempo de protrombina"
+        ],
+        "ajuste_renal": "Evitar em insuficiência renal grave",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Síndrome de Reye é encefalopatia com degeneração hepática desencadeada por salicilato em infecção viral, com mortalidade de até 30%. Bloquear AAS em qualquer criança com varicela, inclusive em associações de antitérmicos",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Isolamento domiciliar e afastamento escolar",
+        "detalhe": "Manter a criança em casa até todas as lesões estarem em crosta, em geral 7 a 10 dias, e não retornar com vesícula aberta. Durante todo o período de contágio, evitar contato com gestante suscetível, recém-nascido e imunossuprimido. Em ambiente hospitalar, precaução de aerossol e de contato, com quarto privativo e porta fechada"
+      },
+      {
+        "medida": "Cuidado de pele e das unhas",
+        "detalhe": "Banho diário com sabonete neutro, secar sem esfregar, cortar as unhas rentes e manter as mãos limpas. Usar roupa de algodão folgada e trocar a roupa de cama. Não aplicar talco, álcool, pomada caseira, casca de banana nem produto com corticoide sobre as lesões"
+      },
+      {
+        "medida": "Controle do prurido sem fármaco",
+        "detalhe": "Compressas frias nas áreas de maior prurido, banho de aveia coloidal, ambiente fresco e ventilado, e distração. Em lactente, luva de algodão à noite para não coçar. Unha curta é a medida que mais reduz a escoriação e, com ela, a celulite"
+      },
+      {
+        "medida": "Hidratação fracionada e alimentação adaptada",
+        "detalhe": "Oferecer líquidos em pequenas quantidades e com frequência, de preferência frios, e alimentos pastosos e frios quando houver lesões orais; evitar sucos ácidos, salgadinhos e alimentos duros. Medir e registrar a diurese, que é o marcador prático de hidratação"
+      },
+      {
+        "medida": "Higiene das mãos e etiqueta respiratória",
+        "detalhe": "Lavar as mãos antes e depois de tocar nas lesões e após trocar fraldas; cobrir boca e nariz ao tossir; limpar superfícies, maçanetas e brinquedos; não compartilhar toalhas, copos nem utensílios. O VZV sobrevive em superfície e é transmitido também por aerossol"
+      },
+      {
+        "medida": "Rastreio e bloqueio de contactantes",
+        "detalhe": "Listar os contatos de risco das 48 h antes do exantema até a fase de crosta: gestantes suscetíveis, recém-nascidos, menores de 1 ano, imunossuprimidos e pessoas em quimioterapia. Vacinar os suscetíveis em até 5 dias e indicar imunoglobulina específica para quem não pode receber vacina de vírus vivo"
+      },
+      {
+        "medida": "Notificação compulsória e comunicação à vigilância",
+        "detalhe": "Varicela é de notificação compulsória: registrar no prontuário, notificar a vigilância municipal e comunicar surtos em creche, escola e serviço de saúde. A notificação é o que dispara o bloqueio vacinal dos contatos e o monitoramento de casos graves"
+      },
+      {
+        "medida": "Restrição de ambientes coletivos e de visitas",
+        "detalhe": "Evitar transporte público, festas, parques, piscina e banho de mar até a fase de crosta. Em internação, restringir visitas e não permitir visitante gestante, recém-nascido ou imunossuprimido no quarto"
+      },
+      {
+        "medida": "Alta segura com sinais de alarme por escrito",
+        "detalhe": "Entregar por escrito os sinais que exigem retorno imediato — dor e vermelhidão em uma lesão, febre que volta, mancar, falta de ar, vômito persistente, sonolência — e agendar reavaliação em 24 a 48 h para quem tem prurido intenso, lesões extensas ou fator de risco"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Punção lombar",
+        "protocolo": "BOX-07",
+        "indicacao": "varicela com ataxia, convulsão, rebaixamento de consciência, irritabilidade persistente ou rigidez de nuca, em criança hemodinamicamente estável",
+        "tecnica": "Confirmar ausência de sinais de hipertensão intracraniana e de instabilidade, posicionar em decúbito lateral com flexão de quadril e coluna, antissepsia e punção em L4-L5 ou L5-S1; colher citologia, bioquímica, cultura e PCR de VZV, e iniciar aciclovir venoso antes ou imediatamente após a coleta, sem esperar o resultado",
+        "complicacoes": "Herniação cerebral em hipertensão intracraniana, cefaleia pós-punção, infecção do sítio, hematoma e falha de coleta em criança agitada"
+      },
+      {
+        "nome": "Coleta de swab de base de vesícula para PCR de varicela-zóster",
+        "indicacao": "varicela atípica, imunossuprimido, dúvida com farmacodermia bolhosa, varicela em gestante e investigação de surto hospitalar",
+        "tecnica": "Romper a vesícula com agulha estéril, absorver o líquido com swab estéril e esfregar a base da lesão; acondicionar em meio de transporte viral e enviar refrigerado ao laboratório, colhendo de lesão recente e não de crosta",
+        "complicacoes": "Falso-negativo por coleta de crosta ou de lesão antiga, contaminação bacteriana, dor local e infecção secundária no sítio manipulado"
+      },
+      {
+        "nome": "Drenagem de abscesso cutâneo",
+        "protocolo": "BOX-15",
+        "indicacao": "abscesso cutâneo secundário a infecção bacteriana de lesão de varicela, com flutuação, dor intensa ou secreção purulenta",
+        "tecnica": "Antissepsia, anestesia local, incisão na parte mais declive, drenagem do conteúdo, coleta de material para cultura, lavagem e curativo; manter antibiótico sistêmico e reavaliar em 24 a 48 h",
+        "complicacoes": "Bacteremia durante a manipulação, recidiva por drenagem insuficiente, cicatriz inestética, lesão de estrutura noble e progressão para fasceíte necrosante se a drenagem for tardia"
+      },
+      {
+        "nome": "Acesso venoso periférico e infusão de aciclovir",
+        "indicacao": "varicela grave, imunossuprimido com doença extensa, recém-nascido com varicela e criança que não consegue receber o antiviral por via oral",
+        "tecnica": "Puncionar veia periférica calibrosa, fixar o cateter, hidratar com soro fisiológico antes e depois da dose, diluir o aciclovir para concentração máxima de 7 mg/mL e infundir em 1 h em bomba de infusão",
+        "complicacoes": "Flebite química, extravasamento com necrose local, cristalúria e injúria renal por infusão rápida ou desidratação, e falha de punção em criança com lesões extensas"
+      }
+    ],
+    "metas": [
+      "Diagnóstico clínico registrado com estágio das lesões, dias de evolução e fatores de risco",
+      "Aciclovir iniciado nas primeiras 24 h do exantema em todo paciente de grupo de risco",
+      "Nenhuma prescrição de AAS, ibuprofeno ou corticoide sistêmico em criança com varicela",
+      "Notificação compulsória e orientação de isolamento registradas antes da alta",
+      "Contato de risco identificado e profilaxia com vacina ou imunoglobulina iniciada em até 96 h",
+      "Reavaliação em 24 a 48 h agendada por escrito para varicela com prurido intenso, lesões extensas ou fator de risco",
+      "Infecção bacteriana secundária reconhecida e tratada em até 24 h da suspeita, com demarcação do eritema"
+    ],
+    "fluxo": [
+      "Confirmar o diagnóstico clínico: vesículas em surtos sobre base eritematosa, em estágios diferentes, com distribuição centrípeta desde couro cabeludo e face, prurido e lesões em mucosa oral",
+      "Classificar o risco na primeira consulta: idade menor de 1 ano ou maior de 12 anos, imunossupressão, doença pulmonar ou cutânea crônica, corticoide sistêmico, salicilato, gestação e recém-nascido",
+      "Procurar complicação dirigida: pele (dor, eritema, pus), neurológico (ataxia, convulsão, sonolência), respiratório (tosse, taquipneia, hipoxemia) e abdominal (vômito, icterícia)",
+      "Decidir o antiviral e a via: nenhum na criança sadia de 1 a 12 anos sem complicação, via oral no grupo de risco, via venosa na doença grave, no imunossuprimido grave e no recém-nascido",
+      "Prescrever analgesia e antiprurido em horário fixo: paracetamol ou dipirona, hidroxizina ou cetirizina, e bloqueio explícito de AAS e ibuprofeno",
+      "Rastrear contatos de risco nas 48 h antes do exantema e indicar vacina em até 5 dias ou imunoglobulina específica em até 96 h",
+      "Notificar, isolar e emitir afastamento escolar até a fase de crosta; orientar por escrito os sinais de retorno",
+      "Reavaliar em 24 a 48 h, ou imediatamente se surgirem sinais de alarme; febre que retorna depois do 3º dia reabre a hipótese de infecção bacteriana secundária"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "lactente_menor_de_1_ano",
+        "ajuste": "tratar como grupo de risco e iniciar aciclovir por via oral 20 mg/kg/dose de 6/6 h por 5 dias; internação se houver recusa hídrica, lesões extensas ou idade abaixo de 3 meses",
+        "alerta": "a imunidade passiva é incompleta e a varicela abaixo de 1 ano tem mais complicação visceral e desidratação"
+      },
+      {
+        "populacao": "adolescente_maior_de_12_anos",
+        "ajuste": "aciclovir por via oral 20 mg/kg/dose de 6/6 h por 5 dias, iniciado em até 24 h, e limiar baixo para internação se houver tosse ou dispneia",
+        "alerta": "acima de 12 anos a varicela tem mais pneumonia varicelosa e hospitalização, inclusive em previamente sadios"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "internar, iniciar aciclovir venoso 10 mg/kg/dose de 8/8 h e manter isolamento de aerossol e contato; não usar vacina de vírus vivo",
+        "alerta": "as lesões podem ser escassas ou atípicas e a disseminação visceral ocorre em dias, com mortalidade alta"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "referenciar ao pré-natal de alto risco, indicar imunoglobulina específica até 96 h da exposição quando suscetível e iniciar aciclovir se houver doença, com avaliação respiratória",
+        "alerta": "varicela na gestação causa pneumonia grave na mãe e síndrome de varicela congênita no feto"
+      },
+      {
+        "populacao": "recem_nascido",
+        "ajuste": "varicela neonatal ou exposição com mãe com lesões entre 5 dias antes e 2 dias após o parto: internação, isolamento, imunoglobulina específica e aciclovir venoso 10 mg/kg/dose de 8/8 h",
+        "alerta": "sem profilaxia e antiviral a varicela neonatal tem mortalidade de até 30%"
+      },
+      {
+        "populacao": "doenca_pulmonar_ou_cutanea_cronica",
+        "ajuste": "aciclovir por via oral 20 mg/kg/dose de 6/6 h por 5 dias iniciado em até 24 h; nas doenças cutâneas extensas, redobrar cuidado de pele e vigiar superinfecção",
+        "alerta": "asma grave, fibrose cística e dermatite atópica extensa aumentam pneumonia varicelosa e celulite"
+      },
+      {
+        "populacao": "uso_cronico_de_corticoide_ou_salicilato",
+        "ajuste": "não iniciar nem aumentar corticoide; manter a menor dose eficaz quando a retirada abrupta causar insuficiência adrenal; iniciar aciclovir precocemente e suspender salicilato",
+        "alerta": "corticoide dissemina o VZV e salicilato desencadeia síndrome de Reye"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "PCR de varicela-zóster em swab de base de vesícula",
+          "indicacao": "varicela atípica, imunossuprimido, gestante, dúvida com farmacodermia bolhosa e investigação de surto hospitalar",
+          "o_que_muda": "confirma VZV, sustenta isolamento e rastreio de contatos e libera o uso dirigido de aciclovir e imunoglobulina"
+        },
+        {
+          "nome": "hemograma com plaquetas, proteína C reativa e VHS",
+          "indicacao": "suspeita de infecção bacteriana secundária, febre que retorna ou varicela grave",
+          "o_que_muda": "neutrofilia com desvio e PCR alta deslocam a conduta para antibiótico e investigação de foco; plaquetopenia e leucopenia sugerem viral ou complicação"
+        },
+        {
+          "nome": "radiografia de tórax",
+          "indicacao": "tosse, taquipneia, dispneia, dor torácica ou hipoxemia em criança com varicela",
+          "o_que_muda": "infiltrado difuso nodular sugere pneumonia varicelosa e indica aciclovir venoso e internação; consolidação lobar sugere superinfecção bacteriana e antibiótico"
+        },
+        {
+          "nome": "transaminases, bilirrubinas, amônia e coagulograma",
+          "indicacao": "vômito persistente, dor abdominal, icterícia, sangramento ou suspeita de síndrome de Reye",
+          "o_que_muda": "elevação de transaminases com coagulopatia indica hepatite varicelosa ou síndrome de Reye e obriga internação e UTI"
+        },
+        {
+          "nome": "punção lombar com citologia, bioquímica e PCR de VZV",
+          "indicacao": "ataxia com sinais de encefalite, convulsão, rebaixamento de consciência ou rigidez de nuca, em criança estável",
+          "o_que_muda": "pleocitose com PCR positivo confirma encefalite por VZV e define manutenção do aciclovir venoso por 7 a 10 dias; líquor normal torna a ataxia cerebelar pós-infecciosa o diagnóstico mais provável"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "sorologia de varicela-zóster de rotina em quadro típico",
+          "motivo": "o diagnóstico é clínico, o resultado não muda a conduta e a IgM tem janela e reação cruzada que geram falso resultado"
+        },
+        {
+          "exame": "hemograma de rotina em varicela não complicada com bom estado geral",
+          "motivo": "não altera a conduta de suporte e submete a criança a punção sem benefício"
+        },
+        {
+          "exame": "cultura bacteriana de rotina do líquido da vesícula",
+          "motivo": "baixa positividade, contaminação por flora da pele e nenhum impacto na conduta, que é clínica"
+        },
+        {
+          "exame": "tomografia de crânio antes de punção lombar em criança sem sinal focal nem hipertensão intracraniana",
+          "motivo": "atrasa o aciclovir e a punção; a indicação de neuroimagem é sinal neurológico focal, convulsão prolongada ou rebaixamento"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "dar paracetamol ou dipirona em horário fixo enquanto houver febre e dor, e anti-histamínico se o prurido atrapalhar o sono",
+        "manter banho diário, unhas curtas e mãos limpas, e vestir roupa de algodão folgada",
+        "oferecer líquidos frios em pequenas quantidades e com frequência, e observar a cor da urina e o número de micções",
+        "cumprir o isolamento até todas as lesões estarem em crosta e avisar a escola ou a creche",
+        "afastar a criança de gestantes suscetíveis, recém-nascidos e pessoas em tratamento de câncer",
+        "comparecer à reavaliação em 24 a 48 h e levar a caderneta de vacinação"
+      ],
+      "evitar": [
+        "AAS, ibuprofeno e qualquer anti-inflamatório, em qualquer idade",
+        "corticoide sistêmico ou tópico para secar as lesões",
+        "antibiótico sem sinal de infecção bacteriana",
+        "talco, álcool, pomada caseira, casca de banana ou curativo oclusivo sobre as vesículas",
+        "coçar, estourar as vesículas ou arrancar as crostas",
+        "voltar à escola, à piscina ou a festas antes do fim do período de transmissão"
+      ],
+      "retorno": [
+        "uma lesão ficando muito dolorida, vermelha, quente ou com pus, ou febre que volta depois do 3º dia",
+        "mancar, desequilíbrio, tremor nas mãos, sonolência ou convulsão",
+        "tosse, falta de ar, respiração rápida, dor no peito ou lábios arroxeados",
+        "vômito que não passa, dor abdominal, pele ou olhos amarelados",
+        "não beber, não urinar por mais de 12 h ou ficar muito prostrado",
+        "sangramento, manchas roxas ou lesões que ficam escuras e não clareiam"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade em superdose",
+          "náusea"
+        ],
+        "observacao": "somar todas as apresentações usadas em casa antes de repetir a dose"
+      },
+      {
+        "agente": "dipirona",
+        "efeitos": [
+          "hipotensão em infusão rápida",
+          "sudorese",
+          "agranulocitose rara"
+        ],
+        "observacao": "infundir lentamente e não usar em menor de 3 meses"
+      },
+      {
+        "agente": "hidroxizina",
+        "efeitos": [
+          "sonolência",
+          "boca seca",
+          "agitação paradoxal",
+          "prolongamento do QT"
+        ],
+        "observacao": "evitar associação com outros fármacos que prolongam o QT e não usar em menor de 6 meses"
+      },
+      {
+        "agente": "cetirizina",
+        "efeitos": [
+          "sonolência leve",
+          "cefaleia",
+          "boca seca"
+        ],
+        "observacao": "ajustar na insuficiência renal e não usar abaixo de 2 anos"
+      },
+      {
+        "agente": "aciclovir oral",
+        "efeitos": [
+          "náusea e vômito",
+          "cristalúria",
+          "cefaleia"
+        ],
+        "observacao": "garantir hidratação e ajustar a dose pela filtração glomerular"
+      },
+      {
+        "agente": "aciclovir venoso",
+        "efeitos": [
+          "nefrotoxicidade",
+          "flebite",
+          "neurotoxicidade com confusão e tremor"
+        ],
+        "observacao": "infundir em 1 h, diluir para no máximo 7 mg/mL e hidratar antes e depois"
+      },
+      {
+        "agente": "imunoglobulina específica antivaricela",
+        "efeitos": [
+          "dor local",
+          "febre",
+          "rash",
+          "anafilaxia rara"
+        ],
+        "observacao": "observar 30 min após a aplicação e não aplicar por via venosa"
+      },
+      {
+        "agente": "vacina varicela",
+        "efeitos": [
+          "dor local",
+          "febre",
+          "exantema variceliforme leve"
+        ],
+        "observacao": "exantema em 1 a 3 semanas é esperado e não contraindica a segunda dose"
+      },
+      {
+        "agente": "cefalexina",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "candidíase"
+        ],
+        "observacao": "rash durante o tratamento deve ser reavaliado para não rotular alergia sem confirmação"
+      },
+      {
+        "agente": "ibuprofeno",
+        "efeitos": [
+          "injúria renal",
+          "sangramento digestivo",
+          "risco de síndrome de Reye em varicela"
+        ],
+        "observacao": "proibido na varicela: item bloqueado, sem exceção de dose"
+      },
+      {
+        "agente": "AAS",
+        "efeitos": [
+          "síndrome de Reye",
+          "sangramento",
+          "zumbido"
+        ],
+        "observacao": "proibido em qualquer criança com varicela; a exceção pediátrica é o Kawasaki"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose, via e manifestação no prontuário",
+      "Anafilaxia por vacina, imunoglobulina ou antibiótico: adrenalina intramuscular 0,01 mg/kg na face lateral da coxa, oxigênio, acesso venoso e observação por 4 a 6 h",
+      "Cristalúria ou elevação de creatinina com aciclovir: suspender a próxima dose, hidratar, dosar creatinina e retomar com dose ajustada à filtração",
+      "Confusão, tremor ou alucinação com aciclovir venoso: dosar creatinina, hidratar e reduzir a dose; considerar suspensão se houver insuficiência renal",
+      "Vômito persistente, sonolência ou agitação em criança que usou AAS ou ibuprofeno: internar, dosar transaminases, amônia e coagulograma e tratar como síndrome de Reye até prova em contrário",
+      "Sonolência excessiva ou agitação paradoxal com hidroxizina: suspender, trocar por cetirizina e reavaliar o controle do prurido",
+      "Diarreia com cefalexina: hidratar, considerar probiótico e reavaliar se houver sangue ou febre alta",
+      "Reação local intensa após imunoglobulina: compressa fria, analgesia e observação; se houver progressão para anafilaxia, tratar como emergência",
+      "Reavaliar o diagnóstico e reescrever a prescrição antes da alta; não dar alta com efeito adverso em curso"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol suspensão 160 mg/5 mL ou solução 200 mg/mL",
+            "dose": "10 a 15 mg/kg/dose = ___ mg = ___ mL",
+            "via": "VO",
+            "frequencia": "4/4 a 6/6 h",
+            "duracao": "3 a 5 dias",
+            "condicao": "antitérmico e analgésico de escolha na varicela",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dipirona solução oral 500 mg/mL (gotas)",
+            "dose": "10 a 15 mg/kg/dose = ___ mg = ___ gotas",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "3 dias",
+            "condicao": "alternativa ao paracetamol, se dor ou febre persistirem",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "hidroxizina xarope 2 mg/mL",
+            "dose": "0,5 a 1 mg/kg/dose = ___ mg = ___ mL",
+            "via": "VO",
+            "frequencia": "6/6 a 8/8 h",
+            "duracao": "5 a 7 dias",
+            "condicao": "prurido intenso com escoriação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "aciclovir suspensão 200 mg/5 mL",
+            "dose": "20 mg/kg/dose = ___ mg = ___ mL (máximo 800 mg por dose)",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "5 dias",
+            "condicao": "grupo de risco: maior de 12 anos, menor de 1 ano, imunossuprimido, doença pulmonar ou cutânea crônica, corticoide ou salicilato, gestante",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cefalexina suspensão 250 mg/5 mL",
+            "dose": "50 mg/kg/dia = ___ mg = ___ mL, divididos de 6/6 h",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "7 a 10 dias",
+            "condicao": "infecção bacteriana secundária das lesões",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "orientação escrita de isolamento, afastamento escolar e sinais de retorno",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a reavaliação",
+            "condicao": "entregar em toda alta com varicela",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "aciclovir",
+            "dose": "10 mg/kg/dose de 8/8 h",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "creatinina, diurese, nível de consciência, sítio de infusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol",
+            "dose": "10 a 15 mg/kg/dose de 4/4 a 6/6 h",
+            "via": "VO ou IV",
+            "frequencia": "4/4 a 6/6 h",
+            "monitorizacao": "temperatura, dor e dose total diária",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "hidroxizina",
+            "dose": "0,5 a 1 mg/kg/dose de 6/6 a 8/8 h",
+            "via": "VO",
+            "frequencia": "6/6 a 8/8 h",
+            "monitorizacao": "sonolência e prurido",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cefalexina",
+            "dose": "50 mg/kg/dia divididos de 6/6 h",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "monitorizacao": "regressão do eritema, diarreia e sinais de progressão",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "PCR de varicela-zóster em swab de vesícula",
+          "hemograma com plaquetas, proteína C reativa e VHS",
+          "radiografia de tórax",
+          "transaminases, bilirrubinas, amônia e coagulograma",
+          "punção lombar com citologia, bioquímica e PCR de VZV",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que a criança esteve sob meus cuidados nesta data, com quadro de varicela, necessitando de afastamento escolar até todas as lesões estarem em crosta, em geral por 7 a 10 dias, mantendo isolamento domiciliar no mesmo período.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e CID são decisão médica no ato; anexar orientação de isolamento e de sinais de retorno"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com idade, dias de exantema, estágio das lesões, fatores de risco, vacinação, contato, exames colhidos e antiviral iniciado",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Criança de ___ anos com varicela iniciada há ___ dias, lesões em estágio ___, distribuição ___, fatores de risco ___, vacinação ___, contato ___, complicação suspeita ___, exames ___ com resultado ___, antiviral ___ iniciado em ___, bloqueio de AAS e AINE ___, notificação ___ e alta com isolamento até a fase de crosta e retorno em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "idade e estado vacinal para varicela, com número de doses",
+        "dias de exantema e estágio das lesões",
+        "local de início e progressão do exantema",
+        "prurido, escoriação e lesões de mucosa oral, ocular ou genital",
+        "febre: dias, picos e retorno após melhora",
+        "dor, vermelhidão ou pus em lesão específica",
+        "ataxia, tremor, convulsão, sonolência ou irritabilidade",
+        "tosse, dispneia, dor torácica e chiado",
+        "aceitação hídrica, diurese e apetite",
+        "comorbidades: imunossupressão, quimioterapia, HIV, asma, fibrose cística, dermatite atópica extensa",
+        "fármacos em uso: corticoide, salicilato, AINE, imunossupressor",
+        "contato com caso de varicela, gestante suscetível, recém-nascido ou imunossuprimido"
+      ],
+      "texto_template": "Criança de ___ anos, vacinação para varicela ___, com exantema vesicular iniciado há ___ dias em ___, prurido ___, lesões em mucosa ___, febre por ___ dias com retorno ___, dor ou secreção em lesão ___, ataxia ___, sintomas respiratórios ___, aceitação hídrica ___, diurese ___, comorbidades ___, fármacos em uso ___ e contato de risco ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "peso, temperatura, frequência cardíaca, frequência respiratória e saturação",
+        "estado geral, hidratação, perfusão e nível de consciência",
+        "morfologia das lesões: mácula, pápula, vesícula, pústula, crosta e estágios simultâneos",
+        "distribuição: couro cabeludo, face, tronco, membros, palmas, plantas e mucosa oral",
+        "sinais de infecção bacteriana secundária: eritema perilesional, calor, dor, pus, linfangite",
+        "orofaringe: vesículas e úlceras em palato, gengiva e língua",
+        "olhos: conjuntivite, vesícula palpebral e lesão corneal",
+        "ausculta pulmonar e esforço respiratório",
+        "abdome: dor à palpação, hepatomegalia e icterícia",
+        "neurológico: marcha, coordenação, nistagmo, tremor e rigidez de nuca",
+        "pele íntegra e dermatoses crônicas prévias que ampliam a área de risco"
+      ],
+      "texto_template": "Peso ___ kg, temperatura ___ °C, frequência cardíaca ___ bpm, frequência respiratória ___ rpm, saturação ___%, estado geral ___, hidratação ___, exantema vesicular em estágios ___ com distribuição ___, lesões em mucosa oral ___, olhos ___, sinais de infecção secundária ___, ausculta ___, abdome ___, marcha e coordenação ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de varicela na emergência pediátrica, quarto de isolamento de aerossol, disponibilidade de aciclovir venoso e de imunoglobulina específica",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "indicação de aciclovir por faixa etária e grupo de risco, manejo da ataxia cerebelar e da superinfecção bacteriana, e dose de anti-histamínico",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "notificação compulsória da varicela, esquema vacinal de duas doses, bloqueio de contactantes e critérios de imunoglobulina",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de aciclovir oral e venoso, hidroxizina, cetirizina, cefalexina, imunoglobulina específica e vacina disponíveis no serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "dose de aciclovir oral 20 mg/kg/dose de 6/6 h por 5 dias e venoso 10 mg/kg/dose de 8/8 h, prazo de 24 h para benefício, risco de síndrome de Reye com salicilato e de celulite necrosante com AINE",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED10-01",
+        "tipo": "aine_salicilato_varicela",
+        "gatilho": "AAS, ibuprofeno, cetoprofeno, nimesulida ou qualquer AINE prescrito em criança com varicela",
+        "severidade": "grave",
+        "mensagem": "AINE e AAS em varicela causam síndrome de Reye, celulite necrosante e injúria renal: prescrever paracetamol ou dipirona.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED10-02",
+        "tipo": "corticoide_varicela",
+        "gatilho": "corticoide sistêmico ou tópico prescrito em criança com varicela",
+        "severidade": "grave",
+        "mensagem": "Corticoide dissemina o vírus varicela-zóster e transforma varicela simples em doença visceral: não prescrever, nem para o prurido.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED10-03",
+        "tipo": "grupo_de_risco_sem_antiviral",
+        "gatilho": "varicela em maior de 12 anos, menor de 1 ano, imunossuprimido, doença pulmonar ou cutânea crônica, corticoide sistêmico, salicilato, gestante ou recém-nascido sem aciclovir prescrito",
+        "severidade": "grave",
+        "mensagem": "Grupo de risco para varicela grave: aciclovir oral 20 mg/kg/dose de 6/6 h por 5 dias ou venoso 10 mg/kg/dose de 8/8 h, conforme a gravidade.",
+        "acao": "sugerir protocolo e revisar prescrição",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED10-04",
+        "tipo": "complicacao_varicela",
+        "gatilho": "ataxia, convulsão, rebaixamento, dispneia, hipoxemia, vômito persistente, icterícia ou lesões hemorrágicas em criança com varicela",
+        "severidade": "grave",
+        "mensagem": "Sinal de complicação: encefalite, pneumonia, hepatite ou varicela progressiva. Internar e iniciar aciclovir venoso.",
+        "acao": "acionar sala vermelha e internação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED10-05",
+        "tipo": "contato_de_risco",
+        "gatilho": "contato de gestante suscetível, recém-nascido, menor de 1 ano ou imunossuprimido com caso de varicela sem profilaxia registrada",
+        "severidade": "precaucao",
+        "mensagem": "Profilaxia pós-exposição: vacina em até 5 dias ou imunoglobulina específica 125 UI/10 kg em até 96 h para quem não pode vacinar.",
+        "acao": "sugerir profilaxia e vigilância",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED10-06",
+        "tipo": "isolamento_e_notificacao",
+        "gatilho": "diagnóstico de varicela sem registro de notificação compulsória e de orientação de isolamento",
+        "severidade": "precaucao",
+        "mensagem": "Varicela exige notificação e isolamento de aerossol e contato até a fase de crosta: um caso sem isolamento gera surto em creche e no serviço.",
+        "acao": "bloquear alta até registrar notificação e isolamento",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBP",
+        "Ministério da Saúde",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

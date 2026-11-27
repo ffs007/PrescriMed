@@ -1,0 +1,264 @@
+<!doctype html><html data-theme=light><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#F7F9FF;color:#121D26}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>PrescriMed — Atendimento clínico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout clínico PrescriMed — busca de condição, módulos documentais e assistente flutuante. */
+:root{
+  --bg:#F7F9FF; --surface:#FFFFFF; --soft:#EDF4FF; --line:#C0C7D0; --ink:#121D26; --muted:#40484F;
+  --accent:#005E8A; --accent-ink:#FFFFFF; --accent-soft:#E4EFFD;
+  --ok:#2D8A57; --warn:#C99020; --warn-soft:#FBF4E4; --bad:#BA1A1A; --bad-soft:#FDF3F2;
+  --f-display:Inter, system-ui, sans-serif; --f-body:Inter, system-ui, sans-serif; --f-mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --r:4px; --shadow:0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0B1220; --surface:#111A2B; --soft:#17243A; --line:#344054; --ink:#F2F4F7; --muted:#98A2B3;
+  --accent:#4D83FF; --accent-ink:#FFFFFF; --accent-soft:#162D5E;
+  --ok:#32C99A; --warn:#FDB022; --warn-soft:#3A2B12; --bad:#F97066; --bad-soft:#3A1C21; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --surface:#111A2B; --soft:#17243A; --line:#344054; --ink:#F2F4F7; --muted:#98A2B3;
+  --accent:#4D83FF; --accent-ink:#FFFFFF; --accent-soft:#162D5E;
+  --ok:#32C99A; --warn:#FDB022; --warn-soft:#3A2B12; --bad:#F97066; --bad-soft:#3A1C21; color-scheme:dark }
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--ink)}
+body{font:16px/1.5 var(--f-body);margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+/* barra superior */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px;padding-block:10px}
+.brand{display:flex;align-items:baseline;gap:8px;font-family:var(--f-display);font-weight:800;font-size:18px;cursor:pointer;white-space:nowrap}
+.brand small{font:500 12px var(--f-mono);color:var(--muted)}
+.ptchip{margin-left:auto;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;cursor:pointer;min-width:0;max-width:60vw}
+.ptchip span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ptchip b{font-weight:700}
+.ptchip .dot{width:8px;height:8px;border-radius:50%;background:var(--warn);flex:none}
+.ptchip.ok .dot{background:var(--ok)}
+.iconbtn{border:1px solid var(--line);background:var(--surface);border-radius:10px;width:38px;height:38px;display:grid;place-items:center;cursor:pointer;flex:none}
+.iconbtn svg{width:18px;height:18px}
+/* botões e campos */
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:9px 14px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px;justify-content:center}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent}
+.btn.sm{padding:5px 10px;font-size:14px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:2px}
+.f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.f>span{font:700 11px/1.2 var(--f-display);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.in,.sel,.ta{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:9px 11px;width:100%;min-width:0}
+.ta{min-height:96px;resize:vertical;line-height:1.45}
+.grid{display:grid;gap:10px 12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.check{display:flex;gap:8px;align-items:center;cursor:pointer}
+.check input{width:17px;height:17px;accent-color:var(--accent)}
+.note{color:var(--muted);font-size:14px}
+.status{font-size:14px;color:var(--muted);min-height:1.2em}
+.status.ok{color:var(--ok)} .status.err{color:var(--bad)}
+/* início */
+.hero{padding-block:28px 10px}
+.hero h1{font-size:clamp(28px,4.4vw,42px);font-weight:800;line-height:1.08}
+.hero p{color:var(--muted);margin:8px 0 18px;max-width:62ch}
+.search{position:relative}
+.search input{font-size:19px;padding:15px 16px 15px 46px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);width:100%}
+.search input:focus{border-color:var(--accent)}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted)}
+.cats{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 6px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:14px;cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.pos{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.chip.neg{background:var(--soft);text-decoration:line-through;color:var(--muted)}
+.chip.alt{border-style:dashed}
+.chip.alt.on{background:var(--warn-soft);color:var(--ink);border-color:var(--warn);border-style:solid}
+.chip.norm.on{background:var(--accent-soft);color:var(--ink);border-color:var(--accent)}
+.catgroup{margin-top:22px}
+.catgroup h2{font:700 12px/1 var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.conds{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.cond{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:12px 14px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:3px;min-width:0}
+.cond:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.cond b{font-weight:700;line-height:1.3}
+.cond small{font:12px var(--f-mono);color:var(--muted)}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+/* condição */
+.crumb{display:inline-flex;align-items:center;gap:6px;color:var(--muted);cursor:pointer;background:none;border:0;padding:16px 0 4px;font-weight:700}
+.chead{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between;padding-bottom:6px}
+.chead h1{font-size:clamp(26px,3.8vw,36px);font-weight:800;line-height:1.1}
+.chead .cat{font:700 12px var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.cids{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.cids .chip{font-family:var(--f-mono);font-size:12.5px}
+.alertbox{margin:14px 0 0;border:1px solid var(--warn);background:var(--warn-soft);border-radius:var(--r);padding:10px 14px;font-size:15px}
+.alertbox.bad{border-color:var(--bad);background:var(--bad-soft)}
+.alertbox b{font-family:var(--f-display)}
+.mods{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));margin:18px 0 24px}
+.mod{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:14px;text-align:left;cursor:pointer;display:grid;grid-template-columns:36px 1fr;gap:4px 12px;align-items:start;min-width:0}
+.mod:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.mod .ic{grid-row:span 2;width:36px;height:36px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.mod .ic svg{width:19px;height:19px}
+.mod b{font-family:var(--f-display);font-weight:700;line-height:1.25}
+.mod small{color:var(--muted);font-size:13px}
+.mod.done small{color:var(--ok);font-weight:700}
+.sumcard{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:16px;margin-bottom:40px}
+.sumcard h2{font-size:18px;margin-bottom:8px}
+.sumtxt{white-space:pre-wrap;font-size:15px;max-height:340px;overflow:auto;color:var(--ink)}
+/* janela de módulo */
+dialog.modal{border:0;padding:0;border-radius:14px;width:min(1000px,calc(100vw - 24px));max-height:calc(100vh - 32px);background:var(--bg);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+dialog.modal::backdrop{background:rgba(10,20,18,.45)}
+.mhead{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--line)}
+.mhead h2{font-size:20px;line-height:1.2}
+.mhead small{display:block;color:var(--muted);font-size:13px}
+.mhead .x{margin-left:auto}
+.mbody{padding:16px 18px 22px;display:flex;flex-direction:column;gap:16px}
+.mfoot{position:sticky;bottom:0;z-index:2;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 18px;background:var(--surface);border-top:1px solid var(--line)}
+@media (max-width:600px){.mfoot{padding:8px 12px;gap:6px}.mfoot .btn{padding:7px 11px;font-size:13.5px}.mfoot .status{flex-basis:100%}}
+.box{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.box>h3{font-size:15px;font-weight:700}
+.box>h3 small{font:400 13px var(--f-body);color:var(--muted);margin-left:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.efrow{display:grid;grid-template-columns:150px 1fr;gap:6px 12px;align-items:start;padding:6px 0;border-top:1px dashed var(--line)}
+.efrow:first-of-type{border-top:0}
+.efrow>span{font-weight:700;font-size:14px;padding-top:4px}
+.drow{border-top:1px solid var(--line);padding:10px 0;display:flex;flex-direction:column;gap:6px}
+.drow:first-of-type{border-top:0}
+.dhead{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.dhead .nm{font-weight:700}
+.badge{font:500 10.5px var(--f-mono);text-transform:uppercase;border-radius:4px;padding:2px 6px;background:var(--accent-soft);color:var(--accent)}
+.badge.w{background:var(--warn-soft);color:var(--warn)}
+.badge.b{background:var(--bad-soft);color:var(--bad)}
+.line{font-family:var(--f-mono);font-size:13.5px;background:var(--soft);border-radius:7px;padding:8px 10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.det{font-size:12.5px;color:var(--muted)}
+.warn{font-size:13.5px;color:var(--warn)} .err{font-size:13.5px;color:var(--bad)}
+.rxlist{display:flex;flex-direction:column;gap:6px;counter-reset:n}
+.rxitem{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:start;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--surface)}
+.rxitem .n{font:700 14px var(--f-mono);color:var(--muted);padding-top:2px}
+.rxitem .t{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14.5px}
+.x{border:0;background:none;cursor:pointer;color:var(--muted);font-size:20px;line-height:1;padding:2px 6px;border-radius:6px}
+.x:hover{color:var(--bad);background:var(--bad-soft)}
+.preview{display:flex;flex-direction:column;gap:10px;align-items:center}
+.preview canvas{width:100%;max-width:640px;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+.two{display:grid;gap:16px;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.exitem{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;font-size:14.5px;padding:3px 0}
+.exitem small{font:12px var(--f-mono);color:var(--muted)}
+.exgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px 14px}
+details.grp>summary{cursor:pointer;font-weight:700;padding:4px 0}
+/* resultado de escore */
+.sc-res{border:1px solid var(--line);border-left-width:5px;border-radius:9px;padding:10px 12px;background:var(--surface)}
+.sc-res.ok{border-left-color:var(--ok)} .sc-res.warn{border-left-color:var(--warn)} .sc-res.bad{border-left-color:var(--bad)}
+.sc-big{font:800 19px/1.25 var(--f-display)}
+/* chat */
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:12px 18px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.25);cursor:pointer}
+.fab svg{width:18px;height:18px}
+[hidden]{display:none!important}
+.chat{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:min(420px,calc(100vw - 32px));height:min(620px,calc(100vh - 100px));background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden}
+.chat header{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.chat header b{font-family:var(--f-display)}
+.chat header small{color:var(--muted);font-size:12px;display:block}
+.msgs{flex:1;overflow:auto;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:92%;padding:9px 12px;border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14.5px}
+.msg.u{align-self:flex-end;background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:4px}
+.msg.a{align-self:flex-start;background:var(--soft);border-bottom-left-radius:4px}
+.msg .act{display:flex;gap:6px;margin-top:6px}
+.qk{display:flex;gap:6px;flex-wrap:wrap;padding:0 14px 8px}
+.qk .chip{font-size:12.5px}
+.chat form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
+.chat textarea{flex:1;min-height:42px;max-height:120px;resize:none}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;z-index:60;font-size:14.5px;box-shadow:var(--shadow)}
+@media (max-width:760px){
+  .two{grid-template-columns:1fr}
+  .efrow{grid-template-columns:1fr}
+  dialog.modal{width:100vw;max-width:100vw;max-height:100vh;height:100%;border-radius:0;margin:0}
+  .mods{grid-template-columns:1fr 1fr}
+  .mod{grid-template-columns:1fr}.mod .ic{grid-row:auto}
+  .brand small{display:none}
+  .fab span{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="top"><div class="wrap">
+  <div class="brand" id="goHome" role="button" tabindex="0">PrescriMed <small>HMC · Cabeceiras-GO</small></div>
+  <button class="ptchip" id="ptChip" type="button" aria-label="Dados do paciente"><i class="dot"></i><span id="ptTxt">Paciente: informe idade e peso</span></button>
+  <button class="iconbtn" id="btnNew" type="button" title="Novo atendimento" aria-label="Novo atendimento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+  <button class="iconbtn" id="btnCfg" type="button" title="Ajustes" aria-label="Ajustes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button>
+</div></header>
+
+<main id="app" class="wrap"></main>
+
+<dialog class="modal" id="modal" aria-labelledby="mTitle">
+  <div class="mhead"><div><h2 id="mTitle"></h2><small id="mSub"></small></div><button class="x" id="mClose" type="button" aria-label="Fechar">×</button></div>
+  <div class="mbody" id="mBody"></div>
+  <div class="mfoot" id="mFoot"></div>
+</dialog>
+
+<button class="fab" id="fab" type="button" aria-label="Abrir Assistente PrescriMed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Assistente</span></button>
+<section class="chat" id="chat" hidden aria-label="Assistente PrescriMed">
+  <header><div><b>Assistente PrescriMed</b><small id="chatCtx">sem condição selecionada</small></div><button class="btn sm ghost" id="chatClear" type="button" style="margin-left:auto">Limpar</button><button class="x" id="chatClose" type="button" aria-label="Fechar">×</button></header>
+  <div class="msgs" id="msgs"></div>
+  <div class="qk" id="qk"></div>
+  <form id="chatForm"><textarea class="ta" id="chatIn" rows="1" placeholder="Pergunte sobre o caso, peça uma prescrição, anamnese…"></textarea><button class="btn primary" id="chatSend" type="submit">Enviar</button></form>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
+<script src="lovable-docstyle.js"></script>
+<script src="lovable-stamp.js"></script>
+<script src="sigtap-data.js"></script>
+<script src="proto-data.js"></script>
+<script src="proto-data-2.js"></script>
+<script src="proto-data-3.js"></script>
+<script src="proto-data-4.js"></script>
+<script src="proto-data-5.js"></script>
+<script src="legacy-data.js"></script>
+<script src="expansion-data.js"></script>
+<script src="hosp-data.js"></script>
+<script src="hosp-expansion.js"></script>
+<script src="curated-data.js"></script>
+<script src="renal-data.js"></script>
+<script src="preg-data.js"></script>
+<script src="clin-data.js"></script>
+<script src="peds-anam.js"></script>
+<script src="engine.js"></script>
+<script src="scores-core.js"></script>
+<script src="scores-extra.js"></script>
+<script src="lovable-custom.js"></script>
+<script src="lovable-catmap.js"></script>
+<script src="apac-pdf.js"></script>
+<script src="rx-pdf.js"></script>
+<script src="ctrl-pdf.js"></script>
+<script src="docs-pdf.js"></script>
+<script src="lovable-bridge.js"></script>
+<script src="lovable-search.js?v=2"></script>
+<script src="app.js"></script>
+<script src="lovable-documents.js"></script>
+<script src="lovable-modules.js"></script>
+<script src="lovable-rxunified.js"></script>
+<script src="lovable-rxtaxonomy.js"></script>
+<script src="lovable-rxmodal.js"></script>
+<script src="lovable-curatedfocus.js"></script>
+<script src="lovable-alta.js"></script>
+<script src="lovable-extras.js"></script>
+<script src="lovable-homelayout.js"></script>
+<script src="lovable-safety.js"></script>
+<script src="lovable-decision.js"></script>
+<script src="lovable-nursing.js"></script>
+<script src="lovable-validate.js"></script>
+<script src="lovable-templates.js"></script>
+<script src="lovable-flowchart.js"></script>
+<script src="lovable-protocols.js"></script>
+<script src="lovable-protassist.js"></script>
+<script src="lovable-cdss.js"></script>
+<script src="lovable-emergency.js"></script>
+<script src="lovable-emergency-box.js"></script>
+<script src="procedures-data.js"></script>
+<script src="lovable-procedures.js"></script>
+<script src="lovable-polish.js"></script>
+<script src="lovable-casehygiene.js"></script>
+<script src="lovable-redesign.js"></script>
+<script src="lovable-analytics.js"></script>
+<script src="lovable-theme.js"></script>
+<script src="lovable-layout.js"></script>
+
+</body></html>

@@ -1,0 +1,1152 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GER-10",
+    "area": "Geriatria",
+    "nome": "Demência com agitação",
+    "aliases": [
+      "Demência com agitação",
+      "agitação em demência",
+      "agitação psicomotora no idoso com demência",
+      "sintomas comportamentais e psicológicos da demência",
+      "SCPD",
+      "agressividade em demência"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "idoso"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Agitação em demência é sintoma, não diagnóstico, e a primeira pergunta nunca é qual sedativo usar: é qual causa orgânica está por trás. Dor, infecção urinária ou respiratória, constipação, retenção urinária, hipóxia, distúrbio eletrolítico, fármaco anticolinérgico ou sedativo novo, abstinência alcoólica ou de benzodiazepínico e evento vascular explicam a maior parte das crises de agitação, e todas são tratáveis sem antipsicótico. O segundo ponto é separar agitação crônica da demência de delirium sobre demência: mudança em relação ao basal, flutuação e desatenção em horas a dias significam delirium e mudam a conduta. O tratamento começa e se sustenta em medidas não farmacológicas — rotina previsível, ambiente calmo, sono preservado, atividade significativa, comunicação sem confronto, cuidador treinado e orientado — e elas precisam de dias a semanas, não de uma tarde. Quando há risco iminente de agressão, queda ou auto-mutilação, e o não farmacológico falhou, usam-se quetiapina, risperidona em dose baixa ou trazodona, na menor dose e pelo menor tempo, com plano de retirada. O que não se faz: benzodiazepínico para acalmar, antipsicótico em demência com corpos de Lewy ou Parkinson e contenção física por conveniência. Antipsicótico em demência aumenta mortalidade, eventos cerebrovasculares e queda, e esse risco precisa estar explícito na prescrição e na conversa com a família.",
+    "inclusao": [
+      "Idoso com demência e agitação, agressividade, irritabilidade ou oposição aos cuidados que interfere no cuidado ou coloca em risco",
+      "Sintomas comportamentais e psicológicos da demência com início recente ou piora em relação ao basal",
+      "Agitação noturna, inversão do ciclo sono-vigília ou recusa alimentar em paciente com demência",
+      "Cuidador em sobrecarga com risco de maus-tratos, abandono ou institucionalização",
+      "Agitação em demência que não responde a medidas ambientais e exige decisão farmacológica"
+    ],
+    "exclusao": [
+      {
+        "situacao": "quadro agudo com flutuação da atenção e rebaixamento em horas a dias, sem causa esclarecida",
+        "fluxo": "delirium / GER-02"
+      },
+      {
+        "situacao": "agitação com ideação suicida, autoagressão grave ou risco a terceiros sem contenção ambiental possível",
+        "fluxo": "psiquiatria / emergência"
+      },
+      {
+        "situacao": "déficit focal novo, convulsão ou rebaixamento progressivo",
+        "fluxo": "neurologia / AVC"
+      },
+      {
+        "situacao": "intoxicação exógena ou abstinência com instabilidade autonômica",
+        "fluxo": "toxicologia / sala vermelha"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "agitação com agressão física, risco de queda da cama ou auto-mutilação",
+        "por_que": "risco imediato de lesão grave no paciente e na equipe",
+        "acao": "ambiente seguro, redução de estímulos, acompanhante e fármaco em dose baixa se necessário; reavaliar em 30–60 min",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "febre, tosse, disúria ou confusão nova em paciente com demência",
+        "por_que": "infecção é a causa mais comum de agitação aguda e de delirium sobre demência",
+        "acao": "hemograma, urina tipo 1 com urocultura e radiografia de tórax; tratar infecção antes de sedar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "bexiga palpável, dor suprapúbica ou ausência de urina por mais de 8 h",
+        "por_que": "retenção urinária causa dor e agitação e é reversível em minutos",
+        "acao": "sondagem vesical de alívio e reavaliação em 30 min",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "ausência de evacuação por mais de 4 dias, distensão ou fecaloma",
+        "por_que": "constipação e impactação causam dor, delírio e recusa alimentar",
+        "acao": "toque retal, desimpactação e enema; iniciar laxante após esvaziar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "saturação abaixo de 90%, taquipneia ou sonolência",
+        "por_que": "hipóxia e hipercapnia pioram o comportamento e podem matar",
+        "acao": "oxigênio, gasometria e investigação de pneumonia ou embolia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "rigidez, tremor, instabilidade postural e uso de antipsicótico em Parkinson ou demência com corpos de Lewy",
+        "por_que": "bloqueio dopaminérgico pode causar síndrome neuroléptica maligna fatal",
+        "acao": "suspender o antipsicótico, hidratar, dosar creatinina quinase e acionar neurologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "tremor, sudorese, taquicardia e história de interrupção do álcool ou de benzodiazepínico",
+        "por_que": "abstinência é a única indicação de benzodiazepínico nesse contexto",
+        "acao": "diazepam titulado por escala de abstinência e tiamina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "agitação refratária com rabdomiólise, desidratação ou lesão por contenção",
+        "por_que": "luta muscular prolongada causa lesão renal e morte",
+        "acao": "hidratar, dosar creatinina quinase e potássio, liberar contenção e tratar a causa",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A agitação é nova ou é o comportamento habitual? Piorou em horas ou em semanas?",
+      "Está diferente do basal, com flutuação e desatenção? (delirium sobre demência)",
+      "Tem dor, febre, tosse, dor para urinar ou ferida?",
+      "Quando foi a última urina e a última evacuação?",
+      "Começou, parou ou aumentou algum remédio? Usa anticolinérgico, benzodiazepínico, corticoide ou opioide?",
+      "Bebe álcool? Quando foi a última dose?",
+      "Dorme à noite? Tem inversão do ciclo sono-vigília?",
+      "O que costuma acalmar? Quem é a pessoa de referência?",
+      "O cuidador está sobrecarregado, dormindo mal ou com risco de agredir?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Agitação nova com flutuação da atenção, desatenção e mudança em relação ao basal",
+        "escolha": "Tratar como delirium sobre demência: investigar e corrigir dor, infecção, retenção, constipação, hipóxia, distúrbio eletrolítico, fármaco e abstinência; antipsicótico só se risco iminente",
+        "porque": "Delirium tem causa orgânica e mortalidade alta, e sedar sem investigar mascara o quadro e piora o desfecho"
+      },
+      {
+        "cenario": "Agitação leve ou moderada, sem risco imediato, em paciente ambulatorial",
+        "escolha": "Medidas não farmacológicas por 2–4 semanas: rotina, ambiente, atividade, sono, cuidador treinado e tratamento de dor e constipação",
+        "porque": "É a intervenção com melhor evidência e menor dano; o fármaco só entra depois e responde por poucas semanas"
+      },
+      {
+        "cenario": "Agitação grave com risco de agressão, queda ou auto-mutilação após falha do não farmacológico, em Alzheimer ou demência vascular",
+        "escolha": "Risperidona 0,25 mg 12/12 h (máximo 1 mg/dia) ou quetiapina 12,5–25 mg à noite, na menor dose eficaz, por 4–12 semanas com tentativa de retirada",
+        "porque": "São os antipsicóticos com melhor relação risco-benefício no idoso; ainda assim aumentam mortalidade e eventos cerebrovasculares, então o uso é curto e com plano de retirada"
+      },
+      {
+        "cenario": "Demência com corpos de Lewy ou doença de Parkinson com agitação e psicose",
+        "escolha": "Quetiapina 12,5 mg à noite, com aumento cauteloso; haloperidol, risperidona e antipsicóticos típicos proibidos",
+        "porque": "Esses pacientes têm hipersensibilidade ao bloqueio dopaminérgico, com rigidez grave, imobilidade e síndrome neuroléptica maligna"
+      },
+      {
+        "cenario": "Agitação com sintomas depressivos, apatia ou choro fácil",
+        "escolha": "Citalopram 10–20 mg/dia ou sertralina 25–50 mg/dia, com reavaliação em 4–6 semanas",
+        "porque": "Depressão em demência se manifesta como agitação e recusa; tratar o humor evita antipsicótico e melhora função"
+      },
+      {
+        "cenario": "Agitação noturna, inversão do ciclo sono-vigília ou insônia com piora comportamental",
+        "escolha": "Higiene do sono, luz natural pela manhã e melatonina 1–3 mg 1–2 h antes de dormir; trazodona 25 mg à noite se persistir",
+        "porque": "Benzodiazepínico e zolpidem causam queda, confusão e piora paradoxal; melatonina e trazodona são mais seguras"
+      },
+      {
+        "cenario": "Dor como gatilho, sobretudo com artrose, úlcera por pressão ou pós-operatório",
+        "escolha": "Paracetamol 500 mg 6/6 h em horário fixo; morfina 2,5 mg em dose baixa se dor intensa, com laxante",
+        "porque": "O paciente com demência não relata dor; analgesia em horário fixo reduz agitação sem sedação e é frequentemente suficiente"
+      },
+      {
+        "cenario": "Constipação ou retenção urinária como gatilho",
+        "escolha": "Desimpactação fecal e enema se fecaloma; sondagem vesical de alívio se retenção, seguida de laxante e manejo intestinal",
+        "porque": "Resolve a causa em minutos a horas e evita antipsicótico; laxante oral sobre fecaloma piora a dor e a agitação"
+      },
+      {
+        "cenario": "Abstinência alcoólica ou de benzodiazepínico em paciente com demência",
+        "escolha": "Diazepam titulado por escala de abstinência (CIWA-Ar) com tiamina; é a única exceção em que benzodiazepínico é indicado",
+        "porque": "Fora da abstinência, benzodiazepínico piora o comportamento e aumenta queda; na abstinência, antipsicótico isolado não previne convulsão"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "dor como causa ou agravante da agitação em demência",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h em horário fixo",
+        "duracao": "até identificar e tratar a causa, com reavaliação semanal",
+        "dose_maxima": "3 g/dia no idoso frágil; 4 g/dia no idoso hígido",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave com depleção de glutationa",
+          "uso simultâneo de outro produto com paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose alta",
+          "náusea",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral gotas 200 mg/mL",
+          "frasco IV 10 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral; a apresentação IV é infundida sem diluir ou em 50 mL de SF 0,9%",
+        "tempo_infusao": "não se aplica (via oral); 15 minutos na via IV",
+        "monitorizacao": [
+          "soma da dose diária de todas as fontes",
+          "escala de dor quando o paciente consegue informar",
+          "comportamento e sono após 48 h de analgesia fixa",
+          "função hepática se uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste; espaçar para 6/8 h se TFG abaixo de 30",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia; evitar em Child C",
+        "observacoes": "Primeiro fármaco a considerar em qualquer agitação de demência: dor não reconhecida é causa frequente. Prescrever em horário fixo, porque o paciente não pede analgésico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "condicional",
+        "indicacao": "dor intensa não controlada por paracetamol, sobretudo em fratura, úlcera por pressão ou pós-operatório",
+        "dose": "2,5 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h ou 4/4 h, com dose de resgate",
+        "duracao": "até controle da dor, com reavaliação diária",
+        "dose_maxima": "20 mg/dia no idoso frágil, titulada",
+        "contraindicacoes": [
+          "insuficiência respiratória sem suporte",
+          "íleo paralítico",
+          "sedação excessiva no momento da prescrição",
+          "TFG abaixo de 15 sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "sedação",
+          "depressão respiratória",
+          "constipação",
+          "retenção urinária",
+          "delirium por acúmulo de metabólitos"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido 30 mg",
+          "solução oral 10 mg/mL",
+          "ampola 10 mg/mL (1 mL)",
+          "ampola 2 mg/mL"
+        ],
+        "preparo": "VO uso direto; IV diluir em 10 mL de SF 0,9% e infundir lentamente",
+        "tempo_infusao": "não se aplica (via oral); 3–5 minutos na via IV",
+        "monitorizacao": [
+          "frequência respiratória e oximetria",
+          "sedação por escala (Ramsay ou POSS)",
+          "dor",
+          "função intestinal e vesical",
+          "creatinina"
+        ],
+        "ajuste_renal": "Reduzir dose e espaçar com TFG abaixo de 30: metabólitos acumulam e causam delirium",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia",
+        "observacoes": "Usar apenas para dor intensa e por pouco tempo. Sedação sem melhora da dor indica reduzir a dose, não aumentar. Prescrever laxante junto.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antipsicotico_atipico",
+        "agente": "risperidona",
+        "papel": "condicional",
+        "indicacao": "agitação grave com risco iminente em Alzheimer ou demência vascular, após falha das medidas não farmacológicas",
+        "dose": "0,25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h; ajustar para 0,5 mg 12/12 h se necessário",
+        "duracao": "4–12 semanas, com tentativa de retirada gradual",
+        "dose_maxima": "1 mg/dia no idoso",
+        "contraindicacoes": [
+          "demência com corpos de Lewy",
+          "doença de Parkinson",
+          "QTc acima de 500 ms",
+          "hipotensão postural grave",
+          "história de síndrome neuroléptica maligna"
+        ],
+        "efeitos_adversos": [
+          "aumento de mortalidade e de eventos cerebrovasculares",
+          "parkinsonismo e rigidez",
+          "sedação e hipotensão postural com queda",
+          "prolongamento de QT",
+          "hiperprolactinemia",
+          "ganho de peso e hiperglicemia"
+        ],
+        "apresentacoes": [
+          "comprimido 1 mg",
+          "comprimido 2 mg",
+          "comprimido 3 mg",
+          "comprimido orodispersível 1 mg",
+          "solução oral 1 mg/mL"
+        ],
+        "preparo": "Uso direto; a solução oral é medida com seringa dosadora e pode ser diluída em água",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sinais extrapiramidais e rigidez",
+          "PA sentado e em pé",
+          "nível de sedação e risco de queda",
+          "ECG e QTc antes e após iniciar",
+          "glicemia e peso"
+        ],
+        "ajuste_renal": "Reduzir a dose pela metade com TFG abaixo de 30: metabólito ativo acumula",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia; iniciar com 0,25 mg em dias alternados",
+        "observacoes": "É o antipsicótico com melhor evidência para agressividade em Alzheimer, mas aumenta mortalidade em cerca de 1,6 a 1,7 vez. Menor dose, menor tempo e retirada planejada. Não usar em Lewy nem em Parkinson.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antipsicotico_atipico",
+        "agente": "quetiapina",
+        "papel": "alternativa",
+        "indicacao": "agitação em demência com corpos de Lewy ou Parkinson, ou intolerância à risperidona",
+        "dose": "12,5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x à noite; 12/12 h se necessário",
+        "duracao": "4–12 semanas, com tentativa de retirada",
+        "dose_maxima": "50 mg/dia no idoso",
+        "contraindicacoes": [
+          "hipotensão postural grave",
+          "QTc acima de 500 ms",
+          "história de síndrome neuroléptica maligna",
+          "uso concomitante de inibidor potente de CYP3A4"
+        ],
+        "efeitos_adversos": [
+          "sedação",
+          "hipotensão postural e queda",
+          "prolongamento de QT",
+          "constipação",
+          "aumento de glicemia e peso",
+          "aumento de mortalidade em demência"
+        ],
+        "apresentacoes": [
+          "comprimido 25 mg",
+          "comprimido 100 mg",
+          "comprimido 200 mg",
+          "comprimido de liberação prolongada 50 mg"
+        ],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "PA sentado e em pé",
+          "nível de sedação e rigidez",
+          "ECG e QTc",
+          "glicemia",
+          "função intestinal"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia; iniciar com 12,5 mg",
+        "observacoes": "É a escolha quando o risco de parkinsonismo é alto, não a escolha de rotina. Continua sendo antipsicótico: aumenta mortalidade em demência e não deve seguir por meses.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antipsicotico_tipico",
+        "agente": "haloperidol",
+        "papel": "resgate",
+        "indicacao": "agitação grave refratária com risco imediato, em paciente sem Parkinson e sem demência com corpos de Lewy",
+        "dose": "0,5 mg",
+        "unidade": "mg",
+        "via": "VO ou IM",
+        "frequencia": "dose única; repetir após 30–60 min se necessário",
+        "duracao": "até 72 h, com reavaliação diária",
+        "dose_maxima": "2 mg/24 h no idoso frágil",
+        "contraindicacoes": [
+          "demência com corpos de Lewy",
+          "doença de Parkinson",
+          "QTc acima de 500 ms",
+          "síndrome neuroléptica maligna prévia"
+        ],
+        "efeitos_adversos": [
+          "parkinsonismo e acatisia",
+          "distonia aguda",
+          "prolongamento de QT e torsades de pointes",
+          "síndrome neuroléptica maligna",
+          "sedação e rigidez"
+        ],
+        "apresentacoes": [
+          "comprimido 1 mg",
+          "comprimido 5 mg",
+          "solução oral 2 mg/mL",
+          "ampola 5 mg/mL (1 mL)"
+        ],
+        "preparo": "VO uso direto; IM sem diluir; IV diluir 5 mg em 100 mL de SF para infusão",
+        "tempo_infusao": "não se aplica (via oral); IM imediato; IV em bolus lento de 1–2 min ou 20–30 min em infusão",
+        "monitorizacao": [
+          "ECG com QTc antes e em 24 h",
+          "sinais extrapiramidais e rigidez",
+          "nível de sedação",
+          "PA e frequência cardíaca"
+        ],
+        "ajuste_renal": "Sem ajuste; em diálise, manter dose pequena com vigilância de QT",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave",
+        "observacoes": "Reservado ao resgate e por no máximo 72 h. Não usar em Lewy nem em Parkinson. A causa da agitação continua sendo o alvo do tratamento.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidepressivo_sedativo",
+        "agente": "trazodona",
+        "papel": "alternativa",
+        "indicacao": "agitação noturna e insônia em demência quando melatonina e higiene do sono falharam",
+        "dose": "25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x à noite, 30–60 min antes de dormir",
+        "duracao": "2–4 semanas, com reavaliação",
+        "dose_maxima": "100 mg/dia no idoso",
+        "contraindicacoes": [
+          "uso de IMAO",
+          "QTc longo",
+          "hipotensão postural grave",
+          "hipocalemia não corrigida"
+        ],
+        "efeitos_adversos": [
+          "hipotensão postural e queda",
+          "sedação diurna",
+          "tontura",
+          "prolongamento de QT",
+          "priapismo raro"
+        ],
+        "apresentacoes": [
+          "comprimido 50 mg",
+          "comprimido 100 mg"
+        ],
+        "preparo": "Uso direto; se necessário, fracionar o comprimido de 50 mg para obter 25 mg",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "PA sentado e em pé",
+          "sedação diurna e risco de queda",
+          "ECG e QTc em cardiopata",
+          "sono e comportamento"
+        ],
+        "ajuste_renal": "Sem ajuste formal; cautela em doença renal crônica com hipotensão",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia",
+        "observacoes": "Boa opção quando o problema é o sono e não há psicose. Não é antipsicótico, mas causa hipotensão e queda: dar à noite e avaliar a pressão em pé.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "isrs",
+        "agente": "citalopram",
+        "papel": "condicional",
+        "indicacao": "agitação com sintomas depressivos, apatia ou choro fácil em demência",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "mínimo 6–12 semanas, com reavaliação em 4–6 semanas",
+        "dose_maxima": "20 mg/dia no idoso",
+        "contraindicacoes": [
+          "uso de IMAO",
+          "QTc acima de 500 ms",
+          "hiponatremia grave não corrigida",
+          "síndrome serotoninérgica prévia"
+        ],
+        "efeitos_adversos": [
+          "hiponatremia",
+          "prolongamento de QT",
+          "náusea",
+          "queda por hipotensão",
+          "sangramento com AINE ou anticoagulante"
+        ],
+        "apresentacoes": [
+          "comprimido 20 mg",
+          "solução oral gotas 20 mg/mL"
+        ],
+        "preparo": "Uso direto; para 10 mg, usar meio comprimido ou a solução oral",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sódio antes e em 2–4 semanas",
+          "ECG e QTc",
+          "humor e comportamento",
+          "sangramento"
+        ],
+        "ajuste_renal": "Cautela com TFG abaixo de 30: risco de hiponatremia e acúmulo",
+        "ajuste_hepatico": "Máximo 10 mg/dia em hepatopatia",
+        "observacoes": "Dose máxima de 20 mg/dia acima de 60 anos por risco de QT. Efeito demora 4–6 semanas: não trocar por antipsicótico antes disso. Preferir sertralina se houver risco cardíaco.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticolinesterasico",
+        "agente": "donepezila",
+        "papel": "condicional",
+        "indicacao": "otimização do tratamento cognitivo em demência leve a moderada antes de associar antipsicótico",
+        "dose": "5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x à noite",
+        "duracao": "contínuo, com reavaliação em 3 meses",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": [
+          "bradicardia grave ou bloqueio atrioventricular avançado",
+          "úlcera péptica ativa",
+          "asma grave",
+          "arritmia cardíaca não controlada"
+        ],
+        "efeitos_adversos": [
+          "náusea, vômito e diarreia",
+          "bradicardia e síncope",
+          "cãibras",
+          "perda de peso",
+          "pesadelos"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 10 mg"
+        ],
+        "preparo": "Uso direto à noite, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "frequência cardíaca e síncope",
+          "peso e apetite",
+          "náusea e diarreia",
+          "cognição e comportamento em 3 meses"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; cautela em hepatopatia grave",
+        "observacoes": "Não é tratamento de agitação aguda, mas a subdose ou a suspensão do anticolinesterásico piora o comportamento. Confirmar adesão antes de escalar para antipsicótico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "hipnotico",
+        "agente": "melatonina",
+        "papel": "alternativa",
+        "indicacao": "insônia e inversão do ciclo sono-vigília em demência",
+        "dose": "1–3 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia, 1–2 h antes de dormir",
+        "duracao": "4–8 semanas, com reavaliação",
+        "dose_maxima": "6 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "uso de fluvoxamina",
+          "doença hepática grave"
+        ],
+        "efeitos_adversos": [
+          "sonolência diurna",
+          "cefaleia",
+          "náusea",
+          "pesadelos"
+        ],
+        "apresentacoes": [
+          "comprimido 3 mg",
+          "cápsula 1 mg",
+          "solução oral 1 mg/mL"
+        ],
+        "preparo": "Uso direto, no mesmo horário todas as noites",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "horário e qualidade do sono",
+          "sonolência diurna",
+          "comportamento noturno e quedas"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave",
+        "observacoes": "Alternativa segura ao benzodiazepínico e ao zolpidem, com efeito modesto. Só funciona junto com higiene do sono, luz natural pela manhã e rotina fixa.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "laxante",
+        "agente": "lactulose",
+        "papel": "condicional",
+        "indicacao": "constipação como causa ou agravante da agitação",
+        "dose": "15–30 mL",
+        "unidade": "mL",
+        "via": "VO ou sonda",
+        "frequencia": "1–2x/dia, titulando até 1–2 evacuações pastosas",
+        "duracao": "até regularização do hábito intestinal",
+        "dose_maxima": "60 mL/dia",
+        "contraindicacoes": [
+          "íleo paralítico",
+          "obstrução intestinal",
+          "galactosemia"
+        ],
+        "efeitos_adversos": [
+          "distensão",
+          "cólica",
+          "diarreia",
+          "desidratação e hipernatremia"
+        ],
+        "apresentacoes": [
+          "xarope 667 mg/mL (120 mL)",
+          "solução 667 mg/mL (200 mL)"
+        ],
+        "preparo": "Administrar puro ou diluído em água ou suco",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número e aspecto das evacuações",
+          "distensão abdominal",
+          "sódio",
+          "hidratação"
+        ],
+        "ajuste_renal": "Sem ajuste; vigiar desidratação na doença renal crônica",
+        "observacoes": "Com fecaloma, desimpactar antes. Constipação não tratada é causa frequente de agitação e de delirium, e responde em 24–48 h.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Rotina previsível e ambiente calmo",
+        "detalhe": "Horários fixos para acordar, comer, tomar banho e dormir; luz natural de dia e ambiente escuro e silencioso à noite; poucos objetos, ruído baixo e equipe ou cuidadores fixos. Mudança de ambiente é gatilho clássico de agitação."
+      },
+      {
+        "medida": "Comunicação sem confronto e validação",
+        "detalhe": "Falar de frente, em frases curtas, tom baixo e ritmo lento; chamar pelo nome; não discutir nem corrigir a realidade; oferecer duas escolhas simples em vez de ordens; dar tempo de resposta de 10–20 s antes de repetir."
+      },
+      {
+        "medida": "Atividade significativa e socialização",
+        "detalhe": "Música que o paciente gosta, reminiscência com fotos e objetos, tarefas simples e seguras (dobrar roupa, regar planta), caminhada e convivência diária. Atividade reduz agitação e apatia e é mais eficaz que fármaco para sintomas leves."
+      },
+      {
+        "medida": "Higiene do sono e exposição à luz",
+        "detalhe": "Expor-se à luz natural por 30 min pela manhã, evitar cochilo longo à tarde, restringir cafeína após o almoço, não acordar à noite sem necessidade e manter ritual fixo antes de dormir. Tratar dor e ir ao banheiro antes de deitar."
+      },
+      {
+        "medida": "Buscar e tratar gatilhos físicos todos os dias",
+        "detalhe": "Checar dor, fome, sede, calor, frio, bexiga, intestino, roupa molhada, unha encravada, prótese dentária mal ajustada, óculos e aparelho auditivo. A maior parte da agitação tem um gatilho físico identificável."
+      },
+      {
+        "medida": "Orientação e apoio ao cuidador",
+        "detalhe": "Explicar que a agitação faz parte da doença e não é pessoal; treinar manejo, oferecer grupo de apoio e escala de descanso; rastrear sobrecarga e depressão do cuidador. Cuidador exausto agride e abandona."
+      },
+      {
+        "medida": "Prevenção de contenção e de restrição",
+        "detalhe": "Retirar grades desnecessárias, manter cama baixa, usar cadeira confortável, permitir deambulação segura em área fechada e acompanhar o paciente. Contenção física só com risco iminente, indicação médica registrada e reavaliação a cada 2 h."
+      },
+      {
+        "medida": "Ajuste de expectativa e metas realistas",
+        "detalhe": "Negociar com a família o que é melhora possível: menos episódios, menos intensidade, mais segurança e mais descanso do cuidador — não ausência total de sintoma. Expectativa irreal leva a escalada de sedativos."
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Avaliação etiológica estruturada da agitação",
+        "indicacao": "Toda agitação nova ou piora em relação ao basal, antes de qualquer psicofármaco",
+        "tecnica": "Aplicar CAM-4AT para delirium, revisar prontuário e lista de fármacos, examinar dor, bexiga, abdome, pele, pulmões e neurológico, e solicitar glicemia, hemograma, urina, eletrólitos, função renal e hepática, oximetria e ECG",
+        "complicacoes": "Investigação incompleta que rotula tudo como demência e leva a sedação desnecessária; excesso de exames em paciente agitado sem exame físico dirigido"
+      },
+      {
+        "nome": "Cateterismo vesical de alívio",
+        "protocolo": "BOX-09",
+        "indicacao": "Retenção urinária com bexiga palpável, dor suprapúbica ou anúria",
+        "tecnica": "Técnica asséptica, sonda de alívio 14–16 Fr, esvaziamento gradual e retirada imediata após o alívio, sem deixar sonda de demora por rotina",
+        "complicacoes": "Infecção urinária, trauma uretral, hipotensão por esvaziamento rápido e piora da agitação pelo desconforto"
+      },
+      {
+        "nome": "Desimpactação fecal e enema",
+        "indicacao": "Fecaloma, constipação grave ou ausência de evacuação com distensão abdominal",
+        "tecnica": "Toque retal, desimpactação manual com lubrificante e enema de glicerina ou fosfato; iniciar lactulose após esvaziar",
+        "complicacoes": "Dor, sangramento retal, perfuração em reto friável e distúrbio eletrolítico por enema de fosfato"
+      },
+      {
+        "nome": "Revisão e desprescrição farmacológica",
+        "indicacao": "Toda agitação em demência, sobretudo com fármaco novo nos últimos 30 dias",
+        "tecnica": "Revisar lista completa com dose e horário, aplicar critérios de Beers e STOPP, suspender anticolinérgico, benzodiazepínico, zolpidem, corticoide, opioide e anti-histamínico quando possível, uma droga por vez, com monitorização de retirada",
+        "complicacoes": "Síndrome de retirada, piora transitória da insônia ou da ansiedade e descompensação de doença de base se a suspensão for abrupta"
+      },
+      {
+        "nome": "Contenção mecânica segura como último recurso",
+        "protocolo": "BOX-23",
+        "indicacao": "Risco iminente e concreto de dano a si ou a terceiros, após falha de desescalada, ambiente seguro e medicação",
+        "tecnica": "Decisão médica registrada, quatro pontos com dois dedos de folga, cabeceira elevada, monitorização contínua, checagem a cada 15 min e reavaliação médica a cada 2 h; liberar assim que possível",
+        "complicacoes": "Asfixia posicional, rabdomiólise, trombose, úlcera por pressão, piora da agitação e morte; nunca usar em decúbito ventral"
+      }
+    ],
+    "metas": [
+      "Causa orgânica excluída e registrada em prontuário em 100% dos episódios antes de iniciar antipsicótico",
+      "Nenhum benzodiazepínico prescrito para agitação em demência fora de abstinência",
+      "Medidas não farmacológicas registradas antes do fármaco em todos os casos leves e moderados",
+      "Antipsicótico na menor dose eficaz, com plano de retirada em até 12 semanas",
+      "Nenhuma contenção física sem indicação médica registrada e reavaliação a cada 2 h",
+      "Agitação medida por escala (NPI ou CMAI) na primeira consulta e a cada reavaliação",
+      "Cuidador orientado por escrito e com plano de manejo e de retorno antes da alta"
+    ],
+    "fluxo": [
+      "Definir o que é: agitação crônica da demência ou delirium sobre demência (mudança do basal, flutuação e desatenção em horas a dias)",
+      "Excluir causa orgânica antes de sedar: dor, infecção, constipação, retenção urinária, hipóxia, hipoglicemia, distúrbio eletrolítico, fármaco novo e abstinência",
+      "Tratar a causa encontrada: analgesia, antibiótico, sondagem de alívio, desimpactação, oxigênio, ajuste de fármaco e tiamina com benzodiazepínico na abstinência",
+      "Iniciar medidas não farmacológicas: rotina, ambiente, comunicação, atividade, sono e orientação do cuidador",
+      "Reavaliar em 24–48 h e registrar intensidade e frequência da agitação por escala",
+      "Persistindo risco iminente, escolher o fármaco pelo perfil: risperidona ou quetiapina na psicose e agressão, quetiapina em Lewy e Parkinson, ISRS na depressão, melatonina ou trazodona no sono, analgesia na dor",
+      "Monitorizar sedação, pressão em pé, ECG e risco de queda, e comunicar riscos e benefícios à família",
+      "Retirar gradualmente após 4–12 semanas e manter plano não farmacológico e seguimento com o cuidador"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "demencia com corpos de Lewy",
+        "ajuste": "Quetiapina 12,5 mg à noite, com aumento cauteloso; antipsicótico típico e risperidona contraindicados",
+        "alerta": "rigidez grave, imobilidade e síndrome neuroléptica maligna"
+      },
+      {
+        "populacao": "parkinson",
+        "ajuste": "Quetiapina em dose mínima ou clozapina em centro especializado; nunca haloperidol",
+        "alerta": "piora do parkinsonismo e síndrome neuroléptica maligna"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Reduzir risperidona, evitar morfina e ajustar laxante; vigiar hidratação",
+        "alerta": "acúmulo de metabólitos ativos e sedação prolongada"
+      },
+      {
+        "populacao": "hepatopata",
+        "ajuste": "Evitar benzodiazepínico de ação longa, reduzir antipsicótico e investigar encefalopatia hepática",
+        "alerta": "encefalopatia confundida com agitação da demência"
+      },
+      {
+        "populacao": "idoso frágil e institucionalizado",
+        "ajuste": "Iniciar com metade da dose, manter acompanhante e rotina, revisar fármacos e priorizar medidas não farmacológicas",
+        "alerta": "queda, fratura de quadril e perda funcional"
+      },
+      {
+        "populacao": "cuidador em sobrecarga",
+        "ajuste": "Avaliar sobrecarga e depressão, acionar rede de apoio e serviço social e considerar centro-dia",
+        "alerta": "maus-tratos, abandono e institucionalização precipitada"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "glicemia capilar",
+          "indicacao": "todos, no momento da agitação",
+          "o_que_muda": "hipoglicemia é causa reversível imediata e muda a conduta em minutos"
+        },
+        {
+          "nome": "hemograma, PCR e urina tipo 1 com urocultura",
+          "indicacao": "todos, mesmo sem febre",
+          "o_que_muda": "infecção urinária e pneumonia são as causas mais frequentes de agitação aguda e indicam antibiótico"
+        },
+        {
+          "nome": "eletrólitos, ureia, creatinina, cálcio e magnésio",
+          "indicacao": "todos",
+          "o_que_muda": "distúrbio eletrolítico e uremia revertem com correção e dispensam sedação"
+        },
+        {
+          "nome": "oximetria e gasometria",
+          "indicacao": "taquipneia, sonolência ou saturação abaixo de 92%",
+          "o_que_muda": "hipóxia e hipercapnia exigem oxigênio e investigação pulmonar"
+        },
+        {
+          "nome": "ECG de 12 derivações",
+          "indicacao": "todos, antes de antipsicótico e de ISRS",
+          "o_que_muda": "QTc acima de 500 ms contraindica risperidona, quetiapina e citalopram"
+        },
+        {
+          "nome": "função hepática, TSH e vitamina B12",
+          "indicacao": "agitação sem causa evidente ou piora cognitiva",
+          "o_que_muda": "encefalopatia, hipotireoidismo e deficiência de B12 simulam demência e agitação"
+        },
+        {
+          "nome": "tomografia de crânio",
+          "indicacao": "déficit focal, trauma, anticoagulação ou causa não esclarecida",
+          "o_que_muda": "exclui hematoma, AVC e lesão expansiva antes de atribuir a agitação à demência"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "benzodiazepínico ou zolpidem para acalmar ou dormir",
+          "motivo": "piora a confusão, causa queda, aspiração e desinibição paradoxal; não é tratamento de agitação em demência"
+        },
+        {
+          "exame": "haloperidol, risperidona ou antipsicótico típico em demência com corpos de Lewy ou Parkinson",
+          "motivo": "risco de rigidez grave e síndrome neuroléptica maligna fatal"
+        },
+        {
+          "exame": "contenção física sem indicação, sem registro e sem reavaliação",
+          "motivo": "aumenta agitação, lesão, trombose e mortalidade, e configura violência quando usada por conveniência"
+        },
+        {
+          "exame": "antipsicótico em dose alta ou por tempo prolongado sem revisão",
+          "motivo": "aumenta mortalidade, eventos cerebrovasculares, queda e parkinsonismo; o benefício é modesto e de curto prazo"
+        },
+        {
+          "exame": "associar dois antipsicóticos ou antipsicótico com benzodiazepínico",
+          "motivo": "soma de sedação, hipotensão, QT longo e mortalidade sem ganho terapêutico"
+        },
+        {
+          "exame": "bateria extensa de exames antes de tratar dor, bexiga e intestino",
+          "motivo": "retarda o que resolve em horas e mantém o paciente agitado e contido"
+        },
+        {
+          "exame": "rotular agitação como demência sem reavaliar fármacos e cognição basal",
+          "motivo": "fármaco anticolinérgico e delirium são causas tratáveis e frequentemente confundidos com progressão da doença"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter horários fixos de acordar, comer, tomar banho e dormir",
+        "levar o paciente para a luz do dia pela manhã e caminhar com ele",
+        "oferecer música, fotos e atividades simples todos os dias",
+        "chamar pelo nome, falar devagar e não discutir com o paciente",
+        "anotar os episódios de agitação, o horário e o que aconteceu antes",
+        "avisar a equipe sobre dor, febre, prisão de ventre ou dificuldade para urinar",
+        "cuidar também do cuidador: descanso, apoio e grupos de familiares"
+      ],
+      "evitar": [
+        "dar calmante ou remédio para dormir por conta própria",
+        "discutir, corrigir ou confrontar o paciente",
+        "mudar de casa, de quarto ou de cuidador sem preparo",
+        "conter o paciente na cama ou na cadeira por comodidade",
+        "deixar o paciente sem óculos e sem aparelho auditivo",
+        "levar a lugares com muito barulho, muita gente ou muita luz à noite"
+      ],
+      "retorno": [
+        "agitação nova, intensa ou com agressão",
+        "febre, falta de ar ou sonolência",
+        "não urinar por mais de 8 h ou não evacuar por mais de 4 dias",
+        "queda, batida na cabeça ou incapacidade de andar",
+        "cuidador sem condições de manter o cuidado em casa"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "risperidona",
+        "efeitos": [
+          "parkinsonismo",
+          "sedação",
+          "hipotensão postural",
+          "prolongamento de QT"
+        ],
+        "observacao": "reduzir ou suspender se rigidez, sedação excessiva ou QTc acima de 500 ms; não manter por mais de 12 semanas sem revisão"
+      },
+      {
+        "agente": "quetiapina",
+        "efeitos": [
+          "sedação",
+          "hipotensão postural",
+          "constipação"
+        ],
+        "observacao": "dar à noite, medir pressão em pé e reduzir se sonolência diurna ou queda"
+      },
+      {
+        "agente": "haloperidol",
+        "efeitos": [
+          "parkinsonismo",
+          "acatisia",
+          "distonia",
+          "prolongamento de QT"
+        ],
+        "observacao": "usar apenas em resgate por até 72 h; suspender se rigidez, tremor ou QTc acima de 500 ms"
+      },
+      {
+        "agente": "trazodona",
+        "efeitos": [
+          "hipotensão postural",
+          "sedação diurna",
+          "tontura"
+        ],
+        "observacao": "reduzir dose ou trocar o horário se tontura ao levantar; avaliar ECG em cardiopata"
+      },
+      {
+        "agente": "citalopram",
+        "efeitos": [
+          "hiponatremia",
+          "náusea",
+          "prolongamento de QT"
+        ],
+        "observacao": "dosar sódio em 2–4 semanas e não ultrapassar 20 mg/dia no idoso"
+      },
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "sedação",
+          "depressão respiratória",
+          "constipação"
+        ],
+        "observacao": "reduzir dose, prescrever laxante e reavaliar em 30 min"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender ou reduzir o fármaco implicado e registrar a reação em prontuário",
+      "Risperidona ou haloperidol com rigidez, acatisia ou distonia: suspender, considerar biperideno e trocar de estratégia",
+      "QTc acima de 500 ms: suspender antipsicótico ou ISRS, corrigir potássio e magnésio e monitorizar",
+      "Trazodona ou quetiapina com hipotensão postural: reduzir dose, orientar levantar devagar e reavaliar queda",
+      "Citalopram com hiponatremia: suspender ou trocar para sertralina e corrigir sódio",
+      "Comunicar a família, reavaliar a indicação e voltar ao plano não farmacológico"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "6/6 h em horário fixo",
+            "duracao": "30 dias",
+            "condicao": "dor como gatilho de agitação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "melatonina 3 mg",
+            "dose": "1–3 mg",
+            "via": "VO",
+            "frequencia": "1x/dia, 1–2 h antes de dormir",
+            "duracao": "8 semanas",
+            "condicao": "insônia e inversão do ciclo sono-vigília",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "citalopram 20 mg",
+            "dose": "10 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "12 semanas",
+            "condicao": "agitação com sintomas depressivos",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lactulose xarope 667 mg/mL",
+            "dose": "15–30 mL",
+            "via": "VO",
+            "frequencia": "1–2x/dia",
+            "duracao": "30 dias",
+            "condicao": "constipação",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "risperidona 1 mg",
+            "dose": "0,25 mg",
+            "via": "VO",
+            "frequencia": "12/12 h se agitação com risco",
+            "monitorizacao": "sinais extrapiramidais, PA em pé, sedação e QTc",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "quetiapina 25 mg",
+            "dose": "12,5–25 mg",
+            "via": "VO",
+            "frequencia": "à noite",
+            "monitorizacao": "PA em pé, sedação e QTc",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "haloperidol 0,5 mg",
+            "dose": "0,5 mg",
+            "via": "VO ou IM",
+            "frequencia": "dose única, repetir após 30–60 min se necessário",
+            "monitorizacao": "QTc, sinais extrapiramidais e sedação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "trazodona 50 mg",
+            "dose": "25 mg",
+            "via": "VO",
+            "frequencia": "à noite",
+            "monitorizacao": "PA em pé, sedação diurna e QTc",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "glicemia capilar",
+          "hemograma",
+          "PCR",
+          "urina tipo 1 e urocultura",
+          "eletrólitos",
+          "ureia e creatinina",
+          "cálcio e magnésio",
+          "função hepática",
+          "TSH",
+          "ECG",
+          "oximetria e gasometria",
+          "tomografia de crânio quando indicada",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente, portador(a) de demência, esteve sob meus cuidados nesta data com quadro de agitação, necessitando de acompanhamento e afastamento de atividades por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento ambulatorial ou hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente idoso com demência e agitação, tempo de evolução, causas orgânicas excluídas, fármacos revisados, medidas não farmacológicas adotadas, fármacos usados com dose e duração, plano de retirada e orientação ao cuidador."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tipo e tempo de demência",
+        "início e flutuação da agitação",
+        "cognição basal e comparação",
+        "dor, febre e foco infeccioso",
+        "última urina e evacuação",
+        "fármacos novos, suspensos e anticolinérgicos",
+        "álcool e abstinência",
+        "sono e rotina",
+        "cuidador e sobrecarga"
+      ],
+      "texto_template": "Idoso com demência e agitação, tipo e tempo de demência, início e flutuação, cognição basal e comparação, dor, febre e foco, última urina e evacuação, fármacos novos ou suspensos, álcool e abstinência, sono, rotina, cuidador e sobrecarga."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e oximetria",
+        "glicemia capilar",
+        "nível de consciência, atenção e CAM-4AT",
+        "exame neurológico e sinais extrapiramidais",
+        "bexiga e abdome",
+        "pele, úlceras e dispositivos",
+        "hidratação e cavidade oral",
+        "dor e mobilidade"
+      ],
+      "texto_template": "Sinais vitais e oximetria, glicemia capilar, nível de consciência e atenção com CAM-4AT, exame neurológico com sinais extrapiramidais, palpação de bexiga e abdome, pele e dispositivos, hidratação, cavidade oral, dor e mobilidade."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de agitação em demência, uso de antipsicótico e critérios de contenção",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_geriatria",
+        "o_que_verificar": "manejo não farmacológico, sobrecarga do cuidador e prevenção de queda",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_psiquiatria",
+        "o_que_verificar": "indicação, dose e duração de antipsicótico em demência e alerta de mortalidade",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_geriatria",
+        "o_que_verificar": "critérios de Beers e STOPP para desprescrição no idoso",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e doses de risperidona, quetiapina, haloperidol, trazodona, citalopram e melatonina",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GER10-01",
+        "tipo": "antipsicotico_sem_causa_excluida",
+        "gatilho": "antipsicótico prescrito para agitação sem registro de exclusão de dor, infecção, constipação, retenção, hipóxia, fármaco e abstinência",
+        "severidade": "grave",
+        "mensagem": "Agitação em demência exige excluir causa orgânica antes de sedar: o antipsicótico mascara o diagnóstico e aumenta mortalidade.",
+        "acao": "bloquear item e exigir avaliação etiológica",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER10-02",
+        "tipo": "benzodiazepinico_em_demencia",
+        "gatilho": "benzodiazepínico ou zolpidem prescrito para agitação ou insônia em demência sem abstinência documentada",
+        "severidade": "grave",
+        "mensagem": "Benzodiazepínico em demência piora confusão, causa queda e aspiração e não trata agitação.",
+        "acao": "bloquear item e sugerir medidas não farmacológicas e melatonina",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER10-03",
+        "tipo": "antipsicotico_em_lewy",
+        "gatilho": "haloperidol, risperidona ou antipsicótico típico prescrito em demência com corpos de Lewy ou Parkinson",
+        "severidade": "grave",
+        "mensagem": "Antipsicótico típico e risperidona são contraindicados em Lewy e Parkinson: risco de síndrome neuroléptica maligna.",
+        "acao": "bloquear item e sugerir quetiapina",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER10-04",
+        "tipo": "dois_antipsicoticos",
+        "gatilho": "dois antipsicóticos prescritos ao mesmo tempo ou antipsicótico associado a benzodiazepínico",
+        "severidade": "grave",
+        "mensagem": "Associação de antipsicóticos ou com benzodiazepínico soma sedação, hipotensão, QT longo e mortalidade sem ganho.",
+        "acao": "bloquear associação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER10-05",
+        "tipo": "mortalidade_antipsicotico",
+        "gatilho": "antipsicótico prescrito em paciente com demência",
+        "severidade": "precaucao",
+        "mensagem": "Antipsicótico em demência aumenta mortalidade em cerca de 1,6 a 1,7 vez e o risco de AVC: usar apenas com risco iminente, na menor dose e pelo menor tempo, com plano de retirada.",
+        "acao": "exibir alerta e registrar ciência na prescrição",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER10-06",
+        "tipo": "contencao_sem_reavaliacao",
+        "gatilho": "contenção física sem indicação médica registrada ou sem reavaliação em 2 h",
+        "severidade": "precaucao",
+        "mensagem": "Contenção sem indicação aumenta agitação, lesão, trombose e mortalidade e configura violência quando usada por conveniência.",
+        "acao": "alertar e exigir reavaliação",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER10-07",
+        "tipo": "antipsicotico_prolongado",
+        "gatilho": "antipsicótico em demência por mais de 12 semanas sem revisão registrada",
+        "severidade": "precaucao",
+        "mensagem": "O benefício do antipsicótico em demência é de curto prazo: revisar e tentar retirada em até 12 semanas.",
+        "acao": "alertar e sugerir plano de retirada",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER10-08",
+        "tipo": "causa_reversivel_nao_tratada",
+        "gatilho": "retenção urinária, constipação, dor ou hipóxia identificadas e não tratadas antes do psicofármaco",
+        "severidade": "grave",
+        "mensagem": "Tratar a causa reversível antes de sedar: retenção, fecaloma, dor e hipóxia resolvem em horas.",
+        "acao": "alertar e sugerir conduta",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

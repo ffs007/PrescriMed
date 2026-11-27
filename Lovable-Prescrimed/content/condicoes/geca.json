@@ -1,0 +1,198 @@
+{
+  "id": "geca",
+  "nome": "Gastroenterite aguda / diarreia aguda",
+  "cat": "Gastro / Proctologia",
+  "alias": "diarreia gastroenterite vomito dor de barriga gastro intestino solto desinteria",
+  "cid": [
+    [
+      "A09",
+      "Gastroenterite infecciosa"
+    ],
+    [
+      "K529",
+      "Diarreia funcional"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "OMS/UNICEF — diarreia aguda; SBP — GECA pediátrica",
+      "IDSA — diarreia infecciosa"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "A base do tratamento é REIDRATAÇÃO (VO, soro caseiro ou oral de farmácia) + manter alimentação — não 'trancar o intestino'. A maioria é viral autolimitada (2–5 dias). Antibiótico SÓ em disenteria (febre + muco/sangue) ou cólera/protossológico confirmado. Probiótico (Lactobacillus) encurta ~1 dia. Loperamida: só adulto sem febre/sangue, dose baixa, < 2 dias (não existe no cadastro — manter via orientação de não comprar 'comprimido para prender o intestino' em farmácia).",
+  "redFlags": [
+    "Desidratação grave/sinais de choque, anúria, olhos fundos, letargia — EV: reidratar",
+    "Sangue MUITO + febre alta + tenesmo — disenteria: cultura/ATB (azitromicina/cipro)",
+    "Dor abdominal intensa localizada ou defesa — abdome cirúrgico (apendicite 'gastro'): ver protocolo Abdome Agudo",
+    "Vômitos biliosos/abundantes sem diarreia — obstrução: imagem",
+    "Criança < 6 meses, idoso frágil, imunossuprimido, diabética em uso de metformina — desidrata desproporcional: revisa",
+    "Diarreia pós-antibiótico + febre + dor + leucocitose — C. difficile: toxin",
+    "Viagem internacional/suspeita de cólera/industrial surto — Vigilância sanitária (notificação)"
+  ],
+  "naoUsar": [
+    "Antibiótico de rotina (prolonga carriage e não cura vírus)",
+    "Loperamida em criança, febre ou sangue",
+    "Jejum prolongado ou 'só líquido' — manter alimentação",
+    "Antiemético em criança sem indicação clara",
+    "Antidiarreico 'trava-tudo' de farmácia"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Reidratação (o tratamento)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "sro",
+              "n": "Solução de reidratação oral (SRO)",
+              "ap": "sachês de SRO ou soro caseiro",
+              "pos": "Dissolver 1 sachê em 1 L de ÁGUA (nunca menos); tomar em goles frequentes: adultos 2–4 L nas primeiras 4 h conforme sede/perdas; continuar até a diarreia parar + 1 dia. Soro caseiro (1 L água + 1 col. sopa rasa açúcar + 1 dedo sal + meio copo suco laranja/limão): válido quando faltar o sachê."
+            },
+            "ped": "Criança: 50–100 mL/kg nas primeiras 4 h, em colheradas/oferecer sempre que evacuar (copinho, não mamadeira forçada)",
+            "motivo": "Intervenção que salva"
+          },
+          {
+            "novo": {
+              "id": "probiot",
+              "n": "Probiótico (Lactobacillus/Saccharomyces)",
+              "ap": "sachês",
+              "pos": "1 dose VO 2x/dia por 5–7 dias — encurta a duração em ~1 dia; opção segura em qualquer idade"
+            },
+            "ped": "Aplicável desde lactente",
+            "motivo": "Evidência razoável"
+          },
+          {
+            "base": "zinco",
+            "pos": "20 mg VO 1x/dia por 10–14 dias SOMENTE em crianças < 5 anos (OMS: reduz duração e recorrência)",
+            "ped": "< 6 meses: 10 mg/dia",
+            "motivo": "Pediatria OMS"
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético (se vômitos impedirem SRO)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ondansetrona",
+            "pos": "8 mg VO (ou sublingual) a cada 8 h por até 2 dias, 30 min antes de tentar SRO",
+            "ped": "0,15 mg/kg/dose (máx 8 mg) 8/8 h",
+            "motivo": "Permite reidratar; segurança melhor que metoclopramida em criança"
+          },
+          {
+            "base": "dimenidrinato",
+            "pos": "50 mg VO 6/6 h se vômito/náusea",
+            "ped": "12,5–25 mg 6/6 h",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "metoclopramida",
+            "pos": "10 mg VO 8/8 h por até 2 dias (adulto; risco extrapiramidal)",
+            "motivo": "Alternativa adulto"
+          },
+          {
+            "base": "bromoprida",
+            "pos": "10 mg VO 8/8 h por até 2 dias",
+            "motivo": "Alternativa"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico — SOMENTE disenteria (febre + muco/sangue)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "azitromicina",
+            "pos": "500 mg VO 1x/dia por 3 dias (1ª escolha em disenteria — Shigella resistente a quinolonas)",
+            "ped": "10 mg/kg/dia por 3 dias",
+            "motivo": "Disenteria bacteriana"
+          },
+          {
+            "base": "ciprofloxacino",
+            "pos": "500 mg VO 12/12 h por 3 dias — alternativa (resistência crescente)",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "metronidazol",
+            "pos": "500 mg VO 8/8 h por 7–10 dias se suspeita/confirmado amebíase (disenteria com muco + sangue SEM febre alta, epidemiologia)",
+            "ped": "20–30 mg/kg/dia dividido 8/8 h (max 1,5 g/d)",
+            "motivo": "Amebíase"
+          },
+          {
+            "base": "secnidazol",
+            "pos": "2 g VO dose única — alternativa ao metronidazol em amebíase/giardíase conforme esquema",
+            "motivo": "Dose única"
+          }
+        ]
+      },
+      {
+        "nome": "Sintomático intestinal",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "simeticona",
+            "pos": "40–75 mg VO após refeições se gases/distensão",
+            "ped": "20–40 mg/dose",
+            "motivo": "Distensão"
+          },
+          {
+            "base": "escopolamina",
+            "pos": "10 mg VO 8/8 h se cólica",
+            "ped": "≥ 6 anos: 5–10 mg 8/8 h",
+            "motivo": "Cólica"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Alimentação e retorno",
+              "ap": "",
+              "pos": "COMER: arroz, banana, batata-coxa, frango, sopa — NÃO ficar só em líquidos nem jejum; voltar à dieta normal conforme tolerância. Evitar gordura, café, álcool, leite (temporário em adultos), e AAS/AINE na fase. RETORNAR: sangue aumentando, febre alta, vômito sem parar, sede intensa com pouca urina, sonolência (criança: olho fundo, choro sem lágrima, moleira baixa) — PS. Lavar as mãos: gastroenterite é de boca a mão."
+            },
+            "motivo": "Base do tratamento domiciliar"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Hidratação EV se VO falha",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV 6/6 h se cólica/febre"
+          },
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "8 mg EV antes de tentar SRO de novo"
+          },
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "Amebíase grave/intolerância oral: 500 mg EV 8/8 h"
+          }
+        ]
+      }
+    ]
+  }
+}

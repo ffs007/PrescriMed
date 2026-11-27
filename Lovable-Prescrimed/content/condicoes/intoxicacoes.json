@@ -1,0 +1,189 @@
+{
+  "id": "intoxicacoes-exogenas",
+  "nome": "Intoxicação exógena",
+  "cat": "Emergência",
+  "alias": "intoxicacao envenenamento overdose superdose veneno suicidio cianeto organofosforado raticida",
+  "cid": [
+    [
+      "T509",
+      "Exposição a outras drogas/drogas não especificadas"
+    ],
+    [
+      "X40",
+      "Envenenamento acidental por psicodislépticos"
+    ],
+    [
+      "X60",
+      "Autolesão por psicotrópicos"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "CIAT/ANVISA 0800-722-6001",
+      "Goldfrank's Toxicologic Emergencies",
+      "SINITOX"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "ABCDE + glicemia SEMPRE (o 'intoxicado' hipoglicêmico é o que morre bobamente). NÃO induzir vômito. Carvão ativado 1 g/kg VO (≤ 1 h da ingestão; dose única repetida conforme agente) se via aérea protegida e sem contraindicação (corrosivo, hidrocarboneto, aspiração). Ligar no CIAT 0800-722-6001 com a embalagem na mão. Antídotos-chave: opioide → naloxona 0,4–2 mg EV (repetir até despertar; meia vida curta — observar re-sedação); paracetamol → N-acetilcisteína 150 mg/kg em 200 mL SF IV 1 h (começar se dose potencialmente tóxica ≥ 150 mg/kg ou Rumack-Matthew; não espere dosagem); organofosforado → atropina 2–4 mg EV dobra até secar secreções + pralidoxima; benZOdiazepínico → flumazenil SÓ em uso agudo puro (risco de convulsão no dependente — quase nunca); cianeto → hidroxocobalamina (kit Cyanokit); metanol/etilenoglicol → fomepizol/etanol + diálise; metemoglobinemia (anilina/dapsona) → azul de metileno; INR alto por varfarina → vitamina K/PCC. Isopropanol/etanol → dosar se rebaixado. CO → 100% O2 (carboxihemoglobina não aparece na SpO2!). Aspiração → RX. Psiquiátrico: avaliação de risco de suicídio ANTES da alta — nunca alta direta após 'melhorar'.",
+  "redFlags": [
+    "Rebaixamento com pupilas mióticas e FR baixa — opioide: naloxona já",
+    "Queimadura de boca + sialorreia — cáustico: NÃO diluir em volume, NÃO carvão, endoscopia em 12–24 h",
+    "Acidocele (hemólise urina) + cálcio baixo — fluoretos/oxalatos",
+    "Paciente 'estável' que piora em horas — acetaminofen (hepático dia 2), tramadol/ISRS (convulsão), metais pesados: observar 12–24 h",
+    "Tentativa de suicídio — alta só com avaliação psiquiátrica e rede de apoio acionada",
+    "Intoxicação alimentar em surto (várias pessoas) — notificação sanitária/Vigilância"
+  ],
+  "naoUsar": [
+    "Induzir vômito ou 'leite/ovo de rotina'",
+    "Carvão em cáustico/hidrocarboneto/via aérea não protegida",
+    "Flumazenil no desconhecido/dependente (convulsão fatal)",
+    "Bicarbonato de rotina sem QRS alargado (TCA) documentado",
+    "Alta sem avaliação psiquiátrica na tentativa de suicídio",
+    "Induzir vômito (ipecac) — abandonado",
+    "Carvão ativado em corrosivos, hidrocarbonetos, álcoois ou metais",
+    "Flumazenil de rotina em depressão de consciência de causa indeterminada"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antídotos disponíveis no cadastro",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "naloxona",
+            "motivo": "Opioide: 0,4–2 mg EV a cada 2–3 min até despertar e FR adequada; infusão se re-sedação"
+          },
+          {
+            "linha": 1,
+            "hosp": "glicose50",
+            "motivo": "Hipoglicemia (inclui beta-bloqueador/insulina): 40–100 mL EV"
+          },
+          {
+            "linha": 1,
+            "hosp": "tiamina_ev",
+            "motivo": "300 mg EV antes da glicose no alcoolista/desnutrido"
+          }
+        ]
+      },
+      {
+        "nome": "Agitação/delirium tóxico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "diazepam_ev",
+            "motivo": "5–10 mg EV — convulsão/agitação (não usar haloperidol na abstinência de álcool/benzo)"
+          },
+          {
+            "linha": 1,
+            "hosp": "haloperidol_im",
+            "motivo": "2,5–5 mg IM se agitação psicótica isolada — cuidado QTc/anticolinérgicos"
+          }
+        ]
+      },
+      {
+        "nome": "Descontaminação — carvão ativado",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "carvao_ativado",
+              "n": "Carvão ativado",
+              "ap": "pó/frasco com 50 g",
+              "via": "VO/NG",
+              "pos": "1 g/kg (adulto 50–100 g) em 1 dose, idealmente ≤ 1–2 h da ingestão. NÃO DAR: corrosivos, hidrocarbonetos, álcoois, metais (ferro/lítio), íleo/obstrução, paciente sem proteção de via aérea"
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antídotos específicos",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nac_intox",
+              "n": "N-acetilcisteína (paracetamol)",
+              "ap": "ampola 200 mg/mL",
+              "via": "IV",
+              "pos": "Protocolo de 21 ampolas (20 h): 150 mg/kg em 200 mL SG5%/SF em 1 h → 50 mg/kg em 4 h → 100 mg/kg em 16 h. Indicado se > 150 mg/kg ou > 7,5 g e 4 h depois do nível"
+            }
+          },
+          {
+            "novo": {
+              "id": "fomepizol_intox",
+              "n": "Fomepizol (metanol/etilenoglicol)",
+              "ap": "frasco 1 g/mL",
+              "via": "IV",
+              "pos": "15 mg/kg dose inicial → 10 mg/kg 12/12 h (→ 15 mg/kg após 48 h se diluição) até nível < 20 mg/dL + hemodiálise se acidose/lesão de órgão"
+            }
+          },
+          {
+            "novo": {
+              "id": "atropina_intox",
+              "n": "Atropina (colinérgico/organofosforado)",
+              "ap": "ampola 0,25 mg/mL ou 1 mg/mL",
+              "via": "IV",
+              "pos": "1–3 mg (0,02–0,05 mg/kg) EV, DUPLICAR a cada 5 min até atropinização (pulmão seco, FC > 80) → infusão 10–20% da dose total de resgate/h"
+            }
+          },
+          {
+            "novo": {
+              "id": "flumazenil_intox",
+              "n": "Flumazenil (benzo — NÃO rotina)",
+              "ap": "ampola 0,1 mg/mL",
+              "via": "IV",
+              "pos": "0,2 mg EV, repetir 0,1 mg até máx 1 mg — SÓ em dependente único de benzo sem benzo crônico (risco de convulsão refratária)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Alta após observação",
+              "ap": "",
+              "pos": "Voltar se: vômitos persistentes, dor abdominal, sonolência aumentando, icterícia (acetaminofen dia 2–3), urina escura, tremores. NÃO ingerir álcool por 72 h (potencializa quase tudo). Levar a lista de tudo que foi ingerido em qualquer retorno."
+            },
+            "motivo": "Fase tardia"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Prevenção em casa",
+              "ap": "",
+              "pos": "Remédios e produtos de limpeza em armário alto/trancado SEMPRE (crianças e idosos); nunca reutilizar embalagens de alimentos para produtos químicos; guardar na embalagem original (o CIAT precisa do rótulo); descartar medicamentos vencidos na farmácia, não no lixo comum."
+            },
+            "motivo": "Prevenção"
+          },
+          {
+            "novo": {
+              "id": "orient3",
+              "n": "Tentativa de suicídio — rede",
+              "ap": "",
+              "pos": "Nenhuma alta sem avaliação psiquiátrica e contato da família/APS em 48–72 h (CAPS, UBS, CVV 188). Retirada de meios letais de casa combinada com o acompanhante. Retorno agendado antes de ir embora."
+            },
+            "motivo": "Cuidado pós-alta em risco"
+          }
+        ]
+      }
+    ]
+  }
+}

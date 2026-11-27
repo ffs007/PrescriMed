@@ -1,0 +1,613 @@
+{
+  "id": "ws-inf_07",
+  "nome": "Síndrome respiratória viral grave",
+  "cat": "Emergência",
+  "alias": "sindrome respiratoria viral grave srag sindrome respiratoria aguda grave influenza grave covid grave",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (INF-07_srag.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_ministerio_saude: definição de SRAG, notificação imediata e fluxo de oseltamivir",
+      "[verificar] protocolo_institucional: critérios de UTI, alvo de saturação e fluxo de alto fluxo e VNI",
+      "[verificar] sociedade_respiratoria: ventilação protetora, prona e indicação de ECMO",
+      "[verificar] sociedade_infectologia: indicação de corticoide na COVID, coinfecção bacteriana e descalonamento",
+      "[verificar] anvisa: apresentações de oseltamivir, dexametasona, enoxaparina e antibióticos",
+      "[verificar] literatura: prona, ECMO, anticoagulação profilática e seguimento pós-viral",
+      "[verificar] vigilancia_epidemiologica: critérios de notificação de SRAG e COVID-19 no município"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "INF-07 em 2026-11-27",
+    "fundido_workspace": "INF-07 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: SpO2 abaixo de 90% em ar ambiente ou queda de 3 pontos ou mais em relação ao basal -> oxigênio titulado imediato, gasometria e avaliação para UTI; frequência respiratória acima de 30 por minuto ou uso de musculatura acessória -> cânula nasal de alto fluxo ou VNI e acionar UTI; rebaixamento de consciência, agitação ou Glasgow 13 ou menos -> avaliar via aérea e intubação, sem VNI; hipotensão, tempo de enchimento capilar acima de 3 s ou lactato acima de 2 mmol/L -> sala vermelha, volume cauteloso e vasopressor se necessário. 1) Confirmar o quadro e separar os quatro cenários: síndrome gripal complicada, pneumonia viral, SDRA ou coinfecção bacteriana 2) Medir SpO2 em ar ambiente, frequência respiratória e esforço; classificar em leve, moderado ou grave 3) Iniciar oxigênio titulado a 92-96% e escalar o dispositivo conforme a FiO2 necessária 4) Iniciar oseltamivir na suspeita de influenza, sem esperar teste, e dexametasona apenas se COVID com hipoxemia 5) Colher RT-PCR ou teste rápido, hemograma, proteína C reativa, gasometria e imagem de tórax 6) Decidir internação, enfermaria monitorizada ou UTI pelos critérios de PaO2/FiO2, frequência respiratória e nível de consciência 7) Se hipoxemia refratária a máscara: cânula nasal de alto fluxo ou VNI, com reavaliação em 1 a 2 h pelo índice ROX 8) Se falha do suporte não invasivo: intubação com sequência rápida e ventilação protetora de 6 mL/kg de peso predito 9) Se PaO2/FiO2 abaixo de 150 em ventilação protetora: prona p",
+  "redFlags": [
+    "SpO2 abaixo de 90% em ar ambiente ou queda de 3 pontos ou mais em relação ao basal -> oxigênio titulado imediato, gasometria e avaliação para UTI",
+    "frequência respiratória acima de 30 por minuto ou uso de musculatura acessória -> cânula nasal de alto fluxo ou VNI e acionar UTI",
+    "rebaixamento de consciência, agitação ou Glasgow 13 ou menos -> avaliar via aérea e intubação, sem VNI",
+    "hipotensão, tempo de enchimento capilar acima de 3 s ou lactato acima de 2 mmol/L -> sala vermelha, volume cauteloso e vasopressor se necessário",
+    "relação PaO2/FiO2 abaixo de 200 ou infiltrado bilateral extenso -> ventilação protetora, prona e UTI",
+    "cianose, respiração paradoxal ou ausculta com murmúrio muito reduzido -> intubação imediata com sequência rápida",
+    "febre persistente além de 72 h, escarro purulento ou piora depois de melhora inicial -> culturas, imagem e antibiótico dirigido ao foco",
+    "oligúria, livedo ou extremidades frias -> avaliar volemia, diurese horária e UTI"
+  ],
+  "naoUsar": [
+    "alergia ao fosfato de oseltamivir",
+    "insuficiência renal sem ajuste de dose",
+    "alergia grave a cefalosporina",
+    "uso simultâneo de solução contendo cálcio no mesmo acesso",
+    "sangramento ativo",
+    "plaquetas abaixo de 50.000/mm³ em dose terapêutica",
+    "história de trombocitopenia induzida por heparina",
+    "endocardite infecciosa"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter isolamento e usar máscara até a orientação da vigilância"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "AAS, AINE e corticoide por conta própria"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antiviral inibidor da neuraminidase",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "oseltamivir",
+            "pos": "75 mg. Via VO ou sonda nasoenteral. 12/12 h. 5 dias.",
+            "posTodas": true,
+            "motivo": "influenza suspeita ou confirmada, sobretudo em grupo de risco e em doente grave (1a linha) influenza confirmada ou suspeita, completando o curso iniciado no hospital",
+            "nota": "Uso direto por via oral; em sonda nasoenteral, abrir a cápsula e diluir o conteúdo em 10 mL de água - monitorar: função renal a cada 48 h; monitorar: náusea e vômito; monitorar: estado mental e agitação; monitorar: SpO2 e frequência respiratória; monitorar: temperatura e curva de defervescência",
+            "dose": {
+              "texto": "75 mg; 12/12 h; 5 dias; max. 150 mg 12/12 h (300 mg/dia) em doença grave ou imunossuprimido",
+              "status": "ok",
+              "valor": 75,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 150,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Heparina de baixo peso molecular",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa preenchida 20 mg/0,2 mL",
+              "q": "",
+              "pos": "40 mg em profilaxia; 1 mg/kg em dose terapêutica. Via SC. Profilaxia 1x/dia; terapêutica 12/12 h. Durante a internação e até 14 dias se mobilidade reduzida persistir."
+            },
+            "motivo": "profilaxia de tromboembolismo em todo paciente internado com SRAG; tratamento apenas com TEV confirmado ou alta suspeita documentada (1a linha) alta com mobilidade reduzida e sem contraindicação de sangramento",
+            "nota": "Pronta para uso; não expelir a bolha da seringa antes da aplicação - monitorar: plaquetas na admissão e a cada 3 a 4 dias; monitorar: sinais de sangramento; monitorar: creatinina e clearance; monitorar: anti-Xa se obesidade extrema, gestação ou insuficiência renal leve; monitorar: hematoma e dor no local · NÃO: sangramento ativo; plaquetas abaixo de 50.000/mm³ em dose terapêutica; história de trombocitopenia induzida por heparina; endocardite infecciosa; insuficiência renal grave em dose terapêutica · Obs: Profilaxia em todos sem contraindicação; IMC acima de 40: 40 mg 12/12 h. Dose terapêutica empírica em COVID sem TEV confirmado…",
+            "dose": {
+              "texto": "40 mg em profilaxia; 1 mg/kg em dose terapêutica; profilaxia 1x/dia; terapêutica 12/12 h; durante a internação e até 14 dias se mobilidade reduzida persistir; max. 1 mg/kg 12/12 h em terapêutica",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Oxigenoterapia",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "oxigenio_medicinal",
+              "n": "Oxigênio medicinal",
+              "ap": "cateter nasal tipo óculos (1 a 6 L/min)",
+              "q": "",
+              "pos": "Titulado para SpO2 entre 92% e 96%; 88% a 92% em DPOC com risco de retenção de CO2. Via inalatória. Contínuo. Até retirada com SpO2 de 92% ou mais em ar ambiente por 24 h. Contínuo, com reavaliação a cada hora na fase aguda."
+            },
+            "motivo": "hipoxemia com SpO2 abaixo de 92% em ar ambiente (1a linha)",
+            "nota": "Umidificar quando o fluxo passar de 4 L/min; ajustar o dispositivo ao fluxo e à FiO2 prescritos e conferir a conexão antes de sair do leito - monitorar: SpO2 contínua; monitorar: frequência respiratória e uso de musculatura acessória; monitorar: gasometria 1 h após iniciar ou mudar o dispositivo; monitorar: conforto, u · NÃO: DPOC com retenção crônica de CO2 sem titulação; hiperóxia mantida com SpO2 acima de 96% · Obs: Não buscar SpO2 acima de 96%: hiperóxia não traz benefício. Saturação normal em repouso não exclui hipoxemia de esforço. Se precisar de FiO2 acima de 0,5 ou mantiver SpO2 abaixo de 92% com máscara, avaliar alto…",
+            "dose": {
+              "texto": "titulado para SpO2 entre 92% e 96%; 88% a 92% em DPOC com risco de retenção de CO2; contínuo; até retirada com SpO2 de 92% ou mais em ar ambiente por 24 h; max. cânula nasal de alto fluxo até 60 L/min com FiO2 de 0,21 a 1,0",
+              "status": "ok",
+              "valor": 92,
+              "valor_max": null,
+              "unidade": "%",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Isolamento com precauções para gotículas e aerossol",
+              "ap": "",
+              "q": "",
+              "pos": "quarto privativo ou coorte, máscara cirúrgica no paciente e PFF2/N95 na equipe; precaução de aerossol em intubação, broncoscopia, prona, aspiração e fisioterapia respiratória"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Notificação compulsória imediata",
+              "ap": "",
+              "q": "",
+              "pos": "SRAG e COVID-19 entram na lista de notificação imediata: preencher e-SUS Notifica ou ficha do SINAN em até 24 h e comunicar a vigilância do município"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Oxigenoterapia titulada com alvo definido",
+              "ap": "",
+              "q": "",
+              "pos": "alvo de SpO2 entre 92% e 96%; registrar dispositivo, fluxo e FiO2 a cada turno e escalar se a necessidade de oxigênio subir"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Posição prona acordada em paciente com alto fluxo ou VNI",
+              "ap": "",
+              "q": "",
+              "pos": "prona vigil por 1 a 2 h, com almofadas em tórax e quadril, monitorização contínua e retorno imediato a supino se piorar o conforto ou a saturação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Ventilação protetora desde a intubação",
+              "ap": "",
+              "q": "",
+              "pos": "volume corrente de 6 mL/kg de peso predito, platô até 30 cmH2O, pressão de distensão até 15 cmH2O e hipercapnia permissiva com pH de 7,25 ou mais"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Estratégia conservadora de fluidos",
+              "ap": "",
+              "q": "",
+              "pos": "balanço hídrico diário, bolus apenas com hipoperfusão documentada e reavaliação da ausculta depois de cada volume"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Profilaxia de tromboembolismo",
+              "ap": "",
+              "q": "",
+              "pos": "prescrever enoxaparina profilática na admissão, salvo contraindicação registrada; reavaliar a dose em obesidade, insuficiência renal e sangramento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Controle glicêmico e nutrição precoce",
+              "ap": "",
+              "q": "",
+              "pos": "alvo de glicemia entre 140 e 180 mg/dL, dieta enteral em até 48 h se o paciente não conseguir via oral e vigilância de disfagia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Reabilitação e mobilização precoce",
+              "ap": "",
+              "q": "",
+              "pos": "fisioterapia motora e respiratória desde a estabilização hemodinâmica, com sedação interrompida diariamente e teste de respiração espontânea"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_10",
+              "n": "Vacinação e quimioprofilaxia de contatos",
+              "ap": "",
+              "q": "",
+              "pos": "atualizar influenza e COVID-19; em contato domiciliar de alto risco de influenza, oseltamivir 75 mg 1x/dia por 7 a 10 dias"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_11",
+              "n": "Decisão compartilhada sobre limite terapêutico",
+              "ap": "",
+              "q": "",
+              "pos": "discutir com a família, ainda na enfermaria, o que fazer em caso de falha de suporte; registrar a diretiva no prontuário antes da intubação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-07"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cefalosporina de terceira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "coinfecção bacteriana comunitária documentada ou fortemente suspeita em SRAG (1a linha)",
+            "nota": "Reconstituir em 10 mL de água para injeção e diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: função renal e hepática; monitorar: curva de temperatura; monitorar: secreção respiratória e ausculta; monitorar: diarreia; monitorar: hemograma e proteína C reativa em 48 a 72 h · NÃO: alergia grave a cefalosporina; uso simultâneo de solução contendo cálcio no mesmo acesso · Obs: Só entra com foco bacteriano: consolidação lobar, escarro purulento, leucocitose com desvio ou piora após 48 a 72 h. Reavaliar e suspender se o foco não se confirmar",
+            "dose": {
+              "texto": "2 g; 1x/dia; 5 a 7 dias; max. 4 g/dia (2 g 12/12 h)",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "febre e desconforto em SRAG (1a linha) febre ou desconforto; máximo 3 g/dia",
+            "nota": "Uso direto por via oral; o frasco para infusão é administrado sem diluição adicional - monitorar: temperatura; monitorar: transaminases se uso acima de 3 dias; monitorar: dor e conforto; monitorar: dose total diária somada de todas as fontes · NÃO: hepatopatia grave; desnutrição crônica; alcoolismo ativo; alergia · Obs: Evitar AAS e AINE na SRAG: risco de sangramento, lesão renal e síndrome de Reye na influenza. Não associar outro produto que contenha paracetamol · Renal: CrCl abaixo de 30: intervalo de 8 h",
+            "dose": {
+              "texto": "750 mg; 6/6 h se febre ou dor; até 72 h, enquanto houver febre; max. 3 g/dia",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "azitromicina_ev",
+            "motivo": "cobertura de patógenos atípicos na coinfecção bacteriana comunitária, associada a betalactâmico (alternativa)",
+            "nota": "Reconstituir o frasco em 4,8 mL de água para injeção e diluir 500 mg em 250 mL de SF 0,9% ou SG 5%, com concentração final entre 1 e 2 mg/mL - monitorar: ECG e QTc em paciente com risco cardíaco; monitorar: potássio e magnésio; monitorar: transaminases; monitorar: diarreia · NÃO: QTc acima de 500 ms; hipocalemia não corrigida; uso concomitante de outras drogas que prolongam o QT; hepatopatia grave · Obs: Não tem benefício em COVID isolada e não deve ser associada de rotina a antiviral. Entra apenas no cenário de coinfecção bacteriana comunitária, junto com betalactâmico",
+            "dose": {
+              "texto": "500 mg; 1x/dia; 3 dias por via IV, completando 5 dias por via oral; max. 500 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Heparina não fracionada",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "heparina_sc",
+            "motivo": "profilaxia ou anticoagulação terapêutica quando a enoxaparina é contraindicada, indisponível ou há insuficiência renal grave (alternativa)",
+            "nota": "Pronta para uso por via subcutânea; para infusão contínua diluir a dose em 100 mL de SF 0,9% e administrar em bomba - monitorar: aPTT de 6/6 h até estabilizar e depois 1x/dia; monitorar: plaquetas a cada 2 a 3 dias; monitorar: sinais de sangramento; monitorar: potássio em uso prolongado · NÃO: sangramento ativo; trombocitopenia induzida por heparina prévia; plaquetas abaixo de 30.000/mm³; hipertensão intracraniana com risco de sangramento · Obs: Alternativa à enoxaparina em ClCr abaixo de 30, obesidade extrema, gestação ou risco de sangramento. Reversível com protamina",
+            "dose": {
+              "texto": "5.000 UI em profilaxia; terapêutica com bolus de 80 UI/kg seguido de 18 UI/kg/h; profilaxia 8/8 h ou 12/12 h; terapêutica em infusão contínua; durante a internação, com reavaliação diária da indicação; max. titulada pelo aPTT, alvo de 1,5 a 2,5 vezes o controle",
+              "status": "ok",
+              "valor": 5000,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticosteroide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dexametasona_ev",
+            "motivo": "COVID-19 com hipoxemia que precisa de oxigênio suplementar ou tem SpO2 abaixo de 94% em ar ambiente (condicional)",
+            "nota": "Uso direto por via oral; por via IV, bolus lento ou diluído em 20 mL de SF 0,9% - monitorar: glicemia capilar de 6/6 h; monitorar: sódio e potássio; monitorar: sinais de infecção secundária; monitorar: força muscular e deglutição; monitorar: glicosúria e balanço hídrico",
+            "dose": {
+              "texto": "6 mg; 1x/dia; 7 a 10 dias; max. 6 mg/dia",
+              "status": "ok",
+              "valor": 6,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 6,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Penicilina com inibidor de betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "piperacilina_tazobactam",
+              "n": "Piperacilina-tazobactam",
+              "ap": "frasco-ampola 4,5 g (4 g de piperacilina + 0,5 g de tazobactam)",
+              "via": "IV",
+              "pos": "4,5 g. Via IV. 6/6 h. 7 dias, com reavaliação em 48 a 72 h. 30 minutos; infusão estendida de 4 h nos casos graves."
+            },
+            "motivo": "pneumonia tardia, suspeita de pneumonia associada à ventilação ou choque séptico com foco pulmonar (condicional)",
+            "nota": "Reconstituir em 20 mL de SF 0,9% ou água para injeção e diluir em 100 mL de SF 0,9% - monitorar: creatinina e diurese; monitorar: plaquetas; monitorar: diarreia; monitorar: nível de consciência e crise convulsiva; monitorar: hemoculturas e cultura de secreção traqueal · NÃO: alergia grave a penicilina ou a inibidor de betalactamase · Obs: Escolha quando há suspeita de germe hospitalar ou ventilação prolongada; descalonar assim que a cultura sair. Não usar como antibiótico de rotina na SRAG viral · Renal: CrCl 20 a 40: 3,375 g 6/6 h; CrCl abaixo de 20: 2,25 g 6/6 h; hemodiálise: 2,25 g 8/8 h",
+            "dose": {
+              "texto": "4,5 g; 6/6 h; 7 dias, com reavaliação em 48 a 72 h; max. 18 g/dia de piperacilina",
+              "status": "ok",
+              "valor": 4.5,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 18,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cristaloide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "solucao_fisiologica",
+              "n": "Solução fisiológica 0,9%",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "250 a 500 mL em bolus. Via IV. Reavaliar perfusão e ausculta após cada bolus. Até 3 bolus, com reavaliação entre eles. 15 a 30 minutos por bolus."
+            },
+            "motivo": "reposição volêmica na hipoperfusão associada e diluição de drogas; não é tratamento da SRAG (condicional)",
+            "nota": "Pronta para uso; aquecer se hipotermia - monitorar: ausculta pulmonar antes e depois de cada bolus; monitorar: balanço hídrico; monitorar: diurese horária; monitorar: lactato e perfusão periférica; monitorar: peso diário · NÃO: edema pulmonar ou sobrecarga estabelecida; SARA com balanço hídrico já positivo e sem hipoperfusão; anúria sem diálise · Obs: No SARA a estratégia é conservadora de fluidos: repetir bolus apenas com hipoperfusão documentada, não por taquicardia isolada",
+            "dose": {
+              "texto": "250 a 500 mL em bolus; reavaliar perfusão e ausculta após cada bolus; até 3 bolus, com reavaliação entre eles; max. individualizar; evitar balanço positivo acima de 1 a 2 L nas primeiras 24 h no SARA",
+              "status": "ok",
+              "valor": 250,
+              "valor_max": 500,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Imunomodulador anti-interleucina 6",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "tocilizumabe",
+              "n": "Tocilizumabe",
+              "ap": "frasco 80 mg/4 mL",
+              "via": "IV",
+              "pos": "8 mg/kg. Via IV. Dose única; repetir uma vez após 12 a 24 h se não houver melhora e não houver toxicidade. 1 a 2 doses. 60 minutos."
+            },
+            "motivo": "COVID-19 grave com hipoxemia progressiva, proteína C reativa ou ferritina muito elevadas e necessidade crescente de oxigênio, em uso de dexametasona (resgate)",
+            "nota": "Diluir a dose calculada em 100 mL de SF 0,9% e administrar em bomba de infusão - monitorar: neutrófilos, plaquetas e transaminases antes e 72 h após; monitorar: proteína C reativa e ferritina; monitorar: sinais de infecção secundária; monitorar: dor abdominal e alteração do hábito intestinal · NÃO: infecção bacteriana, fúngica ou viral não controlada; neutrófilos abaixo de 500/mm³; plaquetas abaixo de 50.000/mm³; transaminases acima de 5 vezes o limite superior; suspeita de diverticulite ou perfuração intestinal; imunossupressão grave não relacionada à COVID · Obs: Reserva para serviço com laboratório disponível; não usar em…",
+            "dose": {
+              "texto": "8 mg/kg; dose única; repetir uma vez após 12 a 24 h se não houver melhora e não houver toxicidade; 1 a 2 doses; max. 800 mg por dose",
+              "status": "ok",
+              "valor": 8,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 800,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "INF-07",
+    "versao": "0.2.0",
+    "arquivo": "INF-07_srag.json",
+    "area": "Infectologia",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

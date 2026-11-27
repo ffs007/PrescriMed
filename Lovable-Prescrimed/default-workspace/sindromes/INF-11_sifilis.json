@@ -1,0 +1,1114 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "INF-11",
+    "area": "Infectologia",
+    "nome": "Sífilis",
+    "aliases": [
+      "Sífilis",
+      "sífilis primária",
+      "sífilis secundária",
+      "sífilis latente",
+      "sífilis latente tardia",
+      "neurossífilis",
+      "cancro duro",
+      "lues"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Sífilis é infecção sistêmica pelo Treponema pallidum, de transmissão sexual e vertical, cujo tratamento e seguimento dependem inteiramente do estágio: primária (cancro duro indolor), secundária (rash maculopapular com palmas e plantas, condiloma plano, alopecia, febre), latente recente (menos de um ano), latente tardia (mais de um ano ou duração ignorada) e terciária (goma, cardiovascular, neurossífilis). A regra que organiza tudo é estadiar antes de tratar. Penicilina benzatina 2,4 milhões de UI intramuscular resolve todos os estágios sem neurossífilis — dose única na primária, secundária e latente recente, e três doses semanais na latente tardia. Neurossífilis exige penicilina cristalina intravenosa, 18 a 24 milhões de UI por dia, por 10 a 14 dias: benzatina não atinge concentração treponemicida no líquor e não trata neurossífilis, e esse é o erro que deixa sequela. Alérgico não gestante recebe doxiciclina; gestante alérgica é dessensibilizada e tratada com penicilina, porque doxiciclina é contraindicada e o esquema alternativo não previne sífilis congênita. O seguimento é feito por teste não treponêmico quantitativo (VDRL ou RPR), esperando queda de duas diluições, e todo paciente com sífilis precisa de teste de HIV, de hepatites e de tratamento dos parceiros.",
+    "inclusao": [
+      "Úlcera genital indolor com bordos endurecidos e adenopatia inguinal",
+      "Rash maculopapular com acometimento de palmas e plantas, condiloma plano ou alopecia em placas",
+      "Teste treponêmico e teste não treponêmico reagentes em rastreamento, pré-natal ou doação de sangue",
+      "Parceiro sexual de caso confirmado, independentemente de sintoma",
+      "Neurossífilis suspeita: sintomas oculares, auditivos, meningismo, alteração de marcha ou cognitiva",
+      "Gestante com qualquer teste reagente, mesmo com título baixo",
+      "Seguimento de tratamento prévio com título estável ou em elevação"
+    ],
+    "exclusao": [
+      {
+        "situacao": "lesão genital vesiculosa e dolorosa com recorrência",
+        "fluxo": "herpes genital, com fluxo próprio"
+      },
+      {
+        "situacao": "úlcera genital dolorosa com adenopatia supurativa",
+        "fluxo": "investigar cancro mole e outras causas de úlcera genital"
+      },
+      {
+        "situacao": "rash com temporalidade clara após novo medicamento",
+        "fluxo": "reação medicamentosa, com suspensão do fármaco"
+      },
+      {
+        "situacao": "teste treponêmico reagente isolado, sem teste não treponêmico e sem clínica",
+        "fluxo": "não tratar de imediato; repetir não treponêmico e avaliar história"
+      },
+      {
+        "situacao": "suspeita de sífilis congênita em recém-nascido",
+        "fluxo": "pediatria e neonatologia, com investigação no líquor"
+      },
+      {
+        "situacao": "instabilidade neurológica aguda com déficit focal",
+        "fluxo": "hospitalar, com imagem e punção lombar"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "perda visual, uveíte, neurite óptica ou embaçamento súbito",
+        "por_que": "sífilis ocular, que é forma de neurossífilis",
+        "acao": "internar, penicilina cristalina venosa e avaliação oftalmológica imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "hipoacusia súbita, zumbido ou vertigem",
+        "por_que": "sífilis otológica, que também é tratada como neurossífilis",
+        "acao": "audiometria, penicilina cristalina venosa e avaliação de otorrinolaringologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "cefaleia intensa, rigidez de nuca, confusão ou AVC em adulto jovem",
+        "por_que": "neurossífilis meníngea ou meningovascular",
+        "acao": "hospitalizar, punção lombar e penicilina cristalina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "alteração de marcha, parestesias de membros inferiores ou dor lancinante",
+        "por_que": "tabes dorsalis",
+        "acao": "internar, punção lombar e tratamento venoso",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "gestante com teste reagente sem tratamento ou com tratamento incompleto",
+        "por_que": "risco de sífilis congênita, com morte fetal e sequela neurológica",
+        "acao": "tratar na mesma consulta, notificar e garantir o esquema completo",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "febre, calafrios, mialgia e cefaleia nas primeiras 24 horas após a primeira dose",
+        "por_que": "reação de Jarisch-Herxheimer por liberação de endotoxinas",
+        "acao": "antitérmico, hidratação e observação; não confundir com alergia nem suspender o tratamento",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "urticária, angioedema, broncoespasmo ou descamação após penicilina",
+        "por_que": "reação alérgica grave",
+        "acao": "suspender, tratar a reação e definir dessensibilização ou esquema alternativo",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "título de VDRL que não cai ou sobe no seguimento",
+        "por_que": "falha terapêutica, reinfecção ou neurossífilis não tratada",
+        "acao": "reavaliar adesão e parceria, pesquisar neurossífilis e retratar",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quando apareceu a lesão genital e ela dói?",
+      "Apareceu rash nas palmas das mãos e nas plantas dos pés, mesmo sem coceira?",
+      "Qual a data da última relação sem preservativo e quantos parceiros nos últimos 12 meses?",
+      "Já teve teste reagente antes e fez tratamento completo? Qual o título e a data?",
+      "Tem alteração visual, auditiva, dor de cabeça, dor nos membros ou dificuldade para andar?",
+      "Está gestante e com quantas semanas?",
+      "Tem HIV, está em tratamento e qual a carga viral e o CD4?",
+      "Tem alergia a penicilina e qual foi o tipo de reação?",
+      "Usa drogas injetáveis ou compartilha material?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Sífilis primária, secundária ou latente recente, sem neurossífilis",
+        "escolha": "Penicilina benzatina 2,4 milhões de UI intramuscular em dose única",
+        "porque": "É o esquema de maior eficácia e o único com proteção comprovada contra transmissão vertical; dose única garante adesão completa"
+      },
+      {
+        "cenario": "Sífilis latente tardia ou duração ignorada, sem neurossífilis",
+        "escolha": "Penicilina benzatina 2,4 milhões de UI em três doses, nos dias 0, 7 e 14",
+        "porque": "O treponema de multiplicação lenta exige exposição prolongada; atraso acima de 9 dias entre doses obriga a reiniciar o esquema"
+      },
+      {
+        "cenario": "Neurossífilis confirmada ou presumida por clínica ocular, auditiva ou neurológica",
+        "escolha": "Penicilina cristalina 18 a 24 milhões de UI por dia por via venosa, por 10 a 14 dias",
+        "porque": "Só a penicilina cristalina atinge concentração treponemicida no líquor; benzatina não trata neurossífilis"
+      },
+      {
+        "cenario": "Neurossífilis quando a penicilina cristalina não está disponível",
+        "escolha": "Penicilina procaína 2,4 milhões de UI intramuscular ao dia com probenecida 500 mg a cada 6 horas, por 10 a 14 dias",
+        "porque": "A probenecida bloqueia a secreção tubular e mantém nível liquórico; sem ela o esquema não é confiável"
+      },
+      {
+        "cenario": "Alérgico à penicilina, não gestante, sem neurossífilis",
+        "escolha": "Doxiciclina 100 mg a cada 12 horas por 14 dias na sífilis recente e por 28 dias na latente tardia",
+        "porque": "É a alternativa oral com eficácia aceitável; exige adesão a duas tomadas diárias e não é opção na gestação"
+      },
+      {
+        "cenario": "Alérgico à penicilina com neurossífilis e sem possibilidade de dessensibilização imediata",
+        "escolha": "Ceftriaxona 2 g por via venosa ao dia por 10 a 14 dias",
+        "porque": "A ceftriaxona atinge o líquor, mas a evidência é menor que a da penicilina; reservar para quando a dessensibilização não é possível"
+      },
+      {
+        "cenario": "Gestante com sífilis",
+        "escolha": "Penicilina benzatina no esquema do estágio; se alérgica, dessensibilização em ambiente hospitalar e penicilina",
+        "porque": "Doxiciclina é teratogênica e não previne sífilis congênita; a penicilina é a única opção que protege o feto"
+      },
+      {
+        "cenario": "Pessoa vivendo com HIV",
+        "escolha": "Mesmo esquema por estágio, com seguimento sorológico mais frequente e punção lombar se houver sintoma neurológico ou título alto",
+        "porque": "A resposta sorológica pode ser mais lenta e a neurossífilis é mais frequente; o esquema não muda, mas a vigilância muda"
+      },
+      {
+        "cenario": "Parceiro sexual de caso recente, assintomático e sem exames",
+        "escolha": "Tratar empiricamente com penicilina benzatina 2,4 milhões de UI em dose única, sem esperar sorologia",
+        "porque": "A janela sorológica deixa o parceiro infeccioso e não detectado; tratar interrompe a cadeia"
+      },
+      {
+        "cenario": "Teste treponêmico reagente com não treponêmico não reagente e sem clínica",
+        "escolha": "Repetir o não treponêmico em 2 a 4 semanas e, se persistir, avaliar história de tratamento e risco",
+        "porque": "Pode ser cicatriz sorológica de infecção tratada ou falso-positivo; tratar sem estadiar expõe a tratamento desnecessário"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "penicilina_benzatina",
+        "agente": "penicilina G benzatina",
+        "papel": "primeira_linha",
+        "indicacao": "sífilis primária, secundária e latente recente em dose única; latente tardia em três doses semanais",
+        "dose": "2,4 milhões de UI",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única ou semanal, nos dias 0, 7 e 14",
+        "duracao": "1 dose na sífilis recente; 3 doses na latente tardia",
+        "dose_maxima": "7,2 milhões de UI no esquema completo de três semanas",
+        "contraindicacoes": [
+          "neurossífilis",
+          "alergia grave a penicilina sem dessensibilização",
+          "hipersensibilidade a penicilina"
+        ],
+        "efeitos_adversos": [
+          "dor intensa no local da aplicação",
+          "reação de Jarisch-Herxheimer em até 50% dos casos",
+          "abscesso glúteo por técnica inadequada",
+          "reação de Hoigne com medo, alucinação e convulsão por injeção intravascular acidental"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1.200.000 UI",
+          "frasco-ampola 2.400.000 UI",
+          "seringa pronta 2.400.000 UI"
+        ],
+        "preparo": "Reconstituir em 4 mL de água para injeção e aplicar imediatamente; se o protocolo local previr diluição em lidocaína 1% sem vasoconstritor para reduzir a dor, seguir o protocolo e registrar",
+        "tempo_infusao": "injeção intramuscular profunda em 1 a 2 minutos, em quadrante superior lateral do glúteo, com agulha 25 x 7 mm ou maior e técnica em Z",
+        "monitorizacao": [
+          "dor e hematoma no local",
+          "febre e calafrios nas primeiras 24 horas",
+          "reação alérgica nos primeiros 30 minutos",
+          "VDRL quantitativo basal e seriado",
+          "data e lote de cada dose no cartão de tratamento"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Benzatina não atinge concentração treponemicida no líquor e está formalmente contraindicada em neurossífilis. Nunca substituir por doxiciclina em gestante. A dose é a mesma em HIV positivo. O atraso acima de 9 dias entre as doses da latente tardia reinicia o esquema",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil, PCDT de IST",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_cristalina",
+        "agente": "penicilina G cristalina (aquosa)",
+        "papel": "primeira_linha",
+        "indicacao": "neurossífilis, incluindo formas meníngea, meningovascular, ocular, otológica e tardia",
+        "dose": "18 a 24 milhões de UI por dia",
+        "unidade": "UI",
+        "via": "IV",
+        "frequencia": "3 a 4 milhões de UI a cada 4 horas ou infusão contínua de 18 a 24 milhões de UI por dia",
+        "duracao": "10 a 14 dias",
+        "dose_maxima": "24 milhões de UI por dia",
+        "contraindicacoes": [
+          "alergia grave a penicilina sem dessensibilização",
+          "insuficiência renal sem ajuste de dose"
+        ],
+        "efeitos_adversos": [
+          "reação de Jarisch-Herxheimer",
+          "convulsão com dose alta em nefropata",
+          "flebite no local da infusão",
+          "hipernatremia e hipocalemia pela carga de sódio e potássio"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 5.000.000 UI",
+          "frasco-ampola 10.000.000 UI"
+        ],
+        "preparo": "Reconstituir em água destilada e diluir em SF 0,9% (5 milhões de UI em 100 mL), infundindo de forma contínua ou intermitente a cada 4 horas",
+        "tempo_infusao": "infusão contínua ou 30 minutos em cada dose intermitente",
+        "monitorizacao": [
+          "creatinina, sódio e potássio",
+          "nível de consciência e convulsão",
+          "febre e mialgia após a primeira dose",
+          "local da punção e sinais de flebite",
+          "VDRL no líquor e no soro no seguimento"
+        ],
+        "ajuste_renal": "Reduzir a dose diária conforme a filtração; em diálise, administrar após a sessão",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Cada 5 milhões de UI contêm cerca de 1,5 g de sódio e 1,7 mEq de potássio: atenção em nefropata e cardiopata. Não substituir por benzatina e não encurtar para menos de 10 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil, PCDT de IST",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_procaina",
+        "agente": "penicilina G procaína",
+        "papel": "alternativa",
+        "indicacao": "neurossífilis quando a penicilina cristalina não está disponível, sempre associada à probenecida",
+        "dose": "2,4 milhões de UI",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "1x/dia",
+        "duracao": "10 a 14 dias",
+        "dose_maxima": "2,4 milhões de UI por dia",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "alergia a procaína",
+          "insuficiência renal grave"
+        ],
+        "efeitos_adversos": [
+          "dor local intensa",
+          "reação de Jarisch-Herxheimer",
+          "reação de Hoigne com sensação de morte iminente",
+          "abscesso no local"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 400.000 UI",
+          "frasco-ampola 2.000.000 UI"
+        ],
+        "preparo": "Reconstituir conforme a bula e aplicar em glúteo profundo; associar probenecida 500 mg por via oral a cada 6 horas",
+        "tempo_infusao": "injeção intramuscular profunda em 1 a 2 minutos",
+        "monitorizacao": [
+          "dor local e abscesso",
+          "sintomas neuropsíquicos imediatos",
+          "creatinina e ácido úrico pela probenecida",
+          "VDRL seriado"
+        ],
+        "ajuste_renal": "Evitar em filtração abaixo de 30 mL/min; a probenecida é contraindicada nesse cenário",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Esquema menos eficaz que a cristalina e com reações próprias da procaína; usar apenas quando a cristalina não existe, e sempre com probenecida",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil e CDC",
+        "claim_id": null
+      },
+      {
+        "classe": "tetraciclina",
+        "agente": "doxiciclina",
+        "papel": "alternativa",
+        "indicacao": "sífilis em alérgico à penicilina, não gestante e sem neurossífilis",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "14 dias na sífilis recente; 28 dias na latente tardia",
+        "dose_maxima": "200 mg/dia",
+        "contraindicacoes": [
+          "gestação",
+          "amamentação",
+          "menor de 8 anos",
+          "alergia a tetraciclina",
+          "insuficiência renal grave"
+        ],
+        "efeitos_adversos": [
+          "fotossensibilidade",
+          "esofagite e úlcera esofágica",
+          "náusea e epigastralgia",
+          "candidíase vaginal",
+          "hipertensão intracraniana benigna rara"
+        ],
+        "apresentacoes": [
+          "comprimido 100 mg",
+          "cápsula 100 mg"
+        ],
+        "preparo": "Uso direto por via oral, com copo cheio de água, sem deitar por 30 minutos",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "adesão às duas tomadas diárias por 28 dias",
+          "sintomas esofágicos",
+          "exposição solar e fotossensibilidade",
+          "teste de gravidez antes de prescrever",
+          "VDRL no seguimento"
+        ],
+        "ajuste_renal": "Sem ajuste acima de 30 mL/min; evitar abaixo disso",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Nunca em gestante: é teratogênica e não previne sífilis congênita. Exige teste de gravidez e contracepção durante o tratamento; a adesão de 28 dias é o ponto frágil do esquema",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil e CDC",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina",
+        "agente": "ceftriaxona",
+        "papel": "alternativa",
+        "indicacao": "sífilis em alérgico não gestante, inclusive neurossífilis quando a penicilina não pode ser usada",
+        "dose": "1 a 2 g",
+        "unidade": "g",
+        "via": "IV ou IM",
+        "frequencia": "1x/dia",
+        "duracao": "10 dias na sífilis recente; 10 a 14 dias na neurossífilis",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "alergia grave a cefalosporina",
+          "anafilaxia prévia a penicilina sem avaliação de reação cruzada",
+          "uso de solução com cálcio em neonato"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "lama biliar e elevação de transaminases",
+          "dor no local da aplicação"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g",
+          "solução injetável 1 g"
+        ],
+        "preparo": "Reconstituir em água para injeção; para via venosa, diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "30 minutos por via venosa; intramuscular profunda em 2 a 3 minutos",
+        "monitorizacao": [
+          "reação alérgica nas primeiras 30 minutos",
+          "transaminases se uso prolongado",
+          "diarreia",
+          "VDRL seriado"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Evidência menor que a da penicilina; reservar para alergia ou indisponibilidade, com seguimento sorológico rigoroso. Não é a opção para gestante alérgica: nesse caso dessensibilizar e usar penicilina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "CDC e literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_secrecao_tubular",
+        "agente": "probenecida",
+        "papel": "condicional",
+        "indicacao": "adjuvante da penicilina procaína na neurossífilis, para elevar o nível liquórico",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "10 a 14 dias",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "insuficiência renal grave",
+          "úlcera péptica ativa",
+          "acidose metabólica",
+          "uso de metotrexato",
+          "alergia a sulfonamida"
+        ],
+        "efeitos_adversos": [
+          "náusea e vômito",
+          "rash",
+          "cristalúria",
+          "exacerbação de crise de gota"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg"
+        ],
+        "preparo": "Uso direto por via oral, com alimento e hidratação abundante",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "creatinina e ácido úrico",
+          "hidratação e volume urinário",
+          "rash cutâneo",
+          "dor articular"
+        ],
+        "ajuste_renal": "Contraindicada em filtração abaixo de 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Sem probenecida, a penicilina procaína não atinge nível liquórico confiável; se ela não estiver disponível, usar cristalina ou ceftriaxona",
+        "confirmar_apresentacao_local": true,
+        "fonte": "CDC e literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "febre, calafrios e mialgia da reação de Jarisch-Herxheimer",
+        "dose": "500 a 1.000 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h se necessário",
+        "duracao": "24 a 48 horas",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "hipersensibilidade ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "elevação de transaminases",
+          "rash raro"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL (gotas)",
+          "solução injetável 10 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral); na apresentação venosa, 15 minutos",
+        "monitorizacao": [
+          "temperatura e sintomas em 24 horas",
+          "dose total diária somada a outros produtos com paracetamol",
+          "transaminases se uso acima de 3 dias"
+        ],
+        "ajuste_renal": "Sem ajuste em uso curto",
+        "ajuste_hepatico": "Máximo de 2 g/dia em hepatopatia; evitar em Child-Pugh C",
+        "observacoes": "Serve para a reação pós-dose e não para tratar a sífilis; orientar o paciente de que a febre nas primeiras 24 horas não é alergia e não justifica suspender o esquema",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "febre e dor da reação de Jarisch-Herxheimer quando o paracetamol é insuficiente ou contraindicado",
+        "dose": "500 a 1.000 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "24 a 48 horas",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a pirazolona",
+          "discrasia sanguínea",
+          "deficiência de glicose-6-fosfato desidrogenase",
+          "porfiria hepática aguda",
+          "primeiro trimestre e último mês de gestação"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "agranulocitose rara",
+          "rash",
+          "sudorese"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 1 g",
+          "solução oral 500 mg/mL (gotas)",
+          "ampola 1 g/2 mL"
+        ],
+        "preparo": "VO: uso direto. IV: diluir 1 g em 10 a 20 mL de água destilada ou SF 0,9%",
+        "tempo_infusao": "não se aplica por via oral; via venosa em 5 minutos",
+        "monitorizacao": [
+          "pressão arterial quando usada por via venosa",
+          "temperatura",
+          "hemograma se uso repetido"
+        ],
+        "ajuste_renal": "Reduzir a frequência em filtração abaixo de 30 mL/min",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Usar apenas para a reação febril pós-dose, nunca como parte do tratamento da sífilis; não associar de forma fixa ao paracetamol",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "prednisona",
+        "papel": "condicional",
+        "indicacao": "sífilis ocular ou otológica com penicilina, para reduzir inflamação, e reação de Jarisch-Herxheimer grave",
+        "dose": "40 a 60 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": [
+          "infecção bacteriana não tratada",
+          "diabetes descompensado",
+          "imunossupressão grave",
+          "úlcera péptica ativa"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "insônia",
+          "alteração de humor",
+          "retardo de cicatrização"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 20 mg",
+          "solução oral 3 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral, pela manhã",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia",
+          "resposta inflamatória ocular ou auditiva",
+          "sono e humor",
+          "pressão arterial"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em uso curto",
+        "observacoes": "Não é rotina e nunca substitui a penicilina; usar apenas em envolvimento ocular ou auditivo, ou em Herxheimer com comprometimento clínico, sempre com o antibiótico já iniciado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Abstinência sexual até completar o tratamento",
+        "detalhe": "Sem relação sexual até o fim do esquema e até a cicatrização da lesão: pelo menos 7 dias após a dose única na sífilis recente e até a terceira dose na latente tardia; orientar também os parceiros"
+      },
+      {
+        "medida": "Tratamento e convocação de parceiros",
+        "detalhe": "Tratar empiricamente parceiros dos últimos 90 dias na primária e na secundária e dos últimos 12 meses na latente, sem esperar sorologia; registrar nome ou contato no prontuário e oferecer testagem"
+      },
+      {
+        "medida": "Notificação compulsória",
+        "detalhe": "Sífilis adquirida, sífilis em gestante e sífilis congênita são de notificação compulsória no SINAN; preencher a ficha no mesmo atendimento, inclusive para paciente assintomático"
+      },
+      {
+        "medida": "Rastreamento de outras IST",
+        "detalhe": "Testar HIV, hepatites B e C, gonorreia e clamídia, oferecer preservativo, avaliar PrEP e vacinar contra hepatite B; a úlcera genital aumenta a transmissão do HIV"
+      },
+      {
+        "medida": "Teste de gravidez e acompanhamento pré-natal",
+        "detalhe": "Toda mulher em idade fértil faz teste de gravidez antes da doxiciclina; gestante com teste reagente é tratada na mesma consulta e repete a sorologia mensalmente até o parto"
+      },
+      {
+        "medida": "Educação sobre o seguimento sorológico",
+        "detalhe": "Explicar que o VDRL pode permanecer reagente por anos mesmo com cura e que o critério é a queda do título; sem essa explicação o paciente abandona o seguimento ou é retratado sem indicação"
+      },
+      {
+        "medida": "Aplicação intramuscular registrada e rastreada",
+        "detalhe": "Registrar lote, local e data de cada dose e entregar cartão de tratamento; a perda de seguimento entre as três doses é a principal causa de falha na latente tardia"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Teste rápido treponêmico no ponto de atendimento",
+        "indicacao": "rastreamento em consulta, pré-natal e atendimento de parceiro",
+        "tecnica": "Punção digital com lanceta estéril, aplicação no dispositivo, leitura em 10 a 15 minutos; resultado reagente exige teste não treponêmico quantitativo para estadiar e acompanhar",
+        "complicacoes": "falso-positivo em baixa prevalência, necessidade de confirmação, ansiedade do paciente"
+      },
+      {
+        "nome": "Coleta de VDRL quantitativo e teste treponêmico por venopunção",
+        "indicacao": "confirmação diagnóstica, estadiamento e seguimento",
+        "tecnica": "Coletar soro em tubo seco, solicitar VDRL com título em diluições e teste treponêmico (FTA-abs, TPHA, ELISA ou quimioluminescência); repetir o título no mesmo laboratório para permitir comparação",
+        "complicacoes": "hematoma, hemólise, variação de título entre laboratórios que invalida a comparação"
+      },
+      {
+        "nome": "Punção lombar diagnóstica",
+        "indicacao": "neurossífilis suspeita, sífilis com sintoma ocular ou auditivo, HIV com CD4 baixo e título alto, ou falha terapêutica",
+        "tecnica": "Punção em L3-L4 ou L4-L5 com técnica asséptica; solicitar celularidade, proteínas, glicose e VDRL no líquor; o diagnóstico usa a combinação de pleocitose, proteinorraquia e VDRL reagente",
+        "complicacoes": "cefaleia pós-punção, hematoma, infecção, herniação em hipertensão intracraniana"
+      },
+      {
+        "nome": "Aplicação intramuscular profunda de penicilina benzatina",
+        "indicacao": "todo tratamento de sífilis sem neurossífilis",
+        "tecnica": "Reconstituição imediata antes da aplicação, agulha 25 x 7 mm ou maior, quadrante superior lateral do glúteo, tração da pele e técnica em Z para evitar refluxo; não massagear o local",
+        "complicacoes": "dor intensa, hematoma, abscesso, reação de Hoigne por injeção intravascular acidental"
+      },
+      {
+        "nome": "Dessensibilização à penicilina por via oral",
+        "indicacao": "gestante alérgica e paciente com neurossífilis que precisa de penicilina",
+        "tecnica": "Protocolo com doses orais crescentes a cada 15 a 20 minutos, em ambiente hospitalar com monitorização, até completar a dose terapêutica; iniciar a penicilina parenteral imediatamente após",
+        "complicacoes": "anafilaxia durante o protocolo, falha da dessensibilização, necessidade de interrupção e tratamento da reação"
+      },
+      {
+        "nome": "Avaliação oftalmológica e otorrinolaringológica especializada",
+        "indicacao": "sintoma visual, uveíte, hipoacusia, zumbido ou vertigem em paciente com sífilis",
+        "tecnica": "Fundoscopia, exame com lâmpada de fenda, acuidade visual e audiometria tonal e vocal; achados definem tratamento como neurossífilis por 10 a 14 dias",
+        "complicacoes": "diagnóstico tardio com perda visual ou auditiva permanente, desconforto do exame"
+      }
+    ],
+    "metas": [
+      "Estágio definido e registrado em prontuário antes da primeira dose em 100% dos casos",
+      "Esquema completo: dose única na sífilis recente e três doses em 21 dias na latente tardia",
+      "VDRL quantitativo basal e repetido em 3, 6, 9 e 12 meses na sífilis recente e em 6, 12 e 24 meses na tardia",
+      "Queda de duas diluições no título em 6 meses na sífilis recente e em 12 a 24 meses na latente tardia",
+      "Teste de HIV realizado em 100% dos pacientes com sífilis",
+      "Parceiros tratados e notificação compulsória registrada no mesmo atendimento",
+      "Gestante com teste reagente tratada na mesma consulta e com sorologia mensal até o parto"
+    ],
+    "fluxo": [
+      "Confirmar o diagnóstico com teste treponêmico reagente e teste não treponêmico quantitativo; se discordantes, repetir em 2 a 4 semanas",
+      "Estadiar pela clínica e pela história: primária, secundária, latente recente, latente tardia ou terciária",
+      "Pesquisar neurossífilis com sintomas neurológicos, visuais e auditivos e com exame neurológico e oftalmológico",
+      "Indicar punção lombar quando houver sintoma, HIV com CD4 baixo e título alto, ou falha de tratamento prévio",
+      "Colher HIV, hepatites B e C, teste de gravidez, gonorreia e clamídia antes ou junto da primeira dose",
+      "Tratar conforme o estágio, registrando lote, local e data de cada aplicação",
+      "Alérgico não gestante: doxiciclina; gestante alérgica ou neurossífilis: dessensibilizar e usar penicilina",
+      "Notificar, tratar parceiros e orientar abstinência sexual até completar o esquema",
+      "Agendar VDRL seriado e retorno clínico com data entregue por escrito",
+      "Avaliar cura pela queda de duas diluições; se o título estabilizar ou subir, revisar adesão, reinfecção e neurossífilis e retratar"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "Penicilina benzatina no esquema do estágio, tratada na mesma consulta; se alérgica, dessensibilização hospitalar e penicilina; repetir VDRL mensalmente até o parto e tratar o parceiro",
+        "alerta": "Doxiciclina é contraindicada e não previne sífilis congênita; qualquer atraso no tratamento aumenta o risco de morte fetal e sequela neurológica"
+      },
+      {
+        "populacao": "portador_de_hiv",
+        "ajuste": "Mesmo esquema por estágio, com VDRL em 3, 6, 9, 12 e 24 meses e punção lombar se houver sintoma neurológico, título acima de 1/32 ou CD4 baixo",
+        "alerta": "Resposta sorológica mais lenta e neurossífilis mais frequente; não confundir queda lenta com falha antes de 12 meses"
+      },
+      {
+        "populacao": "alergico_a_penicilina",
+        "ajuste": "Não gestante e sem neurossífilis: doxiciclina por 14 ou 28 dias. Com neurossífilis ou gestação: dessensibilizar e usar penicilina, ou ceftriaxona quando a dessensibilização não for possível",
+        "alerta": "O esquema alternativo tem eficácia menor e exige seguimento rigoroso; nunca trocar por azitromicina"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "Investigar neurossífilis antes de atribuir alteração cognitiva à demência; ajustar doses de penicilina cristalina à função renal",
+        "alerta": "Neurossífilis pode se apresentar como demência, e a penicilina cristalina em nefropata causa convulsão por acúmulo"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Benzatina sem ajuste; penicilina cristalina com redução de dose conforme filtração; evitar probenecida e doxiciclina em filtração abaixo de 30 mL/min",
+        "alerta": "Carga de sódio e potássio da penicilina cristalina e risco de convulsão por acúmulo"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "VDRL ou RPR quantitativo",
+          "indicacao": "diagnóstico, estadiamento e seguimento de todos os casos",
+          "o_que_muda": "o título em diluições é o parâmetro de cura; precisa ser comparado no mesmo laboratório e com a mesma técnica"
+        },
+        {
+          "nome": "teste treponêmico (FTA-abs, TPHA, ELISA ou quimioluminescência)",
+          "indicacao": "confirmação de todo teste não treponêmico reagente",
+          "o_que_muda": "confirma a infecção e permanece reagente por toda a vida, por isso não serve para seguimento"
+        },
+        {
+          "nome": "análise do líquor com celularidade, proteínas e VDRL",
+          "indicacao": "sintoma neurológico, ocular ou auditivo, HIV com CD4 baixo, falha terapêutica",
+          "o_que_muda": "define neurossífilis e muda o esquema de benzatina para cristalina venosa"
+        },
+        {
+          "nome": "teste de HIV",
+          "indicacao": "todo paciente com sífilis",
+          "o_que_muda": "muda o seguimento, a frequência de punção lombar e o prognóstico; a coinfecção acelera a neurossífilis"
+        },
+        {
+          "nome": "sorologias de hepatite B e C",
+          "indicacao": "todos",
+          "o_que_muda": "indica vacinação, tratamento e rastreamento de transmissão compartilhada"
+        },
+        {
+          "nome": "teste de gravidez (beta-HCG)",
+          "indicacao": "toda mulher em idade fértil antes de doxiciclina",
+          "o_que_muda": "contraindica doxiciclina e obriga penicilina, com impacto direto na prevenção da sífilis congênita"
+        },
+        {
+          "nome": "fundoscopia e audiometria",
+          "indicacao": "sintoma visual, zumbido, hipoacusia ou vertigem",
+          "o_que_muda": "identifica sífilis ocular e otológica, que são tratadas como neurossífilis"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "tratar com base em um único teste não treponêmico reagente",
+          "motivo": "há falso-positivo em gestação, lúpus, síndrome antifosfolípide e outras infecções; a confirmação treponêmica é obrigatória"
+        },
+        {
+          "exame": "repetir VDRL em 15 ou 30 dias para avaliar cura",
+          "motivo": "a queda de título leva meses e a repetição precoce gera interpretação errada e retratamento desnecessário"
+        },
+        {
+          "exame": "usar VDRL no líquor isolado para excluir neurossífilis",
+          "motivo": "a sensibilidade é de 30% a 70%; o diagnóstico usa celularidade, proteínas e contexto clínico"
+        },
+        {
+          "exame": "prescrever azitromicina para sífilis",
+          "motivo": "resistência do Treponema pallidum por mutação A2058G é disseminada e a falha é silenciosa"
+        },
+        {
+          "exame": "solicitar PCR de treponema de rotina",
+          "motivo": "não está disponível na maioria dos serviços e não substitui a sorologia no diagnóstico e no seguimento"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "completar todas as doses, mesmo sem sintoma, e guardar o cartão de tratamento",
+        "avisar todos os parceiros sexuais dos últimos 12 meses para que sejam testados e tratados",
+        "usar preservativo em todas as relações até o fim do tratamento e a cicatrização da lesão",
+        "fazer o teste de HIV e as sorologias de hepatite se ainda não foram colhidos",
+        "comparecer às coletas de VDRL de 3, 6, 9 e 12 meses",
+        "informar imediatamente se aparecer alteração visual, auditiva, dor de cabeça forte ou dificuldade para andar"
+      ],
+      "evitar": [
+        "interromper o esquema ao desaparecer o cancro ou o rash, porque a infecção continua ativa",
+        "beber álcool em excesso durante o tratamento",
+        "tomar sol sem proteção se estiver usando doxiciclina",
+        "usar azitromicina ou qualquer esquema comprado por conta própria",
+        "considerar-se curado apenas porque o VDRL caiu uma diluição",
+        "engravidar durante o tratamento com doxiciclina"
+      ],
+      "retorno": [
+        "piora ou reaparecimento de lesão genital ou rash",
+        "febre e calafrios intensos após a primeira dose",
+        "perda ou embaçamento visual, zumbido ou diminuição da audição",
+        "dor de cabeça intensa, rigidez de nuca ou confusão",
+        "dor ou dormência nos membros e dificuldade para caminhar",
+        "atraso menstrual ou teste de gravidez positivo durante o tratamento"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "penicilina G benzatina",
+        "efeitos": [
+          "dor local intensa",
+          "reação de Jarisch-Herxheimer",
+          "abscesso glúteo",
+          "reação de Hoigne"
+        ],
+        "observacao": "a febre pós-dose é esperada e não contraindica a dose seguinte; orientar antes da aplicação"
+      },
+      {
+        "agente": "penicilina G cristalina",
+        "efeitos": [
+          "convulsão por acúmulo",
+          "hipernatremia",
+          "hipocalemia",
+          "flebite"
+        ],
+        "observacao": "monitorar creatinina, sódio e potássio em nefropata e cardiopata"
+      },
+      {
+        "agente": "doxiciclina",
+        "efeitos": [
+          "fotossensibilidade",
+          "esofagite",
+          "náusea",
+          "candidíase"
+        ],
+        "observacao": "tomar com água e não deitar por 30 minutos; protetor solar e teste de gravidez negativo antes de prescrever"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "lama biliar",
+          "elevação de transaminases"
+        ],
+        "observacao": "avaliar transaminases se uso prolongado e reação alérgica na primeira dose"
+      },
+      {
+        "agente": "probenecida",
+        "efeitos": [
+          "rash",
+          "cristalúria",
+          "náusea",
+          "crise de gota"
+        ],
+        "observacao": "hidratação abundante e controle de creatinina e ácido úrico"
+      },
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "insônia",
+          "alteração de humor"
+        ],
+        "observacao": "curso máximo de 5 dias e nunca sem o antibiótico em curso"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Reação de Jarisch-Herxheimer: manter o esquema, prescrever antitérmico, hidratar e reavaliar em 24 horas; só considerar corticoide se houver comprometimento clínico",
+      "Dor intensa ou nódulo no glúteo após benzatina: compressa fria, analgesia e registro do local; se houver abscesso, drenagem e antibiótico",
+      "Reação de Hoigne (medo, alucinação, convulsão imediata): interromper a aplicação, suporte ventilatório se necessário e observar até a resolução",
+      "Urticária, angioedema ou broncoespasmo após penicilina: suspender, tratar conforme gravidade e encaminhar para dessensibilização ou esquema alternativo",
+      "Convulsão em uso de penicilina cristalina: dosar creatinina e eletrólitos, reduzir a dose conforme filtração e tratar a crise",
+      "Esofagite por doxiciclina: suspender, tratar sintomas e reintroduzir com orientação de tomar com água e não deitar",
+      "Título de VDRL que não cai em 12 meses: revisar adesão, tratar parceiro, repetir teste de HIV e pesquisar neurossífilis antes de retratar",
+      "Teste de gravidez positivo em uso de doxiciclina: suspender imediatamente e trocar para penicilina benzatina"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "penicilina G benzatina 2.400.000 UI",
+            "dose": "2.400.000 UI",
+            "via": "IM",
+            "frequencia": "dose única",
+            "duracao": "1 dose",
+            "condicao": "sífilis primária, secundária ou latente recente",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "penicilina G benzatina 2.400.000 UI",
+            "dose": "2.400.000 UI",
+            "via": "IM",
+            "frequencia": "semanal, dias 0, 7 e 14",
+            "duracao": "3 doses",
+            "condicao": "sífilis latente tardia ou duração ignorada",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "doxiciclina 100 mg",
+            "dose": "100 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "14 dias (recente) ou 28 dias (tardia)",
+            "condicao": "alergia à penicilina em paciente não gestante e sem neurossífilis",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 500 mg",
+            "dose": "1 comprimido",
+            "via": "VO",
+            "frequencia": "6/6 h se febre",
+            "duracao": "2 dias",
+            "condicao": "reação de Jarisch-Herxheimer após a primeira dose",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "penicilina G cristalina 5.000.000 UI",
+            "dose": "3 a 4 milhões de UI",
+            "via": "IV",
+            "frequencia": "4/4 h ou infusão contínua de 18 a 24 milhões de UI/dia",
+            "monitorizacao": "creatinina, sódio, potássio e nível de consciência",
+            "condicao": "neurossífilis, por 10 a 14 dias",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "penicilina G procaína 2.400.000 UI",
+            "dose": "2.400.000 UI",
+            "via": "IM",
+            "frequencia": "1x/dia",
+            "monitorizacao": "dor local, reação de Hoigne e creatinina",
+            "condicao": "neurossífilis quando a cristalina não está disponível, com probenecida",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "probenecida 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "monitorizacao": "creatinina, ácido úrico e hidratação",
+            "condicao": "adjuvante da penicilina procaína",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ceftriaxona 2 g",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "reação alérgica e transaminases",
+            "condicao": "alergia à penicilina com neurossífilis, sem possibilidade de dessensibilização",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "VDRL quantitativo com título",
+          "teste treponêmico",
+          "teste rápido de HIV",
+          "sorologias de hepatite B e C",
+          "beta-HCG",
+          "líquor com celularidade, proteínas e VDRL",
+          "fundoscopia",
+          "audiometria",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com diagnóstico de sífilis, em tratamento com ___, necessitando de afastamento de suas atividades por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento sigiloso; o diagnóstico não deve ser descrito sem consentimento do paciente"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com estágio, data do diagnóstico, esquema e doses aplicadas, VDRL basal, HIV e gestação",
+          "prioridade",
+          "contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com sífilis ___ diagnosticada em ___, VDRL inicial ___, tratado com ___ em ___, com parceiros convocados e seguimento sorológico programado para 3, 6, 9 e 12 meses."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "data de aparecimento e características da lesão genital",
+        "presença de rash, sobretudo em palmas e plantas",
+        "número de parceiros e data da última relação sem preservativo",
+        "tratamentos prévios de sífilis e títulos anteriores",
+        "sintomas neurológicos, visuais e auditivos",
+        "gestação e uso de contracepção",
+        "teste de HIV, carga viral e CD4",
+        "alergia a penicilina e tipo de reação",
+        "uso de drogas injetáveis e compartilhamento de material",
+        "outras IST e vacinação contra hepatite B"
+      ],
+      "texto_template": "Paciente com lesão genital iniciada em ___, rash em palmas e plantas ___, última relação sem preservativo em ___, tratamento prévio de sífilis ___, sintomas neurológicos ___, gestação ___, HIV ___, alergia a penicilina ___, uso de drogas injetáveis ___ e outras IST ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "pele e mucosas com procura de cancro, rash palmar e plantar e condiloma plano",
+        "região anogenital com inspeção de úlceras, secreção e adenopatia inguinal",
+        "orofaringe com úlceras e placas mucosas",
+        "linfonodos cervicais, axilares e inguinais",
+        "exame neurológico com marcha, reflexos, sensibilidade e pupilas",
+        "acuidade visual e fundoscopia quando houver sintoma",
+        "ausculta cardíaca e pesquisa de sopro aórtico",
+        "palpação de gomas e lesões ósseas"
+      ],
+      "texto_template": "Pele com ___, região anogenital com ___, orofaringe ___, linfonodos ___, exame neurológico com marcha ___ e pupilas ___, acuidade visual ___, ausculta cardíaca ___."
+    },
+    "referencias": [
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "PCDT de atenção integral às IST: esquema por estágio, dose de benzatina, tratamento de neurossífilis e seguimento sorológico",
+        "verificar": true
+      },
+      {
+        "tipo": "cdc",
+        "o_que_verificar": "sífilis adquirida e neurossífilis: alternativas em alergia, ceftriaxona, interpretação do líquor e manejo de parceiros",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "protocolo de sífilis na gestação e prevenção da transmissão vertical, com dessensibilização e seguimento mensal",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de punção lombar, disponibilidade de penicilina cristalina e procaína e protocolo de dessensibilização",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, reconstituição e validade após diluição das penicilinas e da ceftriaxona",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "resistência do Treponema pallidum aos macrolídeos e interpretação da queda de título no seguimento",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-INF11-01",
+        "tipo": "benzatina_em_neurossifilis",
+        "gatilho": "penicilina benzatina prescrita em paciente com neurossífilis ou com sintoma ocular, auditivo ou neurológico",
+        "severidade": "grave",
+        "mensagem": "Benzatina não atinge o líquor e não trata neurossífilis.",
+        "acao": "bloquear a prescrição e exigir penicilina cristalina venosa por 10 a 14 dias",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF11-02",
+        "tipo": "doxiciclina_na_gestacao",
+        "gatilho": "doxiciclina prescrita em gestante ou em mulher com teste de gravidez positivo",
+        "severidade": "grave",
+        "mensagem": "Doxiciclina é contraindicada na gestação e não previne sífilis congênita.",
+        "acao": "bloquear e trocar por penicilina benzatina, com dessensibilização se houver alergia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF11-03",
+        "tipo": "tratamento_sem_estadiamento",
+        "gatilho": "tratamento de sífilis iniciado sem estágio definido e registrado em prontuário",
+        "severidade": "grave",
+        "mensagem": "O esquema depende do estágio: sem estadiar não se escolhe a dose nem a duração.",
+        "acao": "bloquear a prescrição e exigir o registro do estágio",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF11-04",
+        "tipo": "alta_sem_teste_hiv",
+        "gatilho": "atendimento de sífilis concluído ou alta registrada sem teste de HIV",
+        "severidade": "grave",
+        "mensagem": "Toda sífilis exige teste de HIV: a coinfecção muda o seguimento.",
+        "acao": "bloquear a alta e incluir o teste no pedido",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF11-05",
+        "tipo": "azitromicina_para_sifilis",
+        "gatilho": "azitromicina prescrita como tratamento de sífilis",
+        "severidade": "grave",
+        "mensagem": "Resistência do Treponema pallidum aos macrolídeos torna a azitromicina ineficaz.",
+        "acao": "bloquear e sugerir benzatina ou doxiciclina conforme o caso",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF11-06",
+        "tipo": "esquema_de_tres_doses_incompleto",
+        "gatilho": "segunda ou terceira dose de benzatina com atraso acima de 9 dias",
+        "severidade": "precaucao",
+        "mensagem": "Atraso acima de 9 dias reinicia o esquema da latente tardia.",
+        "acao": "alertar e reiniciar a contagem das três doses",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF11-07",
+        "tipo": "seguimento_sorologico_ausente",
+        "gatilho": "tratamento de sífilis sem VDRL de controle agendado em 3, 6, 9 e 12 meses",
+        "severidade": "precaucao",
+        "mensagem": "Sem VDRL seriado não se distingue cura de falha ou reinfecção.",
+        "acao": "alertar e incluir as datas no plano",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF11-08",
+        "tipo": "parceiro_nao_tratado",
+        "gatilho": "sífilis tratada sem convocação e tratamento de parceiros e sem notificação registrada",
+        "severidade": "precaucao",
+        "mensagem": "Parceiro não tratado mantém a cadeia de transmissão.",
+        "acao": "alertar e abrir o checklist de parceiros e notificação",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "Ministério da Saúde do Brasil",
+        "CDC",
+        "ANVISA",
+        "protocolo institucional",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

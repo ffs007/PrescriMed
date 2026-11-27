@@ -1,0 +1,141 @@
+{
+  "id": "dispepsia",
+  "nome": "Dispepsia / dor epigástrica",
+  "cat": "Gastro / Proctologia",
+  "alias": "dor no estomago queimacao azia gastrite refluxo drge empachamento",
+  "cid": [
+    [
+      "K30",
+      "Dispepsia"
+    ],
+    [
+      "K21",
+      "DRGE"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ACG — dispepsia; São Paulo consensus H. pylori"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Dispepsia orgânica é minoria: o PS trata sintoma e protege. Teste/tratamento de H. pylori: possível no PS com teste respiratório/fezes disponível (senão,IBP empírico e investigar no ambulatorio com endoscopia se alarme). SINAIS DE ALARME = endoscopia: perda de peso involuntária, disfagia, vômito persistente, sangramento/ anemia, massa palpável, idade > 60 com sintoma novo, icterícia. Dor epigástrica + sudorese/irradiação/ESFORÇO = coronariana até excluir (ECG!). Dor + defesa = abdome agudo.",
+  "redFlags": [
+    "Dor epigástrica com esforço/irradiação/sudorese — SCA: ECG e protocolo IAM",
+    "Hematêmese/melena — HDA: protocolo próprio",
+    "Disfagia progressiva ou perda de peso — endoscopia urgente",
+    "Dor + defesa/rigidez — perfuração: RX (ar livre) e cirurgia",
+    "Icterícia + dor epigástrica — via biliar/pancreas: exames",
+    "Vômitos persistentes com distensão — obstrução: imagem"
+  ],
+  "naoUsar": [
+    "AINEs para 'dor de estômago' (piora)",
+    "Erradicar H. pylori às cegas sem teste/diagnóstico",
+    "IBP por tempo indefinido sem reavaliação (riscos: fratura, B12, enterococos, hipomagnesemia)",
+    "Antiácido como única conduta em paciente com alarme"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Inibidor de bomba de prótons (1ª linha)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "omeprazol",
+            "pos": "20 mg VO em jejum (30–60 min antes do café da manhã) por 4–8 semanas; se falha parcial, 20 mg 2x/dia",
+            "motivo": "IBP padrão"
+          },
+          {
+            "base": "pantoprazol",
+            "pos": "20–40 mg VO em jejum por 4–8 semanas",
+            "motivo": "Alternativa (menos interações)"
+          },
+          {
+            "base": "esomeprazol",
+            "pos": "20–40 mg VO em jejum por 4–8 semanas",
+            "motivo": "Alternativa"
+          }
+        ]
+      },
+      {
+        "nome": "Antiácido/sintomático rápido",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "antiacido",
+            "pos": "1 comprimido ou 10 mL VO 1 h após refeições e à noite, conforme dor (alívio imediato; não junto do IBP — separar 2 h)",
+            "ped": "≥ 12 anos com orientação",
+            "motivo": "Resgate rápido"
+          },
+          {
+            "base": "simeticona",
+            "pos": "40–75 mg VO após refeições se empachamento/gases",
+            "ped": "20–40 mg/dose",
+            "motivo": "Empachamento"
+          },
+          {
+            "base": "dimenidrinato",
+            "pos": "50 mg VO 6/6 h se náusea associada",
+            "motivo": "Sintomático"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Estilo e retorno",
+              "ap": "",
+              "pos": "Fracionar refeições; evitar café, álcool, refrigerante, fritura, chocolate e ceia tardia (última refeição 3 h antes de deitar); elevar cabeceira; reduzir peso se excesso; checar medicações que ferem o estômago (AINE, AAS, ferro, prednisona — NÃO parar AAS cardioprotetor por conta: falar com o médico). Retornar se: vômito com sangue, fezes pretas, dor que não melhora em 2 semanas, perda de peso, dificuldade para engolir."
+            },
+            "motivo": "Cura e alarme"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "H. pylori",
+              "ap": "",
+              "pos": "Se teste positivo: tratamento de erradicação (conforme esquema do serviço — ex.: IBP duplo + 2 antibióticos por 14 dias) e CONFIRMAR cura 4 semanas após com novo teste; sem confirmação a úlcera volta."
+            },
+            "motivo": "Erradicação correta"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Na observação",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "omeprazol_ev",
+            "motivo": "40 mg EV se dor intensa/suspeita ulcerosa"
+          },
+          {
+            "linha": 1,
+            "hosp": "pantoprazol_ev",
+            "motivo": "40 mg EV — alternativa"
+          },
+          {
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV se dor (NÃO AINE na dispepsia)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,533 @@
+{
+  "id": "ws-neu_11",
+  "nome": "Lombociatalgia com sinais neurológicos",
+  "cat": "Neurológico",
+  "alias": "lombociatalgia com sinais neurologicos lombociatalgia ciatica dor lombar com irradiacao hernia de disco lombar radiculopatia lombar",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (NEU-11_lombociatalgia.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de lombalgia e critérios de ressonância",
+      "[verificar] sociedade_ortopedia: red flags de cauda equina e indicação cirúrgica",
+      "[verificar] diretriz_dor_neuropatica: titulação de gabapentinoide e duloxetina",
+      "[verificar] anvisa: apresentações e doses máximas"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "NEU-11 em 2026-11-27",
+    "fundido_workspace": "NEU-11 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: anestesia em sela (hipoestesia perineal e perianal) -> cateterismo de alívio, ressonância imediata e neurocirurgia de urgência; retenção urinária, incontinência urinária ou fecal, redução do tônus anal -> medir resíduo pós-miccional e operar em caráter de emergência; déficit motor bilateral ou progressivo (pé caído que piora, paresia de quadríceps) -> ressonância em 24 h e avaliação neurocirúrgica imediata; febre, dor noturna, uso de drogas injetáveis, imunossupressão ou bacteremia -> ressonância, hemoculturas e antibiótico parenteral; não usar corticoide. 1) Primeiro passo: triagem de red flags - esfíncteres, anestesia em sela, déficit bilateral ou progressivo, febre, câncer, trauma 2) Red flag presente: ressonância urgente e neurocirurgia; suspeita de infecção acrescenta hemoculturas e antibiótico; suspeita de tumor acrescenta dexametasona 3) Sem red flag: diagnóstico clínico de radiculopatia, sem pedir imagem 4) Analgesia escalonada: AINE em dose plena + paracetamol; se contraindicação, paracetamol + tramadol curto + gabapentinoide 5) Reavaliar em 7 a 10 dias; se a dor neuropática persistir, titular gabapentinoide e iniciar fisioterapia 6) Falha após 6 a 8 semanas com imagem correlacionada: avaliar cirurgia eletiva; déficit motor progressivo antecipa a indicação 7) Alta com sinais de retorno por escrito, limite explícito de opioide e plano de atividade",
+  "redFlags": [
+    "anestesia em sela (hipoestesia perineal e perianal) -> cateterismo de alívio, ressonância imediata e neurocirurgia de urgência",
+    "retenção urinária, incontinência urinária ou fecal, redução do tônus anal -> medir resíduo pós-miccional e operar em caráter de emergência",
+    "déficit motor bilateral ou progressivo (pé caído que piora, paresia de quadríceps) -> ressonância em 24 h e avaliação neurocirúrgica imediata",
+    "febre, dor noturna, uso de drogas injetáveis, imunossupressão ou bacteremia -> ressonância, hemoculturas e antibiótico parenteral; não usar corticoide",
+    "história de câncer, perda de peso, dor contínua em repouso -> ressonância urgente, dexametasona e avaliação oncológica/neurocirúrgica",
+    "trauma, osteoporose ou corticoide crônico -> imagem e imobilização",
+    "dor refratária com agitação, sudorese e piora ao decúbito -> ressonância imediata e neurocirurgia"
+  ],
+  "naoUsar": [
+    "úlcera péptica ativa",
+    "sangramento digestivo prévio",
+    "TFG < 30 mL/min",
+    "insuficiência cardíaca descompensada",
+    "terceiro trimestre de gestação",
+    "alergia a AINE",
+    "hepatopatia descompensada",
+    "desnutrição grave"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter atividade dentro do tolerado"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "repouso prolongado no leito"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "600 mg. Via VO. 8/8 h. 5-7 dias.",
+            "posTodas": true,
+            "motivo": "ciática aguda por hérnia de disco sem red flag (1a linha) ciática aguda sem contraindicação",
+            "nota": "Uso direto, sempre com alimento ou após refeição - monitorar: intensidade da dor e função (marcha, sentar); monitorar: creatinina se uso acima de 7 dias ou idoso; monitorar: sinais de sangramento digestivo; monitorar: pressão arterial e edema · NÃO: úlcera péptica ativa; sangramento digestivo prévio; TFG < 30 mL/min; insuficiência cardíaca descompensada; terceiro trimestre de gestação; alergia a AINE · Obs: Base do tratamento na fase aguda; tomar com alimento; não associar a outro AINE nem a AAS em dose analgésica · Renal: Evitar se TFG < 30 mL/min; em TFG 30–59 usar a menor dose pelo menor tempo e reavaliar…",
+            "dose": {
+              "texto": "600 mg; 8/8 h; 5-7 dias; max. 2.400 mg/dia",
+              "status": "ok",
+              "valor": 600,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Neuromodulador",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "gabapentina",
+            "pos": "300 mg. Via VO. 8/8 h, com titulação. 4-8 semanas com reavaliação.",
+            "posTodas": true,
+            "motivo": "dor neuropática radicular persistente por mais de 2 a 4 semanas (alternativa) dor neuropática persistente",
+            "nota": "Uso direto, com ou sem alimento - monitorar: sonolência e equilíbrio; monitorar: função renal antes de titular; monitorar: edema de membros; monitorar: humor e ideação suicida nos primeiros meses · NÃO: hipersensibilidade; insuficiência renal grave sem ajuste de dose · Obs: Iniciar à noite e titular a cada 3 a 7 dias; benefício na ciática é modesto e não há indicação em dor aguda sem componente neuropático; retirada sempre gradual · Renal: TFG 30–59: 200–700 mg 12/12 h; TFG 15–29: 200–700 mg 1x/dia; diálise: 300 mg após cada…",
+            "dose": {
+              "texto": "300 mg; 8/8 h, com titulação; 4-8 semanas com reavaliação; max. 3.600 mg/dia",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3600,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "pregabalina",
+            "pos": "75 mg. Via VO. 12/12 h, com titulação. 4-8 semanas com reavaliação.",
+            "posTodas": true,
+            "motivo": "dor neuropática radicular persistente, alternativa à gabapentina (alternativa)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: sedação; monitorar: edema; monitorar: função renal; monitorar: humor · NÃO: hipersensibilidade; insuficiência renal grave sem ajuste · Obs: Farmacocinética mais previsível que a gabapentina e início mais rápido; mesma limitação de evidência na ciática; retirada gradual para evitar rebote · Renal: TFG 30–59: 25–75 mg 12/12 h ou 50–100 mg/dia; TFG 15–29: 25–50 mg/dia; diálise: dose…",
+            "dose": {
+              "texto": "75 mg; 12/12 h, com titulação; 4-8 semanas com reavaliação; max. 600 mg/dia",
+              "status": "ok",
+              "valor": 75,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 600,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antidepressivo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_duloxetina",
+            "pos": "30 mg. Via VO. 1x/dia por 1 semana, depois 60 mg/dia. 8-12 semanas para avaliar resposta.",
+            "posTodas": true,
+            "motivo": "dor neuropática crônica com depressão associada ou intolerância a gabapentinoide (alternativa)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: pressão arterial antes e após iniciar; monitorar: humor e ideação suicida; monitorar: náusea; monitorar: função hepática",
+            "dose": {
+              "texto": "30 mg; 1x/dia por 1 semana, depois 60 mg/dia; 8-12 semanas para avaliar resposta; max. 120 mg/dia",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 120,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "tramadol",
+            "pos": "50 mg. Via VO. 8/8 h. Máximo 5-7 dias. VO: não se aplica; IV: 15 minutos.",
+            "posTodas": true,
+            "motivo": "crise dolorosa intensa com limitação funcional, sem red flag e sem resposta a AINE (condicional)",
+            "nota": "VO: uso direto. IV: diluir em 10 mL de SF e infundir lentamente - monitorar: nível de consciência e sedação; monitorar: náusea e vômitos; monitorar: função intestinal; monitorar: sinais de uso indevido ou escalada de dose · NÃO: epilepsia não controlada; uso de IMAO; intoxicação por depressores do sistema nervoso central; insuficiência respiratória grave · Obs: Somente para a crise aguda, com quantidade limitada na receita e sem renovação automática; não prescrever para uso contínuo; cautela ao associar a antidepressivo serotoninérgico · Renal: Com TFG < 30 mL/min, intervalo de 12/12 h",
+            "dose": {
+              "texto": "50 mg; 8/8 h; máximo 5-7 dias; max. 400 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "40-60 mg. Via VO. 1x/dia pela manhã. 5-7 dias, sem desmame.",
+            "posTodas": true,
+            "motivo": "radiculopatia com déficit motor agudo ou subagudo sem indicação cirúrgica imediata (condicional)",
+            "nota": "Uso direto, com alimento, pela manhã - monitorar: glicemia; monitorar: pressão arterial; monitorar: humor e sono; monitorar: sinais de infecção · NÃO: suspeita de infecção de coluna; diabetes descompensada; úlcera péptica ativa; psicose; imunossupressão grave · Obs: Evidência limitada: ensaios mostram alívio discreto e transitório da dor radicular, sem melhora consistente de função; é um ciclo único, não um tratamento de manutenção, e nunca deve ser usado sem excluir infecção ou tumor",
+            "dose": {
+              "texto": "40-60 mg; 1x/dia pela manhã; 5-7 dias, sem desmame; max. 60 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 60,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Relaxante muscular",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ciclobenzaprina",
+            "pos": "5 mg (idoso) ou 10 mg. Via VO. À noite. Máximo 7 dias.",
+            "posTodas": true,
+            "motivo": "espasmo muscular com prejuízo do sono em lombociatalgia aguda (condicional)",
+            "nota": "Uso direto - monitorar: sedação diurna; monitorar: retenção urinária; monitorar: equilíbrio e risco de queda · NÃO: glaucoma de ângulo fechado; retenção urinária; arritmia cardíaca; infarto recente; uso de IMAO; hipertireoidismo · Obs: Evidência fraca para ciática; pode ser usada por poucos dias para o espasmo e o sono, nunca como tratamento principal; evitar em idoso",
+            "dose": {
+              "texto": "5 mg (idoso) ou 10 mg; à noite; máximo 7 dias; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Retorno precoce à atividade",
+              "ap": "",
+              "q": "",
+              "pos": "Repouso no leito não deve passar de 2 a 3 dias; caminhar e manter as atividades habituais dentro do tolerado, afastando apenas esforço físico e levantamento de peso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Fisioterapia dirigida",
+              "ap": "",
+              "q": "",
+              "pos": "Programa de controle motor e fortalecimento de core a partir da segunda semana; não usar tração, calor profundo ou eletroterapia passiva como tratamento isolado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Higiene de coluna e ergonomia",
+              "ap": "",
+              "q": "",
+              "pos": "Levantar peso com joelhos fletidos e carga junto ao corpo, evitar flexão combinada com rotação, ajustar altura da bancada e fazer pausas ativas a cada 50 minutos"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Controle de peso",
+              "ap": "",
+              "q": "",
+              "pos": "Perda de 5 a 10% do peso corporal reduz carga discal e recidiva; encaminhar para nutrição quando IMC ≥ 30"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Rastreio de bandeiras amarelas",
+              "ap": "",
+              "q": "",
+              "pos": "Perguntar sobre catastrofização, medo do movimento, insatisfação laboral e sofrimento psíquico; explicar que dor não significa lesão em curso, pois isso reduz cronificação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Reavaliação programada",
+              "ap": "",
+              "q": "",
+              "pos": "Retorno em 7 a 10 dias para checar red flags e resposta analgésica; alta com plano escrito de autocuidado quando estável"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "NEU-11"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "analgesia de base em qualquer fase da lombociatalgia (1a linha) analgesia de base",
+            "nota": "VO: uso direto. IV: infundir o frasco pronto, sem diluição adicional - monitorar: dose total diária somando todas as apresentações; monitorar: função hepática em uso acima de 7 dias; monitorar: dor · NÃO: hepatopatia descompensada; alergia; desnutrição grave · Obs: Analgésico de escolha quando AINE é contraindicado; conferir associações prontas que já contêm paracetamol para não exceder a dose",
+            "dose": {
+              "texto": "750 mg; 6/6 h; 5-7 dias, reavaliar; max. 4 g/dia (3 g/dia em hepatopatia ou etilismo)",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "hosp": "dipirona_ev",
+            "motivo": "dor radicular quando AINE e paracetamol são insuficientes ou contraindicados (alternativa)",
+            "nota": "IV: diluir 1 g em 10 mL de água destilada ou SF 0,9% - monitorar: pressão arterial após injeção; monitorar: hemograma se uso acima de 5 dias; monitorar: temperatura e sinais de infecção · NÃO: alergia a pirazolonas; discrasia sanguínea; porfiria hepática aguda; deficiência de G6PD · Obs: Opção real de analgesia quando AINE está contraindicado; não é a primeira escolha e não substitui a investigação de red flags · Renal: Evitar com TFG < 30 mL/min",
+            "dose": {
+              "texto": "1 g; 6/6 h; 3-5 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "cetorolaco",
+            "motivo": "dor radicular intensa no pronto atendimento, quando a via oral não é possível ou falhou (alternativa)",
+            "nota": "IV: usar sem diluir, em acesso periférico, aplicando lentamente - monitorar: creatinina e diurese; monitorar: dor abdominal e melena; monitorar: pressão arterial",
+            "dose": {
+              "texto": "30 mg; 8/8 h; até 48-72 h; max. 120 mg/dia",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 120,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dexametasona_ev",
+            "motivo": "compressão medular por neoplasia ou suspeita de tumor, como ponte até cirurgia ou radioterapia (condicional)",
+            "nota": "Bolus IV direto ou diluído em 10 mL de SF; manutenção diluída em 50 mL de SF - monitorar: glicemia a cada 6 h; monitorar: déficit neurológico e força; monitorar: melena ou dor epigástrica; monitorar: pressão arterial",
+            "dose": {
+              "texto": "10 mg em bolus, seguido de 4 mg; bolus inicial e depois 4 mg 6/6 h; até 48-72 h, até a descompressão; max. 24 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 24,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "NEU-11",
+    "versao": "0.2.0",
+    "arquivo": "NEU-11_lombociatalgia.json",
+    "area": "Neurológico",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

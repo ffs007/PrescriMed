@@ -1,0 +1,1136 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GER-09",
+    "area": "Geriatria",
+    "nome": "Fratura de fragilidade",
+    "aliases": [
+      "Fratura de fragilidade",
+      "fratura por fragilidade",
+      "fratura osteoporótica",
+      "fratura de fêmur proximal",
+      "fratura de quadril",
+      "fratura vertebral osteoporótica",
+      "fratura de Colles",
+      "fratura de pelve por fragilidade"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "idoso"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Fratura de fragilidade é a fratura que ocorre em osso osteoporótico com trauma de baixa energia — queda da própria altura, torção ao levantar ou esforço mínimo — e os sítios que definem a conduta são fêmur proximal, vértebra, punho e pelve. Não é um evento ortopédico isolado: é a primeira manifestação de uma doença sistêmica, a osteoporose, e marca um paciente com alto risco de nova fratura, perda funcional, delirium, tromboembolismo e morte em um ano. Em fratura de fêmur proximal, a imobilização prolongada no leito é tratamento errado: cada 24 h de atraso cirúrgico aumentam delirium, úlcera por pressão, pneumonia, trombose e mortalidade. A regra é analgesia multimodal desde a primeira hora, cirurgia em até 48 h no fêmur, profilaxia de tromboembolismo, prevenção de delirium com dor controlada, ambiente orientado e sono preservado, e tratamento da osteoporose ainda na internação — cálcio, vitamina D e um anti-reabsortivo — independentemente de densitometria. Fratura vertebral osteoporótica sem déficit neurológico é tratada com analgesia, órtese e mobilização precoce, não com repouso absoluto; vertebroplastia ou cifoplastia ficam reservadas para dor refratária. Punho e pelve por fragilidade, na maioria, são tratados de forma conservadora com imobilização funcional e carga precoce conforme tolerância, sempre com o mesmo pacote de prevenção e de tratamento ósseo.",
+    "inclusao": [
+      "Fratura de fêmur proximal, vértebra, punho ou pelve após queda da própria altura ou trauma de baixa energia em paciente com 65 anos ou mais",
+      "Idoso com dor que impede apoio e deformidade ou encurtamento de membro após queda",
+      "Dor lombar aguda intensa em idoso com ou sem trauma, com fratura vertebral confirmada por imagem",
+      "Fratura de fragilidade já tratada que chega para planejamento cirúrgico, reabilitação ou tratamento da osteoporose",
+      "Segunda fratura por fragilidade ou fratura por fragilidade com densitometria ainda não realizada"
+    ],
+    "exclusao": [
+      {
+        "situacao": "trauma de alta energia, politrauma, ferimento por arma de fogo ou acidente automobilístico",
+        "fluxo": "cirurgia do trauma / sala vermelha"
+      },
+      {
+        "situacao": "fratura patológica sobre metástase óssea ou mieloma com lesão lítica e risco de fratura iminente",
+        "fluxo": "oncologia ortopédica"
+      },
+      {
+        "situacao": "fratura exposta com contaminação grosseira ou síndrome compartimental instalada",
+        "fluxo": "ortopedia / centro cirúrgico imediato"
+      },
+      {
+        "situacao": "déficit neurológico progressivo por compressão medular em fratura vertebral",
+        "fluxo": "neurocirurgia / emergência"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "fratura de fêmur proximal com dor não controlada e sem programação cirúrgica definida",
+        "por_que": "imobilização no leito sem previsão cirúrgica aumenta delirium, úlcera por pressão, pneumonia, trombose e mortalidade",
+        "acao": "analgesia multimodal imediata, bloqueio de fáscia ilíaca quando disponível e cirurgia agendada em até 48 h; registrar a previsão cirúrgica em prontuário",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "hipotensão, taquicardia, palidez ou dor em pelve após queda",
+        "por_que": "fratura de pelve pode sangrar para o retroperitônio e causar choque hemorrágico",
+        "acao": "acessos calibrosos, tipagem sanguínea, tomografia de pelve e avaliação hemodinâmica imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "confusão aguda, flutuação da atenção ou sonolência após a fratura",
+        "por_que": "delirium é a complicação mais frequente e aumenta mortalidade e perda funcional",
+        "acao": "aplicar CAM-4AT, investigar dor, retenção urinária, constipação, infecção e hipóxia antes de qualquer sedação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "dor torácica, dispneia súbita, taquicardia ou edema unilateral de membro",
+        "por_que": "tromboembolismo pulmonar e trombose venosa profunda no imobilizado",
+        "acao": "iniciar profilaxia, ultrassom de membro e angiotomografia quando suspeita clínica; anticoagulação plena se confirmado",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "febre, secreção, crepitação ou pele rompida sobre proeminência óssea",
+        "por_que": "infecção de ferida cirúrgica, pneumonia ou úlcera por pressão profunda",
+        "acao": "culturas, antibiótico e avaliação cirúrgica; inspecionar sacro, calcâneo e trocânter todos os dias",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "dor lombar súbita com fraqueza de membros, anestesia em sela ou retenção urinária",
+        "por_que": "compressão medular ou síndrome da cauda equina em fratura vertebral",
+        "acao": "ressonância magnética de coluna imediata e avaliação neurocirúrgica de urgência",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "parestesia perioral, cãibra, tetania ou convulsão após zoledrônico ou denosumabe",
+        "por_que": "hipocalcemia grave por anti-reabsortivo em paciente com vitamina D baixa",
+        "acao": "cálcio sérico imediato, gluconato de cálcio IV se sintomático e repor vitamina D",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "incapacidade de apoiar o peso após cirurgia de quadril, dor súbita ou encurtamento do membro",
+        "por_que": "luxação de artroplastia ou falha de fixação",
+        "acao": "radiografia imediata, imobilizar e acionar ortopedia; não mobilizar sem liberação",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Como caiu? Foi queda da própria altura? Teve tontura, desmaio ou palpitação antes?",
+      "Consegue apoiar o peso no membro e levantar da cadeira sem ajuda?",
+      "Onde dói, há quanto tempo e a dor piora ao virar na cama ou respirar fundo?",
+      "Já fraturou antes? Fez densitometria? Usa cálcio, vitamina D ou remédio para osteoporose?",
+      "Usa anticoagulante, antiagregante, corticoide, IBP crônico, benzodiazepínico ou opioide?",
+      "Está confuso, sonolento ou diferente do habitual? Quando começou?",
+      "Quando foi a última urina e a última evacuação?",
+      "Tem febre, tosse, dor para urinar ou ferida na pele?",
+      "Como é a casa: escadas, tapetes, banheiro adaptado? Mora sozinho ou com cuidador?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Fratura de fêmur proximal (colo, transtrocantérica ou subtrocantérica) em idoso com comorbidades controláveis",
+        "escolha": "Cirurgia em até 48 h da admissão, idealmente em 24–36 h: osteossíntese com haste cefalomedular ou parafuso deslizante na fratura extracapsular e artroplastia parcial ou total no colo deslocado",
+        "porque": "Não existe benefício em adiar a cirurgia para estabilizar clinicamente: o atraso aumenta delirium, úlcera, pneumonia, trombose e mortalidade. A escolha da técnica depende do traço e da função prévia, não da idade isolada"
+      },
+      {
+        "cenario": "Fratura de fêmur com dor intensa e cirurgia que não será imediata",
+        "escolha": "Bloqueio de fáscia ilíaca guiado por ultrassom com bupivacaína 0,25%, associado a paracetamol em horário fixo e morfina em dose baixa como resgate",
+        "porque": "Reduz a necessidade de opioide, a sedação e o delirium, e permite mobilização e higiene com menos dor enquanto se organiza o centro cirúrgico"
+      },
+      {
+        "cenario": "Fratura vertebral osteoporótica sem déficit neurológico",
+        "escolha": "Analgesia em horário fixo, órtese toracolombar quando tolerada, mobilização precoce e tratamento da osteoporose; vertebroplastia ou cifoplastia se dor refratária após 3–6 semanas",
+        "porque": "Repouso absoluto acelera perda óssea, atrofia e constipação, e não consolida melhor. A cirurgia percutânea é para dor refratária, não para toda fratura vertebral"
+      },
+      {
+        "cenario": "Fratura de punho por fragilidade com desvio ou instabilidade",
+        "escolha": "Redução fechada e imobilização gessada ou com tala, com reavaliação radiográfica em 7–10 dias; fixação cirúrgica se instabilidade, cominuição ou perda de redução",
+        "porque": "A maioria evolui bem com tratamento conservador, mas o punho é sítio de rigidez e de síndrome dolorosa regional complexa; a reavaliação precoce evita deformidade"
+      },
+      {
+        "cenario": "Fratura de pelve por fragilidade (ramos pubianos) com dor e sem instabilidade",
+        "escolha": "Tratamento conservador com analgesia, carga progressiva conforme tolerância e marcha com andador, sem repouso no leito",
+        "porque": "Fraturas de ramo por fragilidade consolidam com carga precoce; o decúbito prolongado causa mais complicação do que a própria fratura"
+      },
+      {
+        "cenario": "Profilaxia de tromboembolismo em fratura de fêmur, pelve ou cirurgia de quadril",
+        "escolha": "Enoxaparina 40 mg SC 1x/dia desde a admissão, mantida por 35 dias após a cirurgia; heparina não fracionada 5.000 UI SC 8/8 h se TFG abaixo de 30",
+        "porque": "Sem profilaxia, a incidência de trombose venosa profunda em fratura de quadril sem anticoagulação chega a 40–50%. O risco persiste por semanas após a alta"
+      },
+      {
+        "cenario": "Fratura de fragilidade confirmada, com ou sem densitometria prévia",
+        "escolha": "Iniciar cálcio 1.000–1.200 mg/dia de cálcio elementar e colecalciferol 1.000–2.000 UI/dia, e associar anti-reabsortivo: alendronato 70 mg/semana, ácido zoledrônico 5 mg IV/ano ou denosumabe 60 mg SC 6/6 meses",
+        "porque": "Fratura por fragilidade é diagnóstico clínico de osteoporose e indica tratamento independentemente do T-score. Tratar reduz nova fratura em 30–70%, e a janela de oportunidade é a internação"
+      },
+      {
+        "cenario": "Idoso com fratura e agitação, insônia ou delirium",
+        "escolha": "Tratar a dor, a retenção urinária, a constipação e a infecção; medidas ambientais e de sono; evitar benzodiazepínico e antipsicótico de rotina",
+        "porque": "Sedativo e benzodiazepínico prolongam o delirium, aumentam queda e aspiração. O delirium da fratura responde a analgesia adequada e a correção de causa"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "analgesia multimodal de base em fratura de fragilidade",
+        "dose": "500–750 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h em horário fixo",
+        "duracao": "enquanto houver dor, com reavaliação diária",
+        "dose_maxima": "3 g/dia no idoso frágil; 4 g/dia no idoso hígido",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave com depleção de glutationa",
+          "uso simultâneo de outro produto com paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose alta",
+          "náusea",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral gotas 200 mg/mL",
+          "frasco IV 10 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral; a apresentação IV é infundida sem diluir ou em 50 mL de SF 0,9%",
+        "tempo_infusao": "não se aplica (via oral); 15 minutos na via IV",
+        "monitorizacao": [
+          "soma da dose diária de todas as fontes, incluindo associações",
+          "intensidade da dor em escala 0–10 em repouso e ao movimento",
+          "função hepática se uso por mais de 5 dias"
+        ],
+        "ajuste_renal": "Sem ajuste; espaçar para 6/8 h se TFG abaixo de 30",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia; evitar em Child C",
+        "observacoes": "É a base da analgesia multimodal e deve ser prescrito em horário fixo, não por demanda: o idoso com demência ou delirium não pede analgésico. Não substitui o bloqueio nem o opioide na dor intensa.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "condicional",
+        "indicacao": "dor intensa de fratura não controlada por paracetamol e bloqueio",
+        "dose": "2,5 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "4/4 h ou 6/6 h, com dose de resgate",
+        "duracao": "até a cirurgia e nas primeiras 48–72 h do pós-operatório",
+        "dose_maxima": "20–30 mg/dia no idoso frágil, titulada",
+        "contraindicacoes": [
+          "insuficiência respiratória sem suporte",
+          "íleo paralítico",
+          "sedação excessiva no momento da prescrição",
+          "TFG abaixo de 15 sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "sedação",
+          "depressão respiratória",
+          "constipação",
+          "retenção urinária",
+          "náusea",
+          "delirium por acúmulo de metabólitos"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido 30 mg",
+          "solução oral 10 mg/mL",
+          "ampola 10 mg/mL (1 mL)",
+          "ampola 2 mg/mL"
+        ],
+        "preparo": "VO uso direto; IV diluir em 10 mL de SF 0,9% e infundir lentamente",
+        "tempo_infusao": "não se aplica (via oral); 3–5 minutos na via IV",
+        "monitorizacao": [
+          "frequência respiratória e oximetria",
+          "sedação por escala (Ramsay ou POSS)",
+          "dor em repouso e ao movimento",
+          "função intestinal e vesical",
+          "creatinina"
+        ],
+        "ajuste_renal": "Reduzir dose e espaçar com TFG abaixo de 30: metabólitos acumulam e causam delirium",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia",
+        "observacoes": "Dose baixa, reavaliação em 30 min e prescrição obrigatória de laxante. Se a sedação aumentar sem melhora da dor, reduzir a dose: o opioide também causa delirium. Preferir bloqueio periférico para poupar opioide.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "bupivacaína",
+        "papel": "condicional",
+        "indicacao": "bloqueio de fáscia ilíaca para analgesia de fratura de fêmur proximal",
+        "dose": "20–30 mL de solução 0,25% (50–75 mg)",
+        "unidade": "mL",
+        "via": "infiltração perineural guiada por ultrassom",
+        "frequencia": "dose única; repetir em 6–12 h se cateter perineural instalado",
+        "duracao": "6–12 h por dose",
+        "dose_maxima": "2 mg/kg de peso corporal",
+        "contraindicacoes": [
+          "infecção no sítio de punção",
+          "alergia a anestésico local do grupo amida",
+          "coagulopatia grave sem correção",
+          "hipovolemia não corrigida"
+        ],
+        "efeitos_adversos": [
+          "toxicidade sistêmica por anestésico local (zumbido, gosto metálico, convulsão, arritmia)",
+          "bloqueio motor do quadríceps com risco de queda",
+          "hematoma",
+          "punção vascular",
+          "infecção do cateter"
+        ],
+        "apresentacoes": [
+          "frasco 0,25% 20 mL",
+          "frasco 0,5% 20 mL",
+          "ampola 0,5% 4 mL",
+          "solução com vasoconstritor 0,25% 20 mL"
+        ],
+        "preparo": "Diluir a solução 0,5% em partes iguais de SF 0,9% para obter 0,25%; aspirar antes de injetar para excluir punção vascular",
+        "tempo_infusao": "não se aplica (injeção única); início em 15–30 minutos",
+        "monitorizacao": [
+          "dor em repouso e ao movimento antes e 30 min após o bloqueio",
+          "sinais de toxicidade sistêmica nos primeiros 30 min",
+          "força do quadríceps e segurança para deambular",
+          "sítio de punção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave por menor depuração",
+        "observacoes": "Mantém emulsão lipídica 20% disponível para toxicidade sistêmica. Bloqueio motor do quadríceps: não liberar deambulação sem supervisão nas primeiras horas. Não substitui a cirurgia e não deve atrasá-la.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticoagulante",
+        "agente": "enoxaparina",
+        "papel": "primeira_linha",
+        "indicacao": "profilaxia de tromboembolismo venoso em fratura de fêmur, pelve ou cirurgia de quadril",
+        "dose": "40 mg",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "1x/dia",
+        "duracao": "desde a admissão até 35 dias após a cirurgia",
+        "dose_maxima": "40 mg/dia na profilaxia",
+        "contraindicacoes": [
+          "sangramento ativo",
+          "plaquetas abaixo de 50.000",
+          "TFG abaixo de 15 sem diálise",
+          "alergia à heparina",
+          "história de trombocitopenia induzida por heparina"
+        ],
+        "efeitos_adversos": [
+          "sangramento",
+          "hematoma no sítio de injeção",
+          "trombocitopenia",
+          "hipercalemia",
+          "anemia"
+        ],
+        "apresentacoes": [
+          "seringa preenchida 40 mg/0,4 mL",
+          "seringa preenchida 20 mg/0,2 mL",
+          "frasco 100 mg/mL"
+        ],
+        "preparo": "Aplicar sem diluir, por via subcutânea, em abdome ou coxa, com rodízio de sítios e sem massagear",
+        "tempo_infusao": "injeção subcutânea",
+        "monitorizacao": [
+          "hemograma e plaquetas a cada 48–72 h",
+          "sinais de sangramento e hematoma",
+          "função renal",
+          "potássio em doença renal crônica"
+        ],
+        "ajuste_renal": "TFG 15–30: reduzir para 20 mg SC 1x/dia ou trocar por heparina não fracionada; TFG abaixo de 15: heparina não fracionada",
+        "observacoes": "Iniciar na admissão, antes da cirurgia, e manter por 35 dias no total após cirurgia de fêmur ou quadril. Suspender 12 h antes de bloqueio neuroaxial e seguir o protocolo institucional.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticoagulante",
+        "agente": "heparina não fracionada",
+        "papel": "alternativa",
+        "indicacao": "profilaxia de tromboembolismo venoso quando TFG abaixo de 30 ou enoxaparina indisponível",
+        "dose": "5.000 UI",
+        "unidade": "UI",
+        "via": "SC",
+        "frequencia": "8/8 h ou 12/12 h",
+        "duracao": "até a alta ou até 35 dias após a cirurgia",
+        "dose_maxima": "15.000 UI/dia na profilaxia",
+        "contraindicacoes": [
+          "sangramento ativo",
+          "plaquetas abaixo de 50.000",
+          "trombocitopenia induzida por heparina prévia",
+          "alergia à heparina"
+        ],
+        "efeitos_adversos": [
+          "sangramento",
+          "trombocitopenia induzida por heparina",
+          "hematoma",
+          "hipercalemia",
+          "osteoporose com uso prolongado"
+        ],
+        "apresentacoes": [
+          "frasco 5.000 UI/mL (5 mL)",
+          "ampola 5.000 UI/0,25 mL"
+        ],
+        "preparo": "Aplicar sem diluir por via subcutânea, com rodízio de sítios",
+        "tempo_infusao": "injeção subcutânea",
+        "monitorizacao": [
+          "plaquetas a cada 48–72 h na primeira semana",
+          "sinais de sangramento",
+          "potássio"
+        ],
+        "ajuste_renal": "Não se acumula como a enoxaparina, mas exige vigilância de sangramento no renal crônico",
+        "observacoes": "É a opção quando a TFG está abaixo de 30 e a enoxaparina é contraindicada. Menor praticidade por exigir duas a três aplicações diárias.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "bisfosfonato",
+        "agente": "alendronato",
+        "papel": "condicional",
+        "indicacao": "tratamento da osteoporose após fratura de fragilidade, em paciente com TFG acima de 35 e sem contraindicação esofágica",
+        "dose": "70 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/semana, no mesmo dia e horário",
+        "duracao": "3–5 anos, com reavaliação anual",
+        "dose_maxima": "70 mg/semana",
+        "contraindicacoes": [
+          "TFG abaixo de 35",
+          "esofagite, disfagia, úlcera esofágica ou gástrica ativa",
+          "hipocalcemia não corrigida",
+          "incapacidade de permanecer sentado por 30 min",
+          "osteonecrose de mandíbula prévia"
+        ],
+        "efeitos_adversos": [
+          "esofagite e dor retroesternal",
+          "hipocalcemia",
+          "mialgia e artralgia",
+          "osteonecrose de mandíbula",
+          "fratura atípica de fêmur com uso prolongado"
+        ],
+        "apresentacoes": [
+          "comprimido 70 mg",
+          "comprimido 10 mg",
+          "comprimido 70 mg com vitamina D"
+        ],
+        "preparo": "Administrar em jejum com 200 mL de água, sem mastigar, e manter o paciente sentado ou em pé por 30 min, sem deitar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "cálcio e 25-OH-vitamina D antes de iniciar e em 3 meses",
+          "creatinina",
+          "sintomas esofágicos",
+          "dor dental e avaliação odontológica antes da primeira dose"
+        ],
+        "ajuste_renal": "Contraindicado com TFG abaixo de 35; não iniciar em insuficiência renal avançada",
+        "observacoes": "Antes de iniciar: corrigir vitamina D e cálcio, avaliar creatinina e encaminhar para odontologia. Orientar que deitar após a dose causa esofagite. Não é analgésico e não trata a dor da fratura aguda.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "bisfosfonato",
+        "agente": "ácido zoledrônico",
+        "papel": "alternativa",
+        "indicacao": "osteoporose após fratura quando há intolerância ou contraindicação ao alendronato, ou preferência por dose anual",
+        "dose": "5 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "1x/ano",
+        "duracao": "3 anos, com reavaliação anual",
+        "dose_maxima": "5 mg/ano",
+        "contraindicacoes": [
+          "TFG abaixo de 35",
+          "hipocalcemia não corrigida",
+          "desidratação ou volemia instável",
+          "osteonecrose de mandíbula prévia",
+          "arritmia sintomática ou hipomagnesemia grave"
+        ],
+        "efeitos_adversos": [
+          "reação de fase aguda com febre, mialgia e cefaleia nas primeiras 48 h",
+          "hipocalcemia",
+          "nefrotoxicidade",
+          "fibrilação atrial",
+          "osteonecrose de mandíbula",
+          "uveíte"
+        ],
+        "apresentacoes": [
+          "frasco 4 mg/5 mL (concentrado)",
+          "frasco 5 mg/100 mL (diluição pronta)"
+        ],
+        "preparo": "Diluir 5 mg em 100 mL de SF 0,9% ou usar a solução pronta; nunca infundir o concentrado",
+        "tempo_infusao": "15–30 minutos",
+        "monitorizacao": [
+          "creatinina antes de cada dose",
+          "cálcio e vitamina D antes e 7–14 dias depois",
+          "temperatura e sintomas gripais",
+          "hidratação e diurese"
+        ],
+        "ajuste_renal": "Não usar com TFG abaixo de 35; em TFG 35–50, manter 5 mg com hidratação prévia e reavaliar creatinina em 7 dias",
+        "observacoes": "Hidratar antes e orientar a beber água nas 24 h seguintes. Corrigir vitamina D e cálcio antes da infusão. A reação de fase aguda é autolimitada e não contraindica a próxima dose.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticorpo_monoclonal",
+        "agente": "denosumabe",
+        "papel": "alternativa",
+        "indicacao": "osteoporose após fratura com contraindicação ou intolerância a bisfosfonato, sobretudo em TFG baixa",
+        "dose": "60 mg",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "6/6 meses",
+        "duracao": "contínuo, com reavaliação anual",
+        "dose_maxima": "60 mg/6 meses",
+        "contraindicacoes": [
+          "hipocalcemia não corrigida",
+          "hipersensibilidade ao produto",
+          "gestação"
+        ],
+        "efeitos_adversos": [
+          "hipocalcemia, sobretudo em doença renal avançada",
+          "dor musculoesquelética",
+          "infecção de pele",
+          "fratura vertebral múltipla após suspensão abrupta",
+          "osteonecrose de mandíbula"
+        ],
+        "apresentacoes": [
+          "seringa preenchida 60 mg/1 mL",
+          "caneta preenchida 60 mg/1 mL"
+        ],
+        "preparo": "Aplicar sem diluir, por via subcutânea, em abdome, coxa ou braço",
+        "tempo_infusao": "injeção subcutânea",
+        "monitorizacao": [
+          "cálcio antes de cada dose, sobretudo em doença renal crônica",
+          "vitamina D",
+          "infecções de pele",
+          "adesão ao esquema semestral"
+        ],
+        "ajuste_renal": "Sem ajuste formal de dose, mas o risco de hipocalcemia grave cresce com TFG abaixo de 30: repor cálcio e vitamina D e monitorar",
+        "observacoes": "Nunca suspender sem transição para outro anti-reabsortivo: a suspensão abrupta causa fraturas vertebrais múltiplas. Não é a primeira escolha no idoso com TFG normal por custo e por exigir adesão semestral rigorosa.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "suplemento_mineral",
+        "agente": "carbonato de cálcio",
+        "papel": "primeira_linha",
+        "indicacao": "suplementação de cálcio em osteoporose após fratura de fragilidade",
+        "dose": "500–600 mg de cálcio elementar",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h, junto às refeições",
+        "duracao": "contínuo",
+        "dose_maxima": "1.200 mg/dia de cálcio elementar, somando dieta e suplemento",
+        "contraindicacoes": [
+          "hipercalcemia",
+          "hipercalciúria grave",
+          "litíase renal recorrente por cálcio",
+          "insuficiência renal grave sem controle de fósforo"
+        ],
+        "efeitos_adversos": [
+          "constipação",
+          "distensão abdominal",
+          "hipercalcemia",
+          "cálculo renal"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 600 mg",
+          "comprimido efervescente 500 mg",
+          "cápsula 600 mg com vitamina D"
+        ],
+        "preparo": "Uso direto, com alimento; não tomar junto de ferro, levotiroxina ou quinolona",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "cálcio sérico e urinário",
+          "hábito intestinal",
+          "adesão e tolerância gástrica"
+        ],
+        "ajuste_renal": "Na doença renal crônica, usar apenas com controle de cálcio e fósforo; evitar em hiperfosfatemia não controlada",
+        "observacoes": "Preferir cálcio dietético e completar com suplemento. Dose total de cálcio elementar 1.000–1.200 mg/dia. Não prescrever cálcio isolado: sem vitamina D a absorção é baixa e o risco de hipocalcemia com anti-reabsortivo aumenta.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "colecalciferol (vitamina D)",
+        "papel": "primeira_linha",
+        "indicacao": "suplementação de vitamina D em osteoporose e prevenção de hipocalcemia com anti-reabsortivo",
+        "dose": "1.000–2.000 UI",
+        "unidade": "UI",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "4.000 UI/dia de manutenção",
+        "contraindicacoes": [
+          "hipercalcemia",
+          "hipervitaminose D",
+          "granulomatose com hipercalcemia"
+        ],
+        "efeitos_adversos": [
+          "hipercalcemia em dose excessiva",
+          "hipercalciúria",
+          "náusea e constipação"
+        ],
+        "apresentacoes": [
+          "cápsula 1.000 UI",
+          "cápsula 2.000 UI",
+          "solução oral 2.000 UI/mL",
+          "comprimido 7.000 UI",
+          "ampola 50.000 UI/mL"
+        ],
+        "preparo": "Uso direto, com refeição que contenha gordura para melhor absorção",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "25-OH-vitamina D antes e em 3 meses",
+          "cálcio sérico",
+          "adesão"
+        ],
+        "ajuste_renal": "Na doença renal crônica avançada, preferir calcitriol ou análogo ativo sob supervisão de nefrologia",
+        "observacoes": "Na deficiência documentada, usar 50.000 UI/semana por 8 semanas e depois manutenção. Alvo de 25-OH-vitamina D acima de 30 ng/mL. Repor antes de iniciar bisfosfonato ou denosumabe.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Imobilização provisória e analgesia antes de mover o paciente",
+        "detalhe": "Tala, tração ou imobilização na posição funcional conforme o BOX-16, com avaliação neurovascular antes e depois. Nunca transportar ou mobilizar fratura de fêmur sem analgesia e sem imobilização."
+      },
+      {
+        "medida": "Não manter no leito sem previsão cirúrgica",
+        "detalhe": "Em fratura de fêmur proximal, registrar em prontuário o plano cirúrgico e a data prevista em até 48 h. Repouso no leito não é tratamento: aumenta delirium, úlcera por pressão, pneumonia, trombose e mortalidade. Se a cirurgia não ocorrer, justificar por escrito e manter analgesia, profilaxia e reabilitação."
+      },
+      {
+        "medida": "Mobilização e carga precoce",
+        "detalhe": "Sentar à beira do leito no primeiro pós-operatório e deambular com andador em 24–48 h, conforme liberação da técnica cirúrgica. Em fratura vertebral, punho e pelve sem instabilidade, manter marcha com apoio conforme tolerância desde o primeiro dia."
+      },
+      {
+        "medida": "Pacote de prevenção de delirium",
+        "detalhe": "Ambiente com luz natural de dia e escuro à noite, relógio e calendário visíveis, óculos e aparelho auditivo ao alcance, sono contínuo de 6–8 h, acompanhante conhecido e analgesia em horário fixo. Aplicar CAM-4AT na admissão e a cada turno."
+      },
+      {
+        "medida": "Prevenção de úlcera por pressão",
+        "detalhe": "Colchão de distribuição de pressão, mudança de decúbito a cada 2 h, inspeção diária de sacro, calcâneo, trocânter e occipital, pele limpa e seca e proteção nas proeminências. Registrar a inspeção no prontuário."
+      },
+      {
+        "medida": "Função intestinal e vesical sem sonda de rotina",
+        "detalhe": "Prescrever laxante profilático com opioide, registrar evacuação e diurese a cada turno e evitar sonda vesical de demora: usar cateter de alívio se retenção. Sonda de demora é gatilho de infecção e de delirium."
+      },
+      {
+        "medida": "Fisioterapia respiratória e prevenção de pneumonia",
+        "detalhe": "Exercícios respiratórios, elevação da cabeceira, sedestação precoce, higiene oral e vacinação contra influenza e pneumococo conforme calendário. Pneumonia é a principal causa de morte no primeiro mês após fratura de quadril."
+      },
+      {
+        "medida": "Avaliação nutricional e aporte proteico",
+        "detalhe": "Rastrear desnutrição na admissão, garantir 1,2 g/kg/dia de proteína e suplemento oral quando ingestão abaixo de 60% do estimado. Desnutrição agrava sarcopenia, atrasa consolidação e aumenta mortalidade."
+      },
+      {
+        "medida": "Prevenção de nova queda e adaptação do domicílio",
+        "detalhe": "Avaliar marcha e equilíbrio, revisar tapetes, iluminação, escadas e banheiro, instalar barras de apoio e orientar o cuidador. Revisar fármacos que causam tontura, sedação e hipotensão postural antes da alta."
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Imobilização provisória e tala",
+        "protocolo": "BOX-16",
+        "indicacao": "Toda suspeita de fratura de membro antes da avaliação radiológica definitiva e para transporte",
+        "tecnica": "Avaliação neurovascular antes e depois, analgesia, alinhamento suave em tentativa única, acolchoamento de proeminências, tala de fibra de vidro ou tração conforme o segmento e fixação com atadura sem compressão",
+        "complicacoes": "Síndrome compartimental, lesão de nervo por compressão, úlcera por pressão sob a tala e trombose por imobilização prolongada"
+      },
+      {
+        "nome": "Bloqueio de fáscia ilíaca guiado por ultrassom",
+        "indicacao": "Fratura de fêmur proximal com dor intensa, sobretudo quando a cirurgia não é imediata ou o opioide causa sedação",
+        "tecnica": "Antissepsia, anestesia local da pele, transdutor linear em orientação transversa abaixo da espinha ilíaca ântero-superior, identificação da fáscia ilíaca, agulha in-plane de 22 G e injeção de bupivacaína 0,25% 20–30 mL com aspiração intermitente",
+        "complicacoes": "Toxicidade sistêmica por anestésico local, bloqueio motor do quadríceps com queda, hematoma, punção vascular e infecção"
+      },
+      {
+        "nome": "Fixação cirúrgica da fratura de fêmur proximal",
+        "indicacao": "Fratura de fêmur proximal em paciente elegível, em até 48 h da admissão",
+        "tecnica": "Osteossíntese com haste cefalomedular ou parafuso deslizante nas fraturas extracapsulares e artroplastia parcial ou total no colo deslocado, com anestesia geral ou raquianestesia e profilaxia antibiótica na indução",
+        "complicacoes": "Infecção de sítio cirúrgico, luxação de artroplastia, falha de fixação, tromboembolismo, delirium pós-operatório e morte"
+      },
+      {
+        "nome": "Redução fechada e imobilização de fratura de punho",
+        "indicacao": "Fratura de rádio distal com desvio, impacto ou instabilidade",
+        "tecnica": "Analgesia e bloqueio hematoma com lidocaína 1%, tração e redução incruenta, imobilização com tala gessada antebraquiopalmar em posição funcional e radiografia de controle",
+        "complicacoes": "Perda de redução, rigidez, síndrome dolorosa regional complexa, compressão do nervo mediano e úlcera por pressão"
+      },
+      {
+        "nome": "Vertebroplastia ou cifoplastia percutânea",
+        "indicacao": "Fratura vertebral osteoporótica com dor refratária ao tratamento conservador por 3–6 semanas ou dor intensa que impede mobilização",
+        "tecnica": "Punção transpedicular guiada por fluoroscopia ou tomografia, injeção de cimento ósseo no corpo vertebral, com ou sem balão de redução, sob anestesia local e sedação",
+        "complicacoes": "Extravasamento de cimento, embolia pulmonar de cimento, fratura de costela ou pedículo, infecção e fratura adjacente"
+      }
+    ],
+    "metas": [
+      "Cirurgia de fratura de fêmur proximal realizada em até 48 h da admissão, idealmente em 24–36 h, em 100% dos pacientes elegíveis",
+      "Dor em repouso abaixo de 3/10 e em movimento abaixo de 5/10 em até 24 h da admissão",
+      "Nenhum paciente mantido em repouso absoluto no leito sem previsão cirúrgica registrada em prontuário",
+      "Profilaxia de tromboembolismo iniciada na admissão e mantida por 35 dias após cirurgia de fêmur ou quadril",
+      "CAM-4AT aplicado na admissão e a cada turno, com nenhum benzodiazepínico prescrito para agitação",
+      "Sentar fora do leito em até 24 h do pós-operatório e deambular com apoio em até 48 h",
+      "Alta com cálcio, vitamina D e anti-reabsortivo prescritos em 100% das fraturas de fragilidade"
+    ],
+    "fluxo": [
+      "Reconhecer fragilidade: queda da própria altura em paciente com 65 anos ou mais, dor que impede apoio e deformidade ou encurtamento",
+      "Imobilizar, avaliar neurovascular e iniciar analgesia multimodal na primeira hora: paracetamol em horário fixo, morfina em dose baixa se dor intensa e bloqueio de fáscia ilíaca quando disponível",
+      "Solicitar imagem dirigida (radiografia de bacia, quadril, fêmur, punho ou coluna) e laboratório com hemograma, creatinina, eletrólitos, coagulograma, glicemia e ECG",
+      "Classificar o sítio e a estabilidade: fêmur proximal, vértebra com ou sem déficit, punho, pelve; procurar segunda fratura e fratura vertebral associada",
+      "Definir o plano cirúrgico na admissão: fêmur em até 48 h, com avaliação de risco anestésico e otimização que não atrase a cirurgia",
+      "Iniciar profilaxia de tromboembolismo e o pacote de prevenção de delirium, úlcera por pressão, constipação e pneumonia no mesmo dia",
+      "Tratar a osteoporose antes da alta: cálcio, vitamina D e alendronato, zoledrônico ou denosumabe, com investigação de causa secundária",
+      "Alta com reabilitação, prevenção de queda, revisão de fármacos, retirada de dispositivos e retorno ambulatorial em 7–15 dias"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso frágil com demência",
+        "ajuste": "Analgesia em horário fixo, bloqueio periférico para poupar opioide, evitar benzodiazepínico e antipsicótico e manter acompanhante e rotina",
+        "alerta": "delirium, perda funcional e institucionalização"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Evitar morfina em TFG abaixo de 30, usar heparina não fracionada se TFG abaixo de 30, não usar alendronato nem zoledrônico com TFG abaixo de 35 e preferir denosumabe com controle de cálcio",
+        "alerta": "acúmulo de metabólitos, sangramento e hipocalcemia grave"
+      },
+      {
+        "populacao": "cardiopata e anticoagulado",
+        "ajuste": "Avaliar risco hemorrágico e cardiológico antes da cirurgia, manejar anticoagulante conforme procedimento e não atrasar a cirurgia por exames cardiológicos sem indicação",
+        "alerta": "sangramento, eventos cardíacos perioperatórios e trombose por suspensão inadequada"
+      },
+      {
+        "populacao": "osteoporose grave com múltiplas fraturas",
+        "ajuste": "Preferir zoledrônico ou denosumabe pela adesão e potência, associar cálcio e vitamina D e investigar causa secundária",
+        "alerta": "nova fratura vertebral e fratura atípica com uso prolongado de bisfosfonato"
+      },
+      {
+        "populacao": "paciente com insuficiência cardíaca",
+        "ajuste": "Cautela com volume de infusão do zoledrônico, hidratação fracionada e vigilância de edema e dispneia",
+        "alerta": "descompensação por sobrecarga hídrica"
+      },
+      {
+        "populacao": "institucionalizado ou sem cuidador",
+        "ajuste": "Acionar serviço social e reabilitação domiciliar, garantir andador e adaptação do domicílio e treinar cuidador antes da alta",
+        "alerta": "nova queda, abandono do tratamento e fratura recorrente"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "radiografia de bacia, quadril, fêmur, punho ou coluna conforme a dor",
+          "indicacao": "todos com suspeita de fratura",
+          "o_que_muda": "confirma o sítio, define o traço e a técnica cirúrgica e identifica fratura associada"
+        },
+        {
+          "nome": "hemograma, ureia, creatinina, eletrólitos, glicemia e coagulograma",
+          "indicacao": "todos, na admissão",
+          "o_que_muda": "anemia, desidratação, distúrbio eletrolítico e disfunção renal mudam a preparação cirúrgica e o ajuste de dose"
+        },
+        {
+          "nome": "eletrocardiograma de 12 derivações e troponina quando indicada",
+          "indicacao": "todos com 65 anos ou mais",
+          "o_que_muda": "arritmia, isquemia e bloqueio mudam a avaliação anestésica e o monitoramento"
+        },
+        {
+          "nome": "cálcio, fósforo, magnésio, 25-OH-vitamina D, PTH e fosfatase alcalina",
+          "indicacao": "todos com fratura de fragilidade",
+          "o_que_muda": "identifica hipovitaminose D, hiperparatireoidismo e causa secundária, e define a reposição antes do anti-reabsortivo"
+        },
+        {
+          "nome": "TSH e eletroforese de proteínas",
+          "indicacao": "fratura vertebral ou fratura sem trauma evidente",
+          "o_que_muda": "hipertireoidismo e mieloma múltiplo mudam o tratamento e contraindicam bisfosfonato sem investigação"
+        },
+        {
+          "nome": "urina tipo 1, urocultura e radiografia de tórax",
+          "indicacao": "febre, tosse, confusão ou delirium",
+          "o_que_muda": "infecção urinária e pneumonia são causas frequentes de delirium e de febre no pós-operatório"
+        },
+        {
+          "nome": "densitometria óssea",
+          "indicacao": "após estabilização, quando não há exame recente",
+          "o_que_muda": "confirma osteoporose e serve de base para monitorar o tratamento, mas não deve atrasar o início do anti-reabsortivo"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "repouso absoluto no leito como tratamento de fratura de fragilidade",
+          "motivo": "aumenta delirium, úlcera por pressão, pneumonia, trombose e mortalidade; não substitui a cirurgia nem a mobilização precoce"
+        },
+        {
+          "exame": "aguardar estabilização clínica completa para operar fratura de fêmur",
+          "motivo": "o atraso aumenta mortalidade e não melhora desfecho; otimizar em paralelo, não em série"
+        },
+        {
+          "exame": "tomografia de crânio de rotina em fratura isolada sem trauma craniano",
+          "motivo": "não muda a conduta da fratura e atrasa analgesia e cirurgia"
+        },
+        {
+          "exame": "iniciar alendronato ou zoledrônico sem corrigir vitamina D e cálcio",
+          "motivo": "causa hipocalcemia sintomática, cãibras e convulsão"
+        },
+        {
+          "exame": "prescrever benzodiazepínico para agitação ou insônia no pós-operatório",
+          "motivo": "prolonga delirium, aumenta queda, aspiração e mortalidade"
+        },
+        {
+          "exame": "alta sem tratamento de osteoporose e sem profilaxia de tromboembolismo",
+          "motivo": "a fratura de fragilidade é a maior preditora de nova fratura e de morte no ano seguinte"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar o cálcio com a refeição e a vitamina D todos os dias",
+        "tomar o alendronato em jejum, com um copo de água, e ficar sentado por 30 minutos",
+        "levantar e caminhar com andador todos os dias, conforme a orientação da fisioterapia",
+        "usar a meia elástica e receber a profilaxia de trombose até completar o tempo prescrito",
+        "manter consulta com ortopedia e com o clínico em 7 a 15 dias",
+        "adaptar o banheiro com barra de apoio e retirar tapetes soltos"
+      ],
+      "evitar": [
+        "ficar na cama sem se movimentar por causa da dor",
+        "tomar anti-inflamatório para dor óssea sem conversar com o médico",
+        "interromper o tratamento da osteoporose por conta própria",
+        "tomar remédio para dormir ou calmante por conta própria",
+        "carregar peso ou subir escadas sem apoio no primeiro mês",
+        "fumar e beber álcool em excesso"
+      ],
+      "retorno": [
+        "dor no peito ou falta de ar",
+        "febre ou ferida com secreção",
+        "confusão mental ou sonolência excessiva",
+        "incapacidade de apoiar o peso ou dor súbita no quadril operado",
+        "nova queda ou nova fratura"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "sedação",
+          "depressão respiratória",
+          "constipação",
+          "retenção urinária"
+        ],
+        "observacao": "reduzir dose e reavaliar em 30 min se sedação sem melhora da dor; prescrever laxante desde a primeira dose"
+      },
+      {
+        "agente": "bupivacaína",
+        "efeitos": [
+          "toxicidade sistêmica",
+          "bloqueio motor do quadríceps",
+          "hematoma"
+        ],
+        "observacao": "suspender infusão, administrar emulsão lipídica 20% e acionar suporte avançado se zumbido, gosto metálico ou convulsão"
+      },
+      {
+        "agente": "enoxaparina",
+        "efeitos": [
+          "sangramento",
+          "hematoma",
+          "trombocitopenia"
+        ],
+        "observacao": "suspender se sangramento ativo ou plaquetas abaixo de 50.000 e dosar plaquetas a cada 48–72 h"
+      },
+      {
+        "agente": "alendronato",
+        "efeitos": [
+          "esofagite",
+          "dor retroesternal",
+          "hipocalcemia"
+        ],
+        "observacao": "suspender se disfagia ou dor retroesternal; orientar a não deitar após a dose"
+      },
+      {
+        "agente": "ácido zoledrônico",
+        "efeitos": [
+          "febre e mialgia",
+          "hipocalcemia",
+          "nefrotoxicidade"
+        ],
+        "observacao": "hidratar, dosar creatinina e cálcio e não repetir com creatinina elevada"
+      },
+      {
+        "agente": "denosumabe",
+        "efeitos": [
+          "hipocalcemia",
+          "infecção de pele",
+          "fratura vertebral após suspensão"
+        ],
+        "observacao": "não suspender sem transição para bisfosfonato; repor cálcio e vitamina D"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender ou reduzir o fármaco implicado e registrar a reação em prontuário",
+      "Morfina com sedação excessiva: reduzir dose, monitorar frequência respiratória e considerar naloxona apenas em depressão respiratória",
+      "Bupivacaína com sinais de toxicidade: interromper a injeção, administrar emulsão lipídica 20% e acionar suporte avançado",
+      "Enoxaparina com sangramento: suspender, dosar hemograma e plaquetas e reavaliar a profilaxia",
+      "Alendronato com esofagite: suspender, tratar com IBP e trocar para zoledrônico ou denosumabe",
+      "Zoledrônico com febre e mialgia: sintomático, hidratação e manter a próxima dose conforme calendário",
+      "Comunicar a equipe e reescrever o plano sem perder a meta de tratar a osteoporose"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "carbonato de cálcio 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "12/12 h com a refeição",
+            "duracao": "contínuo",
+            "condicao": "osteoporose após fratura",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "colecalciferol 1.000 UI",
+            "dose": "1.000–2.000 UI",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "contínuo",
+            "condicao": "deficiência de vitamina D e osteoporose",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "alendronato 70 mg",
+            "dose": "70 mg",
+            "via": "VO",
+            "frequencia": "1x/semana",
+            "duracao": "3–5 anos",
+            "condicao": "TFG acima de 35 e sem contraindicação esofágica",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 500 mg",
+            "dose": "500–750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "7 dias",
+            "condicao": "dor residual após a alta",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "paracetamol 500 mg",
+            "dose": "500–750 mg",
+            "via": "VO ou IV",
+            "frequencia": "6/6 h em horário fixo",
+            "monitorizacao": "dose total diária e função hepática",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "morfina 2,5 mg",
+            "dose": "2,5 mg",
+            "via": "VO ou IV",
+            "frequencia": "4/4 h se dor intensa, com resgate",
+            "monitorizacao": "sedação, frequência respiratória e constipação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "enoxaparina 40 mg",
+            "dose": "40 mg",
+            "via": "SC",
+            "frequencia": "1x/dia",
+            "monitorizacao": "plaquetas e sinais de sangramento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "bupivacaína 0,25% 30 mL",
+            "dose": "20–30 mL",
+            "via": "bloqueio de fáscia ilíaca",
+            "frequencia": "dose única",
+            "monitorizacao": "toxicidade sistêmica e força do quadríceps",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "radiografia de bacia e quadril",
+          "radiografia de fêmur",
+          "radiografia de punho",
+          "radiografia ou tomografia de coluna",
+          "hemograma",
+          "ureia e creatinina",
+          "sódio, potássio e cálcio",
+          "coagulograma",
+          "glicemia",
+          "eletrocardiograma",
+          "25-OH-vitamina D e PTH",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, com fratura de fragilidade, necessitando de afastamento de atividades e reabilitação por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e restrição de carga são decisão médica e ortopédica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente idoso com fratura de fragilidade em (sítio), mecanismo, analgesia utilizada, tempo até a cirurgia, profilaxia de tromboembolismo, prevenção de delirium, tratamento da osteoporose prescrito e plano de reabilitação."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "mecanismo e energia da queda",
+        "dor e capacidade de apoio",
+        "fraturas prévias e densitometria",
+        "uso de cálcio, vitamina D e anti-reabsortivo",
+        "anticoagulante, corticoide, IBP e sedativos",
+        "confusão e cognição basal",
+        "última urina e evacuação",
+        "comorbidades e risco anestésico",
+        "domicílio, cuidador e risco de queda"
+      ],
+      "texto_template": "Idoso com fratura de fragilidade, mecanismo e energia da queda, dor e capacidade de apoio, fraturas prévias e densitometria, uso de cálcio, vitamina D e anti-reabsortivo, anticoagulante, corticoide, IBP e sedativos, cognição basal e confusão, última urina e evacuação, comorbidades, risco anestésico, domicílio e cuidador."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e perfusão",
+        "inspeção e palpação do membro com deformidade e encurtamento",
+        "avaliação neurovascular distal",
+        "coluna e dor à percussão",
+        "pelve e estabilidade",
+        "pele e proeminências ósseas",
+        "estado mental e CAM-4AT",
+        "marcha e equilíbrio quando possível"
+      ],
+      "texto_template": "Sinais vitais e perfusão, inspeção e palpação do membro com deformidade e encurtamento, avaliação neurovascular distal, coluna e dor à percussão, pelve, pele e proeminências ósseas, estado mental com CAM-4AT e avaliação de marcha e equilíbrio."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de ortogeriatria, tempo até a cirurgia e pacote de prevenção de delirium",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_ortopedia",
+        "o_que_verificar": "indicação cirúrgica por sítio, técnica de fixação e reabilitação",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_geriatria",
+        "o_que_verificar": "prevenção de delirium, queda e fratura, e tratamento da osteoporose no idoso",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_osteoporose",
+        "o_que_verificar": "indicação de anti-reabsortivo após fratura, alvo de vitamina D e duração do tratamento",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e doses de paracetamol, morfina, bupivacaína, enoxaparina, alendronato, zoledrônico e denosumabe",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GER09-01",
+        "tipo": "imobilizacao_sem_cirurgia",
+        "gatilho": "fratura de fêmur proximal sem programação cirúrgica registrada e sem previsão de cirurgia em 48 h",
+        "severidade": "grave",
+        "mensagem": "Não manter fratura de fêmur no leito sem previsão cirúrgica: cada 24 h de atraso aumenta delirium, úlcera, pneumonia, trombose e mortalidade.",
+        "acao": "bloquear a conduta e exigir plano cirúrgico com data",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER09-02",
+        "tipo": "tvp_sem_profilaxia",
+        "gatilho": "fratura de fêmur, pelve ou cirurgia de quadril sem profilaxia de tromboembolismo prescrita",
+        "severidade": "grave",
+        "mensagem": "Profilaxia de tromboembolismo é obrigatória: enoxaparina 40 mg ou heparina não fracionada, por 35 dias após a cirurgia.",
+        "acao": "bloquear item e sugerir profilaxia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER09-03",
+        "tipo": "osteoporose_nao_tratada",
+        "gatilho": "alta de fratura de fragilidade sem cálcio, vitamina D e anti-reabsortivo prescritos",
+        "severidade": "grave",
+        "mensagem": "Fratura de fragilidade é diagnóstico de osteoporose: tratar antes da alta reduz nova fratura e morte.",
+        "acao": "bloquear alta e sugerir tratamento ósseo",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER09-04",
+        "tipo": "bisfosfonato_sem_avaliacao",
+        "gatilho": "alendronato ou zoledrônico prescrito sem cálcio, vitamina D, creatinina e avaliação odontológica",
+        "severidade": "precaucao",
+        "mensagem": "Anti-reabsortivo sem reposição prévia causa hipocalcemia; sem avaliação odontológica aumenta risco de osteonecrose.",
+        "acao": "alertar e sugerir correção antes da dose",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER09-05",
+        "tipo": "benzodiazepinico_no_idoso",
+        "gatilho": "benzodiazepínico prescrito para agitação, insônia ou delirium no pós-operatório",
+        "severidade": "grave",
+        "mensagem": "Benzodiazepínico prolonga delirium, aumenta queda, aspiração e mortalidade no idoso com fratura.",
+        "acao": "bloquear item e sugerir analgesia e medidas ambientais",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER09-06",
+        "tipo": "opioide_sem_laxante",
+        "gatilho": "opioide prescrito sem laxante e sem reavaliação de sedação",
+        "severidade": "precaucao",
+        "mensagem": "Opioide sem laxante causa constipação e fecaloma, que pioram delirium e dor abdominal.",
+        "acao": "alertar e sugerir laxante",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER09-07",
+        "tipo": "sonda_de_demora",
+        "gatilho": "sonda vesical de demora sem indicação documentada",
+        "severidade": "precaucao",
+        "mensagem": "Sonda de demora aumenta infecção urinária e delirium e dificulta a mobilização.",
+        "acao": "alertar e sugerir cateter de alívio",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER09-08",
+        "tipo": "denosumabe_sem_transicao",
+        "gatilho": "denosumabe suspenso sem transição para outro anti-reabsortivo",
+        "severidade": "precaucao",
+        "mensagem": "Suspensão abrupta de denosumabe causa fraturas vertebrais múltiplas.",
+        "acao": "alertar e sugerir transição",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

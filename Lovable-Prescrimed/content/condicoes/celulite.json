@@ -1,0 +1,307 @@
+{
+  "id": "celulite",
+  "nome": "Celulite / erisipela",
+  "cat": "Pele",
+  "alias": "celulite erisipela perna inchada vermelha dor pele infeccao pele ferida infectada linfangite",
+  "cid": [
+    [
+      "L03",
+      "Celulite"
+    ],
+    [
+      "A46",
+      "Erisipela"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "IDSA — SSTI 2014; UpToDate — nonpurulent SSTI"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "DERM-01 em 2026-11-27",
+    "fundido_workspace": "DERM-01 em 2026-11-27"
+  },
+  "alerta": "Não purulenta (erisipela/celulite sem coleção): estreptococo → penicilina/cefalosporina 1ª geração é o alvo. Purulenta (abscesso/furúnculo): DRENAR é o tratamento (antibiótico é secundário; CA-MRSA cobertura se grave). Marcar o bordo do eritema COM CANETA e data — a resposta em 48 h decide a conduta. Graves (hipotensão, necrose, crepitação, dor desproporcional, bolhas, imunossupressão, sepse): EV + cirurgia (fasciíte necrosante é cirúrgico em horas). Porta de entrada: tratar (tinea pedis, úlcera, eczema) para não reincidir. Erisipela recorrente: considerar penicilina benzatina profilática com infectologia.",
+  "redFlags": [
+    "Dor DESPROPORCIONAL ao exame, bolhas, crepitação, anestesia local ou progressesão em horas — fasciíte necrosante: cirurgia JÁ (não espere exame)",
+    "Hipotensão/febre alta/taquicardia — sepse: protocolo Sepse + ATB EV",
+    "Imunossuprimido/diabético/neutropênico — EV de entrada e cobertura ampliada",
+    "Mordedura/humano/água doce ou salgada — cobertura específica (ver ferimento/mordedura)",
+    "Celulite orbital/periorbitária ou facial — hospitalizar e oftalmo/avaliar",
+    "Erisipela recorrente (> 2 episódios) — profilaxia e investigar porta de entrada (intertrigo, tinea)"
+  ],
+  "naoUsar": [
+    "SMZ-TMP como 1ª linha da celulite NÃO purulenta (não cobre estreptococo adequadamente)",
+    "Antibiótico VO em SSTI grave",
+    "Corticoide tópico/IM de rotina",
+    "Drenagem 'no gelo' de abscesso profundo/face — encaminhar",
+    "AINE em dose alta se função renal limítrofe/desidratação"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Antibiótico — não purulenta (estreptocócica) 1ª linha",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "cefalexina",
+            "pos": "500 mg VO a cada 6 h por 5–7 dias (comida não atrapalha)",
+            "ped": "25–50 mg/kg/dia dividido 6/6 h",
+            "motivo": "Cefalosporina 1ª geração: alvo correto"
+          },
+          {
+            "base": "amoxclav",
+            "pos": "875/125 mg VO a cada 12 h por 5–7 dias — se comorbidade/diabetes/recorrência (cobre estafilococo adicional)",
+            "ped": "20–40 mg/kg/dia (amox) 8/8 h",
+            "motivo": "Espectro ampliado"
+          },
+          {
+            "base": "cefadroxila",
+            "pos": "1 g VO a cada 12 h por 5–7 dias",
+            "ped": "15 mg/kg/dose 12/12 h",
+            "motivo": "1ª geração 12/12 h"
+          },
+          {
+            "base": "clindamicina",
+            "pos": "300 mg VO a cada 6 h por 5–7 dias — alergia a penicilina",
+            "ped": "10–20 mg/kg/dia dividido 8/8 h",
+            "motivo": "Alergia penicilina"
+          },
+          {
+            "base": "azitromicina",
+            "pos": "500 mg VO 1x/dia por 3–5 dias — alternativa rara em alergia múltipla",
+            "motivo": "Alternativa limitada"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico — purulenta (após drenagem, se indicado)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxclav",
+            "pos": "875/125 mg VO a cada 12 h por 7 dias se abscesso associado/GRANDE/múltiplo",
+            "motivo": "Purulenta com fatores"
+          },
+          {
+            "base": "clindamicina",
+            "pos": "300 mg VO 6/6 h por 7 dias — cobertura CA-MRSA oral de escolha entre os disponíveis",
+            "motivo": "Cobertura MRSA oral"
+          },
+          {
+            "base": "ciprofloxacino",
+            "pos": "500 mg VO 12/12 h por 7 dias + agente anaeróbio se mordedura (ver protocolo)",
+            "motivo": "Contextos específicos"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico — ALWAYS SMZ-TMP com duração CORRETA (nunca 3 dias)",
+        "semPreset": true,
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "smztmp",
+              "n": "Sulfametoxazol-trimetoprima (genérico)",
+              "ap": "800/160 mg comprimido",
+              "pos": "800/160 mg VO a cada 12 h por 5 a 7 DIAS (nunca 3) — opção para purulenta/MRSA quando sensibilidade local o favorece; hidratação generosa; vigiar rash e fotossensibilidade."
+            },
+            "motivo": "Duração correta — erro histórico de 3 dias"
+          }
+        ]
+      },
+      {
+        "nome": "Analgesia",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "1 g VO a cada 6 h se dor (máx 4 g/dia)",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Dor da celulite dói"
+          },
+          {
+            "base": "paracetamol",
+            "pos": "1 g VO 6/6 h (máx 4 g/dia)",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "ibuprofeno",
+            "pos": "600 mg VO 8/8 h com alimento por até 5 dias — anti-inflamatório é adjuvante aceitável na erisipela",
+            "motivo": "AINE adjuvante"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "A perna e o retorno em 48 h",
+              "ap": "",
+              "pos": "ELEVAR a perna acima do nível do coração (reduz edema e dor); repouso relativo; MARCAÇÃO da borda com caneta + retorno AGENDADO em 48 h: se a borda passou da caneta ou febre persiste, mudar de via/classe. Tratar a porta de entrada (micose de pé com antifúngico, intertrigo). RETORNAR ANTES se bolhas, dor muito maior, mancha escura, febre alta, confusão."
+            },
+            "motivo": "Reavaliação é parte do tratamento"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Elevação do membro acometido",
+              "ap": "",
+              "q": "",
+              "pos": "manter acima do nível do coração por 30 minutos, 3 a 4 vezes ao dia, e durante o repouso noturno; reduz edema e dor"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Repouso relativo",
+              "ap": "",
+              "q": "",
+              "pos": "evitar ortostatismo prolongado e caminhada longa até o edema ceder; retomar atividade de forma gradual após 48 horas sem progressão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Demarcação da borda com caneta",
+              "ap": "",
+              "q": "",
+              "pos": "contorno do eritema com data e hora na primeira avaliação e medida da maior dimensão em centímetros; repetir em 24 a 48 horas, porque avanço além da marca indica falha"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Tratamento da porta de entrada",
+              "ap": "",
+              "q": "",
+              "pos": "micose interdigital com terbinafina 250 mg VO 1x/dia por 2 semanas ou clotrimazol creme 2x/dia por 4 semanas; limpar e cobrir úlceras e fissuras"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Compressão elástica após o controle do quadro",
+              "ap": "",
+              "q": "",
+              "pos": "meia de compressão de 20 a 30 mmHg em linfedema ou insuficiência venosa, iniciada após a redução do eritema, para reduzir recidiva"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Controle glicêmico no diabético",
+              "ap": "",
+              "q": "",
+              "pos": "glicemia capilar abaixo de 180 mg/dL no internado e HbA1c solicitada na alta, porque hiperglicemia sustenta a infecção"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Cuidado com a pele",
+              "ap": "",
+              "q": "",
+              "pos": "sabão neutro, secagem entre os dedos, hidratação e unha cortada reta; evitar calor local, massagem e depilação na área acometida"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Hidratação e analgesia",
+              "ap": "",
+              "q": "",
+              "pos": "paracetamol 750 mg 6/6 h se dor e ingestão hídrica adequada, sobretudo em uso de sulfametoxazol-trimetoprima"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "DERM-01"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "ATB EV (grave/intolerância oral)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "cefazolina",
+            "motivo": "1–2 g EV 8/8 h — não purulenta"
+          },
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1–2 g EV 1x/dia — erisipela/celulite com comorbidades"
+          },
+          {
+            "hosp": "oxacilina",
+            "motivo": "2 g EV 4/4 h — suspeita de MSSA"
+          },
+          {
+            "hosp": "clindamicina_ev",
+            "motivo": "600–900 mg EV 8/8 h — alergia/purulenta"
+          },
+          {
+            "hosp": "amp_sulb",
+            "motivo": "3 g EV 6/6 h — mordedura/diabético"
+          },
+          {
+            "hosp": "penicilina_crist",
+            "motivo": "2–4 MU EV 4/4 h — erisipela clássica"
+          }
+        ]
+      },
+      {
+        "nome": "Analgesia EV",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV 6/6 h"
+          },
+          {
+            "hosp": "cetorolaco",
+            "motivo": "30 mg EV 8/8 h (curto; sem risco renal)"
+          }
+        ]
+      }
+    ]
+  }
+}

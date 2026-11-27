@@ -1,0 +1,460 @@
+{
+  "id": "ws-go_10",
+  "nome": "ITU na gestação",
+  "cat": "Ginecologia/Obstetrícia",
+  "alias": "itu na gestacao itu na gestacao infeccao do trato urinario na gestacao itu na gravidez bacteriuria assintomatica na gestacao cistite na gestacao pielonefrite na gestacao",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GO-10_itu_gestacao.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: esquema de antibiótico por idade gestacional e critérios de internação na pielonefrite",
+      "[verificar] sociedade_ginecologia: rastreio de bacteriúria assintomática e profilaxia supressiva",
+      "[verificar] diretriz_obstetrica: duração do tratamento e urocultura de controle",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço",
+      "[verificar] literatura: resistência local de E. coli e escolha empírica"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GO-10 em 2026-11-27",
+    "fundido_workspace": "GO-10 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: febre acima de 38 °C com dor lombar, calafrios ou náusea -> internar, colher hemocultura e urocultura e iniciar ceftriaxona intravenosa; hipotensão, taquicardia, confusão ou oligúria -> reposição volêmica, antibiótico na primeira hora e unidade de terapia intensiva; vômitos incoercíveis ou impossibilidade de ingerir comprimido -> internar para hidratação e antibiótico intravenoso; dor lombar em cólica com hematúria ou história de litíase -> ultrassom de vias urinárias imediato e avaliação urológica para desobstrução. 1) Suspeitar pela clínica e confirmar com urina tipo 1 e urocultura com antibiograma antes de iniciar antibiótico, exceto na pielonefrite 2) Classificar em bacteriúria assintomática, cistite ou pielonefrite e registrar a idade gestacional exata 3) Escolher o antibiótico pela idade gestacional: nitrofurantoína ou cefalexina antes de 37 semanas; cefalexina no termo; ceftriaxona intravenosa na pielonefrite 4) Tratar 5 a 7 dias na bacteriúria e na cistite e 10 a 14 dias na pielonefrite, com internação e hidratação na pielonefrite 5) Repetir urocultura 1 a 2 semanas após o término e manter culturas mensais até o parto 6) Sem melhora em 48 a 72 horas: repetir cultura, ultrassom de vias urinárias e revisar o esquema pelo antibiograma 7) Recorrência: tratar o episódio e iniciar profilaxia supressiva noturna até o parto e por 4 a 6 semanas no puerpério 8) Puerpério: manter rastreio se houve ITU recorrente, orientar contracepção e investigar malformação u",
+  "redFlags": [
+    "febre acima de 38 °C com dor lombar, calafrios ou náusea -> internar, colher hemocultura e urocultura e iniciar ceftriaxona intravenosa",
+    "hipotensão, taquicardia, confusão ou oligúria -> reposição volêmica, antibiótico na primeira hora e unidade de terapia intensiva",
+    "vômitos incoercíveis ou impossibilidade de ingerir comprimido -> internar para hidratação e antibiótico intravenoso",
+    "dor lombar em cólica com hematúria ou história de litíase -> ultrassom de vias urinárias imediato e avaliação urológica para desobstrução",
+    "contrações uterinas regulares, perda de líquido ou sangramento vaginal -> avaliação obstétrica imediata com cardiotocografia",
+    "creatinina acima de 1,1 mg/dL ou diurese abaixo de 25 mL/h -> ajustar doses ao clearance, hidratar com cautela e reavaliar função renal em 24 horas",
+    "ausência de melhora após 48 a 72 horas de antibiótico adequado -> repetir urocultura, solicitar ultrassom de vias urinárias e revisar o esquema",
+    "urocultura de controle ainda positiva após o tratamento -> tratar conforme antibiograma e indicar profilaxia supressiva"
+  ],
+  "naoUsar": [
+    "idade gestacional de 37 semanas ou mais",
+    "trabalho de parto em curso",
+    "deficiência de G6PD",
+    "clearance de creatinina abaixo de 30 mL/min",
+    "alergia a nitrofurano",
+    "neuropatia periférica prévia",
+    "anafilaxia prévia a cefalosporina",
+    "alergia a cefalexina"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar todo o antibiótico no intervalo prescrito, mesmo sem sintoma"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "quinolona e fluoroquinolona em qualquer momento da gestação"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Nitrofurano",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "nitrofurantoina",
+            "pos": "100 mg. Via VO. 12/12 h, com alimento. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "bacteriúria assintomática e cistite antes de 37 semanas (1a linha) bacteriúria ou cistite antes de 37 semanas",
+            "nota": "Uso direto, com alimento para reduzir náusea - monitorar: urocultura de controle 1 a 2 semanas após o término; monitorar: sintomas urinários e febre; monitorar: hemograma se uso prolongado; monitorar: sinais de neuropatia (parestesia de mãos e pés) · NÃO: idade gestacional de 37 semanas ou mais; trabalho de parto em curso; deficiência de G6PD; clearance de creatinina abaixo de 30 mL/min; alergia a nitrofurano; neuropatia periférica prévia · Obs: É a droga de escolha da cistite na gestação pela concentração urinária alta e exposição fetal mínima, mas o limite de 37 semanas é rígido: perto do termo há risco de anemia hemolítica…",
+            "dose": {
+              "texto": "100 mg; 12/12 h, com alimento; 5 a 7 dias; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cefalosporina de primeira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "cefalexina",
+            "pos": "500 mg. Via VO. 6/6 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "cistite e bacteriúria assintomática, inclusive a partir de 37 semanas (1a linha) cistite ou bacteriúria, inclusive com 37 semanas ou mais",
+            "nota": "Uso direto, com ou sem alimento - monitorar: regressão da febre e da disúria em 48 a 72 horas; monitorar: urocultura de controle; monitorar: diarreia e sinais de colite; monitorar: rash cutâneo · NÃO: anafilaxia prévia a cefalosporina; alergia a cefalexina; colite por C. difficile ativa · Obs: É a escolha quando a nitrofurantoína está proibida (37 semanas ou mais), quando há intolerância digestiva ou quando o serviço não dispõe de nitrofurantoína. Cobre E. coli, Klebsiella e Proteus · Renal: Clearance abaixo de 30 mL/min: 500 mg a cada 8 a 12 horas; em diálise, dose suplementar…",
+            "dose": {
+              "texto": "500 mg; 6/6 h; 5 a 7 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Fosfomicina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "fosfomicina",
+            "pos": "3 g. Via VO. Dose única. 1 dose.",
+            "posTodas": true,
+            "motivo": "cistite e bacteriúria assintomática em dose única, sobretudo com risco de baixa adesão (1a linha) cistite com baixa adesão ao esquema de 7 dias",
+            "nota": "Dissolver o conteúdo do sachê em 100 a 200 mL de água, preferencialmente à noite após esvaziar a bexiga - monitorar: sintomas urinários em 48 a 72 horas; monitorar: urocultura de controle 1 a 2 semanas após; monitorar: diarreia · NÃO: pielonefrite; alergia a fosfomicina; insuficiência renal grave sem avaliação; diarreia grave ativa · Obs: Dose única é a maior vantagem na gestante que não consegue manter esquema de 7 dias. Não usar em pielonefrite: a concentração sérica e tecidual é insuficiente. Se o serviço não tiver o sachê de 3 g, a apresentação de 2 g pode… · Renal: Clearance abaixo de 30 mL/min: evitar ou usar com intervalo…",
+            "dose": {
+              "texto": "3 g; dose única; 1 dose; max. 3 g por episódio",
+              "status": "ok",
+              "valor": 3,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina com inibidor de betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "875/125 mg. Via VO. 12/12 h. 7 dias na cistite; 10 a 14 dias na pielonefrite após a fase intravenosa.",
+            "posTodas": true,
+            "motivo": "cistite ou pielonefrite por germe resistente a nitrofurantoína e cefalexina, guiada por antibiograma (alternativa)",
+            "nota": "Uso direto, com alimento para melhorar a absorção e reduzir diarreia - monitorar: febre e sintomas urinários em 48 a 72 horas; monitorar: diarreia; monitorar: transaminases se uso prolongado; monitorar: urocultura de controle",
+            "dose": {
+              "texto": "875/125 mg; 12/12 h; 7 dias na cistite; 10 a 14 dias na pielonefrite após a fase intravenosa; max. 1.750/250 mg/dia",
+              "status": "ok",
+              "valor": 125,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Sulfonamida com trimetoprima",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "smx_tmp",
+            "pos": "800/160 mg. Via VO. 12/12 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "cistite por germe sensível no segundo trimestre, quando nitrofurantoína, cefalexina e fosfomicina não são opção (condicional)",
+            "nota": "Uso direto, com água e preferencialmente com alimento - monitorar: rash cutâneo e lesão de mucosa; monitorar: hemograma; monitorar: potássio; monitorar: urocultura de controle; monitorar: bilirrubina do neonato se uso próximo ao parto · NÃO: primeiro trimestre da gestação; a partir de 32 semanas ou perto do termo; deficiência de G6PD; alergia a sulfa; insuficiência renal grave; história de síndrome de Stevens-Johnson · Obs: Uso restrito: é antagonista de folato no primeiro trimestre e desloca bilirrubina no termo, com risco de kernicterus. Só entra no segundo trimestre, com antibiograma que mostre sensibilidade e sem alternativa ·…",
+            "dose": {
+              "texto": "800/160 mg; 12/12 h; 5 a 7 dias; max. 1.600/320 mg/dia",
+              "status": "ok",
+              "valor": 160,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico antipiretico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "paracetamol",
+            "pos": "500 a 1.000 mg. Via VO. 6/6 h se necessário. Até 3 dias, enquanto durar a dor ou a febre.",
+            "posTodas": true,
+            "motivo": "dor lombar e febre na pielonefrite ou na cistite (condicional) dor e febre",
+            "nota": "Uso direto - monitorar: temperatura; monitorar: dor; monitorar: dose total diária para não ultrapassar 3 g; monitorar: transaminases em uso prolongado · NÃO: hepatopatia grave descompensada; alergia; desnutrição grave com depleção de glutationa · Obs: É o analgésico e antipirético de escolha na gestação em qualquer trimestre. Não substitui antibiótico nem drenagem: febre que persiste apesar do paracetamol indica falha do tratamento da infecção · Renal: Clearance abaixo de 30 mL/min: espaçar para 8/8 h",
+            "dose": {
+              "texto": "500 a 1.000 mg; 6/6 h se necessário; até 3 dias, enquanto durar a dor ou a febre; max. 3 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Rastreio com urocultura no pré-natal",
+              "ap": "",
+              "q": "",
+              "pos": "Coletar urocultura na primeira consulta do pré-natal e repetir entre 28 e 32 semanas em todas as gestantes, mesmo assintomáticas; a fita reagente isolada não substitui a cultura"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Hidratação oral ampla",
+              "ap": "",
+              "q": "",
+              "pos": "Orientar ingestão de 2 a 3 litros de água por dia, distribuídos ao longo do dia, para aumentar o fluxo urinário e reduzir a colonização"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Micção frequente e esvaziamento completo",
+              "ap": "",
+              "q": "",
+              "pos": "Urinar a cada 3 horas e após a relação sexual; não segurar a urina por longos períodos durante o trabalho"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Higiene perineal adequada",
+              "ap": "",
+              "q": "",
+              "pos": "Limpeza de frente para trás, com água e sabão neutro, uma vez ao dia; evitar duchas vaginais, desodorantes íntimos e banhos de assento prolongados"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Tratamento da constipação",
+              "ap": "",
+              "q": "",
+              "pos": "Fibras, líquidos e, se necessário, laxante osmótico; o reto distendido por fezes aumenta a colonização periuretral"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Coleta correta da urocultura",
+              "ap": "",
+              "q": "",
+              "pos": "Jato médio, após higiene local com água e sabão, em frasco estéril, sem tocar a mucosa; processar em até 2 horas ou refrigerar. Coleta inadequada é a principal causa de falso-positivo"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Internação com hidratação intravenosa na pielonefrite",
+              "ap": "",
+              "q": "",
+              "pos": "Acesso venoso, soro fisiológico 0,9% conforme estado volêmico, controle de diurese, antitérmico e monitorização de batimento cardíaco fetal"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Reavaliação clínica em 48 a 72 horas",
+              "ap": "",
+              "q": "",
+              "pos": "Retorno agendado antes da alta para checar febre, dor, tolerância oral e resultado da urocultura de controle; não dar alta sem retorno marcado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GO-10"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cefalosporina de terceira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "pielonefrite na gestação com internação (1a linha)",
+            "nota": "Reconstituir em 10 mL de água bidestilada e diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: curva térmica a cada 4 a 6 horas; monitorar: hemograma e PCR em 48 a 72 horas; monitorar: diarreia; monitorar: função renal e hepática; monitorar: batimento cardíaco fetal em cada turno · NÃO: anafilaxia a cefalosporina; alergia a ceftriaxona; hiperbilirrubinemia neonatal com uso concomitante de solução com cálcio em neonato · Obs: Tratamento intravenoso inicial obrigatório na pielonefrite: a bacteremia ocorre em 10 a 20% dos casos. Converter para oral (cefalexina ou amoxicilina-clavulanato conforme antibiograma) após 48 a 72 horas…",
+            "dose": {
+              "texto": "1 g; 24/24 h; até 48 a 72 horas afebril, com antibioticoterapia total de 10 a 14 dias; max. 2 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "24/24 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Aminoglicosídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "gentamicina",
+            "motivo": "pielonefrite na gestação com alergia grave a betalactâmico ou germe resistente, em curso curto (alternativa)",
+            "nota": "Diluir a dose em 100 mL de SF 0,9%; nunca administrar sem diluição por via intravenosa periférica - monitorar: creatinina e diurese a cada 24 a 48 horas; monitorar: nível sérico de vale antes da terceira dose, quando disponível; monitorar: audiometria se curso acima de 5 dias; monitorar: magnésio e potássio; monitorar:",
+            "dose": {
+              "texto": "5 mg/kg; 24/24 h em dose única diária; 3 a 5 dias, até obter antibiograma e resposta clínica; max. 400 mg/dia ou 5 mg/kg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "24/24 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GO-10",
+    "versao": "0.2.0",
+    "arquivo": "GO-10_itu_gestacao.json",
+    "area": "Ginecologia/Obstetrícia",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

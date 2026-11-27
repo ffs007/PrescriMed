@@ -1,0 +1,581 @@
+{
+  "id": "ws-tra_04",
+  "nome": "Trauma craniano leve",
+  "cat": "Pequenos traumas",
+  "alias": "trauma craniano leve trauma craniano leve tce leve trauma cranioencefalico leve concussao batida na cabeca sindrome pos concussiva",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (TRA-04_tce_leve.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de tomografia, observação e critérios de alta no trauma craniano leve",
+      "[verificar] diretriz_canadense: regra de Canadian CT Head e definição de mecanismo perigoso",
+      "[verificar] diretriz_new_orleans: critérios de tomografia no Glasgow 15 com perda de consciência",
+      "[verificar] sociedade_neurocirurgia: indicação cirúrgica, reversão de anticoagulação e manejo da hipertensão intracraniana",
+      "[verificar] consenso_concussao: síndrome pós-concussiva e protocolo escalonado de retorno às atividades",
+      "[verificar] anvisa: apresentações de analgésicos, antifibrinolítico e reversores"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "TRA-04 em 2026-11-27",
+    "fundido_workspace": "TRA-04 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: Glasgow abaixo de 15 duas horas após o trauma ou queda de 2 pontos -> tomografia imediata, cabeceira elevada e acionar neurocirurgia; pupila assimétrica, hemiparesia, afasia ou desvio do olhar -> tomografia imediata, solução hipertônica e neurocirurgia; cefaleia progressiva e refratária a analgésico -> tomografia e reavaliação neurológica seriada; dois ou mais episódios de vômito -> tomografia em até 1 hora. 1) Avaliar via aérea, respiração e circulação, imobilizar a coluna cervical quando o mecanismo for de alta energia e medir o Glasgow 2) Caracterizar o mecanismo, a perda de consciência, a amnésia, os vômitos, a convulsão, a anticoagulação e a intoxicação 3) Aplicar a regra de Canadian CT Head e, no Glasgow 15 com perda de consciência, os critérios de New Orleans 4) Indicar tomografia em até 1 hora no alto risco, em até 8 horas no risco intermediário e sempre no anticoagulado ou antiagregante 5) Analisar com paracetamol e tratar vômito com ondansetrona; não usar anti-inflamatório e não sedar antes de examinar 6) Manter observação de 4 a 6 horas com Glasgow seriado e tomografia imediata se houver piora 7) No anticoagulado com hemorragia, reverter conforme o fármaco e acionar neurocirurgia 8) Dar alta com sinais de alarme por escrito, acompanhante, retorno em 24 a 48 horas e plano de retorno gradual às atividades",
+  "redFlags": [
+    "Glasgow abaixo de 15 duas horas após o trauma ou queda de 2 pontos -> tomografia imediata, cabeceira elevada e acionar neurocirurgia",
+    "pupila assimétrica, hemiparesia, afasia ou desvio do olhar -> tomografia imediata, solução hipertônica e neurocirurgia",
+    "cefaleia progressiva e refratária a analgésico -> tomografia e reavaliação neurológica seriada",
+    "dois ou mais episódios de vômito -> tomografia em até 1 hora",
+    "convulsão após o trauma -> tomografia, glicemia, eletrólitos e observação em unidade monitorizada",
+    "equimose periorbitária, sinal de Battle, hemotímpano ou saída de líquor pelo nariz ou ouvido -> tomografia com janela óssea, não passar sonda nasal e discutir antibiótico profilático com a neurocirurgia",
+    "uso de varfarina, anticoagulante direto ou antiagregante -> tomografia, observação mínima de 6 a 24 horas e reversão se houver sangramento",
+    "intoxicação alcoólica ou por droga, agitação ou incapacidade de fornecer história -> tomografia com limiar baixo, observação prolongada e reavaliação com acompanhante"
+  ],
+  "naoUsar": [
+    "hepatopatia grave",
+    "alergia ao paracetamol",
+    "síndrome do QT longo",
+    "alergia a ondansetrona",
+    "uso de outro fármaco que prolongue o QT",
+    "epilepsia não controlada",
+    "uso de inibidor da monoaminoxidase",
+    "intoxicação alcoólica aguda"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "ficar com acompanhante responsável nas próximas 24 horas"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "dirigir por 24 horas e enquanto estiver com tontura ou sonolência"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Anestésico local",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "lidocaina_com_adrenalina",
+              "n": "Lidocaína 2% com adrenalina 1:100.000",
+              "ap": "frasco 20 mL a 2% com adrenalina 1:100.000",
+              "q": "",
+              "pos": "3 a 5 mL. Via infiltração subcutânea. Dose única por procedimento. 60 a 120 minutos de bloqueio."
+            },
+            "motivo": "sutura de ferimento de couro cabeludo associado ao trauma (condicional)",
+            "nota": "Aspirar sem diluir, aspirar antes de cada injeção e infiltrar na borda da ferida; alcalinizar 1:10 com bicarbonato 8,4% quando doer muito - monitorar: nível de consciência durante a infiltração; monitorar: zumbido, gosto metálico ou parestesia; monitorar: frequência cardíaca e pressão em infiltração acima de 10 mL; mon · NÃO: alergia a anestésico do tipo amida; ferida contaminada que exige desbridamento antes · Obs: Não atrasa a tomografia e não altera o Glasgow. Em ferimento com afundamento ósseo palpável, não suturar antes da avaliação neurocirúrgica.",
+            "dose": {
+              "texto": "3 a 5 mL; dose única por procedimento; 60 a 120 minutos de bloqueio; max. 7 mg/kg, até 500 mg",
+              "status": "ok",
+              "valor": 3,
+              "valor_max": 5,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 7,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Imunobiológico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "toxoide_tetanico_e_difterico",
+              "n": "Toxoide tetânico e diftérico (dT)",
+              "ap": "frasco multidose 10 doses de 0,5 mL",
+              "q": "",
+              "pos": "0,5 mL. Via IM. Dose única neste atendimento; completar o esquema de 3 doses quando incompleto. Reforço a cada 10 anos."
+            },
+            "motivo": "ferimento de couro cabeludo ou pele associado ao trauma, conforme estado vacinal (condicional) ferimento associado com esquema incompleto",
+            "nota": "Uso direto; agitar antes de aspirar e aplicar no deltoide - monitorar: reação local em 24 horas; monitorar: febre; monitorar: anafilaxia nos primeiros 30 minutos; monitorar: registro no cartão vacinal · NÃO: anafilaxia prévia a componente da vacina; encefalopatia nos 7 dias após dose anterior · Obs: Aplicar antes da alta e registrar no cartão. Não atrasar a tomografia nem a observação por causa da vacina.",
+            "dose": {
+              "texto": "0,5 mL; dose única neste atendimento; completar o esquema de 3 doses quando incompleto; reforço a cada 10 anos; max. 0,5 mL por dose",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.5,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Observação clínica com Glasgow seriado",
+              "ap": "",
+              "q": "",
+              "pos": "4 a 6 horas em serviço com reavaliação a cada hora por enfermagem e exame médico antes da alta; anticoagulado fica de 6 a 24 horas, com tomografia de controle se houver qualquer piora"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Imobilização cervical até excluir lesão de coluna",
+              "ap": "",
+              "q": "",
+              "pos": "colar cervical em trauma de alta energia, dor cervical, déficit neurológico ou intoxicação, mantido até avaliação clínica e de imagem da coluna"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Cabeceira elevada e prevenção de hipertensão intracraniana",
+              "ap": "",
+              "q": "",
+              "pos": "cabeceira a 30 graus, cabeça na linha média, evitar compressão de veias jugulares, tosse e Valsalva; não usar hiperventilação profilática"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Repouso relativo curto e retorno gradual",
+              "ap": "",
+              "q": "",
+              "pos": "24 a 48 horas de repouso relativo, sem isolamento prolongado; depois progressão em etapas de 24 horas cada, começando por atividade leve e só liberando contato pleno com avaliação médica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Educação e orientação escrita na alta",
+              "ap": "",
+              "q": "",
+              "pos": "entregar por escrito os sinais de alarme, o telefone de retorno, a proibição de dirigir por 24 horas e a necessidade de acompanhante responsável pelas próximas 24 horas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Retirada de álcool e de sedativos",
+              "ap": "",
+              "q": "",
+              "pos": "suspender álcool, benzodiazepínico e opioide não essencial durante a observação, porque confundem o exame e aumentam o risco de queda"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Higiene do sono e controle de tela",
+              "ap": "",
+              "q": "",
+              "pos": "sono regular, ambiente escuro e silencioso e redução de tela nas primeiras 48 horas; evitar repouso absoluto prolongado, que piora a síndrome pós-concussiva"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Avaliação do risco social e de violência",
+              "ap": "",
+              "q": "",
+              "pos": "perguntar como o trauma ocorreu, se houve agressão, se há cuidador e se o paciente mora sozinho; notificar violência quando o padrão não corresponde à história"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "TRA-04"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antiemético",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "vômitos após trauma craniano leve (1a linha)",
+            "nota": "Diluir a ampola em 50 mL de soro fisiológico 0,9%; via oral em uso direto - monitorar: número de episódios de vômito; monitorar: eletrocardiograma em cardiopata; monitorar: potássio e magnésio",
+            "dose": {
+              "texto": "4 a 8 mg; 8/8 h, se vômito; 24 a 48 horas; max. 16 mg/dia por via intravenosa",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": 8,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "hosp": "metoclopramida_ev",
+            "motivo": "vômitos após trauma craniano leve quando a ondansetrona não está disponível (alternativa)",
+            "nota": "Diluir a ampola em 50 mL de soro fisiológico 0,9%; via oral em uso direto - monitorar: movimentos involuntários e acatisia; monitorar: número de episódios de vômito; monitorar: sonolência",
+            "dose": {
+              "texto": "10 mg; 8/8 h, se vômito; 24 horas; max. 30 mg/dia, ou 0,5 mg/kg/dia em criança",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": "criança",
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "cefaleia e dor após trauma craniano leve (1a linha) cefaleia pós-trauma",
+            "nota": "Uso direto por via oral; na via intravenosa, infundir o frasco sem diluir - monitorar: dor pela escala de 0 a 10; monitorar: dose total diária somando outros produtos com paracetamol; monitorar: TGO e TGP em uso acima de 5 dias · NÃO: hepatopatia grave; alergia ao paracetamol · Obs: Primeira escolha porque não altera a função plaquetária nem o nível de consciência. Não usar produto combinado com cafeína ou codeína sem necessidade. · Renal: ClCr abaixo de 30: espaçar para 8/8 h",
+            "dose": {
+              "texto": "750 mg a 1 g; 6/6 h, se dor; 3 a 5 dias; max. 4 g/dia, ou 2 g/dia em hepatopatia e etilismo",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Opioide fraco",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "tramadol_ev",
+            "motivo": "dor de intensidade intermediária após trauma craniano leve, quando não há morfina disponível e a tomografia já foi realizada (alternativa)",
+            "nota": "Via oral em uso direto; via intravenosa diluir a ampola em 100 mL de soro fisiológico 0,9% - monitorar: nível de consciência; monitorar: náusea e vômito; monitorar: limiar convulsivo em epiléptico; monitorar: pressão arterial em idoso",
+            "dose": {
+              "texto": "50 a 100 mg; 6/6 h, se dor; 2 a 3 dias; max. 400 mg/dia, ou 300 mg/dia acima de 75 anos",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antifibrinolítico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "acido_tranexamico_ev",
+            "motivo": "trauma craniano com Glasgow 13 a 15 e hemorragia intracraniana, dentro de 3 horas do trauma (condicional)",
+            "nota": "Bolus: diluir 1 g em 100 mL de soro fisiológico 0,9%; infusão: 1 g em 250 mL de soro fisiológico 0,9% - monitorar: sinais de trombose; monitorar: nível de consciência e convulsão; monitorar: pressão arterial durante o bolus; monitorar: função renal · NÃO: trombose venosa ou arterial ativa; história de convulsão com dose alta; coagulação intravascular disseminada estabelecida · Obs: Administrar dentro de 3 horas do trauma. Não confundir com o uso em sangramento digestivo: aqui o alvo é a progressão do hematoma. · Renal: ClCr 30 a 59: reduzir a dose em 50%; ClCr abaixo de 30: evitar",
+            "dose": {
+              "texto": "1 g em bolus, seguido de 1 g em infusão; bolus único seguido de infusão contínua; 8 horas de infusão; max. 2 g no total",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fitomenadiona",
+              "n": "Fitomenadiona (vitamina K)",
+              "ap": "ampola 10 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "10 mg. Via IV. Dose única, com repetição conforme INR. 1 dose. 20 a 30 minutos."
+            },
+            "motivo": "reversão de varfarina em paciente com trauma craniano e sangramento, ou com INR alargado (condicional)",
+            "nota": "Diluir a ampola em 50 mL de soro fisiológico 0,9% e infundir lentamente, sem bolus rápido - monitorar: INR em 6 a 12 horas; monitorar: sangramento neurológico; monitorar: reação infusiona · NÃO: alergia ao fármaco; reação anafilactoide prévia · Obs: Não substitui o complexo protrombínico quando há hemorragia intracraniana: a vitamina K leva horas e o complexo age em minutos.",
+            "dose": {
+              "texto": "10 mg; dose única, com repetição conforme INR; 1 dose; max. 10 mg por dose",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Reversor",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "complexo_protrombinico",
+              "n": "Complexo protrombínico",
+              "ap": "frasco 500 UI",
+              "via": "IV",
+              "pos": "25 a 50 UI/kg, conforme INR e peso. Via IV. Dose única. 10 a 20 minutos."
+            },
+            "motivo": "hemorragia intracraniana em uso de varfarina, para reversão imediata (condicional)",
+            "nota": "Reconstituir com o diluente próprio e infundir a dose calculada pelo peso; não agitar - monitorar: INR 30 minutos após a infusão; monitorar: sinais de trombose; monitorar: pressão arterial; monitorar: nova tomografia se piora neurológica · NÃO: trombose ativa; coagulação intravascular disseminada; anafilaxia prévia a componentes · Obs: Associar sempre à fitomenadiona, que cobre a meia-vida curta dos fatores. Não atrasar a infusão por falta de INR se a clínica de sangramento está instalada.",
+            "dose": {
+              "texto": "25 a 50 UI/kg, conforme INR e peso; dose única; dose única; max. 5.000 UI por dose",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 50,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5000,
+                "unidade": "UI"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "morfina_ev",
+            "motivo": "dor intensa refratária ao paracetamol, após tomografia e com exame neurológico seriado (resgate)",
+            "nota": "Diluir 1 mL da ampola de 10 mg/mL em 9 mL de soro fisiológico 0,9% e administrar 1 mL por bolus - monitorar: Glasgow e pupilas antes e 15 minutos após cada bolus; monitorar: frequência respiratória; monitorar: saturação de oxigênio; monitorar: escala de sedação; monitorar: pressão arterial",
+            "dose": {
+              "texto": "2 mg em bolus, repetido a cada 10 minutos até dor abaixo de 3 em 10; titulação inicial; depois 2 a 4 mg a cada 4 h se dor; 24 a 48 horas; max. 0,1 mg/kg por dose em idoso; reavaliar após cada bolus",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 4,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.1,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 10 min",
+              "freq_min": 10,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antídoto",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "idarucizumabe",
+              "n": "Idarucizumabe",
+              "ap": "frasco 2,5 g (pó para solução)",
+              "via": "IV",
+              "pos": "5 g, em duas infusões de 2,5 g. Via IV. Dose única; repetir 5 g se sangramento persistente. Dose única. 5 a 10 minutos por infusão."
+            },
+            "motivo": "hemorragia intracraniana em paciente em uso de dabigatrana (resgate)",
+            "nota": "Reconstituir cada frasco de 2,5 g em 50 mL de soro fisiológico 0,9% e infundir as duas soluções em sequência - monitorar: tempo de tromboplastina parcial ativada e tempo de trombina; monitorar: sinais de trombose; monitorar: piora neurológica; monitorar: função renal · NÃO: hipersensibilidade ao fármaco; uso de dabigatrana já suspenso há mais de 24 horas com função renal normal · Obs: Específico para dabigatrana, sem ação sobre os inibidores do fator Xa. Para rivaroxabana e apixabana, usar andexanet alfa quando disponível; na falta dele, complexo protrombínico 50 UI/kg e reavaliação com tromboelastometria.",
+            "dose": {
+              "texto": "5 g, em duas infusões de 2,5 g; dose única; repetir 5 g se sangramento persistente; dose única; max. 10 g no total",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "TRA-04",
+    "versao": "0.2.0",
+    "arquivo": "TRA-04_tce_leve.json",
+    "area": "Pequenos traumas",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

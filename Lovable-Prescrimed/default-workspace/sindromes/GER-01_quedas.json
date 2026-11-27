@@ -1,0 +1,1074 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GER-01",
+    "area": "Geriatria",
+    "nome": "Quedas no idoso",
+    "aliases": [
+      "queda",
+      "quedas",
+      "idoso que caiu",
+      "fratura por queda"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "idoso"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Queda no idoso não é acidente isolado: é marcador de fragilidade e, com frequência, o primeiro sinal de uma causa oculta — síncope por arritmia, estenose aórtica, hipotensão postural iatrogênica, hipoglicemia, infecção, déficit visual, parkinsonismo, neuropatia ou sedação excessiva. A pergunta que organiza o atendimento é dupla: houve trauma que mata (hemorragia intracraniana, fratura de fêmur, fratura vertebral) e qual foi a causa da queda. Idoso anticoagulado que bateu a cabeça faz TC de crânio mesmo sem sintoma; dor em quadril com rotação externa e encurtamento é fratura de fêmur até prova contrária, e o atraso cirúrgico aumenta mortalidade. Depois de excluir o grave, o objetivo muda: retirar o fármaco que derruba, tratar o osso, treinar o equilíbrio, adaptar a casa e evitar a síndrome pós-queda — imobilização, medo de andar e perda funcional. Internar sem necessidade, sedar e ignorar o anticoagulante são os três erros que transformam uma queda em catástrofe.",
+    "inclusao": [
+      "Idoso que caiu, com ou sem trauma aparente",
+      "Queda recorrente (duas ou mais no último ano) ou queda com perda funcional",
+      "Queda com rebaixamento, síncope, déficit focal ou uso de anticoagulante",
+      "Incapacidade de levantar do chão sem ajuda"
+    ],
+    "exclusao": [
+      {
+        "situacao": "trauma craniano grave, hematoma expansivo ou coma",
+        "fluxo": "sala vermelha / neurocirurgia"
+      },
+      {
+        "situacao": "dor torácica, síncope com esforço ou arritmia sustentada",
+        "fluxo": "cardiovascular"
+      },
+      {
+        "situacao": "déficit focal agudo sem trauma",
+        "fluxo": "AVC"
+      },
+      {
+        "situacao": "fratura exposta ou choque hemorrágico por trauma de alta energia",
+        "fluxo": "ortopedia / trauma"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "trauma craniano em uso de anticoagulante ou antiagregante",
+        "por_que": "hemorragia intracraniana pode ser silenciosa e progressiva",
+        "acao": "TC de crânio imediata e observação, mesmo com Glasgow 15",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "dor em quadril com rotação externa e encurtamento do membro",
+        "por_que": "fratura de fêmur proximal",
+        "acao": "imobilizar, analgesia multimodal e avaliação ortopédica para cirurgia em até 48 h",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "síncope ou pródromo (palpitação, escurecimento visual, dor torácica) antes da queda",
+        "por_que": "arritmia, estenose aórtica ou embolia pulmonar",
+        "acao": "ECG, monitorização e investigação cardiológica antes de rotular como queda mecânica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "déficit focal, disartria, assimetria facial ou desvio de rima",
+        "por_que": "AVC ou hematoma subdural",
+        "acao": "protocolo de AVC e neuroimagem imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "hipotensão postural sintomática (queda de 20 mmHg na sistólica ou 10 mmHg na diastólica em 3 min)",
+        "por_que": "causa reversível mais comum e risco de nova queda",
+        "acao": "revisar anti-hipertensivo e diurético, hidratar, medir PA em pé antes da alta",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "permanência no chão por mais de 1 hora (long lie)",
+        "por_que": "rabdomiólise, hipotermia, desidratação, úlcera por pressão e delirium",
+        "acao": "hidratar, dosar creatinina e CPK, aquecer e internar para observação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "dor em coluna com déficit motor, anestesia em sela ou retenção urinária",
+        "por_que": "fratura vertebral com compressão medular",
+        "acao": "imobilizar em prancha e ressonância de urgência",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "febre, disúria, tosse ou confusão após a queda",
+        "por_que": "infecção como causa da queda, não consequência",
+        "acao": "investigar foco, colher culturas e tratar sem sedar",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Como e onde caiu: tropeçou, escorregou, sentiu tontura ou apagou?",
+      "Perdeu a consciência ou teve palpitação, suor frio ou visão escurecendo antes?",
+      "Conseguiu se levantar sozinho? Quanto tempo ficou no chão?",
+      "Bateu a cabeça? Tem dor em quadril, punho, coluna ou costela?",
+      "Usa anticoagulante, antiagregante ou fez a última dose quando?",
+      "Começou algum remédio novo nos últimos 15 dias (para dormir, para pressão, para glicemia)?",
+      "Já caiu outras vezes no último ano? Quantas?",
+      "Tem tontura ao levantar da cama, usa óculos, tem catarata, usa bengala?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Queda com trauma craniano em idoso anticoagulado ou antiagregado",
+        "escolha": "TC de crânio sem contraste na hora, com observação mínima de 6 h",
+        "porque": "Hemorragia intracraniana pode ocorrer com exame neurológico normal; o anticoagulante aumenta volume e mortalidade, e a decisão de reverter depende da imagem"
+      },
+      {
+        "cenario": "Dor em quadril com rotação externa e encurtamento",
+        "escolha": "Imobilização provisória, analgesia multimodal e cirurgia em até 48 h",
+        "porque": "Fratura de fêmur; cada 24 h de atraso aumenta mortalidade, delirium e perda funcional"
+      },
+      {
+        "cenario": "Hipotensão postural sintomática com anti-hipertensivo em uso",
+        "escolha": "Suspender ou reduzir o anti-hipertensivo e o diurético, hidratar e usar meia de compressão; midodrina se persistir",
+        "porque": "A causa é iatrogênica e reversível na maioria dos casos; tratar antes de investigar causas raras"
+      },
+      {
+        "cenario": "Osteoporose ou fratura por fragilidade",
+        "escolha": "Vitamina D + cálcio + alendronato (ou denosumabe se bisfosfonato contraindicado)",
+        "porque": "Prevenir a próxima fratura exige tratar o osso, não apenas a queda; bisfosfonato é a base do tratamento"
+      },
+      {
+        "cenario": "Dor após trauma sem fratura",
+        "escolha": "Paracetamol em horário fixo; dipirona como alternativa; tramadol em dose baixa se dor intensa",
+        "porque": "AINE aumenta sangramento, lesão renal e hipertensão; opioide de rotina aumenta sedação, delirium e nova queda"
+      },
+      {
+        "cenario": "Queda recorrente sem causa aparente, exame normal",
+        "escolha": "Avaliação de marcha e equilíbrio, acuidade visual, pés e visita domiciliar",
+        "porque": "Queda recorrente é multifatorial; o risco está no ambiente e no desempenho motor, e é ali que se intervém"
+      },
+      {
+        "cenario": "Uso crônico de benzodiazepínico, zolpidem ou anti-histamínico sedativo",
+        "escolha": "Desprescrição gradual em 4–8 semanas, com higiene do sono",
+        "porque": "É a classe que mais aumenta risco de queda; a retirada abrupta causa insônia de rebote e precisa ser titulada"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "vitamina_d",
+        "agente": "colecalciferol (vitamina D3)",
+        "papel": "primeira_linha",
+        "indicacao": "deficiência de vitamina D, prevenção de queda e de fratura",
+        "dose": "800–1.000 UI",
+        "unidade": "UI",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "4.000 UI/dia",
+        "contraindicacoes": [
+          "hipercalcemia",
+          "sarcoidose",
+          "hiperparatireoidismo não controlado",
+          "litíase cálcica ativa"
+        ],
+        "efeitos_adversos": [
+          "hipercalcemia",
+          "hipercalciúria",
+          "constipação",
+          "náusea",
+          "confusão em intoxicação"
+        ],
+        "apresentacoes": [
+          "cápsula 1.000 UI",
+          "cápsula 7.000 UI",
+          "solução oral 10.000 UI/mL (gotas)",
+          "ampola 300.000 UI/mL (dose mensal)"
+        ],
+        "preparo": "Uso direto; a solução oleosa é melhor absorvida junto de refeição com gordura",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "25-OH-vitamina D após 3 meses",
+          "cálcio sérico",
+          "cálcio urinário se história de litíase",
+          "adesão"
+        ],
+        "ajuste_renal": "Sem ajuste de dose; na doença renal crônica usar colecalciferol e vigiar cálcio e fósforo",
+        "observacoes": "Alvo de 25-OH-vitamina D acima de 30 ng/mL. Deficiência documentada: ataque de 50.000 UI por semana por 8 semanas. Reposição corrige deficiência e reduz queda em quem tem nível baixo; não é droga de efeito imediato.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "suplemento_mineral",
+        "agente": "carbonato de cálcio",
+        "papel": "condicional",
+        "indicacao": "ingestão dietética de cálcio abaixo de 1.000–1.200 mg/dia em osteoporose ou fratura por fragilidade",
+        "dose": "500 mg de cálcio elementar",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h, junto das refeições",
+        "duracao": "contínuo",
+        "dose_maxima": "1.200 mg/dia de cálcio elementar",
+        "contraindicacoes": [
+          "hipercalcemia",
+          "hipercalciúria",
+          "litíase renal recorrente",
+          "imobilização prolongada"
+        ],
+        "efeitos_adversos": [
+          "constipação",
+          "distensão abdominal",
+          "cálculo renal",
+          "hipercalcemia em associação com vitamina D"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 600 mg",
+          "comprimido efervescente 500 mg",
+          "comprimido 500 mg + colecalciferol 400 UI"
+        ],
+        "preparo": "Uso direto com a refeição; separar 2 h de levotiroxina, quinolonas, tetraciclinas e ferro",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "cálcio sérico anual",
+          "cálcio urinário de 24 h se litíase",
+          "constipação",
+          "ingestão dietética"
+        ],
+        "ajuste_renal": "Evitar na doença renal crônica avançada: risco de hipercalcemia, calcificação vascular e cálculo",
+        "observacoes": "Preferir leite e derivados; o suplemento completa o que falta na dieta e não trata osteoporose sozinho. Nunca iniciar sem corrigir a vitamina D.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "bisfosfonato",
+        "agente": "alendronato de sódio",
+        "papel": "primeira_linha",
+        "indicacao": "osteoporose com fratura por fragilidade ou T-score ≤ -2,5",
+        "dose": "70 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/semana",
+        "duracao": "5 anos, com reavaliação",
+        "dose_maxima": "70 mg/semana ou 10 mg/dia",
+        "contraindicacoes": [
+          "TFG abaixo de 35 mL/min",
+          "esofagite, úlcera ou estenose esofágica",
+          "incapacidade de permanecer sentado ou em pé 30 min",
+          "hipocalcemia não corrigida",
+          "fratura de fêmur atípica prévia"
+        ],
+        "efeitos_adversos": [
+          "esofagite",
+          "dor óssea",
+          "hipocalcemia",
+          "fratura de fêmur atípica",
+          "osteonecrose de mandíbula (rara)"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido 70 mg",
+          "comprimido 70 mg + colecalciferol 5.600 UI"
+        ],
+        "preparo": "Uso direto em jejum com 200 mL de água; permanecer sentado ou em pé por 30 min e não deitar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "densitometria em 2 anos",
+          "cálcio e 25-OH-vitamina D antes de iniciar",
+          "sintomas esofágicos",
+          "dor em coxa (fratura atípica)"
+        ],
+        "ajuste_renal": "Contraindicado com TFG abaixo de 35 mL/min",
+        "observacoes": "Após fratura de quadril, iniciar quando o paciente já estiver sentado, deglutindo e com vitamina D e cálcio corrigidos — em geral na primeira semana. Programar revisão odontológica antes de iniciar.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticorpo_antirrankl",
+        "agente": "denosumabe",
+        "papel": "alternativa",
+        "indicacao": "osteoporose com contraindicação ou intolerância a bisfosfonato, ou com TFG muito reduzida",
+        "dose": "60 mg",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "a cada 6 meses",
+        "duracao": "3 anos, com reavaliação",
+        "dose_maxima": "60 mg/6 meses",
+        "contraindicacoes": [
+          "hipocalcemia",
+          "hipersensibilidade ao produto",
+          "gestação"
+        ],
+        "efeitos_adversos": [
+          "hipocalcemia",
+          "artralgia",
+          "candidíase",
+          "osteonecrose de mandíbula (rara)",
+          "fraturas vertebrais múltiplas após suspensão"
+        ],
+        "apresentacoes": [
+          "seringa preenchida 60 mg/mL",
+          "caneta preenchida 60 mg/mL"
+        ],
+        "preparo": "Aplicar no abdome, coxa ou braço; não agitar; retirar da geladeira 30 min antes",
+        "tempo_infusao": "injeção subcutânea em cerca de 30 segundos",
+        "monitorizacao": [
+          "cálcio antes de cada dose",
+          "densitometria em 1–2 anos",
+          "higiene oral e dor mandibular",
+          "adesão ao esquema semestral"
+        ],
+        "ajuste_renal": "Não exige ajuste; é opção na doença renal crônica, mas exige cálcio normal antes de cada dose",
+        "observacoes": "Nunca suspender sem planejar transição para bisfosfonato: a retirada isolada acelera a perda de massa óssea e causa fraturas vertebrais múltiplas.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "dor leve a moderada após trauma, contusão ou fratura",
+        "dose": "500–750 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h em horário fixo",
+        "duracao": "até 5 dias",
+        "dose_maxima": "3 g/dia no idoso frágil; 4 g/dia no idoso hígido",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição com depleção de glutationa",
+          "uso concomitante de outro produto com paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose alta",
+          "náusea",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral gotas 200 mg/mL",
+          "solução oral 32 mg/mL",
+          "frasco IV 10 mg/mL"
+        ],
+        "preparo": "Uso direto; a apresentação IV é infundida sem diluir ou em 50 mL de SF",
+        "tempo_infusao": "não se aplica (via oral); 15 minutos na via IV",
+        "monitorizacao": [
+          "soma da dose diária de todas as fontes (inclusive associações)",
+          "função hepática se uso prolongado",
+          "intensidade da dor em escala 0–10"
+        ],
+        "ajuste_renal": "Sem ajuste; espaçar para 6/8 h se TFG abaixo de 30",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia; evitar em Child C",
+        "observacoes": "Base da analgesia pós-trauma no idoso. Prescrever em horário fixo, não apenas se dor: dor não tratada é causa de delirium e de imobilidade.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_pirazolona",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "dor ou febre quando o paracetamol é insuficiente ou indisponível",
+        "dose": "500 mg–1 g",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "até 3 dias",
+        "dose_maxima": "3 g/dia no idoso (4 g/dia no adulto)",
+        "contraindicacoes": [
+          "alergia a pirazolonas",
+          "porfiria aguda intermitente",
+          "depressão de medula óssea",
+          "uso de outro pirazolônico"
+        ],
+        "efeitos_adversos": [
+          "hipotensão se infundida rápido",
+          "agranulocitose (rara)",
+          "reação alérgica",
+          "sudorese"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 1 g",
+          "solução oral gotas 500 mg/mL",
+          "ampola 500 mg/mL (2 mL)",
+          "ampola 1 g/2 mL"
+        ],
+        "preparo": "VO uso direto; IV diluir 1 g em 20 mL de SF ou água destilada",
+        "tempo_infusao": "não se aplica (via oral); 5–10 minutos na via IV, nunca em bolus rápido",
+        "monitorizacao": [
+          "PA durante e após a infusão",
+          "temperatura",
+          "hemograma se uso repetido",
+          "dor"
+        ],
+        "ajuste_renal": "Espaçar na TFG abaixo de 30; evitar em diálise sem indicação específica",
+        "observacoes": "Escolha real para dor e febre no Brasil, mas não é boa opção em idoso com hipotensão postural: pode agravar a tontura e a queda. Não associar a outro pirazolônico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "tramadol",
+        "papel": "condicional",
+        "indicacao": "dor moderada a intensa por fratura ou pós-operatório, quando paracetamol e dipirona não controlam",
+        "dose": "50 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "8/8 h",
+        "duracao": "até 3–5 dias",
+        "dose_maxima": "200 mg/dia no idoso; 400 mg/dia no adulto",
+        "contraindicacoes": [
+          "uso de IMAO",
+          "epilepsia não controlada",
+          "intoxicação por depressores do SNC",
+          "TFG abaixo de 30 sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "tontura",
+          "constipação",
+          "sonolência",
+          "hiponatremia",
+          "convulsão",
+          "aumento do risco de queda"
+        ],
+        "apresentacoes": [
+          "cápsula 50 mg",
+          "comprimido 100 mg de liberação prolongada",
+          "solução oral gotas 100 mg/mL",
+          "ampola 50 mg/mL (2 mL)"
+        ],
+        "preparo": "VO uso direto; IV diluir 50–100 mg em 100 mL de SF",
+        "tempo_infusao": "não se aplica (via oral); 30 minutos na via IV",
+        "monitorizacao": [
+          "sedação",
+          "frequência respiratória",
+          "náusea",
+          "sódio",
+          "equilíbrio e risco de nova queda"
+        ],
+        "ajuste_renal": "Espaçar para 12/12 h com TFG 30–60; evitar com TFG abaixo de 30",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia; evitar em Child C",
+        "observacoes": "Trata a dor que agita e previne delirium, mas é fármaco de risco de queda: menor dose, menor tempo, e nunca associado a benzodiazepínico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "agonista_alfa1",
+        "agente": "midodrina",
+        "papel": "condicional",
+        "indicacao": "hipotensão postural sintomática persistente após retirada de fármacos e medidas não farmacológicas",
+        "dose": "2,5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h, última dose até 4 h antes de deitar",
+        "duracao": "4 semanas, com reavaliação",
+        "dose_maxima": "10 mg 8/8 h",
+        "contraindicacoes": [
+          "hipertensão supina",
+          "retenção urinária",
+          "glaucoma de ângulo fechado",
+          "feocromocitoma",
+          "cardiopatia isquêmica grave"
+        ],
+        "efeitos_adversos": [
+          "hipertensão supina",
+          "piloereção",
+          "prurido",
+          "retenção urinária",
+          "bradicardia reflexa"
+        ],
+        "apresentacoes": [
+          "comprimido 2,5 mg",
+          "comprimido 5 mg"
+        ],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "PA sentado e deitado",
+          "PA 3 min após levantar",
+          "tontura",
+          "resíduo urinário"
+        ],
+        "ajuste_renal": "Reduzir dose com TFG abaixo de 30",
+        "observacoes": "Antes de prescrever, retirar o anti-hipertensivo e o diurético que causam a hipotensão: boa parte dos casos resolve só com isso. Não usar à noite pelo risco de hipertensão supina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "mineralocorticoide",
+        "agente": "fludrocortisona",
+        "papel": "alternativa",
+        "indicacao": "hipotensão postural refratária, sobretudo neurogênica",
+        "dose": "0,05–0,1 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "2–4 semanas, com reavaliação",
+        "dose_maxima": "0,3 mg/dia",
+        "contraindicacoes": [
+          "insuficiência cardíaca descompensada",
+          "hipertensão arterial",
+          "hipocalemia"
+        ],
+        "efeitos_adversos": [
+          "edema",
+          "hipertensão",
+          "hipocalemia",
+          "hipernatremia",
+          "arritmia por hipocalemia"
+        ],
+        "apresentacoes": [
+          "comprimido 0,1 mg"
+        ],
+        "preparo": "Uso direto pela manhã",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sódio e potássio em 1–2 semanas",
+          "PA supina",
+          "edema e peso",
+          "dispneia"
+        ],
+        "ajuste_renal": "Cautela na doença renal crônica: risco de sobrecarga hídrica e hipocalemia",
+        "observacoes": "Vigiar hipertensão supina e edema. Se aparecerem, reduzir sal e dose — não aumentar pela manhã o que causa dispneia à noite.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidoto",
+        "agente": "fitomenadiona (vitamina K)",
+        "papel": "condicional",
+        "indicacao": "usuário de varfarina que caiu com trauma craniano, hematoma em TC ou sangramento ativo",
+        "dose": "5–10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "1 dose, com repetição conforme INR",
+        "dose_maxima": "10 mg",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "prótese valvar mecânica sem avaliação do risco trombótico"
+        ],
+        "efeitos_adversos": [
+          "reação anafilactoide (rara, com infusão rápida)",
+          "rebote trombótico se reversão excessiva"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "ampola 2 mg/0,2 mL (pediátrica)"
+        ],
+        "preparo": "Diluir em 50 mL de SF; proteger da luz",
+        "tempo_infusao": "20–30 minutos",
+        "monitorizacao": [
+          "INR em 6–12 h",
+          "sangramento",
+          "sinais de trombose"
+        ],
+        "ajuste_renal": "Sem ajuste de dose; em diálise, manter a mesma conduta e vigiar o INR",
+        "observacoes": "Cair anticoagulado não é indicação automática de reverter: reverter se houver sangramento na TC, sangramento ativo ou cirurgia indicada. Não reverte anticoagulante direto (apixabana, rivaroxabana) — para esses, avaliar suspensão e agente específico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Revisão e desprescrição de fármacos",
+        "detalhe": "Listar todos os remédios com dose e horário; suspender ou reduzir benzodiazepínico, zolpidem, anti-histamínico sedativo, anticolinérgico, anti-hipertensivo em excesso, diurético e hipoglicemiante de ação longa. Metade das quedas tem fármaco no caminho."
+      },
+      {
+        "medida": "Exercício de equilíbrio e força",
+        "detalhe": "Programa tipo Otago, 3 sessões por semana, por no mínimo 12 semanas, com exercício domiciliar supervisionado; incluir transferência de sentado para de pé, apoio unipodal e marcha com mudança de direção"
+      },
+      {
+        "medida": "Adaptação ambiental domiciliar",
+        "detalhe": "Barra de apoio no banheiro e ao lado do vaso, corrimão em escada, luz noturna no trajeto cama–banheiro, retirada de tapetes soltos e fios, vaso sanitário elevado e cadeira para banho"
+      },
+      {
+        "medida": "Bengala ou andador com treino",
+        "detalhe": "Indicar por padrão de marcha: bengala no lado oposto ao membro mais fraco para déficit leve; andador com rodas e assento para instabilidade importante. Prescrever sem treino com fisioterapia não reduz queda."
+      },
+      {
+        "medida": "Correção de visão e de calçado",
+        "detalhe": "Avaliar catarata e acuidade; trocar lente multifocal por monofocal para andar na rua; sapato fechado, firme, com solado antiderrapante e sem salto"
+      },
+      {
+        "medida": "Manejo da hipotensão postural",
+        "detalhe": "Levantar em duas etapas (sentar na beira da cama por 1 min antes de ficar de pé), hidratação, ingestão de sal quando não houver contraindicação, meia elástica de compressão e PA medida em pé antes da alta"
+      },
+      {
+        "medida": "Prevenção da síndrome pós-queda",
+        "detalhe": "Não imobilizar no leito por medo de cair: sentar fora da cama no primeiro dia, deambular com apoio e fisioterapia precoce. Rastrear medo de cair e retomar atividade com supervisão."
+      },
+      {
+        "medida": "Visita domiciliar multiprofissional",
+        "detalhe": "Médico, enfermeiro, fisioterapeuta e terapeuta ocupacional em até 4 semanas após queda grave; revisar casa, remédios, rede de apoio e risco de nova queda no próprio ambiente"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Tomografia de crânio sem contraste",
+        "indicacao": "Trauma craniano, uso de anticoagulante ou antiagregante, cefaleia, vômito, rebaixamento ou queda sem explicação em idoso",
+        "tecnica": "Aquisição axial volumétrica da base ao vértice, com reconstruções finas e janela óssea; repetir em 6–12 h se exame inicial duvidoso e anticoagulação mantida",
+        "complicacoes": "Contraste desnecessário, transporte e sedação em paciente agitado, achado incidental"
+      },
+      {
+        "nome": "Radiografia dirigida (bacia, quadril, punho, coluna, costelas)",
+        "indicacao": "Dor, deformidade ou incapacidade de apoiar após a queda",
+        "tecnica": "Duas incidências ortogonais do segmento suspeito; bacia e quadril em AP e perfil, punho em AP e perfil, coluna conforme nível de dor",
+        "complicacoes": "Fratura oculta não vista (repetir imagem ou TC se dor persistente), exposição repetida"
+      },
+      {
+        "nome": "Avaliação de marcha e equilíbrio",
+        "indicacao": "Toda queda, antes da alta e no seguimento",
+        "tecnica": "Timed Up and Go (levantar, caminhar 3 m, voltar e sentar), velocidade de marcha em 4 m, apoio unipodal por 10 s e teste de Romberg; observar uso de dispositivo de apoio",
+        "complicacoes": "Queda durante o teste — executar com supervisão e apoio ao alcance"
+      },
+      {
+        "nome": "Atendimento domiciliar",
+        "indicacao": "Queda recorrente, alta hospitalar após fratura, dificuldade de deslocamento ou suspeita de risco ambiental",
+        "tecnica": "Visita médica e multiprofissional com exame de marcha no domicílio, revisão da farmácia caseira, inspeção de banheiro, escada e iluminação, e plano escrito com a família",
+        "complicacoes": "Baixa adesão sem cuidador treinado; risco de intervenção excessiva e perda de autonomia se não houver pactuação"
+      },
+      {
+        "nome": "Analgesia regional para fratura de fêmur",
+        "indicacao": "Fratura de fêmur proximal com dor importante, enquanto se aguarda a cirurgia",
+        "tecnica": "Bloqueio de fáscia ilíaca ou do nervo femoral guiado por ultrassom, com anestésico local de longa duração",
+        "complicacoes": "Hematoma, infecção, bloqueio motor transitório e toxicidade por anestésico local"
+      },
+      {
+        "nome": "Cirurgia precoce da fratura de fêmur",
+        "indicacao": "Fratura de fêmur proximal operável, preferencialmente em até 48 h",
+        "tecnica": "Osteossíntese (parafusos, haste cefalomedular) ou artroplastia parcial/total conforme local e estado funcional prévio",
+        "complicacoes": "Delirium, tromboembolismo, infecção de sítio cirúrgico, falha de síntese e morte no primeiro ano"
+      }
+    ],
+    "metas": [
+      "Mecanismo da queda e exame de marcha registrados em 100% dos atendimentos",
+      "TC de crânio em até 1 h no anticoagulado com trauma craniano",
+      "Cirurgia de fratura de fêmur em até 48 h da admissão",
+      "Deambulação iniciada em até 24 h após a cirurgia de fêmur",
+      "25-OH-vitamina D acima de 30 ng/mL em 3 meses",
+      "Nenhum sedativo novo prescrito na alta e nenhuma contenção física",
+      "Nenhuma nova queda em 30 dias após o plano de prevenção"
+    ],
+    "fluxo": [
+      "Classificar o evento: houve trauma? houve síncope ou pródromo? está anticoagulado?",
+      "Exame dirigido de cabeça, coluna, quadril, punho, pele e neurológico, com PA sentado e em pé",
+      "Imagem dirigida: TC de crânio se trauma craniano ou anticoagulação; radiografia se dor óssea",
+      "Investigar a causa: glicemia, ECG, fármacos em uso, visão, pés e teste de marcha",
+      "Tratar a dor e a fratura: analgesia multimodal, imobilização provisória e ortopedia precoce",
+      "Retirar o que derruba: sedativo, anti-histamínico, anti-hipertensivo em excesso e anticolinérgico",
+      "Iniciar prevenção: exercício, vitamina D, cálcio, tratamento de osteoporose, adaptação e dispositivo de apoio",
+      "Reavaliar marcha antes da alta, entregar plano escrito e agendar seguimento e visita domiciliar"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "TC de crânio mesmo sem sintoma e observação mínima de 6 h; reverter apenas com sangramento documentado ou cirurgia",
+        "alerta": "hematoma intracraniano tardio e morte evitável"
+      },
+      {
+        "populacao": "demência ou parkinson",
+        "ajuste": "evitar sedativo e antipsicótico, tratar rigidez e freezing, adaptar ambiente e treinar marcha com pistas visuais",
+        "alerta": "risco de contenção química e piora funcional"
+      },
+      {
+        "populacao": "osteoporose",
+        "ajuste": "tratar o osso além da queda: vitamina D, cálcio, bisfosfonato ou denosumabe e exercício com carga",
+        "alerta": "nova fratura em 1 ano e mortalidade no primeiro ano após fratura de quadril"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "evitar bisfosfonato com TFG abaixo de 35; vigiar cálcio, fósforo e uso de vitamina D ativa",
+        "alerta": "hipocalcemia e calcificação vascular"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "revisar hipoglicemiante e afrouxar a meta glicêmica no idoso frágil",
+        "alerta": "hipoglicemia é causa frequente de queda e de fratura"
+      },
+      {
+        "populacao": "cardiopata",
+        "ajuste": "investigar síncope, estenose aórtica e arritmia antes de atribuir a queda à idade",
+        "alerta": "morte súbita por causa cardíaca não diagnosticada"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "tomografia de crânio sem contraste",
+          "indicacao": "trauma craniano, anticoagulação, cefaleia, vômito ou rebaixamento",
+          "o_que_muda": "confirma ou afasta hemorragia e define se há reversão da anticoagulação e neurocirurgia"
+        },
+        {
+          "nome": "radiografia de bacia, quadril, punho e coluna",
+          "indicacao": "dor, deformidade ou incapacidade de apoiar",
+          "o_que_muda": "confirma fratura e antecipa a decisão cirúrgica"
+        },
+        {
+          "nome": "pressão arterial sentado e em pé após 1 e 3 minutos",
+          "indicacao": "toda queda, sobretudo com tontura ao levantar",
+          "o_que_muda": "identifica hipotensão postural, a causa reversível mais comum, e orienta a retirada do anti-hipertensivo"
+        },
+        {
+          "nome": "ECG de 12 derivações",
+          "indicacao": "síncope, palpitação, queda sem pródromo ou uso de fármaco que alarga QT",
+          "o_que_muda": "arritmia, bloqueio, isquemia ou QT longo mudam a conduta e contraindicam fármacos"
+        },
+        {
+          "nome": "hemograma, ureia, creatinina, sódio, potássio e glicemia",
+          "indicacao": "todos",
+          "o_que_muda": "anemia por sangramento oculto, desidratação, distúrbio eletrolítico e hipoglicemia"
+        },
+        {
+          "nome": "densitometria óssea",
+          "indicacao": "fratura por fragilidade ou risco elevado",
+          "o_que_muda": "define o tratamento da osteoporose e o alvo terapêutico"
+        },
+        {
+          "nome": "avaliação de acuidade visual e exame de catarata",
+          "indicacao": "queda recorrente ou queixa visual",
+          "o_que_muda": "déficit visual corrigível reduz queda; indica cirurgia de catarata"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia de crânio para excluir hemorragia",
+          "motivo": "não detecta sangramento e atrasa a tomografia, que é o exame que muda a conduta"
+        },
+        {
+          "exame": "imagem de rotina sem trauma e sem dor",
+          "motivo": "não muda conduta e expõe o idoso a transporte e desconforto desnecessários"
+        },
+        {
+          "exame": "imobilização prolongada no leito 'para segurança'",
+          "motivo": "causa perda funcional, úlcera por pressão, delirium e trombose; a imobilidade gera mais queda do que previne"
+        },
+        {
+          "exame": "benzodiazepínico ou antipsicótico para acalmar após a queda",
+          "motivo": "aumenta o risco da próxima queda, precipita delirium e mascara a causa"
+        },
+        {
+          "exame": "liberar anticoagulado que caiu sem TC e sem exame neurológico documentado",
+          "motivo": "hemorragia tardia é a causa de morte evitável nesse grupo"
+        },
+        {
+          "exame": "AINE para dor pós-trauma em idoso",
+          "motivo": "lesão renal, sangramento digestivo, hipertensão e descompensação cardíaca"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "levantar devagar, sentando na beira da cama por 1 minuto antes de ficar de pé",
+        "usar sapato fechado com solado antiderrapante dentro de casa",
+        "manter luz noturna no caminho até o banheiro",
+        "fazer exercício de equilíbrio e força 3 vezes por semana",
+        "levar a lista completa de remédios em toda consulta",
+        "usar a bengala ou o andador conforme o treino da fisioterapia"
+      ],
+      "evitar": [
+        "tapete solto, fio no chão e piso molhado sem tapete antiderrapante",
+        "subir em banco, cadeira ou caixa para alcançar objetos",
+        "tomar benzodiazepínico ou zolpidem para dormir",
+        "andar no escuro ou sem os óculos",
+        "ficar de repouso absoluto por medo de cair",
+        "tomar remédio para pressão sem medir a pressão em pé"
+      ],
+      "retorno": [
+        "nova queda",
+        "dor que impede apoiar o pé ou andar",
+        "dor de cabeça, vômito ou sonolência após bater a cabeça",
+        "confusão mental ou fala arrastada",
+        "febre ou queimação ao urinar"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "alendronato de sódio",
+        "efeitos": [
+          "esofagite",
+          "dor retroesternal",
+          "dor em coxa"
+        ],
+        "observacao": "suspender e reavaliar se disfagia, dor retroesternal ou dor em coxa; revisar técnica de administração"
+      },
+      {
+        "agente": "tramadol",
+        "efeitos": [
+          "sedação",
+          "náusea",
+          "tontura",
+          "hiponatremia"
+        ],
+        "observacao": "reduzir ou trocar por analgésico simples; sedação em idoso é fator de nova queda"
+      },
+      {
+        "agente": "midodrina",
+        "efeitos": [
+          "hipertensão supina",
+          "piloereção",
+          "retenção urinária"
+        ],
+        "observacao": "afastar a última dose da noite e reduzir se PA deitada elevada"
+      },
+      {
+        "agente": "carbonato de cálcio",
+        "efeitos": [
+          "constipação",
+          "distensão"
+        ],
+        "observacao": "fracionar com a refeição, aumentar fibra e água; trocar de sal se intolerância"
+      },
+      {
+        "agente": "dipirona",
+        "efeitos": [
+          "hipotensão",
+          "reação alérgica"
+        ],
+        "observacao": "infundir em 5–10 min e medir PA; suspender se hipotensão sintomática"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação em prontuário",
+      "Tramadol com sedação, náusea ou nova queda: reduzir dose ou trocar por paracetamol",
+      "Midodrina ou fludrocortisona com hipertensão supina, edema ou hipocalemia: reduzir dose e reavaliar a indicação",
+      "Alendronato com disfagia ou dor retroesternal: suspender, investigar esôfago e trocar para denosumabe",
+      "Comunicar a equipe e reescrever o plano de prevenção de queda com o fármaco substituto"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "colecalciferol 1.000 UI",
+            "dose": "1.000 UI",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "contínuo",
+            "condicao": "prevenção de queda e fratura",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "carbonato de cálcio 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "12/12 h com a refeição",
+            "duracao": "contínuo",
+            "condicao": "ingestão dietética insuficiente",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "alendronato de sódio 70 mg",
+            "dose": "70 mg",
+            "via": "VO",
+            "frequencia": "1x/semana em jejum",
+            "duracao": "5 anos",
+            "condicao": "osteoporose confirmada",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 500 mg",
+            "dose": "500–750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "5 dias",
+            "condicao": "dor pós-trauma",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "monitorizacao": "dose total diária e função hepática",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tramadol 50 mg",
+            "dose": "50 mg",
+            "via": "VO",
+            "frequencia": "8/8 h se dor intensa",
+            "monitorizacao": "sedação, frequência respiratória e equilíbrio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "fitomenadiona 10 mg",
+            "dose": "10 mg",
+            "via": "IV",
+            "frequencia": "dose única se sangramento em usuário de varfarina",
+            "monitorizacao": "INR em 6–12 h",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "tomografia de crânio",
+          "radiografia dirigida",
+          "ECG",
+          "hemograma",
+          "ureia e creatinina",
+          "sódio e potássio",
+          "glicemia",
+          "densitometria óssea",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de queda, necessitando de afastamento por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente idoso com queda, mecanismo, trauma, imagem, causa identificada, analgesia, prevenção e plano de seguimento."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "mecanismo",
+        "pródromo e consciência",
+        "tempo no chão",
+        "dor e local",
+        "anticoagulante",
+        "fármacos e hipotensão postural",
+        "quedas prévias",
+        "visão e calçado",
+        "ambiente domiciliar"
+      ],
+      "texto_template": "Idoso com queda, mecanismo, pródromo e perda de consciência, tempo no chão, dor e local, anticoagulante, fármacos em uso, quedas prévias, visão, calçado e ambiente domiciliar."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e PA em pé",
+        "cabeça e couro cabeludo",
+        "coluna e quadril",
+        "punho e mãos",
+        "marcha, equilíbrio e força",
+        "visão e pés",
+        "neurológico",
+        "pele e higiene"
+      ],
+      "texto_template": "Sinais vitais com PA sentado e em pé, exame de cabeça e couro cabeludo, coluna e quadril, punho e mãos, marcha e equilíbrio, visão e pés, neurológico e pele."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de queda no pronto-socorro, critério de TC de crânio e de observação",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_geriatria",
+        "o_que_verificar": "avaliação multifatorial de queda, prevenção e síndrome pós-queda",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_osteoporose",
+        "o_que_verificar": "indicação de bisfosfonato, denosumabe e alvo de vitamina D",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e doses de colecalciferol, alendronato, denosumabe, tramadol e fitomenadiona",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GER01-01",
+        "tipo": "anticoagulado_com_tce",
+        "gatilho": "anticoagulante ou antiagregante com trauma craniano",
+        "severidade": "grave",
+        "mensagem": "TC de crânio obrigatória: não liberar sem imagem e exame neurológico documentado.",
+        "acao": "bloquear alta e sugerir tomografia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER01-02",
+        "tipo": "fratura_de_femur",
+        "gatilho": "dor em quadril com rotação externa ou incapacidade de apoiar",
+        "severidade": "grave",
+        "mensagem": "Suspeita de fratura de fêmur: analgesia, imobilização e ortopedia para cirurgia em até 48 h.",
+        "acao": "acionar ortopedia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER01-03",
+        "tipo": "sedativo_no_idoso",
+        "gatilho": "prescrição de benzodiazepínico, zolpidem ou anti-histamínico sedativo após a queda",
+        "severidade": "grave",
+        "mensagem": "Sedativo aumenta o risco da próxima queda e precipita delirium.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER01-04",
+        "tipo": "hipotensao_postural",
+        "gatilho": "queda de 20 mmHg na sistólica em pé ou tontura ao levantar",
+        "severidade": "grave",
+        "mensagem": "Hipotensão postural: revisar anti-hipertensivo e diurético antes da alta.",
+        "acao": "sugerir ajuste e alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER01-05",
+        "tipo": "aine_no_idoso",
+        "gatilho": "AINE prescrito para dor pós-trauma",
+        "severidade": "precaucao",
+        "mensagem": "AINE em idoso: risco renal, sangramento digestivo e descompensação cardíaca.",
+        "acao": "alertar e sugerir alternativa",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER01-06",
+        "tipo": "imobilizacao_sem_indicacao",
+        "gatilho": "repouso no leito ou contenção física sem fratura instável",
+        "severidade": "precaucao",
+        "mensagem": "Imobilizar sem indicação causa perda funcional e delirium.",
+        "acao": "alertar e sugerir mobilização precoce",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: queda como marcador de fragilidade e de causa oculta, com avaliação de mecanismo, síncope, hipotensão postural, visão, marcha, fármacos, osteoporose e fratura oculta; 10 fármacos com apresentações, preparo, tempo de infusão, monitorização e ajuste renal; anticoagulado que caiu com TC de crânio obrigatória, fratura de fêmur com analgesia e cirurgia em até 48 h, e síndrome pós-queda; prevenção com vitamina D, cálcio, exercício, desprescrição, adaptação e dispositivo de apoio; procedimentos de TC, radiografia, avaliação de marcha, atendimento domiciliar e analgesia regional; bloqueios de sedativo, de AINE e de alta sem imagem no anticoagulado.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,555 @@
+{
+  "id": "ws-uro_04",
+  "nome": "Hematúria aguda",
+  "cat": "Urinário",
+  "alias": "hematuria aguda hematuria sangue na urina hematuria macroscopica hematuria com coagulos hematuria microscopica",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (URO-04_hematuria.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de hematúria, manejo da retenção por coágulo e critérios de internação",
+      "[verificar] sociedade_urologia: investigação de hematúria microscópica e macroscópica, idade de corte para cistoscopia e papel da tomografia",
+      "[verificar] sociedade_nefrologia: critérios de hematúria glomerular e quando encaminhar sem cistoscopia",
+      "[verificar] anvisa: apresentações, diluições e ajuste renal dos fármacos disponíveis no serviço",
+      "[verificar] literatura: papel do antifibrinolítico na hematúria, limite de dose e risco trombótico"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "URO-04 em 2026-11-27",
+    "fundido_workspace": "URO-04 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: coágulos volumosos com dor suprapúbica e bexiga distendida -> sondagem de três vias e irrigação contínua imediatas; hipotensão, taquicardia ou palidez com hematúria -> ressuscitação, tipagem e transfusão, acionar urologia; anemia sintomática ou hemoglobina abaixo de 8 g/dL -> transfusão conforme necessidade e investigação da fonte; hematúria com febre, calafrios ou dor lombar -> urocultura, antibiótico e imagem. 1) Confirmar que é hematúria: sangue visível ou sedimento com hemácias, afastando sangramento vaginal, retal ou contaminação menstrual 2) Classificar a origem: coágulo, hematúria terminal, dor em cólica e fator de risco urológico apontam para o trato urinário; proteinúria, dismorfismo, cilindros e hipertensão apontam para glomerulonefrite e nefrologia 3) Avaliar gravidade: coágulos com retenção, instabilidade, anemia sintomática e febre mudam a prioridade - sondagem de três vias, irrigação, ressuscitação e urologia 4) Colher urina I com sedimento, creatinina, hemograma e coagulograma, e urocultura se houver febre ou sintomas urinários 5) Tratar a causa aguda: ITU com ceftriaxona ou ciprofloxacino conforme gravidade, obstrução com desobstrução, anticoagulação excessiva com reversão selecionada 6) Controlar dor com dipirona e opioide titulado, sem AINE, e hidratar para manter diurese sem sobrecarga 7) Excluir malignidade: cistoscopia e tomografia em maior de 40 anos, tabagista, exposição ocupacional ou hematúria macroscópica isolada; ultrassom na gesta",
+  "redFlags": [
+    "coágulos volumosos com dor suprapúbica e bexiga distendida -> sondagem de três vias e irrigação contínua imediatas",
+    "hipotensão, taquicardia ou palidez com hematúria -> ressuscitação, tipagem e transfusão, acionar urologia",
+    "anemia sintomática ou hemoglobina abaixo de 8 g/dL -> transfusão conforme necessidade e investigação da fonte",
+    "hematúria com febre, calafrios ou dor lombar -> urocultura, antibiótico e imagem",
+    "idade acima de 40 anos, tabagismo, exposição a anilina ou irradiação pélvica prévia -> cistoscopia e tomografia do trato urinário superior",
+    "coágulo com dor em cólica e hidronefrose -> desobstrução com duplo J ou nefrostomia",
+    "anticoagulação plena com hematúria persistente -> avaliar reversão parcial e manter investigação da causa",
+    "hematúria após trauma leve em paciente com rim cístico ou hidronefrose -> tomografia com contraste e avaliação urológica"
+  ],
+  "naoUsar": [
+    "alergia grave a cefalosporina",
+    "anafilaxia prévia a penicilina",
+    "neonato com solução contendo cálcio",
+    "insuficiência cardíaca descompensada para reposição venosa em grande volume",
+    "edema agudo de pulmão",
+    "bexiga com rotura suspeita para irrigação sob pressão",
+    "trombose ativa",
+    "tromboembolismo prévio"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "beber água ao longo do dia para manter a urina clara"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "AINE e automedicação com anti-inflamatório"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Fluoroquinolona",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ciprofloxacino",
+            "pos": "500 mg. Via VO. 12/12 h. 3 a 7 dias.",
+            "posTodas": true,
+            "motivo": "cistite com hematúria, sem febre e sem dor lombar, com resistência local baixa e tolerância oral (alternativa) cistite com hematúria, sem febre e com resistência local baixa",
+            "nota": "Uso direto; separar em 2 h de antiácido, cálcio, ferro ou leite - monitorar: melhora dos sintomas em 48 a 72 h; monitorar: dor em tendão; monitorar: diarreia; monitorar: aspecto da urina após o tratamento · NÃO: gestação e lactação; tendinopatia prévia por quinolona; miastenia gravis; QT longo; epilepsia não controlada; uso simultâneo de tizanidina · Obs: Trata a ITU, mas não encerra a investigação: hematúria que persiste após 4 a 6 semanas exige cistoscopia e imagem. · Renal: Clearance 30 a 60 mL/min: 250 a 500 mg 12/12 h; abaixo de 30 mL/min: 250 a 500 mg 24/24…",
+            "dose": {
+              "texto": "500 mg; 12/12 h; 3 a 7 dias; max. 1.000 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Sonda vesical de três vias com irrigação contínua",
+              "ap": "",
+              "q": "",
+              "pos": "Instalar sonda de maior calibre possível, irrigar até o efluente clarear e manter irrigação contínua; registrar volume infundido e drenado para não confundir com diurese"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Hidratação oral e venosa equilibrada",
+              "ap": "",
+              "q": "",
+              "pos": "Manter diurese de 1,5 a 2 mL/kg/h para diluir o sangramento; em cardiopata, repor em alíquotas de 250 a 500 mL com ausculta entre elas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Contenção do esforço e repouso relativo",
+              "ap": "",
+              "q": "",
+              "pos": "Evitar esforço físico, tosse vigorosa e constipação; prescrever laxante se necessário, porque a manobra de Valsalva aumenta o sangramento vesical"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Revisão de anticoagulantes e antiagregantes com o prescritor",
+              "ap": "",
+              "q": "",
+              "pos": "Não suspender por conta própria: registrar indicação, tempo de prótese ou stent, dose e exame de controle, e decidir a suspensão em conjunto"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Coleta de urina I com sedimento antes do antibiótico",
+              "ap": "",
+              "q": "",
+              "pos": "Jato médio, sem toque, com envio imediato; em mulher, orientar assepsia e afastar sangramento vaginal"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Registro do aspecto e da cor da urina",
+              "ap": "",
+              "q": "",
+              "pos": "Descrever por escrito a cada micção ou troca de sonda: claro, rosado, vinho, com coágulos; a evolução do aspecto é o parâmetro de resposta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Reavaliação obrigatória após o tratamento da ITU",
+              "ap": "",
+              "q": "",
+              "pos": "Marcar retorno em 4 a 6 semanas com urina I; se a hematúria persistir, manter cistoscopia e tomografia, mesmo com urina clara e paciente assintomático"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Orientação escrita de retorno imediato",
+              "ap": "",
+              "q": "",
+              "pos": "Explicar que parar de urinar, dor intensa, tontura, febre ou coágulos volumosos exigem retorno imediato, sem esperar a consulta marcada"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Cessação do tabagismo e afastamento de exposição ocupacional",
+              "ap": "",
+              "q": "",
+              "pos": "Orientar parar de fumar e evitar anilinas e corantes industriais; registrar a exposição no prontuário porque muda o seguimento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "URO-04"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cefalosporina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "ITU complicada com hematúria, febre, dor lombar ou necessidade de internação (1a linha) ITU complicada com hematúria",
+            "nota": "Reconstituir em 10 mL de água para injeção e diluir em 100 mL de soro fisiológico 0,9% ou glicose 5% - monitorar: defervescência em 48 a 72 h; monitorar: creatinina de 24/24 h; monitorar: diarreia e sinais de C. difficile; monitorar: aspecto da urina · NÃO: alergia grave a cefalosporina; anafilaxia prévia a penicilina; neonato com solução contendo cálcio · Obs: Trata a infecção, não a causa da hematúria: se a hematúria persistir após o tratamento, a investigação de malignidade continua.",
+            "dose": {
+              "texto": "1 g; 1x/dia; 7 a 14 dias, conforme o foco e a resposta; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cristaloide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "solucao_fisiologica",
+              "n": "Solução fisiológica 0,9%",
+              "ap": "bolsa 500 mL",
+              "via": "irrigação vesical por sonda de três vias ou IV",
+              "pos": "Irrigação contínua a 100 a 200 mL/h; reposição de 500 a 1.000 mL em bolsa. Via irrigação vesical por sonda de três vias ou IV. Irrigação contínua até o efluente clarear; reposição conforme perda. Até 24 a 48 h de irrigação, conforme o aspecto. Irrigação contínua em gota a gota conforme o aspecto do efluente; reposição venosa de 500 mL em 30 a 60 min."
+            },
+            "motivo": "irrigação vesical contínua na hematúria com coágulos e reposição volêmica no sangramento com instabilidade (1a linha) hematúria com coágulos",
+            "nota": "Pronta para uso; aquecer a solução de irrigação à temperatura corporal para evitar calafrios - monitorar: aspecto e volume do efluente da irrigação; monitorar: sinais de distensão vesical e dor; monitorar: pressão arterial e frequência cardíaca; monitorar: ausculta pulmonar e saturação na reposição venosa; monitorar: s · NÃO: insuficiência cardíaca descompensada para reposição venosa em grande volume; edema agudo de pulmão; bexiga com rotura suspeita para irrigação sob pressão · Obs: A irrigação é o tratamento mecânico da retenção por coágulo; volume venoso em excesso não compensa sangramento e causa sobrecarga.",
+            "dose": {
+              "texto": "irrigação contínua a 100 a 200 mL/h; reposição de 500 a 1.000 mL em bolsa; irrigação contínua até o efluente clarear; reposição conforme perda; até 24 a 48 h de irrigação, conforme o aspecto; max. individualizar pelo balanço hídrico, pela ausculta pulmonar e pelo aspecto do efluente",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": 200,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antifibrinolítico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "acido_aminocaproico",
+              "n": "Ácido aminocaproico",
+              "ap": "ampola 2 g/10 mL",
+              "via": "IV",
+              "pos": "5 g. Via IV. 6/6 h na primeira hora, depois 1 g/h até controlar. 24 a 48 h. Infusão inicial em 30 a 60 minutos; manutenção contínua."
+            },
+            "motivo": "sangramento vesical persistente quando o ácido tranexâmico não está disponível (alternativa)",
+            "nota": "Diluir a dose em 250 mL de soro fisiológico 0,9% ou glicose 5% - monitorar: aspecto da urina; monitorar: sinais de trombose; monitorar: creatinina e potássio; monitorar: frequência cardíaca e pressão arterial; monitorar: fibrinogênio se uso prolongado · NÃO: trombose ativa; tromboembolismo prévio; coagulação intravascular disseminada; insuficiência renal grave; gestação no primeiro trimestre · Obs: Menos potente e com mais efeito gastrointestinal que o tranexâmico; usar só como substituto quando este falta. · Renal: Reduzir a dose e aumentar o intervalo com clearance abaixo de 50 mL/min; evitar em diálise",
+            "dose": {
+              "texto": "5 g; 6/6 h na primeira hora, depois 1 g/h até controlar; 24 a 48 h; max. 30 g/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "hosp": "acido_tranexamico_ev",
+            "motivo": "sangramento vesical persistente com coágulos, após irrigação e sem instabilidade, em paciente com risco trombótico baixo (condicional) sangramento selecionado com risco trombótico baixo, após avaliação urológica",
+            "nota": "Diluir 1 g em 100 mL de soro fisiológico 0,9% ou glicose 5% para infusão intravenosa - monitorar: aspecto da urina e volume de coágulos; monitorar: sinais de trombose (dor em panturrilha, dispneia, dor torácica); monitorar: creatinina e débito urinário; monitorar: nível de consciência e sinais de convulsão; monitorar:  · NÃO: trombose venosa ou arterial ativa; tromboembolismo pulmonar prévio; stent coronariano recente; coagulação intravascular disseminada; convulsão; insuficiência renal grave sem ajuste; hematúria de origem ureteral alta com risco de obstrução por coágulo · Obs: Uso selecionado e nunca rotineiro em hematúria:…",
+            "dose": {
+              "texto": "1 g; 8/8 h; 24 a 72 h, enquanto durar o sangramento ativo; max. 3 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fitomenadiona",
+              "n": "Fitomenadiona (vitamina K)",
+              "ap": "ampola 10 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "5 a 10 mg. Via IV. Dose única; repetir em 12 a 24 h se o INR permanecer alto. 1 a 2 doses. 20 a 30 minutos."
+            },
+            "motivo": "reversão de varfarina em hematúria significativa com INR acima da faixa terapêutica (condicional) varfarina com INR acima da faixa",
+            "nota": "Diluir a dose em 50 mL de soro fisiológico 0,9% e infundir lentamente; não administrar em bolus - monitorar: INR em 6 a 12 h e em 24 h; monitorar: sinais de sangramento; monitorar: reação alérgica durante a infusão; monitorar: necessidade de plasma ou complexo protrombínico · NÃO: alergia ao fármaco; reação anafilactoide prévia à vitamina K intravenosa · Obs: Reverte a varfarina em 6 a 12 h; em sangramento grave com instabilidade, associar complexo protrombínico para efeito imediato.",
+            "dose": {
+              "texto": "5 a 10 mg; dose única; repetir em 12 a 24 h se o INR permanecer alto; 1 a 2 doses; max. 10 mg por dose",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antídoto",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "sulfato_de_protamina",
+              "n": "Sulfato de protamina",
+              "ap": "ampola 10 mg/mL (5 mL)",
+              "via": "IV",
+              "pos": "1 mg para cada 100 UI de heparina das últimas 2 a 3 h. Via IV. Dose única; repetir metade da dose se o TTPa permanecer alargado. 1 a 2 doses. 10 minutos; não ultrapassar 5 mg/min."
+            },
+            "motivo": "reversão de heparina não fracionada em hematúria grave ou sangramento com instabilidade (condicional)",
+            "nota": "Diluir a dose em 50 mL de soro fisiológico 0,9%; administrar lentamente, sem bolus rápido - monitorar: pressão arterial e frequência cardíaca durante a infusão; monitorar: TTPa em 30 min e 3 h; monitorar: sinais de anafilaxia; monitorar: sangramento · NÃO: alergia à protamina; exposição prévia a insulina com protamina; vasectomia prévia (risco de reação); reação anafilactoide prévia · Obs: Só reverte heparina não fracionada; para enoxaparina o efeito é parcial e a conduta é suspender e aguardar, com controle do sangramento.",
+            "dose": {
+              "texto": "1 mg para cada 100 UI de heparina das últimas 2 a 3 h; dose única; repetir metade da dose se o TTPa permanecer alargado; 1 a 2 doses; max. 50 mg por dose",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analogo vasopressina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "desmopressina",
+              "n": "Desmopressina",
+              "ap": "ampola 4 mcg/mL (1 mL)",
+              "via": "IV",
+              "pos": "0,3 mcg/kg. Via IV. Dose única; repetir em 8 a 12 h se necessário, no máximo 2 a 3 doses. 1 a 3 doses. 30 minutos."
+            },
+            "motivo": "sangramento urinário por coagulopatia urêmica ou plaquetopatia, sem resposta à correção clínica (condicional)",
+            "nota": "Diluir a dose em 50 mL de soro fisiológico 0,9% - monitorar: sódio antes e 6 h após; monitorar: diurese e peso; monitorar: pressão arterial; monitorar: cefaleia e nível de consciência; monitorar: sangramento · NÃO: hiponatremia grave; insuficiência cardíaca descompensada; doença de von Willebrand tipo 2B; púrpura trombocitopênica trombótica; hipersensibilidade · Obs: Ponte para diálise ou procedimento em uremia com sangramento; não é tratamento de causa urológica e não substitui hemostasia. · Renal: Usar com cautela em clearance abaixo de 30 mL/min pelo risco de hiponatremia; restringir…",
+            "dose": {
+              "texto": "0,3 mcg/kg; dose única; repetir em 8 a 12 h se necessário, no máximo 2 a 3 doses; 1 a 3 doses; max. 0,4 mcg/kg por dose",
+              "status": "ok",
+              "valor": 0.3,
+              "valor_max": null,
+              "unidade": "mcg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.4,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "dor associada à hematúria, cólica por coágulo ou dor da ITU (condicional) dor",
+            "nota": "Diluir 1 g em 20 mL de soro fisiológico para uso intravenoso - monitorar: pressão arterial durante a infusão; monitorar: dor em 30 minutos; monitorar: hemograma se uso acima de 5 dias · NÃO: alergia a pirazolonas; porfiria hepática aguda; deficiência de medula óssea; terceiro trimestre de gestação · Obs: É o analgésico de escolha na hematúria porque não agrava sangramento nem função renal, ao contrário do AINE. · Renal: Clearance abaixo de 30 mL/min: intervalo de 8/8 h a 12/12 h",
+            "dose": {
+              "texto": "1 g; 6/6 h; até 3 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "morfina_ev",
+            "motivo": "dor intensa por retenção de coágulo ou cólica refratária à dipirona (resgate) dor refratária",
+            "nota": "Diluir 1 mL (10 mg) em 9 mL de soro fisiológico e usar 1 mL dessa solução por mg; ou diluir a dose em 10 mL de soro fisiológico - monitorar: frequência respiratória e saturação antes e após cada dose; monitorar: escala de sedação; monitorar: pressão arterial; monitorar: náusea; monitorar: alívio da dor em 15 minutos",
+            "dose": {
+              "texto": "0,1 mg/kg (2 a 4 mg no adulto de 70 kg); dose titulada a cada 10 a 15 min até controle; até controle da dor, com reavaliação a cada 4 h; max. individualizar; reavaliar após 3 doses",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 4,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "a cada 4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "URO-04",
+    "versao": "0.2.0",
+    "arquivo": "URO-04_hematuria.json",
+    "area": "Urinário",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

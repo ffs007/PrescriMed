@@ -1,0 +1,284 @@
+{
+  "id": "leg_2006",
+  "nome": "Insuficiência Respiratória Aguda",
+  "cat": "Emergência",
+  "alias": "irpa insuficiencia respiratoria dispneia grave hipoxemia hipercapnia vni",
+  "cid": [
+    [
+      "J960",
+      "Insuficiência respiratória aguda"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "SBPT — exacerbação e VNI",
+      "AMIB — suporte ventilatório"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "RESP-20 em 2026-11-27",
+    "fundido_workspace": "RESP-20 em 2026-11-27"
+  },
+  "alerta": "O2 para SpO2 92–96% (DPOC/hipercapnia: 88–92%). Posição sentada; monitorização contínua + gasometria. VNI PRECOCE (CPAP na hipoxêmica; BiPAP na hipercápnica de DPOC com pH < 7,35/pCO2 > 45) — contraindicações: rebaixamento, vômito, cirurgia facial, pneumotórax não drenado. IOT sem demorar se: Glasgow ≤ 8, FR exaustão paradoxal, SpO2 < 85% persistente com O2 máximo, parada, VNI falhando em 30–60 min. Tratar a causa em paralelo (asma/DPOC, EAP, pneumonia, pneumotórax, TEP, obstrução). Asma grave: salbutamol nebulização contínua + ipratrópio + hidrocortisona + sulfato de magnésio EV; DPOC: igual + considerar aminofilina (não há no cadastro EV).",
+  "redFlags": [
+    "Silêncio auscultatório ou cianose — via aérea iminente: IOT agora",
+    "FR caindo com esforço crescente (fadiga) — o 'paciente que melhora' que piora: intubar antes",
+    "Glasgow caindo + hipoxemia — proteger via aérea",
+    "Pneumotórax hipertensivo (desvio de traqueia, tórax hiperinsuflado mudo) — drenar antes de ventilar",
+    "pH < 7,20 na hipercápnica — VNI com avaliação de intubação imediata paralela",
+    "Estridor/gloso/angioedema — ver protocolo Anafilaxia; via aérea precoce"
+  ],
+  "naoUsar": [
+    "Sedativos sem via aérea planejada",
+    "SpO2 alvo 100% na hipercapnia (agrava retenção de CO2)",
+    "VNI no rebaixado/parada",
+    "O2 retardo 'para pegar gasometria' — oxigênio primeiro"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Broncodilatador nebulizado (asma/DPOC/broncoespasmo)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "fenoterol_neb",
+            "motivo": "Nebulização de 20 em 20 min na 1ª hora (ou contínua na grave) + ipratrópio"
+          },
+          {
+            "linha": 1,
+            "hosp": "ipratropio_neb",
+            "motivo": "0,5 mg associado a cada dose na 1ª hora"
+          },
+          {
+            "hosp": "salbutamol_spray",
+            "motivo": "Espaçador 4–10 jatos se nebulização indisponível"
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide EV",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "hidrocortisona_ev",
+            "motivo": "500 mg EV 6/6h (asma/DPOC grave)"
+          },
+          {
+            "hosp": "metilpred_ev",
+            "motivo": "40–80 mg EV 12/12h — alternativa"
+          },
+          {
+            "hosp": "dexametasona_ev",
+            "motivo": "10 mg EV dose única — alternativa de dose única"
+          }
+        ]
+      },
+      {
+        "nome": "Adjuvantes na asma grave",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "sulfato_mg",
+            "motivo": "2 g (4 mL da 50%) diluído em 100 mL SF em 20 min — asma grave"
+          },
+          {
+            "hosp": "adrenalina_neb",
+            "motivo": "Se anafilaxia/angioedema como causa — ver protocolo Anafilaxia"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico se pneumonia como causa",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1–2 g EV 1x/dia ± azitromicina (ver protocolo Sepse para empírico por foco)"
+          },
+          {
+            "linha": 1,
+            "hosp": "azitromicina_ev",
+            "motivo": "500 mg EV 1x/dia — CAP grave/atípicos"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Alta pós-broncoespasmo (ver condição de base)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "40 mg VO 1x/dia por 5 dias (asma/DPOC pós-exacerbação)",
+            "ped": "1–2 mg/kg/dia (máx 40 mg) por 3–5 dias",
+            "motivo": "Corticoide oral pós-crise"
+          },
+          {
+            "base": "prednisolona",
+            "pos": "40 mg VO 1x/dia por 5 dias (líquido pediátrico)",
+            "ped": "1–2 mg/kg/dia por 3–5 dias",
+            "motivo": "Apresentação pediátrica"
+          },
+          {
+            "base": "montelucaste",
+            "pos": "10 mg VO à noite (adulto) por 7–14 dias como adjuvante",
+            "ped": "4 mg (<6 a), 5 mg (6–14 a)",
+            "motivo": "Adjuvante sintomático"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Falta de ar que volta ou piora, falar frases curtas sem conseguir, lábios/roxo, uso do bombinha de resgate > 4x/dia ou sem alívio, pico de fluxo < 50% do melhor. Retornar com a lista dos bombinhas usadas."
+            },
+            "motivo": "Recorrência da exacerbação"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Plano de inaladores",
+              "ap": "",
+              "pos": "Revisar técnica com espaçador; renovar o resgate antes de acabar; consulta de asma/DPOC em 7 dias (controle, pico de fluxo, vacinas)."
+            },
+            "motivo": "Prevenção"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Oxigenoterapia titulada por alvo definido",
+              "ap": "",
+              "q": "",
+              "pos": "Alvo de 94% a 98% e de 88% a 92% em DPOC com retenção de CO2; reavaliar em 15 minutos e registrar o dispositivo, o fluxo e a saturação obtida"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Cânula nasal de alto fluxo",
+              "ap": "",
+              "q": "",
+              "pos": "Fluxo de 30 a 60 L/min, FiO2 de 21% a 100%, gás aquecido a 37 graus e umidificado, com titulação pela saturação; calcular o índice ROX em 1, 2, 6 e 12 horas e não manter se houver falha"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Ventilação não invasiva com interface adequada",
+              "ap": "",
+              "q": "",
+              "pos": "Máscara oronasal ou nasal, IPAP inicial de 12 cmH2O e EPAP de 4 a 6, com reavaliação clínica e gasométrica em 1 hora; trocar a interface a cada 4 horas para prevenir lesão de pele e não usar se houver rebaixamento, vômito ou instabilidade"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Ventilação protetora com volume corrente pelo peso predito",
+              "ap": "",
+              "q": "",
+              "pos": "6 mL/kg de peso predito, calculado por 50 + 0,91 × (altura em cm − 152,4) em homens e 45,5 + 0,91 × (altura em cm − 152,4) em mulheres; platô abaixo de 30 cmH2O e driving pressure abaixo de 15"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Titulação de PEEP pela melhor complacência",
+              "ap": "",
+              "q": "",
+              "pos": "Iniciar com 5 a 8 cmH2O e subir em passos de 2 até a melhor complacência ou a piora hemodinâmica; evitar PEEP alta em DPOC com auto-PEEP e em hipovolemia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Posição prona por 12 a 16 horas ao dia",
+              "ap": "",
+              "q": "",
+              "pos": "Na síndrome do desconforto respiratório agudo com PaO2/FiO2 abaixo de 150; proteger olhos, face e proeminências, manter a via aérea e o circuito sem tração, e suspender se houver instabilidade ou piora da oxigenação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Cabeceira elevada e prevenção de pneumonia associada à ventilação",
+              "ap": "",
+              "q": "",
+              "pos": "Cabeceira a 30 a 45 graus, higiene oral com clorexidina, circuito fechado e pressão do cuff entre 20 e 30 cmH2O"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Sedação leve, despertar diário e protocolo de desmame",
+              "ap": "",
+              "q": "",
+              "pos": "Alvo de Richmond entre 0 e menos 2, interrupção diária da sedação e teste de respiração espontânea com pressão de suporte de 5 a 7 cmH2O por 30 a 120 minutos"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Balanço hídrico negativo e restrição de fluidos",
+              "ap": "",
+              "q": "",
+              "pos": "Na síndrome do desconforto respiratório agudo, manter balanço negativo após a fase de ressuscitação; pesar diariamente e registrar diurese horária"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_10",
+              "n": "Fisioterapia respiratória e mobilização precoce",
+              "ap": "",
+              "q": "",
+              "pos": "Higiene brônquica, posicionamento e sedestação fora do leito a partir de 24 a 48 horas, com equipe e dispositivo de suporte preparados"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "RESP-20"
+      }
+    ]
+  }
+}

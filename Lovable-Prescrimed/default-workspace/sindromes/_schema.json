@@ -1,0 +1,467 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://prescrimed.app/schemas/sindrome/1.0.0",
+  "title": "PrescriMed — Síndrome",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "sindrome"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "sindrome": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "area",
+        "nome",
+        "contexto",
+        "populacao",
+        "status",
+        "medicamentos",
+        "alertas_sistema",
+        "auditoria"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,6}-[0-9]{2}$"
+        },
+        "area": {
+          "type": "string",
+          "minLength": 3
+        },
+        "nome": {
+          "type": "string",
+          "minLength": 3
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contexto": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ambulatorial",
+              "hospitalar"
+            ]
+          },
+          "minItems": 1
+        },
+        "populacao": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "status": {
+          "enum": [
+            "rascunho",
+            "estruturado_em_revisao",
+            "piloto_em_revisao",
+            "aprovado",
+            "publicado",
+            "suspenso"
+          ]
+        },
+        "risk_class": {
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "versao": {
+          "type": "string"
+        },
+        "visao_geral": {
+          "type": "string"
+        },
+        "inclusao": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exclusao": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "situacao",
+              "fluxo"
+            ],
+            "properties": {
+              "situacao": {
+                "type": "string"
+              },
+              "fluxo": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "sinais_alarme": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "sinal",
+              "acao"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sinal": {
+                "type": "string"
+              },
+              "por_que": {
+                "type": "string"
+              },
+              "acao": {
+                "type": "string"
+              },
+              "severidade": {
+                "enum": [
+                  "grave",
+                  "precaucao",
+                  "informativo"
+                ]
+              }
+            }
+          }
+        },
+        "perguntas_rapidas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "medicamentos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "agente",
+              "dose",
+              "via",
+              "frequencia",
+              "duracao"
+            ],
+            "properties": {
+              "classe": {
+                "type": "string"
+              },
+              "agente": {
+                "type": "string"
+              },
+              "papel": {
+                "type": "string"
+              },
+              "indicacao": {
+                "type": "string"
+              },
+              "dose": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "unidade": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "via": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "frequencia": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "duracao": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "dose_maxima": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "contraindicacoes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "efeitos_adversos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "confirmar_apresentacao_local": {
+                "type": "boolean"
+              },
+              "fonte": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "claim_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "apresentacoes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "preparo": {
+                "type": "string"
+              },
+              "tempo_infusao": {
+                "type": "string"
+              },
+              "monitorizacao": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ajuste_renal": {
+                "type": "string"
+              },
+              "ajuste_hepatico": {
+                "type": "string"
+              },
+              "observacoes": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "populacoes_especiais": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "populacao": {
+                "type": "string"
+              },
+              "ajuste": {
+                "type": "string"
+              },
+              "alerta": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "exames": {
+          "type": "object",
+          "properties": {
+            "comuns": {
+              "type": "array"
+            },
+            "evitar": {
+              "type": "array"
+            }
+          }
+        },
+        "orientacoes": {
+          "type": "object",
+          "properties": {
+            "fazer": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "evitar": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "retorno": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "documentos": {
+          "type": "object"
+        },
+        "anamnese": {
+          "type": "object"
+        },
+        "exame_fisico": {
+          "type": "object"
+        },
+        "referencias": {
+          "type": "array"
+        },
+        "alertas_sistema": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "gatilho",
+              "severidade",
+              "mensagem",
+              "acao"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "tipo": {
+                "type": "string"
+              },
+              "gatilho": {
+                "type": "string"
+              },
+              "severidade": {
+                "enum": [
+                  "grave",
+                  "precaucao",
+                  "informativo"
+                ]
+              },
+              "mensagem": {
+                "type": "string"
+              },
+              "acao": {
+                "type": "string"
+              },
+              "bloqueante": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "auditoria": {
+          "type": "object",
+          "required": [
+            "changelog"
+          ],
+          "properties": {
+            "autor": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "revisor_clinico": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fontes": {
+              "type": "array"
+            },
+            "proxima_revisao": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "changelog": {
+              "type": "array"
+            }
+          }
+        },
+        "criterios_escolha": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "cenario": {
+                "type": "string"
+              },
+              "escolha": {
+                "type": "string"
+              },
+              "porque": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "nao_farmacologico": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "medida": {
+                "type": "string"
+              },
+              "detalhe": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "procedimentos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "nome": {
+                "type": "string"
+              },
+              "indicacao": {
+                "type": "string"
+              },
+              "tecnica": {
+                "type": "string"
+              },
+              "complicacoes": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "metas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fluxo": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

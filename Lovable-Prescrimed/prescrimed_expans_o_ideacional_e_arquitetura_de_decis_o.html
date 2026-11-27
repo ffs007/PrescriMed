@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrescriMed — Expansão Ideacional e Arquitetura de Decisão</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Utilitarian Deep Research · answer-first compact hero · framing -> space -> clusters -> scatter viz -> 10 ideas -> diversity/priority matrices -> gaps · Space Grotesk + Plus Jakarta Sans + IBM Plex Mono · crisp gallery white + deep teal/cobalt accents · 0px radius · single metric emphasis · 2x2 SVG portfolio positioning scatter */
+
+:root {
+  --paper: #FFFFFF;
+  --band: #F4F6F8;
+  --ink: #0F172A;
+  --ink2: #334155;
+  --mute: #475569;
+  --hair: #CBD5E1;
+  --accent: #0F766E;
+  --accent-text: #0D5C56;
+  --accent-2: #1D4ED8;
+  --accent-2-text: #1E3A8A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding: 64px clamp(24px, 8vw, 112px) 96px;
+  background: var(--paper);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.col-12 { grid-column: 1 / -1; }
+.col-8 { grid-column: span 8; }
+.col-7 { grid-column: span 7; }
+.col-6 { grid-column: span 6; }
+.col-5 { grid-column: span 5; }
+.col-4 { grid-column: span 4; }
+.col-3 { grid-column: span 3; }
+
+.measure { max-width: 68ch; }
+
+/* Typography */
+h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.4rem, 4.2vw, 3.35rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  text-wrap: balance;
+  margin-bottom: 18px;
+}
+
+.deck {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: var(--ink2);
+  max-width: 66ch;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.55rem, 2.5vw, 1.95rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 18px;
+  text-wrap: balance;
+}
+
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--ink2);
+  margin-bottom: 14px;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8125rem;
+}
+
+/* Sections */
+.sec {
+  margin-top: 68px;
+  padding-top: 36px;
+  border-top: 1px solid var(--hair);
+}
+
+.hero-emphasis {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-left: 2px solid var(--accent);
+  padding-left: 24px;
+}
+
+.emphasis-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--accent-text);
+  white-space: nowrap;
+}
+
+.emphasis-cap {
+  font-size: 0.9375rem;
+  color: var(--ink2);
+  margin-top: 8px;
+  line-height: 1.45;
+}
+
+/* Full-bleed band (max 1) */
+.full-band {
+  margin: 68px calc(-1 * clamp(24px, 8vw, 112px)) 0;
+  padding: 52px clamp(24px, 8vw, 112px);
+  background: var(--band);
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+
+/* Open strips & lists */
+.strip-item {
+  padding-top: 14px;
+  border-top: 1px solid var(--hair);
+}
+
+.strip-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.strip-text {
+  font-size: 0.9375rem;
+  color: var(--ink2);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+ul.clean-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.clean-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  color: var(--ink2);
+  font-size: 0.95rem;
+}
+
+ul.clean-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+/* Tables (open, no zebra, max 3) */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+thead th {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--mute);
+  padding: 12px 14px 12px 0;
+  border-bottom: 2px solid var(--ink);
+  vertical-align: bottom;
+}
+
+tbody td {
+  padding: 13px 14px 13px 0;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  color: var(--ink2);
+  line-height: 1.48;
+}
+
+tbody td:first-child {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8125rem;
+  color: var(--accent-text);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.num-cell {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+/* Idea 10-block anatomy (open canvas, hairline structured, zero cards) */
+.idea-entry {
+  padding: 36px 0;
+  border-top: 2px solid var(--ink);
+}
+
+.idea-entry + .idea-entry {
+  border-top: 1px solid var(--hair);
+}
+
+.idea-header {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.idea-id {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-text);
+}
+
+.idea-scope-out {
+  color: var(--accent-2-text);
+}
+
+.idea-thesis {
+  font-size: 1.0625rem;
+  color: var(--ink);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.idea-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 28px;
+}
+
+.block-cell {
+  padding-top: 10px;
+  border-top: 1px solid var(--hair);
+}
+
+.block-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.block-val {
+  font-size: 0.9rem;
+  color: var(--ink2);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.block-wide {
+  grid-column: span 2;
+}
+
+.block-full {
+  grid-column: 1 / -1;
+}
+
+.provenance-line {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--mute);
+}
+
+/* Figure & SVG */
+figure {
+  margin: 28px 0 12px;
+  width: 100%;
+}
+
+.fig-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+figcaption {
+  font-size: 0.82rem;
+  color: var(--mute);
+  margin-top: 10px;
+  line-height: 1.45;
+}
+
+/* Pull quote */
+.pull-quote {
+  margin: 48px 0;
+  padding-left: 28px;
+  border-left: 3px solid var(--accent);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+  max-width: 50ch;
+}
+
+@media (max-width: 960px) {
+  .col-8, .col-7, .col-6, .col-5, .col-4, .col-3 {
+    grid-column: 1 / -1;
+  }
+  .idea-blocks {
+    grid-template-columns: 1fr;
+  }
+  .block-wide {
+    grid-column: 1 / -1;
+  }
+  .hero-emphasis {
+    border-left: none;
+    border-top: 2px solid var(--accent);
+    padding-left: 0;
+    padding-top: 18px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="grid-12">
+  <div class="col-8">
+    <h1>PrescriMed precisa escolher seu núcleo antes de escalar sua ambição</h1>
+    <p class="deck">Expansão ideacional estruturada a partir da especificação consolidada de 517 páginas. O projeto já possui tração técnica real (~54 mil linhas, 86 tabelas, 17 módulos), mas carrega sobreposições de escopo entre copiloto rápido de pronto-socorro e plataforma hospitalar enterprise. Este mapa propõe 10 vetores distintos de evolução — cinco dentro do escopo atual e cinco expansões assimétricas.</p>
+  </div>
+  <div class="col-4 hero-emphasis">
+    <div class="emphasis-num">10 vetores</div>
+    <div class="emphasis-cap">Mecanismos estruturalmente independentes, extraídos de 42 candidatos atômicos e 12 técnicas de ideação, preservando segurança clínica, realidade do SUS e baixa carga cognitiva.</div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="grid-12">
+    <div class="col-4">
+      <h2>Quatro reenquadramentos da semente e suposições explícitas</h2>
+      <p>Antes de divergir, separamos o que o documento comprova do que precisa de decisão executiva. Os repositórios GitHub informados não estavam acessíveis publicamente; a análise ancora-se integralmente no dossiê anexado.</p>
+    </div>
+    <div class="col-8">
+      <div class="grid-12">
+        <div class="col-6 strip-item">
+          <div class="strip-title">Como problema</div>
+          <p class="strip-text">Plantonistas perdem minutos críticos e acumulam risco evitável (dose pediátrica, ajuste renal, controle especial, omissão documental) entre PEPs lentos e receituários rasos.</p>
+        </div>
+        <div class="col-6 strip-item">
+          <div class="strip-title">Como oportunidade</div>
+          <p class="strip-text">Ocupar o vácuo entre "app de receita rápida" e "sistema hospitalar burocrático": velocidade de pronto-socorro na superfície, motor clínico-regulatório rigoroso por baixo.</p>
+        </div>
+        <div class="col-6 strip-item">
+          <div class="strip-title">Como hipótese</div>
+          <p class="strip-text">Se o PrescriMed unificar contexto clínico único, inventário real da unidade e síntese multi-condição em &lt;60 segundos, médicos o adotarão organicamente no plantão.</p>
+        </div>
+        <div class="col-6 strip-item">
+          <div class="strip-title">Como visão</div>
+          <p class="strip-text">Tornar-se o exoesqueleto operacional e documental da urgência brasileira — funcionando tanto em hospital terciário privado quanto em UPA ou pronto-socorro do interior.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--hair);">
+        <h3>Suposições operacionais adotadas</h3>
+        <ul class="clean-list">
+          <li><strong>Núcleo validado na dor real:</strong> urgência, emergência, pronto-socorro e sala vermelha permanecem o coração do produto, antes de enfermaria prolongada ou reabilitação.</li>
+          <li><strong>Stack ativa mantida:</strong> React 18, TypeScript, Supabase/PostgreSQL (RLS) e Edge Functions formam a base técnica de partida, exigindo saneamento antes de novas camadas pesadas.</li>
+          <li><strong>Médico sempre no controle:</strong> nenhuma automação ou IA prescreve ou emite ordem clínica autônoma; toda saída exige revisão humana rastreável.</li>
+          <li><strong>Fronteira regulatória crítica:</strong> módulos como leitura de ECG/Raio-X por IA entram em potencial enquadramento de SaMD (ANVISA RDC 657/2022) e exigem validação jurídica e clínica prospectiva antes de uso assistencial.</li>
+          <li><strong>Realidade de infraestrutura:</strong> conectividade instável em prontos-socorros públicos e carência de insumos no interior são restrições de design de primeira classe, não casos de borda.</li>
+          <li><strong>Assinatura e LGPD:</strong> assinatura visual não equivale à assinatura qualificada ICP-Brasil; envio de dados identificáveis a LLMs externos exige política formal de anonimização e base legal.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Mapa do espaço de soluções em 10 eixos independentes</h2>
+  <p class="measure">Para evitar que todas as ideias sejam variações cosméticas de "mais uma tela de prescrição", mapeamos dez dimensões ortogonais do problema clínico-documental.</p>
+  <div class="grid-12" style="margin-top: 24px;">
+    <div class="col-4 strip-item">
+      <div class="strip-title">1. Público primário</div>
+      <p class="strip-text">Plantonista individual · Residente/interno · Coordenador de PS · Gestor hospitalar/faturamento · Enfermagem/farmácia · Paciente pós-alta.</p>
+    </div>
+    <div class="col-4 strip-item">
+      <div class="strip-title">2. Momento da jornada</div>
+      <p class="strip-text">Triagem/porta · Avaliação inicial · Sala vermelha (crise) · Prescrição/alta · Passagem de bastão/AIH · Pós-alta domiciliar · Auditoria retrospectiva.</p>
+    </div>
+    <div class="col-4 strip-item">
+      <div class="strip-title">3. Ambiente e recursos</div>
+      <p class="strip-text">Hospital terciário privado · UPA/PS público urbano · PS de interior sem TC/insumos · Ambulatório/UBS · Telemedicina · Offline total.</p>
+    </div>
+    <div class="col-4 strip-item">
+      <div class="strip-title">4. Mecanismo central</div>
+      <p class="strip-text">Bricolagem de blocos · Motor determinístico de regras · Grafo de conflitos multi-condição · Filtro por estoque real · Copiloto de voz · Auditoria anti-glosa · API headless.</p>
+    </div>
+    <div class="col-4 strip-item">
+      <div class="strip-title">5. Canal de entrega</div>
+      <p class="strip-text">Web app desktop · PWA mobile offline-first · Extensão/overlay sobre PEP (MV/Tasy/PEC) · Interface de voz hands-free · QR Code/WhatsApp para paciente · API REST/FHIR.</p>
+    </div>
+    <div class="col-4 strip-item">
+      <div class="strip-title">6. Grau de automação</div>
+      <p class="strip-text">Editor manual estruturado · Sugestão determinística por protocolo · Copiloto assistivo com revisão · Pré-auditoria bloqueante · IA multimodal (OCR/ECG/RX) com confiança explícita.</p>
+    </div>
+    <div class="col-4 strip-item">
+      <div class="strip-title">7. Unidade de valor</div>
+      <p class="strip-text">Segundos economizados · Erros de dose evitados · Glosas reduzidas · Tempo porta-agulha/antibiótico · Adesão pós-alta · Defesa médico-legal.</p>
+    </div>
+    <div class="col-4 strip-item">
+      <div class="strip-title">8. Modelo operacional</div>
+      <p class="strip-text">SaaS B2C (assinatura médica) · B2B2C via preceptor/residência · B2B hospitalar multi-tenant · Infraestrutura API B2B2B · Freemium de conteúdo + ferramenta paga.</p>
+    </div>
+    <div class="col-4 strip-item">
+      <div class="strip-title">9. Camada de governança</div>
+      <p class="strip-text">Biblioteca pessoal · Modelo mestre de equipe · Curadoria global com diff versionado · Comitê hospitalar (ONA/JCI) · Trilha de auditoria imutável.</p>
+    </div>
+    <div class="col-12 strip-item">
+      <div class="strip-title">10. Fronteira regulatória e ética</div>
+      <p class="strip-text">Apoio administrativo/documental (baixo risco regulatório) · Cálculo determinístico auditável (risco moderado) · Triagem/interpretação de exame por IA (alto risco / potencial SaMD ANVISA).</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Banco de candidatos atômicos e clusterização por mecanismo</h2>
+  <p class="measure">A divergência foi executada em ramos independentes (SCAMPER, Análise Morfológica, Restrições Extremas, TRIZ, Conexões Forçadas, Pensamento Analógico, Inversão de Pressupostos, Personas, Concept Fan, Lotus Blossom, Graph of Thoughts e Step-Back). Dos 42 candidatos gerados, removemos paráfrases cosméticas e agrupamos em 10 clusters de mecanismo estruturalmente distintos.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Cluster</th>
+          <th>Mecanismo central</th>
+          <th>Técnicas de origem</th>
+          <th>Candidatos agrupados (amostra deduplicada)</th>
+          <th>Representante</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CL-01</td>
+          <td>Resolução relacional de conflitos entre múltiplas condições</td>
+          <td>Análise Morfológica · Graph of Thoughts</td>
+          <td>Mescla de prescrições simultâneas; deduplicador de exames redundantes; detector de conflito terapêutico cruzado</td>
+          <td>I-01</td>
+        </tr>
+        <tr>
+          <td>CL-02</td>
+          <td>Filtragem clínica condicionada ao inventário real da unidade</td>
+          <td>Restrições Extremas · Personas (PS Interior)</td>
+          <td>Filtro de farmácia local; guia de contingência "E no SUS?"; gatilho automático de transferência por recurso ausente</td>
+          <td>I-02</td>
+        </tr>
+        <tr>
+          <td>CL-03</td>
+          <td>Execução determinística local-first com fila de auditoria</td>
+          <td>TRIZ (Contradições) · Restrições Extremas</td>
+          <td>Pacote offline de 30 síndromes; calculadora pediátrica/IV em cliente; sincronização assíncrona de logs</td>
+          <td>I-03</td>
+        </tr>
+        <tr>
+          <td>CL-04</td>
+          <td>Compilação automática de dossiê de admissão e passagem de bastão</td>
+          <td>SCAMPER (Combinar/Eliminar)</td>
+          <td>AIH pré-preenchida do atendimento; pacote admissão+enfermagem+SBAR; corte explícito pré-enfermaria</td>
+          <td>I-04</td>
+        </tr>
+        <tr>
+          <td>CL-05</td>
+          <td>Herança versionada de conhecimento clínico em 3 camadas</td>
+          <td>Pensamento Analógico (Git) · Lotus Blossom</td>
+          <td>Fork pessoal sobre protocolo mestre; painel de diff de diretrizes (Perplexity + curador); rollback auditável</td>
+          <td>I-05</td>
+        </tr>
+        <tr>
+          <td>CL-06</td>
+          <td>Interface de crise de baixíssima fricção (voz + timer + checklist)</td>
+          <td>Personas (Sala Vermelha) · Inversão</td>
+          <td>Modo noturno de sala vermelha; cronômetro de PCR/sepse; ditado de linha do tempo para evolução pós-crise</td>
+          <td>I-06</td>
+        </tr>
+        <tr>
+          <td>CL-07</td>
+          <td>Pré-auditoria financeira e regulatória em tempo real</td>
+          <td>Conexões Forçadas (Fintech/Compliance)</td>
+          <td>Validador CID × SIGTAP × justificativa AIH/APAC; bloqueio de omissões geradoras de glosa em convênios</td>
+          <td>I-07</td>
+        </tr>
+        <tr>
+          <td>CL-08</td>
+          <td>Continuidade pós-alta e educação terapêutica sem login</td>
+          <td>Concept Fan · Futures Wheel</td>
+          <td>QR Code com posologia visual; guia calmo de efeitos colaterais (ISRS/insulina); triagem de sinais de retorno</td>
+          <td>I-08</td>
+        </tr>
+        <tr>
+          <td>CL-09</td>
+          <td>Simulação clínica e preceptoria sobre o mesmo motor de regras</td>
+          <td>SCAMPER (Outro Uso) · Lotus Blossom</td>
+          <td>Modo residente com "por que cada conduta"; micro-aulas de ECG/RX pós-leitura; simulador de casos de PS</td>
+          <td>I-09</td>
+        </tr>
+        <tr>
+          <td>CL-10</td>
+          <td>Desacoplamento headless do motor clínico-regulatório (Outlier)</td>
+          <td>Step-Back · Inversão de Pressupostos</td>
+          <td>API de segurança clínica para PEPs; extensão Chrome overlay sobre MV/Tasy/e-SUS PEC; SDK regulatório 344/98</td>
+          <td>I-10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec">
+  <figure>
+    <div class="fig-title">As cinco expansões de maior retorno imediato evitam risco regulatório pesado enquanto consolidam o núcleo de urgência</div>
+    <svg viewBox="0 0 700 430" width="100%" role="img" aria-label="Gráfico de dispersão comparando alavancagem estratégica e risco técnico-regulatório das 10 ideias I-01 a I-10">
+      <!-- Quadrant backgrounds (subtle open hairlines only, no heavy boxes) -->
+      <line x1="88" y1="360" x2="660" y2="360" stroke="#0F172A" stroke-width="1.5"/>
+      <line x1="88" y1="32" x2="88" y2="360" stroke="#0F172A" stroke-width="1.5"/>
+
+      <!-- Gridlines -->
+      <line x1="231" y1="32" x2="231" y2="360" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="374" y1="32" x2="374" y2="360" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="5 5"/>
+      <line x1="517" y1="32" x2="517" y2="360" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <line x1="88" y1="278" x2="660" y2="278" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="88" y1="196" x2="660" y2="196" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="5 5"/>
+      <line x1="88" y1="114" x2="660" y2="114" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <!-- Quadrant labels -->
+      <text x="100" y="52" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600" fill="#0D5C56">Alta alavancagem · Menor risco (Prioridade 1)</text>
+      <text x="386" y="52" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600" fill="#1E3A8A">Apostas estruturais · Maior complexidade</text>
+      <text x="100" y="346" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#475569">Ganhos incrementais rápidos</text>
+      <text x="386" y="346" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#475569">Alto esforço · Validar demanda antes</text>
+
+      <!-- Axis labels -->
+      <text x="374" y="408" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600" fill="#0F172A">Complexidade técnica + risco regulatório (1 = baixo, 5 = alto)</text>
+      <text x="26" y="196" text-anchor="middle" transform="rotate(-90 26 196)" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600" fill="#0F172A">Alavancagem clínica e diferenciação (1–5)</text>
+
+      <!-- X Ticks -->
+      <text x="145" y="380" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">1</text>
+      <text x="260" y="380" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">2</text>
+      <text x="374" y="380" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">3</text>
+      <text x="488" y="380" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">4</text>
+      <text x="603" y="380" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">5</text>
+
+      <!-- Y Ticks -->
+      <text x="74" y="352" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">1</text>
+      <text x="74" y="274" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">2</text>
+      <text x="74" y="198" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">3</text>
+      <text x="74" y="120" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">4</text>
+      <text x="74" y="44" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="13" fill="#475569">5</text>
+
+      <!-- Points: Teal = Dentro do escopo (I-01..I-05), Cobalt = Fora do escopo (I-06..I-10) -->
+      <!-- I-02: x=2.0 (260), y=4.7 (62) -->
+      <circle cx="260" cy="68" r="7" fill="#0F766E"/>
+      <text x="272" y="73" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#0F172A">I-02 Inventário / E no SUS?</text>
+
+      <!-- I-04: x=2.2 (283), y=4.2 (102) -->
+      <circle cx="283" cy="108" r="7" fill="#0F766E"/>
+      <text x="295" y="113" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#0F172A">I-04 Passagem PS→AIH</text>
+
+      <!-- I-01: x=3.1 (385), y=4.8 (60) -->
+      <circle cx="385" cy="60" r="7" fill="#0F766E"/>
+      <text x="397" y="65" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#0F172A">I-01 Multi-Condição</text>
+
+      <!-- I-03: x=3.5 (431), y=4.4 (92) -->
+      <circle cx="431" cy="96" r="7" fill="#0F766E"/>
+      <text x="443" y="101" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#0F172A">I-03 Offline-First</text>
+
+      <!-- I-05: x=2.8 (351), y=3.7 (144) -->
+      <circle cx="351" cy="148" r="7" fill="#0F766E"/>
+      <text x="339" y="153" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#0F172A">I-05 Curadoria 3 Camadas</text>
+
+      <!-- I-08: x=1.8 (237), y=3.8 (138) -->
+      <circle cx="237" cy="136" r="7" fill="#1D4ED8"/>
+      <text x="225" y="130" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#1E3A8A">I-08 Pós-Alta QR</text>
+
+      <!-- I-09: x=2.4 (305), y=3.2 (184) -->
+      <circle cx="305" cy="186" r="7" fill="#1D4ED8"/>
+      <text x="317" y="191" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#1E3A8A">I-09 Simulador/Ensino</text>
+
+      <!-- I-07: x=3.8 (465), y=4.1 (116) -->
+      <circle cx="465" cy="132" r="7" fill="#1D4ED8"/>
+      <text x="477" y="137" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#1E3A8A">I-07 Anti-Glosa B2B</text>
+
+      <!-- I-06: x=4.6 (557), y=4.3 (100) -->
+      <circle cx="557" cy="168" r="7" fill="#1D4ED8"/>
+      <text x="545" y="173" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#1E3A8A">I-06 Sala Vermelha Voz</text>
+
+      <!-- I-10: x=4.3 (522), y=4.9 (52) -->
+      <circle cx="522" cy="214" r="7" fill="#1D4ED8"/>
+      <text x="510" y="219" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="600" fill="#1E3A8A">I-10 API/Overlay (Outlier)</text>
+    </svg>
+    <figcaption>Verde-petróleo: melhorias estruturais dentro do escopo atual (I-01 a I-05). Azul-cobalto: expansões fora do escopo atual e outlier arquitetural (I-06 a I-10). Posições representam estimativa analítica relativa para apoio à priorização.</figcaption>
+  </figure>
+</section>
+
+<section class="full-band">
+  <h2>Portfólio final: cinco consolidações dentro do escopo</h2>
+  <p class="measure">Cada ideia abaixo resolve uma fricção estrutural detectada no dossiê de 517 páginas e está detalhada nos 10 blocos obrigatórios de análise.</p>
+
+  <!-- I-01 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id">I-01 · DENTRO DO ESCOPO</span>
+        <h3>Mesa de Composição Multi-Condição</h3>
+        <p class="idea-thesis">Permite ao plantonista selecionar de 2 a 4 síndromes ou patologias simultâneas e gerar uma prescrição, lista de exames e evolução unificadas, deduplicadas e checadas para interações cruzadas.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Pacientes reais de PS chegam com queixas compostas (ex.: cefaleia + diarreia + febre em gestante). Selecionar condições isoladas obriga o médico a montar múltiplas receitas ou duplicar analgésicos/exames manualmente.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Médicos plantonistas em PS adulto, pediátrico e UPA durante atendimentos de porta com tempo médio de 5 a 8 minutos.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Um grafo de composição clínica recebe os conjuntos de itens de cada condição, aplica deduplicação por princípio ativo/classe terapêutica e exame, executa o motor de interações cruzadas e destaca conflitos antes da montagem dos blocos documentais.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Inserir contexto único → selecionar 2+ condições na busca tolerante → visualizar painel unificado com itens mesclados e conflitos destacados → resolver escolhas em 1 clique → revisar e emitir PDF único.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Abandona o modelo de "1 doença = 1 template estático" e opera como um compilador clínico combinatório, transformando a bricolagem em segurança ativa.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Paciente com cólica renal + gastroenterite: o motor mantém antiemético único, bloqueia AINE se houver desidratação/creatinina elevada, mescla orientações de hidratação e sinais de alarme sem repetição.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Unificação prévia da base medicamentosa (fim da duplicidade estático × banco), taxonomia de classes farmacológicas no Supabase, motor puro em TypeScript com testes unitários clínicos.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: deduplicação automática não oculta nuances de dose. Teste mínimo: bateria de 20 cenários clínicos compostos avaliados por 3 emergencistas medindo falsos negativos de interação e tempo de composição.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: &lt;45 s para prescrição dupla com 0 duplicidade terapêutica. Próximo passo: prototipar o resolvedor para as 5 combinações mais frequentes de UPA.</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: Análise Morfológica · Graph of Thoughts · Candidatos CL-01 · Suposição: base medicamentosa unificada.</p>
+  </article>
+
+  <!-- I-02 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id">I-02 · DENTRO DO ESCOPO</span>
+        <h3>Motor Adaptativo de Recursos Locais e Modo "E no SUS?"</h3>
+        <p class="idea-thesis">Adapta em tempo real prescrições, exames e procedimentos ao inventário real do hospital do usuário, ativando condutas de contingência e gatilhos de transferência quando falta recurso vital.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Protocolos genéricos sugerem angiotomografia ou drogas inexistentes em hospitais do interior, gerando frustração, abandono da ferramenta e perda de tempo na busca por alternativas viáveis.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Plantonistas de cidades do interior, hospitais municipais, UPAs e serviços mistos que alternam plantões em unidades com capacidades muito distintas.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Cada perfil de unidade armazena matriz booleana de farmácia e diagnóstico (RX, ECG, TC, laboratório 24h, UTI). O motor reordena opções terapêuticas pela disponibilidade real, exibe a aba "E no SUS?" para procedimentos com adaptação segura e dispara alerta de transferência regulada se faltar exame/droga imprescindível.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Onboarding de 2 minutos marcando recursos do hospital (ou preset "UPA padrão / Hospital interior") → troca de unidade em 1 toque no topo → condutas já filtradas + botão "Transferir para referência" pré-preenchido quando necessário.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Converte a escassez real da saúde pública brasileira em inteligência de produto, criando um fosso competitivo que apps internacionais ou genéricos ignoram.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">TCE moderado em hospital sem tomografia: o sistema oculta pedido local de TC, exibe estabilização imediata, abre carta de transferência inter-hospitalar com Glasgow e sinais vitais já preenchidos e, em parada/choque sem kit IO comercial, exibe o passo a passo validado com agulha 40×12.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Tabelas `local_resources`, `pharmacy_inventory` e `exam_availability` vinculadas ao perfil de unidade; curadoria médica específica das alternativas "E no SUS?" com validação por emergencistas.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: médicos manterão o perfil da unidade minimamente atualizado. Teste mínimo: criar 3 presets prontos (Hospital Interior, UPA 24h, Hospital Terciário) e testar adesão em 10 plantonistas de cidades diferentes.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: &ge;70% dos usuários configuram ao menos 1 perfil de unidade na primeira semana. Próximo passo: modelar os 3 presets e os primeiros 10 procedimentos com aba "E no SUS?".</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: Restrições Extremas · Personas (PS Interior) · Candidatos CL-02 · Nota de segurança: condutas de contingência exigem validação clínica formal.</p>
+  </article>
+
+  <!-- I-03 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id">I-03 · DENTRO DO ESCOPO</span>
+        <h3>Núcleo Offline-First "Caixa-Preta de Plantão"</h3>
+        <p class="idea-thesis">Garante que busca clínica, cálculo pediátrico/IV, alertas críticos e geração de PDF funcionem integralmente sem internet, sincronizando auditoria e nuvem quando a conexão retornar.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Em salas vermelhas blindadas ou UPAs com Wi-Fi instável, depender de chamadas ao Supabase ou APIs de IA para abrir uma dose pediátrica ou diluição IV quebra a confiança no momento de maior risco.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Médicos em prontos-socorros públicos, ambulâncias/SAMU, unidades rurais e hospitais com rede restrita.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Resolve a contradição TRIZ (disponibilidade imediata × auditoria centralizada) separando um pacote clínico assinado em cache local (PWA + IndexedDB) que executa o motor determinístico no dispositivo, enfileirando logs de emissão e overrides para sincronização segura posterior.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Login inicial baixa pacote essencial versionado (~5 MB) → em queda de rede, banner discreto indica "Modo Offline Ativo (IA pausada)" → busca, cálculo, alertas e PDF local continuam intactos → reconexão sincroniza auditoria.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Degradação graciosa real: a camada de IA pode falhar sem jamais paralisar o fluxo clínico crítico.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Criança de 11 kg com crise convulsiva às 3h da manhã durante queda de internet na UPA: o médico abre o PrescriMed no celular, calcula diazepam/fenitoína por peso e diluição IV instantaneamente e imprime ou copia a conduta.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Refatoração do `Dashboard.tsx`, padronização do TanStack Query com persistência offline, normalização da tabela `iv_medications` (149 colunas → relacional compacto) e dose pediátrica estruturada em JSON calculável.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: pacote local não fica obsoleto sem aviso nem vaza dados sensíveis em dispositivo compartilhado. Teste mínimo: simular modo avião em 15 fluxos críticos com TTL de cache e limpeza automática de dados do paciente ao encerrar sessão.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: tempo de busca &lt;300 ms offline e 100% de sucesso na geração de PDF sem rede. Próximo passo: extrair o motor de cálculos para pacote TypeScript puro sem dependência de rede.</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: TRIZ (Contradições) · Restrições Extremas · Candidatos CL-03 · Nota LGPD: não persistir PII de paciente em computador compartilhado.</p>
+  </article>
+
+  <!-- I-04 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id">I-04 · DENTRO DO ESCOPO</span>
+        <h3>Compilador de Admissão e Passagem de Bastão (PS → AIH)</h3>
+        <p class="idea-thesis">Transforma o atendimento de urgência em um pacote completo de internação inicial (AIH SUS, evolução admissional, prescrição de enfermagem e resumo SBAR) com fronteira clara antes da enfermaria.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Quando um paciente de PS precisa internar, o médico redigita história, exames e condutas em 4 documentos diferentes (AIH, evolução, prescrição hospitalar e passagem de plantão), gerando atrasos e falhas de comunicação.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Médicos de pronto-socorro e sala vermelha no momento exato da decisão de internar ou transferir o paciente para a equipe hospitalista.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">O contexto clínico único já preenchido no atendimento alimenta simultaneamente 4 saídas estruturadas, solicitando apenas os campos regulatórios faltantes da AIH (CNS, caráter, procedimento SIGTAP) e bloqueando a expansão desnecessária para módulos de evolução diária de enfermaria.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Botão "Internar / Admitir" dentro da condição → revisão rápida de 4–6 campos obrigatórios da AIH → seleção de dieta, cuidados de enfermagem e exames admissionais → exportação do kit completo de passagem de bastão.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Resolve o conflito de escopo do dossiê: entrega valor máximo no gargalo da internação sem transformar o PrescriMed em um prontuário de enfermaria/UTI pesado.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Sepse urinária em idoso: após estabilização no box, o médico clica em "Admissão" e gera em 40 segundos a AIH com CID + justificativa clínica robusta, prescrição com aprazamento de enfermagem e resumo SBAR pronto para colar no prontuário.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Mapeamento formal dos campos oficiais da AIH (SUS) + tabela SIGTAP essencial; engine de blocos `DocumentBlock` reutilizando o estado do atendimento; upload opcional de modelo local via IA.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: o formato gerado é aceito pelas centrais de regulação/hospitais locais. Teste mínimo: validar o PDF da AIH e a prescrição admissional com 3 coordenadores de PS e 1 faturista SUS.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: reduzir tempo de documentação de admissão de ~12 min para &lt;3 min. Próximo passo: congelar o escopo do modal Internação exatamente na passagem de bastão.</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: SCAMPER (Combinar + Eliminar) · Candidatos CL-04 · Alinhado ao corte explícito da pág. 490.</p>
+  </article>
+
+  <!-- I-05 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id">I-05 · DENTRO DO ESCOPO</span>
+        <h3>Curadoria Clínica em 3 Camadas com Diff Versionado ("Git Clínico")</h3>
+        <p class="idea-thesis">Permite que protocolo global, adaptação hospitalar e bricolagem pessoal do médico coexistam sem conflito, notificando mudanças científicas com comparação lado a lado.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Se o médico personaliza sua receita ("Sinusite — Felipe") e a diretriz muda meses depois, a cópia pessoal fica desatualizada; se o sistema sobrescreve, o médico perde seu estilo e abandona o app.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Plantonistas avançados (bricolagem pessoal), coordenadores de PS (modelos mestres) e comitês de curadoria clínica do PrescriMed.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Inspirado em controle de versão de software: o Núcleo Global é imutável; a Instituição cria overrides auditados; o Médico cria um fork pessoal leve. Quando o Núcleo Global publica nova versão (via revisão humana apoiada por pesquisa Perplexity), o sistema exibe um diff limpo e pergunta se o usuário deseja mesclar.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Curadoria global revisa evidência → publica versão v2.1 → coordenador/médico vê selo discreto "Atualização disponível" → compara antigo vs. novo com fonte e nível de evidência → aceita, adapta ou mantém com registro.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Resolve simultaneamente o medo de obsolescência clínica, a rastreabilidade médico-legal ("qual diretriz vigorava na data da emissão?") e o apego do médico aos seus próprios modelos.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Atualização de diretriz de manejo de dengue ou sepse: o coordenador do PS recebe o diff das 3 mudanças de dose/exame, aprova em 2 minutos e propaga para os 40 plantonistas da escala preservando a trilha histórica.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Versionamento imutável nas tabelas `protocols`, `clinical_conditions` e `templates`; tabela `content_overrides` por tenant e usuário; checklist automático `.md` de lacunas para a equipe de curadoria.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: médicos revisam diffs se forem curtos e relevantes. Teste mínimo: simular 2 atualizações reais de protocolo com 15 médicos e medir taxa de revisão em 7 dias.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: &ge;80% dos modelos ativos alinhados à última versão crítica em até 14 dias. Próximo passo: definir o contrato de versionamento no banco antes de escalar para 58 patologias.</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: Pensamento Analógico (Git) · Lotus Blossom · Candidatos CL-05 · Governança clínica explícita.</p>
+  </article>
+</section>
+
+<section class="sec">
+  <h2>Cinco expansões fora do escopo atual e aposta outlier</h2>
+  <p class="measure">As propostas a seguir exploram territórios novos — interface multimodal de crise, monetização B2B por retorno financeiro, extensão ao paciente, educação médica e desacoplamento em infraestrutura API/overlay.</p>
+
+  <!-- I-06 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id idea-scope-out">I-06 · FORA DO ESCOPO ATUAL</span>
+        <h3>Modo "Sala Vermelha Hands-Free" (Voz, Timer e Linha do Tempo)</h3>
+        <p class="idea-thesis">Transforma o celular ou tablet em um painel de crise operado por voz ou escriba, cronometrando ciclos de reanimação e convertendo eventos falados em registro cronológico de prontuário.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Na sala vermelha o médico está de luvas, sob altíssimo estresse e sem poder digitar. No fim do atendimento crítico, reconstituir horários exatos de drogas, choques e IOT para o prontuário é penoso e impreciso.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Emergencistas, clínicos de sala vermelha e equipes de enfermagem durante PCR, politrauma, AVC agudo e sepse grave.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Inverte o pressuposto de "tela de formulário": oferece modo escuro de altíssimo contraste com cronômetros ativos (ciclo 2 min PCR, tempo porta-agulha), botões gigantes de 1 toque ou captura de voz estruturada que ao final compila a evolução cronológica completa.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Ativar "Sala Vermelha" → escolher cenário (PCR / IOT / Vasoativa / AVC) → timer inicia automaticamente → equipe marca eventos ou dita marcos ("adrenalina 1 mg agora") → ao encerrar, gera texto de prontuário auditável.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Entrega utilidade real durante a crise (sem depender de leitura arriscada de imagem por IA como primeiro passo) e elimina o pior trabalho burocrático pós-reanimação.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Em uma PCR de 24 minutos, o enfermeiro ou residente toca nos botões gigantes de ritmo/choque/adrenalina com alerta sonoro suave a cada 2 minutos; ao final, o registro completo está pronto para o prontuário em 10 segundos.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Interface dedicada mobile-first com Wake Lock (tela não apaga), alertas locais sem depender de rede, calculadora de bomba de infusão (mcg/kg/min) em tempo real e transcrição de voz opcional pós-evento.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: o ruído da sala vermelha pode inviabilizar voz direta; por isso o fluxo deve funcionar 100% por toques grandes (modo escriba). Teste mínimo: 5 simulações realísticas em laboratório de habilidades.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: 100% dos marcos críticos registrados sem atrasar manobras. Próximo passo: construir o módulo de PCR + Drogas Vasoativas antes de aventurar-se em leitura de ECG/RX por IA (que exige trilha SaMD).</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: Personas (Sala Vermelha) · Inversão de Pressupostos · Candidatos CL-06 · Menor risco regulatório que diagnóstico por imagem.</p>
+  </article>
+
+  <!-- I-07 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id idea-scope-out">I-07 · FORA DO ESCOPO ATUAL</span>
+        <h3>Camada Anti-Glosa e Inteligência de Faturamento Clínico</h3>
+        <p class="idea-thesis">Audita em segundo plano a coerência entre CID, justificativa clínica e procedimento (SIGTAP/TUSS) antes da emissão, pagando a assinatura hospitalar B2B com a redução direta de glosas.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Hospitais perdem receita significativa por AIHs rejeitadas, APACs incompletas e glosas de operadoras devido a justificativas genéricas escritas na correria do plantão — e gestores raramente compram software só por "ganho de tempo médico".</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Diretores hospitalares, coordenadores de faturamento/auditoria e serviços de pronto-socorro privados, filantrópicos e mistos.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Transfere a lógica de pré-validação de fintechs/compliance fiscal para a saúde: antes de fechar AIH, APAC ou relatório de convênio, o motor regulatório verifica campos obrigatórios, coerência CID × procedimento e sugere redação técnica defensável em 1 clique.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Médico conclui conduta → motor regulatório roda silenciosamente → se houver risco de glosa (ex.: TC sem justificativa de red flag), exibe sugestão rápida de complemento → painel de gestão mede documentos blindados.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Cria um argumento comercial irrefutável de ROI para venda B2B hospitalar sem aumentar a carga burocrática do médico.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Solicitação de angiotomografia em suspeita de TEP: o sistema detecta ausência do escore de Wells/D-dímero na justificativa e oferece inserção automática do cálculo já feito no atendimento, evitando recusa da operadora.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Expansão do motor regulatório separado já existente no código; tabela de regras SIGTAP/TUSS mais glosadas em PS; dashboard agregado de completude documental para gestores.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: o alerta anti-glosa não pode gerar fadiga de alerta no médico. Teste mínimo: auditar 100 contas/AIHs reais de um hospital parceiro e mapear os 10 motivos que concentram 80% das glosas.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: redução &ge;25% em pendências documentais em piloto de 60 dias. Próximo passo: entrevistar 3 gestores de faturamento hospitalar para validar willingness-to-pay.</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: Conexões Forçadas (Fintech/Compliance) · Candidatos CL-07 · Alavanca direta de receita B2B.</p>
+  </article>
+
+  <!-- I-08 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id idea-scope-out">I-08 · FORA DO ESCOPO ATUAL</span>
+        <h3>Receita Viva & "Pós-Alta Guiada" via QR Code Anonimizado</h3>
+        <p class="idea-thesis">Estende a prescrição para o bolso do paciente via QR Code sem login, traduzindo posologia em horários visuais, educando sobre efeitos esperados e indicando sinais objetivos de retorno.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Pacientes saem do PS ansiosos, esquecem orientações verbais, abandonam remédios por efeitos colaterais esperados (ex.: náusea inicial de ISRS) ou retornam desnecessariamente à UPA em menos de 72 horas.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Pacientes de alta de PS/UPA, pais de crianças febris, cuidadores de idosos polimedicados e pacientes com baixa familiaridade técnica.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Usa o Concept Fan para ir além do papel impresso: o PDF da receita traz um QR Code com token não óbvio e sem dados identificáveis sensíveis (LGPD), que abre um guia móvel com grade visual de horários, áudio curto opcional e semáforo claro de "esperado vs. voltar ao PS".</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Médico gera receita/alta normalmente (zero clique extra) → QR dinâmico sai impresso no rodapé → paciente escaneia no celular → acessa guia claro da sua condição e medicações com opção de compartilhar com familiar.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Converte um custo operacional (impressão de receita) em canal de redução de reinternação/retorno em 72h e em vitrine orgânica da marca PrescriMed para pacientes e clínicas.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Mãe de criança de 12 kg com amigdalite: o QR mostra "7 gotas de dipirona a cada 6h se febre", explica em 3 bullets quando o antibiótico começa a fazer efeito e destaca 4 sinais objetivos de retorno imediato.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Evolução do módulo `Patient Link` já existente no código; biblioteca revisada de textos leigos por condição/classe medicamentosa; política de expiração de link e zero exposição de CPF/nome na página pública.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: pacientes efetivamente escaneiam o QR impresso. Teste mínimo: medir taxa de escaneamento em 200 receitas emitidas em 1 UPA ou consultório durante 15 dias.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: &ge;20% de taxa de abertura do QR e feedback qualitativo positivo de compreensão. Próximo passo: validar 10 folhetos de alta mais comuns com linguagem simples.</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: Concept Fan · Futures Wheel · Candidatos CL-08 · Nota LGPD: página pública 100% livre de dados pessoais identificáveis.</p>
+  </article>
+
+  <!-- I-09 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id idea-scope-out">I-09 · FORA DO ESCOPO ATUAL</span>
+        <h3>Modo Preceptoria & Simulador de Plantão (Motor PLG de Aquisição)</h3>
+        <p class="idea-thesis">Reaproveita o motor de condutas e alertas do PrescriMed como ambiente de treinamento para internos e residentes, formando uma base leal de futuros plantonistas assinantes.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">Recém-formados entram no primeiro plantão inseguros com doses reais, diluições IV e condutas de porta; ao mesmo tempo, adquirir médicos B2C via anúncios pagos é caro.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Internos do 5º/6º ano, residentes de clínica/emergência/MFC e preceptores de hospitais universitários ou serviços-escola.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Um toggle "Modo Ensino" sobre o mesmo banco clínico expõe o raciocínio por trás de cada conduta (por que pedir/não pedir exame, alternativas, red flags, micro-aulas de fisiopatologia/efeitos adversos) e oferece desafios de prescrição simulada avaliados pelo motor de segurança.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Preceptor ou aluno ativa Modo Ensino → abre caso simulado (ex.: idoso nefropata com pneumonia) → aluno monta prescrição → motor aponta acertos, ajustes renais perdidos e justificativa baseada em evidência.</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Transforma o custo de aquisição de clientes (CAC) em produto educacional viral: quem aprende a prescrever no PrescriMed durante o internato leva a ferramenta para o primeiro plantão.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Interno prescreve ibuprofeno para gestante de 28 semanas no modo simulado: o motor bloqueia, explica a fisiopatologia do fechamento precoce do ducto arterioso e mostra a alternativa segura.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Camada de metadados explicativos (`rationale`) nas condições já cadastradas; 20 casos-teste simulados (que também servem como bateria de QA do motor clínico!); plano gratuito ou acadêmico.</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: o modo ensino não pode poluir a tela do plantonista em uso real. Teste mínimo: oferecer acesso gratuito a uma turma de 30 internos/residentes por 30 dias e medir retenção semanal.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: &ge;40% de retenção na 4ª semana e conversão para plano profissional após formatura. Próximo passo: unir a criação dos casos de ensino à suíte de testes clínicos automatizados.</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: SCAMPER (Outro Uso) · Lotus Blossom · Candidatos CL-09 · Sinergia direta com QA clínico.</p>
+  </article>
+
+  <!-- I-10 -->
+  <article class="idea-entry">
+    <div class="idea-header">
+      <div class="col-12">
+        <span class="idea-id idea-scope-out">I-10 · OUTLIER ARQUITETURAL (FORA DO ESCOPO)</span>
+        <h3>PrescriMed Headless & Extensão Overlay sobre PEPs Legados</h3>
+        <p class="idea-thesis">Desacopla o motor de segurança clínica, cálculo pediátrico/IV e geração de blocos em uma extensão Chrome/API que roda por cima do MV, Tasy ou e-SUS PEC, eliminando a troca de abas.</p>
+      </div>
+    </div>
+    <div class="idea-blocks">
+      <div class="block-cell"><div class="block-label">Problema específico</div><p class="block-val">A maior barreira de adoção de qualquer ferramenta clínica externa é a "fricção da segunda tela": ter que digitar dados do paciente no prontuário do hospital e depois redigitar no PrescriMed.</p></div>
+      <div class="block-cell"><div class="block-label">Público e contexto</div><p class="block-val">Médicos obrigados a usar PEPs hospitalares rígidos (MV, Tasy, Wareline, e-SUS PEC) e healthtechs/prontuários menores que precisam de motor de segurança pronto.</p></div>
+      <div class="block-cell"><div class="block-label">Mecanismo causal</div><p class="block-val">Inverte o pressuposto de "web app isolado": expõe o motor clínico-regulatório via API limpa e entrega um painel lateral leve (extensão de navegador) que lê contexto básico na tela (com permissão), calcula doses/condutas e injeta o texto estruturado direto no campo do prontuário.</p></div>
+      <div class="block-cell"><div class="block-label">Fluxo operacional</div><p class="block-val">Médico trabalha no PEP do hospital → aciona atalho de teclado → painel lateral do PrescriMed abre sobre a mesma aba → seleciona síndrome/peso → clica em "Inserir no prontuário" (anamnese, prescrição ou orientações).</p></div>
+      <div class="block-cell"><div class="block-label">Diferencial estrutural</div><p class="block-val">Salto arquitetural que elimina a necessidade de integrações HL7-FHIR lentas e caras no curto prazo, mantendo o PrescriMed invisível e onipresente no fluxo real do plantão.</p></div>
+      <div class="block-cell"><div class="block-label">Exemplo concreto</div><p class="block-val">Médico de UBS ou UPA no e-SUS PEC: abre o painel lateral, escolhe "Amigdalite + 14 kg", revisa a dose calculada e cola a prescrição + evolução direcionada direto nos campos do sistema oficial em 15 segundos.</p></div>
+      <div class="block-cell"><div class="block-label">Implementação necessária</div><p class="block-val">Separação estrita entre UI e motores (clínico, regulatório, cálculos) em pacotes/APIs independentes; extensão Chrome Manifest V3 leve (aproveitando sinergia do ecossistema MedFlow).</p></div>
+      <div class="block-cell"><div class="block-label">Risco crítico e teste</div><p class="block-val">Premissa: hospitais podem bloquear instalação de extensões em PCs corporativos (mitigação: versão web+clipboard inteligente como fallback e API para parceiros). Teste mínimo: protótipo de painel lateral no e-SUS PEC testado por 5 médicos.</p></div>
+      <div class="block-cell"><div class="block-label">Métrica e próximo passo</div><p class="block-val">Meta: redução de &ge;50% na troca de janelas/cliques por atendimento. Próximo passo: garantir já na refatoração que os motores de negócio sejam headless (sem acoplamento ao React).</p></div>
+    </div>
+    <p class="provenance-line">Proveniência: Step-Back Prompting · Inversão de Pressupostos · Candidatos CL-10 · Outlier preservado por altíssima alavancagem.</p>
+  </article>
+</section>
+
+<div class="pull-quote">
+  "A arquitetura mais perigosa para um produto clínico não é a que tem poucas funcionalidades — é a que tenta ser prontuário, telemedicina, reabilitação e sala vermelha antes de blindar o cálculo de dose pediátrica."
+</div>
+
+<section class="sec">
+  <h2>Matriz de diversidade estrutural</h2>
+  <p class="measure">Verificação par a par garantindo que nenhuma proposta seja paráfrase de outra: cada ideia opera sobre mecanismo, momento e modelo operacional distintos.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Mecanismo central</th>
+          <th>Público primário</th>
+          <th>Modelo operacional</th>
+          <th>Horizonte</th>
+          <th>Diferença-chave</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>I-01</td>
+          <td>Grafo de composição e deduplicação</td>
+          <td>Plantonista PS/UPA</td>
+          <td>Núcleo SaaS B2C/B2B</td>
+          <td>Curto prazo</td>
+          <td>Resolve múltiplas queixas simultâneas</td>
+        </tr>
+        <tr>
+          <td>I-02</td>
+          <td>Filtro por inventário real da unidade</td>
+          <td>Médico de interior/SUS</td>
+          <td>SaaS adaptável por perfil</td>
+          <td>Imediato</td>
+          <td>Adapta conduta à escassez real</td>
+        </tr>
+        <tr>
+          <td>I-03</td>
+          <td>Motor determinístico local-first</td>
+          <td>PS com rede instável</td>
+          <td>PWA resiliente</td>
+          <td>Curto prazo</td>
+          <td>Zero dependência de nuvem/IA no crítico</td>
+        </tr>
+        <tr>
+          <td>I-04</td>
+          <td>Compilador de admissão e bastão</td>
+          <td>PS / Sala Vermelha</td>
+          <td>Workflow documental</td>
+          <td>Curto prazo</td>
+          <td>Fecha AIH+admissão sem virar enfermaria</td>
+        </tr>
+        <tr>
+          <td>I-05</td>
+          <td>Herança e diff em 3 camadas</td>
+          <td>Equipes e curadores</td>
+          <td>Governança B2B/B2C</td>
+          <td>Médio prazo</td>
+          <td>Atualiza ciência sem apagar bricolagem</td>
+        </tr>
+        <tr>
+          <td>I-06</td>
+          <td>Painel de crise voz/timer/escriba</td>
+          <td>Sala Vermelha</td>
+          <td>App mobile de crise</td>
+          <td>Médio prazo</td>
+          <td>Opera sem digitação durante emergência</td>
+        </tr>
+        <tr>
+          <td>I-07</td>
+          <td>Pré-auditoria financeira/regulatória</td>
+          <td>Gestor / Faturamento</td>
+          <td>SaaS B2B por ROI</td>
+          <td>Médio prazo</td>
+          <td>Justifica contrato hospitalar via glosa</td>
+        </tr>
+        <tr>
+          <td>I-08</td>
+          <td>Guia pós-alta sem login via QR</td>
+          <td>Paciente / Cuidador</td>
+          <td>B2B2C extensão de cuidado</td>
+          <td>Curto prazo</td>
+          <td>Reduz abandono e retorno em 72h</td>
+        </tr>
+        <tr>
+          <td>I-09</td>
+          <td>Simulação e preceptoria sobre motor</td>
+          <td>Internos e residentes</td>
+          <td>PLG / EdTech médica</td>
+          <td>Médio prazo</td>
+          <td>Aquisicão orgânica + QA clínico</td>
+        </tr>
+        <tr>
+          <td>I-10</td>
+          <td>Motor headless API / Overlay PEP</td>
+          <td>Médicos em PEP rígido</td>
+          <td>Infraestrutura B2B2B</td>
+          <td>Longo / Outlier</td>
+          <td>Elimina a fricção da segunda tela</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Priorização e menor experimento falsificável por vetor</h2>
+  <p class="measure">A tabela abaixo ordena a execução sugerida sem descartar o portfólio de médio e longo prazo. Notas de 1 a 5 representam estimativa qualitativa para orientar o corte de ondas.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Onda</th>
+          <th>Valor</th>
+          <th>Viab.</th>
+          <th>Evid.</th>
+          <th>Menor experimento para falsificar a premissa crítica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>I-02</td>
+          <td>Onda 1</td>
+          <td class="num-cell">5/5</td>
+          <td class="num-cell">5/5</td>
+          <td class="num-cell">3/5</td>
+          <td>Testar 3 presets de unidade (Interior/UPA/Terciário) com 10 médicos; falsifica se &lt;50% ativarem o filtro local.</td>
+        </tr>
+        <tr>
+          <td>I-04</td>
+          <td>Onda 1</td>
+          <td class="num-cell">5/5</td>
+          <td class="num-cell">4/5</td>
+          <td class="num-cell">2/5</td>
+          <td>Validar 10 kits AIH+Admissão gerados pelo app com coordenador de PS e faturista SUS; falsifica se exigir retrabalho &gt;30%.</td>
+        </tr>
+        <tr>
+          <td>I-08</td>
+          <td>Onda 1</td>
+          <td class="num-cell">4/5</td>
+          <td class="num-cell">5/5</td>
+          <td class="num-cell">2/5</td>
+          <td>Imprimir QR de pós-alta em 200 receitas reais; falsifica se taxa de abertura pelo paciente for &lt;10%.</td>
+        </tr>
+        <tr>
+          <td>I-01</td>
+          <td>Onda 2</td>
+          <td class="num-cell">5/5</td>
+          <td class="num-cell">3/5</td>
+          <td class="num-cell">5/5</td>
+          <td>Submeter 20 casos multi-condição a 3 emergencistas após unificar a base medicamentosa; falsifica se houver qualquer erro silencioso.</td>
+        </tr>
+        <tr>
+          <td>I-03</td>
+          <td>Onda 2</td>
+          <td class="num-cell">5/5</td>
+          <td class="num-cell">3/5</td>
+          <td class="num-cell">4/5</td>
+          <td>Rodar 15 fluxos críticos em modo avião após estruturar dose pediátrica e tabela IV; falsifica se busca &gt;1 s ou falha de PDF.</td>
+        </tr>
+        <tr>
+          <td>I-05</td>
+          <td>Onda 2</td>
+          <td class="num-cell">4/5</td>
+          <td class="num-cell">4/5</td>
+          <td class="num-cell">3/5</td>
+          <td>Disparar 2 atualizações simuladas de protocolo para 15 usuários com cópias pessoais; falsifica se ignorarem o diff.</td>
+        </tr>
+        <tr>
+          <td>I-07</td>
+          <td>Onda 3</td>
+          <td class="num-cell">5/5</td>
+          <td class="num-cell">3/5</td>
+          <td class="num-cell">3/5</td>
+          <td>Auditar 100 contas reais de 1 hospital parceiro para provar redução de glosa antes de construir dashboard completo.</td>
+        </tr>
+        <tr>
+          <td>I-09</td>
+          <td>Onda 3</td>
+          <td class="num-cell">4/5</td>
+          <td class="num-cell">4/5</td>
+          <td class="num-cell">3/5</td>
+          <td>Liberar 10 casos simulados para 30 internos/residentes por 30 dias; falsifica se retenção semanal &lt;25%.</td>
+        </tr>
+        <tr>
+          <td>I-06</td>
+          <td>Onda 3</td>
+          <td class="num-cell">4/5</td>
+          <td class="num-cell">2/5</td>
+          <td class="num-cell">5/5</td>
+          <td>Simular 5 atendimentos de PCR/IOT com protótipo de botões grandes + timer em laboratório; falsifica se aumentar carga cognitiva.</td>
+        </tr>
+        <tr>
+          <td>I-10</td>
+          <td>Outlier</td>
+          <td class="num-cell">5/5</td>
+          <td class="num-cell">2/5</td>
+          <td class="num-cell">3/5</td>
+          <td>Construir painel lateral mínimo sobre e-SUS PEC para 5 médicos; falsifica se bloqueio de TI impedir uso em &gt;80% das máquinas.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="grid-12">
+    <div class="col-4">
+      <h2>Territórios ainda em aberto e lacunas que o questionário precisa travar</h2>
+    </div>
+    <div class="col-8">
+      <ul class="clean-list">
+        <li><strong>Identidade de lançamento:</strong> o produto nasce como ferramenta B2C de assinatura para o plantonista individual, ou já como SaaS B2B multi-tenant para hospitais/UPAs?</li>
+        <li><strong>Estado real dos dois repositórios:</strong> qual é a relação entre `prescrimed-app` e `app-prescrimed-v2` (legado vs. reescrita, produção vs. experimento) e qual versão resolve os conflitos de compilação/módulos citados no dossiê?</li>
+        <li><strong>Fronteira regulatória da IA (SaMD):</strong> leitura de ECG e Raio-X por IA na sala vermelha entra no produto comercial agora (exigindo enquadramento ANVISA) ou fica isolada em modo educacional/futuro?</li>
+        <li><strong>Profundidade vs. amplitude do banco clínico:</strong> lançar com 10 a 15 síndromes de PS impecavelmente estruturadas (com pediatria calculável e testes clínicos) ou manter as 58 patologias em amplitude maior?</li>
+        <li><strong>Validade jurídica da assinatura:</strong> para o lançamento imediato, o foco é impressão carimbada para assinatura física no plantão ou integração nativa com certificado ICP-Brasil (ex.: Vidaas/BirdID)?</li>
+        <li><strong>Territórios deliberadamente fora desta rodada:</strong> enfermaria prolongada, reabilitação multiprofissional (fisio/fono/TO), agenda ambulatorial crônica e telemedicina com vídeo nativo — mantidos em estacionamento estratégico até validação do núcleo de urgência.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

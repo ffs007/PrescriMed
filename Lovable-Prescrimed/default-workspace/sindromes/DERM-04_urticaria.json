@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "DERM-04",
+    "area": "Dermatológico",
+    "nome": "Urticária aguda",
+    "aliases": ["urticária", "urtica", "placas vermelhas", "alergia na pele"],
+    "contexto": ["ambulatorial", "hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Urticária aguda é a erupção de wheals pruriginosos que duram menos de 24 h no mesmo local, com ou sem angioedema, por período de até 6 semanas; acima disso a doença é crônica e o manejo muda. A base do tratamento é anti-H1 de segunda geração em dose plena, escalonado até 4 vezes a dose aprovada em quem não responde, conforme diretriz internacional. Corticoide sistêmico é exceção para crise intensa, por 3 a 5 dias, nunca como manutenção. Adrenalina é para anafilaxia e não para urticária simples. O diagnóstico diferencial que mais erra é o angioedema por IECA: o mecanismo é bradicinina, não histamina, então anti-H1, corticoide e adrenalina não funcionam — o tratamento é suspender o IECA, garantir via aérea e trocar a classe do anti-hipertensivo, sem nunca reintroduzir.",
+    "inclusao": [
+      "Placas eritematosas e edematosas, pruriginosas, que mudam de lugar em menos de 24 h",
+      "Angioedema de face, lábios, língua ou extremidades associado a urticária",
+      "Urticária desencadeada por fármaco, alimento, contraste, picada ou infecção",
+      "Primeiro episódio de urticária com menos de 6 semanas de duração",
+      "Urticária com dermografismo ou desencadeada por estímulo físico"
+    ],
+    "exclusao": [
+      { "situacao": "estridor, disfonia ou edema de língua e glote", "fluxo": "anafilaxia" },
+      { "situacao": "hipotensão, síncope ou broncoespasmo após alérgeno", "fluxo": "anafilaxia" },
+      { "situacao": "angioedema sem urticária em uso de IECA", "fluxo": "angioedema bradicinínico" },
+      { "situacao": "lesão fixa que dura mais de 24 h, dolorosa e com púrpura residual", "fluxo": "vasculite urticariforme" },
+      { "situacao": "urticária com mais de 6 semanas de evolução", "fluxo": "urticária crônica" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "estridor, disfonia ou edema de língua", "por_que": "angioedema de via aérea com risco de obstrução", "acao": "adrenalina IM imediata e avaliação de via aérea", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "hipotensão, síncope ou palidez", "por_que": "anafilaxia com choque distributivo", "acao": "adrenalina IM, volume e sala de emergência", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "dispneia, sibilância ou aperto no peito", "por_que": "broncoespasmo associado", "acao": "adrenalina IM e salbutamol inalatório", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "angioedema progressivo de face e pescoço em uso de IECA, sem urticária", "por_que": "angioedema bradicinínico refratário a anti-H1", "acao": "suspender o IECA, garantir via aérea e usar icatibanto ou plasma fresco", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "urticária com lesão fixa por mais de 24 h, dor ou mancha roxa residual", "por_que": "vasculite urticariforme com risco de lesão renal", "acao": "biópsia de pele, exame de urina e avaliação de complemento", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "febre, artralgia e hematúria", "por_que": "vasculite sistêmica", "acao": "hemograma, urina, creatinina e reumatologia", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "angioedema recorrente sem urticária com dor abdominal ou história familiar", "por_que": "angioedema hereditário por deficiência de C1-INH", "acao": "dosar C4 e C1-INH e encaminhar à alergia/imunologia", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "As lesões duram menos de 24 h no mesmo lugar e mudam de posição?",
+      "Há inchaço de lábios, língua, pálpebras ou mãos?",
+      "Tem falta de ar, chiado, rouquidão ou dificuldade para engolir?",
+      "Tomou AINE, aspirina ou contraste nas últimas 24 h?",
+      "Usa IECA? Qual, desde quando e já teve inchaço antes?",
+      "Teve febre, infecção, viagem ou picada de inseto recente?",
+      "É o primeiro episódio ou já teve outros? Quantos e em quanto tempo?",
+      "As lesões doem ou deixam mancha roxa que dura dias?",
+      "Introduziu alimento, látex ou novo fármaco nas últimas 6 semanas?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Urticária aguda típica, sem angioedema de via aérea e sem sinais sistêmicos", "escolha": "Cetirizina 10 mg/dia em dose plena, com reavaliação em 24 a 48 h se intensa ou em 1 semana se leve", "porque": "Anti-H1 de segunda geração controla prurido e wheals com pouca sedação; dose fracionada é o erro mais comum e simula refratariedade" },
+      { "cenario": "Persistência dos sintomas apesar da dose padrão de anti-H1 de segunda geração", "escolha": "Aumentar a mesma droga até 4 vezes a dose aprovada (cetirizina 10 mg a cada 10 a 12 h, até 40 mg/dia) antes de trocar de classe", "porque": "O escalonamento até 4x é etapa formal da diretriz EAACI/GA²LEN/EDF/WAO e evita corticoide e imunobiológico precoces" },
+      { "cenario": "Crise intensa com prejuízo do sono, angioedema facial sem via aérea ou urticária muito sintomática", "escolha": "Prednisona 40 a 50 mg/dia por 3 a 5 dias, uma única vez, associada ao anti-H1", "porque": "Corticoide curto reduz a crise, mas não previne progressão; uso repetido ou prolongado não tem benefício e traz efeito adverso" },
+      { "cenario": "Estridor, edema de língua, hipotensão ou broncoespasmo", "escolha": "Adrenalina 0,5 mg IM no vasto lateral e protocolo de anafilaxia", "porque": "É a única droga que reverte obstrução de via aérea e choque; anti-H1 e corticoide não substituem e não podem atrasar a injeção" },
+      { "cenario": "Angioedema sem urticária em uso de IECA", "escolha": "Suspender o IECA, avaliar via aérea, icatibanto 30 mg SC ou plasma fresco congelado e trocar para bloqueador de canal de cálcio ou tiazídico", "porque": "O mediador é bradicinina: anti-H1 e corticoide não funcionam, e reintroduzir o IECA pode desencadear edema fatal" },
+      { "cenario": "Urticária desencadeada por AINE ou ácido acetilsalicílico", "escolha": "Suspender o AINE e o AAS, manter anti-H1 e usar paracetamol em dose baixa ou celecoxibe se precisar de analgésico, com observação", "porque": "O bloqueio da COX-1 desvia o metabolismo do ácido araquidônico e degranula mastócitos; o gatilho é farmacológico e não alérgico" },
+      { "cenario": "Reação ao contraste iodado", "escolha": "Tratar como anafilaxia se houver manifestação sistêmica; usar contraste de baixa osmolalidade no próximo exame e registrar a reação", "porque": "A maioria das reações ao contraste não é IgE-mediada e a pré-medicação com corticoide e anti-H1 não previne reação grave" },
+      { "cenario": "Urticária aguda com infecção viral ou bacteriana concomitante", "escolha": "Tratar a infecção e manter anti-H1 por poucos dias; não investigar alérgeno na fase aguda", "porque": "Infecção é a causa mais comum de urticária aguda na criança e a segunda no adulto; o quadro resolve com o controle do processo" },
+      { "cenario": "Lesões fixas que duram mais de 24 h com dor ou púrpura", "escolha": "Biópsia de pele, hemograma, exame de urina, creatinina e complemento; reumatologia se houver acometimento sistêmico", "porque": "É vasculite urticariforme, não urticária; o tratamento e o prognóstico são diferentes e há risco renal" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "cetirizina",
+        "papel": "primeira_linha",
+        "indicacao": "urticária aguda e angioedema histaminérgico",
+        "dose": "10 mg; criança de 2 a 5 anos 2,5 mg, de 6 a 11 anos 5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia; na refratariedade, 10 mg a cada 10 a 12 h",
+        "duracao": "até 6 semanas, com reavaliação a cada 2 a 4 semanas",
+        "dose_maxima": "40 mg/dia (4 vezes a dose aprovada, uso off-label com respaldo de diretriz)",
+        "contraindicacoes": ["hipersensibilidade à cetirizina ou à hidroxizina", "insuficiência renal terminal sem ajuste"],
+        "efeitos_adversos": ["sonolência leve", "boca seca", "cefaleia", "fadiga"],
+        "apresentacoes": ["comprimido 10 mg", "comprimido dispersível 10 mg", "solução oral 1 mg/mL", "gotas 10 mg/mL"],
+        "preparo": "Uso direto; pode ser tomado com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["controle do prurido e do número de lesões em 24 a 48 h", "sonolência", "função renal em doença renal crônica", "tempo de resposta ao escalonamento em 2 a 4 semanas"],
+        "ajuste_renal": "ClCr entre 30 e 50 mL/min: 5 mg/dia; abaixo de 30: 5 mg em dias alternados; não escalonar acima de 10 mg/dia",
+        "ajuste_hepatico": "Sem ajuste; a eliminação é predominantemente renal",
+        "observacoes": "Escalonar sempre a mesma droga antes de associar outra. Não usar anti-H1 de primeira geração em paralelo: soma sedação sem ganho.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz EAACI/GA²LEN/EDF/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "loratadina",
+        "papel": "alternativa",
+        "indicacao": "urticária aguda, sobretudo quando se quer menor sedação ou há intolerância à cetirizina",
+        "dose": "10 mg; criança acima de 2 anos 5 mg se peso abaixo de 30 kg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "10 mg/dia; o escalonamento acima disso não tem respaldo consistente",
+        "contraindicacoes": ["hipersensibilidade à loratadina ou à desloratadina", "insuficiência hepática grave sem ajuste"],
+        "efeitos_adversos": ["cefaleia", "boca seca", "sonolência leve", "fadiga"],
+        "apresentacoes": ["comprimido 10 mg", "comprimido orodispersível 10 mg", "xarope 1 mg/mL"],
+        "preparo": "Uso direto; dissolver o orodispersível na boca quando não houver água",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["resposta clínica em 24 a 48 h", "sintomas de sedação", "função hepática se uso prolongado"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "10 mg em dias alternados em insuficiência hepática grave",
+        "observacoes": "Alternativa quando a cetirizina causa sonolência. A dose plena é 10 mg/dia, não 5 mg nem dias alternados sem motivo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "hidroxizina",
+        "papel": "alternativa",
+        "indicacao": "resgate noturno por poucos dias quando o anti-H1 de segunda geração é insuficiente para o prurido",
+        "dose": "25 mg; criança 0,5 a 1 mg/kg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia à noite",
+        "duracao": "3 a 5 dias, nunca como manutenção",
+        "dose_maxima": "100 mg/dia",
+        "contraindicacoes": ["prolongamento do intervalo QT", "glaucoma de ângulo fechado", "hiperplasia prostática com retenção urinária", "primeiro trimestre de gestação"],
+        "efeitos_adversos": ["sonolência intensa", "prejuízo psicomotor", "boca seca", "retenção urinária", "confusão em idoso", "prolongamento de QT"],
+        "apresentacoes": ["comprimido 25 mg", "xarope 2 mg/mL", "ampola 100 mg/2 mL (IM)"],
+        "preparo": "Uso direto; a via IM é alternativa quando não há acesso oral",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["nível de sedação e risco de queda", "ECG se cardiopata ou dose alta", "função urinária em hiperplasia prostática"],
+        "ajuste_renal": "Reduzir a dose em doença renal crônica, pois há metabólito ativo",
+        "observacoes": "Não é primeira linha e não deve ser usada de rotina: sedação, prejuízo psicomotor e piora da qualidade de vida. Não escalonar junto com cetirizina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisona",
+        "papel": "condicional",
+        "indicacao": "crise intensa de urticária com prejuízo funcional ou angioedema facial sem comprometimento de via aérea",
+        "dose": "40 a 50 mg; criança 1 mg/kg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3 a 5 dias, sem repetir o ciclo",
+        "dose_maxima": "60 mg/dia e no máximo 7 dias",
+        "contraindicacoes": ["infecção sistêmica não tratada", "diabetes descompensado (relativa)", "úlcera péptica ativa", "uso repetido por mais de 7 dias"],
+        "efeitos_adversos": ["hiperglicemia", "insônia", "aumento do apetite", "infecção secundária", "piora do controle da urticária após a retirada"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 20 mg", "comprimido 40 mg", "solução oral 1 mg/mL"],
+        "preparo": "Uso direto, preferencialmente com alimento, pela manhã",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["glicemia", "pressão arterial", "sinais de infecção", "recidiva nos 7 dias após o término"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Preferir prednisolona em hepatopatia grave",
+        "observacoes": "Não previne progressão nem acelera a resolução; serve para a crise. Ciclos repetidos e uso prolongado pioram a urticária e não substituem anti-H1 em dose plena.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz EAACI/GA²LEN/EDF/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "adrenalina_simpatomimetica",
+        "agente": "adrenalina (epinefrina)",
+        "papel": "resgate",
+        "indicacao": "anafilaxia com angioedema de via aérea, broncoespasmo ou hipotensão",
+        "dose": "0,5 mg; criança 0,01 mg/kg (máximo 0,5 mg)",
+        "unidade": "mg",
+        "via": "IM no vasto lateral",
+        "frequencia": "repetir a cada 5 a 15 min se necessário",
+        "duracao": "até estabilização",
+        "dose_maxima": "1,5 mg (três doses)",
+        "contraindicacoes": ["ausência de critérios de anafilaxia", "injeção intravenosa sem diluição"],
+        "efeitos_adversos": ["taquicardia", "tremor", "palidez", "hipertensão", "arritmia em cardiopata"],
+        "apresentacoes": ["ampola 1 mg/mL (1 mL)", "seringa preenchida 0,3 mg/0,3 mL", "autoinjetor 0,3 mg/0,3 mL"],
+        "preparo": "Solução 1 mg/mL sem diluir; aspirar 0,5 mL (0,5 mg) e aplicar no vasto lateral",
+        "tempo_infusao": "bolus IM imediato",
+        "monitorizacao": ["pressão arterial e frequência cardíaca a cada 5 min", "SpO2", "ECG em cardiopata", "resposta do edema de via aérea em 5 a 10 min"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Não tem indicação na urticária simples sem critérios de anafilaxia e não deve ser usada como ansiolítico. Não espera anti-H1 nem corticoide para ser aplicada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_bradicinina",
+        "agente": "icatibanto",
+        "papel": "condicional",
+        "indicacao": "angioedema bradicinínico por IECA com risco de via aérea, quando disponível",
+        "dose": "30 mg",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "repetir em 6 h se não houver resolução",
+        "duracao": "até 3 doses em 24 h",
+        "dose_maxima": "90 mg/24 h",
+        "contraindicacoes": ["hipersensibilidade ao icatibanto", "angioedema histaminérgico sem componente bradicinínico"],
+        "efeitos_adversos": ["reação local", "náusea", "cefaleia", "hipotensão", "trombose em acesso venoso central"],
+        "apresentacoes": ["seringa preenchida 30 mg/3 mL"],
+        "preparo": "Uso direto, sem diluir, na região abdominal",
+        "tempo_infusao": "não se aplica (via subcutânea)",
+        "monitorizacao": ["via aérea a cada 15 min na primeira hora", "pressão arterial", "resolução do edema em 30 a 60 min"],
+        "ajuste_renal": "Sem ajuste estabelecido para uso agudo",
+        "observacoes": "Disponibilidade restrita na maioria dos serviços; alternativa é plasma fresco congelado 2 unidades. Não responde a anti-H1, corticoide nem adrenalina em dose usual.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura/diretriz de angioedema",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide",
+        "agente": "cloreto de sódio 0,9%",
+        "papel": "condicional",
+        "indicacao": "hipotensão na anafilaxia associada à urticária",
+        "dose": "500 a 1.000 mL; criança 20 mL/kg",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "infusão rápida, repetida conforme resposta",
+        "duracao": "até estabilização hemodinâmica",
+        "dose_maxima": "individualizar pela pressão, diurese e ausculta pulmonar",
+        "contraindicacoes": ["insuficiência cardíaca descompensada", "edema agudo de pulmão"],
+        "efeitos_adversos": ["sobrecarga hídrica", "hipercloremia", "edema"],
+        "apresentacoes": ["bolsa 0,9% 500 mL", "bolsa 0,9% 1.000 mL", "frasco 0,9% 250 mL"],
+        "preparo": "Uso direto em bomba de infusão ou pressurizador",
+        "tempo_infusao": "10 a 20 minutos na hipotensão",
+        "monitorizacao": ["pressão arterial", "diurese", "ausculta pulmonar", "saturação"],
+        "ajuste_renal": "Ajustar ao débito urinário; em oligúria, reavaliar o volume",
+        "observacoes": "Adjuvante da adrenalina, nunca substituto. Não usar rotineiramente em urticária sem hipotensão.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "protocolo de anafilaxia",
+        "claim_id": null
+      },
+      {
+        "classe": "beta2_agonista",
+        "agente": "salbutamol",
+        "papel": "resgate",
+        "indicacao": "broncoespasmo associado à anafilaxia que acompanha a urticária",
+        "dose": "2,5 a 5 mg por nebulização; ou 4 a 8 jatos de 100 mcg com espaçador",
+        "unidade": "mg",
+        "via": "inalatória",
+        "frequencia": "a cada 20 min por 3 doses, depois conforme necessidade",
+        "duracao": "até a resolução do broncoespasmo",
+        "dose_maxima": "15 mg por nebulização na primeira hora",
+        "contraindicacoes": ["taquiarritmia grave não controlada", "hipersensibilidade ao salbutamol"],
+        "efeitos_adversos": ["taquicardia", "tremor", "hipocalemia", "hiperglicemia"],
+        "apresentacoes": ["solução para nebulização 5 mg/mL", "aerossol 100 mcg/dose", "xarope 2 mg/5 mL"],
+        "preparo": "Nebulizar 0,5 a 1 mL (2,5 a 5 mg) em 3 mL de SF 0,9%; no aerossol, usar espaçador",
+        "tempo_infusao": "não se aplica (via inalatória)",
+        "monitorizacao": ["frequência cardíaca", "saturação", "potássio em uso repetido", "resposta em 15 min"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Trata apenas o broncoespasmo; a adrenalina IM continua sendo a droga que controla a reação sistêmica.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Identificar e retirar o gatilho", "detalhe": "Revisar cronologicamente fármacos, alimentos, contraste, látex e picada das últimas 6 semanas; suspender AINE, AAS e o IECA quando implicados" },
+      { "medida": "Diário de sintomas com foto e horário", "detalhe": "Registrar hora de início e de desaparecimento de cada lesão, o que comprova a duração menor que 24 h e afasta vasculite" },
+      { "medida": "Evitar AINE, ácido acetilsalicílico e álcool durante a crise", "detalhe": "O álcool aumenta a vasodilatação e os AINEs desviam o metabolismo do ácido araquidônico, agravando a urticária" },
+      { "medida": "Roupas folgadas, ambiente fresco e compressa fria", "detalhe": "Calor, atrito, coceira e estresse pioram o quadro; compressa fria e banho morno aliviam o prurido" },
+      { "medida": "Não usar anti-H1 tópico", "detalhe": "Difenidramina e prometazina em creme sensibilizam a pele e produzem dermatite de contato; não têm eficácia sobre o wheal" },
+      { "medida": "Suspender o IECA em definitivo e registrar a reação", "detalhe": "Anotar no prontuário e no campo de alergia, orientar por escrito e trocar a classe do anti-hipertensivo ainda na consulta" },
+      { "medida": "Plano escrito de anafilaxia quando houver reação prévia grave", "detalhe": "Prescrever autoinjetor de adrenalina, treinar o paciente e a família e orientar quando acionar o serviço de emergência" },
+      { "medida": "Reavaliação programada em 24 a 48 h ou em 1 semana", "detalhe": "Reavaliar controle, adesão e necessidade de escalonamento do anti-H1; não renovar corticoide na reconsulta" }
+    ],
+    "procedimentos": [
+      { "nome": "Identificação e retirada do gatilho", "indicacao": "toda urticária aguda, sobretudo a de início em menos de 24 h após exposição", "tecnica": "Entrevista cronológica dirigida a fármacos, alimentos, contraste, látex, picada e infecção, com suspensão do agente implicado e substituição da classe quando for anti-hipertensivo", "complicacoes": "Retirada de fármaco essencial sem substituto e atribuição errônea a alimento, gerando restrição alimentar desnecessária" },
+      { "nome": "Teste de provocação", "indicacao": "confirmação de tolerância após 4 a 6 semanas da resolução, quando o gatilho é fármaco, contraste ou alimento e a evitação tem custo clínico", "tecnica": "Dose incremental supervisionada, em ambiente com suporte completo para anafilaxia, adrenalina e acesso venoso", "complicacoes": "Reação grave, anafilaxia, necessidade de adrenalina e de internação" },
+      { "nome": "Nasofibrolaringoscopia", "indicacao": "angioedema de língua, hipofaringe ou rouquidão persistente", "tecnica": "Visualização direta de orofaringe, hipofaringe e glote por fibra óptica, com avaliação de edema de prega ariepiglótica", "complicacoes": "Laringoespasmo, desconforto, sangramento e piora do edema por manipulação" },
+      { "nome": "Intubação orotraqueal precoce", "indicacao": "edema de glote com estridor ou disfonia progressiva", "tecnica": "Sequência rápida com tubo um número menor, preferindo via aérea difícil preparada e cirurgião de retaguarda", "complicacoes": "Falha de intubação, sangramento, edema de via aérea e necessidade de cricotireoidostomia" },
+      { "nome": "Teste cutâneo por prick", "indicacao": "suspeita de urticária IgE-mediada por aeroalérgeno, alimento ou látex, somente após a resolução", "tecnica": "Aplicação de extrato na face anterior do antebraço com leitura em 15 a 20 min e controle positivo com histamina", "complicacoes": "Reação local, reação sistêmica rara e falso negativo na fase aguda ou sob anti-H1" }
+    ],
+    "metas": [
+      "Anti-H1 de segunda geração prescrito em dose plena na primeira consulta",
+      "Prurido controlado em 24 h e lesões resolvidas em menos de 6 semanas",
+      "Escalonamento até 4 vezes a dose antes de indicar corticoide ou imunobiológico",
+      "Corticoide limitado a 3 a 5 dias e nunca renovado na reconsulta",
+      "Adrenalina administrada em até 5 min do reconhecimento da anafilaxia",
+      "IECA suspenso e classe substituída no mesmo atendimento do angioedema",
+      "Gatilho identificado e retirado em até 7 dias, com registro no prontuário"
+    ],
+    "fluxo": [
+      "Avaliar via aérea, respiração e circulação; se estridor, hipotensão ou broncoespasmo, adrenalina IM e protocolo de anafilaxia",
+      "Confirmar que as lesões duram menos de 24 h e migram: isso separa urticária de vasculite",
+      "Pesquisar angioedema, uso de IECA, AINE, contraste e infecção recente",
+      "Se angioedema sem urticária em uso de IECA: suspender o IECA, avaliar via aérea e trocar a classe",
+      "Iniciar anti-H1 de segunda geração em dose plena",
+      "Reavaliar em 24 a 48 h; se refratário, escalonar a mesma droga até 4 vezes",
+      "Reservar corticoide para crise intensa, por 3 a 5 dias, sem repetir",
+      "Reavaliar em 6 semanas para definir resolução; se persistir, reclassificar como urticária crônica"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "gestante", "ajuste": "cetirizina e loratadina são as opções preferidas; adrenalina não é contraindicada quando há anafilaxia", "alerta": "não atrasar a adrenalina por gestação" },
+      { "populacao": "crianca", "ajuste": "doses por peso; infecção viral é a causa mais comum e o anti-H1 fica por poucos dias", "alerta": "evitar anti-H1 sedativo e não usar corticoide repetido" },
+      { "populacao": "idoso", "ajuste": "preferir anti-H1 de segunda geração e ajustar pela função renal; evitar hidroxizina", "alerta": "sedação, confusão e queda" },
+      { "populacao": "renal_cronico", "ajuste": "cetirizina 5 mg/dia ou em dias alternados; não escalonar acima de 10 mg/dia", "alerta": "acúmulo e sedação" },
+      { "populacao": "cardiopata", "ajuste": "adrenalina IM é segura e não deve ser adiada; monitorizar ECG após a dose", "alerta": "arritmia em dose alta ou via IV inadvertida" },
+      { "populacao": "asmático", "ajuste": "evitar AINE e AAS, pois podem desencadear broncoespasmo e urticária no mesmo episódio", "alerta": "doença respiratória exacerbada por AINE" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "hemograma, VHS e PCR", "indicacao": "lesão fixa por mais de 24 h, febre ou artralgia", "o_que_muda": "elevação de provas inflamatórias com lesão fixa aponta vasculite e exige biópsia" },
+        { "nome": "triptase sérica", "indicacao": "anafilaxia, colhida entre 30 e 120 min do início", "o_que_muda": "valor elevado sugere ativação mastocitária e indica investigação de mastocitose" },
+        { "nome": "C4 e C1-INH", "indicacao": "angioedema recorrente sem urticária ou história familiar", "o_que_muda": "confirma angioedema hereditário e indica tratamento específico, não anti-H1" },
+        { "nome": "creatinina e exame de urina tipo 1", "indicacao": "suspeita de vasculite urticariforme", "o_que_muda": "hematúria e proteinúria indicam acometimento renal e mudam a urgência" },
+        { "nome": "TSH e anti-TPO", "indicacao": "urticária que ultrapassa 6 semanas", "o_que_muda": "doença tireoidiana autoimune associa-se à urticária crônica" },
+        { "nome": "teste cutâneo por prick", "indicacao": "suspeita de gatilho IgE-mediado, após a resolução", "o_que_muda": "identifica o alérgeno e permite retirada dirigida em vez de restrição empírica" }
+      ],
+      "evitar": [
+        { "exame": "teste cutâneo ou dosagem de IgE total na fase aguda", "motivo": "falso negativo pelo consumo de mediadores e resultado que não muda a conduta imediata" },
+        { "exame": "painel de alérgenos indiscriminado sem história dirigida", "motivo": "gera restrição alimentar e evitação desnecessárias" },
+        { "exame": "pré-medicação rotineira com corticoide e anti-H1 antes de contraste", "motivo": "não previne reação grave e cria falsa segurança" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["tomar o anti-H1 todos os dias, na dose prescrita, mesmo sem lesões", "identificar e evitar o gatilho, levando a lista de medicamentos em uso", "usar compressa fria e roupas folgadas", "retornar se piorar ou se o controle exigir corticoide de novo", "informar a alergia em toda consulta e procedimento"],
+      "evitar": ["AINE, ácido acetilsalicílico e álcool durante a crise", "anti-H1 tópico e coçar as lesões", "corticoide por conta própria ou por mais de 7 dias", "voltar a usar IECA após angioedema", "calor, sol e banho quente"],
+      "retorno": ["inchaço de língua, lábios ou garganta", "falta de ar, chiado ou rouquidão", "desmaio ou tontura", "lesões que duram mais de 24 h ou deixam mancha roxa", "febre com dor nas juntas", "necessidade de nova dose de corticoide"]
+    },
+    "efeitos_adversos": [
+      { "agente": "cetirizina", "efeitos": ["sonolência", "boca seca"], "observacao": "ajustar em insuficiência renal e não escalonar sem reavaliação" },
+      { "agente": "prednisona", "efeitos": ["hiperglicemia", "insônia", "rebote da urticária"], "observacao": "máximo 5 a 7 dias; não repetir ciclos" },
+      { "agente": "adrenalina", "efeitos": ["taquicardia", "tremor", "hipertensão"], "observacao": "monitorizar PA e FC por 30 min após a dose" },
+      { "agente": "icatibanto", "efeitos": ["reação local", "hipotensão", "náusea"], "observacao": "avaliar via aérea a cada 15 min na primeira hora" },
+      { "agente": "hidroxizina", "efeitos": ["sedação", "prejuízo psicomotor", "confusão em idoso"], "observacao": "evitar em idoso e em quem dirige ou opera máquinas" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a droga implicada e registrar o evento no prontuário",
+      "Corticoide: tratar hiperglicemia e insônia; não prolongar o ciclo para compensar recidiva, e sim otimizar o anti-H1",
+      "Adrenalina: manter monitorização por 30 min; taquicardia e tremor são autolimitados e não contraindicam nova dose se houver anafilaxia",
+      "Icatibanto: avaliar via aérea e pressão; se não houver resposta em 60 min, considerar plasma fresco e via aérea definitiva",
+      "Anti-H1 sedativo: trocar por segunda geração e orientar sobre direção e trabalho de risco"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "cetirizina 10 mg", "dose": "10 mg", "via": "VO", "frequencia": "1x/dia (até 10 mg a cada 10 a 12 h se refratário)", "duracao": "14 dias", "condicao": "urticária aguda", "confirmar_apresentacao_local": true },
+          { "item": "loratadina 10 mg", "dose": "10 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "14 dias", "condicao": "alternativa quando há sonolência com cetirizina", "confirmar_apresentacao_local": true },
+          { "item": "prednisona 20 mg", "dose": "40 mg (2 comprimidos)", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "3 a 5 dias", "condicao": "crise intensa, sem uso repetido", "confirmar_apresentacao_local": true },
+          { "item": "autoinjetor de adrenalina 0,3 mg", "dose": "0,3 mg", "via": "IM vasto lateral", "frequencia": "conforme necessidade", "duracao": "1 unidade com validade", "condicao": "anafilaxia prévia com plano escrito", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "adrenalina 1 mg/mL", "dose": "0,5 mg", "via": "IM vasto lateral", "frequencia": "repetir em 5 a 15 min se necessário", "monitorizacao": "PA, FC e SpO2", "confirmar_apresentacao_local": true },
+          { "item": "cloreto de sódio 0,9%", "dose": "500 a 1.000 mL", "via": "IV", "frequencia": "infusão rápida na hipotensão", "monitorizacao": "PA, diurese e ausculta pulmonar", "confirmar_apresentacao_local": true },
+          { "item": "salbutamol 5 mg/mL", "dose": "2,5 a 5 mg", "via": "nebulização", "frequencia": "a cada 20 min por 3 doses", "monitorizacao": "FC, SpO2 e potássio", "confirmar_apresentacao_local": true },
+          { "item": "icatibanto 30 mg/3 mL", "dose": "30 mg", "via": "SC abdominal", "frequencia": "repetir em 6 h se necessário", "monitorizacao": "via aérea e pressão arterial", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["hemograma", "VHS", "PCR", "triptase", "C4", "C1-INH", "creatinina", "exame de urina tipo 1", "TSH", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de urticária aguda, necessitando de afastamento por dias.", "dias": null, "cid": null, "observacao": "dias são decisão médica" },
+      "encaminhamento": { "campos": ["destino (alergia/imunologia, dermatologia ou emergência)", "motivo", "resumo com gatilho, duração das lesões, angioedema e resposta ao anti-H1", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente com urticária aguda, gatilho identificado, duração das lesões, presença de angioedema, dose de anti-H1, uso de corticoide e evolução." }
+    },
+    "anamnese": {
+      "campos": ["início e duração das lesões", "migração das lesões", "angioedema", "dispneia ou disfonia", "fármacos (AINE, IECA, contraste)", "infecção recente", "alimentos", "picada", "episódios prévios", "história familiar de angioedema"],
+      "texto_template": "Paciente com urticária de início em ___, lesões que duram ___ horas no mesmo local, angioedema, dispneia ou disfonia, uso de AINE, IECA ou contraste, infecção recente, alimento, picada, episódios prévios e história familiar de angioedema."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais", "via aérea e orofaringe", "distribuição e número de lesões", "dermografismo", "angioedema de face, língua e extremidades", "ausculta pulmonar", "lesões residuais ou púrpura", "linfonodos e articulações"],
+      "texto_template": "Sinais vitais, exame de via aérea e orofaringe, distribuição e número de lesões, pesquisa de dermografismo, avaliação de angioedema de face, língua e extremidades, ausculta pulmonar, pesquisa de púrpura residual e exame de linfonodos e articulações."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de urticária, plano de anafilaxia e disponibilidade de icatibanto", "verificar": true },
+      { "tipo": "sociedade_alergia", "o_que_verificar": "diretriz EAACI/GA²LEN/EDF/WAO de urticária e escalonamento de anti-H1", "verificar": true },
+      { "tipo": "diretriz_dermatologica", "o_que_verificar": "diferença entre urticária e vasculite urticariforme", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "bulas, apresentações e registro do autoinjetor de adrenalina", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-DERM04-01", "tipo": "anafilaxia", "gatilho": "estridor, edema de língua, hipotensão ou broncoespasmo", "severidade": "grave", "mensagem": "Anafilaxia: adrenalina IM agora.", "acao": "acionar protocolo de anafilaxia", "bloqueante": true },
+      { "id": "SA-DERM04-02", "tipo": "angioedema_ieca", "gatilho": "angioedema sem urticária em uso de IECA ou prescrição de IECA após o evento", "severidade": "grave", "mensagem": "Angioedema por IECA: suspender e nunca reintroduzir.", "acao": "bloquear o IECA e sugerir troca de classe", "bloqueante": true },
+      { "id": "SA-DERM04-03", "tipo": "anti_h1_sedativo", "gatilho": "hidroxizina ou prometazina prescrita como primeira linha", "severidade": "precaucao", "mensagem": "Anti-H1 de primeira geração não é rotina: sedação e prejuízo psicomotor.", "acao": "sugerir anti-H1 de segunda geração em dose plena", "bloqueante": false },
+      { "id": "SA-DERM04-04", "tipo": "corticoide_prolongado", "gatilho": "prednisona por mais de 7 dias ou segundo ciclo em urticária aguda", "severidade": "precaucao", "mensagem": "Corticoide prolongado não previne recidiva e piora o controle.", "acao": "alertar e sugerir escalonamento do anti-H1", "bloqueante": false },
+      { "id": "SA-DERM04-05", "tipo": "dose_subterapeutica", "gatilho": "anti-H1 de segunda geração em dose fracionada ou em dias alternados sem ajuste renal", "severidade": "precaucao", "mensagem": "Dose plena é a base do tratamento da urticária.", "acao": "alertar para corrigir a dose", "bloqueante": false },
+      { "id": "SA-DERM04-06", "tipo": "registro_gatilho", "gatilho": "alta sem registro do gatilho suspeito e da orientação por escrito", "severidade": "precaucao", "mensagem": "Registrar gatilho e orientação reduz reexposição.", "acao": "lembrar de registrar no prontuário", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "diretriz EAACI/GA²LEN/EDF/WAO", "sociedade de alergia", "protocolo de anafilaxia"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com definição de urticária aguda abaixo de 6 semanas, anti-H1 de segunda geração como base em dose plena e escalonamento até 4 vezes, corticoide curto apenas em crise, adrenalina reservada à anafilaxia, explicação do que não funciona e do angioedema por IECA com troca de classe; gatilhos por AINE, contraste e infecção, procedimentos de retirada do gatilho e teste de provocação.", "data": null }
+      ]
+    }
+  }
+}

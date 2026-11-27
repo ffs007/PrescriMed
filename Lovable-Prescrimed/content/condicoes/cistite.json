@@ -1,0 +1,155 @@
+{
+  "id": "cistite",
+  "nome": "Cistite (ITU baixa) não complicada",
+  "cat": "Urologia / Andrologia",
+  "alias": "infeccao urinaria itu cistite ardencia ao urinar polaciuria urina turva",
+  "cid": [
+    [
+      "N30",
+      "Cistite"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "IDSA/EAU — ITU; SBP — ITU pediátrica",
+      "Antimicrobianos: abordagem de resistência (contexto BR)"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Mulher não gestante, sem febre/dor lombar, com disúria + polaciúria + urina turva: probabilidade alta — tratar empiricamente SEM cultura (cultura se recorrência < 1 mês, falha, gestante, homem, criança, sonda, imunossuprimido). FEbre/dor lombar/vômitos = ITU alta (pielonefrite): outro protocolo, cultura SEMPRE e ATB mais longo. Homem com ITU = complicada por definição (investigar). EAS: leucócitos + nitritos positivos. Grávida: sempre cultura e seguimento (ITU na gestação é sempre tratada, mesmo assintomática com bacteriúria significativa).",
+  "redFlags": [
+    "Febre > 38 °C, dor lombar ou CVA + calafrios — pielonefrite: ATB fluorquinolona 7 d ou ATB EV",
+    "Gestante — cultura obrigatória, esquemas seguros (cefalexina/fosfomicina/nitrofurantoína fora do termo), repetir cultura pós-tratamento",
+    "Homem — ITU complicada: cultura + 7–14 d + avaliar (prostatite/obstrução)",
+    "Imunossuprimido/diabética mal controlada/sonda vesical — risco de urosepse",
+    "Cistite recorrente (≥ 3/ano) — profilaxia/investigação urológica; não só repetir ATB",
+    "Criança com ITU — sempre investigar (RNU/USG conforme idade e recorrência)"
+  ],
+  "naoUsar": [
+    "Amoxicilha simples de rotina (resistência alta do E. coli)",
+    "Nitrofurantoína no 3º trimestre/termo da gestação e se TFG < 30",
+    "Fluorquinolona de 3 dias como 1ª escolha empírica em alta resistência local sem justificativa (reservar)",
+    "Automedicação repetida de 'pyridium + ATB' de farmácia",
+    "Fenazopiridina > 2 dias (mascara)"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Antibiótico oral — 1ª linha",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "fosfomicina",
+            "pos": "3 g (1 sachê) VO em dose ÚNICA, à noite, com bexiga cheia e urinar depois de 2–3 h",
+            "ped": "≥ 12 anos: 3 g dose única; < 12 anos: 2 g dose única",
+            "motivo": "Dose única, excelente adesão, baixa resistência"
+          },
+          {
+            "base": "nitro_gest",
+            "pos": "100 mg VO a cada 12 h por 5 dias (não usar no termo da gestação ou TFG < 30)",
+            "ped": "5–7 mg/kg/dia dividido 12/12 h (≥ 1 mês)",
+            "motivo": "1ª linha alternativa; segura na gestação fora do termo"
+          },
+          {
+            "base": "ciprofloxacino",
+            "pos": "500 mg VO a cada 12 h por 3 DIAS (apenas 3 — mais que isso é desnecessário)",
+            "motivo": "Se resistência local/alogia às opções; reserva por resistência"
+          },
+          {
+            "base": "levofloxacino",
+            "pos": "500 mg VO 1x/dia por 3 dias",
+            "motivo": "Alternativa quinolona"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico — alternativas (alergia/gestante)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "cefalexina",
+            "pos": "500 mg VO a cada 6 h por 5–7 dias",
+            "ped": "25–50 mg/kg/dia dividido 6/6 h",
+            "motivo": "Beta-lactâmico seguro na gestação"
+          },
+          {
+            "base": "amoxclav",
+            "pos": "500 mg VO a cada 8 h por 5–7 dias (resistência razoável — usar se cultura sensível)",
+            "ped": "20–40 mg/kg/dia (amoxicilina) dividido 8/8 h",
+            "motivo": "Alternativa com cultura"
+          },
+          {
+            "base": "cefadroxila",
+            "pos": "1 g VO 12/12 h por 5–7 dias",
+            "motivo": "Cefalosporina 12/12 h"
+          }
+        ]
+      },
+      {
+        "nome": "Sintomático urinário",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "500 mg a 1 g VO 6/6 h se ardência/dor (máx 4 g/dia)",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Analgesia da disúria"
+          },
+          {
+            "novo": {
+              "id": "agua",
+              "n": "Hidratação",
+              "ap": "",
+              "pos": "Aumentar ingestão hídrica (urina clara) durante a crise; urinar com frequência e após relação sexual; evitar reter urina; higiene sempre de frente para trás; sem duchas internas/feromônios na região."
+            },
+            "ped": "Aplicável",
+            "motivo": "Medidas comportamentais"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno se",
+              "ap": "",
+              "pos": "Febre, dor lombar, vômitos, piora em 48 h do ATB ou sintomas voltando < 1 mês (cultura necessária). Completar o ATB mesmo melhorando; relação sexual e intervalos longos sem urinar são gatilhos comuns."
+            },
+            "motivo": "Progressão para alta/recorrência"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Na observação (sintomático)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV se disúria intensa"
+          },
+          {
+            "linha": 1,
+            "hosp": "ciprofloxacino_ev",
+            "motivo": "Se indicação de via EV (intolerância oral/gravidade suspeita): 400 mg EV 12/12 h"
+          }
+        ]
+      }
+    ]
+  }
+}

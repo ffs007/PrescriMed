@@ -1,0 +1,491 @@
+{
+  "id": "ws-gi_18",
+  "nome": "Disenteria / diarreia invasiva",
+  "cat": "Gastrointestinal",
+  "alias": "disenteria diarreia invasiva disenteria diarreia invasiva disenteria bacilar disenteria diarreia invasiva diarreia com sangue e muco shigelose colite amebiana",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-18_disenteria.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] oms: manejo da disenteria e reidratação",
+      "[verificar] sociedade_infectologia: indicação de antibiótico e resistência local",
+      "[verificar] anvisa: apresentações e bulas",
+      "[verificar] vigilancia_epidemiologica: lista de notificação compulsória e surtos"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-18 em 2026-11-27",
+    "fundido_workspace": "GI-18 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, taquicardia, extremidades frias ou confusão -> ressuscitação com cristaloide, hemoculturas, antibiótico IV e internação; diurese menor que 0,5 mL/kg/h ou ausência de urina por 8 h -> reidratação venosa e controle de diurese; febre acima de 39 °C com calafrios e toxemia -> hemoculturas, ceftriaxona IV e internação; abdome distendido, difusamente doloroso, com defesa ou rigidez -> avaliação cirúrgica imediata, imagem e suspensão de antidiarreico. 1) Classificar: é disenteria? sangue, muco, febre e tenesmo em conjunto 2) Avaliar gravidade: sinais vitais, perfusão, diurese, toxemia e abdome 3) Hidratar: SRO se tolera via oral; SF 0,9% em bolus se desidratação grave, vômito ou choque 4) Colher coprocultura e hemoculturas quando grave, imunossuprimido, gestante ou surto 5) Excluir E. coli O157 antes de antibiótico se houver cólica intensa com pouco febre, surto ou carne malpassada 6) Escolher antibiótico: ciprofloxacino 3 dias na disenteria leve; azitromicina em gestante, criança e falha de quinolona; ceftriaxona se grave 7) Reavaliar em 48 a 72 h: sem melhora, rever agente (Campylobacter, ameba ou DII) e trocar o esquema 8) Alta com SRO domiciliar, proibição de antidiarreico, sinais de retorno por escrito e seguimento em 72 h",
+  "redFlags": [
+    "hipotensão, taquicardia, extremidades frias ou confusão -> ressuscitação com cristaloide, hemoculturas, antibiótico IV e internação",
+    "diurese menor que 0,5 mL/kg/h ou ausência de urina por 8 h -> reidratação venosa e controle de diurese",
+    "febre acima de 39 °C com calafrios e toxemia -> hemoculturas, ceftriaxona IV e internação",
+    "abdome distendido, difusamente doloroso, com defesa ou rigidez -> avaliação cirúrgica imediata, imagem e suspensão de antidiarreico",
+    "palidez, petéquias, oligúria e queda de plaquetas após diarreia com sangue -> internar, suspender antibiótico e antidiarreico, dosar hemograma e creatinina",
+    "imunossupressão, quimioterapia, HIV avançado ou transplante -> internação, coprocultura ampliada e antibiótico parenteral",
+    "disenteria sem melhora após 48 a 72 h de antibiótico adequado -> rever coprocultura, trocar esquema e considerar colonoscopia"
+  ],
+  "naoUsar": [
+    "vômitos incoercíveis",
+    "rebaixamento de consciência",
+    "íleo paralítico",
+    "insuficiência cardíaca descompensada",
+    "edema agudo de pulmão",
+    "gestação",
+    "menores de 18 anos",
+    "tendinopatia prévia"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "beber SRO em colheradas após cada evacuação"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "loperamida e qualquer antidiarreico"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Reidratante oral",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_sais_de_reidratacao_oral_sro",
+            "pos": "50 a 100 mL/kg em 4 h; 200 a 400 mL após cada evacuação líquida. Via VO. Colheradas a cada 5 a 10 min. Até diurese clara e sede resolvida.",
+            "posTodas": true,
+            "motivo": "desidratação leve a moderada com via oral preservada na disenteria (1a linha) reidratação",
+            "nota": "Diluir o sachê em 1 L de água potável; não usar refrigerante nem água açucarada - monitorar: diurese horária; monitorar: turgor cutâneo; monitorar: sede; monitorar: sódio se desidratação grave",
+            "dose": {
+              "texto": "50 a 100 mL/kg em 4 h; 200 a 400 mL após cada evacuação líquida; colheradas a cada 5 a 10 min; até diurese clara e sede resolvida; max. não se aplica",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            },
+            "ped": "Azitromicina 20 mg/kg dose única ou ceftriaxona 50 a 75 mg/kg/dia; zinco 20 mg/dia por 10 a 14 dias"
+          }
+        ]
+      },
+      {
+        "nome": "Fluorquinolona",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ciprofloxacino",
+            "pos": "500 mg. Via VO. 12/12 h. 3 dias. 60 minutos (via IV); não se aplica por via oral.",
+            "posTodas": true,
+            "motivo": "disenteria bacteriana leve a moderada em adulto, sem sinais de gravidade (1a linha) disenteria bacteriana leve a moderada em adulto",
+            "nota": "VO uso direto; IV infundir a bolsa sem diluição adicional - monitorar: dor e edema de tendão de Aquiles; monitorar: padrão de diarreia; monitorar: ECG se cardiopata ou QT longo; monitorar: creatinina · NÃO: gestação; menores de 18 anos; tendinopatia prévia; miastenia gravis; síndrome do QT longo · Obs: Não usar em suspeita de E. coli O157; no Brasil a resistência a quinolona em Campylobacter é alta, o que justifica troca se falha em 72 h · Renal: ClCr 30 a 59 mL/min: 250 a 500 mg 12/12 h; ClCr menor que 30: 250 a 500 mg 1x/dia",
+            "dose": {
+              "texto": "500 mg; 12/12 h; 3 dias; max. 1.000 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            },
+            "ped": "Azitromicina 20 mg/kg dose única ou ceftriaxona 50 a 75 mg/kg/dia; zinco 20 mg/dia por 10 a 14 dias"
+          }
+        ]
+      },
+      {
+        "nome": "Nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "secnidazol",
+            "pos": "2 g. Via VO. Dose única.",
+            "posTodas": true,
+            "motivo": "amebíase intestinal quando se busca dose única e melhor adesão (alternativa)",
+            "nota": "Uso direto, com alimento - monitorar: resolução da diarreia; monitorar: eventos gastrointestinais; monitorar: teste parasitológico de controle · NÃO: primeiro trimestre de gestação; alergia a nitroimidazol; consumo de álcool · Obs: Não ingerir álcool por 72 h; manter o amebicida luminal após a dose tecidual",
+            "dose": {
+              "texto": "2 g; dose única; dose única; max. 2 g",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "Azitromicina 20 mg/kg dose única ou ceftriaxona 50 a 75 mg/kg/dia; zinco 20 mg/dia por 10 a 14 dias"
+          },
+          {
+            "linha": 2,
+            "base": "metronidazol",
+            "pos": "500 mg. Via VO. 8/8 h. 7 a 10 dias. 30 a 60 minutos (via IV).",
+            "posTodas": true,
+            "motivo": "amebíase intestinal invasiva confirmada ou alta suspeita (condicional)",
+            "nota": "VO uso direto com alimento; IV infundir a solução pronta sem diluição - monitorar: resolução da diarreia e do tenesmo; monitorar: sintomas neurológicos periféricos; monitorar: função hepática · NÃO: primeiro trimestre de gestação; alergia a nitroimidazol; uso de dissulfiram; consumo de álcool · Obs: Após o amebicida tecidual, associar amebicida luminal (teclozana ou paromomicina) para eliminar cistos e evitar recidiva",
+            "dose": {
+              "texto": "500 mg; 8/8 h; 7 a 10 dias; max. 1.500 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            },
+            "ped": "Azitromicina 20 mg/kg dose única ou ceftriaxona 50 a 75 mg/kg/dia; zinco 20 mg/dia por 10 a 14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "azitromicina",
+            "pos": "1 g (criança 20 mg/kg). Via VO. Dose única.",
+            "posTodas": true,
+            "motivo": "disenteria em gestante, criança, falha de quinolona ou suspeita de Campylobacter (alternativa)",
+            "nota": "VO uso direto; suspensão reconstituir com água filtrada conforme bula - monitorar: ECG se cardiopata; monitorar: resolução da febre em 48 h; monitorar: número de evacuações · NÃO: alergia a macrolídeo; síndrome do QT longo; uso concomitante de ondansetrona em dose alta · Obs: Primeira escolha em gestante com disenteria; a dose única é vantagem quando a adesão é incerta",
+            "dose": {
+              "texto": "1 g (criança 20 mg/kg); dose única; dose única; max. 1 g",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": "criança 20 mg/kg)",
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "Azitromicina 20 mg/kg dose única ou ceftriaxona 50 a 75 mg/kg/dia; zinco 20 mg/dia por 10 a 14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico antipiretico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "paracetamol",
+            "pos": "750 mg. Via VO. 6/6 h se necessário. Até 3 dias. 15 minutos (via IV).",
+            "posTodas": true,
+            "motivo": "febre acima de 38,5 °C ou cólica abdominal incapacitante na disenteria (condicional) febre e cólica",
+            "nota": "Uso direto (VO); IV infundir o frasco sem diluição - monitorar: temperatura; monitorar: dor; monitorar: dose total diária somada de todas as fontes; monitorar: TGO e TGP se uso prolongado · NÃO: hepatopatia grave; desnutrição grave; uso crônico de álcool · Obs: Evitar AINE na disenteria: piora a lesão de mucosa e o risco de sangramento e de injúria renal · Renal: ClCr menor que 30: intervalo de 8 h",
+            "dose": {
+              "texto": "750 mg; 6/6 h se necessário; até 3 dias; max. 3.000 mg/dia",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            },
+            "ped": "Azitromicina 20 mg/kg dose única ou ceftriaxona 50 a 75 mg/kg/dia; zinco 20 mg/dia por 10 a 14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Hidratação oral precoce e contínua",
+              "ap": "",
+              "q": "",
+              "pos": "Iniciar SRO antes de exames e de antibiótico; 200 a 400 mL após cada evacuação líquida, em colheradas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Controle de diurese e peso",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar volume urinário e peso na admissão e a cada 12 h no paciente internado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Isolamento de contato e higiene de mãos",
+              "ap": "",
+              "q": "",
+              "pos": "Álcool gel e sabão após cada troca; material de uso individual; precaução de contato até 48 h sem diarreia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Afastamento de manipulador de alimentos",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender a atividade até 48 h após a última evacuação e comprovar coprocultura negativa em surto"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Notificação compulsória",
+              "ap": "",
+              "q": "",
+              "pos": "Surto, cólera, shigelose e febre tifoide são de notificação imediata à vigilância sanitária"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Dieta fracionada e pobre em resíduos na fase aguda",
+              "ap": "",
+              "q": "",
+              "pos": "Arroz, batata, torrada e caldo salgado; reintroduzir leite e gordura após 48 h sem sangue"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Proibição formal de antidiarreico",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar no prontuário a orientação de não usar loperamida nem outro antidiarreico, pelo risco de megacólon tóxico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-18"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cristaloide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "cloreto_de_sodio",
+              "n": "Cloreto de sódio 0,9% (SF)",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "30 mL/kg em bolus, repetido conforme resposta. Via IV. Bolus e reavaliação a cada 500 a 1.000 mL. Até perfusão e diurese restabelecidas. Bolus rápido em 15 a 30 min, reavaliando pressão e perfusão."
+            },
+            "motivo": "desidratação moderada a grave, vômitos incoercíveis ou choque (1a linha)",
+            "nota": "Uso direto; acesso periférico calibroso 14 a 16 G - monitorar: pressão arterial; monitorar: frequência cardíaca; monitorar: ausculta pulmonar; monitorar: diurese; monitorar: lactato · NÃO: insuficiência cardíaca descompensada; edema agudo de pulmão · Obs: Ringer lactato é alternativa quando há acidose metabólica; reavaliar após cada bolus para não hiperhidratar",
+            "dose": {
+              "texto": "30 mL/kg em bolus, repetido conforme resposta; bolus e reavaliação a cada 500 a 1.000 mL; até perfusão e diurese restabelecidas; max. individualizar pela resposta hemodinâmica",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético antagonista 5ht3",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "vômitos que impedem a reidratação oral na disenteria (alternativa)",
+            "nota": "IV direto ou diluído em 50 mL de SF 0,9%; VO sem preparo - monitorar: ECG se cardiopata ou QT longo; monitorar: potássio e magnésio; monitorar: número de vômitos",
+            "dose": {
+              "texto": "4 mg; 8/8 h se necessário; até 24 a 48 h; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cefalosporina terceira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "disenteria grave, toxemia, sepse, bacteremia suspeita ou via oral impossível (condicional) disenteria grave ou sepse",
+            "nota": "Reconstituir em 10 mL de água estéril; diluir em 50 a 100 mL de SF 0,9% ou SG 5% - monitorar: função hepática; monitorar: hemograma; monitorar: sinais de melhora clínica em 48 h · NÃO: alergia a cefalosporina; anafilaxia prévia a penicilina; hiperbilirrubinemia neonatal; uso de solução com cálcio em neonato · Obs: Coletar hemoculturas antes da primeira dose; não é necessário em disenteria leve de paciente hígido",
+            "dose": {
+              "texto": "2 g (criança 50 a 75 mg/kg); 1x/dia; 3 a 5 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": "criança 50 a 75 mg/kg)",
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-18",
+    "versao": "0.2.0",
+    "arquivo": "GI-18_disenteria.json",
+    "area": "Gastrointestinal",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

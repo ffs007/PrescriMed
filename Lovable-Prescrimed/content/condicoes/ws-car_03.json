@@ -1,0 +1,460 @@
+{
+  "id": "ws-car_03",
+  "nome": "Hipertensão assintomática",
+  "cat": "Cardiovascular",
+  "alias": "hipertensao assintomatica hipertensao pressao alta assintomatica hipertensao arterial has hipertensao estagio hipertensao estagio hipertensao resistente",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-03_hipertensao_assintomatica.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] diretriz_sociedade_cardiologia: metas pressóricas por perfil (SBC, ESC e ACC/AHA)",
+      "[verificar] protocolo_institucional: fluxo de início e ajuste de anti-hipertensivo na atenção primária",
+      "[verificar] anvisa: apresentações, bulas e combinações em dose fixa disponíveis",
+      "[verificar] sociedade_nefrologia: manejo em DRC, albuminúria e hipercalemia"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-03 em 2026-11-27",
+    "fundido_workspace": "CAR-03 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: PA ≥ 180/120 mmHg com cefaleia intensa, alteração visual ou confusão -> reclassificar como emergência e tratar venoso; dor torácica, dispneia ou ortopneia -> ECG imediato e protocolo de dor torácica; déficit motor, disartria ou amaurose -> protocolo de AVC e imagem; síncope ou tontura ao levantar após a dose -> medir PA em pé e reduzir dose. 1) Confirmar a medida: técnica, manguito adequado, duas leituras e MRPA/MAPA se dúvida 2) Procurar lesão aguda de órgão-alvo: se houver, reclassificar como emergência (CAR-02) e tratar na hora 3) Sem lesão aguda: estratificar risco (idade, diabetes, DRC, doença cardiovascular, albuminúria) e definir a meta 4) Iniciar mudança de estilo de vida em todos e decidir entre monoterapia (estágio 1) e combinação (≥ 160/100) 5) Escolher a classe pelo perfil: negro → tiazídico ou BCE; diabético/DRC → IECA ou BRA; idoso → metade da dose 6) Reavaliar em 4 semanas; se fora da meta, subir dose ou associar; terceira droga e espironolactona se resistente 7) Sem controle ou com pista de causa secundária: dosar aldosterona/renina, metanefrinas, Doppler renal e polissonografia, e encaminhar",
+  "redFlags": [
+    "PA ≥ 180/120 mmHg com cefaleia intensa, alteração visual ou confusão -> reclassificar como emergência e tratar venoso",
+    "dor torácica, dispneia ou ortopneia -> ECG imediato e protocolo de dor torácica",
+    "déficit motor, disartria ou amaurose -> protocolo de AVC e imagem",
+    "síncope ou tontura ao levantar após a dose -> medir PA em pé e reduzir dose",
+    "gestante com PA ≥ 140/90 mmHg -> encaminhar à obstetrícia no mesmo dia",
+    "hipocalemia espontânea com hipertensão resistente -> dosar aldosterona e renina",
+    "piora de creatinina acima de 30% após iniciar IECA ou BRA -> suspender e investigar"
+  ],
+  "naoUsar": [
+    "gestação",
+    "estenose bilateral de artéria renal",
+    "hipercalemia",
+    "uso concomitante de alisquireno em diabético",
+    "angioedema prévio por IECA",
+    "alergia a diidropiridina",
+    "choque cardiogênico",
+    "estenose aórtica grave"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "Tomar o comprimido no mesmo horário todos os dias e trazer as caixas na consulta"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "Tomar nifedipino de liberação imediata para baixar a pressão na hora"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Tiazidico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "hctz",
+            "pos": "12,5 a 25 mg. Via VO. 1x/dia pela manhã. Contínuo.",
+            "posTodas": true,
+            "motivo": "hipertensão arterial, hipertensão resistente, paciente negro, idoso (1a linha) hipertensão estágio 2 ou meta não atingida com monoterapia",
+            "nota": "Uso direto - monitorar: sódio e potássio em 2-4 semanas; monitorar: ácido úrico; monitorar: glicemia; monitorar: creatinina; monitorar: cálcio · NÃO: anúria; gota ativa; hiponatremia grave; hipocalemia não corrigida · Obs: Menos potente que clortalidona. Risco de hiponatremia em idoso e de câncer de pele não melanoma: orientar fotoproteção. Não usar como monoterapia em gestante · Renal: Pouco eficaz com TFG < 30; preferir clortalidona ou diurético de alça",
+            "dose": {
+              "texto": "12,5 a 25 mg; 1x/dia pela manhã; contínuo; max. 50 mg/dia",
+              "status": "ok",
+              "valor": 12.5,
+              "valor_max": 25,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "clortalidona",
+            "pos": "12,5 a 25 mg. Via VO. 1x/dia pela manhã. Contínuo.",
+            "posTodas": true,
+            "motivo": "hipertensão resistente, DRC com TFG entre 30 e 45, paciente negro, preferência por efeito diurético prolongado (alternativa) hipertensão resistente ou TFG entre 30 e 45",
+            "nota": "Uso direto - monitorar: potássio e sódio em 2-4 semanas; monitorar: ácido úrico; monitorar: creatinina; monitorar: PA em 4 semanas · NÃO: anúria; hiponatremia grave; hipocalemia não corrigida; gota ativa · Obs: Mais potente e de meia-vida mais longa que hidroclorotiazida; preferida em hipertensão resistente. Evitar em atleta de endurance por hiponatremia · Renal: Mantém efeito com TFG 30–45; abaixo de 30 trocar por furosemida",
+            "dose": {
+              "texto": "12,5 a 25 mg; 1x/dia pela manhã; contínuo; max. 25 mg/dia",
+              "status": "ok",
+              "valor": 12.5,
+              "valor_max": 25,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 25,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Bra",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "losartana",
+            "pos": "50 mg. Via VO. 1x/dia. Contínuo.",
+            "posTodas": true,
+            "motivo": "hipertensão arterial, diabetes com albuminúria, DRC, pós-AVC (1a linha) hipertensão estágio 2 ou meta não atingida com monoterapia",
+            "nota": "Uso direto - monitorar: creatinina e potássio em 1-2 semanas; monitorar: PA em 4 semanas; monitorar: sintomas de angioedema; monitorar: adesão",
+            "dose": {
+              "texto": "50 mg; 1x/dia; contínuo; max. 100 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Ieca",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_enalapril",
+            "pos": "5 a 20 mg. Via VO. 1x/dia ou 12/12 h. Contínuo.",
+            "posTodas": true,
+            "motivo": "hipertensão arterial, IC com fração de ejeção reduzida, pós-IAM, DRC com albuminúria (1a linha)",
+            "nota": "Uso direto - monitorar: creatinina e potássio em 1-2 semanas; monitorar: PA em 4 semanas; monitorar: tosse; monitorar: edema de face ou língua · NÃO: gestação; angioedema prévio por IECA; estenose bilateral de artéria renal; hipercalemia · Obs: Alternativa ao BRA quando o objetivo é custo; tosse seca em 10–15% e angioedema mais frequente em negro. Trocar por BRA se tosse intolerável · Renal: Iniciar 2,5 mg se TFG < 30; 2,5 mg em dia de diálise",
+            "dose": {
+              "texto": "5 a 20 mg; 1x/dia ou 12/12 h; contínuo; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 20,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Bloqueador canal cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_anlodipino",
+            "pos": "5 mg. Via VO. 1x/dia. Contínuo.",
+            "posTodas": true,
+            "motivo": "hipertensão arterial, hipertensão sistólica isolada do idoso, paciente negro (1a linha) paciente negro, idoso ou necessidade de terceira classe",
+            "nota": "Uso direto - monitorar: PA em 4 semanas; monitorar: edema de membros inferiores; monitorar: cefaleia nas primeiras semanas",
+            "dose": {
+              "texto": "5 mg; 1x/dia; contínuo; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Combinacao dose fixa",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "hctz",
+            "pos": "50/12,5 mg. Via VO. 1x/dia. Contínuo.",
+            "posTodas": true,
+            "motivo": "hipertensão estágio 2 ou meta não atingida com monoterapia (1a linha) hipertensão estágio 2 ou meta não atingida com monoterapia",
+            "nota": "Uso direto - monitorar: creatinina, potássio e sódio em 1-2 semanas; monitorar: PA sentado e em pé; monitorar: adesão · NÃO: anúria; gota ativa; hiponatremia grave; hipocalemia não corrigida · Obs: Menos potente que clortalidona. Risco de hiponatremia em idoso e de câncer de pele não melanoma: orientar fotoproteção. Não usar como monoterapia em gestante · Renal: Pouco eficaz com TFG < 30; preferir clortalidona ou diurético de alça",
+            "dose": {
+              "texto": "50/12,5 mg; 1x/dia; contínuo; max. 100/25 mg/dia",
+              "status": "ok",
+              "valor": 12.5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Betabloqueador",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "succinato_de_metoprolol",
+              "n": "Succinato de metoprolol",
+              "ap": "comprimido de liberação prolongada 25 mg",
+              "q": "",
+              "pos": "50 mg. Via VO. 1x/dia. Contínuo."
+            },
+            "motivo": "hipertensão com coronariopatia, pós-IAM, IC com fração de ejeção reduzida ou necessidade de controle de frequência (condicional)",
+            "nota": "Uso direto; não partir comprimido de liberação prolongada - monitorar: FC e PA; monitorar: broncoespasmo; monitorar: sintomas de IC; monitorar: glicemia em diabético · NÃO: asma grave; bradicardia sintomática; bloqueio AV de 2º ou 3º grau sem marca-passo; choque cardiogênico; IC descompensada · Obs: Não é primeira linha em hipertensão sem indicação específica. Não suspender abruptamente: risco de angina e taquicardia rebote",
+            "dose": {
+              "texto": "50 mg; 1x/dia; contínuo; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antagonista mineralocorticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "espironolactona",
+            "pos": "25 mg. Via VO. 1x/dia. Contínuo com reavaliação em 4 semanas.",
+            "posTodas": true,
+            "motivo": "hipertensão resistente e hiperaldosteronismo primário (resgate)",
+            "nota": "Uso direto - monitorar: potássio e creatinina em 1, 4 e 12 semanas; monitorar: PA; monitorar: ginecomastia; monitorar: sódio · NÃO: hipercalemia; TFG < 30; gestação; ginecomastia intolerável · Obs: Quarta droga da hipertensão resistente e tratamento clínico do hiperaldosteronismo. Suspender 4 semanas antes de dosar aldosterona/renina · Renal: Contraindicada se TFG < 30; não iniciar com K ≥ 5,0",
+            "dose": {
+              "texto": "25 mg; 1x/dia; contínuo com reavaliação em 4 semanas; max. 50 mg/dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Redução de sódio",
+              "ap": "",
+              "q": "",
+              "pos": "Menos de 2 g de sódio/dia (cerca de 5 g de sal); retirar o saleiro da mesa e ler rótulos de embutidos, temperos prontos e industrializados"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Padrão alimentar DASH",
+              "ap": "",
+              "q": "",
+              "pos": "Cinco ou mais porções de frutas e verduras ao dia, laticínios magros, grãos integrais, leguminosas e oleaginosas; cortar ultraprocessados"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Atividade física",
+              "ap": "",
+              "q": "",
+              "pos": "150 minutos por semana de aeróbico (30 min em 5 dias) mais 2 sessões de resistência; reduz 5–8 mmHg"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Perda de peso",
+              "ap": "",
+              "q": "",
+              "pos": "Cada 1 kg perdido equivale a cerca de 1 mmHg; alvo de 5–10% do peso em 6 meses ou IMC < 25"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Álcool",
+              "ap": "",
+              "q": "",
+              "pos": "Máximo 2 doses/dia para homem e 1 para mulher; abstinência reduz 4/2 mmHg"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Cessação do tabagismo",
+              "ap": "",
+              "q": "",
+              "pos": "Tabaco não sustenta hipertensão crônica, mas multiplica o risco cardiovascular; oferecer terapia de reposição de nicotina"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Sono e rastreio de apneia",
+              "ap": "",
+              "q": "",
+              "pos": "7–9 h por noite; aplicar escala de Epworth e pedir polissonografia se ronco, apneia presenciada ou sonolência diurna"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Automedida domiciliar padronizada",
+              "ap": "",
+              "q": "",
+              "pos": "Aparelho de braço validado, 5 min de repouso, 2 medidas pela manhã e 2 à noite por 5–7 dias antes da consulta; anotar e levar"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-03"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": []
+  },
+  "ws": {
+    "id": "CAR-03",
+    "versao": "0.2.0",
+    "arquivo": "CAR-03_hipertensao_assintomatica.json",
+    "area": "Cardiovascular",
+    "risco": "C",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

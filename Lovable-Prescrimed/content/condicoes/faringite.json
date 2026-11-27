@@ -1,0 +1,255 @@
+{
+  "id": "faringite",
+  "nome": "Faringoamigdalite aguda",
+  "cat": "Respiratório",
+  "alias": "dor de garganta amigdalite faringite pus placas brancas streptococo angina",
+  "cid": [
+    [
+      "J03",
+      "Amigdalite aguda"
+    ],
+    [
+      "J02",
+      "Faringite aguda"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "IDSA — GAS pharyngitis; Centor/McIsaac"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "RESP-03 em 2026-11-27",
+    "fundido_workspace": "RESP-05 em 2026-11-27"
+  },
+  "alerta": "Usar McIsaac (Centor+idade): febre + placas/exsudato + adenopatia cervical dolorosa + SEM tosse ± idade. 0–1: não testar nem tratar (viral). 2–3: testar (rápido/cultura). ≥4 ou teste positivo: ATB para estreptococo do grupo A. Objetivo do ATB: prevenir febre reumática e abscesso, não a dor. Diferenciais graves: abscesso peritonsilar (voz abafada, trismus, desvio de úvula — drenar/ORL), epiglotite (estridor — emergência), mononucleose (adolescente, adenopatia generalizada, hepatosplenomegalia — amoxicilina dá rash), difteria (pseudomembrana).",
+  "redFlags": [
+    "Trismus, voz abafada ('batata quente'), úvula desviada — abscesso peritonsilar: ORL/drenagem",
+    "Estridor, sialorreia, postura — epiglotite: via aérea, NÃO examinar a garganta à força",
+    "Não deglute saliva / recusa líquidos — internar para hidratação",
+    "Faringite + petéquias no palato — considerar mononucleose (atypical lymphocytes)",
+    "Tortícolis/desvio cervical — abscesso retrofaríngeo: imagem",
+    "Faringite recorrente documentada por GAS multiple vezes no ano — discutir tonsilectomia/porte"
+  ],
+  "naoUsar": [
+    "ATB viral (Centor baixo)",
+    "Amoxicilina se suspeita de mononucleose (rash)",
+    "Corticoide de rotina para dor de garganta",
+    "Penicilina + ATB adicional de rotina"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Antibiótico (McIsaac ≥2 com teste positivo, ou ≥4 empírico)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "penicilina_benzatina",
+              "n": "Penicilina benzatina (benzatina) IM",
+              "ap": "frasco-ampola 1.200.000 UI",
+              "pos": "1.200.000 UI IM dose ÚNICA em adulto (criança < 27 kg: 600.000 UI) — 1ª linha clássica: adesão perfeita por ser dose única; aplicar em vasto lateral com agulha 21-25mm.",
+              "nota": "Confirmar disponibilidade na unidade."
+            },
+            "ped": "< 27 kg: 600.000 UI IM dose única",
+            "motivo": "1ª linha — dose única garante adesão"
+          },
+          {
+            "base": "amoxicilina",
+            "pos": "500 mg VO a cada 8 h por 10 dias (ou 1 g 12/12h em adultos) — preferir em criança pelo sabor",
+            "ped": "40–50 mg/kg/dia (máx 1 g/dose) dividido 8/8 h × 10 dias",
+            "motivo": "1ª linha oral"
+          },
+          {
+            "base": "amoxclav",
+            "pos": "875/125 mg VO 12/12 h por 10 dias — se recorrente/ falha",
+            "ped": "40 mg/kg/dia (amox) dividido 8/8 h × 10 dias",
+            "motivo": "Falha/recorrência"
+          },
+          {
+            "base": "azitromicina",
+            "pos": "500 mg VO 1x/dia por 5 dias (ou 500+250+250+250+250) — ALERGIA à penicilina",
+            "ped": "12 mg/kg/dia (máx 500 mg) 1x/dia × 5 dias",
+            "motivo": "Alergia penicilina"
+          },
+          {
+            "base": "cefalexina",
+            "pos": "500 mg VO 6/6 h por 10 dias — alergia não grave à penicilina",
+            "ped": "25–50 mg/kg/dia dividido 6/6 h",
+            "motivo": "Alergia leve"
+          },
+          {
+            "base": "claritromicina",
+            "pos": "250 mg VO 12/12 h por 10 dias — alternativa em alergia",
+            "ped": "15 mg/kg/dia dividido 12/12 h",
+            "motivo": "Alternativa"
+          }
+        ]
+      },
+      {
+        "nome": "Sintomático (dor e febre)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "1 g VO 6/6 h se dor/febre (máx 4 g/dia)",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Dor de garganta dói: analgesia de verdade"
+          },
+          {
+            "base": "paracetamol",
+            "pos": "1 g VO 6/6 h (máx 4 g/dia)",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "ibuprofeno",
+            "pos": "400–600 mg VO 8/8 h com alimento por 3 dias — anti-inflamatório local ajuda a deglutir",
+            "ped": "5–10 mg/kg 8/8 h (> 6 meses)",
+            "motivo": "Dor inflamatória intensa"
+          },
+          {
+            "novo": {
+              "id": "gargarejo",
+              "n": "Gargarejos e medidas locais",
+              "ap": "",
+              "pos": "Água morna com sal 3-4x/dia; pastilhas anestésicas (benzocaína) em adulto; líquidos frios/mornos conforme alívio; mel (> 1 ano) para tosse irritativa associada."
+            },
+            "motivo": "Sintomático sem risco"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno se",
+              "ap": "",
+              "pos": "Não consegue engolir água/droga, voz abafada, dificuldade para abrir a boca, febre > 48 h após iniciar o antibiótico, inchaço de um lado só do pescoço. Completar 10 dias do antibiótico mesmo melhorando (protege o coração — febre reumática)."
+            },
+            "motivo": "Complicações locais e adesão"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Hidratação e alimentação de consistência macia e fria",
+              "ap": "",
+              "q": "",
+              "pos": "Ofertar 1,5 a 2 L de líquido por dia em pequenos volumes frequentes; sorvete, iogurte gelado e purês são aceitos melhor que alimento seco e reduzem a dor ao engolir. Evitar ácido, condimento e alimento duro"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Gargarejo com água morna e sal",
+              "ap": "",
+              "q": "",
+              "pos": "Uma colher de chá de sal em 250 mL de água morna, 3 a 4 vezes ao dia. O efeito é modesto e de curta duração, mas é barato, seguro e ajuda na higiene da orofaringe"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Repouso e afastamento de escola ou trabalho",
+              "ap": "",
+              "q": "",
+              "pos": "Afastar por 12 a 24 h após o início do antibiótico na forma estreptocócica, quando a febre cede; na viral, afastar enquanto houver febre. Manter repouso relativo e sono adequado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Etiqueta respiratória e higiene das mãos",
+              "ap": "",
+              "q": "",
+              "pos": "Cobrir a boca ao tossir, descartar o lenço, lavar as mãos com água e sabão por 20 s ou álcool 70%. Não compartilhar copo, talher, toalha ou escova de dentes durante o período sintomático"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Não introduzir objeto nem cotonete na garganta",
+              "ap": "",
+              "q": "",
+              "pos": "Abaixador de língua improvisado ou espátula caseira podem traumatizar a úvula e provocar náusea e sangramento; a inspeção deve ser feita com boa iluminação e técnica, não com objeto doméstico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Controle do ambiente escolar e comunicação de caso",
+              "ap": "",
+              "q": "",
+              "pos": "Em caso de estreptococo ou escarlatina, avisar a creche ou escola para vigilância de novos casos nos 7 dias seguintes; não é necessário tratar contatos assintomáticos nem fechar a turma"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Reavaliação programada em 48 a 72 horas",
+              "ap": "",
+              "q": "",
+              "pos": "Retorno presencial ou contato telefônico documentado com temperatura, dor, capacidade de deglutição e tolerância ao antibiótico; é o que detecta abscesso em formação e mononucleose"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "RESP-03"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Se internar (complicada)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "penicilina_crist",
+            "motivo": "2–4 MU EV 4/4h — faringite complicada/abscesso (junto com drenagem)"
+          },
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV 6/6 h"
+          },
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1 g EV 1x/dia — alternativa EV"
+          }
+        ]
+      }
+    ]
+  }
+}

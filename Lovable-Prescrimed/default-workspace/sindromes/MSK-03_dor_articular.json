@@ -1,0 +1,1280 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "MSK-03",
+    "area": "Musculoesquelético",
+    "nome": "Dor articular aguda (ombro/joelho)",
+    "aliases": [
+      "dor articular",
+      "artralgia",
+      "monoartrite aguda",
+      "joelho quente",
+      "derrame articular",
+      "dor no joelho",
+      "dor no ombro",
+      "ombro doloroso",
+      "artrite aguda",
+      "bursite",
+      "tendinite aguda"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Dor articular aguda de ombro ou joelho é, na prática, uma pergunta única: é artrite séptica? A resposta não vem da clínica nem da imagem, vem da artrocentese. Febre, calafrio, incapacidade de apoiar, prótese articular, imunossupressão e uso de drogas injetáveis aumentam a probabilidade, mas a ausência deles não exclui: até metade das artrites sépticas chega sem febre. Depois de afastar infecção, o quadro se separa em cinco grupos com conduta própria — gota e pseudogota (cristais no líquido sinovial), bursite (bolsa flutuante periarticular), tendinite (dor à mobilização ativa contra resistência), hemartrose (sangue, trauma ou anticoagulação) e artrite inflamatória (espondiloartrite, artrite reumatoide inicial, viral). O erro que mais custa é tratar joelho quente com AINE e liberar o paciente, e o segundo é infiltrar corticoide sem ter analisado o líquido. A ordem correta é: puncionar, olhar o líquido, tratar o diagnóstico e só então considerar corticoide intra-articular.",
+    "inclusao": [
+      "Monoartrite aguda de joelho ou ombro com menos de 2 semanas de evolução",
+      "Joelho quente com derrame, com ou sem febre",
+      "Dor periarticular com bursa flutuante ou dor à mobilização ativa contra resistência",
+      "Hemartrose após trauma leve ou em paciente anticoagulado",
+      "Primeira crise de gota ou pseudogota com articulação inflamada",
+      "Suspeita de artrite séptica que precisa de artrocentese para excluir"
+    ],
+    "exclusao": [
+      {
+        "situacao": "trauma com deformidade, instabilidade ou suspeita de fratura articular",
+        "fluxo": "TRA-05 fratura e ortopedia"
+      },
+      {
+        "situacao": "prótese articular com dor e febre",
+        "fluxo": "artrite periprotética com ortopedia e punção obrigatória"
+      },
+      {
+        "situacao": "dor cervical ou de cintura escapular que irradia para o ombro sem sinovite",
+        "fluxo": "MSK-02 cervicalgia"
+      },
+      {
+        "situacao": "poliartrite crônica de mais de 6 semanas sem sinais sistêmicos",
+        "fluxo": "reumatologia e MSK-10 osteoartrite"
+      },
+      {
+        "situacao": "eritema e calor de pele com porta de entrada, sem derrame articular",
+        "fluxo": "DERM-01 celulite"
+      },
+      {
+        "situacao": "dor articular com hipotensão, confusão ou lactato elevado",
+        "fluxo": "INF-01 sepse"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "articulação quente, dolorosa e com derrame, com ou sem febre",
+        "por_que": "artrite séptica destrói cartilagem em 24 a 48 horas",
+        "acao": "artrocentese imediata e antibiótico empírico após a coleta; não infiltrar e não liberar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "prótese articular com dor nova, derrame ou febre",
+        "por_que": "artrite periprotética com risco de falha da prótese e sepse",
+        "acao": "punção com cultura e celularidade, ortopedia no mesmo dia; nunca infiltrar corticoide",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "incapacidade total de apoiar o peso com dor intensa e atitude antálgica",
+        "por_que": "derrame tenso, séptica ou fratura oculta",
+        "acao": "punção, imagem e internação para observação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "imunossupressão, corticoide crônico, diabetes, quimioterapia, HIV avançado ou uso de drogas injetáveis",
+        "por_que": "séptica com pouca resposta inflamatória e risco de germe atípico ou MRSA",
+        "acao": "punção precoce mesmo sem febre; internação e cobertura ampliada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "hemartrose tensa em anticoagulado, com queda do hematócrito",
+        "por_que": "sangramento intra-articular com risco de síndrome compartimental",
+        "acao": "punção, reversão da anticoagulação e monitorização de hematócrito",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "dor desproporcional, parestesia ou dor à mobilização passiva do joelho com compartimento tenso",
+        "por_que": "síndrome compartimental ou lesão neurovascular",
+        "acao": "avaliação cirúrgica imediata e medida de pressão compartimental",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "dor noturna contínua, perda de peso e idade acima de 50 anos com monoartrite arrastada",
+        "por_que": "metástase óssea ou sinovite neoplásica",
+        "acao": "radiografia, ressonância e investigação oncológica",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "febre, calafrio e rigidez matinal acima de 1 hora em várias articulações",
+        "por_que": "artrite inflamatória sistêmica ou viral com risco de evolução para artrite reumatoide",
+        "acao": "provas inflamatórias, sorologia dirigida e reumatologia em 2 semanas",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Teve febre, calafrio ou mal-estar nas últimas 48 horas?",
+      "Consegue apoiar o peso e dar quatro passos? Consegue elevar o braço?",
+      "O início foi em horas (cristal, trauma) ou em dias (infeccioso, inflamatório)?",
+      "Teve trauma, queda, torção, injeção ou cirurgia recente na articulação?",
+      "Tem prótese, diabetes, uso de corticoide, quimioterapia ou uso de drogas injetáveis?",
+      "Já teve crise de gota, cálculo renal, ou usa diurético, tacrolimo ou ciclosporina?",
+      "A dor é na articulação ou ao redor dela — piora ao levantar o braço contra resistência ou ao apoiar?",
+      "Usa anticoagulante? Tem sangramento fácil ou plaquetopenia?",
+      "Tem rigidez matinal acima de 1 hora, dor em outras articulações, olho vermelho ou dor lombar inflamatória?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Joelho quente com derrame, com ou sem febre, sem trauma",
+        "escolha": "Artrocentese diagnóstica antes de qualquer fármaco; não infiltrar corticoide e não liberar com AINE",
+        "porque": "É a punção que separa séptica de cristal e de inflamatória; o líquido com mais de 50.000 leucócitos por mm3 ou Gram positivo indica infecção. AINE e corticoide aliviam o sintoma e apagam o sinal, e a séptica não tratada destrói a articulação em 48 horas"
+      },
+      {
+        "cenario": "Líquido sinovial turvo ou purulento, Gram positivo ou leucócitos acima de 50.000/mm3",
+        "escolha": "Internação, ceftriaxona 2 g 1x/dia + vancomicina se risco de MRSA, após hemoculturas; descalonar quando a cultura sair",
+        "porque": "S. aureus é o agente mais comum e N. gonorrhoeae é o mais comum em adulto jovem sexualmente ativo. O antibiótico empírico precisa cobrir os dois, e a coleta imediata melhora a sensibilidade da cultura sem atrasar o tratamento"
+      },
+      {
+        "cenario": "Líquido com cristais (urato monossódico ou pirofosfato), sem bactéria e com Gram negativo",
+        "escolha": "AINE em dose plena por 5 a 7 dias; colchicina em dose baixa como alternativa ou associação; corticoide intra-articular se ambos contraindicados",
+        "porque": "A crise de cristais responde em 48 a 72 horas ao anti-inflamatório. Colchicina em dose baixa tem a mesma eficácia da dose alta com muito menos diarreia, e a infiltração de corticoide resolve a monoartrite quando o paciente não pode usar via sistêmica"
+      },
+      {
+        "cenario": "Gota em doença renal crônica, insuficiência cardíaca, anticoagulação plena ou úlcera prévia",
+        "escolha": "Colchicina 0,5 mg 1x/dia (com ajuste renal) ou corticoide intra-articular; prednisona 30 a 40 mg por 5 dias se a articulação não for puncionável",
+        "porque": "AINE é o que está contraindicado nesse perfil, e a colchicina em dose baixa mantém eficácia com menos efeito gastrointestinal. O corticoide intra-articular concentra o efeito sem exposição sistêmica"
+      },
+      {
+        "cenario": "Bursite pré-patelar ou olecraniana flutuante, sem celulite e sem febre",
+        "escolha": "Aspiração da bursa com cultura, AINE por 5 a 7 dias, repouso relativo e compressão; antibiótico só com celulite, febre ou líquido purulento",
+        "porque": "Bursite traumática ou por pressão resolve com aspiração e anti-inflamatório. Antibiótico indiscriminado seleciona resistência, e a bursite séptica é a exceção, não a regra"
+      },
+      {
+        "cenario": "Dor periarticular do ombro que piora à abdução contra resistência, sem derrame",
+        "escolha": "AINE por 7 a 10 dias, fisioterapia com isometria e progressão de carga; infiltração subacromial de corticoide se falha após 2 a 3 semanas",
+        "porque": "Tendinopatia não tem líquido sinovial para puncionar e responde a carga progressiva. A infiltração repetida no tendão aumenta risco de ruptura e deve ser limitada a poucas aplicações"
+      },
+      {
+        "cenario": "Hemartrose após trauma leve ou em anticoagulado, com derrame tenso",
+        "escolha": "Punção para alívio e análise, reversão da anticoagulação conforme o fármaco, imobilização curta de 24 a 72 horas e descarga",
+        "porque": "Sangue intra-articular distende a cápsula, causa dor intensa e condrólise; a reversão evita ressangramento. Imobilização longa leva a rigidez e atrofia sem benefício"
+      },
+      {
+        "cenario": "Monoartrite aguda em paciente com febre e sinais de toxemia, sem possibilidade de puncionar no serviço",
+        "escolha": "Tratar como séptica, colher hemoculturas, iniciar ceftriaxona e transferir para serviço com punção e ortopedia",
+        "porque": "Na dúvida entre séptica e cristal, o custo de errar para o lado da infecção é muito menor. Tratar como gota às cegas e devolver o paciente é a causa clássica de artrite destruída"
+      },
+      {
+        "cenario": "Artrite inflamatória inicial (espondiloartrite, artrite reumatoide, viral) sem infecção",
+        "escolha": "AINE por 2 a 4 semanas, reumatologia em até 2 semanas e corticoide sistêmico apenas como ponte curta",
+        "porque": "A janela de oportunidade da artrite reumatoide é de semanas, e o tratamento modificador muda o prognóstico. Corticoide prolongado sem diagnóstico atrasa o encaminhamento e mascara a evolução"
+      },
+      {
+        "cenario": "Pseudogota (pirofosfato de cálcio) em idoso com joelho ou punho inflamado",
+        "escolha": "AINE em dose baixa pelo menor tempo, colchicina 0,5 mg 12/12 h ou corticoide intra-articular; investigar hiperparatireoidismo, hemocromatose e hipomagnesemia",
+        "porque": "Idoso tem mais risco de lesão renal e sangramento com AINE, e a pseudogota recorrente é marcador de doença metabólica subjacente"
+      },
+      {
+        "cenario": "Pedido de corticoide intra-articular em articulação quente ainda não puncionada",
+        "escolha": "Não infiltrar: puncionar primeiro e só infiltrar com líquido claro, cultura negativa e Gram negativo",
+        "porque": "Corticoide em articulação infectada piora a infecção, suprime a resposta local e retarda o diagnóstico. É o erro iatrogênico mais grave desta síndrome"
+      },
+      {
+        "cenario": "Paciente estável com suspeita de séptica e cultura ainda não colhida",
+        "escolha": "Não iniciar antibiótico antes da punção e das hemoculturas",
+        "porque": "Uma dose prévia esteriliza o líquido em parte dos casos e impede o diagnóstico etiológico e o descalonamento. A exceção é instabilidade hemodinâmica, em que a coleta não pode atrasar a primeira dose"
+      },
+      {
+        "cenario": "Solicitação de ácido úrico para confirmar gota durante a crise",
+        "escolha": "Não usar o ácido úrico para diagnosticar a crise; o diagnóstico é do líquido sinovial",
+        "porque": "O ácido úrico fica normal em até um terço das crises agudas e pode estar alto em portador assintomático; usá-lo como critério leva a tratar séptica como gota"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "primeira_linha",
+        "indicacao": "crise de gota, pseudogota e artrite inflamatória sem suspeita de infecção, em paciente sem contraindicação a AINE",
+        "dose": "600 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h, com alimento",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "2.400 mg/dia",
+        "contraindicacoes": [
+          "suspeita de artrite séptica até a artrocentese",
+          "úlcera péptica ativa ou sangramento digestivo recente",
+          "doença renal crônica com ClCr abaixo de 30 mL/min",
+          "insuficiência cardíaca descompensada",
+          "anticoagulação plena",
+          "hemartrose com coagulopatia ativa",
+          "gestação após 20 semanas",
+          "asma induzida por AINE"
+        ],
+        "efeitos_adversos": [
+          "dispepsia",
+          "náusea",
+          "sangramento digestivo",
+          "lesão renal aguda",
+          "retenção hídrica",
+          "elevação da pressão arterial"
+        ],
+        "apresentacoes": [
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "comprimido 600 mg",
+          "cápsula mole 200 mg",
+          "suspensão oral 100 mg/mL",
+          "gotas 50 mg/mL"
+        ],
+        "preparo": "Uso direto, com alimento ou após a refeição",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor e amplitude articular em 48 a 72 h",
+          "creatinina se uso acima de 3 dias ou doença renal",
+          "pressão arterial e edema",
+          "melena ou dor epigástrica",
+          "glicemia em diabético"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: contraindicado; entre 30 e 60 mL/min: menor dose pelo menor tempo com creatinina seriada",
+        "ajuste_hepatico": "Evitar em hepatopatia grave e em cirrose com ascite",
+        "observacoes": "Não usar antes de excluir infecção. Não associar a outro AINE. Suspender em 7 dias e reavaliar se não houver melhora",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "naproxeno",
+        "papel": "alternativa",
+        "indicacao": "alternativa ao ibuprofeno na crise de cristais e na artrite inflamatória sem infecção",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h, com ataque de 500 mg na primeira tomada",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "1.000 mg/dia",
+        "contraindicacoes": [
+          "suspeita de artrite séptica até a artrocentese",
+          "úlcera péptica ativa",
+          "ClCr abaixo de 30 mL/min",
+          "insuficiência cardíaca descompensada",
+          "anticoagulação plena",
+          "gestação após 20 semanas",
+          "alergia a salicilato"
+        ],
+        "efeitos_adversos": [
+          "dispepsia",
+          "sangramento digestivo",
+          "lesão renal",
+          "retenção hídrica",
+          "cefaleia"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg",
+          "comprimido 500 mg",
+          "comprimido 550 mg (naproxeno sódico)",
+          "suspensão oral 125 mg/5 mL"
+        ],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor e função articular",
+          "creatinina",
+          "pressão arterial",
+          "sangramento digestivo"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: contraindicado; 30 a 60 mL/min: dose única diária",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia leve a moderada; evitar em grave",
+        "observacoes": "Meia-vida longa permite 12/12 h, o que melhora adesão. Equivalente ao ibuprofeno em eficácia; escolher um dos dois, nunca os dois",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antigotoso",
+        "agente": "colchicina",
+        "papel": "primeira_linha",
+        "indicacao": "crise de gota e pseudogota, e profilaxia de crise ao iniciar hipouricemiante",
+        "dose": "1 mg no primeiro sinal, 0,5 mg após 1 hora e, a partir de 12 horas, 0,5 mg 12/12 h",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "esquema de ataque e depois 12/12 h",
+        "duracao": "até 7 dias na crise; 3 a 6 meses na profilaxia",
+        "dose_maxima": "2 mg no primeiro dia; 1 mg/dia nos dias seguintes",
+        "contraindicacoes": [
+          "ClCr abaixo de 30 mL/min sem ajuste",
+          "hepatopatia grave",
+          "uso de claritromicina, cetoconazol, itraconazol, ciclosporina, verapamil ou diltiazem",
+          "diarreia ativa",
+          "discrasia sanguínea",
+          "hipersensibilidade à colchicina"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "vômito",
+          "dor abdominal",
+          "mialgia",
+          "neuropatia periférica",
+          "mielotoxicidade"
+        ],
+        "apresentacoes": [
+          "comprimido 0,5 mg",
+          "comprimido 0,6 mg",
+          "drágea 0,5 mg"
+        ],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número de evacuações e diarreia",
+          "dor abdominal e vômito",
+          "hemograma se uso acima de 2 semanas",
+          "creatinina e CK se mialgia ou fraqueza"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: contraindicada na crise; 30 a 60 mL/min: 0,5 mg 1x/dia, máximo 0,5 mg/dia",
+        "ajuste_hepatico": "Contraindicada em hepatopatia grave; reduzir dose em Child B",
+        "observacoes": "Dose baixa é tão eficaz quanto a dose alta e causa muito menos diarreia. Suspender quando a crise resolver. Não usar como analgésico de manutenção",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisona",
+        "papel": "condicional",
+        "indicacao": "gota ou pseudogota com AINE e colchicina contraindicados, e ponte curta na artrite inflamatória sem diagnóstico fechado",
+        "dose": "30 a 40 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "5 dias na crise; desmame se uso acima de 2 semanas",
+        "dose_maxima": "40 mg/dia",
+        "contraindicacoes": [
+          "suspeita de artrite séptica até a artrocentese",
+          "infecção sistêmica não tratada",
+          "diabetes descompensado",
+          "úlcera péptica ativa",
+          "psicose induzida por corticoide",
+          "vacina viva recente"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "insônia",
+          "retenção hídrica",
+          "elevação da pressão arterial",
+          "dispepsia",
+          "alteração de humor",
+          "supressão adrenal com uso prolongado"
+        ],
+        "apresentacoes": [
+          "comprimido 1 mg",
+          "comprimido 5 mg",
+          "comprimido 20 mg",
+          "comprimido 30 mg"
+        ],
+        "preparo": "Uso direto, com alimento pela manhã",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia em diabético por 48 h",
+          "pressão arterial e edema",
+          "humor e insônia",
+          "dor e função articular em 48 a 72 h"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em curso curto; preferir prednisolona em hepatopatia grave",
+        "observacoes": "Alternativa, não primeira linha. Não prescrever antes de puncionar quando há suspeita de infecção. Avisar o diabético sobre a hiperglicemia esperada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_intra_articular",
+        "agente": "triancinolona hexacetonida",
+        "papel": "condicional",
+        "indicacao": "gota, pseudogota, bursite ou artrite inflamatória com líquido sinovial já analisado e infecção excluída",
+        "dose": "20 mg em joelho; 10 a 20 mg em ombro subacromial; 5 a 10 mg em bursa",
+        "unidade": "mg",
+        "via": "intra-articular ou periarticular",
+        "frequencia": "dose única",
+        "duracao": "dose única; no máximo 3 infiltrações por articulação em 12 meses",
+        "dose_maxima": "40 mg por articulação por infiltração; 3 infiltrações por ano",
+        "contraindicacoes": [
+          "infecção articular suspeita ou confirmada",
+          "bacteremia",
+          "prótese articular",
+          "celulite ou ferida no trajeto da agulha",
+          "coagulopatia grave sem correção",
+          "fratura intra-articular",
+          "instabilidade articular grave",
+          "alergia a corticoide"
+        ],
+        "efeitos_adversos": [
+          "artrite séptica iatrogênica",
+          "hemartrose",
+          "atrofia de pele e hipopigmentação no trajeto",
+          "hiperglicemia transitória",
+          "rubor e dor pós-infiltração",
+          "ruptura de tendão se injetado no tendão"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 20 mg/mL (1 mL)",
+          "suspensão injetável 40 mg/mL (1 mL)"
+        ],
+        "preparo": "Não diluir; agulha 20 a 22 G; assepsia rigorosa da pele e do campo; nunca injetar dentro do tendão",
+        "tempo_infusao": "bolus intra-articular",
+        "monitorizacao": [
+          "glicemia por 48 h em diabético",
+          "dor e rubor nas primeiras 48 h",
+          "febre e derrame após 24 a 72 h",
+          "pele e subcutâneo no local"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só depois de analisar o líquido sinovial. Infiltrar articulação com suspeita de infecção agrava a séptica e apaga os sinais. Repouso relativo por 24 h após a aplicação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_cefalosporina",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "artrite séptica empírica após artrocentese e coleta de cultura",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "2 a 3 semanas, com 14 dias venosos e complemento oral após melhora clínica",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia grave a cefalosporina",
+          "neonato com hiperbilirrubinemia",
+          "infusão concomitante com solução contendo cálcio"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "colite por C. difficile",
+          "cristalúria",
+          "lama biliar",
+          "neutropenia"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g",
+          "solução injetável 1 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "hemograma e creatinina semanais",
+          "diarreia e colite",
+          "melhora da dor e do derrame em 48 a 72 h",
+          "cultura e antibiograma para descalonar"
+        ],
+        "ajuste_renal": "Sem ajuste, inclusive em diálise",
+        "ajuste_hepatico": "Sem ajuste; monitorar enzimas hepáticas",
+        "observacoes": "Cobre S. aureus, Streptococcus e N. gonorrhoeae quando associada à vancomicina. Não atrasar a primeira dose após a punção. Colher hemoculturas e material de orofaringe, uretra e reto em jovem sexualmente ativo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_glicopeptideo",
+        "agente": "vancomicina",
+        "papel": "condicional",
+        "indicacao": "suspeita de MRSA em artrite séptica com prótese, drogas IV, hospitalização recente ou diálise",
+        "dose": "15 a 20 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "8/8 h a 12/12 h, guiado por função renal e nível sérico",
+        "duracao": "2 a 3 semanas, conforme cultura",
+        "dose_maxima": "2 g por dose",
+        "contraindicacoes": [
+          "alergia grave a glicopeptídeo",
+          "insuficiência renal sem ajuste de dose"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade",
+          "síndrome do homem vermelho",
+          "neutropenia",
+          "ototoxicidade",
+          "flebite"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "frasco-ampola 1 g com diluente"
+        ],
+        "preparo": "Reconstituir em 10 mL de água; diluir 1 g em 200 mL de SF 0,9% ou SG 5% (concentração máxima 5 mg/mL)",
+        "tempo_infusao": "60 minutos por grama (2 g em 120 minutos)",
+        "monitorizacao": [
+          "vale sérico antes da 4ª dose (alvo 15 a 20 mg/L) ou AUC/MIC 400 a 600",
+          "creatinina a cada 48 h",
+          "rubor e hipotensão durante a infusão",
+          "hemograma se uso acima de 7 dias"
+        ],
+        "ajuste_renal": "ClCr 30 a 60 mL/min: 15 mg/kg 24/24 h; ClCr 15 a 30 mL/min: dose guiada por vale; diálise: ataque de 20 mg/kg e redose pelo nível",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Associar à ceftriaxona na suspeita de MRSA e descalonar para oxacilina quando a cultura mostrar MSSA. Não usar como monoterapia empírica na séptica comunitária",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_penicilinico",
+        "agente": "oxacilina",
+        "papel": "alternativa",
+        "indicacao": "MSSA confirmado em cultura e descalonamento de vancomicina",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "4/4 h",
+        "duracao": "2 a 3 semanas",
+        "dose_maxima": "12 g/dia",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "insuficiência renal com ClCr abaixo de 10 mL/min sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade",
+          "neutropenia",
+          "flebite",
+          "rash",
+          "nefrite intersticial"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 a 60 minutos",
+        "monitorizacao": [
+          "TGO, TGP e fosfatase alcalina semanais",
+          "hemograma",
+          "creatinina",
+          "flebite no local da punção"
+        ],
+        "ajuste_renal": "Sem ajuste; com ClCr abaixo de 30 mL/min, espaçar para 6/6 h",
+        "ajuste_hepatico": "Monitorar transaminases; reduzir dose em hepatopatia grave",
+        "observacoes": "Preferir à vancomicina quando o agente é MSSA: melhor penetração articular e menor nefrotoxicidade. Aguardar a cultura quando o paciente está estável",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "analgesia adjuvante e controle da dor quando AINE é contraindicado",
+        "dose": "750 mg a 1 g",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "4 g/dia; 3 g/dia em hepatopatia, alcoolismo ou desnutrição",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose alta",
+          "náusea",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "frasco IV 10 mg/mL (500 mg/50 mL e 1.000 mg/100 mL)"
+        ],
+        "preparo": "Via oral: uso direto. Via IV: não diluir, infundir o frasco diretamente",
+        "tempo_infusao": "15 minutos na via intravenosa",
+        "monitorizacao": [
+          "soma da dose diária de todas as fontes, incluindo associações",
+          "TGO, TGP e INR se uso acima de 3 dias ou hepatopatia",
+          "intensidade da dor"
+        ],
+        "ajuste_renal": "Sem ajuste; espaçar para 6/6 h com ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia grave",
+        "observacoes": "Não substitui a punção no joelho quente: serve para controlar a dor enquanto o diagnóstico é definido",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "ibp",
+        "agente": "omeprazol",
+        "papel": "condicional",
+        "indicacao": "gastroproteção durante uso de AINE ou corticoide sistêmico em paciente com fator de risco",
+        "dose": "20 mg; 40 mg se úlcera prévia ou anticoagulação",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "1x/dia em jejum",
+        "duracao": "enquanto durar o AINE ou o corticoide",
+        "dose_maxima": "40 mg/dia",
+        "contraindicacoes": [
+          "alergia a benzimidazol",
+          "uso concomitante de nelfinavir"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "diarreia",
+          "hipomagnesemia",
+          "colite por C. difficile",
+          "fratura em uso prolongado"
+        ],
+        "apresentacoes": [
+          "cápsula 10 mg",
+          "cápsula 20 mg",
+          "cápsula 40 mg",
+          "comprimido 20 mg",
+          "frasco IV 40 mg"
+        ],
+        "preparo": "Via oral: uso direto em jejum. Via IV: reconstituir em 10 mL e diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "20 a 30 minutos na via intravenosa",
+        "monitorizacao": [
+          "sintomas dispépticos",
+          "magnésio se uso acima de 8 semanas",
+          "reavaliar a necessidade de manter"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em Child B e C",
+        "observacoes": "Indicado apenas com fator de risco (idade acima de 65 anos, úlcera prévia, anticoagulante, AAS). Não é obrigatório em AINE de 5 dias em adulto jovem",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "hipouricemiante",
+        "agente": "alopurinol",
+        "papel": "condicional",
+        "indicacao": "gota com indicação de terapia de manutenção, iniciada com cobertura anti-inflamatória e nunca para tratar a crise",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia após a refeição; titular a cada 2 a 4 semanas",
+        "duracao": "uso contínuo",
+        "dose_maxima": "800 mg/dia; 300 mg/dia na maioria dos pacientes",
+        "contraindicacoes": [
+          "hipersensibilidade ao alopurinol",
+          "crise aguda sem cobertura anti-inflamatória",
+          "insuficiência renal sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "rash cutâneo",
+          "síndrome de hipersensibilidade com febre e eosinofilia",
+          "hepatotoxicidade",
+          "crise desencadeada no início",
+          "nefrolitíase"
+        ],
+        "apresentacoes": [
+          "comprimido 100 mg",
+          "comprimido 300 mg"
+        ],
+        "preparo": "Uso direto após a refeição",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "ácido úrico a cada 2 a 4 semanas até o alvo",
+          "rash, febre e eosinofilia",
+          "TGO, TGP e creatinina",
+          "frequência de crises"
+        ],
+        "ajuste_renal": "ClCr 30 a 60 mL/min: iniciar 50 a 100 mg/dia; ClCr abaixo de 30 mL/min: 50 mg/dia ou em dias alternados, titular pelo ácido úrico",
+        "ajuste_hepatico": "Reduzir dose e monitorar transaminases em hepatopatia",
+        "observacoes": "Não trata a crise e não deve ser iniciado isoladamente sem AINE, colchicina ou corticoide. Se o paciente já usa, não suspender durante a crise",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Descarga e proteção articular",
+        "detalhe": "Muletas com apoio parcial do lado oposto por 3 a 7 dias no joelho; tipoia ou sling no ombro por 24 a 72 h. Descarga total apenas enquanto a infecção não for excluída"
+      },
+      {
+        "medida": "Crioterapia nas primeiras 48 a 72 horas",
+        "detalhe": "Gelo por 15 a 20 minutos, 3 a 4 vezes ao dia, com pano entre a pele e a bolsa; não usar calor na fase aguda de cristal ou trauma"
+      },
+      {
+        "medida": "Elevação e compressão",
+        "detalhe": "Membro elevado acima do nível do coração nas primeiras 48 h; faixa elástica em derrame moderado, sem compressão em suspeita de infecção cutânea"
+      },
+      {
+        "medida": "Imobilização curta e posicionamento",
+        "detalhe": "Joelho em extensão e ombro em leve abdução por 24 a 72 h apenas para conforto; retirar precocemente para evitar rigidez capsular"
+      },
+      {
+        "medida": "Mobilização e exercício precoce",
+        "detalhe": "Isometria de quadríceps e de rotadores do ombro desde o primeiro dia, mobilização passiva suave e progressão para ativo-assistido conforme a dor"
+      },
+      {
+        "medida": "Fisioterapia dirigida por diagnóstico",
+        "detalhe": "Tendinopatia: carga progressiva e exercício excêntrico por 8 a 12 semanas. Artrite inflamatória: mobilidade e fortalecimento sem carga axial alta durante a crise"
+      },
+      {
+        "medida": "Educação e reavaliação programada",
+        "detalhe": "Explicar que febre, piora da dor ou incapacidade de apoiar exigem retorno imediato; marcar reavaliação em 48 a 72 h para todo quadro puncionado ou com corticoide intra-articular"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Artrocentese diagnóstica e terapêutica do joelho",
+        "indicacao": "todo joelho quente com derrame, sem trauma, e sempre antes de infiltração de corticoide",
+        "tecnica": "Assepsia e campos estéreis, portal superolateral ou medial com agulha 18 a 20 G, aspiração até esvaziar; enviar celularidade com diferencial, Gram, cultura e antibiograma, pesquisa de cristais por luz polarizada e citologia se suspeita de neoplasia",
+        "complicacoes": "Infecção iatrogênica, hemartrose, dor, lesão de cartilagem, punção seca"
+      },
+      {
+        "nome": "Artrocentese de ombro guiada por ultrassom",
+        "indicacao": "derrame de ombro duvidoso, articulação profunda ou punção às cegas falha",
+        "tecnica": "Identificar o intervalo rotador ou a janela posterior com transdutor linear; punção em tempo real com agulha 20 a 22 G",
+        "complicacoes": "Pneumotórax raro em abordagem anterior baixa, lesão de tendão, sangramento"
+      },
+      {
+        "nome": "Aspiração de bursa pré-patelar ou olecraniana",
+        "indicacao": "bursa flutuante, dolorosa, com ou sem calor local",
+        "tecnica": "Assepsia, agulha 18 G no ponto de maior flutuação, aspiração completa e curativo compressivo; enviar cultura e Gram",
+        "complicacoes": "Infecção iatrogênica, fístula persistente, recidiva por não tratar a causa de pressão"
+      },
+      {
+        "nome": "Infiltração intra-articular ou subacromial de corticoide",
+        "indicacao": "gota, pseudogota, bursite ou tendinopatia com infecção excluída e falha do tratamento oral",
+        "tecnica": "Após analisar o líquido sinovial, assepsia rigorosa, agulha 20 a 22 G no portal já usado para a punção, injeção lenta de 20 mg no joelho ou 10 a 20 mg no ombro",
+        "complicacoes": "Artrite séptica iatrogênica, hemartrose, atrofia de pele, ruptura de tendão, rubor pós-infiltração"
+      },
+      {
+        "nome": "Radiografia simples da articulação",
+        "indicacao": "todo primeiro episódio de monoartrite e todo trauma",
+        "tecnica": "Duas ou três incidências da articulação, com avaliação de fratura, derrame, calcificação condrocalcinosa e sinais de artropatia",
+        "complicacoes": "Irradiação; não exclui artrite séptica e não substitui a punção"
+      },
+      {
+        "nome": "Ultrassonografia articular à beira-leito",
+        "indicacao": "confirmar derrame, diferenciar bursa de articulação e guiar punção",
+        "tecnica": "Transdutor linear de alta frequência, cortes longitudinal e transversal, comparação com o lado sadio, avaliação de sinóvia e líquido",
+        "complicacoes": "Dependência do operador; não define o agente infeccioso"
+      },
+      {
+        "nome": "Artroscopia com lavagem articular",
+        "indicacao": "artrite séptica com falha de resposta em 48 a 72 h, articulação com septos, prótese ou corpo estranho",
+        "tecnica": "Lavagem com soro fisiológico sob visão direta e sinovectomia parcial, com coleta de material para cultura",
+        "complicacoes": "Lesão de cartilagem, infecção, trombose, síndrome compartimental por extravasamento"
+      }
+    ],
+    "metas": [
+      "Artrocentese realizada em até 2 horas da suspeita de artrite séptica, com antibiótico iniciado na primeira hora após a coleta",
+      "Nenhuma infiltração de corticoide intra-articular sem líquido sinovial analisado e cultura solicitada",
+      "Dor abaixo de 3/10 e redução do derrame em 48 a 72 horas",
+      "Resolução da crise de cristais em 5 a 7 dias, com retorno à função prévia",
+      "Gota com ácido úrico abaixo de 6 mg/dL após 3 a 6 meses de hipouricemiante titulado",
+      "Nenhum paciente com joelho quente liberado com AINE e sem punção",
+      "Reavaliação registrada em 48 a 72 horas para todo paciente puncionado ou infiltrado"
+    ],
+    "fluxo": [
+      "Triagem: monoartrite aguda de joelho ou ombro — pesquisar febre, prótese, imunossupressão, anticoagulação e trauma",
+      "Puncionar antes de tratar: artrocentese com celularidade, Gram, cultura e cristais, e hemoculturas se febre",
+      "Ler o líquido: purulento, Gram positivo ou leucócitos acima de 50.000/mm3 indicam artrite séptica; cristais indicam gota ou pseudogota; líquido hemorrágico indica hemartrose; claro com poucas células sugere inflamatória ou viral",
+      "Séptica: internação, ceftriaxona 2 g 1x/dia, vancomicina se risco de MRSA, analgesia e avaliação ortopédica para lavagem se não houver melhora em 48 a 72 h",
+      "Cristais: AINE em dose plena ou colchicina em dose baixa; corticoide intra-articular se via sistêmica contraindicada",
+      "Bursite ou tendinite: aspirar a bursa, AINE, repouso relativo e fisioterapia; antibiótico apenas com celulite ou líquido purulento",
+      "Hemartrose: punção, reversão da anticoagulação e imobilização curta de 24 a 72 h",
+      "Inflamatória: AINE por 2 a 4 semanas, provas inflamatórias e reumatologia em até 2 semanas",
+      "Reavaliar em 48 a 72 h: se piora ou persistência, repetir punção, imagem e reavaliar o diagnóstico antes de nova infiltração"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "paracetamol como base; AINE apenas em dose baixa e por curto prazo; colchicina 0,5 mg com ajuste renal; preferir corticoide intra-articular",
+        "alerta": "lesão renal, sangramento digestivo, confusão e queda com AINE e colchicina"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "AINE contraindicado; colchicina 0,5 mg 1x/dia ou em dias alternados; vancomicina com dose por nível sérico; corticoide intra-articular é opção",
+        "alerta": "lesão renal aguda e acúmulo de colchicina com neuropatia e mielotoxicidade"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "paracetamol para analgesia; ceftriaxona e oxacilina são seguras; AINE contraindicado após 20 semanas; colchicina apenas se benefício superar risco",
+        "alerta": "oligodrâmnio e fechamento precoce do ducto arterioso com AINE no terceiro trimestre"
+      },
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "AINE contraindicado; paracetamol e corticoide intra-articular; punção apenas com INR controlado ou após reversão parcial",
+        "alerta": "hemartrose extensa e síndrome compartimental"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "punção precoce mesmo sem febre; cobertura para gram-negativos e fungos conforme o perfil; internação",
+        "alerta": "séptica oligossintomática com evolução rápida e germe atípico"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "monitorar glicemia após corticoide sistêmico ou intra-articular; ajustar hipoglicemiante temporariamente",
+        "alerta": "hiperglicemia de 48 a 72 h e maior risco de infecção articular"
+      },
+      {
+        "populacao": "protese_articular",
+        "ajuste": "punção obrigatória com cultura e celularidade, ortopedia no mesmo dia, nunca infiltrar corticoide",
+        "alerta": "artrite periprotética com falha da prótese e sepse"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "artrocentese com celularidade, diferencial, Gram, cultura e cristais",
+          "indicacao": "todo joelho ou ombro quente com derrame",
+          "o_que_muda": "separa séptica de cristal e de inflamatória e define antibiótico, AINE ou colchicina"
+        },
+        {
+          "nome": "hemograma, PCR e VHS",
+          "indicacao": "todo primeiro episódio e seguimento de séptica",
+          "o_que_muda": "sustenta a suspeita de infecção e acompanha a resposta ao antibiótico"
+        },
+        {
+          "nome": "hemoculturas",
+          "indicacao": "febre, calafrio ou suspeita de séptica",
+          "o_que_muda": "identifica o agente quando o líquido sinovial é estéril e permite descalonar"
+        },
+        {
+          "nome": "radiografia da articulação",
+          "indicacao": "primeiro episódio, trauma e suspeita de artropatia",
+          "o_que_muda": "detecta fratura, calcificação condrocalcinosa e sinais de artropatia prévia"
+        },
+        {
+          "nome": "ultrassonografia articular",
+          "indicacao": "derrame duvidoso, bursa versus articulação e guia de punção",
+          "o_que_muda": "confirma líquido e aumenta o sucesso da punção em ombro"
+        },
+        {
+          "nome": "creatinina e taxa de filtração estimada",
+          "indicacao": "antes de AINE, colchicina e vancomicina",
+          "o_que_muda": "contraindica AINE e define ajuste de colchicina e vancomicina"
+        },
+        {
+          "nome": "coagulograma e plaquetas",
+          "indicacao": "anticoagulado, hepatopata ou suspeita de hemartrose",
+          "o_que_muda": "define necessidade de reversão antes da punção"
+        },
+        {
+          "nome": "ressonância magnética da articulação",
+          "indicacao": "séptica com evolução arrastada, suspeita de osteomielite, abscesso ou lesão osteocondral, e monoartrite sem diagnóstico após 4 semanas",
+          "o_que_muda": "identifica osteomielite, abscesso e tumor, e define necessidade de cirurgia ou biópsia sinovial"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "ácido úrico sérico durante a crise para confirmar gota",
+          "motivo": "fica normal em até um terço das crises e não exclui nem confirma; o diagnóstico é do líquido sinovial"
+        },
+        {
+          "exame": "ressonância magnética antes da artrocentese no joelho quente",
+          "motivo": "atrasa a punção, que é o exame que muda a conduta"
+        },
+        {
+          "exame": "radiografia isolada para excluir artrite séptica",
+          "motivo": "radiografia normal é a regra na fase inicial e dá falsa segurança"
+        },
+        {
+          "exame": "fator reumatoide, FAN e anti-CCP na monoartrite aguda",
+          "motivo": "não ajudam no quadro agudo e levam a diagnóstico errôneo de doença reumática"
+        },
+        {
+          "exame": "antibiótico empírico antes de qualquer coleta no paciente estável",
+          "motivo": "esteriliza o líquido e a hemocultura e impede o diagnóstico etiológico"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "voltar imediatamente se febre, calafrio ou piora da dor",
+        "manter isometria e mobilização suave desde o primeiro dia",
+        "usar gelo por 15 a 20 minutos, 3 a 4 vezes ao dia",
+        "tomar o AINE com alimento e suspender em 7 dias",
+        "retornar na data marcada em 48 a 72 horas após a punção ou a infiltração"
+      ],
+      "evitar": [
+        "tratar joelho quente com analgésico e ir para casa",
+        "infiltrar corticoide sem puncionar",
+        "associar dois AINEs",
+        "repouso absoluto e imobilização prolongada",
+        "massagem vigorosa e calor local na fase aguda"
+      ],
+      "retorno": [
+        "febre acima de 38 °C ou calafrio",
+        "piora da dor ou do derrame após 48 horas",
+        "incapacidade de apoiar ou de mover o membro",
+        "vermelhidão que se espalha ou ferida no local da punção",
+        "dor no peito ou falta de ar após imobilização"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "ibuprofeno e naproxeno",
+        "efeitos": [
+          "sangramento digestivo",
+          "lesão renal aguda",
+          "elevação da pressão",
+          "evento cardiovascular"
+        ],
+        "observacao": "suspender se dor epigástrica, melena, edema ou creatinina em ascensão; não associar dois AINEs"
+      },
+      {
+        "agente": "colchicina",
+        "efeitos": [
+          "diarreia",
+          "vômito",
+          "mialgia",
+          "neuropatia",
+          "mielotoxicidade"
+        ],
+        "observacao": "suspender se diarreia intensa ou mialgia; não associar a claritromicina, cetoconazol ou ciclosporina"
+      },
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "insônia",
+          "elevação da pressão",
+          "alteração de humor"
+        ],
+        "observacao": "curso curto com desmame apenas se uso acima de 2 semanas"
+      },
+      {
+        "agente": "triancinolona hexacetonida",
+        "efeitos": [
+          "artrite séptica iatrogênica",
+          "rubor pós-infiltração",
+          "atrofia de pele",
+          "hiperglicemia"
+        ],
+        "observacao": "febre ou derrame após 24 a 72 h exige punção imediata"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "diarreia",
+          "colite por C. difficile",
+          "rash",
+          "lama biliar"
+        ],
+        "observacao": "monitorar diarreia e enzimas hepáticas em uso prolongado"
+      },
+      {
+        "agente": "vancomicina",
+        "efeitos": [
+          "nefrotoxicidade",
+          "síndrome do homem vermelho",
+          "neutropenia"
+        ],
+        "observacao": "infundir em 60 minutos por grama e dosar nível sérico"
+      },
+      {
+        "agente": "alopurinol",
+        "efeitos": [
+          "rash",
+          "síndrome de hipersensibilidade",
+          "hepatotoxicidade"
+        ],
+        "observacao": "suspender imediatamente se rash ou febre; não reiniciar sem avaliação"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose e sintoma",
+      "AINE: suspender, dosar creatinina e hemograma, pesquisar melena e tratar com inibidor de bomba de prótons se sangramento",
+      "Colchicina: suspender se diarreia intensa, vômito ou mialgia; hidratar e dosar hemograma, creatinina e CK",
+      "Corticoide intra-articular: febre ou derrame após a infiltração obriga a puncionar de novo e tratar como séptica até cultura negativa",
+      "Antibiótico: ajustar conforme cultura e antibiograma; trocar em caso de reação alérgica e registrar o agente",
+      "Alopurinol: suspender com rash ou febre e investigar síndrome de hipersensibilidade com hemograma e transaminases",
+      "Reavaliar se o sintoma é efeito adverso ou sinal de alarme não reconhecido"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "ibuprofeno 600 mg",
+            "dose": "600 mg",
+            "via": "VO",
+            "frequencia": "8/8 h com alimento",
+            "duracao": "7 dias",
+            "condicao": "crise de cristais ou artrite inflamatória sem infecção",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "colchicina 0,5 mg",
+            "dose": "1 mg no primeiro sinal, 0,5 mg após 1 h e 0,5 mg 12/12 h",
+            "via": "VO",
+            "frequencia": "12/12 h após o ataque",
+            "duracao": "7 dias",
+            "condicao": "gota ou pseudogota",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "7 dias",
+            "condicao": "analgesia adjuvante, máximo 3 g/dia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "omeprazol 20 mg",
+            "dose": "20 mg",
+            "via": "VO",
+            "frequencia": "1x/dia em jejum",
+            "duracao": "7 dias",
+            "condicao": "gastroproteção com fator de risco",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "alopurinol 100 mg",
+            "dose": "100 mg",
+            "via": "VO",
+            "frequencia": "1x/dia após refeição",
+            "duracao": "uso contínuo com titulação",
+            "condicao": "gota com indicação de manutenção, após controle da crise",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona 2 g",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "função renal, hemograma e resposta articular em 48 a 72 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "vancomicina 1 g",
+            "dose": "15 a 20 mg/kg",
+            "via": "IV",
+            "frequencia": "12/12 h com ajuste renal",
+            "monitorizacao": "vale sérico e creatinina",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "oxacilina 2 g",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "4/4 h",
+            "monitorizacao": "transaminases e hemograma",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 1 g",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "dose total diária",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "artrocentese com celularidade",
+          "Gram e cultura do líquido sinovial",
+          "pesquisa de cristais",
+          "hemoculturas",
+          "hemograma",
+          "PCR",
+          "VHS",
+          "creatinina",
+          "coagulograma",
+          "radiografia da articulação",
+          "ultrassom articular",
+          "ressonância magnética da articulação",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de monoartrite aguda de ___, submetido a artrocentese diagnóstica, necessitando de afastamento de atividades por ___ dias, com reavaliação marcada.",
+        "dias": null,
+        "cid": null,
+        "observacao": "o número de dias é decisão médica e depende do diagnóstico definido"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo com diagnóstico e resultado do líquido sinovial",
+          "resumo com antibiótico em uso",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com monoartrite aguda de ___ há ___, febre ___, fator de risco ___, líquido sinovial com ___ leucócitos, Gram ___, cultura ___, cristais ___, tratamento instituído e resposta em 48 h."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "articulação acometida",
+        "tempo de evolução",
+        "febre e calafrio",
+        "trauma e cirurgia recente",
+        "prótese articular",
+        "imunossupressão e diabetes",
+        "uso de drogas injetáveis",
+        "crises prévias de gota e uso de diurético",
+        "anticoagulante",
+        "rigidez matinal e outras articulações"
+      ],
+      "texto_template": "Paciente com dor articular em ___ há ___, febre ___, trauma ___, cirurgia ou prótese ___, imunossupressão ___, diabetes ___, uso de drogas injetáveis ___, crise prévia de gota ___, diurético ___, anticoagulante ___ e rigidez matinal ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "temperatura e sinais vitais",
+        "inspeção comparativa das articulações",
+        "palpação de derrame e da bursa",
+        "calor e rubor local",
+        "amplitude ativa e passiva",
+        "mobilização ativa contra resistência",
+        "força e sensibilidade distal",
+        "pulsos e perfusão",
+        "pele e porta de entrada"
+      ],
+      "texto_template": "Temperatura ___, inspeção comparativa, derrame ___, calor e rubor ___, amplitude ativa ___ e passiva ___, dor à mobilização contra resistência ___, força e sensibilidade distais ___, pulsos ___ e porta de entrada cutânea ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de monoartrite aguda e disponibilidade de artrocentese nas 24 h",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_reumatologia",
+        "o_que_verificar": "critérios de artrite séptica, colchicina em dose baixa e manejo da gota",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_ortopedia",
+        "o_que_verificar": "indicação de lavagem articular e artroscopia na séptica",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_internacional_de_gota",
+        "o_que_verificar": "alvo de ácido úrico, início do hipouricemiante e profilaxia de crise",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, concentrações e diluentes disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-MSK03-01",
+        "tipo": "artrite_septica",
+        "gatilho": "articulação quente com derrame, com ou sem febre, sem artrocentese registrada",
+        "severidade": "grave",
+        "mensagem": "Suspeita de artrite séptica: puncionar e iniciar antibiótico após a coleta.",
+        "acao": "bloquear alta e exigir artrocentese",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK03-02",
+        "tipo": "infiltracao_sem_puncao",
+        "gatilho": "prescrição de corticoide intra-articular sem resultado de líquido sinovial",
+        "severidade": "grave",
+        "mensagem": "Não infiltrar corticoide sem excluir infecção.",
+        "acao": "bloquear item e sugerir artrocentese",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK03-03",
+        "tipo": "alta_indevida",
+        "gatilho": "alta de joelho quente com AINE e sem punção",
+        "severidade": "grave",
+        "mensagem": "Tratar joelho quente com AINE e liberar é o erro que destrói a articulação.",
+        "acao": "bloquear alta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK03-04",
+        "tipo": "protese",
+        "gatilho": "prótese articular com dor nova, derrame ou febre",
+        "severidade": "grave",
+        "mensagem": "Artrite periprotética: puncionar e acionar ortopedia.",
+        "acao": "bloquear alta e acionar ortopedia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK03-05",
+        "tipo": "aine_contraindicado",
+        "gatilho": "AINE prescrito com ClCr abaixo de 30, anticoagulação plena, úlcera ativa ou gestação após 20 semanas",
+        "severidade": "grave",
+        "mensagem": "AINE contraindicado neste perfil.",
+        "acao": "bloquear item e sugerir paracetamol, colchicina ou corticoide intra-articular",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK03-06",
+        "tipo": "antibiotico_sem_cultura",
+        "gatilho": "antibiótico empírico sem coleta de líquido sinovial ou hemocultura em paciente estável",
+        "severidade": "precaucao",
+        "mensagem": "Coletar antes de tratar reduz o risco de ficar sem agente.",
+        "acao": "alertar e sugerir coleta imediata",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-MSK03-07",
+        "tipo": "acido_urico",
+        "gatilho": "pedido de ácido úrico para diagnosticar crise aguda",
+        "severidade": "informativo",
+        "mensagem": "Ácido úrico não confirma nem exclui crise.",
+        "acao": "alertar e sugerir punção",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-MSK03-08",
+        "tipo": "corticoide_diabetico",
+        "gatilho": "corticoide sistêmico ou intra-articular em diabético",
+        "severidade": "precaucao",
+        "mensagem": "Avisar sobre hiperglicemia de 48 a 72 h e monitorar.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "sociedade de reumatologia",
+        "sociedade de ortopedia",
+        "diretriz de gota",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: separação explícita entre artrite séptica, gota e pseudogota, bursite, tendinite, hemartrose e artrite inflamatória; 12 fármacos com apresentações, preparo, tempo de infusão, monitorização, ajuste renal e hepático, cobrindo AINE oral, colchicina em dose baixa, corticoide sistêmico e intra-articular, ceftriaxona, vancomicina, oxacilina, paracetamol, omeprazol e alopurinol; artrocentese diagnóstica como procedimento central, com celularidade, Gram, cultura e cristais; regra de não infiltrar corticoide sem excluir infecção e de não liberar joelho quente com AINE; antibiótico empírico apenas após a punção; imagem simples e ultrassom no fluxo; alertas bloqueantes para os erros de maior dano.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

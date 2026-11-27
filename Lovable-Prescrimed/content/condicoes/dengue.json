@@ -1,0 +1,240 @@
+{
+  "id": "dengue",
+  "nome": "Dengue",
+  "cat": "Infectologia",
+  "alias": "dengue febre manchas no corpo dor atras dos olhos arboviroses zika chikungunya",
+  "cid": [
+    [
+      "A90",
+      "Dengue"
+    ],
+    [
+      "A91",
+      "Dengue hemorrágica"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "OMS/Paho — dengue 2024; MS — manejo dengue"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "INF-02 em 2026-11-27",
+    "fundido_workspace": "INF-02 em 2026-11-27"
+  },
+  "alerta": "Classificar (OMS A/B/C): A = sem alarme, tolera VO → hidratação + paracetamol/dipirona + retorno programado; B = alarme OU comorbidade/grupos de risco → observação/hidratação; C = choque/alarme grave → EV agressivo. SINAIS DE ALARME (fase crítica, dia 3–7 com a febre BAIXANDO — é quando tudo piora): dor abdominal intensa, vômitos persistentes, sangramento de mucosa, letargia/irrequietude, hepatomegalia, hemoconcentração. NUNCA AINE/AAS (sangramento). NS1/IgM conforme protocolo; hemograma com hematócrito seriado nos casos B/C.",
+  "redFlags": [
+    "Dor abdominal intensa ou vômitos persistentes — alarme: B → observação",
+    "Sangramento de gengiva/nariz/hematêmese/melena — alarme hemorrágico",
+    "Letargia, confusão, hipotensão postural ou choque — C: acesso duplo, SF bolus 10–20 mL/kg, UTI",
+    "Febril que 'melhora' e piora no dia 3–7 — fase crítica: revisar com hematócrito",
+    "Gestante, < 5 anos ou > 65, DM/IRC/comorbidade — grupo de risco: manejo B",
+    "Hematócrito subindo + plaquetas caindo rápido — fuga capilar: expandir com cautela"
+  ],
+  "naoUsar": [
+    "AINEs e AAS (sangramento)",
+    "Dipirona + paracetamol alternados de rotina (escolher um)",
+    "Hidratação IV agressiva na fase de recuperação (sobrecarga)",
+    "Transfundir plaquetas por número (só se sangramento + critérios)"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Antitérmico (SÓ dipirona ou paracetamol)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "1 g VO a cada 6 h SE febre > 38,5 ou dor (máx 4 g/dia) — NÃO usar AINE/AAS",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "1ª linha seguro na dengue"
+          },
+          {
+            "base": "paracetamol",
+            "pos": "1 g VO a cada 6 h (máx 4 g/dia; 3 g se hepatopatia) — alternativo seguro",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Alternativa segura"
+          }
+        ]
+      },
+      {
+        "nome": "Hidratação (o tratamento real)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "hidratos",
+              "n": "Hidratação oral agressiva",
+              "ap": "SRO/água/sucos",
+              "pos": "Adulto: 2–3 L/dia além das perdas (febre/vômito); criança: ~50 mL/kg/dia de manutenção + reposição. Se vomitar: 15 mL a cada 5 min e aumentar. Sinais de desidratação: boca seca, urina escassa, olhos fundos — aumentar e reavaliar."
+            },
+            "ped": "Fracionado em colheradas",
+            "motivo": "Manter volemia é o que salva"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações (papel da família)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se (a partir do dia 3, quando a febre cai)",
+              "ap": "",
+              "pos": "Dor forte na barriga, vômito que não para, sangramento (gengiva, nariz, fezes, urina, vômito com sangue), sonolência ou agitação incomum, mãos/pés frios e úmidos, ausência de urina por > 6 h — VOLTE AO PS: são os sinais de que a dengue vai ficar grave exatamente quando a febre está baixando."
+            },
+            "motivo": "Fase crítica"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Repouso e combate ao mosquito",
+              "ap": "",
+              "pos": "Repouso relativo na fase febril; retorno ao trabalho/escola só após 24 h sem febre. Não usar AINE/AAS até liberação médica. Telas/repelente para não transmitir (o mosquito pega do dia 1 ao 6); eliminar criadouros em casa — 10 minutos de vaso/plato de planta bastam."
+            },
+            "motivo": "Cadeia de transmissão"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Classificação em grupo A, B, C ou D na primeira consulta",
+              "ap": "",
+              "q": "",
+              "pos": "registrar grupo, dia da doença, hematócrito, plaquetas e plano de retorno no prontuário; reclassificar a cada reavaliação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Hidratação oral fracionada e supervisionada",
+              "ap": "",
+              "q": "",
+              "pos": "60 mL/kg/dia em pequenos volumes a cada 15 a 30 min; oferecer copo medido e registrar o aceitado no grupo B"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Controle do ambiente e do vetor",
+              "ap": "",
+              "q": "",
+              "pos": "eliminar água parada, telar janelas, repelente e mosquiteiro; orientar a comunidade e notificar o caso ao serviço de vigilância"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Repouso e afastamento das atividades",
+              "ap": "",
+              "q": "",
+              "pos": "afastamento escolar e laboral enquanto houver febre; evitar esforço físico e banho quente na fase crítica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Notificação compulsória",
+              "ap": "",
+              "q": "",
+              "pos": "preencher a ficha do SINAN para dengue, chikungunya e zika; zika em gestante exige comunicação imediata à vigilância"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Monitorização com hemograma seriado na fase crítica",
+              "ap": "",
+              "q": "",
+              "pos": "hematócrito e plaquetas na entrada e a cada 4 a 6 h no grupo C; queda de plaqueta com aumento do hematócrito indica extravasamento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Balanço hídrico e diurese horária nos grupos C e D",
+              "ap": "",
+              "q": "",
+              "pos": "sonda vesical se choque ou oligúria; registrar entrada, saída e peso diário, com meta de 0,5 mL/kg/h ou mais"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Reconhecimento da fase de reabsorção",
+              "ap": "",
+              "q": "",
+              "pos": "24 a 48 h após a fase crítica, com hematócrito em queda, diurese aumentando e retorno do apetite: reduzir o volume venoso para 1/3 e suspender"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Educação para retorno imediato",
+              "ap": "",
+              "q": "",
+              "pos": "entregar por escrito os sinais de alarme e orientar retorno no mesmo dia se dor abdominal, vômitos, sangramento, tontura ou redução da diurese"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-02"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Suporte na observação (caso B)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV 6/6 h se febre/dor"
+          },
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "8 mg EV 8/8 h se vômitos (para tolerar hidratação)"
+          },
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "10 mg EV 8/8 h — alternativa antiemética"
+          }
+        ]
+      }
+    ]
+  }
+}

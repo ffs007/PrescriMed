@@ -1,0 +1,1083 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-08",
+    "area": "Respiratório/ORL",
+    "nome": "Corpo estranho ouvido/nariz",
+    "aliases": [
+      "corpo estranho nasal",
+      "corpo estranho no ouvido",
+      "objeto no nariz",
+      "objeto no ouvido",
+      "corpo estranho de conduto auditivo",
+      "rinorreia fétida unilateral"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto",
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Corpo estranho de ouvido e nariz é diagnóstico visual: o objeto é visto sob iluminação e instrumentação adequadas, e é isso que separa remoção segura de trauma. Em criança pequena, a maioria é assintomática, e o diagnóstico costuma vir de rinorreia fétida unilateral, otorreia refratária, otalgia persistente ou sangramento de repetição. A remoção é mecânica, com gancho de ponta romba ou pinça de crocodilo sob visão direta; irrigação só em objeto liso, arredondado, não vegetal, não bateria e com membrana timpânica íntegra. Bateria de botão é emergência: libera álcali e necrosa mucosa em 2 a 6 horas, com perfuração septal, fístula e estenose. Corpo vegetal incha em contato com líquido e impacta. Inseto vivo é imobilizado com lidocaína ou óleo antes de qualquer pinça. Quatro erros custam caro: soprar o nariz e empurrar o objeto para a rinofaringe, tentar remover sem visão, usar cotonete e insistir em lavagem onde ela é proibida. Tosse, estridor ou chiado unilateral depois do episódio não é corpo estranho de nariz: é aspiração de via aérea e pertence ao OFT-05.",
+    "inclusao": [
+      "Objeto visível em conduto auditivo ou fossa nasal, sem complicação",
+      "Rinorreia fétida unilateral em criança, com ou sem objeto visível",
+      "Otalgia ou otorreia unilateral refratária com membrana timpânica visualizada",
+      "Inseto vivo em conduto auditivo ou fossa nasal",
+      "Bateria de botão ou ímã em ouvido ou nariz",
+      "Objeto localizado, mas não removível com instrumento no serviço"
+    ],
+    "exclusao": [
+      {
+        "situacao": "engasgo, tosse súbita, estridor, chiado unilateral ou cianose",
+        "fluxo": "OFT-05 — corpo estranho de via aérea"
+      },
+      {
+        "situacao": "objeto em faringe, laringe ou esôfago, com disfagia ou sialorreia",
+        "fluxo": "endoscopia digestiva alta ou broncoscopia, conforme o nível"
+      },
+      {
+        "situacao": "otorreia crônica com perfuração timpânica, sem corpo estranho",
+        "fluxo": "RESP-04 — otite média e externa"
+      },
+      {
+        "situacao": "corpo estranho intraocular, em órbita ou em tecido mole periorbitário",
+        "fluxo": "oftalmologia e cirurgia"
+      },
+      {
+        "situacao": "trauma penetrante de face ou de canal auditivo com ferida e objeto encravado",
+        "fluxo": "cirurgia bucomaxilofacial ou otorrinolaringologia, sem tracionar o objeto"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "bateria de botão ou ímã em ouvido ou nariz",
+        "por_que": "liberação de álcali e necrose de mucosa em 2 a 6 horas, com perfuração septal, fístula e estenose",
+        "acao": "remoção imediata, sem irrigar, com aspiração e instrumento, e otorrinolaringologia de imediato",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "objeto pontiagudo, de vidro, espinha de peixe, prego ou agulha",
+        "por_que": "laceração de mucosa, perfuração timpânica e lesão de estruturas profundas",
+        "acao": "não lavar e não tracionar às cegas; remoção sob visão com instrumento e otorrinolaringologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "corpo estranho bilateral em fossa nasal",
+        "por_que": "obstrução total das duas narinas com risco de asfixia, sobretudo no lactente",
+        "acao": "remoção de um lado por vez, com via aérea monitorizada; nunca lavar as duas narinas na mesma sessão",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "tosse, estridor, chiado unilateral, cianose ou dificuldade para respirar",
+        "por_que": "corpo estranho aspirado para a via aérea, situação de risco de morte",
+        "acao": "acionar sala vermelha e seguir OFT-05; não insistir no exame de nariz",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "sangramento ativo, perfuração timpânica ou lesão de septo após tentativa de remoção",
+        "por_que": "trauma iatrogênico por instrumento sem visão, com perda auditiva e perfuração",
+        "acao": "interromper a tentativa, cobrir a lesão, avaliar otorrinolaringologia e não irrigar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "secreção fétida unilateral, rinorreia purulenta ou granulação sangrante há mais de 48 horas",
+        "por_que": "corpo estranho antigo com reação inflamatória e risco de sinusite e de corpo estranho calcificado",
+        "acao": "aspirar sob visão, remover e reavaliar em 24 a 48 horas com otorrinolaringologia se não houver objeto visível",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "inseto vivo em movimento no conduto auditivo ou na narina",
+        "por_que": "movimento e traumatismo do tímpano, dor intensa e dificuldade de extração",
+        "acao": "imobilizar com lidocaína 2% ou óleo mineral, aguardar 2 a 5 minutos e só então extrair com pinça",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "criança agitada, com reflexo de vômito exacerbado ou que não coopera com o exame",
+        "por_que": "risco de aspiração, de lesão de mucosa e de remoção incompleta durante a contenção",
+        "acao": "imobilizar adequadamente e, se necessário, sedar com equipe de suporte ou encaminhar para remoção sob anestesia",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "O que é o objeto, de que material e quando entrou? Alguém viu?",
+      "É bateria de botão, ímã, vidro, objeto pontiagudo, semente ou inseto?",
+      "A criança respira bem? Teve tosse, chiado, engasgo ou rouquidão depois do episódio?",
+      "Já tentou remover? Com o quê, quantas vezes e houve sangramento?",
+      "Sai secreção fétida por uma narina só? Desde quando? Houve sangramento?",
+      "Tem dor, febre ou piora da audição?",
+      "No ouvido: tem perfuração prévia, tubo de ventilação, cirurgia otológica ou usa prótese auditiva?",
+      "Usa cotonete com frequência ou tem o hábito de coçar o ouvido?",
+      "A criança tem TDAH, autismo ou deficiência intelectual, ou costuma colocar objetos na boca e no nariz?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Objeto pequeno e visível no conduto auditivo, não impactado, paciente cooperativo",
+        "escolha": "Extração com gancho de ponta romba ou pinça de crocodilo sob otoscopia, com aspiração ao lado e contenção adequada",
+        "porque": "O instrumento passa por cima do objeto e o traciona para fora, sem empurrá-lo; é a técnica com maior sucesso e menor trauma na primeira tentativa. Empurrar o objeto contra o tímpano transforma um procedimento simples em perfuração"
+      },
+      {
+        "cenario": "Objeto liso e arredondado no conduto auditivo, como conta, miçanga ou caroço de feijão seco, sem perfuração e sem tubo de ventilação",
+        "escolha": "Irrigação com soro fisiológico morno a 37 °C, seringa de 20 mL com cateter, jato direcionado à parede posterior e superior do canal, até 3 a 5 tentativas",
+        "porque": "O jato contorna o objeto e o mobiliza sem pinça; é o método mais seguro para objeto esférico, que a pinça não agarra. O jato nunca é dirigido ao objeto nem usado com tímpano perfurado"
+      },
+      {
+        "cenario": "Corpo estranho vegetal em fossa nasal, como feijão, milho, semente ou pedaço de fruta",
+        "escolha": "Extração com gancho de ponta romba ou pinça, sob visão, sem irrigar; se falhar, encaminhar ao otorrinolaringologista",
+        "porque": "O vegetal absorve líquido, incha e impacta, aumentando o trauma e o risco de aspiração. A irrigação nasal também empurra o objeto para a rinofaringe"
+      },
+      {
+        "cenario": "Bateria de botão ou ímã em ouvido ou nariz",
+        "escolha": "Remoção imediata por instrumento sob visão, sem irrigação, com aspiração; irrigar o septo com soro após a retirada quando houver queimadura e acionar otorrinolaringologia",
+        "porque": "A bateria gera corrente e álcali e necrosa a mucosa em poucas horas; a irrigação acelera a lesão e pode deslocar a bateria para a coana. Ímã atrai outro ímã e pode prender mucosa entre os dois"
+      },
+      {
+        "cenario": "Inseto vivo em conduto auditivo ou narina",
+        "escolha": "Lidocaína 2% gel, 1 a 2 mL, ou óleo mineral 2 a 3 mL, aguardar 2 a 5 minutos até parar o movimento e extrair com pinça sob visão",
+        "porque": "O inseto vivo se debate e lesiona o tímpano e a mucosa; imobilizado, a extração é simples e segura. Inseticida, álcool e éter irritam a mucosa e são tóxicos no conduto"
+      },
+      {
+        "cenario": "Objeto liso e esférico no nariz ou no ouvido que a pinça não consegue agarrar",
+        "escolha": "Técnica do adesivo: gota de cianoacrilato na ponta de cotonete ou espátula fina, apoiada sobre o objeto por 30 a 60 segundos, com o paciente imóvel, e tração suave",
+        "porque": "É alternativa descrita para objeto esférico e duro, quando o gancho não passa e a irrigação é imprópria. Exige visão, imobilidade e nunca contato com a mucosa, sob risco de colar o objeto na parede e criar lesão maior"
+      },
+      {
+        "cenario": "Corpo estranho bilateral em fossa nasal",
+        "escolha": "Remover um lado por vez, mantendo a boca livre, com aspiração pronta e via aérea monitorizada; não lavar as duas narinas na mesma sessão",
+        "porque": "Com as duas narinas obstruídas, a criança pequena depende da boca e pode descompensar durante a manipulação; a lavagem bilateral simultânea piora a obstrução e o risco de aspiração"
+      },
+      {
+        "cenario": "Criança que não coopera, chora e se debate durante a tentativa",
+        "escolha": "Interromper, imobilizar com lençol e dois profissionais e, se ainda assim não for possível, sedar com midazolam em local com suporte de via aérea ou encaminhar para remoção sob anestesia",
+        "porque": "A remoção à força é a principal causa de perfuração de tímpano, de septo e de aspiração do objeto. Duas tentativas malsucedidas já são indicação de encaminhamento"
+      },
+      {
+        "cenario": "Corpo estranho visualizado, mas não removível, impactado, posterior na coana, com granulação ou em criança que exige anestesia geral",
+        "escolha": "Encaminhar ao otorrinolaringologista, com registro do tipo de objeto, lado, tempo de permanência e tentativas já feitas",
+        "porque": "Objeto atrás da coana, impactado ou com granulação exige nasofibroscopia e instrumentos próprios, e a tentativa às cegas só aumenta o trauma. O otorrino também define se há lesão de septo, fístula ou corpo estranho calcificado"
+      },
+      {
+        "cenario": "Quando encaminhar ao otorrinolaringologista",
+        "escolha": "Encaminhar em bateria com lesão de mucosa, perfuração timpânica ou septal, objeto pontiagudo, corpo estranho posterior, falha de duas tentativas, granulação com secreção fétida, necessidade de sedação e suspeita de corpo estranho antigo calcificado",
+        "porque": "São as situações em que o consultório não tem campo, instrumento ou anestesia para resolver com segurança, e o atraso aumenta necrose, infecção e perda auditiva"
+      },
+      {
+        "cenario": "O que não fazer",
+        "escolha": "Não mandar a criança soprar o nariz, não tentar remover sem visão, não usar cotonete nem instrumento caseiro, não lavar nariz com vegetal ou bateria e não usar cola em objeto úmido, irregular ou sem visão direta",
+        "porque": "Soprar o nariz empurra o objeto para a rinofaringe e para a via aérea; a tentativa cega empurra para o tímpano e para a coana; o cotonete impacta e lacera; a cola em objeto úmido ou irregular não adere e ainda lesa a mucosa"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "solucao_irrigante",
+        "agente": "solução fisiológica 0,9% para irrigação",
+        "papel": "primeira_linha",
+        "indicacao": "irrigação do conduto auditivo para corpo estranho liso e arredondado, não vegetal, não bateria e com membrana timpânica íntegra",
+        "dose": "20 a 50 mL por irrigação no adulto; 10 a 20 mL na criança",
+        "unidade": "mL",
+        "via": "otológica, por irrigação",
+        "frequencia": "até 3 a 5 tentativas na mesma sessão",
+        "duracao": "sessão única",
+        "dose_maxima": "100 mL por sessão",
+        "contraindicacoes": [
+          "bateria de botão ou ímã",
+          "corpo estranho vegetal, que incha com líquido",
+          "perfuração timpânica conhecida ou suspeita",
+          "tubo de ventilação",
+          "histórico de otite média crônica ou cirurgia otológica",
+          "objeto pontiagudo, áspero ou impactado"
+        ],
+        "efeitos_adversos": [
+          "perfuração timpânica por jato mal direcionado",
+          "dor e vertigem por estimulação calórica com solução fria",
+          "impactação do objeto mais profundamente",
+          "otite externa por umidade residual",
+          "sangramento de mucosa"
+        ],
+        "apresentacoes": [
+          "frasco 250 mL",
+          "frasco 500 mL",
+          "bolsa 1.000 mL",
+          "ampola 10 mL"
+        ],
+        "preparo": "Aquecer a solução a 37 °C, aspirar 20 mL em seringa de 20 mL com cateter de 18 G ou equipo sem agulha e testar o jato na mão antes de introduzir no canal",
+        "tempo_infusao": "não se aplica; jato contínuo por 5 a 10 segundos, direcionado à parede posterior e superior do canal, nunca ao objeto",
+        "monitorizacao": [
+          "saída do objeto",
+          "dor e vertigem durante a irrigação",
+          "sangramento",
+          "integridade da membrana timpânica após o procedimento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só em objeto liso, com tímpano íntegro. Bateria e vegetal são proibições absolutas: a bateria libera álcali e o vegetal incha. Não irrigar criança que não coopera, porque o movimento da cabeça faz o jato atingir o tímpano",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "lidocaína 2% gel",
+        "papel": "condicional",
+        "indicacao": "imobilizar e anestesiar inseto vivo em conduto auditivo ou fossa nasal antes da extração, e anestesiar a mucosa nasal para instrumentação",
+        "dose": "1 a 2 mL no ouvido; 1 a 2 jatos ou 1 mL no nariz",
+        "unidade": "mL",
+        "via": "tópica otológica ou nasal",
+        "frequencia": "dose única",
+        "duracao": "uma aplicação, com espera de 2 a 5 minutos",
+        "dose_maxima": "3 mg/kg, com máximo de 200 mg no adulto",
+        "contraindicacoes": [
+          "perfuração timpânica conhecida, pelo risco de vertigem intensa e de absorção pelo ouvido médio",
+          "hipersensibilidade a anestésico do tipo amida",
+          "porfiria"
+        ],
+        "efeitos_adversos": [
+          "ardor na instilação",
+          "vertigem e nistagmo se atingir o ouvido médio",
+          "engasgo por anestesia da faringe",
+          "zumbido e convulsão em dose alta"
+        ],
+        "apresentacoes": [
+          "gel 2% bisnaga 30 g",
+          "spray 10%",
+          "solução 2% frasco 20 mL"
+        ],
+        "preparo": "No ouvido, instilar com o paciente deitado e o ouvido afetado para cima; no nariz, aplicar com algodão sobre a mucosa e aguardar 3 a 5 minutos",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "parada dos movimentos do inseto em 1 a 2 minutos",
+          "vertigem e nistagmo",
+          "nível de consciência e sinais de toxicidade",
+          "eficácia anestésica antes da pinça"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "No inseto vivo, a lidocaína paralisa e permite a pinça sem que ele se debata contra o tímpano. Nunca usar inseticida, álcool ou éter no conduto",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "lubrificante_otologico",
+        "agente": "óleo mineral",
+        "papel": "condicional",
+        "indicacao": "imobilizar e sufocar inseto em conduto auditivo ou fossa nasal quando a lidocaína não está disponível, e lubrificar instrumentos",
+        "dose": "2 a 3 mL no ouvido; 1 a 2 mL no nariz",
+        "unidade": "mL",
+        "via": "tópica",
+        "frequencia": "dose única",
+        "duracao": "uma aplicação, com espera de 5 minutos",
+        "dose_maxima": "5 mL por aplicação",
+        "contraindicacoes": [
+          "perfuração timpânica conhecida",
+          "suspeita de corpo estranho vegetal antes de visualizar o objeto",
+          "disfagia grave ou risco de aspiração",
+          "criança com reflexo de vômito ausente"
+        ],
+        "efeitos_adversos": [
+          "pneumonite lipoídica se aspirado",
+          "otite externa por retenção de óleo",
+          "sensação de ouvido cheio e desconforto"
+        ],
+        "apresentacoes": [
+          "frasco 100 mL",
+          "frasco 500 mL"
+        ],
+        "preparo": "Aquecer à temperatura corporal, instilar com o paciente sentado e a cabeça lateralizada e manter a posição por 5 minutos",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "parada dos movimentos do inseto",
+          "tosse ou engasgo durante a instilação",
+          "dor e sensação de plenitude",
+          "saída do inseto na reavaliação"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Alternativa à lidocaína para inseto. Não usar em corpo estranho vegetal nem antes de visualizar o objeto, porque o óleo esconde o material, dificulta a pinça e favorece impactação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vasoconstritor_topico",
+        "agente": "oximetazolina 0,05% nasal",
+        "papel": "condicional",
+        "indicacao": "descongestionar a mucosa nasal e reduzir sangramento para visualizar e remover corpo estranho",
+        "dose": "1 a 2 jatos na narina afetada",
+        "unidade": "jato",
+        "via": "nasal",
+        "frequencia": "dose única; repetir após 10 minutos se necessário",
+        "duracao": "uma aplicação por atendimento",
+        "dose_maxima": "2 aplicações por narina em 24 horas",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "hipertensão grave não controlada, com dose única e sob monitorização",
+          "glaucoma de ângulo fechado",
+          "uso de inibidor da monoaminoxidase nos últimos 14 dias",
+          "uso contínuo por mais de 3 dias"
+        ],
+        "efeitos_adversos": [
+          "ardor e ressecamento nasal",
+          "congestão de rebote",
+          "cefaleia",
+          "elevação transitória da pressão arterial"
+        ],
+        "apresentacoes": [
+          "solução nasal 0,05% frasco 15 mL",
+          "spray nasal 0,05%",
+          "solução nasal 0,025% infantil"
+        ],
+        "preparo": "Aplicar na narina afetada, aguardar 2 a 3 minutos e aspirar a secreção antes de inspecionar",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "pressão arterial e frequência cardíaca no hipertenso",
+          "clareamento do campo para visualizar o objeto",
+          "recidiva de congestão"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Ajuda a ver o objeto e reduz o sangramento da mucosa, mas não substitui iluminação, aspiração e espéculo. Não é tratamento do corpo estranho",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina",
+        "agente": "amoxicilina",
+        "papel": "condicional",
+        "indicacao": "infecção secundária após corpo estranho antigo, com rinossinusite ou otite externa difusa",
+        "dose": "50 mg/kg/dia na criança; 500 mg por dose no adulto",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "7 dias",
+        "dose_maxima": "3 g por dia",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "anafilaxia prévia a betalactâmico",
+          "mononucleose infecciosa",
+          "insuficiência renal grave sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash cutâneo",
+          "candidíase oral ou de fralda",
+          "colite por Clostridioides difficile"
+        ],
+        "apresentacoes": [
+          "cápsula 500 mg",
+          "comprimido 875 mg",
+          "pó para suspensão 250 mg/5 mL",
+          "pó para suspensão 400 mg/5 mL"
+        ],
+        "preparo": "Uso direto; a suspensão é reconstituída com água filtrada até a marca, agitada e mantida em geladeira por até 7 dias",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "febre e secreção em 48 a 72 horas",
+          "diarreia",
+          "rash cutâneo",
+          "adesão ao tempo prescrito"
+        ],
+        "ajuste_renal": "ClCr entre 10 e 30 mL/min: 25 a 50 mg/kg/dia; ClCr abaixo de 10 mL/min ou diálise: 25 mg/kg/dia, com dose após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só quando há infecção secundária documentada. Corpo estranho sem infecção não precisa de antibiótico, e a rinorreia fétida unilateral costuma resolver apenas com a remoção",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "fluoroquinolona_topica",
+        "agente": "ciprofloxacino 0,3% gotas otológicas",
+        "papel": "condicional",
+        "indicacao": "otite externa difusa após trauma do canal por tentativa de remoção, ou otorreia com perfuração timpânica",
+        "dose": "4 gotas no adulto; 3 gotas na criança",
+        "unidade": "gota",
+        "via": "otológica",
+        "frequencia": "12/12 h",
+        "duracao": "7 dias",
+        "dose_maxima": "8 gotas por dia por ouvido",
+        "contraindicacoes": [
+          "alergia a quinolona",
+          "otite externa fúngica",
+          "perfuração timpânica com suspeita de infecção fúngica não tratada"
+        ],
+        "efeitos_adversos": [
+          "ardor transitório na instilação",
+          "prurido",
+          "candidíase do canal",
+          "gosto amargo"
+        ],
+        "apresentacoes": [
+          "solução otológica 0,3% frasco 5 mL",
+          "solução otológica 0,3% com dexametasona 0,1%",
+          "solução otológica 0,2%"
+        ],
+        "preparo": "Aquecer o frasco na mão, deitar o paciente com o ouvido afetado para cima, tracionar o pavilhão para trás e para cima no adulto e para trás e para baixo na criança, instilar e manter a posição por 3 a 5 minutos",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "dor e otorreia em 48 a 72 horas",
+          "prurido e descamação, que sugerem candidíase",
+          "otoscopia de controle ao final"
+        ],
+        "ajuste_renal": "Sem ajuste, pela absorção desprezível pelo canal",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a gota segura em perfuração, ao contrário das associações com aminoglicosídeo. Não prescrever antes de saber o estado da membrana timpânica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_topico",
+        "agente": "dexametasona 0,1% gotas otológicas",
+        "papel": "alternativa",
+        "indicacao": "edema do canal auditivo que impede a visualização e a remoção do corpo estranho",
+        "dose": "3 a 4 gotas",
+        "unidade": "gota",
+        "via": "otológica",
+        "frequencia": "12/12 h",
+        "duracao": "3 a 5 dias, até reduzir o edema",
+        "dose_maxima": "8 gotas por dia por ouvido",
+        "contraindicacoes": [
+          "alergia a corticoide",
+          "infecção fúngica do canal não tratada",
+          "uso como monoterapia na infecção bacteriana"
+        ],
+        "efeitos_adversos": [
+          "ardor na instilação",
+          "candidíase do canal em uso prolongado",
+          "atrofia cutânea do canal acima de 2 semanas"
+        ],
+        "apresentacoes": [
+          "solução otológica 0,1% frasco 10 mL",
+          "associação com ciprofloxacino 0,3%"
+        ],
+        "preparo": "Mesma técnica de instilação do antibiótico tópico, com o paciente deitado e o ouvido afetado para cima por 3 a 5 minutos",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "redução do edema em 48 a 72 horas",
+          "prurido e descamação",
+          "otoscopia de controle"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reduz o edema para permitir a otoscopia e a pinça; não remove o corpo estranho e não substitui o antibiótico quando há infecção",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "dor e febre após trauma de mucosa ou manipulação do conduto",
+        "dose": "500 a 1.000 mg no adulto; 15 mg/kg/dose na criança",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "3 dias",
+        "dose_maxima": "3 g por dia no adulto; 75 mg/kg/dia na criança",
+        "contraindicacoes": [
+          "insuficiência hepática grave",
+          "hepatite ativa",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em sobredose",
+          "rash",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "frasco intravenoso 10 mg/mL"
+        ],
+        "preparo": "Via oral: uso direto. Via intravenosa: infundir a solução pronta, sem diluir",
+        "tempo_infusao": "não se aplica (via oral); via intravenosa em 15 minutos",
+        "monitorizacao": [
+          "escala de dor em 60 minutos",
+          "temperatura",
+          "soma da dose diária com produtos combinados que contêm paracetamol"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: intervalo de 8/8 h",
+        "ajuste_hepatico": "Máximo de 2 g por dia em hepatopatia; evitar em insuficiência hepática grave",
+        "observacoes": "Preferir ao AINE, que aumenta sangramento de mucosa lesada. A dor costuma ser autolimitada depois da remoção",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "midazolam",
+        "papel": "condicional",
+        "indicacao": "sedação para remoção de corpo estranho em criança ou adulto não cooperativo, quando a contenção falhou e há equipe para monitorar a via aérea",
+        "dose": "0,3 a 0,5 mg/kg por via oral na criança, máximo de 20 mg; adulto 0,05 a 0,1 mg/kg por via intravenosa",
+        "unidade": "mg/kg",
+        "via": "VO ou IV",
+        "frequencia": "dose única",
+        "duracao": "procedimento",
+        "dose_maxima": "20 mg por via oral; 5 mg por via intravenosa",
+        "contraindicacoes": [
+          "depressão respiratória ou apneia do sono grave sem monitorização",
+          "miastenia gravis",
+          "hipersensibilidade a benzodiazepínico",
+          "ausência de suporte de via aérea e de aspiração no local"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "hipotensão",
+          "desinibição paradoxal",
+          "sonolência prolongada",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "solução oral 2 mg/mL",
+          "comprimido 15 mg",
+          "ampola 5 mg/mL",
+          "ampola 1 mg/mL"
+        ],
+        "preparo": "Via oral: administrar 20 a 30 minutos antes, sem diluir. Via intravenosa: diluir em 10 mL de soro fisiológico e infundir lentamente",
+        "tempo_infusao": "via oral não se aplica; via intravenosa em 2 a 3 minutos",
+        "monitorizacao": [
+          "oximetria e frequência respiratória contínuas",
+          "nível de consciência por escala de sedação",
+          "pressão arterial e frequência cardíaca",
+          "observação de 60 a 120 minutos após o procedimento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Só com monitor, oxigênio, aspirador e suporte de via aérea ao lado. Sedar sem equipe de suporte é mais perigoso que encaminhar para remoção sob anestesia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Imobilização adequada antes de qualquer tentativa",
+        "detalhe": "Criança enrolada em lençol com os braços junto ao corpo, dois profissionais, um segurando a cabeça e outro instrumentando; ambiente com boa luz, aspiração montada e material de via aérea ao lado. Tentar remover criança que se debate é a principal causa de perfuração"
+      },
+      {
+        "medida": "Nunca mandar soprar o nariz",
+        "detalhe": "Soprar gera pressão positiva que empurra o objeto para a rinofaringe e para a via aérea, transformando corpo estranho nasal em aspiração. O mesmo vale para fungar e para lavagem nasal com pressão"
+      },
+      {
+        "medida": "Nunca remover sem visão direta",
+        "detalhe": "Iluminação, espéculo nasal ou otoscópio, aspiração e instrumento próprio. Sem ver o objeto e as estruturas ao redor, não se introduz instrumento: a pinça às cegas empurra o objeto contra o tímpano e contra a coana"
+      },
+      {
+        "medida": "Proibir cotonete e instrumento caseiro",
+        "detalhe": "Cotonete, pinça de sobrancelha, arame, agulha, clipe e chave de fenda impactam o objeto, laceração a mucosa e perfuram o tímpano. A limpeza do conduto é feita por aspiração profissional sob visão"
+      },
+      {
+        "medida": "Não lavar nariz com corpo vegetal e não lavar ouvido com bateria",
+        "detalhe": "Vegetal absorve líquido e incha; a bateria libera álcali e necrosa a mucosa mais rápido com a umidade. A lavagem nasal também empurra objetos pequenos para a rinofaringe"
+      },
+      {
+        "medida": "Proteção da via aérea durante a remoção",
+        "detalhe": "Paciente sentado ou em decúbito lateral, cabeça estabilizada, aspiração ligada e cânula de Guedel disponível; interromper imediatamente se houver tosse, engasgo, cianose ou vômito"
+      },
+      {
+        "medida": "Prevenção de recidiva em criança",
+        "detalhe": "Guardar pilhas, ímãs, contas, miçangas e brinquedos com peças pequenas fora do alcance; orientar sobre brinquedos adequados à idade e investigar recidiva como sinal de negligência ou de comportamento exploratório"
+      },
+      {
+        "medida": "Orientação escrita de retorno",
+        "detalhe": "Explicar que secreção fétida, sangramento, dor, febre ou chiado exigem retorno imediato, e registrar no prontuário o objeto removido, o lado, a técnica usada e as complicações"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Otoscopia e rinoscopia anterior com instrumentação",
+        "indicacao": "todo paciente com suspeita de corpo estranho em ouvido ou nariz, antes de qualquer tentativa de remoção",
+        "tecnica": "Boa iluminação frontal, otoscópio com oliva adequada ao canal e espéculo nasal; aspirar secreção e coágulo, vasoconstrição com oximetazolina quando necessário, identificar tipo, tamanho, localização e relação com o tímpano ou com a coana",
+        "complicacoes": "Dor, sangramento de mucosa, otoscopia inconclusiva por secreção espessa, lesão de mucosa por aspiração vigorosa"
+      },
+      {
+        "nome": "Extração com gancho de ponta romba ou pinça de crocodilo",
+        "indicacao": "objeto visível, acessível e não impactado em conduto auditivo ou fossa nasal",
+        "tecnica": "Sob visão direta, introduzir o gancho de ponta romba pela lateral do objeto, girar e tracionar para fora, ou apreender com pinça de crocodilo; no nariz, apoiar o gancho atrás do objeto e tracionar para frente e para baixo, sem empurrar contra o septo",
+        "complicacoes": "Laceração de mucosa, epistaxe, perfuração timpânica, impactação do objeto contra o tímpano ou contra a coana, aspiração do objeto durante a manipulação"
+      },
+      {
+        "nome": "Irrigação do conduto auditivo",
+        "indicacao": "objeto liso e arredondado, não vegetal, não bateria, com membrana timpânica íntegra",
+        "tecnica": "Soro fisiológico a 37 °C em seringa de 20 mL com cateter de 18 G, paciente sentado com a cabeça inclinada sobre a bacia, jato direcionado à parede posterior e superior do canal, interrompendo se houver dor, vertigem ou sangue; até 3 a 5 tentativas",
+        "complicacoes": "Perfuração timpânica por jato direto, impactação mais profunda, vertigem por estimulação calórica, otite externa por umidade residual"
+      },
+      {
+        "nome": "Extração com adesivo ou cianoacrilato na ponta de cotonete",
+        "indicacao": "objeto esférico e duro que a pinça não agarra e em que a irrigação é imprópria ou falhou",
+        "tecnica": "Sob visão direta e com paciente imóvel, aplicar pequena gota de adesivo na ponta de cotonete ou espátula fina, apoiar sobre o objeto por 30 a 60 segundos sem tocar a mucosa, tracionar suavemente e repetir no máximo duas vezes",
+        "complicacoes": "Colagem do objeto na mucosa, laceração ao descolar, adesivo em contato com a pele do canal, falha de aderência em objeto úmido ou irregular"
+      },
+      {
+        "nome": "Imobilização e extração de inseto vivo",
+        "indicacao": "inseto em movimento no conduto auditivo ou na fossa nasal",
+        "tecnica": "Instilar lidocaína 2% 1 a 2 mL ou óleo mineral 2 a 3 mL, aguardar 2 a 5 minutos até cessar o movimento, aspirar o excesso e extrair o inseto com pinça fina sob visão; examinar o canal após para detectar lesão de tímpano",
+        "complicacoes": "Perfuração timpânica pelo movimento do inseto antes da imobilização, retenção de partes do inseto, otite externa secundária, vertigem"
+      },
+      {
+        "nome": "Remoção sob anestesia pelo otorrinolaringologista",
+        "indicacao": "falha de duas tentativas, objeto posterior na coana, impactado, pontiagudo, bateria com lesão de mucosa, corpo estranho antigo com granulação e criança que exige anestesia geral",
+        "tecnica": "Avaliação com nasofibroscopia ou otomicroscopia, remoção com instrumentos próprios sob anestesia geral ou sedação profunda, revisão do septo, do tímpano e da mucosa e limpeza do leito",
+        "complicacoes": "Ressangramento, perfuração de septo ou timpânica, sinéquia, estenose de conduto, infecção secundária, aspiração durante a indução anestésica"
+      }
+    ],
+    "metas": [
+      "Objeto removido em uma única tentativa instrumental, sem sedação, na maioria dos casos",
+      "Zero lesão de mucosa, perfuração timpânica ou epistaxe iatrogênica durante a remoção",
+      "Bateria de botão removida em menos de 2 horas e demais corpos estranhos em menos de 24 horas",
+      "Registro no prontuário do tipo de objeto, lado, tempo de permanência, técnica usada e complicações",
+      "Zero tentativa de remoção sem visão direta registrada",
+      "Reavaliação em 24 a 48 horas nos casos com granulação, lesão de mucosa ou suspeita de corpo estranho residual",
+      "Criança sem cooperação encaminhada para remoção sob anestesia após no máximo duas tentativas"
+    ],
+    "fluxo": [
+      "Triagem: perguntar primeiro por tosse, engasgo, chiado, estridor ou cianose; se houver, tratar como aspiração de via aérea e acionar OFT-05, sem perder tempo com o exame nasal",
+      "Identificar o objeto: bateria, ímã, vidro, pontiagudo, vegetal, inseto ou inerte; o tipo define se pode irrigar, se precisa imobilizar e qual é a urgência",
+      "Exame dirigido com otoscopia e rinoscopia anterior, aspiração, vasoconstrição quando necessário e descrição do lado, tamanho e relação com tímpano, septo e coana",
+      "Bateria de botão ou ímã: remoção imediata por instrumento, sem irrigar, com otorrinolaringologia e reavaliação de lesão de mucosa",
+      "Objeto liso e arredondado no ouvido, com tímpano íntegro: irrigação com soro morno; se falhar, gancho, adesivo e, por fim, otorrinolaringologia",
+      "Objeto no nariz: gancho de ponta romba por trás do objeto, sem soprar, sem lavar vegetal e sem empurrar contra o septo; inseto é imobilizado antes",
+      "Duas tentativas sem sucesso, objeto posterior, impactado ou criança que não coopera: encaminhar ao otorrinolaringologista com resumo escrito",
+      "Após a remoção: reexaminar tímpano, septo e mucosa, aspirar resíduos, prescrever analgesia e orientar retorno; reavaliar em 24 a 48 horas se houve trauma ou granulação",
+      "Documentar o objeto, a técnica, as tentativas e as complicações, e orientar a família sobre prevenção de recidiva"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "pediatria",
+        "ajuste": "imobilização com lençol e dois profissionais, instrumentos de tamanho infantil, aspiração montada e limiar baixo para sedação com equipe de suporte ou encaminhamento",
+        "alerta": "criança que se debate é a principal causa de perfuração timpânica e de aspiração do objeto; rinsagem e cotonete são proibidos"
+      },
+      {
+        "populacao": "idoso com prótese auditiva",
+        "ajuste": "retirar a prótese e a oliva antes do exame, inspecionar o conduto e o molde, e suspeitar de corpo estranho quando há otorreia crônica unilateral",
+        "alerta": "molde impactado e cerume associado são confundidos com corpo estranho, e a manipulação pode lesar a pele fina do canal"
+      },
+      {
+        "populacao": "deficiencia_intelectual e transtorno_psiquiatrico",
+        "ajuste": "abordagem calma, contenção adequada, sedação com suporte de via aérea quando necessário e investigação do contexto do episódio",
+        "alerta": "corpo estranho recorrente pode ser comportamento autoagressivo, cópia ou situação de negligência, e exige notificação e acompanhamento"
+      },
+      {
+        "populacao": "diabetico e imunossuprimido",
+        "ajuste": "baixar o limiar para antibiótico, reavaliar em 48 a 72 horas e examinar o canal com cuidado pela fragilidade da pele",
+        "alerta": "otite externa com progressão rápida e risco de otite externa maligna após trauma do canal"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "preferir remoção instrumental simples e evitar sedação; se necessária, usar a menor dose eficaz com monitorização materna e fetal",
+        "alerta": "posição supina prolongada causa hipotensão pela compressão da veia cava, e a sedação exige equipe de suporte"
+      },
+      {
+        "populacao": "crianca com tea ou tdah",
+        "ajuste": "preparar o ambiente, reduzir estímulos, usar contenção adequada e considerar remoção sob anestesia mais cedo, após no máximo duas tentativas",
+        "alerta": "maior risco de recidiva e de aspiração durante a tentativa; orientar a família sobre vigilância e prevenção"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "otoscopia",
+          "indicacao": "todo corpo estranho de ouvido e toda otalgia ou otorreia unilateral refratária",
+          "o_que_muda": "define se há objeto, onde está, se há perfuração timpânica e qual técnica é segura"
+        },
+        {
+          "nome": "rinoscopia anterior com aspiração",
+          "indicacao": "rinorreia fétida unilateral, sangramento unilateral e suspeita de corpo estranho nasal",
+          "o_que_muda": "mostra o objeto e a reação de mucosa e define se a remoção é possível no consultório"
+        },
+        {
+          "nome": "nasofibroscopia",
+          "indicacao": "objeto posterior, suspeita de corpo estranho não visível na rinoscopia anterior e rinorreia fétida sem objeto visível",
+          "o_que_muda": "localiza o objeto na coana ou no meato e indica remoção sob anestesia pelo otorrinolaringologista"
+        },
+        {
+          "nome": "radiografia de face, pescoço ou mastoides",
+          "indicacao": "objeto radiopaco, dúvida de localização, suspeita de corpo estranho antigo e bateria",
+          "o_que_muda": "confirma a presença e a posição de objetos radiopacos e afasta corpo estranho em via aérea"
+        },
+        {
+          "nome": "tomografia computadorizada",
+          "indicacao": "suspeita de complicação, corpo estranho calcificado, fístula, perfuração profunda ou objeto em tecido mole",
+          "o_que_muda": "define extensão da lesão, corpo estranho em seio ou órbita e indica cirurgia"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia de rotina para objeto radiolucente já visível",
+          "motivo": "não acrescenta informação, atrasa a remoção e expõe a radiação; o exame é clínico e otoscópico"
+        },
+        {
+          "exame": "tomografia em corpo estranho simples, visível e removível no consultório",
+          "motivo": "não muda a conduta e atrasa um procedimento que resolve em minutos"
+        },
+        {
+          "exame": "radiografia de crânio em corpo estranho de ouvido já visualizado",
+          "motivo": "a otoscopia localiza melhor e a imagem não altera a técnica de remoção"
+        },
+        {
+          "exame": "lavagem nasal ou otológica antes de visualizar o objeto",
+          "motivo": "risco de impactação, de aspiração e de necrose quando se trata de bateria, além de esconder o objeto"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter a criança calma e imóvel durante o exame, com contenção adequada se necessário",
+        "voltar para reavaliação em 24 a 48 horas quando houve sangramento, granulação ou lesão de mucosa",
+        "usar o analgésico prescrito e observar febre, dor crescente ou secreção",
+        "guardar pilhas, ímãs, contas e brinquedos com peças pequenas fora do alcance da criança",
+        "examinar o ouvido e o nariz da criança se houver secreção fétida, dor persistente ou mau hálito",
+        "informar ao médico se a criança tem perfuração prévia, tubo de ventilação ou prótese auditiva"
+      ],
+      "evitar": [
+        "mandar a criança soprar o nariz para tirar o objeto",
+        "tentar remover com cotonete, pinça, arame, agulha ou qualquer objeto caseiro",
+        "lavar o nariz ou o ouvido antes de saber que objeto é e se há perfuração",
+        "usar inseticida, álcool, éter ou óleo caseiro no ouvido",
+        "colocar cola ou adesivo no nariz ou no ouvido sem orientação médica",
+        "esperar dias para procurar atendimento com secreção fétida ou sangramento"
+      ],
+      "retorno": [
+        "dificuldade para respirar, chiado, tosse ou rouquidão após o episódio",
+        "secreção fétida ou purulenta que não melhora em 48 horas",
+        "dor intensa, febre ou sangramento",
+        "perda de audição ou zumbido após a remoção",
+        "suspeita de que ficou parte do objeto",
+        "novo episódio de objeto no nariz ou no ouvido"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "solução fisiológica em irrigação",
+        "efeitos": [
+          "perfuração timpânica",
+          "vertigem",
+          "impactação do objeto"
+        ],
+        "observacao": "nunca irrigar bateria, vegetal ou ouvido com perfuração; testar o jato na mão antes"
+      },
+      {
+        "agente": "lidocaína tópica",
+        "efeitos": [
+          "vertigem",
+          "ardor",
+          "toxicidade sistêmica"
+        ],
+        "observacao": "respeitar o limite de 3 mg/kg e não instilar em ouvido com perfuração conhecida"
+      },
+      {
+        "agente": "óleo mineral",
+        "efeitos": [
+          "pneumonite lipoídica",
+          "otite externa",
+          "desconforto"
+        ],
+        "observacao": "instilar com o paciente sentado e nunca em corpo estranho vegetal antes de visualizar"
+      },
+      {
+        "agente": "midazolam",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão",
+          "desinibição paradoxal"
+        ],
+        "observacao": "só com monitor, oxigênio e aspirador ao lado, e observação mínima de 60 minutos"
+      },
+      {
+        "agente": "ciprofloxacino tópico",
+        "efeitos": [
+          "ardor",
+          "prurido",
+          "candidíase do canal"
+        ],
+        "observacao": "dor que piora a cada dose sugere perfuração não diagnosticada: reexaminar"
+      },
+      {
+        "agente": "amoxicilina",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "colite por C. difficile"
+        ],
+        "observacao": "suspender e testar C. difficile se diarreia com cólica e febre"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Interromper o procedimento ao primeiro sinal de dor intensa, sangramento, vertigem ou cianose",
+      "Perfuração timpânica durante a remoção: suspender irrigação, manter o ouvido seco, prescrever gota não ototóxica e encaminhar ao otorrinolaringologista",
+      "Sangramento de mucosa que não cessa: compressão, oximetazolina tópica e reavaliação com otorrinolaringologia",
+      "Aspiração do objeto durante a manipulação: seguir OFT-05 imediatamente, com via aérea e broncoscopia",
+      "Depressão respiratória após midazolam: suspender o procedimento, oferecer oxigênio, ventilar com bolsa-máscara e considerar flumazenil apenas em sedação iatrogênica consciente",
+      "Reação alérgica ao antibiótico ou ao anestésico: suspender, tratar conforme gravidade e registrar a reação",
+      "Objeto não encontrado após a remoção: reexaminar, solicitar imagem e considerar corpo estranho residual ou aspiração",
+      "Registrar o evento, a conduta e o encaminhamento no prontuário antes da alta"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol 750 mg ou gotas 200 mg/mL",
+            "dose": "750 mg (criança 15 mg/kg/dose)",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "3 dias",
+            "condicao": "dor após trauma de mucosa ou manipulação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina 500 mg ou suspensão 400 mg/5 mL",
+            "dose": "500 mg (criança 50 mg/kg/dia)",
+            "via": "VO",
+            "frequencia": "8/8 h",
+            "duracao": "7 dias",
+            "condicao": "infecção secundária com rinossinusite ou otite externa difusa",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ciprofloxacino 0,3% solução otológica",
+            "dose": "4 gotas (criança 3 gotas)",
+            "via": "otológica",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "otite externa após trauma do canal, ou otorreia com perfuração timpânica",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dexametasona 0,1% solução otológica",
+            "dose": "4 gotas",
+            "via": "otológica",
+            "frequencia": "12/12 h",
+            "duracao": "3 a 5 dias",
+            "condicao": "edema do canal que impede a visualização",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "solução fisiológica 0,9%",
+            "dose": "20 a 50 mL por irrigação",
+            "via": "otológica",
+            "frequencia": "até 5 tentativas na sessão",
+            "monitorizacao": "saída do objeto, dor, vertigem e sangramento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "midazolam",
+            "dose": "0,3 a 0,5 mg/kg VO (máximo 20 mg)",
+            "via": "VO ou IV",
+            "frequencia": "dose única",
+            "monitorizacao": "oximetria, frequência respiratória, sedação e pressão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lidocaína 2% gel",
+            "dose": "1 a 2 mL",
+            "via": "tópica",
+            "frequencia": "dose única",
+            "monitorizacao": "vertigem, toxicidade e eficácia anestésica",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol",
+            "dose": "1 g (criança 15 mg/kg/dose)",
+            "via": "IV",
+            "frequencia": "6/6 h se dor",
+            "monitorizacao": "dose diária total e transaminases em uso prolongado",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "otoscopia com descrição da membrana timpânica",
+          "rinoscopia anterior",
+          "nasofibroscopia",
+          "radiografia de face ou mastoides quando radiopaco",
+          "tomografia em suspeita de complicação",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com corpo estranho em ___, submetido(a) a ___ sob visão direta, sem complicações, necessitando de afastamento por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "o número de dias é decisão médica e depende do trauma de mucosa, da necessidade de reavaliação e da exposição laboral"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com tipo de objeto, lado, tempo de permanência, tentativas realizadas, instrumentos usados e complicações",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com corpo estranho ___ em ___, à direita ou à esquerda, há ___, com tentativas prévias ___, removido por ___ sob visão direta, com complicação ___ e reavaliação programada para ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tipo e material do objeto",
+        "tempo de permanência e quem presenciou",
+        "lado afetado e sintomas associados",
+        "tosse, engasgo, chiado ou dificuldade respiratória após o episódio",
+        "tentativas prévias de remoção e instrumentos usados",
+        "sangramento, secreção fétida e dor",
+        "perfuração timpânica prévia, tubo de ventilação e cirurgia otológica",
+        "uso de prótese auditiva e de cotonete",
+        "febre e piora da audição",
+        "comorbidades, imunossupressão e uso de anticoagulante"
+      ],
+      "texto_template": "Paciente com corpo estranho ___ em ___, à direita ou à esquerda, há ___, com tosse ou chiado ___, tentativas prévias ___, sangramento ___, secreção fétida ___, dor ___, perfuração timpânica prévia ___, prótese auditiva ___, febre ___ e comorbidades ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais, oximetria e avaliação da via aérea",
+        "inspeção e palpação de pavilhão, conduto e região retroauricular",
+        "otoscopia com descrição do objeto, do canal e da membrana timpânica",
+        "rinoscopia anterior com aspiração e descrição do objeto e da mucosa",
+        "inspeção da orofaringe e da parede posterior da faringe",
+        "pesquisa de secreção fétida, granulação e sangramento",
+        "avaliação de septo, perfuração e corpo estranho em coana",
+        "palpação de face e pesquisa de crepitação ou massa",
+        "avaliação de nervos cranianos e de audição grosseira"
+      ],
+      "texto_template": "Sinais vitais ___, via aérea ___, pavilhão ___, conduto ___, membrana timpânica ___, objeto no ouvido ___, rinoscopia com objeto ___, mucosa ___, septo ___, orofaringe ___, secreção ___, granulação ___ e audição ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de corpo estranho, disponibilidade de otoscópio, espéculo nasal, gancho, pinça de crocodilo, aspiração e sala de sedação",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "conduta em corpo estranho nasal e auditivo na criança, indicação de sedação e critérios de encaminhamento",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_otorrinolaringologia",
+        "o_que_verificar": "indicação de remoção sob anestesia, manejo de bateria de botão e de corpo estranho em coana",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de lidocaína, oximetazolina, midazolam e gotas otológicas disponíveis, e se a gota contém aminoglicosídeo",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "técnica de irrigação, uso de adesivo em objeto esférico e taxa de sucesso por método",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-RESP08-01",
+        "tipo": "bateria_de_botao",
+        "gatilho": "bateria de botão ou ímã em ouvido ou nariz",
+        "severidade": "grave",
+        "mensagem": "Bateria de botão necrosa mucosa em horas: remoção imediata, sem irrigar, com otorrinolaringologia.",
+        "acao": "bloquear alta e acionar otorrinolaringologia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP08-02",
+        "tipo": "aspiracao_de_via_aerea",
+        "gatilho": "tosse, estridor, chiado unilateral, cianose ou dificuldade para respirar",
+        "severidade": "grave",
+        "mensagem": "Sinais de aspiração: seguir OFT-05 e acionar a sala vermelha, sem insistir no exame nasal.",
+        "acao": "acionar sala vermelha e abrir OFT-05",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP08-03",
+        "tipo": "tentativa_cega",
+        "gatilho": "remoção sem visão direta, com cotonete, pinça caseira, arame ou agulha",
+        "severidade": "grave",
+        "mensagem": "Remoção sem visão empurra o objeto e perfura tímpano e septo. Interromper e instrumentar sob visão.",
+        "acao": "bloquear o registro da técnica e alertar a equipe",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP08-04",
+        "tipo": "lavagem_proibida",
+        "gatilho": "irrigação prescrita para corpo estranho vegetal, bateria, objeto pontiagudo ou ouvido com perfuração",
+        "severidade": "grave",
+        "mensagem": "Lavagem proibida nesse objeto: vegetal incha, bateria necrosa e perfuração piora.",
+        "acao": "bloquear o item e sugerir extração instrumental",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP08-05",
+        "tipo": "corpo_estranho_bilateral",
+        "gatilho": "corpo estranho bilateral em fossa nasal com irrigação simultânea ou manipulação das duas narinas",
+        "severidade": "precaucao",
+        "mensagem": "Corpo estranho bilateral: remover um lado por vez e monitorar a via aérea.",
+        "acao": "alertar e exigir plano de remoção sequencial",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP08-06",
+        "tipo": "inseto_sem_imobilizacao",
+        "gatilho": "inseto vivo com extração instrumental sem lidocaína ou óleo antes",
+        "severidade": "precaucao",
+        "mensagem": "Inseto vivo deve ser imobilizado antes da pinça, para não lesar o tímpano.",
+        "acao": "alertar e sugerir lidocaína tópica",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP08-07",
+        "tipo": "documentacao",
+        "gatilho": "remoção de corpo estranho sem registro de otoscopia ou rinoscopia, do objeto e das complicações",
+        "severidade": "informativo",
+        "mensagem": "Registrar objeto, lado, tempo, técnica e complicações é o que permite reavaliar e sustenta a conduta.",
+        "acao": "solicitar preenchimento do registro",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "sociedade de pediatria",
+        "sociedade de otorrinolaringologia",
+        "literatura",
+        "protocolo institucional"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: corpo estranho de ouvido e de nariz tratados como diagnóstico visual, com remoção por gancho ou pinça sob visão direta como primeira escolha, irrigação restrita a objeto liso e arredondado com tímpano íntegro e proibida em bateria e corpo vegetal, e técnica do adesivo para objeto esférico que a pinça não agarra; inseto imobilizado com lidocaína ou óleo antes da extração; corpo estranho bilateral removido um lado por vez; 9 fármacos de 9 classes, com apresentações, preparo, tempo de infusão, monitorização e ajuste renal; proibição explícita de soprar o nariz, de remoção sem visão e de cotonete; critérios de encaminhamento ao otorrinolaringologista, incluindo falha de duas tentativas, objeto em coana e necessidade de sedação; alerta de aspiração de via aérea encaminhando ao OFT-05; 6 procedimentos e 7 alertas com 4 bloqueantes.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

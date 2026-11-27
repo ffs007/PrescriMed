@@ -1,0 +1,554 @@
+{
+  "id": "ws-gi_10",
+  "nome": "Sangramento digestivo baixo suspeito",
+  "cat": "Emergência",
+  "alias": "sangramento digestivo baixo suspeito enterorragia hematoquezia sangramento digestivo baixo hdb",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-10_hdb.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] sociedade_endoscopia: timing e preparo da colonoscopia no sangramento baixo",
+      "[verificar] protocolo_institucional: protocolo de HDB, transfusão restritiva e reversão de anticoagulação",
+      "[verificar] anvisa: apresentações de cristaloide, hemocomponentes, ferro e octreotida",
+      "[verificar] literatura: HALT-IT (tranexâmico), octreotida em angiodisplasia e limiar transfusional"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-10 em 2026-11-27",
+    "fundido_workspace": "GI-10 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, taquicardia, palidez ou confusão -> ressuscitação imediata em sala vermelha, tipagem e transfusão; enterorragia volumosa com coágulos e sangramento contínuo -> angio-tomografia imediata e embolização; cirurgia se falha; uso de anticoagulante ou antiagregante -> reverter conforme o fármaco e reavaliar risco trombótico; idade acima de 65 anos com comorbidade ou síncope -> internação, monitorização e investigação completa. 1) Estabilizar: acessos, cristaloide, tipagem e prova cruzada, monitorização 2) Classificar: estável ou instável, sangramento ativo ou cessado, e se há suspeita de origem alta 3) Reverter anticoagulação em sangramento grave ou hemoglobina em queda 4) Transfusão restritiva conforme hemoglobina e clínica 5) Estável: preparo intestinal e colonoscopia em 24 a 48 h 6) Instável ou sangramento ativo volumoso: angio-tomografia e embolização; cirurgia se falha 7) Colonoscopia negativa com sangramento recorrente: cintilografia, enteroscopia e endoscopia digestiva alta 8) Definir a causa, tratar a lesão, repor ferro e planejar a alta com causa investigada e retorno precoce",
+  "redFlags": [
+    "hipotensão, taquicardia, palidez ou confusão -> ressuscitação imediata em sala vermelha, tipagem e transfusão",
+    "enterorragia volumosa com coágulos e sangramento contínuo -> angio-tomografia imediata e embolização; cirurgia se falha",
+    "uso de anticoagulante ou antiagregante -> reverter conforme o fármaco e reavaliar risco trombótico",
+    "idade acima de 65 anos com comorbidade ou síncope -> internação, monitorização e investigação completa",
+    "dor abdominal intensa com defesa ou distensão -> cirurgia e tomografia urgente",
+    "anemia grave (hemoglobina abaixo de 8 g/dL) ou síncope -> transfusão restritiva e internação",
+    "hematoquezia volumosa com instabilidade e sem causa baixa identificada -> endoscopia digestiva alta se colonoscopia negativa ou instabilidade persistente"
+  ],
+  "naoUsar": [
+    "edema agudo de pulmão",
+    "sobrecarga hídrica estabelecida",
+    "hipercalemia grave (preferir SF 0,9%)",
+    "anemia sem sangramento e sem sintoma",
+    "recusa documentada do paciente",
+    "sobrecarga circulatória descompensada sem diurético",
+    "sobrecarga de ferro (hemocromatose)",
+    "anemia não ferropriva"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter jejum até definição"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "AINE e antiagregante por conta própria"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Repositor ferro",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "sulfato_ferroso",
+            "pos": "40 a 60 mg de ferro elementar. Via VO. 1 vez ao dia ou em dias alternados. 3 a 6 meses, até normalizar a ferritina.",
+            "posTodas": true,
+            "motivo": "anemia ferropriva por sangramento crônico, após controle do sangramento (1a linha) anemia ferropriva",
+            "nota": "Uso direto; ideal em jejum com vitamina C, longe de chá, café, leite, cálcio e inibidor de bomba - monitorar: hemograma em 4 semanas (alvo de elevação de 1 a 2 g/dL); monitorar: ferritina ao final; monitorar: tolerância gastrointestinal e adesão · NÃO: sobrecarga de ferro (hemocromatose); anemia não ferropriva; úlcera ativa com intolerância · Obs: Dose em dias alternados melhora a absorção pela hepcidina; escurece as fezes e não deve ser confundido com melena. Não iniciar antes de controlar o sangramento ativo",
+            "dose": {
+              "texto": "40 a 60 mg de ferro elementar; 1 vez ao dia ou em dias alternados; 3 a 6 meses, até normalizar a ferritina; max. 120 mg de ferro elementar/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 60,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 120,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Preparo intestinal",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "polietilenoglicol_com_eletrolitos",
+              "n": "Polietilenoglicol 3350 com eletrólitos",
+              "ap": "frasco 4 L de solução pronta",
+              "q": "",
+              "pos": "4 L. Via VO ou sonda nasogástrica. Dose fracionada: 2 L na véspera e 2 L 4 a 6 h antes do exame. Até a saída de líquido claro. 250 mL a cada 15 minutos, por via oral ou sonda."
+            },
+            "motivo": "preparo para colonoscopia no sangramento digestivo baixo estável (condicional)",
+            "nota": "Diluir conforme a apresentação para 4 L de solução; servir gelado melhora a tolerância - monitorar: distensão e vômito; monitorar: eletrólitos em idoso e nefropata; monitorar: clareza do líquido eliminado · NÃO: obstrução intestinal; íleo paralítico; perfuração suspeita; instabilidade hemodinâmica · Obs: Preparo inadequado é a principal causa de colonoscopia inconclusiva; no sangramento ativo instável, não atrasar a angio-tomografia para preparar o cólon · Renal: Cautela em insuficiência renal e cardíaca: risco de sobrecarga e distúrbio eletrolítico",
+            "dose": {
+              "texto": "4 L; dose fracionada: 2 L na véspera e 2 L 4 a 6 h antes do exame; até a saída de líquido claro; max. 4 L por exame",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Dois acessos venosos calibrosos",
+              "ap": "",
+              "q": "",
+              "pos": "14 a 16 G, um para reposição volêmica e outro para drogas e contraste"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Monitorização contínua",
+              "ap": "",
+              "q": "",
+              "pos": "ECG, oximetria e pressão a cada 15 min na fase ativa; sonda vesical se instável"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Jejum e suspensão de AINE e anticoagulante",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender AINE e antiagregante durante o sangramento ativo, com decisão individual sobre risco trombótico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Transfusão restritiva",
+              "ap": "",
+              "q": "",
+              "pos": "Alvo de hemoglobina 7 g/dL (8 g/dL em cardiopata com isquemia); uma unidade por vez, com reavaliação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Preparo intestinal fracionado",
+              "ap": "",
+              "q": "",
+              "pos": "2 L na véspera e 2 L 4 a 6 h antes da colonoscopia; sem preparo o exame não localiza a lesão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Suspender ferro 5 dias antes da colonoscopia",
+              "ap": "",
+              "q": "",
+              "pos": "O ferro escurece as fezes e simula melena, atrapalhando a avaliação endoscópica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Registro do balanço e da hemoglobina seriada",
+              "ap": "",
+              "q": "",
+              "pos": "Anotar volume infundido, diurese e hemoglobina a cada 6 a 12 h na fase ativa"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-10"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cristaloide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ringer_lactato",
+              "n": "Ringer lactato",
+              "ap": "bolsa 1.000 mL",
+              "via": "IV",
+              "pos": "1.000 mL (30 mL/kg). Via IV. Bolus, repetido conforme resposta. Até estabilização hemodinâmica. 15 a 30 minutos no choque, sob pressão; 1 a 2 h no paciente estável."
+            },
+            "motivo": "reposição volêmica no sangramento com instabilidade (1a linha)",
+            "nota": "Infusão direta em acesso calibroso 14 a 16 G; aquecer a 37 °C se hipotermia ou transfusão maciça - monitorar: PA e frequência cardíaca a cada 15 min na fase ativa; monitorar: diurese (alvo 0,5 mL/kg/h); monitorar: ausculta pulmonar e jugulares; monitorar: lactato e hemoglobina seriada · NÃO: edema agudo de pulmão; sobrecarga hídrica estabelecida; hipercalemia grave (preferir SF 0,9%) · Obs: Preferir cristaloide balanceado ao SF 0,9% em volumes grandes; no cardiopata, bolus de 250 a 500 mL com reavaliação · Renal: Cautela em oligúria e insuficiência renal: reduzir volume e avaliar diurese",
+            "dose": {
+              "texto": "1.000 mL (30 mL/kg); bolus, repetido conforme resposta; até estabilização hemodinâmica; max. individualizar pela resposta; reavaliar a cada 500 mL em cardiopata",
+              "status": "ok",
+              "valor": 1000,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Hemoderivado",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "concentrado_de_hemacias",
+              "n": "Concentrado de hemácias",
+              "ap": "bolsa de hemácias leucodepletadas 250 a 300 mL",
+              "via": "IV",
+              "pos": "1 unidade. Via IV. Unidade a unidade, com reavaliação de hemoglobina entre elas. Até atingir o alvo (7 a 8 g/dL conforme comorbidade). 2 a 4 horas por unidade (máximo de 4 h); rápido apenas no protocolo de transfusão maciça."
+            },
+            "motivo": "anemia sintomática por sangramento com hemoglobina abaixo de 7 g/dL (1a linha)",
+            "nota": "Tipagem e prova cruzada; instalar com filtro próprio; aquecer apenas em dispositivo validado, nunca em banho-maria - monitorar: hemoglobina pré e 1 h pós-transfusão; monitorar: temperatura, PA e urina durante a infusão; monitorar: sinais de sobrecarga e de hemólise; monitorar: cálcio e potássio em transfusão maciça · NÃO: anemia sem sangramento e sem sintoma; recusa documentada do paciente; sobrecarga circulatória descompensada sem diurético · Obs: Estratégia restritiva reduz mortalidade e ressangramento; uma unidade eleva a hemoglobina em cerca de 1 g/dL. Não transfundir por número isolado sem clínica",
+            "dose": {
+              "texto": "1 unidade; unidade a unidade, com reavaliação de hemoglobina entre elas; até atingir o alvo (7 a 8 g/dL conforme comorbidade); max. individualizar; protocolo de transfusão maciça 1:1:1 se sangramento incontrolável",
+              "status": "ok",
+              "valor": 7,
+              "valor_max": 8,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Reversor anticoagulante",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fitomenadiona",
+              "n": "Fitomenadiona (vitamina K)",
+              "ap": "ampola 10 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "10 mg. Via IV. Dose única, repetível em 12 a 24 h se INR persistir alto. 1 a 2 doses. 20 a 30 minutos."
+            },
+            "motivo": "sangramento grave em uso de varfarina (condicional) varfarina",
+            "nota": "Diluir em 50 mL de SF 0,9% e infundir lentamente; nunca em bolus rápido - monitorar: INR em 6 a 12 h; monitorar: sinais de trombose; monitorar: sangramento · NÃO: hipersensibilidade; prótese valvar mecânica com necessidade de anticoagulação plena sem discussão com cardiologia · Obs: Isolada leva horas para reverter; em sangramento grave associar complexo protrombínico. Não reverter INR alargado sem sangramento",
+            "dose": {
+              "texto": "10 mg; dose única, repetível em 12 a 24 h se INR persistir alto; 1 a 2 doses; max. 10 mg por dose",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "complexo_protrombinico_humano",
+              "n": "Complexo protrombínico humano (CCP)",
+              "ap": "frasco 500 UI com diluente 20 mL",
+              "via": "IV",
+              "pos": "25 a 50 UI/kg. Via IV. Dose única, guiada por INR e peso. Dose única. 10 a 20 minutos (máximo de 10 mL/min)."
+            },
+            "motivo": "reversão imediata de varfarina em sangramento grave (condicional) varfarina com sangramento grave",
+            "nota": "Reconstituir com o diluente próprio em movimento circular suave, sem agitar; administrar imediatamente - monitorar: INR 30 min após; monitorar: sinais de trombose; monitorar: hemograma e fibrinogênio se repetir · NÃO: trombose recente sem avaliação; CIVD estabelecida; hipersensibilidade a proteínas plasmáticas · Obs: Preferir ao plasma na reversão de varfarina com sangramento grave: reverte em minutos e evita sobrecarga. Manter vitamina K associada",
+            "dose": {
+              "texto": "25 a 50 UI/kg; dose única, guiada por INR e peso; dose única; max. 50 UI/kg",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 50,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "UI"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Repositor ferro",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "sacarato_de_hidroxido_ferrico",
+              "n": "Sacarato de hidróxido férrico",
+              "ap": "ampola 100 mg/5 mL",
+              "via": "IV",
+              "pos": "200 mg. Via IV. 1 a 3 vezes por semana, conforme déficit calculado. Até repor o déficit (usar fórmula de Ganzoni). 30 a 60 minutos (dose teste nos primeiros 15 min em paciente sem uso prévio)."
+            },
+            "motivo": "anemia ferropriva grave, intolerância oral, má absorção ou doença inflamatória (alternativa)",
+            "nota": "Diluir 200 mg em 250 mL de SF 0,9%; ter equipe e carro de emergência disponíveis - monitorar: PA e frequência cardíaca durante a infusão; monitorar: sinais de reação aguda; monitorar: ferritina e saturação de transferrina em 2 a 4 semanas · NÃO: sobrecarga de ferro; anemia não ferropriva; infecção ativa não tratada; hipersensibilidade a ferro venoso · Obs: Indicado quando a hemoglobina está muito baixa, há sangramento contínuo ou má absorção; corrige anemia em semanas e melhora sintomas",
+            "dose": {
+              "texto": "200 mg; 1 a 3 vezes por semana, conforme déficit calculado; até repor o déficit (usar fórmula de Ganzoni); max. 200 mg por infusão; 600 mg por semana",
+              "status": "ok",
+              "valor": 200,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antifibrinolítico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "acido_tranexamico_ev",
+            "motivo": "sangramento digestivo baixo refratário, em caso selecionado (condicional)",
+            "nota": "Diluir 1 g em 100 mL de SF 0,9% ou SG 5% - monitorar: sinais de trombose (dor torácica, edema de membro, déficit neurológico); monitorar: sangramento; monitorar: função renal antes de repetir dose · NÃO: trombose venosa ou arterial recente; história de convulsão; insuficiência renal grave sem ajuste; hemorragia subaracnóidea · Obs: O estudo HALT-IT não mostrou benefício em sangramento gastrointestinal e houve mais eventos tromboembólicos; reservar para casos refratários e sem alternativa cirúrgica · Renal: Reduzir para 15 mg/kg se ClCr entre 30 e 60 mL/min; 10 mg/kg se ClCr abaixo de 30 ou em…",
+            "dose": {
+              "texto": "1 g; 8/8 h ou 1 g seguido de 1 g em 8 h; até 24 a 72 h; max. 3 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analogo somatostatina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "octreotida",
+              "n": "Octreotida",
+              "ap": "ampola 0,1 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "50 mcg em bolus, seguido de 50 mcg/h. Via IV. Infusão contínua. 24 a 72 h, com retirada gradual. Contínua por bomba."
+            },
+            "motivo": "sangramento refratário por angiodisplasia ou doença diverticular, sem opção de hemostasia (condicional) sangramento refratário",
+            "nota": "Bolus de 50 mcg IV; depois diluir em SF 0,9% e manter em bomba de infusão - monitorar: glicemia a cada 6 h; monitorar: frequência cardíaca; monitorar: volume e aspecto do sangramento; monitorar: diurese · NÃO: hipersensibilidade a somatostatina; bradicardia grave; gestação sem avaliação · Obs: Evidência limitada, com séries pequenas mostrando redução de transfusão em angiodisplasia; não substitui colonoscopia terapêutica nem embolização",
+            "dose": {
+              "texto": "50 mcg em bolus, seguido de 50 mcg/h; infusão contínua; 24 a 72 h, com retirada gradual; max. 50 mcg/h",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vasopressor",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "noradrenalina",
+              "n": "Noradrenalina",
+              "ap": "ampola 4 mg/4 mL (1 mg/mL)",
+              "via": "IV",
+              "pos": "0,05 a 0,5 mcg/kg/min. Via IV. Infusão contínua. Até retirada do choque. Contínua por bomba."
+            },
+            "motivo": "choque persistente após reposição volêmica (resgate)",
+            "nota": "Diluir 4 mg em 250 mL de SG 5% (16 mcg/mL) em bomba de infusão; preferir acesso central - monitorar: pressão arterial média (alvo 65 mmHg); monitorar: perfusão de extremidades; monitorar: diurese; monitorar: ritmo cardíaco · NÃO: hipovolemia não corrigida; uso em acesso periférico sem vigilância · Obs: Só após volume; não substitui hemostasia. Extravasamento exige fentolamina no local",
+            "dose": {
+              "texto": "0,05 a 0,5 mcg/kg/min; infusão contínua; até retirada do choque; max. 1 mcg/kg/min (individualizar)",
+              "status": "ok",
+              "valor": 0.05,
+              "valor_max": 0.5,
+              "unidade": "mcg/kg/min",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-10",
+    "versao": "0.2.0",
+    "arquivo": "GI-10_hdb.json",
+    "area": "Gastrointestinal",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

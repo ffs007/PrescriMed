@@ -1,0 +1,571 @@
+{
+  "id": "ws-gi_20",
+  "nome": "Colecistite aguda",
+  "cat": "Emergência",
+  "alias": "colecistite aguda colecistite aguda colecistite colecistite calculosa colecistite alitiasica vesicula inflamada murphy positivo",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-20_colecistite.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] diretriz_tokyo: graduação de gravidade e indicação de drenagem",
+      "[verificar] sociedade_gastroenterologia: momento da colecistectomia e manejo da coledocolitíase",
+      "[verificar] protocolo_institucional: antibiótico do serviço e fluxo de CPRE",
+      "[verificar] anvisa: apresentações e bulas"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-20 em 2026-11-27",
+    "fundido_workspace": "GI-20 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: febre com icterícia e dor em hipocôndrio direito (tríade de Charcot) -> antibiótico na primeira hora, ressuscitação e CPRE em até 24 h; confusão e hipotensão em paciente ictérico (pêntade de Reynolds) -> sala vermelha, UTI e drenagem biliar urgente; defesa muscular localizada ou dor difusa com descompressão dolorosa -> cirurgia de urgência e antibiótico de amplo espectro; febre persistente por mais de 72 h com piora da dor apesar de antibiótico -> repetir imagem, drenar e reavaliar indicação cirúrgica. 1) Confirmar: dor contínua em hipocôndrio direito, Murphy, febre, leucocitose e ultrassonografia com parede espessada ou líquido pericolecístico 2) Separar de cólica biliar: dor que já cedeu, sem febre e sem leucocitose não é colecistite 3) Classificar gravidade (Tokyo I, II ou III) e procurar colangite: febre + icterícia + dor muda o fluxo 4) Iniciar antibiótico, analgesia, antiemético, hidratação e profilaxia de trombose; colher hemocultura antes 5) Definir via biliar: bilirrubina, colédoco na ultrassonografia; CPRE em até 24 h se colangite ou cálculo no colédoco 6) Decidir o destino: colecistectomia videolaparoscópica em até 72 h se operável; colecistostomia percutânea se alto risco 7) Reavaliar em 72 h: sem melhora, reimagem e drenagem; após alta, completar antibiótico e retorno cirúrgico se drenagem",
+  "redFlags": [
+    "febre com icterícia e dor em hipocôndrio direito (tríade de Charcot) -> antibiótico na primeira hora, ressuscitação e CPRE em até 24 h",
+    "confusão e hipotensão em paciente ictérico (pêntade de Reynolds) -> sala vermelha, UTI e drenagem biliar urgente",
+    "defesa muscular localizada ou dor difusa com descompressão dolorosa -> cirurgia de urgência e antibiótico de amplo espectro",
+    "febre persistente por mais de 72 h com piora da dor apesar de antibiótico -> repetir imagem, drenar e reavaliar indicação cirúrgica",
+    "massa palpável em hipocôndrio direito com febre e vômitos -> tomografia e drenagem percutânea ou cirurgia",
+    "amilase ou lipase acima de 3 vezes o limite superior -> hidratação, analgesia e reavaliação da via biliar",
+    "idoso, diabético, imunossuprimido ou pós-operatório sem febre -> ultrassonografia precoce e internação mesmo sem febre",
+    "bilirrubina acima de 4 mg/dL ou icterícia progressiva -> colangiorressonância ou CPRE conforme gravidade"
+  ],
+  "naoUsar": [
+    "alergia a cefalosporina",
+    "anafilaxia prévia a penicilina",
+    "hiperbilirrubinemia neonatal",
+    "uso concomitante de solução com cálcio em neonato",
+    "alergia a nitroimidazol",
+    "ingesta de álcool",
+    "primeiro trimestre da gestação",
+    "hipercalemia grave"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar o antibiótico até o fim quando não operar"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "tratar como cólica biliar e mandar para casa"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Heparina baixo peso molecular",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa 20 mg/0,2 mL",
+              "q": "",
+              "pos": "40 mg. Via SC. 1x/dia. Enquanto internado."
+            },
+            "motivo": "profilaxia de trombose venosa profunda em paciente internado e acamado (condicional)",
+            "nota": "Pronta para uso; não expelir a bolha de ar da seringa - monitorar: plaquetas a cada 2-3 dias; monitorar: sinais de sangramento; monitorar: função renal · NÃO: sangramento ativo; plaquetas abaixo de 50.000/mm³; insuficiência renal grave sem ajuste; anestesia neuroaxial recente · Obs: Suspender 12 h antes da colecistectomia quando possível; não é tratamento de trombose estabelecida · Renal: ClCr < 30 mL/min: 20 mg 1x/dia",
+            "dose": {
+              "texto": "40 mg; 1x/dia; enquanto internado; max. 40 mg/dia na profilaxia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Jejum oral com hidratação venosa",
+              "ap": "",
+              "q": "",
+              "pos": "Nada por boca enquanto houver vômito ou dor intensa; reintroduzir líquidos claros assim que tolerar, sem esperar cirurgia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Monitorização de sinais vitais e diurese",
+              "ap": "",
+              "q": "",
+              "pos": "Temperatura, PA, FC e diurese a cada 6 h; diurese horária se sepse"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Balanço hídrico e controle de glicemia",
+              "ap": "",
+              "q": "",
+              "pos": "Pesar na admissão, balanço diário; glicemia capilar 6/6 h no diabético, alvo 140–180 mg/dL"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Profilaxia de trombose venosa",
+              "ap": "",
+              "q": "",
+              "pos": "Enoxaparina 40 mg SC ou meia elástica em contraindicação; manter até a deambulação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Decisão cirúrgica registrada na primeira avaliação",
+              "ap": "",
+              "q": "",
+              "pos": "Anotar grau de Tokyo, risco ASA, previsão de colecistectomia em até 72 h ou indicação de drenagem"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Reavaliação clínica em 24 h e 72 h",
+              "ap": "",
+              "q": "",
+              "pos": "Febre, dor, leucograma e aceitação alimentar; ausência de melhora em 72 h obriga reimagem"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Dieta pobre em gordura após resolução",
+              "ap": "",
+              "q": "",
+              "pos": "Orientar refeições fracionadas e sem frituras por 4 semanas, sem evidência de que previna recidiva"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-20"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cefalosporina terceira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "colecistite aguda comunitária leve a moderada, em associação ao metronidazol (1a linha)",
+            "nota": "Reconstituir 2 g em 20 mL de água para injeção; diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: temperatura a cada 6 h; monitorar: leucograma em 48-72 h; monitorar: bilirrubina e transaminases; monitorar: diarreia · NÃO: alergia a cefalosporina; anafilaxia prévia a penicilina; hiperbilirrubinemia neonatal; uso concomitante de solução com cálcio em neonato · Obs: Sempre associar metronidazol para anaeróbios; cobrir Pseudomonas com piperacilina-tazobactam se grave",
+            "dose": {
+              "texto": "2 g; 1x/dia; até 24 h após a colecistectomia; 7-10 dias se não operar; max. 2 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "cobertura de anaeróbios na colecistite, sempre em associação (1a linha)",
+            "nota": "Bolsa pronta para infusão; não adicionar outros fármacos na mesma bolsa - monitorar: náusea e vômito; monitorar: sintomas neurológicos após 10 dias; monitorar: INR se usar varfarina · NÃO: alergia a nitroimidazol; ingesta de álcool; primeiro trimestre da gestação · Obs: Proibir álcool durante o tratamento e por 72 h após; é o par obrigatório do Gram-negativo escolhido",
+            "dose": {
+              "texto": "500 mg; 8/8 h; até 24 h após a colecistectomia; 7-10 dias se não operar; max. 1,5 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1.5,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cristaloide balanceado",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ringer_lactato",
+              "n": "Ringer lactato",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "500-1.000 mL em bolus; 30 mL/kg nas primeiras 3 h se sepse. Via IV. Repetir conforme resposta. Até estabilização hemodinâmica. Bolus em 15-30 min; infusão contínua na sepse."
+            },
+            "motivo": "hipovolemia, sepse biliar ou vômitos com impossibilidade de ingestão (1a linha)",
+            "nota": "Pronto para uso - monitorar: PA e frequência cardíaca; monitorar: diurese horária; monitorar: ausculta pulmonar; monitorar: lactato · NÃO: hipercalemia grave; insuficiência cardíaca descompensada · Obs: Preferir Ringer lactato ao SF 0,9% para reduzir acidose hiperclorêmica; reavaliar em 30 min · Renal: Cautela em oligúria com congestão; não suspender por creatinina isolada",
+            "dose": {
+              "texto": "500-1.000 mL em bolus; 30 mL/kg nas primeiras 3 h se sepse; repetir conforme resposta; até estabilização hemodinâmica; max. individualizar; evitar balanço positivo acima de 2 L",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Opioide forte",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "morfina_ev",
+            "motivo": "dor intensa da colecistite (1a linha)",
+            "nota": "Diluir 10 mg em 10 mL de SF (1 mg/mL) para titulação - monitorar: frequência respiratória; monitorar: escala de sedação; monitorar: PA; monitorar: náusea e prurido",
+            "dose": {
+              "texto": "2-4 mg; 4/4 h se necessário; até controle da dor ou cirurgia; max. titular conforme resposta e sedação",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 4,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético antagonista 5ht3",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "náusea e vômito da colecistite ou do pós-operatório (1a linha) náusea",
+            "nota": "IV direto ou diluído em 50 mL de SF - monitorar: QT em cardiopata; monitorar: potássio e magnésio",
+            "dose": {
+              "texto": "4 mg; 8/8 h; até 48 h; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina inibidor betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "amoxicilina_clavulanato",
+              "n": "Amoxicilina-clavulanato",
+              "ap": "frasco 1 g/200 mg",
+              "via": "IV ou VO",
+              "pos": "1,2 g (IV) ou 875/125 mg (VO). IV 8/8 h; VO 12/12 h. 7 dias. 30 minutos (IV); não se aplica (VO)."
+            },
+            "motivo": "colecistite leve quando ceftriaxona indisponível, ou passo-down oral (alternativa) passo-down após alta sem cirurgia",
+            "nota": "Reconstituir o frasco em 20 mL de água; diluir em 100 mL de SF; VO uso direto com alimento - monitorar: diarreia; monitorar: transaminases se uso acima de 7 dias; monitorar: função renal · NÃO: alergia a penicilina; hepatite colestática prévia por amoxicilina-clavulanato; mononucleose infecciosa · Obs: Boa opção para alta precoce em paciente que tolera via oral; não cobre Pseudomonas · Renal: ClCr < 30 mL/min: 1,2 g 12/12 h; não passar de 500/125 mg 12/12 h na via oral",
+            "dose": {
+              "texto": "1,2 g (IV) ou 875/125 mg (VO); IV 8/8 h; VO 12/12 h; 7 dias; max. 3,6 g/dia (IV); 1.750/250 mg/dia (VO)",
+              "status": "ok",
+              "valor": 1.2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3.6,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Carbapenemico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ertapenem",
+              "n": "Ertapenem",
+              "ap": "frasco 1 g",
+              "via": "IV",
+              "pos": "1 g. Via IV. 1x/dia. 7-10 dias. 30 minutos."
+            },
+            "motivo": "colecistite grave com suspeita de ESBL ou falha de piperacilina-tazobactam (alternativa)",
+            "nota": "Reconstituir em 10 mL de água; diluir em 50 mL de SF 0,9% - monitorar: função renal; monitorar: convulsão; monitorar: diarreia · NÃO: alergia a carbapenêmico; meningite; convulsão não controlada · Obs: Não cobre Pseudomonas; se houver risco de Pseudomonas, usar meropenem ou manter piperacilina-tazobactam · Renal: ClCr < 30 mL/min: 500 mg 1x/dia",
+            "dose": {
+              "texto": "1 g; 1x/dia; 7-10 dias; max. 1 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "dor leve a moderada e febre, isolada ou como adjuvante do opioide (alternativa) dor e febre",
+            "nota": "Diluir 1 g em 100 mL de SF ou SG para infusão; não usar em bolus rápido - monitorar: PA durante a infusão; monitorar: temperatura; monitorar: hemograma se uso prolongado · NÃO: alergia a pirazolona; discrasia sanguínea; porfiria hepática aguda; deficiência de G6PD; terceiro trimestre da gestação · Obs: Não substitui opioide na dor intensa; não associar AINE se houver injúria renal ou suspeita de perfuração",
+            "dose": {
+              "texto": "1 g; 6/6 h; até 72 h; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Penicilina antipseudomonas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "piperacilina_tazobactam",
+              "n": "Piperacilina-tazobactam",
+              "ap": "frasco 2,25 g",
+              "via": "IV",
+              "pos": "4,5 g. Via IV. 6/6 h. 7-10 dias ou até 24 h após controle cirúrgico. 30 minutos em dose usual; 3-4 h em infusão estendida no grave."
+            },
+            "motivo": "colecistite grave, sepse, imunossupressão ou risco de Pseudomonas (condicional)",
+            "nota": "Reconstituir em 20 mL de água; diluir em 100-250 mL de SF 0,9% - monitorar: creatinina e potássio; monitorar: plaquetas; monitorar: diarreia; monitorar: controle do foco em 48-72 h · NÃO: alergia a penicilina ou inibidor de beta-lactamase; anafilaxia prévia a beta-lactâmico · Obs: Não é primeira linha na colecistite leve; reservar para gravidade, para não selecionar resistência · Renal: ClCr 20–40: 3,375 g 6/6 h; ClCr < 20: 2,25 g 6/6 h; suplementar após diálise",
+            "dose": {
+              "texto": "4,5 g; 6/6 h; 7-10 dias ou até 24 h após controle cirúrgico; max. 18 g/dia",
+              "status": "ok",
+              "valor": 4.5,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 18,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fitomenadiona",
+              "n": "Fitomenadiona (vitamina K)",
+              "ap": "ampola 10 mg/mL",
+              "via": "IV",
+              "pos": "10 mg. Via IV. Dose única. 1 dose. 20-30 minutos."
+            },
+            "motivo": "colangite com coagulopatia, INR alargado ou uso de varfarina (condicional)",
+            "nota": "Diluir em 50 mL de SF; infundir lentamente - monitorar: INR em 6-12 h; monitorar: sinais de sangramento · NÃO: alergia · Obs: Necessária antes de punção biliar ou cirurgia quando INR está alargado; não corrige coagulopatia de consumo",
+            "dose": {
+              "texto": "10 mg; dose única; 1 dose; max. 10 mg",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-20",
+    "versao": "0.2.0",
+    "arquivo": "GI-20_colecistite.json",
+    "area": "Gastrointestinal",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

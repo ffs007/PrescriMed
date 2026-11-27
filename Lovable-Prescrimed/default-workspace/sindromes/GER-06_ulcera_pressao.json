@@ -1,0 +1,1432 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GER-06",
+    "area": "Geriatria",
+    "nome": "Úlcera por pressão",
+    "aliases": [
+      "úlcera por pressão",
+      "escaras",
+      "lesão por pressão",
+      "úlcera de decúbito",
+      "ferida por pressão"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "idoso"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Úlcera por pressão é lesão de pele e tecido subcutâneo causada por pressão, cisalhamento e fricção sobre proeminência óssea, e no idoso é marcador de imobilidade, desnutrição e falha de cuidado — não de pele frágil. A classificação em estágios define a conduta e só pode ser feita depois da limpeza do leito: estágio 1 é eritema não branqueável em pele intacta; estágio 2 é perda parcial da espessura com derme exposta; estágio 3 é perda total com tecido subcutâneo visível e sem osso; estágio 4 é perda total com osso, tendão, músculo ou fáscia expostos; não classificável é a lesão coberta por esfacelo ou necrose, que só pode ser estadiada após o desbridamento — exceto a escara seca e estável do calcâneo; e lesão tissular profunda é a área púrpura ou marrom em pele intacta ou com bolha hemorrágica, que pode evoluir para estágio 4 em dias. O tratamento tem quatro pilares simultâneos — alívio de pressão com reposicionamento e superfície de apoio, limpeza e desbridamento do tecido desvitalizado, escolha do curativo pelo estágio e pelo volume de exsudato, e suporte nutricional com proteína — e nenhum funciona isolado: a ferida não cicatriza sobre pressão mantida e não melhora em paciente catabólico. O que não se faz é tão importante quanto o que se faz: nunca massagear proeminência óssea, nunca usar solução irritante (álcool, água oxigenada, iodopovidona, hipoclorito) no leito, nunca manter curativo seco ou gaze seca em ferida com exsudato, nunca usar almofada em rosca, nunca desbridar escara estável de calcâneo sem infecção e nunca tratar colonização com antibiótico sistêmico. Prevenção é mais eficaz que tratamento: escala de Braden em todo paciente acamado ou com mobilidade reduzida, inspeção diária de sacro, cóccix, ísquio, trocanter e calcâneo, superfície de apoio adequada ao risco, controle de umidade e nutrição. Osso exposto, ferida que aumenta em vez de diminuir, exsudato persistente e proteína C reativa elevada são osteomielite até prova contrária, e o atraso no diagnóstico custa amputação e sepse.",
+    "inclusao": [
+      "Lesão por pressão de estágio 1 a 4 em paciente com 65 anos ou mais, em qualquer cenário de cuidado",
+      "Lesão não classificável, coberta por esfacelo ou necrose, que precisa de desbridamento para ser estadiada",
+      "Suspeita de lesão tissular profunda: pele púrpura ou marrom, bolha hemorrágica, dor ou temperatura alterada em área de pressão",
+      "Ferida com exsudato, odor, tecido desvitalizado ou dor que exige escolha de curativo",
+      "Paciente acamado, institucionalizado ou com mobilidade reduzida e risco elevado pela escala de Braden, para prevenção",
+      "Ferida que não reduz de tamanho em 2 a 4 semanas apesar de tratamento adequado"
+    ],
+    "exclusao": [
+      {
+        "situacao": "osso exposto com sinais sistêmicos, osteomielite confirmada ou suspeita forte",
+        "fluxo": "hospitalar"
+      },
+      {
+        "situacao": "sepse, celulite extensa, fasceíte necrotizante ou crepitação",
+        "fluxo": "hospitalar"
+      },
+      {
+        "situacao": "necrose extensa com necessidade de retalho ou cobertura cirúrgica",
+        "fluxo": "cirurgia"
+      },
+      {
+        "situacao": "úlcera de perna de origem venosa, arterial ou neuropática",
+        "fluxo": "ferida_cronica"
+      },
+      {
+        "situacao": "queimadura e lesão por contato com calor",
+        "fluxo": "queimadura"
+      },
+      {
+        "situacao": "dermatite por umidade sem componente de pressão em pele íntegra",
+        "fluxo": "dermatologia"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "osso exposto ou teste de sondagem óssea positivo pelo leito da ferida",
+        "por_que": "osteomielite subjacente em estágio 4",
+        "acao": "radiografia e ressonância magnética, proteína C reativa e hemograma, biópsia óssea e antibiótico por 6 semanas com avaliação cirúrgica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "febre, calafrios, hipotensão ou confusão nova em paciente com lesão infectada",
+        "por_que": "sepse de origem cutânea",
+        "acao": "hemoculturas, antibiótico intravenoso, hidratação e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "celulite extensa, linfangite, crepitação ou dor desproporcional",
+        "por_que": "infecção profunda ou fasceíte necrotizante",
+        "acao": "avaliação cirúrgica imediata e desbridamento",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "exsudato purulento com odor fétido, necrose ou aumento da ferida",
+        "por_que": "infecção crítica com biofilme e destruição tecidual",
+        "acao": "desbridar, colher cultura por biópsia e iniciar antimicrobiano",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "ferida que aumenta ou não reduz em 2 a 4 semanas com curativo adequado",
+        "por_que": "pressão mantida, desnutrição, osteomielite ou neoplasia",
+        "acao": "reavaliar superfície e reposicionamento, nutrição, infecção e biópsia se persistir",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "pele púrpura ou bolha hemorrágica em área de pressão",
+        "por_que": "lesão tissular profunda com necrose de tecido profundo",
+        "acao": "aliviar pressão, não romper a bolha e monitorar diariamente",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "escara seca e estável no calcâneo em paciente com isquemia de membro",
+        "por_que": "desbridamento sem revascularização precipita necrose e amputação",
+        "acao": "avaliação vascular antes de qualquer desbridamento",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "perda de peso, albumina baixa ou ingestão alimentar insuficiente",
+        "por_que": "catabolismo impede a cicatrização mesmo com curativo correto",
+        "acao": "avaliação nutricional, meta de 30–35 kcal/kg/dia e 1,25–1,5 g/kg/dia de proteína",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Onde é a lesão e há quanto tempo apareceu?",
+      "Como começou: vermelhidão que não clareia, bolha, ferida aberta ou casquinha preta?",
+      "Sai muito líquido? Tem pus, mau cheiro ou tecido escuro no fundo?",
+      "Dói? Piora na troca do curativo?",
+      "Consegue mudar de posição sozinho no leito e na cadeira? Quem ajuda e com que frequência?",
+      "Está comendo bem? Perdeu peso no último mês?",
+      "Tem febre, diabetes, má circulação nas pernas ou incontinência urinária e fecal?",
+      "Qual curativo está usando, de quanto em quanto tempo troca e quem troca?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Estágio 1, com eritema não branqueável e pele intacta",
+        "escolha": "Alívio de pressão imediato e hidrocoloide extrafino ou filme transparente sobre a área",
+        "porque": "No estágio 1 a pele está íntegra e o problema é isquemia por pressão: o que reverte é reposicionar e reduzir a pressão, e o curativo serve apenas para proteger da fricção. Massagear a área aumenta o dano e transforma eritema em necrose"
+      },
+      {
+        "cenario": "Estágio 2 com exsudato leve a moderado",
+        "escolha": "Hidrocoloide; se o exsudato for moderado, espuma de poliuretano",
+        "porque": "O estágio 2 expõe derme e precisa de ambiente úmido e proteção contra trauma, sem excesso de oclusão. Hidrocoloide em ferida muito exsudativa vaza e macera a borda, o que aumenta a lesão"
+      },
+      {
+        "cenario": "Estágio 3 com exsudato moderado a alto",
+        "escolha": "Espuma de poliuretano; se houver cavidade e exsudato abundante, alginato de cálcio coberto por espuma",
+        "porque": "O alginato forma gel ao absorver exsudato e preenche a cavidade sem compactar, enquanto a espuma controla o volume e mantém o leito úmido. Compactar alginato em cavidade comprime estruturas e causa dor"
+      },
+      {
+        "cenario": "Estágio 4 com cavidade, osso exposto ou exsudato abundante",
+        "escolha": "Alginato ou espuma em cavidade, proteção de bordas e avaliação imediata de osteomielite e de cobertura cirúrgica",
+        "porque": "Estágio 4 significa perda de todo o tecido e risco de osteomielite: curativo sozinho não fecha a lesão. O desfecho depende de tratar o osso, aliviar a pressão e, muitas vezes, de retalho cirúrgico"
+      },
+      {
+        "cenario": "Ferida seca com esfacelo aderido ou necrose fina",
+        "escolha": "Hidrogel amorfo para desbridamento autolítico ou colagenase para o enzimático; se a necrose for espessa, desbridamento cortante conservador",
+        "porque": "Curativo em ferida seca não funciona: o tecido desvitalizado precisa sair para o leito granulhar. O hidrogel hidrata e amolece; a colagenase digere o colágeno desnaturado; o cortante resolve o que os dois não alcançam"
+      },
+      {
+        "cenario": "Necrose extensa ou escara espessa em paciente com condições clínicas",
+        "escolha": "Desbridamento cortante conservador, em sessões, com analgesia; não desbridar isquemia sem revascularização nem escara seca e estável de calcâneo sem infecção",
+        "porque": "O desbridamento é o que controla biofilme e acelera a cicatrização, mas em membro isquêmico ele transforma escara seca em ferida úmida que necrosa. A escara estável funciona como curativo biológico e só deve sair se houver infecção ou dor"
+      },
+      {
+        "cenario": "Sinais de infecção local: exsudato purulento, odor, eritema perilesional sem febre",
+        "escolha": "Desbridar, colher cultura por biópsia ou aspiração profunda e usar curativo com prata iônica; sulfadiazina de prata 1% se o curativo de prata não estiver disponível",
+        "porque": "A prata reduz carga bacteriana e biofilme no leito, mas não substitui o desbridamento nem trata tecido profundo. Cultura de swab superficial coleta colonização e induz antibiótico errado"
+      },
+      {
+        "cenario": "Celulite perilesional, febre ou sinais sistêmicos",
+        "escolha": "Amoxicilina-clavulanato 875/125 mg 12/12 h; se suspeita de MRSA, alergia a penicilina ou necessidade de cobertura de anaeróbio, clindamicina 300 mg 8/8 h",
+        "porque": "A infecção de úlcera por pressão é polimicrobiana, com Staphylococcus aureus, estreptococo, anaeróbio e gram-negativo. Antibiótico sistêmico tem indicação quando há celulite, febre ou osso exposto — não para colonização"
+      },
+      {
+        "cenario": "Dor na troca de curativo ou no desbridamento",
+        "escolha": "Paracetamol 500–750 mg, 30 a 60 minutos antes do procedimento; se dor intensa, morfina 2,5–5 mg por via subcutânea, 20 a 30 minutos antes",
+        "porque": "Desbridamento e troca sem analgesia fazem o paciente recusar o cuidado, e a ferida piora por falta de manejo. O opioide é para o procedimento, não para dor crônica da úlcera, e exige prescrição de laxante"
+      },
+      {
+        "cenario": "Desnutrição, perda de peso ou úlcera de estágio 3 e 4",
+        "escolha": "Suplemento nutricional hipercalórico hiperproteico, com meta de 30–35 kcal/kg/dia e 1,25–1,5 g/kg/dia de proteína, e avaliação nutricional",
+        "porque": "Sem substrato o organismo não fecha a ferida: a proteína é o nutriente que mais muda desfecho. Suplemento não substitui alimentação nem resolve disfagia, que precisa de avaliação de deglutição"
+      },
+      {
+        "cenario": "Prevenção em paciente com Braden de 12 ou menos, acamado ou com mobilidade reduzida",
+        "escolha": "Superfície de apoio adequada ao risco, reposicionamento a cada 2 h no leito e a cada 15 min na cadeira, inspeção diária da pele, controle de umidade e nutrição",
+        "porque": "A úlcera se previne com o que é barato e contínuo: mudança de decúbito e superfície adequada. A escala de Braden não previne nada sozinha — ela só indica quem precisa dessas medidas"
+      },
+      {
+        "cenario": "Suspeita de osteomielite: osso exposto, ferida crônica que não fecha, exsudato persistente, proteína C reativa elevada",
+        "escolha": "Ressonância magnética, hemograma e provas inflamatórias e biópsia óssea para cultura; antibiótico por 6 semanas guiado por cultura e avaliação cirúrgica",
+        "porque": "A radiografia só mostra alteração após 2 a 4 semanas e a cultura de swab não representa o osso. A biópsia óssea é o padrão-ouro e evita tratar uma ferida crônica como se fosse apenas colonização"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "curativo_hidrocoloide",
+        "agente": "hidrocoloide (placa)",
+        "papel": "primeira_linha",
+        "indicacao": "estágio 1 e 2 com exsudato leve a moderado; proteção de pele íntegra sobre proeminência óssea",
+        "dose": "aplicar placa recortada 2 cm além da borda da lesão",
+        "unidade": "curativo",
+        "via": "tópica",
+        "frequencia": "troca a cada 3 a 7 dias, ou antes se a borda levantar ou extravasar",
+        "duracao": "até a epitelização ou mudança de estágio",
+        "dose_maxima": "individualizar pelo tamanho da lesão",
+        "contraindicacoes": [
+          "infecção com exsudato purulento",
+          "exsudato abundante",
+          "ferida cavitária profunda",
+          "isquemia sem perfusão",
+          "alergia a carboximetilcelulose ou poli-isobutileno"
+        ],
+        "efeitos_adversos": [
+          "maceração da pele perilesional",
+          "odor ao remover",
+          "extravasamento e vazamento",
+          "crescimento bacteriano sob oclusão",
+          "trauma e dor na remoção"
+        ],
+        "apresentacoes": [
+          "placa estéril 10 x 10 cm",
+          "placa estéril 15 x 15 cm",
+          "placa extrafina 10 x 10 cm",
+          "placa sacral 17 x 17 cm",
+          "placa com borda adesiva 12,5 x 12,5 cm"
+        ],
+        "preparo": "Limpar o leito com soro fisiológico e secar a pele perilesional; recortar 2 cm além da lesão, aquecer com a mão por 30 segundos e nunca cortar sobre a ferida",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "borda levantada ou vazamento",
+          "maceração da pele perilesional",
+          "odor e volume de exsudato",
+          "estágio e tamanho da lesão a cada troca",
+          "dor na remoção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É o curativo do estágio 1 e 2 com pouco exsudato: mantém o leito úmido e protege da fricção. Não serve para ferida infectada ou muito exsudativa, porque oclui e favorece anaeróbio. No estágio 1 o que resolve é o alívio de pressão; o curativo é adjuvante.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "curativo_espuma",
+        "agente": "espuma de poliuretano",
+        "papel": "primeira_linha",
+        "indicacao": "estágio 2 e 3 com exsudato moderado; ferida plana ou cavitária rasa",
+        "dose": "aplicar uma camada cobrindo o leito e 2 cm além da borda",
+        "unidade": "curativo",
+        "via": "tópica",
+        "frequencia": "troca a cada 3 a 7 dias, conforme a saturação",
+        "duracao": "até a redução do exsudato ou a epitelização",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": [
+          "exposição de osso, tendão ou vaso sem cobertura",
+          "necrose seca aderida não desbridada",
+          "isquemia sem perfusão",
+          "alergia ao poliuretano"
+        ],
+        "efeitos_adversos": [
+          "maceração da pele perilesional",
+          "aderência e dor na remoção",
+          "retenção de exsudato quando saturada",
+          "odor",
+          "crescimento bacteriano sob oclusão"
+        ],
+        "apresentacoes": [
+          "espuma estéril sem borda 10 x 10 cm",
+          "espuma com borda adesiva 12,5 x 12,5 cm",
+          "espuma para cavidade 5 x 5 cm",
+          "espuma sacral 17 x 17 cm"
+        ],
+        "preparo": "Limpar o leito, secar a pele perilesional e aplicar a face de contato; não recortar sobre o leito; em cavidade, não compactar",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "saturação do curativo",
+          "vazamento e maceração",
+          "exsudato e odor",
+          "dor na troca",
+          "progresso do estágio"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Absorve e mantém o leito úmido ao mesmo tempo, o que a gaze seca não faz. Trocar quando o exsudato atinge dois terços da espuma: manter curativo saturado causa maceração e proliferação bacteriana. Não é curativo para ferida seca.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "curativo_alginato",
+        "agente": "alginato de cálcio",
+        "papel": "condicional",
+        "indicacao": "estágio 3 e 4 com exsudato abundante e cavidade; leito com sangramento leve",
+        "dose": "preencher a cavidade sem compactar",
+        "unidade": "curativo",
+        "via": "tópica",
+        "frequencia": "troca a cada 1 a 3 dias, conforme o exsudato",
+        "duracao": "até a redução do exsudato e a granulação do leito",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": [
+          "ferida seca ou com pouco exsudato, em que o alginato adere e traumatiza",
+          "necrose seca não desbridada",
+          "alergia ao alginato",
+          "exposição de osso sem cobertura"
+        ],
+        "efeitos_adversos": [
+          "aderência e dor em ferida seca",
+          "resíduo de fibra no leito",
+          "maceração da pele perilesional",
+          "sangramento na remoção"
+        ],
+        "apresentacoes": [
+          "placa 5 x 5 cm",
+          "placa 10 x 10 cm",
+          "fita 2 x 30 cm",
+          "fita 2 x 45 cm"
+        ],
+        "preparo": "Limpar o leito e umedecer levemente quando estiver seco; aplicar sem compactar e cobrir com espuma ou hidrocoloide",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "volume de exsudato",
+          "resíduo de fibra no leito",
+          "sangramento na troca",
+          "dor",
+          "maceração perilesional"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Precisa de exsudato para formar gel: em ferida seca adere, sangra na troca e retira tecido viável. Não compactar em cavidade, porque expande e pode comprimir estruturas. É o curativo de escolha quando o estágio 3 ou 4 drena muito.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "curativo_antimicrobiano",
+        "agente": "hidrofibra com prata iônica",
+        "papel": "condicional",
+        "indicacao": "ferida com sinais de infecção local ou biofilme suspeito e exsudato moderado",
+        "dose": "aplicar uma camada cobrindo toda a superfície do leito",
+        "unidade": "curativo",
+        "via": "tópica",
+        "frequencia": "troca a cada 3 a 5 dias, até no máximo 7 dias",
+        "duracao": "máximo 4 semanas",
+        "dose_maxima": "individualizar; não cobrir mais de 10% da superfície corporal",
+        "contraindicacoes": [
+          "alergia a prata",
+          "ferida limpa em epitelização",
+          "aplicação em mais de 10% da superfície corporal",
+          "gestação e amamentação",
+          "ressonância magnética com o curativo no local",
+          "uso concomitante de colagenase"
+        ],
+        "efeitos_adversos": [
+          "argiria local e sistêmica em uso prolongado",
+          "citotoxicidade sobre fibroblastos e queratinócitos",
+          "mancha cinzenta na pele",
+          "ardência"
+        ],
+        "apresentacoes": [
+          "placa 5 x 5 cm",
+          "placa 10 x 10 cm",
+          "fita 2 x 45 cm"
+        ],
+        "preparo": "Uso direto com luva estéril, sem cortar sobre a ferida; umedecer com soro fisiológico quando o leito estiver seco",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "redução do exsudato e do odor em 7 dias",
+          "coloração cinzenta da pele",
+          "área total tratada com prata",
+          "sinais de epitelização",
+          "dor"
+        ],
+        "ajuste_renal": "Sem ajuste tópico; evitar grandes áreas em doença renal crônica avançada pela absorção sistêmica de prata",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Retirar a prata assim que o leito estiver limpo e granulando: ela inibe queratinócitos e a argiria é irreversível. Não associar à colagenase, que é inativada por metais pesados. Prata não substitui desbridamento nem antibiótico sistêmico quando há celulite.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "curativo_hidrogel",
+        "agente": "hidrogel amorfo",
+        "papel": "condicional",
+        "indicacao": "ferida seca com esfacelo aderido ou necrose fina; estágio 3 e 4 com pouco exsudato",
+        "dose": "preencher até dois terços da cavidade",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "troca a cada 1 a 3 dias",
+        "duracao": "até a hidratação e a limpeza do leito",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": [
+          "ferida com exsudato abundante",
+          "isquemia sem perfusão",
+          "infecção profunda não tratada",
+          "alergia aos componentes"
+        ],
+        "efeitos_adversos": [
+          "maceração da pele perilesional",
+          "extravasamento e sujidade",
+          "crescimento bacteriano em ferida ocluída"
+        ],
+        "apresentacoes": [
+          "gel amorfo bisnaga 15 g",
+          "gel amorfo bisnaga 30 g",
+          "gel com alginato em placa"
+        ],
+        "preparo": "Uso direto, sem diluição; cobrir com espuma, filme ou gaze conforme a profundidade",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "umidade do leito",
+          "integridade da pele perilesional",
+          "odor e exsudato",
+          "progresso do desbridamento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É desbridamento autolítico: hidrata e amolece o tecido desvitalizado sem instrumento. Em ferida com muito exsudato o gel escorre e macera a pele; em cavidade profunda, associar alginato para não extravasar. Não usar em infecção não controlada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "desbridante_enzimatico",
+        "agente": "colagenase 0,6 U/g",
+        "papel": "primeira_linha",
+        "indicacao": "necrose úmida aderida e esfacelo em paciente sem condição cirúrgica ou como adjuvante do desbridamento cortante",
+        "dose": "camada fina de 2 mm sobre o tecido desvitalizado",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "1x/dia",
+        "duracao": "até a limpeza do leito",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": [
+          "alergia à colagenase",
+          "ferida com exposição de osso, tendão ou cápsula",
+          "aplicação em tecido de granulação sadio",
+          "infecção não controlada"
+        ],
+        "efeitos_adversos": [
+          "dor e ardência na aplicação",
+          "sangramento do leito",
+          "dermatite de contato"
+        ],
+        "apresentacoes": [
+          "pomada 0,6 U/g bisnaga 30 g",
+          "pomada 1,2 U/g bisnaga 30 g",
+          "pomada 0,6 U/g bisnaga 90 g"
+        ],
+        "preparo": "Aplicar diretamente sobre o tecido necrótico seco, sem esfregar; cobrir com gaze umedecida em soro fisiológico e curativo secundário",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "quantidade de tecido necrótico a cada 72 horas",
+          "dor na troca",
+          "sangramento",
+          "sinais de infecção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não associar a prata, iodopovidona, água oxigenada, álcool ou sabões, que inativam a enzima; a limpeza é com soro fisiológico. Precisa de leito úmido: em necrose seca e espessa, fazer cortes de grade com bisturi para a pomada penetrar.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfonamida_topica",
+        "agente": "sulfadiazina de prata 1%",
+        "papel": "alternativa",
+        "indicacao": "ferida infectada com exsudato purulento quando o curativo de prata não está disponível",
+        "dose": "camada de 3 a 5 mm",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "1 a 2x/dia",
+        "duracao": "máximo 2 semanas",
+        "dose_maxima": "individualizar pela área",
+        "contraindicacoes": [
+          "alergia a sulfonamida",
+          "gestação a termo e lactente abaixo de 2 meses",
+          "deficiência de G6PD",
+          "insuficiência hepática ou renal grave",
+          "aplicação em face e próximo de mucosas"
+        ],
+        "efeitos_adversos": [
+          "ardência",
+          "maceração da pele perilesional",
+          "leucopenia transitória",
+          "argiria em uso prolongado",
+          "kernicterus em neonato"
+        ],
+        "apresentacoes": [
+          "creme 1% pote 400 g",
+          "creme 1% bisnaga 50 g"
+        ],
+        "preparo": "Uso direto com luva estéril; remover completamente a camada anterior com soro fisiológico antes de reaplicar",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "hemograma se uso acima de 7 dias",
+          "aspecto da pele perilesional",
+          "sinais de argiria",
+          "função hepática e renal"
+        ],
+        "ajuste_renal": "Evitar com clearance abaixo de 30 mL/min pela absorção sistêmica de sulfonamida",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Limitar a área de aplicação: grandes superfícies por tempo prolongado causam argiria e atrasam a epitelização. Preferir curativo de prata pela liberação controlada. Não usar como profilaxia de ferida limpa.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "dor na troca de curativo e no desbridamento; analgesia de base da úlcera",
+        "dose": "500–750 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h, com dose 30 a 60 minutos antes do procedimento",
+        "duracao": "conforme a necessidade, reavaliar em 2 semanas",
+        "dose_maxima": "3 g/dia no idoso frágil, hepatopata ou etilista; 4 g/dia no idoso hígido",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave com depleção de glutationa",
+          "uso de outro produto que contenha paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose alta",
+          "náusea",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral gotas 200 mg/mL",
+          "frasco IV 10 mg/mL"
+        ],
+        "preparo": "Uso direto; a apresentação IV é infundida sem diluir ou em 50 mL de soro fisiológico",
+        "tempo_infusao": "não se aplica (via oral); 15 minutos na via IV",
+        "monitorizacao": [
+          "soma da dose diária de todas as fontes, incluindo associações",
+          "intensidade da dor em escala 0 a 10 durante a troca",
+          "função hepática se uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste; espaçar para 6/8 h com clearance abaixo de 30 mL/min",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia; evitar em Child C",
+        "observacoes": "Prescrever em horário fixo antes da troca, não apenas se dor. Sem analgesia, o paciente passa a recusar o curativo e a ferida piora por falta de manejo. Conferir paracetamol escondido em associações e antigripais antes de somar a dose.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "condicional",
+        "indicacao": "dor intensa no desbridamento ou na troca de curativo sem controle com paracetamol",
+        "dose": "2,5–5 mg",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "dose única 20 a 30 minutos antes do procedimento; repetir 4/4 h se a dor persistir",
+        "duracao": "até 24–48 horas após o procedimento",
+        "dose_maxima": "5 mg por dose no idoso frágil, com titulação",
+        "contraindicacoes": [
+          "insuficiência respiratória grave sem monitorização",
+          "íleo paralítico",
+          "rebaixamento de consciência sem causa esclarecida",
+          "hipotensão grave",
+          "hipersensibilidade"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "sedação",
+          "constipação",
+          "náusea e vômito",
+          "hipotensão",
+          "retenção urinária",
+          "delirium"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL",
+          "comprimido 10 mg",
+          "comprimido 30 mg",
+          "solução oral 10 mg/5 mL"
+        ],
+        "preparo": "Diluir a dose em 1 mL de água para injeção na via subcutânea; não diluir em volume grande",
+        "tempo_infusao": "injeção subcutânea em 30 segundos; por via IV, infundir em 5 minutos",
+        "monitorizacao": [
+          "frequência respiratória e saturação",
+          "nível de sedação por escala validada",
+          "pressão arterial",
+          "dor em escala 0 a 10",
+          "função intestinal e retenção urinária"
+        ],
+        "ajuste_renal": "Clearance abaixo de 30 mL/min: reduzir 50% e espaçar, porque os metabólitos acumulam",
+        "ajuste_hepatico": "Reduzir a dose e espaçar em hepatopatia",
+        "observacoes": "Usar apenas para procedimento doloroso e por curto prazo; prescrever laxante enquanto estiver em uso, porque constipação em idoso acamado é previsível. Não é analgesia de rotina da úlcera: dor contínua se trata com paracetamol, alívio de pressão e curativo adequado.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_com_inibidor_de_betalactamase",
+        "agente": "amoxicilina-clavulanato",
+        "papel": "primeira_linha",
+        "indicacao": "celulite perilesional, infecção de úlcera com febre ou sinais sistêmicos e cobertura polimicrobiana",
+        "dose": "875/125 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "7 a 10 dias na celulite; 6 semanas na osteomielite, guiado por cultura",
+        "dose_maxima": "3 g/dia de amoxicilina",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "mononucleose infecciosa",
+          "histórico de icterícia colestática por amoxicilina-clavulanato",
+          "insuficiência hepática grave"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "candidíase",
+          "colite por C. difficile",
+          "hepatite colestática",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 875/125 mg",
+          "comprimido 500/125 mg",
+          "suspensão oral 400/57 mg por 5 mL",
+          "frasco IV 1 g/200 mg"
+        ],
+        "preparo": "Uso direto com alimento; na via IV, reconstituir em 10 mL de água e diluir em 100 mL de soro fisiológico",
+        "tempo_infusao": "não se aplica (via oral); 30 minutos na via IV",
+        "monitorizacao": [
+          "função hepática",
+          "diarreia e sinais de C. difficile",
+          "rash",
+          "regressão do eritema e da febre em 48 a 72 h",
+          "função renal"
+        ],
+        "ajuste_renal": "Clearance entre 10 e 30 mL/min: 500/125 mg 12/12 h; abaixo de 10 mL/min: evitar",
+        "ajuste_hepatico": "Evitar em hepatopatia grave e em histórico de icterícia por amoxicilina-clavulanato",
+        "observacoes": "Cobre Staphylococcus aureus, estreptococo e anaeróbio. Em ferida com odor fétido e necrose, associar desbridamento e considerar anaerobicida. Não tratar colonização: antibiótico sistêmico sem celulite, febre ou osso exposto não acelera cicatrização e seleciona resistência.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "lincosamida",
+        "agente": "clindamicina",
+        "papel": "alternativa",
+        "indicacao": "infecção de ferida com suspeita de MRSA, alergia a penicilina ou necessidade de cobertura de anaeróbio",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "1.800 mg/dia",
+        "contraindicacoes": [
+          "alergia a lincosamina",
+          "colite pseudomembranosa prévia",
+          "diarreia grave"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "colite por C. difficile",
+          "náusea",
+          "rash",
+          "gosto metálico"
+        ],
+        "apresentacoes": [
+          "cápsula 300 mg",
+          "solução injetável 150 mg/mL ampola 2 mL",
+          "solução injetável 150 mg/mL ampola 4 mL"
+        ],
+        "preparo": "Uso direto com copo cheio de água; na via IV, diluir em 100 mL de soro fisiológico ou glicosado",
+        "tempo_infusao": "não se aplica (via oral); 30 minutos na via IV",
+        "monitorizacao": [
+          "diarreia e dor abdominal",
+          "hemograma",
+          "sinais de infecção",
+          "função hepática"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Tem boa penetração em tecido e em osso, o que a torna útil na osteomielite por MRSA, mas o risco de C. difficile limita o uso prolongado. Não é primeira escolha para celulite comum, em que o amoxicilina-clavulanato cobre melhor.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "suplemento_nutricional",
+        "agente": "suplemento nutricional hipercalórico hiperproteico",
+        "papel": "condicional",
+        "indicacao": "desnutrição ou risco nutricional em úlcera de estágio 3 e 4, perda de peso ou albumina baixa",
+        "dose": "200 mL de suplemento com 1,5 a 2,0 kcal/mL",
+        "unidade": "mL",
+        "via": "VO ou sonda",
+        "frequencia": "2x/dia, entre as refeições",
+        "duracao": "até a cicatrização ou a recuperação nutricional",
+        "dose_maxima": "individualizar pela meta de 30–35 kcal/kg/dia e 1,25–1,5 g/kg/dia de proteína",
+        "contraindicacoes": [
+          "sobrecarga hídrica sem controle",
+          "insuficiência renal sem diálise com restrição proteica",
+          "hiperglicemia não controlada",
+          "galactosemia"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "distensão",
+          "hiperglicemia",
+          "sobrecarga de volume",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "embalagem 200 mL 1,5 kcal/mL",
+          "embalagem 200 mL 2,0 kcal/mL",
+          "pó de módulo de proteína 275 g"
+        ],
+        "preparo": "Pronto para uso; por sonda, administrar 200 mL em 15 a 20 minutos em bolus ou em infusão contínua, com cabeceira elevada",
+        "tempo_infusao": "15 a 20 minutos em bolus por sonda; não se aplica por via oral",
+        "monitorizacao": [
+          "peso",
+          "albumina e pré-albumina",
+          "ingestão calórica e proteica",
+          "glicemia",
+          "diurese e edema",
+          "tolerância gastrointestinal"
+        ],
+        "ajuste_renal": "Sem diálise: limitar a proteína conforme orientação nefrológica; em diálise, a meta proteica é maior e deve ser individualizada",
+        "ajuste_hepatico": "Em hepatopatia grave, fracionar e monitorar encefalopatia",
+        "observacoes": "Proteína é o nutriente que mais muda desfecho: 1,25 a 1,5 g/kg/dia em estágio 3 e 4, com 30 a 35 kcal/kg/dia. Suplemento não substitui avaliação nutricional nem trata disfagia; em paciente com disfagia, espessar a consistência e avaliar fonoaudiologia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "protetor_cutaneo",
+        "agente": "creme barreira de óxido de zinco",
+        "papel": "condicional",
+        "indicacao": "prevenção de dermatite por umidade e de maceração da pele perilesional em paciente com incontinência",
+        "dose": "camada fina sobre pele íntegra perilesional",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "após cada episódio de incontinência e a cada troca de curativo",
+        "duracao": "uso contínuo enquanto houver incontinência",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": [
+          "alergia aos componentes",
+          "aplicação sobre ferida aberta infectada",
+          "candidíase perilesional sem tratamento"
+        ],
+        "efeitos_adversos": [
+          "oclusão e maceração se aplicado em pele úmida",
+          "dificuldade de limpeza",
+          "ardência",
+          "dermatite de contato"
+        ],
+        "apresentacoes": [
+          "pomada 100 g",
+          "pomada 200 g",
+          "creme 60 g",
+          "lenço impregnado"
+        ],
+        "preparo": "Secar bem a pele antes de aplicar; não esfregar; remover o excesso com óleo de limpeza suave",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "integridade da pele perilesional",
+          "eritema e maceração",
+          "candidíase",
+          "necessidade de reaplicação"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "A pele perilesional macerada é a principal causa de aumento da lesão: a barreira protege do exsudato, da urina e das fezes. Não usar sobre ferida aberta nem como substituto da limpeza e da troca de fralda em horário definido.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Reposicionamento programado",
+        "detalhe": "Mudar de decúbito a cada 2 h no leito e aliviar a pressão a cada 15 min na cadeira, com registro de horário no prontuário ou na beira do leito; individualizar em superfície de apoio adequada e em paciente com dor. Posicionar em decúbito lateral de 30 graus, evitando 90 graus sobre o trocanter"
+      },
+      {
+        "medida": "Superfície de apoio adequada ao risco",
+        "detalhe": "Colchão de espuma de alta especificidade com pelo menos 15 cm ou superfície pneumática alternada para risco alto; almofada de espuma ou gel na cadeira; verificar manutenção e calibragem. Não usar almofada em rosca nem colchão de água sem controle"
+      },
+      {
+        "medida": "Posicionamento e alívio de carga no calcâneo",
+        "detalhe": "Cabeceira a 30 graus ou menos, salvo indicação respiratória; elevar os calcâneos com travesseiro sob a panturrilha, deixando o calcanhar livre; usar lençol para transferir, sem arrastar, para reduzir cisalhamento"
+      },
+      {
+        "medida": "Inspeção diária da pele e escala de Braden",
+        "detalhe": "Examinar sacro, cóccix, ísquio, trocanter, calcâneo, maléolo, occipital, escápula e orelha em todo paciente acamado ou com mobilidade reduzida; aplicar Braden na admissão, diariamente no hospital e semanalmente em casa, e registrar a subescala que mais contribui para o risco"
+      },
+      {
+        "medida": "Controle de umidade e higiene",
+        "detalhe": "Limpar após cada episódio de incontinência com produto de pH fisiológico, secar por compressão sem esfregar e aplicar barreira; trocar fralda e roupa de cama úmida; evitar sabão, álcool e secador quente"
+      },
+      {
+        "medida": "Suporte nutricional e proteína",
+        "detalhe": "Meta de 30 a 35 kcal/kg/dia e 1,25 a 1,5 g/kg/dia de proteína, com avaliação nutricional e acompanhamento de peso, albumina e ingestão; tratar disfagia e candidíase oral que reduzem a ingesta"
+      },
+      {
+        "medida": "Mobilização precoce e sentar fora do leito",
+        "detalhe": "Sentar fora do leito, fisioterapia motora e deambulação assistida quando possível; em acamado, exercícios passivos e posicionamento no leito. Imobilidade é o fator de risco modificável mais importante"
+      },
+      {
+        "medida": "Registro fotográfico, medição e escala PUSH",
+        "detalhe": "Medir maior e menor diâmetro, fotografar com régua e escala de referência a cada 1 a 2 semanas, e registrar exsudato, tipo de tecido e odor; comparar para decidir se o plano está funcionando. Ferida que não reduz em 2 a 4 semanas exige reavaliação"
+      },
+      {
+        "medida": "Educação da equipe e do cuidador",
+        "detalhe": "Treinar sinais de alerta, técnica de troca, reposicionamento e registro; orientar o cuidador a não massagear, não usar produto caseiro, não manter curativo seco e a comunicar febre, odor ou aumento da ferida. Em casa, deixar plano escrito com frequência de troca"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Limpeza e curativo da lesão",
+        "indicacao": "Toda lesão por pressão, em cada troca",
+        "tecnica": "Lavar o leito com soro fisiológico morno sob pressão suave, remover resíduo e crosta sem esfregar, secar a pele perilesional, escolher o curativo pelo estágio e pelo exsudato e ocluir sem tracionar a pele",
+        "complicacoes": "Dor, sangramento, maceração perilesional, trauma na remoção, infecção por técnica inadequada"
+      },
+      {
+        "nome": "Desbridamento cortante conservador",
+        "indicacao": "Necrose espessa, escara infectada ou tecido desvitalizado que impede a granulação",
+        "tecnica": "Antissepsia, analgesia 30 a 60 minutos antes, bisturi ou tesoura estéril removendo camadas finas até o tecido viável, controlando sangramento por compressão; repetir em sessões",
+        "complicacoes": "Sangramento, dor, perfuração de estruturas em cavidade, remoção de tecido viável, infecção"
+      },
+      {
+        "nome": "Desbridamento enzimático",
+        "indicacao": "Necrose úmida aderida em paciente sem condição cirúrgica ou como adjuvante",
+        "tecnica": "Aplicar colagenase em camada de 2 mm sobre o tecido desvitalizado, cobrir com gaze úmida em soro fisiológico e curativo secundário, trocando a cada 24 h; fazer grade com bisturi em necrose seca",
+        "complicacoes": "Dor e ardência, sangramento, dermatite de contato, inativação por prata, iodo ou água oxigenada"
+      },
+      {
+        "nome": "Cultura de tecido por biópsia ou aspiração profunda",
+        "indicacao": "Sinais de infecção local ou sistêmica, antes de antibiótico",
+        "tecnica": "Limpar a superfície com soro fisiológico, desbridar e colher fragmento do leito viável ou aspirar de tecido profundo com seringa, enviando para cultura e antibiograma",
+        "complicacoes": "Sangramento, dor, contaminação por colonizadores de superfície se a técnica for inadequada"
+      },
+      {
+        "nome": "Avaliação de osteomielite",
+        "indicacao": "Osso exposto, teste de sondagem positivo, ferida crônica que não fecha ou exsudato persistente",
+        "tecnica": "Exame com sonda estéril pelo leito, hemograma, proteína C reativa, radiografia e ressonância magnética; confirmar com biópsia óssea para cultura e histologia",
+        "complicacoes": "Diagnóstico tardio com perda óssea, amputação, sepse; falso-negativo de radiografia precoce"
+      },
+      {
+        "nome": "Cobertura cirúrgica com retalho",
+        "indicacao": "Estágio 4, osteomielite tratada ou ferida sem cicatrização após tratamento otimizado",
+        "tecnica": "Avaliação por cirurgia plástica, desbridamento ósseo e de tecidos moles, cobertura com retalho musculocutâneo ou fasciocutâneo e alívio de pressão no pós-operatório",
+        "complicacoes": "Deiscência, recidiva por pressão mantida, infecção, necrose do retalho, necessidade de novo desbridamento"
+      },
+      {
+        "nome": "Avaliação nutricional estruturada",
+        "indicacao": "Todos com estágio 3 ou 4, perda de peso, albumina baixa ou ingestão insuficiente",
+        "tecnica": "Anamnese alimentar, peso e altura, força de preensão, albumina e pré-albumina, cálculo de necessidade calórica e proteica e plano de suplementação e acompanhamento",
+        "complicacoes": "Síndrome de realimentação em desnutrido grave, diarreia por suplemento, sobrecarga de volume"
+      }
+    ],
+    "metas": [
+      "Nenhuma lesão por pressão nova em paciente internado, acamado ou institucionalizado sob cuidado da equipe",
+      "Estágio 1 e 2 sem progressão para estágio 3 ou 4",
+      "Redução de 20 a 30% da área da ferida em 2 a 4 semanas, medida por escala PUSH ou diâmetro",
+      "Exsudato controlado, com troca não mais frequente que a cada 3 dias quando a saturação permitir",
+      "Ausência de sinais de infecção local, como eritema perilesional, odor fétido e exsudato purulento, em 7 dias de tratamento",
+      "Osso exposto ou teste de sondagem positivo investigado em até 48 horas com imagem e cultura",
+      "Meta nutricional de 30 a 35 kcal/kg/dia e 1,25 a 1,5 g/kg/dia de proteína atingida",
+      "Dor igual ou menor que 3 em 10 durante a troca de curativo e o desbridamento",
+      "Escala de Braden aplicada e registrada em 100% dos pacientes acamados ou com mobilidade reduzida",
+      "Pele perilesional íntegra, sem maceração, durante todo o tratamento"
+    ],
+    "fluxo": [
+      "Limpar o leito com soro fisiológico, remover o que obscurece a lesão e estadiar: 1, 2, 3, 4, não classificável ou lesão tissular profunda",
+      "Medir, fotografar com régua e registrar exsudato, tipo de tecido, odor, dor e pele perilesional",
+      "Excluir infecção e osteomielite: osso exposto, sondagem óssea, febre, celulite, provas inflamatórias",
+      "Aliviar pressão: superfície de apoio adequada, reposicionamento a cada 2 h e offloading do calcâneo",
+      "Desbridar o tecido desvitalizado conforme o tipo: cortante, enzimático ou autolítico",
+      "Escolher o curativo pelo estágio e pelo volume de exsudato, protegendo a pele perilesional",
+      "Tratar infecção: prata local se houver biofilme, antibiótico sistêmico se houver celulite, febre ou osso exposto",
+      "Garantir nutrição com proteína e avaliar deglutição",
+      "Reavaliar em 1 a 2 semanas com medição e registro; se não reduzir, revisar pressão, nutrição, infecção e osteomielite",
+      "Encaminhar para cirurgia plástica se estágio 4, osteomielite, exposição de estrutura ou falha de cicatrização",
+      "Prevenção secundária em todos: Braden, inspeção diária, umidade, mobilização e educação da equipe e do cuidador"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "acamado",
+        "ajuste": "reposicionamento a cada 2 h, colchão de alta especificidade ou pneumático alternado, offloading de calcâneo e inspeção diária",
+        "alerta": "pressão mantida em sacro e calcâneo, que são os locais mais frequentes e os mais negligenciados"
+      },
+      {
+        "populacao": "demencia",
+        "ajuste": "não depende de queixa de dor, usar escala de dor para demência, inspeção diária pela equipe e cuidador treinado",
+        "alerta": "dor e desconforto não relatados, com progressão silenciosa da lesão"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "controle glicêmico, avaliação de perfusão e neuropatia, offloading rigoroso e antibiótico precoce na infecção",
+        "alerta": "infecção profunda e osteomielite com poucos sinais flogísticos"
+      },
+      {
+        "populacao": "desnutrido",
+        "ajuste": "avaliação nutricional, suplemento hiperproteico, tratar disfagia e monitorar síndrome de realimentação",
+        "alerta": "ferida que não granula apesar de curativo e pressão adequados"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "evitar sulfadiazina e grandes áreas com prata, ajustar antibiótico pelo clearance e controlar volume e eletrólitos",
+        "alerta": "absorção sistêmica de prata e sulfonamida e acúmulo de antibiótico"
+      },
+      {
+        "populacao": "hepatopata",
+        "ajuste": "evitar sulfadiazina e amoxicilina-clavulanato em doença grave, ajustar paracetamol e morfina e monitorar encefalopatia",
+        "alerta": "hepatotoxicidade e encefalopatia precipitada por infecção"
+      },
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "preferir desbridamento enzimático e autolítico, controlar sangramento por compressão e checar INR antes do cortante",
+        "alerta": "sangramento no leito durante o desbridamento"
+      },
+      {
+        "populacao": "fim_de_vida",
+        "ajuste": "priorizar conforto, curativo que não cole e troca menos frequente, analgesia antes do manejo e não indicar desbridamento agressivo ou cirurgia",
+        "alerta": "dor e sofrimento em procedimento sem benefício no tempo de vida restante"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "cultura de tecido por biópsia ou aspiração profunda",
+          "indicacao": "sinais de infecção local ou sistêmica antes de antibiótico",
+          "o_que_muda": "define o antibiótico dirigido e evita tratar colonização superficial"
+        },
+        {
+          "nome": "hemograma e proteína C reativa",
+          "indicacao": "suspeita de infecção ou osteomielite, e seguimento de ferida crônica",
+          "o_que_muda": "leucocitose e proteína C reativa persistentes sustentam osteomielite e indicam imagem e biópsia"
+        },
+        {
+          "nome": "radiografia da região",
+          "indicacao": "osso exposto ou ferida crônica que não cicatriza",
+          "o_que_muda": "alteração óssea sugere osteomielite, mas exame normal precoce não exclui"
+        },
+        {
+          "nome": "ressonância magnética",
+          "indicacao": "suspeita de osteomielite ou de abscesso profundo",
+          "o_que_muda": "identifica extensão óssea e de partes moles e orienta cirurgia"
+        },
+        {
+          "nome": "biópsia óssea com cultura e histologia",
+          "indicacao": "confirmação de osteomielite antes de antibioticoterapia prolongada",
+          "o_que_muda": "é o padrão-ouro e define o germe e o tempo de antibiótico"
+        },
+        {
+          "nome": "albumina, pré-albumina e hemograma nutricional",
+          "indicacao": "estágio 3 e 4, perda de peso ou ingestão insuficiente",
+          "o_que_muda": "define necessidade de suplementação e monitora resposta"
+        },
+        {
+          "nome": "glicemia e HbA1c",
+          "indicacao": "diabético com lesão por pressão",
+          "o_que_muda": "controle glicêmico inadequado explica falha de cicatrização e infecção recorrente"
+        },
+        {
+          "nome": "avaliação vascular com Doppler e índice tornozelo-braço",
+          "indicacao": "escara em calcâneo, má perfusão ou antes de desbridar membro isquêmico",
+          "o_que_muda": "isquemia contraindica desbridamento sem revascularização"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "swab superficial de rotina para cultura",
+          "motivo": "coleta colonização da superfície e induz antibiótico errado; a cultura deve vir de tecido profundo"
+        },
+        {
+          "exame": "cultura de rotina em ferida sem sinal de infecção",
+          "motivo": "toda ferida crônica é colonizada e o resultado não muda a conduta"
+        },
+        {
+          "exame": "radiografia isolada para excluir osteomielite nas primeiras semanas",
+          "motivo": "a alteração óssea só aparece após 2 a 4 semanas e o exame normal dá falsa segurança"
+        },
+        {
+          "exame": "antibiótico sistêmico para colonização sem celulite, febre ou osso exposto",
+          "motivo": "não acelera a cicatrização, seleciona resistência e acrescenta efeito adverso"
+        },
+        {
+          "exame": "desbridamento de escara seca e estável de calcâneo sem infecção",
+          "motivo": "a escara funciona como cobertura biológica; removê-la cria ferida úmida que necrosa, especialmente em isquemia"
+        },
+        {
+          "exame": "curativo seco ou gaze seca em ferida com exsudato",
+          "motivo": "adere ao leito, traumatiza na troca, causa dor e desseca o tecido de granulação"
+        },
+        {
+          "exame": "massagear proeminência óssea ou usar solução irritante no leito",
+          "motivo": "massagem aprofunda a lesão e álcool, água oxigenada, iodopovidona e hipoclorito são citotóxicos"
+        },
+        {
+          "exame": "almofada em rosca sob a proeminência óssea",
+          "motivo": "concentra pressão na periferia e piora a isquemia"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "mudar de posição a cada 2 horas no leito e a cada 15 minutos na cadeira, com ajuda de quem cuida",
+        "examinar a pele todos os dias em sacro, quadril, calcanhares, tornozelos, ombros e nuca",
+        "manter a pele limpa e seca, trocar a fralda logo após a eliminação e usar creme de barreira",
+        "limpar a ferida com soro fisiológico e usar o curativo indicado, trocando no intervalo prescrito",
+        "comer bem, com proteína em todas as refeições, e aceitar o suplemento quando indicado",
+        "tomar o analgésico 30 a 60 minutos antes da troca do curativo",
+        "fotografar a ferida a cada troca de curativo prescrita e levar as fotos na consulta",
+        "elevar os calcanhares com travesseiro sob a panturrilha, deixando o calcanhar livre"
+      ],
+      "evitar": [
+        "massagear a vermelhidão ou a área de pressão",
+        "usar álcool, água oxigenada, iodopovidona, hipoclorito ou produto caseiro na ferida",
+        "manter gaze seca ou curativo seco em ferida que drena",
+        "usar almofada em rosca ou colchão de água sem controle",
+        "aplicar calor local, secador de cabelo ou bolsa de água quente",
+        "desbridar ou furar a bolha e a casquinha preta por conta própria",
+        "usar antibiótico ou pomada sem prescrição e mantê-los por semanas",
+        "arrastar o paciente na cama em vez de transferir com lençol"
+      ],
+      "retorno": [
+        "febre, calafrios ou prostração",
+        "aumento da vermelhidão ao redor da ferida, calor ou dor intensa",
+        "pus, mau cheiro forte ou tecido escuro na ferida",
+        "ferida que aumenta ou não diminui em 2 a 4 semanas",
+        "osso ou estrutura profunda visível no fundo da ferida",
+        "nova lesão em outra proeminência óssea",
+        "perda de peso ou recusa alimentar"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "hidrocoloide (placa)",
+        "efeitos": [
+          "maceração perilesional",
+          "odor na remoção",
+          "vazamento"
+        ],
+        "observacao": "trocar se a borda levantar; não usar em infecção ou exsudato alto"
+      },
+      {
+        "agente": "espuma de poliuretano",
+        "efeitos": [
+          "maceração",
+          "retenção de exsudato",
+          "dor na remoção"
+        ],
+        "observacao": "trocar quando saturar em dois terços; manter saturada causa proliferação bacteriana"
+      },
+      {
+        "agente": "alginato de cálcio",
+        "efeitos": [
+          "aderência em ferida seca",
+          "sangramento na troca",
+          "resíduo de fibra"
+        ],
+        "observacao": "usar apenas com exsudato; umedecer o leito seco e não compactar em cavidade"
+      },
+      {
+        "agente": "hidrofibra com prata iônica",
+        "efeitos": [
+          "argiria",
+          "citotoxicidade",
+          "mancha cinzenta"
+        ],
+        "observacao": "suspender a prata assim que o leito estiver limpo; não associar a colagenase"
+      },
+      {
+        "agente": "hidrogel amorfo",
+        "efeitos": [
+          "maceração",
+          "extravasamento"
+        ],
+        "observacao": "não usar em exsudato abundante; proteger a pele perilesional"
+      },
+      {
+        "agente": "colagenase 0,6 U/g",
+        "efeitos": [
+          "dor e ardência",
+          "sangramento",
+          "dermatite"
+        ],
+        "observacao": "não associar a prata, iodo, álcool ou água oxigenada, que inativam a enzima"
+      },
+      {
+        "agente": "sulfadiazina de prata 1%",
+        "efeitos": [
+          "leucopenia",
+          "argiria",
+          "maceração"
+        ],
+        "observacao": "hemograma se uso acima de 7 dias; evitar em G6PD e em grandes áreas"
+      },
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade",
+          "náusea"
+        ],
+        "observacao": "somar toda a dose diária, incluindo associações; máximo 3 g/dia no idoso frágil"
+      },
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "depressão respiratória",
+          "sedação",
+          "constipação",
+          "retenção urinária"
+        ],
+        "observacao": "monitorar frequência respiratória e sedação; prescrever laxante enquanto estiver em uso"
+      },
+      {
+        "agente": "amoxicilina-clavulanato",
+        "efeitos": [
+          "diarreia",
+          "C. difficile",
+          "hepatite colestática"
+        ],
+        "observacao": "suspender se diarreia intensa ou icterícia; ajustar pelo clearance"
+      },
+      {
+        "agente": "clindamicina",
+        "efeitos": [
+          "diarreia",
+          "C. difficile",
+          "gosto metálico"
+        ],
+        "observacao": "suspender se diarreia grave; não manter por tempo prolongado"
+      },
+      {
+        "agente": "suplemento nutricional",
+        "efeitos": [
+          "diarreia",
+          "distensão",
+          "hiperglicemia",
+          "sobrecarga de volume"
+        ],
+        "observacao": "infundir devagar por sonda e monitorar glicemia, diurese e edema"
+      },
+      {
+        "agente": "creme barreira de óxido de zinco",
+        "efeitos": [
+          "oclusão",
+          "dermatite de contato"
+        ],
+        "observacao": "aplicar em pele seca e íntegra; não usar sobre ferida aberta"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender ou trocar o curativo implicado e registrar a reação em prontuário com data e produto",
+      "Maceração perilesional: trocar por curativo menos oclusivo, secar a borda e aplicar barreira",
+      "Sangramento no leito: comprimir, suspender desbridamento cortante, checar anticoagulação e preferir enzimático ou autolítico",
+      "Dor na troca: antecipar analgesia, umedecer o curativo antes de remover e evitar curativo aderente em ferida seca",
+      "Diarreia com antibiótico: suspender, pesquisar C. difficile e tratar conforme gravidade",
+      "Lesão que aumenta ou não reduz em 2 a 4 semanas: reavaliar pressão, superfície, nutrição, infecção e osteomielite antes de trocar o curativo mais uma vez",
+      "Prata em uso prolongado: suspender ao sinal de mancha cinzenta, limitar a área e registrar a duração do uso",
+      "Reação sistêmica durante procedimento: interromper, estabilizar e reavaliar a indicação do desbridamento"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "hidrocoloide placa 10 x 10 cm",
+            "dose": "cobrir a lesão com 2 cm de margem",
+            "via": "tópica",
+            "frequencia": "troca a cada 3 a 7 dias",
+            "duracao": "30 dias",
+            "condicao": "estágio 1 e 2 com pouco exsudato",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "espuma de poliuretano 10 x 10 cm",
+            "dose": "cobrir o leito",
+            "via": "tópica",
+            "frequencia": "troca a cada 3 a 5 dias",
+            "duracao": "30 dias",
+            "condicao": "estágio 2 e 3 com exsudato moderado",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "colagenase 0,6 U/g pomada",
+            "dose": "camada de 2 mm",
+            "via": "tópica",
+            "frequencia": "1x/dia",
+            "duracao": "30 dias",
+            "condicao": "necrose aderida",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 500 mg",
+            "dose": "500–750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h, 30 a 60 min antes da troca",
+            "duracao": "30 dias",
+            "condicao": "dor no curativo",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "creme barreira de óxido de zinco",
+            "dose": "camada fina",
+            "via": "tópica",
+            "frequencia": "após cada troca de fralda",
+            "duracao": "90 dias",
+            "condicao": "incontinência e risco de dermatite",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "suplemento nutricional hiperproteico 200 mL",
+            "dose": "200 mL",
+            "via": "VO",
+            "frequencia": "2x/dia entre as refeições",
+            "duracao": "90 dias",
+            "condicao": "desnutrição ou estágio 3 e 4",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "alginato de cálcio 10 x 10 cm",
+            "dose": "preencher a cavidade sem compactar",
+            "via": "tópica",
+            "frequencia": "troca a cada 24 a 72 h",
+            "monitorizacao": "exsudato, sangramento e resíduo de fibra",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "hidrofibra com prata iônica",
+            "dose": "cobrir o leito",
+            "via": "tópica",
+            "frequencia": "troca a cada 3 a 5 dias",
+            "monitorizacao": "odor, exsudato e coloração da pele",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina-clavulanato 875/125 mg",
+            "dose": "875/125 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "monitorizacao": "função hepática, diarreia e regressão da celulite",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "morfina 10 mg/mL",
+            "dose": "2,5–5 mg",
+            "via": "SC",
+            "frequencia": "20 a 30 min antes do desbridamento",
+            "monitorizacao": "frequência respiratória, sedação e dor",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma",
+          "proteína C reativa",
+          "albumina e pré-albumina",
+          "glicemia e HbA1c",
+          "cultura de tecido por biópsia ou aspiração profunda",
+          "radiografia da região",
+          "ressonância magnética",
+          "biópsia óssea",
+          "índice tornozelo-braço com Doppler",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, em tratamento de lesão por pressão, necessitando de afastamento e de cuidado domiciliar por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com local, estágio, tamanho, exsudato, infecção, tratamentos usados, nutrição e risco pela escala de Braden",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente idoso com lesão por pressão em região, estágio, dimensões, tempo de evolução, exsudato e tecido do leito, sinais de infecção e de osteomielite, curativo utilizado com intervalo de troca, medidas de alívio de pressão, estado nutricional com meta proteica, analgesia no manejo, evolução em escala PUSH e plano de prevenção com Braden e inspeção diária."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "local e tempo de evolução da lesão",
+        "mecanismo e aspecto inicial",
+        "exsudato, odor e tecido do leito",
+        "dor e relação com a troca",
+        "mobilidade e quem realiza a mudança de posição",
+        "superfície de apoio e cadeira utilizadas",
+        "ingestão alimentar e perda de peso",
+        "incontinência urinária e fecal",
+        "comorbidades: diabetes, doença vascular, demência e desnutrição",
+        "curativo em uso, intervalo de troca e quem troca"
+      ],
+      "texto_template": "Paciente idoso com lesão por pressão em região, tempo de evolução, mecanismo e aspecto inicial, exsudato, odor e tecido do leito, dor relacionada à troca, mobilidade e responsável pela mudança de posição, superfície de apoio e cadeira, ingestão alimentar e perda de peso, incontinência, comorbidades incluindo diabetes, doença vascular, demência e desnutrição, curativo em uso com intervalo de troca e responsável pelo cuidado."
+    },
+    "exame_fisico": {
+      "itens": [
+        "estágio da lesão após limpeza",
+        "dimensões em dois eixos e profundidade",
+        "tipo de tecido do leito e percentual de esfacelo e necrose",
+        "volume e aspecto do exsudato e odor",
+        "pele perilesional e maceração",
+        "sinais de infecção: eritema, calor, pus, crepitação",
+        "teste de sondagem óssea e exposição de estrutura",
+        "perfusão distal e pulsos",
+        "estado nutricional e hidratação",
+        "escala de Braden e inspeção de todas as proeminências"
+      ],
+      "texto_template": "Lesão por pressão em região, estágio após limpeza, dimensões em dois eixos e profundidade, tipo de tecido do leito com percentual de esfacelo e necrose, volume e aspecto do exsudato, odor, pele perilesional e maceração, sinais de infecção, teste de sondagem óssea, perfusão distal e pulsos, estado nutricional e hidratação, escala de Braden e inspeção das demais proeminências ósseas."
+    },
+    "referencias": [
+      {
+        "tipo": "diretriz_internacional",
+        "o_que_verificar": "classificação de lesão por pressão em estágios 1 a 4, não classificável e lesão tissular profunda, e recomendações de prevenção e tratamento",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de prevenção e tratamento de feridas, disponibilidade de curativos e de superfícies de apoio, e protocolo de desbridamento",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_estomaterapia",
+        "o_que_verificar": "escolha de curativo por estágio e exsudato, técnica de desbridamento e uso racional de prata",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_geriatria",
+        "o_que_verificar": "escala de Braden, prevenção em acamado e institucionalizado e cuidados de fim de vida",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e registros de hidrocoloide, espuma, alginato, hidrofibra com prata, hidrogel, colagenase, sulfadiazina de prata, paracetamol, morfina, amoxicilina-clavulanato, clindamicina, suplemento nutricional e creme barreira",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GER06-01",
+        "tipo": "osteomielite",
+        "gatilho": "osso exposto ou teste de sondagem óssea positivo em lesão por pressão",
+        "severidade": "grave",
+        "mensagem": "Osso exposto é osteomielite até prova contrária: imagem, cultura óssea e antibiótico prolongado.",
+        "acao": "bloquear alta e acionar avaliação cirúrgica e de imagem",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER06-02",
+        "tipo": "sepse_cutanea",
+        "gatilho": "febre, hipotensão ou confusão nova em paciente com lesão infectada",
+        "severidade": "grave",
+        "mensagem": "Suspeita de sepse de origem cutânea: hemocultura, antibiótico intravenoso e internação.",
+        "acao": "bloquear manejo ambulatorial e acionar protocolo de sepse",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER06-03",
+        "tipo": "desbridamento_de_escaras_estavel",
+        "gatilho": "desbridamento indicado em escara seca e estável de calcâneo sem infecção, ou em membro isquêmico sem revascularização",
+        "severidade": "grave",
+        "mensagem": "Não desbridar escara estável de calcâneo nem membro isquêmico sem avaliação vascular: risco de necrose e amputação.",
+        "acao": "bloquear o procedimento e exigir avaliação vascular",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER06-04",
+        "tipo": "massagem_em_proeminencia",
+        "gatilho": "massagem ou fricção prescrita sobre proeminência óssea",
+        "severidade": "grave",
+        "mensagem": "Massagear proeminência óssea aprofunda a lesão por pressão.",
+        "acao": "bloquear a conduta e substituir por alívio de pressão",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER06-05",
+        "tipo": "curativo_inadequado",
+        "gatilho": "curativo seco ou gaze seca em ferida com exsudato, ou hidrocoloide em ferida com exsudato abundante",
+        "severidade": "precaucao",
+        "mensagem": "Curativo incompatível com o estágio e o exsudato: troca inadequada causa trauma e maceração.",
+        "acao": "alertar e sugerir curativo conforme estágio",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER06-06",
+        "tipo": "braden_sem_prevencao",
+        "gatilho": "escala de Braden de 12 ou menos sem superfície de apoio e reposicionamento registrados",
+        "severidade": "precaucao",
+        "mensagem": "Risco alto de lesão por pressão sem medidas de prevenção documentadas.",
+        "acao": "sugerir plano de prevenção e superfície adequada",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER06-07",
+        "tipo": "antibiotico_sem_infeccao",
+        "gatilho": "antibiótico sistêmico prescrito para lesão por pressão sem celulite, febre ou osso exposto",
+        "severidade": "precaucao",
+        "mensagem": "Antibiótico para colonização não acelera cicatrização e seleciona resistência.",
+        "acao": "alertar e sugerir cultura de tecido se houver dúvida",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "diretriz internacional de lesão por pressão"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: lesão por pressão classificada por estágio (1 a 4, não classificável e lesão tissular profunda) com conduta definida para cada um; tratamento em quatro pilares simultâneos de alívio de pressão, desbridamento, curativo por estágio e exsudato, e nutrição com proteína; 13 fármacos com apresentações, preparo, tempo de infusão, monitorização, ajuste renal e hepático, cobrindo hidrocoloide, espuma, alginato, hidrofibra com prata, hidrogel, colagenase, sulfadiazina de prata, paracetamol, morfina para o procedimento, amoxicilina-clavulanato e clindamicina para infecção, suplemento hiperproteico e creme barreira; prevenção com escala de Braden, reposicionamento, superfície de apoio e inspeção diária; sinais de osteomielite com sondagem óssea, ressonância e biópsia óssea; proibição explícita de massagear proeminência óssea, usar solução irritante, manter curativo seco, usar almofada em rosca e desbridar escara estável de calcâneo; alertas bloqueantes para osteomielite, sepse, desbridamento inadequado e massagem.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "id": "ws-resp_15",
+  "nome": "Dispneia a esclarecer",
+  "cat": "Emergência",
+  "alias": "dispneia a esclarecer dispneia falta de ar dificuldade para respirar cansado para respirar",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (RESP-15_dispneia.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de dispneia, alvo de saturação e critérios de alta",
+      "[verificar] sociedade_pneumologia: oxigenoterapia titulada, broncodilatador na crise e estratificação de TEP",
+      "[verificar] sociedade_cardiologia: uso de BNP, diurético e vasodilatador na congestão",
+      "[verificar] diretriz_de_asma_e_dpoc: papel do corticoide sistêmico, do ipratrópio e do magnésio na crise",
+      "[verificar] anvisa: apresentações, concentrações e diluições disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "RESP-15 em 2026-11-27",
+    "fundido_workspace": "RESP-15 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: saturação abaixo de 90% em ar ambiente ou necessidade de máscara com reservatório para manter acima de 92% -> oxigênio de alto fluxo, gasometria imediata e unidade monitorizada; frequência respiratória acima de 30 rpm, uso de musculatura acessória ou respiração paradoxal -> ventilação não invasiva ou intubação, sem aguardar exames; tórax silencioso à ausculta, hipotensão ou desvio de traqueia -> descompressão com agulha imediata, antes da imagem; hipotensão, sudorese fria, turgência jugular ou síncope -> sala vermelha, ecocardiograma à beira-leito e anticoagulação se TEP provável. 1) Triagem imediata: saturação em ar ambiente, frequência respiratória, pressão, frequência cardíaca e nível de consciência 2) Se saturação abaixo de 90%, tórax silencioso ou exaustão: oxigênio, sala monitorizada e chamar suporte avançado antes de qualquer exame 3) Oxigênio titulado com alvo definido e registro do dispositivo, fluxo e FiO2 4) Gasometria, ECG, radiografia de tórax, hemograma e bioquímica na primeira hora; BNP ou NT-proBNP se houver suspeita cardíaca 5) Ultrassom de tórax e ecocardiograma à beira-leito para separar congestão, consolidação, derrame e pneumotórax 6) Classificar a causa em cardíaca, pulmonar, metabólica, anemia, tromboembólica ou funcional, e tratar a causa identificada 7) Suspeita de TEP: aplicar Wells ou PERC, dosar D-dímero se probabilidade baixa e indicar angiotomografia se alta, anticoagulando desde já quando a probabilidade é alta 8) Reavaliar em ",
+  "redFlags": [
+    "saturação abaixo de 90% em ar ambiente ou necessidade de máscara com reservatório para manter acima de 92% -> oxigênio de alto fluxo, gasometria imediata e unidade monitorizada",
+    "frequência respiratória acima de 30 rpm, uso de musculatura acessória ou respiração paradoxal -> ventilação não invasiva ou intubação, sem aguardar exames",
+    "tórax silencioso à ausculta, hipotensão ou desvio de traqueia -> descompressão com agulha imediata, antes da imagem",
+    "hipotensão, sudorese fria, turgência jugular ou síncope -> sala vermelha, ecocardiograma à beira-leito e anticoagulação se TEP provável",
+    "sonolência, confusão, asterixe ou fala arrastada -> gasometria imediata, considerar ventilação e tratar a causa",
+    "respiração de Kussmaul, hálito cetônico ou glicemia acima de 250 mg/dL -> gasometria, cetonemia e correção da causa metabólica",
+    "palidez intensa, taquicardia e hemoglobina abaixo de 7 g/dL -> reserva de hemácias e transfusão conforme clínica",
+    "saturação entre 92% e 93% em ar ambiente com dispneia persistente -> não dar alta; repetir oximetria após 5 min de deambulação e dosar gasometria"
+  ],
+  "naoUsar": [
+    "alvo de 88% a 92% em DPOC com risco de hipercapnia, o que ajusta a dose mas não exclui a indicação",
+    "taquiarritmia não controlada",
+    "hipocalemia grave não corrigida",
+    "hipertireoidismo descompensado",
+    "alergia ao salbutamol",
+    "sangramento ativo",
+    "trombocitopenia induzida por heparina",
+    "plaquetas abaixo de 50.000"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "usar o oxigênio conforme a prescrição e não aumentar o fluxo por conta própria"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "sedativos, ansiolíticos e opioides sem orientação médica"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Oxigenoterapia",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "oxigenio",
+              "n": "Oxigênio",
+              "ap": "cateter nasal tipo óculos 1-6 L/min",
+              "q": "",
+              "pos": "1 a 6 L/min por cateter nasal; máscara de Venturi de 24% a 50%; máscara com reservatório de 10 a 15 L/min; alto fluxo de 30 a 60 L/min. Via inalatória. Contínuo, titulado pela saturação. Até manter saturação estável em ar ambiente por 15 min. Infusão contínua."
+            },
+            "motivo": "hipoxemia com saturação abaixo de 92% em ar ambiente, ou desconforto respiratório com saturação limítrofe (1a linha)",
+            "nota": "Umedecer o gás em fluxo acima de 4 L/min e escolher o dispositivo pelo alvo de saturação; no alto fluxo, ajustar FiO2 e fluxo separadamente - monitorar: saturação contínua; monitorar: frequência respiratória e uso de musculatura acessória; monitorar: gasometria em 30-60 min se não atingir o alvo; monitorar: nível de co · NÃO: alvo de 88% a 92% em DPOC com risco de hipercapnia, o que ajusta a dose mas não exclui a indicação · Obs: Não é medida de conforto: é tratamento de hipoxemia. Em DPOC, alvo de 88% a 92% e gasometria se sonolência. Trocar de dispositivo sem registrar o fluxo é causa comum de hipoxemia silenciosa",
+            "dose": {
+              "texto": "1 a 6 L/min por cateter nasal; máscara de Venturi de 24% a 50%; máscara com reservatório de 10 a 15 L/min; alto fluxo de 30 a 60 L/min; contínuo, titulado pela saturação; até manter saturação estável em ar ambiente por 15 min; max. individualizada; alvo de 94% a 98%, com 88% a 92% em DPOC com risco de hipercapnia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 6,
+              "unidade": "l/min",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Beta-2 agonista inalatório",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_salbutamol_spray",
+            "pos": "2,5 a 5 mg. Via inalatória (nebulização). A cada 20 min por até 3 doses, depois 4/4-6 h. Durante a crise. Nebulização em 10 a 15 min com fluxo de 6 a 8 L/min.",
+            "posTodas": true,
+            "motivo": "crise grave, paciente incapaz de coordenar o spray ou falha da via inalatória com espaçador (alternativa)",
+            "nota": "Diluir 0,5 a 1 mL da solução (2,5 a 5 mg) em 3 a 5 mL de SF 0,9% - monitorar: frequência cardíaca e saturação durante e após; monitorar: tremor; monitorar: potássio em séries repetidas; monitorar: resposta em 15 min pela frequência respiratória e ausculta",
+            "dose": {
+              "texto": "2,5 a 5 mg; a cada 20 min por até 3 doses, depois 4/4-6 h; durante a crise; max. 15 mg na primeira hora, sob supervisão",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 15,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 20 min",
+              "freq_min": 20,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antimuscarinico inalatório",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_brometo_de_ipratropio_gotas",
+            "pos": "0,5 mg nebulizado, ou 2 jatos de 20 mcg com espaçador. Via inalatória. Nebulizado a cada 20 min por 3 doses, depois 4/4-6 h; spray 4/4-6 h. 24 a 48 h na fase aguda. Nebulização em 10 a 15 min; spray não se aplica.",
+            "posTodas": true,
+            "motivo": "crise moderada a grave de asma ou DPOC, associado ao salbutamol (condicional) broncoespasmo persistente associado ao salbutamol",
+            "nota": "Diluir 2 mL da solução (0,5 mg) em 3 mL de SF 0,9% - monitorar: frequência cardíaca; monitorar: volume urinário e retenção; monitorar: queixa ocular; monitorar: resposta pela ausculta e frequência respiratória",
+            "dose": {
+              "texto": "0,5 mg nebulizado, ou 2 jatos de 20 mcg com espaçador; nebulizado a cada 20 min por 3 doses, depois 4/4-6 h; spray 4/4-6 h; 24 a 48 h na fase aguda; max. 1,5 mg na primeira hora por nebulização",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1.5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 20 min",
+              "freq_min": 20,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide sistêmico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "40 mg. Via VO. 1x/dia pela manhã. 5 dias na asma; 5 a 7 dias na DPOC, sem desmame.",
+            "posTodas": true,
+            "motivo": "asma ou exacerbação de DPOC com broncoespasmo, como anti-inflamatório sistêmico (condicional) asma ou DPOC com broncoespasmo, sem necessidade de internação",
+            "nota": "Uso direto com alimento, pela manhã - monitorar: glicemia em diabético; monitorar: pressão arterial; monitorar: potássio; monitorar: estado mental e sono; monitorar: sinais de infecção · NÃO: infecção sistêmica não controlada; alergia a prednisona; psicose induzida por corticoide prévia · Obs: Curso curto dispensa desmame. Não é tratamento de dispneia indiferenciada: só entra com broncoespasmo documentado. Em suspeita de pneumonia sem asma ou DPOC, corticoide não é rotina",
+            "dose": {
+              "texto": "40 mg; 1x/dia pela manhã; 5 dias na asma; 5 a 7 dias na DPOC, sem desmame; max. 60 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anticoagulante",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa 20 mg/0,2 mL",
+              "q": "",
+              "pos": "1 mg/kg. Via SC. 12/12 h. Mínimo de 3 a 6 meses, com transição para anticoagulante oral."
+            },
+            "motivo": "tromboembolismo pulmonar confirmado ou com probabilidade alta enquanto se aguarda a confirmação por imagem (condicional)",
+            "nota": "Seringa pronta; não expelir a bolha; aplicar no abdome sem massagear o local - monitorar: hemograma com plaquetas no dia 4 e no dia 10; monitorar: sinais de sangramento; monitorar: creatinina e clearance; monitorar: anti-Xa em obesidade, gestação ou disfunção renal · NÃO: sangramento ativo; plaquetas abaixo de 50.000; cirurgia de grande porte ou punção de neuroeixo nas últimas 24 h; história de trombocitopenia induzida por heparina; alergia a heparina · Obs: Não iniciar sem excluir sangramento ativo. Em TEP de alto risco com instabilidade, a anticoagulação começa antes da imagem quando a suspeita é alta · Renal: ClCr abaixo de 30…",
+            "dose": {
+              "texto": "1 mg/kg; 12/12 h; mínimo de 3 a 6 meses, com transição para anticoagulante oral; max. 180 mg/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 180,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Posição sentada, com cabeceira elevada a 45 a 60 graus",
+              "ap": "",
+              "q": "",
+              "pos": "Reduz o retorno venoso, melhora a mecânica diafragmática e diminui o trabalho respiratório em minutos; manter até a dispneia ceder, com proteção contra queda"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Oximetria em ar ambiente antes de qualquer oxigênio",
+              "ap": "",
+              "q": "",
+              "pos": "Medir sem suplemento e registrar o valor; a saturação medida com oxigênio já ligado esconde a gravidade e é o erro que mais atrasa a internação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Monitorização contínua com saturação, frequência respiratória e ECG",
+              "ap": "",
+              "q": "",
+              "pos": "Reavaliar a cada 15 min na fase aguda e registrar no prontuário; a frequência respiratória é o parâmetro que piora antes da saturação cair"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Dois acessos venosos e gasometria arterial precoce",
+              "ap": "",
+              "q": "",
+              "pos": "Gasometria na chegada quando houver hipoxemia, DPOC, rebaixamento ou suspeita de acidose; repetir em 30 a 60 min após iniciar oxigênio"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Não sedar antes de excluir hipóxia e acidose",
+              "ap": "",
+              "q": "",
+              "pos": "Nenhum benzodiazepínico, opioide ou antipsicótico para 'acalmar' antes de saturação, gasometria e glicemia; se necessário contenção, fazê-la com monitorização e via aérea garantida"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Reavaliação em ar ambiente antes da alta",
+              "ap": "",
+              "q": "",
+              "pos": "Retirar o oxigênio por 15 min, medir saturação em repouso e após deambular no corredor; alta apenas se mantiver acima de 94% ou se o valor limítrofe estiver documentado com plano"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Controle de fatores desencadeantes e adesão ao tratamento de base",
+              "ap": "",
+              "q": "",
+              "pos": "Revisar técnica do inalador com espaçador, adesão ao broncodilatador e ao tratamento cardiológico, tabagismo, exposição a alérgenos e infecção recente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Profilaxia de tromboembolismo em paciente imobilizado",
+              "ap": "",
+              "q": "",
+              "pos": "Avaliar risco de sangramento e prescrever enoxaparina profilática ou compressão pneumática em quem ficará acamado, porque imobilização é gatilho de TEP"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "RESP-15"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Anticoagulante",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "heparina_nao_fracionada",
+              "n": "Heparina não fracionada",
+              "ap": "frasco 5.000 UI/mL (5 mL)",
+              "via": "IV",
+              "pos": "Bolus de 80 UI/kg, seguido de 18 UI/kg/h. Via IV. Infusão contínua titulada pelo TTPa. Até estabilização e transição para anticoagulante oral. Bolus em 1 a 2 min; infusão contínua."
+            },
+            "motivo": "TEP com instabilidade, insuficiência renal grave, risco de sangramento com necessidade de reversão rápida ou ponte para trombólise (alternativa)",
+            "nota": "Bolus IV direto; manutenção diluída em 250 mL de SF 0,9% em bomba, calculada pelo peso - monitorar: TTPa 6 h após o início e após cada ajuste, com alvo de 1,5 a 2,5 vezes o controle; monitorar: plaquetas a cada 2 a 3 dias; monitorar: sinais de sangramento; monitorar: potássio · NÃO: sangramento ativo; trombocitopenia induzida por heparina; plaquetas abaixo de 50.000; hipertensão intracraniana · Obs: Preferir à enoxaparina na instabilidade e na insuficiência renal grave, porque é titulável e reversível com protamina",
+            "dose": {
+              "texto": "bolus de 80 UI/kg, seguido de 18 UI/kg/h; infusão contínua titulada pelo TTPa; até estabilização e transição para anticoagulante oral; max. ajustada pelo TTPa, sem teto fixo",
+              "status": "ok",
+              "valor": 80,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Diurético de de alça",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "edema agudo de pulmão com congestão, ortopneia e estertoração, sobretudo com sobrecarga de volume (condicional)",
+            "nota": "Bolus: diluir a ampola em 10 a 20 mL de SF 0,9%. Infusão: 100 a 250 mg em 100 mL de SF em bomba - monitorar: diurese horária; monitorar: pressão arterial; monitorar: ausculta pulmonar e saturação; monitorar: potássio, sódio e creatinina em 24 h; monitorar: peso diário · NÃO: hipovolemia; hipotensão sem congestão; anúria sem diálise; hipocalemia grave; alergia a sulfonamida · Obs: Só faz sentido quando há congestão. Em dispneia sem congestão, diurético causa hipotensão e não melhora a saturação · Renal: A dose eficaz é maior na doença renal crônica; titular pela diurese e não pela creatinina",
+            "dose": {
+              "texto": "40 mg, ou 1 a 2 vezes a dose oral em uso prévio de alça; bolus inicial; repetir em 2 a 6 h conforme diurese; até compensar a congestão; max. individualizada, até 600 mg/dia; dobrar a dose se a diurese for insuficiente",
+              "status": "falha",
+              "valor": null,
+              "valor_max": 600,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Nitrato",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nitroglicerina_intravenosa",
+              "n": "Nitroglicerina intravenosa",
+              "ap": "ampola 5 mg/mL (5 mL)",
+              "via": "IV",
+              "pos": "5 a 10 mcg/min, com aumento de 5 a 10 mcg/min a cada 5 a 10 min. Via IV. Infusão contínua titulada. 24 a 48 h, até compensar a congestão. Infusão contínua, titulada a cada 5 a 10 min."
+            },
+            "motivo": "edema agudo de pulmão hipertensivo com pressão sistólica acima de 110 mmHg, ou dor isquêmica associada (condicional)",
+            "nota": "25 mg em 250 mL de SF 0,9% ou SG 5% (100 mcg/mL); equipo de PVC e bomba de infusão - monitorar: pressão arterial a cada 5 min durante a titulação; monitorar: frequência cardíaca e ritmo; monitorar: cefaleia e rubor; monitorar: saturação · NÃO: pressão sistólica abaixo de 90 mmHg; sildenafila nas últimas 24 h ou tadalafila nas últimas 48 h; infarto de ventrículo direito; estenose aórtica grave; cardiopatia hipertrófica obstrutiva · Obs: Perguntar sobre inibidor de PDE5 antes da primeira dose. Suspender se a pressão sistólica cair abaixo de 90 mmHg ou houver queda de 30 mmHg com sintoma",
+            "dose": {
+              "texto": "5 a 10 mcg/min, com aumento de 5 a 10 mcg/min a cada 5 a 10 min; infusão contínua titulada; 24 a 48 h, até compensar a congestão; max. 200 mcg/min",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Sal de magnésio",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "sulfato_mg",
+            "motivo": "asma grave ou broncoespasmo refratário após três séries de broncodilatador, e exacerbação grave de DPOC (resgate)",
+            "nota": "2 g (20 mL da solução a 10%) diluídos em 100 mL de SF 0,9% - monitorar: pressão arterial a cada 5 min durante a infusão; monitorar: reflexo patelar; monitorar: frequência respiratória; monitorar: diurese; monitorar: magnésio sérico se disfunção renal · NÃO: insuficiência renal com ClCr abaixo de 30 mL/min; bloqueio atrioventricular avançado sem marca-passo; miastenia gravis; hipermagnesemia · Obs: Resgate no broncoespasmo grave; não substitui corticoide nem broncodilatador. Se houver perda de reflexo ou frequência respiratória abaixo de 12, suspender e usar gluconato de cálcio · Renal: Metade da dose com ClCr abaixo de 30 mL/min;…",
+            "dose": {
+              "texto": "2 g; dose única, repetida uma vez se necessário; infusão de 20 min por dose; max. 4 g em 24 h fora da UTI",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "RESP-15",
+    "versao": "0.2.0",
+    "arquivo": "RESP-15_dispneia.json",
+    "area": "Respiratório/ORL",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

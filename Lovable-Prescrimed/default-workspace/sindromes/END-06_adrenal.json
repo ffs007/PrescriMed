@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "END-06",
+    "area": "Endócrino",
+    "nome": "Insuficiência adrenal",
+    "aliases": ["insuficiência adrenal", "crise adrenal", "insuficiência suprarrenal", "Addison"],
+    "contexto": ["hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Insuficiência adrenal é rara e mata por atraso. A deficiência de cortisol — com ou sem deficiência de aldosterona — causa hipotensão que não responde a volume, hiponatremia, hipercalemia, hipoglicemia, náusea, vômito, dor abdominal e febre sem foco. A regra que organiza todo o atendimento: não atrasar o corticoide para colher cortisol; a amostra é colhida na mesma punção do acesso, antes da primeira dose, e o resultado nunca espera. O tratamento é hidrocortisona 100 mg IV imediatamente, seguida de 50 mg a cada 6 h, com SF 0,9% contendo glicose, 1 litro na primeira hora, e correção da glicemia e do potássio. Quando o teste de estímulo com ACTH é indispensável, usa-se dexametasona 4 mg, que não interfere na dosagem de cortisol. Depois da crise, manutenção com hidrocortisona oral 15–25 mg/dia e fludrocortisona 0,1 mg/dia na forma primária. Os erros que matam são confundir com sepse e retardar o corticoide, prescrever dose de estresse insuficiente em cirurgia ou infecção e suspender prednisona crônica de forma abrupta.",
+    "inclusao": [
+      "Hipotensão ou choque sem causa evidente com hiponatremia, hipercalemia e hipoglicemia",
+      "Suspeita de crise adrenal em paciente com Addison conhecido, uso crônico de corticoide ou pós-operatório",
+      "Náusea, vômito, dor abdominal e fraqueza com hipotensão postural em usuário de corticoide",
+      "Hiperpigmentação cutânea com hiponatremia e hipercalemia, sugerindo insuficiência adrenal primária",
+      "Hipotensão refratária a volume e a vasopressor sem foco infeccioso definido"
+    ],
+    "exclusao": [
+      { "situacao": "choque séptico com foco definido e sem sinais de insuficiência adrenal", "fluxo": "protocolo de sepse, com hidrocortisona se choque refratário a volume e vasopressor" },
+      { "situacao": "hiponatremia por SIADH, tiazídico ou hiperglicemia", "fluxo": "END-05" },
+      { "situacao": "hipoglicemia isolada sem hipotensão nem hipercalemia", "fluxo": "END-01" },
+      { "situacao": "hipercalemia isolada com função renal normal e ECG alterado", "fluxo": "END-05" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "hipotensão que não responde a volume", "por_que": "vasodilatação por deficiência de cortisol e perda de aldosterona", "acao": "hidrocortisona 100 mg IV imediata e SF 0,9% com glicose", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "hiponatremia com hipercalemia e hipoglicemia no mesmo paciente", "por_que": "tríade clássica de insuficiência adrenal primária", "acao": "tratar como crise adrenal sem esperar exames confirmatórios", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "febre com hipotensão em uso crônico de corticoide", "por_que": "crise precipitada por infecção com eixo suprimido", "acao": "antibiótico na primeira hora e aumentar a dose de corticoide, nunca reduzir", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "rebaixamento de consciência ou convulsão", "por_que": "hipoglicemia ou hiponatremia grave", "acao": "glicemia capilar imediata, glicose 50% e dosagem de sódio", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "vômitos incoercíveis com impossibilidade de via oral", "por_que": "não absorve o corticoide oral e perde volume", "acao": "trocar para hidrocortisona parenteral e hidratar", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "dor abdominal intensa com hipotensão", "por_que": "crise adrenal simula abdome cirúrgico", "acao": "tratar a crise e investigar abdome agudo em paralelo, sem atrasar o corticoide", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "hipercalemia com alteração de ECG", "por_que": "deficiência de aldosterona com risco de arritmia", "acao": "tratar conforme END-05 e repor o corticoide", "severidade": "grave" }
+    ],
+    "perguntas_rapidas": [
+      "Usa prednisona, dexametasona ou outro corticoide há mais de 3 semanas? Qual a dose e a última tomada?",
+      "Teve infecção, cirurgia, trauma ou suspendeu o corticoide nos últimos dias?",
+      "Tem diagnóstico de Addison, hipopituitarismo ou já usou corticoide em dose alta?",
+      "Qual a pressão, a frequência cardíaca e há hipotensão postural?",
+      "Qual o sódio, o potássio e a glicemia?",
+      "Há hiperpigmentação, perda de peso, anorexia ou desejo por sal?",
+      "Há vômitos que impedem a via oral?",
+      "Usa fludrocortisona ou apenas hidrocortisona ou prednisona?",
+      "Já recebeu corticoide nesta internação e em que dose?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Crise adrenal suspeita ou confirmada", "escolha": "Hidrocortisona 100 mg IV imediatamente, seguida de 50 mg a cada 6 h", "porque": "O atraso aumenta a mortalidade; o cortisol pode ser colhido na mesma punção, minutos antes ou depois da dose, sem prejuízo do diagnóstico" },
+      { "cenario": "Dúvida diagnóstica com necessidade de teste de estímulo com ACTH", "escolha": "Dexametasona 4 mg IV e colher cortisol e ACTH antes", "porque": "A dexametasona não interfere na dosagem de cortisol e permite concluir o teste; a hidrocortisona inviabiliza a interpretação" },
+      { "cenario": "Hipotensão ou choque na crise", "escolha": "SF 0,9% com glicose 5%, 1.000 mL na primeira hora, e depois 500–1.000 mL conforme resposta", "porque": "A deficiência combinada de cortisol e aldosterona causa hipovolemia e hipoglicemia ao mesmo tempo; salina pura corrige o volume e agrava a hipoglicemia" },
+      { "cenario": "Glicemia abaixo de 70 mg/dL", "escolha": "Glicose 50% 50 mL IV e infusão contínua de glicose", "porque": "O cortisol baixo reduz a gliconeogênese; a hipoglicemia recorre enquanto o corticoide não faz efeito" },
+      { "cenario": "Crise precipitada por infecção", "escolha": "Antibiótico na primeira hora e hidrocortisona em dose de estresse, sem reduzir a dose prévia", "porque": "Infecção é o precipitante mais comum, e reduzir o corticoide nesse momento remove a única defesa hormonal disponível" },
+      { "cenario": "Cirurgia eletiva em uso crônico de corticoide", "escolha": "Dose de estresse conforme o porte: 25 mg de hidrocortisona no procedimento pequeno, 50–75 mg/dia no médio e 100–150 mg/dia no grande, por 1–3 dias", "porque": "O eixo suprimido não responde ao estresse cirúrgico; dose de manutenção é insuficiente e leva a choque no pós-operatório" },
+      { "cenario": "Doença aguda leve em uso crônico de corticoide", "escolha": "Dobrar a dose oral por 2–3 dias e voltar à dose habitual, sem desmame", "porque": "Aumento proporcional cobre o estresse sem expor o paciente a supressão adicional prolongada" },
+      { "cenario": "Manutenção após a crise", "escolha": "Hidrocortisona oral 15–25 mg/dia (10-5-5) e fludrocortisona 0,1 mg/dia na insuficiência primária", "porque": "A hidrocortisona em dose fisiológica não supre o mineralocorticoide; sem fludrocortisona a hiponatremia e a hipercalemia persistem" },
+      { "cenario": "Suspensão de prednisona usada por mais de 3 semanas", "escolha": "Desmame de 2,5–5 mg a cada 1–2 semanas, nunca abrupto", "porque": "A supressão do eixo hipotálamo-hipófise-adrenal pode durar meses e a retirada rápida precipita crise" },
+      { "cenario": "Crise com hiponatremia grave e convulsão", "escolha": "NaCl 3% 100–150 mL apenas se houver convulsão, com limite de 8–10 mEq/L em 24 h", "porque": "O volume e o corticoide já elevam o sódio; a correção rápida soma-se a isso e leva à mielinólise" },
+      { "cenario": "Crise com hipercalemia refratária", "escolha": "Tratar conforme END-05 e manter a hidrocortisona em dose de estresse", "porque": "O corticoide corrige o mecanismo da hipercalemia; medidas de deslocamento são ponte, não solução" },
+      { "cenario": "Choque que persiste após volume e hidrocortisona", "escolha": "Noradrenalina em infusão contínua titulada", "porque": "O cortisol restaura a resposta vascular ao vasopressor; sem ele a dose necessária sobe muito" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "corticoide",
+        "agente": "hidrocortisona (succinato) intravenosa",
+        "papel": "primeira_linha",
+        "indicacao": "crise adrenal",
+        "dose": "100 mg agora, depois 50 mg a cada 6 h",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "100 mg no ataque, depois 50 mg 6/6 h",
+        "duracao": "até estabilidade hemodinâmica, em geral 24–72 h",
+        "dose_maxima": "200–300 mg/dia na crise; 400 mg/dia em choque refratário",
+        "contraindicacoes": ["hipersensibilidade ao succinato", "infecção fúngica sistêmica não tratada (não impede o uso na crise)"],
+        "efeitos_adversos": ["hiperglicemia", "hipernatremia", "hipocalemia", "retenção hídrica", "psicose cortisônica", "infecção secundária"],
+        "apresentacoes": ["frasco-ampola 100 mg (pó) com diluente de 2 mL", "frasco-ampola 500 mg", "frasco-ampola 1 g"],
+        "preparo": "Reconstituir 100 mg em 2 mL de água para injeção ou SF 0,9%; administrar IV lento; não misturar com bicarbonato",
+        "tempo_infusao": "bolus IV em 2–3 min; dose de manutenção em 5 min",
+        "monitorizacao": ["pressão arterial e frequência cardíaca de 15/15 min até estabilizar", "glicemia capilar de 4/4 h", "sódio e potássio de 12/12 h", "balanço hídrico e peso"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste na crise aguda",
+        "observacoes": "Dose de estresse não é dose de manutenção: 50 mg 6/6 h. Não esperar cortisol nem teste para tratar; quando estável, reduzir para a dose oral de manutenção",
+        "confirmar_apresentacao_local": true,
+        "fonte": "diretriz Endocrine Society",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "hidrocortisona comprimido",
+        "papel": "primeira_linha",
+        "indicacao": "manutenção da insuficiência adrenal primária ou secundária",
+        "dose": "15–25 mg/dia divididos em 10 mg ao acordar, 5 mg ao almoço e 5 mg no meio da tarde",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "2–3x/dia",
+        "duracao": "uso contínuo",
+        "dose_maxima": "25–30 mg/dia",
+        "contraindicacoes": ["infecção fúngica sistêmica não tratada", "vacina de vírus vivo (adiar)"],
+        "efeitos_adversos": ["ganho de peso", "hiperglicemia", "osteoporose", "insônia", "hipertensão"],
+        "apresentacoes": ["comprimido 10 mg", "comprimido 20 mg"],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["pressão arterial", "peso", "glicemia", "sódio e potássio", "densitometria óssea anual"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Cautela em cirrose; considerar redução da dose pelo aumento da fração livre",
+        "observacoes": "Tomar a maior dose ao acordar; dobrar a dose por 2–3 dias em doença febril; nunca suspender abruptamente",
+        "confirmar_apresentacao_local": true,
+        "fonte": "Endocrine Society/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "mineralocorticoide",
+        "agente": "fludrocortisona",
+        "papel": "primeira_linha",
+        "indicacao": "insuficiência adrenal primária, para repor aldosterona",
+        "dose": "0,1 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "uso contínuo",
+        "dose_maxima": "0,2 mg/dia",
+        "contraindicacoes": ["hipertensão não controlada", "insuficiência cardíaca descompensada", "hipocalemia"],
+        "efeitos_adversos": ["hipertensão", "edema", "hipocalemia", "cefaleia", "hipertrofia ventricular"],
+        "apresentacoes": ["comprimido 0,1 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["pressão arterial e edema", "sódio e potássio a cada 3 meses", "atividade de renina quando houver dúvida sobre a dose"],
+        "ajuste_renal": "Cautela na doença renal crônica com sobrecarga; monitorar edema e pressão",
+        "observacoes": "Só na insuficiência primária; na secundária (hipofisária) a aldosterona é preservada e não se usa. Não substitui a hidrocortisona na crise",
+        "confirmar_apresentacao_local": true,
+        "fonte": "Endocrine Society",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "dexametasona",
+        "papel": "alternativa",
+        "indicacao": "crise adrenal quando é necessário realizar o teste de estímulo com ACTH",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única; repetir 6/6 h se necessário",
+        "duracao": "24 h, até concluir o teste",
+        "dose_maxima": "8 mg/dia",
+        "contraindicacoes": ["infecção fúngica sistêmica não tratada", "hipersensibilidade"],
+        "efeitos_adversos": ["hiperglicemia", "ausência de efeito mineralocorticoide com hiponatremia e hipercalemia persistentes", "infecção secundária"],
+        "apresentacoes": ["ampola 4 mg/mL 2,5 mL", "comprimido 4 mg", "frasco 10 mg/2,5 mL"],
+        "preparo": "Pronta para uso IV; não diluir em soluções com fosfato",
+        "tempo_infusao": "bolus IV em 2–3 min",
+        "monitorizacao": ["sódio e potássio, que podem não melhorar", "glicemia", "pressão arterial", "cortisol e ACTH colhidos antes da dose"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Não interfere na dosagem de cortisol e por isso permite o teste; usar apenas quando o teste é indispensável, porque não tem efeito mineralocorticoide; assim que o teste terminar, trocar por hidrocortisona",
+        "confirmar_apresentacao_local": true,
+        "fonte": "Endocrine Society/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide_glicosado",
+        "agente": "solução fisiológica 0,9% com glicose 5%",
+        "papel": "primeira_linha",
+        "indicacao": "reposição volêmica da crise adrenal com prevenção de hipoglicemia",
+        "dose": "1.000 mL na primeira hora; depois 500–1.000 mL conforme pressão e diurese",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "infusão contínua titulada",
+        "duracao": "24–48 h",
+        "dose_maxima": "individualizar; cautela em cardiopata e renal crônico",
+        "contraindicacoes": ["sobrecarga de volume com edema agudo de pulmão", "hiperglicemia grave sem insulina"],
+        "efeitos_adversos": ["hiperglicemia", "sobrecarga volêmica", "hipocalemia dilucional"],
+        "apresentacoes": ["bolsa 500 mL", "bolsa 1.000 mL", "frasco 500 mL"],
+        "preparo": "Pronta para uso; se indisponível, infundir SF 0,9% e administrar 50 mL de glicose 50% em via separada, ou adicionar 50 mL de glicose 50% a 1.000 mL de SF",
+        "tempo_infusao": "primeira hora rápida (30–60 min); depois 250–500 mL/h",
+        "monitorizacao": ["pressão, frequência cardíaca e perfusão de 15/15 min", "glicemia capilar de 1/1 h na primeira hora", "diurese horária", "ausculta pulmonar"],
+        "ajuste_renal": "Reduzir o volume em oligúria e vigiar sobrecarga",
+        "observacoes": "Na crise a hipoglicemia é comum e o soro glicosado previne; nunca usar apenas SG 5%, que não repõe volume nem sódio",
+        "confirmar_apresentacao_local": true,
+        "fonte": "Endocrine Society/protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "carboidrato",
+        "agente": "glicose 50%",
+        "papel": "condicional",
+        "indicacao": "hipoglicemia na crise adrenal",
+        "dose": "50 mL (25 g)",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "dose única; repetir conforme a glicemia",
+        "duracao": "1 dose, seguida de infusão contínua de glicose",
+        "dose_maxima": "100 mL por episódio",
+        "contraindicacoes": ["hiperglicemia acima de 250 mg/dL sem monitorização", "veia de fino calibre pelo risco de flebite"],
+        "efeitos_adversos": ["hiperglicemia", "flebite e necrose por extravasamento", "hipocalemia"],
+        "apresentacoes": ["ampola 50% 10 mL (5 g)", "ampola 50% 20 mL (10 g)", "bolsa 50% 500 mL"],
+        "preparo": "Pronta para uso; preferir veia calibrosa; em criança diluir para 25% ou usar 2 mL/kg de glicose 10%",
+        "tempo_infusao": "bolus IV em 2–5 min",
+        "monitorizacao": ["glicemia capilar 15 min após e depois de 1/1 h", "nível de consciência", "sítio de infusão"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Na crise adrenal a hipoglicemia pode recorrer enquanto o cortisol não é reposto; manter infusão de glicose até o corticoide agir",
+        "confirmar_apresentacao_local": true,
+        "fonte": "protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "prednisona",
+        "papel": "alternativa",
+        "indicacao": "manutenção quando não há hidrocortisona; uso crônico que exige desmame e dose de estresse",
+        "dose": "3–5 mg/dia na manutenção; 10 mg/dia em doença aguda leve",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "uso contínuo",
+        "dose_maxima": "7,5 mg/dia na manutenção",
+        "contraindicacoes": ["infecção fúngica sistêmica não tratada", "vacina de vírus vivo"],
+        "efeitos_adversos": ["supressão do eixo hipotálamo-hipófise-adrenal", "osteoporose", "hiperglicemia", "catarata", "infecção secundária"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 20 mg"],
+        "preparo": "Uso direto, com alimento pela manhã",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["pressão arterial", "glicemia", "peso", "densitometria óssea", "sinais de insuficiência adrenal durante o desmame"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Preferir prednisolona na hepatopatia grave, pela conversão hepática prejudicada",
+        "observacoes": "5 mg de prednisona equivalem a 20 mg de hidrocortisona e a 0,75 mg de dexametasona; após mais de 3 semanas de uso, desmamar 2,5–5 mg a cada 1–2 semanas; não tem efeito mineralocorticoide",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/Endocrine Society",
+        "claim_id": null
+      },
+      {
+        "classe": "vasopressor",
+        "agente": "noradrenalina",
+        "papel": "condicional",
+        "indicacao": "choque refratário após volume e hidrocortisona",
+        "dose": "0,05–0,5 mcg/kg/min",
+        "unidade": "mcg/kg/min",
+        "via": "IV central",
+        "frequencia": "infusão contínua titulada pela pressão média",
+        "duracao": "até pressão média de 65 mmHg ou mais sem a droga",
+        "dose_maxima": "2 mcg/kg/min",
+        "contraindicacoes": ["hipovolemia não corrigida", "taquiarritmia grave", "isquemia mesentérica"],
+        "efeitos_adversos": ["isquemia periférica", "necrose por extravasamento", "arritmia", "hipertensão"],
+        "apresentacoes": ["ampola 4 mg/4 mL (1 mg/mL)", "ampola 8 mg/8 mL", "frasco 4 mg/4 mL"],
+        "preparo": "Diluir 4 mg em 250 mL de SG 5% ou SF (16 mcg/mL); bomba em via central, sem interrupção abrupta",
+        "tempo_infusao": "contínua",
+        "monitorizacao": ["pressão arterial invasiva", "perfusão periférica e diurese", "sítio de infusão", "lactato"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "A hidrocortisona restaura a resposta vascular à noradrenalina; titular depois da dose de corticoide, não antes",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Cartão de identificação de insuficiência adrenal", "detalhe": "Carteira e pulseira de alerta com diagnóstico, dose de manutenção e dose de emergência; registrar também no prontuário eletrônico" },
+      { "medida": "Dose de estresse escrita na prescrição", "detalhe": "Para cada procedimento ou infecção, registrar a dose extra e o prazo; conferir na admissão cirúrgica antes do centro cirúrgico" },
+      { "medida": "Nunca suspender corticoide sem plano de desmame", "detalhe": "Registrar data de início, dose e esquema de redução; após 3 semanas de uso, desmame lento e orientação por escrito" },
+      { "medida": "Glicemia capilar horária na primeira hora", "detalhe": "Manter infusão de glicose até o corticoide agir; hipoglicemia recorrente é marca da crise não tratada" },
+      { "medida": "Hidrocortisona intramuscular domiciliar", "detalhe": "Treinar o paciente e o cuidador para aplicar 100 mg IM em vômito, diarreia ou trauma, e procurar atendimento em seguida" },
+      { "medida": "Tratar o precipitante no mesmo dia", "detalhe": "Antibiótico na primeira hora na infecção, drenagem de foco, revisão da dose de estresse no pós-operatório" },
+      { "medida": "Balanço hídrico e peso diário", "detalhe": "Registrar entrada e saída por turno; ganho rápido de peso com edema indica excesso de mineralocorticoide" }
+    ],
+    "procedimentos": [
+      { "nome": "Teste de estímulo com ACTH (cosintropina)", "indicacao": "suspeita diagnóstica sem instabilidade grave, antes de iniciar corticoide que interfira no cortisol", "tecnica": "Colher cortisol basal, administrar 250 mcg de cosintropina IV e dosar cortisol em 30 e 60 min; usar dexametasona durante o teste", "complicacoes": "Resultado falso-negativo na fase aguda, reação local, atraso no tratamento se mal indicado" },
+      { "nome": "Acesso venoso central", "indicacao": "infusão de noradrenalina, veias periféricas esgotadas ou necessidade de coletas seriadas", "tecnica": "Punção jugular ou subclávia guiada por ultrassom, com confirmação radiológica", "complicacoes": "Pneumotórax, infecção de cateter, trombose, punção arterial" },
+      { "nome": "Punção para cortisol e ACTH", "indicacao": "todos os casos suspeitos, na mesma punção do acesso", "tecnica": "Coletar em dois tubos, identificados, imediatamente antes da primeira dose de hidrocortisona; nunca atrasar a dose pelo resultado", "complicacoes": "Amostra hemolisada, coleta após a dose e perda do diagnóstico" },
+      { "nome": "Monitorização com pressão arterial invasiva", "indicacao": "choque, uso de vasopressor ou instabilidade persistente", "tecnica": "Punção radial com teste de Allen e transdutor zerado no átrio direito", "complicacoes": "Trombose radial, hematoma, infecção e leitura falsa por posicionamento" },
+      { "nome": "Hidrocortisona intramuscular de resgate", "indicacao": "vômitos que impedem a via oral ou crise fora do hospital", "tecnica": "100 mg IM na coxa ou no deltoide, com técnica asséptica, e transporte imediato ao serviço", "complicacoes": "Aplicação em local inadequado, atraso no atendimento, infecção do sítio" }
+    ],
+    "metas": [
+      "Hidrocortisona administrada em até 60 min da suspeita de crise",
+      "Pressão arterial média de 65 mmHg ou mais em 1 h",
+      "Glicemia entre 100 e 180 mg/dL sem episódio abaixo de 70 mg/dL",
+      "Sódio subindo no máximo 8–10 mEq/L em 24 h e potássio entre 3,5 e 5,0 mEq/L",
+      "Cortisol e ACTH colhidos antes da primeira dose quando o teste for possível",
+      "Dose de estresse documentada para cada procedimento e alta com cartão de adrenal"
+    ],
+    "fluxo": [
+      "Reconhecer: hipotensão refratária com hiponatremia, hipercalemia e hipoglicemia, ou hipotensão em Addison, em uso crônico de corticoide ou no pós-operatório",
+      "Colher cortisol e ACTH na mesma punção do acesso, imediatamente, sem atrasar nenhuma medida",
+      "Hidrocortisona 100 mg IV imediatamente; dexametasona 4 mg apenas se o teste de estímulo for indispensável",
+      "SF 0,9% com glicose 5%, 1.000 mL na primeira hora, e glicose 50% se a glicemia estiver abaixo de 70 mg/dL",
+      "Tratar o precipitante: antibiótico na primeira hora na infecção, revisão cirúrgica, correção da suspensão de corticoide",
+      "Manter 50 mg de hidrocortisona a cada 6 h e reavaliar em 24 h; não reduzir para dose de manutenção enquanto houver instabilidade",
+      "Após estabilidade: hidrocortisona oral 15–25 mg/dia e fludrocortisona 0,1 mg/dia se insuficiência primária, com plano escrito de dose de estresse",
+      "Alta somente com cartão de adrenal, receita de resgate intramuscular e orientação de quando dobrar a dose"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "usuario_cronico_de_corticoide", "ajuste": "manter a dose habitual somada à dose de estresse; nunca suspender no período perioperatório", "alerta": "eixo suprimido e crise por retirada ou por dose insuficiente" },
+      { "populacao": "pos_operatorio", "ajuste": "dose de estresse conforme o porte da cirurgia por 1–3 dias, com redução gradual", "alerta": "hipotensão no pós-operatório imediato confundida com anestesia ou sangramento" },
+      { "populacao": "sepse", "ajuste": "hidrocortisona 200 mg/dia se choque refratário a volume e vasopressor, com desmame quando o choque resolver", "alerta": "não confundir crise adrenal com sepse nem atrasar o antibiótico" },
+      { "populacao": "gestante", "ajuste": "hidrocortisona em dose de estresse no parto e no puerpério; manter fludrocortisona com monitorização obstétrica", "alerta": "crise no parto e hiponatremia; o cortisol sérico e a CBG mudam na gestação e confundem o teste" },
+      { "populacao": "idoso", "ajuste": "reduzir a velocidade de hidratação e monitorizar glicemia e potássio", "alerta": "sobrecarga volêmica e hipoglicemia" },
+      { "populacao": "renal_cronico", "ajuste": "menor volume, potássio de 2/2 h e atenção à hipercalemia", "alerta": "hipercalemia grave e sobrecarga de volume" },
+      { "populacao": "pediatria", "ajuste": "hidrocortisona 50–100 mg/m²/dia na crise, com glicose e volume por quilo", "alerta": "hipoglicemia é mais frequente e a dose de estresse precisa ser recalculada pela superfície corporal" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "cortisol basal e ACTH", "indicacao": "todos os casos suspeitos, antes do primeiro corticoide", "o_que_muda": "confirma a insuficiência adrenal e separa a forma primária da secundária" },
+        { "nome": "sódio, potássio e glicemia", "indicacao": "todos", "o_que_muda": "sustenta a suspeita clínica e define a urgência da reposição" },
+        { "nome": "teste de estímulo com ACTH", "indicacao": "dúvida diagnóstica sem instabilidade", "o_que_muda": "confirma a insuficiência adrenal e permite a dexametasona como cobertura" },
+        { "nome": "renina e aldosterona", "indicacao": "suspeita de forma primária", "o_que_muda": "confirma a deficiência de mineralocorticoide e indica fludrocortisona" },
+        { "nome": "hemograma, PCR, lactato, culturas e urina tipo 1", "indicacao": "febre ou hipotensão", "o_que_muda": "identifica o precipitante infeccioso e antecipa antibiótico" },
+        { "nome": "tomografia de adrenais e ressonância de hipófise", "indicacao": "após a estabilização, na investigação etiológica", "o_que_muda": "define a causa: hemorragia, tuberculose, metástase ou adenoma hipofisário" },
+        { "nome": "gasometria e função renal", "indicacao": "instabilidade ou vômitos", "o_que_muda": "detecta acidose e lesão renal por hipoperfusão" }
+      ],
+      "evitar": [
+        { "exame": "esperar o resultado do cortisol para iniciar hidrocortisona", "motivo": "o atraso aumenta a mortalidade e o resultado não muda a conduta na crise" },
+        { "exame": "dosar cortisol depois de já ter dado hidrocortisona ou prednisona", "motivo": "o resultado fica ininterpretável e o diagnóstico se perde por dias" },
+        { "exame": "teste de estímulo com ACTH durante choque profundo", "motivo": "resultado falso-negativo na fase aguda; o teste é feito depois da estabilização" },
+        { "exame": "dosar cortisol em uso de prednisona sem considerar a reação cruzada", "motivo": "a prednisona interfere no ensaio e simula cortisol alto" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["usar o cartão de adrenal em todos os atendimentos", "dobrar a dose oral por 2–3 dias em febre ou infecção leve", "aplicar hidrocortisona intramuscular 100 mg se houver vômito e procurar o serviço", "avisar qualquer cirurgião ou dentista sobre a necessidade de dose de estresse", "manter fludrocortisona todos os dias na forma primária"],
+      "evitar": ["suspender o corticoide por conta própria", "reduzir a dose durante infecção ou cirurgia", "usar apenas analgésico e antitérmico sem ajustar o corticoide", "iniciar fitoterápico ou suplemento sem avisar o médico", "esperar melhora em casa com vômitos persistentes"],
+      "retorno": ["pressão baixa, tontura ao levantar ou desmaio", "vômitos e incapacidade de tomar o comprimido", "febre acima de 38 °C", "fraqueza intensa, dor abdominal ou confusão", "falta de ar ou edema"]
+    },
+    "efeitos_adversos": [
+      { "agente": "hidrocortisona (succinato) intravenosa", "efeitos": ["hiperglicemia", "hipernatremia", "hipocalemia", "psicose"], "observacao": "glicemia de 4/4 h e eletrólitos de 12/12 h; reduzir para a dose de manutenção assim que estável" },
+      { "agente": "hidrocortisona comprimido", "efeitos": ["ganho de peso", "osteoporose", "hiperglicemia"], "observacao": "densitometria anual e orientação sobre cálcio e vitamina D" },
+      { "agente": "fludrocortisona", "efeitos": ["hipertensão", "edema", "hipocalemia"], "observacao": "medir pressão e potássio a cada consulta; reduzir se edema ou hipertensão" },
+      { "agente": "dexametasona", "efeitos": ["hiperglicemia", "hiponatremia e hipercalemia persistentes"], "observacao": "não tem efeito mineralocorticoide; trocar por hidrocortisona assim que o teste terminar" },
+      { "agente": "glicose 50%", "efeitos": ["flebite", "necrose por extravasamento", "hiperglicemia"], "observacao": "veia calibrosa e glicemia de 15/15 min no início" },
+      { "agente": "noradrenalina", "efeitos": ["isquemia periférica", "necrose por extravasamento", "arritmia"], "observacao": "via central, monitorização contínua e checagem do sítio a cada hora" }
+    ],
+    "conduta_efeito_adverso": [
+      "Hiperglicemia grave durante a hidrocortisona: iniciar insulina em infusão e manter o corticoide, que é indispensável na crise",
+      "Hipertensão e edema com fludrocortisona: reduzir para 0,05 mg/dia, restringir sódio e reavaliar a pressão em 1 semana",
+      "Hipocalemia por corticoide ou fludrocortisona: repor potássio conforme END-05 e revisar a dose do mineralocorticoide",
+      "Psicose cortisônica: reduzir para a menor dose eficaz, avaliar antipsicótico e não suspender abruptamente",
+      "Extravasamento de noradrenalina: interromper a infusão no sítio, aspirar o cateter e infiltrar 5–10 mg de fentolamina diluída em 10 mL de SF 0,9% na área em até 12 h",
+      "Hipoglicemia recorrente: manter infusão de glicose e confirmar que a dose de hidrocortisona está sendo administrada nos horários",
+      "Reavaliar o plano, reescrever a prescrição e comunicar a equipe antes de sair do leito"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "hidrocortisona 10 mg comprimido", "dose": "10 mg ao acordar e 5 mg no meio da tarde", "via": "VO", "frequencia": "2x/dia", "duracao": "uso contínuo", "condicao": "manutenção", "confirmar_apresentacao_local": true },
+          { "item": "fludrocortisona 0,1 mg comprimido", "dose": "0,1 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "uso contínuo", "condicao": "insuficiência adrenal primária", "confirmar_apresentacao_local": true },
+          { "item": "hidrocortisona 100 mg frasco-ampola para uso intramuscular", "dose": "100 mg", "via": "IM", "frequencia": "em emergência, dose única", "duracao": "resgate", "condicao": "vômito, trauma ou crise", "confirmar_apresentacao_local": true },
+          { "item": "cartão de identificação de insuficiência adrenal", "dose": "não se aplica", "via": "não se aplica", "frequencia": "portar sempre", "duracao": "uso contínuo", "condicao": "todos os pacientes", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "hidrocortisona 100 mg", "dose": "100 mg no ataque, depois 50 mg 6/6 h", "via": "IV", "frequencia": "6/6 h", "monitorizacao": "pressão, glicemia e eletrólitos", "confirmar_apresentacao_local": true },
+          { "item": "solução fisiológica 0,9% com glicose 5%", "dose": "1.000 mL na primeira hora, depois 500–1.000 mL", "via": "IV", "frequencia": "contínuo titulado", "monitorizacao": "pressão, diurese e glicemia", "confirmar_apresentacao_local": true },
+          { "item": "glicose 50%", "dose": "50 mL se glicemia abaixo de 70 mg/dL", "via": "IV", "frequencia": "dose única, repetir conforme glicemia", "monitorizacao": "glicemia capilar", "confirmar_apresentacao_local": true },
+          { "item": "dexametasona 4 mg", "dose": "4 mg", "via": "IV", "frequencia": "dose única quando há teste de ACTH", "monitorizacao": "eletrólitos e glicemia", "confirmar_apresentacao_local": true },
+          { "item": "noradrenalina", "dose": "0,05–0,5 mcg/kg/min", "via": "IV central", "frequencia": "contínuo titulado", "monitorizacao": "pressão invasiva e perfusão", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["cortisol", "ACTH", "sódio", "potássio", "glicemia", "gasometria", "função renal", "hemograma", "PCR", "culturas", "tomografia de adrenais", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, com insuficiência adrenal e crise, necessitando de afastamento por dias.", "dias": null, "cid": null, "observacao": "dias são decisão médica" },
+      "encaminhamento": { "campos": ["destino", "motivo", "resumo com pressão, sódio, potássio, glicemia, dose de hidrocortisona e precipitante", "prioridade", "horário do contato"] },
+      "relatorio": { "texto_template": "Paciente com insuficiência adrenal, cortisol e ACTH, eletrólitos e glicemia iniciais, dose de hidrocortisona administrada, precipitante identificado e plano de manutenção com dose de estresse." }
+    },
+    "anamnese": {
+      "campos": ["tempo de uso de corticoide", "dose atual de prednisona", "última tomada", "infecção recente", "cirurgia ou trauma", "suspensão de corticoide", "hipotensão postural", "desejo por sal", "perda de peso", "hiperpigmentação", "vômitos", "glicemia"],
+      "texto_template": "Paciente em uso de corticoide há ___, na dose de ___ de prednisona, última tomada ___, com infecção/cirurgia/suspensão ___, hipotensão postural ___, desejo por sal ___, perda de peso ___, hiperpigmentação ___, vômitos ___ e glicemia ___."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais e pressão ortostática", "perfusão e tempo de enchimento capilar", "hidratação", "pigmentação de mucosa e cicatrizes", "peso e índice de massa corporal", "abdome", "nível de consciência", "glicemia capilar"],
+      "texto_template": "Sinais vitais com pressão ortostática, perfusão e tempo de enchimento capilar, hidratação, pigmentação de mucosa e cicatrizes, peso, abdome, nível de consciência e glicemia capilar."
+    },
+    "referencias": [
+      { "tipo": "diretriz_endocrinologia", "o_que_verificar": "dose de hidrocortisona na crise, manejo da dose de estresse e critérios do teste com ACTH", "verificar": true },
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de reconhecimento da crise, kit de adrenal e treinamento de aplicação intramuscular", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações de hidrocortisona, fludrocortisona e dexametasona disponíveis no serviço", "verificar": true },
+      { "tipo": "literatura", "o_que_verificar": "uso de dexametasona quando o teste é necessário e equivalência entre corticoides", "verificar": true },
+      { "tipo": "diretriz_pediatria", "o_que_verificar": "dose por superfície corporal e limites de volume na criança", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-END06-01", "tipo": "crise_sem_corticoide", "gatilho": "suspeita de crise adrenal registrada sem hidrocortisona prescrita em até 60 min", "severidade": "grave", "mensagem": "Crise adrenal mata por atraso: hidrocortisona 100 mg IV agora.", "acao": "bloquear alta e acionar protocolo", "bloqueante": true },
+      { "id": "SA-END06-02", "tipo": "cortisol_antes_do_tratamento", "gatilho": "cortisol solicitado com adiamento da hidrocortisona para aguardar coleta ou resultado", "severidade": "grave", "mensagem": "Colher na mesma punção e tratar imediatamente; o resultado nunca espera.", "acao": "bloquear item de espera", "bloqueante": true },
+      { "id": "SA-END06-03", "tipo": "suspensao_abrupta", "gatilho": "prednisona em uso por mais de 3 semanas com suspensão abrupta prescrita", "severidade": "grave", "mensagem": "Risco de crise adrenal: desmamar 2,5–5 mg a cada 1–2 semanas.", "acao": "bloquear prescrição", "bloqueante": true },
+      { "id": "SA-END06-04", "tipo": "dose_de_estresse_insuficiente", "gatilho": "dose de manutenção de corticoide prescrita em cenário de cirurgia, infecção grave ou hipotensão", "severidade": "grave", "mensagem": "Dose de estresse obrigatória: 100 mg IV na crise, ou 50–75 mg/dia na cirurgia de médio porte.", "acao": "bloquear prescrição", "bloqueante": true },
+      { "id": "SA-END06-05", "tipo": "dexametasona_sem_teste", "gatilho": "dexametasona prescrita como único corticoide na crise sem teste de ACTH planejado", "severidade": "grave", "mensagem": "Dexametasona não repõe mineralocorticoide: trocar por hidrocortisona se o teste não for indicado.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-END06-06", "tipo": "alta_sem_plano", "gatilho": "alta após crise adrenal sem cartão de adrenal, receita de resgate e plano de dose de estresse", "severidade": "grave", "mensagem": "Alta insegura: fornecer cartão, hidrocortisona IM de resgate e orientação de dose de estresse.", "acao": "bloquear alta", "bloqueante": true },
+      { "id": "SA-END06-07", "tipo": "triade_adrenal", "gatilho": "hiponatremia com hipercalemia e hipoglicemia sem corticoide prescrito", "severidade": "grave", "mensagem": "Tríade de insuficiência adrenal: dosar cortisol e iniciar hidrocortisona sem esperar.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "diretriz Endocrine Society", "literatura"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita integral: crise adrenal reconhecida pela tríade hipotensão, hiponatremia, hipercalemia e hipoglicemia, com hidrocortisona 100 mg IV seguida de 50 mg 6/6 h, SF 0,9% com glicose 1.000 mL na primeira hora, glicose 50% na hipoglicemia e noradrenalina no choque refratário. Regra explícita de não atrasar o corticoide para colher cortisol, com dexametasona 4 mg quando o teste de estímulo é indispensável. Manutenção com hidrocortisona oral e fludrocortisona na forma primária, uso crônico de prednisona com desmame e dose de estresse por porte de cirurgia e gravidade da infecção. Alertas bloqueantes para atraso, suspensão abrupta e dose de estresse insuficiente.", "data": null }
+      ]
+    }
+  }
+}

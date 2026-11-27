@@ -1,0 +1,1080 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "INF-12",
+    "area": "Infectologia",
+    "nome": "Tétano",
+    "aliases": [
+      "tétano",
+      "tétano acidental",
+      "tétano generalizado",
+      "Clostridium tetani",
+      "trismo",
+      "opistótono",
+      "riso sardônico",
+      "tetanospasmina"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Tétano é a intoxicação pelo tetanospasmina de Clostridium tetani, que bloqueia a liberação de GABA e glicina nos interneurônios inibitórios da medula e do tronco, produzindo trismo, riso sardônico, disfagia, rigidez de nuca, espasmos generalizados e opistótono desencadeados por estímulo mínimo. O diagnóstico é clínico e não depende de cultura, que raramente é positiva; a porta de entrada é uma ferida, muitas vezes pequena, antiga ou já cicatrizada, que precisa ser procurada em todo paciente com trismo. Quatro medidas começam juntas e mudam o desfecho: neutralizar a toxina circulante com imunoglobulina antitetânica humana 500 UI IM antes de manipular a ferida, eliminar o bacilo com metronidazol 500 mg 8/8 h, controlar o espasmo com benzodiazepínico em dose alta e garantir via aérea com ventilação em UTI de ambiente escuro e silencioso. A penicilina cristalina fica como alternativa, porque é antagonista GABA e pode piorar o espasmo. O magnésio entra no espasmo refratário e na disautonomia. O que mata é sedar sem via aérea preparada, ignorar a disfagia, deixar a ferida sem desbridamento e atrasar a internação em UTI. A doença não confere imunidade: o toxoide entra ainda na internação.",
+    "inclusao": [
+      "Trismo, riso sardônico, disfagia ou rigidez de nuca com ferida recente ou antiga",
+      "Espasmo muscular generalizado desencadeado por estímulo mínimo, com consciência preservada",
+      "Opistótono ou rigidez de parede abdominal com história de ferida contaminada por terra, metal ou material orgânico",
+      "Tétano localizado (rigidez próxima à ferida) ou cefálico (trismo e paralisia de nervos cranianos)",
+      "Ferida antiga, pequena ou já cicatrizada em paciente com trismo, mesmo sem trauma recente relatado"
+    ],
+    "exclusao": [
+      {
+        "situacao": "trismo por abscesso periamigdaliano, odontogênico ou artrite da articulação temporomandibular",
+        "fluxo": "avaliação odontológica ou otorrinolaringológica"
+      },
+      {
+        "situacao": "distonia aguda por antipsicótico, metoclopramida ou intoxicação por estricnina",
+        "fluxo": "toxicologia, biperideno e observação"
+      },
+      {
+        "situacao": "rigidez de nuca com febre, cefaleia e alteração de consciência",
+        "fluxo": "fluxo de meningite e encefalite"
+      },
+      {
+        "situacao": "espasmo com perda de consciência ou movimento rítmico",
+        "fluxo": "fluxo de crise epiléptica"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "estridor, laringoespasmo, apneia ou queda de saturação durante espasmo",
+        "por_que": "obstrução de via aérea por espasmo de musculatura laríngea",
+        "acao": "via aérea definitiva imediata, com intubação e ventilação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "disfagia, sialorreia, voz abafada ou engasgo com líquidos",
+        "por_que": "espasmo de faringe e esôfago com risco de aspiração",
+        "acao": "suspender toda via oral, aspirar secreções e indicar sonda enteral",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "espasmo generalizado ou opistótono desencadeado por luz, ruído ou toque",
+        "por_que": "doença estabelecida com risco de fratura vertebral e exaustão respiratória",
+        "acao": "internação em UTI, sedação e ambiente escuro e silencioso",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "pressão arterial lábil, taquicardia ou bradicardia súbita e sudorese profusa",
+        "por_que": "disautonomia por perda do controle inibitório no tronco",
+        "acao": "monitorização contínua, magnésio e morfina; evitar betabloqueador de rotina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "febre alta com rigidez de nuca e trismo",
+        "por_que": "tétano grave ou meningite bacteriana concomitante",
+        "acao": "não atrasar o tratamento do tétano; avaliar punção lombar apenas se o quadro não fechar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "ferida com terra, corpo estranho, tecido necrótico, queimadura ou parto inseguro",
+        "por_que": "porta de entrada com carga de esporos e anaerobiose",
+        "acao": "imunoglobulina antes da manipulação e desbridamento cirúrgico amplo",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "creatinina em ascensão, urina escura, oligúria ou CPK muito elevada",
+        "por_que": "rabdomiólise por espasmo contínuo com lesão renal",
+        "acao": "hidratação venosa vigorosa, dosar CPK e considerar diálise",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Consegue abrir a boca por completo e mostrar a língua?",
+      "Engasga com saliva ou líquidos? A voz está abafada?",
+      "Teve ferida, corte, queimadura, unha encravada, injeção ou parto nos últimos 21 dias?",
+      "A ferida teve contato com terra, esterco, metal enferrujado, madeira ou material orgânico?",
+      "Qual o esquema vacinal antitetânico: quantas doses e quando foi a última?",
+      "Os espasmos pioram com luz, barulho ou quando alguém toca no paciente?",
+      "Usa antipsicótico, metoclopramida ou domperidona?",
+      "Tem febre, rigidez de nuca ou confusão?",
+      "A ferida foi suturada, tem pus, necrose ou corpo estranho?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Trismo com espasmo e ferida compatível, independentemente de exames",
+        "escolha": "Internar em UTI, aplicar imunoglobulina antitetânica humana 500 UI IM e iniciar metronidazol 500 mg IV 8/8 h na mesma hora",
+        "porque": "O diagnóstico é clínico e cada hora sem neutralizar a toxina e sem UTI aumenta a mortalidade; cultura não exclui e não deve atrasar nada"
+      },
+      {
+        "cenario": "Ferida com necrose, corpo estranho ou tecido desvitalizado",
+        "escolha": "Desbridamento cirúrgico amplo, deixando a ferida aberta, sempre depois da imunoglobulina",
+        "porque": "A imunoglobulina neutraliza apenas a toxina circulante; manipular a ferida antes dela libera mais toxina, e o bacilo só é eliminado com a remoção do tecido necrótico"
+      },
+      {
+        "cenario": "Escolha do antimicrobiano que elimina o Clostridium tetani",
+        "escolha": "Metronidazol 500 mg IV 8/8 h por 7 a 10 dias",
+        "porque": "É tão eficaz quanto a penicilina e associado a menor mortalidade; a penicilina é antagonista GABA e pode agravar o espasmo"
+      },
+      {
+        "cenario": "Metronidazol indisponível ou alergia a nitroimidazol",
+        "escolha": "Penicilina cristalina 4.000.000 UI IV 4/4 h",
+        "porque": "É a alternativa histórica com cobertura adequada, aceitando o risco teórico de piora do espasmo e a necessidade de vigilância de convulsão e hipercalemia"
+      },
+      {
+        "cenario": "Espasmo muscular generalizado",
+        "escolha": "Diazepam 10 a 20 mg IV a cada 2 a 4 horas ou infusão contínua de 0,5 a 1 mg/kg/h, titulada até controlar o espasmo",
+        "porque": "É o benzodiazepínico com maior experiência em tétano e age no receptor GABA; dose alta é regra e exige via aérea preparada"
+      },
+      {
+        "cenario": "Paciente ventilado que precisa de sedação contínua e titulável",
+        "escolha": "Midazolam em infusão contínua de 0,05 a 0,2 mg/kg/h",
+        "porque": "Permite titulação rápida e é mais previsível que bolus repetidos de diazepam; exige ventilação e monitorização de pressão"
+      },
+      {
+        "cenario": "Espasmo refratário à benzodiazepina ou disautonomia com instabilidade",
+        "escolha": "Sulfato de magnésio 4 g IV em 20 a 30 minutos, seguido de 2 a 4 g/h em infusão contínua",
+        "porque": "Reduz a liberação de catecolaminas e o espasmo, com efeito poupador de sedativo; o efeito é titulável pelo reflexo patelar e pela frequência respiratória"
+      },
+      {
+        "cenario": "Espasmo incoercível com comprometimento ventilatório apesar de sedação máxima",
+        "escolha": "Cisatracúrio 0,1 a 0,2 mg/kg em bolus, seguido de 1 a 3 mcg/kg/min, exclusivamente sob intubação e sedação profunda",
+        "porque": "O bloqueio neuromuscular controla o espasmo e o consumo de oxigênio, mas não trata a dor nem a consciência e nunca é usado sem ventilação"
+      },
+      {
+        "cenario": "Disfagia, íleo ou risco de aspiração",
+        "escolha": "Suspender dieta oral e iniciar nutrição enteral por sonda nasoenteral ou nasogástrica",
+        "porque": "A aspiração é uma das principais causas de morte no tétano; a via oral nunca é segura enquanto houver espasmo de faringe"
+      },
+      {
+        "cenario": "Ventilação prevista por mais de 10 a 14 dias ou laringoespasmo recorrente",
+        "escolha": "Traqueostomia eletiva",
+        "porque": "Reduz o tempo de tubo orotraqueal, a lesão de laringe, a sedação necessária e as complicações de via aérea em ventilação prolongada"
+      },
+      {
+        "cenario": "Todo paciente com tétano, na internação",
+        "escolha": "Iniciar esquema de toxoide tetânico com três doses, independentemente do estado vacinal prévio",
+        "porque": "A doença não confere imunidade e a toxina não gera resposta protetora; a vacinação é a única forma de prevenir a recidiva"
+      },
+      {
+        "cenario": "Sedação prescrita sem plano de via aérea",
+        "escolha": "Garantir intubação e ventilação antes ou junto da primeira dose de benzodiazepínico em dose alta",
+        "porque": "A sedação profunda em paciente com laringoespasmo precipita apneia e parada; é o erro mais grave do manejo"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antibiotico_nitroimidazol",
+        "agente": "metronidazol",
+        "papel": "primeira_linha",
+        "indicacao": "eliminação do Clostridium tetani na ferida e nos tecidos",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "1.500 mg/dia",
+        "contraindicacoes": [
+          "alergia a nitroimidazol",
+          "uso de dissulfiram",
+          "primeiro trimestre de gestação sem indicação absoluta"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "gosto metálico",
+          "neuropatia periférica em uso prolongado",
+          "efeito dissulfiram com álcool",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "frasco 500 mg/100 mL solução pronta",
+          "comprimido 400 mg",
+          "comprimido 250 mg"
+        ],
+        "preparo": "Solução pronta para uso; não diluir; proteger da luz durante a infusão",
+        "tempo_infusao": "30 a 60 minutos",
+        "monitorizacao": [
+          "função hepática de 48/48 h",
+          "sintomas de neuropatia em uso acima de 10 dias",
+          "náusea e tolerância",
+          "sinais de infecção da ferida"
+        ],
+        "ajuste_renal": "Sem ajuste formal; em diálise a dose é removida, repetir após a sessão",
+        "ajuste_hepatico": "Reduzir 50% em Child-Pugh C",
+        "observacoes": "É o antimicrobiano de escolha do tétano e não deve ser trocado por penicilina sem motivo. Não substitui desbridamento nem imunoglobulina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/WHO",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_penicilina",
+        "agente": "penicilina cristalina",
+        "papel": "alternativa",
+        "indicacao": "tétano quando metronidazol está indisponível ou há alergia a nitroimidazol",
+        "dose": "4.000.000 UI",
+        "unidade": "UI",
+        "via": "IV",
+        "frequencia": "4/4 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "24.000.000 UI/dia",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "anafilaxia prévia a beta-lactâmico",
+          "insuficiência renal grave sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "convulsão em dose alta e em renal crônico",
+          "hipercalemia com a apresentação potássica",
+          "flebite",
+          "anafilaxia"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1.000.000 UI",
+          "frasco-ampola 5.000.000 UI",
+          "frasco-ampola 10.000.000 UI"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção e diluir em 100 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "nível de consciência e sinais de convulsão",
+          "creatinina e potássio de 24/24 h",
+          "rash e reação alérgica",
+          "sítio de infusão"
+        ],
+        "ajuste_renal": "ClCr abaixo de 10: 4.000.000 UI 8/8 h; em diálise, dose após a sessão",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Alternativa ao metronidazol, não primeira escolha: é antagonista GABA e há relatos de piora do espasmo e de maior mortalidade quando comparada ao metronidazol.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina antitetânica humana",
+        "papel": "primeira_linha",
+        "indicacao": "neutralização da toxina tetânica circulante no tétano declarado",
+        "dose": "500 UI",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "6.000 UI em dose única em apresentação grave ou ferida extensa, conforme protocolo institucional",
+        "contraindicacoes": [
+          "alergia a imunoglobulina humana",
+          "deficiência seletiva de IgA com anticorpo anti-IgA"
+        ],
+        "efeitos_adversos": [
+          "dor e endurecimento no sítio",
+          "reação anafilática rara",
+          "febre",
+          "rash"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 250 UI",
+          "frasco-ampola 500 UI",
+          "seringa preenchida 500 UI"
+        ],
+        "preparo": "Pronta para uso; aplicar por via intramuscular profunda, de preferência no glúteo ou na face lateral da coxa; não agitar",
+        "tempo_infusao": "não se aplica (via intramuscular)",
+        "monitorizacao": [
+          "reação alérgica nos primeiros 30 minutos",
+          "sítio de aplicação",
+          "evolução do trismo e do espasmo nas primeiras 24 h"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Aplicar antes da limpeza cirúrgica da ferida. A dose de 500 UI é a recomendada pela OMS; protocolos que usam 3.000 a 6.000 UI não devem atrasar a aplicação por falta da apresentação maior. Não repetir diariamente e não substitui a vacina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "WHO/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "vacina",
+        "agente": "toxoide tetânico (dT ou dTpa)",
+        "papel": "primeira_linha",
+        "indicacao": "imunização ativa durante e após o tétano, porque a doença não confere imunidade",
+        "dose": "0,5 mL",
+        "unidade": "mL",
+        "via": "IM",
+        "frequencia": "três doses: dia 0, 1 a 2 meses e 6 a 12 meses; reforço a cada 10 anos",
+        "duracao": "esquema completo de três doses",
+        "dose_maxima": "0,5 mL por dose",
+        "contraindicacoes": [
+          "anafilaxia prévia a componente da vacina",
+          "encefalopatia nas 7 dias após dose anterior de coqueluche (usar dT isolado)"
+        ],
+        "efeitos_adversos": [
+          "dor, calor e edema local",
+          "febre baixa",
+          "mal-estar",
+          "anafilaxia rara"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 0,5 mL dose única",
+          "seringa preenchida 0,5 mL",
+          "frasco multidose 5 mL"
+        ],
+        "preparo": "Uso direto; agitar antes de aspirar; aplicar no deltoide",
+        "tempo_infusao": "não se aplica (via intramuscular)",
+        "monitorizacao": [
+          "reação local nas primeiras 48 h",
+          "febre",
+          "registro do lote e da data no cartão vacinal"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Iniciar ainda na internação, em sítio diferente do da imunoglobulina. Registrar no cartão e agendar as doses seguintes antes da alta; a adesão ao esquema é o que evita a recidiva.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "PNI/WHO",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "diazepam",
+        "papel": "primeira_linha",
+        "indicacao": "controle do espasmo muscular e da rigidez do tétano",
+        "dose": "10 a 20 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "2/2 h a 4/4 h, ou infusão contínua de 0,5 a 1 mg/kg/h",
+        "duracao": "7 a 14 dias, com desmame gradual",
+        "dose_maxima": "até 500 mg/dia em UTI, titulado pelo espasmo e pela sedação",
+        "contraindicacoes": [
+          "insuficiência respiratória sem via aérea garantida",
+          "miastenia gravis",
+          "apneia do sono grave sem monitorização",
+          "alergia a benzodiazepínico"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "hipotensão",
+          "sedação excessiva e delirium",
+          "acúmulo com metabólitos ativos em idoso e renal crônico",
+          "tromboflebite"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/2 mL",
+          "comprimido 5 mg",
+          "comprimido 10 mg"
+        ],
+        "preparo": "Diluir a dose em 10 mL de soro fisiológico 0,9% para injeção lenta; para infusão contínua, diluir 100 mg em 250 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "2 a 3 minutos em bolus lento; infusão contínua em bomba",
+        "monitorizacao": [
+          "frequência respiratória e oximetria contínuas",
+          "escala de sedação (RASS) a cada 2 h",
+          "pressão arterial a cada 2 h na titulação",
+          "intensidade do espasmo e do trismo",
+          "necessidade de aumento de dose e sinais de tolerância"
+        ],
+        "ajuste_renal": "Sem ajuste de dose inicial; prolongar o intervalo e reduzir a dose de manutenção porque metabólitos ativos se acumulam",
+        "ajuste_hepatico": "Reduzir 50% em hepatopatia grave e evitar em encefalopatia",
+        "observacoes": "Dose alta é a regra no tétano e só é segura com via aérea preparada e UTI. Nunca prescrever sedação domiciliar para espasmo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "midazolam",
+        "papel": "alternativa",
+        "indicacao": "sedação contínua titulável no paciente ventilado, ou quando o diazepam não está disponível",
+        "dose": "0,05 a 0,2 mg/kg/h",
+        "unidade": "mg/kg/h",
+        "via": "IV",
+        "frequencia": "infusão contínua em bomba",
+        "duracao": "enquanto durar o espasmo, com desmame gradual",
+        "dose_maxima": "0,3 mg/kg/h, com sedação profunda e ventilação",
+        "contraindicacoes": [
+          "ventilação ausente",
+          "choque não corrigido",
+          "miastenia gravis",
+          "alergia a benzodiazepínico"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória e apneia",
+          "hipotensão",
+          "acúmulo do metabólito ativo em renal crônico com sedação prolongada",
+          "delirium na retirada",
+          "tolerância rápida"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (5 mL e 10 mL)",
+          "ampola 1 mg/mL (5 mL)",
+          "comprimido 15 mg"
+        ],
+        "preparo": "Diluir 25 mg em 250 mL de soro fisiológico 0,9% ou glicose 5% (0,1 mg/mL); identificar a via e usar bomba dedicada",
+        "tempo_infusao": "bolus de 2 a 3 minutos; infusão contínua em bomba",
+        "monitorizacao": [
+          "RASS e frequência respiratória a cada 2 h",
+          "pressão arterial",
+          "capnografia ou oximetria contínuas",
+          "despertar diário quando o espasmo permitir",
+          "creatinina em uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste inicial; reduzir a dose e prolongar a infusão em lesão renal por acúmulo do metabólito",
+        "ajuste_hepatico": "Reduzir 50% em cirrose",
+        "observacoes": "Preferir quando é preciso titular rapidamente a sedação em paciente já intubado. Não é sedativo de enfermaria nem de ambulatório.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfato_de_magnesio",
+        "agente": "sulfato de magnésio",
+        "papel": "condicional",
+        "indicacao": "espasmo refratário à benzodiazepina e disautonomia com instabilidade autonômica",
+        "dose": "4 g em 20 a 30 minutos, seguidos de 2 a 4 g/h",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "ataque seguido de infusão contínua",
+        "duracao": "24 a 72 h, titulada pelo reflexo e pelo magnésio sérico",
+        "dose_maxima": "6 g/h ou 70 mg/kg/h",
+        "contraindicacoes": [
+          "insuficiência renal grave ou anúria",
+          "bloqueio atrioventricular de alto grau",
+          "miastenia gravis",
+          "hipermagnesemia prévia"
+        ],
+        "efeitos_adversos": [
+          "hiporreflexia",
+          "depressão respiratória",
+          "hipotensão e bradicardia",
+          "náusea e rubor",
+          "parada cardíaca em infusão rápida"
+        ],
+        "apresentacoes": [
+          "ampola 10% 10 mL (1 g)",
+          "ampola 50% 10 mL (5 g)",
+          "frasco 10% 500 mL"
+        ],
+        "preparo": "Diluir 4 g (40 mL da solução a 10%) em 100 mL de soro fisiológico 0,9%; infundir em bomba",
+        "tempo_infusao": "20 a 30 minutos no ataque; infusão contínua na manutenção",
+        "monitorizacao": [
+          "reflexo patelar antes de cada aumento de dose",
+          "frequência respiratória acima de 12 rpm",
+          "diurese acima de 30 mL/h",
+          "magnésio sérico com alvo de 2 a 4 mmol/L",
+          "pressão arterial e frequência cardíaca"
+        ],
+        "ajuste_renal": "Contraindicado em anúria; com ClCr abaixo de 30 reduzir 50 a 75% e monitorar magnésio e reflexos",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Antídoto é gluconato de cálcio 10% 10 mL IV lento. É adjuvante: não substitui sedação nem bloqueio neuromuscular quando o espasmo é incoercível.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "WHO/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "condicional",
+        "indicacao": "dor e descarga simpática da disautonomia tetânica",
+        "dose": "2 a 5 mg em bolus, seguidos de 1 a 2 mg/h",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "bolus intermitente ou infusão contínua",
+        "duracao": "enquanto houver dor ou instabilidade autonômica",
+        "dose_maxima": "individualizar pela sedação e pela frequência respiratória",
+        "contraindicacoes": [
+          "depressão respiratória sem ventilação",
+          "íleo paralítico",
+          "alergia a opioide"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "hipotensão",
+          "íleo e constipação",
+          "retenção urinária",
+          "prurido e náusea"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "seringa 10 mg/1 mL",
+          "solução oral 10 mg/5 mL"
+        ],
+        "preparo": "Diluir 10 mg em 100 mL de soro fisiológico 0,9% (0,1 mg/mL) para infusão contínua",
+        "tempo_infusao": "bolus em 2 a 3 minutos; infusão contínua em bomba",
+        "monitorizacao": [
+          "frequência respiratória e oximetria",
+          "RASS",
+          "pressão arterial",
+          "ruídos hidroaéreos e evacuação",
+          "diurese e retenção urinária"
+        ],
+        "ajuste_renal": "Reduzir 25 a 50% em ClCr abaixo de 30, pelo acúmulo do metabólito ativo",
+        "ajuste_hepatico": "Reduzir a dose em cirrose com encefalopatia",
+        "observacoes": "Ajuda a controlar a labilidade pressórica e a sudorese, mas não substitui magnésio nem sedação. Não usar betabloqueador de rotina: há relato de bradicardia e parada súbita.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "bloqueador_neuromuscular",
+        "agente": "cisatracúrio",
+        "papel": "resgate",
+        "indicacao": "espasmo incoercível com comprometimento ventilatório apesar de sedação máxima",
+        "dose": "0,1 a 0,2 mg/kg em bolus, seguido de 1 a 3 mcg/kg/min",
+        "unidade": "mcg/kg/min",
+        "via": "IV",
+        "frequencia": "infusão contínua em bomba",
+        "duracao": "o menor tempo possível, reavaliado a cada 24 h",
+        "dose_maxima": "3 mcg/kg/min",
+        "contraindicacoes": [
+          "ausência de intubação e ventilação",
+          "ausência de sedação profunda",
+          "alergia a benzilisoquinolínio"
+        ],
+        "efeitos_adversos": [
+          "paralisia prolongada",
+          "fraqueza adquirida na UTI",
+          "retenção de secreção e atelectasia",
+          "hipotensão pela sedação associada",
+          "despertar com dor se a sedação for insuficiente"
+        ],
+        "apresentacoes": [
+          "ampola 2 mg/10 mL",
+          "ampola 10 mg/5 mL",
+          "frasco 20 mg/10 mL"
+        ],
+        "preparo": "Diluir 20 mg em 100 mL de soro fisiológico 0,9% ou glicose 5% (0,2 mg/mL)",
+        "tempo_infusao": "bolus em 1 a 2 minutos, somente após sedação; infusão contínua em bomba",
+        "monitorizacao": [
+          "estimulação com trem de quatro a cada 4 a 6 h, alvo de 1 a 2 respostas",
+          "pressão arterial e frequência cardíaca",
+          "sedação profunda confirmada antes de cada bolus",
+          "temperatura e sinais de infecção",
+          "força muscular na suspensão"
+        ],
+        "ajuste_renal": "Eliminação de Hofmann, sem ajuste significativo; ainda assim reduzir em uso prolongado",
+        "ajuste_hepatico": "Sem ajuste relevante; cautela em cirrose com acúmulo",
+        "observacoes": "Nunca usar sem ventilação mecânica e sem sedação: o bloqueio não é anestesia. Suspender todos os dias para reavaliar o espasmo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "UTI em quarto escuro e silencioso",
+        "detalhe": "quarto individual, portas fechadas, luz baixa, alarmes em volume mínimo e celular fora da unidade; qualquer estímulo luminoso ou sonoro desencadeia espasmo"
+      },
+      {
+        "medida": "Agrupamento dos cuidados e mínimo manuseio",
+        "detalhe": "concentrar exame, higiene e medicação em um único momento, avisar antes de tocar e evitar procedimentos desnecessários; cada manipulação é um gatilho de espasmo"
+      },
+      {
+        "medida": "Via aérea garantida e ventilação protetora",
+        "detalhe": "intubação com sequência rápida, capnografia contínua, pressão de cuff entre 20 e 30 cmH2O, cabeceira elevada a 30 graus e aspiração com técnica asséptica"
+      },
+      {
+        "medida": "Nada por boca e nutrição enteral precoce",
+        "detalhe": "suspender dieta oral na admissão pelo risco de disfagia e aspiração; sonda nasoenteral ou nasogástrica em até 24 a 48 h, com cabeceira elevada e controle de resíduo"
+      },
+      {
+        "medida": "Profilaxia de tromboembolismo",
+        "detalhe": "enoxaparina 40 mg SC 1x/dia após controle de sangramento, associada a compressão pneumática e mobilização passiva enquanto o paciente estiver sedado"
+      },
+      {
+        "medida": "Prevenção de úlcera por pressão e de contraturas",
+        "detalhe": "mudança de decúbito a cada 2 h, colchão de pressão alternada, fisioterapia passiva diária e talas em posição funcional para evitar encurtamento muscular"
+      },
+      {
+        "medida": "Cuidado da ferida deixada aberta",
+        "detalhe": "curativo úmido com soro fisiológico 0,9%, troca estéril diária, inspeção de necrose e registro fotográfico; não suturar a ferida após o desbridamento"
+      },
+      {
+        "medida": "Controle de temperatura, glicemia e eletrólitos",
+        "detalhe": "glicemia entre 140 e 180 mg/dL, sódio e potássio diários, hidratação para manter diurese acima de 0,5 mL/kg/h e balanço hídrico rigoroso"
+      },
+      {
+        "medida": "Reabilitação e plano de alta com vacinação",
+        "detalhe": "fisioterapia motora e respiratória assim que o espasmo ceder, fonoterapia para disfagia, cartão vacinal com as três doses datadas e retorno agendado"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Limpeza cirúrgica e desbridamento da ferida",
+        "indicacao": "toda ferida suspeita de porta de entrada, sempre após a imunoglobulina antitetânica",
+        "tecnica": "antissepsia e anestesia local ou geral, remoção de corpo estranho e de todo tecido necrótico, irrigação abundante com soro fisiológico 0,9% e solução antisséptica, hemostasia e ferida deixada aberta com curativo úmido; revisão em 24 a 48 h",
+        "complicacoes": "sangramento, lesão de nervo ou vaso, infecção secundária, necessidade de novo desbridamento e dor com espasmo reflexo"
+      },
+      {
+        "nome": "Intubação orotraqueal",
+        "indicacao": "laringoespasmo, disfagia grave, rebaixamento por sedação ou falência respiratória",
+        "tecnica": "pré-oxigenação, sequência rápida com etomidato ou cetamina, evitando succinilcolina pelo risco de hipercalemia, vídeo-laringoscópio e confirmação por capnografia",
+        "complicacoes": "aspiração, hipotensão pós-intubação, lesão de via aérea, pneumotórax e parada cardíaca no espasmo",
+        "protocolo": "BOX-02"
+      },
+      {
+        "nome": "Traqueostomia",
+        "indicacao": "ventilação prevista por mais de 10 a 14 dias, laringoespasmo recorrente, falha de desmame ou secreção abundante",
+        "tecnica": "traqueostomia cirúrgica ou percutânea à beira do leito sob anestesia e sedação, com confirmação de posição por capnografia e radiografia",
+        "complicacoes": "sangramento, infecção de estoma, estenose traqueal, fístula traqueoesofágica, deslocamento da cânula"
+      },
+      {
+        "nome": "Acesso venoso central",
+        "indicacao": "infusão contínua de benzodiazepínico, magnésio, morfina e bloqueador neuromuscular, ou veias periféricas inadequadas",
+        "tecnica": "punção jugular interna ou subclávia guiada por ultrassom, técnica asséptica máxima, confirmação de posição e curativo estéril",
+        "complicacoes": "pneumotórax, punção arterial, hematoma, infecção de cateter e trombose",
+        "protocolo": "BOX-01"
+      },
+      {
+        "nome": "Sondagem nasoenteral para nutrição",
+        "indicacao": "disfagia, íleo ou impossibilidade de via oral por tempo prolongado",
+        "tecnica": "sonda de pequeno calibre, confirmação de posição por radiografia ou ausculta, início com dieta a 20 mL/h e progressão conforme tolerância",
+        "complicacoes": "aspiração, broncoaspiração no momento da passagem, sinusite, deslocamento e diarreia",
+        "protocolo": "BOX-10"
+      }
+    ],
+    "metas": [
+      "Nenhum espasmo generalizado desencadeado por estímulo nas primeiras 24 a 48 h de UTI",
+      "Via aérea pérvia com saturação acima de 92% e PaCO2 entre 35 e 45 mmHg",
+      "Zero episódio de aspiração ou pneumonia aspirativa nas primeiras 72 h",
+      "Ferida sem secreção purulenta e com tecido de granulação em 5 a 7 dias",
+      "Pressão arterial média acima de 65 mmHg e frequência cardíaca abaixo de 120 bpm, sem sudorese profusa",
+      "Sedação em desmame e sem bloqueador neuromuscular até a saída da UTI",
+      "Esquema vacinal antitetânico iniciado antes da alta, com as três doses datadas no cartão"
+    ],
+    "fluxo": [
+      "Reconhecer o tétano pelo quadro clínico: trismo, riso sardônico, disfagia, rigidez e espasmo desencadeado por estímulo, com consciência preservada",
+      "Procurar e descrever a porta de entrada, sem atrasar o tratamento por causa da ferida",
+      "Internar em UTI com quarto escuro e silencioso, monitorização contínua, acesso venoso e plano de via aérea imediato",
+      "Aplicar imunoglobulina antitetânica humana 500 UI IM antes de qualquer manipulação da ferida e iniciar metronidazol 500 mg IV 8/8 h",
+      "Realizar limpeza cirúrgica e desbridamento amplo, deixando a ferida aberta, e iniciar o toxoide tetânico",
+      "Estabelecer o controle do espasmo com diazepam em dose alta ou midazolam em infusão, com intubação e ventilação quando necessário",
+      "Adicionar sulfato de magnésio se o espasmo não ceder ou se houver disautonomia, titulando pelo reflexo patelar e pela frequência respiratória",
+      "Se espasmo incoercível apesar de sedação máxima, iniciar cisatracúrio exclusivamente sob ventilação e sedação profunda",
+      "Suspender via oral, iniciar nutrição enteral, profilaxia de tromboembolismo e prevenção de úlcera por pressão",
+      "Reavaliar diariamente a sedação, o espasmo e a ferida; indicar traqueostomia se a ventilação passar de 10 a 14 dias",
+      "Na melhora, desmamar sedação e bloqueio, iniciar reabilitação e fonoterapia, completar a vacinação e agendar seguimento"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "reduzir a dose de diazepam e de midazolam pela metade e prolongar o intervalo; preferir infusão titulada e avaliar delirium diariamente",
+        "alerta": "acúmulo de benzodiazepínico, quedas na reabilitação e maior mortalidade por pneumonia aspirativa"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "imunoglobulina e toxoide são seguros e devem ser aplicados; metronidazol é permitido no segundo e terceiro trimestres; monitorização fetal contínua",
+        "alerta": "o espasmo e a hipoxemia materna causam sofrimento fetal e parto prematuro"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "sulfato de magnésio contraindicado em anúria e reduzido em ClCr abaixo de 30; ajustar penicilina, morfina e midazolam",
+        "alerta": "hipermagnesemia, convulsão por penicilina e sedação prolongada por metabólitos ativos"
+      },
+      {
+        "populacao": "usuario_de_drogas_injetaveis",
+        "ajuste": "procurar abscesso, tromboflebite e endocardite; colher hemoculturas e ampliar a investigação da porta de entrada",
+        "alerta": "ferida cutânea banal pode coexistir com bacteremia por S. aureus"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "manter o mesmo esquema antibiótico e de imunoglobulina e investigar focos múltiplos; baixar o limiar para culturas e imagem",
+        "alerta": "a resposta vacinal é menor e o risco de infecção secundária é maior"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "hemograma, ureia, creatinina e eletrólitos",
+          "indicacao": "todos, na admissão e diariamente",
+          "o_que_muda": "define hidratação, ajuste de dose e detecção de lesão renal por rabdomiólise"
+        },
+        {
+          "nome": "CPK e mioglobina",
+          "indicacao": "espasmo intenso ou urina escura",
+          "o_que_muda": "confirma rabdomiólise e indica hidratação vigorosa e diálise se necessário"
+        },
+        {
+          "nome": "gasometria arterial",
+          "indicacao": "todo paciente com espasmo, sedação ou ventilação",
+          "o_que_muda": "define necessidade de via aérea, ajuste de ventilação e diagnóstico de acidose"
+        },
+        {
+          "nome": "magnésio sérico",
+          "indicacao": "durante infusão de sulfato de magnésio",
+          "o_que_muda": "evita hipermagnesemia e hiporreflexia; alvo de 2 a 4 mmol/L"
+        },
+        {
+          "nome": "eletrocardiograma contínuo",
+          "indicacao": "todos, pela disautonomia e pelo risco de arritmia",
+          "o_que_muda": "detecta bradicardia súbita, taquicardia e alterações por magnésio ou potássio"
+        },
+        {
+          "nome": "cultura de ferida e hemoculturas",
+          "indicacao": "ferida com pus, necrose ou sinais sistêmicos",
+          "o_que_muda": "identifica infecção bacteriana associada e orienta antibiótico; não confirma nem exclui tétano"
+        },
+        {
+          "nome": "radiografia de tórax",
+          "indicacao": "febre, queda de saturação ou ventilação prolongada",
+          "o_que_muda": "detecta pneumonia aspirativa, atelectasia e complicação de traqueostomia"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "cultura de ferida para confirmar ou excluir tétano",
+          "motivo": "o Clostridium tetani raramente cresce e o resultado não muda a conduta; pode atrasar a imunoglobulina"
+        },
+        {
+          "exame": "punção lombar de rotina no trismo com febre",
+          "motivo": "o espasmo e a posição dificultam o procedimento e o risco de parada é alto; só indicar se o quadro não fechar"
+        },
+        {
+          "exame": "aguardar resultado de exame para iniciar imunoglobulina e metronidazol",
+          "motivo": "o diagnóstico é clínico e cada hora de atraso aumenta a mortalidade"
+        },
+        {
+          "exame": "tomografia de crânio ou de coluna como triagem do espasmo",
+          "motivo": "não altera a conduta inicial e expõe o paciente a transporte e estímulo que desencadeiam espasmo"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "completar as três doses da vacina antitetânica, mesmo após a melhora",
+        "manter a ferida limpa, seca e coberta até a cicatrização",
+        "retornar para reavaliação da ferida e do cartão vacinal",
+        "manter fisioterapia para recuperar força e amplitude de movimento",
+        "avisar a equipe se surgir dificuldade para engolir ou abrir a boca novamente"
+      ],
+      "evitar": [
+        "suturar ou fechar a ferida por conta própria",
+        "usar sedativo ou relaxante muscular sem orientação",
+        "interromper a vacinação por achar que a doença já imunizou",
+        "expor a ferida a terra, água parada ou curativos caseiros",
+        "voltar a dirigir ou operar máquina durante o uso de benzodiazepínico"
+      ],
+      "retorno": [
+        "dificuldade nova para abrir a boca ou engolir",
+        "febre persistente ou pus na ferida",
+        "rigidez de nuca ou espasmo",
+        "falta de ar ou engasgo com saliva",
+        "dor intensa, edema ou vermelhidão crescente na ferida"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "diazepam",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão",
+          "sedação excessiva"
+        ],
+        "observacao": "reduzir a dose se frequência respiratória abaixo de 10 rpm ou hipotensão; ter flumazenil disponível, com cautela pelo risco de convulsão"
+      },
+      {
+        "agente": "midazolam",
+        "efeitos": [
+          "apneia",
+          "hipotensão",
+          "acúmulo em renal crônico"
+        ],
+        "observacao": "titular pela RASS e despertar diário; reduzir em lesão renal"
+      },
+      {
+        "agente": "sulfato de magnésio",
+        "efeitos": [
+          "hiporreflexia",
+          "depressão respiratória",
+          "bradicardia"
+        ],
+        "observacao": "suspender a infusão e dar gluconato de cálcio 10% 10 mL IV lento se reflexo patelar abolido ou frequência respiratória abaixo de 12"
+      },
+      {
+        "agente": "penicilina cristalina",
+        "efeitos": [
+          "convulsão",
+          "hipercalemia",
+          "anafilaxia"
+        ],
+        "observacao": "ajustar à função renal, dosar potássio e manter adrenalina disponível"
+      },
+      {
+        "agente": "metronidazol",
+        "efeitos": [
+          "náusea",
+          "neuropatia periférica",
+          "elevação de transaminases"
+        ],
+        "observacao": "reavaliar em uso acima de 10 dias e evitar álcool durante o tratamento"
+      },
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "depressão respiratória",
+          "íleo",
+          "retenção urinária"
+        ],
+        "observacao": "monitorar frequência respiratória e ruídos hidroaéreos; reduzir em lesão renal"
+      },
+      {
+        "agente": "cisatracúrio",
+        "efeitos": [
+          "paralisia prolongada",
+          "fraqueza adquirida",
+          "retenção de secreção"
+        ],
+        "observacao": "usar somente com sedação profunda e ventilação; suspender diariamente para reavaliar"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Depressão respiratória por benzodiazepínico: ventilar com bolsa e máscara, garantir via aérea e reduzir a dose; flumazenil apenas se não houver risco de convulsão",
+      "Hiporreflexia ou apneia durante o magnésio: suspender a infusão e administrar gluconato de cálcio 10% 10 mL IV em 10 minutos",
+      "Convulsão durante penicilina em dose alta: ajustar à função renal, dosar potássio e trocar para metronidazol",
+      "Anafilaxia por penicilina ou imunoglobulina: adrenalina 0,5 mg IM na face lateral da coxa, oxigênio e volume",
+      "Íleo ou retenção urinária por morfina: reduzir a dose, avaliar bexiga e associar laxante",
+      "Despertar com dor durante bloqueio neuromuscular: aprofundar a sedação antes de qualquer ajuste do bloqueador",
+      "Registrar a reação na evolução, comunicar a equipe e reescrever a prescrição antes de sair do leito"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "toxoide tetânico (dT)",
+            "dose": "0,5 mL",
+            "via": "IM",
+            "frequencia": "dose 1 no dia da alta; dose 2 em 1 a 2 meses; dose 3 em 6 a 12 meses",
+            "duracao": "esquema de três doses",
+            "condicao": "todo paciente após tétano",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor ou febre",
+            "duracao": "3 dias",
+            "condicao": "dor residual e febre baixa",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "imunoglobulina antitetânica humana",
+            "dose": "500 UI",
+            "via": "IM",
+            "frequencia": "dose única, antes do desbridamento",
+            "monitorizacao": "reação alérgica nos primeiros 30 minutos",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metronidazol",
+            "dose": "500 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "função hepática e neuropatia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "diazepam",
+            "dose": "10 a 20 mg",
+            "via": "IV",
+            "frequencia": "2/2 h a 4/4 h ou infusão contínua",
+            "monitorizacao": "frequência respiratória, RASS e pressão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "sulfato de magnésio",
+            "dose": "4 g em 30 min, depois 2 a 4 g/h",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "reflexo patelar, frequência respiratória e magnésio sérico",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cisatracúrio",
+            "dose": "0,1 a 0,2 mg/kg em bolus, depois 1 a 3 mcg/kg/min",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "trem de quatro, sedação profunda e ventilação",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma",
+          "ureia",
+          "creatinina",
+          "eletrólitos",
+          "CPK",
+          "gasometria",
+          "magnésio",
+          "cultura de ferida",
+          "hemoculturas",
+          "radiografia de tórax",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, com quadro de tétano, necessitando de afastamento por período a ser definido conforme a evolução.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e CID são decisão médica no ato"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com trismo, espasmo, ferida, imunoglobulina, antibiótico e suporte ventilatório",
+          "prioridade",
+          "horário do contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com tétano generalizado, porta de entrada em ___, trismo e espasmo desde ___, imunoglobulina 500 UI aplicada às ___, metronidazol iniciado às ___, desbridamento em ___, sedação com ___, magnésio ___, ventilação mecânica ___, traqueostomia ___ e evolução."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "início do trismo e da rigidez",
+        "disfagia e sialorreia",
+        "ferida e tempo de evolução",
+        "contato com terra, metal ou material orgânico",
+        "parto ou aborto recente",
+        "esquema vacinal antitetânico",
+        "uso de antipsicótico ou antiemético",
+        "febre e rigidez de nuca",
+        "fratura ou dor lombar após espasmo"
+      ],
+      "texto_template": "Paciente com trismo e rigidez iniciados há ___ dias, disfagia ___, ferida em ___ com ___ dias de evolução, contato com ___, parto ou aborto ___, vacinação antitetânica ___, uso de antipsicótico ___, febre ___ e rigidez de nuca ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "abertura bucal e trismo",
+        "riso sardônico e rigidez facial",
+        "disfagia e reflexo de deglutição",
+        "rigidez de nuca e de parede abdominal",
+        "opistótono e espasmo provocado",
+        "ferida: local, aspecto, necrose e corpo estranho",
+        "sinais vitais e disautonomia",
+        "saturação e ausculta pulmonar",
+        "fratura ou deformidade de coluna"
+      ],
+      "texto_template": "Abertura bucal de ___ mm, riso sardônico ___, disfagia ___, rigidez de nuca ___, opistótono ___, ferida em ___ com ___, pressão arterial ___, frequência cardíaca ___, saturação ___ e ausculta pulmonar ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de tétano, critérios de UTI, disponibilidade de imunoglobulina e de traqueostomia",
+        "verificar": true
+      },
+      {
+        "tipo": "who",
+        "o_que_verificar": "dose de imunoglobulina antitetânica, esquema vacinal e manejo do espasmo",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_infectologia",
+        "o_que_verificar": "escolha entre metronidazol e penicilina e duração da antibioticoterapia",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de imunoglobulina, toxoide, benzodiazepínicos e sulfato de magnésio",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "uso de magnésio, bloqueio neuromuscular e traqueostomia precoce no tétano grave",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-INF12-01",
+        "tipo": "sedacao_sem_via_aerea",
+        "gatilho": "benzodiazepínico em dose alta ou bloqueador neuromuscular prescrito sem plano de intubação e ventilação",
+        "severidade": "grave",
+        "mensagem": "Não sedar nem bloquear sem via aérea garantida: o laringoespasmo leva à apneia e à parada.",
+        "acao": "bloquear item até registrar via aérea e UTI",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF12-02",
+        "tipo": "disfagia_ignorada",
+        "gatilho": "dieta oral prescrita em paciente com trismo, disfagia ou sialorreia",
+        "severidade": "grave",
+        "mensagem": "Suspender via oral e iniciar nutrição enteral: a aspiração é causa direta de morte.",
+        "acao": "bloquear dieta oral e sugerir sonda",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF12-03",
+        "tipo": "imunoglobulina_ausente",
+        "gatilho": "tétano diagnosticado sem imunoglobulina antitetânica prescrita, ou ferida manipulada antes dela",
+        "severidade": "grave",
+        "mensagem": "Aplicar imunoglobulina 500 UI IM antes do desbridamento, sem esperar exames.",
+        "acao": "bloquear desbridamento até registrar a imunoglobulina",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF12-04",
+        "tipo": "penicilina_primeira_linha",
+        "gatilho": "penicilina cristalina prescrita como primeira escolha no tétano",
+        "severidade": "precaucao",
+        "mensagem": "Metronidazol é preferido: a penicilina é antagonista GABA e pode agravar o espasmo.",
+        "acao": "sugerir troca para metronidazol",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF12-05",
+        "tipo": "ferida_sem_desbridamento",
+        "gatilho": "ferida com necrose, corpo estranho ou pus sem plano cirúrgico em 24 h",
+        "severidade": "grave",
+        "mensagem": "Sem desbridamento o foco persiste e a toxina continua sendo produzida.",
+        "acao": "acionar cirurgia e registrar prazo",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF12-06",
+        "tipo": "vacina_nao_prescrita",
+        "gatilho": "alta ou 48 h de internação sem esquema de toxoide tetânico registrado",
+        "severidade": "precaucao",
+        "mensagem": "A doença não confere imunidade: iniciar as três doses e registrar no cartão.",
+        "acao": "sugerir prescrição de vacina",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "WHO",
+        "PNI",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

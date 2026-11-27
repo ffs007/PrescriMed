@@ -1,0 +1,432 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GER-02",
+    "area": "Geriatria",
+    "nome": "Delirium no idoso",
+    "aliases": ["delirium", "confusão aguda", "estado confusional", "delirium no idoso"],
+    "contexto": ["hospitalar"],
+    "populacao": ["idoso"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Delirium é emergência médica, não 'confusão do idoso'. É a falha aguda e flutuante da atenção com alteração do nível de consciência ou do pensamento, instalada em horas a dias, e sempre tem causa orgânica: infecção, dor, retenção urinária, constipação, hipóxia, distúrbio eletrolítico, abstinência, fármaco anticolinérgico ou sedativo, evento vascular. Reconhecer o subtipo muda a conduta: o hiperativo é visto e sedado; o hipoativo é confundido com depressão, sono ou 'idade' e morre mais, porque passa despercebido. O tratamento é tratar a causa — antipsicótico não é tratamento de delirium, é contenção sintomática por tempo limitado quando há risco. A primeira linha é não farmacológica: ambiente orientado, sono preservado, óculos e aparelho auditivo, mobilização, bexiga e intestino vazios, dor controlada. Haloperidol em dose baixa entra só quando o risco de autoagressão, heteroagressão, queda da cama ou remoção de dispositivos é iminente. Benzodiazepínico de rotina, contenção física sem indicação e antipsicótico em Parkinson ou demência com corpos de Lewy são os erros que prolongam o quadro e matam. A reavaliação em 24 h — causa, subtipo, necessidade do fármaco e plano de retirada — é parte do tratamento.",
+    "inclusao": [
+      "Início agudo de confusão com flutuação e desatenção em idoso",
+      "Delirium hiperativo, hipoativo ou misto com causa a esclarecer",
+      "Confusão em paciente com demência que mudou em relação ao basal (delirium sobre demência)",
+      "Delirium no pós-operatório, na internação ou após mudança de fármacos"
+    ],
+    "exclusao": [
+      { "situacao": "coma com Glasgow ≤ 8 ou risco de via aérea", "fluxo": "sala vermelha" },
+      { "situacao": "déficit focal agudo ou suspeita de AVC", "fluxo": "AVC" },
+      { "situacao": "intoxicação exógena conhecida com instabilidade", "fluxo": "toxicologia" },
+      { "situacao": "quadro crônico estável sem mudança do basal", "fluxo": "ambulatório de cognição" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "glicemia capilar abaixo de 70 mg/dL", "por_que": "hipoglicemia é causa reversível que mata em minutos", "acao": "glicose 50% 20–40 mL IV e reavaliar em 15 min", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "saturação abaixo de 90% ou esforço respiratório", "por_que": "hipóxia e hipercapnia deprimem o sensório", "acao": "oxigênio, gasometria e investigar pneumonia ou embolia", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "febre com rigidez de nuca, petéquias ou rebaixamento progressivo", "por_que": "meningite ou sepse", "acao": "antibiótico na primeira hora e punção lombar após excluir herniação", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "déficit focal, anisocoria ou cefaleia súbita", "por_que": "AVC, hematoma ou lesão expansiva", "acao": "tomografia de crânio imediata e protocolo neurológico", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "tremor, sudorese, taquicardia, alucinose e história de interrupção do álcool", "por_que": "abstinência alcoólica, a única indicação de benzodiazepínico", "acao": "diazepam titulado por escala de abstinência e tiamina", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "bexiga palpável, dor suprapúbica ou anúria", "por_que": "retenção urinária é causa reversível frequente", "acao": "sondagem vesical de alívio e reavaliação em 30 min", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "agitação com risco de autoagressão, heteroagressão ou queda da cama", "por_que": "risco imediato de lesão grave", "acao": "ambiente seguro, acompanhante e haloperidol em dose baixa se necessário", "severidade": "grave" },
+      { "id": "AL-08", "sinal": "delirium hipoativo: sonolência, fala lenta, olhar perdido, sem queixa", "por_que": "é subdiagnosticado e tem maior mortalidade", "acao": "aplicar CAM-4AT, investigar causa e não sedar", "severidade": "grave" }
+    ],
+    "perguntas_rapidas": [
+      "Quando começou? O paciente estava bem e lúcido antes?",
+      "Oscila durante o dia e piora à noite?",
+      "Sustenta a atenção? Consegue dizer os meses de trás para frente?",
+      "Teve febre, tosse, dor para urinar ou dor em algum lugar?",
+      "Quando foi a última urina e a última evacuação?",
+      "Começou ou parou algum remédio? Usa anticolinérgico, benzodiazepínico ou corticoide?",
+      "Bebe álcool? Quando foi a última dose?",
+      "Tem Parkinson, demência com corpos de Lewy ou já teve reação grave a antipsicótico?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Delirium hiperativo com risco imediato de agressão, queda da cama ou remoção de dispositivos, após medidas ambientais", "escolha": "Haloperidol 0,5 mg VO ou IM, reavaliando em 30–60 min", "porque": "É o antipsicótico com melhor perfil em delirium; dose baixa controla o risco sem sedação profunda. Não trata a causa e não substitui a investigação" },
+      { "cenario": "Parkinson ou demência com corpos de Lewy com delirium agitado", "escolha": "Quetiapina 12,5–25 mg à noite; haloperidol proibido", "porque": "Bloqueio dopaminérgico intenso piora rigidez, causa imobilidade e pode desencadear síndrome neuroléptica maligna fatal" },
+      { "cenario": "Abstinência alcoólica ou de benzodiazepínico", "escolha": "Diazepam titulado por escala de abstinência, associado a tiamina", "porque": "É a única situação em que benzodiazepínico é primeira linha; o antipsicótico isolado não previne convulsão e aumenta mortalidade" },
+      { "cenario": "Dor como causa ou agravante (fratura, cirurgia, úlcera por pressão)", "escolha": "Paracetamol em horário fixo; morfina em dose baixa se dor intensa", "porque": "Dor não tratada mantém o delirium; analgesia adequada muitas vezes resolve o quadro sem antipsicótico" },
+      { "cenario": "Retenção urinária", "escolha": "Sondagem vesical de alívio", "porque": "Resolve a causa em minutos e evita sedação desnecessária; deixar sonda de demora só se houver indicação real" },
+      { "cenario": "Constipação ou fecaloma", "escolha": "Desimpactação fecal e lactulose", "porque": "Laxante oral sobre fecaloma causa dor e piora o delirium; é preciso esvaziar primeiro" },
+      { "cenario": "Hipoglicemia confirmada ou suspeita com rebaixamento", "escolha": "Glicose 50% 20–40 mL IV; glucagon 1 mg IM se não houver acesso", "porque": "Corrige a causa mais rápida e potencialmente fatal antes de qualquer sedação" },
+      { "cenario": "Suspeita de intoxicação por opioide com depressão respiratória", "escolha": "Naloxona titulada de 0,04–0,1 mg IV", "porque": "Reverte a respiração sem precipitar abstinência e dor intensa no usuário crônico" },
+      { "cenario": "Delirium hipoativo, sem agitação", "escolha": "Nenhum antipsicótico: investigar causa, hidratar, mobilizar e tratar dor e infecção", "porque": "Sedação adicional aprofunda o rebaixamento e aumenta mortalidade; o hipoativo responde a causa, não a contenção" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antipsicotico_tipico",
+        "agente": "haloperidol",
+        "papel": "primeira_linha",
+        "indicacao": "delirium hiperativo com risco imediato, após medidas não farmacológicas",
+        "dose": "0,5 mg",
+        "unidade": "mg",
+        "via": "VO, IM ou IV",
+        "frequencia": "12/12 h; repetir a cada 2 h se necessário, sempre com reavaliação",
+        "duracao": "até 72 h, com tentativa de retirada diária",
+        "dose_maxima": "2 mg/24 h no idoso frágil; 5 mg/24 h no adulto",
+        "contraindicacoes": ["doença de Parkinson", "demência com corpos de Lewy", "QTc acima de 500 ms", "uso de outros fármacos que alargam o QT", "síndrome neuroléptica maligna prévia", "abstinência alcoólica sem benzodiazepínico associado"],
+        "efeitos_adversos": ["parkinsonismo", "acatisia", "distonia aguda", "prolongamento de QT e torsades de pointes", "síndrome neuroléptica maligna", "sedação e rigidez"],
+        "apresentacoes": ["comprimido 1 mg", "comprimido 5 mg", "solução oral 2 mg/mL", "ampola 5 mg/mL (1 mL)"],
+        "preparo": "VO uso direto; IM sem diluir; IV diluir 5 mg em 100 mL de SF (uso off-label) para infusão em bomba",
+        "tempo_infusao": "não se aplica (via oral); IM imediato; IV em bolus lento de 1–2 min diluído ou 20–30 min em infusão",
+        "monitorizacao": ["ECG com QTc antes e 24 h após iniciar", "sinais extrapiramidais e acatisia", "nível de sedação e resposta comportamental", "PA e frequência cardíaca", "glicemia e eletrólitos"],
+        "ajuste_renal": "Sem ajuste de dose; em diálise, manter dose pequena com vigilância de QT",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave",
+        "observacoes": "Trata o sintoma, não o delirium: a causa continua sendo o alvo. Menor dose pelo menor tempo, com retirada tentada em 24–48 h. Não usar de rotina no delirium hipoativo nem como profilaxia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antipsicotico_atipico",
+        "agente": "quetiapina",
+        "papel": "alternativa",
+        "indicacao": "delirium em Parkinson ou demência com corpos de Lewy, ou intolerância ao haloperidol",
+        "dose": "12,5–25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x à noite; 12/12 h se necessário",
+        "duracao": "até 72 h",
+        "dose_maxima": "50 mg/dia no idoso",
+        "contraindicacoes": ["hipotensão postural grave", "QTc longo", "uso concomitante de inibidor potente de CYP3A4", "história de síndrome neuroléptica maligna"],
+        "efeitos_adversos": ["sedação", "hipotensão postural e queda", "prolongamento de QT", "constipação", "aumento de glicemia e peso"],
+        "apresentacoes": ["comprimido 25 mg", "comprimido 100 mg", "comprimido 200 mg", "comprimido de liberação prolongada 50 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["PA sentado e em pé", "nível de sedação", "ECG e QTc", "glicemia", "função intestinal"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia; iniciar com 12,5 mg",
+        "observacoes": "É a escolha quando o haloperidol é perigoso, não a escolha de rotina. Continua sendo antipsicótico: aumenta mortalidade em demência e não deve seguir por semanas.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "dor como causa ou agravante do delirium",
+        "dose": "500–750 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h em horário fixo",
+        "duracao": "até 5 dias",
+        "dose_maxima": "3 g/dia no idoso frágil; 4 g/dia no idoso hígido",
+        "contraindicacoes": ["hepatopatia grave", "desnutrição grave com depleção de glutationa", "uso de outro produto com paracetamol"],
+        "efeitos_adversos": ["hepatotoxicidade em dose alta", "náusea", "elevação de transaminases"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 750 mg", "solução oral gotas 200 mg/mL", "solução oral 32 mg/mL", "frasco IV 10 mg/mL"],
+        "preparo": "Uso direto; a apresentação IV é infundida sem diluir ou em 50 mL de SF",
+        "tempo_infusao": "não se aplica (via oral); 15 minutos na via IV",
+        "monitorizacao": ["soma da dose diária de todas as fontes", "intensidade da dor em escala 0–10", "função hepática se uso prolongado"],
+        "ajuste_renal": "Sem ajuste; espaçar para 6/8 h se TFG abaixo de 30",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia; evitar em Child C",
+        "observacoes": "Dor não tratada é das causas mais frequentes de delirium no idoso hospitalizado, sobretudo com fratura, cirurgia e úlcera por pressão. Prescrever em horário fixo: o paciente hipoativo não pede analgésico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "condicional",
+        "indicacao": "dor intensa não controlada por analgésico simples (fratura, isquemia, pós-operatório)",
+        "dose": "2,5 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "4/4 h, com dose de resgate",
+        "duracao": "até 72 h",
+        "dose_maxima": "20–30 mg/dia no idoso frágil, titulada",
+        "contraindicacoes": ["insuficiência respiratória sem suporte ventilatório", "íleo paralítico", "sedação excessiva no momento da prescrição", "TFG abaixo de 15 sem ajuste"],
+        "efeitos_adversos": ["sedação", "depressão respiratória", "constipação", "retenção urinária", "náusea", "delirium por acúmulo de metabólitos"],
+        "apresentacoes": ["comprimido 10 mg", "comprimido 30 mg", "solução oral 10 mg/mL", "ampola 10 mg/mL (1 mL)", "ampola 2 mg/mL"],
+        "preparo": "VO uso direto; IV diluir em 10 mL de SF e infundir lentamente",
+        "tempo_infusao": "não se aplica (via oral); 3–5 minutos na via IV",
+        "monitorizacao": ["frequência respiratória", "sedação por escala (Ramsay ou POSS)", "dor", "função intestinal e vesical", "creatinina"],
+        "ajuste_renal": "Reduzir dose e espaçar com TFG abaixo de 30: metabólitos acumulam e causam delirium",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia",
+        "observacoes": "A dor intensa descompensa o delirium e o opioide também o causa. Dose baixa, reavaliação em 30 min e troca de estratégia se a sedação aumentar sem melhora da dor.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidoto",
+        "agente": "naloxona",
+        "papel": "condicional",
+        "indicacao": "suspeita de intoxicação por opioide com depressão respiratória ou rebaixamento",
+        "dose": "0,04–0,1 mg",
+        "unidade": "mg",
+        "via": "IV (IM ou SC se não houver acesso)",
+        "frequencia": "repetir a cada 2–3 min até resposta respiratória",
+        "duracao": "até reversão; infusão contínua se o opioide for de ação longa",
+        "dose_maxima": "0,4 mg por dose no idoso, titulando",
+        "contraindicacoes": ["hipersensibilidade", "reversão total em usuário crônico sem suporte"],
+        "efeitos_adversos": ["abstinência aguda", "agitação", "dor súbita", "edema pulmonar", "convulsão"],
+        "apresentacoes": ["ampola 0,4 mg/mL (1 mL)", "ampola 0,04 mg/mL (neonatal)"],
+        "preparo": "Diluir 0,4 mg em 10 mL de SF (0,04 mg/mL) e titular mL a mL",
+        "tempo_infusao": "bolus lento de 1–2 minutos",
+        "monitorizacao": ["frequência respiratória e oximetria", "escala de sedação", "dor", "reaparecimento de depressão respiratória em 30–60 min"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Titular até a respiração, não até a consciência plena: reversão completa no idoso usuário crônico precipita abstinência, dor e delirium. Meia-vida curta obriga observação prolongada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "tiamina",
+        "papel": "condicional",
+        "indicacao": "etilismo, desnutrição, vômitos prolongados ou risco de Wernicke",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "IV ou IM",
+        "frequencia": "1x/dia",
+        "duracao": "3–5 dias, seguido de via oral",
+        "dose_maxima": "500 mg 8/8 h em suspeita de encefalopatia de Wernicke",
+        "contraindicacoes": ["hipersensibilidade"],
+        "efeitos_adversos": ["reação anafilactoide rara", "dor no local da aplicação IM"],
+        "apresentacoes": ["ampola 100 mg/mL", "comprimido 300 mg"],
+        "preparo": "Diluir 100 mg em 100 mL de SF para infusão",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": ["nistagmo, ataxia e nível de consciência", "reação infusiona"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Sempre antes ou junto da glicose no etilista: glicose sem tiamina pode precipitar Wernicke. Na hipoglicemia, não atrasar a glicose — dar as duas.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "glicose",
+        "agente": "glicose 50%",
+        "papel": "condicional",
+        "indicacao": "hipoglicemia confirmada ou suspeita em delirium com rebaixamento",
+        "dose": "20–40 mL",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "dose única, repetir conforme glicemia capilar",
+        "duracao": "1 dose",
+        "dose_maxima": "60 mL",
+        "contraindicacoes": ["hiperglicemia", "ausência de acesso venoso (usar glucagon 1 mg IM)"],
+        "efeitos_adversos": ["hiperglicemia", "flebite e necrose por extravasamento", "hipoglicemia de rebote"],
+        "apresentacoes": ["ampola 50% 10 mL", "ampola 50% 20 mL", "frasco 50% 500 mL"],
+        "preparo": "Não diluir; usar acesso calibroso, testar refluxo e preferir diluição a 10% quando houver tempo",
+        "tempo_infusao": "bolus em 2–3 minutos",
+        "monitorizacao": ["glicemia capilar em 15 min e de 1/1 h", "sítio de infusão", "nível de consciência"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Glicemia capilar é o primeiro exame de qualquer delirium: hipoglicemia é a causa reversível que mata em minutos. Sem acesso, glucagon 1 mg IM.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "laxante",
+        "agente": "lactulose",
+        "papel": "condicional",
+        "indicacao": "constipação como causa ou agravante do delirium",
+        "dose": "15–30 mL",
+        "unidade": "mL",
+        "via": "VO ou sonda",
+        "frequencia": "1–2x/dia, titulando até 1–2 evacuações pastosas",
+        "duracao": "até regularização do hábito intestinal",
+        "dose_maxima": "60 mL/dia",
+        "contraindicacoes": ["íleo paralítico", "obstrução intestinal", "galactosemia"],
+        "efeitos_adversos": ["distensão", "cólica", "diarreia", "desidratação e hipernatremia"],
+        "apresentacoes": ["xarope 667 mg/mL (120 mL)", "solução 667 mg/mL (200 mL)"],
+        "preparo": "Administrar puro ou diluído em água ou suco",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["número e aspecto das evacuações", "distensão abdominal", "sódio", "hidratação"],
+        "ajuste_renal": "Sem ajuste; vigiar desidratação na doença renal crônica",
+        "observacoes": "Com fecaloma, desimpactar antes: laxante oral sobre impactação causa dor e piora o delirium. Associar fibra e hidratação.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "diazepam",
+        "papel": "condicional",
+        "indicacao": "delirium por abstinência alcoólica ou de benzodiazepínico — nunca como sedativo de rotina",
+        "dose": "5–10 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "conforme escala de abstinência (CIWA-Ar), a cada 1–4 h",
+        "duracao": "3–5 dias, com retirada gradual",
+        "dose_maxima": "40 mg/dia no idoso, titulado pela escala",
+        "contraindicacoes": ["delirium sem abstinência", "insuficiência respiratória", "miastenia gravis", "apneia do sono grave", "demência sem abstinência"],
+        "efeitos_adversos": ["sedação excessiva", "depressão respiratória", "queda", "desinibição e piora paradoxal do delirium", "dependência"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 10 mg", "solução oral gotas 5 mg/mL", "ampola 5 mg/mL (2 mL)"],
+        "preparo": "VO uso direto; IV sem diluir, em acesso calibroso",
+        "tempo_infusao": "não se aplica (via oral); 2–3 minutos na via IV",
+        "monitorizacao": ["sedação por escala (RASS ou Ramsay)", "frequência respiratória e oximetria", "PA", "escala de abstinência", "necessidade de flumazenil apenas em sedação iatrogênica grave"],
+        "ajuste_renal": "Sem ajuste formal, mas metabólitos ativos acumulam no idoso e no renal crônico: reduzir dose",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia; preferir oxazepam ou lorazepam",
+        "observacoes": "A exceção que confirma a regra: benzodiazepínico trata abstinência, não delirium em geral. Fora da abstinência, prolonga o delirium, aumenta queda e mortalidade.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Ambiente orientado e seguro", "detalhe": "Quarto com luz natural de dia e escuro à noite, relógio e calendário visíveis, cama baixa com grade, poucos ruídos e equipe fixa; evitar mudança de leito e de quarto durante o turno" },
+      { "medida": "Reorientação repetida e presença de acompanhante", "detalhe": "Dizer nome, lugar, dia e o que está acontecendo a cada contato; familiar ou cuidador presente durante o dia reduz agitação e uso de antipsicótico" },
+      { "medida": "Óculos, aparelho auditivo e prótese dentária ao alcance", "detalhe": "Déficit sensorial não corrigido é gatilho de delirium; verificar na admissão, etiquetar os dispositivos e ajudar a colocá-los antes de qualquer avaliação cognitiva" },
+      { "medida": "Higiene do sono", "detalhe": "Agrupar coleta e medicação, não acordar para exame sem indicação, evitar cafeína à tarde, desligar televisão e luz forte à noite e permitir sono contínuo de 6–8 h" },
+      { "medida": "Mobilização precoce e retirada de dispositivos", "detalhe": "Sentar fora da cama no primeiro dia, deambular com apoio, retirar cateter, sonda e acesso assim que possível; cada dispositivo é um motivo a mais de contenção e de infecção" },
+      { "medida": "Função vesical e intestinal monitoradas", "detalhe": "Registrar diurese e evacuação a cada turno; palpar bexiga e abdome no exame; tratar retenção e constipação no mesmo dia, não no dia seguinte" },
+      { "medida": "Controle da dor e da hidratação", "detalhe": "Analgesia em horário fixo, oferta de água e alimentação assistida; desidratação e dor são causas reversíveis que respondem em horas" },
+      { "medida": "Rastreio com CAM-4AT e registro da cognição basal", "detalhe": "Aplicar na admissão e a cada turno, comparar com o basal informado pela família e registrar no prontuário: delirium não diagnosticado não é tratado" }
+    ],
+    "procedimentos": [
+      { "nome": "Tomografia de crânio sem contraste", "indicacao": "Déficit focal, trauma, anticoagulação, cefaleia súbita ou delirium sem causa após investigação inicial", "tecnica": "Aquisição volumétrica da base ao vértice; repetir se rebaixamento progressivo e exame inicial normal", "complicacoes": "Transporte e sedação desnecessária, achado incidental, contraste em paciente com função renal limítrofe" },
+      { "nome": "Punção lombar", "indicacao": "Febre com meningismo ou delirium sem foco, após excluir herniação por imagem", "tecnica": "Decúbito lateral, L3–L4, coleta de 3–4 tubos para citologia, bioquímica e cultura; antibiótico não deve atrasar por causa da punção", "complicacoes": "Cefaleia pós-punção, hematoma em anticoagulado, herniação se houver hipertensão intracraniana" },
+      { "nome": "Sondagem vesical de alívio", "indicacao": "Retenção urinária com bexiga palpável, dor ou anúria", "tecnica": "Técnica asséptica, sonda de alívio 14–16 Fr, esvaziamento gradual e retirada imediata após o alívio, sem deixar sonda de demora por rotina", "complicacoes": "Infecção urinária, trauma uretral, hipotensão por esvaziamento rápido, delirium por desconforto" },
+      { "nome": "Desimpactação fecal e enema", "indicacao": "Fecaloma, constipação grave ou ausência de evacuação com distensão abdominal", "tecnica": "Toque retal, desimpactação manual com lubrificante e enema de glicerina ou fosfato; iniciar lactulose após esvaziar", "complicacoes": "Dor, sangramento retal, perfuração em reto friável, distúrbio eletrolítico por enema de fosfato" },
+      { "nome": "Avaliação cognitiva estruturada (CAM-4AT)", "indicacao": "Todo idoso internado, na admissão e a cada turno, e em qualquer mudança de comportamento", "tecnica": "Quatro itens — estado mental agudo e flutuante, desatenção, nível de consciência alterado e desorganização do pensamento; pontuação ≥ 4 sugere delirium", "complicacoes": "Falso-negativo no hipoativo se aplicado às pressas e falso-positivo em demência avançada sem informação do basal" },
+      { "nome": "Retirada de contenção física e mobilização", "indicacao": "Contenção em uso ou risco de queda por agitação", "tecnica": "Reavaliar a indicação a cada 2 h, retirar assim que houver acompanhante ou ambiente seguro, mobilizar com apoio e registrar a decisão e a reavaliação", "complicacoes": "Queda na retirada sem supervisão, lesão por contenção mantida, trombose e piora da agitação" }
+    ],
+    "metas": [
+      "Pacote de prevenção iniciado nas primeiras 24 h de internação em todo idoso de risco: mobilização, sono preservado, orientação, óculos, aparelho auditivo e hidratação",
+      "Causa do delirium identificada e registrada em até 24 h em 100% dos casos",
+      "CAM-4AT aplicado na admissão e a cada turno, com registro",
+      "Reavaliação clínica e do delirium em 24 h, com causa, subtipo e plano",
+      "Nenhum benzodiazepínico prescrito fora de abstinência",
+      "Nenhuma contenção física sem indicação documentada e reavaliação a cada 2 h",
+      "Antipsicótico suspenso ou em retirada em até 72 h",
+      "Delirium resolvido ou em melhora em 72 h, com retorno à função basal"
+    ],
+    "fluxo": [
+      "Reconhecer: início agudo, flutuação e desatenção (CAM-4AT) — delirium não é demência nem 'idade'",
+      "Classificar o subtipo: hiperativo, hipoativo ou misto",
+      "Estabilizar: glicemia capilar, oximetria, PA, temperatura, acesso venoso e ECG",
+      "Buscar a causa com exame dirigido: infecção, dor, bexiga, intestino, fármaco novo e abstinência",
+      "Tratar a causa: antibiótico, analgesia, sondagem de alívio, desimpactação e correção eletrolítica",
+      "Medidas não farmacológicas primeiro: ambiente, orientação, sono, mobilização, óculos e aparelho auditivo",
+      "Fármaco apenas se risco iminente: haloperidol 0,5 mg, ou quetiapina em Parkinson e Lewy, pelo menor tempo",
+      "Reavaliar em 24 h: causa, subtipo, necessidade do antipsicótico e plano de retirada; reavaliar contenção a cada 2 h"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "parkinson", "ajuste": "quetiapina 12,5 mg; haloperidol e outros típicos contraindicados", "alerta": "piora da rigidez e síndrome neuroléptica maligna" },
+      { "populacao": "demencia", "ajuste": "antipsicótico só com risco iminente, na menor dose e por até 72 h; tratar dor, bexiga e sono primeiro", "alerta": "aumento de mortalidade, AVC e queda" },
+      { "populacao": "renal_cronico", "ajuste": "evitar morfina e diazepam por acúmulo de metabólitos ativos; ajustar dose de antipsicótico", "alerta": "sedação prolongada e delirium por fármaco" },
+      { "populacao": "etilista", "ajuste": "tiamina antes da glicose e benzodiazepínico titulado se abstinência", "alerta": "Wernicke e delirium tremens" },
+      { "populacao": "idoso_fragil", "ajuste": "iniciar com metade da dose habitual e reavaliar em 24 h", "alerta": "delirium hipoativo subdiagnosticado e maior mortalidade" },
+      { "populacao": "hepatopata", "ajuste": "evitar benzodiazepínico de ação longa; preferir oxazepam ou lorazepam; investigar encefalopatia", "alerta": "encefalopatia hepática confundida com delirium" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "glicemia capilar", "indicacao": "todos, imediatamente", "o_que_muda": "identifica a causa reversível que mata em minutos e define glicose IV na hora" },
+        { "nome": "hemograma, PCR e urina tipo 1 com urocultura", "indicacao": "todos, mesmo sem febre", "o_que_muda": "infecção urinária e pneumonia são as causas mais comuns e mudam para antibiótico" },
+        { "nome": "eletrólitos, ureia, creatinina, cálcio e magnésio", "indicacao": "todos", "o_que_muda": "distúrbio eletrolítico e uremia revertem com correção e dispensam sedação" },
+        { "nome": "gasometria e oximetria", "indicacao": "hipóxia, taquipneia ou sonolência", "o_que_muda": "hipóxia e hipercapnia exigem oxigênio e investigação pulmonar" },
+        { "nome": "ECG de 12 derivações", "indicacao": "todos, antes de antipsicótico", "o_que_muda": "QTc acima de 500 ms contraindica haloperidol e quetiapina" },
+        { "nome": "tomografia de crânio", "indicacao": "déficit focal, trauma, anticoagulação ou causa não esclarecida", "o_que_muda": "exclui hematoma, AVC e lesão expansiva antes de atribuir a delirium metabólico" },
+        { "nome": "função hepática e TSH", "indicacao": "delirium sem causa evidente", "o_que_muda": "encefalopatia hepática e tireotoxicose têm tratamento específico" },
+        { "nome": "radiografia de tórax", "indicacao": "tosse, febre ou hipoxemia", "o_que_muda": "pneumonia oculta é causa frequente no idoso sem febre alta" }
+      ],
+      "evitar": [
+        { "exame": "benzodiazepínico como sedativo de rotina", "motivo": "prolonga o delirium, aumenta queda, aspiração e mortalidade; só é primeira linha na abstinência" },
+        { "exame": "contenção física sem indicação e sem reavaliação", "motivo": "aumenta agitação, lesão, trombose, úlcera e mortalidade; usar só com risco iminente e por tempo mínimo" },
+        { "exame": "haloperidol em Parkinson ou demência com corpos de Lewy", "motivo": "piora a rigidez e pode desencadear síndrome neuroléptica maligna fatal" },
+        { "exame": "antipsicótico profilático para prevenir delirium", "motivo": "não previne e adiciona efeitos adversos; prevenção é não farmacológica" },
+        { "exame": "cateter vesical de demora de rotina", "motivo": "a própria sonda causa infecção e delirium, além de restringir a mobilização" },
+        { "exame": "atribuir a confusão à idade e sedar sem exame", "motivo": "é o erro que mais atrasa o tratamento da causa e aumenta mortalidade" },
+        { "exame": "bateria extensa de exames antes de tratar dor, bexiga e intestino", "motivo": "retarda o que resolve em horas; examine e trate enquanto investiga" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "iniciar o pacote de prevenção já na admissão, antes de qualquer sintoma",
+        "manter acompanhante ou cuidador conhecido durante o dia",
+        "trazer óculos, aparelho auditivo e lista completa de remédios",
+        "manter luz natural de dia e ambiente escuro e silencioso à noite",
+        "estimular sentar fora da cama e caminhar com apoio todos os dias",
+        "oferecer água e alimentação com assistência",
+        "avisar a equipe a cada mudança de comportamento ou de sonolência"
+      ],
+      "evitar": [
+        "conter o paciente no leito por conveniência da equipe",
+        "usar benzodiazepínico para 'acalmar'",
+        "deixar sonda, cateter e acesso sem indicação",
+        "acordar à noite para exame ou medicação sem necessidade",
+        "trocar de quarto e de equipe várias vezes",
+        "tratar a confusão como se fosse demência ou 'coisa da idade'"
+      ],
+      "retorno": [
+        "rebaixamento do nível de consciência",
+        "agitação com risco de agressão ou queda",
+        "febre ou falta de ar",
+        "não urinar por mais de 8 h",
+        "convulsão ou déficit focal novo"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "haloperidol", "efeitos": ["parkinsonismo", "acatisia", "distonia", "prolongamento de QT"], "observacao": "reduzir ou suspender se rigidez, tremor ou QTc acima de 500 ms; não repetir sem reavaliar" },
+      { "agente": "quetiapina", "efeitos": ["sedação", "hipotensão postural", "constipação"], "observacao": "dar à noite, medir PA em pé e reduzir se sonolência diurna" },
+      { "agente": "morfina", "efeitos": ["sedação", "depressão respiratória", "constipação"], "observacao": "reduzir dose, prescrever laxante e reavaliar em 30 min" },
+      { "agente": "diazepam", "efeitos": ["sedação excessiva", "depressão respiratória", "desinibição paradoxal"], "observacao": "titular por escala de abstinência e reduzir se sedação sem melhora da agitação" },
+      { "agente": "lactulose", "efeitos": ["distensão", "diarreia", "desidratação"], "observacao": "ajustar pela consistência das fezes e vigiar sódio" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação em prontuário",
+      "Haloperidol com rigidez, acatisia ou distonia: suspender, considerar biperideno e trocar de estratégia",
+      "QTc acima de 500 ms: suspender antipsicótico, corrigir potássio e magnésio e monitorizar",
+      "Diazepam com sedação excessiva: reduzir dose, considerar flumazenil apenas em sedação iatrogênica grave",
+      "Comunicar a equipe e reescrever o plano com foco na causa, não em mais sedação"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "paracetamol 500 mg", "dose": "500–750 mg", "via": "VO", "frequencia": "6/6 h se dor", "duracao": "5 dias", "condicao": "dor como gatilho de delirium", "confirmar_apresentacao_local": true },
+          { "item": "tiamina 300 mg", "dose": "300 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "30 dias", "condicao": "etilismo ou desnutrição", "confirmar_apresentacao_local": true },
+          { "item": "lactulose xarope 667 mg/mL", "dose": "15–30 mL", "via": "VO", "frequencia": "1–2x/dia", "duracao": "30 dias", "condicao": "constipação", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "haloperidol 0,5 mg", "dose": "0,5 mg", "via": "VO ou IM", "frequencia": "12/12 h se agitação com risco", "monitorizacao": "QTc, sinais extrapiramidais e sedação", "confirmar_apresentacao_local": true },
+          { "item": "quetiapina 25 mg", "dose": "12,5–25 mg", "via": "VO", "frequencia": "à noite", "monitorizacao": "PA em pé e sedação", "confirmar_apresentacao_local": true },
+          { "item": "diazepam 10 mg", "dose": "5–10 mg", "via": "VO ou IV", "frequencia": "conforme escala de abstinência", "monitorizacao": "sedação e frequência respiratória", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["glicemia capilar", "hemograma", "urina tipo 1 e urocultura", "eletrólitos", "ureia e creatinina", "gasometria", "ECG", "tomografia de crânio", "função hepática", "TSH", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, com quadro de delirium, necessitando de afastamento por dias.", "dias": null, "cid": null, "observacao": "documento hospitalar" },
+      "encaminhamento": { "campos": ["destino", "motivo", "resumo", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente idoso com delirium, subtipo, causa identificada, medidas não farmacológicas, fármacos usados e duração, reavaliação em 24 h e plano de retirada." }
+    },
+    "anamnese": {
+      "campos": ["início e flutuação", "cognição basal", "febre e foco infeccioso", "dor", "última urina e evacuação", "fármacos novos ou suspensos", "álcool e abstinência", "parkinson ou demência", "ambiente e sono"],
+      "texto_template": "Idoso com delirium, início e flutuação, cognição basal informada por acompanhante, febre e foco, dor, última urina e evacuação, fármacos novos ou suspensos, uso de álcool, parkinson ou demência, ambiente e sono."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais e oximetria", "glicemia capilar", "nível de consciência e atenção", "neurológico e pupilas", "bexiga e abdome", "pele e dispositivos", "hidratação", "dor e mobilidade"],
+      "texto_template": "Sinais vitais e oximetria, glicemia capilar, nível de consciência e atenção, exame neurológico com pupilas, palpação de bexiga e abdome, pele e dispositivos, hidratação, avaliação de dor e mobilidade."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de delirium, uso de CAM-4AT e critérios de contenção", "verificar": true },
+      { "tipo": "sociedade_geriatria", "o_que_verificar": "subtipo, causas reversíveis e prevenção não farmacológica", "verificar": true },
+      { "tipo": "diretriz_cuidados_paliativos", "o_que_verificar": "sedação paliativa versus delirium e uso de antipsicótico no fim de vida", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações e doses de haloperidol, quetiapina, diazepam, morfina e naloxona", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-GER02-01", "tipo": "hipoglicemia", "gatilho": "glicemia capilar abaixo de 70 mg/dL", "severidade": "grave", "mensagem": "Hipoglicemia: corrigir antes de qualquer sedação.", "acao": "sugerir glicose 50% e reavaliação em 15 min", "bloqueante": true },
+      { "id": "SA-GER02-02", "tipo": "parkinson_com_haloperidol", "gatilho": "haloperidol prescrito em Parkinson ou demência com corpos de Lewy", "severidade": "grave", "mensagem": "Haloperidol contraindicado em Parkinson e Lewy: risco de síndrome neuroléptica maligna.", "acao": "bloquear item e sugerir quetiapina", "bloqueante": true },
+      { "id": "SA-GER02-03", "tipo": "benzodiazepinico_fora_de_abstinencia", "gatilho": "benzodiazepínico prescrito sem abstinência alcoólica ou de benzodiazepínico", "severidade": "grave", "mensagem": "Benzodiazepínico de rotina prolonga o delirium e aumenta mortalidade.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-GER02-04", "tipo": "abstinencia_sem_benzodiazepinico", "gatilho": "abstinência alcoólica tratada apenas com antipsicótico", "severidade": "grave", "mensagem": "Abstinência exige benzodiazepínico: antipsicótico isolado não previne convulsão.", "acao": "bloquear conduta e sugerir diazepam titulado", "bloqueante": true },
+      { "id": "SA-GER02-05", "tipo": "retencao_urinaria", "gatilho": "bexiga palpável, anúria ou dor suprapúbica", "severidade": "grave", "mensagem": "Esvaziar a bexiga antes de sedar.", "acao": "sugerir sondagem de alívio", "bloqueante": false },
+      { "id": "SA-GER02-06", "tipo": "contencao_sem_reavaliacao", "gatilho": "contenção física sem registro de indicação ou sem reavaliação em 2 h", "severidade": "precaucao", "mensagem": "Contenção sem indicação aumenta lesão e mortalidade.", "acao": "alertar e exigir reavaliação", "bloqueante": false },
+      { "id": "SA-GER02-07", "tipo": "reavaliacao_24h", "gatilho": "delirium sem reavaliação registrada em 24 h", "severidade": "precaucao", "mensagem": "Reavaliar causa, subtipo e necessidade do antipsicótico em 24 h.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "literatura"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita integral: delirium como emergência médica e não 'confusão do idoso', com identificação do subtipo hiperativo, hipoativo e misto; investigação dirigida de infecção, dor, retenção urinária, constipação, hipóxia, distúrbio eletrolítico, abstinência e fármaco anticolinérgico; 9 fármacos com apresentações, preparo, tempo de infusão, monitorização e ajuste renal, incluindo haloperidol em dose baixa, quetiapina no Parkinson e Lewy, analgesia, naloxona, tiamina, glicose, lactulose e diazepam restrito à abstinência; medidas não farmacológicas como primeira linha; prevenção, rastreio com CAM-4AT e reavaliação em 24 h; bloqueios de benzodiazepínico de rotina, de contenção física sem indicação e de antipsicótico em Parkinson e Lewy.", "data": null }
+      ]
+    }
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "id": "leg_2007",
+  "nome": "Tromboembolismo Pulmonar",
+  "cat": "Emergência",
+  "alias": "tep embolia pulmonar trombose venosa profunda tvp dispneia súbita toracalgia pleuritica",
+  "cid": [
+    [
+      "I269",
+      "Tromboembolismo pulmonar"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ESC 2019 — TEP",
+      "SBPT/SBACV — TVP/TEP",
+      "Wells/Geneva score"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "CAR-08 em 2026-11-27",
+    "fundido_workspace": "CAR-08 em 2026-11-27"
+  },
+  "alerta": "Suspeita (dispneia súbita + taquicardia + toracalgia pleurítica; ou sincope sem causa): Wells/Geneva → D-dímero se baixa probabilidade; angio-TC (ou ECO床 se instável: ventrículo direito dilatado). Anticoagular JÁ quando probabilidade intermediária/alta, ANTES da imagem (plena dose): enoxaparina 1 mg/kg SC 12/12h OU heparina não fracionada EV (bolus 80 U/kg + 18 U/kg/h — preferir se obesidade extrema, alto risco hemorrágico ou trombólise planejada). O2 para SpO2 > 94. TEP maciço com hipotensão (PAS < 90 por > 15 min): trombólise alteplase 100 mg EV em 2 h (ou 50 mg se risco alto de sangramento) + suporte com vasopressor. Trombectomia/perfusão se contraindicação de trombólise. Discussão de filtro de VC só se contraindicação absoluta persistente de anticoagulação.",
+  "redFlags": [
+    "Hipotensão/syncope no TEP — maciço: trombólise/estratégia avançada já",
+    "Ecocardiograma com disfunção de VD normotenso — submaciço: discutir monitorização estreita/estratégia",
+    "Signos de TVP associada (edema unilateral) — medir e anticoagular plenamente",
+    "TEP em gestante — angio-TC é aceitável; anticoagular com heparina (NÃO varfarina)",
+    "Sangramento ativo — heparina com discussão risco/benefício, filtro de VC excepcional",
+    "Taquicardia + hipoxemia que 'não fecha' pós-operatória — TEP até excluir",
+    "Hipotensão + dilatação de ventrículo direito no eco — TEP massiva: trombólise sistêmica, não apenas anticoagulante",
+    "Suspeita de TEP instável — eco à beira-leito ANTES de levar à TC (paciente pode parar no tomógrafo)"
+  ],
+  "naoUsar": [
+    "AAS no lugar de anticoagulação plena",
+    "Dose profilática de enoxaparina no TEP confirmado (40 mg NÃO trata)",
+    "Iniciar varfarina sozinha (sem bridge) na fase aguda",
+    "Deambular durante dor/instabilidade antes de anticoagulado",
+    "Trombólise em TEP de risco baixo/intermediário — anticoagulante basta",
+    "Anticoagulação sem pesar sangramento maciço ativo, AVC < 3 meses ou plaquetas < 20.000"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Anticoagulação plena — 1ª linha",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "enoxaparina",
+            "motivo": "1 mg/kg SC 12/12h (ou 1,5 mg/kg 1x/dia) — dose PLENA desde a suspeita de média/alta probabilidade"
+          },
+          {
+            "linha": 1,
+            "hosp": "heparina_sc",
+            "motivo": "HNF EV: bolus 80 U/kg + infusão 18 U/kg/h (TTPa 6 h) — preferir se trombólise possível/renal extremo"
+          }
+        ]
+      },
+      {
+        "nome": "Suporte sintomático",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV 6/6h — toracalgia pleurítica"
+          },
+          {
+            "hosp": "morfina_ev",
+            "motivo": "2–4 mg EV se dor intensa (monitorar FR — hipoxemia)"
+          }
+        ]
+      },
+      {
+        "nome": "Trombólise — TEP massiva (hipotensão/DVE)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "alteplase_tep",
+              "n": "Alteplase (TEP massiva)",
+              "ap": "frasco 50 mg",
+              "via": "IV",
+              "pos": "100 mg EV em infusão contínua de 2 h (ou tenecteplase por peso). Hipotensão (PAS < 90 ou queda ≥ 40 mmHg) + DVE no eco. Após lise: continuar heparina sem bolus adicional"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Anticoagulação oral na alta (transição)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "rivaroxabana",
+              "n": "Rivaroxabana 20 mg",
+              "ap": "20 mg comprimido",
+              "pos": "20 mg VO 1x/dia COM comida, por 3–6 meses (TEP provocado); não exige bridge se iniciada na fase aguda em elegíveis. Conforme disponibilidade do serviço.",
+              "nota": "Confirme cobertura/estoque do serviço — alternativas abaixo."
+            },
+            "motivo": "ACO direto em elegíveis (sem câncer ativo/gestação)"
+          },
+          {
+            "novo": {
+              "id": "varfarina",
+              "n": "Varfarina (com bridge de enoxaparina)",
+              "ap": "5 mg comprimido",
+              "pos": "5 mg VO à noite ajustando INR 2–3; manter enoxaparina 1 mg/kg 12/12h POR CIMA até INR ≥ 2 em dois dias. Reforçar número do laboratório."
+            },
+            "motivo": "Quando ACO direto indisponível/câncer/gestação (nesta usar heparina)"
+          },
+          {
+            "novo": {
+              "id": "enox_alta",
+              "n": "Enoxaparina na alta (ambulatorial)",
+              "ap": "seringas 40/60/80 mg",
+              "pos": "1 mg/kg SC 12/12h até a transição completa — ensinar autoaplicação abdominal e descarte de agulhas."
+            },
+            "motivo": "Ponte e situações sem ACO oral"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Falta de ar nova, dor no peito, tosse com sangue, inchaço de uma perna, dor de cabeça intensa (sangramento), fezes pretas, qualquer sangramento que não para — TEP pode crescer e anticoagulante sangra."
+            },
+            "motivo": "Extensão e sangramento"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Adesão crítica",
+              "ap": "",
+              "pos": "NÃO falhar dose do anticoagulante (usar alarme); evitar AINEs; informar todos os dentistas/médicos que usa anticoagulante; carteira de identificação. Hemograma/INR conforme esquema. Consulta com hematologia/cardiologia em 7–14 dias."
+            },
+            "motivo": "Segurança do anticoagulante"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Monitorização contínua com desfibrilador ao lado",
+              "ap": "",
+              "q": "",
+              "pos": "Ritmo, oximetria, pressão e frequência; desfibrilador testado em todo paciente com hipoxemia ou instabilidade"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Dois acessos venosos calibrosos",
+              "ap": "",
+              "q": "",
+              "pos": "14–16 G; um exclusivo para infusão de vasopressor e trombolítico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Reposição volêmica cautelosa",
+              "ap": "",
+              "q": "",
+              "pos": "250–500 mL de cristaloide e reavaliar; o ventrículo direito está dilatado e volumes maiores pioram a perfusão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Cabeceira elevada e posição confortável",
+              "ap": "",
+              "q": "",
+              "pos": "30–45° se dispneia; evitar decúbito dorsal prolongado em paciente hipoxêmico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Mobilização precoce com anticoagulação plena",
+              "ap": "",
+              "q": "",
+              "pos": "Não manter repouso absoluto prolongado; deambular reduz síndrome pós-trombótica e tempo de internação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Meia elástica de compressão 30–40 mmHg",
+              "ap": "",
+              "q": "",
+              "pos": "Quando houver TVP associada, após 48–72 h de anticoagulação e excluída isquemia arterial"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Profilaxia de tromboembolismo no internado",
+              "ap": "",
+              "q": "",
+              "pos": "Enoxaparina 40 mg SC 1x/dia ou meia elástica conforme risco, reavaliada diariamente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Educação e plano de retorno",
+              "ap": "",
+              "q": "",
+              "pos": "Explicar duração da anticoagulação, sinais de sangramento e de recidiva, e retorno em 7–14 dias"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Controle de fatores de risco",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender tabagismo, planejar profilaxia em cirurgias e imobilizações e revisar terapia hormonal"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-08"
+      }
+    ]
+  }
+}

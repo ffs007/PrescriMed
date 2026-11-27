@@ -1,0 +1,504 @@
+{
+  "id": "ws-inf_13",
+  "nome": "Infecção de ferida",
+  "cat": "Infectologia",
+  "alias": "infeccao de ferida infeccao de ferida ferida infectada infeccao de sitio cirurgico ferida cirurgica infectada abscesso de ferida mordedura infectada ferida traumatica infectada deiscencia com secrecao purulenta",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (INF-13_infeccao_de_ferida.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de infecção de sítio cirúrgico, critérios de internação e disponibilidade de drenagem",
+      "[verificar] diretriz_sociedade_infectologia: escolha empírica em infecção de pele e partes moles, mordedura e MRSA",
+      "[verificar] diretriz_cirurgia: indicação de desbridamento, drenagem e manejo da ferida cirúrgica infectada",
+      "[verificar] anvisa: apresentações, reconstituição e estabilidade dos antimicrobianos",
+      "[verificar] literatura: duração do antibiótico após drenagem e papel da cultura profunda"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "INF-13 em 2026-11-27",
+    "fundido_workspace": "INF-13 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: dor desproporcional à palpação, pele endurecida, crepitação ou bolhas hemorrágicas -> acionar cirurgia imediatamente, sem esperar imagem nem antibiótico fazer efeito; hipotensão, confusão, oligúria ou lactato elevado -> ressuscitação, hemoculturas e antibiótico intravenoso na primeira hora; necrose de borda avançando rapidamente, mancha acinzentada ou ferida com gás -> desbridamento cirúrgico amplo e ampliação da cobertura antibiótica; ferida cirúrgica com deiscência, secreção purulenta e dor nova -> abrir pontos, drenar, colher cultura e avaliar a fáscia. 1) Classificar a ferida: tempo de evolução, mecanismo, profundidade, presença de coleção, necrose e material de síntese 2) Procurar sinais de gravidade: dor desproporcional, crepitação, bolhas, necrose, toxemia e hipotensão; se presentes, acionar cirurgia imediatamente 3) Palpar flutuação e, se houver dúvida, fazer ultrassonografia à beira do leito; coleção confirmada indica drenagem 4) Colher cultura de aspirado ou tecido antes do antibiótico em ferida purulenta, mordedura e infecção profunda 5) Drenar o abscesso, abrir a ferida cirúrgica infectada e desbridar tecido necrótico, sem suturar ferida contaminada 6) Escolher o antibiótico pelo cenário: cefalexina na celulite leve, amoxicilina-clavulanato na mordedura, sulfametoxazol-trimetoprima ou clindamicina no MRSA, ceftriaxona com metronidazol na grave e vancomicina no MRSA grave internado 7) Atualizar a profilaxia antitetânica e, em mordedura, avaliar ra",
+  "redFlags": [
+    "dor desproporcional à palpação, pele endurecida, crepitação ou bolhas hemorrágicas -> acionar cirurgia imediatamente, sem esperar imagem nem antibiótico fazer efeito",
+    "hipotensão, confusão, oligúria ou lactato elevado -> ressuscitação, hemoculturas e antibiótico intravenoso na primeira hora",
+    "necrose de borda avançando rapidamente, mancha acinzentada ou ferida com gás -> desbridamento cirúrgico amplo e ampliação da cobertura antibiótica",
+    "ferida cirúrgica com deiscência, secreção purulenta e dor nova -> abrir pontos, drenar, colher cultura e avaliar a fáscia",
+    "mordedura em mão, punho, face, articulação ou com lesão de tendão -> avaliação cirúrgica, antibioticoterapia e profilaxia antirrábica",
+    "diabetes descompensado, neutropenia, corticoide ou quimioterapia -> baixar o limiar de internação e ampliar a cobertura",
+    "febre ou secreção persistente após 48 a 72 horas de antibiótico adequado -> reavaliar com ultrassonografia, cultura e avaliação cirúrgica"
+  ],
+  "naoUsar": [
+    "alergia a cefalosporina",
+    "anafilaxia prévia a penicilina",
+    "alergia a penicilina",
+    "hepatite colestática prévia atribuída ao fármaco",
+    "colite pseudomembranosa prévia",
+    "alergia a lincosamida",
+    "alergia a sulfonamida",
+    "gestação no primeiro trimestre e nas duas últimas semanas"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter o curativo limpo e seco e trocá-lo conforme a orientação"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "espremer, furar ou aplicar produtos caseiros na ferida"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Cefalosporina primeira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "cefalexina",
+            "pos": "500 mg. Via VO. 6/6 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "celulite ao redor de ferida sem coleção e sem toxemia (1a linha) celulite ao redor de ferida sem coleção",
+            "nota": "Uso direto, com água; tomar com alimento se houver desconforto gástrico - monitorar: regressão do eritema e da dor em 48 a 72 h; monitorar: diarreia; monitorar: rash cutâneo; monitorar: função renal no idoso · NÃO: alergia a cefalosporina; anafilaxia prévia a penicilina · Obs: Não cobre anaeróbios, Pseudomonas nem MRSA. É a escolha de espectro estreito para ferida comunitária limpa. · Renal: ClCr 30 a 59: 500 mg 8/8 h; ClCr abaixo de 30: 500 mg 12/12 h; em diálise, dose…",
+            "dose": {
+              "texto": "500 mg; 6/6 h; 5 a 7 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina com inibidor de betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "875/125 mg. Via VO. 12/12 h. 5 a 7 dias no tratamento; 3 a 5 dias na profilaxia de mordedura.",
+            "posTodas": true,
+            "motivo": "mordedura animal ou humana, ferida com terra ou material orgânico e ferida cirúrgica com anaeróbios (1a linha) mordedura ou ferida com terra",
+            "nota": "Via oral em uso direto, no início da refeição; via intravenosa reconstituir em 20 mL de água e diluir em 100 mL de soro fisiológico 0,9% - monitorar: diarreia; monitorar: transaminases se uso acima de 14 dias; monitorar: rash; monitorar: regressão da celulite e da secreção",
+            "dose": {
+              "texto": "875/125 mg; 12/12 h; 5 a 7 dias no tratamento; 3 a 5 dias na profilaxia de mordedura; max. 1.750/250 mg por tomada, duas tomadas ao dia",
+              "status": "ok",
+              "valor": 125,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Lincosamida",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "clindamicina",
+            "pos": "300 mg. Via VO. 6/6 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "alergia a beta-lactâmico, suspeita de MRSA comunitário e ferida com produção de toxina (alternativa) alergia a beta-lactâmico",
+            "nota": "Via oral em uso direto; via intravenosa diluir 600 mg em 100 mL de soro fisiológico 0,9% - monitorar: diarreia e dor abdominal; monitorar: hemograma em uso acima de 7 dias; monitorar: transaminases; monitorar: regressão da celulite · NÃO: colite pseudomembranosa prévia; alergia a lincosamida · Obs: No internado, 600 mg IV 8/8 h. Cobre MRSA comunitário e inibe toxina, mas não é rotina pelo risco de colite por C. difficile.",
+            "dose": {
+              "texto": "300 mg; 6/6 h; 5 a 7 dias; max. 1.800 mg/dia por via oral",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1800,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Sulfonamida",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "smx_tmp",
+            "pos": "800/160 mg. Via VO. 12/12 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "suspeita ou confirmação de MRSA comunitário em ferida, com ou sem drenagem (condicional) suspeita de MRSA comunitário",
+            "nota": "Uso direto com copo cheio de água; manter hidratação durante todo o tratamento - monitorar: rash e lesão de mucosa; monitorar: potássio e creatinina; monitorar: hemograma em uso acima de 7 dias; monitorar: diurese · NÃO: alergia a sulfonamida; gestação no primeiro trimestre e nas duas últimas semanas; deficiência grave de G6PD; ClCr abaixo de 15 · Obs: Não cobre estreptococo de forma confiável; usar quando MRSA é provável e reavaliar em 48 a 72 h. Alternativa em alergia a beta-lactâmico. · Renal: ClCr 15 a 30: metade da dose; ClCr abaixo de 15: evitar",
+            "dose": {
+              "texto": "800/160 mg; 12/12 h; 5 a 7 dias; max. 1.600/320 mg/dia",
+              "status": "ok",
+              "valor": 160,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vacina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "toxoide_tetanico",
+              "n": "Toxoide tetânico (dT ou dTpa)",
+              "ap": "frasco-ampola 0,5 mL dose única",
+              "q": "",
+              "pos": "0,5 mL. Via IM. Dose única na profilaxia; completar o esquema de três doses se incompleto. Esquema completo conforme o histórico."
+            },
+            "motivo": "profilaxia do tétano em ferida contaminada, conforme o estado vacinal (condicional)",
+            "nota": "Uso direto; agitar antes de aspirar; aplicar no deltoide - monitorar: reação local nas primeiras 48 h; monitorar: febre; monitorar: registro de lote e data no cartão vacinal · NÃO: anafilaxia prévia a componente da vacina; encefalopatia nas 7 dias após dose anterior de coqueluche · Obs: Ferida contaminada com esquema incompleto ou desconhecido exige toxoide e, em ferida de alto risco, imunoglobulina antitetânica conforme o protocolo de tétano. Em ferida de baixo risco com esquema completo, não é necessária dose.",
+            "dose": {
+              "texto": "0,5 mL; dose única na profilaxia; completar o esquema de três doses se incompleto; esquema completo conforme o histórico; max. 0,5 mL por dose",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.5,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "paracetamol",
+            "pos": "750 mg. Via VO. 6/6 h, se dor ou febre. 3 a 5 dias.",
+            "posTodas": true,
+            "motivo": "dor e febre associadas à infecção de ferida (condicional) dor e febre",
+            "nota": "Uso direto - monitorar: dor pela escala de 0 a 10; monitorar: temperatura; monitorar: TGO e TGP se uso acima de 5 dias · NÃO: hepatopatia grave; alergia · Obs: Não associar a outro produto com paracetamol. Não usar AINE em ferida com risco de sangramento ou em renal crônico. · Renal: ClCr abaixo de 30: espaçar para 8/8 h",
+            "dose": {
+              "texto": "750 mg; 6/6 h, se dor ou febre; 3 a 5 dias; max. 4 g/dia, ou 2 g/dia em hepatopatia e etilismo",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Elevação e repouso do segmento acometido",
+              "ap": "",
+              "q": "",
+              "pos": "manter o membro acima do nível do coração por 30 minutos, 3 a 4 vezes ao dia, e evitar ortostatismo prolongado até o edema ceder"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Limpeza da ferida com soro fisiológico",
+              "ap": "",
+              "q": "",
+              "pos": "irrigação com seringa e agulha ou frasco sob pressão, remoção de detritos e de tecido desvitalizado; não usar álcool, água oxigenada ou clorexidina em ferida aberta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Curativo e troca programada",
+              "ap": "",
+              "q": "",
+              "pos": "curativo úmido com soro fisiológico 0,9% ou cobertura com prata conforme exsudato, troca a cada 24 a 48 h ou antes se saturado, com técnica asséptica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Não suturar ferida contaminada",
+              "ap": "",
+              "q": "",
+              "pos": "mordedura, ferida com terra, corpo estranho ou mais de 6 a 12 h de evolução deve cicatrizar por segunda intenção ou com fechamento tardio"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Controle glicêmico no diabético",
+              "ap": "",
+              "q": "",
+              "pos": "glicemia capilar abaixo de 180 mg/dL no internado e HbA1c solicitada; hiperglicemia sustenta a infecção e atrasa a cicatrização"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Higiene das mãos e isolamento de contato quando indicado",
+              "ap": "",
+              "q": "",
+              "pos": "higiene antes e depois de cada curativo; em ferida colonizada por MRSA ou germe multirresistente, seguem-se as precauções de contato do serviço"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Profilaxia de tromboembolismo no internado",
+              "ap": "",
+              "q": "",
+              "pos": "enoxaparina 40 mg SC 1x/dia após controle de sangramento, com compressão pneumática quando houver contraindicação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Retorno programado em 48 a 72 horas",
+              "ap": "",
+              "q": "",
+              "pos": "reavaliar borda demarcada, secreção e dor; ferida que não melhora nesse prazo exige ultrassonografia e reavaliação cirúrgica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-13"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cefalosporina terceira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "ferida grave, profunda, com toxemia ou necessidade de internação (condicional)",
+            "nota": "Reconstituir em 10 mL de água para injeção e diluir em 100 mL de soro fisiológico 0,9% ou glicose 5% - monitorar: hemograma e função hepática em uso prolongado; monitorar: diarreia e sinais de C. difficile; monitorar: resposta clínica em 48 a 72 h; monitorar: sítio de infusão · NÃO: alergia grave a cefalosporina; anafilaxia prévia a penicilina; solução com cálcio em neonato · Obs: Não cobre anaeróbios nem MRSA; associar metronidazol quando há componente anaeróbio e vancomicina quando há MRSA grave.",
+            "dose": {
+              "texto": "2 g; 1x/dia; 7 a 10 dias, conforme o foco e o controle cirúrgico; max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "cobertura de anaeróbios em mordedura, ferida com terra, ferida profunda e infecção de sítio cirúrgico abdominal ou pélvico (condicional)",
+            "nota": "Solução pronta para uso; não diluir; proteger da luz - monitorar: função hepática; monitorar: sintomas neurológicos em uso acima de 10 dias; monitorar: náusea e tolerância · NÃO: alergia a nitroimidazol; uso de dissulfiram; primeiro trimestre de gestação sem indicação absoluta · Obs: Só entra quando há anaeróbio provável ou confirmado; não associar de rotina a amoxicilina-clavulanato, que já cobre anaeróbios.",
+            "dose": {
+              "texto": "500 mg; 8/8 h; 7 a 10 dias, conforme o foco; max. 1.500 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Glicopeptideo",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "vancomicina",
+              "n": "Vancomicina",
+              "ap": "frasco-ampola 500 mg",
+              "via": "IV",
+              "pos": "Ataque de 25 a 30 mg/kg; manutenção de 15 a 20 mg/kg. Via IV. 8/8 a 12/12 h, guiada por AUC ou nível sérico. 7 a 14 dias, conforme a profundidade e o controle cirúrgico. 60 a 120 minutos, sem ultrapassar 10 mg por minuto."
+            },
+            "motivo": "MRSA grave em ferida com toxemia, falha de beta-lactâmico ou infecção profunda de sítio cirúrgico (resgate)",
+            "nota": "Reconstituir em 10 mL de água para injeção e diluir em 250 mL de soro fisiológico 0,9%, com concentração final de até 5 mg/mL - monitorar: AUC/MIC entre 400 e 600, ou vale entre 15 e 20 mcg/mL; monitorar: creatinina a cada 48 h; monitorar: hemograma semanal; monitorar: rubor e hipotensão durante a infusão · NÃO: alergia a glicopeptídeo; infusão rápida em bolus; insuficiência renal grave sem ajuste · Obs: Não é droga ambulatorial. Reservar para MRSA grave ou falha de beta-lactâmico, pelo risco de nefrotoxicidade e de seleção de resistência. · Renal: Ataque pelo peso real; manutenção guiada por nível; em diálise, dose após a sessão",
+            "dose": {
+              "texto": "ataque de 25 a 30 mg/kg; manutenção de 15 a 20 mg/kg; 8/8 a 12/12 h, guiada por AUC ou nível sérico; 7 a 14 dias, conforme a profundidade e o controle cirúrgico; max. 3 g no ataque e 2 g por dose de manutenção",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 30,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "INF-13",
+    "versao": "0.2.0",
+    "arquivo": "INF-13_infeccao_de_ferida.json",
+    "area": "Infectologia",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

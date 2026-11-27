@@ -1,0 +1,1000 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GI-18",
+    "area": "Gastrointestinal",
+    "nome": "Disenteria / diarreia invasiva",
+    "aliases": [
+      "disenteria",
+      "diarreia invasiva",
+      "disenteria bacilar",
+      "Disenteria / diarreia invasiva",
+      "diarreia com sangue e muco",
+      "shigelose",
+      "colite amebiana"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Disenteria é diarreia com sangue, muco e febre, com dor abdominal e tenesmo — o padrão de invasão da mucosa colônica por Shigella, Salmonella, Campylobacter, E. coli invasora ou Entamoeba histolytica. Não é diarreia aquosa com um fio de sangue: o conjunto sangue + muco + febre + tenesmo é que define a síndrome e muda a conduta. A decisão tem três eixos: gravidade (sepse, desidratação, abdome cirúrgico), agente provável (bactéria invasiva versus ameba) e risco de complicação (síndrome hemolítico-urêmica por E. coli O157). O tratamento é hidratação, antibiótico dirigido em caso selecionado e coprocultura quando o resultado muda a escolha. Duas proibições são absolutas: antidiarreico na disenteria e antibiótico na suspeita de E. coli O157.",
+    "inclusao": [
+      "Diarreia com sangue vivo e muco, com febre ou tenesmo",
+      "Disenteria com sinais de gravidade, desidratação ou sepse",
+      "Disenteria em gestante, imunossuprimido ou idoso frágil",
+      "Disenteria persistente por mais de 7 dias ou recorrente",
+      "Suspeita de amebíase intestinal com muco e sangue"
+    ],
+    "exclusao": [
+      {
+        "situacao": "diarreia aquosa sem sangue, sem muco e sem febre alta",
+        "fluxo": "GI-01 diarreia aguda"
+      },
+      {
+        "situacao": "diarreia com mais de 14 dias, sem disenteria, com perda de peso",
+        "fluxo": "GI-02 diarreia persistente"
+      },
+      {
+        "situacao": "dor abdominal localizada com defesa e rigidez",
+        "fluxo": "GI-14 apendicite / cirurgia"
+      },
+      {
+        "situacao": "sangramento digestivo alto com hematêmese ou melena",
+        "fluxo": "GI-09 HDA"
+      },
+      {
+        "situacao": "sangue apenas em papel, por hemorroida ou fissura, sem febre",
+        "fluxo": "GI-08 hemorroida / fissura"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "hipotensão, taquicardia, extremidades frias ou confusão",
+        "por_que": "choque séptico ou hipovolêmico por colite invasiva",
+        "acao": "ressuscitação com cristaloide, hemoculturas, antibiótico IV e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "diurese menor que 0,5 mL/kg/h ou ausência de urina por 8 h",
+        "por_que": "desidratação grave com injúria renal",
+        "acao": "reidratação venosa e controle de diurese",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "febre acima de 39 °C com calafrios e toxemia",
+        "por_que": "bacteremia por Salmonella ou Shigella",
+        "acao": "hemoculturas, ceftriaxona IV e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "abdome distendido, difusamente doloroso, com defesa ou rigidez",
+        "por_que": "megacólon tóxico, perfuração ou colite grave",
+        "acao": "avaliação cirúrgica imediata, imagem e suspensão de antidiarreico",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "palidez, petéquias, oligúria e queda de plaquetas após diarreia com sangue",
+        "por_que": "síndrome hemolítico-urêmica por E. coli produtora de toxina Shiga",
+        "acao": "internar, suspender antibiótico e antidiarreico, dosar hemograma e creatinina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "imunossupressão, quimioterapia, HIV avançado ou transplante",
+        "por_que": "sepse por agente entérico e risco de bacteremia",
+        "acao": "internação, coprocultura ampliada e antibiótico parenteral",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "disenteria sem melhora após 48 a 72 h de antibiótico adequado",
+        "por_que": "agente resistente, amebíase ou doença inflamatória intestinal",
+        "acao": "rever coprocultura, trocar esquema e considerar colonoscopia",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Há sangue vivo e muco nas fezes ou só fezes líquidas?",
+      "Quantas evacuações nas últimas 24 h e há tenesmo?",
+      "Qual a temperatura medida e há calafrios?",
+      "Quando foi a última micção e quanto urinou?",
+      "Comeu carne malpassada, leite não pasteurizado ou água de procedência duvidosa?",
+      "Viajou para área endêmica ou houve surto no local?",
+      "Usou antibiótico nos últimos 60 dias ou esteve internado?",
+      "Já teve diarreia com muco e sangue recorrente, aftas ou dor articular?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Disenteria leve em adulto hígido, sem sinais de gravidade e tolerando via oral",
+        "escolha": "Ciprofloxacino 500 mg 12/12 h por 3 dias, com SRO e reavaliação em 48 h",
+        "porque": "Encurta a duração e reduz transmissão em Shigella; é o esquema mais curto e aderente"
+      },
+      {
+        "cenario": "Gestante, criança ou intolerância a quinolona",
+        "escolha": "Azitromicina 1 g dose única (criança 20 mg/kg dose única)",
+        "porque": "Quinolona é contraindicada na gestação e na infância; a dose única resolve adesão"
+      },
+      {
+        "cenario": "Disenteria grave, toxemia, sepse, internação ou impossibilidade de via oral",
+        "escolha": "Ceftriaxona 2 g IV 1x/dia por 3 a 5 dias, após hemoculturas e coprocultura",
+        "porque": "Cobre Shigella, Salmonella e E. coli invasora com boa penetração e sem ajuste renal"
+      },
+      {
+        "cenario": "Suspeita de E. coli O157 (surto, carne malpassada, cólica intensa com pouco ou nenhum febre)",
+        "escolha": "Apenas hidratação e vigilância de hemograma, plaquetas e creatinina",
+        "porque": "Antibiótico aumenta a liberação de toxina Shiga e o risco de síndrome hemolítico-urêmica"
+      },
+      {
+        "cenario": "Disenteria com fezes em geleia de framboesa, cólica, epidemiologia de área endêmica e eosinofilia",
+        "escolha": "Metronidazol 500 mg 8/8 h por 7 a 10 dias (ou secnidazol 2 g dose única), após parasitológico",
+        "porque": "Amebíase intestinal invasiva exige amebicida tecidual; quinolona não trata Entamoeba"
+      },
+      {
+        "cenario": "Febre alta, sangue e tenesmo sem resposta a quinolona em 72 h",
+        "escolha": "Trocar para azitromicina 1 g dose única e aguardar coprocultura",
+        "porque": "Campylobacter é frequentemente resistente a quinolona e responde a macrolídeo"
+      },
+      {
+        "cenario": "Diarreia com muco e sangue recorrente, sem febre alta, com perda de peso e história de meses",
+        "escolha": "Não repetir antibiótico empírico; colonoscopia com biópsia e calprotectina fecal",
+        "porque": "O padrão é de doença inflamatória intestinal; antibiótico repetido atrasa o diagnóstico e induz resistência"
+      },
+      {
+        "cenario": "Disenteria com vômitos que impedem a reidratação oral",
+        "escolha": "Ondansetrona 4 mg IV e reidratação venosa com SF 0,9%",
+        "porque": "Sem controlar o vômito a via oral falha e a desidratação progride"
+      },
+      {
+        "cenario": "Paciente com disenteria que pede algo para parar a diarreia",
+        "escolha": "Não prescrever loperamida nem qualquer antidiarreico; explicar o motivo e manter apenas SRO",
+        "porque": "Antidiarreico retém toxina e agente invasor no cólon e precipita megacólon tóxico, distensão e perfuração"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "reidratante_oral",
+        "agente": "solução de reidratação oral (SRO)",
+        "papel": "primeira_linha",
+        "indicacao": "desidratação leve a moderada com via oral preservada na disenteria",
+        "dose": "50 a 100 mL/kg em 4 h; 200 a 400 mL após cada evacuação líquida",
+        "unidade": "mL/kg",
+        "via": "VO",
+        "frequencia": "colheradas a cada 5 a 10 min",
+        "duracao": "até diurese clara e sede resolvida",
+        "dose_maxima": "não se aplica",
+        "contraindicacoes": [
+          "vômitos incoercíveis",
+          "rebaixamento de consciência",
+          "íleo paralítico",
+          "choque"
+        ],
+        "efeitos_adversos": [
+          "náusea por volume rápido",
+          "distensão abdominal"
+        ],
+        "apresentacoes": [
+          "sachê 27,9 g para 1 L de água",
+          "solução pronta 500 mL",
+          "sachê pediátrico para 200 mL"
+        ],
+        "preparo": "Diluir o sachê em 1 L de água potável; não usar refrigerante nem água açucarada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "diurese horária",
+          "turgor cutâneo",
+          "sede",
+          "sódio se desidratação grave"
+        ],
+        "ajuste_renal": "Sem ajuste; cautela em anúria",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reidratar antes de coletar exames e antes do antibiótico; a SRO não trata a invasão, mas evita a morte por desidratação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide",
+        "agente": "cloreto de sódio 0,9% (SF)",
+        "papel": "primeira_linha",
+        "indicacao": "desidratação moderada a grave, vômitos incoercíveis ou choque",
+        "dose": "30 mL/kg em bolus, repetido conforme resposta",
+        "unidade": "mL/kg",
+        "via": "IV",
+        "frequencia": "bolus e reavaliação a cada 500 a 1.000 mL",
+        "duracao": "até perfusão e diurese restabelecidas",
+        "dose_maxima": "individualizar pela resposta hemodinâmica",
+        "contraindicacoes": [
+          "insuficiência cardíaca descompensada",
+          "edema agudo de pulmão"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga volêmica",
+          "acidose hiperclorêmica",
+          "hiponatremia dilucional"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL",
+          "frasco 250 mL"
+        ],
+        "preparo": "Uso direto; acesso periférico calibroso 14 a 16 G",
+        "tempo_infusao": "bolus rápido em 15 a 30 min, reavaliando pressão e perfusão",
+        "monitorizacao": [
+          "pressão arterial",
+          "frequência cardíaca",
+          "ausculta pulmonar",
+          "diurese",
+          "lactato"
+        ],
+        "ajuste_renal": "Sem ajuste de dose; monitorar sobrecarga em oligúria",
+        "ajuste_hepatico": "Cautela em cirrose com ascite",
+        "observacoes": "Ringer lactato é alternativa quando há acidose metabólica; reavaliar após cada bolus para não hiperhidratar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ATLS/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "fluorquinolona",
+        "agente": "ciprofloxacino",
+        "papel": "primeira_linha",
+        "indicacao": "disenteria bacteriana leve a moderada em adulto, sem sinais de gravidade",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "3 dias",
+        "dose_maxima": "1.000 mg/dia",
+        "contraindicacoes": [
+          "gestação",
+          "menores de 18 anos",
+          "tendinopatia prévia",
+          "miastenia gravis",
+          "síndrome do QT longo"
+        ],
+        "efeitos_adversos": [
+          "tendinite e ruptura de tendão",
+          "neuropatia periférica",
+          "prolongamento de QT",
+          "diarreia por C. difficile"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 250 mg",
+          "bolsa IV 400 mg/200 mL",
+          "solução injetável 2 mg/mL"
+        ],
+        "preparo": "VO uso direto; IV infundir a bolsa sem diluição adicional",
+        "tempo_infusao": "60 minutos (via IV); não se aplica por via oral",
+        "monitorizacao": [
+          "dor e edema de tendão de Aquiles",
+          "padrão de diarreia",
+          "ECG se cardiopata ou QT longo",
+          "creatinina"
+        ],
+        "ajuste_renal": "ClCr 30 a 59 mL/min: 250 a 500 mg 12/12 h; ClCr menor que 30: 250 a 500 mg 1x/dia",
+        "ajuste_hepatico": "Sem ajuste em hepatopatia leve a moderada",
+        "observacoes": "Não usar em suspeita de E. coli O157; no Brasil a resistência a quinolona em Campylobacter é alta, o que justifica troca se falha em 72 h",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA",
+        "claim_id": null
+      },
+      {
+        "classe": "macrolideo",
+        "agente": "azitromicina",
+        "papel": "alternativa",
+        "indicacao": "disenteria em gestante, criança, falha de quinolona ou suspeita de Campylobacter",
+        "dose": "1 g (criança 20 mg/kg)",
+        "unidade": "g",
+        "via": "VO",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "1 g",
+        "contraindicacoes": [
+          "alergia a macrolídeo",
+          "síndrome do QT longo",
+          "uso concomitante de ondansetrona em dose alta"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "dor abdominal",
+          "diarreia",
+          "prolongamento de QT"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 600 mg",
+          "suspensão 200 mg/5 mL",
+          "frasco IV 500 mg"
+        ],
+        "preparo": "VO uso direto; suspensão reconstituir com água filtrada conforme bula",
+        "tempo_infusao": "não se aplica (via oral); IV em 60 minutos",
+        "monitorizacao": [
+          "ECG se cardiopata",
+          "resolução da febre em 48 h",
+          "número de evacuações"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Cautela em hepatopatia grave; evitar em colestase",
+        "observacoes": "Primeira escolha em gestante com disenteria; a dose única é vantagem quando a adesão é incerta",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_terceira_geracao",
+        "agente": "ceftriaxona",
+        "papel": "condicional",
+        "indicacao": "disenteria grave, toxemia, sepse, bacteremia suspeita ou via oral impossível",
+        "dose": "2 g (criança 50 a 75 mg/kg)",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina",
+          "anafilaxia prévia a penicilina",
+          "hiperbilirrubinemia neonatal",
+          "uso de solução com cálcio em neonato"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "colite por C. difficile",
+          "barro biliar"
+        ],
+        "apresentacoes": [
+          "frasco 1 g",
+          "frasco 2 g",
+          "solução injetável 1 g/10 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água estéril; diluir em 50 a 100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "função hepática",
+          "hemograma",
+          "sinais de melhora clínica em 48 h"
+        ],
+        "ajuste_renal": "Sem ajuste até ClCr 10 mL/min; em diálise, dose máxima 2 g/dia",
+        "ajuste_hepatico": "Sem ajuste isolado; se renal e hepático graves, não passar de 2 g/dia",
+        "observacoes": "Coletar hemoculturas antes da primeira dose; não é necessário em disenteria leve de paciente hígido",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA",
+        "claim_id": null
+      },
+      {
+        "classe": "nitroimidazol",
+        "agente": "metronidazol",
+        "papel": "condicional",
+        "indicacao": "amebíase intestinal invasiva confirmada ou alta suspeita",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "1.500 mg/dia",
+        "contraindicacoes": [
+          "primeiro trimestre de gestação",
+          "alergia a nitroimidazol",
+          "uso de dissulfiram",
+          "consumo de álcool"
+        ],
+        "efeitos_adversos": [
+          "gosto metálico",
+          "náusea",
+          "cefaleia",
+          "urina escura",
+          "neuropatia periférica em uso prolongado"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg",
+          "comprimido 400 mg",
+          "solução injetável 5 mg/mL (100 mL)",
+          "suspensão 40 mg/mL"
+        ],
+        "preparo": "VO uso direto com alimento; IV infundir a solução pronta sem diluição",
+        "tempo_infusao": "30 a 60 minutos (via IV)",
+        "monitorizacao": [
+          "resolução da diarreia e do tenesmo",
+          "sintomas neurológicos periféricos",
+          "função hepática"
+        ],
+        "ajuste_renal": "Sem ajuste; reduzir em diálise conforme prática local",
+        "ajuste_hepatico": "Reduzir para 250 mg 8/8 h em Child C",
+        "observacoes": "Após o amebicida tecidual, associar amebicida luminal (teclozana ou paromomicina) para eliminar cistos e evitar recidiva",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/OMS",
+        "claim_id": null
+      },
+      {
+        "classe": "nitroimidazol",
+        "agente": "secnidazol",
+        "papel": "alternativa",
+        "indicacao": "amebíase intestinal quando se busca dose única e melhor adesão",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "VO",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "2 g",
+        "contraindicacoes": [
+          "primeiro trimestre de gestação",
+          "alergia a nitroimidazol",
+          "consumo de álcool"
+        ],
+        "efeitos_adversos": [
+          "gosto metálico",
+          "náusea",
+          "cefaleia",
+          "urina escura"
+        ],
+        "apresentacoes": [
+          "comprimido 1 g",
+          "comprimido 500 mg",
+          "suspensão 200 mg/5 mL"
+        ],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "resolução da diarreia",
+          "eventos gastrointestinais",
+          "teste parasitológico de controle"
+        ],
+        "ajuste_renal": "Sem ajuste em dose única",
+        "ajuste_hepatico": "Reduzir em hepatopatia grave",
+        "observacoes": "Não ingerir álcool por 72 h; manter o amebicida luminal após a dose tecidual",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_antagonista_5ht3",
+        "agente": "ondansetrona",
+        "papel": "alternativa",
+        "indicacao": "vômitos que impedem a reidratação oral na disenteria",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h se necessário",
+        "duracao": "até 24 a 48 h",
+        "dose_maxima": "16 mg/dia",
+        "contraindicacoes": [
+          "síndrome do QT longo",
+          "uso concomitante de apomorfina"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "constipação",
+          "prolongamento de QT"
+        ],
+        "apresentacoes": [
+          "comprimido 4 mg",
+          "comprimido 8 mg",
+          "ampola 2 mg/mL (2 mL e 4 mL)",
+          "solução oral 4 mg/5 mL"
+        ],
+        "preparo": "IV direto ou diluído em 50 mL de SF 0,9%; VO sem preparo",
+        "tempo_infusao": "2 a 5 minutos (IV lento)",
+        "monitorizacao": [
+          "ECG se cardiopata ou QT longo",
+          "potássio e magnésio",
+          "número de vômitos"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em Child C",
+        "observacoes": "Não seda e não causa distonia; libera a via oral para a SRO",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antipiretico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "febre acima de 38,5 °C ou cólica abdominal incapacitante na disenteria",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h se necessário",
+        "duracao": "até 3 dias",
+        "dose_maxima": "3.000 mg/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave",
+          "uso crônico de álcool"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose excessiva",
+          "náusea",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "frasco IV 10 mg/mL"
+        ],
+        "preparo": "Uso direto (VO); IV infundir o frasco sem diluição",
+        "tempo_infusao": "15 minutos (via IV)",
+        "monitorizacao": [
+          "temperatura",
+          "dor",
+          "dose total diária somada de todas as fontes",
+          "TGO e TGP se uso prolongado"
+        ],
+        "ajuste_renal": "ClCr menor que 30: intervalo de 8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia leve a moderada; evitar em Child C",
+        "observacoes": "Evitar AINE na disenteria: piora a lesão de mucosa e o risco de sangramento e de injúria renal",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Hidratação oral precoce e contínua",
+        "detalhe": "Iniciar SRO antes de exames e de antibiótico; 200 a 400 mL após cada evacuação líquida, em colheradas"
+      },
+      {
+        "medida": "Controle de diurese e peso",
+        "detalhe": "Registrar volume urinário e peso na admissão e a cada 12 h no paciente internado"
+      },
+      {
+        "medida": "Isolamento de contato e higiene de mãos",
+        "detalhe": "Álcool gel e sabão após cada troca; material de uso individual; precaução de contato até 48 h sem diarreia"
+      },
+      {
+        "medida": "Afastamento de manipulador de alimentos",
+        "detalhe": "Suspender a atividade até 48 h após a última evacuação e comprovar coprocultura negativa em surto"
+      },
+      {
+        "medida": "Notificação compulsória",
+        "detalhe": "Surto, cólera, shigelose e febre tifoide são de notificação imediata à vigilância sanitária"
+      },
+      {
+        "medida": "Dieta fracionada e pobre em resíduos na fase aguda",
+        "detalhe": "Arroz, batata, torrada e caldo salgado; reintroduzir leite e gordura após 48 h sem sangue"
+      },
+      {
+        "medida": "Proibição formal de antidiarreico",
+        "detalhe": "Registrar no prontuário a orientação de não usar loperamida nem outro antidiarreico, pelo risco de megacólon tóxico"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Coprocultura com antibiograma e parasitológico de fezes",
+        "indicacao": "Disenteria grave, imunossuprimido, gestante, surto, falha de tratamento ou disenteria persistente",
+        "tecnica": "Coletar 2 a 3 amostras em dias distintos ou swab retal; solicitar pesquisa de Salmonella, Shigella, Campylobacter, E. coli e Entamoeba histolytica",
+        "complicacoes": "Atraso de conduta quando pedido sem indicação; resultado negativo não exclui amebíase"
+      },
+      {
+        "nome": "Reidratação venosa",
+        "indicacao": "Desidratação moderada a grave, vômito incoercível, choque ou via oral impossível",
+        "tecnica": "Acesso periférico 14 a 16 G; SF 0,9% 30 mL/kg em bolus com reavaliação de perfusão, diurese e ausculta após cada volume",
+        "complicacoes": "Sobrecarga volêmica, hiponatremia dilucional, flebite, extravasamento"
+      },
+      {
+        "nome": "Hemoculturas antes do antibiótico",
+        "indicacao": "Febre alta com calafrios, toxemia, imunossupressão ou suspeita de bacteremia",
+        "tecnica": "Dois pares de frascos de sítios distintos, 10 mL por frasco, antes da primeira dose de ceftriaxona",
+        "complicacoes": "Contaminação de coleta; não deve atrasar o antibiótico em choque"
+      },
+      {
+        "nome": "Colonoscopia com biópsia",
+        "indicacao": "Disenteria recorrente, disenteria crônica, suspeita de doença inflamatória intestinal ou dúvida com amebíase",
+        "tecnica": "Exame com sedação; biópsias seriadas de cólon direito e esquerdo, incluindo mucosa aparentemente normal; enviar material para histologia e pesquisa de ameba",
+        "complicacoes": "Perfuração, sangramento, sedação em paciente desidratado, desencadeamento de megacólon"
+      },
+      {
+        "nome": "Teste molecular entérico em painel",
+        "indicacao": "Disenteria com dúvida etiológica, imunossuprimido ou surto institucional",
+        "tecnica": "Amostra única de fezes em meio de transporte; painel multiplex para bactérias, vírus e parasitas",
+        "complicacoes": "Detecção de colonização sem doença; custo elevado e disponibilidade restrita"
+      }
+    ],
+    "metas": [
+      "Diurese maior ou igual a 0,5 mL/kg/h em 6 h de reidratação",
+      "Temperatura abaixo de 38 °C em 48 h de antibiótico adequado",
+      "Redução do tenesmo e do sangue nas fezes em 48 a 72 h",
+      "Sódio entre 135 e 145 mEq/L e potássio entre 3,5 e 5 mEq/L",
+      "Ausência de critérios de síndrome hemolítico-urêmica: plaquetas acima de 150.000, creatinina estável, sem esquizócitos",
+      "Alta com coprocultura solicitada, orientação de sinais de retorno e notificação quando indicada"
+    ],
+    "fluxo": [
+      "Classificar: é disenteria? sangue, muco, febre e tenesmo em conjunto",
+      "Avaliar gravidade: sinais vitais, perfusão, diurese, toxemia e abdome",
+      "Hidratar: SRO se tolera via oral; SF 0,9% em bolus se desidratação grave, vômito ou choque",
+      "Colher coprocultura e hemoculturas quando grave, imunossuprimido, gestante ou surto",
+      "Excluir E. coli O157 antes de antibiótico se houver cólica intensa com pouco febre, surto ou carne malpassada",
+      "Escolher antibiótico: ciprofloxacino 3 dias na disenteria leve; azitromicina em gestante, criança e falha de quinolona; ceftriaxona se grave",
+      "Reavaliar em 48 a 72 h: sem melhora, rever agente (Campylobacter, ameba ou DII) e trocar o esquema",
+      "Alta com SRO domiciliar, proibição de antidiarreico, sinais de retorno por escrito e seguimento em 72 h"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "Azitromicina 1 g dose única; nunca quinolona; hidratar cedo e avaliar vitalidade fetal",
+        "alerta": "Desidratação e febre aumentam risco de parto prematuro"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "Limiar menor para hidratação venosa e internação; checar creatinina e eletrólitos",
+        "alerta": "Desidratação, delirium e injúria renal rápidos"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "Internar, coprocultura ampliada, hemoculturas e ceftriaxona IV empírica",
+        "alerta": "Bacteremia e sepse por agente entérico"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Ajustar ciprofloxacino ao clearance; evitar AINE e contraste; reidratar com vigilância de sobrecarga",
+        "alerta": "Toxicidade por acúmulo e progressão para SHU"
+      },
+      {
+        "populacao": "crianca",
+        "ajuste": "Azitromicina 20 mg/kg dose única ou ceftriaxona 50 a 75 mg/kg/dia; zinco 20 mg/dia por 10 a 14 dias",
+        "alerta": "Quinolona é contraindicada e antidiarreico é proscrito"
+      },
+      {
+        "populacao": "cardiopata",
+        "ajuste": "Evitar quinolona e azitromicina em QT longo; hidratar fracionado",
+        "alerta": "Arritmia por QT e edema agudo de pulmão"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "hemograma com plaquetas e esfregaço",
+          "indicacao": "todo paciente com disenteria moderada a grave",
+          "o_que_muda": "detecta anemia hemolítica e plaquetopenia da SHU e orienta internação"
+        },
+        {
+          "nome": "creatinina, ureia e eletrólitos",
+          "indicacao": "desidratação, oligúria, idoso e uso de quinolona",
+          "o_que_muda": "ajuste de dose e decisão de hidratação venosa"
+        },
+        {
+          "nome": "coprocultura com antibiograma",
+          "indicacao": "disenteria grave, falha terapêutica, surto, imunossuprimido e gestante",
+          "o_que_muda": "escolha e troca do antibiótico"
+        },
+        {
+          "nome": "parasitológico de fezes e antígeno de Entamoeba",
+          "indicacao": "disenteria com epidemiologia de área endêmica, muco sem febre alta ou disenteria persistente",
+          "o_que_muda": "indica metronidazol ou secnidazol em vez de antibiótico"
+        },
+        {
+          "nome": "hemoculturas",
+          "indicacao": "febre alta com calafrios, toxemia e imunossupressão",
+          "o_que_muda": "confirma bacteremia e orienta duração do tratamento"
+        },
+        {
+          "nome": "tomografia de abdome",
+          "indicacao": "abdome com defesa, distensão ou suspeita de megacólon",
+          "o_que_muda": "indica cirurgia ou internação em unidade crítica"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "coprocultura de rotina em disenteria leve de adulto hígido",
+          "motivo": "não muda a conduta inicial e atrasa a alta"
+        },
+        {
+          "exame": "colonoscopia na fase aguda grave",
+          "motivo": "risco de perfuração e de megacólon tóxico"
+        },
+        {
+          "exame": "sorologia para amebíase",
+          "motivo": "não distingue infecção atual de passada e não deve guiar tratamento"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "beber SRO em colheradas após cada evacuação",
+        "manter alimentação leve e fracionada",
+        "lavar as mãos e higienizar o banheiro",
+        "retornar imediatamente se sangue aumentar, febre persistir ou urina diminuir",
+        "completar o antibiótico no prazo prescrito"
+      ],
+      "evitar": [
+        "loperamida e qualquer antidiarreico",
+        "AINE e ácido acetilsalicílico",
+        "antibiótico por conta própria",
+        "alimento cru, leite não pasteurizado e água de origem duvidosa",
+        "preparar alimentos para outras pessoas durante a diarreia"
+      ],
+      "retorno": [
+        "sangue vivo e abundante nas fezes",
+        "febre acima de 38,5 °C por mais de 48 h",
+        "ausência de urina por 8 h",
+        "dor abdominal intensa com barriga distendida",
+        "palidez, manchas na pele ou confusão"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "ciprofloxacino",
+        "efeitos": [
+          "tendinite",
+          "neuropatia periférica",
+          "prolongamento de QT",
+          "C. difficile"
+        ],
+        "observacao": "Suspender ao primeiro sinal de dor tendínea ou parestesia"
+      },
+      {
+        "agente": "azitromicina",
+        "efeitos": [
+          "náusea",
+          "prolongamento de QT"
+        ],
+        "observacao": "ECG se cardiopata ou uso concomitante de ondansetrona"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "rash",
+          "diarreia por C. difficile",
+          "barro biliar"
+        ],
+        "observacao": "Suspender se diarreia nova após melhora ou icterícia"
+      },
+      {
+        "agente": "metronidazol",
+        "efeitos": [
+          "gosto metálico",
+          "neuropatia periférica",
+          "urina escura"
+        ],
+        "observacao": "Suspender se parestesia; proibir álcool durante e por 72 h após"
+      },
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade"
+        ],
+        "observacao": "Somar todas as fontes e não exceder 3 g/dia"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação",
+      "Tendinopatia por quinolona: suspender, imobilizar e avaliar ruptura",
+      "Diarreia atribuída a C. difficile após antibiótico: pesquisar toxina e não prescrever novo antidiarreico",
+      "Neuropatia por metronidazol: suspender e substituir por secnidazol ou outro esquema",
+      "Reação alérgica a betalactâmico: trocar para azitromicina ou quádruplo sem betalactâmico conforme gravidade"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "ciprofloxacino 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "3 dias",
+            "condicao": "disenteria bacteriana leve a moderada em adulto",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "solução de reidratação oral",
+            "dose": "1 sachê para 1 L",
+            "via": "VO",
+            "frequencia": "após cada evacuação líquida",
+            "duracao": "3 dias",
+            "condicao": "reidratação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se febre ou dor",
+            "duracao": "3 dias",
+            "condicao": "febre e cólica",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "SF 0,9%",
+            "dose": "30 mL/kg",
+            "via": "IV",
+            "frequencia": "bolus com reavaliação",
+            "monitorizacao": "diurese, ausculta e pressão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ceftriaxona 2 g",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "duracao": "3 a 5 dias",
+            "monitorizacao": "função hepática e melhora clínica",
+            "condicao": "disenteria grave ou sepse",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona 4 mg",
+            "dose": "4 mg",
+            "via": "IV",
+            "frequencia": "8/8 h se vômito",
+            "monitorizacao": "QT",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma com plaquetas",
+          "creatinina",
+          "eletrólitos",
+          "coprocultura",
+          "parasitológico de fezes",
+          "hemoculturas",
+          "gasometria",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de disenteria, necessitando de afastamento das atividades até 48 horas após a última evacuação com sangue.",
+        "dias": 3,
+        "cid": null,
+        "observacao": "manipulador de alimentos só retorna com coprocultura negativa"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com disenteria, número de evacuações, presença de sangue e muco, febre, sinais de desidratação, exames coletados, antibiótico instituído e resposta em 72 horas."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "número de evacuações",
+        "sangue e muco",
+        "tenesmo",
+        "febre",
+        "vômitos",
+        "diurese",
+        "alimento suspeito",
+        "viagem",
+        "antibiótico recente",
+        "diarreia recorrente prévia"
+      ],
+      "texto_template": "Paciente refere diarreia há __ dias, __ evacuações/dia, com/sem sangue e muco, tenesmo __, febre __, vômitos __, diurese __, alimento suspeito __, viagem __, antibiótico recente __ e episódios prévios de diarreia com muco __."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "estado geral e perfusão",
+        "turgor e mucosas",
+        "abdome com defesa e distensão",
+        "toque retal",
+        "diurese",
+        "nível de consciência"
+      ],
+      "texto_template": "Sinais vitais, perfusão, mucosas, abdome com pesquisa de defesa e distensão, toque retal e diurese."
+    },
+    "referencias": [
+      {
+        "tipo": "oms",
+        "o_que_verificar": "manejo da disenteria e reidratação",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_infectologia",
+        "o_que_verificar": "indicação de antibiótico e resistência local",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e bulas",
+        "verificar": true
+      },
+      {
+        "tipo": "vigilancia_epidemiologica",
+        "o_que_verificar": "lista de notificação compulsória e surtos",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GI18-01",
+        "tipo": "antidiarreico",
+        "gatilho": "loperamida ou antidiarreico prescrito em disenteria",
+        "severidade": "grave",
+        "mensagem": "Antidiarreico é proscrito na disenteria: risco de megacólon tóxico e de morte.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI18-02",
+        "tipo": "shiga",
+        "gatilho": "antibiótico prescrito com suspeita de E. coli O157",
+        "severidade": "grave",
+        "mensagem": "Antibiótico na suspeita de E. coli O157 aumenta o risco de síndrome hemolítico-urêmica.",
+        "acao": "bloquear antibiótico e sugerir hidratação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI18-03",
+        "tipo": "sepse",
+        "gatilho": "hipotensão, confusão ou diurese ausente em disenteria",
+        "severidade": "grave",
+        "mensagem": "Disenteria com sepse: ressuscitação, hemoculturas e antibiótico IV imediato.",
+        "acao": "acionar sala vermelha",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI18-04",
+        "tipo": "quinolona_gestante",
+        "gatilho": "ciprofloxacino prescrito em gestante ou menor de 18 anos",
+        "severidade": "grave",
+        "mensagem": "Quinolona contraindicada na gestação e na infância: usar azitromicina.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI18-05",
+        "tipo": "aine",
+        "gatilho": "AINE prescrito em disenteria",
+        "severidade": "precaucao",
+        "mensagem": "AINE piora a lesão de mucosa e o risco de sangramento e de injúria renal.",
+        "acao": "alertar e sugerir paracetamol",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GI18-06",
+        "tipo": "notificacao",
+        "gatilho": "surto, cólera ou shigelose",
+        "severidade": "precaucao",
+        "mensagem": "Caso sujeito a notificação compulsória: comunicar a vigilância sanitária.",
+        "acao": "abrir notificação",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "OMS",
+        "ANVISA",
+        "IDSA"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

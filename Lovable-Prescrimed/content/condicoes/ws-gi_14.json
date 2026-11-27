@@ -1,0 +1,544 @@
+{
+  "id": "ws-gi_14",
+  "nome": "Apendicite suspeita",
+  "cat": "Emergência",
+  "alias": "apendicite suspeita apendicite dor na fossa iliaca direita apendicite aguda apendicite nao complicada plastrao apendicular escore de alvarado",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-14_apendicite.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] sociedade_cirurgia: indicação cirúrgica e antibiótico perioperatório",
+      "[verificar] protocolo_institucional: fluxo de abdome agudo e tempo porta-cirurgia",
+      "[verificar] diretriz_radiologia: escolha de imagem por faixa etária e gestação",
+      "[verificar] anvisa: apresentações, diluições e bulas"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-14 em 2026-11-27",
+    "fundido_workspace": "GI-14 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: defesa muscular ou descompressão dolorosa (Blumberg) -> cirurgia de urgência, antibiótico e ressuscitação; hipotensão, taquicardia ou confusão -> sala vermelha, volume, antibiótico na primeira hora; febre alta com toxemia ou calafrios -> tomografia e avaliação cirúrgica imediata; massa palpável em fossa ilíaca direita -> tomografia e drenagem percutânea. 1) Triagem: sinais vitais, exame abdominal e teste de gravidez em idade fértil 2) Classificar: peritonite ou instabilidade? Se sim, sala vermelha, antibiótico e cirurgia imediata 3) Escore de Alvarado e hipótese: típica, duvidosa ou complicada 4) Definir imagem por grupo: USG em criança e mulher, TC no adulto e idoso, RM na gestante 5) Iniciar antibiótico e analgesia na primeira hora, sem esperar o exame de imagem 6) Chamar cirurgia: apendicectomia laparoscópica é o padrão; aberta se peritonite ou instabilidade 7) Caso selecionado não complicado com recusa ou alto risco: antibiótico IV 24-48 h e reavaliação clínica e por imagem 8) Falha do conservador, piora da dor ou nova febre: cirurgia sem novo atraso 9) Alta só com cirurgia comunicada, reavaliação agendada e sinais de retorno por escrito",
+  "redFlags": [
+    "defesa muscular ou descompressão dolorosa (Blumberg) -> cirurgia de urgência, antibiótico e ressuscitação",
+    "hipotensão, taquicardia ou confusão -> sala vermelha, volume, antibiótico na primeira hora",
+    "febre alta com toxemia ou calafrios -> tomografia e avaliação cirúrgica imediata",
+    "massa palpável em fossa ilíaca direita -> tomografia e drenagem percutânea",
+    "idade fértil sem teste de gravidez -> beta-hCG antes de imagem e antibiótico",
+    "dor com analgesia e melhora aparente -> reavaliação seriada; não dar alta",
+    "íleo, distensão e parada de eliminação de gases -> tomografia e cirurgia"
+  ],
+  "naoUsar": [
+    "alergia a cefalosporina",
+    "neonato com hiperbilirrubinemia",
+    "infusão simultânea com solução contendo cálcio em neonato",
+    "alergia a nitroimidazol",
+    "ingesta de álcool",
+    "primeiro trimestre da gestação (evitar)",
+    "anafilaxia prévia a penicilina",
+    "depressão respiratória"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "permanecer em jejum até a definição cirúrgica"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "laxante, enema ou chá laxativo"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina inibidor betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "875/125 mg. Via VO. 12/12 h. 7 dias.",
+            "posTodas": true,
+            "motivo": "fase oral do tratamento conservador de apendicite não complicada selecionada (condicional) fase oral do tratamento conservador de apendicite não complicada",
+            "nota": "Uso direto, com alimento para melhorar absorção e reduzir diarreia - monitorar: diarreia; monitorar: função hepática; monitorar: resolução de dor e febre em 48-72 h",
+            "dose": {
+              "texto": "875/125 mg; 12/12 h; 7 dias; max. 1.750/250 mg/dia",
+              "status": "ok",
+              "valor": 125,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Jejum oral com hidratação venosa",
+              "ap": "",
+              "q": "",
+              "pos": "Nada por boca desde a suspeita até a definição cirúrgica; manter Ringer lactato em acesso calibroso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Reavaliação seriada pelo mesmo examinador",
+              "ap": "",
+              "q": "",
+              "pos": "Exame abdominal a cada 1–2 h enquanto aguarda imagem ou cirurgia; registrar dor, defesa e temperatura"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Proibição de laxante, enema e antiespasmódico",
+              "ap": "",
+              "q": "",
+              "pos": "Aumentam risco de perfuração e mascaram a progressão do quadro"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Dieta zero e sonda nasogástrica só se vômito incoercível",
+              "ap": "",
+              "q": "",
+              "pos": "Sonda não é rotina; distensão e íleo melhoram com descompressão apenas quando há vômito persistente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Coleta de exames antes do antibiótico",
+              "ap": "",
+              "q": "",
+              "pos": "Hemograma, PCR, beta-hCG e urina tipo 1 colhidos na chegada, sem atrasar a primeira dose"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Comunicação formal com a equipe cirúrgica",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar hora do contato, nome do cirurgião e conduta definida; não liberar sem parecer registrado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Profilaxia de tromboembolismo",
+              "ap": "",
+              "q": "",
+              "pos": "Enoxaparina 40 mg SC 1x/dia em paciente acamado, se não houver sangramento ativo"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-14"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cefalosporina 3a geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "cobertura de Gram-negativos na apendicite suspeita, em associação ao metronidazol (1a linha)",
+            "nota": "Reconstituir em 10 mL de água estéril; diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: função renal; monitorar: diarreia; monitorar: rash cutâneo; monitorar: sinais de infecção de ferida · NÃO: alergia a cefalosporina; neonato com hiperbilirrubinemia; infusão simultânea com solução contendo cálcio em neonato · Obs: No adulto pode ser infundida na mesma via do Ringer lactato desde que a linha seja lavada entre as infusões; em neonato, usar via separada",
+            "dose": {
+              "texto": "1 g; 1x/dia; até a cirurgia; 3-5 dias no tratamento conservador; max. 2 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "cobertura de anaeróbios, sempre associado a um Gram-negativo (1a linha)",
+            "nota": "Bolsa pronta para uso; não diluir nem adicionar drogas - monitorar: náusea e vômito; monitorar: gosto metálico; monitorar: INR se usar varfarina; monitorar: sintomas neurológicos em uso > 10 dias · NÃO: alergia a nitroimidazol; ingesta de álcool; primeiro trimestre da gestação (evitar) · Obs: Proibir álcool durante o tratamento e por 72 h após; não é necessário em monoterapia — sempre associar",
+            "dose": {
+              "texto": "500 mg; 8/8 h; até a cirurgia; 5-7 dias no tratamento conservador; max. 1,5 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1.5,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cefalosporina 1a geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "cefazolina",
+            "motivo": "profilaxia cirúrgica e apendicite não complicada de baixo risco (1a linha)",
+            "nota": "Reconstituir em 10 mL de água estéril; diluir em 50-100 mL de SF 0,9% - monitorar: rash; monitorar: local da punção; monitorar: função renal em uso prolongado · NÃO: alergia a cefalosporina; anafilaxia prévia a penicilina · Obs: Associar metronidazol para cobrir anaeróbio; é a opção de menor custo e menor impacto em resistência quando o risco de Pseudomonas é baixo · Renal: Dose de ataque 2 g; manutenção 1 g 8/8 h se ClCr < 35 mL/min",
+            "dose": {
+              "texto": "2 g; dose única 30-60 min antes da incisão; repetir a cada 4 h de cirurgia; dose única (profilaxia); até 24 h no pós-operatório; max. 6 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 6,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "a cada 4 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Opioide forte",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "morfina_ev",
+            "motivo": "dor moderada a intensa antes e após a definição cirúrgica (1a linha)",
+            "nota": "Diluir 10 mg em 10 mL de SF 0,9% (1 mg/mL) para titulação - monitorar: frequência respiratória; monitorar: escala de sedação; monitorar: PA; monitorar: náusea; monitorar: resposta à dor",
+            "dose": {
+              "texto": "2-4 mg; 4/4 h se necessário, titulado; até a cirurgia e nas primeiras 24-48 h de pós-operatório; max. titular conforme resposta e frequência respiratória",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 4,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético antagonista 5ht3",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "náusea e vômito que impedem exame ou hidratação oral (1a linha)",
+            "nota": "IV direto ou diluído em 50 mL de SF 0,9% - monitorar: QT em cardiopata ou com outras drogas que prolongam QT; monitorar: potássio e magnésio",
+            "dose": {
+              "texto": "4 mg; 8/8 h; até 24-48 h; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cristaloide balanceado",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ringer_lactato",
+              "n": "Ringer lactato",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "500-1.000 mL em bolus; depois 1-2 mL/kg/h. Via IV. Conforme resposta clínica. Até estabilização e retomada de dieta. Bolus em 15-30 minutos; manutenção contínua."
+            },
+            "motivo": "reposição volêmica no jejum e na sepse abdominal (1a linha)",
+            "nota": "Pronto para uso; não adicionar potássio na fase inicial - monitorar: diurese; monitorar: PA e FC; monitorar: ausculta pulmonar; monitorar: balanço hídrico; monitorar: sódio · NÃO: hipercalemia grave; insuficiência cardíaca descompensada; hipercalcemia · Obs: Preferir ao SF 0,9% em jejum prolongado; manter acesso calibroso e coletar exames antes do antibiótico · Renal: Cautela em oligúria; não suspender por creatinina isolada sem congestão",
+            "dose": {
+              "texto": "500-1.000 mL em bolus; depois 1-2 mL/kg/h; conforme resposta clínica; até estabilização e retomada de dieta; max. individualizar; reavaliar após cada bolus",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "dor leve a moderada e febre, como adjuvante para poupar opioide (alternativa) dor e febre",
+            "nota": "Uso direto por via oral; bolsa pronta para infusão IV - monitorar: dose total diária somada de todas as fontes; monitorar: TGP/TGO se uso > 3 dias; monitorar: intensidade da dor · NÃO: hepatopatia grave; alergia; desnutrição grave · Obs: Não mascara peritonite de forma clinicamente relevante e reduz a necessidade de opioide; conferir se há paracetamol em associação antigripal · Renal: 8/8 h se ClCr < 30 mL/min",
+            "dose": {
+              "texto": "1 g; 6/6 h; até 72 h; max. 4 g/dia (3 g/dia em hepatopatia, etilismo ou desnutrição)",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiemético procinético",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "vômito sem sinais de obstrução, quando ondansetrona indisponível (alternativa)",
+            "nota": "IV lento, sem diluição - monitorar: sintomas extrapiramidais; monitorar: QT; monitorar: nível de consciência",
+            "dose": {
+              "texto": "10 mg; 8/8 h; 24 h; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Lincosamida",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "clindamicina_ev",
+            "motivo": "alergia grave a beta-lactâmico, em associação com gentamicina (alternativa)",
+            "nota": "Diluir em 50-100 mL de SF 0,9%; nunca em bolus rápido - monitorar: diarreia e febre; monitorar: função hepática; monitorar: rash; monitorar: nível de consciência · NÃO: colite prévia por C. difficile; meningite; alergia a lincosamida · Obs: Associar gentamicina 5 mg/kg 1x/dia para cobrir Gram-negativos; alternativa é aztreonam + metronidazol",
+            "dose": {
+              "texto": "600 mg; 8/8 h; 7 dias; max. 2,7 g/dia",
+              "status": "ok",
+              "valor": 600,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2.7,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Penicilina inibidor betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "piperacilina_tazobactam",
+              "n": "Piperacilina-tazobactam",
+              "ap": "frasco 2,25 g (2 g + 0,25 g)",
+              "via": "IV",
+              "pos": "4,5 g. Via IV. 6/6 h. 7-10 dias conforme o foco. 30 minutos; 4 horas em infusão estendida em UTI."
+            },
+            "motivo": "apendicite complicada, peritonite difusa, sepse ou choque (condicional)",
+            "nota": "Reconstituir em 20 mL de água estéril; diluir em 100 mL de SF 0,9% - monitorar: creatinina; monitorar: potássio; monitorar: diarreia; monitorar: convulsão se ajuste renal inadequado · NÃO: alergia a penicilina; anafilaxia prévia a cefalosporina · Obs: Escolha quando há perfuração, abscesso roto ou instabilidade; cobrir também Pseudomonas e enterobactérias produtoras de ESBL · Renal: 2,25 g 6/6 h se ClCr 20–40 mL/min; 2,25 g 8/8 h se ClCr < 20; 2,25 g 12/12 h em diálise",
+            "dose": {
+              "texto": "4,5 g; 6/6 h; 7-10 dias conforme o foco; max. 18 g de piperacilina/dia",
+              "status": "ok",
+              "valor": 4.5,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 18,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-14",
+    "versao": "0.2.0",
+    "arquivo": "GI-14_apendicite.json",
+    "area": "Gastrointestinal",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

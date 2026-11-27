@@ -1,0 +1,571 @@
+{
+  "id": "ws-resp_11",
+  "nome": "Tosse aguda / bronquite",
+  "cat": "Respiratório/ORL",
+  "alias": "tosse aguda bronquite tosse bronquite tosse aguda catarro tosse subaguda tosse cronica tosse pos infecciosa",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (RESP-11_tosse.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de tosse, critérios de radiografia de tórax e esquema de coqueluche do serviço",
+      "[verificar] sociedade_pneumologia: investigação de tosse crônica e ordem do tratamento empírico (gotejamento, asma e refluxo)",
+      "[verificar] diretriz_internacional: papel do mel e do antitussígeno na tosse aguda, e critérios de tosse variante de asma",
+      "[verificar] ministerio_da_saude: definição de caso, notificação e quimioprofilaxia da coqueluche, e fluxo de tuberculose",
+      "[verificar] anvisa: apresentações, concentrações e restrições de idade dos xaropes e antitussígenos",
+      "[verificar] calendario_vacinacao: dTpa em gestante e contactantes, influenza e pneumococo"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "RESP-11 em 2026-11-27",
+    "fundido_workspace": "RESP-11 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: estridor ou respiração ruidosa em repouso -> não sedar, manter posição confortável, acionar via aérea e laringoscopia; dispneia, uso de musculatura acessória ou frequência respiratória de 30 rpm ou mais -> oximetria, raio-X de tórax e internação; cianose ou saturação abaixo de 92% em ar ambiente -> oxigênio titulado, gasometria e remoção imediata; hemoptise ou escarro com sangue -> raio-X, baciloscopia e tomografia; encaminhar no mesmo dia. 1) Classificar o tempo de tosse e registrar: menos de 3 semanas é aguda, de 3 a 8 semanas é subaguda e acima de 8 semanas é crônica 2) Procurar sinal de alarme e medir saturação, frequência respiratória, temperatura e ausculta em todo paciente 3) Com sinal de alarme, sair do fluxo de tosse simples: raio-X e exames dirigidos; estridor pede via aérea, hemoptise pede investigação de tuberculose e neoplasia, dispneia e hipoxemia pedem internação 4) Sem alarme e com tosse aguda, tratar como viral: mel, hidratação, umidificação e sintomático; não prescrever antibiótico; orientar retorno em 3 semanas 5) Tosse subaguda pós-infecciosa: afastar coqueluche pelos paroxismos, guincho e contato, manter sintomático e reavaliar em 4 a 8 semanas 6) Tosse crônica: revisar todos os medicamentos e suspender inibidor de ECA, trocando por bloqueador do receptor de angiotensina 7) Aplicar tratamento empírico sequencial de 2 a 8 semanas para gotejamento pós-nasal, asma e refluxo, uma causa por vez, com critério de resposta registrado 8) Reavalia",
+  "redFlags": [
+    "estridor ou respiração ruidosa em repouso -> não sedar, manter posição confortável, acionar via aérea e laringoscopia",
+    "dispneia, uso de musculatura acessória ou frequência respiratória de 30 rpm ou mais -> oximetria, raio-X de tórax e internação",
+    "cianose ou saturação abaixo de 92% em ar ambiente -> oxigênio titulado, gasometria e remoção imediata",
+    "hemoptise ou escarro com sangue -> raio-X, baciloscopia e tomografia; encaminhar no mesmo dia",
+    "imunossupressão por HIV, quimioterapia, corticoide prolongado ou transplante -> tomografia, investigação dirigida e internação se febre",
+    "emagrecimento acima de 5% em 3 meses ou sudorese noturna -> baciloscopia, teste molecular e imagem",
+    "febre por mais de 3 semanas -> investigação dirigida com hemograma, imagem e culturas",
+    "tosse acima de 8 semanas em tabagista ou ex-tabagista acima de 40 anos, ou mudança do padrão da tosse -> tomografia de tórax e espirometria"
+  ],
+  "naoUsar": [
+    "criança abaixo de 1 ano pelo risco de botulismo infantil",
+    "alergia a mel ou a componentes da colmeia",
+    "diabetes descompensado sem ajuste da dieta",
+    "arritmia grave não controlada",
+    "hipertireoidismo descompensado",
+    "hipersensibilidade ao fármaco",
+    "crise asmática isolada, porque não substitui o broncodilatador de resgate",
+    "tuberculose pulmonar ativa sem tratamento"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "beber líquidos ao longo do dia, salvo restrição cardíaca ou renal"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "antibiótico por conta própria ou guardado de outra infecção"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Demulcente natural",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "mel",
+            "pos": "5 mL (1 colher de chá). Via VO. Até 3 vezes ao dia, com dose obrigatória ao deitar. 3 a 7 dias.",
+            "posTodas": true,
+            "motivo": "tosse aguda ou subaguda em adulto e em criança acima de 1 ano, como sintomático de primeira escolha (1a linha) tosse aguda ou subaguda sem alarme, acima de 1 ano",
+            "nota": "Uso direto; pode ser diluído em chá morno, nunca em líquido fervente, para não perder a viscosidade que reveste a faringe - monitorar: glicemia capilar em diabético; monitorar: escore de tosse e sono na primeira semana; monitorar: sinais de alergia e tolerância gástrica · NÃO: criança abaixo de 1 ano pelo risco de botulismo infantil; alergia a mel ou a componentes da colmeia; diabetes descompensado sem ajuste da dieta · Obs: É o sintomático com melhor evidência para tosse aguda e reduz a tosse noturna. Nunca em menor de 1 ano. Não substitui a investigação de sinal de alarme e não deve atrasar a consulta de reavaliação",
+            "dose": {
+              "texto": "5 mL (1 colher de chá); até 3 vezes ao dia, com dose obrigatória ao deitar; 3 a 7 dias; max. 15 mL/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 15,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "3 vezes ao dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Broncodilatador beta-2 agonista",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_salbutamol_spray",
+            "pos": "2 jatos (200 mcg). Via inalatória. 4/4 h a 6/6 h sob demanda. 5 a 7 dias, ou enquanto houver sibilância.",
+            "posTodas": true,
+            "motivo": "tosse com sibilância, broncoespasmo associado ou tosse variante de asma (1a linha) sibilância ou tosse variante de asma",
+            "nota": "Aerossol: agitar e usar com espaçador. Nebulização: diluir 2,5 a 5 mg em 3 a 5 mL de soro fisiológico 0,9% - monitorar: frequência cardíaca e tremor; monitorar: saturação antes e depois da dose; monitorar: resposta do pico de fluxo; monitorar: potássio em uso repetido ou associado a corticoide",
+            "dose": {
+              "texto": "2 jatos (200 mcg); 4/4 h a 6/6 h sob demanda; 5 a 7 dias, ou enquanto houver sibilância; max. 12 jatos/dia (1.200 mcg)",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "jatos",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide inalatório",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_beclometasona",
+            "pos": "250 mcg. Via inalatória. 12/12 h. 8 a 12 semanas, com reavaliação em 4 e 8 semanas.",
+            "posTodas": true,
+            "motivo": "tosse variante de asma e tosse persistente com hiperreatividade brônquica (1a linha) tosse variante de asma confirmada ou suspeita",
+            "nota": "Agitar antes do uso, acoplar ao espaçador e bochechar com água e cuspir após cada inalação - monitorar: tosse, pico de fluxo e sintomas noturnos em 4 a 8 semanas; monitorar: candidíase oral e disfonia; monitorar: espirometria com prova broncodilatadora em 8 a 12 semanas; monitorar: crescimento e velocidade de crescimen",
+            "dose": {
+              "texto": "250 mcg; 12/12 h; 8 a 12 semanas, com reavaliação em 4 e 8 semanas; max. 1.000 mcg/dia",
+              "status": "ok",
+              "valor": 250,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1000,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "1 g. Via VO. 8/8 h. 5 a 7 dias, guiado por estabilidade clínica.",
+            "posTodas": true,
+            "motivo": "pneumonia bacteriana adquirida na comunidade confirmada ou provável, em tratamento ambulatorial (1a linha) pneumonia confirmada ou provável, sem comorbidade",
+            "nota": "Uso direto, com ou sem alimento; a suspensão é reconstituída com água filtrada conforme o rótulo - monitorar: febre, frequência respiratória e saturação em 48 a 72 h; monitorar: diarreia e sinais de colite; monitorar: rash cutâneo; monitorar: adesão ao esquema · NÃO: alergia a penicilina; anafilaxia prévia a betalactâmico; mononucleose infecciosa · Obs: Só para pneumonia com infiltrado ou ausculta focal — não para bronquite viral nem para tosse pós-infecciosa. Criança: 40 a 90 mg/kg/dia divididos 8/8 h, máximo de 3 g/dia · Renal: ClCr abaixo de 30 mL/min: 500 mg 8/8 h; em hemodiálise, administrar após a sessão",
+            "dose": {
+              "texto": "1 g; 8/8 h; 5 a 7 dias, guiado por estabilidade clínica; max. 3 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Inibidor de bomba de protons",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "omeprazol",
+            "pos": "40 mg. Via VO. 1 vez ao dia, 30 a 60 minutos antes do café da manhã. 8 semanas.",
+            "posTodas": true,
+            "motivo": "tosse por refluxo gastroesofágico suspeita ou confirmada, como teste terapêutico (1a linha) tosse por refluxo gastroesofágico",
+            "nota": "VO: engolir a cápsula inteira em jejum, sem abrir. IV: reconstituir em 10 mL e diluir em 100 mL de soro fisiológico - monitorar: resposta da tosse em 4 e 8 semanas; monitorar: magnésio se uso acima de 8 semanas; monitorar: diarreia; monitorar: interação com clopidogrel e varfarina · NÃO: alergia a benzimidazol; uso concomitante de nelfinavir; hipomagnesemia grave não corrigida · Obs: Teste terapêutico de 8 semanas: sem resposta, suspender e não manter IBP indefinidamente. Não usar 2 vezes ao dia de rotina. A tosse por refluxo melhora depois de 4 a 8 semanas, não em dias",
+            "dose": {
+              "texto": "40 mg; 1 vez ao dia, 30 a 60 minutos antes do café da manhã; 8 semanas; max. 80 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 80,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anti-histaminico H1 segunda geração",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "loratadina",
+            "pos": "10 mg. Via VO. 1 vez ao dia. 2 a 4 semanas.",
+            "posTodas": true,
+            "motivo": "tosse por síndrome de gotejamento pós-nasal em rinite alérgica ou rinite não alérgica (1a linha) gotejamento pós-nasal com rinite",
+            "nota": "Uso direto, com ou sem alimento - monitorar: sonolência diurna e desempenho ao volante; monitorar: resposta da coriza e da tosse em 2 semanas; monitorar: associação com descongestionante, que deve ser evitada em hipertenso · NÃO: hipersensibilidade ao fármaco; insuficiência hepática grave sem ajuste de intervalo · Obs: Associar sempre lavagem nasal com soro fisiológico. Criança acima de 2 anos e abaixo de 30 kg: 5 mg 1 vez ao dia. Evitar anti-histamínico de primeira geração, que seda e não é mais eficaz",
+            "dose": {
+              "texto": "10 mg; 1 vez ao dia; 2 a 4 semanas; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina com inibidor de betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "875 mg/125 mg. Via VO. 12/12 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "pneumonia em paciente com comorbidade (DPOC, diabetes, insuficiência cardíaca), tabagismo, antibiótico nos últimos 90 dias ou falha da amoxicilina (alternativa) pneumonia confirmada ou provável, sem comorbidade",
+            "nota": "Uso direto, no início da refeição para reduzir diarreia; suspensão reconstituída com água filtrada - monitorar: diarreia; monitorar: bilirrubinas e transaminases se prurido ou icterícia; monitorar: resposta clínica em 48 a 72 h; monitorar: rash · NÃO: alergia a penicilina; anafilaxia prévia a betalactâmico; mononucleose infecciosa · Obs: Só para pneumonia com infiltrado ou ausculta focal — não para bronquite viral nem para tosse pós-infecciosa. Criança: 40 a 90 mg/kg/dia divididos 8/8 h, máximo de 3 g/dia · Renal: ClCr abaixo de 30 mL/min: 500 mg 8/8 h; em hemodiálise, administrar após a sessão",
+            "dose": {
+              "texto": "875 mg/125 mg; 12/12 h; 5 a 7 dias; max. 1.750 mg/dia de amoxicilina",
+              "status": "ok",
+              "valor": 875,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1750,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antitussigeno central",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "dextrometorfano",
+              "n": "Dextrometorfano",
+              "ap": "xarope 3 mg/mL (120 mL)",
+              "q": "",
+              "pos": "15 mg. Via VO. 6/6 h ou 8/8 h. 3 a 5 dias."
+            },
+            "motivo": "tosse seca incapacitante que impede o sono, em adulto, sem expectoração, sem sibilância e sem sinal de alarme (condicional) tosse seca incapacitante em adulto, sem expectoração",
+            "nota": "Uso direto; medir com copo ou seringa graduada, nunca com colher de sopa - monitorar: nível de consciência e sonolência diurna; monitorar: frequência respiratória em idoso e em uso concomitante de benzodiazepínico ou opioide; monitorar: escore de tosse e sono; monitorar: agitação, tremor ou sudorese se associado a ISRS · NÃO: criança abaixo de 6 anos; uso de IMAO nos últimos 14 dias; tosse produtiva com retenção de secreção; asma ou DPOC com broncoespasmo; insuficiência respiratória · Obs: Só em tosse seca e por poucos dias. Não usar em criança pequena, em tosse com catarro nem em asmático. Não associa com anti-histamínico…",
+            "dose": {
+              "texto": "15 mg; 6/6 h ou 8/8 h; 3 a 5 dias; max. 120 mg/dia",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 120,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide sistêmico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisolona",
+            "pos": "40 mg. Via VO. 1 vez ao dia pela manhã. 5 dias, sem desmame.",
+            "posTodas": true,
+            "motivo": "exacerbação asmática com sibilância e queda do pico de fluxo, ou coqueluche grave com paroxismos incoercíveis (condicional)",
+            "nota": "VO: uso direto, de preferência com alimento pela manhã - monitorar: glicemia capilar; monitorar: pressão arterial; monitorar: sono, humor e agitação; monitorar: pico de fluxo e sintomas em 48 a 72 h · NÃO: infecção bacteriana não tratada; herpes zoster oftálmico; tuberculose ativa sem tratamento; diabetes descompensado sem monitorização · Obs: Não é rotina em bronquite aguda, tosse pós-viral ou tosse sem sibilância. Criança: 1 a 2 mg/kg/dia, máximo de 40 mg/dia. Curso de 5 dias não precisa de desmame",
+            "dose": {
+              "texto": "40 mg; 1 vez ao dia pela manhã; 5 dias, sem desmame; max. 60 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "paracetamol",
+            "pos": "500 a 750 mg. Via VO. 6/6 h. Até 3 dias.",
+            "posTodas": true,
+            "motivo": "febre acima de 38,5 °C ou dor de garganta ou pleurítica associada à tosse (condicional)",
+            "nota": "VO: uso direto. IV: infundir a solução pronta, sem diluir - monitorar: temperatura e dor; monitorar: soma da dose diária com produtos associados que contenham paracetamol; monitorar: transaminases se uso acima de 3 dias ou hepatopatia · NÃO: insuficiência hepática grave; hepatite ativa; alergia ao paracetamol · Obs: Preferir ao AINE, que não tem papel na tosse e aumenta risco renal e gastrointestinal. A dipirona não é escolha de rotina neste quadro: reservar para dor ou febre com indicação específica e vigiar hipotensão · Renal: ClCr abaixo de 30 mL/min: intervalo de 8/8 h",
+            "dose": {
+              "texto": "500 a 750 mg; 6/6 h; até 3 dias; max. 3 g/dia; 2 g/dia em hepatopatia, etilismo, desnutrição ou peso abaixo de 50 kg",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 750,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Mel como sintomático noturno",
+              "ap": "",
+              "q": "",
+              "pos": "5 mL puros ou diluídos em chá morno, até 3 vezes ao dia, com dose obrigatória ao deitar; em criança acima de 1 ano, 2,5 a 5 mL; nunca em menor de 1 ano pelo risco de botulismo"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Hidratação e umidificação do ambiente",
+              "ap": "",
+              "q": "",
+              "pos": "1,5 a 2 L de líquido por dia em adulto sem restrição cardíaca ou renal; umidificador ou bacia com água no quarto e banho quente antes de dormir; evitar ar-condicionado seco e ambiente com fumaça"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Lavagem nasal com soro fisiológico 0,9%",
+              "ap": "",
+              "q": "",
+              "pos": "5 a 10 mL por narina, 2 a 3 vezes ao dia, com seringa ou frasco de irrigação; reduz gotejamento pós-nasal e é o que sustenta o efeito do anti-histamínico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Cessação do tabagismo e retirada de irritantes",
+              "ap": "",
+              "q": "",
+              "pos": "Abordagem breve na consulta, com oferta de vareniclina, bupropiona ou reposição de nicotina e encaminhamento ao programa; orientar a evitar fumaça de segunda mão, perfumes, produtos de limpeza e poeira"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Medidas antirrefluxo",
+              "ap": "",
+              "q": "",
+              "pos": "Elevar a cabeceira da cama em 15 a 20 cm, não deitar nas 2 a 3 horas após a refeição, reduzir café, álcool, chocolate e gordura à noite e perder peso quando houver sobrepeso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Técnica inalatória com espaçador",
+              "ap": "",
+              "q": "",
+              "pos": "Demonstrar na consulta, com devolução do paciente, agitar antes do jato, coordenar a inspiração lenta e bochechar após o corticoide; sem técnica correta o tratamento da tosse variante de asma falha"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Diário de tosse e plano de reavaliação",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar frequência e horário da tosse, despertares noturnos e uso de resgate por 2 a 4 semanas; retorno agendado em 3 semanas para tosse aguda e em 4 a 8 semanas para tosse crônica, com data e critério de retorno por escrito"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Vacinação e isolamento na coqueluche",
+              "ap": "",
+              "q": "",
+              "pos": "Verificar influenza, COVID-19, dTpa e pneumococo conforme faixa etária e comorbidade; na suspeita de coqueluche, máscara cirúrgica, afastamento de escola ou trabalho por 5 dias de antibiótico e quimioprofilaxia dos contactantes domiciliares"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "RESP-11"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "azitromicina_ev",
+            "motivo": "coqueluche suspeita ou confirmada por Bordetella pertussis e quimioprofilaxia de contactantes domiciliares (1a linha) coqueluche suspeita ou confirmada",
+            "nota": "VO: uso direto, com ou sem alimento. IV: reconstituir em 4,8 mL de água e diluir em 250 mL de soro fisiológico 0,9% - monitorar: ECG e QT em cardiopata ou uso de outra droga que prolonga o QT; monitorar: potássio e magnésio; monitorar: diarreia; monitorar: transaminases se houver sintoma; monitorar: adesão ao isolament · NÃO: QT longo ou uso de outra droga que prolonga o QT; hipocalemia ou hipomagnesemia não corrigidas; alergia a macrolídeo; insuficiência hepática grave · Obs: Erradica a bactéria e interrompe a transmissão, mas não encurta a tosse paroxística já instalada. Iniciar até 3 semanas do início dos sintomas. Criança: 10…",
+            "dose": {
+              "texto": "500 mg no primeiro dia e 250 mg do segundo ao quinto dia; 1 vez ao dia; 5 dias; max. 500 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ws": {
+    "id": "RESP-11",
+    "versao": "0.2.0",
+    "arquivo": "RESP-11_tosse.json",
+    "area": "Respiratório/ORL",
+    "risco": "C",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

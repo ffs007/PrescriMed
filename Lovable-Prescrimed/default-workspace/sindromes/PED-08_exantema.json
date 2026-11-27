@@ -1,0 +1,1323 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-08",
+    "area": "Pediatria",
+    "nome": "Exantema febril",
+    "aliases": [
+      "exantema febril",
+      "sarampo",
+      "rubéola",
+      "escarlatina",
+      "varicela",
+      "exantema súbito",
+      "roséola infantil",
+      "mão-pé-boca",
+      "manchas e febre"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Exantema febril é um diagnóstico sindrômico: manchas ou vesículas na pele somadas a febre, sem dizer qual doença. O nome da síndrome é o ponto de partida, e o diagnóstico específico sai da combinação de quatro eixos — morfologia da lesão, distribuição, relação temporal entre febre e exantema e contexto epidemiológico, que inclui vacinação, contato e fármaco novo. Sarampo: pródromo de 3 a 4 dias com febre alta, tosse, coriza e conjuntivite, manchas de Koplik e exantema maculopapular cefalocaudal que confluencia no tronco e descama de forma furfurácea — notificação imediata. Rubéola: febre baixa, adenopatia retroauricular e occipital, exantema que desaparece em até 3 dias e artralgia, com risco fetal em gestante suscetível. Escarlatina: faringite com exantema áspero de início em pescoço e tórax, palidez perioral, língua em framboesa, linhas de Pastia e descamação laminar tardia de palmas e plantas. Varicela: vesículas em surtos sobre base eritematosa, prurido intenso, distribuição centrípeta e crostas. Exantema súbito: febre por 3 a 5 dias que cede e só então aparece o exantema, quase sempre abaixo de 2 anos. Mão-pé-boca: vesículas em boca, palmas e plantas, com desidratação como complicação principal. Dengue: exantema com a queda da febre, petéquias e prova do laço positiva. Farmacodermia: exantema 7 a 14 dias após o início de um fármaco, pruriginoso, com eosinofilia. O tratamento é suporte e antitérmico na maioria dos casos, com exceções precisas: penicilina ou amoxicilina na escarlatina, aciclovir na varicela de risco, vitamina A no sarampo, imunoglobulina e AAS em dose anti-inflamatória no Kawasaki sob especialista e ceftriaxona imediata no exantema petequial com toxemia. O que não se faz: AAS e AINE em varicela e dengue (risco de síndrome de Reye e de sangramento), corticoide em varicela, antibiótico em exantema viral e anti-histamínico usado como substituto da reavaliação do fármaco suspeito. Notificar faz parte da conduta: sarampo e rubéola são de notificação imediata, dengue e varicela são compulsórias e a escarlatina não é.",
+    "inclusao": [
+      "Criança com febre e exantema maculopapular, vesicular ou petequial de causa não esclarecida",
+      "Suspeita de sarampo, rubéola ou varicela em criança com vacinação incompleta ou contato conhecido",
+      "Exantema áspero com faringite, língua em framboesa e palidez perioral compatível com escarlatina",
+      "Exantema que surge após a defervescência em lactente ou pré-escolar, compatível com exantema súbito",
+      "Vesículas em boca, mãos e pés com odinofagia e risco de desidratação",
+      "Exantema com petéquias, prova do laço positiva ou sinais de alarme para dengue",
+      "Exantema surgido 7 a 14 dias após início de fármaco, com prurido ou eosinofilia",
+      "Febre há 5 dias ou mais com conjuntivite, alteração de lábios e língua, exantema e descamação de extremidades para investigação de Kawasaki"
+    ],
+    "exclusao": [
+      {
+        "situacao": "petéquias ou púrpura não branqueável com toxemia, hipotensão ou rebaixamento",
+        "fluxo": "purpura fulminans e meningococcemia — emergência, ceftriaxona imediata e UTI"
+      },
+      {
+        "situacao": "bolhas flácidas, descolamento epidérmico, mucosite intensa e sinal de Nikolsky positivo",
+        "fluxo": "síndrome de Stevens-Johnson ou necrólise epidérmica tóxica — hospitalização e unidade de queimados"
+      },
+      {
+        "situacao": "rigidez de nuca, convulsão, letargia ou fontanela abaulada com exantema",
+        "fluxo": "NEU-15 meningite — punção lombar e antibiótico empírico"
+      },
+      {
+        "situacao": "exantema vesicular dermatomal unilateral sem febre em criança vacinada",
+        "fluxo": "DERM-06 herpes-zóster — antiviral e analgesia"
+      },
+      {
+        "situacao": "urticária evanescente com angioedema, sem febre e sem toxemia",
+        "fluxo": "DERM-04 urticária aguda — anti-histamínico e investigação de gatilho"
+      },
+      {
+        "situacao": "exantema sem febre em criança com nova medicação, sem sinais de gravidade",
+        "fluxo": "farmacodermia leve — suspender o fármaco e observação"
+      },
+      {
+        "situacao": "descamação generalizada em lactente com eritema periorificial, diarreia e baixo ganho de peso",
+        "fluxo": "deficiência de zinco ou dermatite seborreica — tratamento dermatológico específico"
+      },
+      {
+        "situacao": "febre prolongada, hepatoesplenomegalia e citopenias sem exantema característico",
+        "fluxo": "síndrome inflamatória multissistêmica pediátrica ou leishmaniose — investigação hospitalar"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "petéquias ou púrpura não branqueáveis, principalmente em membros inferiores, com febre e toxemia",
+        "por_que": "meningococcemia com progressão para choque em horas",
+        "acao": "sala vermelha, acesso venoso, ceftriaxona imediata, isolamento de gotículas e UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "toxemia, prostração desproporcional à febre, hipotensão, enchimento capilar lento ou confusão",
+        "por_que": "sepse ou choque de qualquer etiologia, inclusive dengue grave",
+        "acao": "reidratação volêmica, antibiótico empírico, exames urgentes e monitorização contínua",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "bolhas flácidas, descolamento da pele, mucosite intensa, conjuntivite purulenta ou sinal de Nikolsky positivo",
+        "por_que": "síndrome de Stevens-Johnson ou necrólise epidérmica tóxica induzida por fármaco",
+        "acao": "suspender todos os fármacos não essenciais, hospitalizar, suporte de queimado e avaliação por dermatologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "febre há 5 dias ou mais com conjuntivite bilateral não purulenta, lábios fissurados, língua em framboesa, exantema polimorfo, adenopatia cervical acima de 1,5 cm e descamação de extremidades",
+        "por_que": "doença de Kawasaki com risco de aneurisma de artéria coronária",
+        "acao": "internar, colher hemograma, PCR, VHS, plaquetas, albumina e ecocardiograma, e iniciar imunoglobulina com AAS sob especialista",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "descamação laminar de palmas, plantas e extremidades após a fase aguda do exantema",
+        "por_que": "escarlatina não tratada ou Kawasaki, ambos com complicação possível",
+        "acao": "revisar o diagnóstico, confirmar estreptococo e reavaliar artérias coronárias se houver critério de Kawasaki",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "sarampo com dispneia, hipoxemia, convulsão, rebaixamento de consciência ou diarreia com desidratação",
+        "por_que": "pneumonia, encefalite e desidratação são as causas de morte do sarampo",
+        "acao": "hospitalizar com precaução de aerossol, oxigênio, suporte e notificação imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "varicela com ataxia, rebaixamento, dor torácica, dispneia, lesões hemorrágicas ou infecção secundária extensa",
+        "por_que": "encefalite cerebelar, pneumonia varicelosa e celulite necrosante por superinfecção bacteriana",
+        "acao": "hospitalizar, aciclovir venoso e investigação dirigida",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "dengue com dor abdominal intensa e contínua, vômitos persistentes, sangramento de mucosa, letargia, hepatomegalia dolorosa ou lipotímia",
+        "por_que": "dengue com sinais de alarme, que antecede o choque",
+        "acao": "hidratação venosa imediata conforme peso, hemograma seriado, internação e notificação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "recusa hídrica, sialorreia, ausência de diurese por mais de 12 h e prostração em mão-pé-boca ou herpangina",
+        "por_que": "desidratação por odinofagia intensa, principal causa de internação nessas viroses",
+        "acao": "analgesia plena, reidratação oral fracionada e, se falhar, hidratação venosa",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-10",
+        "sinal": "exantema febril em criança imunossuprimida, em quimioterapia ou em uso de corticoide sistêmico prolongado",
+        "por_que": "varicela, sarampo e disseminação viral com mortalidade elevada nesse grupo",
+        "acao": "hospitalizar precocemente, aciclovir venoso e isolamento",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A criança está vacinada? Quantas doses de tríplice viral e de varicela constam na caderneta?",
+      "A febre veio antes do exantema, junto com ele ou desapareceu quando as manchas surgiram?",
+      "Como é a lesão: mancha plana, pápula áspera, vesícula, bolha ou petéquia que não desaparece à pressão?",
+      "Onde começou e para onde se espalhou: face e pescoço, tronco, extremidades ou boca, mãos e pés?",
+      "Tem tosse, coriza e conjuntivite? Tem aftas ou feridas na boca?",
+      "Tem dor de garganta, língua avermelhada e descamação nas mãos e nos pés?",
+      "Teve contato com alguém com exantema, sarampo ou varicela nos últimos 21 dias?",
+      "Começou algum medicamento novo nos últimos 7 a 14 dias? Qual e quando?",
+      "Mora ou viajou para área com circulação de dengue, sarampo ou febre amarela?",
+      "Está bebendo e urinando normalmente? Há quanto tempo não urina?",
+      "A febre dura há quantos dias? Já passou de 5 dias?",
+      "Há sangramento de gengiva, nariz, fezes escuras ou manchas roxas?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Exantema maculopapular cefalocaudal com pródromo de tosse, coriza e conjuntivite, manchas de Koplik e caderneta vacinal incompleta ou contato com caso",
+        "escolha": "Suspeitar de sarampo: notificação imediata em até 24 h, isolamento com precaução de aerossol, coleta de IgM e PCR, vitamina A em duas doses e suporte; nenhum antibiótico",
+        "porque": "O sarampo é a única dessas doenças com transmissão por aerossol e potencial de surto em serviço de saúde; a vitamina A reduz mortalidade e complicações oculares em criança com deficiência, e o antibiótico só entra se houver pneumonia bacteriana documentada"
+      },
+      {
+        "cenario": "Escarlatina: faringite com exantema áspero iniciado em pescoço e tórax, palidez perioral, língua em framboesa, linhas de Pastia e descamação tardia",
+        "escolha": "Penicilina benzatina dose única intramuscular — 600.000 UI abaixo de 27 kg e 1.200.000 UI a partir de 27 kg — ou amoxicilina 50 mg/kg/dia por 10 dias",
+        "porque": "A escarlatina é infecção por estreptococo do grupo A produtor de toxina, e o tratamento erradica o agente, encurta a transmissão e previne febre reumática e glomerulonefrite; a dose única resolve adesão"
+      },
+      {
+        "cenario": "Escarlatina em criança com alergia imediata a beta-lactâmico ou com falha de erradicação da penicilina",
+        "escolha": "Azitromicina 12 mg/kg/dia em dose única diária, máximo 500 mg, por 5 dias",
+        "porque": "É a alternativa segura na alergia imediata; a resistência do estreptococo ao macrolídeo é relevante no Brasil, por isso não se usa como primeira escolha"
+      },
+      {
+        "cenario": "Varicela em criança sadia de 1 a 12 anos, sem complicação",
+        "escolha": "Suporte: paracetamol ou dipirona em horário, hidratação, banho diário, unhas curtas e anti-histamínico se prurido intenso. Não prescrever aciclovir de rotina, AAS, AINE nem corticoide",
+        "porque": "A varicela é autolimitada nessa faixa e o antiviral de rotina não reduz complicação; AAS e AINE aumentam risco de síndrome de Reye e de celulite necrosante, e corticoide agrava a disseminação"
+      },
+      {
+        "cenario": "Varicela em grupo de risco: menor de 1 ano, maior de 12 anos, imunossuprimido, doença cutânea ou pulmonar crônica, uso de corticoide sistêmico ou de salicilato, gestante",
+        "escolha": "Aciclovir por via oral 20 mg/kg/dose de 6/6 h, máximo 800 mg por dose, por 5 dias; via venosa 10 mg/kg/dose de 8/8 h, máximo 500 mg/m², em doença grave, imunossupressão ou recém-nascido",
+        "porque": "Nesses grupos a varicela tem mortalidade e complicação visceral maiores, e o aciclovir iniciado nas primeiras 24 h reduz disseminação e internação; na criança sadia o benefício não supera o custo e a exposição"
+      },
+      {
+        "cenario": "Contactante suscetível de caso de sarampo ou varicela, incluindo gestante e imunossuprimido",
+        "escolha": "Vacinação de bloqueio em até 72 h para sarampo e até 5 dias para varicela em quem pode receber vacina; imunoglobulina em gestante, imunossuprimido, menor de 1 ano e contraindicação à vacina",
+        "porque": "A profilaxia pós-exposição é a única forma de evitar doença grave em quem não pode ser vacinado, e o prazo é curto — depois dele só resta vigilância e isolamento"
+      },
+      {
+        "cenario": "Febre há 5 dias ou mais com conjuntivite bilateral, lábios fissurados, língua em framboesa, exantema polimorfo, descamação de extremidades e adenopatia cervical",
+        "escolha": "Doença de Kawasaki: internação, imunoglobulina humana 2 g/kg em dose única e AAS 30 a 50 mg/kg/dia divididos de 6/6 h na fase febril, sob especialista, com ecocardiograma na admissão, em 2 semanas e em 6 a 8 semanas",
+        "porque": "A imunoglobulina no 5º ao 10º dia reduz aneurisma coronário de 25% para cerca de 4%; o AAS em dose anti-inflamatória controla a inflamação na fase aguda e depois passa para dose antiagregante, e o ecocardiograma define o seguimento"
+      },
+      {
+        "cenario": "Exantema petequial não branqueável com febre e toxemia, ou púrpura em progressão",
+        "escolha": "Ceftriaxona 100 mg/kg/dia divididos de 12/12 h, máximo de 2 g por dose, imediatamente após acesso venoso; punção lombar apenas se estável, isolamento de gotículas e UTI",
+        "porque": "A meningococcemia mata em horas e o antibiótico não pode esperar exame; a punção em criança instável ou com sinais de hipertensão intracraniana causa herniação"
+      },
+      {
+        "cenario": "Dengue com exantema, prova do laço positiva, febre e mialgia em área de circulação",
+        "escolha": "Hidratação oral conforme peso e classificação, dipirona como antitérmico, hemograma e NS1 ou sorologia, prova do laço seriada e notificação; proibidos AAS, AINE e corticoide",
+        "porque": "AINE e AAS aumentam sangramento e risco de síndrome de Reye na dengue, e a dipirona é o antitérmico seguro nesse cenário; a classificação de risco e a hidratação são o que evita o choque"
+      },
+      {
+        "cenario": "Farmacodermia: exantema maculopapular pruriginoso surgido 7 a 14 dias após início de fármaco, sem mucosite nem bolhas",
+        "escolha": "Suspender o fármaco suspeito, anti-histamínico para prurido, corticoide tópico e observação; registrar o fármaco como suspeito e reavaliar em 48 h",
+        "porque": "A retirada do agente é o tratamento; se surgirem bolhas, mucosite, dor de pele ou febre alta, o quadro virou Stevens-Johnson e a conduta passa a ser hospitalar"
+      },
+      {
+        "cenario": "Lactente de 6 a 24 meses com febre alta por 3 a 5 dias que cede abruptamente e então aparece exantema em tronco, com bom estado geral",
+        "escolha": "Exantema súbito por herpes-vírus humano 6: suporte, antitérmico e alta com orientação, sem antibiótico e sem antiviral",
+        "porque": "É a causa mais comum de exantema febril nessa idade e o reconhecimento evita investigação de sarampo e antibiótico desnecessário; a convulsão febril é a complicação possível e não muda o tratamento"
+      },
+      {
+        "cenario": "Vesículas em boca, palmas e plantas com odinofagia e recusa alimentar",
+        "escolha": "Mão-pé-boca por Coxsackie: analgesia em horário fixo, hidratação fracionada com líquidos frios, afastamento escolar até a resolução das lesões e notificação de surto na creche",
+        "porque": "Não há antiviral com indicação e a evolução é autolimitada; a internação só se justifica por desidratação, que é prevenível com analgesia adequada"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "febre e desconforto em qualquer exantema febril, incluindo varicela e dengue",
+        "dose": "10 a 15 mg/kg/dose, a cada 4 a 6 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "4/4 a 6/6 h",
+        "duracao": "3 a 5 dias, enquanto houver febre",
+        "dose_maxima": "75 mg/kg/dia, sem ultrapassar 4 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "náusea",
+          "rash raro"
+        ],
+        "apresentacoes": [
+          "solução oral 200 mg/mL (gotas), frasco 15 mL",
+          "suspensão oral 160 mg/5 mL, frasco 60 e 100 mL",
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução para infusão 10 mg/mL, frasco 100 mL"
+        ],
+        "preparo": "Via oral: uso direto, medindo com seringa dosadora e conferindo a concentração do frasco. Via venosa: infundir a solução já diluída, sem reconstituição",
+        "tempo_infusao": "15 minutos por via venosa; não se aplica por via oral",
+        "monitorizacao": [
+          "temperatura e conforto",
+          "dose total diária somada com outros produtos que contenham paracetamol",
+          "enzimas hepáticas em uso prolongado",
+          "aceitação hídrica"
+        ],
+        "ajuste_renal": "Ampliar intervalo para 6 a 8 h se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose máxima diária e evitar em hepatopatia grave",
+        "observacoes": "É o antitérmico de escolha na varicela e na dengue, justamente porque não interfere em plaquetas nem na função renal. A superdose acidental por soma de apresentações diferentes é a causa mais comum de hepatotoxicidade pediátrica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "febre e dor em dengue, varicela e exantema com dor intensa quando não há resposta ou tolerância ao paracetamol",
+        "dose": "10 a 15 mg/kg/dose, a cada 6 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "3 dias",
+        "dose_maxima": "60 mg/kg/dia; 4 g/dia no adolescente",
+        "contraindicacoes": [
+          "menor de 3 meses",
+          "alergia a pirazolona",
+          "discrasia sanguínea ou porfiria",
+          "deficiência de glicose-6-fosfato desidrogenase"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "sudorese e palidez",
+          "agranulocitose rara",
+          "reação cutânea grave rara"
+        ],
+        "apresentacoes": [
+          "solução oral 500 mg/mL (gotas), frasco 10 e 20 mL",
+          "solução oral 50 mg/mL, frasco 100 mL",
+          "comprimido 500 mg e 1 g",
+          "ampola 500 mg/mL, 2 e 5 mL"
+        ],
+        "preparo": "Via oral: uso direto, medindo com seringa dosadora. Via venosa: diluir a dose em 10 a 20 mL de soro fisiológico ou água destilada",
+        "tempo_infusao": "5 minutos por via venosa, infusão lenta; não se aplica por via oral",
+        "monitorizacao": [
+          "pressão arterial durante e após a infusão",
+          "temperatura e dor",
+          "hemograma se febre prolongada",
+          "lesões cutâneas"
+        ],
+        "ajuste_renal": "Ampliar o intervalo em insuficiência renal grave",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Na dengue é o antitérmico preferido no Brasil, ao lado do paracetamol, porque não altera a agregação plaquetária. Continua contraindicada abaixo de 3 meses",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "condicional",
+        "indicacao": "febre com artralgia em rubéola, parvovírus B19 e exantema não variceloso e não dengue",
+        "dose": "10 mg/kg/dose, a cada 6 a 8 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "6/6 a 8/8 h",
+        "duracao": "3 dias",
+        "dose_maxima": "40 mg/kg/dia; 2.400 mg/dia no adolescente",
+        "contraindicacoes": [
+          "varicela",
+          "suspeita ou confirmação de dengue",
+          "desidratação ou injúria renal aguda",
+          "úlcera péptica ou sangramento digestivo",
+          "asma induzida por AINE",
+          "terceiro trimestre de gestação"
+        ],
+        "efeitos_adversos": [
+          "dor epigástrica",
+          "injúria renal aguda em desidratação",
+          "sangramento digestivo",
+          "broncoespasmo em asmático sensível",
+          "risco de síndrome de Reye em varicela"
+        ],
+        "apresentacoes": [
+          "suspensão oral 100 mg/5 mL, frasco 100 mL",
+          "solução oral 50 mg/mL (gotas), frasco 20 mL",
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "comprimido 600 mg"
+        ],
+        "preparo": "Uso direto; agitar a suspensão, medir com seringa dosadora e administrar com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor e mobilidade articular",
+          "diurese e hidratação",
+          "dor abdominal e melena",
+          "plaquetas se houver petéquias"
+        ],
+        "ajuste_renal": "Evitar em injúria renal aguda e em filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Existe apenas para o cenário de artralgia de exantema não variceloso: em varicela e dengue é proibido. Prescrever AINE em criança com exantema vesicular ou petequial é erro grave e deve ser bloqueado no sistema",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina",
+        "agente": "penicilina benzatina",
+        "papel": "primeira_linha",
+        "indicacao": "escarlatina confirmada ou altamente provável",
+        "dose": "600.000 UI em criança abaixo de 27 kg; 1.200.000 UI a partir de 27 kg, em dose única",
+        "unidade": "UI",
+        "via": "IM profunda, glúteo ou vasto lateral da coxa",
+        "frequencia": "dose única",
+        "duracao": "1 dia",
+        "dose_maxima": "1.200.000 UI por dose",
+        "contraindicacoes": [
+          "hipersensibilidade imediata a penicilina",
+          "reação prévia grave a beta-lactâmico",
+          "administração por via intravenosa"
+        ],
+        "efeitos_adversos": [
+          "dor intensa no local",
+          "enduração e abscesso local",
+          "rash maculopapular tardio",
+          "anafilaxia rara"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 600.000 UI com diluente de 1,2 mL",
+          "frasco-ampola 1.200.000 UI com diluente de 3 mL",
+          "frasco-ampola 300.000 UI com diluente de 1 mL"
+        ],
+        "preparo": "Reconstituir com o diluente do próprio frasco, agitar até dissolução e aplicar IM profunda com agulha 25 x 7 mm, com a criança contida",
+        "tempo_infusao": "aplicação intramuscular lenta em 1 a 2 minutos; não se aplica infusão venosa",
+        "monitorizacao": [
+          "reação alérgica nos primeiros 30 minutos",
+          "dor e enduração local por 24 a 48 h",
+          "regressão da febre e do exantema em 24 a 48 h",
+          "descamação tardia em 1 a 3 semanas"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Na escarlatina a febre e o exantema regridem em 24 a 48 h após a dose, e a descamação de palmas e plantas aparece depois, sem indicar falha. Não atrasar o tratamento para aguardar cultura",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/MS",
+        "claim_id": null
+      },
+      {
+        "classe": "aminopenicilina",
+        "agente": "amoxicilina",
+        "papel": "alternativa",
+        "indicacao": "escarlatina em criança que aceita via oral ou quando a penicilina benzatina não está disponível",
+        "dose": "50 mg/kg/dia, uma vez ao dia ou divididos de 12/12 h, máximo de 1 g/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia ou 12/12 h",
+        "duracao": "10 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "alergia imediata a penicilina",
+          "mononucleose infecciosa",
+          "reação cutânea grave prévia a beta-lactâmico"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "candidíase oral",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "suspensão oral 250 mg/5 mL, frasco 60, 100 e 150 mL",
+          "suspensão oral 400 mg/5 mL, frasco 60 e 100 mL",
+          "cápsula 500 mg",
+          "comprimido 875 mg e 1 g"
+        ],
+        "preparo": "Reconstituir a suspensão com água filtrada até a marca, agitar e conservar em geladeira por até 7 dias, agitando antes de cada dose",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "diarreia",
+          "rash e sua relação com o dia de tratamento",
+          "contagem dos dias tomados",
+          "regressão da febre e do exantema em 48 h"
+        ],
+        "ajuste_renal": "Reduzir a dose ou ampliar o intervalo se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Completar 10 dias mesmo com a pele já limpa; o exantema desaparece antes da erradicação e a interrupção leva a recidiva e a risco de febre reumática",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "macrolideo",
+        "agente": "azitromicina",
+        "papel": "alternativa",
+        "indicacao": "escarlatina em criança com alergia imediata a beta-lactâmico",
+        "dose": "12 mg/kg/dia em dose única diária, máximo de 500 mg/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "5 dias",
+        "dose_maxima": "500 mg/dia",
+        "contraindicacoes": [
+          "alergia a macrolídeo",
+          "intervalo QT longo congênito",
+          "uso de fármacos que prolongam o QT"
+        ],
+        "efeitos_adversos": [
+          "diarreia e dor abdominal",
+          "náusea",
+          "prolongamento do QT",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "suspensão oral 200 mg/5 mL, frasco 15 e 30 mL",
+          "comprimido 500 mg",
+          "comprimido 600 mg"
+        ],
+        "preparo": "Reconstituir a suspensão com água até a marca, agitar e conservar em temperatura ambiente por até 5 dias",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "frequência cardíaca e eletrocardiograma se cardiopatia",
+          "diarreia",
+          "regressão da febre e do exantema em 48 a 72 h"
+        ],
+        "ajuste_renal": "Sem ajuste na dose habitual",
+        "ajuste_hepatico": "Evitar em insuficiência hepática grave",
+        "observacoes": "Só na alergia imediata verdadeira; a resistência do estreptococo ao macrolídeo pode levar a falha de erradicação e a recidiva da escarlatina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir",
+        "papel": "condicional",
+        "indicacao": "varicela em grupo de risco, varicela grave, imunossuprimido e recém-nascido",
+        "dose": "Via oral: 20 mg/kg/dose de 6/6 h, máximo de 800 mg por dose. Via venosa: 10 mg/kg/dose de 8/8 h, máximo de 500 mg/m² por dose",
+        "unidade": "mg/kg/dose",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h por via oral; 8/8 h por via venosa",
+        "duracao": "5 dias por via oral; 7 a 10 dias por via venosa",
+        "dose_maxima": "3.200 mg/dia por via oral; 1.500 mg/m²/dia por via venosa",
+        "contraindicacoes": [
+          "alergia ao aciclovir",
+          "insuficiência renal grave sem ajuste de dose"
+        ],
+        "efeitos_adversos": [
+          "náusea e vômito",
+          "cristalúria e nefrotoxicidade se desidratado",
+          "cefaleia",
+          "neurotoxicidade com confusão em insuficiência renal"
+        ],
+        "apresentacoes": [
+          "suspensão oral 200 mg/5 mL, frasco 100 mL",
+          "comprimido 200 mg e 400 mg",
+          "frasco-ampola 250 mg e 500 mg para infusão",
+          "creme 5%"
+        ],
+        "preparo": "Via oral: uso direto, com boa hidratação. Via venosa: reconstituir o frasco em água destilada e diluir em soro fisiológico ou glicosado para concentração máxima de 7 mg/mL",
+        "tempo_infusao": "1 hora por via venosa, com hidratação e bom fluxo; não se aplica por via oral",
+        "monitorizacao": [
+          "função renal e diurese",
+          "hidratação durante a infusão",
+          "número e evolução das lesões",
+          "nível de consciência",
+          "hemograma em uso prolongado"
+        ],
+        "ajuste_renal": "Reduzir a dose e ampliar o intervalo conforme a filtração glomerular; ajuste obrigatório em qualquer grau de disfunção",
+        "ajuste_hepatico": "Sem ajuste relevante",
+        "observacoes": "Só tem benefício se iniciado nas primeiras 24 h do exantema. Na criança sadia de 1 a 12 anos com varicela não complicada não é indicado: o curso é autolimitado e o antiviral de rotina não reduz complicação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina humana intravenosa",
+        "papel": "condicional",
+        "indicacao": "doença de Kawasaki, sob avaliação de especialista",
+        "dose": "2 g/kg em dose única",
+        "unidade": "g/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir 2 g/kg em 48 h se persistir febre",
+        "duracao": "1 a 2 doses no total",
+        "dose_maxima": "2 g/kg por dose; 4 g/kg no total",
+        "contraindicacoes": [
+          "deficiência seletiva de IgA com anticorpos anti-IgA",
+          "reação anafilática prévia a imunoglobulina",
+          "insuficiência cardíaca descompensada sem controle de volume"
+        ],
+        "efeitos_adversos": [
+          "cefaleia intensa",
+          "febre e calafrios durante a infusão",
+          "sobrecarga de volume",
+          "meningite asséptica",
+          "reações tromboembólicas raras",
+          "hemólise"
+        ],
+        "apresentacoes": [
+          "frasco 2,5 g em 50 mL",
+          "frasco 5 g em 100 mL",
+          "frasco 10 g em 200 mL",
+          "frasco 20 g em 400 mL"
+        ],
+        "preparo": "Não diluir; infundir com equipo próprio e filtro, iniciando a 0,5 a 1 mL/kg/h e aumentando gradualmente até 3 a 4 mL/kg/h conforme tolerância, com acesso venoso calibroso",
+        "tempo_infusao": "10 a 12 horas no total, com velocidade escalonada",
+        "monitorizacao": [
+          "pressão arterial, frequência cardíaca e temperatura a cada 30 min",
+          "sinais de sobrecarga: dispneia, edema, estertores",
+          "cefaleia e rigidez de nuca (meningite asséptica)",
+          "débito urinário",
+          "regressão da febre em 24 a 48 h",
+          "ecocardiograma antes e após"
+        ],
+        "ajuste_renal": "Reduzir a velocidade de infusão em disfunção renal",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a droga que muda o desfecho do Kawasaki e deve ser iniciada idealmente entre o 5º e o 10º dia de febre; atrasar para confirmar critério completo em lactente com quadro incompleto é o erro que produz aneurisma coronário",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "salicilato",
+        "agente": "ácido acetilsalicílico (AAS)",
+        "papel": "condicional",
+        "indicacao": "doença de Kawasaki na fase aguda, em dose anti-inflamatória, sob especialista",
+        "dose": "30 a 50 mg/kg/dia divididos de 6/6 h na fase febril; após 48 h afebril, 3 a 5 mg/kg/dia em dose única como antiagregante",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "6/6 h na fase aguda; 1x/dia na fase antiagregante",
+        "duracao": "fase febril até 48 h afebril; antiagregante por 6 a 8 semanas, ou indefinidamente se houver alteração coronariana",
+        "dose_maxima": "4 g/dia na fase anti-inflamatória; 100 mg/dia na fase antiagregante",
+        "contraindicacoes": [
+          "varicela",
+          "dengue",
+          "suspeita de síndrome de Reye",
+          "sangramento ativo ou plaquetopenia grave",
+          "úlcera péptica",
+          "asma induzida por salicilato",
+          "menor de 3 meses"
+        ],
+        "efeitos_adversos": [
+          "gastrite e sangramento digestivo",
+          "zumbido e ototoxicidade em dose alta",
+          "síndrome de Reye em infecção viral",
+          "broncoespasmo",
+          "prolongamento do tempo de sangramento"
+        ],
+        "apresentacoes": [
+          "comprimido 100 mg",
+          "comprimido 500 mg",
+          "comprimido efervescente 500 mg",
+          "solução oral infantil 100 mg/mL"
+        ],
+        "preparo": "Uso direto; dissolver o comprimido em água ou administrar a solução com alimento, medindo com seringa dosadora",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sangramento de mucosa e equimoses",
+          "dor abdominal e melena",
+          "zumbido e audição",
+          "plaquetas e hematócrito",
+          "ecocardiograma seriado",
+          "adesão à dose antiagregante"
+        ],
+        "ajuste_renal": "Evitar em insuficiência renal grave",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "O AAS no Kawasaki é exceção ao dogma de não usar salicilato em criança com virose: aqui o diagnóstico é definido e o risco de Reye não se aplica à mesma forma. Fora do Kawasaki, AAS é proibido em qualquer exantema febril",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "retinol (vitamina A)",
+        "papel": "condicional",
+        "indicacao": "sarampo confirmado ou suspeito em criança com risco de deficiência, e sarampo grave",
+        "dose": "50.000 UI abaixo de 6 meses; 100.000 UI de 6 a 11 meses; 200.000 UI a partir de 12 meses, em duas doses com intervalo de 24 h",
+        "unidade": "UI",
+        "via": "VO",
+        "frequencia": "duas doses com 24 h de intervalo; terceira dose em 2 a 4 semanas se houver sinais de deficiência",
+        "duracao": "2 doses",
+        "dose_maxima": "200.000 UI por dose",
+        "contraindicacoes": [
+          "hipervitaminose A conhecida",
+          "hipersensibilidade a componentes da formulação"
+        ],
+        "efeitos_adversos": [
+          "cefaleia e vômito transitórios",
+          "fontanela abaulada em lactente",
+          "irritabilidade",
+          "hepatotoxicidade em uso repetido acima da dose"
+        ],
+        "apresentacoes": [
+          "cápsula mole 50.000 UI",
+          "cápsula mole 100.000 UI",
+          "cápsula mole 200.000 UI",
+          "solução oral 150.000 UI/mL"
+        ],
+        "preparo": "Abrir a cápsula e administrar o conteúdo por via oral com colher ou seringa, ou usar a solução oleosa medida com conta-gotas",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "fontanela em lactente",
+          "vômito e cefaleia nas primeiras 24 h",
+          "evolução do exantema e da conjuntivite",
+          "sinais de ceratomalácia e xeroftalmia"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "A suplementação de vitamina A no sarampo reduz mortalidade e cegueira em populações com deficiência e faz parte do manejo da OMS; não substitui a notificação, o isolamento nem o suporte",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/MS",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_terceira_geracao",
+        "agente": "ceftriaxona",
+        "papel": "resgate",
+        "indicacao": "exantema petequial com toxemia e suspeita de meningococcemia, antes da transferência",
+        "dose": "100 mg/kg/dia divididos de 12/12 h, máximo de 2 g por dose",
+        "unidade": "mg/kg/dia",
+        "via": "IV",
+        "frequencia": "12/12 h",
+        "duracao": "7 dias na meningococcemia; iniciar imediatamente e manter até afastar",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia imediata a cefalosporina",
+          "anafilaxia prévia a penicilina",
+          "hiperbilirrubinemia em recém-nascido"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "colite por C. difficile",
+          "barro biliar e pseudolitíase",
+          "flebite no sítio de infusão"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "solução injetável 1 g em 10 mL"
+        ],
+        "preparo": "Reconstituir em água destilada e diluir em 50 a 100 mL de soro fisiológico ou glicosado; não misturar com soluções que contenham cálcio no mesmo equipo em neonato",
+        "tempo_infusao": "30 minutos por via venosa",
+        "monitorizacao": [
+          "pressão arterial, perfusão e nível de consciência",
+          "evolução das petéquias",
+          "diarreia",
+          "sítio de infusão",
+          "bilirrubinas em neonato"
+        ],
+        "ajuste_renal": "Sem ajuste na dose habitual",
+        "ajuste_hepatico": "Reduzir a dose em insuficiência hepática grave combinada com renal",
+        "observacoes": "Antibiótico de resgate do exantema petequial: não espera punção lombar, cultura nem transferência. Em criança estável, colher hemocultura antes se não atrasar a dose",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Isolamento conforme o agente suspeito",
+        "detalhe": "Sarampo: precaução de aerossol com máscara N95 e quarto com pressão negativa, por 4 dias após o início do exantema. Varicela: aerossol e contato até todas as lesões estarem em crosta. Rubéola: gotículas por 7 dias após o exantema. Escarlatina: gotículas por 24 h de antibiótico. Dengue e mão-pé-boca: precauções padrão e controle de vetor ou de contato com secreções"
+      },
+      {
+        "medida": "Notificação compulsória e comunicação à vigilância",
+        "detalhe": "Sarampo e rubéola: notificação imediata em até 24 h, com coleta de amostra e bloqueio vacinal de contactantes. Dengue: notificação compulsória com registro semanal e imediata em caso de sinais de alarme, óbito ou surto. Varicela: compulsória, com comunicação de surtos em creche e escola. Escarlatina, exantema súbito e mão-pé-boca não são de notificação nacional obrigatória, mas surtos devem ser informados à vigilância municipal"
+      },
+      {
+        "medida": "Hidratação e conforto térmico",
+        "detalhe": "Oferecer líquidos em pequenas quantidades e com frequência, medir diurese e evitar agasalho excessivo e banho quente; compressas mornas em axilas e virilhas ajudam no desconforto. Nunca usar álcool ou gelo na pele da criança"
+      },
+      {
+        "medida": "Cuidado da pele e das unhas na varicela",
+        "detalhe": "Banho diário com sabonete neutro, secar sem esfregar, cortar as unhas rentes e manter as mãos limpas; lesões de varicela infectadas por coçadura são a porta de entrada da celulite e da sepse por estafilococo. Não aplicar talco, pomada caseira nem casca de banana"
+      },
+      {
+        "medida": "Prova do laço e reavaliação seriada na dengue",
+        "detalhe": "Realizar a prova do laço na consulta inicial e repetir na reavaliação, registrar o resultado e o hematócrito, e orientar retorno diário enquanto durar a febre; a queda do hematócrito com piora clínica indica extravasamento plasmático"
+      },
+      {
+        "medida": "Vacinação de bloqueio e verificação da caderneta",
+        "detalhe": "Em surto de sarampo, vacinar contactantes suscetíveis em até 72 h da exposição com tríplice viral; em varicela, vacinar em até 5 dias. Aproveitar a consulta para conferir tríplice viral, varicela e influenza e atualizar o que estiver faltando"
+      },
+      {
+        "medida": "Afastamento escolar e do trabalho pelos prazos do agente",
+        "detalhe": "Sarampo: 4 dias após o início do exantema. Varicela: até todas as lesões estarem em crosta, em geral 7 a 10 dias. Rubéola: 7 dias. Escarlatina: 24 h de antibiótico. Mão-pé-boca: até a resolução das lesões, com atenção a creche e piscina"
+      },
+      {
+        "medida": "Retirada imediata do fármaco suspeito na farmacodermia",
+        "detalhe": "Suspender todos os medicamentos não essenciais, anotar nome, dose, data de início e dia do exantema, e registrar o evento no prontuário e no cartão da criança; reexposição ao mesmo fármaco pode causar reação mais grave"
+      },
+      {
+        "medida": "Suporte nutricional e acompanhamento do sarampo",
+        "detalhe": "Manter alimentação e aleitamento materno, tratar diarreia e desidratação, suplementar vitamina A e acompanhar peso; a desnutrição e a deficiência de vitamina A são os fatores que transformam sarampo em doença fatal"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Prova do laço",
+        "indicacao": "exantema com suspeita de dengue, petéquias ou síndrome febril em área de circulação",
+        "tecnica": "Inflar o manguito até a média entre a pressão arterial sistólica e a diastólica, mantê-lo por 5 minutos no adulto e na criança maior, e por 3 minutos em criança pequena; contar as petéquias em área de 2,5 x 2,5 cm no antebraço e considerar positiva com 20 ou mais petéquias em adulto e 10 ou mais em criança",
+        "complicacoes": "Petéquias no local, desconforto, falso-negativo em choque ou em plaquetopenia grave e resultado não reprodutível se a técnica variar entre observadores"
+      },
+      {
+        "nome": "Coleta de amostras para sarampo, rubéola e dengue",
+        "indicacao": "suspeita clínica de sarampo ou rubéola, e dengue com sinais de alarme ou em investigação de surto",
+        "tecnica": "Sarampo e rubéola: sangue para IgM e IgG e swab de orofaringe ou urina para PCR, colhidos até o 5º dia do exantema para PCR e até 30 dias para sorologia. Dengue: NS1 até o 5º dia e IgM a partir do 6º dia, com hemograma completo no mesmo momento",
+        "complicacoes": "Falso-negativo por coleta tardia ou precoce, necessidade de segunda amostra, extravio de material refrigerado e atraso do bloqueio vacinal enquanto o resultado não sai"
+      },
+      {
+        "nome": "Punção lombar",
+        "indicacao": "exantema com rigidez de nuca, convulsão, letargia ou fontanela abaulada, em criança estável",
+        "tecnica": "Confirmar ausência de sinais de hipertensão intracraniana e de instabilidade, posicionar em decúbito lateral com flexão de quadril e coluna, antissepsia e punção no espaço L4-L5 ou L5-S1, colhendo citologia, bioquímica, cultura e PCR conforme suspeita",
+        "complicacoes": "Herniação cerebral em hipertensão intracraniana, cefaleia pós-punção, infecção do sítio, hematoma e falha de coleta"
+      },
+      {
+        "nome": "Ecocardiograma transtorácico",
+        "indicacao": "suspeita ou confirmação de doença de Kawasaki, e febre prolongada com exantema e critérios incompletos",
+        "tecnica": "Exame na admissão, repetido em 2 semanas e em 6 a 8 semanas, com medida dos diâmetros das artérias coronárias direita e esquerda, avaliação de aneurismas, derrame pericárdico e função ventricular",
+        "complicacoes": "Sedação em criança pequena, resultado dependente do examinador, ansiedade familiar e necessidade de ecocardiografista experiente em coronária pediátrica"
+      },
+      {
+        "nome": "Biópsia de pele",
+        "indicacao": "exantema bolhoso ou em descolamento com dúvida entre farmacodermia grave, síndrome de Stevens-Johnson e outras dermatoses",
+        "tecnica": "Colher preferencialmente pele perilesional para imunofluorescência e lesão recente para histopatologia, sem retardar o suporte; em suspeita de necrólise epidérmica tóxica, a biópsia não deve atrasar a suspensão do fármaco nem a transferência para unidade de queimados",
+        "complicacoes": "Sangramento local, infecção do sítio, resultado inconclusivo e atraso do tratamento se a coleta for priorizada sobre o suporte"
+      }
+    ],
+    "metas": [
+      "Diagnóstico sindrômico registrado com morfologia, distribuição e relação febre-exantema descritas",
+      "Notificação de sarampo e rubéola realizada em até 24 h da suspeita",
+      "Nenhuma prescrição de AAS, AINE ou corticoide em varicela e dengue",
+      "Antibiótico apenas em escarlatina confirmada ou em foco bacteriano documentado, com 10 dias completos de amoxicilina quando indicada",
+      "Imunoglobulina iniciada entre o 5º e o 10º dia de febre no Kawasaki, com ecocardiograma na admissão",
+      "Criança com exantema petequial e toxemia recebendo ceftriaxona na primeira hora",
+      "Retorno em 24 a 48 h agendado por escrito em todo exantema com febre persistente"
+    ],
+    "fluxo": [
+      "Estabilizar e procurar sinal de alarme: petéquias não branqueáveis, toxemia, bolhas, mucosite, hipotensão ou rebaixamento — se presente, sala vermelha e conduta específica antes de qualquer hipótese",
+      "Descrever o exantema: morfologia, distribuição, início e progressão, e a relação temporal com a febre",
+      "Verificar vacinação, contato com caso, viagem ou área de circulação e fármaco novo nos últimos 14 dias",
+      "Agrupar em uma das hipóteses prováveis: sarampo, rubéola, escarlatina, varicela, exantema súbito, mão-pé-boca, dengue ou farmacodermia",
+      "Confirmar o que for confirmável: IgM ou PCR para sarampo e rubéola, NS1 ou sorologia para dengue, teste rápido ou cultura para escarlatina",
+      "Tratar o específico quando houver: penicilina ou amoxicilina na escarlatina, aciclovir na varicela de risco, vitamina A no sarampo, ceftriaxona no exantema petequial",
+      "Fazer suporte em todos: antitérmico em horário, hidratação fracionada, cuidado de pele e analgesia",
+      "Notificar e isolar conforme o agente, e iniciar bloqueio vacinal dos contactantes suscetíveis",
+      "Reavaliar em 24 a 48 h com exame de pele e de mucosas; febre por 5 dias ou mais reabre a hipótese de Kawasaki com ecocardiograma"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "lactente_menor_de_1_ano",
+        "ajuste": "baixar o limiar de internação, preferir exantema súbito e varicela de risco, e usar aciclovir na varicela; considerar Kawasaki no diagnóstico diferencial de febre prolongada",
+        "alerta": "varicela e sarampo são mais graves nessa faixa e a vacina não está aplicada"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "evitar contato com rubéola e varicela; em exposição, aplicar imunoglobulina específica quando indicada e encaminhar ao pré-natal de alto risco",
+        "alerta": "rubéola e varicela na gestação causam síndrome congênita e varicela neonatal grave"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "hospitalizar, usar aciclovir venoso e evitar vacina de vírus vivo; investigar sarampo com PCR",
+        "alerta": "exantema pode ser escasso ou atípico e a mortalidade é alta"
+      },
+      {
+        "populacao": "nao_vacinado_ou_sem_caderneta",
+        "ajuste": "tratar como suscetível, notificar sarampo e rubéola na suspeita e iniciar bloqueio vacinal dos contactantes",
+        "alerta": "um caso suspeito em serviço de saúde gera surto se não houver isolamento imediato"
+      },
+      {
+        "populacao": "adolescente",
+        "ajuste": "considerar varicela em quem não teve a doença, mononucleose e farmacodermia; evitar AAS pelo risco de síndrome de Reye",
+        "alerta": "varicela após os 12 anos tem mais pneumonia e hospitalização"
+      },
+      {
+        "populacao": "cardiopata_ou_kawasaki_previo",
+        "ajuste": "manter AAS antiagregante sob especialista e seguimento ecocardiográfico, sem suspender por conta própria",
+        "alerta": "suspender o antiagregante em aneurisma coronário leva a trombose"
+      },
+      {
+        "populacao": "contato_domiciliar_suscetivel",
+        "ajuste": "verificar imunidade, vacinar em até 72 h para sarampo e 5 dias para varicela e indicar imunoglobulina quando a vacina é contraindicada",
+        "alerta": "a transmissão domiciliar é o principal amplificador de surto"
+      },
+      {
+        "populacao": "uso_cronico_de_corticoide_ou_biologico",
+        "ajuste": "considerar risco de varicela grave, suspender o imunossupressor se possível e usar aciclovir precocemente",
+        "alerta": "corticoide sistêmico converte varicela simples em doença disseminada"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "hemograma completo com plaquetas",
+          "indicacao": "todo exantema com febre, petéquias ou suspeita de dengue",
+          "o_que_muda": "plaquetopenia e hemoconcentração com leucopenia sugerem dengue; linfocitose com atípicos sugere vírus; eosinofilia sugere farmacodermia; neutrofilia com desvio sugere bacteriana e escarlatina"
+        },
+        {
+          "nome": "NS1 e sorologia IgM para dengue",
+          "indicacao": "exantema com febre, mialgia, prova do laço positiva ou área de circulação",
+          "o_que_muda": "confirma dengue, define classificação de risco, hidratação e necessidade de internação"
+        },
+        {
+          "nome": "IgM e PCR para sarampo e rubéola",
+          "indicacao": "exantema maculopapular com pródromo respiratório, conjuntivite, Koplik ou vacinação incompleta",
+          "o_que_muda": "confirma o diagnóstico, define isolamento e bloqueio vacinal e sustenta a notificação imediata"
+        },
+        {
+          "nome": "teste rápido de estreptococo ou cultura de orofaringe",
+          "indicacao": "exantema áspero com faringite, língua em framboesa e palidez perioral",
+          "o_que_muda": "confirma escarlatina e define penicilina benzatina ou amoxicilina por 10 dias"
+        },
+        {
+          "nome": "PCR de varicela-zóster ou sorologia",
+          "indicacao": "exantema vesicular atípico, imunossuprimido ou dúvida com farmacodermia bolhosa",
+          "o_que_muda": "confirma varicela, indica aciclovir e orienta isolamento e rastreio de contactantes"
+        },
+        {
+          "nome": "ecocardiograma transtorácico",
+          "indicacao": "febre por 5 dias ou mais com critérios de Kawasaki, completos ou incompletos",
+          "o_que_muda": "detecta dilatação ou aneurisma coronário e determina imunoglobulina, anticoagulação e seguimento"
+        },
+        {
+          "nome": "hemograma, PCR, VHS, plaquetas, albumina e transaminases",
+          "indicacao": "investigação de Kawasaki",
+          "o_que_muda": "o padrão inflamatório com trombocitose, hipoalbuminemia e transaminase elevada apoia o diagnóstico e o início da imunoglobulina"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "painel sorológico amplo sem hipótese definida",
+          "motivo": "resultado não interpretável, custo alto, atraso da conduta e falsos positivos que geram ansiedade e exames em cadeia"
+        },
+        {
+          "exame": "hemograma de rotina em exantema viral típico com bom estado geral",
+          "motivo": "não muda a conduta de suporte e submete a criança a punção sem benefício"
+        },
+        {
+          "exame": "biópsia de pele em exantema maculopapular típico",
+          "motivo": "achado inespecífico, cicatriz e risco de sangramento sem impacto no tratamento"
+        },
+        {
+          "exame": "hemocultura de rotina em exantema viral sem toxemia",
+          "motivo": "positividade baixa, punção desnecessária e nenhum impacto na conduta, que é suporte e vigilância"
+        },
+        {
+          "exame": "tomografia de crânio de rotina antes de punção lombar em meningite sem sinal focal",
+          "motivo": "atrasa o antibiótico e a punção; a indicação é por sinal neurológico focal ou hipertensão intracraniana"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "dar o antitérmico em horário fixo enquanto houver febre e hidratar em pequenas quantidades e com frequência",
+        "manter as unhas curtas e o banho diário para evitar infecção das lesões de varicela",
+        "cumprir o isolamento e o afastamento escolar pelo prazo do agente suspeito",
+        "levar a caderneta de vacinação em toda consulta e atualizar as vacinas atrasadas",
+        "voltar em 24 a 48 h se a febre persistir, surgirem manchas roxas ou bolhas",
+        "informar a escola ou a creche em caso de sarampo, varicela ou mão-pé-boca para que a vigilância seja acionada"
+      ],
+      "evitar": [
+        "AAS, AINE, dipirona em menor de 3 meses ou qualquer antitérmico em dose dobrada",
+        "corticoide por conta própria para 'secar' o exantema, sobretudo em varicela",
+        "antibiótico comprado sem avaliação médica para manchas na pele",
+        "banho quente, álcool, talco, pomada caseira ou casca de banana sobre as lesões",
+        "coçar ou estourar as vesículas de varicela",
+        "retorno à escola antes do fim do período de transmissão, mesmo com a criança bem"
+      ],
+      "retorno": [
+        "manchas roxas que não desaparecem ao pressionar, sangramento ou prostração",
+        "bolhas, descamação da pele ou feridas na boca e nos olhos",
+        "dificuldade para respirar, chiado ou dor no peito",
+        "febre que dura mais de 5 dias ou volta após melhora",
+        "não beber, não urinar ou ficar muito sonolento",
+        "convulsão, fraqueza, confusão ou dificuldade para andar"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade em superdose",
+          "náusea"
+        ],
+        "observacao": "somar todas as apresentações usadas em casa antes de repetir a dose"
+      },
+      {
+        "agente": "dipirona",
+        "efeitos": [
+          "hipotensão em infusão rápida",
+          "agranulocitose rara",
+          "sudorese"
+        ],
+        "observacao": "infundir lentamente e não usar em menor de 3 meses"
+      },
+      {
+        "agente": "ibuprofeno",
+        "efeitos": [
+          "injúria renal",
+          "sangramento digestivo",
+          "risco de síndrome de Reye em varicela"
+        ],
+        "observacao": "proibido em varicela, dengue e desidratação"
+      },
+      {
+        "agente": "penicilina benzatina",
+        "efeitos": [
+          "dor local intensa",
+          "rash",
+          "anafilaxia"
+        ],
+        "observacao": "observar 30 min após a aplicação e nunca usar via venosa"
+      },
+      {
+        "agente": "amoxicilina",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "candidíase"
+        ],
+        "observacao": "rash durante tratamento de escarlatina deve ser reavaliado para não rotular alergia sem confirmação"
+      },
+      {
+        "agente": "azitromicina",
+        "efeitos": [
+          "diarreia",
+          "prolongamento de QT"
+        ],
+        "observacao": "eletrocardiograma se cardiopatia ou outro fármaco que prolonga o QT"
+      },
+      {
+        "agente": "aciclovir",
+        "efeitos": [
+          "cristalúria e nefrotoxicidade",
+          "náusea",
+          "neurotoxicidade em insuficiência renal"
+        ],
+        "observacao": "hidratar e ajustar a dose pela filtração; infundir em 1 h"
+      },
+      {
+        "agente": "imunoglobulina intravenosa",
+        "efeitos": [
+          "cefaleia",
+          "febre e calafrios",
+          "sobrecarga de volume",
+          "meningite asséptica"
+        ],
+        "observacao": "escalonar a velocidade e monitorar pressão, diurese e sinais de sobrecarga"
+      },
+      {
+        "agente": "AAS",
+        "efeitos": [
+          "gastrite",
+          "sangramento",
+          "zumbido",
+          "síndrome de Reye fora do Kawasaki"
+        ],
+        "observacao": "exclusivo do Kawasaki, sob especialista, com plaquetas e hematócrito"
+      },
+      {
+        "agente": "vitamina A",
+        "efeitos": [
+          "cefaleia e vômito transitórios",
+          "fontanela abaulada"
+        ],
+        "observacao": "duas doses apenas; não repetir sem indicação por risco de hipervitaminose"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "rash",
+          "diarreia",
+          "barro biliar",
+          "flebite"
+        ],
+        "observacao": "não misturar com cálcio no mesmo equipo em neonato"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose, via e manifestação",
+      "Anafilaxia por penicilina benzatina ou ceftriaxona: adrenalina IM 0,01 mg/kg, oxigênio, acesso venoso e observação por 4 a 6 h",
+      "Exantema que piora ou surge mucosite durante o tratamento: suspender todos os fármacos não essenciais e tratar como farmacodermia grave até prova em contrário",
+      "Cefaleia intensa durante imunoglobulina: reduzir a velocidade, hidratar, analgesia e considerar meningite asséptica",
+      "Cristalúria ou elevação de creatinina com aciclovir: hidratar, reduzir a dose e reavaliar a via",
+      "Sangramento ou zumbido com AAS: suspender, dosar plaquetas e hematócrito e reavaliar com o especialista",
+      "Vômito e fontanela abaulada após vitamina A: observação, suporte e não repetir a dose",
+      "Reavaliar o diagnóstico e reescrever a prescrição antes da alta; não dar alta com efeito adverso em curso"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol suspensão 160 mg/5 mL ou solução 200 mg/mL",
+            "dose": "10 a 15 mg/kg/dose = ___ mg = ___ mL",
+            "via": "VO",
+            "frequencia": "4/4 a 6/6 h",
+            "duracao": "3 a 5 dias",
+            "condicao": "antitérmico de escolha em varicela e dengue",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "penicilina benzatina",
+            "dose": "600.000 UI abaixo de 27 kg; 1.200.000 UI a partir de 27 kg = ___ UI (calcular pelo peso)",
+            "via": "IM profunda",
+            "frequencia": "dose única",
+            "duracao": "1 dia",
+            "condicao": "escarlatina confirmada ou altamente provável",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina suspensão 250 mg/5 mL ou 400 mg/5 mL",
+            "dose": "50 mg/kg/dia = ___ mg = ___ mL (máximo 1 g/dia)",
+            "via": "VO",
+            "frequencia": "1x/dia ou 12/12 h",
+            "duracao": "10 dias",
+            "condicao": "escarlatina, alternativa oral à penicilina",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "aciclovir suspensão 200 mg/5 mL",
+            "dose": "20 mg/kg/dose = ___ mg = ___ mL (máximo 800 mg por dose)",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "5 dias",
+            "condicao": "varicela em grupo de risco, iniciado nas primeiras 24 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "retinol (vitamina A) cápsula 100.000 UI ou 200.000 UI",
+            "dose": "50.000 UI abaixo de 6 meses; 100.000 UI de 6 a 11 meses; 200.000 UI a partir de 12 meses",
+            "via": "VO",
+            "frequencia": "duas doses com 24 h de intervalo",
+            "duracao": "2 dias",
+            "condicao": "sarampo suspeito ou confirmado",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "orientação escrita de isolamento, notificação e sinais de retorno",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a reavaliação",
+            "condicao": "entregar em toda alta com exantema febril",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona",
+            "dose": "100 mg/kg/dia divididos de 12/12 h, máximo 2 g por dose",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "monitorizacao": "perfusão, consciência, evolução das petéquias e diarreia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "imunoglobulina humana intravenosa",
+            "dose": "2 g/kg em dose única, velocidade escalonada",
+            "via": "IV",
+            "frequencia": "dose única, com repetição em 48 h se persistir febre",
+            "monitorizacao": "pressão, diurese, sinais de sobrecarga, cefaleia e temperatura",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ácido acetilsalicílico",
+            "dose": "30 a 50 mg/kg/dia de 6/6 h na fase febril; 3 a 5 mg/kg/dia após 48 h afebril",
+            "via": "VO",
+            "frequencia": "6/6 h e depois 1x/dia",
+            "monitorizacao": "sangramento, plaquetas, zumbido e ecocardiograma",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "aciclovir",
+            "dose": "10 mg/kg/dose de 8/8 h, máximo 500 mg/m² por dose",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "função renal, diurese e hidratação",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma com plaquetas",
+          "NS1 e sorologia para dengue",
+          "IgM e PCR para sarampo e rubéola",
+          "teste rápido de estreptococo",
+          "PCR de varicela-zóster",
+          "hemograma, PCR, VHS, albumina e transaminases para Kawasaki",
+          "ecocardiograma",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que a criança esteve sob meus cuidados nesta data, com quadro de exantema febril por ___, necessitando de afastamento escolar por ___ dias, com isolamento até ___.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e isolamento são decisão médica conforme o agente; anexar orientação de retorno"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com idade, dias de febre, morfologia e distribuição do exantema, vacinação, contato, exames colhidos e tratamento iniciado",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Criança de ___ anos com exantema ___ iniciado há ___, em ___ dias de febre, com pródromo ___, mucosa ___, descamação ___, vacinação ___, contato ___, hipótese de ___, exames ___ com resultado ___, tratamento ___ e notificação ___, alta com orientação de isolamento e retorno em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "dias de febre e relação temporal com o exantema",
+        "morfologia e local de início do exantema, progressão e prurido",
+        "pródromo: tosse, coriza, conjuntivite e manchas de Koplik",
+        "lesões de boca, mãos e pés e dificuldade para deglutir",
+        "dor de garganta, língua avermelhada e descamação de palmas e plantas",
+        "vacinação: doses de tríplice viral e varicela na caderneta",
+        "contato com caso de exantema, sarampo ou varicela nos últimos 21 dias",
+        "fármacos iniciados nos últimos 14 dias, com data",
+        "viagem ou residência em área de dengue, sarampo ou febre amarela",
+        "sangramento de mucosa, petéquias e dor abdominal",
+        "aceitação hídrica e diurese",
+        "comorbidades, imunossupressão e uso de corticoide ou biológico"
+      ],
+      "texto_template": "Criança de ___ anos com exantema ___ iniciado em ___, em ___ dias de febre, com tosse ___, coriza ___, conjuntivite ___, Koplik ___, lesões em boca, mãos e pés ___, dor de garganta ___, descamação ___, vacinação ___, contato ___, fármaco novo ___, área de risco ___, sangramento ___, aceitação hídrica ___ e comorbidades ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "peso, temperatura, frequência cardíaca, frequência respiratória e saturação",
+        "estado geral e perfusão: toxemia, enchimento capilar e pressão arterial",
+        "morfologia do exantema: mácula, pápula, vesícula, bolha, petéquia e sinal de Nikolsky",
+        "distribuição e progressão: face, tronco, extremidades, palmas, plantas e mucosa oral",
+        "descamação de extremidades, palmas e plantas",
+        "orofaringe: exsudato, língua em framboesa, Koplik e úlceras",
+        "conjuntivite, lábios fissurados e adenopatia cervical",
+        "prova do laço e pesquisa de petéquias",
+        "ausculta pulmonar, abdome e fígado",
+        "neurológico: nível de consciência, rigidez de nuca e ataxia"
+      ],
+      "texto_template": "Peso ___ kg, temperatura ___ °C, frequência cardíaca ___ bpm, frequência respiratória ___ rpm, saturação ___%, estado geral ___, exantema ___ com distribuição ___, mucosa oral ___, descamação ___, orofaringe ___, conjuntivite ___, adenopatia ___, prova do laço ___, ausculta ___, abdome ___, neurológico ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de exantema febril na emergência pediátrica, sala de isolamento, disponibilidade de teste rápido e de ecocardiograma",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "diferenciação clínica entre os exantemas, indicação de aciclovir na varicela e critérios diagnósticos de Kawasaki completo e incompleto",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "lista vigente de notificação compulsória, prazos de notificação imediata e esquema de bloqueio vacinal",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de penicilina benzatina, amoxicilina, aciclovir, imunoglobulina, AAS, vitamina A e ceftriaxona disponíveis no serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "dose de imunoglobulina e de AAS no Kawasaki, dose de vitamina A no sarampo e critérios de gravidade da dengue",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED08-01",
+        "tipo": "petequias_toxemia",
+        "gatilho": "petéquias ou púrpura não branqueável com febre, toxemia ou hipotensão",
+        "severidade": "grave",
+        "mensagem": "Suspeita de meningococcemia: ceftriaxona imediatamente, isolamento de gotículas e UTI; não aguardar exames.",
+        "acao": "acionar sala vermelha e UTI",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED08-02",
+        "tipo": "sarampo",
+        "gatilho": "suspeita de sarampo ou rubéola sem notificação registrada e sem isolamento",
+        "severidade": "grave",
+        "mensagem": "Sarampo e rubéola exigem notificação imediata em até 24 h e precaução de aerossol: um caso sem isolamento gera surto no serviço.",
+        "acao": "bloquear alta até registrar notificação e isolamento",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED08-03",
+        "tipo": "aine_em_varicela_dengue",
+        "gatilho": "AAS, ibuprofeno ou outro AINE prescrito em varicela, dengue ou exantema petequial",
+        "severidade": "grave",
+        "mensagem": "AINE e AAS em varicela e dengue causam síndrome de Reye, sangramento e celulite necrosante: usar paracetamol ou dipirona.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED08-04",
+        "tipo": "kawasaki",
+        "gatilho": "febre por 5 dias ou mais com conjuntivite, língua em framboesa, exantema ou descamação de extremidades",
+        "severidade": "grave",
+        "mensagem": "Critérios de Kawasaki: ecocardiograma e imunoglobulina entre o 5º e o 10º dia, com AAS sob especialista.",
+        "acao": "sugerir protocolo e internação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED08-05",
+        "tipo": "antibiotico_sem_foco",
+        "gatilho": "antibiótico prescrito em exantema viral sem escarlatina confirmada nem foco bacteriano",
+        "severidade": "precaucao",
+        "mensagem": "Exantema viral não se trata com antibiótico: confirmar escarlatina por teste rápido ou cultura antes de prescrever.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED08-06",
+        "tipo": "descamacao",
+        "gatilho": "descamação de palmas, plantas ou extremidades após exantema febril",
+        "severidade": "precaucao",
+        "mensagem": "Descamação tardia sugere escarlatina não tratada ou Kawasaki: reavaliar diagnóstico e artérias coronárias.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED08-07",
+        "tipo": "imunossuprimido",
+        "gatilho": "exantema febril em criança imunossuprimida, em quimioterapia ou em corticoide sistêmico",
+        "severidade": "grave",
+        "mensagem": "Risco de varicela ou sarampo disseminado: hospitalizar e iniciar aciclovir venoso precocemente.",
+        "acao": "acionar internação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED08-08",
+        "tipo": "farmacodermia",
+        "gatilho": "exantema com bolhas, mucosite, dor de pele ou sinal de Nikolsky após fármaco novo",
+        "severidade": "grave",
+        "mensagem": "Síndrome de Stevens-Johnson ou necrólise epidérmica tóxica: suspender fármacos e transferir para suporte de queimado.",
+        "acao": "acionar dermatologia e UTI",
+        "bloqueante": true
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBP",
+        "Ministério da Saúde",
+        "OMS",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral como síndrome: separação explícita de sarampo, rubéola, escarlatina, varicela, exantema súbito, mão-pé-boca, dengue e farmacodermia por morfologia, distribuição, relação febre-exantema e epidemiologia. Onze fármacos em nove classes, com apresentações, preparo, tempo de infusão e monitorização: paracetamol e dipirona como antitérmicos seguros em varicela e dengue, ibuprofeno restrito a exantema não variceloso e não dengue e bloqueado nos demais, penicilina benzatina 600.000 UI abaixo de 27 kg e 1.200.000 UI a partir de 27 kg e amoxicilina 50 mg/kg/dia por 10 dias na escarlatina, azitromicina na alergia, aciclovir na varicela de risco, imunoglobulina 2 g/kg e AAS 30 a 50 mg/kg/dia no Kawasaki sob especialista, vitamina A em duas doses no sarampo e ceftriaxona de resgate no exantema petequial. Sinais de alarme para petéquias, toxemia, bolhas, descamação e conjuntivite com língua em framboesa, bloqueios de AAS e AINE em varicela e dengue, notificação compulsória de sarampo, rubéola, dengue e varicela com prazos e isolamento por agente.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

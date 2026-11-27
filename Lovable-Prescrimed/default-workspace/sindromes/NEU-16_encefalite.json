@@ -1,0 +1,1391 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "NEU-16",
+    "area": "Neurológico",
+    "nome": "Encefalite",
+    "aliases": [
+      "encefalite",
+      "encefalite viral",
+      "encefalite herpética"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Encefalite é a inflamação do parênquima cerebral, com febre, alteração de consciência, cefaleia, convulsão ou déficit focal; o que a separa da meningite é a disfunção cerebral, não a rigidez de nuca. O herpes simples é a causa tratável mais letal e o único erro que muda a mortalidade é esperar exame para começar o antiviral: aciclovir 10 mg/kg IV 8/8 h entra na primeira hora da suspeita, antes do PCR, antes da ressonância e antes da punção, e só sai quando o diagnóstico é excluído com segurança. O tratamento dura 14 dias e vai a 21 em imunossuprimido ou doença grave. O PCR de HSV no líquor é o exame confirmatório, mas pode ser negativo nos primeiros três dias; resultado negativo com clínica compatível não autoriza suspender o aciclovir. A ressonância é o exame de imagem de escolha, com hipersinal em FLAIR e restrição à difusão no lobo temporal, insular e frontal inferior; a tomografia serve para excluir hemorragia e herniação antes da punção. O EEG em até 24 horas identifica crise subclínica e padrão periódico, achados que mudam a conduta em paciente com rebaixamento inexplicado. Corticoide não é rotina na encefalite viral: entra na encefalite autoimune, com metilprednisolona em pulsoterapia seguida de prednisona em desmame, associada ou não a imunoglobulina e plasmaférese. Antiepiléptico trata crise clínica ou eletrográfica, nunca profilaxia de rotina. A hipertensão intracraniana se maneja com cabeceira elevada, normocapnia, osmoterapia e, no refratário, descompressão cirúrgica.",
+    "inclusao": [
+      "Febre com alteração de consciência, comportamento ou personalidade de instalação aguda",
+      "Convulsão nova associada a febre e alteração do nível de consciência",
+      "Déficit focal, afasia ou hemiparesia em contexto febril",
+      "Cefaleia com febre, confusão e líquor com pleocitose, mesmo sem rigidez de nuca",
+      "Quadro psiquiátrico agudo com coreia, discinesia orofacial ou convulsão em adulto jovem",
+      "Encefalopatia febril em imunossuprimido, com necessidade de ampliar agentes"
+    ],
+    "exclusao": [
+      {
+        "situacao": "meningite bacteriana com meningismo predominante e disfunção cerebral ausente",
+        "fluxo": "NEU-15 meningite bacteriana"
+      },
+      {
+        "situacao": "déficit focal súbito sem febre, com tomografia ou ressonância compatível com isquemia",
+        "fluxo": "NEU-08 AVC"
+      },
+      {
+        "situacao": "crise epiléptica isolada com recuperação completa da consciência",
+        "fluxo": "NEU-05 crise epiléptica"
+      },
+      {
+        "situacao": "confusão mental sem febre e sem sinal focal, com causa metabólica identificada",
+        "fluxo": "NEU-09 confusão"
+      },
+      {
+        "situacao": "agitação ou psicose sem febre e sem alteração do sensório",
+        "fluxo": "PSQ-01 agitação"
+      },
+      {
+        "situacao": "intoxicação exógena com rebaixamento de consciência",
+        "fluxo": "PSQ-08 intoxicação"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "rebaixamento progressivo com Glasgow 8 ou menos",
+        "por_que": "edema cerebral e risco de herniação",
+        "acao": "proteger via aérea, osmoterapia e UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "convulsão ou estado de mal epiléptico",
+        "por_que": "lesão cortical e edema, com piora do dano",
+        "acao": "benzodiazepínico seguido de anticonvulsivante IV",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "déficit focal, anisocoria ou postura de descerebração",
+        "por_que": "lesão temporal com efeito de massa e herniação",
+        "acao": "tomografia imediata, manitol e neurocirurgia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "hiponatremia abaixo de 130 mEq/L",
+        "por_que": "SIADH com risco de convulsão e edema",
+        "acao": "restrição hídrica e correção lenta do sódio",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "febre acima de 39 °C sem foco evidente",
+        "por_que": "aumento do metabolismo cerebral e do edema",
+        "acao": "antitérmico, hemoculturas e ampliação da investigação",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "rebaixamento sem crise clínica aparente",
+        "por_que": "estado de mal não convulsivo",
+        "acao": "EEG em até 24 h e tratamento se padrão epileptiforme",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "imunossupressão, HIV, transplante ou uso de imunobiológico",
+        "por_que": "CMV, toxoplasmose, tuberculose e criptococo",
+        "acao": "ampliar investigação e cobertura, com infectologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "quadro psiquiátrico agudo com coreia ou discinesia em adulto jovem",
+        "por_que": "encefalite autoimune anti-NMDAR",
+        "acao": "pesquisar tumor e iniciar imunoterapia após excluir infecção",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Há quantas horas ou dias começou a alteração de comportamento ou de consciência?",
+      "Teve convulsão, déficit focal ou alteração de fala?",
+      "Há herpes labial, genital ou lesão cutânea vesiculosa ativa?",
+      "Está imunossuprimido, tem HIV, transplante ou usa imunobiológico ou corticoide?",
+      "Viajou para área de arbovírus, teve contato com animal ou exposição a carrapato?",
+      "Teve quadro psiquiátrico agudo, insônia, coreia ou movimentos anormais?",
+      "Há história de tumor ovariano ou teratoma, mesmo benigno?",
+      "A creatinina e o sódio estão normais, e qual o valor?",
+      "Já recebeu aciclovir, e em que hora?",
+      "Fez EEG e ele mostrou padrão periódico ou crise subclínica?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Suspeita de encefalite viral com febre, alteração de consciência e cefaleia, convulsão ou déficit",
+        "escolha": "Aciclovir 10 mg/kg IV 8/8 h imediatamente, associado a ceftriaxona 2 g 12/12 h até excluir causa bacteriana",
+        "porque": "O herpes é a causa tratável com maior letalidade e o benefício do antiviral depende de começar cedo; a ceftriaxona cobre a meningite bacteriana que se apresenta de forma encefalítica"
+      },
+      {
+        "cenario": "PCR de HSV positivo no líquor",
+        "escolha": "Manter aciclovir 10 mg/kg 8/8 h por 14 dias; 21 dias em imunossuprimido, em doença grave ou em recidiva",
+        "porque": "O curso prolongado reduz recidiva e sequela neurológica, sobretudo em imunossuprimido, em que a replicação viral é mais prolongada"
+      },
+      {
+        "cenario": "PCR de HSV negativo colhido nas primeiras 72 horas, com clínica e ressonância compatíveis",
+        "escolha": "Manter aciclovir e repetir a punção com novo PCR em 3 a 7 dias, repetindo a ressonância",
+        "porque": "A sensibilidade do PCR cai nos primeiros dias de sintoma; suspender com um único negativo precoce é o erro que leva a recidiva e morte"
+      },
+      {
+        "cenario": "Encefalite autoimune provável: início psiquiátrico, coreia, discinesia orofacial, convulsão e teratoma ovariano",
+        "escolha": "Metilprednisolona 1 g/dia IV por 3 a 5 dias, seguida de prednisona 1 mg/kg/dia com desmame em 4 a 6 semanas, associada a imunoglobulina ou plasmaférese",
+        "porque": "A imunoterapia precoce melhora o desfecho funcional; o corticoide isolado é a primeira etapa e a associação é reservada aos casos graves ou refratários"
+      },
+      {
+        "cenario": "Encefalite autoimune com dúvida sobre herpes concomitante",
+        "escolha": "Iniciar aciclovir e imunoterapia juntos, sem esperar o PCR para começar nenhum dos dois",
+        "porque": "As duas condições podem coexistir como gatilho viral; esperar um resultado para tratar a outra custa dano neurológico irreversível"
+      },
+      {
+        "cenario": "Crise convulsiva na encefalite",
+        "escolha": "Levetiracetam 1.000–2.000 mg IV em ataque e manutenção de 500–1.000 mg 12/12 h; fenitoína 20 mg/kg como segunda linha",
+        "porque": "O levetiracetam controla a crise sem interação e sem sedação que confunda a avaliação do sensório; a fenitoína entra quando há falha ou necessidade de associação"
+      },
+      {
+        "cenario": "Estado de mal epiléptico ou crises repetidas",
+        "escolha": "Midazolam 0,1–0,2 mg/kg IV e infusão contínua de 0,05–0,2 mg/kg/h, com monitorização respiratória",
+        "porque": "O benzodiazepínico é a primeira linha para interromper a crise; a infusão contínua estabiliza o paciente que não responde à dose única"
+      },
+      {
+        "cenario": "Rebaixamento inexplicado com EEG mostrando padrão periódico ou crise subclínica",
+        "escolha": "Tratar como estado de mal não convulsivo com anticonvulsivante e reavaliar o EEG em 24 h",
+        "porque": "Crise subclínica mantém lesão neuronal e edema sem manifestação motora; o EEG é o único exame que a revela"
+      },
+      {
+        "cenario": "Hipertensão intracraniana com rebaixamento, pupilas assimétricas ou edema na imagem",
+        "escolha": "Cabeceira a 30 graus, normocapnia, manitol 0,25–1 g/kg ou salina hipertônica a 20%, com avaliação imediata para craniectomia descompressiva",
+        "porque": "A osmoterapia é ponte e a descompressão é a medida que muda mortalidade no edema refratário; hiperventilação só em herniação iminente e por minutos"
+      },
+      {
+        "cenario": "Imunossuprimido com encefalite e suspeita de CMV",
+        "escolha": "Ganciclovir 5 mg/kg IV 12/12 h por 14 a 21 dias, associado ao aciclovir até excluir HSV",
+        "porque": "O CMV causa encefalite grave em HIV e transplantado e não responde ao aciclovir; a cobertura dupla cobre as duas hipóteses até o resultado"
+      },
+      {
+        "cenario": "Maior de 50 anos, alcoolista ou imunossuprimido com febre, ataxia e disfunção de pares cranianos",
+        "escolha": "Acrescentar ampicilina 2 g 4/4 h para Listeria, que causa romboencefalite",
+        "porque": "A Listeria não é coberta pela ceftriaxona e a apresentação de tronco encefálico é típica nessa população"
+      },
+      {
+        "cenario": "Encefalite em área endêmica de arbovírus, com exantema, mialgia ou artralgia",
+        "escolha": "Suporte, hidratação, notificação e nenhum antiviral específico; evitar AAS e anti-inflamatório até excluir dengue",
+        "porque": "Não há antiviral para arbovírus e o antiagregante aumenta sangramento na dengue, que é o principal diagnóstico diferencial nessas áreas"
+      },
+      {
+        "cenario": "Insuficiência renal aguda ou crônica durante o tratamento",
+        "escolha": "Ajustar aciclovir por ClCr, ganciclovir por ClCr e levetiracetam por ClCr; manter ceftriaxona e metilprednisolona sem ajuste",
+        "porque": "Aciclovir cristaliza no túbulo e causa nefrotoxicidade, e o acúmulo de levetiracetam deprime o sensório e simula piora da encefalite"
+      },
+      {
+        "cenario": "Gestante com suspeita de encefalite",
+        "escolha": "Aciclovir em dose plena, ceftriaxona e ressonância sem gadolínio; discutir com obstetrícia",
+        "porque": "O aciclovir é seguro na gestação e a encefalite não tratada é fatal para a mãe e para o feto"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir",
+        "papel": "primeira_linha",
+        "indicacao": "encefalite herpética suspeita ou confirmada, iniciada na primeira hora da suspeita",
+        "dose": "10 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "14 dias; 21 dias em imunossuprimido, doença grave ou recidiva",
+        "dose_maxima": "1.200 mg por dose, com peso ideal em obeso",
+        "contraindicacoes": [
+          "hipersensibilidade a aciclovir ou valaciclovir",
+          "insuficiência renal sem ajuste de dose",
+          "desidratação grave não corrigida"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade por cristalúria",
+          "confusão e alucinação",
+          "tremor e mioclonias",
+          "flebite no acesso",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 250 mg",
+          "frasco-ampola 500 mg",
+          "comprimido 200 mg",
+          "suspensão oral 50 mg/mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água; diluir em 100–250 mL de SF 0,9% até concentração máxima de 7 mg/mL",
+        "tempo_infusao": "60 minutos; nunca em bolus",
+        "monitorizacao": [
+          "creatinina a cada 24–48 h",
+          "diurese e balanço hídrico",
+          "nível de consciência e confusão",
+          "sódio sérico",
+          "sítio de infusão"
+        ],
+        "ajuste_renal": "ClCr 50–80 mL/min: 10 mg/kg 12/12 h; ClCr 25–50: 10 mg/kg 24/24 h; ClCr 10–25: 5–10 mg/kg 24/24 h; abaixo de 10 ou em diálise: 2,5–5 mg/kg 24/24 h após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Hidratar com SF 0,9% antes e durante a infusão. Não esperar PCR, ressonância ou punção para iniciar: o atraso é o principal determinante de morte e sequela. Em paciente que melhora e tem PCR negativo, a decisão de suspender exige reavaliação clínica e de imagem",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de encefalite",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_cefalosporina_terceira",
+        "agente": "ceftriaxona",
+        "papel": "condicional",
+        "indicacao": "cobertura de meningite bacteriana com apresentação encefalítica até a exclusão",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "12/12 h",
+        "duracao": "até 48–72 h, ou 7–14 dias se bacteriana confirmada",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "anafilaxia a cefalosporina ou penicilina",
+          "neonato com hiperbilirrubinemia",
+          "infusão com solução contendo cálcio"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "colite por Clostridioides difficile",
+          "litíase biliar",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g",
+          "solução injetável 1 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "temperatura e nível de consciência",
+          "hemograma e transaminases",
+          "diarreia",
+          "sítio de infusão"
+        ],
+        "ajuste_renal": "Sem ajuste; limitar a 2 g/dia com ClCr abaixo de 10 mL/min",
+        "ajuste_hepatico": "Sem ajuste isolado",
+        "observacoes": "Suspender quando o líquor e a cultura afastarem causa bacteriana. Não atrasa nem substitui o aciclovir: os dois começam juntos na dúvida",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de meningite",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_aminopenicilina",
+        "agente": "ampicilina",
+        "papel": "condicional",
+        "indicacao": "cobertura de Listeria em romboencefalite de maior de 50 anos, alcoolista ou imunossuprimido",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "4/4 h",
+        "duracao": "21 dias quando Listeria confirmada",
+        "dose_maxima": "12 g/dia",
+        "contraindicacoes": [
+          "anafilaxia a penicilina",
+          "alergia grave a beta-lactâmico"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "convulsão por acúmulo",
+          "cristalúria",
+          "hipocalemia"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g",
+          "cápsula 500 mg"
+        ],
+        "preparo": "Reconstituir em 10 mL de água; diluir 2 g em 100 mL de SF 0,9% e usar em até 30 minutos",
+        "tempo_infusao": "15–30 minutos",
+        "monitorizacao": [
+          "creatinina e potássio",
+          "nível de consciência e crises",
+          "rash cutâneo"
+        ],
+        "ajuste_renal": "ClCr 10–30 mL/min: 2 g 8/8 h; ClCr abaixo de 10: 2 g 12/12 h",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Entra apenas quando há fator de risco para Listeria, sobretudo com ataxia, nistagmo ou paralisia de par craniano",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de meningite",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "metilprednisolona",
+        "papel": "primeira_linha",
+        "indicacao": "encefalite autoimune, em pulsoterapia de indução",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "infecção bacteriana ativa sem tratamento",
+          "imunossupressão grave sem cobertura",
+          "hipersensibilidade",
+          "psicose ativa descompensada"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipertensão",
+          "arritmia",
+          "psicose esteroidal",
+          "infecção secundária",
+          "sangramento digestivo"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg (succinato)",
+          "frasco-ampola 1 g (succinato)",
+          "comprimido 4 mg"
+        ],
+        "preparo": "Reconstituir em 10 mL de diluente próprio; diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "30–60 minutos",
+        "monitorizacao": [
+          "glicemia a cada 6 h",
+          "pressão arterial e frequência cardíaca durante a infusão",
+          "eletrólitos",
+          "sinais de infecção",
+          "glicemia e comportamento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em uso curto",
+        "observacoes": "Não é rotina na encefalite viral: reservar para a autoimune, após ou junto da cobertura antiviral. Prescrever proteção gástrica e monitorar glicemia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de encefalite autoimune",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "prednisona",
+        "papel": "condicional",
+        "indicacao": "manutenção após a pulsoterapia da encefalite autoimune, com desmame gradual",
+        "dose": "1 mg/kg/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "4 a 6 semanas com desmame",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": [
+          "infecção ativa não controlada",
+          "diabetes descompensado",
+          "osteoporose grave",
+          "úlcera péptica ativa"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "aumento de peso",
+          "osteoporose",
+          "infecção",
+          "insônia",
+          "alteração de humor"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 20 mg",
+          "solução oral 3 mg/mL"
+        ],
+        "preparo": "Uso direto, pela manhã, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia",
+          "pressão arterial",
+          "peso",
+          "sinais de infecção",
+          "densitometria em uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Cautela em hepatopatia grave",
+        "observacoes": "Desmame lento para evitar recidiva da encefalite autoimune; não interromper abruptamente após 4 semanas",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anticonvulsivante",
+        "agente": "levetiracetam",
+        "papel": "primeira_linha",
+        "indicacao": "crise convulsiva clínica ou eletrográfica na encefalite",
+        "dose": "ataque de 1.000–2.000 mg; manutenção de 500–1.000 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "12/12 h",
+        "duracao": "fase aguda; reavaliar em 7 a 14 dias",
+        "dose_maxima": "3.000 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "psicose ativa",
+          "insuficiência renal sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "sonolência",
+          "irritabilidade",
+          "agressividade",
+          "tontura",
+          "trombocitopenia rara"
+        ],
+        "apresentacoes": [
+          "solução injetável 100 mg/mL",
+          "comprimido 250 mg",
+          "comprimido 500 mg",
+          "solução oral 100 mg/mL"
+        ],
+        "preparo": "Diluir a dose em 100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "15 minutos",
+        "monitorizacao": [
+          "controle de crises e EEG se rebaixamento persistente",
+          "nível de consciência",
+          "função renal",
+          "comportamento"
+        ],
+        "ajuste_renal": "ClCr 50–80 mL/min: 500–1.000 mg 12/12 h; 30–50: 250–750 mg 12/12 h; abaixo de 30: 250–500 mg 12/12 h",
+        "ajuste_hepatico": "Reduzir a dose em Child C",
+        "observacoes": "Profilaxia de rotina não é indicada: tratar apenas crise clínica ou eletrográfica. Preferir ao fenobarbital por não deprimir o sensório",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anticonvulsivante",
+        "agente": "fenitoína",
+        "papel": "alternativa",
+        "indicacao": "segunda linha no controle da crise e do estado de mal na encefalite",
+        "dose": "ataque de 20 mg/kg; manutenção de 100 mg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "ataque em dose única; manutenção 8/8 h",
+        "duracao": "fase aguda, com reavaliação",
+        "dose_maxima": "1.000 mg no ataque; 300 mg/dia na manutenção",
+        "contraindicacoes": [
+          "bradicardia abaixo de 50 bpm",
+          "bloqueio atrioventricular de 2º ou 3º grau",
+          "hipotensão",
+          "hipersensibilidade a hidantoína"
+        ],
+        "efeitos_adversos": [
+          "hipotensão",
+          "arritmia",
+          "flebite grave",
+          "necrose cutânea por extravasamento",
+          "ataxia e nistagmo em dose alta"
+        ],
+        "apresentacoes": [
+          "ampola 250 mg/5 mL",
+          "cápsula 100 mg",
+          "comprimido 100 mg"
+        ],
+        "preparo": "Diluir em 100 mL de SF 0,9%; não diluir em glicose, que precipita; infundir com filtro e monitorização cardíaca",
+        "tempo_infusao": "velocidade máxima de 50 mg/min, com ECG contínuo",
+        "monitorizacao": [
+          "ECG e pressão durante a infusão",
+          "nível sérico de 10–20 mcg/mL",
+          "sítio de infusão",
+          "nível de consciência e nistagmo"
+        ],
+        "ajuste_renal": "Sem ajuste na dose de ataque; monitorar nível livre em hipoalbuminemia",
+        "ajuste_hepatico": "Reduzir a manutenção em hepatopatia grave",
+        "observacoes": "Preferir o levetiracetam quando há rebaixamento, porque a fenitoína piora a sedação e a hipotensão. Nunca em bolus rápido",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "midazolam",
+        "papel": "resgate",
+        "indicacao": "estado de mal epiléptico e crises repetidas na encefalite",
+        "dose": "0,1–0,2 mg/kg em bolus; infusão de 0,05–0,2 mg/kg/h",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "bolus e infusão contínua titulada",
+        "duracao": "até 24–48 h, com desmame gradual",
+        "dose_maxima": "0,2 mg/kg por bolus; infusão conforme resposta e suporte ventilatório",
+        "contraindicacoes": [
+          "hipotensão grave",
+          "insuficiência respiratória sem suporte ventilatório",
+          "miastenia gravis",
+          "hipersensibilidade a benzodiazepínico"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "hipotensão",
+          "sedação prolongada",
+          "acúmulo em insuficiência renal"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (3 mL)",
+          "ampola 5 mg/mL (10 mL)",
+          "frasco 5 mg/mL"
+        ],
+        "preparo": "Bolus sem diluição; para infusão, diluir 50 mg em 250 mL de SF 0,9% (0,2 mg/mL) em bomba",
+        "tempo_infusao": "bolus lento em 1–2 minutos; infusão contínua titulada",
+        "monitorizacao": [
+          "frequência respiratória e saturação",
+          "pressão arterial",
+          "nível de consciência",
+          "EEG contínuo no estado de mal refratário"
+        ],
+        "ajuste_renal": "Reduzir a dose em insuficiência renal por acúmulo do metabólito ativo",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Ter material de via aérea à beira do leito. Após 24–48 h de infusão, o desmame é gradual para evitar crise de rebote",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "osmotico",
+        "agente": "manitol 20%",
+        "papel": "condicional",
+        "indicacao": "hipertensão intracraniana com edema cerebral e risco de herniação",
+        "dose": "0,25–1 g/kg",
+        "unidade": "g/kg",
+        "via": "IV",
+        "frequencia": "6/6 h ou 8/8 h",
+        "duracao": "até o controle da pressão intracraniana ou a descompressão cirúrgica",
+        "dose_maxima": "2 g/kg em herniação iminente",
+        "contraindicacoes": [
+          "anúria",
+          "insuficiência cardíaca descompensada",
+          "edema agudo de pulmão",
+          "hipovolemia grave não corrigida"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga de volume",
+          "lesão renal",
+          "distúrbio eletrolítico",
+          "efeito rebote"
+        ],
+        "apresentacoes": [
+          "frasco 250 mL a 20%",
+          "bolsa 500 mL a 20%"
+        ],
+        "preparo": "Usar a solução a 20% já pronta, aquecida a 37 °C, com filtro em acesso calibroso",
+        "tempo_infusao": "20–30 minutos",
+        "monitorizacao": [
+          "diurese e balanço hídrico",
+          "sódio e osmolaridade a cada 6–12 h",
+          "creatinina",
+          "pupilas e nível de consciência"
+        ],
+        "ajuste_renal": "Contraindicado em anúria; evitar com ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É ponte para a cirurgia. Em hipotenso ou hipovolêmico, preferir salina hipertônica, que expande o volume intravascular",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "osmotico",
+        "agente": "solução salina hipertônica 20%",
+        "papel": "alternativa",
+        "indicacao": "hipertensão intracraniana em paciente hipotenso ou hipovolêmico",
+        "dose": "20–40 mL de solução a 20% em bolus",
+        "unidade": "mL",
+        "via": "IV em acesso central",
+        "frequencia": "6/6 h ou 8/8 h, ou bolus único na herniação",
+        "duracao": "48–96 h conforme resposta",
+        "dose_maxima": "120 mL/dia de solução a 20%",
+        "contraindicacoes": [
+          "hipernatremia acima de 155 mEq/L",
+          "sobrecarga de volume",
+          "insuficiência cardíaca descompensada",
+          "anúria"
+        ],
+        "efeitos_adversos": [
+          "hipernatremia",
+          "mielinólise osmótica com correção excessiva",
+          "sobrecarga de volume",
+          "tromboflebite em acesso periférico"
+        ],
+        "apresentacoes": [
+          "frasco 20 mL a 20%",
+          "frasco 250 mL a 3%",
+          "bolsa 500 mL a 3%"
+        ],
+        "preparo": "Não diluir a solução a 20%; administrar por acesso central; a solução a 3% pode ir em acesso periférico calibroso",
+        "tempo_infusao": "10–20 minutos (20%); 30–60 minutos (3%)",
+        "monitorizacao": [
+          "sódio a cada 6–12 h, alvo de 145–155 mEq/L",
+          "pressão e diurese",
+          "ausculta pulmonar",
+          "pupilas e nível de consciência"
+        ],
+        "ajuste_renal": "Sem ajuste; monitorar sódio e volume",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não corrigir o sódio rápido demais: risco de mielinólise. Preferida no hipotenso porque expande o volume além de reduzir o edema",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina humana IV",
+        "papel": "condicional",
+        "indicacao": "encefalite autoimune grave ou refratária ao corticoide, associada ou não à plasmaférese",
+        "dose": "0,4 g/kg/dia",
+        "unidade": "g/kg/dia",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "5 dias",
+        "dose_maxima": "2 g/kg no total do ciclo",
+        "contraindicacoes": [
+          "deficiência de IgA com anticorpo anti-IgA",
+          "insuficiência renal grave sem cautela",
+          "trombose ativa",
+          "hipersensibilidade a imunoglobulina"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "meningite asséptica",
+          "lesão renal",
+          "trombose",
+          "hemólise",
+          "reação infusiona"
+        ],
+        "apresentacoes": [
+          "frasco 2,5 g em 50 mL",
+          "frasco 5 g em 100 mL",
+          "frasco 10 g em 200 mL"
+        ],
+        "preparo": "Usar a solução pronta; não agitar; infundir em equipo com filtro, sem diluição",
+        "tempo_infusao": "iniciar a 0,5–1 mL/kg/h e aumentar até 3–4 mL/kg/h conforme tolerância",
+        "monitorizacao": [
+          "creatinina e diurese",
+          "pressão e frequência cardíaca",
+          "cefaleia e rigidez de nuca",
+          "hemograma",
+          "sinais de trombose"
+        ],
+        "ajuste_renal": "Reduzir a velocidade e a dose em ClCr abaixo de 30 mL/min; contraindicada em anúria sem diálise",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Aumenta a viscosidade sérica: hidratar e monitorar trombose em idoso e em paciente imobilizado. Não substitui o aciclovir na dúvida com herpes",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "ganciclovir",
+        "papel": "condicional",
+        "indicacao": "encefalite por citomegalovírus em imunossuprimido, com PCR de CMV no líquor",
+        "dose": "5 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "12/12 h",
+        "duracao": "14 a 21 dias, com reavaliação clínica e de PCR",
+        "dose_maxima": "10 mg/kg/dia",
+        "contraindicacoes": [
+          "neutrófilos abaixo de 500/mm³",
+          "plaquetas abaixo de 25.000/mm³",
+          "hipersensibilidade a ganciclovir",
+          "gestação"
+        ],
+        "efeitos_adversos": [
+          "neutropenia",
+          "trombocitopenia",
+          "anemia",
+          "disfunção renal",
+          "febre"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "cápsula 250 mg",
+          "cápsula 500 mg"
+        ],
+        "preparo": "Reconstituir em 10 mL de água; diluir em 100 mL de SF 0,9%; não refrigerar",
+        "tempo_infusao": "60 minutos",
+        "monitorizacao": [
+          "hemograma com neutrófilos a cada 48–72 h",
+          "creatinina",
+          "plaquetas",
+          "função hepática"
+        ],
+        "ajuste_renal": "ClCr 50–70 mL/min: 2,5 mg/kg 12/12 h; ClCr 25–50: 2,5 mg/kg 24/24 h; ClCr 10–25: 1,25 mg/kg 24/24 h; em diálise: 1,25 mg/kg após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Manter aciclovir associado até excluir HSV. O ganciclovir não cobre herpes simples com a mesma eficácia e não substitui o aciclovir",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Cabeceira elevada a 30 graus com cabeça na linha média",
+        "detalhe": "Reduz a pressão intracraniana por facilitar a drenagem venosa jugular; manter no transporte e durante a ressonância, quando possível"
+      },
+      {
+        "medida": "Normocapnia e normoxemia com proteção de via aérea",
+        "detalhe": "Manter PaCO2 entre 35 e 40 mmHg e saturação acima de 94%; hiperventilação só por minutos na herniação iminente, porque reduz o fluxo cerebral"
+      },
+      {
+        "medida": "Controle térmico rigoroso",
+        "detalhe": "Tratar temperatura acima de 37,5 °C com paracetamol e medidas físicas; cada grau de febre aumenta o metabolismo cerebral e o edema"
+      },
+      {
+        "medida": "Controle glicêmico entre 140 e 180 mg/dL",
+        "detalhe": "Glicemia de 6 em 6 h e insulina em infusão se acima de 180 mg/dL; evitar hipoglicemia, que também lesa o cérebro"
+      },
+      {
+        "medida": "Controle do sódio e do balanço hídrico",
+        "detalhe": "Dosar sódio a cada 24 h; no SIADH restringir líquidos e corrigir no máximo 8–10 mEq/L em 24 h; na hipernatremia desejada pela osmoterapia, alvo de 145–155 mEq/L"
+      },
+      {
+        "medida": "Sedação e analgesia tituladas com EEG quando necessário",
+        "detalhe": "Evitar sedação profunda que impeça a avaliação neurológica; no estado de mal refratário, usar EEG contínuo para titular a infusão anestésica"
+      },
+      {
+        "medida": "Precaução de contato com secreções e isolamento de gotículas quando houver lesão herpética",
+        "detalhe": "Higiene de mãos, luvas e máscara para manipular secreções orais e de feridas; o herpes simples em encefalite não exige isolamento de aerossol"
+      },
+      {
+        "medida": "Reabilitação precoce e prevenção de complicações da imobilidade",
+        "detalhe": "Fisioterapia motora e respiratória desde a estabilização, fonoaudiologia para disfagia e mudança de decúbito a cada 2 h, com avaliação neuropsicológica antes da alta"
+      },
+      {
+        "medida": "Notificação e comunicação com a vigilância",
+        "detalhe": "Notificar encefalite por arbovírus, raiva e surtos; registrar a suspeita de herpes para investigação de contactantes com lesão ativa"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Ressonância magnética de crânio com FLAIR e difusão",
+        "indicacao": "todo paciente com suspeita de encefalite, sem atrasar o aciclovir",
+        "tecnica": "Aquisição axial e coronal com FLAIR, difusão e T1 com contraste; procurar hipersinal em temporal, insular e frontal inferior",
+        "complicacoes": "Sedação e claustrofobia, atraso do tratamento se o exame for feito antes do antiviral, piora do paciente sem monitorização"
+      },
+      {
+        "nome": "Punção lombar diagnóstica",
+        "indicacao": "suspeita de encefalite sem contraindicação de herniação, após aciclovir e imagem quando indicada",
+        "tecnica": "L3-L4 ou L4-L5, com medida de pressão de abertura; enviar citologia, bioquímica, PCR de HSV e de outros vírus, cultura, lactato e painel autoimune",
+        "complicacoes": "Cefaleia pós-punção, hematoma, herniação em hipertensão intracraniana"
+      },
+      {
+        "nome": "Eletroencefalograma em até 24 horas",
+        "indicacao": "rebaixamento inexplicado, convulsão, suspeita de estado de mal não convulsivo ou encefalite autoimune",
+        "tecnica": "EEG de 20 a 30 minutos com montagem completa; se negativo e o rebaixamento persistir, EEG prolongado ou contínuo",
+        "complicacoes": "Não trata o paciente nem substitui a imagem; resultado normal não exclui encefalite"
+      },
+      {
+        "nome": "Intubação orotraqueal e ventilação mecânica",
+        "indicacao": "Glasgow 8 ou menos, hipoxemia, convulsão refratária ou hipertensão intracraniana com necessidade de sedação",
+        "tecnica": "Pré-oxigenação, sequência rápida, capnografia e ajuste de ventilação para normocapnia",
+        "complicacoes": "Hipotensão, aspiração, pneumonia, piora da pressão intracraniana"
+      },
+      {
+        "nome": "Plasmaférese terapêutica",
+        "indicacao": "encefalite autoimune grave ou refratária à corticoterapia e à imunoglobulina",
+        "tecnica": "5 a 7 sessões em dias alternados, com cateter central e reposição de albumina ou plasma",
+        "complicacoes": "Hipotensão, infecção de cateter, distúrbio eletrolítico, sangramento por remoção de fatores"
+      },
+      {
+        "nome": "Craniectomia descompressiva",
+        "indicacao": "edema cerebral refratário com herniação iminente ou pressão intracraniana incontrolável",
+        "tecnica": "Remoção de fragmento ósseo frontotemporoparietal amplo com abertura da dura",
+        "complicacoes": "Infecção, hidrocefalia, síndrome do afundamento do retalho, hematoma"
+      }
+    ],
+    "metas": [
+      "Aciclovir iniciado em até 60 minutos da suspeita, e nunca depois de 6 horas da chegada",
+      "Ceftriaxona iniciada na mesma hora do aciclovir quando houver dúvida com bacteriana",
+      "Punção lombar com PCR de HSV realizada em até 24 horas, sem nunca atrasar o antiviral",
+      "Ressonância magnética realizada em até 48 horas nos pacientes estáveis",
+      "EEG realizado em até 24 horas em todo paciente com rebaixamento inexplicado",
+      "Nenhum paciente com clínica compatível tem aciclovir suspenso por um único PCR negativo precoce",
+      "PAM de pelo menos 65 mmHg, sódio igual ou acima de 130 mEq/L e glicemia entre 140 e 180 mg/dL",
+      "Duração do aciclovir de 14 dias, ou 21 dias em imunossuprimido e em doença grave",
+      "Avaliação de reabilitação e neuropsicológica documentada antes da alta"
+    ],
+    "fluxo": [
+      "Reconhecer a tríade febre, alteração de consciência e cefaleia, convulsão ou déficit, e acionar o protocolo de encefalite com registro da hora",
+      "Iniciar aciclovir 10 mg/kg IV 8/8 h imediatamente e ceftriaxona 2 g 12/12 h na mesma hora, sem esperar imagem, punção ou PCR",
+      "Colher hemoculturas e exames gerais, medir glicemia, sódio e creatinina, e ajustar a dose de aciclovir pela função renal já na primeira prescrição",
+      "Avaliar risco de herniação: sem sinal, punção lombar com PCR de HSV; com rebaixamento, déficit ou papiledema, tomografia primeiro e punção depois, mantendo o antiviral",
+      "Ressonância de crânio com FLAIR e difusão em até 48 h, sem interromper o tratamento para realizá-la",
+      "EEG em até 24 h se houver rebaixamento inexplicado, convulsão ou suspeita de estado de mal não convulsivo, com tratamento se padrão epileptiforme",
+      "Decidir a imunoterapia: se o quadro for autoimune, iniciar metilprednisolona 1 g/dia por 3 a 5 dias, seguida de prednisona com desmame, e associar imunoglobulina ou plasmaférese nos casos graves",
+      "Tratar hipertensão intracraniana com cabeceira a 30 graus, normocapnia, manitol ou salina hipertônica e avaliação de craniectomia no refratário",
+      "Reavaliar com o PCR e a evolução: manter 14 dias, estender a 21 em imunossuprimido ou doença grave, e suspender aciclovir apenas com diagnóstico alternativo firmado ou dois PCR negativos em momento adequado"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "imunossuprimido e HIV",
+        "ajuste": "aciclovir por 21 dias, cobertura de CMV com ganciclovir e investigação de toxoplasmose, criptococo e tuberculose",
+        "alerta": "apresentação atípica, PCR de HSV com menor positividade e coinfecção múltipla"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "ajustar aciclovir e levetiracetam pela função renal, com atenção a confusão e quedas",
+        "alerta": "creatinina normal com ClCr baixo leva a superdose e nefrotoxicidade"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "aciclovir em dose plena, ceftriaxona e ressonância sem gadolínio, com discussão com obstetrícia",
+        "alerta": "encefalite não tratada é fatal para mãe e feto; o aciclovir é seguro na gestação"
+      },
+      {
+        "populacao": "renal_cronico ou em diálise",
+        "ajuste": "aciclovir e ganciclovir por faixa de ClCr, com dose após a sessão de diálise; levetiracetam reduzido",
+        "alerta": "cristalúria por aciclovir e acúmulo de metabólito do midazolam"
+      },
+      {
+        "populacao": "adulto jovem com quadro psiquiátrico agudo",
+        "ajuste": "pesquisar anti-NMDAR, teratoma ovariano e iniciar imunoterapia após ou junto da cobertura antiviral",
+        "alerta": "internação psiquiátrica isolada atrasa o diagnóstico de encefalite autoimune e piora o desfecho funcional"
+      },
+      {
+        "populacao": "usuario de inibidor de checkpoint",
+        "ajuste": "considerar encefalite autoimune por imunoterapia, suspender o imunobiológico e iniciar corticoide em pulsoterapia",
+        "alerta": "quadro pode coexistir com outras toxicidades imunes e exige equipe de oncologia"
+      },
+      {
+        "populacao": "área endêmica de arbovírus",
+        "ajuste": "suporte, notificação e evitar AAS e anti-inflamatório até excluir dengue",
+        "alerta": "não há antiviral específico e o sangramento por antiagregante piora a evolução"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "ressonância magnética de crânio com FLAIR e difusão",
+          "indicacao": "todos, em até 48 h, sem atrasar o antiviral",
+          "o_que_muda": "hipersinal temporal bilateral assimétrico sugere herpes e reforça a manutenção do aciclovir; lesão em gânglios da base sugere outra etiologia"
+        },
+        {
+          "nome": "PCR de HSV no líquor",
+          "indicacao": "todos submetidos a punção lombar",
+          "o_que_muda": "confirma herpes e define os 14 a 21 dias; negativo precoce não autoriza suspender"
+        },
+        {
+          "nome": "punção lombar com citologia, bioquímica, lactato e cultura",
+          "indicacao": "após aciclovir e imagem quando indicada",
+          "o_que_muda": "separa viral de bacteriana, tuberculosa e fúngica, e orienta o ajuste do esquema"
+        },
+        {
+          "nome": "eletroencefalograma",
+          "indicacao": "rebaixamento, convulsão ou suspeita de estado de mal não convulsivo",
+          "o_que_muda": "identifica crise subclínica e padrão periódico, que exigem anticonvulsivante"
+        },
+        {
+          "nome": "tomografia de crânio sem contraste",
+          "indicacao": "antes da punção quando houver risco de herniação",
+          "o_que_muda": "exclui hemorragia e efeito de massa e libera a punção com segurança"
+        },
+        {
+          "nome": "hemograma, proteína C reativa, procalcitonina, glicemia, sódio e creatinina",
+          "indicacao": "todos, na admissão e seriados",
+          "o_que_muda": "orienta sepse, SIADH e ajuste renal do aciclovir"
+        },
+        {
+          "nome": "painel autoimune e sorologias (HIV, sífilis, arbovírus conforme epidemiologia)",
+          "indicacao": "quadro autoimune provável, imunossupressão ou área endêmica",
+          "o_que_muda": "define imunoterapia, notificação e cobertura específica"
+        },
+        {
+          "nome": "PCR de CMV, EBV, enterovírus e outros no líquor",
+          "indicacao": "imunossuprimido ou PCR de HSV negativo com clínica persistente",
+          "o_que_muda": "identifica o agente e permite trocar ou associar antiviral"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "aguardar PCR de HSV ou ressonância para iniciar o aciclovir",
+          "motivo": "é o erro que mais mata na encefalite: o antiviral é empírico e urgente, e o exame não muda a primeira hora"
+        },
+        {
+          "exame": "suspender aciclovir com um único PCR negativo colhido nas primeiras 72 horas",
+          "motivo": "a sensibilidade do PCR cai no início e a recidiva é grave"
+        },
+        {
+          "exame": "punção lombar sem imagem em paciente com rebaixamento, déficit focal ou papiledema",
+          "motivo": "risco de herniação durante o procedimento"
+        },
+        {
+          "exame": "corticoide de rotina na encefalite viral",
+          "motivo": "não melhora desfecho e aumenta infecção secundária; reservar para a autoimune"
+        },
+        {
+          "exame": "profilaxia anticonvulsivante de rotina em todo paciente com encefalite",
+          "motivo": "não previne crise, acrescenta sedação e atrapalha a avaliação neurológica"
+        },
+        {
+          "exame": "sedação profunda sem EEG no paciente com rebaixamento",
+          "motivo": "mascara crise subclínica e impede distinguir sedação de piora da encefalite"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "completar o aciclovir endovenoso por todo o período prescrito, sem interrupção por melhora",
+        "comparecer à reabilitação motora, fonoaudiológica e neuropsicológica nas datas agendadas",
+        "manter o seguimento neurológico e repetir a ressonância quando solicitado",
+        "informar a equipe sobre novos sintomas psiquiátricos, movimentos anormais ou convulsão",
+        "realizar exames de controle de creatinina durante o tratamento endovenoso",
+        "notificar e orientar a família sobre sinais de recidiva após a alta"
+      ],
+      "evitar": [
+        "interromper o antiviral antes do prazo por conta própria",
+        "dirigir ou operar máquinas até a liberação médica, pela possibilidade de crise",
+        "praticar atividade física intensa ou usar álcool durante a recuperação",
+        "usar anti-inflamatório ou AAS sem orientação, sobretudo em área de dengue",
+        "retornar ao trabalho ou à escola sem avaliação neuropsicológica"
+      ],
+      "retorno": [
+        "convulsão ou movimentos anormais novos",
+        "sonolência, confusão ou alteração de comportamento",
+        "cefaleia intensa com vômitos ou visão dupla",
+        "febre nova após melhora",
+        "piora da força, da fala ou da memória"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "aciclovir",
+        "efeitos": [
+          "nefrotoxicidade",
+          "confusão",
+          "flebite"
+        ],
+        "observacao": "hidratar, infundir em 1 hora, ajustar por ClCr e dosar creatinina a cada 24–48 h"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "diarreia",
+          "colite por C. difficile",
+          "litíase biliar"
+        ],
+        "observacao": "suspender se colite confirmada e investigar dor abdominal"
+      },
+      {
+        "agente": "ampicilina",
+        "efeitos": [
+          "rash",
+          "convulsão por acúmulo"
+        ],
+        "observacao": "ajustar na insuficiência renal e diferenciar rash de anafilaxia"
+      },
+      {
+        "agente": "metilprednisolona",
+        "efeitos": [
+          "hiperglicemia",
+          "hipertensão",
+          "arritmia",
+          "psicose esteroidal"
+        ],
+        "observacao": "glicemia de 6 em 6 h, ECG se cardiopata e proteção gástrica"
+      },
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "infecção",
+          "osteoporose",
+          "insônia"
+        ],
+        "observacao": "desmame lento e suplementação de cálcio e vitamina D em uso prolongado"
+      },
+      {
+        "agente": "levetiracetam",
+        "efeitos": [
+          "sonolência",
+          "irritabilidade",
+          "agressividade"
+        ],
+        "observacao": "ajustar por ClCr e reavaliar a manutenção após a fase aguda"
+      },
+      {
+        "agente": "fenitoína",
+        "efeitos": [
+          "hipotensão",
+          "arritmia",
+          "necrose por extravasamento"
+        ],
+        "observacao": "infundir no máximo 50 mg/min com ECG e acesso calibroso"
+      },
+      {
+        "agente": "midazolam",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão",
+          "sedação prolongada"
+        ],
+        "observacao": "ter via aérea disponível e desmamar gradualmente após 24–48 h"
+      },
+      {
+        "agente": "manitol 20%",
+        "efeitos": [
+          "sobrecarga de volume",
+          "lesão renal",
+          "distúrbio eletrolítico"
+        ],
+        "observacao": "monitorar sódio, diurese e ausculta pulmonar"
+      },
+      {
+        "agente": "solução salina hipertônica 20%",
+        "efeitos": [
+          "hipernatremia",
+          "mielinólise osmótica",
+          "sobrecarga"
+        ],
+        "observacao": "alvo de sódio de 145–155 mEq/L e acesso central"
+      },
+      {
+        "agente": "imunoglobulina humana IV",
+        "efeitos": [
+          "cefaleia",
+          "meningite asséptica",
+          "lesão renal",
+          "trombose",
+          "hemólise"
+        ],
+        "observacao": "hidratar, infundir lentamente e monitorar creatinina e hemograma"
+      },
+      {
+        "agente": "ganciclovir",
+        "efeitos": [
+          "neutropenia",
+          "trombocitopenia",
+          "disfunção renal"
+        ],
+        "observacao": "hemograma a cada 48–72 h e ajuste por ClCr"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose e sintoma no prontuário",
+      "Creatinina subindo em uso de aciclovir: hidratar com SF 0,9%, reduzir a dose por ClCr e revisar nefrotóxicos associados",
+      "Confusão nova durante o aciclovir: dosar creatinina e sódio antes de atribuir à progressão da encefalite",
+      "Neutropenia por ganciclovir: suspender, dosar hemograma diário e considerar fator estimulador de colônias com infectologia",
+      "Hiperglicemia ou psicose por corticoide: ajustar insulina, reduzir a dose e avaliar necessidade de antipsicótico",
+      "Depressão respiratória por midazolam: reduzir a infusão, garantir via aérea e titular pelo EEG",
+      "Cefaleia e rigidez de nuca após imunoglobulina: diferenciar meningite asséptica de recidiva da encefalite",
+      "Reavaliar a indicação, trocar de classe e reescrever a prescrição antes de sair do leito"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "prednisona 20 mg",
+            "dose": "1 mg/kg/dia",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "4 a 6 semanas com desmame",
+            "condicao": "manutenção da encefalite autoimune",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "levetiracetam 500 mg",
+            "dose": "500–1.000 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "reavaliar em 7 a 14 dias",
+            "condicao": "crise convulsiva na fase aguda",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ácido fólico 5 mg",
+            "dose": "5 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "durante o desmame do corticoide",
+            "condicao": "uso prolongado de corticoide, se indicado pela equipe",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "aciclovir",
+            "dose": "10 mg/kg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "creatinina, hidratação e nível de consciência",
+            "condicao": "iniciar na primeira hora, manter 14 a 21 dias",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ceftriaxona",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "monitorizacao": "função hepática e sinais de infecção",
+            "condicao": "até excluir causa bacteriana",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ampicilina",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "4/4 h",
+            "monitorizacao": "creatinina e crises",
+            "condicao": "fator de risco para Listeria",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metilprednisolona",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "glicemia, pressão e ECG",
+            "condicao": "encefalite autoimune, por 3 a 5 dias",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "imunoglobulina humana IV",
+            "dose": "0,4 g/kg/dia",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "creatinina, pressão e cefaleia",
+            "condicao": "encefalite autoimune grave, 5 dias",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "levetiracetam",
+            "dose": "1.000 mg",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "monitorizacao": "controle de crises e sonolência",
+            "condicao": "convulsão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "midazolam",
+            "dose": "0,1–0,2 mg/kg",
+            "via": "IV",
+            "frequencia": "bolus e infusão contínua",
+            "monitorizacao": "respiração, saturação e EEG",
+            "condicao": "estado de mal epiléptico",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "manitol 20%",
+            "dose": "0,5 g/kg",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "sódio, diurese e ausculta pulmonar",
+            "condicao": "hipertensão intracraniana",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ganciclovir",
+            "dose": "5 mg/kg",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "monitorizacao": "neutrófilos, plaquetas e creatinina",
+            "condicao": "encefalite por CMV em imunossuprimido",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "ressonância magnética de crânio com FLAIR e difusão",
+          "punção lombar com PCR de HSV e cultura",
+          "eletroencefalograma",
+          "tomografia de crânio sem contraste",
+          "hemograma",
+          "proteína C reativa",
+          "procalcitonina",
+          "glicemia",
+          "sódio",
+          "creatinina",
+          "sorologias e painel autoimune",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, com diagnóstico de encefalite, em tratamento antiviral endovenoso e sob monitorização neurológica.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino (UTI, neurologia, neurocirurgia ou reabilitação)",
+          "motivo",
+          "resumo com hora do início, hora do aciclovir, ressonância, PCR e EEG",
+          "prioridade",
+          "necessidade de suporte ventilatório"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com encefalite de início ___, aciclovir iniciado às ___, ressonância com ___, PCR de HSV ___, EEG com ___, evoluindo com ___ e completando ___ dias de antiviral."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tempo de evolução",
+        "febre",
+        "alteração de consciência",
+        "alteração de comportamento",
+        "convulsão",
+        "déficit focal",
+        "herpes labial ou genital",
+        "imunossupressão e HIV",
+        "viagem e exposição a arbovírus",
+        "contato com animais",
+        "sintomas psiquiátricos e movimentos anormais",
+        "tumor prévio",
+        "medicações e imunobiológicos",
+        "creatinina e sódio"
+      ],
+      "texto_template": "Paciente com ___ dias de evolução, febre ___, alteração de consciência ___, alteração de comportamento ___, convulsão ___, déficit focal ___, herpes ___, imunossupressão ___, viagem para área endêmica ___, contato com animal ___, sintomas psiquiátricos ___, tumor prévio ___ e creatinina de ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e saturação",
+        "escala de coma de Glasgow",
+        "orientação, atenção e comportamento",
+        "pares cranianos e fundoscopia",
+        "força, sensibilidade e reflexos",
+        "coordenação e marcha",
+        "movimentos anormais e coreia",
+        "pele e lesões herpéticas",
+        "rigidez de nuca"
+      ],
+      "texto_template": "Sinais vitais com temperatura ___, Glasgow ___, orientação ___, pares cranianos ___, fundoscopia ___, força ___, coordenação ___, movimentos anormais ___, pele com ___ e rigidez de nuca ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de encefalite, tempo porta-aciclovir, disponibilidade de ressonância e EEG e padronização da dose renal",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_neurologia",
+        "o_que_verificar": "indicação e duração do aciclovir, critérios de encefalite autoimune e manejo da hipertensão intracraniana",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_encefalite",
+        "o_que_verificar": "interpretação do PCR de HSV conforme o tempo de coleta e critérios para repetir a punção",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e reconstituição de aciclovir, ganciclovir e imunoglobulina",
+        "verificar": true
+      },
+      {
+        "tipo": "ms",
+        "o_que_verificar": "notificação de arbovírus e raiva e vigilância de encefalites virais",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-NEU16-01",
+        "tipo": "atraso_antiviral",
+        "gatilho": "suspeita de encefalite sem aciclovir em 60 minutos",
+        "severidade": "grave",
+        "mensagem": "Encefalite é emergência antiviral: iniciar aciclovir agora, sem esperar PCR, ressonância ou punção.",
+        "acao": "bloquear a etapa e notificar o médico assistente",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-NEU16-02",
+        "tipo": "suspensao_precoce",
+        "gatilho": "aciclovir suspenso com um único PCR de HSV negativo colhido nas primeiras 72 horas",
+        "severidade": "grave",
+        "mensagem": "PCR negativo precoce não exclui herpes: manter o antiviral e repetir a coleta.",
+        "acao": "bloquear a suspensão",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-NEU16-03",
+        "tipo": "puncao_sem_imagem",
+        "gatilho": "punção lombar prescrita com rebaixamento, déficit focal, convulsão recente ou papiledema sem tomografia",
+        "severidade": "grave",
+        "mensagem": "Risco de herniação: obter imagem antes da punção, sem suspender o antiviral.",
+        "acao": "bloquear o procedimento",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-NEU16-04",
+        "tipo": "dose_renal",
+        "gatilho": "aciclovir, ganciclovir ou levetiracetam prescritos com ClCr abaixo de 50 mL/min sem ajuste",
+        "severidade": "grave",
+        "mensagem": "Ajustar a dose pela depuração de creatinina.",
+        "acao": "bloquear o item até o ajuste",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-NEU16-05",
+        "tipo": "convulsao",
+        "gatilho": "convulsão ou rebaixamento sem anticonvulsivante prescrito",
+        "severidade": "grave",
+        "mensagem": "Tratar a crise e considerar estado de mal não convulsivo com EEG.",
+        "acao": "sugerir levetiracetam e EEG",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-NEU16-06",
+        "tipo": "corticoide_indevido",
+        "gatilho": "corticoide prescrito em encefalite viral sem suspeita autoimune",
+        "severidade": "precaucao",
+        "mensagem": "Corticoide não é rotina na encefalite viral.",
+        "acao": "alertar e registrar a justificativa",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-NEU16-07",
+        "tipo": "herniacao",
+        "gatilho": "pupilas assimétricas ou queda do Glasgow com edema na imagem",
+        "severidade": "grave",
+        "mensagem": "Hipertensão intracraniana: osmoterapia, cabeceira elevada e avaliação de neurocirurgia.",
+        "acao": "acionar neurocirurgia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-NEU16-08",
+        "tipo": "eeg_nao_realizado",
+        "gatilho": "rebaixamento inexplicado sem EEG em 24 horas",
+        "severidade": "precaucao",
+        "mensagem": "Solicitar EEG para excluir estado de mal não convulsivo.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "MS",
+        "diretriz de encefalite",
+        "sociedade de neurologia",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: aciclovir 10 mg/kg 8/8 h por 14 a 21 dias como emergência da primeira hora, empírico até excluir herpes e sem suspensão por PCR negativo precoce; ceftriaxona e ampicilina para cobertura bacteriana e de Listeria; ressonância com FLAIR e difusão, PCR de HSV no líquor, EEG em 24 h e o erro de aguardar resultado; corticoide apenas na encefalite autoimune com metilprednisolona e prednisona em desmame; antiepilépticos para crise clínica ou eletrográfica, com manejo de estado de mal; tratamento da hipertensão intracraniana com osmoterapia e craniectomia; 12 fármacos com apresentações, preparo, tempo de infusão, monitorização e ajuste renal.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

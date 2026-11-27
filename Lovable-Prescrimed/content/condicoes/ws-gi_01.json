@@ -1,0 +1,495 @@
+{
+  "id": "ws-gi_01",
+  "nome": "Diarreia aguda / gastroenterite",
+  "cat": "Gastrointestinal",
+  "alias": "diarreia aguda gastroenterite diarreia gastroenterite geca diarreia e vomito diarreia aguda",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-01_diarreia_aguda.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] oms: reidratação oral e zinco",
+      "[verificar] sociedade_gastroenterologia: indicação de antibiótico e C. difficile",
+      "[verificar] anvisa: apresentações e bulas"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-01 em 2026-11-27",
+    "fundido_workspace": "GI-01 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, olhos fundos, turgor ruim, confusão -> hidratação IV imediata e internação; sangue vivo nas fezes com febre alta -> coprocultura e antibiótico empírico; diurese ausente por mais de 8 h -> volume e controle de diurese; dor abdominal difusa intensa com defesa -> avaliação cirúrgica e imagem. 1) Avaliar gravidade: sinais vitais, perfusão, turgor, diurese 2) Classificar: aquosa sem sangue ou disenteria (sangue, muco, febre alta) 3) Iniciar SRO se tolera via oral; via venosa se não tolera ou está grave 4) Antiemético se vômito impedir a reidratação 5) Antibiótico apenas em disenteria grave, cólera ou imunossuprimido 6) Pesquisar C. difficile se uso recente de antibiótico 7) Reavaliar em 4-6 h; alta com sinais de retorno e hidratação domiciliar",
+  "redFlags": [
+    "hipotensão, olhos fundos, turgor ruim, confusão -> hidratação IV imediata e internação",
+    "sangue vivo nas fezes com febre alta -> coprocultura e antibiótico empírico",
+    "diurese ausente por mais de 8 h -> volume e controle de diurese",
+    "dor abdominal difusa intensa com defesa -> avaliação cirúrgica e imagem",
+    "uso recente de antibiótico ou internação -> pesquisar toxina e suspender antibiótico",
+    "imunossupressão, quimioterapia ou HIV avançado -> internação e investigação ampliada",
+    "vômitos incoercíveis com incapacidade de ingerir líquido -> hidratação venosa e antiemético IV"
+  ],
+  "naoUsar": [
+    "vômitos incoercíveis",
+    "rebaixamento de consciência",
+    "íleo paralítico",
+    "síndrome do QT longo",
+    "uso concomitante de apomorfina",
+    "obstrução intestinal",
+    "feocromocitoma",
+    "parkinsonismo"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "beber SRO em colheradas"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "antidiarreico se houver febre ou sangue"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Reidratante oral",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_sais_de_reidratacao_oral_sro",
+            "pos": "50-100 mL/kg em 4 h, fraccionado. Via VO. Pequenos volumes a cada 5-10 min. Até restabelecer diurese clara.",
+            "posTodas": true,
+            "motivo": "desidratação leve a moderada com via oral preservada (1a linha) reidratação",
+            "nota": "Diluir o sachê em 1 L de água potável; não usar açúcar caseiro nem refrigerante - monitorar: diurese; monitorar: peso em criança; monitorar: sede; monitorar: turgor cutâneo; monitorar: sódio se grave",
+            "dose": {
+              "texto": "50-100 mL/kg em 4 h, fraccionado; pequenos volumes a cada 5-10 min; até restabelecer diurese clara; max. não se aplica",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 5-10 min",
+              "freq_min": 5,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            },
+            "ped": "SRO 50 mL/kg em 4 h, zinco 20 mg/dia por 10–14 dias"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "azitromicina",
+            "pos": "1 g. Via VO. Dose única.",
+            "posTodas": true,
+            "motivo": "disenteria em gestante, criança ou intolerância a quinolona (alternativa)",
+            "nota": "Uso direto; suspensão reconstituir conforme bula - monitorar: QT se cardiopata; monitorar: resposta em 48 h · NÃO: alergia a macrolídeo; QT longo · Obs: Boa opção em gestante com disenteria; dose única favorece adesão",
+            "dose": {
+              "texto": "1 g; dose única; dose única; max. 1 g",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "SRO 50 mL/kg em 4 h, zinco 20 mg/dia por 10–14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antissecretor intestinal",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "racecadotrila",
+            "pos": "100 mg. Via VO. 8/8 h. Até 5 dias.",
+            "posTodas": true,
+            "motivo": "diarreia aquosa aguda sem disenteria, como adjuvante da SRO (condicional) diarreia aquosa",
+            "nota": "Uso direto; granulado dispersar em água - monitorar: número de evacuações; monitorar: sinais de constipação · NÃO: disenteria com sangue; febre alta; insuficiência renal grave · Obs: Encurta a diarreia em cerca de 24 h; não substitui a SRO e não serve para disenteria · Renal: Contraindicada se ClCr < 30 mL/min",
+            "dose": {
+              "texto": "100 mg; 8/8 h; até 5 dias; max. 300 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            },
+            "ped": "SRO 50 mL/kg em 4 h, zinco 20 mg/dia por 10–14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide antidiarreico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "loperamida",
+            "pos": "4 mg de ataque, depois 2 mg. Via VO. Após cada evacuação líquida. Máximo 48 h.",
+            "posTodas": true,
+            "motivo": "diarreia aquosa sem febre e sem sangue, em adulto sem comorbidade (condicional)",
+            "nota": "Uso direto - monitorar: febre; monitorar: distensão abdominal; monitorar: parada da diarreia · NÃO: disenteria; febre alta; colite por C. difficile; criança · Obs: Alivia sintoma, não trata causa; proscrita em disenteria e em criança",
+            "dose": {
+              "texto": "4 mg de ataque, depois 2 mg; após cada evacuação líquida; máximo 48 h; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            },
+            "ped": "SRO 50 mL/kg em 4 h, zinco 20 mg/dia por 10–14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico fluorquinolona",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ciprofloxacino",
+            "pos": "500 mg. Via VO. 12/12 h. 3 dias. 60 minutos (IV).",
+            "posTodas": true,
+            "motivo": "disenteria bacteriana grave ou cólera com desidratação (condicional) disenteria",
+            "nota": "VO uso direto; IV infundir a bolsa sem diluição adicional - monitorar: diarreia por C. difficile; monitorar: tendão de Aquiles; monitorar: QT · NÃO: gestação; criança; tendinopatia prévia; miastenia · Obs: Reservar para disenteria grave; não usar em diarreia aquosa sem sangue · Renal: Ajustar se ClCr < 30 mL/min (250–500 mg 12/12 h)",
+            "dose": {
+              "texto": "500 mg; 12/12 h; 3 dias; max. 1 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            },
+            "ped": "SRO 50 mL/kg em 4 h, zinco 20 mg/dia por 10–14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiparasitário nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "secnidazol",
+            "pos": "2 g. Via VO. Dose única.",
+            "posTodas": true,
+            "motivo": "giardíase ou amebíase confirmada ou alta suspeita (condicional)",
+            "nota": "Uso direto, com alimento - monitorar: resolução da diarreia; monitorar: efeitos gastrointestinais · NÃO: gestação no primeiro trimestre; alergia a nitroimidazol · Obs: Não beber álcool por 72 h; tratar contactantes se giardíase",
+            "dose": {
+              "texto": "2 g; dose única; dose única; max. 2 g",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "SRO 50 mL/kg em 4 h, zinco 20 mg/dia por 10–14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Probiotico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "boulardii",
+            "pos": "250 mg. Via VO. 12/12 h. 5 dias.",
+            "posTodas": true,
+            "motivo": "diarreia aguda viral e prevenção de diarreia por antibiótico (condicional)",
+            "nota": "Não misturar com líquido quente nem com gelo - monitorar: resposta clínica; monitorar: febre em imunossuprimido · NÃO: imunossupressão grave; cateter central; paciente crítico · Obs: Reduz duração em cerca de 1 dia; evitar em paciente com cateter central",
+            "dose": {
+              "texto": "250 mg; 12/12 h; 5 dias; max. 500 mg/dia",
+              "status": "ok",
+              "valor": 250,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            },
+            "ped": "SRO 50 mL/kg em 4 h, zinco 20 mg/dia por 10–14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Reidratação oral precoce",
+              "ap": "",
+              "q": "",
+              "pos": "Iniciar antes de exames; 50–100 mL/kg em 4 h, em colheradas de 5 min"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Manter alimentação",
+              "ap": "",
+              "q": "",
+              "pos": "Não suspender dieta; arroz, batata, banana, torrada e caldo salgado são adequados"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Isolamento de contato",
+              "ap": "",
+              "q": "",
+              "pos": "Higiene de mãos e superfícies; afastar manipulador de alimentos até 48 h sem sintomas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Notificação compulsória",
+              "ap": "",
+              "q": "",
+              "pos": "Surto, cólera, febre tifoide e botulismo são de notificação imediata"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Controle de diurese",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar volume urinário em desidratação moderada a grave"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Suspender laxante, inibidor de bomba e metformina",
+              "ap": "",
+              "q": "",
+              "pos": "Durante o episódio agudo, se clinicamente possível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Educação sobre sinais de retorno",
+              "ap": "",
+              "q": "",
+              "pos": "Sangue nas fezes, febre persistente, ausência de urina por 8 h, vômito incoercível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-01"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antiemético antagonista 5ht3",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "vômitos que impedem a reidratação oral (1a linha) náusea",
+            "nota": "IV direto ou diluído em 50 mL de SF; VO sem preparo - monitorar: ECG se cardiopata ou QT longo; monitorar: potássio e magnésio",
+            "dose": {
+              "texto": "4 mg; 8/8 h se necessário; até 24-48 h; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético procinético",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "vômitos com intolerância oral, quando ondansetrona indisponível (alternativa)",
+            "nota": "IV lento, sem diluição obrigatória - monitorar: sintomas extrapiramidais; monitorar: sonolência",
+            "dose": {
+              "texto": "10 mg; 8/8 h; até 24 h; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-01",
+    "versao": "0.2.0",
+    "arquivo": "GI-01_diarreia_aguda.json",
+    "area": "Gastrointestinal",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

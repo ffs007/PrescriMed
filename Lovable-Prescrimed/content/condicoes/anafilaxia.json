@@ -1,0 +1,293 @@
+{
+  "id": "anafilaxia",
+  "nome": "Anafilaxia",
+  "cat": "Emergência",
+  "alias": "choque anafilatico reacao alergica grave angioedema urticaria generalizada alergia medicamento vespa abelha alimentos",
+  "cid": [
+    [
+      "T782",
+      "Anafilaxia"
+    ],
+    [
+      "T783",
+      "Angioedema"
+    ],
+    [
+      "Z915",
+      "História pessoal de alergia"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "Consenso WAO 2020 (anaphylaxis)",
+      "ILCOR/AHA BLS-ALS — epinefrina IM precoce",
+      "Protocolos SBPT/AMIB de atendimento inicial",
+      "UpToDate: Anaphylaxis emergency treatment"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "ALG-01 em 2026-11-27",
+    "fundido_workspace": "ALG-01 em 2026-11-27"
+  },
+  "alerta": "Reconhecer: 2+ sistemas (cutâneo + resp/GI/hipotensão) ou hipotensão após exposição conhecida. 1) ADRENALINA IM 0,5 mg (vasto lateral da coxa) JÁ — repetir a cada 5–15 min se não melhora (criança 0,01 mg/kg IM, máx 0,5 mg). Corticoide/antihistamínico NÃO substituem a adrenalina. 2) Deitar com pernas elevadas (não levantar abruptamente). 3) O2 alto fluxo se SpO2 < 94%; via aérea precoce se angioedema de via aérea (chamar quem intuba). 4) Acesso venoso + SF 0,9% 20 mL/kg em bolus se hipotensão (adulto 1–2 L). 5) Broncoespasmo: salbutamol nebulizado. 6) Refratária: adrenalina EV em infusão contínua (0,05–0,2 mcg/kg/min) com monitorização — nunca bolus IV. 7) Betabloqueador com adrenalina refratária: glucagon 1–2 mg EV. 8) Observar 6–12 h (reação bifásica); alta com adrenalina de resgate + encaminhamento ao alergista.",
+  "redFlags": [
+    "Estridor, rouquidão nova ou edema de língua/faringe — via aérea iminente: intubação precoce, NÃO espere",
+    "Hipotensão persistente após 2 doses de adrenalina IM — infusão EV de adrenalina + UTI/transferência",
+    "Paciente em betabloqueador com resposta ruim — glucagon 1–2 mg EV",
+    "Sem urticária mas com angioedema abdominal/familiar — pensar angioedema hereditário (não responde a adrenalina)",
+    "Anafilaxia por veneno de inseto, exercício ou idiopática — risco bifásico maior, observação prolongada"
+  ],
+  "naoUsar": [
+    "AINEs",
+    "Corticoide ou antihistamínico no lugar da adrenalina (erro clássico — atrasa a terapia que salva)",
+    "Adrenalina IV em bolus (risco de IAM/arritmia) — só infusão contínua monitorizada ou na PCR",
+    "Sentar/levantar o paciente logo após melhora (morte por empty ventricle syndrome)"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Adrenalina de resgate — salvar vida (1ª linha)",
+        "itens": [
+          {
+            "linha": 1,
+            "motivo": "Única terapia que reduz mortalidade; alta sem ela é alta sem segurança",
+            "novo": {
+              "id": "adrenalina_resgate",
+              "n": "Adrenalina (caneta autoinjetora ou ampola 1 mg/mL)",
+              "ap": "caneta 0,3 mg / ampola 1 mg/mL",
+              "pos": "Aplicar 0,3 mg IM na face anterolateral da coxa ao PRIMEIRO sinal de reação; repetir com a 2ª caneta após 5–15 min e chamar SAMU 192. Prescrever 2 unidades e treinar a aplicação antes da alta."
+            },
+            "ped": "Criança 15–30 kg: 0,15 mg IM; <15 kg: 0,01 mg/kg IM (máx 0,3 mg)"
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide oral (alta)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "40 a 60 mg (adulto) VO em dose única diária por 3 dias",
+            "ped": "0,5–1 mg/kg/dia (máx 60 mg) por 3 dias",
+            "motivo": "Possivelmente reduz reação bifásica (evidência fraca, prática padrão)"
+          },
+          {
+            "base": "dexametasona",
+            "pos": "8 mg VO em dose única no dia 1 (esquema curto alternativo)",
+            "ped": "0,15–0,3 mg/kg/dia (máx 8 mg)",
+            "motivo": "Esquema de 1 dia, adesão melhor"
+          },
+          {
+            "base": "prednisolona",
+            "pos": "40 mg VO 1x/dia por 3 dias (presentação líquida útil em criança)",
+            "ped": "1 mg/kg/dia (máx 40 mg) por 3 dias",
+            "motivo": "Apresentação pediátrica"
+          },
+          {
+            "base": "leg_acetato_de_metilprednisolona",
+            "pos": "Conforme apresentação disponível, equivalente a prednisona 40–60 mg/dia por 3 dias",
+            "motivo": "Alternativa de estoque"
+          }
+        ]
+      },
+      {
+        "nome": "Antihistamínico (sintomático cutâneo)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "cetirizina",
+            "pos": "10 mg VO 1x/dia por 3–5 dias (adulto); iniciar 1h após a adrenalina, nunca antes",
+            "ped": "≥6 anos: 5–10 mg/dia; 2–5 anos: 2,5–5 mg/dia",
+            "motivo": "2ª geração, menos sedação"
+          },
+          {
+            "base": "levocetirizina",
+            "pos": "5 mg VO 1x/dia por 3–5 dias",
+            "ped": "≥6 anos: 2,5–5 mg/dia",
+            "motivo": "Alternativa 2ª geração"
+          },
+          {
+            "base": "loratadina",
+            "pos": "10 mg VO 1x/dia por 3–5 dias",
+            "ped": "≥30 kg: 10 mg/dia; <30 kg: 5 mg/dia",
+            "motivo": "Alternativa sem sedação"
+          },
+          {
+            "base": "desloratadina",
+            "pos": "5 mg VO 1x/dia por 3–5 dias",
+            "ped": "6–11 anos: 2,5 mg/dia",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "dexclorfeniramina",
+            "pos": "2 mg VO a cada 8h por 3 dias (sedativo — preferir à noite)",
+            "ped": "≤12 anos: evitar rotineiramente",
+            "motivo": "Se prurido intenso disruptivo do sono"
+          }
+        ]
+      },
+      {
+        "nome": "Broncodilatador de resgate (se broncoespasmo residual na alta)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "salbutamol",
+            "pos": "2 jatos (200 mcg) inalatórios a cada 4–6h SE sibilos, por até 5 dias, com espaçador",
+            "ped": "2 jatos com espaçador (máscara em <4 anos), mesmo esquema",
+            "motivo": "Somente se sibilos ao exame de alta"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações e plano de ação",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Plano escrito de ação",
+              "ap": "",
+              "pos": "1) Ao primeiro sinal (urticária difusa + engasgo/tontura): aplicar a adrenalina NA COXA e chamar 192 — nesta ordem. 2) Nunca substituir a adrenalina por antihistamínico. 3) Evitar o gatilho identificado; carregar as 2 canetas sempre. 4) Retorno em 7–14 dias com alergista para investigação."
+            },
+            "motivo": "Plano de ação escrito reduz reação fatal subsequente"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Sinais de retorno imediato",
+              "ap": "",
+              "pos": "Voltar IMEDIATAMENTE se: retorno de urticária com falta de ar, voz rouca, tontura ao levantar, vômitos recorrentes, ou qualquer sintoma nas primeiras 12h que aumente."
+            },
+            "motivo": "Janela bifásica"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Suspender o agente desencadeante",
+              "ap": "",
+              "q": "",
+              "pos": "Interromper infusão de fármaco ou contraste, retirar o ferrão por raspagem (nunca pinçar, que pressiona a bolsa de veneno) e afastar o alimento suspeito"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Posição de choque",
+              "ap": "",
+              "q": "",
+              "pos": "Decúbito dorsal com pernas elevadas; sentado se houver dispneia; decúbito lateral esquerdo na gestante; não colocar de pé, pois a mobilização pode precipitar parada"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Acesso venoso calibroso e monitorização",
+              "ap": "",
+              "q": "",
+              "pos": "Dois acessos 14–16 G, ECG contínuo, oximetria e pressão não invasiva a cada 5 min; acesso intraósseo se punção impossível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Observação mínima de 4 a 6 horas",
+              "ap": "",
+              "q": "",
+              "pos": "Estender para 6–12 h em reação grave, mais de uma dose de adrenalina, asma, hipotensão prévia ou história de reação bifásica; alta antes disso só com exceção registrada"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Preparar material de via aérea à beira do leito",
+              "ap": "",
+              "q": "",
+              "pos": "Cânulas orofaríngeas, laringoscópio e videolaringoscópio, tubos 6,5–8,0, aspirador, capnógrafo e drogas de indução disponíveis antes do estridor progredir"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Documentar e notificar",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar alérgeno, via de exposição, tempo até a adrenalina, número de doses e evolução; notificar à farmacovigilância quando o gatilho for fármaco ou contraste"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Orientação de alta por escrito",
+              "ap": "",
+              "q": "",
+              "pos": "Plano de ação com sinais de recidiva, prescrição de autoinjetor, treinamento de uso e encaminhamento a alergista em 4–8 semanas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "ALG-01"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Adrenalina IM — salvar vida (1ª linha)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "adrenalina_im",
+            "motivo": "0,5 mg IM vasto lateral; repetir 5–15 min"
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide EV",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dexametasona_ev",
+            "motivo": "10 mg EV dose única"
+          }
+        ]
+      },
+      {
+        "nome": "Antihistamínico EV/IM",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "prometazina_im",
+            "motivo": "25–50 mg IM"
+          }
+        ]
+      }
+    ]
+  }
+}

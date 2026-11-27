@@ -1,0 +1,579 @@
+{
+  "id": "ws-go_02",
+  "nome": "Dor pélvica / ameaça de abortamento",
+  "cat": "Emergência",
+  "alias": "dor pelvica ameaca de abortamento dor pelvica ameaca de abortamento abortamento abortamento incompleto abortamento retido gravidez ectopica doenca inflamatoria pelvica cisto ovariano roto torcao ovariana",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GO-02_abortamento.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de dor pélvica e critérios de cirurgia imediata",
+      "[verificar] ms: protocolo de abortamento e uso de misoprostol",
+      "[verificar] sociedade_ginecologia: critérios de metotrexato na ectópica e esquema de DIP",
+      "[verificar] anvisa: apresentações de metotrexato, misoprostol e imunoglobulina anti-D"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GO-02 em 2026-11-27",
+    "fundido_workspace": "GO-02 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, taquicardia, palidez ou síncope com dor pélvica -> sala vermelha, dois acessos, tipagem e laparotomia de urgência; dor súbita intensa com defesa, rigidez ou dor no ombro -> cirurgia imediata sem aguardar exames; febre acima de 38 °C, corrimento purulento e dor à mobilização do colo -> antibiótico parenteral e avaliação cirúrgica; beta-hCG positivo sem saco intrauterino e acima da zona discriminatória -> metotrexato ou cirurgia conforme critérios. 1) Sinais vitais e avaliação de instabilidade; dois acessos e cristaloide se hipotensa 2) Beta-hCG quantitativo em toda mulher em idade reprodutiva, sem exceção 3) Beta-hCG negativo: dor pélvica não gestacional - exame especular, ultrassom e avaliação de DIP, cisto roto, torção e apendicite 4) Beta-hCG positivo: ultrassom transvaginal para localizar a gestação 5) Saco intrauterino com embrião vivo e colo fechado: ameaça de abortamento, com progesterona e reavaliação em 7 dias 6) Colo aberto com restos ou sangramento ativo: abortamento incompleto, com esvaziamento uterino 7) Útero vazio, saco sem embrião ou beta-hCG acima da zona discriminatória: ectópica - metotrexato se estável e elegível, cirurgia se instável ou critérios de exclusão 8) Instabilidade, dor súbita com defesa ou líquido livre abundante: cirurgia imediata, sem aguardar exames 9) Definir destino: alta com retorno em 48 a 72 horas, internação ou centro cirúrgico; registrar beta-hCG, ultrassom e orientação de retorno",
+  "redFlags": [
+    "hipotensão, taquicardia, palidez ou síncope com dor pélvica -> sala vermelha, dois acessos, tipagem e laparotomia de urgência",
+    "dor súbita intensa com defesa, rigidez ou dor no ombro -> cirurgia imediata sem aguardar exames",
+    "febre acima de 38 °C, corrimento purulento e dor à mobilização do colo -> antibiótico parenteral e avaliação cirúrgica",
+    "beta-hCG positivo sem saco intrauterino e acima da zona discriminatória -> metotrexato ou cirurgia conforme critérios",
+    "sangramento com coágulos e colo aberto ao exame -> esvaziamento uterino e acesso venoso",
+    "dor unilateral súbita com náusea, vômito e massa anexial dolorosa -> cirurgia em até 6 horas",
+    "dor difusa com febre alta e sinais de sepse -> antibiótico parenteral e drenagem cirúrgica",
+    "dor após relação sexual ou esforço com instabilidade -> observação em ambiente monitorizado e cirurgia se instável"
+  ],
+  "naoUsar": [
+    "hepatopatia grave",
+    "desnutrição grave",
+    "hipersensibilidade ao fármaco",
+    "alergia a cefalosporina",
+    "recém-nascido com hiperbilirrubinemia",
+    "uso de solução com cálcio no mesmo equipo",
+    "gestação",
+    "lactação"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "comparecer ao retorno em 48 a 72 horas com o resultado do beta-hCG"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "relação sexual e absorvente interno enquanto houver sangramento"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Prostaglandina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "misoprostol",
+              "n": "Misoprostol",
+              "ap": "comprimido 25 mcg",
+              "q": "",
+              "pos": "800 mcg. Via vaginal ou sublingual. Dose única; repetir em 24 h se não houver expulsão. Até 48 horas, com reavaliação ecográfica em 7 a 14 dias."
+            },
+            "motivo": "abortamento incompleto e abortamento retido ou ovo anembrionado, com ectópica excluída (1a linha)",
+            "nota": "Via vaginal: inserir os comprimidos no fundo de saco vaginal, com a paciente em decúbito; via sublingual: deixar dissolver - monitorar: volume de sangramento e coágulos; monitorar: temperatura; monitorar: dor e necessidade de analgesia; monitorar: confirmação de expulsão e ultrassom em 7 a 14 dias · NÃO: gestação ectópica não excluída; instabilidade hemodinâmica; alergia a prostaglandina; infecção pélvica não tratada; mola hidatiforme · Obs: Nunca antes de ultrassom que afaste ectópica: o misoprostol em ectópica não trata e retarda a cirurgia. Explicar que o sangramento esperado é maior que a menstruação",
+            "dose": {
+              "texto": "800 mcg; dose única; repetir em 24 h se não houver expulsão; até 48 horas, com reavaliação ecográfica em 7 a 14 dias; max. 800 mcg por dose, até 3 doses",
+              "status": "ok",
+              "valor": 800,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 800,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "400 a 600 mg. Via VO. 8/8 h. Até 5 dias.",
+            "posTodas": true,
+            "motivo": "dor pélvica de causa definida, como dismenorreia e cisto ovariano estável, sem gestação (condicional)",
+            "nota": "Uso direto, com alimento - monitorar: dor abdominal e defesa; monitorar: diurese; monitorar: pressão arterial; monitorar: hemograma se sangramento · NÃO: suspeita de ectópica; gestação após 30 semanas; doença renal crônica avançada; úlcera péptica ativa; alergia a AINE; doença inflamatória pélvica sem antibiótico · Obs: Cautela explícita: alivia a dor, mas pode esconder apendicite, torção e ectópica. Não usar antes de definir o diagnóstico · Renal: Evitar com ClCr abaixo de 30 mL/min",
+            "dose": {
+              "texto": "400 a 600 mg; 8/8 h; até 5 dias; max. 2.400 mg/dia",
+              "status": "ok",
+              "valor": 400,
+              "valor_max": 600,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Progestagenio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "progesterona_micronizada",
+              "n": "Progesterona micronizada",
+              "ap": "cápsula 100 mg e 200 mg",
+              "q": "",
+              "pos": "200 mg. Via vaginal. 1x/dia à noite. Até 14 dias, com reavaliação em 7 dias."
+            },
+            "motivo": "ameaça de abortamento com gestação intrauterina confirmada e embrião vivo (condicional) ameaça de abortamento com gestação intrauterina confirmada",
+            "nota": "Via vaginal: aplicar o óvulo ou a cápsula no fundo da vagina à noite; não é preciso diluir - monitorar: sangramento vaginal; monitorar: beta-hCG seriado quando a viabilidade é incerta; monitorar: ultrassom em 7 dias; monitorar: nível de sonolência · NÃO: gestação ectópica não excluída; mola hidatiforme; hepatopatia grave; trombose ativa; abortamento incompleto com sangramento ativo · Obs: A evidência é fraca e os estudos são heterogêneos: o benefício é incerto e não se deve prometer prevenção do abortamento. Nunca iniciar sem ultrassom que confirme gestação intrauterina",
+            "dose": {
+              "texto": "200 mg; 1x/dia à noite; até 14 dias, com reavaliação em 7 dias; max. 400 mg/dia",
+              "status": "ok",
+              "valor": 200,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antimetabolito",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "metotrexato",
+              "n": "Metotrexato",
+              "ap": "frasco-ampola 50 mg/2 mL (25 mg/mL)",
+              "q": "",
+              "pos": "50 mg/m². Via IM. Dose única; repetir após 7 dias se a queda de beta-hCG for insuficiente. Dose única, com seguimento de beta-hCG por 2 a 4 semanas."
+            },
+            "motivo": "gestação ectópica estável, sem ruptura, com critérios laboratoriais e ecográficos favoráveis (condicional)",
+            "nota": "Calcular pela superfície corporal e administrar por via intramuscular profunda, sem diluição adicional; usar seringa e equipo próprios - monitorar: beta-hCG nos dias 4 e 7, com queda esperada acima de 15% entre eles; monitorar: hemograma, creatinina, TGO, TGP e bilirrubina nos dias 4 e 7; monitorar: dor abdominal e sin · NÃO: instabilidade hemodinâmica; ruptura ou hemoperitônio; beta-hCG acima de 5.000 mUI/mL; massa maior que 4 cm; batimento cardíaco embrionário; amamentação; imunodeficiência; hepatopatia ou nefropatia grave; plaquetopenia ou anemia grave; alcoolismo; gestação intrauterina não excluída · Obs: Só em paciente…",
+            "dose": {
+              "texto": "50 mg/m²; dose única; repetir após 7 dias se a queda de beta-hCG for insuficiente; dose única, com seguimento de beta-hCG por 2 a 4 semanas; max. 2 doses",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Imunoglobulina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "imunoglobulina_anti_d",
+              "n": "Imunoglobulina anti-D",
+              "ap": "frasco 300 mcg (1.500 UI)",
+              "q": "",
+              "pos": "300 mcg (1.500 UI). Via IM. Dose única. 1 dose por evento, até 72 horas."
+            },
+            "motivo": "mulher Rh negativo com sangramento na gestação, abortamento, ectópica ou procedimento uterino (condicional)",
+            "nota": "Aplicar por via intramuscular profunda, sem diluir; não misturar na mesma seringa com outras vacinas - monitorar: cartão de Rh e registro da aplicação; monitorar: Coombs indireto quando indicado; monitorar: reação local · NÃO: Rh positivo já confirmado; reação anafilática prévia a imunoglobulina; deficiência de IgA com anticorpos anti-IgA · Obs: Aplicar em até 72 horas do evento; se o sangramento persistir por mais de 3 semanas, repetir a dose",
+            "dose": {
+              "texto": "300 mcg (1.500 UI); dose única; 1 dose por evento, até 72 horas; max. 300 mcg por evento; 50 mcg se sangramento antes de 12 semanas",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Beta-hCG quantitativo em toda mulher em idade reprodutiva",
+              "ap": "",
+              "q": "",
+              "pos": "Coletar na chegada, mesmo com laqueadura ou DIU; registrar o valor e a hora no prontuário antes de qualquer decisão de alta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Ultrassom transvaginal antes da alta quando indicado",
+              "ap": "",
+              "q": "",
+              "pos": "Obrigatório com beta-hCG positivo e dor, com beta-hCG acima da zona discriminatória ou com massa anexial ao toque"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Observação com sinais vitais seriados",
+              "ap": "",
+              "q": "",
+              "pos": "Pressão, frequência cardíaca e dor a cada 30 a 60 minutos nas primeiras 2 horas; qualquer piora reabre a avaliação cirúrgica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Tipagem sanguínea e fator Rh na primeira coleta",
+              "ap": "",
+              "q": "",
+              "pos": "Rh negativo com sangramento recebe imunoglobulina anti-D em até 72 horas, com registro no cartão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Acesso venoso calibroso e cristaloide na instabilidade",
+              "ap": "",
+              "q": "",
+              "pos": "Dois acessos 14 a 16 G, 500 mL de cristaloide aquecido em bolus e reavaliação imediata; tipagem e prova cruzada na primeira punção"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Repouso relativo na ameaça de abortamento",
+              "ap": "",
+              "q": "",
+              "pos": "Evitar esforço intenso e relação sexual enquanto houver sangramento; explicar que repouso absoluto não altera o desfecho e não é necessário afastamento prolongado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Aconselhamento contraceptivo e planejamento reprodutivo na alta",
+              "ap": "",
+              "q": "",
+              "pos": "Oferecer método antes da alta, com atenção ao intervalo mínimo após metotrexato (3 meses) e à prevenção de nova ectópica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Curva de beta-hCG no seguimento",
+              "ap": "",
+              "q": "",
+              "pos": "Após metotrexato, dosar nos dias 4 e 7; após abortamento, repetir em 48 horas quando a queda não for clara, até negativação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GO-02"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "dor pélvica leve a moderada, inclusive na gestação (1a linha) dor pélvica",
+            "nota": "VO: uso direto; IV: infundir o frasco pronto sem diluir - monitorar: intensidade da dor pela escala visual; monitorar: dose total diária somada de todas as fontes; monitorar: TGO e TGP em uso acima de 5 dias · NÃO: hepatopatia grave; desnutrição grave; hipersensibilidade ao fármaco · Obs: É o analgésico de escolha na gestação; se a dor não ceder com dose plena, o problema é diagnóstico e não de analgesia",
+            "dose": {
+              "texto": "750 mg a 1 g; 6/6 h; até 3 a 5 dias; max. 4 g/dia; 2 a 3 g/dia em hepatopatia ou uso de álcool",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 3,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cefalosporina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "doença inflamatória pélvica, leve ou grave, e abscesso tubo-ovariano (1a linha) doença inflamatória pélvica leve",
+            "nota": "IM: reconstituir com o diluente com lidocaína 1%; IV: reconstituir em 10 mL de água e diluir em 100 mL de SF 0,9% - monitorar: dor e rubor no local; monitorar: temperatura e dor abdominal em 48 a 72 h; monitorar: diarreia; monitorar: função hepática · NÃO: alergia a cefalosporina; recém-nascido com hiperbilirrubinemia; uso de solução com cálcio no mesmo equipo · Obs: Cobre gonococo; não cobre anaeróbios, por isso a associação com metronidazol é obrigatória",
+            "dose": {
+              "texto": "500 mg IM em dose única no regime ambulatorial; 1 g IV/dia no regime hospitalar; dose única (ambulatorial) ou 1x/dia (hospitalar); dose única no ambulatorial; até 24 h após melhora no hospitalar, com transição para via oral; max. 2 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Tetraciclina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "doxiciclina",
+              "n": "Doxiciclina",
+              "ap": "cápsula 100 mg",
+              "via": "VO ou IV",
+              "pos": "100 mg. Via VO ou IV. 12/12 h. 14 dias. 60 a 120 minutos por via intravenosa."
+            },
+            "motivo": "doença inflamatória pélvica por clamídia, em associação (1a linha) doença inflamatória pélvica",
+            "nota": "VO: uso direto com um copo cheio de água, em pé, sem deitar por 30 minutos; IV: diluir em 250 mL de SF 0,9% - monitorar: dor retroesternal e disfagia; monitorar: exposição solar; monitorar: temperatura; monitorar: TGO e TGP em uso prolongado · NÃO: gestação; lactação; criança abaixo de 8 anos; alergia a tetraciclina; insuficiência hepática grave · Obs: Suspender e trocar por azitromicina se houver gestação; orientar protetor solar e não deitar após a tomada",
+            "dose": {
+              "texto": "100 mg; 12/12 h; 14 dias; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "cobertura de anaeróbios na doença inflamatória pélvica e em abscessos (1a linha) doença inflamatória pélvica",
+            "nota": "VO: uso direto com alimento; IV: infundir o frasco pronto sem diluir - monitorar: náusea e gosto metálico; monitorar: sinais neurológicos em uso acima de 10 dias; monitorar: temperatura e dor pélvica · NÃO: primeiro trimestre de gestação; alergia a nitroimidazol; uso de álcool durante e 48 h após; doença neurológica ativa · Obs: Sem metronidazol o esquema perde cobertura para anaeróbios e falha mais em abscesso; orientar abstinência alcoólica por escrito · Renal: ClCr abaixo de 30 mL/min: reduzir dose e espaçar",
+            "dose": {
+              "texto": "500 mg; 12/12 h; 14 dias; max. 2 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico pirazolona",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "dor pélvica moderada a intensa e febre associada (alternativa)",
+            "nota": "IV: diluir 1 g em 10 a 20 mL de SF 0,9% ou água para injeção - monitorar: pressão arterial após a infusão; monitorar: hemograma se uso repetido; monitorar: intensidade da dor; monitorar: lesões de pele · NÃO: alergia a pirazolonas; discrasia sanguínea; deficiência de medula óssea; porfiria hepática aguda; terceiro trimestre de gestação · Obs: Droga útil no Brasil e amplamente disponível, mas não é primeira escolha na gestação; reservar para quando a dor justifica o risco de agranulocitose · Renal: ClCr abaixo de 30 mL/min: espaçar intervalo e reduzir dose",
+            "dose": {
+              "texto": "1 g; 6/6 h; até 3 a 5 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiespasmoidico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "escopolamina_ev",
+            "motivo": "dor pélvica com componente cólico, dismenorreia e cólica associada à expulsão de restos (alternativa)",
+            "nota": "IV: diluir a ampola em 10 mL de SF 0,9%; VO: uso direto - monitorar: frequência cardíaca; monitorar: pressão arterial; monitorar: retenção urinária; monitorar: resposta da dor",
+            "dose": {
+              "texto": "20 mg; 8/8 h; até 3 dias; max. 60 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GO-02",
+    "versao": "0.2.0",
+    "arquivo": "GO-02_abortamento.json",
+    "area": "Ginecologia/Obstetrícia",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

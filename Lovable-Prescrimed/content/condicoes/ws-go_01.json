@@ -1,0 +1,600 @@
+{
+  "id": "ws-go_01",
+  "nome": "Sangramento uterino agudo",
+  "cat": "Ginecologia/Obstetrícia",
+  "alias": "sangramento uterino agudo sangramento uterino hemorragia uterina menorragia sangramento vaginal hemorragia uterina anormal sangramento pos parto",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GO-01_sangramento_uterino.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de sangramento uterino agudo e critérios de transfusão",
+      "[verificar] sociedade_ginecologia: classificação PALM-COEIN e tratamento da hemorragia uterina anormal",
+      "[verificar] diretriz_obstetrica: manejo da hemorragia pós-parto e uso de uterotônicos",
+      "[verificar] anvisa: apresentações, concentrações e disponibilidade do estrogênio conjugado intravenoso"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GO-01 em 2026-11-27",
+    "fundido_workspace": "GO-01 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, taquicardia, palidez ou síncope -> dois acessos calibrosos, cristaloide aquecido, tipagem e sala vermelha; encharcar mais de um absorvente por hora por mais de duas horas ou coágulos maiores que 3 cm -> internação, acesso venoso e ácido tranexâmico imediato; beta-hCG positivo com dor pélvica ou instabilidade -> acionar GO-02 e avaliação cirúrgica; febre, dor pélvica e corrimento fétido -> antibiótico parenteral e internação. 1) Sinais vitais, dois acessos venosos, cristaloide aquecido e tipagem sanguínea se instável 2) Beta-hCG imediato em toda mulher em idade fértil, antes de qualquer hormônio ou AINE 3) Beta-hCG positivo: ultrassom transvaginal e avaliação de ectópica ou abortamento, com encaminhamento a GO-02 4) Exame especular e quantificação do sangramento; descartar origem retal, urinária e cervical 5) Hemograma, ferritina, coagulograma e TSH; ultrassom transvaginal para causa estrutural 6) Classificar a causa: estrutural, coagulopatia, disfuncional ou anovulatório, gestação ou pós-parto 7) Tratar conforme a causa: tranexâmico, anticoncepcional combinado, progestagênio, AINE ou sistema intrauterino 8) Refratário ou instável: estrogênio conjugado intravenoso, transfusão, balão, embolização ou cirurgia 9) Alta com ferro, método de controle definido, sinais de alarme por escrito e retorno em 7 dias",
+  "redFlags": [
+    "hipotensão, taquicardia, palidez ou síncope -> dois acessos calibrosos, cristaloide aquecido, tipagem e sala vermelha",
+    "encharcar mais de um absorvente por hora por mais de duas horas ou coágulos maiores que 3 cm -> internação, acesso venoso e ácido tranexâmico imediato",
+    "beta-hCG positivo com dor pélvica ou instabilidade -> acionar GO-02 e avaliação cirúrgica",
+    "febre, dor pélvica e corrimento fétido -> antibiótico parenteral e internação",
+    "anticoagulação em dose plena, INR alargado ou plaquetopenia -> reverter conforme o fármaco e acionar hematologia",
+    "hemoglobina abaixo de 7 g/dL ou abaixo de 8 g/dL com sintomas -> transfusão e monitorização",
+    "sangramento volumoso após o parto com útero amolecido -> uterotônico imediato, tranexâmico e compressão",
+    "sangramento irregular em mulher acima de 45 anos ou pós-menopausa -> ultrassom transvaginal e biópsia endometrial antes de tratar como disfuncional"
+  ],
+  "naoUsar": [
+    "trombose venosa ou arterial ativa",
+    "antecedente de trombose nos últimos 12 meses",
+    "coagulação intravascular disseminada",
+    "convulsão",
+    "insuficiência renal grave sem ajuste",
+    "gestação",
+    "trombose venosa ou arterial",
+    "enxaqueca com aura"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar o ferro todos os dias, de preferência em dias alternados e com suco de fruta"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "usar AINE por conta própria enquanto a gestação não estiver afastada"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Anticoncepcional combinado",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "aco_comb",
+            "pos": "30 mcg de etinilestradiol + 150 mcg de levonorgestrel. Via VO. 8/8 h por 7 dias, depois 12/12 h por 7 dias, depois 1x/dia até completar 21 dias. 21 dias, com pausa ou placebo.",
+            "posTodas": true,
+            "motivo": "sangramento uterino anovulatório agudo sem instabilidade e com gestação excluída (1a linha) sangramento anovulatório",
+            "nota": "Uso direto - monitorar: sangramento em 24 a 48 horas; monitorar: cefaleia e alteração visual; monitorar: pressão arterial; monitorar: sinais de trombose · NÃO: gestação; trombose venosa ou arterial; enxaqueca com aura; tabagismo acima de 15 cigarros por dia em maiores de 35 anos; hipertensão não controlada; lactação nos primeiros 21 dias; hepatopatia descompensada; neoplasia estrogênio-dependente · Obs: O esquema de dose alta vale só na fase aguda; depois manter um comprimido por dia. Associar antiemético se náusea impedir a tomada",
+            "dose": {
+              "texto": "30 mcg de etinilestradiol + 150 mcg de levonorgestrel; 8/8 h por 7 dias, depois 12/12 h por 7 dias, depois 1x/dia até completar 21 dias; 21 dias, com pausa ou placebo; max. 3 comprimidos por dia na fase aguda",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "por 7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Progestagenio intrauterino",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "levonorgestrel",
+            "pos": "52 mg (dispositivo). Via intrauterino. Inserção única; troca a cada 5 a 8 anos. 5 anos com redução de fluxo a partir de 3 meses.",
+            "posTodas": true,
+            "motivo": "menorragia por adenomiose, mioma, coagulopatia ou disfuncional, e prevenção de recidiva (1a linha)",
+            "nota": "Inserção por profissional treinado, preferencialmente nos primeiros 7 dias do ciclo, com técnica asséptica - monitorar: fio do dispositivo em 6 semanas; monitorar: padrão de sangramento em 3 e 6 meses; monitorar: dor pélvica e febre; monitorar: ultrassom se suspeita de expulsão ou perfuração",
+            "dose": {
+              "texto": "52 mg (dispositivo); inserção única; troca a cada 5 a 8 anos; 5 anos com redução de fluxo a partir de 3 meses; max. 1 dispositivo",
+              "status": "ok",
+              "valor": 52,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "600 mg. Via VO. 8/8 h. 5 dias, a partir do primeiro dia de fluxo.",
+            "posTodas": true,
+            "motivo": "menorragia ovulatória com gestação excluída e sem contraindicação (alternativa) menorragia ovulatória com gestação excluída",
+            "nota": "Uso direto, com alimento - monitorar: dor epigástrica e melena; monitorar: diurese; monitorar: pressão arterial; monitorar: volume de sangramento · NÃO: suspeita ou confirmação de gestação; doença renal crônica avançada; úlcera péptica ativa; alergia a AINE; anticoagulação em dose plena; asma induzida por AINE; insuficiência cardíaca descompensada · Obs: Reduz o fluxo menstrual em 20 a 30% e a dismenorreia; nunca iniciar enquanto a gestação não estiver excluída · Renal: Evitar com ClCr abaixo de 30 mL/min",
+            "dose": {
+              "texto": "600 mg; 8/8 h; 5 dias, a partir do primeiro dia de fluxo; max. 2.400 mg/dia",
+              "status": "ok",
+              "valor": 600,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Progestagenio",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "medroxiprogesterona",
+            "pos": "10 mg. Via VO. 1x/dia por 10 a 14 dias. 10 a 14 dias por ciclo, repetido por 3 a 6 ciclos.",
+            "posTodas": true,
+            "motivo": "sangramento anovulatório quando estrogênio é contraindicado e controle de menorragia (alternativa) controle de sangramento quando estrogênio é contraindicado",
+            "nota": "Uso direto - monitorar: padrão de sangramento; monitorar: peso e edema; monitorar: densidade óssea em uso acima de 2 anos",
+            "dose": {
+              "texto": "10 mg; 1x/dia por 10 a 14 dias; 10 a 14 dias por ciclo, repetido por 3 a 6 ciclos; max. 20 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Prostaglandina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "misoprostol",
+              "n": "Misoprostol",
+              "ap": "comprimido 25 mcg",
+              "q": "",
+              "pos": "800 mcg. Via sublingual ou retal. Dose única; repetir após 20 minutos se necessário. Até controle do sangramento."
+            },
+            "motivo": "atonia uterina refratária à ocitocina (alternativa)",
+            "nota": "Uso direto; via retal quando há sangramento ativo e a via oral não é possível - monitorar: temperatura; monitorar: volume de sangramento; monitorar: tônus uterino; monitorar: pressão arterial · NÃO: alergia a prostaglandina; instabilidade com indicação cirúrgica imediata · Obs: Via sublingual age em 5 a 15 minutos; a via retal é preferida no pós-parto com instabilidade porque a absorção é mais previsível",
+            "dose": {
+              "texto": "800 mcg; dose única; repetir após 20 minutos se necessário; até controle do sangramento; max. 800 mcg por dose, até 3 doses",
+              "status": "ok",
+              "valor": 800,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 800,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Suplemento de ferro",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "sulfato_ferroso",
+            "pos": "40 a 60 mg de ferro elementar. Via VO. 1x/dia ou em dias alternados. 90 dias após a normalização da hemoglobina.",
+            "posTodas": true,
+            "motivo": "anemia ferropriva por sangramento crônico, com tolerância oral (condicional) anemia ferropriva",
+            "nota": "Uso direto, uma hora antes da refeição ou com fonte de vitamina C - monitorar: hemograma e ferritina em 4 e 12 semanas; monitorar: tolerância gastrointestinal; monitorar: adesão ao tratamento · NÃO: sobrecarga de ferro; hemocromatose; anemia não ferropriva; intolerância prévia grave · Obs: Dose em dias alternados melhora a absorção e reduz a intolerância; manter até ferritina acima de 50 ng/mL",
+            "dose": {
+              "texto": "40 a 60 mg de ferro elementar; 1x/dia ou em dias alternados; 90 dias após a normalização da hemoglobina; max. 120 mg/dia de ferro elementar",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 60,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 120,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 90,
+              "duracao_texto": "90 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Dois acessos venosos calibrosos",
+              "ap": "",
+              "q": "",
+              "pos": "14 a 16 G, um para reposição volêmica e outro para fármacos; coletar tipagem e prova cruzada na primeira punção"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Avaliação hemodinâmica seriada",
+              "ap": "",
+              "q": "",
+              "pos": "Pressão arterial, frequência cardíaca, perfusão periférica, nível de consciência e diurese a cada 15 minutos enquanto instável"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Reposição volêmica com cristaloide aquecido",
+              "ap": "",
+              "q": "",
+              "pos": "Bolus de 500 mL de Ringer lactato ou SF 0,9% e reavaliação imediata; evitar sobrecarga em cardiopata e renal crônico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Contagem objetiva do sangramento",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar número de absorventes por hora e tamanho dos coágulos; trocar a proteção e pesar quando possível, para comparar resposta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Exame especular com boa iluminação",
+              "ap": "",
+              "q": "",
+              "pos": "Quantificar sangramento, identificar origem no colo, retirar corpo estranho e coletar material para exame quando indicado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Coleta de beta-hCG antes de qualquer hormônio",
+              "ap": "",
+              "q": "",
+              "pos": "Teste urinário ou plasmático na primeira hora de atendimento, registrado no prontuário antes da prescrição hormonal"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Transfusão guiada por clínica e não por número isolado",
+              "ap": "",
+              "q": "",
+              "pos": "Hemoglobina abaixo de 7 g/dL, ou abaixo de 8 g/dL com sintomas ou sangramento ativo; um concentrado de hemácias eleva cerca de 1 g/dL"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Repouso relativo e abstinência de relação durante o sangramento",
+              "ap": "",
+              "q": "",
+              "pos": "Evitar esforço físico intenso e relação sexual até 48 horas sem sangramento; não há evidência de que repouso absoluto altere o desfecho"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Orientação contraceptiva e planejamento reprodutivo na alta",
+              "ap": "",
+              "q": "",
+              "pos": "Definir o método de controle antes da alta, com explicação do sangramento esperado nos primeiros 3 meses"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GO-01"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antifibrinolítico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "acido_tranexamico_ev",
+            "motivo": "sangramento uterino agudo volumoso, inclusive pós-parto, sem trombose ativa (1a linha) sangramento ativo sem trombose",
+            "nota": "IV: diluir 1 g em 100 mL de SF 0,9%; VO: uso direto - monitorar: volume de sangramento e coágulos; monitorar: sinais de trombose em membros e dor torácica; monitorar: creatinina e diurese; monitorar: nível de consciência se houver risco de convulsão · NÃO: trombose venosa ou arterial ativa; antecedente de trombose nos últimos 12 meses; coagulação intravascular disseminada; convulsão; insuficiência renal grave sem ajuste · Obs: Iniciar nas primeiras 3 horas do sangramento; no pós-parto, 1 g IV em 10 minutos e repetir após 30 minutos se o sangramento persistir · Renal: ClCr 30–60 mL/min: 15 mg/kg 12/12 h; ClCr abaixo de 30 mL/min:…",
+            "dose": {
+              "texto": "1 g; 8/8 h; até 5 dias por via oral; 24 a 48 horas por via intravenosa; max. 3 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Uterotonico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ocitocina",
+              "n": "Ocitocina",
+              "ap": "ampola 5 UI/mL (1 mL)",
+              "via": "IM ou IV",
+              "pos": "10 UI. Via IM ou IV. Dose inicial; repetir 10 UI se necessário e manter infusão. Infusão de manutenção por 2 a 4 horas. Bolus intravenoso lento em 5 minutos; manutenção em infusão contínua."
+            },
+            "motivo": "sangramento pós-parto por atonia uterina (1a linha)",
+            "nota": "IM direta; IV: 10 UI em 500 mL de SF 0,9% ou SG 5% (20 mUI/mL) - monitorar: tônus uterino e volume de sangramento; monitorar: pressão arterial e frequência cardíaca; monitorar: diurese e sódio em infusão prolongada · NÃO: hipersensibilidade ao fármaco; hipertensão grave não controlada; desequilíbrio hidroeletrolítico grave · Obs: Primeira escolha na atonia; se falhar, associar misoprostol ou balão intrauterino. Nunca em bolus rápido, que causa hipotensão · Renal: Cautela: risco de intoxicação hídrica, reduzir o volume infundido",
+            "dose": {
+              "texto": "10 UI; dose inicial; repetir 10 UI se necessário e manter infusão; infusão de manutenção por 2 a 4 horas; max. 40 UI em 24 horas",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "UI"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Ferro intravenoso",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "sacarato_de_hidroxido_de_ferro",
+              "n": "Sacarato de hidróxido de ferro",
+              "ap": "ampola 100 mg/5 mL",
+              "via": "IV",
+              "pos": "200 mg. Via IV. 1 a 3 vezes por semana. Até completar o déficit calculado. 30 a 60 minutos, com 25 mg nos primeiros 15 minutos em observação."
+            },
+            "motivo": "anemia ferropriva com hemoglobina abaixo de 9 g/dL, intolerância oral, má absorção ou necessidade de reposição rápida (alternativa)",
+            "nota": "Diluir 200 mg em 200 mL de SF 0,9% - monitorar: pressão arterial e frequência durante a infusão; monitorar: sinais de reação alérgica nos primeiros 15 minutos; monitorar: hemograma e ferritina em 4 semanas · NÃO: anemia não ferropriva; sobrecarga de ferro; infecção ativa não tratada; primeiro trimestre de gestação · Obs: Preferir quando a anemia é sintomática e o tempo até a cirurgia é curto; não substitui transfusão no choque",
+            "dose": {
+              "texto": "200 mg; 1 a 3 vezes por semana; até completar o déficit calculado; max. 200 a 300 mg por infusão",
+              "status": "ok",
+              "valor": 200,
+              "valor_max": 300,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fitomenadiona",
+              "n": "Fitomenadiona (vitamina K)",
+              "ap": "ampola 10 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "10 mg. Via IV. Dose única. 1 dose. 20 a 30 minutos."
+            },
+            "motivo": "sangramento em paciente anticoagulada com varfarina ou com INR alargado (condicional)",
+            "nota": "Diluir em 50 mL de SF 0,9% e infundir lentamente - monitorar: INR em 6 e 12 horas; monitorar: volume de sangramento; monitorar: sinais de trombose após reversão · NÃO: hipersensibilidade ao fármaco · Obs: Associar complexo protrombínico quando disponível e o sangramento for grave; a reversão completa leva 6 a 12 horas e não substitui hemostasia",
+            "dose": {
+              "texto": "10 mg; dose única; 1 dose; max. 10 mg",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Estrogenio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "estrogenio_conjugado_intravenoso",
+              "n": "Estrogênio conjugado intravenoso",
+              "ap": "frasco-ampola 25 mg com diluente",
+              "via": "IV",
+              "pos": "25 mg. Via IV. 4/4 h a 6/6 h. Até 24 a 48 horas, com transição para via oral. Bolus lento em 5 minutos."
+            },
+            "motivo": "hemorragia uterina aguda grave refratária a progestagênio, sem contraindicação (resgate)",
+            "nota": "Reconstituir no diluente fornecido e administrar por via intravenosa lenta; não misturar com outros fármacos na mesma seringa - monitorar: sangramento a cada 4 horas; monitorar: pressão arterial; monitorar: sinais de trombose; monitorar: náusea e cefaleia · NÃO: trombose venosa ou arterial; neoplasia estrogênio-dependente; hepatopatia grave; gestação; infarto do miocárdio recente · Obs: Disponibilidade restrita em muitos serviços; quando indisponível, usar anticoncepcional combinado em dose alta por via oral ou progestagênio em dose alta",
+            "dose": {
+              "texto": "25 mg; 4/4 h a 6/6 h; até 24 a 48 horas, com transição para via oral; max. 25 mg a cada 4 horas",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 25,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GO-01",
+    "versao": "0.2.0",
+    "arquivo": "GO-01_sangramento_uterino.json",
+    "area": "Ginecologia/Obstetrícia",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

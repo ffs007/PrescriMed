@@ -1,0 +1,1 @@
+ALTER VIEW public.vw_patologia_completa SET (security_invoker = true);

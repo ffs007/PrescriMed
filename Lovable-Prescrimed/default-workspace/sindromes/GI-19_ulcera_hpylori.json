@@ -1,0 +1,1019 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GI-19",
+    "area": "Gastrointestinal",
+    "nome": "Doença ulcerosa / H. pylori",
+    "aliases": [
+      "doença ulcerosa péptica",
+      "úlcera péptica",
+      "úlcera gástrica",
+      "úlcera duodenal",
+      "Helicobacter pylori",
+      "Doença ulcerosa / H. pylori",
+      "erradicação de H. pylori"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Doença ulcerosa péptica é a solução de continuidade da mucosa gástrica ou duodenal que ultrapassa a muscular da mucosa, quase sempre por Helicobacter pylori ou por ácido acetilsalicílico e anti-inflamatório não esteroidal. O ponto central é que úlcera tem causa tratável: confirmar H. pylori com teste válido, erradicar com esquema de 14 dias e comprovar a cura. Três erros se repetem na prática. O primeiro é tratar sem confirmar H. pylori — o que perpetua IBP e nunca resolve. O segundo é prescrever tríplice com claritromicina onde a resistência local passa de 15%, o que derruba a taxa de erradicação para menos de 70%. O terceiro é manter inibidor de bomba de prótons por anos sem reavaliar indicação, expondo o paciente a hipomagnesemia, deficiência de B12, fratura e infecção por C. difficile. Úlcera gástrica exige biópsia de bordas e controle endoscópico para excluir malignidade.",
+    "inclusao": [
+      "Dispepsia com úlcera documentada à endoscopia",
+      "H. pylori positivo com indicação de erradicação",
+      "Úlcera em uso de AAS ou AINE",
+      "Dispepsia com teste não invasivo positivo para H. pylori",
+      "Úlcera gástrica que exige biópsia e controle endoscópico"
+    ],
+    "exclusao": [
+      {
+        "situacao": "dispepsia sem úlcera e sem H. pylori, sem sinal de alarme",
+        "fluxo": "GI-05 dispepsia funcional"
+      },
+      {
+        "situacao": "hematêmese, melena ou instabilidade",
+        "fluxo": "GI-09 HDA"
+      },
+      {
+        "situacao": "dor epigástrica súbita com abdome rígido",
+        "fluxo": "GI-14 / cirurgia — perfuração"
+      },
+      {
+        "situacao": "dor biliar pós-prandial com Murphy positivo",
+        "fluxo": "GI-20 colecistite"
+      },
+      {
+        "situacao": "disfagia progressiva ou perda de peso com anemia",
+        "fluxo": "endoscopia urgente / oncologia"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "hematêmese, melena ou vômito em borra de café",
+        "por_que": "úlcera sangrante com risco de choque",
+        "acao": "estabilizar, IBP venoso e endoscopia precoce",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "dor epigástrica súbita e intensa com abdome rígido",
+        "por_que": "perfuração de úlcera",
+        "acao": "cirurgia imediata e tomografia se estável",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "vômitos persistentes com distensão e sucção gástrica aumentada",
+        "por_que": "estenose pilórica por úlcera cicatricial",
+        "acao": "descompressão, hidratação e avaliação endoscópica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "perda de peso, anemia, disfagia ou saciedade precoce",
+        "por_que": "úlcera gástrica malignizada",
+        "acao": "endoscopia com biópsia de bordas e tomografia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "uso contínuo de AINE ou AAS com úlcera ativa",
+        "por_que": "sangramento e perfuração",
+        "acao": "suspender AINE, gastroproteção e reavaliar AAS",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "idoso acima de 60 anos com dispepsia de início recente",
+        "por_que": "câncer gástrico simula úlcera",
+        "acao": "endoscopia precoce, sem tratar empiricamente",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A dor é epigástrica, em queimação, e melhora ou piora com a comida?",
+      "Usa AAS, AINE, corticoide ou anticoagulante?",
+      "Já fez endoscopia e o laudo diz úlcera, gastrite ou cicatriz?",
+      "Já tratou H. pylori antes? Com qual esquema e por quantos dias?",
+      "Completou os 14 dias ou parou quando a dor passou?",
+      "Tem anemia, perda de peso, disfagia ou vômito persistente?",
+      "Tem alergia a penicilina ou usou claritromicina ou quinolona no último ano?",
+      "Fuma ou bebe álcool diariamente?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "H. pylori confirmado, sem uso prévio de macrolídeo e resistência local a claritromicina menor que 15%",
+        "escolha": "Tríplice com IBP 12/12 h + amoxicilina 1 g 12/12 h + claritromicina 500 mg 12/12 h por 14 dias",
+        "porque": "Taxa de erradicação acima de 85% quando a resistência é baixa; é o esquema mais simples e barato"
+      },
+      {
+        "cenario": "Resistência local a claritromicina maior ou igual a 15%, uso prévio de macrolídeo ou de quinolona",
+        "escolha": "Quádruplo com bismuto: IBP 12/12 h + bismuto 6/6 h + tetraciclina 6/6 h + metronidazol 12/12 h por 14 dias",
+        "porque": "Não depende de claritromicina e supera 90% de erradicação mesmo em cenário de resistência"
+      },
+      {
+        "cenario": "Alergia a penicilina",
+        "escolha": "Quádruplo com bismuto sem amoxicilina (bismuto + tetraciclina + metronidazol + IBP)",
+        "porque": "Mantém eficácia sem betalactâmico; a alternativa com claritromicina é frágil em área de resistência"
+      },
+      {
+        "cenario": "Falha após tríplice com claritromicina",
+        "escolha": "Quádruplo com bismuto por 14 dias",
+        "porque": "Não repetir claritromicina: a resistência é induzida e persistente após a primeira falha"
+      },
+      {
+        "cenario": "Falha após quádruplo com bismuto",
+        "escolha": "Tríplice com levofloxacino 500 mg 1x/dia + amoxicilina, guiado por cultura ou teste molecular",
+        "porque": "Segunda linha depois do bismuto; idealmente guiada por antibiograma para não repetir resistência"
+      },
+      {
+        "cenario": "Falha após múltiplos esquemas, com cultura disponível",
+        "escolha": "Rifabutina 300 mg 1x/dia + amoxicilina 1 g 12/12 h + IBP por 14 dias",
+        "porque": "Resgate em população multirresistente; disponibilidade restrita e custo alto"
+      },
+      {
+        "cenario": "Dispepsia sem H. pylori confirmado e sem uso de AINE",
+        "escolha": "Não tratar empiricamente com antibiótico; investigar com teste válido e endoscopia conforme idade e alarme",
+        "porque": "Tratar sem confirmação expõe a efeitos adversos, seleciona resistência e nunca resolve a causa"
+      },
+      {
+        "cenario": "AAS para prevenção secundária cardiovascular com úlcera prévia ou alto risco gastrointestinal",
+        "escolha": "Manter AAS com IBP em dose plena de gastroproteção (omeprazol 20 mg 1x/dia)",
+        "porque": "Suspender AAS aumenta eventos cardiovasculares; a gastroproteção reduz ressangramento"
+      },
+      {
+        "cenario": "AINE para doença musculoesquelética em paciente com úlcera prévia",
+        "escolha": "Suspender ou trocar o AINE; se inevitável, usar a menor dose pelo menor tempo com IBP contínuo",
+        "porque": "AINE é a segunda causa de úlcera e a primeira de complicação hemorrágica"
+      },
+      {
+        "cenario": "Úlcera gástrica diagnosticada à endoscopia",
+        "escolha": "Biópsia de bordas na primeira endoscopia e nova endoscopia em 8 a 12 semanas",
+        "porque": "Cerca de 3% das úlceras gástricas aparentemente benignas são câncer"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "ibp",
+        "agente": "omeprazol",
+        "papel": "primeira_linha",
+        "indicacao": "base de todos os esquemas de erradicação e cicatrização da úlcera",
+        "dose": "20 mg (esquema de erradicação) ou 40 mg (úlcera ativa e gastroproteção)",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h durante a erradicação; depois 1x/dia em jejum",
+        "duracao": "14 dias no esquema, seguido de 4 a 8 semanas na úlcera duodenal e 8 a 12 semanas na gástrica",
+        "dose_maxima": "80 mg/dia",
+        "contraindicacoes": [
+          "alergia a benzimidazol",
+          "uso concomitante de nelfinavir"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "diarreia",
+          "hipomagnesemia",
+          "deficiência de vitamina B12",
+          "fraturas em uso prolongado",
+          "diarreia por C. difficile"
+        ],
+        "apresentacoes": [
+          "cápsula 10 mg",
+          "cápsula 20 mg",
+          "cápsula 40 mg",
+          "comprimido dispersível 10 mg",
+          "frasco IV 40 mg"
+        ],
+        "preparo": "Uso direto, 30 a 60 min antes das refeições; cápsula inteira, sem mastigar",
+        "tempo_infusao": "não se aplica (via oral); IV em 10 a 30 minutos",
+        "monitorizacao": [
+          "magnésio se uso acima de 8 semanas",
+          "B12 em uso acima de 1 ano",
+          "controle da dor",
+          "cicatrização endoscópica"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 20 mg/dia em Child C",
+        "observacoes": "Tomar antes da refeição para bloquear a bomba ativada; a dose dobra no esquema de erradicação para compensar o estímulo alimentar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "ibp",
+        "agente": "pantoprazol",
+        "papel": "alternativa",
+        "indicacao": "erradicação e cicatrização quando o omeprazol não está disponível ou há intolerância",
+        "dose": "40 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h no esquema; depois 1x/dia",
+        "duracao": "14 dias no esquema, seguido de 4 a 8 semanas",
+        "dose_maxima": "80 mg/dia",
+        "contraindicacoes": [
+          "alergia a benzimidazol"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "diarreia",
+          "hipomagnesemia",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 20 mg",
+          "comprimido 40 mg",
+          "frasco IV 40 mg"
+        ],
+        "preparo": "Uso direto, antes da refeição; comprimido inteiro",
+        "tempo_infusao": "não se aplica (via oral); IV em 15 minutos",
+        "monitorizacao": [
+          "magnésio em uso prolongado",
+          "controle da dor",
+          "função hepática"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 40 mg/dia em hepatopatia grave",
+        "observacoes": "Equivalente ao omeprazol em eficácia; escolher pelo custo e pela apresentação disponível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina",
+        "agente": "amoxicilina",
+        "papel": "primeira_linha",
+        "indicacao": "componente dos esquemas tríplice e quádruplo",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "14 dias",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "mononucleose infecciosa"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "candidíase vaginal",
+          "anafilaxia rara"
+        ],
+        "apresentacoes": [
+          "cápsula 500 mg",
+          "comprimido 875 mg",
+          "suspensão 250 mg/5 mL",
+          "pó para solução 1 g"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "diarreia",
+          "rash cutâneo",
+          "adesão aos 14 dias"
+        ],
+        "ajuste_renal": "ClCr menor que 30 mL/min: 500 mg 12/12 h",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É o componente mais potente contra H. pylori; não substituir por ampicilina sem necessidade e nunca suspender por rash leve sem avaliar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "macrolideo",
+        "agente": "claritromicina",
+        "papel": "condicional",
+        "indicacao": "tríplice terapia apenas quando a resistência local a claritromicina é menor que 15% e não há uso prévio de macrolídeo",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "14 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "resistência local maior ou igual a 15%",
+          "uso prévio de macrolídeo",
+          "síndrome do QT longo",
+          "uso de sinvastatina ou simvastatina em dose alta",
+          "insuficiência hepática grave"
+        ],
+        "efeitos_adversos": [
+          "gosto metálico",
+          "náusea",
+          "diarreia",
+          "prolongamento de QT",
+          "interação com estatinas e varfarina"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg",
+          "comprimido 500 mg",
+          "suspensão 50 mg/mL",
+          "frasco IV 500 mg"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral); IV em 60 minutos",
+        "monitorizacao": [
+          "ECG se cardiopata",
+          "INR se anticoagulado",
+          "sintomas musculares se usar estatina",
+          "adesão"
+        ],
+        "ajuste_renal": "ClCr menor que 30 mL/min: reduzir para 250 mg 12/12 h",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Cada dia de claritromicina sem indicação correta reduz a erradicação futura; suspender estatina durante os 14 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "nitroimidazol",
+        "agente": "metronidazol",
+        "papel": "primeira_linha",
+        "indicacao": "componente do quádruplo com bismuto e das segundas linhas",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "14 dias",
+        "dose_maxima": "1.500 mg/dia",
+        "contraindicacoes": [
+          "primeiro trimestre de gestação",
+          "alergia a nitroimidazol",
+          "consumo de álcool",
+          "uso de dissulfiram"
+        ],
+        "efeitos_adversos": [
+          "gosto metálico",
+          "náusea",
+          "cefaleia",
+          "urina escura",
+          "neuropatia periférica"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg",
+          "comprimido 400 mg",
+          "solução injetável 5 mg/mL",
+          "suspensão 40 mg/mL"
+        ],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica (via oral); IV em 30 a 60 minutos",
+        "monitorizacao": [
+          "sintomas neurológicos",
+          "adesão",
+          "efeitos gastrointestinais"
+        ],
+        "ajuste_renal": "Sem ajuste; em diálise, repor após a sessão",
+        "ajuste_hepatico": "Reduzir para 250 mg 12/12 h em Child C",
+        "observacoes": "Proibir álcool durante e por 72 h após; alguns protocolos usam 400 mg 8/8 h — conferir o protocolo local antes de prescrever",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "tetraciclina",
+        "agente": "tetraciclina",
+        "papel": "primeira_linha",
+        "indicacao": "componente do quádruplo com bismuto, inclusive na alergia a penicilina",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "14 dias",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "gestação",
+          "lactação",
+          "menores de 8 anos",
+          "insuficiência renal grave"
+        ],
+        "efeitos_adversos": [
+          "esofagite",
+          "fotossensibilidade",
+          "náusea",
+          "manchamento dentário permanente em criança"
+        ],
+        "apresentacoes": [
+          "cápsula 250 mg",
+          "cápsula 500 mg",
+          "comprimido 500 mg"
+        ],
+        "preparo": "Uso direto com um copo cheio de água, sentado, 1 h antes ou 2 h após a refeição; não deitar por 30 min",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor retroesternal",
+          "fotossensibilidade",
+          "aderência ao esquema de 4 tomadas"
+        ],
+        "ajuste_renal": "Evitar se ClCr menor que 30 mL/min",
+        "ajuste_hepatico": "Cautela em hepatopatia grave",
+        "observacoes": "Não tomar com leite, antiácido ou ferro; a dor retroesternal indica esofagite por comprimido retido",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "bismuto",
+        "agente": "subsalicilato de bismuto",
+        "papel": "primeira_linha",
+        "indicacao": "componente do quádruplo com bismuto; protege a mucosa e supera resistência",
+        "dose": "525 mg (2 comprimidos de 262 mg)",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h, com as refeições e ao deitar",
+        "duracao": "14 dias",
+        "dose_maxima": "2.100 mg/dia",
+        "contraindicacoes": [
+          "alergia a salicilato",
+          "insuficiência renal grave",
+          "uso de anticoagulante em dose alta",
+          "gripe ou varicela em criança"
+        ],
+        "efeitos_adversos": [
+          "fezes escuras",
+          "língua e dentes escurecidos",
+          "constipação",
+          "náusea",
+          "neurotoxicidade em uso prolongado"
+        ],
+        "apresentacoes": [
+          "comprimido 262 mg",
+          "suspensão 262 mg/15 mL"
+        ],
+        "preparo": "Uso direto; agitar a suspensão antes de medir",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "cor das fezes (escurecimento é esperado e não é melena)",
+          "constipação",
+          "sintomas neurológicos se uso acima de 2 semanas"
+        ],
+        "ajuste_renal": "Contraindicado se ClCr menor que 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Avisar o paciente que as fezes ficam negras — evita ida desnecessária ao pronto-socorro por suspeita de sangramento",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "fluorquinolona",
+        "agente": "levofloxacino",
+        "papel": "alternativa",
+        "indicacao": "segunda linha após falha do quádruplo com bismuto, de preferência guiado por cultura",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "14 dias",
+        "dose_maxima": "750 mg/dia",
+        "contraindicacoes": [
+          "gestação",
+          "menores de 18 anos",
+          "tendinopatia prévia",
+          "miastenia gravis",
+          "síndrome do QT longo"
+        ],
+        "efeitos_adversos": [
+          "tendinite e ruptura de tendão",
+          "neuropatia periférica",
+          "prolongamento de QT",
+          "hipoglicemia",
+          "C. difficile"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg",
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "bolsa IV 500 mg/100 mL"
+        ],
+        "preparo": "Uso direto; manter hidratação e evitar antiácido nas 2 h anteriores",
+        "tempo_infusao": "não se aplica (via oral); IV em 60 minutos",
+        "monitorizacao": [
+          "dor tendínea",
+          "glicemia em diabético",
+          "ECG se cardiopata",
+          "sintomas neurológicos"
+        ],
+        "ajuste_renal": "ClCr 20 a 49 mL/min: 250 mg 1x/dia; ClCr menor que 20: 250 mg a cada 48 h",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não repetir quinolona se já falhou antes; a resistência a levofloxacino acompanha a resistência a claritromicina em parte das cepas",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "rifamicina",
+        "agente": "rifabutina",
+        "papel": "resgate",
+        "indicacao": "resgate de erradicação após múltiplas falhas, com cultura e sensibilidade disponíveis",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "14 dias, associada a amoxicilina 1 g 12/12 h e IBP",
+        "dose_maxima": "300 mg/dia",
+        "contraindicacoes": [
+          "tuberculose ativa",
+          "alergia a rifamicina",
+          "uso de antirretroviral com interação",
+          "gestação"
+        ],
+        "efeitos_adversos": [
+          "coloração alaranjada de urina e lágrimas",
+          "neutropenia",
+          "elevação de transaminases",
+          "interações medicamentosas extensas"
+        ],
+        "apresentacoes": [
+          "cápsula 150 mg"
+        ],
+        "preparo": "Uso direto, em jejum ou com alimento leve",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "hemograma",
+          "transaminases",
+          "revisão de interações com antirretrovirais e anticoagulantes"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir em hepatopatia grave",
+        "observacoes": "Disponibilidade restrita no Brasil e custo elevado; reservar para falha comprovada e com antibiograma, nunca empiricamente",
+        "confirmar_apresentacao_local": true,
+        "fonte": "FDA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Suspender AAS ou AINE conforme o risco",
+        "detalhe": "AAS de prevenção secundária cardiovascular geralmente é mantido com IBP; AINE para dor deve ser suspenso ou trocado — a decisão e o motivo ficam registrados"
+      },
+      {
+        "medida": "Substituir o AINE por analgésico não ulcerogênico",
+        "detalhe": "Paracetamol até 3 g/dia, calor local e fisioterapia para dor musculoesquelética; evitar trocar por outro AINE"
+      },
+      {
+        "medida": "Parar de fumar",
+        "detalhe": "Tabagismo retarda a cicatrização e aumenta a recidiva; oferecer aconselhamento e tratamento nicotínico na mesma consulta"
+      },
+      {
+        "medida": "Reduzir álcool",
+        "detalhe": "Suspender durante o tratamento; acima de 2 doses/dia aumenta risco de sangramento e de recidiva"
+      },
+      {
+        "medida": "Garantir adesão aos 14 dias",
+        "detalhe": "Explicar que o antibiótico não é para a dor e que parar antes de 14 dias seleciona resistência; usar alarme, cartela ou apoio familiar"
+      },
+      {
+        "medida": "Reavaliar a indicação do IBP a cada consulta",
+        "detalhe": "Definir data de retirada ou de redução para a menor dose eficaz; IBP sem indicação ativa deve ser suspenso, com taper se uso acima de 8 semanas"
+      },
+      {
+        "medida": "Orientar sinais de alarme por escrito",
+        "detalhe": "Vômito com sangue, fezes negras, dor súbita com barriga dura e perda de peso exigem retorno imediato, não nova consulta agendada"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Endoscopia digestiva alta com biópsias",
+        "indicacao": "Dispepsia com alarme, idade acima de 60 anos, úlcera gástrica e dúvida diagnóstica",
+        "tecnica": "Biópsias de antro (2) e corpo (2) para histologia e teste rápido de urease; úlcera gástrica exige biópsia de bordas",
+        "complicacoes": "Sangramento, perfuração, sedação, falso-negativo por uso de IBP"
+      },
+      {
+        "nome": "Teste respiratório com ureia marcada (UBT)",
+        "indicacao": "Diagnóstico de H. pylori e confirmação de cura quando não há indicação de endoscopia",
+        "tecnica": "Jejum de 6 h, coletar amostra basal, ingerir ureia marcada e coletar 30 min depois; suspender IBP por 14 dias e antibiótico por 28 dias",
+        "complicacoes": "Resultado falso-negativo com IBP ou antibiótico recente; custo e disponibilidade"
+      },
+      {
+        "nome": "Antígeno fecal de H. pylori",
+        "indicacao": "Alternativa ao UBT no diagnóstico e no teste de cura, inclusive em uso de IBP com cautela",
+        "tecnica": "Amostra única de fezes, teste monoclonal; colher pelo menos 4 semanas após o fim do antibiótico",
+        "complicacoes": "Falso-negativo em diarreia aquosa e em sangramento digestivo recente"
+      },
+      {
+        "nome": "Controle endoscópico de úlcera gástrica",
+        "indicacao": "Toda úlcera gástrica, 8 a 12 semanas após o tratamento",
+        "tecnica": "Nova endoscopia com biópsias do leito ulceroso mesmo se aparentemente cicatrizado",
+        "complicacoes": "Atraso no diagnóstico de câncer gástrico quando não realizado"
+      },
+      {
+        "nome": "Cultura de H. pylori com antibiograma",
+        "indicacao": "Falha de segunda linha e antes de esquema com rifabutina",
+        "tecnica": "Biópsia gástrica em meio de transporte específico, processada em laboratório de referência; alternativa é teste molecular para mutação 23S rRNA",
+        "complicacoes": "Baixa sensibilidade da cultura, demora de 10 a 14 dias e disponibilidade restrita"
+      }
+    ],
+    "metas": [
+      "H. pylori erradicado, comprovado por UBT ou antígeno fecal 4 semanas após o antibiótico",
+      "Úlcera cicatrizada em 4 a 8 semanas na duodenal e em 8 a 12 semanas na gástrica",
+      "AINE suspenso ou gastroproteção instituída em 100% dos pacientes com úlcera e AINE",
+      "Adesão de pelo menos 90% das doses nos 14 dias de antibiótico",
+      "Ausência de ressangramento e de recidiva em 12 meses",
+      "IBP com indicação registrada e data de reavaliação definida no prontuário"
+    ],
+    "fluxo": [
+      "Confirmar a úlcera e o H. pylori com teste válido: endoscopia, UBT ou antígeno fecal",
+      "Verificar exposição prévia a claritromicina ou quinolona e a resistência local a claritromicina",
+      "Escolher o esquema: tríplice com claritromicina se resistência menor que 15%; quádruplo com bismuto nos demais",
+      "Prescrever 14 dias com IBP em dose plena e conferir alergias e interações",
+      "Manter IBP até a cicatrização: 4 a 8 semanas na úlcera duodenal e 8 a 12 na gástrica",
+      "Suspender antibiótico por 4 semanas e IBP por 2 semanas antes do teste de cura",
+      "Teste de cura com UBT ou antígeno fecal; se positivo, resgate com esquema diferente e cultura quando possível",
+      "Reavaliar AAS, AINE e IBP crônico em cada consulta e agendar controle endoscópico da úlcera gástrica"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "Adiar erradicação para após o parto, salvo úlcera complicada; IBP permitido; nunca tetraciclina, quinolona ou bismuto",
+        "alerta": "Esquema incompleto seleciona resistência e não erradica"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "Revisar interações (claritromicina com estatina, varfarina e digoxina); vigiar função renal e risco de queda",
+        "alerta": "Maior risco de sangramento por AAS e de confusão por claritromicina"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Ajustar amoxicilina e levofloxacino ao clearance; evitar bismuto e tetraciclina se ClCr menor que 30",
+        "alerta": "Acúmulo e neurotoxicidade por bismuto"
+      },
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "Claritromicina e metronidazol elevam o INR; monitorar INR em 72 h e preferir quádruplo com bismuto",
+        "alerta": "Sangramento digestivo por interação medicamentosa"
+      },
+      {
+        "populacao": "alergia_penicilina",
+        "ajuste": "Quádruplo com bismuto sem amoxicilina; não usar tríplice com claritromicina como substituto automático",
+        "alerta": "Esquema sem betalactâmico exige 4 tomadas diárias e adesão rigorosa"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "endoscopia digestiva alta com biópsia",
+          "indicacao": "dispepsia com alarme, idade acima de 60 anos e úlcera gástrica",
+          "o_que_muda": "confirma úlcera, permite biópsia e exclui malignidade"
+        },
+        {
+          "nome": "teste rápido de urease na biópsia",
+          "indicacao": "durante a endoscopia",
+          "o_que_muda": "diagnóstico de H. pylori em minutos e início do esquema na mesma consulta"
+        },
+        {
+          "nome": "teste respiratório com ureia marcada",
+          "indicacao": "diagnóstico sem endoscopia e confirmação de cura",
+          "o_que_muda": "define se erradicou e se precisa de resgate"
+        },
+        {
+          "nome": "antígeno fecal de H. pylori",
+          "indicacao": "alternativa ao UBT e teste de cura",
+          "o_que_muda": "mesma decisão do UBT com coleta mais simples"
+        },
+        {
+          "nome": "hemograma e ferritina",
+          "indicacao": "anemia, palidez ou úlcera gástrica",
+          "o_que_muda": "suspeita de malignidade e necessidade de endoscopia urgente"
+        },
+        {
+          "nome": "teste molecular de resistência a claritromicina",
+          "indicacao": "falha de tratamento e áreas de resistência alta",
+          "o_que_muda": "define se claritromicina pode ser usada no resgate"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "sorologia IgG para H. pylori como teste de cura",
+          "motivo": "permanece positiva por anos após a erradicação"
+        },
+        {
+          "exame": "UBT ou antígeno fecal durante uso de IBP ou antibiótico",
+          "motivo": "falso-negativo que leva a tratar menos do que o necessário"
+        },
+        {
+          "exame": "endoscopia de repetição sem indicação em úlcera duodenal cicatrizada",
+          "motivo": "não muda conduta e expõe a risco de sedação"
+        },
+        {
+          "exame": "pesquisa de H. pylori em paciente assintomático sem indicação de erradicação",
+          "motivo": "gera tratamento desnecessário e resistência"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar o IBP 30 a 60 min antes do café e do jantar",
+        "completar os 14 dias de antibiótico mesmo sem dor",
+        "tomar tetraciclina com água, sentado, e não deitar por 30 min",
+        "avisar fezes escuras pelo bismuto não é sangramento",
+        "fazer o teste de cura 4 semanas após o antibiótico",
+        "trazer todas as caixas na consulta de revisão"
+      ],
+      "evitar": [
+        "AAS e AINE sem gastroproteção",
+        "álcool durante o tratamento",
+        "suspender antibiótico quando a dor melhora",
+        "leite e antiácido junto com tetraciclina",
+        "manter IBP por anos sem reavaliar a indicação",
+        "tratar H. pylori sem teste que confirme"
+      ],
+      "retorno": [
+        "vômito com sangue ou borra de café",
+        "fezes negras e fétidas",
+        "dor súbita e intensa com barriga dura",
+        "perda de peso ou dificuldade para engolir",
+        "dor que não melhora após 7 dias de IBP"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "claritromicina",
+        "efeitos": [
+          "gosto metálico",
+          "prolongamento de QT",
+          "interação com estatina e varfarina"
+        ],
+        "observacao": "Suspender estatina nos 14 dias e dosar INR em 72 h se anticoagulado"
+      },
+      {
+        "agente": "amoxicilina",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "candidíase"
+        ],
+        "observacao": "Rash leve sem anafilaxia permite reintrodução monitorada; anafilaxia exige troca de esquema"
+      },
+      {
+        "agente": "metronidazol",
+        "efeitos": [
+          "gosto metálico",
+          "neuropatia periférica",
+          "urina escura"
+        ],
+        "observacao": "Suspender se parestesia; proibir álcool durante e por 72 h"
+      },
+      {
+        "agente": "tetraciclina",
+        "efeitos": [
+          "esofagite",
+          "fotossensibilidade"
+        ],
+        "observacao": "Orientar ingestão com água e posição sentada; protetor solar se exposição"
+      },
+      {
+        "agente": "subsalicilato de bismuto",
+        "efeitos": [
+          "fezes escuras",
+          "constipação",
+          "neurotoxicidade rara"
+        ],
+        "observacao": "Escurecimento é esperado; não confundir com melena"
+      },
+      {
+        "agente": "omeprazol",
+        "efeitos": [
+          "hipomagnesemia",
+          "deficiência de B12",
+          "fratura",
+          "C. difficile"
+        ],
+        "observacao": "Dosar magnésio e B12 em uso acima de 1 ano; menor dose eficaz"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação no prontuário",
+      "Diarreia intensa durante o esquema: pesquisar C. difficile antes de novo antibiótico",
+      "Neuropatia por metronidazol: suspender e trocar por esquema sem nitroimidazol",
+      "Esofagite por tetraciclina: suspender, orientar posição e tratar sintomas",
+      "Hipomagnesemia por IBP: repor magnésio e reduzir para a menor dose eficaz ou suspender",
+      "Reação alérgica a penicilina: migrar para quádruplo com bismuto, não apenas trocar por outro betalactâmico"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "omeprazol 20 mg",
+            "dose": "20 mg",
+            "via": "VO",
+            "frequencia": "12/12 h antes das refeições",
+            "duracao": "14 dias, depois 1x/dia até 8 semanas",
+            "condicao": "erradicação de H. pylori com úlcera",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina 1 g",
+            "dose": "1 g",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "14 dias",
+            "condicao": "erradicação de H. pylori",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "claritromicina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "14 dias",
+            "condicao": "somente se resistência local menor que 15%",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "omeprazol 40 mg IV",
+            "dose": "40 mg",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "duracao": "até tolerar via oral",
+            "monitorizacao": "dor e sangramento",
+            "condicao": "úlcera com sangramento recente",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "subsalicilato de bismuto 525 mg",
+            "dose": "525 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "14 dias",
+            "monitorizacao": "fezes escuras e constipação",
+            "condicao": "quádruplo com bismuto",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tetraciclina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "14 dias",
+            "monitorizacao": "dor retroesternal",
+            "condicao": "quádruplo com bismuto",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "endoscopia digestiva alta",
+          "teste rápido de urease",
+          "teste respiratório de ureia",
+          "antígeno fecal de H. pylori",
+          "hemograma",
+          "ferritina",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com diagnóstico de doença ulcerosa péptica, necessitando de afastamento das atividades por 3 dias.",
+        "dias": 3,
+        "cid": null,
+        "observacao": "afastamento conforme sintomas e risco de sangramento"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com úlcera __ (gástrica/duodenal), H. pylori confirmado por __, esquema instituído por 14 dias, IBP até __, teste de cura agendado para __ e situação de AAS/AINE __."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "dor epigástrica e relação com alimento",
+        "AAS e AINE",
+        "endoscopia prévia",
+        "tratamento prévio de H. pylori",
+        "adesão aos 14 dias",
+        "alarme (sangue, perda de peso, disfagia)",
+        "alergia a penicilina",
+        "tabagismo e álcool",
+        "uso de IBP e tempo"
+      ],
+      "texto_template": "Paciente refere dor epigástrica há __, em queimação, com/sem relação com alimento, uso de AAS/AINE __, endoscopia prévia com laudo __, tratamento prévio de H. pylori __ com adesão __, sinais de alarme __, alergia a penicilina __, tabagismo __, álcool __ e uso atual de IBP há __."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "palidez e mucosas",
+        "abdome com dor epigástrica à palpação",
+        "pesquisa de defesa e rigidez",
+        "toque retal para melena",
+        "peso"
+      ],
+      "texto_template": "Sinais vitais, palidez, dor epigástrica à palpação, ausência de defesa, toque retal sem melena e peso."
+    },
+    "referencias": [
+      {
+        "tipo": "consenso_erradicacao",
+        "o_que_verificar": "esquemas de primeira e segunda linha e limiar de resistência",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_gastroenterologia",
+        "o_que_verificar": "indicação de endoscopia e seguimento da úlcera gástrica",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, bulas e restrição de venda",
+        "verificar": true
+      },
+      {
+        "tipo": "vigilancia_antimicrobiana",
+        "o_que_verificar": "resistência local a claritromicina e quinolona",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GI19-01",
+        "tipo": "claritromicina",
+        "gatilho": "claritromicina prescrita sem registro de resistência local abaixo de 15% ou com uso prévio de macrolídeo",
+        "severidade": "grave",
+        "mensagem": "Claritromicina sem critério derruba a erradicação: usar quádruplo com bismuto.",
+        "acao": "bloquear item e sugerir quádruplo",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI19-02",
+        "tipo": "teste_de_cura",
+        "gatilho": "teste de cura solicitado antes de 4 semanas do antibiótico ou em uso de IBP",
+        "severidade": "grave",
+        "mensagem": "Teste de cura precoce ou com IBP dá falso-negativo e simula erradicação.",
+        "acao": "bloquear pedido e recalcular a data",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI19-03",
+        "tipo": "aine_ulcera",
+        "gatilho": "AINE ou AAS prescrito em paciente com úlcera ativa e sem gastroproteção",
+        "severidade": "grave",
+        "mensagem": "AINE em úlcera ativa sem IBP causa sangramento e perfuração.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI19-04",
+        "tipo": "sem_confirmacao",
+        "gatilho": "antibiótico para H. pylori sem teste positivo registrado",
+        "severidade": "grave",
+        "mensagem": "Erradicação sem confirmação expõe a efeitos adversos e resistência sem benefício.",
+        "acao": "bloquear esquema e solicitar teste",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI19-05",
+        "tipo": "ulcera_gastrica",
+        "gatilho": "úlcera gástrica sem biópsia de bordas ou sem controle endoscópico agendado",
+        "severidade": "grave",
+        "mensagem": "Úlcera gástrica exige biópsia e controle em 8 a 12 semanas para excluir câncer.",
+        "acao": "alertar e agendar controle",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GI19-06",
+        "tipo": "ibp_cronico",
+        "gatilho": "IBP em uso contínuo por mais de 8 semanas sem indicação registrada",
+        "severidade": "precaucao",
+        "mensagem": "Reavaliar a indicação do IBP: risco de hipomagnesemia, B12 baixa, fratura e C. difficile.",
+        "acao": "alertar e pedir justificativa",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "consenso de erradicação",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,538 @@
+{
+  "id": "ws-resp_14",
+  "nome": "Pneumonia suspeita (PAC)",
+  "cat": "Emergência",
+  "alias": "pneumonia suspeita pneumonia pac pneumonia adquirida na comunidade infeccao pulmonar",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (RESP-14_pneumonia.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: protocolo de PAC, fluxo de internação e esquema antibiótico do serviço",
+      "[verificar] sociedade_pneumologia: CURB-65, PSI e escolha empírica por perfil de risco",
+      "[verificar] diretriz_internacional: duração de 5 a 7 dias guiada por estabilidade e papel do macrolídeo na pneumonia grave",
+      "[verificar] anvisa: apresentações, concentrações e diluições disponíveis no serviço",
+      "[verificar] calendario_vacinacao: esquema de pneumococo e influenza para adulto e grupos de risco"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "RESP-14 em 2026-11-27",
+    "fundido_workspace": "RESP-14 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: saturação abaixo de 92% em ar ambiente ou necessidade de oxigênio para manter acima de 92% -> oxigênio titulado, gasometria e internação imediata; pressão sistólica abaixo de 90 mmHg, lactato acima de 2 mmol/L ou tempo de enchimento capilar acima de 3 s -> protocolo de sepse, cristaloide e antibiótico na primeira hora; confusão ou rebaixamento novo -> internação, gasometria, glicemia e avaliação de UTI; frequência respiratória de 30 rpm ou mais, ou uso de musculatura acessória -> sala monitorizada e avaliação para ventilação não invasiva. 1) Triagem: febre, tosse e dispneia entram em sala com oximetria, frequência respiratória, pressão e nível de consciência 2) Confirmar hipótese: radiograma de tórax em duas incidências; se negativa e suspeita alta, considerar tomografia ou ultrassom pulmonar 3) Calcular CURB-65 e, em dúvida, o Pneumonia Severity Index; registrar o resultado e a decisão de local de tratamento 4) Colher exames antes do antibiótico no internado: hemograma, ureia, creatinina, eletrólitos, gasometria e duas hemoculturas 5) Iniciar oxigênio titulado se saturação abaixo de 92% e definir alvo por escrito 6) Escolher o antibiótico pelo local de tratamento e pelo perfil de comorbidade e exposição prévia 7) Reavaliar em 48 a 72 h: temperatura, frequência respiratória, saturação, tolerância oral e resultado de cultura 8) Sem melhora: repetir imagem, pesquisar derrame, abscesso, TEP, insuficiência cardíaca e obstrução antes de trocar o antibiótico 9) En",
+  "redFlags": [
+    "saturação abaixo de 92% em ar ambiente ou necessidade de oxigênio para manter acima de 92% -> oxigênio titulado, gasometria e internação imediata",
+    "pressão sistólica abaixo de 90 mmHg, lactato acima de 2 mmol/L ou tempo de enchimento capilar acima de 3 s -> protocolo de sepse, cristaloide e antibiótico na primeira hora",
+    "confusão ou rebaixamento novo -> internação, gasometria, glicemia e avaliação de UTI",
+    "frequência respiratória de 30 rpm ou mais, ou uso de musculatura acessória -> sala monitorizada e avaliação para ventilação não invasiva",
+    "derrame pleural com febre persistente, dor ou redução do murmúrio vesicular -> ultrassom e toracocentese diagnóstica no mesmo dia",
+    "ausência de melhora de febre e dispneia após 48 a 72 h de antibiótico -> reavaliar diagnóstico, repetir imagem e colher cultura antes de trocar o esquema",
+    "frequência cardíaca acima de 120 bpm, hipotermia abaixo de 36 °C ou leucócitos abaixo de 4.000 -> internação e culturas antes do antibiótico"
+  ],
+  "naoUsar": [
+    "alergia a penicilina",
+    "anafilaxia prévia a betalactâmico",
+    "mononucleose infecciosa",
+    "anafilaxia prévia a cefalosporina",
+    "anafilaxia prévia a penicilina",
+    "uso de solução com cálcio em neonato",
+    "hiperbilirrubinemia neonatal",
+    "alvo de 88% a 92% em DPOC com risco de hipercapnia, o que reduz a dose mas não exclui a indicação"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar o antibiótico nos horários certos e completar todos os dias prescritos"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "fumar e frequentar ambientes com fumaça"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "1 g. Via VO. 8/8 h. 5 dias quando estável em 48-72 h; até 7 dias.",
+            "posTodas": true,
+            "motivo": "PAC leve, sem comorbidade e sem antibiótico nos últimos 90 dias, em tratamento ambulatorial (1a linha) PAC leve sem comorbidade, CURB-65 de 0 a 1",
+            "nota": "Uso direto, com ou sem alimento; a suspensão é reconstituída com água filtrada conforme o rótulo - monitorar: resposta clínica em 48-72 h: febre, frequência respiratória e saturação; monitorar: diarreia e sinais de colite; monitorar: rash cutâneo; monitorar: adesão ao esquema · NÃO: alergia a penicilina; anafilaxia prévia a betalactâmico; mononucleose infecciosa · Obs: É a primeira escolha no paciente sem comorbidade porque cobre pneumococo com dose alta. Não associar macrolídeo de rotina nesse perfil: a associação fica para suspeita de atípico ou para gravidade · Renal: ClCr abaixo de 30 mL/min: 500 mg 8/8 h; em hemodiálise,…",
+            "dose": {
+              "texto": "1 g; 8/8 h; 5 dias quando estável em 48-72 h; até 7 dias; max. 3 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Oxigenoterapia",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "oxigenio",
+              "n": "Oxigênio",
+              "ap": "cateter nasal tipo óculos 1-6 L/min",
+              "q": "",
+              "pos": "1 a 6 L/min por cateter nasal; máscara de Venturi de 24% a 50%; máscara com reservatório de 10 a 15 L/min. Via inalatória. Contínuo, titulado pela saturação. Até manter saturação acima de 92% por 15 min em ar ambiente. Infusão contínua."
+            },
+            "motivo": "hipoxemia com saturação abaixo de 92% em ar ambiente, ou desconforto respiratório com saturação limítrofe (1a linha)",
+            "nota": "Umedecer o gás em fluxo acima de 4 L/min e escolher o dispositivo pelo alvo de saturação - monitorar: saturação contínua; monitorar: frequência respiratória e uso de musculatura acessória; monitorar: gasometria em 30-60 min se não houver melhora; monitorar: nível de consciência; monitorar: dispositivo e fluxo registrad · NÃO: alvo de 88% a 92% em DPOC com risco de hipercapnia, o que reduz a dose mas não exclui a indicação · Obs: Não é medida de conforto: é tratamento de hipoxemia. Em DPOC, alvo de 88% a 92% e gasometria se sonolência. Trocar o dispositivo sem registrar o fluxo é causa comum de hipoxemia silenciosa",
+            "dose": {
+              "texto": "1 a 6 L/min por cateter nasal; máscara de Venturi de 24% a 50%; máscara com reservatório de 10 a 15 L/min; contínuo, titulado pela saturação; até manter saturação acima de 92% por 15 min em ar ambiente; max. individualizada; alvo de 94% a 98% e sem hiperóxia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 6,
+              "unidade": "l/min",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina com inibidor de betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "875 mg/125 mg. Via VO. 12/12 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "PAC ambulatorial com comorbidade, tabagismo, DPOC, diabetes ou uso de antibiótico nos últimos 90 dias (alternativa) PAC leve sem comorbidade, CURB-65 de 0 a 1",
+            "nota": "Uso direto, no início da refeição para reduzir diarreia - monitorar: diarreia; monitorar: função hepática se icterícia ou prurido; monitorar: resposta em 48-72 h; monitorar: rash · NÃO: alergia a penicilina; anafilaxia prévia a betalactâmico; mononucleose infecciosa · Obs: É a primeira escolha no paciente sem comorbidade porque cobre pneumococo com dose alta. Não associar macrolídeo de rotina nesse perfil: a associação fica para suspeita de atípico ou para gravidade · Renal: ClCr abaixo de 30 mL/min: 500 mg 8/8 h; em hemodiálise, administrar após a sessão",
+            "dose": {
+              "texto": "875 mg/125 mg; 12/12 h; 5 a 7 dias; max. 1.750 mg/dia de amoxicilina",
+              "status": "ok",
+              "valor": 875,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1750,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "claritromicina",
+            "pos": "500 mg. Via VO. 12/12 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "cobertura de atípicos quando a azitromicina não está disponível ou na suspeita de Legionella (alternativa)",
+            "nota": "Uso direto, com alimento. IV: diluir em 250 mL de SF ou SG 5% - monitorar: INR em uso de varfarina; monitorar: QT no ECG; monitorar: creatinina em uso de digoxina; monitorar: dor muscular com estatina · NÃO: QT longo; uso de cisaprida, pimozida ou terfenadina; insuficiência hepática grave; alergia a macrolídeo; icterícia colestática prévia por macrolídeo · Obs: É inibidor potente do CYP3A4: revisar estatinas, varfarina, digoxina, colchicina e antiarrítmicos antes de prescrever · Renal: ClCr abaixo de 30 mL/min: reduzir a dose pela metade",
+            "dose": {
+              "texto": "500 mg; 12/12 h; 5 a 7 dias; max. 1 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Tetraciclina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "doxiciclina",
+            "pos": "100 mg. Via VO. 12/12 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "cobertura de atípicos quando não há macrolídeo nem quinolona disponíveis, ou alergia a betalactâmico e macrolídeo (alternativa)",
+            "nota": "Uso direto com copo cheio de água, sentado, sem se deitar por 30 min - monitorar: fotossensibilidade; monitorar: dor retroesternal por esofagite; monitorar: diarreia; monitorar: INR em uso de varfarina · NÃO: gestação; amamentação; alergia a tetraciclina; insuficiência hepática grave · Obs: Opção útil em serviço sem macrolídeo. Não usar em gestante nem em criança; cálcio, ferro e antiácido reduzem a absorção",
+            "dose": {
+              "texto": "100 mg; 12/12 h; 5 a 7 dias; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Oxigênio titulado com alvo definido e dispositivo registrado",
+              "ap": "",
+              "q": "",
+              "pos": "Alvo de 94% a 98%, e 88% a 92% em DPOC com risco de hipercapnia; registrar dispositivo e fluxo, reavaliar em 30 min e repetir gasometria se não atingir o alvo"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Hidratação oral e oferta calórica",
+              "ap": "",
+              "q": "",
+              "pos": "Ofertar 1,5 a 2 L de líquido por dia quando não houver contraindicação cardíaca ou renal; refeições fracionadas, porque a saciedade precoce e a dispneia reduzem a ingesta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Posição de semi-Fowler e mobilização precoce",
+              "ap": "",
+              "q": "",
+              "pos": "Cabeceira a 30 a 45 graus melhora a mecânica diafragmática e reduz aspiração; levantar e caminhar no corredor a partir de 24 h reduz delirium e tempo de internação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Técnica de tosse dirigida e higiene brônquica",
+              "ap": "",
+              "q": "",
+              "pos": "Ensinar tosse dirigida e inspiração profunda 10 vezes por hora acordado; fisioterapia respiratória apenas se retenção de secreção ou atelectasia, não de rotina"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Suspender tabagismo e oferecer tratamento de cessação",
+              "ap": "",
+              "q": "",
+              "pos": "Abordagem breve na internação com oferta de vareniclina, bupropiona ou reposição de nicotina e encaminhamento ao programa de cessação na alta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Vacinação como prevenção",
+              "ap": "",
+              "q": "",
+              "pos": "Vacina pneumocócica conjugada e polissacarídica conforme faixa etária e comorbidade, influenza anual, COVID-19 e, em risco, Haemophilus influenzae tipo b; verificar carteira na alta e prescrever o que falta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Prevenção de aspiração e de infecção hospitalar",
+              "ap": "",
+              "q": "",
+              "pos": "Cabeceira elevada para alimentar, avaliar deglutição após intubação ou em idoso frágil, higiene oral e higiene das mãos; evitar inibidor de bomba de prótons sem indicação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Reavaliação programada em 48 a 72 horas",
+              "ap": "",
+              "q": "",
+              "pos": "Consulta ou contato telefônico documentado com saturação, temperatura, frequência respiratória e tolerância ao antibiótico; sem esse retorno, a falha terapêutica é descoberta tarde"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "RESP-14"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cefalosporina de terceira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "PAC com indicação de internação, em enfermaria ou UTI, associada a macrolídeo (1a linha)",
+            "nota": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: resposta clínica em 48-72 h; monitorar: diarreia; monitorar: hemograma em uso acima de 7 dias; monitorar: função hepática se icterícia · NÃO: anafilaxia prévia a cefalosporina; anafilaxia prévia a penicilina; uso de solução com cálcio em neonato; hiperbilirrubinemia neonatal · Obs: No internado, a associação com azitromicina reduz mortalidade na pneumonia grave por cobrir atípicos. Ceftriaxona isolada fica para quando o atípico já está coberto ou o risco é baixo",
+            "dose": {
+              "texto": "1 a 2 g; 1x/dia; 5 a 7 dias, com reavaliação clínica em 48 a 72 h; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 2,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "azitromicina_ev",
+            "motivo": "cobertura de atípicos em PAC internado ou em paciente com comorbidade, associada a betalactâmico (alternativa) suspeita de atípico associada ao betalactâmico",
+            "nota": "VO: uso direto, com ou sem alimento. IV: reconstituir em 4,8 mL de água e diluir em 250-500 mL de SF ou SG 5% - monitorar: ECG e QT em paciente com risco cardíaco; monitorar: potássio e magnésio; monitorar: diarreia; monitorar: transaminases se houver sintoma · NÃO: QT longo ou uso de outro fármaco que prolonga o QT; hipocalemia ou hipomagnesemia não corrigidas; alergia a macrolídeo; insuficiência hepática grave · Obs: Não usar azitromicina isolada em paciente com comorbidade ou gravidade: a monoterapia falha para pneumococo resistente. Revisar estatinas e outros fármacos que prolongam o QT",
+            "dose": {
+              "texto": "500 mg; 1x/dia; 3 dias com 500 mg/dia, ou 5 dias com 500 mg no primeiro dia e 250 mg nos dias 2 a 5; max. 500 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Fluoroquinolona respiratoria",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "levofloxacino_ev",
+            "motivo": "PAC com alergia grave a betalactâmico, comorbidade que contraindica macrolídeo, ou internado sem disponibilidade de macrolídeo (alternativa) alergia grave a betalactâmico",
+            "nota": "VO: uso direto, com 2 h de intervalo de ferro, cálcio, magnésio e antiácido. IV: infundir a bolsa pronta - monitorar: dor ou edema de tendão, sobretudo Aquiles; monitorar: glicemia em diabético; monitorar: QT no ECG; monitorar: estado mental; monitorar: diarreia · NÃO: tendinopatia prévia por quinolona; miastenia gravis; epilepsia não controlada; QT longo; gestação e amamentação; idade abaixo de 18 anos · Obs: Reserva para quando o betalactâmico não serve. Suspender ao primeiro sinal de tendinite ou neuropatia. Não é primeira escolha no ambulatorial sem comorbidade · Renal: ClCr de 20 a 49 mL/min: 750 mg a cada 48 h; ClCr abaixo…",
+            "dose": {
+              "texto": "750 mg; 1x/dia; 5 dias com 750 mg; 7 a 10 dias com 500 mg; max. 750 mg/dia",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 750,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "febre acima de 38,5 °C ou dor pleurítica que impede a tosse e a expansão torácica (condicional) febre ou dor pleurítica",
+            "nota": "VO: uso direto. IV: infundir a solução pronta, sem diluir - monitorar: temperatura e dor; monitorar: transaminases se uso acima de 3 dias ou hepatopatia; monitorar: soma da dose diária com produtos associados que contêm paracetamol · NÃO: insuficiência hepática grave; hepatite ativa; alergia ao paracetamol · Obs: Preferir ao AINE: AINE em pneumonia aumenta complicação pleural e lesão renal. Não associar dois produtos que contenham paracetamol · Renal: ClCr abaixo de 30 mL/min: intervalo de 8/8 h",
+            "dose": {
+              "texto": "500 a 1.000 mg; 6/6 h ou 4/4 h; até 72 h, enquanto houver febre ou dor; max. 3 g/dia, e 2 g/dia em hepatopatia, etilismo, desnutrição ou peso abaixo de 50 kg",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cristaloide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "solucao_fisiologica",
+              "n": "Solução fisiológica 0,9%",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "500 a 1.000 mL. Via IV. Conforme resposta clínica e balanço hídrico. Até tolerar via oral. 500 mL em 30 a 60 min; 1.000 mL em 1 a 2 h."
+            },
+            "motivo": "desidratação, hipotensão inicial ou impossibilidade de ingestão oral (condicional)",
+            "nota": "Pronta para uso; não adicionar potássio sem dosagem prévia - monitorar: ausculta pulmonar e saturação antes e depois de cada carga; monitorar: pressão arterial e frequência cardíaca; monitorar: diurese; monitorar: sódio e potássio · NÃO: edema agudo de pulmão; insuficiência cardíaca descompensada sem monitorização; anúria sem diálise · Obs: Hidratação não é tratamento de pneumonia: repor apenas quando há perda ou hipoperfusão. Sobrecarga em idoso com pneumonia piora a oxigenação",
+            "dose": {
+              "texto": "500 a 1.000 mL; conforme resposta clínica e balanço hídrico; até tolerar via oral; max. individualizada; 250 a 500 mL por vez em cardiopata ou idoso",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "RESP-14",
+    "versao": "0.2.0",
+    "arquivo": "RESP-14_pneumonia.json",
+    "area": "Respiratório/ORL",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

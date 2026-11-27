@@ -1,0 +1,1118 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-06",
+    "area": "Respiratório/ORL",
+    "nome": "Rinite alérgica (crise)",
+    "aliases": [
+      "rinite",
+      "alergia nasal",
+      "coriza alérgica",
+      "espirros"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Rinite alérgica é a inflamação da mucosa nasal mediada por IgE, com coriza clara, espirros em salva, prurido nasal e obstrução, com ou sem sintoma ocular. A crise é ambulatorial e não é uma doença de antibiótico nem de descongestionante: tem escada própria, e a escolha depende de frequência e intensidade. A classificação que decide a conduta é simples: intermitente (menos de 4 dias por semana ou menos de 4 semanas) contra persistente (4 dias ou mais por semana e 4 semanas ou mais), e leve contra moderada a grave conforme o sintoma atrapalhe sono, trabalho, estudo ou lazer. Na intermitente leve, anti-histamínico de segunda geração sob demanda e lavagem nasal resolvem. Na persistente moderada a grave, o corticoide nasal é primeira linha e precisa de 2 semanas para o efeito máximo, com dose plena desde o início, aplicado de forma correta e por no mínimo 4 semanas antes de ser considerado falha. O anti-histamínico de segunda geração entra para prurido, espirros e coriza, e não substitui o corticoide nasal na obstrução. A lavagem nasal com soro fisiológico é medida de base em todos os casos, porque remove alérgeno e mediadores. O descongestionante tópico serve apenas como ponte, por no máximo 5 dias, e acima disso produz rinite medicamentosa, que é pior que a doença original. O que não se faz: descongestionante oral em hipertenso, cardiopata ou com glaucoma; corticoide sistêmico de rotina ou em cursos repetidos; anti-histamínico de primeira geração, pelo efeito sedativo, anticolinérgico e pela queda de desempenho. O controle ambiental e a imunoterapia alérgeno-específica mudam a história natural e são parte do tratamento, não um extra. Os erros que mais custam são tratar crise persistente só com anti-histamínico, abandonar o corticoide nasal em 3 dias por falta de explicação, ignorar asma associada e perpetuar o descongestionante tópico.",
+    "inclusao": [
+      "Coriza clara, espirros em salva e prurido nasal com fator desencadeante identificável",
+      "Obstrução nasal sazonal ou perene com sintomas oculares associados",
+      "Crise de rinite que atrapalha sono, trabalho, estudo ou atividade física",
+      "Rinite alérgica persistente com necessidade de ajuste da escada terapêutica",
+      "Rinite com asma ou dermatite atópica associada, exigindo tratamento conjunto",
+      "Rinite refratária ao tratamento inicial, com indicação de investigação alergológica"
+    ],
+    "exclusao": [
+      {
+        "situacao": "obstrução unilateral persistente, rinorreia fétida ou sangramento recorrente",
+        "fluxo": "corpo estranho, pólipo ou neoplasia — otorrinolaringologia"
+      },
+      {
+        "situacao": "dispneia, sibilância ou tosse noturna sem diagnóstico de asma",
+        "fluxo": "RESP-12 asma — espirometria e tratamento de via aérea inferior"
+      },
+      {
+        "situacao": "febre, dor facial e secreção purulenta por mais de 10 dias",
+        "fluxo": "RESP-05 sinusite aguda bacteriana"
+      },
+      {
+        "situacao": "edema de face, língua ou garganta com estridor",
+        "fluxo": "ALG-01 anafilaxia — adrenalina intramuscular imediata"
+      },
+      {
+        "situacao": "obstrução nasal com uso crônico de descongestionante tópico",
+        "fluxo": "rinite medicamentosa — suspensão do descongestionante e protocolo próprio"
+      },
+      {
+        "situacao": "rinorreia aquosa unilateral após trauma ou cirurgia nasal",
+        "fluxo": "fístula liquórica — otorrinolaringologia e imagem"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "dispneia, sibilância, aperto no peito ou tosse noturna recorrente",
+        "por_que": "asma associada, presente em até 4 de cada 10 pacientes com rinite",
+        "acao": "espirometria com prova broncodilatadora e tratamento da via aérea inferior",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "edema de face, língua ou garganta, estridor ou voz alterada",
+        "por_que": "anafilaxia ou angioedema de via aérea",
+        "acao": "adrenalina intramuscular, suporte e sala de emergência",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "obstrução unilateral fixa com rinorreia fétida, sangramento ou dor facial",
+        "por_que": "corpo estranho, pólipo unilateral, rinossinusite fúngica ou neoplasia",
+        "acao": "nasofibroscopia e otorrinolaringologia, sem tratar como rinite alérgica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "perda progressiva do olfato com obstrução e pólipo visível",
+        "por_que": "rinossinusite crônica com pólipo nasal",
+        "acao": "corticoide nasal em dose plena, tomografia e otorrinolaringologia",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "piora da obstrução com uso de descongestionante tópico há mais de 5 dias",
+        "por_que": "rinite medicamentosa por rebote",
+        "acao": "suspender o descongestionante e iniciar lavagem nasal com corticoide nasal",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "sonolência, confusão ou retenção urinária com anti-histamínico",
+        "por_que": "efeito anticolinérgico e sedativo de anti-histamínico de primeira geração",
+        "acao": "suspender e trocar por anti-histamínico de segunda geração",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "febre com secreção purulenta e dor facial durante a crise",
+        "por_que": "sinusite bacteriana sobreposta",
+        "acao": "aplicar critérios bacterianos e reavaliar a necessidade de antibiótico",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quantos dias por semana e por quantas semanas os sintomas aparecem?",
+      "Os sintomas atrapalham o sono, o trabalho ou o estudo?",
+      "A coriza é clara e aquosa, com espirros em salva e coceira?",
+      "Há coceira ou vermelhidão nos olhos?",
+      "O quadro é sazonal ou o ano todo, e piora em qual ambiente?",
+      "Usa descongestionante nasal há quanto tempo e com que frequência?",
+      "Já usou corticoide nasal, por quanto tempo e como aplicava?",
+      "Tem chiado, falta de ar ou tosse à noite?",
+      "Tem pressão alta, glaucoma, próstata aumentada ou dirige profissionalmente?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Intermitente leve: menos de 4 dias por semana, sintomas leves, sem impacto no sono ou no trabalho",
+        "escolha": "Anti-histamínico de segunda geração sob demanda, associado à lavagem nasal com soro fisiológico",
+        "porque": "Resolve prurido, espirros e coriza sem sedação e sem efeito sistêmico relevante; o uso sob demanda é suficiente quando a exposição é curta"
+      },
+      {
+        "cenario": "Persistente moderada a grave, ou qualquer quadro com obstrução nasal predominante e impacto no sono",
+        "escolha": "Corticoide nasal em dose plena por no mínimo 4 semanas, com lavagem nasal antes da aplicação",
+        "porque": "É a classe mais eficaz para obstrução e para todos os sintomas nasais, com efeito local e pouca absorção sistêmica; a resposta máxima aparece em 2 semanas"
+      },
+      {
+        "cenario": "Persistente com predomínio de espirros, prurido e coriza, ou resposta parcial ao corticoide nasal",
+        "escolha": "Associar anti-histamínico de segunda geração ao corticoide nasal, em vez de trocar de fármaco",
+        "porque": "A associação cobre sintomas diferentes; trocar o corticoide nasal por outro da mesma classe raramente acrescenta"
+      },
+      {
+        "cenario": "Rinoconjuntivite com prurido e hiperemia ocular importantes",
+        "escolha": "Corticoide nasal associado a colírio de anti-histamínico ou de estabilizador de mastócito",
+        "porque": "O corticoide nasal melhora também o sintoma ocular por via naso-ocular, e o colírio trata o olho diretamente"
+      },
+      {
+        "cenario": "Rinite com asma associada",
+        "escolha": "Corticoide nasal em dose plena, com controle da asma conforme protocolo próprio e montelucaste apenas se houver indicação para a asma",
+        "porque": "Tratar a rinite reduz exacerbação asmática e melhora o controle; o corticoide nasal é a via mais segura para o componente nasal"
+      },
+      {
+        "cenario": "Coriza aquosa refratária, rinite gustativa ou rinite induzida por inibidor da ECA",
+        "escolha": "Ipratrópio nasal, quando a apresentação nasal está disponível",
+        "porque": "O anticolinérgico tópico reduz a secreção glandular sem atravessar a barreira hematoencefálica; não trata obstrução nem prurido"
+      },
+      {
+        "cenario": "Falha de corticoide nasal em 4 semanas de uso correto",
+        "escolha": "Revisar técnica e adesão, afastar rinite medicamentosa e pólipo, e encaminhar para teste alérgico e otorrinolaringologia",
+        "porque": "Antes de escalonar, é preciso confirmar que o fármaco chegou à mucosa e que o diagnóstico está certo"
+      },
+      {
+        "cenario": "Crise incapacitante com obstrução total, sem infecção e sem resposta ao tratamento nasal",
+        "escolha": "Corticoide sistêmico por 3 a 5 dias, como exceção documentada",
+        "porque": "Alivia rápido, mas o benefício é curto e o custo metabólico é real; não é tratamento de manutenção e não deve ser repetido a cada crise"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "anti_histaminico_segunda_geracao",
+        "agente": "loratadina",
+        "papel": "primeira_linha",
+        "indicacao": "crise intermitente leve, com espirros, prurido e coriza, sob demanda ou em ciclo curto",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "sob demanda ou contínuo por 2 a 4 semanas; manter durante a estação na rinite sazonal",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": [
+          "alergia a loratadina ou desloratadina",
+          "insuficiência hepática grave sem ajuste",
+          "lactente abaixo de 2 anos"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "boca seca",
+          "fadiga",
+          "sonolência leve em minoria dos pacientes",
+          "aumento do apetite"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido desintegrável 10 mg",
+          "comprimido mastigável 5 mg",
+          "xarope 1 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento; o comprimido desintegrável se dissolve na língua sem água",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "resposta em 24 a 72 h",
+          "sonolência e desempenho em direção",
+          "boca seca e cefaleia",
+          "adesão na fase de manutenção"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: 10 mg em dias alternados",
+        "ajuste_hepatico": "Child-Pugh B ou C: 10 mg em dias alternados",
+        "observacoes": "É o anti-histamínico de segunda geração mais usado no Brasil e o de melhor perfil para uso sob demanda, com início de ação em 1 a 3 h. Não trata obstrução nasal importante isoladamente: nesse caso o corticoide nasal é obrigatório. Pediatria: 5 mg/dia de 2 a 6 anos e 10 mg/dia acima de 6 anos.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_segunda_geracao",
+        "agente": "cetirizina",
+        "papel": "alternativa",
+        "indicacao": "crise com prurido intenso, urticária associada ou rinoconjuntivite com sintoma ocular importante",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia, à noite quando houver sonolência",
+        "duracao": "2 a 4 semanas, com reavaliação",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": [
+          "alergia a cetirizina ou hidroxizina",
+          "insuficiência renal grave sem ajuste",
+          "paciente em diálise",
+          "gestação no primeiro trimestre sem avaliação"
+        ],
+        "efeitos_adversos": [
+          "sonolência em 10 a 14% dos pacientes",
+          "boca seca",
+          "cefaleia",
+          "fadiga",
+          "retenção urinária rara"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido 5 mg",
+          "solução oral 1 mg/mL",
+          "gotas orais 10 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sonolência e atenção",
+          "resposta do prurido em 24 h",
+          "função renal antes de manter por mais de 4 semanas",
+          "retenção urinária em homem com próstata aumentada"
+        ],
+        "ajuste_renal": "ClCr entre 30 e 49 mL/min: 5 mg/dia; abaixo de 30 mL/min: 5 mg em dias alternados; em diálise, contraindicada",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave, com apenas doença hepática isolada sem ajuste renal",
+        "observacoes": "É mais potente que a loratadina no prurido e na urticária, mas seda mais: não prescrever para motorista profissional, piloto ou operador de máquina sem aviso explícito. Pediatria: 2,5 mg de 2 a 6 anos e 5 mg acima de 6 anos, 1x/dia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_segunda_geracao",
+        "agente": "fexofenadina",
+        "papel": "alternativa",
+        "indicacao": "crise em paciente que dirige, opera máquina ou precisa manter atenção, e em quem apresentou sonolência com outros anti-histamínicos",
+        "dose": "120 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "2 a 4 semanas",
+        "dose_maxima": "180 mg/dia",
+        "contraindicacoes": [
+          "alergia a fexofenadina ou terfenadina",
+          "insuficiência renal grave sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "náusea",
+          "tontura leve",
+          "boca seca",
+          "sonolência rara"
+        ],
+        "apresentacoes": [
+          "comprimido 60 mg",
+          "comprimido 120 mg",
+          "comprimido 180 mg",
+          "suspensão oral 6 mg/mL"
+        ],
+        "preparo": "Uso direto com água; não tomar com suco de fruta, que reduz a absorção",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "resposta em 24 a 48 h",
+          "sonolência, que é incomum",
+          "função renal em uso prolongado",
+          "adesão"
+        ],
+        "ajuste_renal": "ClCr abaixo de 80 mL/min: iniciar com 60 mg 1x/dia; em diálise, 60 mg 1x/dia",
+        "ajuste_hepatico": "Sem ajuste, porque não é metabolizada pelo fígado",
+        "observacoes": "É a melhor escolha quando o paciente não pode ter nenhuma sedação e quando há hepatopatia, porque praticamente não passa pela barreira hematoencefálica nem pelo citocromo P450. Pediatria: 30 mg 2x/dia de 2 a 11 anos e 60 mg 1x/dia acima de 12 anos.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_nasal",
+        "agente": "mometasona nasal",
+        "papel": "primeira_linha",
+        "indicacao": "rinite persistente moderada a grave, obstrução nasal predominante e rinoconjuntivite com componente nasal",
+        "dose": "200 mcg, equivalente a 2 jatos de 50 mcg em cada narina",
+        "unidade": "mcg",
+        "via": "nasal",
+        "frequencia": "1x/dia",
+        "duracao": "mínimo 4 semanas; manter por até 6 meses na persistente, com reavaliação",
+        "dose_maxima": "200 mcg/dia na rinite; até 400 mcg/dia na polipose nasal",
+        "contraindicacoes": [
+          "alergia a mometasona",
+          "epistaxe ativa",
+          "infecção nasal não tratada",
+          "tuberculose nasal",
+          "cirurgia nasal recente sem liberação"
+        ],
+        "efeitos_adversos": [
+          "epistaxe",
+          "irritação e ressecamento nasal",
+          "dor de garganta",
+          "crosta septal e perfuração rara",
+          "candidíase nasal rara"
+        ],
+        "apresentacoes": [
+          "spray nasal 50 mcg/jato, frasco de 140 doses",
+          "spray nasal 50 mcg/jato, frasco de 60 doses",
+          "spray nasal 50 mcg/jato pediátrico"
+        ],
+        "preparo": "Agitar antes de usar, assoar o nariz, apontar o jato para a parede lateral e não para o septo; aplicar uma narina por vez, com a outra ocluída, sem inspirar com força",
+        "tempo_infusao": "não se aplica (via nasal)",
+        "monitorizacao": [
+          "melhora da obstrução em 3 a 7 dias, com pico em 2 semanas",
+          "epistaxe e crosta septal",
+          "técnica de aplicação em cada retorno",
+          "sintoma ocular associado"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Metabolização hepática; usar com cautela em cirrose grave",
+        "observacoes": "É a primeira linha na rinite persistente e o fármaco mais eficaz para obstrução. Explicar que o efeito máximo leva 2 semanas é o que evita abandono em 3 dias. Não há necessidade de reduzir a dose após melhora: manter a menor dose eficaz por 4 semanas antes de tentar desmame.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_nasal",
+        "agente": "fluticasona nasal",
+        "papel": "alternativa",
+        "indicacao": "rinite persistente quando a mometasona não está disponível, não é tolerada ou o paciente prefere aplicação única diária",
+        "dose": "100 mcg, equivalente a 2 jatos de 50 mcg em cada narina",
+        "unidade": "mcg",
+        "via": "nasal",
+        "frequencia": "1x/dia",
+        "duracao": "mínimo 4 semanas; manter até 6 meses na persistente",
+        "dose_maxima": "200 mcg/dia",
+        "contraindicacoes": [
+          "alergia a fluticasona",
+          "epistaxe ativa",
+          "infecção nasal não tratada",
+          "tuberculose nasal",
+          "cirurgia nasal recente sem liberação"
+        ],
+        "efeitos_adversos": [
+          "epistaxe",
+          "irritação nasal",
+          "cefaleia",
+          "ressecamento de mucosa",
+          "perfuração septal rara"
+        ],
+        "apresentacoes": [
+          "spray nasal 50 mcg/jato, frasco de 120 doses",
+          "spray nasal 50 mcg/jato pediátrico",
+          "spray nasal 93 mcg/jato de furoato"
+        ],
+        "preparo": "Agitar, assoar o nariz antes, aplicar com o frasco vertical apontado para a parede lateral da narina, sem inspirar profundamente",
+        "tempo_infusao": "não se aplica (via nasal)",
+        "monitorizacao": [
+          "epistaxe",
+          "melhora da obstrução em 3 a 7 dias",
+          "técnica de aplicação",
+          "sintomas de candidíase oral se houver uso concomitante de corticoide inalatório"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Metabolização hepática extensa; cautela em hepatopatia grave",
+        "observacoes": "Equivalente à mometasona em eficácia; a escolha entre elas é por disponibilidade, custo e tolerância. Não trocar de corticoide nasal antes de 4 semanas de uso correto, porque a troca dentro da classe acrescenta pouco.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "descongestionante_nasal",
+        "agente": "oximetazolina",
+        "papel": "condicional",
+        "indicacao": "obstrução nasal intensa na crise, como ponte por no máximo 5 dias, para dormir e permitir a lavagem nasal",
+        "dose": "2 jatos de 0,05% em cada narina",
+        "unidade": "jato",
+        "via": "nasal",
+        "frequencia": "12/12 h",
+        "duracao": "máximo 5 dias, com data de início anotada",
+        "dose_maxima": "3 aplicações por dia por no máximo 5 dias",
+        "contraindicacoes": [
+          "uso acima de 5 dias",
+          "rinite medicamentosa prévia",
+          "hipertensão não controlada",
+          "glaucoma de ângulo fechado",
+          "hipertireoidismo",
+          "uso de inibidor da monoaminoxidase",
+          "arritmia significativa"
+        ],
+        "efeitos_adversos": [
+          "congestão de rebote e rinite medicamentosa",
+          "ressecamento e ardor nasal",
+          "hipertensão e taquicardia",
+          "cefaleia",
+          "insônia"
+        ],
+        "apresentacoes": [
+          "frasco 0,05% 15 mL com válvula de spray",
+          "frasco 0,025% pediátrico",
+          "gotas nasais 0,05%"
+        ],
+        "preparo": "Aplicar com a cabeça levemente inclinada, sem inspirar profundamente; limpar o bico após o uso e não compartilhar o frasco",
+        "tempo_infusao": "não se aplica (via nasal)",
+        "monitorizacao": [
+          "número de dias em uso",
+          "congestão de rebote após suspender",
+          "pressão arterial e frequência cardíaca em cardiopata",
+          "intervalo entre aplicações, que não deve encurtar"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "O limite de 5 dias é regra dura. Nunca prescrever para rinite medicamentosa, porque reinicia o ciclo de rebote. Pediatria: apenas a apresentação 0,025% e por no máximo 3 dias. Não associar a descongestionante oral.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "solucao_salina",
+        "agente": "soro fisiológico 0,9%",
+        "papel": "primeira_linha",
+        "indicacao": "lavagem nasal em toda crise de rinite, antes da aplicação do corticoide nasal",
+        "dose": "20 a 30 mL por narina",
+        "unidade": "mL",
+        "via": "nasal",
+        "frequencia": "2x/dia; até 4x/dia em período de alta exposição a alérgeno",
+        "duracao": "contínua enquanto houver exposição",
+        "dose_maxima": "sem dose máxima; limitar pelo conforto e pela tolerância",
+        "contraindicacoes": [
+          "epistaxe ativa",
+          "risco de aspiração por disfagia ou rebaixamento de consciência",
+          "cirurgia nasal recente sem liberação",
+          "obstrução nasal total sem via de saída"
+        ],
+        "efeitos_adversos": [
+          "desconforto e ardência transitória",
+          "otalgia por pressão mal equalizada",
+          "aspiração se a posição for inadequada",
+          "sangramento em mucosa friável"
+        ],
+        "apresentacoes": [
+          "frasco 500 mL de soro fisiológico 0,9%",
+          "frasco com válvula para irrigação de 240 mL",
+          "spray nasal 0,9% de 30 mL",
+          "sachê de 5 mL para diluição",
+          "ampola de 10 mL"
+        ],
+        "preparo": "Usar soro estéril ou diluir 9 g de cloreto de sódio em 1 L de água filtrada previamente fervida; nunca usar água de torneira não tratada; lavar e secar o recipiente após cada uso",
+        "tempo_infusao": "não se aplica (via nasal)",
+        "monitorizacao": [
+          "tolerância e dor durante a irrigação",
+          "sangramento nasal",
+          "redução do uso de descongestionante",
+          "técnica correta na consulta"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Remove alérgeno e mediadores inflamatórios da mucosa e melhora a obstrução sem efeito sistêmico. É obrigatória antes do corticoide nasal, porque mucosa limpa aumenta a deposição do fármaco. Pediatria: usar volumes menores, de 5 a 10 mL por narina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisona",
+        "papel": "resgate",
+        "indicacao": "crise incapacitante com obstrução total que impede dormir ou comer, sem infecção e sem resposta ao tratamento nasal, como exceção documentada",
+        "dose": "20 a 40 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3 a 5 dias, sem desmame",
+        "dose_maxima": "40 mg/dia",
+        "contraindicacoes": [
+          "infecção ativa não tratada",
+          "diabetes descompensado",
+          "úlcera péptica ativa",
+          "glaucoma de ângulo aberto descompensado",
+          "osteoporose grave",
+          "psicose ou transtorno bipolar descompensado",
+          "gestação no primeiro trimestre sem avaliação"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "insônia e alteração de humor",
+          "retenção hídrica e elevação da pressão",
+          "dispepsia",
+          "supressão adrenal em cursos repetidos"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 20 mg",
+          "comprimido 40 mg",
+          "solução oral 3 mg/mL"
+        ],
+        "preparo": "Uso direto pela manhã, com alimento, para reduzir insônia e dispepsia",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia em diabético",
+          "pressão arterial e edema",
+          "sono e humor",
+          "dor epigástrica"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Preferir prednisolona em hepatopatia grave, porque a prednisona depende de conversão hepática",
+        "observacoes": "Não é tratamento de rinite e não deve ser prescrito de rotina, nem em cursos mensais nem como 'burst' a cada crise. A indicação é exceção: crise com obstrução total, sem infecção, após falha do tratamento nasal correto. Pediatria: 1 a 2 mg/kg/dia, máximo de 40 mg, por até 5 dias.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "antileucotrieno",
+        "agente": "montelucaste",
+        "papel": "condicional",
+        "indicacao": "rinite alérgica com asma associada ou rinite persistente refratária ao corticoide nasal e ao anti-histamínico",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia à noite",
+        "duracao": "mínimo 4 semanas, com reavaliação de benefício",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": [
+          "alergia a montelucaste",
+          "doença hepática ativa com transaminases elevadas",
+          "histórico de alteração neuropsiquiátrica grave com o fármaco"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "dor abdominal",
+          "alteração de humor e comportamento",
+          "pesadelos e insônia",
+          "ideação suicida rara",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido mastigável 4 mg e 5 mg",
+          "granulado 4 mg"
+        ],
+        "preparo": "Uso direto, com ou sem alimento, sempre no mesmo horário",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "humor, comportamento e sono em cada retorno",
+          "resposta nasal e pulmonar em 4 semanas",
+          "transaminases se sintoma hepático",
+          "necessidade de manter, já que o benefício isolado é modesto"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Cautela em hepatopatia leve a moderada; evitar em hepatopatia grave",
+        "observacoes": "Benefício modesto na rinite isolada e claro na asma: reservar para rinite com asma ou para refratários. Avisar o paciente e a família sobre alterações de humor e suspender se aparecerem. Pediatria: 5 mg de 6 a 14 anos e 4 mg de 2 a 5 anos, 1x/dia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "anticolinergico_topico",
+        "agente": "ipratrópio nasal",
+        "papel": "condicional",
+        "indicacao": "coriza aquosa refratária, rinite gustativa e rinite induzida por inibidor da enzima conversora de angiotensina",
+        "dose": "84 mcg, equivalente a 2 jatos de 42 mcg em cada narina",
+        "unidade": "mcg",
+        "via": "nasal",
+        "frequencia": "2 a 3x/dia",
+        "duracao": "até 3 semanas, com reavaliação",
+        "dose_maxima": "4 aplicações por dia",
+        "contraindicacoes": [
+          "alergia a ipratrópio ou a atropínicos",
+          "glaucoma de ângulo fechado",
+          "retenção urinária por hiperplasia prostática",
+          "obstrução uretral"
+        ],
+        "efeitos_adversos": [
+          "ressecamento nasal",
+          "epistaxe",
+          "irritação e crosta nasal",
+          "retenção urinária rara",
+          "visão turva se houver contato com os olhos"
+        ],
+        "apresentacoes": [
+          "solução nasal 0,03%, 42 mcg por jato",
+          "solução nasal 0,06%, 84 mcg por jato"
+        ],
+        "preparo": "Aplicar com o frasco na vertical, sem confundir com a solução para inalação; lavar as mãos depois e evitar contato com os olhos",
+        "tempo_infusao": "não se aplica (via nasal)",
+        "monitorizacao": [
+          "volume da coriza",
+          "epistaxe e ressecamento",
+          "retenção urinária em homem com próstata aumentada",
+          "visão turva"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Trata apenas a secreção aquosa: não melhora obstrução, espirro nem prurido, e por isso não substitui o corticoide nasal. A disponibilidade da apresentação nasal varia no Brasil; se só houver a solução para inalação, não improvisar no nariz — confirmar a apresentação nasal no serviço.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Controle de ácaros no quarto",
+        "detalhe": "Capas impermeáveis em colchão e travesseiro, lavar roupa de cama semanalmente em água acima de 55 °C, retirar tapete, bicho de pelúcia e cortina de tecido, manter umidade relativa abaixo de 50% com desumidificador ou ar-condicionado"
+      },
+      {
+        "medida": "Controle de mofo e infiltração",
+        "detalhe": "Corrigir vazamento e mancha de parede, abrir janelas diariamente por 15 min, usar exaustor no banheiro e evitar plantas com prato de água parada dentro de casa"
+      },
+      {
+        "medida": "Manejo de animais domésticos",
+        "detalhe": "Manter o animal fora do quarto e da cama, banho semanal, piso lavável e aspirador com filtro HEPA; não existe raça hipoalergênica, apenas menor produção de alérgeno"
+      },
+      {
+        "medida": "Redução da exposição a pólen",
+        "detalhe": "Manter janelas fechadas no período de polinização, tomar banho e trocar de roupa ao chegar da rua, não secar roupa ao ar livre e usar óculos de sol para reduzir depósito ocular"
+      },
+      {
+        "medida": "Lavagem nasal com técnica ensinada na consulta",
+        "detalhe": "20 a 30 mL por narina, 2x/dia, com a cabeça inclinada, antes do corticoide nasal; demonstrar e pedir que o paciente reproduza, porque técnica errada é a causa mais comum de resposta insuficiente"
+      },
+      {
+        "medida": "Controle de irritantes e fumaça",
+        "detalhe": "Proibir fumaça de cigarro em casa e no carro, evitar perfumes, incenso, desinfetante com cloro e produtos de limpeza com odor forte; oferecer tratamento para cessação tabágica"
+      },
+      {
+        "medida": "Diário de sintomas e identificação do gatilho",
+        "detalhe": "Anotar por 2 semanas o horário e o ambiente em que os sintomas pioram, além do uso de medicação de resgate; o padrão orienta a evicção e a decisão sobre imunoterapia"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Teste de puntura (skin prick test)",
+        "indicacao": "rinite persistente, refratária ou com indicação de imunoterapia, e dúvida sobre o alérgeno desencadeante",
+        "tecnica": "Suspender anti-histamínico 3 a 7 dias antes conforme a meia-vida, marcar o antebraço, aplicar extrato padronizado com lanceta, incluir controle positivo com histamina e negativo com salina, ler em 15 a 20 min medindo o diâmetro da pápula",
+        "complicacoes": "Reação local intensa, urticária generalizada, broncoespasmo e anafilaxia rara; obrigatório ter adrenalina disponível"
+      },
+      {
+        "nome": "Imunoterapia alérgeno-específica",
+        "indicacao": "rinite persistente moderada a grave com alérgeno identificado e bem definido, sem controle adequado com farmacoterapia ou com efeito adverso relevante, em paciente aderente",
+        "tecnica": "Via subcutânea com escalonamento semanal em ambiente com observação por 30 min, ou via sublingual diária em casa; duração de 3 a 5 anos, com reavaliação anual e ajuste de dose conforme reação local",
+        "complicacoes": "Reação local, urticária, broncoespasmo e anafilaxia, sobretudo na fase de escalonamento; contraindica em asma não controlada e em uso de betabloqueador"
+      },
+      {
+        "nome": "Lavagem nasal de alto volume",
+        "indicacao": "crise com secreção espessa, exposição intensa a alérgeno ou pós-operatório nasal",
+        "tecnica": "120 a 240 mL de soro fisiológico por narina, com a cabeça inclinada e virada para o lado, aplicando na narina superior; repetir dos dois lados com higiene do recipiente",
+        "complicacoes": "Aspiração, otalgia, sangramento, desconforto e contaminação do frasco"
+      },
+      {
+        "nome": "Nasofibroscopia",
+        "indicacao": "obstrução unilateral, suspeita de pólipo, refratariedade ao tratamento, rinorreia fétida ou avaliação pré-operatória",
+        "tecnica": "Vasoconstrição e anestesia tópica, endoscópio flexível pelas fossas nasais até a nasofaringe, avaliando septo, meatos, pólipos e secreção",
+        "complicacoes": "Sangramento, dor, reação ao anestésico e síncope vasovagal"
+      }
+    ],
+    "metas": [
+      "Redução do escore de sintomas nasais para menos de 3 em 4 pontos em 2 a 4 semanas de tratamento",
+      "Nenhum despertar noturno por obstrução nasal após 4 semanas",
+      "Nenhuma prescrição de descongestionante tópico por mais de 5 dias",
+      "Nenhuma prescrição de anti-histamínico de primeira geração",
+      "Adesão ao corticoide nasal acima de 80% das doses por 4 semanas, com técnica correta verificada",
+      "Controle da asma associada, sem exacerbação no período de acompanhamento"
+    ],
+    "fluxo": [
+      "Confirmar o diagnóstico de rinite alérgica e classificar em intermitente ou persistente, leve ou moderada a grave",
+      "Excluir as imitações: obstrução unilateral, pólipo, corpo estranho, sinusite bacteriana e rinite medicamentosa",
+      "Começar pela base em todos: lavagem nasal com soro fisiológico e controle ambiental",
+      "Intermitente leve: anti-histamínico de segunda geração sob demanda e reavaliar em 2 a 4 semanas",
+      "Persistente moderada a grave: corticoide nasal em dose plena por 4 semanas, com técnica ensinada e adesão checada",
+      "Resposta parcial: associar anti-histamínico de segunda geração; refratário: ipratrópio para coriza, teste alérgico e otorrinolaringologia",
+      "Crise incapacitante sem infecção: corticoide sistêmico por 3 a 5 dias, como exceção documentada",
+      "Rinite com asma: tratar as duas vias, considerar montelucaste e avaliar imunoterapia"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "corticoide nasal e loratadina são as opções preferidas; cetirizina pode ser usada com avaliação; evitar prednisona no primeiro trimestre sem indicação forte",
+        "alerta": "não suspender o tratamento da rinite na gestação, porque asma não controlada e rinite grave pioram desfecho"
+      },
+      {
+        "populacao": "pediatria",
+        "ajuste": "loratadina 5 mg de 2 a 6 anos; cetirizina 2,5 mg de 2 a 6 anos; mometasona nasal 50 mcg 1 jato por narina 1x/dia; montelucaste 4 a 5 mg conforme idade",
+        "alerta": "corticoide nasal em criança exige monitorização de crescimento e uso da menor dose eficaz; evitar anti-histamínico de primeira geração pelo efeito cognitivo"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "preferir fexofenadina ou loratadina; corticoide nasal é seguro; revisar interações e função renal antes de manter cetirizina",
+        "alerta": "anti-histamínico de primeira geração causa confusão, retenção urinária e queda; descongestionante tópico agrava hipertensão e glaucoma"
+      },
+      {
+        "populacao": "hipertenso e cardiopata",
+        "ajuste": "proibir descongestionante oral e limitar o tópico a 5 dias; corticoide nasal é a via preferida",
+        "alerta": "descongestionante oral eleva a pressão e a frequência cardíaca e pode descompensar angina"
+      },
+      {
+        "populacao": "motorista_profissional",
+        "ajuste": "usar fexofenadina ou loratadina e evitar cetirizina e anti-histamínicos de primeira geração",
+        "alerta": "sonolência residual compromete direção e operação de máquina, com risco ocupacional e legal"
+      },
+      {
+        "populacao": "asmático",
+        "ajuste": "corticoide nasal em dose plena, com controle da asma conforme protocolo e avaliação de montelucaste",
+        "alerta": "rinite não tratada aumenta exacerbação asmática e ida à emergência"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "teste de puntura com extrato padronizado",
+          "indicacao": "rinite persistente, refratária ou candidato a imunoterapia",
+          "o_que_muda": "identifica o alérgeno responsável, orienta a evicção e define se há indicação de imunoterapia"
+        },
+        {
+          "nome": "IgE específica sérica",
+          "indicacao": "quando o teste de puntura não é possível, há dermatografismo extenso ou uso de anti-histamínico que não pode ser suspenso",
+          "o_que_muda": "confirma a sensibilização quando a puntura é inviável e quantifica o alérgeno suspeito"
+        },
+        {
+          "nome": "nasofibroscopia",
+          "indicacao": "obstrução unilateral, suspeita de pólipo, refratariedade ou rinorreia fétida",
+          "o_que_muda": "separa rinite alérgica de pólipo, corpo estranho, desvio septal e neoplasia, e muda o tratamento para cirúrgico ou específico"
+        },
+        {
+          "nome": "espirometria com prova broncodilatadora",
+          "indicacao": "chiado, tosse noturna, dispneia ou rinite refratária",
+          "o_que_muda": "diagnostica asma associada, que muda o tratamento e o prognóstico"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "hemograma com contagem de eosinófilos de rotina",
+          "motivo": "eosinofilia é inespecífica e não confirma rinite alérgica nem define alérgeno; serve apenas como apoio em investigação de eosinofilia sistêmica"
+        },
+        {
+          "exame": "dosagem de IgE total",
+          "motivo": "não diagnostica alergia, se altera em parasitose e tabagismo e não muda a conduta; o que importa é a IgE específica ao alérgeno suspeito"
+        },
+        {
+          "exame": "tomografia de seios da face na crise leve",
+          "motivo": "espessamento mucosal é achado inespecífico e frequente na rinite, e induz tratamento antibiótico desnecessário"
+        },
+        {
+          "exame": "painel alérgico amplo sem hipótese clínica",
+          "motivo": "gera positividade sem relevância clínica, aumenta custo e pode levar a evicção e imunoterapia sem alérgeno verdadeiramente implicado"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "lavar o nariz com soro fisiológico antes de aplicar o corticoide nasal, todos os dias",
+        "aplicar o corticoide nasal apontando para a parede lateral da narina, sem inspirar com força",
+        "manter o corticoide nasal por pelo menos 4 semanas, mesmo que melhore em poucos dias",
+        "reduzir ácaro e mofo no quarto, com capa impermeável, lavagem semanal e correção de infiltração",
+        "anotar a data de início do descongestionante nasal e parar em no máximo 5 dias",
+        "voltar na data marcada com o diário de sintomas para reavaliar a escada terapêutica"
+      ],
+      "evitar": [
+        "usar descongestionante nasal por mais de 5 dias ou de novo após instalar rebote",
+        "usar descongestionante oral se for hipertenso, cardiopata ou tiver glaucoma",
+        "usar anti-histamínico de primeira geração, que seda e piora a atenção",
+        "pedir antibiótico para coriza clara, porque rinite não é infecção bacteriana",
+        "usar corticoide sistêmico a cada crise, porque o benefício é curto e o risco metabólico é cumulativo",
+        "interromper o corticoide nasal por achar que 'não fez efeito' em 3 dias"
+      ],
+      "retorno": [
+        "falta de ar, chiado ou tosse que piora à noite",
+        "edema de face, língua ou garganta, ou rouquidão com estridor",
+        "obstrução que piora muito após suspender o descongestionante",
+        "obstrução unilateral, sangramento nasal ou perda de olfato",
+        "febre com secreção purulenta e dor facial",
+        "sem melhora após 4 semanas de corticoide nasal usado corretamente"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "corticoide nasal (mometasona e fluticasona)",
+        "efeitos": [
+          "epistaxe",
+          "irritação e ressecamento",
+          "crosta septal",
+          "perfuração septal rara"
+        ],
+        "observacao": "epistaxe recorrente exige revisar a técnica antes de trocar o fármaco; sangramento persistente com crosta pede avaliação otorrinolaringológica"
+      },
+      {
+        "agente": "anti-histamínicos de segunda geração",
+        "efeitos": [
+          "sonolência leve",
+          "boca seca",
+          "cefaleia",
+          "fadiga"
+        ],
+        "observacao": "cetirizina seda mais que loratadina e fexofenadina; trocar de agente antes de associar outro sedativo"
+      },
+      {
+        "agente": "anti-histamínicos de primeira geração",
+        "efeitos": [
+          "sedação",
+          "confusão em idoso",
+          "retenção urinária",
+          "constipação",
+          "taquicardia"
+        ],
+        "observacao": "não prescrever: o risco cognitivo e anticolinérgico supera qualquer benefício na rinite"
+      },
+      {
+        "agente": "oximetazolina",
+        "efeitos": [
+          "rinite medicamentosa",
+          "hipertensão",
+          "taquicardia",
+          "insônia"
+        ],
+        "observacao": "congestão que piora ao suspender confirma rebote; tratar com lavagem e corticoide nasal, sem reiniciar o descongestionante"
+      },
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "insônia",
+          "elevação da pressão",
+          "alteração de humor",
+          "supressão adrenal em cursos repetidos"
+        ],
+        "observacao": "curso único de até 5 dias; repetir no mesmo mês é sinal de que o tratamento de manutenção está inadequado"
+      },
+      {
+        "agente": "montelucaste",
+        "efeitos": [
+          "cefaleia",
+          "dor abdominal",
+          "alteração de humor",
+          "pesadelos",
+          "ideação suicida rara"
+        ],
+        "observacao": "perguntar ativamente sobre humor e sono em cada retorno e suspender se houver alteração comportamental"
+      },
+      {
+        "agente": "ipratrópio nasal",
+        "efeitos": [
+          "ressecamento nasal",
+          "epistaxe",
+          "retenção urinária rara",
+          "visão turva"
+        ],
+        "observacao": "evitar em glaucoma de ângulo fechado e hiperplasia prostática sintomática"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose e sintoma no prontuário",
+      "Epistaxe com corticoide nasal: suspender por 5 a 7 dias, revisar a técnica e reintroduzir apontando para a parede lateral",
+      "Sonolência com anti-histamínico: trocar para fexofenadina, suspender direção e orientar sobre risco ocupacional",
+      "Rinite medicamentosa por descongestionante: suspender de imediato, iniciar lavagem nasal e corticoide nasal, e avisar que a obstrução piora por alguns dias",
+      "Alteração de humor ou comportamento com montelucaste: suspender e comunicar notificação de suspeita de reação adversa",
+      "Retenção urinária ou visão turva com ipratrópio: suspender e avaliar próstata e pressão intraocular"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "mometasona nasal 50 mcg/jato",
+            "dose": "2 jatos por narina",
+            "via": "nasal",
+            "frequencia": "1x/dia",
+            "duracao": "mínimo 4 semanas, com reavaliação",
+            "condicao": "rinite persistente moderada a grave; aplicar após a lavagem nasal, apontando para a parede lateral",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "loratadina 10 mg",
+            "dose": "10 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "sob demanda ou 2 a 4 semanas",
+            "condicao": "espirros, prurido e coriza; não substitui o corticoide nasal na obstrução",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "soro fisiológico 0,9% para irrigação nasal",
+            "dose": "20 a 30 mL por narina",
+            "via": "nasal",
+            "frequencia": "2x/dia",
+            "duracao": "contínua",
+            "condicao": "todos os casos, antes da aplicação do corticoide nasal",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "oximetazolina 0,05% spray nasal",
+            "dose": "2 jatos por narina",
+            "via": "nasal",
+            "frequencia": "12/12 h",
+            "duracao": "máximo 5 dias, com data de início anotada na receita",
+            "condicao": "obstrução intensa; não usar em hipertenso não controlado, glaucoma ou rinite medicamentosa",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "fexofenadina 120 mg",
+            "dose": "120 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "2 a 4 semanas",
+            "condicao": "paciente que dirige ou opera máquina, ou sonolência com outro anti-histamínico",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisona 20 mg",
+            "dose": "20 a 40 mg",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "3 a 5 dias, uso único",
+            "condicao": "exceção em crise incapacitante sem infecção, após falha do tratamento nasal correto",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "soro fisiológico 0,9% 500 mL",
+            "dose": "120 a 240 mL por narina",
+            "via": "nasal",
+            "frequencia": "2 a 3x/dia",
+            "monitorizacao": "tolerância, sangramento e aspiração durante a irrigação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "oximetazolina 0,05% spray nasal",
+            "dose": "2 jatos por narina",
+            "via": "nasal",
+            "frequencia": "dose única antes do exame",
+            "monitorizacao": "pressão arterial e frequência cardíaca em cardiopata",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisona 40 mg",
+            "dose": "40 mg",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "monitorizacao": "glicemia, pressão arterial e humor em observação",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "teste de puntura",
+          "IgE específica",
+          "nasofibroscopia",
+          "espirometria com prova broncodilatadora",
+          "justificativa clínica com classificação da rinite",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de rinite alérgica em crise, necessitando de afastamento de suas atividades por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "o número de dias é decisão médica e depende do controle dos sintomas e da exposição ocupacional ao alérgeno"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo com classificação da rinite e tratamentos já feitos",
+          "resumo com alérgenos suspeitos, exames e adesão",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com coriza clara, espirros e obstrução nasal há ___, com padrão ___ (sazonal ou perene) e classificação ___ (intermitente ou persistente, leve ou moderada a grave). Gatilhos identificados ___. Tratamentos prévios com dose e tempo ___, adesão ___ e técnica ___. Exame com mucosa ___, sem pólipo ou obstrução unilateral. Conduta: ___ e reavaliação em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tempo de evolução e padrão sazonal ou perene",
+        "frequência semanal e mensal dos sintomas",
+        "impacto no sono, trabalho e estudo",
+        "prurido, espirros e coriza",
+        "sintomas oculares",
+        "gatilhos ambientais e ocupacionais",
+        "uso de descongestionante nasal",
+        "tratamentos prévios com dose, tempo e técnica",
+        "chiado ou tosse noturna",
+        "comorbidades: hipertensão, glaucoma, próstata, diabetes"
+      ],
+      "texto_template": "Paciente com coriza clara, espirros e obstrução nasal há ___, padrão ___, com ___ dias por semana, impacto no sono ___, sintomas oculares ___, gatilhos ___, uso de descongestionante há ___, tratamentos prévios com ___ por ___ e técnica ___, chiado ___, hipertensão ou glaucoma ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "inspeção nasal com mucosa, secreção e coloração",
+        "presença de pólipo ou obstrução unilateral",
+        "linha de Dennie-Morgan e prega nasal transversa",
+        "conjuntiva e olhos",
+        "orofaringe e respiração bucal",
+        "ausculta pulmonar",
+        "pele: dermatite atópica associada"
+      ],
+      "texto_template": "Mucosa nasal ___ com secreção ___, sem pólipo ou obstrução unilateral, cornetos ___, prega nasal ___, conjuntiva ___, orofaringe ___, ausculta pulmonar ___, pele ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de rinite, escada terapêutica e disponibilidade de teste alérgico e imunoterapia no serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_internacional",
+        "o_que_verificar": "classificação ARIA em intermitente e persistente, e papel do corticoide nasal como primeira linha na persistente",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_alergia",
+        "o_que_verificar": "indicação de imunoterapia, técnica do teste de puntura e protocolo de escalonamento",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de corticoide nasal, anti-histamínicos e ipratrópio nasal disponíveis no mercado brasileiro",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura_farmacologia",
+        "o_que_verificar": "limite de 5 dias para descongestionante tópico e efeito de classe dos anti-histamínicos de primeira geração",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-RESP06-01",
+        "tipo": "descongestionante_oral_hipertenso",
+        "gatilho": "descongestionante oral prescrito em hipertenso, cardiopata, glaucoma de ângulo fechado ou hipertireoidismo",
+        "severidade": "grave",
+        "mensagem": "Descongestionante oral é contraindicado neste perfil.",
+        "acao": "bloquear o item e sugerir corticoide nasal com lavagem nasal",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP06-02",
+        "tipo": "anti_histaminico_primeira_geracao",
+        "gatilho": "prescrição de anti-histamínico de primeira geração, como dexclorfeniramina, hidroxizina ou prometazina",
+        "severidade": "precaucao",
+        "mensagem": "Anti-H1 de primeira geração seda, prejudica a atenção e causa efeito anticolinérgico.",
+        "acao": "bloquear o item e sugerir anti-histamínico de segunda geração",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP06-03",
+        "tipo": "corticoide_sistemico_rotina",
+        "gatilho": "prednisona prescrita para rinite em mais de um curso no mesmo trimestre ou por mais de 5 dias",
+        "severidade": "precaucao",
+        "mensagem": "Corticoide sistêmico não é tratamento de rinite e não deve ser repetido.",
+        "acao": "alertar e revisar o tratamento de manutenção",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP06-04",
+        "tipo": "descongestionante_prolongado",
+        "gatilho": "oximetazolina prescrita por mais de 5 dias ou em paciente com rinite medicamentosa",
+        "severidade": "precaucao",
+        "mensagem": "Acima de 5 dias o descongestionante causa rebote e piora a obstrução.",
+        "acao": "alertar e ajustar o item da receita",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP06-05",
+        "tipo": "asma_associada",
+        "gatilho": "sibilância, dispneia ou tosse noturna em paciente com rinite",
+        "severidade": "grave",
+        "mensagem": "Investigar asma associada: rinite não tratada aumenta exacerbação.",
+        "acao": "sugerir espirometria e tratamento da via aérea inferior",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP06-06",
+        "tipo": "obstrucao_unilateral",
+        "gatilho": "obstrução unilateral, rinorreia fétida ou sangramento recorrente",
+        "severidade": "precaucao",
+        "mensagem": "Obstrução unilateral não é rinite alérgica até prova em contrário.",
+        "acao": "sugerir nasofibroscopia e otorrinolaringologia",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "ARIA",
+        "sociedade brasileira de alergia e imunopatologia"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita com escada terapêutica própria, classificação intermitente e persistente, apresentações, preparo, monitorização, ajuste renal, controle ambiental, imunoterapia e lista explícita do que não fazer.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

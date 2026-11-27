@@ -1,0 +1,1294 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-09",
+    "area": "Pediatria",
+    "nome": "Convulsão febril",
+    "aliases": [
+      "convulsão febril",
+      "crise febril",
+      "convulsão na criança",
+      "crise convulsiva febril",
+      "convulsão febril simples",
+      "convulsão febril complexa"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Convulsão febril é a crise convulsiva que ocorre entre 6 meses e 5 anos, associada à febre acima de 38 graus, em criança sem infecção do sistema nervoso central, sem distúrbio metabólico e sem história de crise afebril. A distinção que organiza tudo é entre simples e complexa. Simples: generalizada, duração abaixo de 15 minutos, uma única crise em 24 horas, exame neurológico normal após a crise, criança entre 6 meses e 5 anos. Complexa: focal, acima de 15 minutos, recorrente em 24 horas, ou com exame neurológico alterado — e aí a investigação muda, com punção lombar e neuroimagem conforme o caso. A terceira hipótese, que nunca pode ser esquecida, é meningite ou encefalite: febre com crise em criança pequena, sobretudo abaixo de 12 meses, com rigidez de nuca, fontanela abaulada, petéquias, rebaixamento persistente ou vacinação incompleta, é meningite até prova contraria e exige antibiótico empírico antes de qualquer exame que atrase a dose. Na crise, o que salva é o relógio e a via: decúbito lateral, proteção da cabeça, nada na boca, desobstrução de vias aéreas, e benzodiazepínico se a crise passar de 5 minutos — diazepam retal 0,5 mg/kg ou midazolam intramuscular ou bucal 0,2 mg/kg, com segunda dose se persistir. Não se contém a criança à força, não se coloca objeto na boca e não se dá banho frio. Na investigação da forma simples, tomografia de crânio e eletroencefalograma não são de rotina; glicemia é obrigatória em todos; punção lombar segue idade e sinais meníngeos; internação é considerada abaixo de 12 meses sem foco definido. Duas verdades precisam ser ditas em voz alta aos pais: antitérmico não previne nova crise, e profilaxia contínua com anticonvulsivante não está indicada na convulsão febril simples.",
+    "inclusao": [
+      "Crise convulsiva generalizada, com duração abaixo de 15 minutos, em criança de 6 meses a 5 anos, com febre e exame neurológico normal após a crise",
+      "Crise convulsiva com febre em criança de 6 meses a 5 anos, ainda em atividade na chegada, de qualquer duração",
+      "Segunda crise febril em 24 horas, ou crise focal, ou crise acima de 15 minutos, com febre e sem sinais de infecção do sistema nervoso central",
+      "Criança com convulsão febril prévia que retorna com novo episódio e precisa de reavaliação e plano de resgate",
+      "Lactente de 6 a 12 meses com crise febril e febre sem foco definido, para observação e decisão sobre punção lombar"
+    ],
+    "exclusao": [
+      {
+        "situacao": "crise sem febre, ou primeira crise afebril, em criança de qualquer idade",
+        "fluxo": "NEU-05 crise epiléptica"
+      },
+      {
+        "situacao": "crise com sinais de meningite ou encefalite confirmada, com líquor alterado",
+        "fluxo": "meningite e encefalite bacteriana"
+      },
+      {
+        "situacao": "crise em criança abaixo de 6 meses, com ou sem febre",
+        "fluxo": "sepse e meningite do lactente"
+      },
+      {
+        "situacao": "crise por hipoglicemia, hiponatremia, hipocalcemia, intoxicação ou trauma craniano",
+        "fluxo": "causa metabólica ou estrutural de crise"
+      },
+      {
+        "situacao": "crise febril em criança acima de 6 anos ou com epilepsia já diagnosticada",
+        "fluxo": "NEU-05 crise epiléptica"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "crise em atividade por mais de 5 minutos, com cronômetro confirmando",
+        "por_que": "risco de estado de mal epiléptico, com lesão neuronal progressiva",
+        "acao": "benzodiazepínico imediato, sem esperar acesso venoso: diazepam retal ou midazolam intramuscular",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "crise acima de 15 minutos, ou segunda crise sem recuperação de consciência entre elas",
+        "por_que": "estado de mal epiléptico instalado",
+        "acao": "segunda dose de benzodiazepínico, segunda linha, oxigênio e acionamento de terapia intensiva",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "rigidez de nuca, fontanela abaulada, petéquias, ou sinais de Kernig e Brudzinski",
+        "por_que": "meningite bacteriana, com mortalidade alta se o antibiótico atrasar",
+        "acao": "ceftriaxona empírica na primeira hora, punção lombar após estabilização e acionamento de hospital terciário",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "idade abaixo de 6 meses",
+        "por_que": "crise febril nessa faixa não é convulsão febril típica e sugere meningite ou sepse",
+        "acao": "tratar como infecção grave: punção lombar, antibiótico empírico e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "déficit focal, assimetria de força ou paralisia de Todd que persiste além de 60 minutos",
+        "por_que": "lesão estrutural, acidente vascular cerebral ou encefalite",
+        "acao": "neuroimagem e avaliação neurológica urgente",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "rebaixamento de consciência que não melhora 30 minutos após o fim da crise",
+        "por_que": "estado de mal não convulsivo, meningite ou distúrbio metabólico",
+        "acao": "glicemia, eletrólitos, punção lombar e eletroencefalograma após estabilizar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "crise focal, desvio de olhar ou versão da cabeça no início da crise",
+        "por_que": "convulsão febril complexa, com maior risco de epilepsia futura e de lesão estrutural",
+        "acao": "classificar como complexa, ampliar investigação e internar para observação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "segunda crise nas últimas 24 horas",
+        "por_que": "recorrência precoce define a forma complexa e aumenta o risco de estado de mal",
+        "acao": "observação hospitalar, reavaliar necessidade de punção lombar e garantir plano de resgate",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "lactente abaixo de 12 meses com febre sem foco definido",
+        "por_que": "meningite oculta e infecção bacteriana grave são mais frequentes e o exame é pouco confiável",
+        "acao": "punção lombar conforme idade e vacinação, considerar internação e reavaliação em 24 horas",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-10",
+        "sinal": "vacinação incompleta para Haemophilus influenzae, pneumococo e meningococo, ou imunossupressão",
+        "por_que": "risco de meningite bacteriana subestimado pelo exame físico normal",
+        "acao": "baixar o limiar para punção lombar, antibiótico empírico e internação",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-11",
+        "sinal": "família relata tentativa de conter a criança à força, objeto colocado na boca ou banho frio durante a crise",
+        "por_que": "risco de broncoaspiração, fratura, mordedura e queimadura por choque térmico",
+        "acao": "orientar de forma explícita e registrar a orientação no prontuário",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quanto tempo durou a crise e a criança já parou de convulsionar agora?",
+      "A crise foi generalizada, com os dois braços e as duas pernas, ou começou em um lado só?",
+      "Quantas crises foram nas últimas 24 horas e a criança voltou ao normal entre elas?",
+      "Qual a idade exata e a vacinação está completa para a idade?",
+      "Teve febre medida, quanto, e há quanto tempo? Qual o foco aparente: garganta, ouvido, urina, pulmão?",
+      "A criança já teve crise sem febre antes, ou tem epilepsia diagnosticada?",
+      "Há rigidez de nuca, vômitos repetidos, manchas na pele, sonolência excessiva ou irritabilidade persistente?",
+      "Já usou antitérmico nas últimas 6 horas, qual, em que dose e em que horário?",
+      "Alguém na família tem convulsão febril ou epilepsia?",
+      "O que foi feito durante a crise: colocaram algo na boca, tentaram conter, deram banho frio?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Crise generalizada já cessada, com menos de 15 minutos, única em 24 horas, exame neurológico normal, criança entre 6 meses e 5 anos",
+        "escolha": "Classificar como convulsão febril simples, não usar anticonvulsivante, não pedir tomografia nem eletroencefalograma de rotina, colher glicemia, tratar o foco e liberar com plano escrito de resgate",
+        "porque": "A forma simples tem prognóstico benigno e nenhum exame de rotina muda o desfecho; a investigação excessiva gera sedação, radiação e ansiedade familiar sem benefício"
+      },
+      {
+        "cenario": "Crise em atividade há mais de 5 minutos, sem acesso venoso disponível",
+        "escolha": "Diazepam retal 0,5 mg/kg (máximo 10 mg) ou midazolam bucal ou intramuscular 0,2 mg/kg (máximo 10 mg), sem esperar punção venosa",
+        "porque": "A via retal e a bucal absorvem em poucos minutos e são as únicas vias rápidas fora do hospital; esperar acesso venoso em criança convulsionando é a causa mais comum de estado de mal iatrogênico"
+      },
+      {
+        "cenario": "Crise em atividade há mais de 5 minutos, com acesso venoso periférico já disponível",
+        "escolha": "Diazepam intravenoso 0,3 mg/kg (máximo 10 mg) em 2 minutos, ou midazolam intravenoso 0,1 a 0,2 mg/kg",
+        "porque": "A via intravenosa é a mais previsível quando o acesso já existe; a dose retal é maior porque parte do fármaco não é absorvida"
+      },
+      {
+        "cenario": "Crise persiste 5 a 10 minutos após a primeira dose de benzodiazepínico",
+        "escolha": "Segunda dose de benzodiazepínico, uma única vez, na mesma via ou na via disponível",
+        "porque": "Uma repetição é segura e eficaz; a terceira dose sem via aérea definida causa depressão respiratória e não controla a crise"
+      },
+      {
+        "cenario": "Crise persiste após duas doses de benzodiazepínico",
+        "escolha": "Segunda linha com fenitoína 20 mg/kg em soro fisiológico, ou levetiracetam 40 a 60 mg/kg em 15 minutos, ou fenobarbital 20 mg/kg, com via aérea preparada",
+        "porque": "Depois de dois benzodiazepínicos o quadro é estado de mal; o fármaco seguinte precisa de infusão controlada e de monitorização cardiorrespiratória"
+      },
+      {
+        "cenario": "Crise focal, acima de 15 minutos, ou recorrente em 24 horas, sem sinais meníngeos",
+        "escolha": "Classificar como convulsão febril complexa, internar para observação, colher glicemia e eletrólitos e indicar eletroencefalograma e neuroimagem de forma dirigida, não urgente",
+        "porque": "A forma complexa aumenta o risco de epilepsia e de lesão estrutural, mas o eletroencefalograma feito na urgência raramente muda a conduta imediata"
+      },
+      {
+        "cenario": "Febre com sinais meníngeos, ou lactente abaixo de 12 meses com febre sem foco, ou vacinação incompleta, ou imunossupressão",
+        "escolha": "Ceftriaxona 100 mg/kg/dia intravenosa e punção lombar assim que a criança estiver estável; se houver rebaixamento persistente, crise focal ou papiledema, tomografia antes da punção e antibiótico antes da tomografia",
+        "porque": "Meningite bacteriana é a hipótese que mata e o antibiótico não pode esperar exame; a tomografia só entra quando há risco de herniação"
+      },
+      {
+        "cenario": "Crise com febre e alteração de consciência desproporcional, convulsão focal repetida ou suspeita de encefalite por herpes",
+        "escolha": "Aciclovir 10 a 20 mg/kg/dose a cada 8 horas, associado à ceftriaxona, e internação em terapia intensiva pediátrica",
+        "porque": "A encefalite herpética tem mortalidade alta sem antiviral e o quadro inicial é indistinguível de convulsão febril complexa"
+      },
+      {
+        "cenario": "Glicemia capilar abaixo de 60 mg/dL durante ou após a crise",
+        "escolha": "Glicose 10% 5 mL/kg intravenosa em 3 a 5 minutos e nova glicemia em 10 minutos",
+        "porque": "Hipoglicemia é causa reversível de crise e de lesão cerebral, e a correção muda o diagnóstico: deixa de ser convulsão febril"
+      },
+      {
+        "cenario": "Criança com convulsão febril simples e família ansiosa pedindo remédio para não convulsionar de novo",
+        "escolha": "Explicar que antitérmico não previne recorrência e que profilaxia contínua com fenobarbital, valproato ou levetiracetam não está indicada; oferecer diazepam retal domiciliar apenas em casos selecionados de crise prolongada recorrente",
+        "porque": "Ensaios clínicos mostram que antitérmico não reduz o número de crises e que o risco de efeitos adversos do anticonvulsivante crônico supera o benefício na forma simples"
+      },
+      {
+        "cenario": "Crise cessada, lactente abaixo de 12 meses, febre sem foco e família com dificuldade de retorno",
+        "escolha": "Internar para observação por 24 horas, colher hemograma, urina e hemocultura e decidir punção lombar pela idade e pelo estado geral",
+        "porque": "Abaixo de 12 meses o exame físico é pouco sensível para meningite e a deterioração pode ser rápida depois da alta"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "benzodiazepinico",
+        "agente": "diazepam retal",
+        "papel": "primeira_linha",
+        "indicacao": "crise febril em atividade por mais de 5 minutos, sem acesso venoso, no hospital ou em casa com cuidador treinado",
+        "dose": "0,5 mg/kg",
+        "unidade": "mg/kg",
+        "via": "retal",
+        "frequencia": "dose única; repetir uma vez após 5 minutos se a crise persistir",
+        "duracao": "dose única no episódio",
+        "dose_maxima": "10 mg por dose",
+        "contraindicacoes": [
+          "depressão respiratória grave sem suporte ventilatório",
+          "miastenia gravis",
+          "alergia a benzodiazepínico",
+          "diarreia profusa, que reduz a absorção retal"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "sedação prolongada",
+          "hipotensão",
+          "hipotonia",
+          "irritabilidade paradoxal"
+        ],
+        "apresentacoes": [
+          "solução retal 5 mg/mL (2,5 mL e 10 mg em seringa graduada)",
+          "solução retal 10 mg/2,5 mL",
+          "ampola 5 mg/mL (2 mL) para uso retal com seringa sem agulha"
+        ],
+        "preparo": "Usar a solução retal pronta na seringa graduada. Se houver apenas a ampola, aspirar 0,1 mL/kg da solução 5 mg/mL e retirar a agulha antes da aplicação",
+        "tempo_infusao": "não se aplica (via retal); absorção em 5 a 10 minutos",
+        "monitorizacao": [
+          "frequência respiratória e oximetria por 30 minutos após a dose",
+          "nível de consciência e resposta a estímulo",
+          "pressão arterial e frequência cardíaca",
+          "necessidade de aspiração de secreção"
+        ],
+        "ajuste_renal": "Sem ajuste na dose única",
+        "ajuste_hepatico": "Reduzir para 0,25 mg/kg em hepatopatia grave, pela meia-vida prolongada",
+        "observacoes": "É a via de resgate por excelência fora do hospital: aplicar no reto, comprimir as nádegas por 2 minutos e virar a criança em decúbito lateral. Não repetir mais de uma vez sem avaliação médica. A dose é maior que a intravenosa porque a absorção retal é incompleta",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/diretriz de convulsão febril",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "midazolam",
+        "papel": "alternativa",
+        "indicacao": "crise febril em atividade por mais de 5 minutos, por via intramuscular ou bucal, quando o diazepam retal não está disponível ou a via retal é inviável",
+        "dose": "0,2 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IM ou bucal",
+        "frequencia": "dose única; repetir uma vez após 5 a 10 minutos se a crise persistir",
+        "duracao": "dose única no episódio",
+        "dose_maxima": "10 mg por dose",
+        "contraindicacoes": [
+          "choque com hipoperfusão periférica, que reduz a absorção intramuscular",
+          "depressão respiratória grave sem suporte",
+          "alergia a benzodiazepínico"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "apneia",
+          "sedação prolongada",
+          "hipotensão",
+          "dor no sítio intramuscular"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (1 mL, 3 mL e 10 mL)",
+          "ampola 1 mg/mL (5 mL)",
+          "solução oral 2 mg/mL para uso bucal com seringa"
+        ],
+        "preparo": "Intramuscular: usar a solução 5 mg/mL sem diluir, no vasto lateral da coxa em lactente e no deltoide em criança maior. Bucal: usar a solução 5 mg/mL, 0,04 mL/kg, aplicada na mucosa jugal com seringa, sem agulha, metade em cada lado",
+        "tempo_infusao": "não se aplica (via intramuscular ou bucal); absorção intramuscular em 5 a 10 minutos e bucal em 3 a 5 minutos",
+        "monitorizacao": [
+          "oximetria e frequência respiratória por 30 minutos",
+          "nível de consciência e tônus",
+          "pressão arterial",
+          "sítio intramuscular: dor, hematoma e abscesso"
+        ],
+        "ajuste_renal": "Sem ajuste na dose única",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave pelo metabolismo hepático",
+        "observacoes": "A via bucal é a mais rápida sem acesso venoso em criança pequena e a mais aceita pela família; a intramuscular dói e demora um pouco mais, mas é a alternativa quando a boca está fechada pela crise. Não usar por via intranasal em criança com sangramento nasal ou secreção abundante",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/diretriz de convulsão febril",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "diazepam intravenoso",
+        "papel": "condicional",
+        "indicacao": "crise febril em atividade por mais de 5 minutos em criança com acesso venoso já puncionado",
+        "dose": "0,3 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir 0,2 mg/kg após 5 minutos se a crise persistir",
+        "duracao": "dose única no episódio",
+        "dose_maxima": "10 mg no total do episódio",
+        "contraindicacoes": [
+          "depressão respiratória grave sem suporte ventilatório",
+          "miastenia gravis",
+          "hipotensão com instabilidade",
+          "alergia a benzodiazepínico"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "apneia",
+          "hipotensão",
+          "flebite",
+          "sedação prolongada"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (2 mL)",
+          "ampola 10 mg/2 mL",
+          "comprimido 5 mg e 10 mg"
+        ],
+        "preparo": "Aplicar sem diluir em acesso calibroso, ou diluir em 5 mL de soro fisiológico 0,9% quando a veia for fina, mantendo seringa de soro para lavar a veia após a injeção",
+        "tempo_infusao": "2 minutos (máximo 1 mg/kg/min e nunca em bolus rápido)",
+        "monitorizacao": [
+          "frequência respiratória e oximetria antes, durante e 15 minutos após",
+          "pressão arterial a cada 5 minutos",
+          "nível de consciência e reflexo de deglutição",
+          "sítio de infusão por flebite"
+        ],
+        "ajuste_renal": "Sem ajuste na dose única",
+        "ajuste_hepatico": "Reduzir para 0,15 mg/kg em hepatopatia grave",
+        "observacoes": "Só usar quando o acesso já existe: puncionar veia em criança convulsionando consome o tempo que decide o desfecho. Ter aspirador e bolsa-máscara abertos ao lado do leito antes de injetar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de estado de mal epiléptico",
+        "claim_id": null
+      },
+      {
+        "classe": "hidantoina",
+        "agente": "fenitoína",
+        "papel": "alternativa",
+        "indicacao": "segunda linha do estado de mal febril, após duas doses de benzodiazepínico",
+        "dose": "20 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose de ataque única",
+        "duracao": "dose única no episódio",
+        "dose_maxima": "1.000 mg no ataque",
+        "contraindicacoes": [
+          "bloqueio atrioventricular de segundo ou terceiro grau",
+          "bradicardia grave",
+          "porfiria aguda intermitente",
+          "alergia a hidantoína"
+        ],
+        "efeitos_adversos": [
+          "hipotensão",
+          "bradicardia e arritmia",
+          "flebite e necrose por extravasamento",
+          "nistagmo e ataxia",
+          "rash cutâneo"
+        ],
+        "apresentacoes": [
+          "ampola 250 mg/5 mL (50 mg/mL)",
+          "comprimido 100 mg",
+          "suspensão oral 20 mg/mL"
+        ],
+        "preparo": "Diluir exclusivamente em soro fisiológico 0,9% em 100 a 250 mL, porque precipita em glicose; usar filtro de linha e conferir ausência de cristais antes de infundir",
+        "tempo_infusao": "20 a 30 minutos (máximo 1 mg/kg/min e nunca acima de 50 mg/min)",
+        "monitorizacao": [
+          "eletrocardiograma contínuo durante toda a infusão",
+          "pressão arterial a cada 5 minutos",
+          "sítio de infusão a cada 5 minutos, pelo risco de necrose",
+          "nível de consciência"
+        ],
+        "ajuste_renal": "Sem ajuste no ataque",
+        "ajuste_hepatico": "Sem ajuste no ataque; reduzir manutenção em hepatopatia",
+        "observacoes": "Não é a segunda linha preferida em criança pequena pelo risco de extravasamento e de arritmia; usar apenas com monitor cardíaco e acesso calibroso. Em acesso duvidoso, preferir levetiracetam",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de estado de mal epiléptico",
+        "claim_id": null
+      },
+      {
+        "classe": "anticonvulsivante",
+        "agente": "levetiracetam",
+        "papel": "alternativa",
+        "indicacao": "segunda linha do estado de mal febril, com preferência em criança pequena, instável ou com acesso venoso fino",
+        "dose": "40 a 60 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose de ataque única",
+        "duracao": "dose única no episódio",
+        "dose_maxima": "4.500 mg no ataque",
+        "contraindicacoes": [
+          "alergia a pirrolidona",
+          "insuficiência renal terminal sem diálise"
+        ],
+        "efeitos_adversos": [
+          "sonolência",
+          "irritabilidade",
+          "agitação",
+          "tontura",
+          "astenia"
+        ],
+        "apresentacoes": [
+          "frasco 500 mg/5 mL (100 mg/mL)",
+          "comprimido 250 mg, 500 mg e 750 mg",
+          "solução oral 100 mg/mL"
+        ],
+        "preparo": "Diluir a dose em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "15 minutos (pode ser em 5 minutos no estado de mal, com monitorização)",
+        "monitorizacao": [
+          "nível de consciência",
+          "comportamento e irritabilidade",
+          "pressão arterial",
+          "função renal em uso prolongado"
+        ],
+        "ajuste_renal": "Obrigatório em uso contínuo: metade da dose com clearance entre 30 e 50 mL/min e um terço abaixo de 30 mL/min; dose suplementar após hemodiálise",
+        "ajuste_hepatico": "Sem ajuste isolado; em hepatopatia com disfunção renal, ajustar pelo renal",
+        "observacoes": "É a segunda linha mais segura na criança: não causa hipotensão, não exige eletrocardiograma e não tem interação relevante. Só não é primeira escolha em serviço sem o frasco disponível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de estado de mal epiléptico",
+        "claim_id": null
+      },
+      {
+        "classe": "barbiturico",
+        "agente": "fenobarbital",
+        "papel": "resgate",
+        "indicacao": "estado de mal febril refratário a benzodiazepínico e a uma segunda linha, ou serviço sem fenitoína e sem levetiracetam",
+        "dose": "15 a 20 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose de ataque única",
+        "duracao": "dose única no episódio",
+        "dose_maxima": "1.000 mg no ataque",
+        "contraindicacoes": [
+          "insuficiência respiratória grave sem suporte",
+          "hipotensão grave",
+          "porfiria aguda intermitente",
+          "alergia a barbitúrico"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "apneia",
+          "hipotensão",
+          "sedação prolongada",
+          "reação cutânea grave"
+        ],
+        "apresentacoes": [
+          "ampola 200 mg/mL (1 mL)",
+          "comprimido 100 mg",
+          "solução oral 40 mg/mL"
+        ],
+        "preparo": "Diluir em 10 a 20 mL de água para injeção ou soro fisiológico 0,9%; nunca diluir em glicose. A ampola de 200 mg/mL nunca é injetada pura",
+        "tempo_infusao": "20 a 30 minutos (máximo 1 a 2 mg/kg/min)",
+        "monitorizacao": [
+          "frequência respiratória e oximetria contínua",
+          "pressão arterial a cada 5 minutos",
+          "nível de consciência",
+          "material de intubação separado antes de iniciar"
+        ],
+        "ajuste_renal": "Reduzir em lesão renal aguda por acúmulo",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Só usar com via aérea pronta: a dose plena depois de dois benzodiazepínicos causa apneia. É a opção real quando não há levetiracetam nem fenitoína no serviço",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antitermico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "febre e desconforto na convulsão febril, como conforto, sem finalidade de prevenir nova crise",
+        "dose": "15 mg/kg",
+        "unidade": "mg/kg",
+        "via": "VO ou retal",
+        "frequencia": "6/6 horas, no máximo 5 doses em 24 horas",
+        "duracao": "até 72 horas ou até cessar a febre",
+        "dose_maxima": "75 mg/kg/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição importante",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "náusea",
+          "vômito",
+          "rash cutâneo raro"
+        ],
+        "apresentacoes": [
+          "solução oral 32 mg/mL (gotas)",
+          "suspensão oral 120 mg/5 mL",
+          "suspensão oral 200 mg/5 mL",
+          "supositório 100 mg e 300 mg"
+        ],
+        "preparo": "Uso direto; agitar a suspensão antes de medir com seringa graduada, nunca com colher de sopa",
+        "tempo_infusao": "não se aplica (via oral ou retal)",
+        "monitorizacao": [
+          "temperatura 30 a 60 minutos após a dose",
+          "conforto e aceitação",
+          "número de doses em 24 horas para não exceder o máximo",
+          "sinais de hepatotoxicidade em uso prolongado ou superdose"
+        ],
+        "ajuste_renal": "Sem ajuste em uso curto",
+        "ajuste_hepatico": "Reduzir para 10 mg/kg/dose e intervalo de 8 horas em hepatopatia",
+        "observacoes": "Dizer à família, com essas palavras, que antitérmico não previne convulsão: ele trata o desconforto da febre e não reduz o número de crises. A febre pode subir mesmo com o fármaco em dose correta",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "alternativa",
+        "indicacao": "febre e desconforto em criança acima de 6 meses, quando o paracetamol é insuficiente ou indisponível",
+        "dose": "10 mg/kg",
+        "unidade": "mg/kg",
+        "via": "VO",
+        "frequencia": "8/8 horas",
+        "duracao": "até 72 horas",
+        "dose_maxima": "40 mg/kg/dia",
+        "contraindicacoes": [
+          "idade abaixo de 6 meses",
+          "desidratação ou vômitos persistentes",
+          "doença renal",
+          "úlcera ou sangramento digestivo",
+          "dengue suspeita ou confirmada",
+          "alergia a AINE e asma induzida por AINE"
+        ],
+        "efeitos_adversos": [
+          "gastrite e dor abdominal",
+          "lesão renal em desidratação",
+          "sangramento digestivo",
+          "broncoespasmo em asmático sensível",
+          "plaquetopenia"
+        ],
+        "apresentacoes": [
+          "suspensão oral 50 mg/mL (gotas)",
+          "suspensão oral 100 mg/5 mL",
+          "comprimido 200 mg e 400 mg"
+        ],
+        "preparo": "Uso direto; agitar a suspensão e administrar com seringa graduada, preferencialmente com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "temperatura e conforto",
+          "dor abdominal e vômitos",
+          "diurese em criança desidratada",
+          "sangramento digestivo"
+        ],
+        "ajuste_renal": "Evitar em lesão renal aguda e em desidratação; sem ajuste em uso curto com função normal",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Não usar em suspeita de dengue, em desidratação ou em lactente abaixo de 6 meses. Como o paracetamol, não previne recorrência de convulsão febril",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico",
+        "agente": "ceftriaxona",
+        "papel": "condicional",
+        "indicacao": "suspeita de meningite bacteriana em criança com crise febril, sinais meníngeos ou abaixo de 12 meses sem foco",
+        "dose": "100 mg/kg/dia",
+        "unidade": "mg/kg/dia",
+        "via": "IV",
+        "frequencia": "12/12 horas (dose única diária após 5 dias de tratamento)",
+        "duracao": "7 a 14 dias conforme o agente e a evolução",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia grave a cefalosporina",
+          "recém-nascido com hiperbilirrubinemia, pelo deslocamento da bilirrubina",
+          "uso de solução com cálcio em neonato"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash cutâneo",
+          "colite por Clostridioides difficile",
+          "barro biliar e litíase biliar",
+          "anemia hemolítica imune rara"
+        ],
+        "apresentacoes": [
+          "frasco 500 mg",
+          "frasco 1 g",
+          "solução injetável 1 g"
+        ],
+        "preparo": "Reconstituir em água para injeção e diluir em 50 a 100 mL de soro fisiológico 0,9% ou glicose 5%; não misturar com soluções que contenham cálcio",
+        "tempo_infusao": "30 minutos (infundir em 60 minutos em neonato)",
+        "monitorizacao": [
+          "sinais de melhora clínica e de irritabilidade",
+          "temperatura e sinais meníngeos a cada 6 horas",
+          "diarreia e sinais de colite",
+          "bilirrubinas e hemograma em uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste, exceto em insuficiência renal grave associada a disfunção hepática",
+        "ajuste_hepatico": "Sem ajuste isolado; cautela na associação com disfunção renal",
+        "observacoes": "Dar a primeira dose antes da punção lombar se houver instabilidade, rebaixamento, crise focal ou papiledema, e antes da tomografia. Não atrasar por coleta de líquor",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/diretriz de meningite bacteriana",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir",
+        "papel": "condicional",
+        "indicacao": "suspeita de encefalite por herpes simples em criança com crise febril, alteração de consciência ou crise focal repetida",
+        "dose": "10 a 20 mg/kg/dose",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "8/8 horas",
+        "duracao": "14 a 21 dias",
+        "dose_maxima": "800 mg por dose",
+        "contraindicacoes": [
+          "alergia ao aciclovir",
+          "insuficiência renal grave sem ajuste de dose"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade por cristalúria",
+          "náusea e vômito",
+          "flebite",
+          "neurotoxicidade com confusão e tremor",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "frasco 250 mg",
+          "frasco 500 mg",
+          "comprimido 200 mg e 400 mg"
+        ],
+        "preparo": "Reconstituir com água para injeção e diluir em soro fisiológico 0,9% ou glicose 5% na concentração máxima de 7 mg/mL; hidratar a criança antes e durante a infusão",
+        "tempo_infusao": "60 minutos (nunca em bolus)",
+        "monitorizacao": [
+          "função renal e diurese",
+          "nível de consciência e sinais de neurotoxicidade",
+          "sítio de infusão por flebite",
+          "transaminases em uso prolongado"
+        ],
+        "ajuste_renal": "Obrigatório: aumentar o intervalo para 12 horas com clearance entre 25 e 50 mL/min e para 24 horas abaixo de 25 mL/min",
+        "ajuste_hepatico": "Sem ajuste isolado",
+        "observacoes": "Iniciar na suspeita, sem esperar reação em cadeia da polimerase ou ressonância: a encefalite herpética não tratada mata. Manter até afastar o diagnóstico",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de encefalite herpética",
+        "claim_id": null
+      },
+      {
+        "classe": "glicose",
+        "agente": "glicose 10%",
+        "papel": "condicional",
+        "indicacao": "hipoglicemia documentada por glicemia capilar abaixo de 60 mg/dL durante ou após a crise",
+        "dose": "5 mL/kg",
+        "unidade": "mL/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir conforme glicemia capilar",
+        "duracao": "dose única, com manutenção de glicose se a hipoglicemia recorrer",
+        "dose_maxima": "250 mL por dose",
+        "contraindicacoes": [
+          "hiperglicemia documentada"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipocalemia",
+          "flebite",
+          "necrose por extravasamento em veia fina"
+        ],
+        "apresentacoes": [
+          "bolsa 10% 250 mL e 500 mL",
+          "frasco 10% 100 mL",
+          "ampola 25% 10 mL",
+          "ampola 50% 10 mL"
+        ],
+        "preparo": "Usar a solução a 10% pronta. Se houver apenas glicose a 50%, diluir 1 parte em 4 partes de água destilada ou soro fisiológico; nunca infundir 50% em veia periférica de criança",
+        "tempo_infusao": "3 a 5 minutos",
+        "monitorizacao": [
+          "glicemia capilar 10 minutos após e a cada hora até estabilizar",
+          "nível de consciência",
+          "sítio de infusão por risco de necrose",
+          "potássio em infusões repetidas"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Glicemia capilar é obrigatória em toda criança com crise: hipoglicemia é a causa reversível que tira o caso do diagnóstico de convulsão febril e se corrige em minutos",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/protocolo institucional",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Posição lateral e proteção da cabeça",
+        "detalhe": "Colocar a criança em decúbito lateral, apoiar a cabeça em superfície macia, afrouxar a roupa do pescoço e retirar objetos duros e cortantes do entorno; não segurar braços e pernas"
+      },
+      {
+        "medida": "Desobstrução de vias aéreas",
+        "detalhe": "Aspirar apenas secreção visível, manter o queixo elevado e a boca livre; não introduzir dedo, colher, pano ou termômetro na boca, porque não abre a via aérea e causa mordedura, dente quebrado e broncoaspiração"
+      },
+      {
+        "medida": "Cronometrar a crise",
+        "detalhe": "Acionar cronômetro no início da crise ou na chegada e anotar hora de início e de término; é o dado que define se a crise é simples (menos de 15 minutos) ou se indica benzodiazepínico (mais de 5 minutos)"
+      },
+      {
+        "medida": "Glicemia capilar imediata",
+        "detalhe": "Punção digital em toda criança com convulsão febril, antes de qualquer solicitação de exame; resultado abaixo de 60 mg/dL muda o diagnóstico e a conduta"
+      },
+      {
+        "medida": "Oferta de oxigênio e preparo de via aérea",
+        "detalhe": "Oxigênio por máscara a 5 a 10 L/min se saturação abaixo de 94%; aspirador montado e bolsa-máscara ao lado do leito antes de administrar benzodiazepínico"
+      },
+      {
+        "medida": "Monitorização contínua",
+        "detalhe": "Oximetria, frequência cardíaca e respiratória, pressão arterial e temperatura a cada 15 minutos na primeira hora; registrar saturação antes e depois da dose de benzodiazepínico"
+      },
+      {
+        "medida": "Controle térmico confortável",
+        "detalhe": "Retirar excesso de roupa, manter ambiente ventilado e oferecer líquido por via oral se estiver consciente; proibido banho frio, compressa de álcool e imersão em água gelada, que causam tremores, vasoconstrição e risco de hipotermia e queimadura química"
+      },
+      {
+        "medida": "Ambiente seguro e cama com grades",
+        "detalhe": "Cama baixa, grades elevadas, sem objetos cortantes; após a crise manter decúbito lateral até recuperação completa da consciência e não deixar a criança sozinha no primeiro banho ou na primeira noite"
+      },
+      {
+        "medida": "Orientação escrita e treinamento do cuidador",
+        "detalhe": "Entregar por escrito o que fazer em nova crise, quando usar o resgate, quando chamar emergência e quando retornar; treinar a aplicação do diazepam retal com a seringa na mão, não apenas falando"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Punção lombar diagnóstica",
+        "indicacao": "suspeita de meningite, criança abaixo de 12 meses com febre sem foco, convulsão febril complexa, imunossupressão, vacinação incompleta ou uso prévio de antibiótico",
+        "tecnica": "Estabilizar primeiro: glicemia, oximetria, benzodiazepínico se crise ativa. Posicionar em decúbito lateral com flexão suave do tronco, L3-L4 ou L4-L5, agulha 22 G em criança maior e 25 G em lactente, medir pressão de abertura, colher quatro tubos para citologia, glicose, proteína, cultura e reação em cadeia da polimerase; coletar hemocultura e glicemia simultâneas",
+        "complicacoes": "Cefaleia pós-punção, punção traumática com sangue no líquor, hematoma, infecção do sítio, herniação quando há hipertensão intracraniana não reconhecida, apneia e bradicardia por flexão excessiva do pescoço"
+      },
+      {
+        "nome": "Acesso intraósseo",
+        "indicacao": "crise febril em atividade por mais de 5 minutos sem acesso venoso após duas tentativas, ou criança em choque com necessidade de benzodiazepínico imediato",
+        "tecnica": "Tíbia proximal, face medial, 2 cm abaixo da tuberosidade; agulha intraóssea com broca em criança maior ou agulha manual em lactente; confirmar aspiração de medula, infundir 10 mL de soro fisiológico sob pressão e administrar o benzodiazepínico pela via intraóssea",
+        "complicacoes": "Extravasamento e síndrome compartimental, fratura óssea, osteomielite, posicionamento incorreto com falha de infusão, embolia gordurosa rara"
+      },
+      {
+        "nome": "Intubação orotraqueal",
+        "indicacao": "estado de mal febril refratário, depressão respiratória após benzodiazepínico ou barbitúrico, escala de coma de Glasgow de 8 ou menos e necessidade de anestésico em infusão",
+        "tecnica": "Pré-oxigenação por 2 a 3 minutos, sequência rápida com hipnótico em dose por peso e bloqueador neuromuscular, lâmina reta em lactente, capnografia confirmando o posicionamento e ventilação sem hiperventilação profilática",
+        "complicacoes": "Hipóxia, aspiração de conteúdo gástrico, bradicardia por hipóxia em lactente, trauma de via aérea, hipotensão pós-indução, pneumonia associada à ventilação"
+      },
+      {
+        "nome": "Eletroencefalograma",
+        "indicacao": "convulsão febril complexa, crise recorrente em 24 horas, rebaixamento persistente após a crise ou suspeita de estado de mal não convulsivo; nunca de rotina na forma simples",
+        "tecnica": "Traçado de 20 a 30 minutos com montagem longitudinal bipolar e ativação por hiperventilação e fotoestimulação quando a criança colabora; repetir em 2 a 4 semanas nos casos complexos, fora da fase aguda",
+        "complicacoes": "Artefato por movimento e por choro, interpretação dependente de especialista, desconforto e lesão de pele no eletrodo"
+      }
+    ],
+    "metas": [
+      "Benzodiazepínico administrado em até 5 minutos do início da crise ou da chegada ao serviço, quando a crise passar de 5 minutos",
+      "Crise cessada em até 5 minutos da primeira dose do benzodiazepínico",
+      "Segunda dose de benzodiazepínico ou segunda linha iniciada em até 15 minutos do início da crise",
+      "Glicemia capilar medida em até 2 minutos da chegada, em 100% das crianças com convulsão febril",
+      "Saturação de oxigênio mantida acima de 94% durante todo o atendimento",
+      "Nenhuma tomografia de crânio ou eletroencefalograma solicitado de rotina na convulsão febril simples",
+      "Punção lombar realizada ou justificadamente adiada em até 2 horas em todo lactente abaixo de 12 meses com febre sem foco",
+      "Antibiótico empírico administrado na primeira hora em toda suspeita de meningite bacteriana",
+      "Alta com plano escrito de resgate e orientação de retorno entregue em mãos ao cuidador",
+      "Reavaliação médica agendada em 24 a 48 horas após o episódio"
+    ],
+    "fluxo": [
+      "Reconhecer a crise na triagem, cronometrar, virar a criança em decúbito lateral, proteger a cabeça, desobstruir a via aérea e checar glicemia capilar imediatamente",
+      "Se a crise está em atividade há mais de 5 minutos: benzodiazepínico agora, sem esperar acesso venoso — diazepam retal 0,5 mg/kg ou midazolam bucal ou intramuscular 0,2 mg/kg; se já houver acesso, diazepam intravenoso 0,3 mg/kg",
+      "Se a crise persistir após 5 minutos, repetir uma vez o benzodiazepínico; se persistir após 10 a 15 minutos, iniciar segunda linha com levetiracetam 40 a 60 mg/kg ou fenitoína 20 mg/kg, com monitor cardíaco",
+      "Se a crise persistir após duas segundas linhas, é estado de mal refratário: fenobarbital 20 mg/kg, intubação, oxigênio e terapia intensiva pediátrica",
+      "Com a crise controlada, classificar: simples (generalizada, menos de 15 minutos, única em 24 horas, exame normal) ou complexa (focal, acima de 15 minutos, recorrente em 24 horas ou exame alterado)",
+      "Procurar o foco da febre com exame físico completo: otoscopia, orofaringe, ausculta pulmonar, abdome, pele e urina; colher exames dirigidos apenas quando mudarem a conduta",
+      "Decidir sobre meningite: sinais meníngeos, idade abaixo de 12 meses sem foco, vacinação incompleta e imunossupressão indicam punção lombar; instabilidade ou rebaixamento indicam ceftriaxona primeiro e punção depois",
+      "Definir destino: alta com plano escrito na forma simples com família capaz e retorno garantido; observação ou internação na forma complexa, abaixo de 12 meses sem foco, em suspeita de meningite e em serviço distante",
+      "Na alta, explicar que antitérmico não previne recorrência, que profilaxia contínua não está indicada na forma simples, treinar o resgate e agendar reavaliação em 24 a 48 horas"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "lactente abaixo de 12 meses",
+        "ajuste": "baixar o limiar para punção lombar e antibioticoterapia empírica, internação para observação por 24 horas e reavaliação antes da alta; dose de benzodiazepínico por peso, conferida em balança",
+        "alerta": "o exame físico é pouco sensível para meningite nessa faixa e a deterioração pode ser rápida depois da alta"
+      },
+      {
+        "populacao": "crianca abaixo de 6 meses",
+        "ajuste": "não tratar como convulsão febril: punção lombar, hemocultura, antibiótico empírico e internação, com investigação de causa metabólica e estrutural",
+        "alerta": "convulsão febril é diagnóstico de exclusão entre 6 meses e 5 anos; abaixo de 6 meses a probabilidade de infecção grave é alta"
+      },
+      {
+        "populacao": "epilepsia conhecida",
+        "ajuste": "manter o anticonvulsivante de base, dosar nível sérico quando disponível, não trocar o esquema na emergência e considerar a crise como não febril enquanto se prova o contrário",
+        "alerta": "crise em criança epiléptica com febre não é convulsão febril e não autoriza suspender nem reduzir o tratamento de base"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "punção lombar e antibiótico empírico de amplo espectro, internação e avaliação por infectologia, mesmo com exame neurológico normal",
+        "alerta": "a resposta inflamatória é atenuada e o líquor pode ser pouco alterado apesar de meningite"
+      },
+      {
+        "populacao": "vacinacao_incompleta",
+        "ajuste": "considerar meningite por Haemophilus influenzae e pneumococo, ampliar cobertura antibiótica e internar para observação",
+        "alerta": "a ausência de sinais meníngeos não afasta meningite em criança não vacinada"
+      },
+      {
+        "populacao": "anemia falciforme",
+        "ajuste": "tratar febre como emergência: hemocultura, ceftriaxona empírica, hemograma e internação, com hidratação cautelosa",
+        "alerta": "risco elevado de sepse por pneumococo e de síndrome torácica aguda desencadeada pela infecção"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "glicemia capilar",
+          "indicacao": "todas as crianças com convulsão febril, imediatamente e antes de qualquer outro exame",
+          "o_que_muda": "identifica hipoglicemia, que é causa reversível, retira o diagnóstico de convulsão febril e se corrige em minutos"
+        },
+        {
+          "nome": "hemograma, urina tipo 1 e urocultura",
+          "indicacao": "febre sem foco definido, sobretudo abaixo de 12 meses e em criança com aspecto toxêmico",
+          "o_que_muda": "identifica infecção urinária e bacteremia como foco e indica antibiótico e internação"
+        },
+        {
+          "nome": "punção lombar com citologia, glicose, proteína e cultura",
+          "indicacao": "sinais meníngeos, idade abaixo de 12 meses sem foco, convulsão febril complexa, vacinação incompleta ou imunossupressão",
+          "o_que_muda": "confirma ou afasta meningite bacteriana e define o antibiótico, a duração e o destino"
+        },
+        {
+          "nome": "eletrólitos, cálcio e magnésio",
+          "indicacao": "crise prolongada, vômitos, diarreia, uso de diurético ou rebaixamento persistente",
+          "o_que_muda": "hiponatremia e hipocalcemia mudam a causa da crise e o tratamento"
+        },
+        {
+          "nome": "eletroencefalograma",
+          "indicacao": "convulsão febril complexa, crise recorrente e suspeita de estado de mal não convulsivo; fora da fase aguda na forma complexa",
+          "o_que_muda": "identifica atividade epileptiforme e reforça a indicação de avaliação neurológica, sem mudar a conduta na crise aguda"
+        },
+        {
+          "nome": "tomografia de crânio",
+          "indicacao": "déficit focal, trauma craniano, sinais de hipertensão intracraniana, crise focal prolongada ou suspeita de lesão estrutural; antes da punção lombar nesses casos",
+          "o_que_muda": "identifica hemorragia, tumor, abscesso e hidrocefalia, e contraindica a punção lombar imediata"
+        },
+        {
+          "nome": "hemocultura",
+          "indicacao": "febre com aspecto toxêmico, suspeita de meningite ou de sepse, antes do antibiótico",
+          "o_que_muda": "define o agente e permite reduzir o espectro antibiótico depois"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "tomografia de crânio de rotina na convulsão febril simples",
+          "motivo": "não altera a conduta em criança com exame neurológico normal, expõe à radiação e à sedação e atrasa a alta"
+        },
+        {
+          "exame": "eletroencefalograma de rotina na convulsão febril simples",
+          "motivo": "traçado alterado é comum e não prediz epilepsia de forma útil; gera tratamento desnecessário e ansiedade familiar"
+        },
+        {
+          "exame": "punção lombar em crise ativa, antes de estabilizar e controlar a convulsão",
+          "motivo": "risco de apneia, bradicardia e aspiração; a punção é feita depois do benzodiazepínico e da estabilização"
+        },
+        {
+          "exame": "coleta de exames, tomografia ou acesso venoso antes do benzodiazepínico em crise com mais de 5 minutos",
+          "motivo": "nenhum exame muda a primeira dose e o atraso transforma crise em estado de mal"
+        },
+        {
+          "exame": "dosagem de eletrólitos, cálcio, magnésio e amônia em toda convulsão febril simples",
+          "motivo": "baixo rendimento diagnóstico em criança com exame normal e sem alteração clínica; só quando houver pista"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "Em nova crise: deitar a criança de lado, proteger a cabeça, afrouxar a roupa, cronometrar e esperar a crise passar, sem segurar os braços e as pernas",
+        "Aplicar o diazepam retal 0,5 mg/kg se a crise passar de 5 minutos, uma única vez, e chamar o serviço de emergência se a crise passar de 10 minutos ou não ceder",
+        "Oferecer antitérmico na dose certa por peso para o desconforto da febre, sabendo que ele não impede nova convulsão",
+        "Manter hidratação, alimentação leve e repouso, e retomar a rotina escolar assim que a criança estiver bem",
+        "Guardar a receita, o plano escrito e o telefone de retorno na bolsa ou na geladeira, em local visível",
+        "Comparecer à reavaliação em 24 a 48 horas e informar a escola sobre o episódio e o que fazer"
+      ],
+      "evitar": [
+        "Conter a criança à força durante a crise, o que causa fratura, luxação e mordedura",
+        "Colocar objeto, dedo, colher ou pano na boca, o que não abre a via aérea e causa broncoaspiração e dente quebrado",
+        "Dar banho frio, compressa de álcool ou imersão em água gelada para baixar a febre",
+        "Oferecer água, alimento ou remédio por boca durante a crise ou enquanto a criança estiver sonolenta",
+        "Usar antitérmico em dose acima da prescrita ou alternar remédios sem orientação para tentar impedir a convulsão",
+        "Interromper ou iniciar anticonvulsivante de uso contínuo por conta própria: profilaxia contínua não está indicada na convulsão febril simples",
+        "Deixar a criança sozinha no banho, na piscina ou em local alto nos dias seguintes à crise"
+      ],
+      "retorno": [
+        "Nova crise, crise com mais de 5 minutos, ou segunda crise em 24 horas",
+        "Febre que não cede, vômitos repetidos, recusa alimentar ou aspecto sonolento e irritado",
+        "Rigidez de nuca, manchas vermelhas ou roxas na pele que não desaparecem à pressão, ou fontanela abaulada",
+        "Fraqueza em um lado do corpo, fala alterada, visão dupla ou desmaio",
+        "Sonolência excessiva, confusão ou dificuldade de acordar após a crise",
+        "Reação ao diazepam: respiração lenta, lábios arroxeados ou muita sonolência"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "diazepam retal",
+        "efeitos": [
+          "depressão respiratória",
+          "sedação prolongada",
+          "hipotonia"
+        ],
+        "observacao": "manter aspirador e bolsa-máscara disponíveis; não repetir a dose sem avaliação e não associar a outro benzodiazepínico"
+      },
+      {
+        "agente": "midazolam",
+        "efeitos": [
+          "depressão respiratória",
+          "apneia",
+          "sedação prolongada"
+        ],
+        "observacao": "oximetria por 30 minutos após a dose; em sedação excessiva, suporte ventilatório e considerar flumazenil apenas em sedação iatrogênica sem epilepsia"
+      },
+      {
+        "agente": "diazepam intravenoso",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão",
+          "flebite"
+        ],
+        "observacao": "infundir em 2 minutos e nunca em bolus; suspender se frequência respiratória cair ou saturação ficar abaixo de 90%"
+      },
+      {
+        "agente": "fenitoína",
+        "efeitos": [
+          "hipotensão",
+          "bradicardia e arritmia",
+          "necrose por extravasamento"
+        ],
+        "observacao": "eletrocardiograma contínuo durante a infusão; interromper se arritmia ou queda pressórica e trocar por levetiracetam"
+      },
+      {
+        "agente": "levetiracetam",
+        "efeitos": [
+          "sonolência",
+          "irritabilidade",
+          "agitação"
+        ],
+        "observacao": "reavaliar comportamento e humor na consulta de retorno; ajustar pelo clearance de creatinina em uso contínuo"
+      },
+      {
+        "agente": "fenobarbital",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão",
+          "sedação prolongada",
+          "reação cutânea grave"
+        ],
+        "observacao": "só usar com material de intubação disponível; suspender e nunca reintroduzir se rash extenso com descamação"
+      },
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade em superdose",
+          "náusea",
+          "rash"
+        ],
+        "observacao": "conferir o peso e o número de doses em 24 horas; em suspeita de superdose, dosar transaminases e avaliar N-acetilcisteína"
+      },
+      {
+        "agente": "ibuprofeno",
+        "efeitos": [
+          "gastrite",
+          "lesão renal em desidratação",
+          "sangramento digestivo"
+        ],
+        "observacao": "suspender se vômitos, dor abdominal intensa ou diurese baixa; evitar em dengue e em desidratação"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "barro biliar"
+        ],
+        "observacao": "monitorizar diarreia e icterícia; suspender se sinais de colite ou de hemólise"
+      },
+      {
+        "agente": "aciclovir",
+        "efeitos": [
+          "nefrotoxicidade",
+          "flebite",
+          "neurotoxicidade"
+        ],
+        "observacao": "hidratar e infundir em 60 minutos; dosar creatinina e ajustar o intervalo ao clearance"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose, via e peso da criança",
+      "Depressão respiratória por benzodiazepínico: suspender a próxima dose, ventilar com bolsa-máscara, aspirar secreção e considerar flumazenil apenas em sedação iatrogênica sem epilepsia",
+      "Hipotensão ou arritmia com fenitoína: interromper a infusão, hidratar, manter eletrocardiograma e trocar para levetiracetam",
+      "Extravasamento de fenitoína, ceftriaxona ou aciclovir: parar imediatamente, aspirar o conteúdo, avaliar cirurgia plástica e registrar a lesão",
+      "Hepatotoxicidade por paracetamol: suspender, dosar transaminases e tempo de protrombina e avaliar N-acetilcisteína conforme protocolo de intoxicação",
+      "Lesão renal por ibuprofeno ou aciclovir: suspender, hidratar e dosar creatinina e diurese",
+      "Reação cutânea com fenobarbital, fenitoína ou ceftriaxona: suspender e nunca reintroduzir o mesmo fármaco",
+      "Registrar a reação em prontuário, comunicar a equipe e reescrever a prescrição antes de sair do leito"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol solução oral 32 mg/mL",
+            "dose": "15 mg/kg",
+            "via": "VO",
+            "frequencia": "6/6 h se febre ou desconforto",
+            "duracao": "até 72 h",
+            "condicao": "febre, sem finalidade de prevenir convulsão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ibuprofeno suspensão oral 50 mg/mL",
+            "dose": "10 mg/kg",
+            "via": "VO",
+            "frequencia": "8/8 h se febre",
+            "duracao": "até 72 h",
+            "condicao": "acima de 6 meses, sem desidratação e sem suspeita de dengue",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "diazepam solução retal 5 mg/mL",
+            "dose": "0,5 mg/kg (máximo 10 mg)",
+            "via": "retal",
+            "frequencia": "dose única se crise passar de 5 min, repetível uma vez após 5 min",
+            "duracao": "uso conforme crise",
+            "condicao": "plano de resgate domiciliar com cuidador treinado em crise prolongada ou recorrente",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "diazepam retal 5 mg/mL",
+            "dose": "0,5 mg/kg",
+            "via": "retal",
+            "frequencia": "dose única, repetir uma vez após 5 min se persistir",
+            "monitorizacao": "frequência respiratória, oximetria e consciência por 30 min",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "midazolam 5 mg/mL",
+            "dose": "0,2 mg/kg",
+            "via": "IM ou bucal",
+            "frequencia": "dose única se sem acesso venoso",
+            "monitorizacao": "oximetria por 30 min e nível de consciência",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "diazepam 5 mg/mL",
+            "dose": "0,3 mg/kg",
+            "via": "IV",
+            "frequencia": "dose única em 2 min, repetir 0,2 mg/kg após 5 min",
+            "monitorizacao": "respiração, oximetria e pressão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "levetiracetam 100 mg/mL",
+            "dose": "40 a 60 mg/kg",
+            "via": "IV",
+            "frequencia": "ataque único em 15 min",
+            "monitorizacao": "consciência e comportamento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "fenitoína 50 mg/mL",
+            "dose": "20 mg/kg",
+            "via": "IV",
+            "frequencia": "ataque único em 20 a 30 min, somente em soro fisiológico",
+            "monitorizacao": "eletrocardiograma contínuo, pressão e sítio de infusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "fenobarbital 200 mg/mL",
+            "dose": "15 a 20 mg/kg",
+            "via": "IV",
+            "frequencia": "ataque único em 20 a 30 min",
+            "monitorizacao": "respiração e pressão, com material de intubação pronto",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ceftriaxona 1 g",
+            "dose": "100 mg/kg/dia",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "monitorizacao": "sinais meníngeos, temperatura e diarreia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "aciclovir 500 mg",
+            "dose": "10 a 20 mg/kg/dose",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "creatinina, diurese e nível de consciência",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "glicose 10% 250 mL",
+            "dose": "5 mL/kg",
+            "via": "IV",
+            "frequencia": "dose única, repetir conforme glicemia capilar",
+            "monitorizacao": "glicemia capilar em 10 min",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "glicemia capilar",
+          "hemograma",
+          "urina tipo 1 e urocultura",
+          "hemocultura",
+          "eletrólitos",
+          "cálcio",
+          "magnésio",
+          "punção lombar com citologia, glicose, proteína e cultura",
+          "eletroencefalograma",
+          "tomografia de crânio",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que a criança esteve sob meus cuidados nesta data, com quadro de convulsão febril, necessitando de afastamento escolar por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; documento pode ser emitido pelo acompanhante responsável"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com idade, duração da crise, focalidade, número de crises em 24 h, fármacos e doses administrados, exames realizados e estado na transferência",
+          "prioridade",
+          "horário do contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Criança de ___ meses/anos com convulsão febril, crise de ___ minutos, generalizada ou focal, ___ crises em 24 horas, exame neurológico ___ após a crise, glicemia ___, exames ___, classificação em simples ou complexa, conduta e destino."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "idade em meses",
+        "duração da crise e hora de início",
+        "focalidade no início da crise",
+        "número de crises em 24 horas e recuperação entre elas",
+        "temperatura medida e tempo de febre",
+        "foco infeccioso aparente",
+        "vacinação para Haemophilus influenzae, pneumococo e meningococo",
+        "história de crise afebril e de epilepsia",
+        "anticonvulsivante em uso e adesão",
+        "história familiar de convulsão febril e de epilepsia",
+        "antitérmico usado: qual, dose, horário e número de doses",
+        "o que foi feito durante a crise: contenção, objeto na boca, banho frio",
+        "sinais meníngeos, vômitos e manchas na pele",
+        "doenças prévias, prematuridade e imunossupressão"
+      ],
+      "texto_template": "Criança de ___ meses com convulsão febril, crise de ___ minutos, iniciada às ___, generalizada ou focal, ___ crises em 24 horas, com recuperação ___, temperatura de ___ graus há ___, foco ___, vacinação ___, história de crise afebril ___, anticonvulsivante ___, história familiar ___, antitérmico usado ___, conduta da família durante a crise ___, sinais meníngeos ___, manchas na pele ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais, temperatura, oximetria e glicemia capilar",
+        "nível de consciência e escala de coma de Glasgow pediátrica",
+        "fontanela, perímetro cefálico e sinais meníngeos",
+        "pupilas, fundo de olho e pares cranianos",
+        "força, tônus, reflexos e marcha após a crise",
+        "orofaringe, otoscopia e ausculta pulmonar",
+        "abdome, fígado e baço",
+        "pele: exantema, petéquias e sinais de mordedura de língua",
+        "trauma craniano e escoriações",
+        "hidratação, perfusão e tempo de enchimento capilar"
+      ],
+      "texto_template": "Sinais vitais com temperatura e oximetria, glicemia capilar ___, Glasgow ___, fontanela e sinais meníngeos ___, pupilas e fundo de olho ___, força e tônus ___, orofaringe e otoscopia ___, ausculta pulmonar ___, abdome ___, pele com exantema ou petéquias ___, trauma craniano ___, perfusão e hidratação ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de convulsão febril, disponibilidade de diazepam retal e midazolam bucal, e critério local de internação abaixo de 12 meses",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "definição de convulsão febril simples e complexa, indicação de punção lombar por idade e vacinação e orientação de não usar profilaxia contínua",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_internacional",
+        "o_que_verificar": "recomendação de não solicitar tomografia e eletroencefalograma de rotina na forma simples e de não usar antitérmico para prevenir recorrência",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e concentrações de diazepam retal, midazolam, fenitoína, levetiracetam, fenobarbital, paracetamol, ibuprofeno, ceftriaxona, aciclovir e glicose 10%",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura_de_epilepsia",
+        "o_que_verificar": "risco de recorrência e de epilepsia futura após convulsão febril simples e complexa, e critérios de encaminhamento à neurologia pediátrica",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED09-01",
+        "tipo": "crise_sem_benzodiazepinico",
+        "gatilho": "crise febril em atividade há mais de 5 minutos sem benzodiazepínico administrado",
+        "severidade": "grave",
+        "mensagem": "Crise acima de 5 minutos: benzodiazepínico agora, sem esperar acesso venoso.",
+        "acao": "bloquear qualquer outra conduta e sugerir diazepam retal 0,5 mg/kg ou midazolam 0,2 mg/kg",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED09-02",
+        "tipo": "meningite_nao_tratada",
+        "gatilho": "febre com rigidez de nuca, fontanela abaulada, petéquias, lactente abaixo de 12 meses sem foco ou vacinação incompleta, sem ceftriaxona prescrita",
+        "severidade": "grave",
+        "mensagem": "Suspeita de meningite bacteriana: antibiótico na primeira hora.",
+        "acao": "bloquear a alta e sugerir ceftriaxona 100 mg/kg/dia e punção lombar após estabilização",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED09-03",
+        "tipo": "manejo_domiciliar_inadequado",
+        "gatilho": "orientação registrada de conter a criança à força, colocar objeto na boca ou dar banho frio durante a crise",
+        "severidade": "grave",
+        "mensagem": "Nada na boca, nada de contenção e nada de banho frio: risco de aspiração, fratura e hipotermia.",
+        "acao": "bloquear a orientação e substituir pelo texto correto de proteção lateral e cronometragem",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED09-04",
+        "tipo": "profilaxia_continua_em_simples",
+        "gatilho": "prescrição de fenobarbital, ácido valproico ou levetiracetam de uso contínuo para convulsão febril simples",
+        "severidade": "grave",
+        "mensagem": "Profilaxia contínua não está indicada na convulsão febril simples.",
+        "acao": "bloquear a prescrição e sugerir plano de resgate com diazepam retal apenas em casos selecionados",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED09-05",
+        "tipo": "exame_de_rotina_em_simples",
+        "gatilho": "tomografia de crânio ou eletroencefalograma solicitados em convulsão febril simples com exame neurológico normal",
+        "severidade": "precaucao",
+        "mensagem": "Tomografia e eletroencefalograma não são de rotina na forma simples.",
+        "acao": "alertar e sugerir retirada do pedido, mantendo glicemia e avaliação do foco",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED09-06",
+        "tipo": "antitermico_como_prevencao",
+        "gatilho": "antitérmico prescrito ou orientado com a finalidade declarada de impedir nova convulsão",
+        "severidade": "precaucao",
+        "mensagem": "Antitérmico trata o desconforto da febre e não previne recorrência de convulsão febril.",
+        "acao": "alertar e reescrever a orientação com essa informação explícita",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED09-07",
+        "tipo": "alta_de_lactente_sem_reavaliacao",
+        "gatilho": "alta de criança abaixo de 12 meses com febre sem foco definido sem punção lombar, antibioticoterapia ou reavaliação agendada",
+        "severidade": "precaucao",
+        "mensagem": "Lactente abaixo de 12 meses com febre sem foco exige investigação ou reavaliação garantida.",
+        "acao": "alertar e sugerir internação para observação ou retorno em 24 horas com exame",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED09-08",
+        "tipo": "dose_sem_peso",
+        "gatilho": "dose de benzodiazepínico, antitérmico ou antibiótico prescrita sem peso registrado em criança",
+        "severidade": "precaucao",
+        "mensagem": "Toda dose pediátrica é por peso: registrar o peso em quilos antes de prescrever.",
+        "acao": "alertar e exigir o peso no cabeçalho da prescrição",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBP",
+        "diretriz de convulsão febril",
+        "diretriz de meningite bacteriana",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral no padrão de diversidade: separação explícita entre convulsão febril simples (6 meses a 5 anos, generalizada, abaixo de 15 minutos, única em 24 horas), complexa (focal, prolongada, recorrente ou com exame alterado) e meningite ou encefalite; 11 fármacos em 9 classes, com apresentações, preparo, tempo de infusão, monitorização e ajuste renal — diazepam retal 0,5 mg/kg e midazolam intramuscular ou bucal 0,2 mg/kg como resgate sem acesso, diazepam intravenoso 0,3 mg/kg, levetiracetam 40 a 60 mg/kg, fenitoína 20 mg/kg e fenobarbital 20 mg/kg como segunda linha e resgate, paracetamol e ibuprofeno como antitérmicos de conforto, ceftriaxona e aciclovir na suspeita de meningite e encefalite e glicose 10% na hipoglicemia; conduta na crise com posição lateral, proteção, desobstrução e proibição de conter à força, colocar objeto na boca e banho frio; investigação sem tomografia e sem eletroencefalograma de rotina na forma simples, com punção lombar por idade e sinais meníngeos, glicemia obrigatória e internação considerada abaixo de 12 meses sem foco; afirmação explícita de que antitérmico não previne recorrência e de que profilaxia contínua não está indicada na forma simples; orientação escrita aos pais sobre o que fazer em nova crise e quando retornar.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

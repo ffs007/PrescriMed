@@ -1,0 +1,202 @@
+{
+  "id": "leg_2230",
+  "nome": "Hipercalemia",
+  "cat": "Emergência",
+  "alias": "potassio alto k alto hiperkalemia alargamento qrs onda t apontada",
+  "cid": [
+    [
+      "E875",
+      "Hipercalemia"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "KDIGO/UK Renal — hipercalemia",
+      "ERC — emergências eletrolíticas"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "END-08 em 2026-11-27",
+    "fundido_workspace": "END-08 em 2026-11-27"
+  },
+  "alerta": "Confirmar (gasometria/hemólise falsa- alta é comum) MAS se ECG alterado tratar ANTES de confirmar. ECG: T apontada → QRS alargando → P some → sinusoide → PCR. K > 6,5 ou ECG alterado: 1) Gluconato de cálcio 10% 10 mL EV em 5 min (estabiliza miocárdio em minutos; não baixa o K) — não disponível no cadastro EV: providenciar na farmácia imediatamente; 2) Insulina regular 10 U EV + glicose 50% 50 mL EV em 15–30 min (desloca K, 30–60 min); 3) Salbutamol nebulizado 10–20 mg (adjuvante); 4) Bicarbonato só se acidose associada; 5) Furosemida 40 mg EV se diurese preservada; 6) ELIMINAR: resina/patiromer são lentas; DIÁLISE se refratário, anúrico ou IRA grave. Causas: IRA/IRC, IECA/BRA/espironolactona, AINE, KCl indevido, hemólise, acidose, tumor lisis, adrenal. Parar contribuintes JÁ.",
+  "redFlags": [
+    "ECG com QRS alargado ou morfologia em sinusoide — cálcio EV AGORA e chamar nefro/diálise",
+    "K > 7,0 em qualquer ECG — tratamento imediato + diálise planejada",
+    "Anúria/IRA grave — diálise é a única eliminação eficaz: regulação",
+    "Paciente em IECA + espironolactona + AINE (a tríade iatrogênica) — suspender os três",
+    "Hipercalemia + hiponatremia/hipotensão — insuficiência adrenal: hidrocortisona",
+    "K alto pós-quimioterapia (tumor lysis) — allopurinol/hidratação + nefro"
+  ],
+  "naoUsar": [
+    "Esperar o potássio confirmado se o ECG está alterado",
+    "Calcium e bicarbonato na MESMA via (precipita)",
+    "Resina como tratamento da hipercalemia grave (lenta demais)",
+    "Manter IECA/BRA/espironolactona/AINEs durante o episódio"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Deslocar o K para dentro da célula",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "insulina_reg_sc",
+            "motivo": "Insulina regular 10 U EV em bolus — associar SEMPRE à glicose"
+          },
+          {
+            "linha": 1,
+            "hosp": "glicose50",
+            "motivo": "50 mL EV em 15–30 min junto da insulina (monitorar glicemia 1/1 h — hipoglicemia tardia)"
+          },
+          {
+            "linha": 1,
+            "hosp": "fenoterol_neb",
+            "motivo": "Nebulização de dose alta (equivalente beta-2): adjuvante de deslocamento"
+          }
+        ]
+      },
+      {
+        "nome": "Eliminar o K",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "40 mg EV se diurese preservada"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Alta do episódio leve/moderado controlado",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "furosemida",
+            "pos": "20–40 mg VO 1x/dia conforme nefrologia (se diurese preservada)",
+            "motivo": "Manutenção conforme função renal"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Dieta e medicamentos",
+              "ap": "",
+              "pos": "Reduzir alimentos ricos em potássio (banana, laranja, tomate, batata-doce, abacate, castanhas, sal light/substitutos do sal, alguns sucos); NÃO usar sal light; revisar com o médico TODA medicação nova (IECA, espironolactona, AINE, KCl podem elevar K). Repetir potássio em 48–72 h e 1 semana."
+            },
+            "motivo": "Evitar recorrência iatrogênica/dieta"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Fraqueza intensa, palpitações, desmaio, formigamento, confusão — hipercalemia voltando: PS com o exame anterior na mão."
+            },
+            "motivo": "Recorrência"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Suspender os fármacos hipercalemiantes",
+              "ap": "",
+              "q": "",
+              "pos": "Revisar IECA, ARA2, espironolactona, AINE, trimetoprima, heparina, tacrolimo, ciclosporina, succinilcolina e substitutos de sal com cloreto de potássio; registrar a suspensão na prescrição e comunicar a equipe"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Restringir potássio da dieta",
+              "ap": "",
+              "q": "",
+              "pos": "Menos de 2 a 3 g por dia, com orientação sobre banana, batata, feijão, água de coco, tomate, laranja e chocolate; proibir sal substituto, que é cloreto de potássio"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "ECG de 12 derivações seriado",
+              "ap": "",
+              "q": "",
+              "pos": "Na entrada, 5 min após o gluconato de cálcio, após cada intervenção e a cada nova dosagem; comparar com traçado prévio e guardar no prontuário"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Confirmar a amostra antes de tratar",
+              "ap": "",
+              "q": "",
+              "pos": "Repetir a coleta sem garrote, em plasma heparinizado, se houver hemólise, plaquetose, leucocitose extrema ou demora no processamento; não tratar valor isolado de amostra duvidosa"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "ECG contínuo e monitorização",
+              "ap": "",
+              "q": "",
+              "pos": "Obrigatório com potássio ≥ 6,0, alteração de traçado ou durante insulina, cálcio e diálise; manter desfibrilador disponível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Controle glicêmico após insulina",
+              "ap": "",
+              "q": "",
+              "pos": "Glicemia capilar de 30/30 min por 2 h e de 1/1 h até 6 h; deixar acesso venoso pérvio e glicose à beira do leito para tratar hipoglicemia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Balanço hídrico e diurese horária",
+              "ap": "",
+              "q": "",
+              "pos": "Sonda vesical se instabilidade ou uso de furosemida; registrar débito por hora e peso diário para avaliar resposta e sobrecarga"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "END-08"
+      }
+    ]
+  }
+}

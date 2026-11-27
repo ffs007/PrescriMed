@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "INF-09",
+    "area": "Infectologia",
+    "nome": "Zika",
+    "aliases": ["Zika", "zika vírus", "ZIKV", "febre pelo zika", "exantema por zika", "síndrome congênita do zika"],
+    "contexto": ["ambulatorial", "hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Zika é infecção pelo ZIKV, transmitida por Aedes aegypti e albopictus, por via sexual, transfusional e vertical. No adulto é doença leve e autolimitada, com duração de 3 a 7 dias: exantema máculo-papular pruriginoso de instalação precoce — muitas vezes o primeiro e único sinal —, febre baixa ou ausente, artralgia leve de pequenas articulações, conjuntivite não purulenta, cefaleia e mialgia. O diagnóstico é clínico-epidemiológico: exantema pruriginoso com artralgia leve ou conjuntivite em área com transmissão, sem febre alta nem dor articular incapacitante. O ponto crítico não é o adulto, é a gestante: exantema em qualquer trimestre exige notificação imediata, RT-PCR de soro e urina, sorologia com confirmação por neutralização e ultrassonografia obstétrica seriada, porque o vírus atravessa a placenta e causa microcefalia, calcificações intracranianas, ventriculomegalia, artrogripose e alterações oculares e auditivas. Não existe antiviral, vacina disponível no SUS nem tratamento específico: o manejo é sintomático, com paracetamol, anti-histamínico para o prurido e hidratação. AINE e AAS são proibidos até afastar dengue, que circula no mesmo mosquito e no mesmo território. Os dois erros que causam dano são prescrever anti-inflamatório às cegas e tranquilizar a gestante sem investigar. A transmissão sexual é real: o vírus permanece no sêmen por semanas a meses, e o preservativo é indicado em toda a gestação quando há exposição do parceiro.",
+    "inclusao": [
+      "Exantema máculo-papular pruriginoso com artralgia leve ou conjuntivite não purulenta em área com transmissão",
+      "Gestante com exantema em qualquer idade gestacional, independentemente da presença de febre",
+      "Zika confirmada por RT-PCR ou sorologia em paciente com quadro compatível",
+      "Gestante cujo parceiro sexual teve zika ou viajou para área com transmissão nos últimos 3 meses",
+      "Neonato com microcefalia, calcificações intracranianas ou alterações oculares cuja mãe teve exantema na gestação"
+    ],
+    "exclusao": [
+      { "situacao": "febre alta com dor retro-orbitária, mialgia intensa ou sangramento", "fluxo": "INF-02 dengue" },
+      { "situacao": "artralgia intensa e incapacitante com edema articular", "fluxo": "INF-08 chikungunya" },
+      { "situacao": "exantema com petéquias, sinais meníngeos ou toxemia", "fluxo": "investigação de outra infecção e NEU-15" },
+      { "situacao": "exantema medicamentoso, escarlatina ou outra dermatose", "fluxo": "DERM-03 exantema" },
+      { "situacao": "microcefalia sem história de exantema materno", "fluxo": "genética e neurologia pediátrica" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "gestante com exantema em qualquer idade gestacional", "por_que": "transmissão vertical com risco de microcefalia e síndrome congênita", "acao": "notificar imediatamente, colher RT-PCR e iniciar ultrassonografia seriada com obstetrícia", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "fraqueza ascendente, arreflexia ou parestesias", "por_que": "síndrome de Guillain-Barré pós-zika", "acao": "internação, eletroneuromiografia e monitorização de capacidade vital", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "cefaleia intensa, rigidez de nuca, confusão ou convulsão", "por_que": "meningoencefalite, ainda que rara", "acao": "internação e punção lombar pelo BOX-07 após imagem", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "sangramento de mucosa, petéquias extensas ou plaquetopenia", "por_que": "dengue coinfectada com risco hemorrágico", "acao": "NS1, hemograma e suspender AINE e AAS", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "recém-nascido com irritabilidade, convulsão, sucção débil ou perímetro cefálico abaixo do esperado", "por_que": "síndrome congênita do zika", "acao": "avaliação pediátrica imediata, ultrassom transfontanelar e fundo de olho", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "dispneia, dor torácica ou arritmia", "por_que": "miocardite descrita na infecção por zika", "acao": "eletrocardiograma, troponina e internação se alterado", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "oligúria, edema ou hipertensão de instalação recente", "por_que": "lesão renal e glomerulonefrite", "acao": "função renal, sedimento urinário e suspender AINE", "severidade": "precaucao" },
+      { "id": "AL-08", "sinal": "exantema com bolhas, descamação extensa ou dor intensa", "por_que": "dermatose grave ou coinfecção bacteriana", "acao": "avaliação dermatológica e hemograma", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "O exantema coça e começou no rosto ou no tronco?",
+      "Tem febre alta, dor atrás dos olhos ou dor no corpo intensa?",
+      "A dor articular impede andar ou fechar a mão?",
+      "Tem olho vermelho sem secreção, ou conjuntivite recente?",
+      "Está gestante? Qual a idade gestacional e já teve exantema antes nesta gestação?",
+      "Seu parceiro teve zika ou viajou para área com transmissão nos últimos 3 meses?",
+      "Usou AAS, AINE ou corticoide nos últimos dias?",
+      "Mora ou viajou para área com transmissão nas últimas 2 semanas?",
+      "Teve manchas roxas, sangramento ou urina escura?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Adulto com exantema pruriginoso e artralgia leve, com dengue ainda não afastada", "escolha": "Paracetamol 750 mg 6/6 h, loratadina 10 mg 1x/dia e hidratação oral; AAS e AINE bloqueados", "porque": "Paracetamol e anti-H1 controlam febre, dor e prurido sem risco hemorrágico; a dengue só é excluída com NS1 ou RT-PCR" },
+      { "cenario": "Prurido intenso que impede o sono", "escolha": "Dexclorfeniramina 2 mg 8/8 h ou apenas à noite", "porque": "Anti-histamínico de primeira geração é mais eficaz no prurido, ao custo de sonolência; orientar a não dirigir" },
+      { "cenario": "Intolerância à via oral por vômitos", "escolha": "Ondansetrona 4 mg IV e cristaloide 0,9% até tolerar líquidos", "porque": "A desidratação é o principal motivo de pronto atendimento em arbovirose; controlar o vômito evita internação" },
+      { "cenario": "Gestante com exantema em qualquer trimestre", "escolha": "Notificação imediata, RT-PCR de soro até o quinto dia e de urina até o 14º, sorologia a partir do sexto dia e ultrassonografia obstétrica seriada mensal", "porque": "A microcefalia e as calcificações aparecem tardiamente; a investigação e o seguimento mudam o desfecho e o planejamento do parto" },
+      { "cenario": "Gestante com zika confirmada", "escolha": "Pré-natal de alto risco, ultrassonografia mensal com medida do perímetro cefálico, avaliação de líquido amniótico e parto em serviço com UTI neonatal", "porque": "Uma parcela dos fetos expostos desenvolve alterações estruturais; o parto precisa ocorrer onde haja suporte neonatal" },
+      { "cenario": "Parceiro com zika e gestante em acompanhamento", "escolha": "Preservativo em todas as relações até o parto, com orientação registrada", "porque": "O vírus permanece no sêmen por semanas a meses e a via sexual é comprovada" },
+      { "cenario": "Síndrome de Guillain-Barré com progressão rápida", "escolha": "Internação, eletroneuromiografia, capacidade vital seriada e imunoglobulina 0,4 g/kg/dia por 5 dias", "porque": "O comprometimento respiratório pode instalar-se em horas; a imunoglobulina reduz a duração e a gravidade" },
+      { "cenario": "Neonato exposto com mãe com exantema na gestação", "escolha": "Ultrassom transfontanelar, fundo de olho, triagem auditiva e seguimento do desenvolvimento até 12 meses", "porque": "Alterações auditivas e oculares podem ser silenciosas ao nascimento e comprometer o desenvolvimento" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "febre baixa, artralgia leve e desconforto do exantema",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": ["hepatopatia grave", "desnutrição crônica", "alcoolismo crônico", "alergia"],
+        "efeitos_adversos": ["hepatotoxicidade em superdose", "elevação de transaminases", "rash cutâneo"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 750 mg", "solução oral 200 mg/mL (gotas)", "frasco 100 mg/mL"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["dor e temperatura 2 h após a dose", "transaminases se uso acima de 5 dias", "sinais de hepatotoxicidade: náusea, icterícia e dor em hipocôndrio direito"],
+        "ajuste_renal": "Clearance abaixo de 30 mL/min: intervalo de 8 h",
+        "ajuste_hepatico": "Máximo de 2 g/dia em hepatopatia; evitar em Child-Pugh C",
+        "observacoes": "Analgésico de escolha na zika, inclusive na gestação, porque não altera a coagulação nem o feto; conferir produtos combinados",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/MS",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "febre e dor quando o paracetamol é insuficiente ou indisponível",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": ["alergia a pirazolonas", "discrasia sanguínea ou agranulocitose prévia", "porfiria hepática aguda", "terceiro trimestre de gestação"],
+        "efeitos_adversos": ["hipotensão em infusão rápida", "rash cutâneo", "agranulocitose rara", "sudorese intensa"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 1 g", "solução oral 500 mg/mL (gotas)", "ampola 1 g/2 mL"],
+        "preparo": "Uso direto por via oral; para via IV diluir 1 g em 10 mL de água para injeção",
+        "tempo_infusao": "não se aplica por via oral; por via IV, 5 min, nunca em bolus rápido",
+        "monitorizacao": ["pressão arterial se via IV", "hemograma se uso acima de 5 dias", "sinais de agranulocitose: febre e odinofagia"],
+        "ajuste_renal": "Evitar uso prolongado com clearance abaixo de 30 mL/min",
+        "ajuste_hepatico": "Evitar em insuficiência hepática grave",
+        "observacoes": "Evitar no terceiro trimestre pelo risco de fechamento do ducto arterial; na gestante, preferir paracetamol",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/MS",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "loratadina",
+        "papel": "primeira_linha",
+        "indicacao": "prurido do exantema",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": ["alergia", "insuficiência hepática grave sem ajuste"],
+        "efeitos_adversos": ["cefaleia", "boca seca", "sonolência leve", "fadiga"],
+        "apresentacoes": ["comprimido 10 mg", "xarope 1 mg/mL", "solução oral 1 mg/mL"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["intensidade do prurido", "sonolência", "lesões de pele por coçadura e infecção secundária"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir para dias alternados em insuficiência hepática grave",
+        "observacoes": "Anti-H1 de segunda geração é a primeira escolha porque não seda e permite dirigir e trabalhar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "dexclorfeniramina",
+        "papel": "alternativa",
+        "indicacao": "prurido intenso que atrapalha o sono ou não responde à loratadina",
+        "dose": "2 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h ou dose única noturna",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "12 mg/dia",
+        "contraindicacoes": ["glaucoma de ângulo fechado", "retenção urinária por hypertrofia prostática", "recém-nascido", "uso de IMAO"],
+        "efeitos_adversos": ["sonolência", "boca seca", "visão turva", "retenção urinária", "tontura"],
+        "apresentacoes": ["comprimido 2 mg", "comprimido de liberação prolongada 6 mg", "solução oral 0,4 mg/mL", "xarope 0,4 mg/mL"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["sonolência e risco de queda", "prurido", "retenção urinária em idoso"],
+        "ajuste_renal": "Clearance abaixo de 30 mL/min: reduzir a dose ou ampliar o intervalo",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Mais eficaz no prurido que a loratadina, mas seda: orientar a não dirigir e evitar associação com álcool ou benzodiazepínico",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "reidratante_oral",
+        "agente": "solução de reidratação oral",
+        "papel": "primeira_linha",
+        "indicacao": "hidratação de manutenção no paciente com exantema e febre baixa",
+        "dose": "2 a 3 litros por dia, em pequenos volumes",
+        "unidade": "mL/dia",
+        "via": "VO",
+        "frequencia": "a cada 15 a 30 min, em volumes de 100 a 200 mL",
+        "duracao": "enquanto durar o quadro, em geral 3 a 7 dias",
+        "dose_maxima": "individualizar; 30 a 40 mL/kg/dia no adulto",
+        "contraindicacoes": ["vômitos incoercíveis", "rebaixamento de consciência", "íleo paralítico", "insuficiência cardíaca descompensada sem controle"],
+        "efeitos_adversos": ["náusea", "distensão abdominal", "vômito se administrada rapidamente"],
+        "apresentacoes": ["sachê 27,9 g para 1 litro", "solução pronta 500 mL", "solução pronta 1 litro"],
+        "preparo": "Diluir o sachê em 1 litro de água filtrada; não usar refrigerante nem acrescentar açúcar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["diurese e cor da urina", "aceitação oral e vômitos", "peso em idoso e cardiopata", "sinais de desidratação"],
+        "ajuste_renal": "Sem ajuste; em insuficiência cardíaca fracionar e reduzir o volume",
+        "observacoes": "A hidratação é o suporte central; se o paciente não tolerar a via oral, passar a cristaloide venoso",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide",
+        "agente": "solução fisiológica 0,9%",
+        "papel": "condicional",
+        "indicacao": "desidratação com intolerância à via oral ou vômitos persistentes",
+        "dose": "500 a 1.000 mL",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "conforme perdas; reavaliar após cada 500 mL",
+        "duracao": "24 a 48 h, até retomar a via oral",
+        "dose_maxima": "individualizar pelo balanço hídrico",
+        "contraindicacoes": ["sobrecarga de volume", "edema pulmonar", "insuficiência cardíaca descompensada"],
+        "efeitos_adversos": ["sobrecarga volêmica", "acidose hiperclorêmica", "flebite"],
+        "apresentacoes": ["bolsa 0,9% 500 mL", "bolsa 0,9% 1.000 mL", "frasco 0,9% 500 mL"],
+        "preparo": "Pronta para uso",
+        "tempo_infusao": "30 a 60 min por 500 mL, com reavaliação",
+        "monitorizacao": ["ausculta pulmonar e saturação", "diurese", "pressão arterial", "edema"],
+        "ajuste_renal": "Sem ajuste de dose; reduzir a velocidade em oligúria",
+        "ajuste_hepatico": "Cautela em cirrose com ascite",
+        "observacoes": "Não é rotina na zika; entra apenas na desidratação com falha da via oral",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico",
+        "agente": "ondansetrona",
+        "papel": "condicional",
+        "indicacao": "vômitos que impedem a hidratação oral",
+        "dose": "4 a 8 mg",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "8/8 h",
+        "duracao": "24 a 48 h",
+        "dose_maxima": "16 mg/dia",
+        "contraindicacoes": ["alargamento de QT", "uso de apomorfina", "alergia"],
+        "efeitos_adversos": ["cefaleia", "constipação", "prolongamento do QT", "tontura"],
+        "apresentacoes": ["ampola 4 mg/2 mL", "ampola 8 mg/4 mL", "comprimido 4 mg", "comprimido 8 mg", "solução oral 4 mg/5 mL"],
+        "preparo": "Uso direto; para IV diluir em 50 mL de SF 0,9% quando necessário",
+        "tempo_infusao": "2 a 5 min em bolus lento ou 15 min diluído",
+        "monitorizacao": ["frequência de vômitos e aceitação oral", "ECG se risco de QT", "cefaleia"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo de 8 mg/dia em Child-Pugh C",
+        "observacoes": "Usar apenas enquanto houver vômito; não prescrever de rotina em quem tolera líquidos",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "condicional",
+        "indicacao": "artralgia moderada apenas após afastar dengue, situação incomum na zika",
+        "dose": "400 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "1.200 mg/dia",
+        "contraindicacoes": ["dengue suspeita ou confirmada", "plaquetopenia abaixo de 50.000", "sangramento ativo", "úlcera péptica", "clearance abaixo de 30 mL/min", "gestação", "insuficiência cardíaca descompensada"],
+        "efeitos_adversos": ["sangramento digestivo", "lesão renal", "retenção hídrica", "aumento da pressão arterial"],
+        "apresentacoes": ["comprimido 400 mg", "comprimido 600 mg", "cápsula 200 mg", "suspensão 100 mg/5 mL"],
+        "preparo": "Uso direto, após a refeição",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["sinais de sangramento", "creatinina", "pressão arterial", "plaquetas"],
+        "ajuste_renal": "Evitar com clearance abaixo de 30 mL/min",
+        "ajuste_hepatico": "Evitar em cirrose descompensada",
+        "observacoes": "Na zika a artralgia costuma ser leve e não justifica AINE; se houver dúvida diagnóstica com dengue, o item deve ser bloqueado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina humana",
+        "papel": "resgate",
+        "indicacao": "síndrome de Guillain-Barré associada ao zika",
+        "dose": "0,4 g/kg/dia",
+        "unidade": "g/kg/dia",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "5 dias consecutivos",
+        "dose_maxima": "2 g/kg no total do ciclo",
+        "contraindicacoes": ["deficiência de IgA com anticorpos anti-IgA", "insuficiência renal grave", "trombose recente", "alergia a imunoglobulina"],
+        "efeitos_adversos": ["cefaleia", "reação infusional", "lesão renal", "trombose", "meningite asséptica"],
+        "apresentacoes": ["frasco 5 g/100 mL", "frasco 10 g/200 mL", "frasco 2,5 g/50 mL"],
+        "preparo": "Não diluir; infundir em acesso calibroso com equipo específico, iniciando a 0,5 mL/kg/h",
+        "tempo_infusao": "iniciar a 0,5 mL/kg/h e aumentar gradualmente até 2 mL/kg/h, conforme tolerância; ciclo de 8 a 12 h por dia",
+        "monitorizacao": ["pressão arterial e frequência cardíaca durante a infusão", "função renal antes e após o ciclo", "cefaleia e sinais meníngeos", "saturação e sinais de sobrecarga"],
+        "ajuste_renal": "Reduzir a velocidade em clearance abaixo de 60 mL/min; contraindicada em insuficiência renal grave",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Resgate da síndrome de Guillain-Barré, sempre com neurologia e internação; não tem papel no tratamento da zika não complicada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Notificação compulsória imediata", "detalhe": "zika e síndrome congênita são de notificação imediata; na gestante, comunicar vigilância e obstetrícia no mesmo dia e registrar o número da ficha no prontuário" },
+      { "medida": "Repouso relativo e hidratação", "detalhe": "2 a 3 litros de líquidos por dia em pequenos volumes; repouso enquanto houver exantema e febre, com retorno gradual às atividades" },
+      { "medida": "Controle vetorial e proteção individual", "detalhe": "repelente nas áreas expostas, telas, mosquiteiro e eliminação de criadouros; na primeira semana de viremia, evitar picada para interromper a cadeia" },
+      { "medida": "Preservativo nas relações sexuais", "detalhe": "usar em todas as relações por pelo menos 3 meses após a exposição ou o início dos sintomas do parceiro, e durante toda a gestação; registrar a orientação" },
+      { "medida": "Cuidados com a pele e o prurido", "detalhe": "banho morno e curto, compressa fria, hidratante sem perfume, unhas curtas e roupa de algodão; evitar água quente e sabonete abrasivo" },
+      { "medida": "Ultrassonografia obstétrica seriada na gestante", "detalhe": "mensal após a confirmação, avaliando perímetro cefálico, calcificações intracranianas, ventriculomegalia, artrogripose e líquido amniótico" },
+      { "medida": "Seguimento do neonato exposto", "detalhe": "ultrassom transfontanelar, fundo de olho e triagem auditiva antes da alta e acompanhamento do desenvolvimento até 12 meses" },
+      { "medida": "Educação sem falsa tranquilização", "detalhe": "explicar o que é zika, o risco real na gestação e o plano de investigação; não afirmar que está tudo bem antes do resultado e da ultrassonografia" }
+    ],
+    "procedimentos": [
+      { "nome": "Coleta de RT-PCR de soro e urina", "indicacao": "suspeita de zika, sobretudo em gestante com exantema", "tecnica": "soro até o quinto dia de sintomas e urina até o 14º dia, em tubo estéril, refrigerado e enviado ao laboratório de referência com a ficha de notificação", "complicacoes": "punção difícil, hemólise da amostra, resultado falso-negativo por coleta tardia" },
+      { "nome": "Ultrassonografia obstétrica seriada", "indicacao": "toda gestante com exantema ou confirmação de zika", "tecnica": "exame mensal com medida do perímetro cefálico, avaliação de ventrículos, calcificações, cerebelo, líquido amniótico e movimentos fetais", "complicacoes": "ansiedade materna, resultado operador-dependente, falso diagnóstico de alteração isolada" },
+      { "nome": "Punção lombar", "indicacao": "suspeita de meningoencefalite ou de Guillain-Barré com dissociação albumino-citológica", "tecnica": "BOX-07: decúbito lateral, espaço L3-L4, assepsia, coleta de três tubos para celularidade, proteína, glicose e cultura", "complicacoes": "cefaleia pós-punção, hematoma, herniação se hipertensão intracraniana sem imagem prévia" },
+      { "nome": "Eletroneuromiografia", "indicacao": "fraqueza, arreflexia ou suspeita de síndrome de Guillain-Barré", "tecnica": "estudo de condução nervosa e eletromiografia de agulha, com comparação contralateral e avaliação de nervos cranianos", "complicacoes": "desconforto, hematoma, resultado operador-dependente" },
+      { "nome": "Ultrassom transfontanelar e fundo de olho no neonato", "indicacao": "recém-nascido de mãe com exantema ou zika na gestação", "tecnica": "ultrassom pela fontanela com avaliação de ventrículos e calcificações; fundo de olho com pupilas dilatadas por oftalmologista", "complicacoes": "desconforto, midríase prolongada, necessidade de repetição em 30 dias" }
+    ],
+    "metas": [
+      "Gestante com exantema notificada e com RT-PCR coletado no mesmo dia do atendimento",
+      "Ultrassonografia obstétrica seriada realizada mensalmente até o parto em toda gestante com zika",
+      "Nenhum AINE ou AAS prescrito antes de afastar dengue",
+      "Prurido controlado, com escala de 0 a 10 abaixo de 3, em 48 h",
+      "Orientação sobre preservativo registrada em prontuário em todo caso confirmado",
+      "Neonato exposto com triagem auditiva, fundo de olho e ultrassom transfontanelar até 30 dias de vida"
+    ],
+    "fluxo": [
+      "Caracterizar o exantema: pruriginoso, máculo-papular, início precoce, com artralgia leve e conjuntivite não purulenta",
+      "Diferenciar: febre alta com dor retro-orbitária sugere dengue; dor articular incapacitante sugere chikungunya",
+      "Afastar dengue com NS1, RT-PCR e hemograma antes de qualquer AINE ou AAS",
+      "Iniciar sintomáticos: paracetamol, anti-histamínico para o prurido e hidratação oral",
+      "Perguntar sobre gestação em toda mulher em idade fértil e solicitar teste quando houver dúvida",
+      "Gestante com exantema: notificar imediatamente, colher RT-PCR de soro e urina, sorologia a partir do sexto dia e iniciar ultrassonografia seriada",
+      "Orientar preservativo, investigar o parceiro e registrar a orientação no prontuário",
+      "Vigiar sinais neurológicos, cardíacos e renais em toda reavaliação",
+      "Neonato exposto: avaliação ao nascer com ultrassom transfontanelar, fundo de olho e triagem auditiva",
+      "Alta: afebril, hidratado, prurido controlado, gestante com seguimento agendado e notificação registrada"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "gestante", "ajuste": "paracetamol como analgésico de escolha, AINE e AAS proibidos, notificação imediata, RT-PCR e ultrassonografia seriada com pré-natal de alto risco", "alerta": "microcefalia, calcificações intracranianas e alterações oculares e auditivas no feto; nunca tranquilizar sem investigação" },
+      { "populacao": "neonato", "ajuste": "avaliação ao nascer com perímetro cefálico, ultrassom transfontanelar, fundo de olho e triagem auditiva; seguimento do desenvolvimento até 12 meses", "alerta": "alterações silenciosas ao nascimento podem comprometer audição, visão e desenvolvimento" },
+      { "populacao": "idoso", "ajuste": "evitar anti-H1 de primeira geração pelo risco de queda e confusão; hidratação fracionada e revisão de interações", "alerta": "confusão mental e retenção urinária" },
+      { "populacao": "renal_cronico", "ajuste": "paracetamol como base, AINE contraindicado, anti-H1 com ajuste e cristaloide criterioso", "alerta": "lesão renal aguda sobre crônica" },
+      { "populacao": "imunossuprimido", "ajuste": "investigar coinfecção, evitar corticoide e reavaliar de 48/48 h", "alerta": "apresentação atípica e evolução prolongada" },
+      { "populacao": "parceiro_sexual", "ajuste": "orientar preservativo por pelo menos 3 meses após exposição ou sintomas e durante toda a gestação do casal", "alerta": "transmissão sexual comprovada, inclusive a partir de paciente assintomático" },
+      { "populacao": "cardiopata", "ajuste": "evitar AINE e cristaloide em excesso; eletrocardiograma e troponina se dor torácica ou palpitação", "alerta": "miocardite e descompensação volêmica" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "RT-PCR para zika em soro e urina", "indicacao": "soro até o quinto dia e urina até o 14º dia de sintomas", "o_que_muda": "confirma a infecção na fase aguda e é o exame que define o seguimento da gestante" },
+        { "nome": "sorologia IgM e IgG com teste de neutralização (PRNT)", "indicacao": "a partir do sexto dia de sintomas", "o_que_muda": "confirma casos tardios e separa zika de dengue, que tem reação cruzada entre flavivírus" },
+        { "nome": "NS1 e RT-PCR para dengue", "indicacao": "todo caso com exantema e febre", "o_que_muda": "afasta dengue e libera ou bloqueia o uso de AINE" },
+        { "nome": "hemograma com plaquetas", "indicacao": "todos, na primeira avaliação", "o_que_muda": "plaquetopenia e leucopenia apontam dengue; a zika costuma ter hemograma pouco alterado" },
+        { "nome": "ultrassonografia obstétrica seriada", "indicacao": "gestante com exantema ou zika confirmada", "o_que_muda": "identifica microcefalia, calcificações, ventriculomegalia e artrogripose e define o local do parto" },
+        { "nome": "creatinina, ureia e exame de urina", "indicacao": "oligúria, edema, hipertensão ou uso de AINE", "o_que_muda": "detecta lesão renal e glomerulonefrite e contraindica anti-inflamatório" },
+        { "nome": "eletroneuromiografia e capacidade vital", "indicacao": "fraqueza ou arreflexia", "o_que_muda": "confirma Guillain-Barré e antecipa necessidade de suporte ventilatório" }
+      ],
+      "evitar": [
+        { "exame": "prescrever AINE ou AAS antes de afastar dengue", "motivo": "risco de sangramento em dengue coinfectada, no mesmo território e no mesmo vetor" },
+        { "exame": "sorologia isolada no primeiro dia de febre", "motivo": "falso-negativo na fase virêmica; nesse período o exame útil é o RT-PCR" },
+        { "exame": "repetir a sorologia no mesmo dia para confirmar", "motivo": "a IgM só é confiável a partir do sexto dia e a repetição não muda a conduta imediata" },
+        { "exame": "ultrassonografia precoce isolada para tranquilizar a gestante", "motivo": "as alterações estruturais aparecem tardiamente; um exame normal no início não exclui síndrome congênita" },
+        { "exame": "amniocentese de rotina para diagnóstico fetal", "motivo": "risco de perda gestacional sem mudança de conduta comprovada" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["beber 2 a 3 litros de líquidos por dia, em pequenos volumes", "usar paracetamol para febre e dor e anti-histamínico para o prurido", "banho morno e compressa fria nas áreas que coçam", "usar repelente, telas e mosquiteiro e eliminar água parada", "usar preservativo em todas as relações", "retornar em 48 a 72 h e levar a ficha de notificação"],
+      "evitar": ["AAS, nimesulida, diclofenaco e qualquer anti-inflamatório por conta própria", "coçar as lesões e usar água quente no banho", "automedicação com corticoide", "dirigir após anti-histamínico que dá sono", "adiar a consulta pré-natal em caso de exantema"],
+      "retorno": ["fraqueza nas pernas, formigamento ou dificuldade para caminhar", "dor de cabeça intensa, rigidez de nuca ou convulsão", "sangramento de gengiva, nariz ou manchas roxas", "falta de ar, palpitação ou dor no peito", "diminuição da urina ou inchaço", "gestante: qualquer novo exantema, febre ou redução dos movimentos fetais"]
+    },
+    "efeitos_adversos": [
+      { "agente": "paracetamol", "efeitos": ["hepatotoxicidade", "elevação de transaminases"], "observacao": "respeitar o teto de 3 g/dia e suspender se transaminases acima de 3 vezes o limite" },
+      { "agente": "dipirona", "efeitos": ["hipotensão em infusão rápida", "agranulocitose"], "observacao": "infundir em 5 min e evitar no terceiro trimestre da gestação" },
+      { "agente": "loratadina", "efeitos": ["cefaleia", "boca seca", "sonolência leve"], "observacao": "orientar sobre sonolência e reduzir em hepatopatia grave" },
+      { "agente": "dexclorfeniramina", "efeitos": ["sonolência", "retenção urinária", "visão turva"], "observacao": "suspender se retenção urinária ou confusão em idoso" },
+      { "agente": "ondansetrona", "efeitos": ["prolongamento do QT", "cefaleia", "constipação"], "observacao": "eletrocardiograma se risco de QT e não associar a outras drogas que prolongam o intervalo" },
+      { "agente": "ibuprofeno", "efeitos": ["sangramento digestivo", "lesão renal", "retenção hídrica"], "observacao": "só após afastar dengue; suspender se plaquetas caírem ou houver sangramento" },
+      { "agente": "imunoglobulina humana", "efeitos": ["cefaleia", "reação infusional", "lesão renal", "trombose"], "observacao": "infundir em velocidade progressiva, hidratar e dosar creatinina antes e após o ciclo" }
+    ],
+    "conduta_efeito_adverso": [
+      "AINE ou AAS em uso com dengue confirmada: suspender imediatamente, dosar hemograma e coagulograma e internar para observação",
+      "Sonolência excessiva por anti-H1: suspender a droga, orientar a não dirigir e trocar para loratadina",
+      "Retenção urinária em idoso por anti-H1: suspender e avaliar cateterismo se bexigoma",
+      "Reação infusional por imunoglobulina: reduzir a velocidade, usar anti-histamínico e retomar quando estável",
+      "Elevação de creatinina após imunoglobulina: suspender, hidratar e reavaliar em 48 h",
+      "Hepatotoxicidade por paracetamol: suspender, dosar transaminases e coagulograma e avaliar N-acetilcisteína em ingestão excessiva",
+      "Registrar o evento, comunicar a equipe e reescrever a prescrição antes de liberar o paciente"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "paracetamol 750 mg", "dose": "750 mg", "via": "VO", "frequencia": "6/6 h se dor ou febre", "duracao": "5 dias", "condicao": "primeira escolha, inclusive na gestação", "confirmar_apresentacao_local": true },
+          { "item": "loratadina 10 mg", "dose": "10 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "7 dias", "condicao": "prurido do exantema", "confirmar_apresentacao_local": true },
+          { "item": "dexclorfeniramina 2 mg", "dose": "2 mg", "via": "VO", "frequencia": "à noite se prurido intenso", "duracao": "5 dias", "condicao": "prurido que atrapalha o sono", "confirmar_apresentacao_local": true },
+          { "item": "solução de reidratação oral sachê", "dose": "1 sachê em 1 litro de água", "via": "VO", "frequencia": "ao longo do dia, 2 a 3 litros/dia", "duracao": "5 dias", "condicao": "hidratação domiciliar", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "paracetamol", "dose": "750 mg", "via": "VO", "frequencia": "6/6 h", "monitorizacao": "dor, temperatura e transaminases", "confirmar_apresentacao_local": true },
+          { "item": "ondansetrona", "dose": "4 mg", "via": "IV", "frequencia": "8/8 h", "monitorizacao": "vômitos, aceitação oral e QT", "confirmar_apresentacao_local": true },
+          { "item": "solução fisiológica 0,9%", "dose": "500 a 1.000 mL", "via": "IV", "frequencia": "conforme perdas", "monitorizacao": "ausculta pulmonar, diurese e edema", "confirmar_apresentacao_local": true },
+          { "item": "imunoglobulina humana", "dose": "0,4 g/kg/dia", "via": "IV", "frequencia": "1x/dia por 5 dias", "monitorizacao": "pressão, função renal e reação infusional", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["RT-PCR zika soro", "RT-PCR zika urina", "sorologia zika IgM e IgG", "PRNT", "NS1", "RT-PCR dengue", "hemograma com plaquetas", "creatinina", "ultrassonografia obstétrica", "ultrassom transfontanelar", "triagem auditiva", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de zika, necessitando de afastamento de suas atividades pelo período de ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; afastamento enquanto houver exantema e febre"
+      },
+      "encaminhamento": {
+        "campos": ["destino", "motivo", "resumo com data do exantema, idade gestacional, exames coletados, seguimento de imagem e notificação", "prioridade", "horário do contato"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com quadro de zika, exantema em ___, artralgia ___, gestação ___, RT-PCR coletado em ___, sorologia ___, ultrassonografia ___ e notificação ___."
+      }
+    },
+    "anamnese": {
+      "campos": ["data de início do exantema", "prurido", "febre", "conjuntivite", "artralgia", "gestação e idade gestacional", "exantema prévio na gestação", "parceiro com exposição", "uso de AAS ou AINE", "área de transmissão", "sinais neurológicos"],
+      "texto_template": "Paciente com exantema iniciado em ___, prurido ___, febre ___, conjuntivite ___, artralgia ___, gestação ___ com idade gestacional ___, exantema prévio ___, parceiro com exposição ___, uso de AAS ou AINE ___, área de transmissão ___ e sinais neurológicos ___."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais", "temperatura", "exantema: distribuição e aspecto", "conjuntivite", "articulações", "força muscular e reflexos", "sinais meníngeos", "ausculta cardíaca e pulmonar", "altura uterina e perímetro abdominal na gestante"],
+      "texto_template": "Sinais vitais ___, temperatura ___, exantema ___ com distribuição ___, conjuntivite ___, articulações ___, força e reflexos ___, sinais meníngeos ___, ausculta ___ e altura uterina ___."
+    },
+    "referencias": [
+      { "tipo": "protocolo_ministerio_saude", "o_que_verificar": "protocolo de vigilância do zika e da síndrome congênita, com fluxo laboratorial e seguimento da gestante", "verificar": true },
+      { "tipo": "sociedade_obstetricia", "o_que_verificar": "seguimento ultrassonográfico da gestante com zika e conduta no parto", "verificar": true },
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de notificação imediata, coleta de RT-PCR e referência de pré-natal de alto risco", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações de paracetamol, anti-histamínicos e imunoglobulina disponíveis", "verificar": true },
+      { "tipo": "vigilancia_epidemiologica", "o_que_verificar": "notificação imediata no SINAN e critérios de confirmação laboratorial por município", "verificar": true },
+      { "tipo": "literatura", "o_que_verificar": "transmissão sexual, tempo de permanência do vírus no sêmen e uso de preservativo", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-INF09-01", "tipo": "aine_sem_afastar_dengue", "gatilho": "AAS, AINE ou corticoide prescrito com dengue não afastada", "severidade": "grave", "mensagem": "Zika e dengue circulam no mesmo vetor: AINE só com NS1 e RT-PCR negativos.", "acao": "bloquear item e sugerir paracetamol", "bloqueante": true },
+      { "id": "SA-INF09-02", "tipo": "gestante_sem_investigacao", "gatilho": "gestante com exantema sem notificação, RT-PCR ou sorologia solicitados", "severidade": "grave", "mensagem": "Gestante com exantema exige notificação imediata e investigação laboratorial: risco de microcefalia.", "acao": "bloquear alta e acionar vigilância e obstetrícia", "bloqueante": true },
+      { "id": "SA-INF09-03", "tipo": "gestante_sem_seguimento_imagem", "gatilho": "gestante com zika confirmada ou suspeita sem ultrassonografia seriada agendada", "severidade": "grave", "mensagem": "Sem ultrassonografia seriada não há como detectar microcefalia e síndrome congênita.", "acao": "bloquear fechamento do atendimento até agendar", "bloqueante": true },
+      { "id": "SA-INF09-04", "tipo": "tranquilizacao_sem_exame", "gatilho": "orientação de que não há risco em gestante com exantema sem resultado de exame", "severidade": "grave", "mensagem": "Não tranquilizar gestante sem investigação: o exame normal inicial não exclui síndrome congênita.", "acao": "alertar e revisar a conduta", "bloqueante": false },
+      { "id": "SA-INF09-05", "tipo": "sindrome_neurologica", "gatilho": "fraqueza ascendente, arreflexia ou sinais meníngeos sem internação", "severidade": "grave", "mensagem": "Suspeita de Guillain-Barré exige internação e monitorização de capacidade vital.", "acao": "acionar internação e neurologia", "bloqueante": false },
+      { "id": "SA-INF09-06", "tipo": "preservativo_nao_orientado", "gatilho": "caso confirmado de zika sem orientação de preservativo registrada", "severidade": "precaucao", "mensagem": "Transmissão sexual comprovada: orientar preservativo por 3 meses e durante a gestação.", "acao": "alertar e emitir orientação impressa", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["Ministério da Saúde", "ANVISA", "protocolo institucional", "literatura", "vigilância epidemiológica"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Criação do registro a partir do catálogo mestre.", "data": null },
+        { "versao": "0.2.0", "descricao": "Primeira versão no padrão de diversidade.", "data": null }
+      ]
+    }
+  }
+}

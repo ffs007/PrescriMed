@@ -1,0 +1,143 @@
+{
+  "id": "asma",
+  "nome": "Asma — exacerbação",
+  "cat": "Respiratório",
+  "alias": "asma crise bronquica broncoespasmo chiado no peito bombinha",
+  "cid": [
+    [
+      "J45",
+      "Asma"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "GINA 2024; SBPT — exacerbação"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Gravidade: FR, FC, SpO2, fala (frases/palavras), uso de músculos acessórios, nível de consciência. GRAVE: salbutamol nebulizado/dispensador 4-10 jatos com espaçador a cada 20 min na 1ª hora + ipratrópio + corticoide sistêmico JÁ (efeito em 4-6 h: não espere). Sulfato de magnésio EV na grave. SpO2 < 90%, silêncio auscultatório, exaustão, PCO2 subindo = IOT. Cuidado: 'crise que melhora' com FR caindo e esforço subindo = fadiga. Corticoide VO = EV em eficácia (usar VO se tolera). Alta: continuar corticoide 5-7 dias, revisar técnica e controle (a crise é falha do controle: marcar seguimento).",
+  "redFlags": [
+    "Silêncio auscultatório, cianose, exaustão, Glasgow caindo — IOT iminente: chamar anestesia",
+    "SpO2 < 90% persistente apesar do tratamento — oxigenoterapia + reavaliar continuamente",
+    "Pico de fluxo < 33% do previsto/pessoal — grave",
+    "Crise fatal prévia, internação prévia por asma, uso de > 2 bombinhas de resgate/mês — alto risco: considerar internação",
+    "Criança pequena que para de comer/mamar e fica 'quietinha' — deterioração",
+    "Não responde a 3 doses de salbutamol na 1ª hora — internar"
+  ],
+  "naoUsar": [
+    "Aminofilina de primeira linha (segurança inferior)",
+    "Sedativos/ansiolíticos",
+    "Antibiótico de rotina na asma",
+    "Corticoide tópico isolado na crise",
+    "Espirômetro na crise grave (usar pico de fluxo)"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Broncodilatador de resgate (sempre)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "salbutamol",
+            "pos": "2 a 4 jatos com ESPAÇADOR a cada 4–6 h por 5–7 dias pós-crise (na crise aguda: 4–10 jatos a cada 20 min na 1ª hora); 1 jato = agitar, expirar, apertar e inspirar lento, prender 10 s",
+            "ped": "Mesma técnica com máscara/espaçador; lactente: 2 jatos 4/4 h",
+            "motivo": "Resgate — sempre na receita"
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide sistêmico (a crise pede)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "40–50 mg VO 1x/dia (adulto) por 5–7 dias, de manhã, sem desmame em curso curto",
+            "ped": "1–2 mg/kg/dia (máx 40 mg) por 3–5 dias",
+            "motivo": "Eficácia VO = EV; começa a agir em 4–6 h"
+          },
+          {
+            "base": "prednisolona",
+            "pos": "40 mg VO 1x/dia por 5 dias (líquido pediátrico 1–2 mg/kg/dia)",
+            "ped": "1–2 mg/kg/dia × 3–5 dias",
+            "motivo": "Apresentação pediátrica"
+          },
+          {
+            "base": "dexametasona",
+            "pos": "10–16 mg VO (adulto) em 1–2 doses em 48 h — esquema curto alternativo",
+            "ped": "0,3 mg/kg/dia × 2 dias",
+            "motivo": "Adesão melhor"
+          }
+        ]
+      },
+      {
+        "nome": "Controle (definir seguimento — não iniciar beclometasona sozinho sem orientação de técnica)",
+        "semPreset": true,
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ctrl_asma",
+              "n": "Corticoide inalatório de manutenção",
+              "ap": "",
+              "pos": "A exacerbação é sinal de controle ruim: marcar consulta de asma em 7 dias para iniciar/ajustar corticoide inalatório + revisar técnica e adesão. Não basta tratar a crise."
+            },
+            "motivo": "GINA: toda crise → rever controle"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Plano de ação escrito",
+              "ap": "",
+              "pos": "1) Pico de fluxo em casa: valores pessoais. 2) Se piora: salbutamol 4 jatos até 3x em 1 h; se não melhora → prednisona (se combinado) e PS. 3) Azul de lábios/fala em palavras → 192. Evitar gatilhos (fumaça, mofo, pelos, AINE se sensível); bombinha de resgate NÃO pode acabar; revisar técnica no espelho."
+            },
+            "motivo": "Plano escrito reduz re-internação"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Crise — 1ª hora",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "fenoterol_neb",
+            "motivo": "Nebulização 20/20 min na 1ª hora (alternativa: salbutamol spray 4-10 jatos + espaçador)"
+          },
+          {
+            "linha": 1,
+            "hosp": "ipratropio_neb",
+            "motivo": "0,5 mg associado às neblizações da 1ª hora"
+          },
+          {
+            "linha": 1,
+            "hosp": "hidrocortisona_ev",
+            "motivo": "500 mg EV 6/6h (ou prednisona VO 50 mg se tolerando — mesma eficácia)"
+          },
+          {
+            "linha": 1,
+            "hosp": "sulfato_mg",
+            "motivo": "2 g EV em 20 min na grave (adjuvante)"
+          }
+        ]
+      }
+    ]
+  }
+}

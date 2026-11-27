@@ -1,0 +1,338 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 100% 98%;
+    --foreground: 207 36% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 207 36% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 36% 11%;
+    --primary: 199 100% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 68% 41%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 216 100% 96%;
+    --muted-foreground: 208 10% 28%;
+    --accent: 214 89% 94%;
+    --accent-foreground: 200 100% 22%;
+    --destructive: 0 75% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 40 73% 46%;
+    --warning-foreground: 210 24% 16%;
+    --success: 147 51% 36%;
+    --success-foreground: 0 0% 100%;
+    --cyan: 192 100% 55%;
+    --cyan-foreground: 0 0% 100%;
+    --regulatory: 263 51% 48%;
+    --regulatory-foreground: 0 0% 100%;
+    --border: 214 14% 78%;
+    --input: 214 14% 78%;
+    --ring: 202 65% 40%;
+    --radius: 0.25rem;
+    --paper: 225 100% 98%;
+    --paper-alt: 216 100% 96%;
+    --ink: 207 36% 11%;
+    --ink-muted: 208 10% 28%;
+    --ink-faint: 211 17% 57%;
+    --canon-blue: 199 100% 27%;
+    --receipt-yellow: 45 95% 50%;
+    --receipt-yellow-soft: 45 95% 95%;
+    --receipt-blue: 210 80% 45%;
+    --receipt-blue-soft: 210 80% 95%;
+    --receipt-controlled: 213 82% 42%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 207 36% 11%;
+    --sidebar-primary: 199 100% 27%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 89% 94%;
+    --sidebar-accent-foreground: 200 100% 22%;
+    --sidebar-border: 214 50% 92%;
+    --sidebar-ring: 202 65% 40%;
+    --hero-gradient: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --hero-gradient-subtle: radial-gradient(ellipse at 85% 10%, hsl(var(--primary) / 0.10), transparent 55%), linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--primary) / 0.06) 100%);
+    --card-shadow: 0 1px 2px hsl(219 42% 14% / 0.05), 0 8px 24px -16px hsl(213 82% 35% / 0.22);
+    --card-shadow-hover: 0 12px 28px -16px hsl(213 82% 35% / 0.3), 0 0 0 1px hsl(213 82% 52% / 0.12);
+    --paper-shadow: 0 1px 2px hsl(219 42% 14% / 0.05), 0 8px 24px -16px hsl(213 82% 35% / 0.2);
+    --pricing-popular-border: hsl(213 82% 52%);
+    --section-alt-bg: hsl(210 29% 95%);
+    --glow: 0 0 60px hsl(187 87% 42% / 0.12);
+  }
+
+  .dark {
+    --background: 217 49% 8%;
+    --foreground: 220 15% 95%;
+    --card: 218 35% 12%;
+    --card-foreground: 220 15% 95%;
+    --popover: 224 25% 10%;
+    --popover-foreground: 220 15% 95%;
+    --primary: 202 75% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 230 25% 16%;
+    --secondary-foreground: 230 50% 80%;
+    --muted: 224 15% 16%;
+    --muted-foreground: 220 10% 58%;
+    --accent: 192 72% 48%;
+    --accent-foreground: 217 49% 8%;
+    --destructive: 4 70% 62%;
+    --destructive-foreground: 220 30% 98%;
+    --warning: 40 80% 56%;
+    --warning-foreground: 224 25% 6%;
+    --border: 220 15% 95% / 0.1;
+    --input: 220 15% 95% / 0.15;
+    --ring: 226 100% 71%;
+    --sidebar-background: 224 25% 8%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 213 56% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 25% 16%;
+    --sidebar-accent-foreground: 230 50% 80%;
+    --sidebar-border: 220 15% 95% / 0.1;
+    --sidebar-ring: 213 56% 60%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'tnum' 1, 'zero' 1, 'cv05' 1, 'cv08' 1;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  .font-serif {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Subtle focus ring using design tokens */
+  :focus-visible {
+    outline: 2px solid hsl(var(--canon-blue) / 0.5);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--hero-gradient);
+  }
+
+  .section-alt {
+    background-color: var(--section-alt-bg);
+  }
+
+  .bg-hero-gradient {
+    background-image: var(--hero-gradient);
+  }
+
+  .bg-hero-gradient-subtle {
+    background-image: var(--hero-gradient-subtle);
+  }
+
+  .bg-paper {
+    background-color: hsl(var(--paper));
+  }
+
+  .bg-paper-alt {
+    background-color: hsl(var(--paper-alt));
+  }
+
+  .text-ink {
+    color: hsl(var(--ink));
+  }
+
+  .text-ink-muted {
+    color: hsl(var(--ink-muted));
+  }
+
+  .text-ink-faint {
+    color: hsl(var(--ink-faint));
+  }
+
+  .text-canon-blue {
+    color: hsl(var(--canon-blue));
+  }
+
+  .border-canon-blue {
+    border-color: hsl(var(--canon-blue));
+  }
+
+  .bg-canon-blue {
+    background-color: hsl(var(--canon-blue));
+  }
+
+  .hover\:bg-canon-blue\/90:hover {
+    background-color: hsl(var(--canon-blue) / 0.9);
+  }
+
+  .border-ink-soft {
+    border-color: hsl(var(--ink) / 0.1);
+  }
+
+  .border-ink-faint {
+    border-color: hsl(var(--ink) / 0.05);
+  }
+
+  .shadow-paper {
+    box-shadow: var(--paper-shadow);
+  }
+
+  .tracking-editorial {
+    letter-spacing: 0;
+  }
+}
+
+@layer components {
+  .card-elevated {
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .card-elevated:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
+  .glass { background: hsl(var(--card) / 0.88); backdrop-filter: blur(16px); border: 1px solid hsl(var(--border)); }
+  .clinical-panel { border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--card)); box-shadow: var(--card-shadow); }
+  .clinical-eyebrow { font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
+  .clinical-action { display: flex; min-height: 7.5rem; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--card)); padding: 1rem; text-align: center; font-size: 0.75rem; font-weight: 600; box-shadow: var(--card-shadow); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .clinical-action:hover { transform: translateY(-2px); box-shadow: var(--card-shadow-hover); }
+  .clinical-icon { display: inline-flex; height: 2.5rem; width: 2.5rem; align-items: center; justify-content: center; border-radius: 9999px; }
+  .clinical-icon-primary { color: hsl(var(--primary)); background: hsl(var(--primary) / 0.12); }
+  .clinical-icon-success { color: hsl(var(--success)); background: hsl(var(--success) / 0.12); }
+  .clinical-icon-warning { color: hsl(var(--warning)); background: hsl(var(--warning) / 0.14); }
+  .clinical-icon-critical { color: hsl(var(--destructive)); background: hsl(var(--destructive) / 0.12); }
+  .clinical-icon-cyan { color: hsl(var(--cyan)); background: hsl(var(--cyan) / 0.12); }
+  .clinical-icon-regulatory { color: hsl(var(--regulatory)); background: hsl(var(--regulatory) / 0.12); }
+  .clinical-badge { border-radius: 9999px; padding: 0.125rem 0.5rem; font-size: 0.6875rem; font-weight: 700; }
+  .clinical-badge-primary { color: hsl(var(--primary)); background: hsl(var(--primary) / 0.12); }
+  .clinical-badge-success { color: hsl(var(--success)); background: hsl(var(--success) / 0.12); }
+  .clinical-badge-warning { color: hsl(var(--warning)); background: hsl(var(--warning) / 0.14); }
+  .clinical-badge-critical { color: hsl(var(--destructive)); background: hsl(var(--destructive) / 0.12); }
+  .clinical-badge-cyan { color: hsl(var(--cyan)); background: hsl(var(--cyan) / 0.12); }
+  .clinical-badge-regulatory { color: hsl(var(--regulatory)); background: hsl(var(--regulatory) / 0.12); }
+  @keyframes reveal-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .anim-reveal { animation: reveal-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+  .anim-delay-1 { animation-delay: 0.2s; }
+  .anim-delay-2 { animation-delay: 0.4s; }
+  .anim-delay-3 { animation-delay: 0.6s; }
+  .anim-delay-4 { animation-delay: 0.8s; }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  html, body {
+    background: white !important;
+    color: #1a1a1a !important;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+    font-size: 11pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print\:hidden,
+  aside,
+  header,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  body > div > div > div:not(.prescription-print-area):not(:has(.prescription-print-area)) {
+    /* Keep parent containers visible */
+  }
+
+  .prescription-print-area {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+
+  .prescription-header h2 {
+    font-size: 16pt !important;
+    color: #1a1a1a !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .prescription-header p {
+    color: #333 !important;
+  }
+
+  .prescription-patient-info {
+    border: 1px solid #999 !important;
+    border-radius: 4px !important;
+    padding: 10px 14px !important;
+    background: transparent !important;
+  }
+
+  .prescription-patient-info p {
+    color: #1a1a1a !important;
+  }
+
+  .space-y-5 > div,
+  .space-y-4 > div {
+    page-break-inside: avoid;
+  }
+
+  .prescription-signature {
+    margin-top: 60px !important;
+  }
+
+  .prescription-signature div {
+    color: #1a1a1a !important;
+  }
+
+  * {
+    color: #1a1a1a !important;
+  }
+
+  .text-primary {
+    color: #1a1a1a !important;
+  }
+
+  strong {
+    font-weight: 700 !important;
+  }
+
+  .print\:break-before-page {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  /* Receita de Controle Especial: duas vias na mesma folha A4 paisagem.
+     Garante que o bloco inteiro caiba em uma única página. */
+  .prescription-template-controlled {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  .prescription-template-controlled > div {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}

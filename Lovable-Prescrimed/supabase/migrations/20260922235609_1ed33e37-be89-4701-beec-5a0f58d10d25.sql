@@ -1,0 +1,1 @@
+ALTER FUNCTION curadoria.nome_negocio_normalizado(text) SET search_path = curadoria, public, extensions, pg_temp;

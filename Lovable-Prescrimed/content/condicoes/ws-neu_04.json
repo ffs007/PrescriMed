@@ -1,0 +1,583 @@
+{
+  "id": "ws-neu_04",
+  "nome": "Síncope e perda transitória de consciência",
+  "cat": "Emergência",
+  "alias": "sincope e perda transitoria de consciencia sincope desmaio perda de consciencia lipotimia sincope vasovagal sincope reflexa sincope ortostatica sincope cardiaca perda transitoria de consciencia",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (NEU-04_sincope.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] sociedade_cardiologia: diretriz de síncope da SBC e da ESC: estratificação de risco, critérios de internação e indicação de marca-passo",
+      "[verificar] acls: algoritmo de bradicardia sintomática com atropina, marca-passo e infusão de catecolamina",
+      "[verificar] protocolo_institucional: fluxo de síncope no pronto atendimento, disponibilidade de telemetria, tilt table e monitor implantável",
+      "[verificar] anvisa: apresentações e diluições de atropina, adrenalina, isoproterenol, midodrina e fludrocortisona"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "NEU-04 em 2026-11-27",
+    "fundido_workspace": "NEU-04 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: síncope durante esforço físico ou em decúbito -> internar em unidade monitorada e solicitar ecocardiograma; palpitação ou desconforto torácico imediatamente antes da perda -> monitorização contínua e ECG seriado; avaliar marca-passo ou desfibrilador; ECG alterado: bloqueio atrioventricular, QRS largo, QT longo, Brugada, ondas Q ou inversão de T -> internar, telemetria e avaliação por cardiologia; história familiar de morte súbita antes dos 40 anos ou cardiomiopatia familiar -> avaliação especializada e rastreio familiar. 1) Confirmar que houve perda real de consciência: testemunha, trauma, duração e recuperação espontânea e completa 2) Separar síncope de convulsão e de causa psicogênica: pródromo, movimentos, mordida de língua, liberação esfincteriana e confusão pós-ictal 3) ECG de 12 derivações, glicemia capilar, exame neurológico e aferição de pressão em ortostatismo em todo paciente 4) Buscar critério de alto risco: esforço, decúbito, palpitação antes, cardiopatia, história familiar de morte súbita e ECG alterado 5) Alto risco: internação em unidade monitorada, telemetria e avaliação de cardiologia, sem alta 6) Baixo risco com pródromo e ortostatismo normal: orientação, hidratação, sal, meias e manobras de contrapressão, alta com retorno em 72 horas 7) Ortostatismo positivo: revisar e suspender o fármaco culpado, repor volume e sal, e reavaliar antes de associar fludrocortisona ou midodrina 8) Bradicardia sintomática: atropina, marca-passo transcutâneo e ",
+  "redFlags": [
+    "síncope durante esforço físico ou em decúbito -> internar em unidade monitorada e solicitar ecocardiograma",
+    "palpitação ou desconforto torácico imediatamente antes da perda -> monitorização contínua e ECG seriado; avaliar marca-passo ou desfibrilador",
+    "ECG alterado: bloqueio atrioventricular, QRS largo, QT longo, Brugada, ondas Q ou inversão de T -> internar, telemetria e avaliação por cardiologia",
+    "história familiar de morte súbita antes dos 40 anos ou cardiomiopatia familiar -> avaliação especializada e rastreio familiar",
+    "cardiopatia estrutural conhecida com síncope -> internação obrigatória, sem alta do pronto atendimento",
+    "trauma craniano, fratura ou acidente de trânsito durante a perda -> avaliar trauma e manter observação",
+    "dispneia, dor pleurítica, hipoxemia ou assimetria de panturrilha -> angiotomografia de tórax e anticoagulação",
+    "uso de anti-hipertensivo, diurético, betabloqueador ou vasodilatador com hipotensão postural -> revisar e suspender o fármaco culpado antes de investigar mais"
+  ],
+  "naoUsar": [
+    "insuficiência cardíaca descompensada",
+    "edema agudo de pulmão",
+    "anúria sem diálise",
+    "hipertensão intracraniana",
+    "hipertensão não controlada",
+    "insuficiência cardíaca",
+    "edema de qualquer causa",
+    "doença renal crônica avançada"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "Beber 2 a 3 L de água por dia e aumentar o sal conforme orientação"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "Dirigir até a investigação concluída"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Eletrólito",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "soro_nasal",
+            "pos": "6 a 10 g/dia de cloreto de sódio (cerca de 2,4 a 4 g de sódio). Via VO. Distribuído nas refeições ou em cápsulas ao longo do dia. Contínuo, com reavaliação em 4 semanas.",
+            "posTodas": true,
+            "motivo": "síncope ortostática e vasovagal recorrente, como parte do tratamento não farmacológico (1a linha) síncope ortostática sem hipertensão ou edema",
+            "nota": "Diluir em água ou suco para reduzir o desconforto gástrico - monitorar: pressão arterial sentado e em ortostatismo; monitorar: peso e edema; monitorar: sódio sérico em 4 semanas; monitorar: adesão à ingestão hídrica · NÃO: hipertensão não controlada; insuficiência cardíaca; edema de qualquer causa; doença renal crônica avançada; cirrose com ascite · Obs: É a intervenção mais eficaz e mais barata na síncope ortostática; só funciona junto com 2 a 3 L de água por dia e com a retirada do fármaco que derruba a pressão · Renal: Evitar em TFG abaixo de 30 mL/min",
+            "dose": {
+              "texto": "6 a 10 g/dia de cloreto de sódio (cerca de 2,4 a 4 g de sódio); distribuído nas refeições ou em cápsulas ao longo do dia; contínuo, com reavaliação em 4 semanas; max. 10 g/dia, individualizando em hipertenso e cardiopata",
+              "status": "ok",
+              "valor": 6,
+              "valor_max": 10,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Mineralocorticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fludrocortisona",
+              "n": "Fludrocortisona",
+              "ap": "comprimido 0,1 mg",
+              "q": "",
+              "pos": "0,1 mg. Via VO. 1x/dia pela manhã. 4 a 8 semanas, com reavaliação antes de manter."
+            },
+            "motivo": "síncope ortostática e vasovagal recorrente refratárias a água, sal e meia de compressão (condicional) síncope vasovagal ou ortostática refratária",
+            "nota": "Uso direto pela manhã, com alimento - monitorar: pressão arterial e edema; monitorar: potássio e magnésio em 2 semanas; monitorar: peso; monitorar: glicemia · NÃO: hipertensão arterial; insuficiência cardíaca; hipocalemia; diabetes descompensado · Obs: Eficácia limitada nos ensaios e risco de hipertensão em idoso: reservar para casos selecionados e reavaliar em 4 semanas. Não retirar de forma abrupta · Renal: Reduzir a dose e monitorar potássio em doença renal crônica",
+            "dose": {
+              "texto": "0,1 mg; 1x/dia pela manhã; 4 a 8 semanas, com reavaliação antes de manter; max. 0,3 mg/dia",
+              "status": "ok",
+              "valor": 0.1,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.3,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Alfa agonista",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "midodrina",
+              "n": "Midodrina",
+              "ap": "comprimido 2,5 mg e 5 mg",
+              "q": "",
+              "pos": "2,5 a 5 mg. Via VO. 8/8 h, com a última dose até 4 horas antes de deitar. 4 a 8 semanas, com reavaliação."
+            },
+            "motivo": "síncope ortostática com hipotensão refratária e síncope vasovagal recorrente (condicional) síncope ortostática refratária",
+            "nota": "Uso direto - monitorar: pressão arterial sentado e em decúbito; monitorar: frequência cardíaca; monitorar: sintomas de hipertensão supina; monitorar: resíduo vesical · NÃO: hipertensão arterial; bradicardia; retenção urinária; feocromocitoma; glaucoma de ângulo fechado; hipertireoidismo · Obs: Elevar a cabeceira em 10 a 20 graus à noite para evitar hipertensão supina. Não usar antes de deitar e não associar a outro vasoconstritor · Renal: Reduzir a dose em TFG abaixo de 30 mL/min",
+            "dose": {
+              "texto": "2,5 a 5 mg; 8/8 h, com a última dose até 4 horas antes de deitar; 4 a 8 semanas, com reavaliação; max. 30 mg/dia (10 mg 8/8 h)",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "ISRS",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_paroxetina",
+            "pos": "10 a 20 mg. Via VO. 1x/dia pela manhã. 6 a 12 meses.",
+            "posTodas": true,
+            "motivo": "síncope vasovagal recorrente refratária a medidas não farmacológicas, em paciente selecionado (condicional) síncope vasovagal recorrente refratária",
+            "nota": "Uso direto pela manhã, com alimento - monitorar: sódio sérico em idoso; monitorar: humor e ideação suicida no início; monitorar: frequência das síncopes",
+            "dose": {
+              "texto": "10 a 20 mg; 1x/dia pela manhã; 6 a 12 meses; max. 20 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Hidratação oral estruturada",
+              "ap": "",
+              "q": "",
+              "pos": "2 a 3 L de água por dia, com dois copos rápidos (500 mL) antes de situações de risco, como calor, refeição volumosa ou ortostatismo prolongado; a água fria aumenta a resposta pressora"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Sal na dieta",
+              "ap": "",
+              "q": "",
+              "pos": "6 a 10 g de cloreto de sódio por dia, distribuídos nas refeições, salvo hipertensão, insuficiência cardíaca ou edema; reavaliar sódio e pressão em 4 semanas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Meias de compressão",
+              "ap": "",
+              "q": "",
+              "pos": "Meia elástica de compressão graduada de 15 a 20 mmHg, do tornozelo à coxa (ou meia-calça), colocada antes de levantar e usada durante o dia; meia de beira de leito não serve"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Manobras de contrapressão",
+              "ap": "",
+              "q": "",
+              "pos": "Ao primeiro pródromo, cruzar as pernas e contrair coxas, glúteos e abdome, ou agachar, ou apertar as mãos com força e tensionar os braços; ensinar e treinar com o paciente na consulta, não apenas descrever"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Levantar em etapas",
+              "ap": "",
+              "q": "",
+              "pos": "Sentar na beira do leito por 1 a 2 minutos, depois ficar de pé apoiado por 30 segundos antes de caminhar; nunca levantar à noite no escuro e sem apoio"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Cabeceira elevada e evitar ortostatismo noturno",
+              "ap": "",
+              "q": "",
+              "pos": "Elevar a cabeceira em 10 a 20 graus e usar o banheiro sentado à noite; reduz a natriurese noturna e a hipotensão da manhã"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Revisão de fármacos",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender ou reduzir anti-hipertensivo, diurético, alfa-bloqueador, nitrato, antidepressivo tricíclico e neuroléptico quando a pressão em ortostatismo estiver baixa; uma droga a menos resolve mais que uma droga a mais"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Evitar gatilhos",
+              "ap": "",
+              "q": "",
+              "pos": "Calor, banho quente, álcool, jejum prolongado, esforço intenso, tosse e micção em pé; treinar a reconhecer o pródromo e deitar com as pernas elevadas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Treino de ortostatismo e de tilt",
+              "ap": "",
+              "q": "",
+              "pos": "Programa domiciliar progressivo de 30 a 45 minutos, começando com 5 minutos de pé apoiado na parede e aumentando conforme tolerado, por 4 a 8 semanas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "NEU-04"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cristaloide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "solucao_fisiologica",
+              "n": "Solução fisiológica 0,9%",
+              "ap": "frasco 250 mL e 500 mL",
+              "via": "IV",
+              "pos": "500 a 1.000 mL. Via IV. Repetir conforme pressão arterial, diurese e clínica. Até a estabilização hemodinâmica. 15 a 30 minutos na hipotensão; 1 a 2 horas na reposição eletiva."
+            },
+            "motivo": "hipovolemia, hipotensão documentada ou síncope ortostática com desidratação (1a linha)",
+            "nota": "Uso direto, em acesso periférico calibroso - monitorar: pressão arterial e frequência cardíaca; monitorar: ausculta pulmonar e saturação; monitorar: diurese; monitorar: sódio em reposições grandes · NÃO: insuficiência cardíaca descompensada; edema agudo de pulmão; anúria sem diálise; hipertensão intracraniana · Obs: Não é tratamento da síncope reflexa isolada, que costuma ter pressão normal após a recuperação. Usar quando há hipovolemia ou hipotensão documentada · Renal: Reduzir volume em oligúria e monitorar diurese; em diálise, repor conforme o peso seco",
+            "dose": {
+              "texto": "500 a 1.000 mL; repetir conforme pressão arterial, diurese e clínica; até a estabilização hemodinâmica; max. individualizar; evitar acima de 30 mL/kg em cardiopata ou renal crônico",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 1000,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Inotrópico vasopressor",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "dopamina",
+              "n": "Dopamina",
+              "ap": "ampola 5 mg/mL (10 mL)",
+              "via": "IV",
+              "pos": "5 a 20 mcg/kg/min. Via IV. Infusão contínua. Até o marca-passo ou a estabilização."
+            },
+            "motivo": "bradicardia refratária como ponte para o marca-passo, quando adrenalina não está disponível (alternativa)",
+            "nota": "250 mg em 250 mL de SF 0,9% (1 mg/mL); acesso central preferencial - monitorar: frequência cardíaca e ritmo; monitorar: pressão arterial; monitorar: diurese; monitorar: perfusão periférica; monitorar: local da infusão · NÃO: feocromocitoma; taquiarritmia não controlada; hipovolemia não corrigida; uso de IMAO · Obs: Produz mais arritmia que isoproterenol e adrenalina; usar apenas como alternativa e na menor dose eficaz",
+            "dose": {
+              "texto": "5 a 20 mcg/kg/min; infusão contínua; até o marca-passo ou a estabilização; max. 20 mcg/kg/min",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 20,
+              "unidade": "mcg/kg/min",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Beta agonista",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "isoproterenol",
+              "n": "Isoproterenol",
+              "ap": "ampola 0,2 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "1 a 4 mcg/min. Via IV. Infusão contínua, titulada pela frequência cardíaca. Até o marca-passo definitivo. Infusão contínua."
+            },
+            "motivo": "bradicardia refratária e bloqueio atrioventricular como ponte para o marca-passo (alternativa)",
+            "nota": "1 mg em 250 mL de SG 5% (4 mcg/mL); acesso central preferencial - monitorar: frequência cardíaca e ritmo; monitorar: pressão arterial; monitorar: dor torácica e alteração de ST; monitorar: potássio · NÃO: isquemia miocárdica; taquiarritmia; estenose aórtica grave; hipovolemia não corrigida; hipertireoidismo · Obs: Titular para frequência de 60 a 70 por minuto. Não usar em cardiopatia isquêmica ativa; a vasodilatação pode agravar a hipotensão",
+            "dose": {
+              "texto": "1 a 4 mcg/min; infusão contínua, titulada pela frequência cardíaca; até o marca-passo definitivo; max. 10 mcg/min",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 4,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Glicidico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "glicose50",
+            "motivo": "hipoglicemia documentada ou suspeita como causa da perda de consciência (condicional)",
+            "nota": "Uso direto; preferir solução a 25% em veia periférica fina para reduzir flebite - monitorar: glicemia capilar a cada 15 minutos até estabilizar; monitorar: nível de consciência; monitorar: local do acesso · NÃO: hiperglicemia; hipersensibilidade · Obs: Em etilista, administrar tiamina 100 mg antes da glicose. Confirmar glicemia capilar antes de atribuir a perda de consciência à hipoglicemia",
+            "dose": {
+              "texto": "25 a 50 mL; dose única, repetida conforme glicemia capilar; dose única, com reavaliação em 15 minutos; max. individualizar pela glicemia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 50,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anticolinergico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "atropina",
+              "n": "Atropina",
+              "ap": "ampola 0,25 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "0,5 mg. Via IV. Repetir a cada 3 a 5 minutos até a dose máxima. Até resposta ou até o marca-passo. Bolus rápido."
+            },
+            "motivo": "bradicardia sintomática com síncope, pré-síncope ou pulso abaixo de 40 a 50 por minuto (resgate)",
+            "nota": "Uso direto em bolus; se preferir, diluir em 10 mL de SF 0,9% - monitorar: frequência cardíaca e ritmo no monitor; monitorar: pressão arterial; monitorar: estado mental; monitorar: saturação · NÃO: glaucoma de ângulo fechado; retenção urinária por obstrução; taquiarritmia; miastenia gravis · Obs: Dose abaixo de 0,5 mg pode causar bradicardia paradoxal. Pouco eficaz em bloqueio atrioventricular infranodal: não atrasar o marca-passo por repetir atropina",
+            "dose": {
+              "texto": "0,5 mg; repetir a cada 3 a 5 minutos até a dose máxima; até resposta ou até o marca-passo; max. 3 mg",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Catecolamina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "adrenalina",
+              "n": "Adrenalina",
+              "ap": "ampola 1 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "2 a 10 mcg/min. Via IV. Infusão contínua titulada pela frequência cardíaca e pela pressão. Até o marca-passo ou a estabilização. Infusão contínua; bolus rápido apenas na parada."
+            },
+            "motivo": "bradicardia refratária à atropina com instabilidade ou parada iminente (resgate)",
+            "nota": "1 mg em 250 mL de SF 0,9% (4 mcg/mL); preferir acesso central - monitorar: frequência cardíaca e ritmo; monitorar: pressão arterial; monitorar: perfusão de extremidades; monitorar: glicemia; monitorar: local da infusão · NÃO: taquiarritmia; isquemia miocárdica ativa; hipovolemia não corrigida; hipertensão grave · Obs: Fora da parada, usar sempre infusão: bolus repetido em paciente com pulso causa arritmia e isquemia. Serve de ponte até o marca-passo",
+            "dose": {
+              "texto": "2 a 10 mcg/min; infusão contínua titulada pela frequência cardíaca e pela pressão; até o marca-passo ou a estabilização; max. 20 mcg/min em infusão; na parada, 1 mg em bolus a cada 3 a 5 minutos",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 10,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "NEU-04",
+    "versao": "0.2.0",
+    "arquivo": "NEU-04_sincope.json",
+    "area": "Neurológico",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

@@ -1,0 +1,517 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "TRA-06",
+    "area": "Pequenos traumas",
+    "nome": "Amputação traumática",
+    "aliases": [
+      "amputação",
+      "amputação traumática",
+      "perda de segmento",
+      "dedo amputado"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Amputação traumática é a perda de um segmento de membro por trauma, e a primeira decisão não é o reimplante: é o controle da hemorragia, porque o paciente morre de sangramento e não de segmento perdido. A sequência é compressão direta com curativo compressivo, torniquete quando a compressão falha ou a hemorragia é arterial e volumosa, com a hora anotada de forma legível no próprio torniquete e no prontuário — hora de torniquete é dado clínico, e sem ela ninguém sabe há quanto tempo o membro está isquêmico. Depois vêm prevenção de hipotermia, dois acessos venosos calibrosos, ácido tranexâmico 1 g intravenoso em até 3 horas do trauma, analgesia titulada e antibiótico na primeira hora. O coto é coberto com curativo estéril compressivo, sem clampear vaso às cegas no pronto-socorro e sem lavar o foco com antisséptico. O segmento amputado é envolto em gaze úmida com soro fisiológico, colocado em saco plástico fechado e este dentro de outro recipiente com gelo e água, mantendo refrigeração em torno de 4 °C sem contato direto com o gelo, porque gelo direto congela o tecido e inviabiliza o reimplante. O destino depende de viabilidade e de tempo de isquemia: dedo com amputação limpa tolera até 12 horas de isquemia quente e 24 horas fria; segmento proximal com massa muscular tolera 4 a 6 horas quentes e cerca de 12 horas frias, e é esse relógio que define se o paciente vai para centro com microcirurgia ou se o coto é regularizado no próprio serviço. O que não se faz: soltar o torniquete para ver se parou de sangrar, perder a hora do torniquete, mergulhar o segmento em gelo ou em soro gelado e atrasar o transporte para completar exames.",
+    "inclusao": [
+      "Amputação completa de segmento de membro, com ou sem o segmento disponível",
+      "Amputação parcial com segmento viável mantido por ponte de pele ou tecido, com isquemia",
+      "Esmagamento com perda de viabilidade de segmento distal",
+      "Lesão com hemorragia controlada por compressão ou torniquete e necessidade de avaliação de reimplante"
+    ],
+    "exclusao": [
+      { "situacao": "hemorragia incontrolável com choque refratário ou parada cardiorrespiratória", "fluxo": "sala vermelha, protocolo de transfusão maciça" },
+      { "situacao": "politrauma com instabilidade hemodinâmica, via aérea comprometida ou trauma de tórax e abdome", "fluxo": "sala vermelha, protocolo de trauma" },
+      { "situacao": "ferimento cortante sem perda de segmento", "fluxo": "TRA-01 ferimento cortante" },
+      { "situacao": "fratura de membro com osso exposto e segmento preservado", "fluxo": "TRA-05 fratura de membro" },
+      { "situacao": "amputação de extremidade já desvitalizada por doença vascular ou diabetes, sem trauma", "fluxo": "cirurgia vascular, amputação programada" },
+      { "situacao": "queimadura elétrica com perda de segmento em paciente estável", "fluxo": "TRA-03 queimadura ou centro de queimados" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "hemorragia arterial pulsátil, jato ou sangramento que encharca o curativo em minutos", "por_que": "choque hemorrágico rápido; o paciente morre antes de chegar ao centro cirúrgico", "acao": "compressão direta firme, curativo compressivo e torniquete se falhar, com hora anotada", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "hipotensão, taquicardia, palidez, sudorese ou confusão", "por_que": "choque hemorrágico instalado", "acao": "dois acessos calibrosos, ressuscitação volêmica, transfusão e cirurgia imediata", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "torniquete sem hora legível ou com tempo desconhecido", "por_que": "isquemia de tempo indeterminado e risco de rabdomiólise e lesão de reperfusão", "acao": "anotar a hora imediatamente, não soltar o torniquete e comunicar o tempo ao centro cirúrgico", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "segmento amputado em contato direto com gelo, imerso em água ou em soro", "por_que": "lesão por congelamento e maceração inviabilizam o reimplante", "acao": "retirar do gelo, envolver em gaze úmida com soro fisiológico e acondicionar em duplo saco refrigerado", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "hipotermia com temperatura abaixo de 35 °C", "por_que": "coagulopatia, acidose e disfunção miocárdica no trauma", "acao": "aquecer o ambiente, cobrir o paciente, aquecer os fluidos e usar manta térmica", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "dor intensa refratária ou dor desproporcional no coto com tensão", "por_que": "analgesia insuficiente ou síndrome compartimental em coto fechado", "acao": "titular opioide, soltar pontos de pele e reavaliar perfusão", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "ferida do coto com terra, fezes, material vegetal ou tempo de trauma acima de 6 horas", "por_que": "contaminação grosseira com anaeróbios e risco de infecção de coto", "acao": "ampliar a cobertura antibiótica, desbridar e revisar profilaxia antitetânica", "severidade": "precaucao" },
+      { "id": "AL-08", "sinal": "isquemia quente há mais de 6 horas em segmento proximal com massa muscular", "por_que": "necrose muscular instalada; reimplante sem função e risco de síndrome de reperfusão", "acao": "discutir com microcirurgia e considerar regularização do coto", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "Qual foi o nível exato da amputação e o horário do trauma?",
+      "O sangramento está controlado com compressão ou foi necessário torniquete, e a que horas ele foi colocado?",
+      "O segmento amputado foi encontrado e como foi acondicionado até aqui?",
+      "O mecanismo foi corte limpo, esmagamento, avulsão ou queimadura elétrica?",
+      "Há contaminação por terra, fezes ou material vegetal?",
+      "Quando foi a última dose da vacina antitetânica e quantas doses ao todo?",
+      "Tem diabetes, doença vascular periférica, tabagismo ou amputação prévia no membro?",
+      "Qual a intensidade da dor e o que já foi administrado?",
+      "Está usando anticoagulante ou tem doença de coagulação?",
+      "Quantos minutos até um centro com microcirurgia e há vaga confirmada?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Primeira medida diante de qualquer amputação traumática", "escolha": "compressão direta com gaze estéril e curativo compressivo firme, antes de qualquer outra conduta", "porque": "resolve a maioria das hemorragias de coto sem isquemia adicional; é mais rápido e menos mórbido que o torniquete e pode ser feito por qualquer pessoa do time" },
+      { "cenario": "Hemorragia arterial que não cessa com compressão, coto com vaso exposto ou múltiplos feridos", "escolha": "torniquete proximal à amputação, 5 a 7 cm acima do foco, com a hora de aplicação escrita no próprio torniquete e no prontuário", "porque": "o torniquete controla a hemorragia arterial em segundos e salva a vida; a hora anotada é o único dado que permite calcular o tempo de isquemia e decidir entre reimplante e regularização" },
+      { "cenario": "Paciente com tempo de transporte prolongado e torniquete que não controla o sangramento", "escolha": "manter o torniquete, adicionar segundo torniquete acima do primeiro e compressão sobre o coto, sem soltar o primeiro", "porque": "soltar para reposicionar devolve a hemorragia e perde a contagem do tempo; o segundo torniquete resolve a falha sem reiniciar o relógio" },
+      { "cenario": "Controle cirúrgico definitivo da hemorragia", "escolha": "ligadura seletiva do vaso no centro cirúrgico, sob visão direta", "porque": "a ligadura definitiva permite retirar o torniquete com segurança; clampear vaso às cegas no pronto-socorro lesa nervo e agrava a isquemia do coto" },
+      { "cenario": "Trauma com hemorragia e menos de 3 horas de evolução", "escolha": "ácido tranexâmico 1 g IV em 10 minutos, dose única, idealmente na primeira hora", "porque": "a antifibrinólise precoce reduz mortalidade no trauma hemorrágico; após 3 horas o benefício desaparece e o risco trombótico supera" },
+      { "cenario": "Analgesia na amputação", "escolha": "morfina intravenosa titulada; cetamina em dose subdissociativa quando há hipotensão ou dor refratária", "porque": "a dor da amputação é intensa e a analgesia adequada reduz descarga adrenérgica e melhora a perfusão do coto; a cetamina não derruba a pressão como o opioide" },
+      { "cenario": "Antibioticoterapia da amputação traumática", "escolha": "cefazolina 2 g IV na primeira hora, com gentamicina 5 mg/kg em contaminação grosseira e amoxicilina-clavulanato quando a ferida é rural ou tem terra e fezes", "porque": "o coto é uma ferida cirúrgica contaminada com osso exposto; a cobertura precoce reduz infecção de coto e osteomielite, que custam mais amputações" },
+      { "cenario": "Escolha entre reimplante e regularização do coto", "escolha": "encaminhar a centro com microcirurgia toda amputação de polegar, de múltiplos dedos, de criança, com corte limpo e isquemia dentro do limite; regularizar quando há esmagamento extenso, avulsão com perda de vasos, contaminação grosseira, instabilidade do paciente ou isquemia além do limite", "porque": "reimplante sem viabilidade ou fora do tempo expõe o paciente a cirurgia longa, sepse e reoperação; a função e a vida pesam mais que a anatomia" },
+      { "cenario": "Limite de tempo de isquemia por nível", "escolha": "dedo: até 12 horas de isquemia quente e 24 horas fria; mão, antebraço e membro proximal com músculo: 4 a 6 horas quentes e cerca de 12 horas frias", "porque": "o músculo é o tecido menos tolerante à isquemia; passado o limite, a reperfusão libera mioglobina, potássio e radicais livres e produz síndrome de reperfusão com risco de morte" },
+      { "cenario": "Acondicionamento do segmento amputado", "escolha": "gaze úmida com soro fisiológico, segmento em saco plástico fechado, saco dentro de recipiente com gelo e água, temperatura em torno de 4 °C", "porque": "a refrigeração indireta reduz o metabolismo tecidual e dobra o tempo útil de isquemia; o contato direto com gelo congela o tecido e o torna inviável" },
+      { "cenario": "Prevenção de hipotermia no paciente com amputação", "escolha": "cobrir o paciente, aquecer o ambiente e os fluidos, usar manta térmica e medir temperatura central", "porque": "hipotermia agrava coagulopatia, acidose e vasoconstrição, e a tríade letal do trauma mata antes do cirurgião chegar" },
+      { "cenario": "Profilaxia antitetânica na amputação", "escolha": "dT conforme o esquema e imunoglobulina antitetânica quando o esquema é incompleto ou desconhecido", "porque": "a ferida amputada é tetanogênica por definição; a vacina não protege de imediato e a imunoglobulina neutraliza a toxina circulante" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antifibrinolitico",
+        "agente": "ácido tranexâmico",
+        "papel": "primeira_linha",
+        "indicacao": "hemorragia por amputação traumática, administrado em até 3 horas do trauma",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "dose única; 1 g adicional em infusão de 8 horas apenas em hemorragia persistente",
+        "duracao": "dose única na primeira hora; esquema estendido somente em sangramento contínuo",
+        "dose_maxima": "2 g nas primeiras 24 horas fora do protocolo estendido",
+        "contraindicacoes": ["trombose venosa profunda ou embolia pulmonar ativas", "história de convulsão", "insuficiência renal grave sem ajuste", "trombose arterial recente", "coagulação intravascular disseminada estabelecida"],
+        "efeitos_adversos": ["náusea e vômito", "hipotensão em infusão rápida", "convulsão em dose alta com função renal reduzida", "trombose arterial ou venosa", "alteração visual transitória"],
+        "apresentacoes": ["ampola 1 g/10 mL (100 mg/mL)", "ampola 500 mg/5 mL", "comprimido 500 mg", "solução para infusão 1 g/100 mL"],
+        "preparo": "Diluir 1 g (10 mL) em 100 mL de soro fisiológico 0,9% ou glicose 5%; não administrar em bolus rápido",
+        "tempo_infusao": "10 minutos",
+        "monitorizacao": ["pressão arterial durante a infusão", "sangramento e aspecto do curativo", "sinais de trombose em membro contralateral", "nível de consciência e convulsão", "função renal antes de doses repetidas"],
+        "ajuste_renal": "ClCr entre 30 e 50: 15 mg/kg 12/12 h; ClCr abaixo de 30: reduzir para 10 mg/kg 1x/dia pelo acúmulo e risco de convulsão",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "O benefício está concentrado na primeira hora e desaparece após 3 horas do trauma: registrar a hora da administração. Não substitui torniquete nem compressão; é adjuvante do controle mecânico da hemorragia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "primeira_linha",
+        "indicacao": "dor intensa do coto e do membro amputado",
+        "dose": "2 a 4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "titular a cada 5 a 10 minutos até dor menor ou igual a 3 em 10",
+        "duracao": "até controle da dor; reavaliar a cada 30 minutos",
+        "dose_maxima": "0,1 mg/kg por dose e 10 mg em paciente sem exposição prévia a opioide",
+        "contraindicacoes": ["depressão respiratória não monitorada", "hipotensão grave não corrigida antes da reposição volêmica", "alergia a opioide", "rebaixamento de consciência sem via aérea protegida"],
+        "efeitos_adversos": ["depressão respiratória", "sedação", "náusea e vômito", "hipotensão", "prurido", "constipação", "retenção urinária"],
+        "apresentacoes": ["ampola 2 mg/mL (1 mL)", "ampola 10 mg/mL (1 mL)", "comprimido 10 mg", "comprimido de liberação prolongada 30 mg", "solução oral 1 mg/mL"],
+        "preparo": "Diluir 1 mL da ampola de 10 mg em 9 mL de soro fisiológico 0,9% para 1 mg/mL; administrar em bolus lento",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos",
+        "monitorizacao": ["frequência respiratória a cada 15 minutos na primeira hora", "escala de sedação e nível de consciência", "saturação de oxigênio", "pressão arterial e frequência cardíaca", "dor pela escala de 0 a 10 antes e 15 minutos após cada dose", "náusea e vômito"],
+        "ajuste_renal": "ClCr abaixo de 30: reduzir a dose em 50% e espaçar, pelo acúmulo do metabólito morfina-6-glucuronídeo",
+        "ajuste_hepatico": "Reduzir a dose em 50% em cirrose Child B ou C",
+        "observacoes": "Titular por resposta, sem dose fixa. Em choque, corrigir volume antes ou preferir cetamina em dose subdissociativa. Ter naloxona 0,04 a 0,4 mg IV disponível.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_dissociativo",
+        "agente": "cetamina",
+        "papel": "alternativa",
+        "indicacao": "analgesia e sedação para desbridamento do coto em paciente hipotensivo ou com dor refratária ao opioide",
+        "dose": "0,3 mg/kg para analgesia subdissociativa; 1 a 2 mg/kg para sedação dissociativa no procedimento",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir 0,15 mg/kg para analgesia",
+        "duracao": "analgesia de 20 a 30 minutos; sedação de 10 a 15 minutos",
+        "dose_maxima": "0,5 mg/kg na analgesia e 2 mg/kg na sedação",
+        "contraindicacoes": ["hipertensão arterial grave não controlada", "aneurisma intracraniano ou dissecção de aorta conhecidos", "psicose ativa ou delirium", "insuficiência cardíaca descompensada"],
+        "efeitos_adversos": ["hipertensão e taquicardia", "reação de emergência com agitação", "alucinação", "náusea e vômito", "sialorreia", "aumento do tônus muscular"],
+        "apresentacoes": ["frasco 50 mg/mL (10 mL)", "ampola 50 mg/mL (2 mL)", "frasco 10 mg/mL (20 mL)", "frasco 100 mg/mL (5 mL)"],
+        "preparo": "Diluir 1 mL da solução a 50 mg/mL em 9 mL de soro fisiológico para 5 mg/mL; administrar IV lento",
+        "tempo_infusao": "bolus lento em 1 a 2 minutos",
+        "monitorizacao": ["pressão arterial e frequência cardíaca a cada 5 minutos", "saturação de oxigênio e padrão respiratório", "grau de dissociação e resposta ao estímulo", "emergência psicomotora na recuperação", "sialorreia e risco de aspiração"],
+        "ajuste_renal": "Sem ajuste de dose na dose única",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave pela menor depuração",
+        "observacoes": "Na dose subdissociativa preserva respiração espontânea e reflexos de via aérea, o que a torna a escolha no paciente hipotensivo. Associar midazolam 0,05 mg/kg para reduzir emergência psicomotora quando não houver contraindicação.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_primeira_geracao",
+        "agente": "cefazolina",
+        "papel": "primeira_linha",
+        "indicacao": "profilaxia e tratamento de infecção do coto na amputação traumática",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "24 horas em ferida limpa; 5 a 7 dias em coto contaminado",
+        "dose_maxima": "6 g/dia; até 12 g/dia em infecção grave",
+        "contraindicacoes": ["alergia a cefalosporina", "anafilaxia prévia a penicilina"],
+        "efeitos_adversos": ["rash", "diarreia", "colite por C. difficile", "flebite no sítio de infusão", "elevação de transaminases"],
+        "apresentacoes": ["frasco 1 g (pó)", "frasco 2 g (pó)", "solução injetável 1 g", "frasco 2 g em 100 mL para infusão"],
+        "preparo": "Reconstituir 2 g em 10 mL de água destilada e diluir em 100 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": ["reação alérgica nos primeiros 30 minutos", "diarreia e dor abdominal", "função renal em uso acima de 5 dias", "aspecto e secreção do coto", "hemograma em uso acima de 10 dias"],
+        "ajuste_renal": "ClCr entre 10 e 30: 1 g 12/12 h; diálise: dose adicional após a sessão",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Primeira dose na primeira hora, antes do desbridamento cirúrgico. Não cobre Gram-negativos do solo nem anaeróbios: em coto com terra ou fezes, associar gentamicina ou trocar por amoxicilina-clavulanato.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "aminoglicosideo",
+        "agente": "gentamicina",
+        "papel": "condicional",
+        "indicacao": "coto com contaminação grosseira, esmagamento ou exposição a Gram-negativos, associada à cefazolina",
+        "dose": "5 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "5 mg/kg/dia, até 400 mg por dia",
+        "contraindicacoes": ["insuficiência renal grave sem monitorização de níveis", "miastenia gravis", "alergia a aminoglicosídeo", "perda auditiva prévia por aminoglicosídeo"],
+        "efeitos_adversos": ["nefrotoxicidade", "ototoxicidade coclear e vestibular", "bloqueio neuromuscular", "hipomagnesemia", "rash"],
+        "apresentacoes": ["ampola 40 mg/mL (2 mL)", "ampola 80 mg/2 mL", "frasco 20 mg/2 mL", "solução injetável 80 mg"],
+        "preparo": "Diluir a dose em 100 mL de soro fisiológico 0,9% e infundir em bomba quando possível",
+        "tempo_infusao": "30 a 60 minutos",
+        "monitorizacao": ["creatinina e diurese a cada 24 horas", "nível sérico de vale após 48 horas", "audiometria se uso acima de 5 dias", "magnésio e potássio", "força muscular e reflexos"],
+        "ajuste_renal": "Ajustar por ClCr e por nível sérico; a dose única diária reduz a captação tubular; em ClCr abaixo de 30, dosar nível antes da terceira dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Não usar isolada: cobre Gram-negativos e é sinérgica com a cefazolina. Suspender quando a cultura do coto orientar o esquema definitivo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_com_inibidor_de_betalactamase",
+        "agente": "amoxicilina-clavulanato",
+        "papel": "alternativa",
+        "indicacao": "coto com ferida rural, terra, fezes ou material vegetal, e descalonamento oral após o controle cirúrgico",
+        "dose": "875/125 mg por via oral ou 1 g/200 mg por via intravenosa",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "12/12 h por via oral; 8/8 h por via intravenosa",
+        "duracao": "7 dias",
+        "dose_maxima": "1.750/250 mg por tomada, 2 tomadas ao dia por via oral",
+        "contraindicacoes": ["alergia a penicilina", "hepatite colestática prévia atribuída ao fármaco", "mononucleose infecciosa"],
+        "efeitos_adversos": ["diarreia", "náusea", "rash", "elevação de transaminases", "colite por C. difficile", "candidíase"],
+        "apresentacoes": ["comprimido 875/125 mg", "comprimido 500/125 mg", "suspensão oral 400/57 mg por 5 mL", "frasco 1 g/200 mg (pó para infusão)"],
+        "preparo": "Via oral em uso direto, no início da refeição; via intravenosa reconstituir em 10 mL de água destilada e diluir em 100 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "via intravenosa em 30 minutos; via oral não se aplica",
+        "monitorizacao": ["diarreia e dor abdominal", "TGO e TGP em uso acima de 10 dias", "regressão do eritema e da secreção do coto em 48 horas", "função renal", "sinais de colite"],
+        "ajuste_renal": "ClCr entre 10 e 30: 500/125 mg 12/12 h; evitar o comprimido de 875 mg com ClCr abaixo de 30",
+        "ajuste_hepatico": "Contraindicado se houver hepatite colestática prévia atribuída ao fármaco",
+        "observacoes": "Cobre anaeróbios e a flora mista do solo, o que a cefazolina não faz. Serve como esquema inicial em ferida rural e como descalonamento oral para alta.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_nao_opioide",
+        "agente": "paracetamol",
+        "papel": "alternativa",
+        "indicacao": "analgesia multimodal adjuvante e controle da dor após a alta",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV ou VO",
+        "frequencia": "6/6 h",
+        "duracao": "até 5 dias",
+        "dose_maxima": "3 g/dia; 4 g/dia apenas em adulto saudável sem hepatopatia",
+        "contraindicacoes": ["hepatopatia grave", "alergia ao paracetamol", "desnutrição grave com depleção de glutationa"],
+        "efeitos_adversos": ["hepatotoxicidade em overdose", "náusea", "rash", "elevação de transaminases"],
+        "apresentacoes": ["frasco de infusão 10 mg/mL (100 mL)", "comprimido 500 mg", "comprimido 750 mg", "solução oral 200 mg/mL", "supositório 500 mg"],
+        "preparo": "Via oral em uso direto; via intravenosa infundir o frasco sem diluir",
+        "tempo_infusao": "via intravenosa em 15 minutos; via oral não se aplica",
+        "monitorizacao": ["dor pela escala de 0 a 10", "dose total diária somando outros produtos com paracetamol", "TGO e TGP em uso acima de 3 dias"],
+        "ajuste_renal": "ClCr abaixo de 30: espaçar para 8/8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia; evitar em Child C",
+        "observacoes": "Adjuvante, nunca único analgésico na fase aguda da amputação. Não prescrever junto de associação que já contenha paracetamol.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "imunobiologico",
+        "agente": "toxoide tetânico e diftérico (dT)",
+        "papel": "condicional",
+        "indicacao": "complementação ou reforço do esquema antitetânico na amputação traumática",
+        "dose": "0,5 mL",
+        "unidade": "mL",
+        "via": "IM",
+        "frequencia": "dose única neste atendimento; completar o esquema de 3 doses quando incompleto",
+        "duracao": "reforço a cada 10 anos",
+        "dose_maxima": "0,5 mL por dose",
+        "contraindicacoes": ["anafilaxia prévia a componente da vacina", "encefalopatia nos 7 dias após dose anterior"],
+        "efeitos_adversos": ["dor e edema no local", "febre baixa", "anafilaxia rara", "abscesso local por aplicação inadequada"],
+        "apresentacoes": ["frasco multidose 10 doses de 0,5 mL", "seringa preenchida 0,5 mL", "frasco 5 doses de 0,5 mL"],
+        "preparo": "Uso direto; agitar antes de aspirar e aplicar no deltoide, com agulha 25 x 7 mm",
+        "tempo_infusao": "não se aplica (via intramuscular)",
+        "monitorizacao": ["reação local em 24 horas", "febre", "anafilaxia nos primeiros 30 minutos", "registro no cartão vacinal e no prontuário"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Aplicar em sítio diferente do da imunoglobulina, com agulha e seringa separadas. Não atrasar o controle de hemorragia nem a cirurgia por causa da vacina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/PNI",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina humana antitetânica",
+        "papel": "condicional",
+        "indicacao": "amputação traumática com esquema vacinal incompleto, desconhecido ou última dose há mais de 10 anos",
+        "dose": "500 UI",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "500 UI por atendimento",
+        "contraindicacoes": ["anafilaxia prévia a imunoglobulina humana", "deficiência de IgA com anticorpos anti-IgA"],
+        "efeitos_adversos": ["dor local", "febre", "anafilaxia rara", "doença do soro em 7 a 14 dias"],
+        "apresentacoes": ["frasco 250 UI", "frasco 500 UI", "seringa preenchida 250 UI"],
+        "preparo": "Uso direto, IM profunda no glúteo ou vasto lateral; nunca por via intravenosa",
+        "tempo_infusao": "não se aplica (via intramuscular); observar 30 minutos após",
+        "monitorizacao": ["anafilaxia nos primeiros 30 minutos", "febre e artralgia em 7 a 14 dias", "sítio de aplicação"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Usar 500 UI por se tratar de ferida de alto potencial tetanogênico. Se indisponível, soro antitetânico heterólogo 5.000 UI IM após teste de sensibilidade.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/PNI",
+        "claim_id": null
+      },
+      {
+        "classe": "eletrolito",
+        "agente": "gluconato de cálcio 10%",
+        "papel": "condicional",
+        "indicacao": "hipocalcemia por transfusão maciça e prevenção de arritmia e coagulopatia no choque hemorrágico",
+        "dose": "1 g (10 mL da solução a 10%)",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "repetir conforme cálcio iônico; a cada 4 unidades de concentrado de hemácias em transfusão maciça",
+        "duracao": "infusão lenta; repetir enquanto durar a transfusão maciça",
+        "dose_maxima": "3 g por episódio sem dosagem de cálcio iônico",
+        "contraindicacoes": ["hipercalcemia", "digitalização em curso", "insuficiência renal grave com hipercalcemia", "flebite no acesso periférico de pequeno calibre"],
+        "efeitos_adversos": ["bradicardia em infusão rápida", "irritação e necrose por extravasamento", "hipercalcemia", "náusea", "precipitação com bicarbonato na mesma via"],
+        "apresentacoes": ["ampola 10 mL a 10% (1 g)", "frasco 100 mL a 10%", "ampola 10 mL a 10% de gluconato de cálcio", "solução injetável 1 g/10 mL"],
+        "preparo": "Diluir 10 mL em 100 mL de soro fisiológico 0,9% ou glicose 5% para infusão periférica; não misturar na mesma via com bicarbonato de sódio nem com ceftriaxona",
+        "tempo_infusao": "10 a 20 minutos; em parada por hipercalemia, em 5 a 10 minutos",
+        "monitorizacao": ["cálcio iônico antes e após cada dose", "eletrocardiograma e frequência cardíaca", "pressão arterial", "sítio de infusão e sinais de extravasamento", "potássio e magnésio"],
+        "ajuste_renal": "Reduzir a dose e espaçar em ClCr abaixo de 30 pelo risco de hipercalcemia",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Indicado em transfusão maciça, porque o citrato do concentrado de hemácias quelata o cálcio e produz hipocalcemia com arritmia e coagulopatia. Preferir acesso calibroso: o extravasamento causa necrose de pele.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vasopressor",
+        "agente": "noradrenalina",
+        "papel": "resgate",
+        "indicacao": "choque hemorrágico com hipotensão persistente após reposição volêmica e transfusão",
+        "dose": "0,05 a 0,5 mcg/kg/min",
+        "unidade": "mcg/kg/min",
+        "via": "IV em infusão contínua, em acesso calibroso ou cateter central",
+        "frequencia": "infusão contínua com titulação pela pressão arterial média",
+        "duracao": "até controle hemodinâmico e hemostasia cirúrgica",
+        "dose_maxima": "1 mcg/kg/min; acima disso, associar vasopressina e reavaliar a fonte de sangramento",
+        "contraindicacoes": ["hipovolemia grave não corrigida", "trombose mesentérica ou periférica", "uso isolado sem reposição volêmica"],
+        "efeitos_adversos": ["isquemia periférica e necrose de extremidade", "arritmia", "hipertensão", "isquemia mesentérica", "necrose por extravasamento"],
+        "apresentacoes": ["ampola 2 mg/mL (4 mL)", "ampola 1 mg/mL (4 mL)", "frasco 4 mg/4 mL", "solução injetável 8 mg/4 mL"],
+        "preparo": "Diluir em soro glicosado 5% ou soro fisiológico: 4 mg em 250 mL resulta em 16 mcg/mL; administrar em bomba de infusão",
+        "tempo_infusao": "infusão contínua, titulada a cada 5 a 10 minutos",
+        "monitorizacao": ["pressão arterial média em monitorização contínua, alvo de 65 mmHg", "perfusão periférica, diurese e lactato", "frequência cardíaca e ritmo", "sítio de infusão e sinais de extravasamento", "dose acumulada e necessidade de escalonamento"],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "É ponte para a hemostasia cirúrgica, não tratamento da causa. Vasopressor em hipovolemia não corrigida piora a isquemia do coto e do rim: repor volume e sangue primeiro.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Compressão direta e curativo compressivo no coto", "detalhe": "gaze estéril dobrada sobre o coto, pressão firme e contínua por 10 minutos sem espiar, atadura compressiva por cima; primeiro passo em toda amputação, antes de qualquer torniquete" },
+      { "medida": "Torniquete com hora anotada", "detalhe": "torniquete comercial 5 a 7 cm acima do foco, apertado até cessar o sangramento arterial; escrever a hora na fita do próprio torniquete e no prontuário, e comunicar o tempo de isquemia a cada transferência; não cobrir o torniquete com cobertor" },
+      { "medida": "Preservação do segmento amputado", "detalhe": "segmento envolto em gaze úmida com soro fisiológico 0,9%, colocado em saco plástico fechado, saco dentro de recipiente com gelo e água em torno de 4 °C; nunca gelo em contato direto, nunca imersão em água ou soro, nunca congelamento" },
+      { "medida": "Cobertura do coto e controle de contaminação", "detalhe": "curativo estéril úmido e oclusivo, sem antisséptico dentro do foco, sem lavagem vigorosa no pronto-socorro e sem clampear vaso às cegas; irrigação e desbridamento acontecem no centro cirúrgico" },
+      { "medida": "Prevenção de hipotermia", "detalhe": "cobrir o paciente, aquecer o ambiente, aquecer os fluidos a 39 °C, manta térmica e medição de temperatura central; hipotermia abaixo de 35 °C agrava coagulopatia e acidose" },
+      { "medida": "Dois acessos venosos calibrosos e reposição volêmica", "detalhe": "dois acessos de 14 ou 16 G, sendo um para reposição e outro para drogas; cristaloide aquecido em volume titulado e ativação precoce do protocolo de transfusão maciça" },
+      { "medida": "Registro do tempo de isquemia e do relógio do reimplante", "detalhe": "anotar hora do trauma, hora do torniquete, hora do acondicionamento do segmento e hora da chegada ao centro cirúrgico; o relógio de isquemia é o dado que decide a indicação de reimplante" },
+      { "medida": "Comunicação prévia com o centro de microcirurgia", "detalhe": "confirmar vaga, bancada de microcirurgia e equipe antes de transferir; enviar nível da amputação, mecanismo, tempo de isquemia, estado do segmento e condição hemodinâmica" }
+    ],
+    "procedimentos": [
+      { "nome": "Controle de hemorragia por compressão e curativo compressivo", "indicacao": "toda amputação com sangramento ativo, como primeira medida", "tecnica": "gaze estéril dobrada sobre o coto, pressão manual firme e contínua por 10 minutos sem inspecionar, seguida de atadura compressiva e elevação do membro quando possível; reavaliar encharcamento do curativo e registrar a hora", "complicacoes": "sangramento persistente sob o curativo, compressão excessiva com isquemia do coto, dor intensa e contaminação do ferimento" },
+      { "nome": "Torniquete tático proximal", "indicacao": "hemorragia arterial que não cessa com compressão, coto com vaso exposto ou múltiplos feridos", "tecnica": "posicionar 5 a 7 cm acima do foco, nunca sobre articulação, apertar até cessar o sangramento arterial, travar o catraca, escrever a hora na fita e no prontuário; se falhar, adicionar segundo torniquete acima sem soltar o primeiro", "complicacoes": "lesão de nervo por compressão prolongada, isquemia de membro, rabdomiólise e síndrome de reperfusão ao soltar, necrose de pele sob a fita" },
+      { "nome": "Ligadura vascular definitiva no centro cirúrgico", "indicacao": "controle definitivo da hemorragia antes de retirar o torniquete", "tecnica": "antissepsia e campo, identificação do vaso sob visão direta, dissecção mínima, ligadura com fio não absorvível ou reparo vascular quando há indicação de revascularização, seguida de retirada controlada do torniquete e revisão da hemostasia", "complicacoes": "lesão de nervo durante a dissecção, isquemia distal por ligadura inadvertida de vaso essencial, hematoma e infecção do coto" },
+      { "nome": "Desbridamento e regularização do coto", "indicacao": "coto com tecido desvitalizado, contaminação grosseira ou sem possibilidade de reimplante", "tecnica": "no centro cirúrgico, retirada de tecido desvitalizado e corpo estranho, hemostasia por ligadura, secção óssea regular, modelagem de retalhos musculares e fechamento frouxo com dreno; cobertura estéril e revisão em 48 horas", "complicacoes": "infecção de coto, necrose de retalho, neuroma doloroso, deiscência e necessidade de nova amputação mais proximal" },
+      { "nome": "Acondicionamento e transporte do segmento amputado", "indicacao": "toda amputação com possibilidade de reimplante", "tecnica": "enxaguar o segmento com soro fisiológico sem esfregar, envolver em gaze úmida, colocar em saco plástico fechado identificado com nome, hora e lado, inserir esse saco em recipiente com gelo e água mantendo 4 °C, e transportar junto do paciente com registro em prontuário", "complicacoes": "lesão por congelamento por contato direto com gelo, maceração por imersão em líquido, perda do segmento por extravio e atraso por acondicionamento inadequado" },
+      { "nome": "Reimplante ou revascularização em centro com microcirurgia", "indicacao": "amputação de polegar, múltiplos dedos, criança, corte limpo e isquemia dentro do limite de tempo", "tecnica": "debridamento e identificação de estruturas, encurtamento ósseo, fixação, anastomose arterial e venosa com microscópio, reparo de nervos e tendões, cobertura cutânea e monitorização de perfusão com Doppler", "complicacoes": "trombose da anastomose, falha do reimplante, síndrome de reperfusão, infecção e retorno ao centro cirúrgico para revisão vascular" },
+      { "nome": "Avaliação de viabilidade e do tempo de isquemia", "indicacao": "toda amputação, na decisão entre reimplante e regularização", "tecnica": "somar o tempo de isquemia quente e fria, avaliar mecanismo, contaminação, nível, idade, comorbidades e estado hemodinâmico; usar Doppler e perfusão do segmento quando disponível", "complicacoes": "decisão equivocada por tempo subestimado, reimplante de segmento inviável e amputação desnecessária de segmento viável" }
+    ],
+    "metas": [
+      "Hemorragia controlada em até 5 minutos do atendimento, por compressão ou torniquete",
+      "Hora do torniquete registrada no próprio dispositivo e no prontuário em 100% dos casos",
+      "Ácido tranexâmico administrado em até 3 horas do trauma, idealmente na primeira hora",
+      "Antibiótico administrado na primeira hora da chegada",
+      "Temperatura central mantida acima de 36 °C durante todo o atendimento",
+      "Segmento amputado acondicionado refrigerado em até 4 °C sem contato direto com gelo",
+      "Tempo porta-centro cirúrgico abaixo de 60 minutos quando há reimplante indicado",
+      "Pressão arterial média acima de 65 mmHg e lactato em queda após a ressuscitação"
+    ],
+    "fluxo": [
+      "Controlar a hemorragia: compressão direta e curativo compressivo; torniquete se falhar, com hora anotada",
+      "Avaliar via aérea, respiração, circulação e mecanismo; identificar politrauma e outras fontes de sangramento",
+      "Obter dois acessos calibrosos, aquecer o paciente e iniciar reposição volêmica titulada e transfusão quando indicada",
+      "Administrar ácido tranexâmico 1 g IV em até 3 horas do trauma",
+      "Titular analgesia com morfina; cetamina em dose subdissociativa se hipotensão ou dor refratária",
+      "Iniciar cefazolina na primeira hora; associar gentamicina ou trocar por amoxicilina-clavulanato conforme contaminação",
+      "Cobrir o coto com curativo estéril úmido e acondicionar o segmento amputado em duplo saco refrigerado, com registro da hora",
+      "Revisar profilaxia antitetânica com dT e imunoglobulina conforme o esquema vacinal",
+      "Calcular o tempo de isquemia e avaliar viabilidade: indicar reimplante e transferir para centro com microcirurgia, ou regularizar o coto no serviço",
+      "No centro cirúrgico: ligadura ou reparo vascular, desbridamento, regularização ou reimplante, com retirada controlada do torniquete e reavaliação de perfusão"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "crianca", "ajuste": "priorizar reimplante mesmo em amputação aparentemente desfavorável, porque a capacidade de recuperação funcional é maior; doses de morfina e cetamina por peso e torniquete infantil", "alerta": "superfície corporal pequena com perda sanguínea proporcionalmente maior e hipotermia rápida; suspeitar de maus-tratos em amputação sem mecanismo compatível" },
+      { "populacao": "idoso", "ajuste": "reduzir a dose inicial de opioide, avaliar cognição e reserva cardíaca e limitar o tempo cirúrgico do reimplante", "alerta": "reimplante longo em paciente com comorbidade cardíaca pode custar mais que a perda funcional da regularização do coto" },
+      { "populacao": "anticoagulado", "ajuste": "compressão e torniquete precoces, reversão conforme o fármaco antes da cirurgia e transfusão mais liberal", "alerta": "sangramento persistente sob curativo compressivo e hematoma expansivo do coto" },
+      { "populacao": "diabetico", "ajuste": "controle glicêmico com meta de 140 a 180 mg/dL, antibioticoterapia mais prolongada e avaliação vascular antes de indicar reimplante", "alerta": "doença vascular periférica reduz a viabilidade do reimplante e aumenta a infecção do coto" },
+      { "populacao": "gestante", "ajuste": "manter decúbito lateral esquerdo após 20 semanas, monitorizar o feto durante a cirurgia e evitar ácido tranexâmico prolongado", "alerta": "hipotensão e hipoperfusão uterina; decisão de reimplante com equipe obstétrica" },
+      { "populacao": "renal_cronico", "ajuste": "ajustar ácido tranexâmico, cefazolina, gentamicina e morfina; atenção ao potássio na síndrome de reperfusão", "alerta": "rabdomiólise e hipercalemia após reperfusão em paciente sem reserva renal" },
+      { "populacao": "tabagista", "ajuste": "orientar cessação antes de cirurgia de reimplante e otimizar perfusão com hidratação e controle de dor", "alerta": "vasoconstrição por nicotina reduz a perviedade da anastomose microvascular" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "radiografia do coto e do segmento amputado", "indicacao": "toda amputação", "o_que_muda": "define o nível ósseo, revela corpos estranhos e fratura associada e orienta o planejamento do reimplante ou da regularização" },
+        { "nome": "tipagem sanguínea, prova cruzada e reserva de hemácias", "indicacao": "hemorragia, choque ou cirurgia indicada", "o_que_muda": "ativa o protocolo de transfusão maciça e define a disponibilidade de sangue antes do centro cirúrgico" },
+        { "nome": "hemograma, coagulograma, gasometria e lactato", "indicacao": "choque, transfusão maciça ou instabilidade", "o_que_muda": "quantifica a perda, revela coagulopatia e acidose e orienta a reposição de hemocomponentes" },
+        { "nome": "creatinoquinase, creatinina, potássio e cálcio iônico", "indicacao": "esmagamento, isquemia prolongada, reperfusão ou transfusão maciça", "o_que_muda": "identifica rabdomiólise, lesão renal e hipocalcemia, e indica hidratação e reposição de cálcio" },
+        { "nome": "angiotomografia ou arteriografia do membro", "indicacao": "amputação parcial com isquemia, dúvida de viabilidade ou lesão vascular proximal", "o_que_muda": "mostra a perviedade arterial e define se há condição técnica para revascularização" },
+        { "nome": "glicemia capilar e temperatura central", "indicacao": "todo paciente com amputação", "o_que_muda": "revela descompensação glicêmica e hipotermia, que agravam coagulopatia e perfusão" }
+      ],
+      "evitar": [
+        { "exame": "atrasar o centro cirúrgico para completar exames em paciente com hemorragia controlada por torniquete", "motivo": "o tempo de isquemia é o determinante da viabilidade; cada minuto de espera reduz a chance de reimplante e aumenta a necrose" },
+        { "exame": "cultura do coto colhida antes do antibiótico em paciente séptico ou com hemorragia", "motivo": "atrasa o antibiótico da primeira hora; colher a cultura junto com a administração, sem esperar o resultado para tratar" },
+        { "exame": "imersão do segmento amputado em gelo, soro ou água para transporte", "motivo": "o contato direto com gelo causa lesão por congelamento e a imersão macera o tecido, inviabilizando o reimplante" },
+        { "exame": "soltar o torniquete no pronto-socorro para reavaliar o sangramento", "motivo": "devolve a hemorragia, perde a contagem do tempo de isquemia e reinicia o relógio do reimplante sem necessidade" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter o curativo do coto limpo e seco e trocá-lo conforme orientação da equipe",
+        "elevar o coto nas primeiras 48 horas para reduzir edema",
+        "tomar a analgesia prescrita de forma regular, sem esperar a dor ficar intensa",
+        "comparecer à revisão cirúrgica e à consulta de acompanhamento nas datas marcadas",
+        "iniciar fisioterapia e dessensibilização do coto assim que liberado",
+        "procurar apoio de reabilitação e acompanhamento psicológico"
+      ],
+      "evitar": [
+        "soltar o torniquete por conta própria ou por curiosidade para ver se parou de sangrar",
+        "colocar o segmento amputado em contato direto com gelo, água ou soro",
+        "molhar o curativo do coto antes da liberação da equipe",
+        "apoiar peso no coto antes da liberação e do uso de prótese",
+        "fumar, porque a nicotina reduz a perfusão e compromete a cicatrização",
+        "dirigir ou operar máquina sob efeito de opioide"
+      ],
+      "retorno": [
+        "sangramento que encharca o curativo",
+        "febre, calafrios ou secreção purulenta no coto",
+        "dor que aumenta e não cede com a analgesia prescrita",
+        "pele do coto escura, fria ou com odor fétido",
+        "falta de ar, dor torácica ou dor na panturrilha",
+        "sinais de sofrimento e alterações de humor persistentes"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "ácido tranexâmico", "efeitos": ["náusea", "hipotensão em infusão rápida", "convulsão", "trombose"], "observacao": "infundir em 10 minutos, ajustar na insuficiência renal e suspender se convulsão" },
+      { "agente": "morfina", "efeitos": ["depressão respiratória", "sedação excessiva", "hipotensão"], "observacao": "reduzir a velocidade da titulação, ofertar oxigênio e usar naloxona 0,04 a 0,4 mg IV se frequência respiratória abaixo de 8 por minuto" },
+      { "agente": "cetamina", "efeitos": ["emergência psicomotora", "hipertensão", "alucinação"], "observacao": "reduzir a dose, associar midazolam e manter ambiente calmo" },
+      { "agente": "gentamicina", "efeitos": ["nefrotoxicidade", "ototoxicidade"], "observacao": "dosar creatinina e nível sérico, ajustar a dose e suspender se creatinina subir mais de 0,5 mg/dL" },
+      { "agente": "noradrenalina", "efeitos": ["isquemia periférica", "arritmia", "necrose por extravasamento"], "observacao": "reduzir a dose ao menor valor eficaz, inspecionar o sítio de infusão a cada hora e tratar extravasamento com fentolamina" },
+      { "agente": "gluconato de cálcio", "efeitos": ["bradicardia", "necrose por extravasamento", "hipercalcemia"], "observacao": "infundir lentamente em acesso calibroso e dosar cálcio iônico antes de repetir" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação com data, hora e dose",
+      "Choque persistente apesar de volume e sangue: reavaliar a fonte de sangramento antes de escalonar vasopressor",
+      "Depressão respiratória por opioide: oxigênio, estímulo e naloxona 0,04 a 0,4 mg IV, repetindo a cada 2 minutos",
+      "Extravasamento de noradrenalina ou gluconato de cálcio: interromper a infusão naquele acesso, aspirar o conteúdo e infiltrar fentolamina 5 a 10 mg diluída em 10 mL de soro fisiológico na área, sem massagear",
+      "Hipotermia abaixo de 35 °C: aquecer o paciente, os fluidos e o ambiente e reavaliar coagulograma",
+      "Síndrome de reperfusão após revascularização: hidratar, monitorizar potássio, cálcio e creatinina e tratar hipercalemia",
+      "Suspeita de infecção do coto: colher cultura, ampliar antibiótico e reavaliar necessidade de desbridamento cirúrgico"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "paracetamol 750 mg", "dose": "750 mg", "via": "VO", "frequencia": "6/6 h se dor", "duracao": "5 dias", "condicao": "dor após regularização do coto", "confirmar_apresentacao_local": true },
+          { "item": "amoxicilina-clavulanato 875/125 mg", "dose": "875/125 mg", "via": "VO", "frequencia": "12/12 h", "duracao": "7 dias", "condicao": "coto contaminado ou ferida rural, após alta", "confirmar_apresentacao_local": true },
+          { "item": "toxoide tetânico e diftérico (dT)", "dose": "0,5 mL", "via": "IM", "frequencia": "dose única", "duracao": "reforço em 10 anos", "condicao": "esquema incompleto ou última dose há mais de 10 anos", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "ácido tranexâmico", "dose": "1 g", "via": "IV", "frequencia": "dose única em até 3 horas do trauma", "monitorizacao": "pressão arterial, sangramento e convulsão", "confirmar_apresentacao_local": true },
+          { "item": "cefazolina", "dose": "2 g", "via": "IV", "frequencia": "8/8 h", "monitorizacao": "reação alérgica, diarreia e aspecto do coto", "confirmar_apresentacao_local": true },
+          { "item": "gentamicina", "dose": "5 mg/kg", "via": "IV", "frequencia": "1x/dia", "monitorizacao": "creatinina, diurese e nível sérico", "confirmar_apresentacao_local": true },
+          { "item": "morfina", "dose": "2 a 4 mg", "via": "IV", "frequencia": "titular a cada 5 a 10 minutos", "monitorizacao": "frequência respiratória, sedação e dor", "confirmar_apresentacao_local": true },
+          { "item": "noradrenalina", "dose": "0,05 a 0,5 mcg/kg/min", "via": "IV em bomba", "frequencia": "infusão contínua", "monitorizacao": "pressão arterial média, perfusão e sítio de infusão", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["radiografia do coto e do segmento", "tipagem sanguínea e prova cruzada", "hemograma", "coagulograma", "gasometria e lactato", "creatinoquinase", "creatinina e potássio", "cálcio iônico", "angiotomografia quando indicada", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, submetido a tratamento de amputação traumática com regularização do coto, necessitando de afastamento das atividades habituais e de reabilitação.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento hospitalar; dias e CID são decisão médica no ato"
+      },
+      "encaminhamento": {
+        "campos": ["destino", "motivo", "resumo", "prioridade"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com amputação traumática em nível, mecanismo e hora do trauma, controle de hemorragia com curativo compressivo ou torniquete e hora de aplicação, tempo de isquemia quente e fria, acondicionamento do segmento, antibioticoterapia e profilaxia antitetânica, analgesia, estado hemodinâmico e destino para reimplante ou regularização do coto."
+      }
+    },
+    "anamnese": {
+      "campos": ["hora e mecanismo do trauma", "nível da amputação", "segmento disponível e forma de acondicionamento", "hora do torniquete e tempo de isquemia", "contaminação da ferida", "dor e analgesia já administrada", "estado vacinal antitetânico", "comorbidades e doença vascular periférica", "anticoagulação", "distância e disponibilidade de centro com microcirurgia"],
+      "texto_template": "Paciente com amputação traumática em nível, por mecanismo, há horas do atendimento, com segmento disponível acondicionado de tal forma, hemorragia controlada por compressão ou torniquete aplicado às horas, contaminação por terra ou fezes, dor e analgesia administrada, estado vacinal antitetânico, comorbidades e doença vascular, uso de anticoagulante e disponibilidade de centro com microcirurgia."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais e avaliação primária do trauma", "nível exato da amputação e viabilidade dos tecidos do coto", "aspecto do sangramento e eficácia do curativo ou torniquete", "hora legível do torniquete", "perfusão e sensibilidade do segmento proximal remanescente", "estado do segmento amputado: cor, temperatura, perfusão e contaminação", "temperatura central", "avaliação de outras lesões e de fontes ocultas de sangramento", "nível de consciência e escala de dor"],
+      "texto_template": "Sinais vitais e avaliação primária, nível da amputação, viabilidade do coto, aspecto do sangramento e eficácia do curativo ou torniquete com hora legível, perfusão e sensibilidade do segmento proximal, estado do segmento amputado com cor e temperatura, temperatura central, outras lesões e escala de dor."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de amputação traumática, protocolo de transfusão maciça e critérios de transferência para microcirurgia", "verificar": true },
+      { "tipo": "sociedade_cirurgia", "o_que_verificar": "indicação de reimplante, limites de tempo de isquemia e técnica de acondicionamento do segmento", "verificar": true },
+      { "tipo": "diretriz_de_trauma", "o_que_verificar": "uso de torniquete, ácido tranexâmico no trauma e prevenção da tríade letal", "verificar": true },
+      { "tipo": "protocolo_ms", "o_que_verificar": "profilaxia antitetânica conforme estado vacinal e tipo de ferida", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações de ácido tranexâmico, cefazolina, gentamicina, gluconato de cálcio e noradrenalina", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-TRA06-01", "tipo": "hemorragia", "gatilho": "sangramento arterial ativo ou curativo encharcando", "severidade": "grave", "mensagem": "Controle imediato da hemorragia: compressão, curativo compressivo e torniquete se falhar.", "acao": "acionar sala vermelha e protocolo de hemorragia", "bloqueante": true },
+      { "id": "SA-TRA06-02", "tipo": "torniquete_sem_hora", "gatilho": "torniquete aplicado sem hora registrada", "severidade": "grave", "mensagem": "Registrar a hora do torniquete imediatamente: sem ela não se calcula o tempo de isquemia.", "acao": "bloquear alta e exigir registro", "bloqueante": true },
+      { "id": "SA-TRA06-03", "tipo": "segmento", "gatilho": "segmento amputado não acondicionado ou em contato direto com gelo", "severidade": "grave", "mensagem": "Acondicionar em gaze úmida, duplo saco e refrigeração indireta a 4 °C.", "acao": "acionar correção imediata do acondicionamento", "bloqueante": true },
+      { "id": "SA-TRA06-04", "tipo": "choque", "gatilho": "hipotensão ou taquicardia persistentes", "severidade": "grave", "mensagem": "Choque hemorrágico: dois acessos, transfusão e cirurgia imediata.", "acao": "acionar sala vermelha", "bloqueante": true },
+      { "id": "SA-TRA06-05", "tipo": "tranexamico", "gatilho": "ácido tranexâmico prescrito após 3 horas do trauma", "severidade": "precaucao", "mensagem": "Fora da janela de 3 horas o benefício desaparece e o risco trombótico aumenta.", "acao": "alertar e sugerir revisão", "bloqueante": true },
+      { "id": "SA-TRA06-06", "tipo": "hipotermia", "gatilho": "temperatura central abaixo de 35 °C", "severidade": "grave", "mensagem": "Aquecer o paciente, os fluidos e o ambiente antes de prosseguir.", "acao": "sugerir protocolo de aquecimento", "bloqueante": false },
+      { "id": "SA-TRA06-07", "tipo": "reimplante", "gatilho": "tempo de isquemia acima do limite para o nível da amputação", "severidade": "precaucao", "mensagem": "Discutir com microcirurgia: reimplante pode não ser viável.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-TRA06-08", "tipo": "tetanos", "gatilho": "esquema antitetânico desconhecido ou incompleto", "severidade": "grave", "mensagem": "Indicar dT e imunoglobulina antitetânica nesta visita.", "acao": "sugerir profilaxia", "bloqueante": true }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "MS/PNI", "literatura", "diretrizes de trauma e microcirurgia"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com prioridade no controle de hemorragia por compressão, curativo compressivo e torniquete com hora anotada, ácido tranexâmico em até 3 horas, analgesia titulada com morfina e cetamina, antibiótico de coto com cefazolina, gentamicina e amoxicilina-clavulanato, cobertura do coto, preservação do segmento com refrigeração indireta, prevenção de hipotermia, cálculo do tempo de isquemia, critérios de encaminhamento a centro com microcirurgia e lista do que não fazer.", "data": null }
+      ]
+    }
+  }
+}

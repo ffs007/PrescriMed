@@ -1,0 +1,555 @@
+{
+  "id": "ws-car_13",
+  "nome": "Fibrilação atrial com resposta rápida",
+  "cat": "Emergência",
+  "alias": "fibrilacao atrial com resposta rapida fibrilacao atrial com resposta rapida fa com resposta ventricular rapida fibrilacao atrial rapida fa de alta resposta fibrilacao atrial com instabilidade",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-13_fa_resposta_rapida.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] diretriz_sociedade_cardiologia: CHADS2 e CHA2DS2-VASc, alvo de frequência e indicação de cardioversão",
+      "[verificar] protocolo_institucional: fluxo de cardioversão e anticoagulação peri-procedimento",
+      "[verificar] manual_do_box: técnica e energia da cardioversão sincronizada no BOX-11",
+      "[verificar] anvisa: apresentações de DOAC, amiodarona e digoxina disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-13 em 2026-11-27",
+    "fundido_workspace": "CAR-13 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, sudorese fria ou choque -> cardioversão sincronizada imediata com BOX-11; dor torácica com infra ou supra de ST durante a FA rápida -> cardioversão sincronizada e protocolo de SCA; dispneia intensa, estertores e hipoxemia -> cardioversão, ventilação não invasiva e diurético; confusão, sonolência ou síncope -> cardioversão sincronizada e monitorização contínua. 1) Confirmar a FA no ECG de 12 derivações e medir a resposta ventricular 2) Avaliar instabilidade: pressão, dor isquêmica, dispneia com congestão e nível de consciência 3) Instável: sedação, cardioversão sincronizada conforme BOX-11 e heparina; não atrasar por exames 4) Estável: controle de frequência com metoprolol IV ou VO, ou diltiazem; digoxina ou amiodarona se insuficiência cardíaca 5) Calcular CHA2DS2-VASc e HAS-BLED e decidir a anticoagulação na primeira hora 6) Tratar o gatilho: tireoide, eletrólitos, sepse, álcool, tromboembolismo, anemia e dor 7) Definir a estratégia: controle de frequência ou de ritmo; se cardioversão eletiva, anticoagular 3 semanas antes e 4 semanas depois ou excluir trombo com ecocardiograma transesofágico 8) Alta com anticoagulante, plano de controle de frequência, orientação de sangramento e seguimento em 7 a 14 dias",
+  "redFlags": [
+    "hipotensão, sudorese fria ou choque -> cardioversão sincronizada imediata com BOX-11",
+    "dor torácica com infra ou supra de ST durante a FA rápida -> cardioversão sincronizada e protocolo de SCA",
+    "dispneia intensa, estertores e hipoxemia -> cardioversão, ventilação não invasiva e diurético",
+    "confusão, sonolência ou síncope -> cardioversão sincronizada e monitorização contínua",
+    "FA com QRS largo e pré-excitação (onda delta, história de Wolff-Parkinson-White) -> proibir bloqueador do nó atrioventricular e cardioverter se instável",
+    "frequência ventricular acima de 150 bpm sustentada -> controle de frequência agressivo e avaliar cardioversão",
+    "febre, dor pleurítica ou hipertireoidismo associado -> tratar a causa e reavaliar a estratégia",
+    "sangramento ativo em paciente anticoagulado -> suspender anticoagulante, reverter conforme o fármaco e avaliar causa"
+  ],
+  "naoUsar": [
+    "insuficiência cardíaca descompensada",
+    "frequência abaixo de 50 bpm",
+    "bloqueio atrioventricular de 2º ou 3º grau sem marca-passo",
+    "choque cardiogênico",
+    "asma grave descompensada",
+    "fibrilação atrial com pré-excitação",
+    "prótese valvar mecânica",
+    "estenose mitral reumática moderada ou grave"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar o anticoagulante todos os dias no mesmo horário"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "suspender o anticoagulante por conta própria"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Doac inibidor do fator xa",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "apixabana",
+              "n": "Apixabana",
+              "ap": "comprimido 2,5 mg",
+              "q": "",
+              "pos": "5 mg. Via VO. 12/12 h. Uso contínuo."
+            },
+            "motivo": "anticoagulação de FA não valvar com CHA2DS2-VASc ≥ 2 em homem ou ≥ 3 em mulher (1a linha) CHA2DS2-VASc de indicação",
+            "nota": "Uso direto, com ou sem alimento - monitorar: sinais de sangramento; monitorar: hemograma e creatinina a cada 6-12 meses; monitorar: adesão; monitorar: função hepática · NÃO: prótese valvar mecânica; estenose mitral reumática moderada ou grave; sangramento ativo; plaquetopenia abaixo de 50.000; gestação e amamentação; insuficiência hepática Child C · Obs: Preferido em idoso frágil e em doença renal crônica; não exige controle de INR e tem menor sangramento intracraniano que varfarina · Renal: Reduzir para 2,5 mg 12/12 h com dois dos três critérios: idade ≥ 80 anos, peso ≤ 60 kg,…",
+            "dose": {
+              "texto": "5 mg; 12/12 h; uso contínuo; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "rivaroxabana",
+              "n": "Rivaroxabana",
+              "ap": "comprimido 10 mg",
+              "q": "",
+              "pos": "20 mg. Via VO. 1x/dia, junto com alimento. Uso contínuo."
+            },
+            "motivo": "anticoagulação de FA não valvar com CHA2DS2-VASc de indicação (alternativa)",
+            "nota": "Uso direto, obrigatoriamente com alimento para garantir absorção - monitorar: sangramento; monitorar: hemograma e creatinina; monitorar: adesão; monitorar: função hepática · NÃO: prótese valvar mecânica; estenose mitral reumática moderada ou grave; sangramento ativo; insuficiência hepática Child C; gestação; ClCr abaixo de 15 mL/min · Obs: Uma tomada diária melhora adesão, mas a absorção depende de alimento; não usar junto com inibidor duplo de CYP3A4 e P-glicoproteína · Renal: ClCr 15–49 mL/min: 15 mg 1x/dia; evitar abaixo de 15 mL/min",
+            "dose": {
+              "texto": "20 mg; 1x/dia, junto com alimento; uso contínuo; max. 20 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Betabloqueador com ação alfa",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "carvedilol",
+            "pos": "3,125-25 mg. Via VO. 12/12 h. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "FA rápida com insuficiência cardíaca de fração de ejeção reduzida, para controle de frequência e tratamento da insuficiência cardíaca (alternativa)",
+            "nota": "Uso direto, com alimento - monitorar: pressão em pé e sentado; monitorar: frequência cardíaca; monitorar: peso e sinais de congestão; monitorar: creatinina e potássio na titulação · NÃO: insuficiência cardíaca descompensada; asma grave; bloqueio atrioventricular avançado sem marca-passo; bradicardia abaixo de 50 bpm; insuficiência hepática grave · Obs: Preferir quando há insuficiência cardíaca de fração de ejeção reduzida; iniciar em dose baixa e titular a cada 2 semanas",
+            "dose": {
+              "texto": "3,125-25 mg; 12/12 h; uso contínuo; max. 50 mg/dia",
+              "status": "ok",
+              "valor": 3.125,
+              "valor_max": 25,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Doac inibidor direto da trombina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "dabigatrana",
+              "n": "Dabigatrana",
+              "ap": "cápsula 110 mg",
+              "q": "",
+              "pos": "150 mg. Via VO. 12/12 h. Uso contínuo."
+            },
+            "motivo": "anticoagulação de FA não valvar em paciente com função renal preservada (alternativa)",
+            "nota": "Uso direto, com alimento e água; não abrir a cápsula - monitorar: sangramento; monitorar: creatinina a cada 6 meses ou antes se idoso; monitorar: dispepsia; monitorar: adesão · NÃO: prótese valvar mecânica; ClCr abaixo de 30 mL/min; sangramento ativo; uso de inibidor potente de P-glicoproteína; gestação; dispepsia grave · Obs: Reversível com idarucizumabe; a dispepsia é o principal motivo de troca · Renal: ClCr 30–50 mL/min: 110 mg 12/12 h ou 150 mg conforme risco; contraindicada abaixo de 30…",
+            "dose": {
+              "texto": "150 mg; 12/12 h; uso contínuo; max. 300 mg/dia",
+              "status": "ok",
+              "valor": 150,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antagonista da vitamina k",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_varfarina",
+            "pos": "5 mg. Via VO. 1x/dia, com ajuste pelo INR. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "FA com prótese valvar mecânica, estenose mitral reumática moderada ou grave, ou ClCr abaixo de 15 mL/min (condicional) prótese valvar mecânica ou estenose mitral reumática",
+            "nota": "Uso direto, no mesmo horário, com ingestão estável de vitamina K - monitorar: INR semanal no início e mensal quando estável; monitorar: sinais de sangramento; monitorar: hemoglobina; monitorar: interações com antibiótico e amiodarona",
+            "dose": {
+              "texto": "5 mg; 1x/dia, com ajuste pelo INR; uso contínuo; max. ajustada pelo INR, sem limite fixo",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Heparina de baixo peso molecular",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa 20 mg",
+              "q": "",
+              "pos": "1 mg/kg. Via subcutânea. 12/12 h. Até início do anticoagulante oral ou 4 semanas após a cardioversão."
+            },
+            "motivo": "anticoagulação parenteral na cardioversão precoce, ponte de varfarina ou durante a internação (condicional)",
+            "nota": "Uso direto na seringa; não expelir a bolha - monitorar: plaquetas na basal e no 4º dia; monitorar: sangramento; monitorar: anti-Xa se obesidade, gestação ou ClCr baixo; monitorar: função renal · NÃO: sangramento ativo; plaquetopenia induzida por heparina prévia; insuficiência renal grave sem ajuste; endocardite; hipertensão não controlada grave · Obs: Iniciar heparina antes da cardioversão quando a FA tem mais de 48 h e o paciente não está anticoagulado; manter até o anticoagulante oral em dose terapêutica · Renal: ClCr abaixo de 30 mL/min: 1 mg/kg 1x/dia",
+            "dose": {
+              "texto": "1 mg/kg; 12/12 h; até início do anticoagulante oral ou 4 semanas após a cardioversão; max. 1 mg/kg por dose",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Tratar o gatilho da FA",
+              "ap": "",
+              "q": "",
+              "pos": "Pesquisar e tratar sepse, tromboembolismo pulmonar, hipertireoidismo, anemia, hipovolemia, dor, álcool e pós-operatório; a FA de gatilho reversível costuma reverter com o tratamento da causa"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Monitorização cardíaca contínua",
+              "ap": "",
+              "q": "",
+              "pos": "Telemetria com alarme de frequência, desfibrilador testado ao lado do leito e ECG de 12 derivações seriado na instabilidade"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Restrição de álcool e cafeína e higiene do sono",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender álcool durante a fase aguda e investigar apneia obstrutiva do sono com polissonografia em obesos e em FA recorrente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Controle de volume e de congestão",
+              "ap": "",
+              "q": "",
+              "pos": "Restrição de sódio, diurético conforme peso e balanço hídrico; a congestão piora a taquicardia e a dispneia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Prevenção de queda no idoso anticoagulado",
+              "ap": "",
+              "q": "",
+              "pos": "Avaliar risco de queda, revisar sedativos e hipoglicemiantes, adaptar o ambiente e orientar uso de apoio ao caminhar"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Educação sobre anticoagulação",
+              "ap": "",
+              "q": "",
+              "pos": "Explicar adesão, sinais de sangramento, necessidade de informar procedimentos e a importância de não suspender por conta própria"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Decisão compartilhada entre controle de frequência e de ritmo",
+              "ap": "",
+              "q": "",
+              "pos": "Discutir sintoma, idade, tempo de FA, tamanho do átrio e preferência; encaminhar para ablação quando refratário e sintomático"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-13"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Betabloqueador",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "metoprolol",
+              "n": "Metoprolol",
+              "ap": "ampola 1 mg/mL (5 mL)",
+              "via": "IV ou VO",
+              "pos": "2,5-5 mg IV; manutenção 25-100 mg VO. IV a cada 5 minutos até 3 doses; VO 12/12 h. Fase aguda com transição para via oral em 24-48 h. Bolus lento em 1-2 minutos."
+            },
+            "motivo": "controle de frequência na FA com resposta rápida sem insuficiência cardíaca descompensada (1a linha) controle de frequência",
+            "nota": "IV: usar sem diluição, em bolus lento; VO: uso direto - monitorar: frequência cardíaca e pressão antes de cada dose; monitorar: ECG contínuo; monitorar: ausculta respiratória; monitorar: perfusão periférica · NÃO: insuficiência cardíaca descompensada; frequência abaixo de 50 bpm; bloqueio atrioventricular de 2º ou 3º grau sem marca-passo; choque cardiogênico; asma grave descompensada; fibrilação atrial com pré-excitação · Obs: Primeira escolha na FA rápida sem insuficiência cardíaca. Alvo de frequência abaixo de 110 bpm na estratégia leniente e 80 bpm em repouso na estrita",
+            "dose": {
+              "texto": "2,5-5 mg IV; manutenção 25-100 mg VO; IV a cada 5 minutos até 3 doses; VO 12/12 h; fase aguda com transição para via oral em 24-48 h; max. 15 mg IV na fase aguda; 200 mg/dia VO",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 15,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Bloqueador de canal de cálcio não diidropiridinico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "diltiazem",
+              "n": "Diltiazem",
+              "ap": "ampola 5 mg/mL (2 mL e 10 mL)",
+              "via": "IV ou VO",
+              "pos": "0,25 mg/kg IV (20 mg) em 2 minutos; repetir 0,35 mg/kg após 15 minutos; manutenção 120-360 mg/dia VO. IV a cada 15 minutos; VO 8/8 h ou liberação prolongada 1x/dia. Fase aguda e manutenção. 2 minutos."
+            },
+            "motivo": "controle de frequência na FA rápida sem insuficiência cardíaca de fração de ejeção reduzida e sem pré-excitação (alternativa)",
+            "nota": "IV: diluir a dose em 20 mL de SF 0,9% e infundir em 2 minutos; VO: uso direto - monitorar: pressão arterial a cada 15 minutos na fase aguda; monitorar: frequência cardíaca e ECG; monitorar: sinais de congestão; monitorar: edema · NÃO: insuficiência cardíaca de fração de ejeção reduzida; choque cardiogênico; bloqueio atrioventricular; pressão sistólica abaixo de 90 mmHg; fibrilação atrial com pré-excitação; uso concomitante de betabloqueador intravenoso · Obs: Verapamil e diltiazem são proibidos na insuficiência cardíaca de fração de ejeção reduzida: nesse cenário use betabloqueador, digoxina ou amiodarona",
+            "dose": {
+              "texto": "0,25 mg/kg IV (20 mg) em 2 minutos; repetir 0,35 mg/kg após 15 minutos; manutenção 120-360 mg/dia VO; IV a cada 15 minutos; VO 8/8 h ou liberação prolongada 1x/dia; fase aguda e manutenção; max. 0,35 mg/kg por dose IV; 360 mg/dia VO",
+              "status": "ok",
+              "valor": 120,
+              "valor_max": 360,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.35,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Glicosideo digitalico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "digoxina",
+              "n": "Digoxina",
+              "ap": "ampola 0,25 mg/mL (1 mL e 2 mL)",
+              "via": "IV ou VO",
+              "pos": "0,25-0,5 mg IV de ataque; manutenção 0,125-0,25 mg/dia. Ataque em dose única ou dividida; manutenção 1x/dia. Uso contínuo. 5 minutos (IV lento)."
+            },
+            "motivo": "FA rápida com insuficiência cardíaca de fração de ejeção reduzida ou hipotensão que impede betabloqueador e diltiazem (condicional) insuficiência cardíaca com controle de frequência insuficiente",
+            "nota": "IV: diluir em 10 mL de SF 0,9% ou SG 5% e infundir lento; VO: uso direto - monitorar: nível sérico entre 0,5 e 0,9 ng/mL; monitorar: potássio, magnésio e creatinina; monitorar: ECG com bradicardia ou bloqueio; monitorar: náusea e alteração visual · NÃO: bloqueio atrioventricular avançado sem marca-passo; fibrilação atrial com pré-excitação; hipocalemia grave não corrigida; insuficiência renal grave sem ajuste; cardiopatia hipertrófica obstrutiva · Obs: Ação de horas: não serve para FA com instabilidade. A toxicidade piora com hipocalemia, hipomagnesemia e hipoxemia · Renal: ClCr 30–60 mL/min: reduzir a manutenção pela metade;…",
+            "dose": {
+              "texto": "0,25-0,5 mg IV de ataque; manutenção 0,125-0,25 mg/dia; ataque em dose única ou dividida; manutenção 1x/dia; uso contínuo; max. 1 mg no primeiro dia; 0,25 mg/dia de manutenção",
+              "status": "ok",
+              "valor": 0.25,
+              "valor_max": 0.5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiarrítmico classe iii",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "amiodarona",
+              "n": "Amiodarona",
+              "ap": "ampola 50 mg/mL (3 mL)",
+              "via": "IV ou VO",
+              "pos": "150 mg IV em 10 minutos, depois 1 mg/min por 6 h e 0,5 mg/min por 18 h; manutenção 200 mg/dia VO. Bolus único seguido de infusão contínua. 24 horas de infusão; manutenção oral conforme indicação. 10 minutos em bolus; infusão contínua por 24 horas."
+            },
+            "motivo": "FA rápida com insuficiência cardíaca grave, choque ou refratária a betabloqueador e digoxina (condicional)",
+            "nota": "Diluir 150 mg em 100-250 mL de SG 5%; usar acesso venoso central quando possível - monitorar: pressão arterial durante o bolus; monitorar: frequência e ECG com medida do QT; monitorar: TSH e T4 livre a cada 6 meses; monitorar: TGO e TGP; monitorar: radiografia e função pulmonar em uso crônico · NÃO: bradicardia sinusal grave; bloqueio atrioventricular avançado sem marca-passo; doença tireoidiana não controlada; hepatopatia grave; hipersensibilidade a iodo · Obs: Controla a frequência por via intravenosa, mas a hipotensão limita o bolus. Não é a primeira escolha para controle de frequência crônico",
+            "dose": {
+              "texto": "150 mg IV em 10 minutos, depois 1 mg/min por 6 h e 0,5 mg/min por 18 h; manutenção 200 mg/dia VO; bolus único seguido de infusão contínua; 24 horas de infusão; manutenção oral conforme indicação; max. 2,2 g/dia IV; 200 mg/dia VO de manutenção",
+              "status": "ok",
+              "valor": 150,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2.2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "CAR-13",
+    "versao": "0.2.0",
+    "arquivo": "CAR-13_fa_resposta_rapida.json",
+    "area": "Cardiovascular",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar",
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

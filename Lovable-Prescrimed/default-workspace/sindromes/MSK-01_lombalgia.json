@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "MSK-01",
+    "area": "Musculoesquelético",
+    "nome": "Lombalgia aguda",
+    "aliases": ["lombalgia", "dor lombar", "dor nas costas", "lumbago", "lombalgia mecânica", "lombalgia aguda inespecífica"],
+    "contexto": ["ambulatorial", "hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Lombalgia aguda é a dor lombar de até 6 semanas e, em cerca de 90% dos casos, é mecânica inespecífica, sem doença estrutural que explique o sintoma. O primeiro trabalho não é achar a causa: é separar cinco grupos que mudam a conduta — fratura (trauma, osteoporose, corticoide crônico), infecção (febre, drogas IV, imunossupressão, hemodiálise), tumor (câncer prévio, perda de peso, dor noturna contínua), síndrome da cauda equina (anestesia em sela, retenção urinária, déficit progressivo) e aneurisma de aorta abdominal (dor lombar súbita com massa pulsátil e hipotensão em maior de 50 anos). Sem nenhum desses, imagem não muda desfecho e aumenta cirurgia desnecessária: a conduta é AINE em dose plena por 5 a 7 dias, paracetamol quando o AINE é contraindicado, relaxante muscular por no máximo 1 semana e opioide apenas em falha. Repouso prolongado, corticoide sistêmico de rotina e cirurgia sem déficit são erros que pioram o resultado. A meta é dor controlada e retorno às atividades em 24 a 48 horas, com red flag reconhecida no mesmo dia.",
+    "inclusao": [
+      "Dor lombar de até 6 semanas, com ou sem irradiação para nádega ou coxa, sem déficit neurológico",
+      "Lombalgia mecânica recorrente em adulto sem sinais de alarme",
+      "Dor lombar com espasmo muscular e limitação funcional",
+      "Lombalgia com suspeita de red flag que exige investigação dirigida"
+    ],
+    "exclusao": [
+      { "situacao": "dor irradiada para perna com déficit motor, alteração de reflexo ou dermátomo definido", "fluxo": "NEU-11 lombociatalgia" },
+      { "situacao": "trauma de alta energia, queda de altura ou acidente com suspeita de fratura instável", "fluxo": "trauma ortopédico" },
+      { "situacao": "dor lombar com febre e infecção urinária ou abdominal associada", "fluxo": "investigação infecciosa" },
+      { "situacao": "dor lombar de origem visceral ou ginecológica, com sinais abdominais ou pélvicos", "fluxo": "GI-04 dor abdominal ou GO" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "anestesia em sela, retenção urinária, incontinência ou hipotonia anal", "por_que": "síndrome da cauda equina com compressão de raízes sacrais", "acao": "ressonância lombossacra imediata e cirurgia descompressiva urgente; não passar analgesia e ir para casa", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "déficit motor progressivo, em especial queda da dorsiflexão do pé ou do joelho", "por_que": "compressão radicular ou medular com sofrimento axonal", "acao": "ressonância urgente e avaliação neurocirúrgica; déficit fixo acima de 48 h tem pior recuperação", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "febre, calafrio, uso de drogas injetáveis, hemodiálise ou imunossupressão", "por_que": "espondilodiscite ou abscesso epidural", "acao": "hemoculturas, ressonância com contraste e antibiótico dirigido; não iniciar antibiótico sem cultura se o paciente está estável", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "câncer prévio, perda de peso, dor noturna contínua que não alivia com repouso", "por_que": "metástase vertebral ou tumor primário", "acao": "ressonância com contraste, imagem de corpo inteiro conforme suspeita e oncologia", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "trauma significante, idade acima de 65 anos, osteoporose ou uso crônico de corticoide", "por_que": "fratura vertebral por compressão", "acao": "radiografia lombossacra; se negativa e suspeita persiste, tomografia ou ressonância", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "dor lombar súbita com massa pulsátil no abdome, síncope ou hipotensão em maior de 50 anos", "por_que": "aneurisma de aorta abdominal roto ou em expansão", "acao": "ultrassom à beira-leito ou angiotomografia e cirurgia vascular imediatas; não prescrever AINE", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "dor que piora em repouso, rigidez matinal acima de 30 minutos ou dor inflamatória em jovem", "por_que": "espondiloartrite axial ou infecção", "acao": "reavaliar diagnóstico, provas inflamatórias e ressonância de sacroilíacas", "severidade": "precaucao" },
+      { "id": "AL-08", "sinal": "dor lombar com déficit esfincteriano de instalação rápida e alteração da marcha", "por_que": "compressão medular ou cauda equina de evolução aguda", "acao": "ressonância em caráter de emergência e neurocirurgia", "severidade": "grave" }
+    ],
+    "perguntas_rapidas": [
+      "Tem perda de força para levantar o pé, ficar na ponta dos pés ou subir escada?",
+      "Perdeu o controle da urina ou das fezes, ou tem dormência entre as pernas e na região da sela?",
+      "Teve febre, calafrio, infecção recente, uso de drogas injetáveis ou faz hemodiálise?",
+      "Perdeu peso, tem câncer prévio ou a dor acorda você à noite e não melhora com repouso?",
+      "Teve queda, acidente, ou usa corticoide por mais de 3 meses? Tem mais de 65 anos?",
+      "A dor piora com repouso e rigidez matinal, ou melhora com movimento?",
+      "Como começou: súbito após esforço ou progressivo ao longo de dias?",
+      "Já usou AINE, paracetamol ou relaxante neste episódio? Por quanto tempo e com qual resposta?",
+      "A dor tem pulsação no abdome ou já teve desmaio junto com o início?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Lombalgia mecânica aguda sem red flag, em adulto sem contraindicação", "escolha": "Naproxeno 500 mg 12/12 h por 5 a 7 dias + retorno precoce às atividades", "porque": "AINE tem efeito analgésico superior ao paracetamol isolado na lombalgia aguda e o retorno precoce encurta a incapacidade; a evidência é de alívio sintomático, não de cura estrutural" },
+      { "cenario": "AINE contraindicado por doença renal crônica, úlcera péptica, anticoagulação plena, insuficiência cardíaca ou gestação após 20 semanas", "escolha": "Paracetamol 750 mg 6/6 h + adesivo de lidocaína 5% 12 h/dia + calor local", "porque": "Evita sangramento digestivo, lesão renal e descompensação cardíaca; o adesivo tem absorção sistêmica mínima e cobre dor localizada" },
+      { "cenario": "Espasmo muscular intenso com limitação importante para levantar e deambular", "escolha": "Ciclobenzaprina 5 a 10 mg à noite por até 7 dias", "porque": "Reduz o espasmo e melhora a mobilidade, mas o benefício é modesto e cai após 1 semana; a sedação é o efeito limitante" },
+      { "cenario": "Idoso acima de 65 anos, frágil, com múltiplas comorbidades ou em risco de queda", "escolha": "Paracetamol como base; AINE só se função renal e pressão permitirem, pelo menor tempo possível; evitar ciclobenzaprina ou usar 5 mg à noite", "porque": "AINE e relaxante central aumentam lesão renal, confusão, queda e fratura de quadril nessa faixa; o risco supera o ganho analgésico" },
+      { "cenario": "Falha de AINE e paracetamol após 72 a 96 horas, com dor moderada a intensa", "escolha": "Tramadol 50 mg 6/6 h por até 5 dias, com quantidade limitada", "porque": "Opioide fraco tem benefício pequeno na lombalgia e risco de náusea, sedação, convulsão e dependência; serve como ponte curta, nunca como manutenção" },
+      { "cenario": "Trauma significante, osteoporose ou uso crônico de corticoide com dor lombar nova", "escolha": "Radiografia lombossacra; se negativa com suspeita mantida, tomografia ou ressonância", "porque": "A radiografia detecta fratura por compressão, mas tem baixa sensibilidade na osteoporose; a imagem avançada define tratamento e necessidade de vertebroplastia ou órtese" },
+      { "cenario": "Febre, imunossupressão ou uso de drogas IV com dor lombar", "escolha": "Ressonância com contraste + hemoculturas antes do antibiótico; antibiótico parenteral por 6 semanas após confirmação", "porque": "Radiografia é insensível na espondilodiscite e o atraso do diagnóstico leva a abscesso epidural e déficit irreversível" },
+      { "cenario": "Câncer prévio ou perda de peso com dor noturna contínua", "escolha": "Ressonância com contraste da coluna inteira e investigação oncológica", "porque": "Metástase vertebral é a causa mais comum de dor por tumor; a conduta muda com radioterapia, cirurgia de estabilização ou tratamento sistêmico" },
+      { "cenario": "Anestesia em sela, retenção urinária ou déficit motor progressivo", "escolha": "Ressonância imediata e cirurgia descompressiva em caráter de urgência", "porque": "Cauda equina é emergência cirúrgica: quanto maior o tempo até a descompressão, maior a chance de sequela esfincteriana e motora permanente" },
+      { "cenario": "Dor lombar súbita com massa pulsátil, síncope ou hipotensão", "escolha": "Ultrassom de aorta à beira-leito ou angiotomografia e cirurgia vascular imediatas", "porque": "Aneurisma roto mata em minutos; AINE e analgesia que mascaram o quadro atrasam o diagnóstico" },
+      { "cenario": "Lombalgia sem red flag, com pedido de imagem pelo paciente ou pelo trabalho", "escolha": "Não pedir imagem; explicar o prognóstico e reavaliar em 4 a 6 semanas", "porque": "Achados degenerativos são universais em adultos e levam a cirurgia, injeção e afastamento sem melhora de desfecho" },
+      { "cenario": "Lombalgia com ou sem radiculopatia, sem déficit, e desejo de cirurgia", "escolha": "Não operar; tratar de forma conservadora e encaminhar à fisioterapia", "porque": "Cirurgia de coluna sem déficit não supera o tratamento conservador e adiciona risco de infecção, lesão dural e reoperação" },
+      { "cenario": "Lombalgia aguda com indicação de corticoide sistêmico por hábito do serviço", "escolha": "Não usar corticoide sistêmico de rotina", "porque": "Não há benefício consistente na lombalgia aguda inespecífica e há risco de hiperglicemia, retenção hídrica, infecção e piora da densidade óssea" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "aine",
+        "agente": "naproxeno",
+        "papel": "primeira_linha",
+        "indicacao": "lombalgia mecânica aguda sem red flag, em paciente sem contraindicação a AINE",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h, com ataque de 500 mg na primeira tomada",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "1.000 mg/dia",
+        "contraindicacoes": ["úlcera péptica ativa ou sangramento digestivo recente", "doença renal crônica com ClCr abaixo de 30 mL/min", "insuficiência cardíaca descompensada", "anticoagulação plena", "gestação após 20 semanas", "asma induzida por AINE ou alergia a salicilato"],
+        "efeitos_adversos": ["dispepsia", "náusea", "sangramento digestivo", "lesão renal", "retenção hídrica", "elevação da pressão arterial"],
+        "apresentacoes": ["comprimido 250 mg", "comprimido 500 mg", "comprimido 550 mg"],
+        "preparo": "Uso direto, com alimento ou leite para reduzir dispepsia",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["dor e mobilidade em 72 h", "pressão arterial", "creatinina se uso acima de 5 dias", "sinais de sangramento digestivo", "edema periférico"],
+        "ajuste_renal": "Evitar com ClCr abaixo de 30 mL/min; entre 30 e 60 mL/min usar a menor dose pelo menor tempo e suspender se creatinina subir 30%",
+        "ajuste_hepatico": "Evitar em cirrose Child C; reduzir dose em hepatopatia leve a moderada",
+        "observacoes": "Meia-vida longa permite 12/12 h. Não associar a outro AINE nem a AAS em dose anti-inflamatória. Suspender e reavaliar se não houver melhora em 7 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de lombalgia",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "diclofenaco sódico",
+        "papel": "alternativa",
+        "indicacao": "lombalgia aguda quando o serviço não dispõe de naproxeno, ou crise intensa com necessidade de via intramuscular",
+        "dose": "50 mg VO ou 75 mg IM",
+        "unidade": "mg",
+        "via": "VO ou IM",
+        "frequencia": "8/8 h por via oral; 1x/dia por via intramuscular",
+        "duracao": "5 dias por via oral; no máximo 2 dias por via intramuscular",
+        "dose_maxima": "150 mg/dia",
+        "contraindicacoes": ["doença cardiovascular estabelecida", "úlcera péptica ativa", "doença renal crônica com ClCr abaixo de 30 mL/min", "insuficiência cardíaca descompensada", "anticoagulação plena", "gestação após 20 semanas"],
+        "efeitos_adversos": ["dispepsia", "sangramento digestivo", "lesão renal", "elevação da pressão arterial", "evento cardiovascular", "dor e hematoma no local da injeção"],
+        "apresentacoes": ["comprimido 50 mg", "comprimido de liberação prolongada 75 mg", "comprimido de liberação prolongada 100 mg", "ampola 75 mg/3 mL", "gel 1%"],
+        "preparo": "VO uso direto com alimento; IM aplicar no quadrante superior externo do glúteo, sem misturar outros fármacos na seringa",
+        "tempo_infusao": "não se aplica (via oral ou intramuscular)",
+        "monitorizacao": ["pressão arterial", "creatinina", "sinais de sangramento digestivo", "dor e hematoma no local da aplicação", "sintomas cardiovasculares"],
+        "ajuste_renal": "Evitar com ClCr abaixo de 30 mL/min; não usar por mais de 5 dias se ClCr entre 30 e 60 mL/min",
+        "ajuste_hepatico": "Evitar em hepatopatia grave; reduzir dose em hepatopatia leve a moderada",
+        "observacoes": "Tem o maior risco cardiovascular entre os AINEs disponíveis: evitar em cardiopata e em idoso com múltiplas comorbidades. A via intramuscular não é mais eficaz que a oral e não deve ser repetida por mais de 2 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "alternativa",
+        "indicacao": "lombalgia aguda leve a moderada, com necessidade de titular dose por tomada",
+        "dose": "400 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "2.400 mg/dia sob prescrição; 1.200 mg/dia sem prescrição",
+        "contraindicacoes": ["úlcera péptica ativa", "doença renal crônica com ClCr abaixo de 30 mL/min", "insuficiência cardíaca descompensada", "anticoagulação plena", "gestação após 20 semanas", "asma induzida por AINE"],
+        "efeitos_adversos": ["dispepsia", "náusea", "sangramento digestivo", "lesão renal", "retenção hídrica", "tontura"],
+        "apresentacoes": ["comprimido 200 mg", "comprimido 400 mg", "comprimido 600 mg", "cápsula gelatinosa 200 mg", "suspensão oral 50 mg/mL"],
+        "preparo": "Uso direto, com alimento; agitar a suspensão antes de medir",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["dor e mobilidade", "pressão arterial", "creatinina se uso acima de 5 dias", "sangramento digestivo", "edema"],
+        "ajuste_renal": "Evitar com ClCr abaixo de 30 mL/min; usar 200 mg 8/8 h se ClCr entre 30 e 60 mL/min",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia leve a moderada; evitar em grave",
+        "observacoes": "Meia-vida curta: útil quando se quer titular por tomada, mas exige 3 tomadas ao dia. É o mesmo grupo do naproxeno — escolher um AINE, não associar dois",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "alternativa",
+        "indicacao": "lombalgia aguda quando o AINE é contraindicado, ou como adjuvante para reduzir a dose de AINE",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "3 g/dia (limite absoluto de 4 g/dia em adulto saudável por até 3 dias)",
+        "contraindicacoes": ["hepatopatia descompensada", "desnutrição grave", "uso crônico de álcool", "alergia ao paracetamol"],
+        "efeitos_adversos": ["náusea", "elevação de transaminases", "hepatotoxicidade em dose alta", "rash cutâneo raro"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 750 mg", "solução oral 200 mg/mL (gotas)", "frasco para infusão 10 mg/mL (1 g/100 mL)"],
+        "preparo": "VO uso direto; IV infundir o frasco de 1 g em 100 mL sem diluição adicional",
+        "tempo_infusao": "não se aplica na via oral; 15 minutos na via intravenosa",
+        "monitorizacao": ["soma da dose diária de todas as fontes, incluindo associações", "TGO, TGP e INR se uso acima de 3 dias ou hepatopatia", "intensidade da dor"],
+        "ajuste_renal": "Sem ajuste na dose habitual; espaçar para 6/6 h se ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia, alcoolismo ou desnutrição",
+        "observacoes": "Não tem efeito anti-inflamatório e o efeito isolado na lombalgia mecânica é modesto. Conferir se o paciente já usa paracetamol em associação para não ultrapassar o teto",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "relaxante_muscular_central",
+        "agente": "ciclobenzaprina",
+        "papel": "condicional",
+        "indicacao": "espasmo muscular intenso com limitação funcional, por no máximo 7 dias",
+        "dose": "5 a 10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "5 mg 8/8 h ou 10 mg à noite",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "30 mg/dia",
+        "contraindicacoes": ["glaucoma de ângulo fechado", "retenção urinária", "hipertireoidismo", "uso de IMAO", "arritmia cardíaca", "infarto recente", "idoso frágil com risco de queda"],
+        "efeitos_adversos": ["sonolência", "boca seca", "tontura", "constipação", "retenção urinária", "confusão mental em idoso"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 10 mg", "cápsula de liberação prolongada 15 mg", "cápsula de liberação prolongada 30 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["nível de sedação", "marcha e risco de queda", "confusão mental em idoso", "retenção urinária", "boca seca"],
+        "ajuste_renal": "Sem ajuste renal",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia leve a moderada; evitar em Child C",
+        "observacoes": "Em idoso acima de 65 anos usar 5 mg à noite ou não usar: sedação, queda, fratura de quadril e confusão. Não associar a outro relaxante nem a benzodiazepínico. O benefício é modesto e cai após 1 semana",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "relaxante_muscular_central",
+        "agente": "tizanidina",
+        "papel": "alternativa",
+        "indicacao": "espasmo muscular quando se quer evitar o efeito anticolinérgico da ciclobenzaprina",
+        "dose": "2 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "12 mg/dia",
+        "contraindicacoes": ["hepatopatia grave", "uso concomitante de fluvoxamina ou ciprofloxacino", "hipotensão arterial", "alergia ao fármaco"],
+        "efeitos_adversos": ["sonolência", "tontura", "boca seca", "hipotensão", "elevação de transaminases"],
+        "apresentacoes": ["comprimido 2 mg", "comprimido 4 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["TGO e TGP se uso acima de 1 semana", "pressão arterial", "sedação"],
+        "ajuste_renal": "ClCr abaixo de 25 mL/min: 2 mg 1x/dia e titular com cautela",
+        "ajuste_hepatico": "Contraindicada em hepatopatia grave; solicitar transaminases antes de iniciar",
+        "observacoes": "Menos anticolinérgica que a ciclobenzaprina, porém com hepatotoxicidade rara e interações por CYP1A2. Não associar a ciprofloxacino nem a fluvoxamina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide_fraco",
+        "agente": "tramadol",
+        "papel": "resgate",
+        "indicacao": "falha de AINE e paracetamol após 72 a 96 horas, com dor moderada a intensa e por curto prazo",
+        "dose": "50 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h se necessário",
+        "duracao": "até 5 dias",
+        "dose_maxima": "400 mg/dia",
+        "contraindicacoes": ["uso de IMAO nos últimos 14 dias", "epilepsia não controlada", "depressão respiratória", "intoxicação aguda por álcool ou depressores", "uso concomitante de triptano ou ISRS sem cautela", "ClCr abaixo de 30 mL/min sem ajuste"],
+        "efeitos_adversos": ["náusea", "vômito", "tontura", "sonolência", "constipação", "convulsão", "síndrome serotoninérgica", "dependência"],
+        "apresentacoes": ["cápsula 50 mg", "comprimido de liberação prolongada 100 mg", "solução injetável 50 mg/mL (ampola 2 mL)"],
+        "preparo": "VO uso direto; IV diluir 1 ampola de 100 mg em 100 mL de SF 0,9%",
+        "tempo_infusao": "não se aplica na via oral; 15 a 30 minutos na via intravenosa, sem bolus",
+        "monitorizacao": ["sedação e frequência respiratória", "náusea e vômito", "pressão arterial", "convulsão", "sinais de síndrome serotoninérgica se usar ISRS"],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: 50 mg 12/12 h, máximo de 200 mg/dia",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia leve a moderada; evitar em grave",
+        "observacoes": "Não é primeira linha na lombalgia: o benefício é pequeno. Prescrever quantidade limitada, sem renovação automática, e suspender em 5 dias. Evitar em idoso com risco de queda e em quem usa ISRS, IMAO ou triptano",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local_topico",
+        "agente": "lidocaína 5% adesivo",
+        "papel": "alternativa",
+        "indicacao": "dor lombar localizada em paciente que não pode usar AINE (doença renal, úlcera, anticoagulação, insuficiência cardíaca)",
+        "dose": "1 adesivo de 10 x 14 cm",
+        "unidade": "adesivo",
+        "via": "tópica",
+        "frequencia": "12 horas de uso e 12 horas sem, 1x/dia",
+        "duracao": "até 2 semanas",
+        "dose_maxima": "3 adesivos simultâneos",
+        "contraindicacoes": ["alergia a anestésico do tipo amida", "pele lesionada, infectada ou com dermatite no local", "uso concomitante de antiarrítmico classe I"],
+        "efeitos_adversos": ["irritação local", "eritema", "prurido", "sensação de queimação", "toxicidade sistêmica rara com uso em área extensa"],
+        "apresentacoes": ["adesivo 5% (700 mg por adesivo de 10 x 14 cm)", "gel 2%"],
+        "preparo": "Aplicar sobre pele íntegra e seca, sem oclusão e sem aquecimento local",
+        "tempo_infusao": "não se aplica (via tópica)",
+        "monitorizacao": ["pele no local da aplicação", "intensidade da dor", "sinais de toxicidade sistêmica se uso em área extensa ou pele lesada"],
+        "ajuste_renal": "Sem ajuste (absorção sistêmica mínima)",
+        "ajuste_hepatico": "Cautela em hepatopatia grave com uso em grandes áreas",
+        "observacoes": "Opção segura em idoso e em doença renal crônica por não ter efeito sistêmico relevante. Não substitui o AINE em dor intensa nem trata espasmo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Retorno precoce às atividades", "detalhe": "Manter deambulação desde o primeiro dia; repouso no leito no máximo 1 a 2 dias. Voltar ao trabalho leve em 24 a 48 h, com restrição de carga por 1 a 2 semanas" },
+      { "medida": "Calor local", "detalhe": "Bolsa térmica ou compressa por 20 minutos, 2 a 3 vezes ao dia, com proteção da pele; evita-se calor em área com déficit de sensibilidade" },
+      { "medida": "Fisioterapia ativa", "detalhe": "Iniciar entre a primeira e a segunda semana: exercícios de controle motor, fortalecimento de glúteos e estabilizadores, exposição gradual à carga. Não indicar eletroterapia passiva isolada" },
+      { "medida": "Educação sobre o prognóstico", "detalhe": "Explicar que 90% melhora em 4 a 6 semanas e que achados de desgaste na imagem são esperados para a idade; reduz catastrofização e pedido de imagem" },
+      { "medida": "Higiene de carga e ergonomia", "detalhe": "Levantar peso com joelhos fletidos e carga próxima ao corpo, alternar posturas, pausas de 50 minutos e ajuste de bancada e cadeira" },
+      { "medida": "Controle de peso e cessação do tabagismo", "detalhe": "Obesidade e tabagismo são fatores de cronificação; orientar perda de peso gradual e encaminhar ao programa de cessação" },
+      { "medida": "Plano de retorno ao trabalho", "detalhe": "Definir por escrito restrições temporárias e data de reavaliação; evitar atestado longo sem reavaliação, que favorece incapacidade" }
+    ],
+    "procedimentos": [
+      { "nome": "Exame neurológico dirigido da coluna lombar", "indicacao": "toda lombalgia, obrigatório se houver irradiação ou déficit", "tecnica": "Força por miótomo (dorsiflexão, extensão do hálux, flexão do joelho), sensibilidade por dermátomo, reflexos aquileu e patelar, Lasègue e Lasègue cruzado, marcha, apoio bipodal e toque retal se suspeita esfincteriana", "complicacoes": "Déficit não detectado por exame incompleto, com atraso de descompressão" },
+      { "nome": "Radiografia de coluna lombossacra", "indicacao": "trauma, osteoporose, idade acima de 65 anos com dor nova ou uso crônico de corticoide", "tecnica": "Incidências anteroposterior e perfil centradas em L3, com avaliação de altura vertebral, alinhamento e partes moles", "complicacoes": "Irradiação; baixa sensibilidade para fratura osteoporótica e para hérnia discal" },
+      { "nome": "Ressonância magnética de coluna lombossacra", "indicacao": "déficit neurológico, cauda equina, suspeita de infecção ou tumor e falha do tratamento conservador acima de 6 semanas", "tecnica": "Protocolo sagital e axial T1 e T2; contraste se suspeita de infecção, tumor ou pós-operatório", "complicacoes": "Claustrofobia, reação ao contraste, achados incidentais que levam a cirurgia sem indicação" },
+      { "nome": "Cirurgia descompressiva da coluna lombar", "indicacao": "síndrome da cauda equina e déficit motor progressivo; nunca em lombalgia isolada sem déficit", "tecnica": "Laminectomia ou laminotomia com discectomia e descompressão radicular, por via posterior", "complicacoes": "Lesão dural, infecção de sítio cirúrgico, instabilidade, recidiva de hérnia e reoperação" },
+      { "nome": "Programa de fisioterapia ativa", "indicacao": "lombalgia mecânica a partir da primeira ou segunda semana e prevenção de recidiva", "tecnica": "Exercícios de controle motor, fortalecimento de tronco e membros inferiores, alongamento e progressão de carga supervisionada", "complicacoes": "Exacerbação transitória da dor nas primeiras sessões" },
+      { "nome": "Ultrassonografia de aorta abdominal", "indicacao": "maior de 50 anos com dor lombar súbita, massa pulsátil ou síncope", "tecnica": "Medida do diâmetro anteroposterior da aorta em corte transversal; angiotomografia se dilatação ou instabilidade", "complicacoes": "Limitação em obesidade e em gases intestinais; não exclui dissecção" }
+    ],
+    "metas": [
+      "Dor abaixo de 3/10 em 7 dias e retorno às atividades habituais em 24 a 48 horas",
+      "Nenhum paciente com red flag sem imagem ou encaminhamento no mesmo dia",
+      "Nenhuma imagem de coluna solicitada em lombalgia sem red flag nas primeiras 6 semanas",
+      "Nenhuma cirurgia indicada sem déficit neurológico ou síndrome da cauda equina",
+      "AINE suspenso em até 7 dias e opioide em até 5 dias",
+      "Deambulação independente e função esfincteriana preservada na alta"
+    ],
+    "fluxo": [
+      "Triagem: dor lombar de até 6 semanas com pesquisa ativa de sinais de alarme, incluindo função esfincteriana e força",
+      "Red flag presente: direcionar — trauma e osteoporose para radiografia, febre e imunossupressão para ressonância e hemoculturas, cauda equina para ressonância urgente e cirurgia, aneurisma para ultrassom e cirurgia vascular",
+      "Sem red flag: classificar como lombalgia mecânica inespecífica e não solicitar imagem",
+      "Tratar: AINE em dose plena por 5 a 7 dias; paracetamol ou lidocaína tópica se AINE contraindicado; relaxante por até 7 dias se espasmo",
+      "Orientar retorno imediato às atividades, calor local e início de fisioterapia entre a primeira e a segunda semana",
+      "Reavaliar em 72 a 96 horas; se falha, trocar ou associar analgésico e considerar tramadol por até 5 dias",
+      "Falha acima de 6 semanas ou piora: reavaliar diagnóstico, pesquisar red flag oculta e espondiloartrite, e só então solicitar imagem",
+      "Nunca indicar cirurgia sem déficit; encaminhar à fisioterapia e ao especialista quando houver déficit, cauda equina ou refratariedade documentada"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "idoso", "ajuste": "paracetamol como base; AINE apenas se função renal e pressão permitirem, pelo menor tempo; ciclobenzaprina 5 mg à noite ou evitar", "alerta": "risco de queda, confusão, lesão renal e fratura de quadril" },
+      { "populacao": "renal_cronico", "ajuste": "sem AINE; paracetamol e lidocaína tópica; tramadol com ajuste de dose", "alerta": "AINE precipita lesão renal aguda e hipercalemia" },
+      { "populacao": "gestante", "ajuste": "paracetamol é a primeira escolha; AINE contraindicado após 20 semanas; evitar ciclobenzaprina e tramadol", "alerta": "AINE no terceiro trimestre causa oligodrâmnio e fechamento precoce do ducto arterioso" },
+      { "populacao": "anticoagulado", "ajuste": "evitar AINE; preferir paracetamol e lidocaína tópica", "alerta": "sangramento digestivo grave com AINE em uso de anticoagulante" },
+      { "populacao": "cardiopata", "ajuste": "evitar AINE, em especial diclofenaco; preferir paracetamol e fisioterapia", "alerta": "retenção hídrica e descompensação de insuficiência cardíaca" },
+      { "populacao": "hepatopata", "ajuste": "paracetamol no máximo 2 g/dia; evitar AINE e tramadol em doença avançada", "alerta": "hepatotoxicidade por paracetamol e encefalopatia por opioide" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "radiografia de coluna lombossacra", "indicacao": "trauma, osteoporose, idade acima de 65 anos, uso crônico de corticoide", "o_que_muda": "confirma fratura por compressão e define órtese, vertebroplastia ou internação" },
+        { "nome": "ressonância magnética de coluna lombossacra", "indicacao": "déficit, cauda equina, suspeita de infecção ou tumor, falha acima de 6 semanas", "o_que_muda": "define cirurgia, antibiótico ou tratamento oncológico" },
+        { "nome": "hemograma, PCR e VHS", "indicacao": "febre, imunossupressão ou dor inflamatória", "o_que_muda": "sustenta infecção ou espondiloartrite e indica imagem e cultura" },
+        { "nome": "hemoculturas", "indicacao": "febre com dor lombar e fator de risco para infecção", "o_que_muda": "identifica o agente e permite antibiótico dirigido em vez de empírico prolongado" },
+        { "nome": "creatinina e taxa de filtração estimada", "indicacao": "antes de prescrever AINE", "o_que_muda": "contraindica AINE e obriga a trocar a classe analgésica" },
+        { "nome": "ultrassonografia de aorta abdominal", "indicacao": "maior de 50 anos com dor lombar, massa pulsátil ou síncope", "o_que_muda": "diagnostica aneurisma e indica cirurgia vascular imediata" }
+      ],
+      "evitar": [
+        { "exame": "imagem de coluna nas primeiras 6 semanas sem red flag", "motivo": "achados degenerativos são incidentais e levam a cirurgia, injeção e afastamento sem melhora de desfecho" },
+        { "exame": "ressonância magnética em lombalgia sem déficit e com menos de 6 semanas", "motivo": "não muda a conduta e aumenta custo e ansiedade do paciente" },
+        { "exame": "radiografia de rotina para documentar a dor", "motivo": "baixa sensibilidade para hérnia discal e para fratura osteoporótica inicial" },
+        { "exame": "repetir imagem sem mudança clínica", "motivo": "exposição desnecessária e achados novos incidentais que geram intervenção" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["manter movimento e voltar às atividades em 24 a 48 horas", "usar calor local por 20 minutos, 2 a 3 vezes ao dia", "tomar o AINE com alimento e suspender em 7 dias", "iniciar fisioterapia a partir da primeira semana", "retornar imediatamente se perder força, urina ou sensibilidade na sela"],
+      "evitar": ["repouso no leito por mais de 2 dias", "imagem sem sinal de alarme", "corticoide sistêmico de rotina", "associar dois AINEs", "carregar peso e dirigir sob sedação de relaxante ou opioide"],
+      "retorno": ["perda de força ou dificuldade para andar", "retenção ou incontinência urinária ou fecal", "dormência em sela", "febre ou dor noturna contínua", "dor que não melhora em 7 dias ou piora com repouso"]
+    },
+    "efeitos_adversos": [
+      { "agente": "naproxeno e diclofenaco", "efeitos": ["sangramento digestivo", "lesão renal", "elevação da pressão", "evento cardiovascular"], "observacao": "suspender se dor epigástrica, melena, edema ou creatinina em ascensão; não associar dois AINEs" },
+      { "agente": "paracetamol", "efeitos": ["hepatotoxicidade", "náusea"], "observacao": "somar toda a dose diária, inclusive associações; reduzir teto em hepatopatia e alcoolismo" },
+      { "agente": "ciclobenzaprina", "efeitos": ["sonolência", "tontura", "confusão em idoso", "retenção urinária"], "observacao": "suspender se sedação excessiva ou queda; não usar por mais de 7 dias" },
+      { "agente": "tizanidina", "efeitos": ["hepatotoxicidade", "hipotensão", "sonolência"], "observacao": "dosar transaminases se uso acima de 1 semana e suspender se elevação acima de 3 vezes o limite" },
+      { "agente": "tramadol", "efeitos": ["náusea", "sedação", "convulsão", "síndrome serotoninérgica"], "observacao": "suspender em 5 dias; não associar a ISRS, IMAO ou triptano sem avaliar risco" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose e sintoma",
+      "AINE: suspender, dosar creatinina e hemograma, pesquisar melena e tratar com inibidor de bomba de prótons se sangramento",
+      "Paracetamol: dosar transaminases e INR, avaliar critérios de N-acetilcisteína em intoxicação",
+      "Ciclobenzaprina e tramadol: reduzir dose ou suspender se sedação, queda ou confusão; suporte ventilatório se depressão respiratória",
+      "Trocar de classe terapêutica e reescrever a prescrição antes de liberar o paciente",
+      "Reavaliar se o sintoma é efeito adverso ou red flag não reconhecida"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "naproxeno 500 mg", "dose": "500 mg", "via": "VO", "frequencia": "12/12 h", "duracao": "7 dias", "condicao": "lombalgia mecânica sem contraindicação a AINE", "confirmar_apresentacao_local": true },
+          { "item": "paracetamol 750 mg", "dose": "750 mg", "via": "VO", "frequencia": "6/6 h se dor", "duracao": "7 dias", "condicao": "analgesia de resgate, máximo 3 g/dia", "confirmar_apresentacao_local": true },
+          { "item": "ciclobenzaprina 5 mg", "dose": "5 mg", "via": "VO", "frequencia": "à noite", "duracao": "5 dias", "condicao": "espasmo com limitação; evitar em idoso frágil", "confirmar_apresentacao_local": true },
+          { "item": "adesivo de lidocaína 5%", "dose": "1 adesivo", "via": "tópica", "frequencia": "12 h de uso e 12 h sem", "duracao": "14 dias", "condicao": "AINE contraindicado e dor localizada", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "diclofenaco 75 mg", "dose": "75 mg", "via": "IM", "frequencia": "1x/dia", "monitorizacao": "pressão, creatinina e sangramento", "confirmar_apresentacao_local": true },
+          { "item": "paracetamol 1 g", "dose": "1 g", "via": "IV", "frequencia": "6/6 h", "monitorizacao": "dose total diária e transaminases", "confirmar_apresentacao_local": true },
+          { "item": "tramadol 50 mg", "dose": "50 mg", "via": "IV", "frequencia": "6/6 h se dor", "monitorizacao": "sedação, respiratório e náusea", "confirmar_apresentacao_local": true },
+          { "item": "ciclobenzaprina 5 mg", "dose": "5 mg", "via": "VO", "frequencia": "à noite", "monitorizacao": "sedação e risco de queda", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["radiografia lombossacra", "ressonância lombossacra", "hemograma", "PCR", "VHS", "hemoculturas", "creatinina", "ultrassom de aorta", "justificativa com red flag", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de lombalgia aguda sem sinais de alarme, necessitando de afastamento de atividades por ___ dias, com reavaliação marcada.", "dias": null, "cid": null, "observacao": "o número de dias é decisão médica e deve ter reavaliação prevista" },
+      "encaminhamento": { "campos": ["destino", "motivo com red flag ou falha de tratamento", "resumo com exame neurológico", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente com lombalgia aguda de ___ semanas, red flags pesquisadas ___, exame neurológico ___, imagem ___, tratamento instituído e resposta em 72 h." }
+    },
+    "anamnese": {
+      "campos": ["início e duração", "irradiação", "força e sensibilidade", "controle esfincteriano", "febre", "trauma", "câncer prévio e perda de peso", "uso de corticoide e anticoagulante", "trabalho e carga"],
+      "texto_template": "Paciente com dor lombar de início há ___, duração ___, irradiação ___, força e sensibilidade ___, controle esfincteriano ___, febre ___, trauma ___, câncer prévio ___, uso de corticoide ___, anticoagulante ___ e trabalho com carga ___."
+    },
+    "exame_fisico": {
+      "itens": ["inspeção da coluna", "palpação de processos espinhosos", "força por miótomo", "sensibilidade por dermátomo", "reflexos aquileu e patelar", "Lasègue e Lasègue cruzado", "marcha e apoio bipodal", "toque retal se suspeita esfincteriana"],
+      "texto_template": "Inspeção da coluna, palpação de processos espinhosos, força por miótomo, sensibilidade por dermátomo, reflexos aquileu e patelar, Lasègue, marcha e toque retal se indicado."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de lombalgia e critérios de imagem", "verificar": true },
+      { "tipo": "sociedade_ortopedia", "o_que_verificar": "bandeiras vermelhas e indicação cirúrgica", "verificar": true },
+      { "tipo": "diretriz_internacional_de_lombalgia", "o_que_verificar": "papel do AINE, do paracetamol e do repouso", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações e concentrações disponíveis no serviço", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-MSK01-01", "tipo": "cauda_equina", "gatilho": "anestesia em sela, retenção urinária ou incontinência fecal", "severidade": "grave", "mensagem": "Síndrome da cauda equina: ressonância imediata e cirurgia urgente.", "acao": "bloquear alta e acionar neurocirurgia", "bloqueante": true },
+      { "id": "SA-MSK01-02", "tipo": "deficit_motor", "gatilho": "déficit motor progressivo ou queda da dorsiflexão", "severidade": "grave", "mensagem": "Déficit motor exige imagem urgente.", "acao": "bloquear alta e solicitar ressonância", "bloqueante": true },
+      { "id": "SA-MSK01-03", "tipo": "infeccao", "gatilho": "febre, drogas IV, hemodiálise ou imunossupressão com dor lombar", "severidade": "grave", "mensagem": "Suspeita de espondilodiscite ou abscesso epidural.", "acao": "solicitar ressonância e hemoculturas antes do antibiótico", "bloqueante": true },
+      { "id": "SA-MSK01-04", "tipo": "aneurisma", "gatilho": "dor lombar súbita com massa pulsátil, síncope ou hipotensão", "severidade": "grave", "mensagem": "Suspeita de aneurisma de aorta abdominal.", "acao": "acionar cirurgia vascular e imagem imediata", "bloqueante": true },
+      { "id": "SA-MSK01-05", "tipo": "aine_contraindicado", "gatilho": "AINE prescrito com ClCr abaixo de 30, anticoagulação plena, úlcera ativa ou gestação após 20 semanas", "severidade": "grave", "mensagem": "AINE contraindicado neste perfil.", "acao": "bloquear item e sugerir paracetamol ou lidocaína tópica", "bloqueante": true },
+      { "id": "SA-MSK01-06", "tipo": "cirurgia_sem_deficit", "gatilho": "indicação cirúrgica em lombalgia sem déficit", "severidade": "grave", "mensagem": "Não operar lombalgia sem déficit: tratar de forma conservadora.", "acao": "bloquear pedido cirúrgico", "bloqueante": true },
+      { "id": "SA-MSK01-07", "tipo": "imagem_sem_red_flag", "gatilho": "pedido de imagem em lombalgia abaixo de 6 semanas sem red flag", "severidade": "precaucao", "mensagem": "Imagem sem red flag não muda conduta.", "acao": "alertar e sugerir reavaliação em 4 semanas", "bloqueante": false },
+      { "id": "SA-MSK01-08", "tipo": "corticoide_sistemico", "gatilho": "corticoide sistêmico prescrito para lombalgia aguda", "severidade": "precaucao", "mensagem": "Corticoide sistêmico não é rotina na lombalgia aguda.", "acao": "alertar e revisar indicação", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "diretriz de lombalgia", "diretriz de bandeiras vermelhas", "literatura"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita integral: separação entre lombalgia mecânica e cinco grupos de red flag (fratura, infecção, tumor, cauda equina e aneurisma de aorta); 8 fármacos com apresentações, preparo, tempo de infusão, monitorização e ajuste renal, cobrindo naproxeno, diclofenaco, ibuprofeno, paracetamol, ciclobenzaprina com cautela em idoso, tizanidina, tramadol apenas em falha e lidocaína tópica; retorno precoce às atividades, fisioterapia, regra de não operar sem déficit e bloqueios de repouso prolongado, imagem sem red flag e corticoide sistêmico de rotina.", "data": null }
+      ]
+    }
+  }
+}

@@ -1,0 +1,524 @@
+{
+  "id": "ws-gi_09",
+  "nome": "Sangramento digestivo alto suspeito",
+  "cat": "Emergência",
+  "alias": "sangramento digestivo alto suspeito hematemese melena hemorragia digestiva alta hda varizes esofagicas",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-09_hda.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: protocolo de HDA",
+      "[verificar] sociedade_gastroenterologia: varizes e úlcera",
+      "[verificar] anvisa: bulas e apresentações"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-09 em 2026-11-27",
+    "fundido_workspace": "GI-09 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, taquicardia ou confusão -> ressuscitação e sala vermelha; hematêmese volumosa ou vômito vivo -> estabilização e endoscopia urgente; cirrose, ascite ou icterícia -> protocolo de varizes; uso de anticoagulante ou antiagregante -> reversão conforme protocolo. 1) Estabilizar: acessos, volume, transfusão restritiva 2) Estratificar: cirrose? anticoagulante? instabilidade? 3) Iniciar droga conforme suspeita (terlipressina/octreotida vs IBP) 4) Antibiótico profilático se cirrótico 5) Endoscopia precoce com hemostasia 6) Falha: balão, TIPS ou cirurgia 7) Pós-procedimento: IBP oral, erradicação de H. pylori, profilaxia secundária",
+  "redFlags": [
+    "hipotensão, taquicardia ou confusão -> ressuscitação e sala vermelha",
+    "hematêmese volumosa ou vômito vivo -> estabilização e endoscopia urgente",
+    "cirrose, ascite ou icterícia -> protocolo de varizes",
+    "uso de anticoagulante ou antiagregante -> reversão conforme protocolo",
+    "melena com síncope -> internação e transfusão",
+    "dor epigástrica intensa -> cirurgia",
+    "encefalopatia ou confusão em cirrótico -> lactulose e antibiótico"
+  ],
+  "naoUsar": [
+    "doença coronariana",
+    "gestação",
+    "hiponatremia grave",
+    "alergia a benzimidazol",
+    "alergia a cefalosporina",
+    "bradicardia grave",
+    "íleo paralítico",
+    "obstrução"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "jejum até endoscopia"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "AINE"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Laxante",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "lactulose",
+            "pos": "30-45 mL. Via VO ou sonda. 4/4 h até 2-3 evacuações pastosas, depois ajustar. Até resolução.",
+            "posTodas": true,
+            "motivo": "encefalopatia hepática (condicional)",
+            "nota": "Administrar puro ou diluído em água - monitorar: número de evacuações; monitorar: nível de consciência; monitorar: eletrólitos · NÃO: íleo paralítico; obstrução · Obs: Titular pelo número de evacuações; evitar diarreia excessiva",
+            "dose": {
+              "texto": "30-45 mL; 4/4 h até 2-3 evacuações pastosas, depois ajustar; até resolução; max. individualizar",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": 45,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico intestinal",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "rifaximina",
+              "n": "Rifaximina",
+              "ap": "comprimido 550 mg",
+              "q": "",
+              "pos": "550 mg. Via VO. 12/12 h. Até 6 meses."
+            },
+            "motivo": "prevenção de recidiva de encefalopatia (condicional)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: função hepática · NÃO: alergia a rifamicina · Obs: Associar à lactulose na prevenção secundária",
+            "dose": {
+              "texto": "550 mg; 12/12 h; até 6 meses; max. 1.100 mg/dia",
+              "status": "ok",
+              "valor": 550,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Dois acessos venosos calibrosos",
+              "ap": "",
+              "q": "",
+              "pos": "14–16 G; um para reposição, outro para drogas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Jejum oral",
+              "ap": "",
+              "q": "",
+              "pos": "Nada por boca até endoscopia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Sonda vesical",
+              "ap": "",
+              "q": "",
+              "pos": "Controle de diurese em instáveis"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Transfusão restritiva",
+              "ap": "",
+              "q": "",
+              "pos": "Alvo de Hb 7–8 g/dL; evitar sobrecarga e hipertransfusão em varizes"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Correção de coagulopatia guiada",
+              "ap": "",
+              "q": "",
+              "pos": "Plaquetas se < 50.000 e sangramento; não corrigir número isolado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Monitorização contínua",
+              "ap": "",
+              "q": "",
+              "pos": "ECG, oximetria, PA invasiva se instável"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Profilaxia de encefalopatia",
+              "ap": "",
+              "q": "",
+              "pos": "Lactulose precoce em cirrótico, mesmo sem confusão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-09"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Vasoconstritor esplancnico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "terlipressina",
+              "n": "Terlipressina",
+              "ap": "ampola 1 mg/5 mL",
+              "via": "IV",
+              "pos": "2 mg. Via IV. 4/4 h. Até 5 dias. 2-3 minutos (bolus lento) ou 15 minutos."
+            },
+            "motivo": "hemorragia varicosa (1a linha)",
+            "nota": "Diluir em 50-100 mL de SF 0,9% para infusão intermitente - monitorar: sódio a cada 24 h; monitorar: dor abdominal; monitorar: perfusão de extremidades; monitorar: FC · NÃO: doença coronariana; gestação; hiponatremia grave · Obs: Iniciar antes da endoscopia quando varizes são prováveis; manter por 2–5 dias · Renal: Contraindicada em creatinina > 3 mg/dL ou dialítico",
+            "dose": {
+              "texto": "2 mg; 4/4 h; até 5 dias; max. 2 mg/4 h",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "octreotida",
+              "n": "Octreotida",
+              "ap": "ampola 0,1 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "50 mcg em bolus, seguido de 50 mcg/h. Via IV. Infusão contínua. 3-5 dias. Contínua."
+            },
+            "motivo": "hemorragia varicosa (indisponibilidade de terlipressina) (alternativa)",
+            "nota": "Bolus de 50 mcg; depois 50 mcg/h em bomba de infusão - monitorar: glicemia; monitorar: FC; monitorar: sangramento · NÃO: alergia; bradicardia grave · Obs: Menor evidência que terlipressina, mas perfil de efeitos mais brando",
+            "dose": {
+              "texto": "50 mcg em bolus, seguido de 50 mcg/h; infusão contínua; 3-5 dias; max. 50 mcg/h",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "IBP",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "pantoprazol_ev",
+            "motivo": "sangramento não varicoso (1a linha)",
+            "nota": "Reconstituir em 10 mL de SF; diluir 80 mg em 100 mL de SF para infusão - monitorar: magnésio se uso prolongado; monitorar: sangramento",
+            "dose": {
+              "texto": "80 mg em bolus, seguido de 8 mg/h; infusão contínua; 72 horas; max. 8 mg/h",
+              "status": "ok",
+              "valor": 80,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 8,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          },
+          {
+            "linha": 2,
+            "hosp": "omeprazol_ev",
+            "motivo": "sangramento não varicoso (alternativa) úlcera",
+            "nota": "Reconstituir em 5 mL; diluir 80 mg em 100 mL de SF - monitorar: sangramento; monitorar: hábito intestinal",
+            "dose": {
+              "texto": "80 mg em bolus, seguido de 8 mg/h; infusão contínua; 72 horas; max. 8 mg/h",
+              "status": "ok",
+              "valor": 80,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 8,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "profilaxia de PBE em cirrótico com HDA (1a linha)",
+            "nota": "Reconstituir em 10 mL de água; diluir em 100 mL de SF para infusão - monitorar: função hepática; monitorar: sinais de infecção · NÃO: alergia a cefalosporina · Obs: Reduz mortalidade e ressangramento em cirrótico; alternativa: norfloxacino 400 mg 12/12 h VO se via oral",
+            "dose": {
+              "texto": "1 g; 1x/dia; 7 dias; max. 2 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Expansor",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "albumina_humana",
+              "n": "Albumina humana",
+              "ap": "frasco 20% 50 mL",
+              "via": "IV",
+              "pos": "1-1,5 g/kg. Via IV. Dose única ou dividida. 1-3 dias. 30-60 minutos."
+            },
+            "motivo": "cirrótico com PBE ou paracentese de grande volume (condicional)",
+            "nota": "Não diluir; infundir em acesso calibroso - monitorar: PA; monitorar: diurese; monitorar: edema; monitorar: sódio · NÃO: sobrecarga; alergia · Obs: Evidência para PBE e paracentese; em HDA isolada, uso individualizado",
+            "dose": {
+              "texto": "1-1,5 g/kg; dose única ou dividida; 1-3 dias; max. individualizar",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 1.5,
+              "unidade": "g",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fitomenadiona",
+              "n": "Fitomenadiona (vitamina K)",
+              "ap": "ampola 10 mg/mL",
+              "via": "IV",
+              "pos": "10 mg. Via IV. Dose única. 1 dose. 20-30 minutos."
+            },
+            "motivo": "reversão de varfarina ou coagulopatia (condicional)",
+            "nota": "Diluir em 50 mL de SF; infundir lentamente - monitorar: INR em 6-12 h · NÃO: alergia · Obs: Complementar com CCP quando disponível; reversão completa leva horas",
+            "dose": {
+              "texto": "10 mg; dose única; 1 dose; max. 10 mg",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antifibrinolítico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "acido_tranexamico_ev",
+            "motivo": "sangramento não varicoso refratário (uso selecionado) (condicional)",
+            "nota": "Diluir em 100 mL de SF - monitorar: sangramento; monitorar: sinais de trombose · NÃO: trombose; convulsão · Obs: Não é rotina em HDA; evidência fraca fora de trauma",
+            "dose": {
+              "texto": "1 g; 8/8 h; 3 dias; max. 3 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-09",
+    "versao": "0.2.0",
+    "arquivo": "GI-09_hda.json",
+    "area": "Gastrointestinal",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

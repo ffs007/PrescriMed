@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GI-01",
+    "area": "Gastrointestinal",
+    "nome": "Diarreia aguda / gastroenterite",
+    "aliases": ["diarreia", "gastroenterite", "GECA", "diarreia e vômito", "diarreia aguda"],
+    "contexto": ["ambulatorial", "hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Diarreia aguda é a eliminação de fezes amolecidas ou líquidas três ou mais vezes em 24 horas, com menos de 14 dias de duração. Na imensa maioria dos casos é viral e autolimitada: o tratamento é reidratação e o antibiótico é exceção. O erro clínico mais comum é prescrever antibiótico e antidiarreico para todo mundo; o segundo é não reconhecer desidratação, disenteria invasiva ou diarreia por C. difficile. A decisão gira em torno de três perguntas: há sinais de gravidade? há sangue ou febre alta? há exposição que mude a etiologia?",
+    "inclusao": [
+      "Três ou mais evacuações líquidas em 24 h com menos de 14 dias",
+      "Diarreia com vômitos e sinais de desidratação leve a moderada",
+      "Diarreia com febre, sangue ou muco (disenteria)",
+      "Diarreia após antibioticoterapia ou internação recente"
+    ],
+    "exclusao": [
+      { "situacao": "diarreia com mais de 14 dias, sem sangue", "fluxo": "GI-02 diarreia persistente" },
+      { "situacao": "dor abdominal intensa localizada com defesa", "fluxo": "GI-04 / cirurgia" },
+      { "situacao": "diarreia em criança com menos de 1 ano com desidratação", "fluxo": "PED-03" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "hipotensão, olhos fundos, turgor ruim, confusão", "por_que": "desidratação grave com risco de choque", "acao": "hidratação IV imediata e internação", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "sangue vivo nas fezes com febre alta", "por_que": "disenteria invasiva bacteriana", "acao": "coprocultura e antibiótico empírico", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "diurese ausente por mais de 8 h", "por_que": "injúria renal por hipoperfusão", "acao": "volume e controle de diurese", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "dor abdominal difusa intensa com defesa", "por_que": "abdome cirúrgico ou colite grave", "acao": "avaliação cirúrgica e imagem", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "uso recente de antibiótico ou internação", "por_que": "C. difficile, potencialmente fatal", "acao": "pesquisar toxina e suspender antibiótico", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "imunossupressão, quimioterapia ou HIV avançado", "por_que": "agente oportunista e sepse", "acao": "internação e investigação ampliada", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "vômitos incoercíveis com incapacidade de ingerir líquido", "por_que": "falha da via oral", "acao": "hidratação venosa e antiemético IV", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "Quantas evacuações nas últimas 24 h e qual o aspecto?",
+      "Há sangue, muco ou pus nas fezes?",
+      "Tem febre? Qual a temperatura medida?",
+      "Consegue beber líquido e urinar? Quando foi a última micção?",
+      "Usou antibiótico nos últimos 60 dias ou esteve internado?",
+      "Comeu alimento suspeito, ovo cru, água de procedência duvidosa ou viajou?",
+      "Tem contato com criança, idoso ou manipulador de alimentos?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Diarreia aquosa sem sangue, sem febre alta, tolerando via oral", "escolha": "SRO + dieta livre + antiemético se vômito", "porque": "É viral e autolimitada; antibiótico não encurta e seleciona resistência" },
+      { "cenario": "Desidratação moderada a grave ou vômitos incoercíveis", "escolha": "Hidratação IV com SF 0,9% em bolus e reavaliação", "porque": "A via oral falhou; o volume é a droga que salva" },
+      { "cenario": "Disenteria com febre alta e sangue", "escolha": "Ciprofloxacino 500 mg 12/12 h por 3 dias (ou azitromicina 1 g dose única em gestante)", "porque": "Reduz duração e complicações em Shigella e Salmonella invasivas" },
+      { "cenario": "Diarreia após antibiótico ou internação", "escolha": "Pesquisar toxina de C. difficile; suspender o antibiótico implicado", "porque": "Vancomicina oral só se teste positivo ou alta suspeita" },
+      { "cenario": "Diarreia prolongada com esteatorreia ou perda de peso", "escolha": "Investigar parasitose (Giardia, Strongyloides) antes de tratar", "porque": "Tratamento empírico repetido mascara o diagnóstico" },
+      { "cenario": "Surto comunitário com água contaminada", "escolha": "Notificação compulsória e SRO em massa", "porque": "Cólera exige controle de fonte, não prescrição individual" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "reidratante_oral",
+        "agente": "solução de reidratação oral (SRO)",
+        "papel": "primeira_linha",
+        "indicacao": "desidratação leve a moderada com via oral preservada",
+        "dose": "50–100 mL/kg em 4 h, fraccionado",
+        "unidade": "mL/kg",
+        "via": "VO",
+        "frequencia": "pequenos volumes a cada 5–10 min",
+        "duracao": "até restabelecer diurese clara",
+        "dose_maxima": "não se aplica",
+        "contraindicacoes": ["vômitos incoercíveis", "rebaixamento de consciência", "íleo paralítico"],
+        "efeitos_adversos": ["náusea por volume rápido", "distensão abdominal"],
+        "apresentacoes": ["sachê 27,9 g para 1 L de água", "solução pronta 500 mL", "sachê pediátrico para 200 mL"],
+        "preparo": "Diluir o sachê em 1 L de água potável; não usar açúcar caseiro nem refrigerante",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["diurese", "peso em criança", "sede", "turgor cutâneo", "sódio se grave"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Se houver vômito, esperar 10 min e reiniciar em colheradas; a SRO é subusada no adulto",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_antagonista_5ht3",
+        "agente": "ondansetrona",
+        "papel": "primeira_linha",
+        "indicacao": "vômitos que impedem a reidratação oral",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h se necessário",
+        "duracao": "até 24–48 h",
+        "dose_maxima": "16 mg/dia",
+        "contraindicacoes": ["síndrome do QT longo", "uso concomitante de apomorfina"],
+        "efeitos_adversos": ["cefaleia", "constipação", "prolongamento de QT"],
+        "apresentacoes": ["comprimido 4 mg e 8 mg", "ampola 2 mg/mL (2 mL e 4 mL)", "solução oral 4 mg/5 mL"],
+        "preparo": "IV direto ou diluído em 50 mL de SF; VO sem preparo",
+        "tempo_infusao": "2–5 minutos (IV lento)",
+        "monitorizacao": ["ECG se cardiopata ou QT longo", "potássio e magnésio"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em Child C",
+        "observacoes": "Primeira escolha em vômito com diarreia; não seda e não tem efeito extrapiramidal",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_procinetico",
+        "agente": "metoclopramida",
+        "papel": "alternativa",
+        "indicacao": "vômitos com intolerância oral, quando ondansetrona indisponível",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "até 24 h",
+        "dose_maxima": "30 mg/dia",
+        "contraindicacoes": ["obstrução intestinal", "feocromocitoma", "parkinsonismo", "epilepsia não controlada"],
+        "efeitos_adversos": ["distonia", "acatisia", "sonolência", "hiperprolactinemia"],
+        "apresentacoes": ["comprimido 10 mg", "ampola 5 mg/mL (2 mL)", "solução oral 4 mg/mL"],
+        "preparo": "IV lento, sem diluição obrigatória",
+        "tempo_infusao": "2–3 minutos (lento, para evitar distonia)",
+        "monitorizacao": ["sintomas extrapiramidais", "sonolência"],
+        "ajuste_renal": "Reduzir para 5 mg se ClCr < 30 mL/min",
+        "observacoes": "Evitar em idoso e em uso prolongado; risco de distonia é real em jovem",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antissecretor_intestinal",
+        "agente": "racecadotrila",
+        "papel": "condicional",
+        "indicacao": "diarreia aquosa aguda sem disenteria, como adjuvante da SRO",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "até 5 dias",
+        "dose_maxima": "300 mg/dia",
+        "contraindicacoes": ["disenteria com sangue", "febre alta", "insuficiência renal grave"],
+        "efeitos_adversos": ["constipação", "cefaleia", "náusea"],
+        "apresentacoes": ["cápsula 100 mg", "granulado 10 mg/g", "granulado 30 mg/g"],
+        "preparo": "Uso direto; granulado dispersar em água",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["número de evacuações", "sinais de constipação"],
+        "ajuste_renal": "Contraindicada se ClCr < 30 mL/min",
+        "observacoes": "Encurta a diarreia em cerca de 24 h; não substitui a SRO e não serve para disenteria",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide_antidiarreico",
+        "agente": "loperamida",
+        "papel": "condicional",
+        "indicacao": "diarreia aquosa sem febre e sem sangue, em adulto sem comorbidade",
+        "dose": "4 mg de ataque, depois 2 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "após cada evacuação líquida",
+        "duracao": "máximo 48 h",
+        "dose_maxima": "16 mg/dia",
+        "contraindicacoes": ["disenteria", "febre alta", "colite por C. difficile", "criança"],
+        "efeitos_adversos": ["constipação", "distensão", "megacólon tóxico se usada em disenteria"],
+        "apresentacoes": ["comprimido 2 mg", "cápsula 2 mg", "solução oral 0,2 mg/mL"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["febre", "distensão abdominal", "parada da diarreia"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Alivia sintoma, não trata causa; proscrita em disenteria e em criança",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_fluorquinolona",
+        "agente": "ciprofloxacino",
+        "papel": "condicional",
+        "indicacao": "disenteria bacteriana grave ou cólera com desidratação",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "3 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": ["gestação", "criança", "tendinopatia prévia", "miastenia"],
+        "efeitos_adversos": ["tendinite", "neuropatia", "prolongamento de QT", "C. difficile"],
+        "apresentacoes": ["comprimido 500 mg", "bolsa IV 400 mg/200 mL", "solução injetável 2 mg/mL"],
+        "preparo": "VO uso direto; IV infundir a bolsa sem diluição adicional",
+        "tempo_infusao": "60 minutos (IV)",
+        "monitorizacao": ["diarreia por C. difficile", "tendão de Aquiles", "QT"],
+        "ajuste_renal": "Ajustar se ClCr < 30 mL/min (250–500 mg 12/12 h)",
+        "observacoes": "Reservar para disenteria grave; não usar em diarreia aquosa sem sangue",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_macrolideo",
+        "agente": "azitromicina",
+        "papel": "alternativa",
+        "indicacao": "disenteria em gestante, criança ou intolerância a quinolona",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "VO",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "1 g",
+        "contraindicacoes": ["alergia a macrolídeo", "QT longo"],
+        "efeitos_adversos": ["náusea", "diarreia", "prolongamento de QT"],
+        "apresentacoes": ["comprimido 500 mg", "suspensão 200 mg/5 mL", "frasco IV 500 mg"],
+        "preparo": "Uso direto; suspensão reconstituir conforme bula",
+        "tempo_infusao": "não se aplica (VO); IV em 60 min",
+        "monitorizacao": ["QT se cardiopata", "resposta em 48 h"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Cautela em hepatopatia grave",
+        "observacoes": "Boa opção em gestante com disenteria; dose única favorece adesão",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiparasitario_nitroimidazol",
+        "agente": "secnidazol",
+        "papel": "condicional",
+        "indicacao": "giardíase ou amebíase confirmada ou alta suspeita",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "VO",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "2 g",
+        "contraindicacoes": ["gestação no primeiro trimestre", "alergia a nitroimidazol"],
+        "efeitos_adversos": ["gosto metálico", "náusea", "cefaleia", "urina escura"],
+        "apresentacoes": ["comprimido 1 g", "comprimido 500 mg", "suspensão 200 mg/5 mL"],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["resolução da diarreia", "efeitos gastrointestinais"],
+        "ajuste_renal": "Sem ajuste em dose única",
+        "ajuste_hepatico": "Reduzir em hepatopatia grave",
+        "observacoes": "Não beber álcool por 72 h; tratar contactantes se giardíase",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "probiotico",
+        "agente": "Saccharomyces boulardii",
+        "papel": "condicional",
+        "indicacao": "diarreia aguda viral e prevenção de diarreia por antibiótico",
+        "dose": "250 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "5 dias",
+        "dose_maxima": "500 mg/dia",
+        "contraindicacoes": ["imunossupressão grave", "cateter central", "paciente crítico"],
+        "efeitos_adversos": ["flatulência", "fungemia em imunossuprimido"],
+        "apresentacoes": ["cápsula 250 mg", "sachê 250 mg", "sachê 100 mg"],
+        "preparo": "Não misturar com líquido quente nem com gelo",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["resposta clínica", "febre em imunossuprimido"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Reduz duração em cerca de 1 dia; evitar em paciente com cateter central",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Reidratação oral precoce", "detalhe": "Iniciar antes de exames; 50–100 mL/kg em 4 h, em colheradas de 5 min" },
+      { "medida": "Manter alimentação", "detalhe": "Não suspender dieta; arroz, batata, banana, torrada e caldo salgado são adequados" },
+      { "medida": "Isolamento de contato", "detalhe": "Higiene de mãos e superfícies; afastar manipulador de alimentos até 48 h sem sintomas" },
+      { "medida": "Notificação compulsória", "detalhe": "Surto, cólera, febre tifoide e botulismo são de notificação imediata" },
+      { "medida": "Controle de diurese", "detalhe": "Registrar volume urinário em desidratação moderada a grave" },
+      { "medida": "Suspender laxante, inibidor de bomba e metformina", "detalhe": "Durante o episódio agudo, se clinicamente possível" },
+      { "medida": "Educação sobre sinais de retorno", "detalhe": "Sangue nas fezes, febre persistente, ausência de urina por 8 h, vômito incoercível" }
+    ],
+    "procedimentos": [
+      { "nome": "Reidratação venosa", "indicacao": "Desidratação moderada a grave, vômito incoercível ou choque", "tecnica": "Acesso periférico calibroso; SF 0,9% 30 mL/kg em bolus e reavaliação", "complicacoes": "Sobrecarga, hiponatremia dilucional, flebite" },
+      { "nome": "Sondagem nasogástrica para reidratação", "indicacao": "Via oral impossível por vômito, sem distensão", "tecnica": "Sonda fina, infusão de SRO 20 mL/kg/h", "complicacoes": "Aspiração, epistaxe, desconforto" },
+      { "nome": "Coprocultura e parasitológico de fezes", "indicacao": "Disenteria, imunossupressão, diarreia persistente, surto", "tecnica": "Três amostras ou swab retal; pesquisar toxina de C. difficile", "complicacoes": "Atraso na conduta se pedido sem indicação" },
+      { "nome": "Coleta de eletrólitos e função renal", "indicacao": "Desidratação, idoso, diarreia grave", "tecnica": "Gasometria e painel metabólico na admissão", "complicacoes": "Não se aplica" }
+    ],
+    "metas": [
+      "Diurese restabelecida em até 6 h de reidratação",
+      "Redução do número de evacuações em 24–48 h",
+      "Ausência de sinais de desidratação ao exame",
+      "Sódio entre 135 e 145 mEq/L",
+      "Alta com plano de hidratação e sinais de retorno por escrito"
+    ],
+    "fluxo": [
+      "Avaliar gravidade: sinais vitais, perfusão, turgor, diurese",
+      "Classificar: aquosa sem sangue ou disenteria (sangue, muco, febre alta)",
+      "Iniciar SRO se tolera via oral; via venosa se não tolera ou está grave",
+      "Antiemético se vômito impedir a reidratação",
+      "Antibiótico apenas em disenteria grave, cólera ou imunossuprimido",
+      "Pesquisar C. difficile se uso recente de antibiótico",
+      "Reavaliar em 4–6 h; alta com sinais de retorno e hidratação domiciliar"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "idoso", "ajuste": "Limiar menor para hidratação venosa; checar função renal e eletrólitos", "alerta": "Desidratação e injúria renal rápidas" },
+      { "populacao": "gestante", "ajuste": "Preferir azitromicina a quinolona; hidratar cedo", "alerta": "Parto prematuro por desidratação" },
+      { "populacao": "imunossuprimido", "ajuste": "Internar, coprocultura ampliada, evitar probiótico", "alerta": "Sepse por agente atípico" },
+      { "populacao": "renal_cronico", "ajuste": "Hidratação cautelosa, evitar AINE e ajustar antibiótico", "alerta": "Sobrecarga e toxicidade" },
+      { "populacao": "crianca", "ajuste": "SRO 50 mL/kg em 4 h, zinco 20 mg/dia por 10–14 dias", "alerta": "Desidratação rápida" },
+      { "populacao": "cardiopata", "ajuste": "Hidratação fracionada com vigilância de congestão", "alerta": "Edema agudo de pulmão" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "hemograma e eletrólitos", "indicacao": "desidratação, idoso, comorbidade", "o_que_muda": "gravidade e necessidade de via venosa" },
+        { "nome": "creatinina e ureia", "indicacao": "desidratação ou diurese reduzida", "o_que_muda": "hidratação e ajuste de dose" },
+        { "nome": "coprocultura", "indicacao": "disenteria, imunossupressão, surto", "o_que_muda": "escolha do antibiótico" },
+        { "nome": "toxina de C. difficile", "indicacao": "após antibiótico ou internação", "o_que_muda": "vancomicina oral e suspensão do antibiótico" },
+        { "nome": "gasometria", "indicacao": "choque ou acidose suspeita", "o_que_muda": "reposição e gravidade" }
+      ],
+      "evitar": [
+        { "exame": "cultura de fezes em diarreia aquosa leve sem sinais de alarme", "motivo": "não muda conduta e atrasa alta" },
+        { "exame": "tomografia de abdome de rotina", "motivo": "exposição sem indicação; reservar para abdome cirúrgico" },
+        { "exame": "hemograma seriado em paciente estável", "motivo": "não altera decisão" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["beber SRO em colheradas", "manter alimentação leve", "lavar as mãos", "voltar se sangue nas fezes ou febre alta"],
+      "evitar": ["antidiarreico se houver febre ou sangue", "refrigerante e suco concentrado", "antibiótico por conta própria", "leite em excesso nas primeiras 24 h"],
+      "retorno": ["sangue nas fezes", "febre acima de 38,5 °C por mais de 48 h", "ausência de urina por 8 h", "vômito incoercível", "confusão"]
+    },
+    "efeitos_adversos": [
+      { "agente": "ondansetrona", "efeitos": ["cefaleia", "QT longo"], "observacao": "avaliar ECG se cardiopata" },
+      { "agente": "metoclopramida", "efeitos": ["distonia", "acatisia"], "observacao": "suspender e usar difenidramina se ocorrer" },
+      { "agente": "ciprofloxacino", "efeitos": ["tendinite", "neuropatia", "C. difficile"], "observacao": "suspender se dor tendínea" },
+      { "agente": "loperamida", "efeitos": ["constipação", "megacólon"], "observacao": "nunca em disenteria" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado",
+      "Distonia por metoclopramida: difenidramina 50 mg IV ou prometazina 25 mg IM",
+      "Diarreia após antibiótico: pesquisar C. difficile antes de novo antibiótico",
+      "Registrar a reação e revisar a indicação",
+      "Reavaliar necessidade de manter o tratamento"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "solução de reidratação oral", "dose": "1 sachê para 1 L", "via": "VO", "frequencia": "livre demanda", "duracao": "3 dias", "condicao": "reidratação", "confirmar_apresentacao_local": true },
+          { "item": "ondansetrona 4 mg", "dose": "4 mg", "via": "VO", "frequencia": "8/8 h se vômito", "duracao": "2 dias", "condicao": "náusea", "confirmar_apresentacao_local": true },
+          { "item": "racecadotrila 100 mg", "dose": "100 mg", "via": "VO", "frequencia": "8/8 h", "duracao": "3 dias", "condicao": "diarreia aquosa", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "SF 0,9%", "dose": "30 mL/kg", "via": "IV", "frequencia": "bolus", "monitorizacao": "diurese e ausculta", "confirmar_apresentacao_local": true },
+          { "item": "ondansetrona 4 mg", "dose": "4 mg", "via": "IV", "frequencia": "8/8 h", "monitorizacao": "QT", "confirmar_apresentacao_local": true },
+          { "item": "ciprofloxacino 500 mg", "dose": "500 mg", "via": "VO", "frequencia": "12/12 h", "monitorizacao": "C. difficile", "condicao": "disenteria", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["hemograma", "eletrólitos", "creatinina", "coprocultura", "toxina C. difficile", "gasometria", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de gastroenterite aguda, necessitando de afastamento por 24 a 48 horas.", "dias": 2, "cid": null, "observacao": "afastamento até 48 h sem sintomas se manipulador de alimentos" },
+      "encaminhamento": { "campos": ["destino", "motivo", "resumo", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente com diarreia aguda, número de evacuações, sinais de desidratação, exames, hidratação realizada e resposta." }
+    },
+    "anamnese": {
+      "campos": ["número de evacuações", "aspecto das fezes", "sangue ou muco", "febre", "vômitos", "diurese", "antibiótico recente", "alimento suspeito", "viagem"],
+      "texto_template": "Paciente refere diarreia há __ dias, __ evacuações/dia, aspecto __, com/sem sangue, febre __, vômitos __, diurese preservada/ausente, uso de antibiótico __, alimento suspeito __ e viagem __."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais", "peso", "turgor cutâneo", "mucosas", "abdome", "diurese", "nível de consciência"],
+      "texto_template": "Sinais vitais, peso, turgor, mucosas, abdome e diurese."
+    },
+    "referencias": [
+      { "tipo": "oms", "o_que_verificar": "reidratação oral e zinco", "verificar": true },
+      { "tipo": "sociedade_gastroenterologia", "o_que_verificar": "indicação de antibiótico e C. difficile", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações e bulas", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-GI01-01", "tipo": "desidratacao", "gatilho": "hipotensão ou diurese ausente", "severidade": "grave", "mensagem": "Desidratação grave: hidratação venosa imediata.", "acao": "sugerir protocolo de reposição", "bloqueante": true },
+      { "id": "SA-GI01-02", "tipo": "disenteria", "gatilho": "sangue nas fezes com febre", "severidade": "grave", "mensagem": "Disenteria: não usar loperamida e considerar antibiótico.", "acao": "bloquear antidiarreico", "bloqueante": true },
+      { "id": "SA-GI01-03", "tipo": "clostridioides", "gatilho": "antibiótico nos últimos 60 dias", "severidade": "precaucao", "mensagem": "Risco de C. difficile: pesquisar toxina antes de novo antibiótico.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-GI01-04", "tipo": "pediatria", "gatilho": "idade menor de 5 anos", "severidade": "precaucao", "mensagem": "Não prescrever loperamida em criança.", "acao": "bloquear item", "bloqueante": true }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["OMS", "ANVISA", "IDSA"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com critérios de escolha, apresentações, preparo, monitorização, não farmacológico e procedimentos.", "data": null }
+      ]
+    }
+  }
+}

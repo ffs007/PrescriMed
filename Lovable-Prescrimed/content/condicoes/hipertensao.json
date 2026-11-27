@@ -1,0 +1,157 @@
+{
+  "id": "urgencia-hipertensiva",
+  "nome": "Urgência hipertensiva",
+  "cat": "Cardiovascular",
+  "alias": "pressao alta hipertensao crise hipertensiva pas 180 200 cefaleia hipertensiva",
+  "cid": [
+    [
+      "I100",
+      "Hipertensão essencial"
+    ],
+    [
+      "I169",
+      "Doença cardiovascular hipertensiva"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ESC/ESH — hipertensão; SBC — emergência hipertensiva"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Separar URGÊNCIA (PA muito alta SEM lesão de órgão-alvo: dor de cabeça inespecífica, epistaxe, ansiedade — tratar VO, reduzir em 24–48 h, NÃO derrubar rápido) de EMERGÊNCIA (PA alta + lesão de órgão-alvo ATIVA: encefalopatia/AVC, edema agudo de pulmão, síndrome coronariana, dissecção de aorta, eclâmpsia, sangramento com hipertensão, retina com papiledema — reduzir EV controlado em minutos-horas com monitorização e alvo por causa). Rotina do PS: PA correta (manquim adequado, 5 min de repouso, duas medidas; dor/ansiedade/xixi preso elevam — meça de novo após alívio sintomático), ECG, glicemia, creatinina se possível, sumário se sintomas urinários. A 'crise' mais comum é dor + branco: tratar a dor e reavaliar antes de diagnosticar hipertensão.",
+  "redFlags": [
+    "PA alta + dor torácica/ dispneia/ ECG alterado — SCA/EAP: protocolos próprios + EV",
+    "PA alta + cefaleia intensa, vômitos, confusão, déficit, visão — encefalopatia/AVC: TC (cuidado: reduzir 15-25% no isquêmico)",
+    "Dor em rasgo no peito/dorso irradiando — DISSECÇÃO: TC, cirurgio vascular JÁ",
+    "Gestante + PA alta/cefaleia/visão — pré-eclâmpsia/eclâmpsia: obstetrícia e hidralazina/metildopa",
+    "PA diastólica > 130 com papiledema/oligúria — emergência: EV",
+    "PA alta + epistaxe abundante não controlada com tamponamento — entubar a via EV se persistir"
+  ],
+  "naoUsar": [
+    "Redução rápida da PA na urgência sem lesão de órgão (hipoperfusão cerebral/coronária)",
+    "Nifedipina sublingual (queda incontrolável — abandonada)",
+    "Captopril SL em dose cheia de rotina em idosos/desidratados",
+    "Alta sem esquema de manutenção e seguimento garantido (a crise volta)",
+    "Ignorar que a 'crise' pode ser dor/ansiedade/persistência — reavaliar após tratar o gatilho"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Redução oral controlada (urgência, sem lesão de órgão)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "captopril",
+            "pos": "12,5 a 25 mg VO (mastigar) — reavaliar em 30–60 min; repetir 1x se necessário; alvo: reduzir 20–25% em 24–48 h",
+            "ped": "Não se aplica",
+            "motivo": "1ª linha VO de ação relativamente rápida"
+          },
+          {
+            "base": "anlodipino",
+            "pos": "5 a 10 mg VO — início em 30–60 min; preferir se taquicárdico em uso de betabloqueador não é opção",
+            "motivo": "Alternativa oral"
+          },
+          {
+            "base": "clonazepam",
+            "pos": "0,5 mg VO se componente ansioso importante (ansiedade eleva a PA — tratar junto)",
+            "motivo": "Componente ansiedade/dor"
+          },
+          {
+            "base": "dipirona",
+            "pos": "1 g VO se dor/cefaleia — a dor eleva a PA: aliviar e REMEDIR antes de escalar anti-hipertensivo",
+            "motivo": "Tratar o gatilho antes"
+          }
+        ]
+      },
+      {
+        "nome": "Manutenção na alta (individualizada)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "anlodipino",
+            "pos": "5 mg VO 1x/dia — início ambulatorial comum em paciente virgem de tratamento",
+            "motivo": "Escolha inicial típica"
+          },
+          {
+            "base": "losartana",
+            "pos": "50 mg VO 1x/dia — alternativa (diabéticos/albuminúria)",
+            "motivo": "Alternativa com indicação específica"
+          },
+          {
+            "base": "enalapril",
+            "pos": "10 mg VO 1x/dia — IECA (vigiar tosse/potássio/creatinina em 1–2 semanas)",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "hctz",
+            "pos": "12,5–25 mg VO 1x/dia pela manhã — diurético em dose baixa; cautela se risco de hiponatremia/idoso",
+            "motivo": "Associação clássica"
+          },
+          {
+            "base": "carvedilol",
+            "pos": "12,5 mg VO 2x/dia se coronariopatia/taquiarritmia concomitante",
+            "motivo": "Indicação dupla"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Auto-medida e retorno",
+              "ap": "",
+              "pos": "Comprar/emprestar aparelho de PA (braço): medir 2x/dia (manhã e noite) sentado, 5 min de descanso, anotar em planilha — o diagnóstico e o ajuste dependem disso. Dieta com pouco sal (não adicionar, evitar enlatados/embutidos); perda de peso se excesso;/activity física leve regular. Consulta APS/hipertensão em 7 dias com as anotações. RETORNAR se dor no peito, falta de ar, dor de cabeça forte, visão embaçada, fraqueza — não esperar."
+            },
+            "motivo": "Sucesso depende do seguimento"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Emergência hipertensiva — EV",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "hidralazina_ev",
+            "motivo": "5–10 mg EV lento (bolus) a cada 20–30 min — eclâmpsia/opções limitadas; taquicardia como efeito"
+          },
+          {
+            "linha": 1,
+            "hosp": "clonidina_vo",
+            "motivo": "0,1–0,2 mg VO — transição/sedação adjuvante"
+          },
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "40 mg EV — se congestão/EAP junto (junto ao protocolo próprio)"
+          },
+          {
+            "linha": 1,
+            "hosp": "captopril_vo",
+            "motivo": "25 mg VO mastigado — transição para oral"
+          },
+          {
+            "hosp": "isossorbida_sl",
+            "motivo": "5 mg SL — se componente isquêmico/congestão (protocolo EAP)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "ALG-05",
+    "area": "Alergias",
+    "nome": "Alergia alimentar",
+    "aliases": ["alergia alimentar", "reação alimentar", "alergia a alimento", "anafilaxia alimentar"],
+    "contexto": ["ambulatorial", "hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Alergia alimentar é a reação adversa imunomediada a proteína de alimento, e o que define a conduta é o mecanismo e o tempo até o sintoma. Reações IgE-mediadas são imediatas (minutos a 2 h): urticária, angioedema, vômitos e anafilaxia — adrenalina IM é o tratamento e não pode ser substituída por anti-H1 nem por corticoide. Reações tardias (2–72 h) incluem FPIES, proctocolite e enteropatia induzidas por proteína alimentar, nas quais não há papel para adrenalina ou anti-H1: o tratamento é retirar o alérgeno e sustentar nutrição. O diagnóstico é clínico, apoiado por teste cutâneo e IgE específica, mas o padrão é a provocação oral; dieta restritiva sem confirmação é dano, não tratamento. Todo paciente com anafilaxia alimentar precisa de plano de emergência escrito e autoinjetor de adrenalina.",
+    "inclusao": [
+      "Urticária, angioedema ou vômitos até 2 h após ingestão de alimento suspeito",
+      "Anafilaxia alimentar (segue o protocolo de adrenalina IM e observação)",
+      "Reação cutânea ou gastrointestinal recorrente relacionada a alimento específico",
+      "Lactente com sangue nas fezes, vômitos repetidos ou baixo ganho de peso em uso de fórmula de leite de vaca",
+      "Necessidade de esclarecer diagnóstico antes de manter dieta de exclusão"
+    ],
+    "exclusao": [
+      { "situacao": "anafilaxia com choque refratário a duas doses de adrenalina", "fluxo": "sala vermelha / UTI" },
+      { "situacao": "reação a medicamento, sem relação com alimento", "fluxo": "ALG-02 alergia a medicamento" },
+      { "situacao": "diarreia ou distensão após lactose, sem sintomas imunológicos", "fluxo": "intolerância à lactose, não alergia" },
+      { "situacao": "disfagia ou impactação alimentar sem reação alérgica", "fluxo": "gastroenterologia" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "estridor, disfonia ou edema de língua e lábios", "por_que": "obstrução de via aérea superior", "acao": "adrenalina IM imediata e via aérea preparada", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "hipotensão, síncope ou palidez com extremidades frias", "por_que": "choque distributivo", "acao": "adrenalina IM, decúbito dorsal com pernas elevadas e volume", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "sibilância, tiragem ou queda de saturação", "por_que": "broncoespasmo", "acao": "adrenalina IM e salbutamol; não atrasar pela nebulização", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "vômitos repetidos e hipotonia após alimento em lactente", "por_que": "FPIES com risco de choque hipovolêmico", "acao": "hidratação IV, ondansetrona e observação hospitalar", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "sintomas em dois sistemas após amendoim, castanha ou frutos do mar", "por_que": "anafilaxia de alto risco", "acao": "adrenalina IM e observação 4–6 h", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "asma grave ou mal controlada associada à alergia alimentar", "por_que": "principal fator de anafilaxia fatal", "acao": "adrenalina precoce e revisão do controle da asma", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "uso de betabloqueador ou bloqueador de canal de cálcio", "por_que": "anafilaxia refratária à adrenalina", "acao": "adrenalina em dose plena e glucagon se refratária", "severidade": "grave" },
+      { "id": "AL-08", "sinal": "sintomas que retornam 4–12 h após a melhora inicial", "por_que": "reação bifásica em até 20% dos casos", "acao": "reavaliar e tratar como anafilaxia nova; observação mínima de 4–6 h", "severidade": "precaucao" },
+      { "id": "AL-09", "sinal": "sangue vivo nas fezes em lactente eutrófico", "por_que": "proctocolite induzida por proteína alimentar", "acao": "trocar a fórmula e reavaliar em 2–4 semanas", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "Qual alimento, quanto comeu e quanto tempo depois começaram os sintomas?",
+      "O início foi em minutos ou em horas após a ingestão?",
+      "Houve urticária, inchaço de lábios ou língua, falta de ar ou rouquidão?",
+      "Houve vômitos repetidos, diarreia ou sangue nas fezes?",
+      "Já recebeu adrenalina? Quanto tempo passou até a aplicação?",
+      "Tem asma, rinite ou dermatite atópica? A asma está controlada?",
+      "Usa betabloqueador, IECA ou bloqueador de canal de cálcio?",
+      "Já teve reação ao mesmo alimento antes? Quais sintomas e gravidade?",
+      "Criança: qual fórmula ou leite usa, há sangue nas fezes e como está o ganho de peso?",
+      "Tem autoinjetor em casa? Sabe usar? Alguém já treinou?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Anafilaxia por alimento, qualquer idade", "escolha": "Adrenalina IM 0,01 mg/kg (máx. 0,5 mg) no vasto lateral, volume, oxigênio e salbutamol se broncoespasmo", "porque": "É a única droga que reverte a reação; atraso na aplicação se associa a morte e a reação bifásica" },
+      { "cenario": "Urticária ou angioedema isolados, sem sintoma respiratório ou cardiovascular", "escolha": "Anti-H1 de segunda geração por via oral (cetirizina) e observação de 1–2 h", "porque": "Adrenalina não é indicada sem critério de anafilaxia e o anti-H1 controla o prurido; corticoide não acelera a resolução" },
+      { "cenario": "Broncoespasmo persistente após a primeira dose de adrenalina", "escolha": "Salbutamol inalatório com espaçador ou nebulização e repetir adrenalina se houver sinal de gravidade", "porque": "O beta-2 trata o componente brônquico, mas não substitui a adrenalina, que trata o mediador sistêmico" },
+      { "cenario": "Sintomas que retornam horas depois da melhora", "escolha": "Tratar como anafilaxia nova com adrenalina se houver critério, e manter observação hospitalar", "porque": "Corticoide não previne reação bifásica em ensaios e revisões; a vigilância é que previne o desfecho" },
+      { "cenario": "Lactente com APLV não IgE-mediada leve a moderada (proctocolite, refluxo, eczema)", "escolha": "Fórmula extensamente hidrolisada por 2–4 semanas", "porque": "Mais de 90% toleram; mantém custo e paladar melhores que a fórmula de aminoácidos" },
+      { "cenario": "APLV com anafilaxia, FPIES grave ou falha de hidrolisado extenso", "escolha": "Fórmula de aminoácidos", "porque": "Até 10% dos lactentes ainda reagem ao hidrolisado extenso; a fórmula elementar elimina o peptídeo imunogênico" },
+      { "cenario": "Alergia alimentar IgE-mediada múltipla com risco de anafilaxia e asma associada", "escolha": "Omalizumabe como adjuvante em centro especializado, mantendo dieta e adrenalina", "porque": "Aumenta o limiar de reação, mas não substitui exclusão do alérgeno nem o autoinjetor" },
+      { "cenario": "IgE específica ou prick positivo sem história compatível", "escolha": "Teste de provocação oral e manutenção da dieta habitual até o resultado", "porque": "Sensibilização não é alergia; excluir alimento com base em exame isolado gera desnutrição e perda de tolerância" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "simpatomimetico",
+        "agente": "adrenalina (epinefrina)",
+        "papel": "primeira_linha",
+        "indicacao": "anafilaxia por alimento, incluindo broncoespasmo e hipotensão",
+        "dose": "0,5 mg (adulto); 0,01 mg/kg na criança, máx. 0,5 mg",
+        "unidade": "mg",
+        "via": "IM no vasto lateral da coxa",
+        "frequencia": "repetir a cada 5–15 min se não houver resposta, até 3 doses",
+        "duracao": "até estabilização clínica",
+        "dose_maxima": "1,5 mg por evento (3 doses de 0,5 mg)",
+        "contraindicacoes": ["não há contraindicação absoluta na anafilaxia", "injeção IV em bolus de solução 1:1000 é proscrita"],
+        "efeitos_adversos": ["taquicardia", "tremor", "palpitação", "hipertensão transitória", "isquemia miocárdica em cardiopata e idoso"],
+        "apresentacoes": ["ampola 1 mg/mL (1 mL)", "seringa preenchida 1 mg/mL", "auto-injetor 0,3 mg", "auto-injetor 0,15 mg (infantil)"],
+        "preparo": "Ampola 1:1000 (1 mg/mL) aplicada sem diluição por via IM; diluição 1:10.000 (0,1 mg/mL) somente para uso IV em bomba de infusão",
+        "tempo_infusao": "bolus IM único; sem infusão na via IM",
+        "monitorizacao": ["PA e FC a cada 5 min até estabilizar", "traçado de ECG em cardiopata", "saturação e ausculta pulmonar", "regressão do edema de via aérea e do estridor"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste relevante",
+        "observacoes": "Aplicar com agulha 25 mm no vasto lateral; repetir em 5–15 min se não houver melhora; não atrasar por anti-H1 ou corticoide",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/WAO/EAACI",
+        "claim_id": null
+      },
+      {
+        "classe": "simpatomimetico",
+        "agente": "adrenalina autoinjetor",
+        "papel": "resgate",
+        "indicacao": "autotratamento domiciliar, escolar e em viagem de anafilaxia alimentar",
+        "dose": "0,3 mg (acima de 25–30 kg); 0,15 mg (10–25 kg)",
+        "unidade": "mg",
+        "via": "IM na face lateral da coxa",
+        "frequencia": "dose única; repetir em 5–15 min se não houver melhora",
+        "duracao": "até atendimento médico",
+        "dose_maxima": "2 dispositivos por evento",
+        "contraindicacoes": ["não há contraindicação absoluta na anafilaxia", "não usar por via digital ou EV"],
+        "efeitos_adversos": ["taquicardia", "tremor", "palidez", "cefaleia"],
+        "apresentacoes": ["auto-injetor 0,3 mg/0,3 mL", "auto-injetor 0,15 mg/0,3 mL"],
+        "preparo": "Pronto para uso: remover a trava de segurança e pressionar o dispositivo contra a coxa por 3 a 10 s, conforme o modelo",
+        "tempo_infusao": "não se aplica (bolus IM)",
+        "monitorizacao": ["PA e FC", "tempo até a segunda dose", "necessidade de transporte imediato ao serviço"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Prescrever dois dispositivos, treinar o paciente e ao menos dois cuidadores, conferir validade a cada consulta e entregar plano escrito para a escola ou o trabalho",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/FDA/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "cetirizina",
+        "papel": "primeira_linha",
+        "indicacao": "urticária e prurido sem sintomas respiratórios ou cardiovasculares",
+        "dose": "10 mg (adulto e acima de 6 anos); 5 mg (2–6 anos); 2,5 mg (6–24 meses)",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia, preferir à noite",
+        "duracao": "3–7 dias ou até controle do prurido",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": ["hipersensibilidade a hidroxizina ou cetirizina", "insuficiência renal grave sem ajuste"],
+        "efeitos_adversos": ["sonolência leve", "cefaleia", "boca seca"],
+        "apresentacoes": ["comprimido 10 mg", "solução oral 1 mg/mL (60 mL)", "comprimido 5 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["regressão da urticária em 30–60 min", "sonolência", "função renal se uso prolongado"],
+        "ajuste_renal": "ClCr 30–50 mL/min: 5 mg/dia; ClCr abaixo de 30: 5 mg em dias alternados",
+        "observacoes": "Não trata anafilaxia: qualquer sintoma respiratório ou cardiovascular exige adrenalina antes do anti-H1",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/EAACI",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "difenidramina",
+        "papel": "alternativa",
+        "indicacao": "urticária intensa quando a via oral não é possível",
+        "dose": "25–50 mg (adulto); 1 mg/kg na criança, máx. 50 mg",
+        "unidade": "mg",
+        "via": "IV lenta ou IM",
+        "frequencia": "dose única, repetir em 6 h se necessário",
+        "duracao": "1–3 doses",
+        "dose_maxima": "50 mg por dose",
+        "contraindicacoes": ["glaucoma de ângulo fechado", "retenção urinária", "uso concomitante de IMAO", "neonato"],
+        "efeitos_adversos": ["sonolência", "boca seca", "taquicardia", "agitação paradoxal em criança", "hipotensão se infundida rápido"],
+        "apresentacoes": ["ampola 50 mg/mL (1 mL)", "comprimido 25 mg", "cápsula 50 mg"],
+        "preparo": "Diluir 50 mg em 50 mL de SF 0,9% para infusão curta",
+        "tempo_infusao": "5–10 min (IV lenta)",
+        "monitorizacao": ["PA", "nível de consciência", "frequência cardíaca"],
+        "ajuste_renal": "Sem ajuste formal; reduzir em nefropata grave",
+        "ajuste_hepatico": "Reduzir em hepatopatia grave",
+        "observacoes": "A sedação mascara piora clínica; não usar como substituto de adrenalina em criança com sintomas sistêmicos",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "prednisona",
+        "papel": "condicional",
+        "indicacao": "reação cutânea persistente acima de 24 h ou asma e rinite associadas; sem papel na fase aguda da anafilaxia",
+        "dose": "40–50 mg (adulto); 1–2 mg/kg na criança, máx. 40 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3–5 dias",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": ["infecção sistêmica não tratada", "exposição a varicela em imunossuprimido"],
+        "efeitos_adversos": ["hiperglicemia", "insônia", "aumento do apetite", "oscilação de humor"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 20 mg", "solução oral 3 mg/mL"],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["glicemia em diabético", "sintomas gástricos", "humor e sono"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; preferir prednisolona em hepatopatia grave",
+        "observacoes": "Não previne reação bifásica e não trata anafilaxia: diretrizes e revisões não sustentam essa finalidade; uso restrito a anti-inflamatório de reação cutânea prolongada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/EAACI/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "metilprednisolona",
+        "papel": "alternativa",
+        "indicacao": "reação cutânea prolongada quando a via oral está indisponível",
+        "dose": "1–2 mg/kg (adulto 40–125 mg)",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única, repetir 6/6 h se necessário",
+        "duracao": "1–3 doses",
+        "dose_maxima": "125 mg por dose",
+        "contraindicacoes": ["infecção não tratada", "hipersensibilidade ao fármaco"],
+        "efeitos_adversos": ["hiperglicemia", "hipertensão", "insônia", "rubor facial"],
+        "apresentacoes": ["frasco 40 mg pó com diluente", "frasco 125 mg", "ampola 500 mg"],
+        "preparo": "Reconstituir no diluente e diluir em 50–100 mL de SF 0,9%",
+        "tempo_infusao": "10–20 min",
+        "monitorizacao": ["PA", "glicemia", "sódio"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Só quando a via oral não é possível; a limitação de evidência é a mesma da prednisona quanto à reação bifásica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "broncodilatador_beta2",
+        "agente": "salbutamol spray",
+        "papel": "condicional",
+        "indicacao": "broncoespasmo persistente após adrenalina",
+        "dose": "4–8 jatos de 100 mcg com espaçador (adulto); 2–4 jatos na criança",
+        "unidade": "jato",
+        "via": "inalatória",
+        "frequencia": "a cada 20 min na primeira hora, depois 4/4–6 h",
+        "duracao": "24–48 h",
+        "dose_maxima": "individualizar; acima de 10 jatos em 24 h indica reavaliar gravidade",
+        "contraindicacoes": ["arritmia grave descompensada (relativa)", "hipocalemia grave não corrigida"],
+        "efeitos_adversos": ["tremor", "taquicardia", "hipocalemia", "hiperglicemia"],
+        "apresentacoes": ["aerossol 100 mcg/jato (200 doses)", "solução para nebulização 5 mg/mL", "espaçador adulto e infantil"],
+        "preparo": "Agitar e acoplar ao espaçador; na nebulização diluir 2,5–5 mg em 3 mL de SF 0,9%",
+        "tempo_infusao": "nebulização em 10–15 min",
+        "monitorizacao": ["frequência respiratória e ausculta", "frequência cardíaca", "saturação", "potássio se doses repetidas"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Trata o broncoespasmo e não a anafilaxia: se a adrenalina ainda não foi dada, ela vem primeiro",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/GINA",
+        "claim_id": null
+      },
+      {
+        "classe": "formula_infantil",
+        "agente": "fórmula de aminoácidos",
+        "papel": "primeira_linha",
+        "indicacao": "APLV IgE-mediada grave, FPIES grave ou falha de hidrolisado extenso",
+        "dose": "150 mL/kg/dia reconstituído (cerca de 120 kcal/kg/dia)",
+        "unidade": "mL/kg/dia",
+        "via": "VO ou sonda gástrica",
+        "frequencia": "6–8 refeições por dia abaixo de 6 meses; 4–5 após",
+        "duracao": "até a reintrodução, em geral 12–24 meses",
+        "dose_maxima": "volume conforme peso, aceitação e curva de crescimento",
+        "contraindicacoes": ["hipersensibilidade a componente da fórmula", "galactosemia sem confirmação de composição"],
+        "efeitos_adversos": ["recusa inicial pelo sabor", "constipação", "custo elevado"],
+        "apresentacoes": ["lata 400 g pó", "lata 900 g pó", "frasco 200 mL líquido pronto"],
+        "preparo": "Reconstituir 1 medida rasa por 30 mL de água fervida morna; desprezar a sobra após a mamada",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["peso e comprimento mensais", "volume aceito e diurese", "sangue nas fezes e vômitos", "hemograma e ferritina se enteropatia"],
+        "ajuste_renal": "Não se aplica; ajustar volume em nefropata",
+        "observacoes": "Hidrolisado extenso é primeira escolha em APLV leve a moderada; aminoácidos em anafilaxia, FPIES grave ou falha do hidrolisado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ESPGHAN/AAAAI",
+        "claim_id": null
+      },
+      {
+        "classe": "anticorpo_monoclonal_anti_ige",
+        "agente": "omalizumabe",
+        "papel": "condicional",
+        "indicacao": "alergia alimentar IgE-mediada múltipla com risco de anafilaxia, como adjuvante em centro especializado",
+        "dose": "75–600 mg SC a cada 2–4 semanas, conforme IgE total e peso",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "a cada 2 ou 4 semanas",
+        "duracao": "contínuo enquanto houver exposição de risco",
+        "dose_maxima": "600 mg a cada 2 semanas",
+        "contraindicacoes": ["hipersensibilidade a omalizumabe", "asma aguda grave no momento da aplicação"],
+        "efeitos_adversos": ["dor e equimose no local", "cefaleia", "anafilaxia pós-aplicação (rara)", "febre"],
+        "apresentacoes": ["seringa preenchida 75 mg/0,5 mL", "seringa preenchida 150 mg/1 mL", "frasco 150 mg pó para reconstituição"],
+        "preparo": "Reconstituir o frasco com 1,4 mL de diluente e homogeneizar sem agitar; seringa é pronta para uso",
+        "tempo_infusao": "injeção SC em 5–10 s",
+        "monitorizacao": ["reação no local", "sinais de anafilaxia na primeira hora", "controle da asma e das crises"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Aumenta o limiar de reação, mas não substitui dieta de exclusão nem adrenalina de resgate; alto custo e acesso restrito",
+        "confirmar_apresentacao_local": true,
+        "fonte": "FDA/ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Plano de emergência escrito e individualizado", "detalhe": "Uma página com foto do paciente, alérgeno, sinais de gravidade, quando aplicar o autoinjetor, telefone do serviço e dos responsáveis; entregar cópia à escola e ao trabalho" },
+      { "medida": "Leitura de rótulos e controle de contaminação cruzada", "detalhe": "Orientar a ler a lista de ingredientes e os avisos de traço a cada compra, evitar frituras e utensílios compartilhados e não confiar em cardápio sem confirmação do fabricante" },
+      { "medida": "Dieta de exclusão confirmada e nutricionalmente compensada", "detalhe": "Excluir apenas o alérgeno comprovado, com nutricionista; suplementar cálcio, vitamina D e ferro na exclusão de leite e reavaliar tolerância em 12–24 meses" },
+      { "medida": "Observação hospitalar de 4–6 h após anafilaxia", "detalhe": "Alta somente após 4–6 h assintomático, com exame de via aérea; reação bifásica ocorre em até 20% e costuma surgir nessa janela" },
+      { "medida": "Treinamento do autoinjetor com dispositivo de treino", "detalhe": "Treinar o paciente e dois cuidadores na consulta, repetir a técnica a cada visita e conferir validade e cor da solução no dispositivo" },
+      { "medida": "Plano escolar e ambulatorial de acesso à adrenalina", "detalhe": "Adrenalina guardada em local de acesso imediato, não em armário trancado; proibir troca de alimentos e definir funcionário responsável pela aplicação" },
+      { "medida": "Preparo correto da fórmula infantil", "detalhe": "Orientar diluição na proporção da lata, sem economia de pó, e proibir leite de cabra, leite vegetal ou soja como substituto sem avaliação especializada" }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Teste de provocação oral",
+        "indicacao": "Confirmar ou excluir alergia quando história e exames não são conclusivos; verificar aquisição de tolerância; liberar alimento excluído há anos",
+        "tecnica": "Ambiente hospitalar com adrenalina à beira do leito, acesso venoso, monitorização e equipe treinada; doses crescentes do alimento a cada 15–30 min, observação de 2 h após a última dose; protocolo aberto ou duplo-cego conforme a dúvida",
+        "complicacoes": "Anafilaxia, aspiração, reação tardia, falha do protocolo por recusa; contraindicado em asma descontrolada, anafilaxia recente, uso de betabloqueador e instabilidade clínica",
+        "ambiente": "Hospital-dia ou enfermaria com carrinho de anafilaxia; nunca em consultório sem suporte de ressuscitação",
+        "contraindicacoes": "Anafilaxia nos últimos 3 meses, asma grave não controlada, betabloqueador em dose plena, doença aguda febril"
+      },
+      {
+        "nome": "Teste cutâneo de leitura imediata (prick test)",
+        "indicacao": "Triagem de sensibilização IgE a alimento quando a história é compatível",
+        "tecnica": "Extrato comercial no antebraço, com controle positivo (histamina) e negativo (salina); leitura em 15–20 min; positivo se pápula de 3 mm ou mais que o controle negativo",
+        "complicacoes": "Falso positivo por sensibilização, reação sistêmica rara, urticária local prolongada",
+        "ambiente": "Ambulatório com adrenalina disponível",
+        "contraindicacoes": "Dermatografismo intenso, eczema extenso no local, uso recente de anti-H1"
+      },
+      {
+        "nome": "IgE específica sérica e componentes moleculares",
+        "indicacao": "Quando o prick não é possível, há risco de reação ou é preciso prever tolerância",
+        "tecnica": "Coleta sérica com painel dirigido ao alimento suspeito; componentes como Ara h 2 para amendoim e Gal d 1 para ovo estimam risco e persistência",
+        "complicacoes": "Falso positivo por sensibilização, resultado tardio em 3–7 dias, custo",
+        "ambiente": "Ambulatorial",
+        "contraindicacoes": "Nenhuma contraindicação absoluta; não substitui a história clínica"
+      },
+      {
+        "nome": "Dieta de eliminação diagnóstica",
+        "indicacao": "Suspeita de reação tardia (FPIES, proctocolite, enteropatia) em que a provocação imediata não reproduz o quadro",
+        "tecnica": "Excluir o alérgeno por 2–4 semanas com diário de sintomas e substituto adequado; reavaliar em consulta e programar reintrodução controlada",
+        "complicacoes": "Desnutrição, perda de tolerância, ansiedade familiar, exclusão desnecessária de múltiplos alimentos",
+        "ambiente": "Ambulatorial com nutricionista",
+        "contraindicacoes": "História de anafilaxia grave — nesse caso a reintrodução é sempre hospitalar"
+      },
+      {
+        "nome": "Imunoterapia oral (dessensibilização)",
+        "indicacao": "Alergia persistente a leite, ovo ou amendoim em crianças acima de 4 anos e adultos selecionados",
+        "tecnica": "Escalonamento supervisionado em centro especializado com doses diárias crescentes até a dose de manutenção, mantida por tempo prolongado",
+        "complicacoes": "Anafilaxia durante o escalonamento ou a manutenção, esofagite eosinofílica, necessidade de adrenalina em casa",
+        "ambiente": "Centro de alergia com protocolo escrito e suporte de emergência",
+        "contraindicacoes": "Asma grave não controlada, esofagite eosinofílica ativa, má adesão e recusa familiar"
+      }
+    ],
+    "metas": [
+      "Adrenalina aplicada em até 5 min do reconhecimento da anafilaxia",
+      "Observação mínima de 4–6 h após anafilaxia, sem alta precoce",
+      "Dieta restritiva limitada ao alérgeno comprovado, com registro em prontuário",
+      "Três doses de adrenalina documentadas como esquema máximo antes do resgate hospitalar",
+      "Criança com APLV em fórmula adequada e peso/estatura entre os percentis 3 e 97",
+      "Autoinjetor prescrito, dispensado e técnica treinada em 100% dos pacientes com anafilaxia alimentar",
+      "Reavaliação de tolerância com provocação oral em 12–24 meses"
+    ],
+    "fluxo": [
+      "Reconhecer o tempo: sintomas em até 2 h após o alimento indicam mecanismo IgE-mediado; de 2 a 72 h, reação tardia",
+      "Triar gravidade: há comprometimento de via aérea, respiração ou circulação? Se sim, é anafilaxia",
+      "Anafilaxia: adrenalina IM no vasto lateral, decúbito, volume, oxigênio, salbutamol se broncoespasmo e chamar ajuda",
+      "Urticária isolada: anti-H1 oral, observação de 1–2 h e alta com plano escrito",
+      "Reação tardia: retirar o alérgeno, hidratar na FPIES, avaliar nutrição e programar provocação",
+      "Definir diagnóstico: história mais prick ou IgE específica; em dúvida, indicar provocação oral, não dieta empírica",
+      "Alta: plano de emergência, autoinjetor treinado, dieta confirmada e retorno em 4–6 semanas"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "lactente", "ajuste": "fórmula extensamente hidrolisada ou de aminoácidos; nunca leite de vaca integral antes de 12 meses", "alerta": "enteropatia, anemia e baixo ganho de peso" },
+      { "populacao": "crianca", "ajuste": "adrenalina 0,01 mg/kg, anti-H1 em solução oral e autoinjetor de 0,15 mg", "alerta": "subdose por uso de dispositivo adulto" },
+      { "populacao": "gestante", "ajuste": "adrenalina não é contraindicada e deve ser usada na anafilaxia", "alerta": "hipóxia e hipoperfusão fetal" },
+      { "populacao": "asmático", "ajuste": "revisar controle da asma e reforçar adrenalina precoce", "alerta": "asma mal controlada é o principal fator de anafilaxia fatal" },
+      { "populacao": "cardiopata e usuário de betabloqueador", "ajuste": "adrenalina em dose plena e considerar glucagon na refratariedade", "alerta": "anafilaxia refratária e isquemia" },
+      { "populacao": "idoso", "ajuste": "adrenalina indicada com monitorização cardíaca", "alerta": "arritmia e isquemia miocárdica" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "triptase sérica (até 2 h do início e basal após 24 h)", "indicacao": "anafilaxia", "o_que_muda": "confirma ativação de mastócito e sustenta o diagnóstico" },
+        { "nome": "prick test alimentar", "indicacao": "história sugestiva de reação imediata", "o_que_muda": "identifica o alérgeno provável e orienta a provocação" },
+        { "nome": "IgE específica e componentes moleculares", "indicacao": "risco de reação no teste ou dúvida de tolerância", "o_que_muda": "estima probabilidade e persistência da alergia" },
+        { "nome": "hemograma, eosinófilos, proteína C e albumina", "indicacao": "reação tardia, FPIES e enteropatia", "o_que_muda": "gravidade, anemia e resposta inflamatória" },
+        { "nome": "endoscopia ou colonoscopia com biópsia", "indicacao": "suspeita de enteropatia ou esofagite eosinofílica", "o_que_muda": "confirma o diagnóstico histológico e afasta outras causas" }
+      ],
+      "evitar": [
+        { "exame": "prick test ou IgE isolados sem história clínica", "motivo": "falso positivo leva a dieta desnecessária, desnutrição e perda de tolerância" },
+        { "exame": "teste de provocação durante a fase aguda", "motivo": "falso negativo e risco de reação grave" },
+        { "exame": "IgG específica ou painel de intolerância alimentar", "motivo": "sem validade diagnóstica e gera exclusões indevidas" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["portar adrenalina e plano de emergência", "ler rótulos em toda compra", "aplicar o autoinjetor ao primeiro sinal de anafilaxia e chamar o serviço", "manter follow-up com alergista", "informar escola e trabalho por escrito"],
+      "evitar": ["anti-histamínico como única medida em anafilaxia", "dieta restritiva sem confirmação", "reintroduzir alimento em casa após reação grave", "leite de cabra ou vegetal como substituto da fórmula"],
+      "retorno": ["falta de ar, rouquidão ou inchaço de língua", "vômitos repetidos ou sangue nas fezes", "recidiva após melhora", "dúvida sobre o autoinjetor"]
+    },
+    "efeitos_adversos": [
+      { "agente": "adrenalina", "efeitos": ["taquicardia", "tremor", "palidez", "isquemia miocárdica"], "observacao": "Monitorar ECG em cardiopata; não suspender por taquicardia isolada na anafilaxia" },
+      { "agente": "difenidramina", "efeitos": ["sonolência", "agitação paradoxal", "retenção urinária"], "observacao": "Evitar em idoso, glaucoma e próstata; não usar como sedativo de conveniência" },
+      { "agente": "prednisona", "efeitos": ["hiperglicemia", "insônia", "desconforto gástrico"], "observacao": "Curso curto; monitorar glicemia em diabético" },
+      { "agente": "salbutamol", "efeitos": ["tremor", "taquicardia", "hipocalemia"], "observacao": "Reavaliar se necessidade frequente; hipocalemia em doses repetidas" },
+      { "agente": "omalizumabe", "efeitos": ["reação local", "anafilaxia pós-aplicação"], "observacao": "Observar 30–60 min na primeira aplicação" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação no prontuário",
+      "Anafilaxia durante o tratamento: adrenalina IM imediata e suporte",
+      "Difenidramina com agitação paradoxal: suspender e trocar por anti-H1 de segunda geração",
+      "Prednisona com hiperglicemia: controle glicêmico e o menor tempo de uso possível",
+      "Comunicar a equipe, revisar a indicação e ajustar o plano de emergência"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "adrenalina autoinjetor 0,3 mg", "dose": "0,3 mg", "via": "IM", "frequencia": "conforme necessidade", "duracao": "2 dispositivos por validade", "condicao": "anafilaxia alimentar", "confirmar_apresentacao_local": true },
+          { "item": "cetirizina 10 mg", "dose": "10 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "5 dias", "condicao": "urticária isolada", "confirmar_apresentacao_local": true },
+          { "item": "prednisona 20 mg", "dose": "40 mg", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "3 dias", "condicao": "reação cutânea persistente", "confirmar_apresentacao_local": true },
+          { "item": "fórmula de aminoácidos", "dose": "150 mL/kg/dia", "via": "VO", "frequencia": "6–8 refeições/dia", "duracao": "12–24 meses", "condicao": "APLV grave", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "adrenalina 1 mg/mL", "dose": "0,5 mg IM", "via": "IM", "frequencia": "repetir em 5–15 min se necessário", "monitorizacao": "PA, FC e saturação", "confirmar_apresentacao_local": true },
+          { "item": "difenidramina 50 mg", "dose": "25–50 mg", "via": "IV lenta", "frequencia": "dose única", "monitorizacao": "PA e consciência", "confirmar_apresentacao_local": true },
+          { "item": "metilprednisolona 125 mg", "dose": "40–125 mg", "via": "IV", "frequencia": "dose única", "monitorizacao": "glicemia e PA", "confirmar_apresentacao_local": true },
+          { "item": "salbutamol spray 100 mcg", "dose": "4–8 jatos", "via": "inalatória", "frequencia": "a cada 20 min", "monitorizacao": "ausculta e FC", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["triptase", "prick test", "IgE específica", "hemograma", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de alergia alimentar, necessitando de afastamento por dias.", "dias": null, "cid": null, "observacao": "dias são decisão médica" },
+      "encaminhamento": { "campos": ["destino", "motivo", "resumo", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente com alergia alimentar, alérgeno, mecanismo, gravidade, tratamento, plano de emergência e exames realizados." }
+    },
+    "anamnese": {
+      "campos": ["alimento", "tempo até o sintoma", "urticária", "angioedema", "dispneia", "vômitos", "sangue nas fezes", "asma", "betabloqueador", "adrenalina prévia"],
+      "texto_template": "Paciente com reação alimentar a ___, início ___ minutos após a ingestão, com urticária, angioedema, dispneia, vômitos e sangue nas fezes; antecedentes de asma, uso de betabloqueador e uso prévio de adrenalina."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais", "via aérea e voz", "pele e mucosas", "ausculta pulmonar", "perfusão", "peso e percentis na criança"],
+      "texto_template": "Sinais vitais, avaliação de via aérea e voz, pele e mucosas, ausculta pulmonar, perfusão e peso com percentis."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de anafilaxia e carrinho de emergência", "verificar": true },
+      { "tipo": "sociedade_alergia", "o_que_verificar": "ASBAI, EAACI e WAO para anafilaxia e provocação oral", "verificar": true },
+      { "tipo": "diretriz_pediatria", "o_que_verificar": "ESPGHAN e AAAAI para APLV e fórmulas", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "bulas, apresentações e disponibilidade do autoinjetor", "verificar": true },
+      { "tipo": "diretriz_respiratoria", "o_que_verificar": "GINA para asma associada", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-ALG05-01", "tipo": "anafilaxia", "gatilho": "estridor, hipotensão ou broncoespasmo após alimento", "severidade": "grave", "mensagem": "Anafilaxia: adrenalina IM agora, antes de qualquer anti-H1.", "acao": "acionar carrinho de emergência", "bloqueante": true },
+      { "id": "SA-ALG05-02", "tipo": "anti_histaminico_isolado", "gatilho": "anti-H1 prescrito como única medida em anafilaxia", "severidade": "grave", "mensagem": "Anti-H1 não trata anafilaxia e não substitui adrenalina.", "acao": "bloquear item e sugerir adrenalina", "bloqueante": true },
+      { "id": "SA-ALG05-03", "tipo": "alta_precoce", "gatilho": "alta antes de 4 h após anafilaxia", "severidade": "precaucao", "mensagem": "Risco de reação bifásica em até 20%.", "acao": "alertar e manter observação", "bloqueante": false },
+      { "id": "SA-ALG05-04", "tipo": "dieta_sem_confirmacao", "gatilho": "dieta de exclusão sem provocação ou IgE compatível", "severidade": "precaucao", "mensagem": "Exclusão sem confirmação causa desnutrição e perda de tolerância.", "acao": "sugerir provocação oral", "bloqueante": false },
+      { "id": "SA-ALG05-05", "tipo": "corticoide_para_bifasica", "gatilho": "corticoide prescrito para prevenir reação bifásica", "severidade": "precaucao", "mensagem": "Evidência não sustenta corticoide para prevenir reação bifásica.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-ALG05-06", "tipo": "teste_isolado", "gatilho": "prick ou IgE positivo usado como diagnóstico isolado", "severidade": "precaucao", "mensagem": "Sensibilização não é alergia: interpretar com a história.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-ALG05-07", "tipo": "leite_integral_lactente", "gatilho": "leite de vaca integral prescrito antes de 12 meses", "severidade": "grave", "mensagem": "Leite integral antes de 12 meses aumenta risco de alergia e sangramento.", "acao": "bloquear item", "bloqueante": true }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "WAO", "EAACI", "ASBAI", "ESPGHAN", "AAAAI", "GINA"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com distinção entre reação IgE-mediada aguda e tardia, critérios de escolha por cenário, apresentações, preparo, tempo de infusão, monitorização, plano com autoinjetor, fórmulas para APLV, teste de provocação oral e alertas bloqueantes.", "data": null }
+      ]
+    }
+  }
+}

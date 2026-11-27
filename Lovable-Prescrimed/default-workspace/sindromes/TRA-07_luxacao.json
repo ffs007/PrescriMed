@@ -1,0 +1,1183 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "TRA-07",
+    "area": "Pequenos traumas",
+    "nome": "Luxação",
+    "aliases": [
+      "Luxação",
+      "luxação articular",
+      "articulação deslocada",
+      "luxação glenoumeral",
+      "luxação de patela",
+      "luxação de dedo",
+      "luxação de mandíbula",
+      "luxação de quadril",
+      "prótese articular luxada"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Luxação é a perda completa e permanente da congruência entre as superfícies articulares, e é sempre emergência articular com risco neurovascular: a cabeça que saiu do lugar comprime ou traciona o nervo e a artéria que passam ao lado dela, e cada minuto de deformidade sustentada aumenta a chance de lesão nervosa permanente e de necrose da cabeça femoral. A conduta se organiza em cinco decisões que mudam o desfecho: qual articulação está luxada, se há déficit neurovascular distal, se há fratura associada na imagem, se a redução será feita agora no pronto-socorro ou no centro cirúrgico, e qual imobilização protege a redução. A regra que ordena tudo: radiografar antes e depois de reduzir, com duas incidências, porque reduzir às cegas com fratura associada empurra fragmento ósseo para dentro de vaso ou nervo e transforma uma lesão reparável em sequela definitiva; a única exceção é a isquemia distal com dedo pálido, frio e sem pulso, em que a redução é imediata e a imagem vem depois. Sedação e analgesia antes da manobra não são conforto, são técnica: fentanil com midazolam, ou cetamina quando há hipotensão, permitem reduzir com o músculo relaxado, menos tentativas e menos lesão de cartilagem. A redução é específica por articulação — ombro por tração e contratração ou método de Stimson, patela por extensão do joelho com pressão medial, dedo por tração axial após bloqueio digital, mandíbula pela manobra de Hippocrates ou Thierry — e nenhuma delas se faz sem analgesia. Luxação de quadril é a mais grave das articulações comuns: exige redução em até 6 horas pelo risco de necrose avascular da cabeça femoral e de lesão do nervo ciático, sempre com ortopedia e sempre com imagem. Prótese articular luxada não é luxação simples: a manipulação pode desencaixar o componente, fraturar o osso ao redor ou introduzir infecção no implante, e a decisão é ortopédica. Depois de reduzir, imobiliza-se na posição funcional, reavalia-se o exame neurovascular e radiografa-se de novo, porque a redução que não foi conferida na imagem não foi feita.",
+    "inclusao": [
+      "Deformidade articular com bloqueio de movimento e dor intensa após trauma",
+      "Suspeita de luxação com déficit neurovascular distal, parestesia ou isquemia",
+      "Luxação de ombro, patela, dedo, mandíbula, quadril ou tornozelo",
+      "Luxação de prótese articular ou de articulação previamente operada",
+      "Luxação reduzida em outro serviço sem radiografia pós-redução",
+      "Necessidade de sedação e analgesia para redução articular"
+    ],
+    "exclusao": [
+      {
+        "situacao": "fratura de membro sem perda de congruência articular",
+        "fluxo": "TRA-05 fratura de membro"
+      },
+      {
+        "situacao": "luxação exposta, com ferida comunicando com a articulação e osso ou cartilagem visível",
+        "fluxo": "centro cirúrgico com ortopedia, cobertura estéril e antibiótico, sem redução na emergência"
+      },
+      {
+        "situacao": "politrauma com instabilidade hemodinâmica, via aérea comprometida ou trauma de tórax e abdome",
+        "fluxo": "sala vermelha, protocolo de trauma"
+      },
+      {
+        "situacao": "trauma craniano com alteração de consciência",
+        "fluxo": "TRA-04 TCE leve ou neurocirurgia"
+      },
+      {
+        "situacao": "dor articular sem trauma, com derrame e sinais inflamatórios",
+        "fluxo": "artrite séptica, avaliação clínica e punção articular"
+      },
+      {
+        "situacao": "entorse com articulação congruente e sem bloqueio de movimento",
+        "fluxo": "TRA-05 imobilização e reabilitação"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "pulso distal ausente ou assimétrico, extremidade pálida, fria ou com enchimento capilar maior que 2 segundos",
+        "por_que": "lesão vascular com isquemia aguda do membro",
+        "acao": "reduzir de imediato, mesmo sem imagem, e acionar cirurgia vascular; não atrasar por radiografia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "parestesia, anestesia ou paralisia distal à articulação luxada",
+        "por_que": "compressão ou tração de nervo periférico, com déficit que pode se tornar permanente",
+        "acao": "registrar o território acometido, reduzir com sedação e reavaliar após a manobra",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "luxação de quadril com encurtamento, rotação interna do membro e dor intensa",
+        "por_que": "necrose avascular da cabeça femoral e lesão do nervo ciático a partir de 6 horas",
+        "acao": "acionar ortopedia imediatamente e reduzir em até 6 horas, com imagem prévia e sedação ou anestesia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "prótese articular luxada, dor com bloqueio de movimento e deformidade em articulação operada",
+        "por_que": "risco de desencaixe do componente, fratura periprotética e infecção do implante",
+        "acao": "não manipular sem ortopedia; imobilizar, radiografar e transferir",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "dedo luxado com pele pálida, dor desproporcional e tempo de isquemia acima de 30 minutos",
+        "por_que": "isquemia digital por tração do feixe neurovascular; necrose é irreversível",
+        "acao": "bloqueio digital imediato e redução sem esperar exames complementares",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "hipotensão, taquicardia, palidez ou confusão no trauma que gerou a luxação",
+        "por_que": "choque hemorrágico associado, oculto no foco articular",
+        "acao": "ressuscitação volêmica, tipagem sanguínea e reavaliação do trauma antes da manobra",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "deformidade grosseira com pele sob tensão, equimose extensa ou risco de ruptura cutânea",
+        "por_que": "risco de converter luxação fechada em exposta e de síndrome compartimental",
+        "acao": "imobilizar no eixo encontrado, analgesia e redução precoce com imagem",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "duas tentativas de redução sem sucesso ou dor que impede a manobra",
+        "por_que": "interposição de tecido, fratura associada oculta ou sedação insuficiente",
+        "acao": "parar a manipulação, imobilizar, radiografar de novo e acionar ortopedia",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Qual foi o mecanismo, a energia do trauma e o horário exato da lesão?",
+      "Consegue mexer os dedos e sente o toque em todos os territórios abaixo da articulação?",
+      "O dedo ou o pé está pálido, frio ou com formigamento desde quando?",
+      "Tem fratura, cirurgia ou prótese nessa articulação?",
+      "Já tentou reduzir, alguém puxou o membro ou houve tentativa em casa?",
+      "Quando comeu ou bebeu pela última vez, para sedação segura?",
+      "Usa anticoagulante, opioide, benzodiazepínico ou tem apneia do sono?",
+      "Tem alergia a anestésico, opioide ou benzodiazepínico?",
+      "A dor é proporcional ao exame ou piora com a extensão passiva dos dedos?",
+      "Já luxou essa articulação antes e quantas vezes?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Primeira medida em qualquer luxação articular",
+        "escolha": "avaliação neurovascular dos cinco parâmetros, radiografia em duas incidências e analgesia antes de tocar no membro",
+        "porque": "o exame de base e a imagem são o que permitem distinguir lesão nervosa nova de prévia e luxação simples de luxação com fratura associada; sem esse registro, a manobra é irreversível e sem comparação"
+      },
+      {
+        "cenario": "Redução de qualquer articulação, exceto bloqueio digital isolado",
+        "escolha": "sedação e analgesia procedural com fentanil 1 a 2 mcg/kg mais midazolam 0,03 a 0,05 mg/kg, titulados até sedação moderada com resposta a estímulo",
+        "porque": "o músculo relaxado reduz o número de tentativas e a lesão de cartilagem; reduzir sem analgesia produz espasmo, manobra mais traumática e imobilização frouxa"
+      },
+      {
+        "cenario": "Paciente hipotensivo, idoso frágil ou com depressão respiratória prévia que precisa de redução",
+        "escolha": "cetamina 0,5 a 1 mg/kg IV titulada, mantendo respiração espontânea e reflexo de via aérea",
+        "porque": "a cetamina preserva a pressão arterial e a ventilação espontânea, o que a torna mais segura que a associação fentanil-midazolam nesse perfil"
+      },
+      {
+        "cenario": "Luxação glenoumeral anterior sem fratura na imagem",
+        "escolha": "tração e contratração com o braço em 30 graus de abdução, seguida de rotação externa suave, ou método de Stimson com peso de 2,5 a 5 kg por 15 a 20 minutos",
+        "porque": "a tração contínua vence o espasmo sem alavanca; manobras de alavanca fraturam o colo umeral e lesam o nervo axilar"
+      },
+      {
+        "cenario": "Luxação de patela",
+        "escolha": "extensão progressiva do joelho com pressão medial sobre a patela e leve tração distal, sob analgesia, seguida de imobilizador em extensão",
+        "porque": "a patela reduz com o relaxamento do quadríceps na extensão; manipular com o joelho fletido e o quadríceps contraído aumenta a lesão do retináculo medial"
+      },
+      {
+        "cenario": "Luxação de dedo, com ou sem isquemia",
+        "escolha": "bloqueio digital com lidocaína 2% sem vasoconstritor, 2 a 3 mL na face lateral da base, e tração axial contínua com hiperextensão leve; se houver isquemia, reduzir imediatamente, sem imagem prévia",
+        "porque": "o bloqueio digital é rápido, não exige sedação e permite redução com o paciente confortável; atrasar a redução de dedo isquêmico por burocracia de exame custa a falange"
+      },
+      {
+        "cenario": "Luxação anterior de mandíbula com boca aberta e incapacidade de fechar",
+        "escolha": "manobra de Hippocrates, com os polegares protegidos por gaze sobre os molares inferiores e pressão para baixo e para trás, ou técnica de Thierry com a cabeça apoiada no tórax do médico",
+        "porque": "a mandíbula só volta a passar pela eminência articular com pressão inferior associada à rotação; a força aplicada no mento sem apoio dental desloca a carga para a ATM e para os incisivos"
+      },
+      {
+        "cenario": "Luxação de quadril",
+        "escolha": "redução em até 6 horas, em centro cirúrgico ou sala de emergência com ortopedia, sob sedação profunda ou anestesia geral e com radiografia e tomografia prévias quando o tempo permitir",
+        "porque": "a cabeça femoral fora do acetábulo interrompe a vascularização retinacular; a janela de 6 horas é o que separa quadril viável de necrose avascular e artroplastia precoce"
+      },
+      {
+        "cenario": "Prótese articular luxada",
+        "escolha": "imobilizar, radiografar e acionar ortopedia; redução apenas por ortopedista, com avaliação do componente e do osso periprotético",
+        "porque": "a manobra às cegas em osso osteopênico ao redor do implante fratura o trocanter ou o colo e pode desencaixar o componente acetabular, além de semear o implante com a flora da pele"
+      },
+      {
+        "cenario": "Após redução confirmada",
+        "escolha": "imobilização na posição funcional, conforme a articulação: tipoia ou Velpeau no ombro, imobilizador em extensão na patela, tala digital em semiflexão, banda mentoniana na mandíbula, tala suropodálica ou tração no quadril",
+        "porque": "a posição funcional protege a redução e evita a contratura; imobilizar em posição antálgica deixa a articulação rígida e a redução instável"
+      },
+      {
+        "cenario": "Luxação com fratura associada identificada na imagem ou suspeita de fratura do colo umeral",
+        "escolha": "não reduzir no pronto-socorro; imobilizar no eixo e acionar ortopedia",
+        "porque": "reduzir às cegas com fratura associada desloca o fragmento e pode lesar a artéria axilar ou o nervo axilar, além de impedir a fixação planejada"
+      },
+      {
+        "cenario": "Definição do destino após redução bem-sucedida",
+        "escolha": "alta com imobilização e retorno em 7 dias quando a redução é estável, congruente, sem fratura e sem déficit; ortopedia imediata quando há fratura, instabilidade, déficit neurovascular, luxação recorrente ou prótese",
+        "porque": "a luxação recorrente e a fratura associada não se resolvem com tipoia; o seguimento precoce é o que define reabilitação e cirurgia"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "opioide",
+        "agente": "fentanil",
+        "papel": "primeira_linha",
+        "indicacao": "analgesia e sedação durante a redução de luxação",
+        "dose": "1 a 2 mcg/kg",
+        "unidade": "mcg/kg",
+        "via": "IV",
+        "frequencia": "dose inicial; repetir 0,5 a 1 mcg/kg a cada 3 a 5 minutos até sedação adequada",
+        "duracao": "procedimento; efeito de 30 a 60 minutos",
+        "dose_maxima": "5 mcg/kg no total do procedimento",
+        "contraindicacoes": [
+          "depressão respiratória não monitorada",
+          "hipotensão grave não corrigida",
+          "alergia a opioide",
+          "uso de inibidor da monoaminoxidase nos últimos 14 dias"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "rigidez torácica em injeção rápida",
+          "bradicardia",
+          "hipotensão",
+          "náusea e vômito",
+          "prurido"
+        ],
+        "apresentacoes": [
+          "ampola 50 mcg/mL (2 mL)",
+          "ampola 50 mcg/mL (5 mL)",
+          "ampola 50 mcg/mL (10 mL)",
+          "frasco 50 mcg/mL (20 mL)"
+        ],
+        "preparo": "Diluir 1 mL da ampola de 50 mcg/mL em 9 mL de soro fisiológico 0,9% para 5 mcg/mL; administrar em bolus lento",
+        "tempo_infusao": "bolus lento em 1 a 2 minutos, para evitar rigidez torácica",
+        "monitorizacao": [
+          "frequência respiratória a cada 5 minutos durante a sedação",
+          "saturação de oxigênio e capnografia contínua",
+          "escala de sedação e resposta a estímulo verbal",
+          "pressão arterial e frequência cardíaca a cada 5 minutos",
+          "dor pela escala de 0 a 10 antes e após a redução"
+        ],
+        "ajuste_renal": "Sem ajuste de dose; em ClCr abaixo de 30, titular mais lentamente pela menor depuração",
+        "ajuste_hepatico": "Reduzir a dose em 50% em cirrose Child B ou C",
+        "observacoes": "É a base da sedação para redução: rápido, titulável e reversível com naloxona. Ter naloxona e material de via aérea à beira do leito antes da primeira dose. Não usar como único agente quando há hipotensão: nesse caso, cetamina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "midazolam",
+        "papel": "primeira_linha",
+        "indicacao": "sedação ansiolítica associada ao fentanil na redução de luxação",
+        "dose": "0,03 a 0,05 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose inicial; repetir 1 mg a cada 3 a 5 minutos até sedação moderada",
+        "duracao": "procedimento; efeito de 20 a 60 minutos",
+        "dose_maxima": "0,1 mg/kg ou 10 mg no total do procedimento",
+        "contraindicacoes": [
+          "depressão respiratória não monitorada",
+          "miastenia gravis",
+          "hipotensão grave não corrigida",
+          "alergia a benzodiazepínico",
+          "insuficiência hepática grave sem monitorização"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "hipotensão",
+          "sedação prolongada no idoso",
+          "amnesia anterógrada",
+          "desinibição e agitação paradoxal",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (1 mL)",
+          "ampola 5 mg/mL (3 mL)",
+          "ampola 5 mg/mL (5 mL)",
+          "ampola 5 mg/mL (10 mL)",
+          "comprimido 7,5 mg",
+          "comprimido 15 mg"
+        ],
+        "preparo": "Diluir 1 mL da ampola de 5 mg/mL em 9 mL de soro fisiológico 0,9% para 0,5 mg/mL; administrar em bolus lento",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos",
+        "monitorizacao": [
+          "frequência respiratória e capnografia contínua",
+          "saturação de oxigênio",
+          "escala de sedação a cada 5 minutos",
+          "pressão arterial e frequência cardíaca",
+          "agitação paradoxal e resposta a estímulo"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: reduzir a dose em 50% e espaçar, pelo acúmulo do metabólito ativo",
+        "ajuste_hepatico": "Reduzir a dose em 50% em cirrose Child B ou C",
+        "observacoes": "Associar ao fentanil em dose mínima eficaz: a associação permite reduzir a dose de cada fármaco e a incidência de depressão respiratória. Reversão com flumazenil 0,2 mg IV se sedação excessiva. Evitar em apneia do sono não tratada e em idoso com risco de delirium.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_dissociativo",
+        "agente": "cetamina",
+        "papel": "alternativa",
+        "indicacao": "sedação para redução de luxação em paciente hipotensivo, asmático ou com dor refratária ao fentanil",
+        "dose": "0,5 a 1 mg/kg para sedação dissociativa; 0,3 mg/kg para analgesia subdissociativa",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir 0,25 a 0,5 mg/kg se a redução não terminou",
+        "duracao": "sedação de 10 a 15 minutos; analgesia de 20 a 30 minutos",
+        "dose_maxima": "2 mg/kg na sedação dissociativa",
+        "contraindicacoes": [
+          "hipertensão arterial grave não controlada",
+          "aneurisma intracraniano ou dissecção de aorta conhecidos",
+          "doença coronariana instável",
+          "psicose ativa ou delirium",
+          "hipertensão intracraniana sem controle ventilatório"
+        ],
+        "efeitos_adversos": [
+          "hipertensão e taquicardia",
+          "reação de emergência com alucinação e agitação",
+          "sialorreia e risco de aspiração",
+          "náusea e vômito",
+          "nistagmo",
+          "aumento do tônus muscular"
+        ],
+        "apresentacoes": [
+          "frasco 50 mg/mL (10 mL)",
+          "ampola 50 mg/mL (2 mL)",
+          "frasco 10 mg/mL (20 mL)",
+          "frasco 100 mg/mL (5 mL)"
+        ],
+        "preparo": "Diluir 1 mL da solução a 50 mg/mL em 9 mL de soro fisiológico 0,9% para 5 mg/mL; administrar IV lento",
+        "tempo_infusao": "bolus lento em 1 a 2 minutos",
+        "monitorizacao": [
+          "pressão arterial e frequência cardíaca a cada 5 minutos",
+          "saturação de oxigênio e padrão respiratório",
+          "grau de dissociação e resposta ao estímulo",
+          "emergência psicomotora na recuperação",
+          "sialorreia e proteção de via aérea"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave pela menor depuração",
+        "observacoes": "Primeira escolha quando a pressão arterial não permite fentanil com midazolam. Associar midazolam 0,05 mg/kg na recuperação para reduzir emergência psicomotora, se não houver contraindicação. Manter aspiração pronta pela sialorreia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "lidocaína 2% sem vasoconstritor",
+        "papel": "condicional",
+        "indicacao": "bloqueio digital para redução de dedo e infiltração local em redução de patela ou de mandíbula",
+        "dose": "2 a 3 mL por dedo, na face lateral da base; até 10 mL em infiltração periarticular",
+        "unidade": "mL",
+        "via": "infiltração local e bloqueio digital",
+        "frequencia": "dose única por redução",
+        "duracao": "60 a 90 minutos de bloqueio",
+        "dose_maxima": "4,5 mg/kg, até 300 mg",
+        "contraindicacoes": [
+          "alergia a anestésico do tipo amida",
+          "infecção de pele no trajeto da agulha",
+          "uso de vasoconstritor em dedo, nariz, orelha ou pênis",
+          "síndrome compartimental instalada no segmento"
+        ],
+        "efeitos_adversos": [
+          "toxicidade sistêmica com zumbido e gosto metálico",
+          "convulsão em dose excessiva",
+          "isquemia digital por solução com vasoconstritor",
+          "hematoma no sítio de punção",
+          "bloqueio incompleto"
+        ],
+        "apresentacoes": [
+          "frasco 20 mL a 2%",
+          "frasco 20 mL a 2% com epinefrina",
+          "ampola 5 mL a 2%",
+          "frasco 20 mL a 1%"
+        ],
+        "preparo": "Usar a solução a 2% sem vasoconstritor sem diluir no bloqueio digital; aspirar antes de injetar para excluir punção intravascular",
+        "tempo_infusao": "não se aplica (infiltração local); início do bloqueio em 3 a 5 minutos",
+        "monitorizacao": [
+          "toxicidade: zumbido, gosto metálico, parestesia perioral e agitação",
+          "perfusão e cor do dedo após a infiltração",
+          "dor pela escala de 0 a 10 após 8 a 10 minutos",
+          "nível de consciência durante a infiltração",
+          "sangramento no sítio de punção"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Reduzir a dose máxima em 50% em hepatopatia grave",
+        "observacoes": "Nunca usar solução com vasoconstritor em dedo: a isquemia digital é irreversível. Se o bloqueio falhar, não repetir acima da dose máxima: partir para sedação com cetamina ou fentanil.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "bupivacaína 0,5%",
+        "papel": "alternativa",
+        "indicacao": "bloqueio digital e infiltração periarticular quando se precisa de bloqueio mais prolongado",
+        "dose": "2 a 3 mL por dedo; até 20 mL a 0,25% em infiltração periarticular",
+        "unidade": "mL",
+        "via": "infiltração local e bloqueio digital",
+        "frequencia": "dose única por redução",
+        "duracao": "4 a 8 horas de bloqueio",
+        "dose_maxima": "2 mg/kg, até 150 mg",
+        "contraindicacoes": [
+          "alergia a anestésico do tipo amida",
+          "infecção de pele no trajeto da agulha",
+          "uso em criança pequena sem cálculo por peso",
+          "síndrome compartimental instalada no segmento"
+        ],
+        "efeitos_adversos": [
+          "toxicidade cardíaca com arritmia em injeção intravascular",
+          "convulsão em dose excessiva",
+          "bloqueio motor prolongado",
+          "hematoma no sítio de punção",
+          "parestesia transitória"
+        ],
+        "apresentacoes": [
+          "frasco 20 mL a 0,5%",
+          "frasco 20 mL a 0,25%",
+          "ampola 4 mL a 0,5%"
+        ],
+        "preparo": "Diluir 1:1 em soro fisiológico 0,9% para 0,25% em infiltração ampla; aspirar antes de injetar em qualquer sítio",
+        "tempo_infusao": "não se aplica (infiltração local); início do bloqueio em 5 a 10 minutos",
+        "monitorizacao": [
+          "eletrocardiograma contínuo durante e após a infiltração",
+          "zumbido, gosto metálico e parestesia perioral",
+          "perfusão e sensibilidade distal",
+          "dor pela escala de 0 a 10 após 15 minutos",
+          "duração do bloqueio motor antes da alta"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Reduzir a dose máxima em 50% em hepatopatia grave",
+        "observacoes": "Preferir quando a redução e a imobilização vão exigir mais de 90 minutos de conforto, como na luxação de dedo com ferida associada. A cardiotoxicidade é maior que a da lidocaína: em injeção intravascular acidental, usar emulsão lipídica a 20% se disponível.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_opioide",
+        "agente": "naloxona",
+        "papel": "resgate",
+        "indicacao": "depressão respiratória por opioide durante a sedação para redução",
+        "dose": "0,04 a 0,4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "repetir a cada 2 minutos até frequência respiratória acima de 12",
+        "duracao": "dose única ou repetida; efeito de 30 a 60 minutos, menor que o do fentanil",
+        "dose_maxima": "2 mg no total",
+        "contraindicacoes": [
+          "alergia a naloxona",
+          "dependência de opioide sem suporte ventilatório, pelo risco de síndrome de abstinência e edema pulmonar"
+        ],
+        "efeitos_adversos": [
+          "síndrome de abstinência aguda em dependente de opioide",
+          "dor súbita intensa",
+          "hipertensão e taquicardia",
+          "edema pulmonar",
+          "náusea e vômito"
+        ],
+        "apresentacoes": [
+          "ampola 0,4 mg/mL (1 mL)",
+          "frasco 0,4 mg/mL (10 mL)"
+        ],
+        "preparo": "Diluir 1 mL da ampola de 0,4 mg/mL em 9 mL de soro fisiológico 0,9% para 0,04 mg/mL; titular em doses pequenas",
+        "tempo_infusao": "bolus em 1 a 2 minutos",
+        "monitorizacao": [
+          "frequência respiratória e saturação após cada dose",
+          "nível de consciência e escala de sedação",
+          "dor, pelo risco de reversão abrupta com dor intensa",
+          "pressão arterial e frequência cardíaca",
+          "recorrência de depressão respiratória por reentorpecimento"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Titular em doses de 0,04 mg para reverter a respiração sem reverter toda a analgesia. Como a meia-vida é menor que a do fentanil, reavaliar por 60 a 120 minutos após a última dose. Ofertar oxigênio e ventilar com bolsa-máscara antes de reverter, se possível.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_benzodiazepinico",
+        "agente": "flumazenil",
+        "papel": "resgate",
+        "indicacao": "sedação excessiva por midazolam durante a redução",
+        "dose": "0,2 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "repetir 0,2 mg a cada 60 segundos até resposta",
+        "duracao": "dose única ou repetida; efeito de 30 a 60 minutos",
+        "dose_maxima": "1 mg no total",
+        "contraindicacoes": [
+          "uso crônico de benzodiazepínico, pelo risco de convulsão por abstinência",
+          "intoxicação mista com antidepressivo tricíclico",
+          "alergia a flumazenil"
+        ],
+        "efeitos_adversos": [
+          "convulsão em usuário crônico de benzodiazepínico",
+          "agitação e ansiedade",
+          "náusea",
+          "arritmia",
+          "reentorpecimento após o efeito"
+        ],
+        "apresentacoes": [
+          "ampola 0,1 mg/mL (5 mL)",
+          "ampola 0,1 mg/mL (10 mL)"
+        ],
+        "preparo": "Uso direto, sem diluição; administrar em bolus lento",
+        "tempo_infusao": "bolus em 15 a 30 segundos",
+        "monitorizacao": [
+          "nível de consciência e escala de sedação a cada 5 minutos",
+          "frequência respiratória e saturação",
+          "convulsão em paciente com uso crônico",
+          "pressão arterial e frequência cardíaca",
+          "reentorpecimento após 60 minutos"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Reservar para sedação excessiva com comprometimento ventilatório que não responde a estímulo e oxigênio. Não usar de rotina ao fim do procedimento: o despertar abrupto aumenta agitação e dor.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_nao_opioide",
+        "agente": "paracetamol",
+        "papel": "alternativa",
+        "indicacao": "analgesia multimodal após a redução e na alta",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV ou VO",
+        "frequencia": "6/6 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "3 g/dia; 4 g/dia apenas em adulto saudável sem hepatopatia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "alergia ao paracetamol",
+          "desnutrição grave com depleção de glutationa"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em overdose",
+          "náusea",
+          "rash",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "frasco de infusão 10 mg/mL (100 mL)",
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "supositório 500 mg"
+        ],
+        "preparo": "Via oral em uso direto; via intravenosa infundir o frasco sem diluir ou diluído em até 100 mL de soro fisiológico",
+        "tempo_infusao": "via intravenosa em 15 minutos; via oral não se aplica",
+        "monitorizacao": [
+          "dor pela escala de 0 a 10",
+          "dose total diária somando outros produtos com paracetamol",
+          "TGO e TGP em uso acima de 3 dias",
+          "função renal em uso prolongado"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: espaçar para 8/8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia; evitar em Child C",
+        "observacoes": "Adjuvante, não substituto da sedação para a redução. Na alta, é a base da analgesia junto com o AINE, quando não há contraindicação, e reduz o consumo de opioide.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "cetoprofeno",
+        "papel": "alternativa",
+        "indicacao": "dor e inflamação após redução de luxação, em paciente sem contraindicação",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "12/12 h",
+        "duracao": "48 a 72 horas",
+        "dose_maxima": "300 mg/dia",
+        "contraindicacoes": [
+          "ClCr abaixo de 30",
+          "úlcera péptica ativa ou sangramento digestivo recente",
+          "anticoagulação plena",
+          "asma induzida por AINE",
+          "insuficiência cardíaca descompensada",
+          "terceiro trimestre de gestação"
+        ],
+        "efeitos_adversos": [
+          "sangramento digestivo",
+          "lesão renal aguda",
+          "elevação da pressão arterial",
+          "retenção hídrica",
+          "broncoespasmo em asmático sensível",
+          "cefaleia"
+        ],
+        "apresentacoes": [
+          "ampola 50 mg/mL (2 mL)",
+          "frasco 100 mg (pó liofilizado)",
+          "cápsula 50 mg",
+          "comprimido de liberação prolongada 150 mg",
+          "gel 2,5%"
+        ],
+        "preparo": "Diluir 100 mg em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "20 a 30 minutos",
+        "monitorizacao": [
+          "creatinina e diurese em uso acima de 48 horas",
+          "dor epigástrica, melena e hematêmese",
+          "pressão arterial",
+          "edema e ganho de peso",
+          "dor pela escala de 0 a 10"
+        ],
+        "ajuste_renal": "Contraindicado com ClCr abaixo de 30; entre 30 e 60, usar a menor dose pelo menor tempo",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Não é analgésico da redução: a redução exige sedação. Serve para o controle da dor e do edema nas primeiras 48 a 72 horas após a articulação voltar ao lugar. Evitar em atleta em competição e em paciente com risco de consolidação óssea comprometida.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_5ht3",
+        "agente": "ondansetrona",
+        "papel": "condicional",
+        "indicacao": "náusea e vômito induzidos por opioide durante ou após a sedação",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h se necessário",
+        "duracao": "até 24 horas",
+        "dose_maxima": "8 mg por dose e 16 mg/dia",
+        "contraindicacoes": [
+          "síndrome do QT longo congênito",
+          "uso concomitante de outros fármacos que prolongam o QT",
+          "alergia a ondansetrona"
+        ],
+        "efeitos_adversos": [
+          "prolongamento do intervalo QT",
+          "cefaleia",
+          "constipação",
+          "tontura",
+          "rubor facial"
+        ],
+        "apresentacoes": [
+          "ampola 2 mg/mL (2 mL)",
+          "ampola 2 mg/mL (4 mL)",
+          "comprimido 4 mg",
+          "comprimido 8 mg",
+          "solução oral 4 mg/5 mL"
+        ],
+        "preparo": "Uso direto ou diluído em 50 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "bolus lento em 2 a 5 minutos ou infusão em 15 minutos",
+        "monitorizacao": [
+          "eletrocardiograma em paciente com risco de QT longo",
+          "potássio e magnésio em uso repetido",
+          "náusea e vômito após a dose",
+          "cefaleia e tontura"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Máximo 8 mg/dia em cirrose Child C",
+        "observacoes": "Tratar a náusea do opioide com antiemético é parte de permitir a alta, mas a causa mais comum de vômito durante a sedação é hipotensão e dose excessiva de opioide: corrigir a dose antes de associar mais fármaco.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Avaliação neurovascular dos cinco parâmetros antes e depois de cada manobra",
+        "detalhe": "palpar pulso radial, ulnar, pedioso e tibial posterior; medir enchimento capilar menor que 2 segundos; testar sensibilidade de cada dermátomo, em especial o nervo axilar na face lateral do deltoide; testar força contra resistência; registrar no prontuário no minuto zero e imediatamente após a redução"
+      },
+      {
+        "medida": "Radiografia em duas incidências ortogonais antes e depois da redução",
+        "detalhe": "pré-redução sempre, exceto isquemia distal com dedo ou pé sem pulso; pós-redução sempre, para confirmar congruência articular e excluir fratura associada; incluir as articulações vizinhas e comparar com o lado contralateral quando a imagem for duvidosa"
+      },
+      {
+        "medida": "Sala preparada para sedação procedural",
+        "detalhe": "monitor multiparamétrico com oximetria e capnografia, aspiração ligada, bolsa-máscara com reservatório, cânula de Guedel de três tamanhos, oxigênio a 5 L/min e duas vias de acesso; drogas de reversão sorteadas sobre a bancada antes da primeira dose"
+      },
+      {
+        "medida": "Jejum e posicionamento para a sedação",
+        "detalhe": "jejum de 6 horas para sólidos e 2 horas para líquidos claros em sedação eletiva; em urgência com isquemia, não atrasar a redução por jejum — assumir risco de aspiração e preparar aspiração; decúbito dorsal com grade lateral e acesso pelos quatro lados da maca"
+      },
+      {
+        "medida": "Imobilização imediata após a redução confirmada",
+        "detalhe": "ombro em tipoia ou Velpeau por 1 a 3 semanas; patela em imobilizador em extensão por 2 a 3 semanas; dedo em tala digital em semiflexão por 1 a 2 semanas; mandíbula em banda mentoniana por 2 a 3 semanas com dieta líquida e pastosa; quadril sem carga por 4 a 6 semanas; conferir pulso, perfusão e sensibilidade depois de imobilizar"
+      },
+      {
+        "medida": "Elevação, crioterapia e mobilização do que não está imobilizado",
+        "detalhe": "elevar o membro acima do nível do coração nas primeiras 48 horas; gelo por 20 minutos a cada 2 a 3 horas, sempre com pano entre o gelo e a pele, nunca sobre área com déficit sensitivo; mobilizar ativamente dedos, punho, tornozelo e o segmento livre desde o primeiro dia para evitar rigidez e trombose"
+      },
+      {
+        "medida": "Registro da manobra, do tempo e do número de tentativas",
+        "detalhe": "anotar articulação, lado, mecanismo, hora do trauma, hora da primeira e da última tentativa, técnica empregada, drogas e doses da sedação, número de tentativas, achados radiográficos pré e pós e o exame neurovascular comparativo; duas tentativas sem sucesso encerram a manipulação no pronto-socorro"
+      },
+      {
+        "medida": "Reavaliação ortopédica precoce e reabilitação",
+        "detalhe": "retorno em 7 dias com radiografia para ombro, patela e quadril; fisioterapia precoce para amplitude do segmento livre e fortalecimento a partir da terceira semana; orientar sinais de alarme por escrito na alta"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Redução de luxação",
+        "indicacao": "luxação de ombro, patela, dedo, mandíbula, cotovelo, punho ou tornozelo, sem fratura associada na imagem",
+        "tecnica": "avaliação neurovascular registrada, radiografia em duas incidências, sedação e analgesia tituladas até sedação moderada ou dissociação, tração contínua no eixo da articulação com contratração por assistente, manobra específica por articulação sem alavanca, no máximo duas tentativas, reavaliação neurovascular imediata e radiografia pós-redução",
+        "complicacoes": "lesão do nervo axilar ou do nervo ciático, fratura do colo umeral ou do trocanter durante a manobra, lesão vascular com hematoma expansivo, síndrome compartimental, rigidez articular e luxação recorrente",
+        "protocolo": "BOX-17"
+      },
+      {
+        "nome": "Redução de luxação de quadril",
+        "indicacao": "luxação de quadril confirmada, com ou sem fratura acetabular, sempre como emergência",
+        "tecnica": "acionar ortopedia, radiografar e considerar tomografia se o tempo permitir, analgesia e sedação profunda ou anestesia geral em centro cirúrgico, tração longitudinal no eixo do fêmur com o quadril e o joelho em 90 graus e tração suave até o ressalto de entrada da cabeça no acetábulo, seguida de radiografia e exame do nervo ciático",
+        "complicacoes": "necrose avascular da cabeça femoral após 6 horas, lesão do nervo ciático, fratura do colo femoral durante a tração, lesão de cartilagem acetabular e artrose pós-traumática precoce",
+        "protocolo": "BOX-17"
+      },
+      {
+        "nome": "Imobilização provisória e tala",
+        "indicacao": "imediatamente após a redução confirmada e em qualquer luxação que ainda não será reduzida no pronto-socorro",
+        "tecnica": "escolher a tala por articulação, acolchoar as proeminências ósseas, imobilizar a articulação acima e a abaixo do foco, fixar com atadura de crepe sem apertar, fender o gesso na face volar quando houver edema e conferir pulso, perfusão e sensibilidade após a colocação",
+        "complicacoes": "isquemia por tala apertada, úlcera de pressão sob a tala, perda da redução, rigidez articular e trombose venosa por imobilização prolongada",
+        "protocolo": "BOX-16"
+      },
+      {
+        "nome": "Sedação e analgesia procedural",
+        "indicacao": "redução de ombro, patela, mandíbula ou quadril e qualquer manobra que não se resolva com bloqueio local",
+        "tecnica": "monitorização com oximetria e capnografia, acesso venoso, fentanil 1 a 2 mcg/kg mais midazolam 0,03 a 0,05 mg/kg titulados, ou cetamina 0,5 a 1 mg/kg em paciente hipotensivo; titular até resposta a estímulo verbal, iniciar a manobra, reavaliar a cada 3 a 5 minutos e manter observação até critérios de alta",
+        "complicacoes": "depressão respiratória, hipotensão, aspiração, emergência psicomotora com cetamina, sedação prolongada no idoso e reentorpecimento após reversão"
+      },
+      {
+        "nome": "Bloqueio digital",
+        "indicacao": "luxação de dedo da mão ou do pé, com ou sem isquemia distal",
+        "tecnica": "antissepsia, lidocaína 2% sem vasoconstritor 2 a 3 mL na face lateral da base do dedo, aspirando antes de injetar, aguardar 8 a 10 minutos, confirmar anestesia e reduzir por tração axial; nunca usar solução com vasoconstritor",
+        "complicacoes": "toxicidade sistêmica por injeção intravascular, isquemia digital por vasoconstritor, hematoma, infecção do sítio de punção e bloqueio incompleto"
+      }
+    ],
+    "metas": [
+      "Redução concluída em até 30 minutos do diagnóstico quando há déficit neurovascular ou isquemia digital",
+      "Luxação de quadril reduzida em até 6 horas do trauma",
+      "Radiografia em duas incidências registrada antes e depois da redução em 100% dos casos",
+      "Avaliação neurovascular dos cinco parâmetros registrada antes e imediatamente após a redução",
+      "Sedação adequada com escala de Ramsay 3 ou dissociação antes da primeira manobra, sem reduzir sem analgesia",
+      "No máximo duas tentativas de redução no pronto-socorro antes de parar e acionar ortopedia",
+      "Imobilização aplicada imediatamente após a redução confirmada e reavaliação ortopédica agendada em até 7 dias"
+    ],
+    "fluxo": [
+      "Estabilizar, expor a articulação e comparar com o lado contralateral; identificar politrauma, choque e trauma de maior gravidade antes da articulação",
+      "Examinar e registrar pulso, perfusão, sensibilidade e força distal dos cinco parâmetros, antes de qualquer manobra",
+      "Solicitar radiografia em duas incidências; se houver dedo ou pé isquêmico, pular a imagem e reduzir imediatamente",
+      "Identificar a articulação e a presença de fratura associada ou de prótese; quadril e prótese seguem para ortopedia",
+      "Garantir acesso venoso, monitor com capnografia, aspiração e material de via aérea; sedar e analgesiar com fentanil e midazolam, ou cetamina se hipotensão",
+      "Reduzir pela técnica específica da articulação, sem alavanca, com no máximo duas tentativas",
+      "Reavaliar neurovascular, radiografar pós-redução e confirmar congruência articular e ausência de fratura",
+      "Imobilizar na posição funcional conforme a articulação e conferir o exame neurovascular depois da tala",
+      "Decidir destino: alta com analgesia, imobilização e retorno em 7 dias, ou ortopedia imediata se fratura, instabilidade, déficit, luxação recorrente ou prótese",
+      "Registrar técnica, número de tentativas, drogas e doses, achados de imagem e orientações de alta por escrito"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "reduzir fentanil e midazolam em 50%, titulando em doses menores; preferir cetamina em dose subdissociativa quando a pressão arterial for limítrofe; imobilizar com acolchoado extra e reavaliar cognição antes e depois da sedação",
+        "alerta": "delirium por benzodiazepínico, sedação prolongada, hipotensão e luxação de prótese de quadril como apresentação de queda"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "fentanil e cetamina são seguros com monitorização; evitar benzodiazepínico no primeiro trimestre quando houver alternativa; proteger a pelve na radiografia e manter decúbito lateral esquerdo após 20 semanas",
+        "alerta": "compressão da veia cava com hipotensão, risco de aspiração pelo útero elevado e necessidade de avaliação obstétrica no trauma"
+      },
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "preferir bloqueio digital ou regional e evitar punções profundas com agulha grossa; imobilizar com tala acolchoada e reavaliar perfusão a cada hora nas primeiras 6 horas",
+        "alerta": "hematoma expansivo no foco, síndrome compartimental e sangramento no sítio de punção para bloqueio"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "ajustar midazolam pela depuração, evitar cetoprofeno com ClCr abaixo de 30 e dosar creatinina antes da alta",
+        "alerta": "acúmulo de metabólito ativo do midazolam com sedação prolongada e lesão renal aguda por AINE"
+      },
+      {
+        "populacao": "obeso",
+        "ajuste": "calcular fentanil e cetamina pelo peso ideal ou por peso ajustado, não pelo peso total; posicionar com cabeceira elevada e usar capnografia desde o início",
+        "alerta": "dessaturação rápida na apneia, dificuldade de via aérea e doses excessivas quando se usa o peso real"
+      },
+      {
+        "populacao": "usuario_cronico_de_benzodiazepinico_ou_opioide",
+        "ajuste": "aumentar a dose de indução pela tolerância, associar cetamina para reduzir a necessidade de opioide e evitar flumazenil, que pode precipitar convulsão",
+        "alerta": "tolerância cruzada, abstinência precipitada por antagonista e dor desproporcional no pós-procedimento"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "radiografia da articulação em duas incidências ortogonais",
+          "indicacao": "toda suspeita de luxação, antes e depois da redução",
+          "o_que_muda": "confirma a direção da luxação, revela fratura associada do colo umeral, da tuberosidade maior, do maléolo ou da margem acetabular, e define se a redução pode ser feita no pronto-socorro"
+        },
+        {
+          "nome": "tomografia computadorizada da articulação",
+          "indicacao": "luxação de quadril, luxação com fratura associada, luxação de prótese e radiografia pós-redução duvidosa",
+          "o_que_muda": "revela fragmento acetabular, fratura periprotética e corpo livre intra-articular, e muda a indicação cirúrgica e o tipo de fixação"
+        },
+        {
+          "nome": "avaliação neurovascular seriada",
+          "indicacao": "toda luxação, antes e depois da redução e a cada hora nas primeiras 6 horas em quadril ou suspeita de lesão arterial",
+          "o_que_muda": "antecipa o diagnóstico de lesão nervosa e de síndrome compartimental, e indica cirurgia antes da perda funcional permanente"
+        },
+        {
+          "nome": "hemograma, creatinina, glicemia e eletrocardiograma pré-sedação",
+          "indicacao": "antes de sedação procedural, em idoso, cardiopata, diabético, renal crônico ou anticoagulado",
+          "o_que_muda": "identifica anemia, disfunção renal, hiperglicemia e arritmia que alteram a escolha e a dose dos fármacos da sedação"
+        },
+        {
+          "nome": "capnografia e oximetria contínuas durante a sedação",
+          "indicacao": "toda sedação para redução",
+          "o_que_muda": "detecta apneia e hipoventilação antes da dessaturação e define a necessidade de reversão com naloxona ou flumazenil"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "redução antes da radiografia em luxação sem isquemia distal",
+          "motivo": "reduzir às cegas com fratura associada esconde o desvio real, desloca fragmento para dentro de vaso ou nervo e impede o planejamento cirúrgico"
+        },
+        {
+          "exame": "redução sem analgesia registrada",
+          "motivo": "a dor produz espasmo muscular, aumenta o número de tentativas e a lesão de cartilagem, e transforma uma redução simples em manobra traumática"
+        },
+        {
+          "exame": "ultrassom de rotina antes da redução de ombro com pulso presente",
+          "motivo": "atrasa a analgesia e a redução sem alterar a conduta; reservar para pulso ausente, suspeita de lesão arterial ou hematoma expansivo"
+        },
+        {
+          "exame": "redução de quadril no pronto-socorro sem imagem e sem ortopedia",
+          "motivo": "a tração em quadril com fratura do colo ou do acetábulo pode deslocar o fragmento e converter uma fratura fixável em prótese de urgência"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter a imobilização pelo tempo prescrito e retirá-la apenas na consulta de reavaliação",
+        "manter o membro elevado nas primeiras 48 horas e aplicar gelo por 20 minutos a cada 2 a 3 horas, sempre com pano entre o gelo e a pele",
+        "mexer os dedos, o punho e o tornozelo livres várias vezes ao dia para evitar rigidez e trombose",
+        "tomar a analgesia prescrita antes de a dor ficar intensa e não associar dois produtos com paracetamol",
+        "comparecer à reavaliação em 7 dias com as radiografias e iniciar a fisioterapia na data indicada",
+        "dormir com o braço apoiado em travesseiro nas primeiras noites após redução de ombro"
+      ],
+      "evitar": [
+        "apoiar peso ou usar o membro reduzido antes da liberação",
+        "tentar reduzir a articulação em casa ou pedir para alguém puxar o membro",
+        "molhar, amassar ou apertar a tala e colocar objeto dentro dela para coçar",
+        "dirigir ou operar máquina sob efeito de opioide ou benzodiazepínico",
+        "praticar esporte de contato antes da liberação ortopédica, pelo risco de nova luxação",
+        "usar AINE por conta própria em anticoagulado ou em doença renal"
+      ],
+      "retorno": [
+        "dedo ou pé pálido, frio, azulado ou com formigamento",
+        "perda de força ou incapacidade de mover os dedos",
+        "dor que piora e não passa com a analgesia prescrita",
+        "nova deformidade ou sensação de que a articulação saiu do lugar",
+        "febre, secreção ou mau odor no ferimento associado",
+        "falta de ar, dor torácica ou dor na panturrilha"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "fentanil",
+        "efeitos": [
+          "depressão respiratória",
+          "rigidez torácica",
+          "hipotensão",
+          "náusea"
+        ],
+        "observacao": "ofertar oxigênio, ventilar com bolsa-máscara e titular naloxona 0,04 mg IV a cada 2 minutos até frequência respiratória acima de 12"
+      },
+      {
+        "agente": "midazolam",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão",
+          "sedação prolongada",
+          "agitação paradoxal"
+        ],
+        "observacao": "reduzir a velocidade de titulação e usar flumazenil 0,2 mg IV apenas em sedação excessiva com comprometimento ventilatório, nunca em usuário crônico"
+      },
+      {
+        "agente": "cetamina",
+        "efeitos": [
+          "emergência psicomotora",
+          "hipertensão",
+          "sialorreia",
+          "alucinação"
+        ],
+        "observacao": "manter ambiente calmo, reduzir estímulo sonoro e luminoso, associar midazolam 0,05 mg/kg e aspirar a secreção"
+      },
+      {
+        "agente": "lidocaína",
+        "efeitos": [
+          "zumbido",
+          "gosto metálico",
+          "convulsão",
+          "arritmia"
+        ],
+        "observacao": "interromper a infiltração ao primeiro sintoma neurológico, ofertar oxigênio e tratar convulsão com benzodiazepínico"
+      },
+      {
+        "agente": "bupivacaína",
+        "efeitos": [
+          "arritmia ventricular",
+          "convulsão",
+          "bloqueio motor prolongado"
+        ],
+        "observacao": "suspender a infiltração, monitorizar com ECG e usar emulsão lipídica a 20% em colapso cardiovascular por injeção intravascular"
+      },
+      {
+        "agente": "cetoprofeno",
+        "efeitos": [
+          "sangramento digestivo",
+          "lesão renal aguda",
+          "elevação da pressão arterial"
+        ],
+        "observacao": "suspender se dor epigástrica, melena ou creatinina subir mais de 0,3 mg/dL, e trocar por paracetamol isolado"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação com data, hora, dose e via",
+      "Depressão respiratória por opioide: ofertar oxigênio, ventilar com bolsa-máscara e titular naloxona 0,04 a 0,4 mg IV a cada 2 minutos",
+      "Sedação excessiva por benzodiazepínico: considerar flumazenil 0,2 mg IV somente se houver comprometimento ventilatório e ausência de uso crônico",
+      "Toxicidade por anestésico local: interromper a infiltração, monitorizar, ofertar oxigênio e tratar convulsão com benzodiazepínico",
+      "Anafilaxia por qualquer fármaco: adrenalina 0,5 mg IM na face lateral da coxa, oxigênio e volume",
+      "Suspeita de síndrome compartimental após redução ou imobilização: soltar a tala, medir pressão do compartimento e indicar fasciotomia sem esperar melhora clínica",
+      "Piora do déficit neurológico após a redução: registrar o território, não repetir manobras e acionar ortopedia e cirurgia vascular"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "5 dias",
+            "condicao": "dor após redução de luxação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cetoprofeno 100 mg",
+            "dose": "100 mg",
+            "via": "VO",
+            "frequencia": "12/12 h após a refeição",
+            "duracao": "3 dias",
+            "condicao": "dor e edema articular sem contraindicação a AINE",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tramadol 50 mg",
+            "dose": "50 mg",
+            "via": "VO",
+            "frequencia": "8/8 h se dor intensa refratária",
+            "duracao": "3 dias",
+            "condicao": "dor refratária após a alta",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tipoia ou imobilizador de ombro",
+            "dose": "uso contínuo",
+            "via": "externo",
+            "frequencia": "contínua",
+            "duracao": "1 a 3 semanas",
+            "condicao": "luxação de ombro reduzida",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "fentanil",
+            "dose": "1 a 2 mcg/kg",
+            "via": "IV",
+            "frequencia": "titular a cada 3 a 5 minutos",
+            "monitorizacao": "frequência respiratória, capnografia e sedação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "midazolam",
+            "dose": "0,03 a 0,05 mg/kg",
+            "via": "IV",
+            "frequencia": "titular até sedação moderada",
+            "monitorizacao": "frequência respiratória, saturação e pressão arterial",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cetamina",
+            "dose": "0,5 a 1 mg/kg",
+            "via": "IV",
+            "frequencia": "dose única, repetir 0,25 a 0,5 mg/kg se necessário",
+            "monitorizacao": "pressão arterial, frequência cardíaca e emergência psicomotora",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lidocaína 2% sem vasoconstritor",
+            "dose": "2 a 3 mL por dedo",
+            "via": "bloqueio digital",
+            "frequencia": "dose única",
+            "monitorizacao": "toxicidade, perfusão digital e dor após 10 minutos",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona",
+            "dose": "4 mg",
+            "via": "IV",
+            "frequencia": "8/8 h se náusea",
+            "monitorizacao": "intervalo QT e resposta",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "radiografia da articulação em duas incidências pré-redução",
+          "radiografia pós-redução",
+          "tomografia da articulação quando indicada",
+          "hemograma",
+          "creatinina",
+          "glicemia",
+          "eletrocardiograma",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com luxação articular submetida a redução e imobilização, necessitando de afastamento das atividades habituais e de reavaliação ortopédica.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e CID são decisão médica no ato, conforme a articulação, a estabilidade da redução e a necessidade cirúrgica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com luxação de articulação e lado, mecanismo e hora do trauma, avaliação neurovascular antes e depois da redução, sedação utilizada, técnica e número de tentativas, achados radiográficos pré e pós-redução, imobilização prescrita e plano de reavaliação ortopédica."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "hora e mecanismo do trauma",
+        "articulação e lado acometido",
+        "direção da deformidade",
+        "déficit sensitivo ou motor",
+        "tempo de isquemia distal",
+        "tentativa prévia de redução",
+        "fratura, cirurgia ou prótese na articulação",
+        "número de luxações anteriores",
+        "jejum e última refeição",
+        "comorbidades, anticoagulação e alergias"
+      ],
+      "texto_template": "Paciente com luxação de articulação e lado por mecanismo, há horas do atendimento, com deformidade em tal direção, déficit sensitivo ou motor distal, tempo de isquemia, tentativa prévia de redução, cirurgia ou prótese na articulação, episódios anteriores, jejum, comorbidades e alergias."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e avaliação primária do trauma",
+        "inspeção da articulação: deformidade, edema, equimose e ferida",
+        "palpação de pulsos distais e enchimento capilar",
+        "coloração e temperatura da extremidade",
+        "sensibilidade em cada território nervoso, com atenção ao nervo axilar",
+        "força muscular contra resistência",
+        "bloqueio de movimento e amplitude possível",
+        "tensão do compartimento à palpação",
+        "comparação com o lado contralateral",
+        "presença de cicatriz cirúrgica ou de prótese"
+      ],
+      "texto_template": "Sinais vitais e avaliação primária, deformidade e edema da articulação, ferida e equimose, pulsos distais e enchimento capilar, coloração e temperatura, sensibilidade por território, força contra resistência, bloqueio de movimento, tensão do compartimento, comparação com o contralateral e cicatriz cirúrgica."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de redução de luxação, sedação procedural e critérios de acionamento da ortopedia",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_ortopedia",
+        "o_que_verificar": "técnica de redução por articulação, tempo de imobilização e indicação cirúrgica na luxação recorrente",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_trauma",
+        "o_que_verificar": "janela de 6 horas para redução de quadril e manejo da luxação no politrauma",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_anestesiologia",
+        "o_que_verificar": "jejum, monitorização e critérios de alta da sedação procedural",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de fentanil, midazolam, cetamina, lidocaína, bupivacaína, naloxona e flumazenil",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-TRA07-01",
+        "tipo": "isquemia",
+        "gatilho": "dedo ou pé pálido, frio e sem pulso em articulação luxada",
+        "severidade": "grave",
+        "mensagem": "Isquemia distal: reduzir imediatamente e não atrasar por exames ou burocracia.",
+        "acao": "priorizar redução imediata e acionar cirurgia vascular",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA07-02",
+        "tipo": "reducao_sem_imagem",
+        "gatilho": "redução de luxação prescrita sem radiografia prévia em paciente sem isquemia distal",
+        "severidade": "grave",
+        "mensagem": "Não reduzir às cegas: fratura associada pode ser deslocada para dentro de vaso ou nervo.",
+        "acao": "bloquear procedimento até a imagem em duas incidências",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA07-03",
+        "tipo": "quadril",
+        "gatilho": "luxação de quadril sem redução e tempo de trauma acima de 6 horas",
+        "severidade": "grave",
+        "mensagem": "Luxação de quadril é emergência: a janela de 6 horas define necrose avascular da cabeça femoral.",
+        "acao": "acionar ortopedia imediatamente e registrar a hora do trauma",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA07-04",
+        "tipo": "protese",
+        "gatilho": "luxação em articulação com prótese ou artroplastia prévia",
+        "severidade": "grave",
+        "mensagem": "Prótese luxada não se manipula no pronto-socorro sem ortopedia.",
+        "acao": "bloquear redução por não especialista e transferir",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA07-05",
+        "tipo": "reducao_sem_analgesia",
+        "gatilho": "redução de luxação registrada sem sedação, analgesia ou bloqueio",
+        "severidade": "precaucao",
+        "mensagem": "Reduzir sem analgesia aumenta tentativas, lesão de cartilagem e dor.",
+        "acao": "bloquear procedimento até registrar a analgesia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA07-06",
+        "tipo": "sedacao_insegura",
+        "gatilho": "sedação procedural sem capnografia, aspiração ou material de via aérea disponível",
+        "severidade": "precaucao",
+        "mensagem": "Sedação para redução exige monitorização com capnografia e via aérea pronta.",
+        "acao": "alertar e exigir adequação da sala",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-TRA07-07",
+        "tipo": "imobilizacao",
+        "gatilho": "luxação reduzida sem imobilização registrada ou sem exame neurovascular pós-tala",
+        "severidade": "precaucao",
+        "mensagem": "Toda redução confirmada exige imobilização e reavaliação neurovascular.",
+        "acao": "sugerir protocolo de imobilização",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBOT",
+        "ATLS 10ª edição",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "ALG-02",
+    "area": "Alergias",
+    "nome": "Reação alérgica a medicamento",
+    "aliases": ["alergia a medicamento", "reação adversa a fármaco", "rash medicamentoso", "alergia a antibiótico", "exantema medicamentoso", "DRESS", "Stevens-Johnson"],
+    "contexto": ["ambulatorial", "hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Reação alérgica a medicamento é um conjunto de fenótipos distintos que exige conduta diferente em cada um: exantema maculopapular, urticária, angioedema, DRESS e Stevens-Johnson/necrólise epidérmica tóxica. O erro mais comum é tratar todos como 'alergia leve' e mandar o paciente para casa com anti-histamínico. A primeira medida é sempre suspender o fármaco suspeito; a segunda é classificar o fenótipo em minutos, porque SJS/NET evolui com descolamento epidérmico e mortalidade de até 30%, e DRESS lesiona órgão de forma silenciosa. Corticoide isolado não é tratamento de SJS/NET. Todo caso exige registro formal da reação, com fármaco, data, fenótipo e gravidade, porque a reexposição pode ser fulminante.",
+    "inclusao": [
+      "Exantema maculopapular novo após início de fármaco, sem mucosite",
+      "Urticária aguda ou angioedema temporalmente relacionado a fármaco",
+      "Febre, exantema e eosinofilia com lesão de órgão após fármaco (DRESS)",
+      "Bolhas, descolamento epidérmico ou erosão de mucosas após fármaco (SJS/NET)",
+      "Pustulose aguda generalizada com febre após fármaco (AGEP)",
+      "Exantema com eosinofilia ou linfadenopatia sem outra causa"
+    ],
+    "exclusao": [
+      { "situacao": "hipotensão, broncoespasmo ou estridor após o fármaco", "fluxo": "anafilaxia" },
+      { "situacao": "exantema com febre e sintomas respiratórios de via aérea superior em criança", "fluxo": "exantema viral" },
+      { "situacao": "urticária crônica espontânea sem relação com fármaco", "fluxo": "urticária" },
+      { "situacao": "angioedema por IECA sem urticária", "fluxo": "angioedema bradicinínico" },
+      { "situacao": "reação no local da injeção sem manifestação sistêmica", "fluxo": "intercorrência local" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "bolhas, descolamento epidérmico ou sinal de Nikolsky positivo", "por_que": "Stevens-Johnson ou necrólise epidérmica tóxica", "acao": "internar imediatamente e acionar unidade de queimados", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "erosão de mucosa oral, ocular ou genital", "por_que": "SJS/NET com risco de cegueira e sepse", "acao": "hospitalar urgente, avaliação oftalmológica no mesmo dia", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "febre com eosinofilia e linfadenopatia", "por_que": "DRESS com lesão de órgão", "acao": "internar, dosar transaminases, creatinina e avaliar coração", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "hipotensão, broncoespasmo ou estridor", "por_que": "anafilaxia sobreposta", "acao": "adrenalina IM e protocolo de anafilaxia", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "icterícia ou transaminases acima de três vezes o limite", "por_que": "hepatite por fármaco ou DRESS", "acao": "suspender todos os fármacos hepatotóxicos e internar", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "pústulas estéreis com febre em área de exantema", "por_que": "pustulose exantemática aguda generalizada", "acao": "suspender o fármaco e avaliar neutrofilia", "severidade": "precaucao" },
+      { "id": "AL-07", "sinal": "infiltrado pulmonar, derrame ou arritmia", "por_que": "acometimento de órgão no DRESS", "acao": "corticoide sistêmico e monitorização cardíaca", "severidade": "grave" },
+      { "id": "AL-08", "sinal": "edema de língua ou de glote", "por_que": "angioedema com risco de obstrução", "acao": "avaliar via aérea e adrenalina se houver critérios de anafilaxia", "severidade": "grave" }
+    ],
+    "perguntas_rapidas": [
+      "Qual fármaco foi iniciado e em que data, e qual a latência até a lesão?",
+      "Há bolhas, pele descolando ou dor cutânea ao toque?",
+      "Há feridas na boca, nos olhos ou na região genital?",
+      "Tem febre, mal-estar ou aumento de linfonodos?",
+      "Já teve reação a esse fármaco ou a fármaco da mesma classe?",
+      "Usa alopurinol, anticonvulsivante, sulfa ou AINE de uso recente?",
+      "Há icterícia, urina escura ou redução da diurese?",
+      "O exantema piora rapidamente ou a área acometida cresce a cada hora?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Exantema maculopapular leve, sem mucosite, sem febre, sem lesão de órgão", "escolha": "Suspender o fármaco, anti-H1 de segunda geração e corticoide tópico", "porque": "A maioria resolve em 1 a 2 semanas apenas com a retirada; corticoide sistêmico não acelera a cura e pode mascarar progressão" },
+      { "cenario": "Exantema extenso, muito sintomático ou com edema importante", "escolha": "Prednisona 40–60 mg/dia por 5 a 7 dias, com reavaliação em 48 h", "porque": "Reduz a intensidade inflamatória em reação moderada; não substitui a suspensão do fármaco" },
+      { "cenario": "Urticária aguda por fármaco sem angioedema de via aérea", "escolha": "Cetirizina 10 mg/dia; hidroxizina à noite se prurido intenso", "porque": "Anti-H1 controla o prurido e a urticária; corticoide só se durar mais de 24 a 48 h" },
+      { "cenario": "Angioedema sem urticária, em uso de IECA", "escolha": "Suspender o IECA, nunca reintroduzir e garantir via aérea", "porque": "O mecanismo é bradicinina, então anti-H1 e corticoide não funcionam; o risco de recorrência com nova exposição é alto" },
+      { "cenario": "Anafilaxia durante uso do fármaco", "escolha": "Adrenalina 0,3–0,5 mg IM e protocolo de anafilaxia", "porque": "Única droga que reverte o choque e o broncoespasmo; a reação a medicamento é a causa mais comum de anafilaxia hospitalar" },
+      { "cenario": "DRESS confirmado ou provável", "escolha": "Suspender o fármaco, prednisona 1 mg/kg/dia e desmame em 6 a 8 semanas", "porque": "O desmame lento evita recidiva, que no DRESS costuma vir com hepatite grave" },
+      { "cenario": "SJS ou NET com descolamento epidérmico", "escolha": "Suspender o fármaco, suporte tipo queimado, oftalmologia diária e avaliação de ciclosporina ou imunoglobulina com especialista", "porque": "Corticoide isolado não reduz mortalidade e aumenta sepse; o que muda desfecho é a retirada precoce e o suporte" },
+      { "cenario": "AGEP (pustulose exantemática aguda generalizada)", "escolha": "Suspender o fármaco, corticoide tópico e suporte; sistêmico apenas se extenso", "porque": "Resolve em 1 a 2 semanas após a retirada, com descamação e sem cicatriz" },
+      { "cenario": "Reação leve a betalactâmico já resolvida", "escolha": "Registrar a reação e encaminhar para teste de provocação após 4 a 6 semanas", "porque": "A maioria dos rótulos de alergia a penicilina é falsa e restringe antibióticos desnecessariamente" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "cetirizina",
+        "papel": "primeira_linha",
+        "indicacao": "urticária e exantema pruriginoso leve a moderado",
+        "dose": "10 mg; criança de 6 a 11 anos 5 mg, de 2 a 5 anos 2,5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "10 mg/dia; 5 mg/dia em insuficiência renal",
+        "contraindicacoes": ["insuficiência renal terminal sem ajuste", "hipersensibilidade a hidroxizina"],
+        "efeitos_adversos": ["sonolência leve", "boca seca", "cefaleia"],
+        "apresentacoes": ["comprimido 10 mg", "comprimido dispersível 10 mg", "solução oral 1 mg/mL"],
+        "preparo": "Uso direto; pode ser tomado com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["intensidade do prurido e do exantema em 24 a 48 h", "sonolência", "função renal em doença renal crônica"],
+        "ajuste_renal": "ClCr entre 30 e 50: 5 mg/dia; abaixo de 30: 5 mg em dias alternados",
+        "observacoes": "Não previne progressão para DRESS nem para SJS. Reavaliar imediatamente se surgirem bolhas, febre ou mucosite.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "hidroxizina",
+        "papel": "alternativa",
+        "indicacao": "prurido intenso, sobretudo noturno, quando a cetirizina é insuficiente",
+        "dose": "25 mg; criança 0,5–1 mg/kg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h ou dose única à noite",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "100 mg/dia",
+        "contraindicacoes": ["prolongamento do intervalo QT", "primeiro trimestre de gestação", "glaucoma de ângulo fechado", "hiperplasia prostática com retenção"],
+        "efeitos_adversos": ["sonolência", "boca seca", "retenção urinária", "prolongamento de QT"],
+        "apresentacoes": ["comprimido 25 mg", "xarope 2 mg/mL", "ampola 100 mg/2 mL (IM)"],
+        "preparo": "Uso direto; a via IM é alternativa quando não há via oral",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["nível de sedação", "ECG se dose alta ou cardiopata", "função urinária em hiperplasia prostática"],
+        "ajuste_renal": "Reduzir a dose em doença renal crônica (metabólito ativo)",
+        "observacoes": "Evitar em idoso frágil pelo risco de confusão mental e queda.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisona",
+        "papel": "condicional",
+        "indicacao": "exantema maculopapular extenso ou DRESS leve a moderado",
+        "dose": "40–60 mg (1 mg/kg/dia); DRESS: 1 mg/kg/dia com desmame lento",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "5 a 7 dias no exantema; 6 a 8 semanas com desmame no DRESS",
+        "dose_maxima": "80 mg/dia",
+        "contraindicacoes": ["infecção sistêmica não tratada", "SJS/NET em monoterapia", "diabetes descompensado (relativa)"],
+        "efeitos_adversos": ["hiperglicemia", "insônia", "aumento do apetite", "infecção secundária", "osteoporose em uso prolongado"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 20 mg", "solução oral 1 mg/mL"],
+        "preparo": "Uso direto, preferencialmente com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["glicemia", "pressão arterial", "sinais de infecção", "hemograma e transaminases no DRESS"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Preferir prednisolona em hepatopatia grave, pois a prednisona exige conversão hepática",
+        "observacoes": "Não usar corticoide isolado em SJS/NET: não reduz mortalidade e aumenta risco de sepse e de infecção. No DRESS, retirada abrupta provoca recidiva.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz dermatológica",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "metilprednisolona",
+        "papel": "condicional",
+        "indicacao": "reação grave com necessidade de corticoide parenteral: DRESS, exantema extenso com disfagia ou intolerância oral",
+        "dose": "1–2 mg/kg/dia (usual 125 mg/dia); pulsoterapia de 500–1.000 mg/dia por 3 dias no DRESS grave",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "12/12 h ou 1x/dia",
+        "duracao": "3 a 5 dias IV, seguido de prednisona oral com desmame",
+        "dose_maxima": "1 g/dia por até 3 dias em pulsoterapia",
+        "contraindicacoes": ["infecção não controlada", "SJS/NET como monoterapia"],
+        "efeitos_adversos": ["hiperglicemia", "hipertensão", "hipocalemia", "psicose esteroide", "infecção"],
+        "apresentacoes": ["frasco-ampola 125 mg (pó) com diluente", "frasco-ampola 500 mg", "frasco-ampola 1 g"],
+        "preparo": "Reconstituir com o diluente e diluir em 50–100 mL de SF 0,9%",
+        "tempo_infusao": "30 min",
+        "monitorizacao": ["glicemia a cada 6 h", "pressão arterial", "potássio", "balanço hídrico", "sinais de infecção"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; não exige ativação hepática",
+        "observacoes": "Após o controle, converter para prednisona oral e desmamar ao longo de semanas. Suspender de forma abrupta no DRESS reativa a reação.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_topico",
+        "agente": "hidrocortisona creme 1%",
+        "papel": "condicional",
+        "indicacao": "exantema localizado, pouco extenso e sem erosão",
+        "dose": "camada fina sobre a área afetada",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "2x/dia",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "não exceder 2 semanas em face, dobras ou região genital",
+        "contraindicacoes": ["pele com erosão ou exsudato", "infecção cutânea concomitante", "SJS/NET"],
+        "efeitos_adversos": ["atrofia cutânea", "telangiectasia", "dermatite de contato", "estrias"],
+        "apresentacoes": ["creme 1% 30 g", "pomada 1% 30 g", "loção 1% 60 mL"],
+        "preparo": "Uso direto sobre a pele limpa e seca",
+        "tempo_infusao": "não se aplica (via tópica)",
+        "monitorizacao": ["evolução da lesão em 7 dias", "atrofia ou irritação local"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Não aplicar sobre área de descolamento epidérmico nem em mucosa, pelo risco de absorção e de atrofia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "adrenalina_simpatomimetica",
+        "agente": "adrenalina (epinefrina)",
+        "papel": "resgate",
+        "indicacao": "anafilaxia durante reação a medicamento",
+        "dose": "0,3–0,5 mg; criança 0,01 mg/kg (máximo 0,5 mg)",
+        "unidade": "mg",
+        "via": "IM no vasto lateral",
+        "frequencia": "repetir a cada 5–15 min se necessário",
+        "duracao": "até estabilização",
+        "dose_maxima": "1,5 mg (três doses)",
+        "contraindicacoes": ["ausência de critérios de anafilaxia"],
+        "efeitos_adversos": ["taquicardia", "tremor", "palidez", "arritmia em cardiopata"],
+        "apresentacoes": ["ampola 1 mg/mL (1 mL)", "seringa preenchida 0,3 mg/0,3 mL", "autoinjetor 0,3 mg/0,3 mL"],
+        "preparo": "Solução 1 mg/mL sem diluir; aspirar 0,3–0,5 mL e aplicar no vasto lateral",
+        "tempo_infusao": "bolus IM imediato",
+        "monitorizacao": ["pressão arterial e frequência cardíaca a cada 5 min", "SpO2", "ECG em cardiopata"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Único fármaco que altera mortalidade na anafilaxia. Não esperar anti-H1 nem corticoide para administrá-la.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "imunossupressor",
+        "agente": "ciclosporina",
+        "papel": "condicional",
+        "indicacao": "SJS/NET com progressão nas primeiras 48 a 72 h, em decisão conjunta com dermatologia",
+        "dose": "3–5 mg/kg/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO ou IV",
+        "frequencia": "12/12 h por via oral; 1x/dia por via IV",
+        "duracao": "7 a 14 dias",
+        "dose_maxima": "5 mg/kg/dia",
+        "contraindicacoes": ["insuficiência renal estabelecida", "hipertensão não controlada", "infecção ativa grave", "imunodeficiência"],
+        "efeitos_adversos": ["nefrotoxicidade", "hipertensão", "tremor", "hipercalemia", "infecção oportunista"],
+        "apresentacoes": ["cápsula 25 mg", "cápsula 100 mg", "solução oral 100 mg/mL", "ampola 50 mg/mL"],
+        "preparo": "Via oral: uso direto. Via IV: diluir 1 mL (50 mg) em 100–250 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "infusão IV em 2 a 3 h",
+        "monitorizacao": ["creatinina e potássio a cada 48 h", "pressão arterial diária", "nível sérico quando disponível", "sinais de infecção"],
+        "ajuste_renal": "Contraindicada com ClCr abaixo de 30; reduzir para 2–3 mg/kg/dia com ClCr entre 30 e 60",
+        "ajuste_hepatico": "Reduzir 25 a 50% em Child B ou C",
+        "observacoes": "Séries asiáticas mostram menor mortalidade em SJS/NET; não é consenso universal. Não associar a corticoide em dose alta pelo risco de sepse.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura/diretriz dermatológica",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina humana intravenosa",
+        "papel": "condicional",
+        "indicacao": "SJS/NET grave com progressão rápida, discutida caso a caso",
+        "dose": "2–3 g/kg no total, divididos em 3 a 5 dias (0,5–1 g/kg/dia)",
+        "unidade": "g/kg",
+        "via": "IV",
+        "frequencia": "1x/dia por 3 a 5 dias",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "3 g/kg no total",
+        "contraindicacoes": ["deficiência de IgA com anticorpos anti-IgA", "insuficiência renal grave", "trombose recente", "hiperviscosidade"],
+        "efeitos_adversos": ["cefaleia", "nefrotoxicidade", "trombose", "reação anafilactoide", "meningite asséptica"],
+        "apresentacoes": ["frasco 2,5 g/50 mL", "frasco 5 g/100 mL", "frasco 10 g/200 mL"],
+        "preparo": "Não diluir; infundir em acesso dedicado com filtro de 1,2 micron conforme a apresentação",
+        "tempo_infusao": "iniciar 0,5–1 mL/kg/h e aumentar até 3–4 mL/kg/h conforme tolerância (6 a 12 h por frasco)",
+        "monitorizacao": ["pressão arterial e frequência cardíaca durante a infusão", "creatinina em 48 h", "cefaleia intensa", "sinais de trombose", "diurese"],
+        "ajuste_renal": "Reduzir a velocidade em doença renal crônica; evitar com ClCr abaixo de 30 sem diálise",
+        "observacoes": "Evidência fraca e conflitante em SJS/NET. Não substitui o suporte tipo queimado, que é o que sustenta a sobrevida.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura/diretriz dermatológica",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide",
+        "agente": "cloreto de sódio 0,9%",
+        "papel": "condicional",
+        "indicacao": "reposição volêmica no SJS/NET, cuja perda cutânea se comporta como queimadura",
+        "dose": "2–4 mL/kg por porcentagem de superfície corporal acometida nas primeiras 24 h (metade nas primeiras 8 h)",
+        "unidade": "mL/kg/%SCQ",
+        "via": "IV",
+        "frequencia": "infusão contínua com reavaliação horária",
+        "duracao": "24 a 48 h",
+        "dose_maxima": "individualizar pela diurese, com alvo de 0,5 a 1 mL/kg/h",
+        "contraindicacoes": ["insuficiência cardíaca descompensada", "edema agudo de pulmão"],
+        "efeitos_adversos": ["sobrecarga hídrica", "hipercloremia", "edema"],
+        "apresentacoes": ["bolsa 0,9% 500 mL", "bolsa 0,9% 1.000 mL", "frasco 0,9% 250 mL"],
+        "preparo": "Uso direto em bomba de infusão",
+        "tempo_infusao": "contínuo",
+        "monitorizacao": ["diurese horária", "balanço hídrico", "sódio", "ausculta pulmonar"],
+        "ajuste_renal": "Ajustar à diurese; em oligúria, reduzir o volume e reavaliar",
+        "observacoes": "No SJS/NET a reposição volêmica é parte central do suporte, junto com controle térmico e curativo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "protocolo de queimados",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Suspender imediatamente o fármaco suspeito", "detalhe": "Retirar também os fármacos da mesma classe e os de meia-vida longa; não esperar confirmação diagnóstica para suspender" },
+      { "medida": "Registrar a reação de forma estruturada", "detalhe": "Anotar fármaco, dose, data de início, latência, fenótipo, superfície acometida, órgãos afetados e gravidade, e lançar no campo de alergia do prontuário" },
+      { "medida": "Hidratação e controle térmico no SJS/NET", "detalhe": "Ambiente a 30–32 °C, reposição volêmica guiada por diurese, controle da dor e prevenção de hipotermia" },
+      { "medida": "Não descolar a pele nem romper bolhas", "detalhe": "Manter as bolhas íntegras como curativo biológico; usar gaze não aderente e evitar adesivos na área acometida" },
+      { "medida": "Cuidado ocular precoce", "detalhe": "Lubrificação intensiva, higiene das pálpebras e avaliação por oftalmologia diária enquanto houver inflamação conjuntival" },
+      { "medida": "Fotoproteção e repouso", "detalhe": "Evitar sol direto e atrito na pele acometida durante a descamação; hidratar com emoliente sem fragrância" },
+      { "medida": "Notificar à farmacovigilância e orientar o paciente por escrito", "detalhe": "Registrar no Notivisa e entregar documento com o nome do fármaco, a reação e a lista de fármacos a evitar" }
+    ],
+    "procedimentos": [
+      { "nome": "Biópsia de pele", "indicacao": "dúvida entre DRESS, SJS/NET, AGEP e exantema viral", "tecnica": "Punch de 4 mm em lesão recente, com envio para histologia e imunofluorescência quando indicado", "complicacoes": "Sangramento, infecção, cicatriz" },
+      { "nome": "Avaliação oftalmológica com lâmpada de fenda", "indicacao": "toda suspeita de SJS/NET, diariamente na fase aguda", "tecnica": "Eversão palpebral, coloração com fluoresceína e pesquisa de sinéquias conjuntivais", "complicacoes": "Sinéquias e cegueira quando não tratadas; desconforto e fotofobia durante o exame" },
+      { "nome": "Desbridamento e curativo em unidade de queimados", "indicacao": "SJS/NET com mais de 10% de superfície corporal descolada", "tecnica": "Higiene com clorexidina, remoção apenas de tecido desvitalizado, gaze não aderente e cobertura biológica", "complicacoes": "Infecção, perda de barreira cutânea, hipotermia, dor intensa" },
+      { "nome": "Intubação orotraqueal precoce", "indicacao": "angioedema de glote ou edema de via aérea em SJS/NET", "tecnica": "Sequência rápida com tubo um número menor e manipulação mínima de mucosa friável", "complicacoes": "Sangramento, falha de intubação, estenose traqueal" },
+      { "nome": "Teste de provocação oral", "indicacao": "após 4 a 6 semanas da resolução, em reação leve sem critérios de gravidade", "tecnica": "Dose incremental supervisionada em ambiente com suporte completo para anafilaxia", "complicacoes": "Reação grave, anafilaxia, necessidade de adrenalina" }
+    ],
+    "metas": [
+      "Fármaco suspeito suspenso na primeira hora do reconhecimento",
+      "Fenótipo classificado e registrado em até 24 h",
+      "SJS/NET: avaliação oftalmológica em 24 h e reposição volêmica iniciada nas primeiras 8 h",
+      "DRESS: corticoide iniciado em até 48 h e desmame programado em 6 a 8 semanas",
+      "Exantema leve com melhora clínica em 7 a 10 dias",
+      "Registro formal da reação em 100% dos atendimentos, com orientação escrita ao paciente"
+    ],
+    "fluxo": [
+      "Reconhecer o fenótipo: exantema, urticária, angioedema, DRESS, SJS/NET ou AGEP",
+      "Suspender imediatamente o fármaco suspeito e os da mesma classe",
+      "Classificar gravidade: mucosa, bolhas, febre, eosinofilia, lesão de órgão",
+      "Tratar conforme o fenótipo, sem aplicar o mesmo pacote a todos",
+      "Anafilaxia sobreposta: adrenalina IM e protocolo próprio",
+      "SJS/NET: suporte tipo queimado, oftalmologia diária e decisão sobre imunomodulador",
+      "Monitorar órgão por 4 a 8 semanas no DRESS e no SJS/NET",
+      "Registrar a reação, notificar a farmacovigilância e orientar o paciente por escrito"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "gestante", "ajuste": "priorizar fármacos com perfil de segurança conhecido e envolver obstetrícia no SJS/NET", "alerta": "risco fetal e materno aumentado em reação grave" },
+      { "populacao": "renal_cronico", "ajuste": "ajustar cetirizina e ciclosporina; vigiar creatinina a cada 48 h", "alerta": "nefrotoxicidade e acúmulo de metabólitos" },
+      { "populacao": "idoso", "ajuste": "evitar anti-H1 sedativo e revisar a polifarmácia, priorizando o fármaco de início mais recente", "alerta": "maior mortalidade em SJS/NET e confusão por anti-H1" },
+      { "populacao": "crianca", "ajuste": "doses por peso; não usar prometazina abaixo de 2 anos e vigiar desidratação no SJS", "alerta": "exantema viral é o principal diferencial e simula reação medicamentosa" },
+      { "populacao": "imunossuprimido", "ajuste": "evitar ciclosporina em dose alta e corticoide prolongado; discutir cada caso", "alerta": "sepse e reativação de infecção" },
+      { "populacao": "hepatopata", "ajuste": "preferir prednisolona e evitar fármacos hepatotóxicos; monitorar transaminases a cada 48 h", "alerta": "hepatite fulminante no DRESS" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "hemograma com contagem de eosinófilos", "indicacao": "todo paciente com suspeita", "o_que_muda": "eosinofilia acima de 1.500 sugere DRESS; leucopenia e linfopenia grave sugerem SJS" },
+        { "nome": "transaminases, bilirrubina e fosfatase alcalina", "indicacao": "todo paciente com suspeita", "o_que_muda": "hepatite define gravidade e indica internação" },
+        { "nome": "creatinina e ureia", "indicacao": "todo paciente com suspeita", "o_que_muda": "nefrite intersticial no DRESS e necessidade de ajuste de dose" },
+        { "nome": "biópsia de pele", "indicacao": "dúvida entre os fenótipos", "o_que_muda": "separa DRESS, SJS/NET, AGEP e exantema viral" },
+        { "nome": "sorologias virais (EBV, CMV, HIV e hepatites)", "indicacao": "exantema com febre", "o_que_muda": "exantema viral é o principal diferencial e muda a conduta" },
+        { "nome": "radiografia de tórax", "indicacao": "tosse ou dispneia", "o_que_muda": "detecta pneumonite por DRESS" }
+      ],
+      "evitar": [
+        { "exame": "teste cutâneo ou de provocação na fase aguda", "motivo": "risco de reação grave e de piora do quadro em atividade" },
+        { "exame": "reintrodução empírica do fármaco suspeito", "motivo": "pode desencadear recidiva fulminante de DRESS ou de SJS" },
+        { "exame": "corticoide isolado como tratamento do SJS/NET", "motivo": "não reduz mortalidade e aumenta o risco de sepse" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["suspender o fármaco suspeito e levar a lista de medicamentos em uso", "informar a alergia em toda consulta e procedimento", "retornar imediatamente se surgirem bolhas, febre ou feridas na boca ou nos olhos", "hidratar a pele e usar protetor solar durante a descamação"],
+      "evitar": ["voltar a usar o fármaco ou outro da mesma classe", "automedicação com anti-inflamatório ou antibiótico", "exposição solar direta na área afetada", "interromper o corticoide por conta própria no DRESS"],
+      "retorno": ["bolhas ou pele descolando", "feridas na boca, nos olhos ou na região genital", "febre acima de 38 °C", "icterícia ou urina escura", "piora rápida do exantema em 24 h"]
+    },
+    "efeitos_adversos": [
+      { "agente": "prednisona", "efeitos": ["hiperglicemia", "insônia", "infecção secundária"], "observacao": "curso curto no exantema; no DRESS o desmame é obrigatório" },
+      { "agente": "cetirizina", "efeitos": ["sonolência", "boca seca"], "observacao": "ajustar em insuficiência renal" },
+      { "agente": "ciclosporina", "efeitos": ["nefrotoxicidade", "hipertensão", "tremor"], "observacao": "dosar creatinina e potássio a cada 48 h" },
+      { "agente": "imunoglobulina intravenosa", "efeitos": ["cefaleia", "nefrotoxicidade", "trombose"], "observacao": "infundir lentamente e hidratar antes" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a droga implicada e registrar o evento no prontuário",
+      "Corticoide: se houver hiperglicemia ou infecção, tratar e reduzir a dose sem suspender abruptamente no DRESS",
+      "Ciclosporina: suspender se creatinina subir mais de 30% do basal ou se PA sustentada acima de 160/100 mmHg",
+      "Imunoglobulina: reduzir a velocidade na cefaleia e suspender se houver sinais de trombose",
+      "Reavaliar o fenótipo e a necessidade de cada fármaco antes de nova prescrição"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "cetirizina 10 mg", "dose": "10 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "7 dias", "condicao": "urticária ou exantema pruriginoso", "confirmar_apresentacao_local": true },
+          { "item": "prednisona 20 mg", "dose": "40 mg", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "5 dias", "condicao": "exantema extenso sem critérios de gravidade", "confirmar_apresentacao_local": true },
+          { "item": "hidrocortisona creme 1%", "dose": "camada fina", "via": "tópica", "frequencia": "2x/dia", "duracao": "7 dias", "condicao": "lesão localizada sem erosão", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "metilprednisolona 125 mg", "dose": "1–2 mg/kg/dia", "via": "IV", "frequencia": "12/12 h", "monitorizacao": "glicemia, PA, potássio e sinais de infecção", "confirmar_apresentacao_local": true },
+          { "item": "cloreto de sódio 0,9%", "dose": "2–4 mL/kg por % de superfície acometida", "via": "IV", "frequencia": "infusão contínua por 24 h", "monitorizacao": "diurese horária e balanço hídrico", "confirmar_apresentacao_local": true },
+          { "item": "adrenalina 1 mg/mL", "dose": "0,3–0,5 mg", "via": "IM vasto lateral", "frequencia": "se critérios de anafilaxia, repetir em 5–15 min", "monitorizacao": "PA, FC e SpO2", "confirmar_apresentacao_local": true },
+          { "item": "ciclosporina 50 mg/mL", "dose": "3–5 mg/kg/dia", "via": "IV", "frequencia": "1x/dia em 2–3 h", "monitorizacao": "creatinina, potássio e PA", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["hemograma com eosinófilos", "transaminases", "bilirrubina", "fosfatase alcalina", "creatinina", "ureia", "sorologias virais", "biópsia de pele", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de reação alérgica a medicamento, necessitando de afastamento por dias.", "dias": null, "cid": null, "observacao": "dias são decisão médica" },
+      "encaminhamento": { "campos": ["destino (dermatologia, alergia ou queimados)", "motivo", "resumo com fármaco, latência, fenótipo e superfície acometida", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente com reação a fármaco, agente, latência, fenótipo, superfície corporal acometida, órgãos afetados, tratamento e evolução." }
+    },
+    "anamnese": {
+      "campos": ["fármaco suspeito", "data de início e latência", "bolhas", "mucosa", "febre", "eosinofilia", "lesão de órgão", "reação prévia", "outros fármacos em uso"],
+      "texto_template": "Paciente com reação a medicamento, fármaco suspeito, data de início e latência, presença de bolhas, acometimento de mucosa, febre, eosinofilia, lesão de órgão, reação prévia e demais fármacos em uso."
+    },
+    "exame_fisico": {
+      "itens": ["superfície corporal acometida", "sinal de Nikolsky", "mucosa oral, ocular e genital", "sinais vitais e temperatura", "linfonodos", "ausculta pulmonar", "palpação hepática e esplênica"],
+      "texto_template": "Avaliação da superfície corporal acometida, pesquisa de Nikolsky, exame de mucosa oral, ocular e genital, sinais vitais, linfonodos, ausculta pulmonar e palpação de órgãos."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de reação a fármaco e acionamento de queimados", "verificar": true },
+      { "tipo": "sociedade_alergia", "o_que_verificar": "algoritmo de reação cutânea grave e critérios de DRESS", "verificar": true },
+      { "tipo": "diretriz_dermatologica", "o_que_verificar": "classificação de SJS/NET e esquema de imunomodulador", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "bulas, apresentações e notificação pelo Notivisa", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-ALG02-01", "tipo": "reintroducao", "gatilho": "fármaco registrado como alérgico na prescrição", "severidade": "grave", "mensagem": "Fármaco previamente implicado em reação alérgica.", "acao": "bloquear o item e exigir justificativa", "bloqueante": true },
+      { "id": "SA-ALG02-02", "tipo": "sjs", "gatilho": "bolhas, descolamento epidérmico ou mucosite", "severidade": "grave", "mensagem": "Suspeita de SJS/NET: internação imediata e oftalmologia.", "acao": "acionar dermatologia e unidade de queimados", "bloqueante": true },
+      { "id": "SA-ALG02-03", "tipo": "anafilaxia", "gatilho": "hipotensão, broncoespasmo ou estridor", "severidade": "grave", "mensagem": "Anafilaxia: adrenalina IM agora.", "acao": "acionar protocolo de anafilaxia", "bloqueante": true },
+      { "id": "SA-ALG02-04", "tipo": "corticoide_em_sjs", "gatilho": "corticoide isolado prescrito em SJS/NET", "severidade": "grave", "mensagem": "Corticoide isolado não trata SJS/NET.", "acao": "alertar e sugerir suporte especializado", "bloqueante": true },
+      { "id": "SA-ALG02-05", "tipo": "registro_ausente", "gatilho": "alta sem registro da reação no campo de alergia", "severidade": "precaucao", "mensagem": "Registro obrigatório da reação.", "acao": "bloquear a alta até o registro", "bloqueante": false },
+      { "id": "SA-ALG02-06", "tipo": "farmaco_alta_suspeicao", "gatilho": "alopurinol, carbamazepina, fenitoína, sulfa ou AINE em uso recente", "severidade": "precaucao", "mensagem": "Fármaco de alta suspeição para reação cutânea grave.", "acao": "sugerir revisão da indicação", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "diretriz dermatológica", "sociedade de alergia", "protocolo de queimados"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com fenótipos distintos no mesmo registro, conduta por fenótipo, lista de fármacos de alta suspeição, manejo de reação cutânea grave sem corticoide isolado em SJS/NET e registro obrigatório da reação.", "data": null }
+      ]
+    }
+  }
+}
