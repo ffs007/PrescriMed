@@ -94,7 +94,6 @@ _Checklist completo extraído do texto-conceito do Dr. Felipe (2026-11-06), com 
 
 # PRÓXIMA FILA (sugestões, ordem proposta)
 
-**⑩ Backup/sincronia do caso**: `psx.case` espelha para tabela própria via `__psxBridge` (como tpl/prot) para retomar atendimento de outro dispositivo — exige mudança também no src/ (PrototypePage), coordenar com curadoria.
-**⑫ Expansão do banco**: aplicar PROMPTS-PESQUISA.md às 20 condições de maior porta de PS que ainda têm versão resumida (fila de aprofundamento contínua — usa o pipeline 6 degraus com assinatura do Dr. Felipe).
-**⑬ Metrônomo no painel PCR**: bip de compressão (Web Audio, 100–120/min) com temporizador de ciclo — pequeno, alto impacto na sala vermelha.
-**⑹ Print direto**: botão "Imprimir" nos PDFs (iframe oculto + window.print) para impressora da sala sem passar por download.
+**⑩ Backup/sincronia do caso**: `psx.case` espelha para tabela própria via `__psxBridge` (como tpl/prot) para retomar atendimento de outro dispositivo — exige mudança também no src/ (PrototypePage) e tabela nova no banco; precisa de coordenação (sessão de curadoria ativa no mesmo repo) e, idealmente, aprovação do Dr. Felipe.
+**⑫ Expansão do banco**: aplicar PROMPTS-PESQUISA.md às 20 condições de maior porta de PS que ainda têm versão resumida — POR DESENHO exige pesquisa + cruzamento + **assinatura do Dr. Felipe** (pipeline ético de 6 degraus; a IA nunca assina conteúdo clínico).
+**⑭ Print direto**: botão "Imprimir" nos PDFs (iframe oculto + window.print) para impressora da sala sem passar por download. *(O metrônomo de PCR já existe no painel ACLS — proposta original ⑬ era redundante e foi retirada.)*
