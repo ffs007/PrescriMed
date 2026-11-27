@@ -7,16 +7,16 @@ _Atualizado 27/11/2026._
 | 1 | Bundle sob demanda | **feito** | PR #4 — core 1,02 MB + 8 pacotes; loader com espera e precarga |
 | 2 | CI de assinatura | **feito** | PR #3 — workflow `curadoria.yml` com piso de cobertura 100% |
 | 3 | Gate V11 (molécula repetida) | **feito** | PR #3 — 27 pares no relatório, build segue verde |
-| 4 | "E no meu hospital?" | pendente | marcar recursos da unidade e adaptar a condição |
-| 5 | Editor de condição no app | pendente | editar dose/motivo e exportar patch assinável |
-| 6 | Painel de fadiga de alerta | pendente | override por alerta a partir de `safety_events` |
+| 4 | "E no meu hospital?" | **feito** | `lovable-cockpit.js` aba Recursos: marca o que a unidade tem (`psx.stock`), cartão na condição mostra "X de Y opções" e lista as classes sem opção local |
+| 5 | Editor de condição no app | **feito** | aba Editar: altera posologia em memória e exporta `patch-<cond>.json`; `scripts/workspace/aplicar-patch.mjs` aplica com checagem de concorrência |
+| 6 | Painel de fadiga de alerta | **feito** | aba Alertas: agrega `safety_events` via `__psxBridge.listSafety` por tipo/motivo, com contagem e último evento |
 
-## Notas para retomar
+## Notas
 
-- **4**: a extensão precisa de âncora estável no DOM da condição. Ver como
-  `lovable-cdss.js` e `lovable-procedures.js` inserem painéis; guardar o estado em
-  `psx.stock` e espelhar em `profiles.psx_cfg` (exige ajuste no PrototypePage).
-- **5**: sem backend de escrita, o caminho é editar em memória e exportar um patch
-  JSON que `scripts/workspace/aplicar-patch.mjs` aplica em `content/condicoes`.
-- **6**: dados vêm de `__psxBridge.listSafety` (`safety_events`); agregar por
-  `tipo`/`motivo` e mostrar taxa de override por regra.
+- **4**: estado em `psx.stock` (local por dispositivo — recurso de unidade é local por
+  definição). Espelhar em `profiles.psx_cfg` exigiria mexer no PrototypePage; fica para
+  quando o checklist de unidade virar multi-dispositivo.
+- **5**: o patch não escreve no banco; ele vira arquivo e passa pelo gate + build, que é
+  o caminho governado. `pos_antes` funciona como controle de concorrência.
+- **6**: a leitura prioriza `listSafety` (Supabase) e cai para `psx.safety.queue`
+  quando offline.
