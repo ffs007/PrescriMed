@@ -257,7 +257,7 @@ pacotes.forEach((pk, n) => {
 
 /* ---- digest para assinatura ---- */
 mkdirSync(resolve(root, "reports/curadoria"), { recursive: true });
-const dig = ["# DIGEST DE CURADORIA — para assinatura do Dr. Felipe", "", `_Gerado em ${new Date().toISOString()}; build: ${digest.length} condição(ões)._`, ""];
+const dig = ["# DIGEST DE CURADORIA — para assinatura do Dr. Felipe", "", `_Gerado em ${new Date().toISOString().slice(0, 10)}; build: ${digest.length} condição(ões)._`, ""];
 for (const c of digest) {
   dig.push(`## ${c.nome} (\`${c.id}\`) — status: **${c.status}**`);
   dig.push(`**Fontes:** ${(c.meta?.fontes || []).join(" · ") || "—"}`);
