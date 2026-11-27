@@ -26,7 +26,7 @@ jobs:
         run: node scripts/content/build.mjs
 
       - name: Bundle em sincronia com as fontes
-        run: git -C .. diff --exit-code --ignore-cr-at-eol -- Lovable-Prescrimed/public/prototype/curated-data.js
+        run: git -C .. diff --exit-code --ignore-cr-at-eol -- Lovable-Prescrimed/public/prototype/curated-core.js "Lovable-Prescrimed/public/prototype/curated-pkg-*.js"
 
       - name: Cobertura da assinatura de 27/11
         run: node scripts/workspace/audit-assinatura.mjs --min 100 --falhar-sem-alvo

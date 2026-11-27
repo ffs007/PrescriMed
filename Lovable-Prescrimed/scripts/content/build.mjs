@@ -1,6 +1,6 @@
 // Gerador + validador do conteúdo clínico curado.
 // Lê content/condicoes/*.json (status:"aprovado" OU --rascunho) e emite
-// public/prototype/curated-data.js (substitui protocolos/mapa hospitalar no runtime).
+// public/prototype/curated-core.js + curated-pkg-N.js (sob demanda; ver lovable-packages.js).
 // Regras do gate: ver content/MODELO.md. Uso:
 //   node scripts/content/build.mjs            → só aprovados
 //   node scripts/content/build.mjs --rascunho → inclui rascunhos (com aviso no console)
@@ -190,7 +190,7 @@ if (duplicatas.length) {
   warn("V11", `${duplicatas.length} molécula(s) repetida(s) na mesma seção — ver reports/curadoria/DUPLICATAS-V11.md`);
 }
 
- /* ---- exite curated-data.js ---- */
+ /* ---- empacotamento: core + pacotes sob demanda ---- */
 /* RXMAP: cada classe curada entra na taxonomia com queixa = nome da condição
    → o modal gera "⚡ Usar kit: <Condição>" = 1º item (1ª linha) de cada classe. */
 const rxmap = {};
@@ -202,28 +202,58 @@ const applyRx = `
     var i = window.PSX_RXSEC.findIndex(function(s){ return s.id === "outros"; });
     window.PSX_RXSEC.splice(i < 0 ? window.PSX_RXSEC.length : i, 0, { id: "emergencia", n: "Emergência" });
   }`;
-const js = `/* GERADO por scripts/content/build.mjs — NÃO EDITAR. Fonte: content/condicoes/*.json (curadoria assinada). */
-(function(){
- "use strict";
- var DB = window.PROTO_DB, HD = window.HOSP_DB;
- var drugs = ${JSON.stringify(out.drugs)};
- drugs.forEach(function(d){ DB.drugs[d.id] = d; });
- ${JSON.stringify(out.classes)}.forEach(function(c){ DB.classes[c.key] = { n: c.nome, d: c.d }; });
- var hospDrugs = ${JSON.stringify(out.hospDrugs)};
- hospDrugs.forEach(function(d){ HD.drugs[d.id] = d; });
- ${JSON.stringify(out.hospClasses)}.forEach(function(c){ HD.classes[c.key] = { n: c.nome, d: c.d }; });
- var protos = ${JSON.stringify(out.protos)};
- protos.forEach(function(p){
-   var i = DB.protocols.findIndex(function(x){ return x.id === p.id; });
-   if (i >= 0) DB.protocols[i] = p; else DB.protocols.push(p);
- });
- var map = ${JSON.stringify(out.hospMap)};
- Object.keys(map).forEach(function(k){ HD.map[k] = map[k]; });
- if (window.PSX_RXMAP && window.PSX_RXSEC) { ${applyRx} }
- else { window.addEventListener("load", function(){ ${applyRx} }); }
- window.PSX_CURATED = { ids: protos.map(function(p){ return p.id; }), status: ${JSON.stringify(Object.fromEntries(digest.map(c => [c.id, c.status])))} };
-})();`;
-writeFileSync(resolve(protoDir, "curated-data.js"), js, "utf8");
+/* ---- empacotamento sob demanda: core (protocolos) + pacotes (classes/drogas) ---- */
+const PACOTES = 8;
+const ordem = [...out.protos].sort((a, b) => String(a.cat || "").localeCompare(String(b.cat || "")) || a.id.localeCompare(b.id));
+const bucket = {};
+ordem.forEach((p, i) => { bucket[p.id] = Math.min(PACOTES - 1, Math.floor((i * PACOTES) / ordem.length)); });
+
+const classPorKey = new Map(out.classes.map((c) => [c.key, c]));
+const drugPorId = new Map(out.drugs.map((d) => [d.id, d]));
+const hospClassPorKey = new Map(out.hospClasses.map((c) => [c.key, c]));
+const hospDrugPorId = new Map(out.hospDrugs.map((d) => [d.id, d]));
+
+const pacotes = Array.from({ length: PACOTES }, () => ({ classes: [], drugs: [], hospClasses: [], hospDrugs: [], hospMap: {} }));
+for (const p of out.protos) {
+  const pk = pacotes[bucket[p.id] ?? 0];
+  const cls = [...new Set(p.cls || [])];
+  const hcls = [...new Set(out.hospMap[p.id] || [])];
+  for (const k of cls) { const c = classPorKey.get(k); if (c) pk.classes.push(c); }
+  for (const k of hcls) { const c = hospClassPorKey.get(k); if (c) pk.hospClasses.push(c); }
+  if (hcls.length) pk.hospMap[p.id] = hcls;
+}
+for (const pk of pacotes) {
+  const ids = new Set(), hids = new Set();
+  for (const c of pk.classes) for (const id of c.d) ids.add(id);
+  for (const c of pk.hospClasses) for (const id of c.d) hids.add(id);
+  pk.drugs = [...ids].map((id) => drugPorId.get(id)).filter(Boolean);
+  pk.hospDrugs = [...hids].map((id) => hospDrugPorId.get(id)).filter(Boolean);
+}
+
+/* core: tudo que a busca e a home precisam, sem corpos de farmaco */
+const cabecalho = "/* GERADO por scripts/content/build.mjs - NAO EDITAR. Fonte: content/condicoes/*.json */\n";
+const rxBloco = "if (window.PSX_RXMAP && window.PSX_RXSEC) { " + applyRx + " } else { window.addEventListener(\"load\", function(){ " + applyRx + " }); }";
+const core = cabecalho + "(function(){\n \"use strict\";\n var DB = window.PROTO_DB, HD = window.HOSP_DB; if (!DB) return;\n"
+  + " var protos = " + JSON.stringify(out.protos) + ";\n"
+  + " protos.forEach(function(p){ var i = DB.protocols.findIndex(function(x){ return x.id === p.id; }); if (i >= 0) DB.protocols[i] = p; else DB.protocols.push(p); });\n"
+  + " window.PSX_BUCKET = " + JSON.stringify(bucket) + ";\n"
+  + " window.PSX_PKG_COUNT = " + PACOTES + ";\n"
+  + " " + rxBloco + "\n"
+  + " window.PSX_CURATED = { ids: protos.map(function(p){ return p.id; }), status: " + JSON.stringify(Object.fromEntries(digest.map((c) => [c.id, c.status]))) + " };\n"
+  + "})();\n";
+writeFileSync(resolve(protoDir, "curated-core.js"), core, "utf8");
+
+pacotes.forEach((pk, n) => {
+  const js = cabecalho + "(function(){\n \"use strict\";\n var DB = window.PROTO_DB, HD = window.HOSP_DB; if (!DB) return;\n"
+    + " " + JSON.stringify(pk.drugs) + ".forEach(function(d){ DB.drugs[d.id] = d; });\n"
+    + " " + JSON.stringify(pk.classes) + ".forEach(function(c){ DB.classes[c.key] = { n: c.nome, d: c.d }; });\n"
+    + " " + JSON.stringify(pk.hospDrugs) + ".forEach(function(d){ HD.drugs[d.id] = d; });\n"
+    + " " + JSON.stringify(pk.hospClasses) + ".forEach(function(c){ HD.classes[c.key] = { n: c.nome, d: c.d }; });\n"
+    + " var m = " + JSON.stringify(pk.hospMap) + ";\n Object.keys(m).forEach(function(k){ HD.map[k] = m[k]; });\n"
+    + " (window.PSX_PKG = window.PSX_PKG || {})[" + n + "] = 1;\n if (window.PSX_PKG_DONE) window.PSX_PKG_DONE(" + n + ");\n"
+    + "})();\n";
+  writeFileSync(resolve(protoDir, "curated-pkg-" + n + ".js"), js, "utf8");
+});
 
 /* ---- digest para assinatura ---- */
 mkdirSync(resolve(root, "reports/curadoria"), { recursive: true });

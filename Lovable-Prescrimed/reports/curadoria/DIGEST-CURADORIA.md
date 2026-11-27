@@ -1,6 +1,6 @@
 # DIGEST DE CURADORIA — para assinatura do Dr. Felipe
 
-_Gerado em 2026-11-27T09:46:45.898Z; build: 239 condição(ões)._
+_Gerado em 2026-11-27T10:08:25.929Z; build: 239 condição(ões)._
 
 ## Abdome Agudo (`leg_2009`) — status: **aprovado**
 **Fontes:** WSES guidelines — apendicite e abdome agudo · ATLS 10ª ed. — avaliação abdominal · Toronto/ACS — dor abdominal aguda não traumática · UpToDate: Evaluation of acute abdomen in adults
