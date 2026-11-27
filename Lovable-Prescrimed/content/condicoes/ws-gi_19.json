@@ -23,7 +23,8 @@
     },
     "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
     "medidas_adicionadas": "GI-19 em 2026-11-27",
-    "fundido_workspace": "GI-19 em 2026-11-27"
+    "fundido_workspace": "GI-19 em 2026-11-27",
+    "lacuna_fechada": "GI-19 (+3) em 2026-11-27"
   },
   "alerta": "Sinais de alarme: hematêmese, melena ou vômito em borra de café -> estabilizar, IBP venoso e endoscopia precoce; dor epigástrica súbita e intensa com abdome rígido -> cirurgia imediata e tomografia se estável; vômitos persistentes com distensão e sucção gástrica aumentada -> descompressão, hidratação e avaliação endoscópica; perda de peso, anemia, disfagia ou saciedade precoce -> endoscopia com biópsia de bordas e tomografia. 1) Confirmar a úlcera e o H. pylori com teste válido: endoscopia, UBT ou antígeno fecal 2) Verificar exposição prévia a claritromicina ou quinolona e a resistência local a claritromicina 3) Escolher o esquema: tríplice com claritromicina se resistência menor que 15%; quádruplo com bismuto nos demais 4) Prescrever 14 dias com IBP em dose plena e conferir alergias e interações 5) Manter IBP até a cicatrização: 4 a 8 semanas na úlcera duodenal e 8 a 12 na gástrica 6) Suspender antibiótico por 4 semanas e IBP por 2 semanas antes do teste de cura 7) Teste de cura com UBT ou antígeno fecal; se positivo, resgate com esquema diferente e cultura quando possível 8) Reavaliar AAS, AINE e IBP crônico em cada consulta e agendar controle endoscópico da úlcera gástrica",
   "redFlags": [
@@ -475,7 +476,48 @@
     ]
   },
   "hospitalar": {
-    "classes": []
+    "classes": [
+      {
+        "nome": "Procedimentos à beira do leito",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "proc_1",
+              "n": "Endoscopia digestiva alta com biópsias",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: Dispepsia com alarme, idade acima de 60 anos, úlcera gástrica e dúvida diagnóstica. Técnica: Biópsias de antro (2) e corpo (2) para histologia e teste rápido de urease; úlcera gástrica exige biópsia de bordas. Complicações: Sangramento, perfuração, sedação, falso-negativo por uso de IBP"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "proc_2",
+              "n": "Teste respiratório com ureia marcada (UBT)",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: Diagnóstico de H. pylori e confirmação de cura quando não há indicação de endoscopia. Técnica: Jejum de 6 h, coletar amostra basal, ingerir ureia marcada e coletar 30 min depois; suspender IBP por 14 dias e antibiótico por 28 dias. Complicações: Resultado falso-negativo com IBP ou antibiótico recente; custo e disponibilidade"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "proc_3",
+              "n": "Antígeno fecal de H. pylori",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: Alternativa ao UBT no diagnóstico e no teste de cura, inclusive em uso de IBP com cautela. Técnica: Amostra única de fezes, teste monoclonal; colher pelo menos 4 semanas após o fim do antibiótico. Complicações: Falso-negativo em diarreia aquosa e em sangramento digestivo recente"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-19"
+      }
+    ]
   },
   "ws": {
     "id": "GI-19",

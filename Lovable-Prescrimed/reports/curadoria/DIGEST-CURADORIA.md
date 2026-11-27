@@ -1,6 +1,6 @@
 # DIGEST DE CURADORIA — para assinatura do Dr. Felipe
 
-_Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
+_Gerado em 2026-11-27T09:46:45.898Z; build: 239 condição(ões)._
 
 ## Abdome Agudo (`leg_2009`) — status: **aprovado**
 **Fontes:** WSES guidelines — apendicite e abdome agudo · ATLS 10ª ed. — avaliação abdominal · Toronto/ACS — dor abdominal aguda não traumática · UpToDate: Evaluation of acute abdomen in adults
@@ -196,6 +196,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Higiene do sono e exercício aeróbico — Sono regular de 7 a 8 h, sem tela na hora de dormir; 150 min por semana de exercício aeróbico moderado, que reduz a ansiedade basal e serve como exposição interoceptiva controlada · _(medida não farmacológica da síndrome)_
 - Manejo do ambiente durante a crise — Levar a local silencioso, reduzir estímulos, sentar ou deitar, afrouxar roupas, oferecer água, falar em frases curtas e em tom baixo, sem dizer que é apenas psicológico nem pedir para se acalmar · _(medida não farmacológica da síndrome)_
 - Plano de crise escrito — Cartão com sinais iniciais, três passos de autocuidado, telefone de contato e critério claro de quando procurar emergência; revisar em cada consulta e compartilhar com familiar · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — procurar atendimento na primeira crise com dor torácica, para ECG e troponina · _(cuidados e plano de ação)_
 
 ### Hospitalar (EV)
 - **Benzodiazepinico:** Lorazepam — 1 a 2 mg (0,5 a 1 mg em idoso) · VO, IV ou IM · dose única; repetir uma vez após 30 min se persistir · uso eventual, não mais que 2 a 4 semanas · máx: 4 mg/24 h (crise de pânico aguda em pronto-socorro ou quando é necessária via parenteral)
@@ -487,10 +490,22 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Profilaxia de trombose e de úlcera de estresse conforme risco — enoxaparina após controle do sangramento; IBP se ventilação mecânica ou coagulopatia · _(medida não farmacológica da síndrome)_
 - Plano escrito na alta — esquema basal-bolus com doses e horários, dose de correção, quando medir cetonas, sinais de alarme e retorno em 48–72 h · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — aplicar a insulina basal todos os dias, mesmo sem comer · _(cuidados e plano de ação)_
+- Não fazer — suspender a insulina basal por falta de apetite · _(evitar erro de manejo)_
+
+**Insulina**
+- **[1ª linha]** Insulina glargina — 0,2-0,3 UI/kg. Via SC. 1x/dia a cada 24 h. Uso contínuo. · _(insulina basal na transição para via subcutânea (1a linha) alta após cetoacidose)_
+- Insulina regular subcutânea (bolus prandial) — 0,1 UI/kg por refeição. Via SC. Antes das três refeições. Uso contínuo. · _(cobertura prandial no esquema basal-bolus da transição (condicional) esquema basal-bolus)_
+
+**Anticoagulante** _(sem preset)_
+- Enoxaparina — 40 mg. Via SC. 1x/dia. Enquanto internado e imóvel. · _(profilaxia de trombose venosa profunda na cetoacidose grave (condicional))_
+
 ### Hospitalar (EV)
 - **Insulinoterapia da CAD:** Insulina humana regular (1ª linha) (Infusão IV 0,1 U/kg/h (bombas de insulina regular; sem bolus inicial rotineiro) — manter até resolução da cetose com glicose quando glicemia < 200)
 - **Glicose (quando glicemia < 200):** Glicose 10% (1ª linha) (SG 5–10% junto à hidratação para permitir continuar a insulina e limpar a cetose)
 - **Se gatilho infeccioso:** Ceftriaxona (1ª linha) (Conforme foco (ver protocolo Sepse) — infecção é o gatilho mais comum)
+- **Procedimentos à beira do leito:** Gasometria seriada com cálculo do ânion gap — Indicação: todos os casos, na entrada e a cada 2-4 h. Técnica: Punção radial com teste de Allen ou gasometria venosa para pH e bicarbonato; calcular sódio menos cloro e bicarbonato. Complicações: Hematoma, punção arterial acidental, dor, resultado alterado por garrote prolongado (procedimento indicado na síndrome) · Acesso venoso central — Indicação: necessidade de KCl acima de 10 mEq/h, droga vasoativa ou veias periféricas esgotadas. Técnica: Punção jugular ou subclávia guiada por ultrassom, confirmar posição com radiografia. Complicações: Pneumotórax, infecção de cateter, trombose, punção arterial (procedimento indicado na síndrome)
 
 ---
 
@@ -522,11 +537,16 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Controle glicêmico e de temperatura — alvo de glicemia 140–180 mg/dL com insulina em bomba; antitérmico e medidas físicas se febre alta, sem retardar o antibiótico · _(medida não farmacológica da síndrome)_
 - Comunicação estruturada na passagem de plantão — hora do antibiótico, hora das culturas, volume infundido, dose de vasopressor, lactato inicial e de controle, foco e pendências de controle · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — completar o antibiótico prescrito mesmo após a melhora · _(cuidados e plano de ação)_
+- Não fazer — interromper o antibiótico por melhora antes do tempo previsto · _(evitar erro de manejo)_
+
 ### Hospitalar (EV)
 - **Antibiótico de amplo espectro ≤ 1 h:** Cefepima (1ª linha) (2 g EV 8/8h — 1ª linha do choque até foco definido (Pseudomonas)) · Metronidazol (1ª linha) (500 mg EV 8/8h — cobertura anaeróbia se foco abdominal possível) · Ceftriaxona (2 g EV 1x/dia — foco comunitário sem risco Pseudomonas) · Ampicilina + sulbactam (3 g EV 6/6h — abdominal/aspização) · Sulfato de gentamicina (5–7 mg/kg/dia EV — associação em foco urinário grave (renal!))
 - **Corticoide do choque refratário:** Succinato sódico de hidrocortisona (1ª linha) (50 mg EV 6/6h enquanto choque refratário; desmame na melhora)
 - **Tromboprofilaxia (estabilizado):** Enoxaparina sódica (1ª linha) (40 mg SC/dia profilática — peso risco/sangramento)
 - **Vasopressores e inotrópicos:** Noradrenalina — 0,05–0,5 mcg/kg/min, titular a cada 5 min (alvo PAM ≥ 65). Diluição: 4 mg em 250 mL = 16 mcg/mL. Se refratário: vasopressina 0,03 UI/min · Vasopressina — 0,03 UI/min fixa, sem titulação — poupa noradrenalina quando dose ≥ 0,25–0,5 mcg/kg/min · Dobutamina — 2–20 mcg/kg/min — débito baixo persistente (SE < 2,2) ou congestão apesar de noradrenalina + volume
+- **Procedimentos à beira do leito:** Hemocultura de dois sítios — Indicação: todo paciente com suspeita de sepse, antes do antibiótico. Técnica: antissepsia com clorexidina, 20 mL por par divididos em frasco aeróbio e anaeróbio, punção periférica e de cateter quando houver, sem atrasar a droga. Complicações: contaminação por técnica inadequada, hematoma, punção arterial acidental (procedimento indicado na síndrome)
 
 ---
 
@@ -596,6 +616,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 **Enzima digestiva**
 - **[1ª linha]** Lactase — 1.000 unidades FCC (5 gotas) por 100 mL de leite ordenhado, ou 5 gotas antes da mamada · VO · em cada mamada · 2 semanas de teste, com reavaliação do diário de choro · máx: 2.000 unidades FCC por 100 mL de leite · _(cólica com sinais de intolerância à lactose secundária — fezes ácidas e explosivas, eritema perianal — ou teste de hidrogênio expirado positivo)_
+- Lactase (beta-galactosidase) — 1.000 unidades FCC (5 gotas) por 100 mL de leite ordenhado, ou 5 gotas antes da mamada. Via VO. Em cada mamada. 2 semanas de teste, com reavaliação do diário de choro. · _(cólica com sinais de intolerância à lactose secundária - fezes ácidas e explosivas, eritema perianal - ou teste de hidrogênio expirado positivo (alternativa))_
 
 **Fitoterapico**
 - **[1ª linha]** Infusão de erva-doce com camomila — 30 a 60 mL/dia de infusão a 1–2% (1 colher de chá de semente para 150 mL de água) · VO · após as mamadas, até 3 vezes ao dia · até 2 semanas · máx: 90 mL/dia · _(uso tradicional para cólica, quando a família já utiliza chá e precisa de orientação de diluição, volume e higiene)_
@@ -616,6 +637,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Diário de 24 horas de choro, sono e mamadas — Registrar horário de início e fim de cada crise, sono, mamadas e evacuações por 3 dias, com o mesmo instrumento antes e depois de qualquer intervenção. É o único modo de saber se o tratamento funcionou e de distinguir cólica de outros padrões de choro · _(medida não farmacológica da síndrome)_
 - Apoio ao cuidador e plano de pausa segura — Reconhecer a exaustão, validar o cansaço e dividir turnos com outra pessoa. Ensinar explicitamente: se o choro não cessa e o cuidador estiver perdendo o controle, colocar o bebê de barriga para cima no berço, sem nada solto, sair do quarto por 5 a 10 minutos e chamar alguém — nunca sacudir. Rastrear depressão pós-parto e encaminhar quando indicado · _(medida não farmacológica da síndrome)_
 - Não trocar fórmula, não usar antiácido e não restringir dieta sem critério — Manter uma única fórmula adequada à idade e não alternar marcas; não usar fórmula espessante, antiácido, inibidor de bomba ou simeticona em combinação sem indicação. Dieta de exclusão de leite e derivados só na mãe de bebê amamentado quando há suspeita real de alergia, com prazo e reavaliação — restrição alimentar sem diagnóstico desnutre a mãe e não melhora o choro · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — manter a mamada em livre demanda e não suspender o peito durante a crise · _(cuidados e plano de ação)_
+- Não fazer — antiespasmódico, remédio para cólica de adulto, elixir paragórico, opioide ou sedativo · _(evitar erro de manejo)_
 
 ---
 
@@ -785,6 +810,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Sigilo e acolhimento na adolescência — Atender a adolescente com privacidade garantida, sem exigir presença de responsável para a contracepção de emergência, e registrar o atendimento conforme a norma do serviço · _(medida não farmacológica da síndrome)_
 - Plano de retorno em 3 semanas — Consulta ou contato agendado para teste de gravidez, revisão do método regular e reforço da adesão; atraso menstrual acima de 7 dias antecipa a avaliação · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — tomar a dose o mais cedo possível e repetir se vomitar em até 2 horas · _(cuidados e plano de ação)_
+
 ---
 
 ## Corrimento vaginal / vulvovaginite (`corrimento-vaginal`) — status: **aprovado**
@@ -845,6 +873,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Controle glicêmico na candidíase recorrente — Dosar glicemia e hemoglobina glicada, ajustar o tratamento do diabetes e reavaliar em 14 dias; a glicemia alta mantém a candidíase · _(medida não farmacológica da síndrome)_
 - Indução e manutenção na candidíase recorrente — Tratar o episódio agudo, manter fluconazol 150 mg por semana durante 6 meses, reavaliar a cada 3 meses e suspender se houver duas culturas negativas · _(medida não farmacológica da síndrome)_
 - Notificação e busca ativa de parceiros — Notificar gonorreia, sífilis, HIV e hepatites conforme a lista nacional, registrar tricomoníase e clamídia no prontuário e acionar o serviço de vigilância para busca de contatos · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — usar o medicamento até o último dia, mesmo que o corrimento desapareça antes · _(cuidados e plano de ação)_
 
 ---
 
@@ -909,6 +940,16 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Balanço hídrico e diurese horária nos grupos C e D — sonda vesical se choque ou oligúria; registrar entrada, saída e peso diário, com meta de 0,5 mL/kg/h ou mais · _(medida não farmacológica da síndrome)_
 - Reconhecimento da fase de reabsorção — 24 a 48 h após a fase crítica, com hematócrito em queda, diurese aumentando e retorno do apetite: reduzir o volume venoso para 1/3 e suspender · _(medida não farmacológica da síndrome)_
 - Educação para retorno imediato — entregar por escrito os sinais de alarme e orientar retorno no mesmo dia se dor abdominal, vômitos, sangramento, tontura ou redução da diurese · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — beber 60 mL/kg de líquidos por dia, metade em soro de reidratação oral · _(cuidados e plano de ação)_
+- Não fazer — AAS, AINE, nimesulida e corticoide por conta própria · _(evitar erro de manejo)_
+
+**Reidratante oral**
+- **[1ª linha]** Sais de reidratação oral (SRO) — 60 mL/kg/dia, sendo 1/3 em solução de reidratação oral e 2/3 em líquidos caseiros. Via VO. Em pequenos volumes ao longo do dia, a cada 15 a 30 min. Até a fase crítica passar, em geral 5 a 7 dias. · _(hidratação do grupo A e manutenção do grupo B (1a linha) hidratação domiciliar)_
+
+**AINE** _(sem preset)_
+- Ibuprofeno — 400 mg. Via VO. 8/8 h. 7 a 10 dias. · _(dor articular de chikungunya após afastar dengue (condicional))_
 
 ### Hospitalar (EV)
 - **Suporte na observação (caso B):** Dipirona (1ª linha) (1 g EV 6/6 h se febre/dor) · Cloridrato de ondansetrona (1ª linha) (8 mg EV 8/8 h se vômitos (para tolerar hidratação)) · Cloridrato de metoclopramida (1ª linha) (10 mg EV 8/8 h — alternativa antiemética)
@@ -1059,6 +1100,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Educação e reasseguramento — Explicar que a dor é de parede torácica, que a forma pós-viral resolve em 2 a 6 semanas e que retorno imediato é obrigatório se surgirem dor em aperto, sudorese ou falta de ar · _(medida não farmacológica da síndrome)_
 - Reavaliação programada com diário de dor — Registrar intensidade de 0 a 10, gatilhos e resposta ao AINE; consulta de reavaliação em 2 semanas e reabertura diagnóstica se a dor persistir além de 4 semanas · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — aplicar calor local por 15 a 20 minutos, 3 a 4 vezes ao dia · _(cuidados e plano de ação)_
+- Não fazer — tratar dor torácica como muscular sem eletrocardiograma · _(evitar erro de manejo)_
+
 ### Hospitalar (EV)
 - **Analgesico:** Dipirona (1ª linha) (dor moderada a intensa quando AINE é contraindicado e o paracetamol isolado é insuficiente)
 
@@ -1198,6 +1243,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Cuidado com a pele e controle do coçar — unhas curtas, banho morno, emoliente após o banho e roupa de cama individual; coçar mantém a impetiginização e perpetua o prurido · _(medida não farmacológica da síndrome)_
 - Orientação escolar e laboral — criança com pediculose não precisa ser afastada e volta após o primeiro tratamento, com cabelo preso; escabiose permite retorno após a primeira dose; avisar a instituição para rastrear contatos, sem expor o paciente · _(medida não farmacológica da síndrome)_
 - Não tratar animais de estimação — cães e gatos têm ácaros próprios e não transmitem Sarcoptes scabiei humano; tratar o animal não previne recidiva e atrasa a busca do contato humano não tratado · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — aplicar o produto em todo o corpo, não só nas lesões · _(cuidados e plano de ação)_
+- Não fazer — tratar só o paciente · _(evitar erro de manejo)_
 
 ---
 
@@ -1362,6 +1411,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Cuidados com a criança que sangra de repetição — Unha curta, retirar o hábito de enfiar o dedo no nariz, evitar brincadeira de colocar objeto, manter o quarto úmido e avisar a escola sobre o que fazer. Não usar cotonete nem algodão seco no nariz · _(medida não farmacológica da síndrome)_
 - Repouso relativo e cabeceira elevada nas primeiras 24 horas — Evitar esforço físico, banho muito quente, sauna e abaixar a cabeça; dormir com a cabeceira elevada a 30 graus. A elevação reduz a pressão venosa na mucosa nasal · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — comprimir a parte mole do nariz contra o septo por 10 a 15 minutos, sem soltar para ver, com a cabeça levemente para frente · _(cuidados e plano de ação)_
+- Não fazer — inclinar a cabeça para trás ou deitar durante o sangramento · _(evitar erro de manejo)_
+
 ### Hospitalar (EV)
 - **Antifibrinolitico:** Ácido tranexâmico (1ª linha) (epistaxe persistente em anticoagulado, telangiectasia hemorrágica hereditária, plaquetopenia ou coagulopatia, quando a via tópica não controla)
 - **Vitamina:** Fitomenadiona — 5 a 10 mg · IV · dose única · uma dose · máx: 10 mg (reversão de varfarina em epistaxe grave ou refratária, com INR alargado)
@@ -1369,6 +1422,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Penicilina com inibidor de betalactamase:** Amoxicilina-clavulanato — 875/125 mg no adulto; 50 mg/kg/dia na criança · VO ou IV · 12/12 h · enquanto o tampão permanecer, até 5 dias · máx: 3 g por dia de amoxicilina (profilaxia de síndrome do choque tóxico e de sinusite em tamponamento posterior prolongado, sobretudo em diabético e imunossuprimido)
 - **Reversor de anticoagulante:** Complexo protrombínico de quatro fatores — 25 a 50 UI/kg conforme INR e peso · IV · dose única, com INR de controle em 30 minutos · uma dose · máx: 5.000 UI (epistaxe grave ou refratária em uso de varfarina, com INR acima de 2 e sangramento ativo)
 - **Antidoto:** Idarucizumabe — 5 g, equivalentes a dois frascos de 2,5 g · IV · dose única · uma dose · máx: 5 g (epistaxe grave, com risco de via aérea, em uso de dabigatrana)
+- **Procedimentos à beira do leito:** Compressão digital guiada e identificação do ponto de sangramento — Indicação: todo paciente com epistaxe, antes de qualquer instrumento. Técnica: Sentar o paciente, inclinar a cabeça para frente, comprimir a parte mole do nariz contra o septo por 10 a 15 minutos sem interrupção, com relógio; depois, com boa iluminação, aspirar o coágulo, vasoconstrição com oximetazolina e inspeção do septo anterior e do assoalho com espéculo nasal ou otoscópio. Complicações: Compressão inadequada que não controla o sangramento, síncope em paciente ansioso, lesão de mucosa por aspiração vigorosa (procedimento indicado na síndrome)
 
 ---
 
@@ -1536,6 +1590,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Sinais de alarme por escrito — Entregar lista impressa com dor abdominal súbita, dispneia, sangramento, icterícia e vômitos persistentes, com orientação de retorno imediato; o paciente com dor abdominal que espera o retorno agendado é o caso de rotura esplênica · _(medida não farmacológica da síndrome)_
 - Reavaliação programada em 48 a 72 horas — Reavaliar hidratação, dor, tamanho do baço, aparecimento de rash e necessidade de exames; a mononucleose que não melhora em uma semana obriga a revisar diagnóstico e a procurar complicação · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — beber 2 a 3 litros de líquido por dia, em pequenos volumes, mesmo sem sede · _(cuidados e plano de ação)_
+- Não fazer — amoxicilina, ampicilina e antibiótico sem teste de estreptococo · _(evitar erro de manejo)_
+
 ### Hospitalar (EV)
 - **Antiemetico:** Cloridrato de metoclopramida (1ª linha) (vômitos com risco de desidratação)
 - **Antiviral:** Aciclovir — 10 mg/kg · IV · 8/8 h · 7 a 10 dias · máx: 1.500 mg/dia (apenas em imunossuprimido com doença grave ou complicada por EBV; não é rotina)
@@ -1641,6 +1699,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Não introduzir objeto nem cotonete na garganta — Abaixador de língua improvisado ou espátula caseira podem traumatizar a úvula e provocar náusea e sangramento; a inspeção deve ser feita com boa iluminação e técnica, não com objeto doméstico · _(medida não farmacológica da síndrome)_
 - Controle do ambiente escolar e comunicação de caso — Em caso de estreptococo ou escarlatina, avisar a creche ou escola para vigilância de novos casos nos 7 dias seguintes; não é necessário tratar contatos assintomáticos nem fechar a turma · _(medida não farmacológica da síndrome)_
 - Reavaliação programada em 48 a 72 horas — Retorno presencial ou contato telefônico documentado com temperatura, dor, capacidade de deglutição e tolerância ao antibiótico; é o que detecta abscesso em formação e mononucleose · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — tomar o antibiótico nos horários certos e completar os 10 dias quando a via for oral · _(cuidados e plano de ação)_
 
 ### Hospitalar (EV)
 - **Se internar (complicada):** Benzilpenicilina potássica (cristalina) (1ª linha) (2–4 MU EV 4/4h — faringite complicada/abscesso (junto com drenagem)) · Dipirona (1ª linha) (1 g EV 6/6 h) · Ceftriaxona (1ª linha) (1 g EV 1x/dia — alternativa EV)
@@ -2055,6 +2116,13 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Controle de gatilhos de recorrência — Sono regular, controle de estresse, proteção solar, tratamento de febre e de infecções intercorrentes; revisar imunossupressores quando possível · _(medida não farmacológica da síndrome)_
 - Retorno programado e diário de crises — Retorno em 7 a 10 dias no primeiro episódio e em 4 a 12 semanas na supressão; orientar o paciente a anotar data e duração de cada crise para decidir manutenção ou suspensão · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — tomar o antiviral até o último dia, mesmo que as lesões desapareçam antes · _(cuidados e plano de ação)_
+- Não fazer — relação sexual durante as lesões, até a queda completa das crostas · _(evitar erro de manejo)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Coleta de material da lesão para teste de amplificação de HSV — Indicação: primeiro episódio, dúvida diagnóstica, gestante, imunossuprimido e lesão atípica. Técnica: Selecionar vesícula recente com menos de 48 h, romper com zaragatoa estéril e coletar a base úmida, com pressão firme; enviar em meio de transporte para reação em cadeia da polimerase, sem tocar a pele ao redor. Complicações: Amostra insuficiente, resultado falso-negativo em lesão já cicatrizada, dor local e contaminação (procedimento indicado na síndrome)
+
 ---
 
 ## Hipercalemia (`leg_2230`) — status: **aprovado**
@@ -2086,9 +2154,22 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Controle glicêmico após insulina — Glicemia capilar de 30/30 min por 2 h e de 1/1 h até 6 h; deixar acesso venoso pérvio e glicose à beira do leito para tratar hipoglicemia · _(medida não farmacológica da síndrome)_
 - Balanço hídrico e diurese horária — Sonda vesical se instabilidade ou uso de furosemida; registrar débito por hora e peso diário para avaliar resposta e sobrecarga · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — avisar imediatamente palpitação, tontura ou desmaio · _(cuidados e plano de ação)_
+- Não fazer — sal substituto e suplemento de potássio · _(evitar erro de manejo)_
+
+**Quelante potássio** _(sem preset)_
+- Patiromer — 8,4 g. Via VO. 1x/dia; ajustar em incrementos de 8,4 g a cada semana conforme o potássio. Uso contínuo enquanto houver indicação. · _(hipercalemia crônica ou persistente em doença renal crônica ou em uso de IECA, ARA2 ou espironolactona que se quer manter (alternativa) hipercalemia crônica em doença renal crônica)_
+- Ciclossilicato de zircônio sódico — 10 g. Via VO. 3x/dia. Até 48 h no episódio agudo; uso crônico conforme potássio. · _(hipercalemia aguda leve a moderada ou crônica em doença renal, com início de ação mais rápido que a resina (alternativa))_
+- Poliestirenossulfonato de cálcio — 15-30 g. Via VO ou retal. A cada 6 h até potássio abaixo de 5,0 mEq/L. 24 a 48 h. · _(hipercalemia leve a moderada sem alteração de ECG, para remoção intestinal (condicional) hipercalemia sem alteração de ECG)_
+
+**Beta-2 agonista** _(sem preset)_
+- Salbutamol spray — 10-20 mg nebulizados (4 a 8 ampolas de 2,5 mg). Via inalatória (nebulização). Dose única; repetir em 2 h se necessário. Efeito de cerca de 2 h. Nebulização em 10 minutos. · _(hipercalemia como medida adjuvante de deslocamento intracelular, sobretudo quando o acesso venoso é difícil (alternativa))_
+
 ### Hospitalar (EV)
 - **Deslocar o K para dentro da célula:** Insulina humana regular (1ª linha) (Insulina regular 10 U EV em bolus — associar SEMPRE à glicose) · Glicose 50% (1ª linha) (50 mL EV em 15–30 min junto da insulina (monitorar glicemia 1/1 h — hipoglicemia tardia)) · Bromidrato de fenoterol (1ª linha) (Nebulização de dose alta (equivalente beta-2): adjuvante de deslocamento)
 - **Eliminar o K:** Furosemida (1ª linha) (40 mg EV se diurese preservada)
+- **Procedimentos à beira do leito:** Hemodiálise de urgência — Indicação: anúria, doença renal crônica avançada, hipercalemia refratária ou sobrecarga de volume com potássio alto. Técnica: Acesso vascular temporário, banho com concentração de potássio definida pelo nefrologista e tempo conforme a massa corporal. Complicações: Hipotensão intradialítica, desequilíbrio eletrolítico, sangramento do cateter, arritmia durante a sessão (procedimento indicado na síndrome)
 
 ---
 
@@ -2222,6 +2303,13 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Controle dos gatilhos de rosácea e de dermatite seborreica — Protetor solar diário, evitar calor, álcool, comida apimentada e banho muito quente; usar cetoconazol ou xampu anticaspa também na sobrancelha e na margem do couro cabeludo · _(medida não farmacológica da síndrome)_
 - Higiene das mãos e troca de fronha e toalha — Lavar as mãos antes de tocar a pálpebra, trocar a fronha a cada 2 a 3 dias e não compartilhar toalha de rosto, porque o S. aureus e o Demodex passam pelo contato · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — higiene da margem palpebral com xampu de bebê diluído todos os dias, mesmo sem sintoma · _(cuidados e plano de ação)_
+- Não fazer — usar corticoide tópico por conta própria ou por mais de 2 semanas · _(evitar erro de manejo)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Debridamento mecânico da margem palpebral — Indicação: crostas aderentes, colarete e cilindros que não saem com a higiene domiciliar. Técnica: Anestesia tópica com proximetacaína, cureta de blefarite ou cotonete sob biomicroscopia, removendo as escamas e o colarete da base dos cílios sem tracionar o folículo. Complicações: Sangramento discreto, epilação acidental, abrasão corneal por atrito, desconforto (procedimento indicado na síndrome)
+
 ---
 
 ## Infarto Agudo do Miocárdio (`leg_2011`) — status: **aprovado**
@@ -2316,6 +2404,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Atividade física, temperatura e ruído — Exercício aeróbico regular, sem treino intenso nas 3 h antes de deitar; quarto escuro, silencioso e entre 18 e 20 °C; banho morno 1 a 2 h antes de dormir · _(medida não farmacológica da síndrome)_
 - Sonecas, refeição e líquidos — Sem cochilo após as 15 h e no máximo 20 min; jantar leve 2 a 3 h antes de deitar; reduzir líquidos à noite para diminuir noctúria · _(medida não farmacológica da síndrome)_
 - Diário de sono e automonitorização — Registrar hora de deitar, latência, despertares, hora de levantar e sonolência diurna por 2 semanas; é o instrumento que guia a restrição de sono e mede a resposta · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — manter horário fixo de deitar e de levantar, inclusive no fim de semana · _(cuidados e plano de ação)_
+- Não fazer — cafeína depois das 14 h · _(evitar erro de manejo)_
 
 ---
 
@@ -2473,6 +2565,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Controle de irritantes e fumaça — Proibir fumaça de cigarro em casa e no carro, evitar perfumes, incenso, desinfetante com cloro e produtos de limpeza com odor forte; oferecer tratamento para cessação tabágica · _(medida não farmacológica da síndrome)_
 - Diário de sintomas e identificação do gatilho — Anotar por 2 semanas o horário e o ambiente em que os sintomas pioram, além do uso de medicação de resgate; o padrão orienta a evicção e a decisão sobre imunoterapia · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — lavar o nariz com soro fisiológico antes de aplicar o corticoide nasal, todos os dias · _(cuidados e plano de ação)_
+- Não fazer — usar descongestionante nasal por mais de 5 dias ou de novo após instalar rebote · _(evitar erro de manejo)_
+
 ---
 
 ## IVAS / resfriado comum (`leg_18`) — status: **aprovado**
@@ -2525,6 +2621,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Sono com cabeceira elevada e ambiente ventilado — Elevar a cabeceira em 15 a 20 cm reduz o gotejamento pós-nasal e a tosse noturna; manter a janela aberta e evitar cobertores de lã e poeira no quarto · _(medida não farmacológica da síndrome)_
 - Retorno programado com critério escrito — Explicar por escrito que deve voltar se a febre passar de 3 dias, surgir dor facial, dor de ouvido, falta de ar, ou se os sintomas não melhorarem em 10 dias; registrar na receita o prazo de reavaliação · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — beber líquidos ao longo do dia e manter a alimentação habitual · _(cuidados e plano de ação)_
+
 ### Hospitalar (EV)
 - **Analgesico antitermico:** Dipirona (1ª linha) (febre e dor quando o paracetamol está contraindicado ou é insuficiente)
 
@@ -2571,6 +2670,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Ventilação do ambiente, coorte e precaução por aerossol no hospital — Quarto individual com porta fechada e ventilação adequada; máscara N95 ou PFF2 para a equipe em procedimento gerador de aerossol; agrupar casos confirmados do mesmo vírus e restringir visitas · _(medida não farmacológica da síndrome)_
 - Vacinação e profilaxia da população de risco — Influenza anual para todos acima de 6 meses e COVID conforme calendário vigente, com dose de reforço nos grupos de risco; verificar carteira na alta e prescrever o que falta · _(medida não farmacológica da síndrome)_
 - Suspensão do tabagismo e controle de comorbidade durante o quadro — Manter os medicamentos de base, monitorar glicemia no diabético 4 vezes ao dia e aferir pressão; orientar que a suspensão de estatina só ocorre se houver interação com nirmatrelvir · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — ficar em casa por 7 dias e até 24 h sem febre, usando máscara perto de outras pessoas · _(cuidados e plano de ação)_
+- Não fazer — antibiótico por conta própria ou guardado de outra ocasião · _(evitar erro de manejo)_
 
 ### Hospitalar (EV)
 - **Analgesico antitermico:** Paracetamol (1ª linha) (febre e mialgia da síndrome gripal) · Dipirona (febre alta ou mialgia quando o paracetamol é insuficiente ou está contraindicado)
@@ -3175,6 +3278,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Proteção ocular no zoster oftálmico — não usar colírio por conta própria, não coçar o olho, usar óculos escuros para fotofobia e comparecer à avaliação oftalmológica mesmo se a dor melhorar · _(medida não farmacológica da síndrome)_
 - Sono e ambiente — quarto fresco e escuro, evitar cafeína à noite e tratar a dor noturna antes de dormir, porque a privação de sono amplifica a percepção da dor neuropática · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — iniciar o antiviral o quanto antes, idealmente nas primeiras 48 a 72 horas · _(cuidados e plano de ação)_
+- Não fazer — romper as bolhas ou coçar · _(evitar erro de manejo)_
+
 ---
 
 ## Infecção urinária baixa (cistite) (`leg_8`) — status: **aprovado**
@@ -3418,6 +3525,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Retorno em 48 a 72 h e sinais de alarme por escrito — Reavaliação obrigatória em 48 a 72 h com exame escrotal; entregar por escrito que dor súbita, náusea, aumento do escroto ou febre exigem retorno imediato, sem esperar a consulta marcada · _(medida não farmacológica da síndrome)_
 - Afinação do diagnóstico diferencial na alta — Registrar no prontuário como a torção foi excluída, quem examinou, o horário e o resultado do Doppler; sem esse registro, a dor que volta é tratada como epididimite de novo · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — manter repouso relativo e o escroto elevado com suspensório por 48 a 72 h · _(cuidados e plano de ação)_
+- Não fazer — esforço físico, academia e levantamento de peso por 1 semana · _(evitar erro de manejo)_
+
 ### Hospitalar (EV)
 - **Cefalosporina:** Ceftriaxona (1ª linha) (orquiepididimite por gonococo em homem sexualmente ativo, em dose única intramuscular associada à doxiciclina)
 - **Analgesico:** Dipirona (1ª linha) (dor testicular e escrotal, em apresentação oral no ambulatório e intravenosa no pronto-socorro)
@@ -3473,6 +3584,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Reavaliação otoscópica programada — Retorno em 48 a 72 h quando houve observação inicial ou falha terapêutica, e em 2 a 4 semanas após otite média aguda para confirmar resolução da efusão; em efusão persistente, audiometria e timpanometria em 3 meses · _(medida não farmacológica da síndrome)_
 - Avaliação audiológica e de fala na criança com efusão crônica — Efusão bilateral por mais de 3 meses com limiar auditivo alterado justifica encaminhamento para tubo de ventilação; atraso de fala e dificuldade escolar são sinais de hipoacusia crônica · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — tomar o antibiótico na dose e pelo tempo prescritos, medindo a suspensão com a seringa dosadora · _(cuidados e plano de ação)_
+- Não fazer — usar cotonete ou qualquer objeto no canal auditivo · _(evitar erro de manejo)_
+
 ### Hospitalar (EV)
 - **Lincosamida:** Clindamicina (1ª linha) (alergia grave a betalactâmico em otite média, ou associação na mastoidite para cobertura de anaeróbios e Staphylococcus aureus)
 - **Analgesico antitermico:** Paracetamol (1ª linha) (otalgia e febre em qualquer das formas de otite, sempre prescrito junto ao tratamento específico)
@@ -3518,6 +3633,16 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Explicar a efusão residual e o efeito na audição — Avisar que a sensação de ouvido tampado e a audição abafada podem durar semanas após a infecção e que isso não significa tratamento incompleto. Se persistir por mais de 3 meses ou houver atraso de fala, o encaminhamento é para audiometria e otorrinolaringologia · _(medida não farmacológica da síndrome)_
 - Orientação sobre a técnica de administração da suspensão — Demonstrar a reconstituição, a agitação antes de cada dose e o uso de seringa graduada; suspensão mal reconstituída concentra o fármaco no fundo do frasco e é causa silenciosa de falha terapêutica · _(medida não farmacológica da síndrome)_
 - Orientação escrita de sinais de alarme — Entregar por escrito: voltar imediatamente se houver inchaço ou vermelhidão atrás da orelha, desvio do pavilhão, paralisia da face, rigidez de nuca, sonolência, vômitos ou piora da dor após 48 horas de antibiótico · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — dar o analgésico em horário fixo, inclusive à noite, nas primeiras 48 a 72 horas · _(cuidados e plano de ação)_
+- Não fazer — cotonete, hastes, óleo, alho ou qualquer solução caseira no ouvido · _(evitar erro de manejo)_
+
+**Cefalosporina segunda geração** _(sem preset)_
+- Cefuroxima (axetil) — 30 mg/kg/dia divididos em 2 tomadas (15 mg/kg/dose). Via VO. 12/12 h. 10 dias. · _(alergia a penicilina sem reação imediata e falha de amoxicilina em criança que não pode usar clavulanato (alternativa))_
+
+**Solução salina** _(sem preset)_
+- Soro fisiológico 0,9% para irrigação nasal — 2 a 5 mL por narina em cada irrigação. Via nasal. 2 a 3 vezes ao dia e antes das mamadas no lactente. Enquanto houver obstrução nasal, habitualmente 5 a 7 dias. · _Ped: lactente_ · _(obstrução nasal associada a infecção de vias aéreas superiores que acompanha a otite; medida de conforto, não trata a otite (condicional) obstrução nasal; medida de conforto, não trata a otite)_
 
 ---
 
@@ -3651,8 +3776,13 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Posicionamento e dispositivo na gestante — Deslocamento uterino manual para a esquerda e inclinação lateral de 15–30 graus após 20 semanas; compressão na mesma profundidade e frequência · _(medida não farmacológica da síndrome)_
 - Organização da equipe e documentação — Definir líder, quem comprime, quem ventila, quem administra drogas e quem registra o tempo; anotar horário de cada choque, dose e ritmo em quadro visível · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — Iniciar compressão imediatamente e manter até a chegada do desfibrilador · _(cuidados e plano de ação)_
+- Não fazer — Adrenalina antes da desfibrilação na FV/TV · _(evitar erro de manejo)_
+
 ### Hospitalar (EV)
 - **Drogas da RCP:** Epinefrina (adrenalina) (1ª linha) (Adrenalina 1 mg EV (diluir 1 mg em 9 mL SF) a cada 3–5 min — todas as causas) · Glicose 50% (1ª linha) (Hipoglicemia como causa/contusão miocárdica pós-ROSC: 40–100 mL EV conforme glicemia) · Cloridrato de naloxona (0,4–2 mg EV repetido — intoxicação opioide como causa) · Cloridrato de tiamina (200–300 mg EV antes de glicose no alcoolista (Wernicke))
+- **Procedimentos à beira do leito:** Desfibrilação manual — Indicação: FV ou TV sem pulso em qualquer ciclo da reanimação. Técnica: Pás anterolateral com gel ou pás adesivas; selecionar 120-200 J no bifásico ou 360 J no monofásico; carregar antes de interromper a compressão; anunciar 'afaste-se', conferir o afastamento e aplicar; retomar a compressão imediatamente sem checar pulso. Complicações: Queimadura de pele, arritmia pós-choque, falha de choque por contato inadequado, lesão para o operador se houver contato (procedimento indicado na síndrome) · Desfibrilação com desfibrilador externo automático — Indicação: Parada fora do hospital ou setor sem equipe treinada em desfibrilador manual. Técnica: Ligar o aparelho, colar as pás conforme o desenho, afastar todos durante a análise e aplicar o choque quando indicado; manter a compressão durante a análise quando o aparelho permitir. Complicações: Interrupção prolongada da compressão durante a análise, pás em posição errada, choque em ritmo não chocável por adesivo solto (procedimento indicado na síndrome) · Ventilação com bolsa-máscara — Indicação: Via aérea inicial em toda parada, com dois profissionais. Técnica: Um profissional sela a máscara com as duas mãos (técnica C-E) e o outro comprime a bolsa; 30:2 sem via aérea avançada; checar elevação do tórax e ouvir o retorno do ar. Complicações: Ventilação excessiva, insuflação gástrica, regurgitação e aspiração, selo inadequado com hipoventilação (procedimento indicado na síndrome) · Intubação orotraqueal — Indicação: Via aérea definitiva em parada prolongada ou quando a bolsa-máscara é insuficiente. Técnica: Laringoscopia direta ou vídeo, tubo 7,5-8,5 com cuff, confirmação por capnografia com onda persistente após 5 ventilações, fixação e rechecagem a cada movimento; compressão não para durante a tentativa. Complicações: Intubação esofágica, tempo de apneia prolongado, trauma de via aérea, aspiração, pneumotórax, falha de reconhecimento do tubo (procedimento indicado na síndrome) · Máscara laríngea e dispositivos supraglóticos — Indicação: Alternativa à intubação quando o operador não é experiente ou a laringoscopia falha. Técnica: Inserção às cegas com cuff desinsuflado, insuflar conforme o tamanho, confirmar por capnografia e ausculta; permite compressão contínua com 1 ventilação a cada 6 segundos. Complicações: Selo inadequado com fuga e hipoventilação, aspiração, deslocamento, lesão de hipofaringe (procedimento indicado na síndrome) · Acesso intraósseo — Indicação: Parada sem acesso venoso em até duas tentativas ou 90 segundos. Técnica: Tíbia proximal (2 cm abaixo da tuberosidade) ou úmero proximal; antissepsia, agulha perpendicular ou levemente angulada, perfuração com pressão até perder resistência, confirmação por aspiração de medula e infusão sem extravasamento; flush de 10 mL de SF. Complicações: Extravasamento e síndrome compartimental, fratura, osteomielite, má posição, falha de fluxo (procedimento indicado na síndrome) · Capnografia — Indicação: Toda parada com via aérea avançada e durante os cuidados pós-parada. Técnica: Sensor entre o tubo e o circuito; observar a onda, o valor de EtCO2 e a tendência; registrar no início, após cada intubação e a cada ciclo. Complicações: Leitura falsamente baixa por baixo débito ou obstrução do sensor, leitura falsa por secreção, interpretação isolada sem clínica (procedimento indicado na síndrome) · Controle de temperatura e hipotermia terapêutica — Indicação: Paciente em coma após retorno da circulação, independentemente do ritmo inicial. Técnica: Iniciar resfriamento assim que possível, alvo 32-36 °C por 24 h, com cateter intravascular, colchão térmico ou infusão de solução fria; sedação e bloqueio neuromuscular para evitar calafrios; reaquecimento lento de 0,25-0,5 °C por hora. Complicações: Bradicardia, hipotensão, distúrbio eletrolítico, hiperglicemia, coagulopatia, pneumonia, calafrios com consumo de oxigênio (procedimento indicado na síndrome) · Compressão torácica mecânica — Indicação: Reanimação prolongada, transporte e equipe reduzida. Técnica: Aplicar o dispositivo sobre o terço inferior do esterno, ajustar a profundidade e a frequência conforme o fabricante, confirmar EtCO2 e pausar apenas para o choque e a checagem de ritmo. Complicações: Fratura de costelas e esterno, lesão hepática ou esplênica, posicionamento inadequado com compressão ineficaz (procedimento indicado na síndrome) · Descompressão torácica por agulha — Indicação: Pneumotórax hipertensivo suspeito em AESP ou deterioração súbita. Técnica: Agulha calibrosa no segundo espaço intercostal na linha médio-clavicular ou no quarto ou quinto espaço na linha axilar anterior; seguir com drenagem torácica. Complicações: Pneumotórax iatrogênico, lesão de vaso intercostal, hemotórax, punção de víscera (procedimento indicado na síndrome)
 
 ---
 
@@ -3708,6 +3838,13 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Manter a criança na escola e avisar a instituição — pediculose não é motivo de afastamento escolar nem de constrangimento: a criança volta após a primeira aplicação, com o cabelo preso; a escola deve ser avisada para rastrear contatos, sem expor o aluno nem revistar cabeças em público · _(medida não farmacológica da síndrome)_
 - Não usar receitas caseiras e não raspar o cabelo — vinagre, querosene, álcool, petróleo, maionese e óleo de cozinha não têm eficácia comprovada e causam queimadura química e dermatite; raspar o cabelo não é necessário e produz impacto psicossocial, sobretudo em meninas · _(medida não farmacológica da síndrome)_
 - Tratar a pediculose do corpo pela roupa, não pela pele — banho diário, troca de roupa e lavagem a 60 °C por 30 minutos resolvem a pediculose vulgar; em situação de rua ou de vulnerabilidade, oferecer vestuário limpo e local para banho, e investigar febre e sinais de infecção por Bartonella quintana · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — aplicar o produto em todo o couro cabeludo e em todo o comprimento do cabelo, não só onde coça · _(cuidados e plano de ação)_
+- Não fazer — tratar sem ver lêndea viva ou piolho vivo · _(evitar erro de manejo)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Pente-fino diagnóstico (wet combing) — Indicação: confirmação diagnóstica, definição de cura e controle de contactantes assintomáticos. Técnica: umedecer o cabelo com condicionador, desembaraçar, dividir em mechas e passar pente de dentes metálicos rente ao couro cabeludo da raiz às pontas sobre pano branco, em quatro direções; contar piolhos vivos e lêndeas a menos de 1 cm da raiz; repetir a cada 2 a 3 dias por 2 semanas. Complicações: desconforto no couro cabeludo; lêndea vazia contada como viva gera falso diagnóstico de falha e retratamento desnecessário (procedimento indicado na síndrome) · Tricoscopia e dermatoscopia do couro cabeludo — Indicação: dúvida entre lêndea, caspa e pitiríase, e confirmação em consulta com pouca luz. Técnica: dermatoscópio manual ou de luz polarizada em aumento de 10 a 20 vezes sobre a haste do pelo: a lêndea aparece como estrutura oval aderida à haste, com opérculo e conteúdo, enquanto a escama de caspa é irregular, solta e não acompanha o pelo. Complicações: nenhuma; o rendimento depende da experiência do examinador e da escolha da região (nuca e atrás das orelhas) (procedimento indicado na síndrome) · Aplicação supervisionada da primeira dose — Indicação: toda pediculose em criança, idoso, cuidador ou quando a adesão é incerta. Técnica: o profissional aplica o pediculicida na consulta, mostra a extensão correta, marca o horário de início e de retirada, entrega a segunda dose com a data agendada e demonstra o pente-fino. Complicações: nenhuma; reduz a falha por aplicação parcial, tempo de contato curto e segunda dose esquecida (procedimento indicado na síndrome) · Remoção mecânica de lêndeas e piolhos dos cílios — Indicação: pediculose palpebral, em associação com oximetazolina 0,025%. Técnica: após instilar o anestésico tópico e a oximetazolina, remover as lêndeas e os piolhos aderidos à base dos cílios com pinça de ponta fina sob lâmpada de fenda, um cílio por vez, sem tracionar a pálpebra. Complicações: abrasão corneal, blefarite, perda de cílios e risco de lesão ocular; exige oftalmologista (procedimento indicado na síndrome) · Lavagem térmica e descontaminação de roupas e roupa de cama — Indicação: todo caso confirmado, sobretudo pediculose do corpo e infestação familiar. Técnica: separar roupas, roupa de cama e toalhas usadas nas 72 horas anteriores, lavar em água a 60 °C por 30 minutos ou secar em máquina em temperatura alta por 20 a 30 minutos; o que não pode ser lavado vai para saco plástico fechado por 14 dias. Complicações: nenhuma clinicamente; água insuficientemente quente e secadora em temperatura baixa dão falsa segurança e mantêm ovos viáveis (procedimento indicado na síndrome)
 
 ---
 
@@ -3916,6 +4053,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Educação sobre o seguimento sorológico — Explicar que o VDRL pode permanecer reagente por anos mesmo com cura e que o critério é a queda do título; sem essa explicação o paciente abandona o seguimento ou é retratado sem indicação · _(medida não farmacológica da síndrome)_
 - Aplicação intramuscular registrada e rastreada — Registrar lote, local e data de cada dose e entregar cartão de tratamento; a perda de seguimento entre as três doses é a principal causa de falha na latente tardia · _(medida não farmacológica da síndrome)_
 
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — completar todas as doses, mesmo sem sintoma, e guardar o cartão de tratamento · _(cuidados e plano de ação)_
+- Não fazer — interromper o esquema ao desaparecer o cancro ou o rash, porque a infecção continua ativa · _(evitar erro de manejo)_
+
 ### Hospitalar (EV)
 - **Penicilina benzatina:** Benzilpenicilina benzatina (1ª linha) (sífilis primária, secundária e latente recente em dose única; latente tardia em três doses semanais)
 - **Penicilina cristalina:** Penicilina G cristalina — 18 a 24 milhões de UI por dia · IV · 3 a 4 milhões de UI a cada 4 horas ou infusão contínua de 18 a 24 milhões de UI por dia · 10 a 14 dias · máx: 24 milhões de UI por dia (neurossífilis, incluindo formas meníngea, meningovascular, ocular, otológica e tardia)
@@ -3996,6 +4137,13 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Profilaxia de tromboembolismo no internado — Enoxaparina 40 mg SC 1x/dia ou meia elástica conforme risco, reavaliada diariamente · _(medida não farmacológica da síndrome)_
 - Educação e plano de retorno — Explicar duração da anticoagulação, sinais de sangramento e de recidiva, e retorno em 7–14 dias · _(medida não farmacológica da síndrome)_
 - Controle de fatores de risco — Suspender tabagismo, planejar profilaxia em cirurgias e imobilizações e revisar terapia hormonal · _(medida não farmacológica da síndrome)_
+
+**Orientações e retorno**
+- **[1ª linha]** Orientação ao paciente — manter a anticoagulação no horário exato e não interromper por conta própria · _(cuidados e plano de ação)_
+- Não fazer — AINE por conta própria · _(evitar erro de manejo)_
+
+**Anticoagulante inibidor direto do fator xa**
+- **[1ª linha]** Rivaroxabana — 15 mg 12/12 h por 21 dias; depois 20 mg 1x/dia. Via VO. 12/12 h na fase inicial; 1x/dia na manutenção. 3-6 meses; estender se TEP não provocado ou recidivante. · _(TEP confirmado em paciente estável e de baixo risco, sem gestação e sem contraindicação (1a linha) TEP confirmado, alternativa à apixabana)_
 
 ### Hospitalar (EV)
 - **Anticoagulação plena — 1ª linha:** Enoxaparina sódica (1ª linha) (1 mg/kg SC 12/12h (ou 1,5 mg/kg 1x/dia) — dose PLENA desde a suspeita de média/alta probabilidade) · Heparina sódica (1ª linha) (HNF EV: bolus 80 U/kg + infusão 18 U/kg/h (TTPa 6 h) — preferir se trombólise possível/renal extremo)
@@ -4180,6 +4328,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 **Simpatomimético**
 - **[1ª linha]** Adrenalina (epinefrina) — 0,5 mg (adulto); 0,01 mg/kg na criança, máx. 0,5 mg. Via IM no vasto lateral da coxa. Repetir a cada 5-15 min se não houver resposta, até 3 doses. Até estabilização clínica. Bolus IM único; sem infusão na via IM. · _Ped: adrenalina 0,01 mg/kg, anti-H1 em solução oral e autoinjetor de 0,15 mg_ · _(anafilaxia por alimento, incluindo broncoespasmo e hipotensão (1a linha) anafilaxia alimentar)_
+- Adrenalina autoinjetor — 0,3 mg (acima de 25-30 kg); 0,15 mg (10-25 kg). Via IM na face lateral da coxa. Dose única; repetir em 5-15 min se não houver melhora. Até atendimento médico. · _Ped: adrenalina 0,01 mg/kg, anti-H1 em solução oral e autoinjetor de 0,15 mg_ · _(autotratamento domiciliar, escolar e em viagem de anafilaxia alimentar (resgate) anafilaxia alimentar)_
 
 **Anti-histamínico H1**
 - **[1ª linha]** Cetirizina — 10 mg (adulto e acima de 6 anos); 5 mg (2-6 anos); 2,5 mg (6-24 meses). Via VO. 1x/dia, preferir à noite. 3-7 dias ou até controle do prurido. · _Ped: adrenalina 0,01 mg/kg, anti-H1 em solução oral e autoinjetor de 0,15 mg_ · _(urticária e prurido sem sintomas respiratórios ou cardiovasculares (1a linha) urticária isolada)_
@@ -4570,6 +4719,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Diurético de de alça:** Furosemida (1ª linha) (edema grave, anasarca, congestão pulmonar ou paciente que não absorve por via oral (condicional) edema com hipervolemia e causa definida)
 - **Expansor colloidal:** Albumina humana — 0,5-1 g/kg. Via IV. Dose única, repetida conforme albumina e resposta diurética. 1-3 dias. 30-60 min; 1-2 h quando há risco de sobrecarga. (hipoalbuminemia abaixo de 2,5 g/dL com anasarca ou após paracentese de grande volume (condicional))
+- **Procedimentos à beira do leito:** Duplex venoso de membros inferiores — Indicação: todo edema unilateral, ou bilateral assimétrico com fator de risco para trombose. Técnica: Compressão manual das veias femoral, poplítea e tibiais com Doppler colorido; avaliar compressibilidade, fluxo fásico e refluxo. Repetir em 5-7 dias se o primeiro exame for negativo e a suspeita permanecer. Complicações: Exame falso-negativo em trombose distal isolada, desconforto à compressão, atraso de anticoagulação quando pedido sem urgência (procedimento indicado na síndrome)
 
 ---
 
@@ -4625,6 +4775,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Anticoagulante heparina não fracionada:** Heparina não fracionada — 80 UI/kg em bolus, seguido de 18 UI/kg/h. Via IV. Bolus seguido de infusão contínua. Até estabilização clínica e transição para oral. Bolus IV lento; infusão contínua. (TVP com ClCr < 30 mL/min, instabilidade, alto risco de sangramento, necessidade de reversão rápida ou cirurgia iminente (alternativa))
 - **Analgésico antipiretico:** Paracetamol (1ª linha) (dor de panturrilha; analgésico de escolha no paciente anticoagulado (alternativa) analgesia)
 - **Trombolítico:** Alteplase — 100 mg. Via IV. Infusão única. 2 horas. (Flegmasia cerúlea dolens com isquemia iminente ou TVP ileofemoral com risco de perda do membro, quando trombectomia não está disponível de imediato (resgate))
+- **Procedimentos à beira do leito:** Ultrassonografia Doppler venoso compressivo — Indicação: suspeita de TVP com Wells ≥2 ou D-dímero positivo. Técnica: Compressão seriada de veias femorais, poplítea e da panturrilha; repetir em 5-7 dias se o primeiro exame for negativo e a suspeita persistir. Complicações: Exame inconclusivo em obesidade ou edema intenso, dependência do operador e falso-negativo em TVP distal isolada (procedimento indicado na síndrome)
 
 ---
 
@@ -4792,6 +4943,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Adaptação do esforço e do ambiente — Evitar esforço intenso em jejum, no frio e após refeição copiosa; aquecimento antes do exercício e caminhada regular em vez de esforço explosivo · _(medida não farmacológica da síndrome)_
 - Investigação e tratamento da apneia do sono — Aplicar questionário de rastreio em obesos e hipertensos resistentes; tratar apneia reduz crises noturnas e melhora o controle pressórico · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Teste ergométrico — Indicação: dor típica com ECG interpretável e capacidade de exercício, para diagnóstico e estratificação. Técnica: Protocolo de Bruce em esteira com 12 derivações, medida de pressão a cada estágio e interrupção por dor, alteração de ST, arritmia ou queda pressórica. Complicações: Arritmia ventricular, infarto, hipotensão, queda da esteira (procedimento indicado na síndrome) · Cintilografia de perfusão miocárdica ou ecocardiograma de estresse — Indicação: paciente que não consegue exercitar ou com ECG que impede interpretação do esforço. Técnica: Estresse farmacológico com dipiridamol ou dobutamina, com imagem de perfusão ou de motilidade segmentar. Complicações: Broncoespasmo com dipiridamol, arritmia com dobutamina, reação ao radiofármaco (procedimento indicado na síndrome)
+
 ---
 
 ## Fibrilação atrial com resposta rápida (`ws-car_13`) — status: **aprovado**
@@ -4843,6 +4997,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Bloqueador de canal de cálcio não diidropiridinico:** Diltiazem — 0,25 mg/kg IV (20 mg) em 2 minutos; repetir 0,35 mg/kg após 15 minutos; manutenção 120-360 mg/dia VO. IV a cada 15 minutos; VO 8/8 h ou liberação prolongada 1x/dia. Fase aguda e manutenção. 2 minutos. (controle de frequência na FA rápida sem insuficiência cardíaca de fração de ejeção reduzida e sem pré-excitação (alternativa))
 - **Glicosideo digitalico:** Digoxina — 0,25-0,5 mg IV de ataque; manutenção 0,125-0,25 mg/dia. Ataque em dose única ou dividida; manutenção 1x/dia. Uso contínuo. 5 minutos (IV lento). (FA rápida com insuficiência cardíaca de fração de ejeção reduzida ou hipotensão que impede betabloqueador e diltiazem (condicional) insuficiência cardíaca com controle de frequência insuficiente)
 - **Antiarrítmico classe iii:** Amiodarona — 150 mg IV em 10 minutos, depois 1 mg/min por 6 h e 0,5 mg/min por 18 h; manutenção 200 mg/dia VO. Bolus único seguido de infusão contínua. 24 horas de infusão; manutenção oral conforme indicação. 10 minutos em bolus; infusão contínua por 24 horas. (FA rápida com insuficiência cardíaca grave, choque ou refratária a betabloqueador e digoxina (condicional))
+- **Procedimentos à beira do leito:** Cardioversão sincronizada elétrica — Indicação: FA com instabilidade hemodinâmica, isquemia, edema agudo de pulmão ou rebaixamento. Técnica: Sedação com midazolam e fentanil, pás em posição ântero-lateral, modo sincronizado confirmado em cada QRS e choque de 100-200 J, repetindo com energia maior se falhar. Complicações: Tromboembolismo, arritmia pós-choque, queimadura de pele, aspiração durante a sedação (procedimento indicado na síndrome) · Ecocardiograma transtorácico — Indicação: todos com FA de início recente ou desconhecido, para fração de ejeção, valvopatia e átrio esquerdo. Técnica: Janelas para função ventricular, valvas, diâmetro e volume do átrio esquerdo e pressão pulmonar. Complicações: Exame inconclusivo em tórax difícil, dependência do operador (procedimento indicado na síndrome)
 
 ---
 
@@ -5083,6 +5238,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 ### Hospitalar (EV)
 - **Analgésico antitérmico:** Dipirona (1ª linha) (dor pericárdica refratária ao AINE e febre associada (resgate) resgate de dor)
+- **Procedimentos à beira do leito:** ECG de 12 derivações seriado — Indicação: todo paciente com suspeita de pericardite, na admissão e em 6-12 h. Técnica: Traçado completo com derivações precordiais bem posicionadas; repetir se dor persistente ou piora clínica; procurar supra difuso, depressão de PR e alternância elétrica. Complicações: Interpretação de supra difuso como infarto e atraso de reperfusão; não reconhecer supra em território coronário (procedimento indicado na síndrome) · Avaliação ecocardiográfica à beira-leito (POCUS) — Indicação: todo paciente com hipotensão, turgência jugular ou suspeita de derrame. Técnica: Janela subxifoide e apical de quatro câmaras para derrame, colapso de átrio e ventrículo direitos e variação respiratória da veia cava inferior. Complicações: Exame inconclusivo em tórax difícil; estimativa de volume dependente do operador (procedimento indicado na síndrome)
 
 ---
 
@@ -5266,6 +5422,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Registro fotográfico e medida da área — medir maior e menor diâmetro com régua estéril a cada 2 semanas e fotografar sempre com a mesma distância e iluminação; repetir a mesma técnica para permitir comparação · _(medida não farmacológica da síndrome)_
 - Cuidado com a pele perilesional — filme de barreira ou óxido de zinco na borda para evitar maceração pelo exsudato e adesivo; não tracionar a pele ao remover a fita · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Desbridamento cortante conservador — Indicação: tecido necrótico ou fibrina aderida com perfusão preservada e sem exposição de estrutura nobre. Técnica: antissepsia, anestesia local com lidocaína 2% sem vasoconstritor quando necessário, retirada de tecido desvitalizado com lâmina 15 em camadas, da borda para o centro, parando na presença de sangramento sadio. Complicações: sangramento, dor, lesão de tendão ou vaso e infecção de ferida limpa por instrumento contaminado (procedimento indicado na síndrome)
+
 ---
 
 ## Queimadura superficial (`ws-derm_08`) — status: **aprovado**
@@ -5330,6 +5489,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Analgésico:** Dipirona (1ª linha) (dor e febre da queimadura, sobretudo quando há necessidade de via intravenosa (alternativa) dor e febre)
 - **Antiemético:** Cloridrato de ondansetrona (1ª linha) (náusea e vômito induzidos por opioide (condicional) náusea por opioide)
 - **Cristaloide:** Ringer lactato — 2 mL por kg por porcentagem de superfície corporal queimada nas primeiras 24 horas. Via IV. Metade do volume nas primeiras 8 horas e o restante nas 16 horas seguintes. 24 horas, com reavaliação a cada 2 horas pelo diurese. Infusão contínua, com titulação pelo débito urinário. (reposição volêmica em queimadura acima de 10% da superfície corporal (condicional))
+- **Procedimentos à beira do leito:** Limpeza e desbridamento de bolhas — Indicação: bolhas tensas extensas, rotas ou com conteúdo turvo em área de dobra. Técnica: antissepsia, incisão na borda dependente com agulha 18 G ou lâmina, drenagem do conteúdo sem remover o teto íntegro, limpeza com soro fisiológico morno e cobertura não aderente. Complicações: infecção quando o teto é removido em ambiente não estéril, dor, sangramento (procedimento indicado na síndrome) · Escarotomia de urgência — Indicação: queimadura circunferencial de membro com síndrome compartimental ou de tórax com restrição ventilatória. Técnica: incisão longitudinal em toda a extensão da escara, até o tecido subcutâneo, incluindo as faces lateral e medial do membro, em ambiente cirúrgico. Complicações: sangramento, lesão de estrutura nobre, infecção e necessidade de enxerto (procedimento indicado na síndrome)
 
 ---
 
@@ -5445,6 +5605,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 ### Hospitalar (EV)
 - **Antiviral sistêmico intravenoso:** Aciclovir intravenoso — 10 mg/kg. Via IV. 8/8 h. 7 a 14 dias; 14 a 21 dias na encefalite. 60 minutos, com hidratação concomitante; nunca em bolus. (eczema herpético, herpes simples grave ou disseminado, imunossuprimido com lesão extensa, encefalite e impossibilidade de via oral (condicional) gengivoestomatite ou herpes cutâneo)
+- **Procedimentos à beira do leito:** Coleta de material da base da vesícula para PCR de HSV — Indicação: dúvida diagnóstica, imunossuprimido, lesão atípica ou suspeita de resistência ao aciclovir. Técnica: romper a vesícula com agulha estéril, coletar o líquido e as células da base com swab estéril, acondicionar em meio de transporte viral e enviar refrigerado. Complicações: infecção secundária no local e resultado falso-negativo quando a coleta é feita em crosta antiga (procedimento indicado na síndrome) · Avaliação oftalmológica com lâmpada de fenda — Indicação: dor ocular, fotofobia, hiperemia conjuntival, ceratite ou vesícula na pálpebra. Técnica: exame com lâmpada de fenda com fluoresceína para pesquisar ceratite dendrítica, medida da acuidade visual e da pressão intraocular. Complicações: nenhuma relevante; o atraso no exame e o uso de corticoide tópico sem avaliação é o que causa cicatriz corneal (procedimento indicado na síndrome)
 
 ---
 
@@ -5500,6 +5661,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Vacinação — Influenza anual, pneumocócica conforme esquema, hepatite B e covid-19; infecção é o precipitante mais comum de descompensação · _(medida não farmacológica da síndrome)_
 - Sono e álcool — 7–9 h por noite e no máximo 1 dose/dia para mulher e 2 para homem; rastrear apneia com Epworth se ronco ou sonolência · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Glicemia capilar estruturada — Indicação: Todos em uso de insulina ou sulfonilureia; em metformina isolada, apenas para educação. Técnica: Lavar as mãos, punturar a lateral da polpa digital, descartar a primeira gota; medir em jejum e 2 h após a maior refeição em 2-3 dias da semana e anotar em diário. Complicações: Dor, hematoma, erro por tira vencida ou dedo contaminado com açúcar (procedimento indicado na síndrome)
+
 ---
 
 ## Insuficiência adrenal (`ws-end_06`) — status: **aprovado**
@@ -5541,6 +5705,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Cristaloide glicosado:** Glicose 50% (1ª linha) (reposição volêmica da crise adrenal com prevenção de hipoglicemia (1a linha))
 - **Carboidrato:** Glicose 50% (1ª linha) (hipoglicemia na crise adrenal (condicional))
 - **Vasopressor:** Noradrenalina — 0,05-0,5 mcg/kg/min. Via IV central. Infusão contínua titulada pela pressão média. Até pressão média de 65 mmHg ou mais sem a droga. Contínua. (choque refratário após volume e hidrocortisona (condicional))
+- **Procedimentos à beira do leito:** Teste de estímulo com ACTH (cosintropina) — Indicação: suspeita diagnóstica sem instabilidade grave, antes de iniciar corticoide que interfira no cortisol. Técnica: Colher cortisol basal, administrar 250 mcg de cosintropina IV e dosar cortisol em 30 e 60 min; usar dexametasona durante o teste. Complicações: Resultado falso-negativo na fase aguda, reação local, atraso no tratamento se mal indicado (procedimento indicado na síndrome)
 
 ---
 
@@ -5605,6 +5770,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Retirada de bebidas açucaradas e ultraprocessados — Substituir por água ou bebida sem açúcar; medir a circunferência mensalmente na mesma altura, na cicatriz umbilical · _(medida não farmacológica da síndrome)_
 - Acompanhamento multiprofissional com meta escrita — Nutricionista, educador físico e enfermagem; retorno em 4 a 8 semanas no início, com peso, circunferência e pressão anotados na ficha · _(medida não farmacológica da síndrome)_
 - Automonitorização de peso e passo — Pesagem semanal no mesmo horário e registro de passos diários; pesar todos os dias tende a melhorar a manutenção, mas não criar compulsão · _(medida não farmacológica da síndrome)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Gastrectomia vertical (sleeve) — Indicação: IMC ≥ 40, ou IMC ≥ 35 com comorbidade, após falha de tratamento clínico estruturado. Técnica: Ressecção de cerca de 80% do estômago pela grande curvatura, por videolaparoscopia, preservando o piloro. Complicações: Fístula na linha de grampeamento, sangramento, refluxo gastroesofágico, deficiência de ferro e B12, reganho de peso a longo prazo (procedimento indicado na síndrome) · Bypass gástrico em Y de Roux — Indicação: IMC ≥ 40, ou IMC ≥ 35 com diabetes tipo 2 de difícil controle, apneia do sono ou hipertensão resistente. Técnica: Pequena bolsa gástrica anastomosada a alça jejunal em Y, por videolaparoscopia. Complicações: Fístula, hérnia interna, obstrução, deficiência de ferro, B12, cálcio e vitamina D, dumping, úlcera de anastomose (procedimento indicado na síndrome) · Aferição padronizada da circunferência abdominal — Indicação: todo paciente com sobrepeso ou risco metabólico, em cada consulta. Técnica: Fita inextensível no ponto médio entre a última costela e a crista ilíaca, paciente em pé, ao fim da expiração, sem roupa sobre o abdome. Complicações: Erro de medida por fita frouxa, roupa ou ponto anatômico diferente, que invalida a comparação seriada (procedimento indicado na síndrome)
 
 ---
 
@@ -5758,6 +5926,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Analgésico pirazolona:** Dipirona (1ª linha) (dor ou febre quando o paracetamol é insuficiente ou indisponível (alternativa))
 - **Opioide:** Cloridrato de tramadol (1ª linha) (dor moderada a intensa por fratura ou pós-operatório, quando paracetamol e dipirona não controlam (condicional))
 - **Antídoto:** Fitomenadiona (vitamina K) — 5-10 mg. Via IV. Dose única. 1 dose, com repetição conforme INR. 20-30 minutos. (usuário de varfarina que caiu com trauma craniano, hematoma em TC ou sangramento ativo (condicional))
+- **Procedimentos à beira do leito:** Tomografia de crânio sem contraste — Indicação: Trauma craniano, uso de anticoagulante ou antiagregante, cefaleia, vômito, rebaixamento ou queda sem explicação em idoso. Técnica: Aquisição axial volumétrica da base ao vértice, com reconstruções finas e janela óssea; repetir em 6-12 h se exame inicial duvidoso e anticoagulação mantida. Complicações: Contraste desnecessário, transporte e sedação em paciente agitado, achado incidental (procedimento indicado na síndrome) · Radiografia dirigida (bacia, quadril, punho, coluna, costelas) — Indicação: Dor, deformidade ou incapacidade de apoiar após a queda. Técnica: Duas incidências ortogonais do segmento suspeito; bacia e quadril em AP e perfil, punho em AP e perfil, coluna conforme nível de dor. Complicações: Fratura oculta não vista (repetir imagem ou TC se dor persistente), exposição repetida (procedimento indicado na síndrome)
 
 ---
 
@@ -5804,6 +5973,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Vitamina:** Cloridrato de tiamina (1ª linha) (etilismo, desnutrição, vômitos prolongados ou risco de Wernicke (condicional) etilismo ou desnutrição)
 - **Glicose:** Glicose 50% (1ª linha) (hipoglicemia confirmada ou suspeita em delirium com rebaixamento (condicional))
 - **Benzodiazepínico:** Diazepam (1ª linha) (delirium por abstinência alcoólica ou de benzodiazepínico - nunca como sedativo de rotina (condicional))
+- **Procedimentos à beira do leito:** Tomografia de crânio sem contraste — Indicação: Déficit focal, trauma, anticoagulação, cefaleia súbita ou delirium sem causa após investigação inicial. Técnica: Aquisição volumétrica da base ao vértice; repetir se rebaixamento progressivo e exame inicial normal. Complicações: Transporte e sedação desnecessária, achado incidental, contraste em paciente com função renal limítrofe (procedimento indicado na síndrome) · Punção lombar — Indicação: Febre com meningismo ou delirium sem foco, após excluir herniação por imagem. Técnica: Decúbito lateral, L3-L4, coleta de 3-4 tubos para citologia, bioquímica e cultura; antibiótico não deve atrasar por causa da punção. Complicações: Cefaleia pós-punção, hematoma em anticoagulado, herniação se houver hipertensão intracraniana (procedimento indicado na síndrome) · Sondagem vesical de alívio — Indicação: Retenção urinária com bexiga palpável, dor ou anúria. Técnica: Técnica asséptica, sonda de alívio 14-16 Fr, esvaziamento gradual e retirada imediata após o alívio, sem deixar sonda de demora por rotina. Complicações: Infecção urinária, trauma uretral, hipotensão por esvaziamento rápido, delirium por desconforto (procedimento indicado na síndrome)
 
 ---
 
@@ -5874,6 +6044,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 ### Hospitalar (EV)
 - **Analgésico:** Paracetamol (1ª linha) (analgesia de substituição que viabiliza a retirada do AINE e do tramadol (1a linha) substituição do AINE ou do tramadol)
+- **Procedimentos à beira do leito:** Conciliação medicamentosa estruturada — Indicação: Toda admissão, transferência, alta e primeira consulta de idoso em polifarmácia. Técnica: Entrevista com as embalagens, conferência com prontuário e farmácia, checagem de duplicidade de classe, interação e ajuste por função renal; gerar lista única assinada e entregue ao paciente. Complicações: Lista incompleta se feita por telefone, omissão de fitoterápico e de amostra, conflito entre prescritores e descontinuação acidental de fármaco essencial (procedimento indicado na síndrome) · Revisão farmacológica com critérios de Beers e STOPP — Indicação: Idoso com 5 ou mais fármacos, ou anualmente em todos com 65 anos ou mais. Técnica: Aplicar as duas listas, calcular carga anticolinérgica, classificar cada fármaco em manter, ajustar, reduzir ou retirar, e registrar a justificativa de cada manutenção. Complicações: Aplicação mecânica da lista sem considerar meta e prognóstico, retirada de fármaco essencial por erro de classificação e fadiga do paciente com muitas mudanças de uma vez (procedimento indicado na síndrome) · Teste de retirada supervisionada — Indicação: Fármaco sem indicação clara, em uso por tempo indeterminado, com risco maior que benefício. Técnica: Reduzir por etapas com intervalo definido, monitorizar sintomas por diário e consulta em 2 a 4 semanas, e reinstalar em dose menor apenas se houver recidiva objetiva comprovada. Complicações: Síndrome de abstinência confundida com recidiva, descompensação de doença de base e retorno permanente ao fármaco por falta de plano de resgate (procedimento indicado na síndrome)
 
 ---
 
@@ -5927,6 +6098,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Cuidado da pele e dispositivo coletor adequado — Higiene com água morna e sabonete neutro, secagem por contato, creme de barreira com óxido de zinco, troca programada a cada 2 a 4 h e absorvente adequado ao volume. Prevenir dermatite e úlcera é parte do tratamento e evita infecção e dor · _(medida não farmacológica da síndrome)_
 - Tratamento da constipação e revisão de fármacos — Evacuação regular, fibra e hidratação; revisar diurético, anticolinérgico, benzodiazepínico, opioide e bloqueador de canal de cálcio, que causam retenção e incontinência. A revisão farmacológica resolve sozinha parte dos casos · _(medida não farmacológica da síndrome)_
 - Perda de peso e cessação do tabagismo — Perda de 5 a 10% do peso reduz a pressão intra-abdominal e melhora a incontinência de esforço; parar de fumar reduz a tosse crônica, que é gatilho de perda · _(medida não farmacológica da síndrome)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Medida do resíduo pós-miccional por ultrassom beira-leito — Indicação: Todo idoso com incontinência antes de iniciar fármaco, e sempre que houver dúvida de esvaziamento incompleto. Técnica: Paciente urina em volume medido e, em até 10 minutos, mede-se a bexiga por ultrassom ou cateterismo estéril; resíduo acima de 200 mL é anormal e acima de 300 mL indica cateterismo. Complicações: Cateterismo desnecessário se a bexiga estiver vazia, falso resultado se a medida for feita com a bexiga cheia e risco de interpretar resíduo alto isolado sem clínica (procedimento indicado na síndrome) · Cateterismo vesical intermitente limpo — Indicação: Retenção crônica, bexiga neurogênica e transbordamento com resíduo elevado. Técnica: Técnica limpa (não estéril) com sonda de alívio 12 a 14 Fr, 4 a 6 vezes ao dia, volume drenado abaixo de 500 mL por cateterismo, higiene das mãos e dos genitais, sonda de uso único ou reutilizada conforme protocolo; ensinar o paciente ou o cuidador e documentar o volume. Complicações: Infecção urinária, trauma e estenose uretral, hematúria, desconforto, falsa via em próstata aumentada (procedimento indicado na síndrome) · Treino vesical supervisionado — Indicação: Bexiga hiperativa com urgência e frequência, como primeira linha. Técnica: Programa de 6 a 8 semanas com diário miccional, idas ao banheiro por horário, aumento progressivo do intervalo e técnicas de supressão da urgência (respiração lenta, contração rápida do assoalho); revisão a cada 2 semanas. Complicações: Falha por falta de adesão, retenção se o intervalo for aumentado rápido, desmotivação sem retorno programado (procedimento indicado na síndrome) · Fisioterapia do assoalho pélvico com biofeedback — Indicação: Incontinência de esforço, mista e pós-prostatectomia. Técnica: Avaliação digital da contração, ensino da contração correta sem Valsalva, 3 séries diárias de 8 a 12 contrações lentas e rápidas, com biofeedback ou eletroestimulação quando disponível, por 8 a 12 semanas. Complicações: Contração incorreta com esforço abdominal, dor pélvica, piora da urgência se o treino for mal orientado (procedimento indicado na síndrome) · Sondagem vesical de alívio e cateter de demora — Indicação: Retenção aguda com dor e globo vesical; cateter de demora apenas quando o cateterismo intermitente é inviável ou há indicação de monitorização. Técnica: Técnica asséptica, sonda 14 a 16 Fr, esvaziamento gradual em retenção de longa data, fixação adequada e revisão diária da necessidade do cateter. Complicações: Infecção urinária associada ao cateter, trauma uretral, hipotensão por esvaziamento rápido, hematúria, cronificação da retenção e bexiga contraída (procedimento indicado na síndrome)
 
 ---
 
@@ -5982,6 +6156,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Acesso ao banheiro, privacidade e resposta ao chamado — Banheiro acessível, com barras de apoio e assento elevado; em instituição, responder ao pedido sem demora e evitar fralda como substituto do vaso. Reter as fezes por falta de banheiro ou por constrangimento é causa comum de impactação · _(medida não farmacológica da síndrome)_
 - Registro do hábito intestinal e educação do cuidador — Diário com data, consistência pela escala de Bristol e uso de laxante; cuidador treinado para reconhecer diarreia de transbordamento, distensão e parada de eliminação. O registro é o que permite diferenciar impactação de diarreia verdadeira · _(medida não farmacológica da síndrome)_
 - Tratamento da causa de base — Repor levotiroxina no hipotireoidismo, corrigir hipercalcemia, controlar glicemia na neuropatia diabética, tratar fissura e hemorroida dolorosa que levam à retenção voluntária e investigar neoplasia quando há alarme · _(medida não farmacológica da síndrome)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Toque retal diagnóstico — Indicação: Todo idoso constipado, com suspeita de impactação ou antes de iniciar laxante. Técnica: Explicar o exame, posicionar em decúbito lateral esquerdo, inspecionar a região anal, lubrificar e palpar o canal e o reto avaliando tônus, fezes endurecidas, massa, sangue e dor. Complicações: Desconforto, sangramento em fissura, síncope vagal, interpretação equivocada de reto vazio com impactação alta (procedimento indicado na síndrome) · Desimpactação manual — Indicação: Fecaloma endurecido no reto que não responde a supositório e enema. Técnica: Analgesia e lubrificação, fragmentar e remover as fezes em círculos com dedo enluvado, alternando com enemas; monitorizar dor, sangramento e sinais vagais; reavaliar com radiografia se necessário. Complicações: Dor intensa, sangramento, perfuração retal, síncope, arritmia por estímulo vagal (procedimento indicado na síndrome) · Enema de limpeza — Indicação: Impactação baixa a média refratária ao supositório, em paciente sem contraindicação. Técnica: Decúbito lateral esquerdo, lubrificar o aplicador, administrar lentamente 133 mL de fosfato ou enema glicerinado, orientar reter por 5-15 min; usar soro fisiológico no renal crônico e no cardiopata. Complicações: Hiperfosfatemia, hipocalcemia, hipernatremia, nefrocalcinose, perfuração, síncope (procedimento indicado na síndrome) · Desimpactação com macrogol em alta dose — Indicação: Impactação alta ou difusa, especialmente em doença renal crônica e insuficiência cardíaca, em que o fosfato é proibido. Técnica: Macrogol 1-1,5 g/kg/dia (máximo 100 g/dia) diluído em volume fracionado ao longo do dia, por 3-6 dias, com hidratação e controle de eletrólitos; internação se vômitos ou distensão importante. Complicações: Distensão, vômito, diarreia intensa, desidratação, distúrbio eletrolítico, aspiração em paciente com disfagia (procedimento indicado na síndrome)
 
 ---
 
@@ -6053,6 +6230,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 ### Hospitalar (EV)
 - **Analgésico:** Paracetamol (1ª linha) (dor na troca de curativo e no desbridamento; analgesia de base da úlcera (1a linha) dor no curativo)
+- **Procedimentos à beira do leito:** Limpeza e curativo da lesão — Indicação: Toda lesão por pressão, em cada troca. Técnica: Lavar o leito com soro fisiológico morno sob pressão suave, remover resíduo e crosta sem esfregar, secar a pele perilesional, escolher o curativo pelo estágio e pelo exsudato e ocluir sem tracionar a pele. Complicações: Dor, sangramento, maceração perilesional, trauma na remoção, infecção por técnica inadequada (procedimento indicado na síndrome) · Desbridamento cortante conservador — Indicação: Necrose espessa, escara infectada ou tecido desvitalizado que impede a granulação. Técnica: Antissepsia, analgesia 30 a 60 minutos antes, bisturi ou tesoura estéril removendo camadas finas até o tecido viável, controlando sangramento por compressão; repetir em sessões. Complicações: Sangramento, dor, perfuração de estruturas em cavidade, remoção de tecido viável, infecção (procedimento indicado na síndrome) · Desbridamento enzimático — Indicação: Necrose úmida aderida em paciente sem condição cirúrgica ou como adjuvante. Técnica: Aplicar colagenase em camada de 2 mm sobre o tecido desvitalizado, cobrir com gaze úmida em soro fisiológico e curativo secundário, trocando a cada 24 h; fazer grade com bisturi em necrose seca. Complicações: Dor e ardência, sangramento, dermatite de contato, inativação por prata, iodo ou água oxigenada (procedimento indicado na síndrome) · Cultura de tecido por biópsia ou aspiração profunda — Indicação: Sinais de infecção local ou sistêmica, antes de antibiótico. Técnica: Limpar a superfície com soro fisiológico, desbridar e colher fragmento do leito viável ou aspirar de tecido profundo com seringa, enviando para cultura e antibiograma. Complicações: Sangramento, dor, contaminação por colonizadores de superfície se a técnica for inadequada (procedimento indicado na síndrome) · Avaliação de osteomielite — Indicação: Osso exposto, teste de sondagem positivo, ferida crônica que não fecha ou exsudato persistente. Técnica: Exame com sonda estéril pelo leito, hemograma, proteína C reativa, radiografia e ressonância magnética; confirmar com biópsia óssea para cultura e histologia. Complicações: Diagnóstico tardio com perda óssea, amputação, sepse; falso-negativo de radiografia precoce (procedimento indicado na síndrome)
 
 ---
 
@@ -6103,6 +6281,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Glicose hipertonica:** Glicose 50% (1ª linha) (hipoglicemia documentada como causa da síncope (condicional))
 - **Repositor de ferro:** Sacarato de hidróxido férrico — 100 mg de ferro elementar. Via IV. 1x/semana ou em dias alternados. Até repor estoques, em geral 5-10 doses. 30 minutos, nunca menos de 15 minutos. (anemia ferropriva sintomática com síncope e falha ou intolerância ao ferro oral (condicional))
 - **Anticolinergico:** Atropina — 0,5 mg. Via IV. 3/3 a 5/5 minutos se persistir. Até 3 mg no total. Bolus IV em 1-2 minutos no idoso. (bradicardia sintomática com síncope ou hipotensão, enquanto se prepara o marca-passo (resgate))
+- **Procedimentos à beira do leito:** Monitorização eletrocardiográfica contínua — Indicação: Síncope de alto risco, ECG alterado, palpitação antes do evento ou bradicardia documentada. Técnica: Telemetria em unidade monitorizada por no mínimo 24 h, com registro de eventos, alarmes de pausa e de taquicardia, e correlação com o diário de sintomas. Complicações: Falso alarme e fadiga de alarmes, restrição de mobilidade, atraso na investigação quando não há evento no período (procedimento indicado na síndrome) · Teste de inclinação com massagem do seio carotídeo — Indicação: Síncope reflexa suspeita, síncope recorrente sem causa após ECG e ecocardiograma. Técnica: Mesa basculante a 60-70 graus por 20-45 min com monitorização contínua; massagem do seio carotídeo por 5-10 s de cada lado, com intervalo, sob monitor. Complicações: Síncope prolongada e assistolia, bradicardia grave, queda da mesa; contraindicado em sopro carotídeo ou AVC recente (procedimento indicado na síndrome)
 
 ---
 
@@ -6162,6 +6341,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 ### Hospitalar (EV)
 - **Vitamina b1:** Cloridrato de tiamina (1ª linha) (etilismo crônico, vômitos prolongados ou risco de deficiência em desnutrido grave (condicional))
+- **Procedimentos à beira do leito:** Triagem e avaliação nutricional — Indicação: Todo idoso na consulta, na internação e no seguimento. Técnica: Aplicar a Mini Avaliação Nutricional (MAN), medir peso, altura, IMC, circunferência da panturrilha e do braço, força de preensão palmar e aplicar a Avaliação Subjetiva Global; calcular necessidade energética em 30 kcal/kg/dia e proteica em 1,2-1,5 g/kg/dia. Complicações: Peso não aferido ou estimado por memória, uso de balança inadequada em acamado e interpretação de IMC em paciente edemaciado (procedimento indicado na síndrome)
 
 ---
 
@@ -6218,6 +6398,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Analgésico:** Paracetamol (1ª linha) (analgesia multimodal de base em fratura de fragilidade (1a linha) dor residual após a alta)
 - **Bisfosfonato:** Ácido zoledrônico — 5 mg. Via IV. 1x/ano. 3 anos, com reavaliação anual. 15-30 minutos. (osteoporose após fratura quando há intolerância ou contraindicação ao alendronato, ou preferência por dose anual (alternativa))
 - **Opioide:** Sulfato de morfina (1ª linha) (dor intensa de fratura não controlada por paracetamol e bloqueio (condicional))
+- **Procedimentos à beira do leito:** Imobilização provisória e tala — Indicação: Toda suspeita de fratura de membro antes da avaliação radiológica definitiva e para transporte. Técnica: Avaliação neurovascular antes e depois, analgesia, alinhamento suave em tentativa única, acolchoamento de proeminências, tala de fibra de vidro ou tração conforme o segmento e fixação com atadura sem compressão. Complicações: Síndrome compartimental, lesão de nervo por compressão, úlcera por pressão sob a tala e trombose por imobilização prolongada (procedimento indicado na síndrome)
 
 ---
 
@@ -6275,6 +6456,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Analgésico:** Paracetamol (1ª linha) (dor como causa ou agravante da agitação em demência (1a linha) dor como gatilho de agitação)
 - **Opioide:** Sulfato de morfina (1ª linha) (dor intensa não controlada por paracetamol, sobretudo em fratura, úlcera por pressão ou pós-operatório (condicional))
+- **Procedimentos à beira do leito:** Avaliação etiológica estruturada da agitação — Indicação: Toda agitação nova ou piora em relação ao basal, antes de qualquer psicofármaco. Técnica: Aplicar CAM-4AT para delirium, revisar prontuário e lista de fármacos, examinar dor, bexiga, abdome, pele, pulmões e neurológico, e solicitar glicemia, hemograma, urina, eletrólitos, função renal e hepática, oximetria e ECG. Complicações: Investigação incompleta que rotula tudo como demência e leva a sedação desnecessária; excesso de exames em paciente agitado sem exame físico dirigido (procedimento indicado na síndrome) · Cateterismo vesical de alívio — Indicação: Retenção urinária com bexiga palpável, dor suprapúbica ou anúria. Técnica: Técnica asséptica, sonda de alívio 14-16 Fr, esvaziamento gradual e retirada imediata após o alívio, sem deixar sonda de demora por rotina. Complicações: Infecção urinária, trauma uretral, hipotensão por esvaziamento rápido e piora da agitação pelo desconforto (procedimento indicado na síndrome) · Desimpactação fecal e enema — Indicação: Fecaloma, constipação grave ou ausência de evacuação com distensão abdominal. Técnica: Toque retal, desimpactação manual com lubrificante e enema de glicerina ou fosfato; iniciar lactulose após esvaziar. Complicações: Dor, sangramento retal, perfuração em reto friável e distúrbio eletrolítico por enema de fosfato (procedimento indicado na síndrome)
 
 ---
 
@@ -6440,6 +6622,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Não prescrever dieta de exclusão empírica — Restringir lactose, glúten ou gordura sem teste apenas piora a nutrição; testar um gatilho por vez por 2–4 semanas quando houver relação clara · _(medida não farmacológica da síndrome)_
 - Explicar o diagnóstico funcional — Dizer que a mucosa é normal e que o sintoma é real, com mecanismo de hipersensibilidade visceral; isso reduz ansiedade, consultas e uso crônico de IBP · _(medida não farmacológica da síndrome)_
 - Revisar AINE, AAS, corticoide, ferro e potássio — Suspender o que não tem indicação; quando o AINE é inevitável, associar IBP e revisar a cada 6 meses · _(medida não farmacológica da síndrome)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Endoscopia digestiva alta com biópsias — Indicação: sinal de alarme, início após os 45 anos, refratariedade, úlcera ou suspeita de câncer. Técnica: Biópsias de antro e corpo (2+2) pelo protocolo de Sydney, com teste rápido de urease quando disponível. Complicações: Perfuração, aspiração, reação à sedação, sangramento no sítio de biópsia (procedimento indicado na síndrome)
 
 ---
 
@@ -6809,6 +6994,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Opioide forte:** Sulfato de morfina (1ª linha) (dor intensa refratária a analgésico simples, preferencialmente em ambiente hospitalar (condicional))
 - **Cristaloide balanceado:** Ringer lactato — 500-1.000 mL em bolus; depois 1-2 mL/kg/h. Via IV. Conforme resposta clínica. Até tolerância oral e estabilização. Bolus em 15-30 min; manutenção contínua. (reposição volêmica na sepse, no vômito persistente ou na impossibilidade de hidratação oral (condicional))
 - **Carbapenemico:** Meropenem — 1 g. Via IV. 8/8 h. 7-10 dias. 30 minutos; 3 horas em infusão estendida. (choque séptico, peritonite fecal ou suspeita de ESBL (resgate))
+- **Procedimentos à beira do leito:** Tomografia de abdome e pelve com contraste — Indicação: Confirmação diagnóstica, classificação de Hinchey e suspeita de complicação. Técnica: Fase portal, cortes finos; contraste IV salvo contraindicação. Complicações: Nefrotoxicidade do contraste, reação alérgica, radiação (procedimento indicado na síndrome)
 
 ---
 
@@ -6905,6 +7091,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Cristaloide:** Cloreto de sódio 0,9% (SF) — 30 mL/kg em bolus, repetido conforme resposta. Via IV. Bolus e reavaliação a cada 500 a 1.000 mL. Até perfusão e diurese restabelecidas. Bolus rápido em 15 a 30 min, reavaliando pressão e perfusão. (desidratação moderada a grave, vômitos incoercíveis ou choque (1a linha))
 - **Antiemético antagonista 5ht3:** Cloridrato de ondansetrona (1ª linha) (vômitos que impedem a reidratação oral na disenteria (alternativa))
 - **Cefalosporina terceira geração:** Ceftriaxona (1ª linha) (disenteria grave, toxemia, sepse, bacteremia suspeita ou via oral impossível (condicional) disenteria grave ou sepse)
+- **Procedimentos à beira do leito:** Coprocultura com antibiograma e parasitológico de fezes — Indicação: Disenteria grave, imunossuprimido, gestante, surto, falha de tratamento ou disenteria persistente. Técnica: Coletar 2 a 3 amostras em dias distintos ou swab retal; solicitar pesquisa de Salmonella, Shigella, Campylobacter, E. coli e Entamoeba histolytica. Complicações: Atraso de conduta quando pedido sem indicação; resultado negativo não exclui amebíase (procedimento indicado na síndrome)
 
 ---
 
@@ -6958,6 +7145,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Garantir adesão aos 14 dias — Explicar que o antibiótico não é para a dor e que parar antes de 14 dias seleciona resistência; usar alarme, cartela ou apoio familiar · _(medida não farmacológica da síndrome)_
 - Reavaliar a indicação do IBP a cada consulta — Definir data de retirada ou de redução para a menor dose eficaz; IBP sem indicação ativa deve ser suspenso, com taper se uso acima de 8 semanas · _(medida não farmacológica da síndrome)_
 - Orientar sinais de alarme por escrito — Vômito com sangue, fezes negras, dor súbita com barriga dura e perda de peso exigem retorno imediato, não nova consulta agendada · _(medida não farmacológica da síndrome)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Endoscopia digestiva alta com biópsias — Indicação: Dispepsia com alarme, idade acima de 60 anos, úlcera gástrica e dúvida diagnóstica. Técnica: Biópsias de antro (2) e corpo (2) para histologia e teste rápido de urease; úlcera gástrica exige biópsia de bordas. Complicações: Sangramento, perfuração, sedação, falso-negativo por uso de IBP (procedimento indicado na síndrome) · Teste respiratório com ureia marcada (UBT) — Indicação: Diagnóstico de H. pylori e confirmação de cura quando não há indicação de endoscopia. Técnica: Jejum de 6 h, coletar amostra basal, ingerir ureia marcada e coletar 30 min depois; suspender IBP por 14 dias e antibiótico por 28 dias. Complicações: Resultado falso-negativo com IBP ou antibiótico recente; custo e disponibilidade (procedimento indicado na síndrome) · Antígeno fecal de H. pylori — Indicação: Alternativa ao UBT no diagnóstico e no teste de cura, inclusive em uso de IBP com cautela. Técnica: Amostra única de fezes, teste monoclonal; colher pelo menos 4 semanas após o fim do antibiótico. Complicações: Falso-negativo em diarreia aquosa e em sangramento digestivo recente (procedimento indicado na síndrome)
 
 ---
 
@@ -7275,6 +7465,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Betabloqueador com ação alfa:** Labetalol — 20 mg no primeiro bolus, depois 20-80 mg. Via IV ou VO. A cada 10-20 minutos até o alvo; manutenção 100-200 mg VO a cada 12 horas. Fase aguda; manutenção até o parto. Bolus em 2 minutos; infusão contínua. (crise hipertensiva na pré-eclâmpsia, sobretudo com taquicardia, ou quando a hidralazina falha (alternativa))
 - **Diurético de de alça:** Furosemida (1ª linha) (edema agudo de pulmão com hipoxemia na pré-eclâmpsia; nunca para tratar pressão ou edema de membros (condicional))
 - **Antídoto:** Gluconato de cálcio 10% — 1 g (10 mL da solução a 10%). Via IV. Dose única; repetir em 5-10 minutos se persistir. Uma dose, repetida conforme resposta clínica. 10 minutos (5-10 minutos); nunca em bolus rápido. (intoxicação por sulfato de magnésio com arreflexia, depressão respiratória ou bradicardia (resgate))
+- **Procedimentos à beira do leito:** Monitorização fetal — Indicação: toda pré-eclâmpsia com critério de gravidade, HELLP, restrição de crescimento ou após cada dose de anti-hipertensivo. Técnica: Cardiotocografia de 20 a 30 minutos ou ausculta intermitente a cada 15 minutos em trabalho de parto; perfil biofísico e doppler conforme idade gestacional. Complicações: Interpretação falsamente tranquilizadora sem doppler na restrição de crescimento; atraso do parto por repetição desnecessária (procedimento indicado na síndrome) · Parto (indução ou cesárea) — Indicação: tratamento definitivo: pré-eclâmpsia com critério de gravidade, eclâmpsia, HELLP, restrição de crescimento com doppler alterado ou 37 semanas ou mais. Técnica: Indução com misoprostol ou ocitocina quando o colo é favorável e a apresentação é cefálica; cesárea se sofrimento fetal, apresentação anômala, plaquetas abaixo de 50.000, eclâmpsia não controlada ou falha de indução. Complicações: Hemorragia pós-parto, atonia, hipotensão com anestesia neuroaxial, piora de plaquetas no pós-operatório, edema agudo no puerpério (procedimento indicado na síndrome)
 
 ---
 
@@ -7329,6 +7520,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antagonista da ocitocina:** Atosibana — 6,75 mg em bolus, seguidos de 18 mg/h e depois 6 mg/h. Via IV. Bolus único; infusão contínua em duas fases. Até 48 horas. Bolus em 1 minuto; infusão contínua, com 18 mg/h por 3 horas e depois 6 mg/h. (tocólise em gestante com cardiopatia, hipotensão ou contraindicação ao nifedipino (alternativa))
 - **Penicilina natural:** Penicilina cristalina — 5 milhões UI no ataque, depois 2,5-3 milhões UI. Via IV. Ataque; manutenção a cada 4 horas até o parto. Até o parto. 30 minutos. (profilaxia de estreptococo do grupo B em trabalho de parto quando a ampicilina não está disponível (alternativa))
 - **Uterotonico:** Ocitocina — Iniciar 1-2 mUI/min, com aumento de 1-2 mUI/min. Via IV. Infusão contínua, com reajuste a cada 30 minutos. Até o parto. Infusão contínua, titulada a cada 30 minutos. (indução e condução do trabalho de parto verdadeiro com colo favorável ou hipodinamia (condicional))
+- **Procedimentos à beira do leito:** Cardiotocografia e ausculta intermitente — Indicação: toda ameaça de parto prematuro, tocólise em curso e trabalho de parto. Técnica: Traçado de 20 a 30 minutos com avaliação de linha de base, variabilidade, acelerações e desacelerações; ausculta a cada 15 minutos no período expulsivo. Complicações: Interpretação falsamente tranquilizadora, atraso do parto por repetição desnecessária (procedimento indicado na síndrome) · Toque vaginal seriado com partograma — Indicação: trabalho de parto verdadeiro, para acompanhar dilatação, apagamento, altura e variedade de apresentação. Técnica: Toque a cada 2 a 4 horas com registro em partograma; nunca em placenta prévia ou sangramento de terceiro trimestre sem ultrassom. Complicações: Infecção ascendente, rotura de membranas iatrogênica, desconforto (procedimento indicado na síndrome)
 
 ---
 
@@ -7399,6 +7591,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Suporte de saúde mental no mesmo dia — Avaliação de risco de suicídio e de transtorno mental, acionamento de psicologia e psiquiatria, técnicas de estabilização e agendamento de acompanhamento antes da alta, não em lista de espera · _(medida não farmacológica da síndrome)_
 - Plano de segurança e rede de apoio — Perguntar onde a pessoa vai dormir naquela noite, se o agressor tem acesso à casa, se há filhos no domicílio e acionar abrigo, casa da mulher ou medida protetiva quando houver risco de repetição · _(medida não farmacológica da síndrome)_
 - Contato ativo e busca ativa do seguimento — Telefone e endereço alternativo no prontuário, contato em 7 dias, lembrete antes de cada coleta sorológica e busca ativa em caso de falta, porque o abandono é a regra quando o retorno depende só do paciente · _(medida não farmacológica da síndrome)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Coleta de vestígios médico-legais — Indicação: violência sexual recente, oferecida em até 72 horas, independentemente de boletim de ocorrência. Técnica: Coleta de material de vagina, colo, ânus, boca e pele conforme o tipo de contato, com swabs secos, envelope lacrado, identificação, cadeia de custódia e registro fotográfico das lesões quando autorizado. Complicações: revitimização quando conduzida sem acolhimento, perda de material por acondicionamento inadequado, dor durante a coleta (procedimento indicado na síndrome) · Inserção de dispositivo intrauterino de cobre — Indicação: contracepção de emergência após violência sexual, até 5 dias, quando não há contraindicação. Técnica: Exame pélvico com consentimento, antissepsia, inserção com técnica asséptica, confirmação do posicionamento e orientação sobre sangramento e retorno. Complicações: dor e sangramento, perfuração uterina rara, expulsão, infecção pélvica, dificuldade de inserção em nulípara (procedimento indicado na síndrome) · Exame ginecológico com espéculo e coleta de material — Indicação: toda vítima com penetração vaginal, corrimento, dor pélvica ou sangramento. Técnica: Inspeção vulvar e perineal, espéculo com material estéril e lubrificante adequado, coleta de secreção para teste de amplificação de ácido nucleico de gonorreia e clamídia, exame a fresco para tricomonas e colpocitologia quando indicada. Complicações: dor, sangramento, desconforto psicológico, resultado falso negativo por coleta inadequada (procedimento indicado na síndrome)
 
 ---
 
@@ -7491,6 +7686,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antagonista 5ht3:** Cloridrato de ondansetrona (1ª linha) (hiperêmese refratária a duas classes de antieméticos, com decisão de risco documentada no primeiro trimestre (condicional) resgate após falha de duas classes, com risco discutido)
 - **Eletrólito:** Cloreto de potássio — 20 a 40 mEq. Via IV. Adicionado ao soro de 24 horas, conforme potássio sérico. Até normalização do potássio. Infusão contínua; máximo 10 mEq/h em veia periférica. (hipocalemia associada aos vômitos prolongados (condicional))
 - **Carboidrato:** Glicose 50% (1ª linha) (prevenção de cetose e hipoglicemia após a tiamina, em paciente sem tolerância oral (condicional))
+- **Procedimentos à beira do leito:** Acesso venoso periférico e hidratação venosa — Indicação: hiperêmese com desidratação, cetose, vômitos incoercíveis ou intolerância oral. Técnica: Punção de veia periférica calibrosa com cateter 18 a 20 G, coleta de eletrólitos, ureia, creatinina e hemograma na primeira punção e início de SF 0,9% com KCl. Complicações: Flebite, infiltração, hematoma, hipocalemia por diluição se não repuser potássio (procedimento indicado na síndrome) · Sondagem nasoenteral para nutrição — Indicação: intolerância oral por mais de 7 dias, perda de peso progressiva ou falha do antiemético parenteral. Técnica: Passagem de sonda nasogástrica ou nasojejunal, confirmação de posição e infusão de fórmula polimérica em bomba, iniciando com 20 a 30 mL/h e progredindo conforme tolerância. Complicações: Aspiração, deslocamento, obstrução da sonda, diarreia, desconforto nasal (procedimento indicado na síndrome)
 
 ---
 
@@ -7544,6 +7740,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Cefalosporina de terceira geração:** Ceftriaxona (1ª linha) (pielonefrite na gestação com internação (1a linha))
 - **Aminoglicosídeo:** Sulfato de gentamicina (1ª linha) (pielonefrite na gestação com alergia grave a betalactâmico ou germe resistente, em curso curto (alternativa))
+- **Procedimentos à beira do leito:** Urocultura com antibiograma por jato médio — Indicação: toda suspeita de ITU na gestação, todo rastreio pré-natal e toda falha terapêutica. Técnica: Antissepsia com água e sabão, descarte do primeiro jato, coleta do jato médio em frasco estéril, identificação com hora e idade gestacional, envio imediato ao laboratório. Complicações: Contaminação por flora perineal com falso-positivo, resultado tardio que atrasa o tratamento empírico, coleta após início do antibiótico que invalida o antibiograma (procedimento indicado na síndrome) · Ultrassonografia de vias urinárias e rins — Indicação: pielonefrite sem melhora em 48 a 72 horas, cólica renal, história de litíase, rim único, malformação ou ITU recorrente. Técnica: Ultrassom abdominal com bexiga parcialmente cheia, avaliando hidronefrose, cálculos, espessamento ureteral e coleções perirrenais; complementar com doppler quando há suspeita de obstrução. Complicações: Baixa sensibilidade para cálculos ureterais distais, necessidade de complementação com ressonância quando a dúvida persiste, achado incidental que não muda a conduta (procedimento indicado na síndrome)
 
 ---
 
@@ -7599,6 +7796,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Penicilina antiestafilococica:** Oxacilina (1ª linha) (abscesso mamário com sinais sistêmicos por MSSA, em internação (condicional))
 - **Glicopeptideo:** Vancomicina — 15 a 20 mg/kg. Via IV. 8/8 h ou 12/12 h conforme função renal e monitorização. 7 a 14 dias, conforme resposta clínica e cultura. 60 a 120 minutos, no mínimo 60 minutos para evitar a síndrome do homem vermelho. (abscesso mamário com sepse ou infecção necrotizante por MRSA confirmado ou fortemente suspeito (resgate))
+- **Procedimentos à beira do leito:** Ultrassonografia de mama — Indicação: toda suspeita de abscesso, toda mastite sem melhora em 48 a 72 horas e toda recidiva no mesmo quadrante. Técnica: Transdutor linear de alta frequência, varredura em toda a mama e na axila, caracterizando coleção (hipoecoica ou anecoica, com reforço acústico posterior e parede espessa), tamanho, número de loculações, profundidade e relação com a aréola; comparar com a mama contralateral. Complicações: Falso-negativo em coleção muito pequena ou profunda, dificuldade de diferenciar abscesso de ectasia ductal e de carcinoma inflamatório, achado que não muda a conduta quando não há coleção (procedimento indicado na síndrome) · Punção aspirativa guiada por ultrassom — Indicação: abscesso único, menor que 5 cm, sem necrose de pele, em lactante que deseja manter a amamentação. Técnica: Antissepsia e campo estéril, anestesia local com lidocaína 1% na pele, agulha 18 a 21 G conectada a seringa de 20 mL, punção no eixo de maior diâmetro com controle ecográfico contínuo, aspiração até colapsar a loja; enviar o material para Gram e cultura; repetir em 48 horas se necessário. Complicações: Punção seca em coleção loculada, sangramento, hematoma, fístula láctea, recidiva por loculação residual, contaminação da amostra (procedimento indicado na síndrome)
 
 ---
 
@@ -7662,6 +7860,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Revisão de fármacos hiperprolactinêmicos — Revisar com o prescritor antipsicóticos, metoclopramida, domperidona e antidepressivos; nunca suspender antipsicótico por conta própria · _(medida não farmacológica da síndrome)_
 - Higiene do sono e redução de estresse — Sete a oito horas de sono, horário regular e técnicas de relaxamento; privação de sono e estresse suprimem a pulsatilidade do GnRH · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Exame pélvico com inspeção e toque — Indicação: toda amenorreia, sobretudo primária e com dor cíclica. Técnica: Inspeção de vulva e hímen, avaliação de perviedade vaginal, espéculo quando possível, toque para útero, anexos e abaulamentos. Complicações: Desconforto, limitação em virgens, interpretação inadequada sem imagem (procedimento indicado na síndrome)
+
 ---
 
 ## Tuberculose (`ws-inf_05`) — status: **aprovado**
@@ -7715,6 +7916,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Fluoroquinolona:** Levofloxacino (1ª linha) (esquema de tuberculose resistente e substituição em hepatotoxicidade quando o esquema precisa ser reduzido (alternativa))
 - **Corticosteroide:** Prednisona — 1 mg/kg/dia (40 a 60 mg/dia) na meningite; 0,5 a 1 mg/kg/dia na pericardite. Via VO (metilprednisolona IV se vômitos ou rebaixamento). 1x/dia pela manhã. 4 a 8 semanas, com desmame gradual. (tuberculose meníngea e pericardite tuberculosa, associada ao esquema antituberculose (condicional) meningite ou pericardite tuberculosa, com desmame em 4 a 8 semanas)
 - **Oxazolidinona:** Linezolida — 600 mg/dia. Via VO (IV em intolerância digestiva). 1x/dia. 2 a 6 meses, conforme o esquema de resistência. 30 a 120 minutos por via intravenosa. (tuberculose multirresistente ou extensivamente resistente em esquema combinado de referência (resgate))
+- **Procedimentos à beira do leito:** Coleta de escarro para TRM-TB, baciloscopia e cultura — Indicação: todo caso suspeito de tuberculose pulmonar, antes da primeira dose do esquema. Técnica: Duas amostras, uma na consulta e outra na manhã seguinte, com escarro emitido após inspiração profunda; em caso de escarro seco, induzir com solução salina hipertônica em sala ventilada. Complicações: contaminação da amostra, resultado falso negativo por amostra inadequada, broncoespasmo na indução (procedimento indicado na síndrome)
 
 ---
 
@@ -7779,6 +7981,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Coleta de vestígios e preservação de prova — Oferecer coleta até 72 horas em serviço de referência, guardar roupas em saco de papel, não lavar a região antes da coleta e explicar que a coleta não condiciona o atendimento · _(medida não farmacológica da síndrome)_
 - Aconselhamento e testagem de parcerias — Oferecer testagem ao parceiro e, se fonte conhecida e HIV positiva, orientar sobre tratamento e indetectabilidade; comunicar sem expor a identidade · _(medida não farmacológica da síndrome)_
 - Transição para PrEP ao final da PEP — Quem mantém risco recorrente deve sair do serviço com PrEP agendada, não apenas com a PEP concluída; a PEP trata o episódio, a PrEP previne o próximo · _(medida não farmacológica da síndrome)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Teste rápido de HIV com aconselhamento pré e pós-teste — Indicação: todo atendimento de exposição e toda suspeita de síndrome retroviral. Técnica: punção digital com lanceta estéril, 1 gota de sangue no dispositivo, leitura em 15 a 30 minutos, confirmação com teste de segunda linha se reagente; resultado negativo não exclui infecção recente. Complicações: falso negativo na janela imunológica, resultado indeterminado, ansiedade e necessidade de repetição (procedimento indicado na síndrome) · Coleta de exames basais em venopunção — Indicação: antes ou junto com a primeira dose da PEP. Técnica: coletar HIV, hepatites B e C, sífilis, hemograma, creatinina, transaminases, beta-HCG e, se indicação, carga viral; não atrasar a primeira dose para coletar. Complicações: hematoma, dor local, atraso da profilaxia se a coleta for priorizada sobre o tratamento (procedimento indicado na síndrome) · Aplicação intramuscular de ceftriaxona, imunoglobulina e vacina — Indicação: profilaxia de IST e hepatite B no atendimento de violência sexual. Técnica: deltoide para vacina e imunoglobulina, glúteo para ceftriaxona, com agulha de calibre adequado e locais diferentes entre si; registrar lote e sítio. Complicações: dor e hematoma, abscesso por técnica inadequada, reação alérgica (procedimento indicado na síndrome)
 
 ---
 
@@ -7948,6 +8153,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Cristaloide:** Solução fisiológica 0,9% — 500 a 1.000 mL. Via IV. Conforme perdas; reavaliar após cada 500 mL. 24 a 48 h, até retomar a via oral. 30 a 60 min por 500 mL, com reavaliação. (desidratação com intolerância à via oral ou vômitos persistentes (condicional))
 - **Antiemético:** Cloridrato de ondansetrona (1ª linha) (vômitos que impedem a hidratação oral (condicional))
 - **Imunoglobulina:** Imunoglobulina humana antitetânica (IGHAT) (1ª linha) (síndrome de Guillain-Barré associada ao zika (resgate))
+- **Procedimentos à beira do leito:** Coleta de RT-PCR de soro e urina — Indicação: suspeita de zika, sobretudo em gestante com exantema. Técnica: soro até o quinto dia de sintomas e urina até o 14º dia, em tubo estéril, refrigerado e enviado ao laboratório de referência com a ficha de notificação. Complicações: punção difícil, hemólise da amostra, resultado falso-negativo por coleta tardia (procedimento indicado na síndrome)
 
 ---
 
@@ -8099,6 +8305,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antibiótico glicopeptideo:** Vancomicina — 15 a 20 mg/kg. Via IV. 8/8 h a 12/12 h, guiado por função renal e nível sérico. 2 a 3 semanas, conforme cultura. 60 minutos por grama (2 g em 120 minutos). (suspeita de MRSA em artrite séptica com prótese, drogas IV, hospitalização recente ou diálise (condicional))
 - **Analgésico:** Paracetamol (1ª linha) (analgesia adjuvante e controle da dor quando AINE é contraindicado (condicional) analgesia adjuvante, máximo 3 g/dia)
 - **IBP:** Omeprazol sódico (1ª linha) (gastroproteção durante uso de AINE ou corticoide sistêmico em paciente com fator de risco (condicional) gastroproteção com fator de risco)
+- **Procedimentos à beira do leito:** Artrocentese diagnóstica e terapêutica do joelho — Indicação: todo joelho quente com derrame, sem trauma, e sempre antes de infiltração de corticoide. Técnica: Assepsia e campos estéreis, portal superolateral ou medial com agulha 18 a 20 G, aspiração até esvaziar; enviar celularidade com diferencial, Gram, cultura e antibiograma, pesquisa de cristais por luz polarizada e citologia se suspeita de neoplasia. Complicações: Infecção iatrogênica, hemartrose, dor, lesão de cartilagem, punção seca (procedimento indicado na síndrome)
 
 ---
 
@@ -8211,6 +8418,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Ergonomia e pausas programadas — Pausas de 5 minutos a cada 50 minutos, alternância de tarefas, ajuste de altura da bancada e apoio de antebraço; reduzir força de preensão, vibração e repetitividade · _(medida não farmacológica da síndrome)_
 - Educação e expectativa de recuperação — Explicar que a tendinopatia melhora em 6 a 12 semanas e que a recuperação não é linear; dor leve durante o exercício é aceitável e não indica lesão nova, o que sustenta a adesão · _(medida não farmacológica da síndrome)_
 - Redução de sobrecarga no membro inferior — Perda de peso na tendinopatia patelar e do Aquiles, calçado com amortecimento e sem desgaste, evitar corrida em ladeira e salto durante a fase de carga · _(medida não farmacológica da síndrome)_
+
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Aspiração de bursa olecraniana, pré-patelar ou trocantérica — Indicação: bursa flutuante, dolorosa, com ou sem calor local, para diferenciar séptica de traumática. Técnica: Assepsia e campo estéril, agulha 18 a 20 G no ponto de maior flutuação, aspiração completa, envio de material para Gram, cultura, antibiograma e celularidade quando possível; curativo compressivo. Complicações: Infecção iatrogênica, fístula persistente, recidiva por não tratar a causa de pressão, hematoma (procedimento indicado na síndrome)
 
 ---
 
@@ -8325,6 +8535,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Educação sobre o diagnóstico — Explicar que ponto-gatilho é achado muscular reversível e não lesão grave, que o tratamento é ativo e que a melhora esperada é de 50% em 4 semanas; reduz catastrofização e pedido de infiltração repetida · _(medida não farmacológica da síndrome)_
 - Diário de dor e gatilhos — Registrar dor de 0 a 10, horas de sono, atividade física e gesto associado ao pior momento do dia por 2 semanas, para orientar o ajuste de carga na consulta de retorno · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Agulhamento seco do ponto-gatilho — Indicação: ponto-gatilho único ou poucos, refratários a 2 a 4 semanas de tratamento tópico e alongamento; alternativa quando não se quer injetar fármaco. Técnica: Antissepsia, localização da banda tensa por palpação ou ultrassom e punção com agulha 0,25 a 0,30 mm em movimento de vai e vem por 10 a 30 segundos por ponto, buscando resposta de espasmo local; seguida de alongamento imediato. Complicações: Dor e hematoma local, pneumotórax em parede torácica, lesão de nervo ou vaso, síncope vasovagal, infecção de pele (procedimento indicado na síndrome)
+
 ---
 
 ## Lesão meniscal / ligamentar (`ws-msk_12`) — status: **aprovado**
@@ -8419,6 +8632,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antibiótico rifamicina:** Rifampicina — 600 mg. Via VO ou IV. 1x/dia, 1 hora antes da refeição. 6 semanas na prótese com retenção do implante; até 12 semanas conforme cirurgia. 30 a 60 minutos na via intravenosa. (infecção periprotética estafilocócica com implante mantido ou troca em dois tempos, sempre em combinação com outro antimicrobiano ativo (condicional) prótese articular com implante mantido, sempre em combinação)
 - **Analgésico:** Paracetamol (1ª linha) (analgesia adjuvante e controle de dor e febre durante o tratamento antibiótico e a drenagem (condicional) analgesia adjuvante, máximo 3 g/dia)
 - **Antibiótico lipopeptideo:** Daptomicina — 8 a 10 mg/kg. Via IV. 1x/dia. 3 a 4 semanas; bacteremia prolongada conforme resposta. 2 a 30 minutos, conforme a concentração utilizada. (bacteremia e infecção articular por MRSA com falha, intolerância ou CIM alta à vancomicina (resgate))
+- **Procedimentos à beira do leito:** Artrocentese diagnóstica e terapêutica — Indicação: toda monoartrite aguda com suspeita de infecção, antes do antibiótico e antes de qualquer infiltração de corticoide. Técnica: Assepsia e campos estéreis, anestesia local na pele, portal superolateral ou medial no joelho com agulha 18 a 20 G, aspiração até esvaziar; enviar celularidade com diferencial, Gram, cultura e antibiograma, pesquisa de cristais por luz polarizada, glicose, proteína e LDH. Complicações: Infecção iatrogênica, hemartrose, dor, lesão de cartilagem, punção seca, fístula persistente (procedimento indicado na síndrome)
 
 ---
 
@@ -8590,6 +8804,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antiemético antidopaminergico:** Cloridrato de metoclopramida (1ª linha) (náusea e vômito da crise vestibular, quando não há parkinsonismo (1a linha))
 - **Antiemético antagonista 5ht3:** Cloridrato de ondansetrona (1ª linha) (náusea e vômito quando a metoclopramida está contraindicada ou falhou (alternativa))
 - **Corticoide:** Succinato de metilprednisolona (1ª linha) (neurite vestibular com vômitos incoercíveis ou via oral indisponível (alternativa))
+- **Procedimentos à beira do leito:** Manobra de Dix-Hallpike — Indicação: suspeita de VPPB de canal posterior, com vertigem posicional breve. Técnica: Cabeça girada 45 graus para o lado testado, deitar o paciente rapidamente com o pescoço estendido 20 a 30 graus abaixo do plano da maca; observar nistagmo por até 60 segundos, com latência e fatigabilidade típicas; repetir no lado oposto. Complicações: Náusea e vômito intensos, cervicalgia, desencadeamento de vertigem incapacitante, risco de queda na maca (procedimento indicado na síndrome)
 
 ---
 
@@ -8688,6 +8903,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Sal de magnésio:** Sulfato de magnésio 50% (1ª linha) (crise convulsiva em eclâmpsia ou pré-eclâmpsia com sinais de gravidade (condicional))
 - **Barbiturico:** Fenobarbital sódico (1ª linha) (estado de mal refratário a benzodiazepínico e a duas segundas linhas, e crise em serviço sem benzodiazepínico disponível (resgate))
 - **Anestésico:** Propofol — 1 a 2 mg/kg em bolus, seguido de 2 a 10 mg/kg/h. Via IV. Bolus único e infusão contínua em bomba. 24 a 48 horas, com desmame após 24 horas sem crise no eletroencefalograma. Bolus em 1 a 2 minutos; manutenção em infusão contínua. (estado de mal epiléptico refratário a benzodiazepínico e a duas segundas linhas, em unidade de terapia intensiva com via aérea definitiva (resgate))
+- **Procedimentos à beira do leito:** Intubação orotraqueal — Indicação: estado de mal refratário, depressão respiratória por benzodiazepínico ou barbitúrico, escala de coma de Glasgow de 8 ou menos, necessidade de propofol em infusão. Técnica: Pré-oxigenação por 2 a 3 minutos, sequência rápida com hipnótico em dose reduzida se hipotensão e bloqueador neuromuscular, capnografia confirmando o posicionamento e ventilação sem hiperventilação profilática. Complicações: Hipotensão pós-indução, hipóxia, aspiração de conteúdo gástrico, trauma de via aérea, pneumonia associada à ventilação (procedimento indicado na síndrome)
 
 ---
 
@@ -8739,6 +8955,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Solução hipertonica:** Cloreto de sódio 3% — 100 mL. Via IV. Dose única; repetir até elevar 4 a 6 mEq/L e então interromper a correção rápida. Até cessar a crise. 10 minutos na crise convulsiva (100 mL). (hiponatremia grave com crise, sódio abaixo de 120 mEq/L (condicional))
 - **Alcalinizante:** Bicarbonato de sódio 8,4% — 1 a 2 mEq/kg. Via IV. Bolus único; repetir conforme eletrocardiograma e pH. Até estreitar o QRS e estabilizar o pH. 5 a 10 minutos em bolus no QRS alargado. (crise por intoxicação por tricíclico com complexo QRS acima de 100 ms, e acidose metabólica grave com crise (condicional))
 - **Benzodiazepínico:** Diazepam (1ª linha) (crise em atividade durante a avaliação do primeiro episódio (resgate))
+- **Procedimentos à beira do leito:** Tomografia de crânio sem contraste — Indicação: todo primeiro episódio convulsivo; urgente se déficit focal, trauma, anticoagulação, febre, cefaleia súbita, câncer, HIV ou idade acima de 40 anos. Técnica: Cortes axiais de 5 mm da base ao vértice, sem contraste, com janela óssea; revisar cisternas, sulcos, ventrículos, sangue, calcificações e lesões expansivas com desvio de linha média. Complicações: Radiação, transporte de paciente instável, perda de monitorização durante o exame, falso-negativo em lesão pequena ou isodensa (procedimento indicado na síndrome)
 
 ---
 
@@ -8883,6 +9100,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Analgésico:** Paracetamol (1ª linha) (analgesia de base em qualquer fase da lombociatalgia (1a linha) analgesia de base) · Dipirona (dor radicular quando AINE e paracetamol são insuficientes ou contraindicados (alternativa))
 - **AINE:** Trometamol cetorolaco (1ª linha) (dor radicular intensa no pronto atendimento, quando a via oral não é possível ou falhou (alternativa))
 - **Corticoide:** Fosfato dissódico de dexametasona (1ª linha) (compressão medular por neoplasia ou suspeita de tumor, como ponte até cirurgia ou radioterapia (condicional))
+- **Procedimentos à beira do leito:** Ressonância magnética de coluna lombossacra — Indicação: suspeita de cauda equina, déficit motor, tumor, infecção, hematoma ou falha de tratamento acima de 6 semanas com candidatura cirúrgica; não indicada na ciática sem red flag. Técnica: Cortes sagitais e axiais em T1 e T2, sem contraste; contraste com gadolínio se suspeita de infecção ou neoplasia. Complicações: Achados incidentais que levam a cirurgia desnecessária, atraso de conduta, reação ao gadolínio e nefropatia por gadolínio (rara) (procedimento indicado na síndrome) · Medida de resíduo pós-miccional por ultrassom — Indicação: suspeita de cauda equina com retenção urinária. Técnica: Esvaziamento vesical e medida do volume residual; resíduo acima de 200 mL reforça o diagnóstico. Complicações: Infecção urinária e trauma uretral pelo cateterismo (procedimento indicado na síndrome)
 
 ---
 
@@ -8925,6 +9143,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Vasodilatador:** Nitroprussiato de sódio — 0,3-0,5 mcg/kg/min. Via IV. Infusão contínua, titular a cada 5 min. Máximo 24 a 48 h. Infusão contínua em bomba. (hipertensão refratária em HSA; em hemorragia intraparenquimatosa apenas se labetalol e esmolol falharem e com monitorização de pressão intracraniana (alternativa))
 - **Vitamina:** Fitomenadiona (vitamina K) — 10 mg. Via IV. Dose única, com repetição conforme INR. 1 dose. 20 a 30 minutos. (reversão de varfarina em hemorragia intracraniana (condicional))
 - **Antifibrinolítico:** Ácido tranexâmico (1ª linha) (HSA com início há menos de 3 h, para reduzir ressangramento precoce (condicional))
+- **Procedimentos à beira do leito:** Angiotomografia de crânio (ou angiografia digital) — Indicação: HSA para localizar o aneurisma e HIP em jovem sem hipertensão para afastar malformação vascular. Técnica: Tomografia com contraste e reconstruções vasculares; a angiografia digital é o padrão-ouro e permite tratamento na mesma sessão. Complicações: Nefropatia por contraste, reação alérgica e ruptura durante o cateterismo (rara) (procedimento indicado na síndrome)
 
 ---
 
@@ -8983,6 +9202,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 ### Hospitalar (EV)
 - **IBP:** Pantoprazol sódico (1ª linha) (gastroproteção durante a dupla antiagregação em paciente com risco de sangramento digestivo (condicional) gastroproteção)
+- **Procedimentos à beira do leito:** Endarterectomia carotídea — Indicação: estenose de 50% a 99% ipsilateral sintomática, com expectativa de vida acima de 5 anos, em até 14 dias do evento. Técnica: Dissecção da bifurcação carotídea sob anestesia geral ou locorregional, com pinçamento e shunt se necessário, endarterectomia por eversão ou com patch e fechamento com controle de fluxo. Complicações: AVC perioperatório, hematoma cervical com comprometimento de via aérea, paralisia de nervo craniano, infarto do miocárdio, reestenose (procedimento indicado na síndrome)
 
 ---
 
@@ -9075,6 +9295,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antiviral:** Aciclovir — 10 mg/kg. Via IV. 8/8 h. Até PCR de HSV negativo; 14-21 dias se positivo. 60 minutos; nunca em bolus. (dúvida com encefalite herpética: convulsão, déficit focal, alteração de comportamento ou líquor com hemácias (condicional) dúvida com encefalite herpética)
 - **Anticonvulsivante:** Levetiracetam — Ataque de 1.000-2.000 mg; manutenção de 500-1.000 mg. Via IV. 12/12 h. 7 dias na fase aguda, com reavaliação da necessidade. 15 minutos. (crise convulsiva na meningite ou profilaxia de crise em paciente com lesão cortical e edema (condicional) convulsão)
 - **Osmotico:** Manitol 20% — 0,25-1 g/kg. Via IV. 6/6 h ou 8/8 h. Até o controle da pressão intracraniana ou a descompressão cirúrgica. 20-30 minutos. (hipertensão intracraniana com risco de herniação, antes da punção ou na evolução (condicional) hipertensão intracraniana)
+- **Procedimentos à beira do leito:** Punção lombar diagnóstica — Indicação: suspeita de meningite sem contraindicação de herniação, após hemocultura e antibiótico. Técnica: Decúbito lateral ou sentado, espaço L3-L4 ou L4-L5, antissepsia e anestesia local; medir a pressão de abertura, colher 3 tubos e enviar citologia, bioquímica, Gram, cultura, PCR e lactato. Complicações: Cefaleia pós-punção, hematoma epidural, herniação em hipertensão intracraniana, infecção do sítio (procedimento indicado na síndrome)
 
 ---
 
@@ -9173,6 +9394,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Inibidor sintese heme:** Hemina (arginato de hemina) — 3 a 4 mg/kg/dia. Via IV. 1x/dia. 4 dias consecutivos. 15 a 30 minutos. (crise de porfiria aguda intermitente com fraqueza, dor abdominal ou hiponatremia (condicional) porfiria aguda)
 - **Solução glicosada:** Glicose 50% (1ª linha) (carga de carboidrato na crise de porfiria, sobretudo quando a hemina não está disponível (condicional))
 - **Opioide fraco:** Cloridrato de tramadol (1ª linha) (dor neuropática intensa refratária a gabapentinoide, por curto período, enquanto se titula o tratamento de base (resgate))
+- **Procedimentos à beira do leito:** Plasmaferese terapêutica — Indicação: Guillain-Barré com incapacidade de deambular ou progressão rápida, sobretudo quando a imunoglobulina não está disponível. Técnica: Cateter venoso central de duplo lúmen; remoção de 1 a 1,5 volume plasmático por sessão, com reposição de albumina a 5% ou plasma fresco; 4 a 6 sessões em dias alternados. Complicações: Hipotensão, hipocalcemia por citrato, infecção de cateter, trombose, plaquetopenia e reação alérgica ao plasma (procedimento indicado na síndrome)
 
 ---
 
@@ -9240,6 +9462,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Notificação do acidente de trabalho e prevenção — Emitir CAT, orientar uso de óculos de proteção em esmerilhamento, solda e manuseio de químicos, e registrar o agente causal · _(medida não farmacológica da síndrome)_
 - Não dirigir e não operar máquinas — Com acuidade reduzida, pupilas dilatadas ou uso de tramadol, o paciente não deve conduzir veículo ou trabalhar em altura · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Irrigação ocular copiosa — Indicação: queimadura química e lavagem de corpo estranho. Técnica: Anestesia tópica, eversão das pálpebras, lavagem com soro fisiológico 0,9% por 20 a 30 minutos, remoção de partículas com cotonete e medição do pH conjuntival até 7,0 a 7,4. Complicações: Edema corneal por hipotonia osmótica, hipotermia local, contaminação da solução, lesão adicional se o fluxo for muito forte (procedimento indicado na síndrome)
+
 ---
 
 ## Abscesso periamigdaliano (`ws-oft_03`) — status: **aprovado**
@@ -9286,6 +9511,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Nitroimidazol:** Metronidazol (1ª linha) (cobertura de anaeróbios associada a ceftriaxona em abscesso com extensão ou falha terapêutica (condicional))
 - **Corticoide:** Fosfato dissódico de dexametasona (1ª linha) (edema importante de via aérea, trismo intenso ou dor refratária, como adjuvante da drenagem e do antibiótico (condicional))
 - **Analgésico antitérmico:** Paracetamol (1ª linha) (dor e febre no abscesso, inclusive nas primeiras horas após a drenagem, quando o AINE deve ser evitado (condicional) analgesia e antitermia)
+- **Procedimentos à beira do leito:** Punção aspirativa do abscesso periamigdaliano — Indicação: dúvida diagnóstica entre abscesso e amigdalite grave, ou serviço sem otorrinolaringologia disponível para incisão. Técnica: Anestesia tópica com lidocaína spray, paciente sentado, agulha 18 G acoplada a seringa de 10 mL no ponto de maior abaulamento, na altura do pilar anterior, aspirando até obter pus; não aprofundar mais de 1 cm e não atravessar a linha média. Complicações: Punção de vaso e hematoma, aspiração de pus para a via aérea, drenagem incompleta com recidiva, lesão de carótida interna em punção medial inadvertida (procedimento indicado na síndrome) · Incisão e drenagem do abscesso periamigdaliano — Indicação: abscesso confirmado com coleção, toxemia, falha da punção aspirativa ou recidiva. Técnica: Anestesia local ou geral com proteção de via aérea, lâmina de bisturi número 11 fazendo incisão de 1 a 1,5 cm no ponto de maior flutuação, abertura romba com pinça hemostática, aspiração contínua e lavagem com soro fisiológico; reavaliar em 24 a 48 h. Complicações: Sangramento, lesão de vaso, aspiração de secreção, recidiva por drenagem incompleta, fístula, disseminação para o espaço parafaríngeo (procedimento indicado na síndrome) · Drenagem de extensão parafaríngea ou cervical — Indicação: edema cervical, torcicolo, crepitação ou coleção em espaço profundo confirmada por tomografia. Técnica: Drenagem cirúrgica por acesso cervical externo ou transoral conforme o espaço acometido, sob anestesia geral com via aérea assegurada, com coleta de material para cultura e dreno de exteriorização. Complicações: Lesão de grandes vasos e de nervos cranianos, mediastinite, fístula, sangramento, trombose de veia jugular (procedimento indicado na síndrome)
 
 ---
 
@@ -9337,6 +9563,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Vitamina k:** Fitomenadiona (vitamina K1) — 5 a 10 mg. Via IV. Dose única. 1 dose. 20 a 30 minutos. (reversão de anticoagulação por varfarina em paciente com epistaxe que não controla (condicional))
 - **Anestésico dissociativo:** Cetamina — 0,5 mg/kg para analgesia; 1 a 1,5 mg/kg para sedação. Via IV. Dose única, com repetição de metade da dose se necessário. 1 dose por procedimento. 1 a 2 minutos. (analgesia e sedação dissociativa para tamponamento posterior doloroso ou remoção de tampão em paciente agitado, após avaliação de via aérea (condicional))
 - **Reversor de anticoagulacao:** Complexo protrombínico de quatro fatores — 25 a 50 UI/kg, conforme o INR. Via IV. Dose única. 1 dose, com reavaliação do INR. 15 a 30 minutos. (epistaxe posterior grave em uso de varfarina com INR elevado, ou sangramento com risco de vida que exige reversão imediata (resgate))
+- **Procedimentos à beira do leito:** Compressão digital e tamponamento nasal anterior — Indicação: primeira medida em toda epistaxe, e teste que define a origem: falha após 15 a 20 min com técnica correta sugere sangramento posterior. Técnica: Paciente sentado e inclinado para frente, compressão da parte mole do nariz contra o septo por 15 a 20 min sem interrupção; se persistir, gaze com vasoconstritor ou ácido tranexâmico introduzida horizontalmente ao longo do assoalho nasal, preenchendo de trás para frente, sem ultrapassar duas tentativas. Complicações: Trauma e sinéquia de mucosa, sangramento por remoção traumática, aspiração, falsa sensação de controle com sangramento posterior mantido (procedimento indicado na síndrome) · Cauterização química ou elétrica — Indicação: ponto de sangramento visível e localizado, geralmente na parede anterior do septo ou na borda do corneto. Técnica: Remover o coágulo com aspiração e gaze, anestesiar com lidocaína tópica, secar a mucosa e aplicar nitrato de prata por 5 a 10 s em um único ponto ao redor da fonte, ou eletrocoagulação bipolar com potência baixa; não cauterizar bilateralmente nem em área extensa. Complicações: Perfuração de septo, sinéquia, necrose de mucosa, recidiva por coagulação incompleta, dor intensa (procedimento indicado na síndrome) · Tamponamento posterior com sonda de Foley — Indicação: sangramento posterior sem ponto visível, falha do tamponamento anterior ou necessidade de controle rápido antes do centro cirúrgico. Técnica: Sonda de Foley 12 a 14 Fr lubrificada introduzida pela narina até a nasofaringe (cerca de 10 a 12 cm), balão insuflado com 10 a 15 mL de soro fisiológico, tracionado até encostar na coana, fixado com clamp na columela e gaze de proteção, sempre associado a tamponamento anterior. Complicações: Necrose de columela e de asa nasal por tração excessiva, sinéquia, otite média, hipoxemia e apneia, aspiração, lesão de mucosa, deslocamento do balão para a orofaringe com obstrução de via aérea (procedimento indicado na síndrome)
 
 ---
 
@@ -9390,6 +9617,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Benzodiazepínico:** Midazolam (1ª linha) (sedação para broncoscopia rígida ou flexível e para laringoscopia de remoção (condicional))
 - **Opioide:** Fentanil — 1-2 mcg/kg IV; adulto 25-50 mcg em bolus, com reforços de 12,5-25 mcg. A cada 5 minutos até o nível desejado. Procedimento e recuperação. Bolus lento em 1-2 minutos; bolus rápido causa rigidez torácica. (analgesia e sedação durante broncoscopia, laringoscopia e remoção de corpo estranho (condicional))
 - **Anticolinergico:** Glicopirrolato — 0,2 mg IV no adulto; 0,01 mg/kg na criança. Dose única antes do procedimento, repetível em 30 minutos. Procedimento. Bolus em 1 minuto. (redução de secreção e prevenção de bradicardia vagal durante broncoscopia rígida, laringoscopia e aspiração (condicional))
+- **Procedimentos à beira do leito:** Manobra de desobstrução em adulto consciente (golpes dorsais e compressões abdominais tipo Heimlich) — Indicação: obstrução completa com tosse ineficaz em adulto ou criança maior de 1 ano, consciente. Técnica: Socorrista atrás do paciente; cinco golpes com a base da mão entre as escápulas, com o paciente inclinado para frente; se não resolver, cinco compressões abdominais com punho acima do umbigo e abaixo do apêndice xifoide, em movimento rápido para cima e para dentro; alternar até a saída do objeto ou a inconsciência. Complicações: Laceração de fígado ou baço, fratura de arcos costais, regurgitação com broncoaspiração, ruptura de víscera oca e agravamento da impactação (procedimento indicado na síndrome) · Manobra de desobstrução em lactente menor de 1 ano — Indicação: obstrução completa com tosse ineficaz em lactente consciente. Técnica: Lactente em decúbito ventral sobre o antebraço, cabeça mais baixa que o tórax e mandíbula apoiada; cinco golpes dorsais com o calcanhar da mão entre as escápulas; virar em decúbito dorsal e aplicar cinco compressões torácicas com dois dedos no terço inferior do esterno; alternar os ciclos; não comprimir o abdome. Complicações: Fratura de costelas, contusão hepática, regurgitação e aspiração, lesão de coluna cervical por manipulação inadequada (procedimento indicado na síndrome)
 
 ---
 
@@ -9444,6 +9672,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Corticoide:** Succinato de metilprednisolona (1ª linha) (surdez súbita quando a via oral é inviável, há vômitos ou o paciente está internado (alternativa))
 - **Antiviral:** Aciclovir — 10 mg/kg. Via IV. 8/8 h. 7 dias. 1 hora. (surdez súbita com suspeita viral quando o valaciclovir não está disponível ou a via oral é inviável (alternativa))
+- **Procedimentos à beira do leito:** Audiometria tonal e vocal com imitanciometria — Indicação: todo paciente com suspeita de surdez súbita, no mesmo dia. Técnica: Audiometria tonal nas frequências de 250 a 8.000 Hz por via aérea e óssea, logoaudiometria com índice de reconhecimento de fala e imitanciometria para excluir causa condutiva; repetir em 7 a 14 dias e após cada ciclo de tratamento. Complicações: Não há complicações; o risco é o atraso na realização, que impede o diagnóstico e o tratamento na janela útil (procedimento indicado na síndrome) · Corticoide intratimpânico por injeção transtimpânica — Indicação: falha do corticoide sistêmico, contraindicação ao sistêmico, perda profunda ou refratariedade. Técnica: Otoscopia e antissepsia; anestesia tópica da membrana timpânica; punção no quadrante póstero-inferior com agulha fina e injeção lenta de 0,3 a 0,5 mL de dexametasona 24 mg/mL; paciente mantém a cabeça inclinada por 20 a 30 minutos e evita engolir por alguns minutos. Complicações: Perfuração timpânica, dor, vertigem transitória, infecção do ouvido médio, zumbido e falha de absorção (procedimento indicado na síndrome)
 
 ---
 
@@ -9503,6 +9732,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Compressa fria e repouso visual — Gaze fria por 10 minutos, 3 vezes ao dia, para o edema e a dor; evitar leitura prolongada e telas enquanto durar o espasmo ciliar · _(medida não farmacológica da síndrome)_
 - Encaminhamento oftalmológico no mesmo dia com registro escrito — Anotar acuidade visual, tamanho do infiltrado, presença de hipópio e colírio já instilado; o paciente sai com destino, horário e orientação de retorno imediato se a dor ou a visão piorarem no trajeto · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Biomicroscopia com fluoresceína — Indicação: todo olho com dor, fotofobia ou queda de acuidade, para definir o tamanho, a profundidade e o formato da úlcera. Técnica: Instilar fluoresceína e examinar com luz azul de cobalto e aumento: procurar captação epitelial, infiltrado estromal, hipópio, células na câmara anterior e o padrão dendrítico com terminações bulbosas. Complicações: Falso negativo sem filtro adequado, contaminação do frasco, desconforto e abrasão por técnica inadequada (procedimento indicado na síndrome) · Raspado corneal para cultura e exame direto — Indicação: ceratite grave, central, com hipópio, refratária a antibiótico ou com suspeita fúngica, antes de iniciar o antimicrobiano específico. Técnica: Anestesia tópica, lâmina de bisturi estéril ou espátula sob lâmpada de fenda, raspando a base e a borda do infiltrado; semear em ágar sangue, ágar chocolate e Sabouraud, além de lâmina para Gram e Giemsa. Complicações: Perfuração em córnea já adelgaçada, sangramento, dor, resultado tardio que não muda a conduta inicial e contaminação por flora palpebral (procedimento indicado na síndrome)
+
 ---
 
 ## Glaucoma agudo (`ws-oft_08`) — status: **aprovado**
@@ -9553,6 +9785,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antiemético:** Cloridrato de metoclopramida (1ª linha) (náusea e vômito da crise quando a ondansetrona não está disponível (alternativa)) · Cloridrato de ondansetrona (náusea e vômito da crise de glaucoma agudo (condicional) antiemético)
 - **Inibidor anidrase carbonica:** Acetazolamida 500 mg solução injetável — 500 mg. Via IV. 500 mg, depois 250 mg 8/8 h. 24 a 48 h, até a iridotomia. 15 a 30 minutos. (crise aguda com vômito, jejum ou impossibilidade de via oral (alternativa) crise de ângulo fechado)
 - **Diurético osmótico:** Manitol 20% solução — 1 a 2 g/kg. Via IV. Dose única, repetida apenas com oftalmologista. Dose única na crise. 30 a 45 minutos. (crise refratária, com pressão acima de 50 mmHg sem resposta a tópicos e acetazolamida (resgate) crise refratária)
+- **Procedimentos à beira do leito:** Tonometria de aplanação com biomicroscopia — Indicação: dor ocular com baixa visual, halos, midríase ou suspeita de glaucoma agudo. Técnica: Anestésico tópico e tonômetro de aplanação sobre a córnea, medindo os dois olhos; registrar pressão, aspecto da córnea, profundidade da câmara anterior e diâmetro pupilar. Complicações: Abrasão por técnica inadequada, transmissão de infecção sem higienização do tonômetro, leitura falsa em córnea muito edemaciada (procedimento indicado na síndrome)
 
 ---
 
@@ -9611,6 +9844,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Adesão ao desmame do corticoide por escrito — Entregar o esquema de redução em dias e gotas; parar o colírio quando a dor melhora é a principal causa de recidiva · _(medida não farmacológica da síndrome)_
 - Tratamento da doença de base — Espondiloartrite, sarcoidose, sífilis, tuberculose e herpes exigem tratamento específico; a uveíte recidiva enquanto a causa não é controlada · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Biomicroscopia com lâmpada de fenda e contagem de células — Indicação: todo olho com dor, fotofobia, miose ou baixa visual. Técnica: Instilar fluoresceína, examinar córnea, câmara anterior, íris e cristalino; graduar células e flare de 0 a 4+ e registrar a pressão intraocular. Complicações: Falso negativo sem magnificação adequada, contaminação do corante, desconforto (procedimento indicado na síndrome) · Tonometria de aplanação — Indicação: toda uveíte, pelo risco de hipertensão ocular inflamatória e induzida por corticoide. Técnica: Anestésico tópico e tonômetro sobre a córnea, medindo os dois olhos; repetir a cada 2 a 4 semanas durante o corticoide. Complicações: Abrasão por técnica inadequada, transmissão de infecção sem higienização do tonômetro, medida falsa em córnea edemaciada (procedimento indicado na síndrome) · Cicloplegia terapêutica e lise de sinequia — Indicação: dor intensa, pupila miótica e sinequia incipiente. Técnica: Instilar atropina 1% e, se necessário, associar fenilefrina 2,5% sob supervisão para romper a aderência iriana; repetir conforme a resposta. Complicações: Glaucoma agudo em olho predisposto, midríase prolongada, taquicardia e retenção urinária (procedimento indicado na síndrome)
+
 ---
 
 ## Hordéolo / calázio (`ws-oft_10`) — status: **aprovado**
@@ -9664,6 +9900,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Higiene das mãos antes de tocar a pálpebra — Lavar as mãos com sabão antes de cada compressa e antes de aplicar o colírio; não compartilhar toalha · _(medida não farmacológica da síndrome)_
 - Controle da blefarite e da rosácea — Higiene palpebral diária, protetor solar, evitar gatilhos de rosácea (calor, álcool, comida apimentada) e tratar a disfunção de Meibomius para reduzir recidiva · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Incisão e drenagem do hordéolo — Indicação: hordéolo com flutuação franca ou que não drena em 72 h. Técnica: Anestesia local com lidocaína 2% sem vasoconstritor, incisão puntiforme sobre o ponto de flutuação com lâmina 11, drenagem por expressão suave da cápsula e curativo oclusivo por 24 h. Complicações: Cicatriz visível, disseminação da infecção, lesão do canalículo lacrimal em incisão mal posicionada, recidiva (procedimento indicado na síndrome) · Excisão e curetagem do calázio — Indicação: calázio refratário por mais de 4 a 6 semanas, grande ou recidivante. Técnica: Anestesia local, incisão vertical na conjuntiva tarsal (ou horizontal na pele quando há componente cutâneo), curetagem do granuloma e envio do material para histopatologia. Complicações: Cicatriz, ectrópio, recidiva, sangramento, lesão do ducto lacrimal e resultado estético insatisfatório (procedimento indicado na síndrome) · Injeção intralesional de triancinolona — Indicação: calázio persistente sem resposta à compressa e ao corticoide tópico. Técnica: Antissepsia, anestesia tópica e injeção de 0,1 a 0,2 mL de triancinolona 4 mg/mL no centro do nódulo, com agulha 30 G; repetir após 4 semanas se necessário. Complicações: Atrofia de gordura, despigmentação, aumento da pressão intraocular, oclusão de artéria retiniana rara (procedimento indicado na síndrome)
+
 ---
 
 ## Perda visual súbita (`ws-oft_12`) — status: **aprovado**
@@ -9715,6 +9954,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Corticoide sistêmico:** Succinato de metilprednisolona (1ª linha) (neurite óptica e suspeita de arterite de células gigantes com perda visual (1a linha) neurite óptica ou arterite de células gigantes)
 - **Trombolítico:** Alteplase 50 mg injetável — 0,9 mg/kg. Via IV. 10% da dose em bolus e o restante em 60 minutos, dose única. Infusão única de 60 minutos. 10% em bolus em 1 minuto e 90% em 60 minutos. (AVC isquêmico occipital com perda de campo visual dentro da janela de 4,5 horas (condicional) AVC occipital dentro de 4,5 horas)
 - **Diurético osmotico:** Manitol 20% solução injetável — 1 a 2 g/kg. Via IV. Dose única; repetir em 6 a 8 horas se necessário. 24 a 48 horas. 30 a 45 minutos, com diurese estabelecida antes de iniciar. (glaucoma agudo com pressão intraocular muito elevada e oclusão arterial sem resposta às medidas iniciais (resgate) glaucoma agudo refratário)
+- **Procedimentos à beira do leito:** Massagem ocular digital — Indicação: suspeita de oclusão de artéria central da retina nas primeiras horas. Técnica: Com o olho fechado, compressão do globo com a polpa dos dedos por 10 a 15 segundos, seguida de descompressão de 10 a 15 segundos, repetida por 3 a 5 minutos, com reavaliação da acuidade visual entre os ciclos. Complicações: Desconforto, bradicardia vagal, deslocamento de êmbolo para ramo ainda mais crítico e lesão do globo em olho operado ou com ceratocone (procedimento indicado na síndrome) · Paracentese de câmara anterior — Indicação: oclusão de artéria central da retina e glaucoma agudo com pressão intraocular refratária. Técnica: Antissepsia, anestésico tópico, blefarostato, punção na periferia da córnea com agulha 27 a 30 G ou lâmina, drenagem de 0,1 a 0,2 mL de humor aquoso e reavaliação imediata da pressão intraocular. Complicações: Endoftalmite, lesão do cristalino ou da íris, hifema, hipotonia, descolamento de retina e perfuração do globo (procedimento indicado na síndrome)
 
 ---
 
@@ -9763,6 +10003,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Cefalosporina 3a:** Ceftriaxona (1ª linha) (sepse, meningite, petéquias febris e lactente jovem com suspeita de infecção bacteriana grave; tratamento empírico até identificação do agente (condicional))
 - **Penicilina aminopenicilina:** Ampicilina (1ª linha) (lactente menor de 3 meses com suspeita de sepse ou meningite, para cobertura de Listeria e enterococo associada ao aminoglicosídeo ou à cefalosporina (condicional))
 - **Aminoglicosídeo:** Sulfato de gentamicina (1ª linha) (sepse neonatal e de lactente jovem, em associação à ampicilina, com efeito sinérgico sobre enterococo e Gram-negativos (condicional))
+- **Procedimentos à beira do leito:** Punção lombar — Indicação: lactente menor de 3 meses com febre, estratificação entre 29 e 60 dias e suspeita de meningite. Técnica: Decúbito lateral com flexão moderada do tronco, nível L4-L5 ou L3-L4, agulha 22 G com estilete, coleta de três tubos para celularidade, glicose e proteína e cultura; não hiperextender o pescoço nem comprimir a via aérea. Complicações: Punção traumática com líquor sanguinolento, cefaleia, apneia e bradicardia em lactente, sangramento, infecção local e herniação em hipertensão intracraniana (procedimento indicado na síndrome)
 
 ---
 
@@ -9816,6 +10057,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Fluido manutencao:** Solução de manutenção isotônica (glicose 5% com cloreto de sódio 0,9%) — 100 mL/kg/dia até 10 kg; 50 mL/kg/dia entre 10 e 20 kg; 20 mL/kg/dia acima de 20 kg (Holliday-Segar). Via IV. Infusão contínua em bomba de infusão. Até retomar a dieta enteral, habitualmente 12-24 h. Infusão contínua em bomba. (manutenção venosa após o plano C, enquanto a via enteral não é tolerada (condicional) preparar 1 sachê em 1 L de água potável, sem acrescentar açúcar ou sal; desprezar sobra após 24 h)
 - **Antiemético antagonista 5ht3:** Cloridrato de ondansetrona (1ª linha) (vômito que impede a reidratação oral em criança de 6 meses a 12 anos, sem sinais de desidratação grave (condicional) somente se o vômito impedir a reidratação oral; não usar de horário)
 - **Antibiótico macrolídeo:** Azitromicina (1ª linha) (disenteria com sangue, febre alta e toxemia, ou diarreia grave por cólera com desidratação importante (condicional))
+- **Procedimentos à beira do leito:** Reidratação oral supervisionada (plano B) — Indicação: desidratação leve a moderada em criança alerta, capaz de deglutir, sem íleo. Técnica: Pesar, calcular 50-100 mL/kg e dividir em ofertas de 5-10 mL a cada 5-10 min, com seringa ou colher, sob observação direta; reavaliar hidratação, diurese e vômito a cada hora e pesar ao fim das 4 h. Se houver vômito, aguardar 10 min e retomar em volume menor. Complicações: Vômito e aspiração por oferta rápida, distensão gástrica, falha da reidratação com necessidade de sonda ou veia, hiponatremia por solução preparada errada e sobrecarga por volume acima do calculado (procedimento indicado na síndrome)
 
 ---
 
@@ -9870,6 +10112,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Corticoide sistêmico:** Succinato de metilprednisolona (1ª linha) (crise grave com vômito, dispneia intensa que impede deglutição ou falha da via oral (alternativa))
 - **Sulfato de magnésio:** Sulfato de magnésio 50% (1ª linha) (crise grave refratária a broncodilatador, ipratrópio e corticoide sistêmico em 1 h (resgate))
+- **Procedimentos à beira do leito:** Inalação com espaçador valvulado e máscara facial — Indicação: toda crise em criança que não consegue usar bocal, principalmente abaixo de 4 anos. Técnica: Agitar o aerossol, acoplar ao espaçador, adaptar a máscara cobrindo nariz, boca e queixo sem frestas, disparar um único jato e manter a máscara por 5 a 6 incursões respiratórias; aguardar 30 s e repetir até completar a dose. Sentar a criança e observar a válvula se movimentar a cada respiração. Complicações: Deposição facial e ocular por máscara mal adaptada, fresta que reduz a dose entregue, choro que diminui o volume corrente, contaminação do espaçador por falta de limpeza e uso de espaçador compartilhado entre pacientes (procedimento indicado na síndrome)
 
 ---
 
@@ -10043,6 +10286,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antiviral:** Aciclovir — 10 a 20 mg/kg/dose. Via IV. 8/8 horas. 14 a 21 dias. 60 minutos (nunca em bolus). (suspeita de encefalite por herpes simples em criança com crise febril, alteração de consciência ou crise focal repetida (condicional))
 - **Glicose:** Glicose 50% (1ª linha) (hipoglicemia documentada por glicemia capilar abaixo de 60 mg/dL durante ou após a crise (condicional))
 - **Barbiturico:** Fenobarbital sódico (1ª linha) (estado de mal febril refratário a benzodiazepínico e a uma segunda linha, ou serviço sem fenitoína e sem levetiracetam (resgate))
+- **Procedimentos à beira do leito:** Punção lombar diagnóstica — Indicação: suspeita de meningite, criança abaixo de 12 meses com febre sem foco, convulsão febril complexa, imunossupressão, vacinação incompleta ou uso prévio de antibiótico. Técnica: Estabilizar primeiro: glicemia, oximetria, benzodiazepínico se crise ativa. Posicionar em decúbito lateral com flexão suave do tronco, L3-L4 ou L4-L5, agulha 22 G em criança maior e 25 G em lactente, medir pressão de abertura, colher quatro tubos para citologia, glicose, proteína, cultura e reação em cadeia da polimerase; coletar hemocultura e glicemia simultâneas. Complicações: Cefaleia pós-punção, punção traumática com sangue no líquor, hematoma, infecção do sítio, herniação quando há hipertensão intracraniana não reconhecida, apneia e bradicardia por flexão excessiva do pescoço (procedimento indicado na síndrome) · Acesso intraósseo — Indicação: crise febril em atividade por mais de 5 minutos sem acesso venoso após duas tentativas, ou criança em choque com necessidade de benzodiazepínico imediato. Técnica: Tíbia proximal, face medial, 2 cm abaixo da tuberosidade; agulha intraóssea com broca em criança maior ou agulha manual em lactente; confirmar aspiração de medula, infundir 10 mL de soro fisiológico sob pressão e administrar o benzodiazepínico pela via intraóssea. Complicações: Extravasamento e síndrome compartimental, fratura óssea, osteomielite, posicionamento incorreto com falha de infusão, embolia gordurosa rara (procedimento indicado na síndrome)
 
 ---
 
@@ -10094,6 +10338,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Analgésico antitérmico:** Dipirona (1ª linha) (dor e febre na mão-pé-boca quando o paracetamol é insuficiente ou não está disponível (alternativa) alternativa ou resgate quando a dor não cede com paracetamol)
 - **Antiemético:** Cloridrato de ondansetrona (1ª linha) (vômito que impede a reidratação oral na mão-pé-boca, com dor já controlada (resgate) vômito que impede a reidratação oral)
 - **Fluido venoso:** Solução de manutenção venosa (glicofisiológica) — Holliday-Segar: 100 mL/kg/dia até 10 kg; 1.000 mL mais 50 mL/kg para cada kg entre 10 e 20 kg; 1.500 mL mais 20 mL/kg acima de 20 kg. Na regra 4-2-1: 4 mL/kg/h até 10 kg, 2 mL/kg/h para cada kg entre 10 e 20 kg e 1 mL/kg/h acima de 20 kg. Via IV. Infusão contínua. Até tolerar via oral, em geral 12 a 24 h. Infusão contínua por 24 h, com reavaliação a cada 4 a 6 h. (desidratação moderada ou grave, recusa hídrica persistente ou vômito incoercível que impedem a via oral (resgate))
+- **Procedimentos à beira do leito:** Teste de reidratação oral supervisionada — Indicação: criança com mão-pé-boca que recusa líquidos por dor ou com desidratação leve, para decidir entre alta e via venosa. Técnica: Analgesia e anestésico tópico 15 a 20 minutos antes; oferecer solução de reidratação oral na dose de 50 mL/kg em 4 h, em colheradas de 5 a 10 mL a cada 5 a 15 minutos, com registro em ficha do volume aceito, dos vômitos e das micções; reavaliar peso, mucosa e diurese ao final ou antes se houver vômito persistente. Complicações: Vômito por volume excessivo, distensão abdominal, aspiração em criança com rebaixamento e falsa impressão de sucesso quando a família não registra o volume real (procedimento indicado na síndrome)
 
 ---
 
@@ -10151,6 +10396,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Penicilina:** Penicilina G cristalina — 100.000 a 200.000 UI/kg/dia divididas de 4/4 a 6/6 h. Via IV. 4/4 a 6/6 h. 10 a 14 dias, com transição para via oral quando tolerar. 15 a 30 minutos por dose; infusão rápida em acesso periférico causa flebite. (escarlatina com toxemia, choque, suspeita de infecção invasiva ou impossibilidade de via oral e intramuscular (condicional))
 - **Lincosamida:** Clindamicina (1ª linha) (escarlatina com alergia imediata a beta-lactâmico, falha de erradicação ou suspeita de síndrome de choque tóxico e fasciíte (condicional))
+- **Procedimentos à beira do leito:** Teste rápido de estreptococo por swab de orofaringe — Indicação: toda suspeita de escarlatina, antes de prescrever antibiótico. Técnica: Com a criança sentada e a língua abaixada com espátula, friccionar o swab sobre ambas as amígdalas e a parede posterior da faringe, evitando bochecha, língua e úvula; processar imediatamente conforme o kit e ler no tempo especificado pelo fabricante. Complicações: Gag reflex e vômito, falso-negativo por coleta inadequada, falso-positivo por colonização assintomática em contato domiciliar (procedimento indicado na síndrome) · Cultura de orofaringe — Indicação: teste rápido negativo com suspeita clínica persistente, recidiva precoce e suspeita de falha de erradicação. Técnica: Coletar swab estéril em amígdalas e parede posterior da faringe, sem tocar mucosa jugal, acondicionar em meio de transporte e enviar ao laboratório em até 2 h; o resultado leva de 24 a 48 h. Complicações: Desconforto e vômito na coleta, falso-negativo por técnica ou antibioticoterapia prévia, demora do resultado e dificuldade de diferenciar infecção de colonização (procedimento indicado na síndrome)
 
 ---
 
@@ -10204,6 +10450,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Aminoglicosídeo:** Sulfato de gentamicina (1ª linha) (pielonefrite e febre sem foco no lactente, sobretudo quando há alergia a beta-lactâmico ou necessidade de cobertura sinérgica (1a linha))
 - **Aminopenicilina com inibidor:** Amoxicilina-clavulanato — 30 a 45 mg/kg/dia do componente amoxicilina, divididos de 12/12 h, máximo de 875 mg de amoxicilina por dose. Via VO ou IV. 12/12 h. 7 a 10 dias. 30 minutos por via venosa; não se aplica por via oral. (pielonefrite ou cistite por germe produtor de beta-lactamase, e falha de cefalexina com sensibilidade documentada (alternativa))
 - **Aminopenicilina:** Amoxicilina — 50 a 75 mg/kg/dia divididos de 8/8 a 12/12 h conforme a idade pós-natal. Via IV. 8/8 a 12/12 h. 7 a 14 dias, conforme evolução e hemocultura. 15 a 30 minutos. (neonato com suspeita de ITU, em associação com gentamicina para cobertura de Enterococcus e Listeria (condicional))
+- **Procedimentos à beira do leito:** Coleta de urina por sondagem vesical de alívio — Indicação: lactente e criança não continente com suspeita de ITU, e confirmação de resultado positivo em saco coletor. Técnica: Com técnica asséptica, higiene com clorexidina aquosa ou água e sabão, cateter uretral de calibre adequado à idade, desprezar os primeiros mililitros e coletar 5 a 10 mL em frasco estéril; retirar a sonda imediatamente após a coleta. Complicações: Trauma uretral, sangramento, introdução de bactéria com bacteriúria iatrogênica, falso-positivo por contaminação e desconforto (procedimento indicado na síndrome) · Coleta de urina por jato médio — Indicação: criança continente e colaborativa com sintomas urinários. Técnica: Higiene local com água e sabão, desprezar o primeiro jato e coletar o jato médio em frasco estéril, sem tocar na borda; orientar a criança sobre o procedimento antes, para não perder a amostra. Complicações: Contaminação por técnica inadequada, amostra insuficiente e necessidade de repetir a coleta, o que atrasa o início do tratamento (procedimento indicado na síndrome)
 
 ---
 
@@ -10315,6 +10562,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Educação da família sobre o tempo do tratamento — Explicar que a constipação funcional é crônica, que o laxante não causa dependência e que o desmame leva meses; combinar que a dose não será suspensa por conta própria quando as fezes melhorarem, que é justamente quando o desmame começa · _(medida não farmacológica da síndrome)_
 - Retirada de medicamentos que causam constipação, quando possível — Revisar ferro oral, opioides, anticonvulsivantes, anti-histamínicos e suplementos de cálcio; quando o fármaco é indispensável, ajustar dose, fracionar ou intensificar a manutenção laxativa em vez de suspender o tratamento de base · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Toque retal — Indicação: suspeita de fecaloma, impactação alta, estenose anal, Hirschsprung ou sangramento; não é necessário na constipação funcional típica já diagnosticada. Técnica: Explicar à criança e ao cuidador, usar luvas e lubrificante, examinar a margem anal, avaliar tônus, presença de fezes no ampola, sangramento e massa; no lactente, avaliar a expulsão do dedo enluvado e a ampola vazia que sugere aganglionose. Complicações: Dor e sangramento em fissura, trauma psicológico se feito sem explicação, perfuração rara e interpretação equivocada de ampola vazia (procedimento indicado na síndrome)
+
 ---
 
 ## Ideação suicida (`ws-psq_02`) — status: **aprovado**
@@ -10411,6 +10661,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Agonista alfa2 adrenérgico:** Dexmedetomidina — 0,2 a 1 mcg/kg/h. Via IV. Infusão contínua titulada por RASS. 24 a 72 h, com desmame progressivo. Infusão contínua; não fazer bolus. (delirium tremens refratário a benzodiazepínico em unidade de terapia intensiva (alternativa))
 - **Carboidrato:** Glicose 50% (1ª linha) (hipoglicemia documentada ou risco de hipoglicemia em etilista desnutrido, sempre após a tiamina (condicional))
 - **Antipsicótico tipico butirofenona:** Haloperidol (1ª linha) (agitação ou alucinações persistentes no delirium tremens apesar de benzodiazepínico adequado (condicional))
+- **Procedimentos à beira do leito:** Aplicação seriada da escala CIWA-Ar — Indicação: todo paciente com suspeita de abstinência alcoólica, da admissão até 72 h. Técnica: Dez itens (náusea, tremor, sudorese, ansiedade, agitação, cefaleia, orientação, distúrbios sensoriais, alucinações, taquicardia), pontuação de 0 a 67; registrar antes de cada dose e definir a conduta por faixa. Complicações: Pontuação feita de memória, sem registro, e conduta guiada por impressão clínica em vez do escore (procedimento indicado na síndrome) · Acesso venoso periférico e infusão de tiamina e glicose — Indicação: todo etilista com vômitos, desnutrição, hipoglicemia ou necessidade de via parenteral. Técnica: Acesso calibroso, tiamina 500 mg em 50 a 100 mL de SF em 30 min, lavar o acesso e só então glicose 50% 50 mL em bolus lento. Complicações: Flebite por glicose concentrada, anafilaxia pela tiamina em infusão rápida, hipoglicemia de rebote (procedimento indicado na síndrome)
 
 ---
 
@@ -10464,6 +10715,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Retorno agendado e contato ativo — Consulta em 7 a 14 dias após iniciar ou ajustar dose, contato telefônico em 48 h no jovem e no risco moderado; receita suficiente apenas até o retorno, com data e nome do profissional registrados · _(medida não farmacológica da síndrome)_
 - Suspensão de álcool e revisão de fármacos depressogênicos — Interromper álcool e drogas, revisar corticosteroides, isotretinoína, interferon, betabloqueador e anticoncepcional hormonal; tratar dor crônica e apneia do sono, que mantêm o quadro · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Aplicação de PHQ-9 e de escala de risco suicida (C-SSRS) — Indicação: todo atendimento por humor deprimido, na primeira consulta e em cada reavaliação. Técnica: PHQ-9 para gravidade e seguimento; C-SSRS para ideação, intensidade, plano, intenção e comportamento, aplicada na ordem do instrumento, com registro do escore no prontuário. Complicações: Falso negativo por resposta defensiva e uso do escore sem entrevista clínica, o que subestima risco (procedimento indicado na síndrome) · Plano de segurança escrito — Indicação: risco moderado, ideação sem plano ou paciente com histórico de tentativa em acompanhamento ambulatorial. Técnica: Construir com o paciente sinais de alerta, estratégias de enfrentamento, pessoas e lugares de distração, contatos de confiança e CVV 188; entregar cópia e revisar em cada consulta. Complicações: Plano genérico, feito sem o paciente, não é usado (procedimento indicado na síndrome) · Internação psiquiátrica conforme a Lei 10.216/2001 — Indicação: risco suicida alto, psicose, catatonia, recusa alimentar, autonegligência grave ou falha do tratamento ambulatorial. Técnica: Internação voluntária com consentimento registrado; na involuntária, laudo médico fundamentado, comunicação ao Ministério Público em 72 h e revisão periódica da necessidade. Complicações: Perda de vínculo, constrangimento ilegal se mal fundamentada e prolongamento indevido (procedimento indicado na síndrome)
+
 ---
 
 ## Psicose aguda (`ws-psq_06`) — status: **aprovado**
@@ -10513,6 +10767,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Benzodiazepínico:** Lorazepam — 1 a 2 mg. Via VO, IM ou IV. A cada 4 a 6 h se necessário. No máximo 7 dias, com retirada gradual. IV lento em 2 a 5 minutos; IM em aplicação única; VO não se aplica. (adjuvante da agitação e da catatonia, enquanto o antipsicótico não faz efeito (condicional)) · Diazepam (abstinência alcoólica com alucinose, catatonia e controle de convulsão associada à psicose (condicional))
 - **Anti-histaminico:** Cloridrato de difenidramina (1ª linha) (distonia aguda e reação extrapiramidal quando o biperideno não está disponível (alternativa))
 - **Anticolinergico:** Biperideno — 5 mg. Via IM ou IV. Dose única; repetir após 30 minutos se a distonia persistir. 1 a 3 doses; manutenção oral apenas se houver necessidade recorrente. IV lento em 2 a 3 minutos; IM em aplicação única. (distonia aguda, parkinsonismo e acatisia induzidos por antipsicótico (alternativa) extrapiramidalismo sintomático, pelo menor tempo possível)
+- **Procedimentos à beira do leito:** Contenção física sob monitorização — Indicação: risco iminente de agressão a si ou a terceiros, após falha da abordagem verbal e da contenção química. Técnica: Decisão médica registrada, equipe de pelo menos 4 pessoas, técnica treinada, decúbito dorsal com cabeceira elevada e membros contidos sem compressão torácica; checar pulso, perfusão e respiração após a contenção; observação contínua, soltura e reavaliação a cada 30 minutos, tempo máximo de 2 horas. Complicações: Asfixia posicional e morte súbita, rabdomiólise, trombose venosa, lesão de pele e nervo, aspiração, trauma e morte em paciente em decúbito ventral (procedimento indicado na síndrome) · Contenção química — Indicação: agitação grave com risco, após tentativa de manejo verbal e ambiental. Técnica: Escolher o fármaco pelo perfil clínico: haloperidol 5 mg IM com prometazina 50 mg IM, ou olanzapina 10 mg IM, ou benzodiazepínico em abstinência; registrar droga, dose, hora e resposta e reavaliar em 30 minutos. Complicações: Sedação excessiva, depressão respiratória, hipotensão, distonia, síndrome neuroléptica maligna e prolongamento de QT (procedimento indicado na síndrome) · Punção lombar — Indicação: febre, rigidez de nuca, cefaleia intensa ou imunossupressão com suspeita de infecção do sistema nervoso central. Técnica: Após exame neurológico e avaliação de risco de herniação; colher celularidade, glicose, proteína, cultura e PCR conforme suspeita. Complicações: Cefaleia pós-punção, sangramento, infecção e herniação quando há hipertensão intracraniana (procedimento indicado na síndrome)
 
 ---
 
@@ -10564,6 +10819,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Eletrólito antiarrítmico:** Sulfato de magnésio 50% (1ª linha) (torsades de pointes ou QT longo com instabilidade em intoxicação (condicional))
 - **Benzodiazepínico:** Diazepam (1ª linha) (convulsão induzida por tóxico, agitação grave na síndrome serotoninérgica ou em intoxicação por estimulante (condicional))
 - **Antídoto lipidico:** Emulsão lipídica 20% — 1,5 mL/kg em bolus, seguida de 0,25 mL/kg/min. Via IV. Bolus único e infusão contínua, com repetição do bolus uma vez se não houver resposta. 30 a 60 min de infusão. Bolus em 1 a 2 min; infusão contínua em bomba. (colapso cardiovascular por intoxicação por anestésico local ou por bloqueador de canal refratário a cálcio, vasopressor e bicarbonato (resgate))
+- **Procedimentos à beira do leito:** ECG de 12 derivações seriado — Indicação: todo intoxicado na admissão e em 4 a 6 h; obrigatório em tricíclico, antipsicótico, bloqueador de canal, cocaína e salicilato. Técnica: Registro de 12 derivações com medida de QRS, QT corrigido e eixo, repetido se alteração ou sintoma. Complicações: ECG normal precoce não exclui tricíclico de liberação lenta nem intoxicação por bloqueador de canal (procedimento indicado na síndrome) · Descontaminação gastrointestinal — Indicação: ingestão há menos de 1 h de substância adsorvível, com via aérea protegida. Técnica: Carvão ativado 50 g por sonda gástrica calibrosa; lavagem gástrica apenas em ingestão recente de dose muito tóxica e com via aérea protegida, sem induzir vômito. Complicações: Aspiração e pneumonite química, perfuração esofágica na lavagem, hiponatremia por lavagem com água (procedimento indicado na síndrome)
 
 ---
 
@@ -10662,6 +10918,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antídoto:** Acetilcisteína — 150 mg/kg na primeira etapa. Via IV. 150 mg/kg em 60 min, 50 mg/kg em 4 h e 100 mg/kg em 16 h. 21 horas no protocolo completo. 60 minutos na primeira etapa; 4 h e 16 h nas seguintes. (coingestão de paracetamol em dose potencialmente tóxica, com ou sem sintomas (condicional))
 - **Antiemético antagonista 5ht3:** Cloridrato de ondansetrona (1ª linha) (vômitos persistentes que impedem hidratação oral, atrapalham a reavaliação ou favorecem aspiração (condicional))
 - **Eletrólito:** Sulfato de magnésio 50% (1ª linha) (hipomagnesemia, suspeita de Wernicke ou etilista desnutrido com convulsão (condicional))
+- **Procedimentos à beira do leito:** Glicemia capilar seriada — Indicação: todo paciente com intoxicação alcoólica, na admissão, em 1 h, em 2 h e antes da alta. Técnica: Punção digital com lanceta estéril, descarte do primeiro jato, leitura em glicosímetro calibrado; em hipoglicemia, repetir 15 min após a glicose e de hora em hora enquanto houver risco. Complicações: Hipoglicemia não detectada por medida única, erro de leitura em paciente com má perfusão periférica e dor local (procedimento indicado na síndrome) · Acesso venoso periférico ou intraósseo — Indicação: todo paciente que precisa de tiamina, glicose, hidratação ou antídoto, sobretudo no rebaixado e no agitado com veia difícil. Técnica: Dois acessos calibrosos de 14 a 16 G, com punção guiada por ultrassom quando necessário; se duas tentativas falharem ou houver colapso, acesso intraósseo em tíbia proximal e troca por venoso depois. Complicações: Flebite química pela glicose concentrada, extravasamento, hematoma e, no acesso intraósseo, fratura e extravasamento (procedimento indicado na síndrome)
 
 ---
 
@@ -10718,6 +10975,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Analgésico antitérmico:** Paracetamol (1ª linha) (dor e febre após trauma de mucosa ou manipulação do conduto (condicional) dor após trauma de mucosa ou manipulação)
 - **Benzodiazepínico:** Midazolam (1ª linha) (sedação para remoção de corpo estranho em criança ou adulto não cooperativo, quando a contenção falhou e há equipe para monitorar a via aérea (condicional))
+- **Procedimentos à beira do leito:** Otoscopia e rinoscopia anterior com instrumentação — Indicação: todo paciente com suspeita de corpo estranho em ouvido ou nariz, antes de qualquer tentativa de remoção. Técnica: Boa iluminação frontal, otoscópio com oliva adequada ao canal e espéculo nasal; aspirar secreção e coágulo, vasoconstrição com oximetazolina quando necessário, identificar tipo, tamanho, localização e relação com o tímpano ou com a coana. Complicações: Dor, sangramento de mucosa, otoscopia inconclusiva por secreção espessa, lesão de mucosa por aspiração vigorosa (procedimento indicado na síndrome) · Extração com gancho de ponta romba ou pinça de crocodilo — Indicação: objeto visível, acessível e não impactado em conduto auditivo ou fossa nasal. Técnica: Sob visão direta, introduzir o gancho de ponta romba pela lateral do objeto, girar e tracionar para fora, ou apreender com pinça de crocodilo; no nariz, apoiar o gancho atrás do objeto e tracionar para frente e para baixo, sem empurrar contra o septo. Complicações: Laceração de mucosa, epistaxe, perfuração timpânica, impactação do objeto contra o tímpano ou contra a coana, aspiração do objeto durante a manipulação (procedimento indicado na síndrome)
 
 ---
 
@@ -10774,6 +11032,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 ### Hospitalar (EV)
 - **Antibiótico sistêmico cefalosporina:** Ceftriaxona (1ª linha) (conjuntivite neonatal por gonococo suspeita ou confirmada, com internação e coleta de cultura (condicional))
+- **Procedimentos à beira do leito:** Biomicroscopia com lâmpada de fenda — Indicação: todo olho vermelho com dor, baixa visual, fotofobia, trauma, uso de lente de contato ou falha de tratamento em 7 dias. Técnica: Instilar anestésico tópico, examinar pálpebra, conjuntiva, córnea, câmara anterior e reflexo pupilar; repetir após fluoresceína para pesquisar ulceração e infiltrado. Complicações: Ceratite por toxicidade do anestésico em uso repetido, reação alérgica ao corante e transmissão de infecção por contato inadequado do aparelho (procedimento indicado na síndrome) · Teste com fluoresceína e luz azul de cobalto — Indicação: suspeita de ceratite, úlcera corneal, corpo estranho ou abrasão após trauma. Técnica: Instilar 1 gota de fluoresceína 1% ou tocar a fita no fórnice, pedir que o paciente pisque e examinar com lâmpada de fenda e filtro azul; área verde indica perda epitelial. Complicações: Contaminação da solução, coloração de lente de contato e reação alérgica rara (procedimento indicado na síndrome) · Eversão palpebral e remoção de corpo estranho — Indicação: sensação de corpo estranho persistente, história de areia, solda ou inseto, mesmo com conjuntiva aparentemente normal. Técnica: Anestesiar, evertar a pálpebra superior sobre um aplicador e inspecionar o fórnice; remover corpo estranho com gaze, cotonete ou agulha estéril sob lâmpada de fenda; corpo estranho incrustado na córnea é removido pelo oftalmologista. Complicações: Abrasão corneal, úlcera, infecção secundária e perfuração em remoção inadvertida de corpo estranho profundo (procedimento indicado na síndrome) · Raspado e cultura conjuntival com coloração de Gram — Indicação: conjuntivite neonatal, quadro grave, imunossuprimido, falha de tratamento ou suspeita de agente incomum. Técnica: Coletar secreção e raspado do fórnice inferior com swab estéril ou espátula, sem anestésico; enviar para Gram, cultura bacteriana e, quando indicado, cultura viral e pesquisa de Chlamydia por PCR. Complicações: Sangramento discreto, desconforto, resultado falso-negativo por coleta inadequada e atraso terapêutico se o exame for supervalorizado (procedimento indicado na síndrome)
 
 ---
 
@@ -10822,6 +11081,10 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Analgesia e antiemético em paralelo à investigação — Não atrasar analgesia esperando exame: dor controlada permite palpação melhor e decisão mais rápida · _(medida não farmacológica da síndrome)_
 - Sinais de retorno por escrito na alta — Entregar impresso com dor que piora ou se localiza, febre, vômito persistente, sangue nas fezes, desmaio; reavaliação em 12–24 h se dor sem diagnóstico · _(medida não farmacológica da síndrome)_
 - Evitar opioide de longa ação na alta sem diagnóstico — Não prescrever opioide ou AINE por vários dias para dor abdominal não esclarecida: mascara a evolução e o paciente retorna mais grave · _(medida não farmacológica da síndrome)_
+- **[1ª linha]** Hidratação frequente e em pequenos volumes — Oferecer 100 a 200 mL de água, água morna ou solução de reidratação a cada 30 a 60 minutos, em vez de grandes volumes de uma vez, porque a odinofagia faz o paciente evitar beber e chegar desidratado. Água morna com mel e limão alivia; mel não pode ser dado a menor de 1 ano. · _(medida não farmacológica da síndrome)_
+- Gargarejo com água salgada morna — Dissolver meia colher de chá de sal em 240 mL de água morna e gargarejar por 30 segundos, 3 a 4 vezes ao dia, sem engolir; reduz edema e desconforto local e não tem risco sistêmico. Não indicar em criança que ainda não sabe gargarejar sem engolir. · _(medida não farmacológica da síndrome)_
+- Repouso vocal e retirada de irritantes — Evitar falar alto, cantar e sussurrar por 48 a 72 h; proibir cigarro, incluindo o de terceiros, álcool, café quente e ambientes com ar-condicionado seco. Sussurrar força mais a laringe do que falar em tom normal. · _(medida não farmacológica da síndrome)_
+- Alimentos frios, moles e não ácidos — Preferir sorvete, iogurte gelado, purê, sopa morna e frutas não ácidas; evitar suco de laranja, limão, tomate, fritura, pimenta e alimento duro, que traumatizam a mucosa já inflamada. O frio tem efeito anestésico local. · _(medida não farmacológica da síndrome)_
 
 ### Hospitalar (EV)
 - **Analgésico antipiretico:** Dipirona (1ª linha) (dor de garganta de intensidade média a intensa e febre, quando o paracetamol é insuficiente ou indisponível (alternativa) dor intensa não controlada pelo paracetamol isolado)
@@ -10889,6 +11152,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 
 ### Hospitalar (EV)
 - **Macrolídeo:** Azitromicina (1ª linha) (coqueluche suspeita ou confirmada por Bordetella pertussis e quimioprofilaxia de contactantes domiciliares (1a linha) coqueluche suspeita ou confirmada)
+- **Procedimentos à beira do leito:** Radiografia de tórax em duas incidências — Indicação: febre persistente, dispneia, hemoptise, perda de peso, imunossupressão, tabagista acima de 40 anos ou tosse acima de 8 semanas - nunca em tosse aguda sem alarme. Técnica: Incidências posteroanterior e perfil, em inspiração máxima, com proteção abdominal em gestante; comparar com exame prévio. Complicações: Exposição a radiação desnecessária quando pedida sem critério, falso-negativo em lesão pequena e achado incidental que gera investigação sem benefício (procedimento indicado na síndrome) · Espirometria com prova broncodilatadora — Indicação: tosse acima de 8 semanas, sibilância, suspeita de tosse variante de asma ou de DPOC. Técnica: Manobra lenta e forçada com três curvas aceitáveis, repetida 15 minutos após 400 mcg de salbutamol; registrar VEF1 e relação VEF1/CVF antes e depois. Complicações: Broncoespasmo, tontura, síncope, tosse e exacerbação em asmático instável; não realizar durante crise (procedimento indicado na síndrome) · Coleta de swab nasofaríngeo com PCR para Bordetella pertussis — Indicação: tosse paroxística acima de 2 semanas com guincho, vômito pós-tosse ou contato com caso. Técnica: Swab fino de nylon na nasofaringe, por 10 a 15 segundos, em tubo com meio de transporte; colher antes do antibiótico e até 4 semanas do início. Complicações: Desconforto e sangramento nasal, resultado falso-negativo após 4 semanas ou após antibiótico (procedimento indicado na síndrome)
 
 ---
 
@@ -10942,6 +11206,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Corticoide sistêmico:** Succinato de metilprednisolona (1ª linha) (crise grave ou quando a via oral é impossível por vômito, rebaixamento ou intubação (alternativa))
 - **Sal de magnésio:** Sulfato de magnésio 50% (1ª linha) (crise grave com pico de fluxo abaixo de 50% ou sem resposta a salbutamol, ipratrópio e corticoide na primeira hora (resgate))
+- **Procedimentos à beira do leito:** Ventilação não invasiva com CPAP ou BiPAP — Indicação: crise grave refratária em centro experiente, sem rebaixamento e sem exaustão, como ponte por 1 h. Técnica: Máscara oronasal bem ajustada, CPAP de 5-8 cmH2O ou BiPAP com IPAP 10-12 e EPAP 4-5 cmH2O, titulando pelo conforto e pela frequência respiratória; reavaliar em 30-60 min. Complicações: Distensão gástrica e vômito com aspiração, hipotensão por redução do retorno venoso, lesão de pele facial, pneumotórax e, principalmente, atraso da intubação em paciente fatigado (procedimento indicado na síndrome)
 
 ---
 
@@ -10998,6 +11263,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Macrolídeo:** Azitromicina (1ª linha) (alergia a penicilina, intolerância ao beta-lactâmico ou risco de arritmia com quinolona (alternativa))
 - **Fluoroquinolona respiratoria:** Levofloxacino (1ª linha) (risco de Pseudomonas, falha do beta-lactâmico, alergia a penicilina ou exacerbação grave com necessidade de cobertura ampliada (condicional))
 - **Cefalosporina de terceira geração:** Ceftriaxona (1ª linha) (exacerbação grave com necessidade de antibiótico IV e impossibilidade de via oral (condicional))
+- **Procedimentos à beira do leito:** Ventilação não invasiva com BiPAP — Indicação: acidose respiratória com pH entre 7,25 e 7,35 e hipercapnia, frequência respiratória acima de 25 rpm ou uso de musculatura acessória, sem rebaixamento grave. Técnica: Máscara oronasal bem ajustada, IPAP inicial de 10-12 cmH2O e EPAP de 4-6 cmH2O, titulando o IPAP a cada 15-30 min por volume corrente de 6-8 mL/kg, frequência e conforto; iniciar com períodos contínuos de 1-2 h e reavaliar pH e PaCO2 em 1-2 h. Complicações: Distensão gástrica e vômito com aspiração, lesão de pele facial, hipotensão, pneumotórax em bolha enfisematosa, falha por desconforto e atraso da intubação (procedimento indicado na síndrome) · Intubação orotraqueal com ventilação protetora — Indicação: pH abaixo de 7,25 com rebaixamento, exaustão, instabilidade hemodinâmica, falha ou contraindicação de VNI. Técnica: Pré-oxigenação, sequência rápida com cetamina ou etomidato e bloqueador neuromuscular, tubo 7,5-8,0; volume corrente 6-8 mL/kg de peso predito, frequência 12-16 rpm, PEEP de 5 cmH2O, tempo expiratório prolongado e hipercapnia permissiva com pH acima de 7,20; vigiar auto-PEEP e desconectar do circuito se houver hipotensão. Complicações: Hipotensão pós-intubação, pneumotórax e pneumomediastino, auto-PEEP com parada circulatória, aspiração, lesão de via aérea, dificuldade de desmame e morte (procedimento indicado na síndrome)
 
 ---
 
@@ -11050,6 +11316,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Fluoroquinolona respiratoria:** Levofloxacino (1ª linha) (PAC com alergia grave a betalactâmico, comorbidade que contraindica macrolídeo, ou internado sem disponibilidade de macrolídeo (alternativa) alergia grave a betalactâmico)
 - **Analgésico antitérmico:** Paracetamol (1ª linha) (febre acima de 38,5 °C ou dor pleurítica que impede a tosse e a expansão torácica (condicional) febre ou dor pleurítica)
 - **Cristaloide:** Solução fisiológica 0,9% — 500 a 1.000 mL. Via IV. Conforme resposta clínica e balanço hídrico. Até tolerar via oral. 500 mL em 30 a 60 min; 1.000 mL em 1 a 2 h. (desidratação, hipotensão inicial ou impossibilidade de ingestão oral (condicional))
+- **Procedimentos à beira do leito:** Toracocentese diagnóstica e terapêutica — Indicação: derrame pleural maior que 1 cm ao decúbito em paciente com pneumonia. Técnica: Ultrassom para marcar o ponto, antissepsia, anestesia local, punção no bordo superior da costela abaixo do derrame; enviar líquido para celularidade, proteína, glicose, LDH, pH, Gram e cultura. Complicações: Pneumotórax, sangramento, infecção do trajeto, punção de órgão, síncope (procedimento indicado na síndrome)
 
 ---
 
@@ -11102,6 +11369,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Diurético de de alça:** Furosemida (1ª linha) (edema agudo de pulmão com congestão, ortopneia e estertoração, sobretudo com sobrecarga de volume (condicional))
 - **Nitrato:** Nitroglicerina intravenosa — 5 a 10 mcg/min, com aumento de 5 a 10 mcg/min a cada 5 a 10 min. Via IV. Infusão contínua titulada. 24 a 48 h, até compensar a congestão. Infusão contínua, titulada a cada 5 a 10 min. (edema agudo de pulmão hipertensivo com pressão sistólica acima de 110 mmHg, ou dor isquêmica associada (condicional))
 - **Sal de magnésio:** Sulfato de magnésio 50% (1ª linha) (asma grave ou broncoespasmo refratário após três séries de broncodilatador, e exacerbação grave de DPOC (resgate))
+- **Procedimentos à beira do leito:** Punção arterial para gasometria — Indicação: hipoxemia, suspeita de hipercapnia, DPOC, rebaixamento ou acidose metabólica. Técnica: Artéria radial preferencial após teste de Allen, agulha 23 a 25 G, 1 a 2 mL de sangue heparinizado, compressão por 5 min; processar em até 15 min. Complicações: Hematoma, dor, espasmo arterial, trombose rara, punção de nervo, infecção (procedimento indicado na síndrome)
 
 ---
 
@@ -11157,6 +11425,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antibiótico macrolídeo:** Azitromicina (1ª linha) (pneumonia com alergia a penicilina, suspeita de atípicos ou associação a betalactâmico na pneumonia grave (alternativa) alergia a penicilina ou suspeita de atípicos)
 - **Antibiótico betalactamico:** Ceftriaxona (1ª linha) (pneumonia com critério de internação, comorbidade, hipoxemia ou falha do tratamento oral (condicional))
 - **Opioide:** Sulfato de morfina (1ª linha) (dor pleurítica intensa refratária, depois de excluídos TEP, pneumotórax, dissecção de aorta e síndrome coronariana aguda (resgate))
+- **Procedimentos à beira do leito:** Radiografia de tórax em duas incidências — Indicação: toda dor pleurítica como primeiro exame de imagem. Técnica: Posteroanterior e perfil, em inspiração máxima; em paciente grave, anteroposterior portátil. Complicações: Baixa sensibilidade para TEP, pneumotórax pequeno e lesão retrocardíaca; não exclui causas graves (procedimento indicado na síndrome) · Ultrassonografia pleural à beira-leito — Indicação: suspeita de derrame, consolidação, pneumotórax ou derrame pericárdico. Técnica: Transdutor convexo e linear em grade de 8 a 12 regiões por hemitórax; avaliar líquido, deslizamento pleural e sinal do pulso pulmonar. Complicações: Dependência do operador, resultado duvidoso em obesidade e enfisema subcutâneo (procedimento indicado na síndrome)
 
 ---
 
@@ -11202,6 +11471,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Opioide:** Fentanil — 25-50 mcg em bolus, com reforços de 12,5-25 mcg. Via IV. A cada 5 minutos até o nível desejado. Procedimento e recuperação. Bolus lento em 1-2 minutos (bolus rápido causa rigidez torácica). (sedação e analgesia procedural para drenagem torácica, agulha de alívio ou aspiração simples (condicional)) · Sulfato de morfina (dor intensa do pneumotórax ou do pós-drenagem que não responde a dipirona e paracetamol (resgate))
 - **Benzodiazepínico:** Midazolam (1ª linha) (sedação ansiolítica associada ao opioide durante a drenagem torácica (condicional))
 - **Antibiótico betalactamico inibidor:** Amoxicilina com clavulanato — 875/125 mg. Via VO ou IV. 12/12 h (VO) ou 8/8 h (IV). 5-7 dias. (pneumotórax aberto, ferida torácica contaminada ou trauma penetrante com drenagem (condicional) pneumotórax aberto ou ferida torácica contaminada)
+- **Procedimentos à beira do leito:** Agulha de alívio (descompressão por agulha) — Indicação: pneumotórax hipertensivo com instabilidade, antes de qualquer imagem. Técnica: Antissepsia e anestesia local; agulha 14 G ou cateter sobre agulha de 8 cm no quarto ou quinto espaço intercostal na linha axilar anterior (alternativa: segundo espaço intercostal na linha medioclavicular), até saída de ar; deixar o cateter e seguir para drenagem. Complicações: Punção de vaso intercostal, de pulmão ou de víscera, pneumotórax por mau posicionamento, infecção e falha por agulha curta em tórax espesso (procedimento indicado na síndrome) · Aspiração simples por cateter — Indicação: pneumotórax espontâneo primário maior que 2 cm ou sintomático, com paciente estável. Técnica: Cateter 14-16 G ou cateter venoso central no segundo espaço intercostal na linha medioclavicular; conectar a válvula de três vias e seringa de 60 mL, aspirar até 2,5-4 L e clampear por 1-2 h, repetindo se necessário; radiografia de controle. Complicações: Falha em um terço dos casos, punção pulmonar, sangramento, enfisema subcutâneo e infecção (procedimento indicado na síndrome)
 
 ---
 
@@ -11249,6 +11519,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Lincosamida:** Clindamicina (1ª linha) (empiema por anaeróbios, aspiração, abscesso pulmonar associado ou alergia a betalactâmico (condicional) anaeróbios ou alergia a betalactâmico)
 - **Diurético de alsa:** Furosemida (1ª linha) (derrame transudativo por insuficiência cardíaca ou sobrecarga volêmica (condicional) transudato por insuficiência cardíaca)
 - **Opioide:** Sulfato de morfina (1ª linha) (dor intensa da drenagem, dispneia refratária do derrame volumoso ou do derrame maligno (resgate) dor intensa ou dispneia refratária)
+- **Procedimentos à beira do leito:** Toracocentese diagnóstica guiada por ultrassom — Indicação: todo derrame pleural novo com volume suficiente, para classificar em transudato ou exsudato e identificar a causa. Técnica: Ultrassom para marcar o sítio na linha axilar posterior ou média, antissepsia, campo estéril, lidocaína 1% por planos e agulha 21 a 22 G; aspirar 30 a 50 mL e enviar para celularidade, proteína, LDH, glicose, ADA, citologia, Gram, cultura e pH. Complicações: Pneumotórax, hemotórax, dor, infecção do trajeto, punção de fígado ou baço e síncope vasovagal (procedimento indicado na síndrome)
 
 ---
 
@@ -11301,6 +11572,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Vitamina:** Fitomenadiona (vitamina K) — 5 a 10 mg. Via IV. Dose única. 1 dose. 20 a 30 minutos. (reversão de varfarina em paciente com hemoptise e INR elevado (condicional))
 - **Reversor anticoagulante:** Complexo protrombínico — 25 a 50 UI/kg. Via IV. Dose única. 1 dose. 10 a 15 minutos. (reversão imediata de varfarina ou de inibidor do fator Xa em hemoptise com sangramento ativo (condicional))
 - **Reversor anticoagulante especifico:** Idarucizumabe — 5 g. Via IV. Dose única, dividida em dois frascos de 2,5 g. 1 administração. Cada 2,5 g em 5 a 10 minutos. (reversão de dabigatrana em hemoptise com risco de vida, com base em história de uso nas últimas 48 horas (resgate))
+- **Procedimentos à beira do leito:** Intubação orotraqueal com proteção de via aérea — Indicação: hemoptise maciça, rebaixamento de consciência, incapacidade de tossir ou hipoxemia refratária. Técnica: Sequência rápida pelo protocolo BOX-02: pré-oxigenação, etomidato 0,3 mg/kg e succinilcolina 1 a 1,5 mg/kg, aspiração vigorosa imediatamente após a passagem do tubo e confirmação por capnografia; aspiração contínua do tubo antes de ventilar. Complicações: Asfixia por sangue durante a laringoscopia, intubação esofágica, aspiração para o pulmão sadio, lesão de via aérea e parada cardíaca (procedimento indicado na síndrome)
 
 ---
 
@@ -11368,6 +11640,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Retirada programada dos pontos — agendar no dia correto do sítio e registrar na alta; retirada precoce causa deiscência e tardia deixa marca · _(medida não farmacológica da síndrome)_
 - Registro do estado vacinal antitetânico — anotar número de doses e data da última no prontuário e no cartão; sem registro, tratar como esquema desconhecido · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Irrigação sob pressão e desbridamento — Indicação: toda ferida que será suturada ou deixada para segunda intenção. Técnica: anestesiar quando necessário, irrigar com SF 0,9% em seringa de 35 mL com agulha 18 G a 8 a 15 psi, remover corpo estranho e tecido desvitalizado, revisar hemostasia. Complicações: dilaceração tecidual com pressão acima de 15 psi, disseminação de contaminante para planos profundos e hipotermia em ferida extensa (procedimento indicado na síndrome)
+
 ---
 
 ## Mordedura animal (`ws-tra_02`) — status: **aprovado**
@@ -11431,6 +11706,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 ### Hospitalar (EV)
 - **Penicilina com inibidor de betalactamase:** Ampicilina + sulbactam (1ª linha) (mordedura com infecção instalada, celulite extensa, ferida profunda ou de mão com internação (1a linha))
 - **Nitroimidazol:** Metronidazol (1ª linha) (cobertura adicional de anaeróbios em ferida profunda, por punção ou contaminada por terra (condicional))
+- **Procedimentos à beira do leito:** Lavagem e desbridamento da mordedura — Indicação: toda mordedura, antes de qualquer decisão de fechamento. Técnica: lavar com água e sabão por 15 minutos, irrigar com SF 0,9% sob pressão, remover corpo estranho e tecido desvitalizado, revisar hemostasia e não fechar em seguida quando o risco é alto. Complicações: sangramento, disseminação de contaminante para planos profundos e lesão de estrutura nobre durante o desbridamento (procedimento indicado na síndrome)
 
 ---
 
@@ -11490,6 +11766,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antiemético:** Cloridrato de ondansetrona (1ª linha) (vômitos na lesão esofágica por cáustico, para evitar reexposição da mucosa (alternativa))
 - **Antídoto injetavel cálcio:** Gluconato de cálcio 10% — Infiltração perilesional de 0,5 mL por cm² de pele atingida, até 10 mL por sessão; via intravenosa 1 a 2 g se hipocalcemia sintomática ou arritmia. Via infiltração perilesional ou IV. Dose única por sessão de infiltração; repetir conforme dor e cálcio. 1 a 3 sessões. Via intravenosa em 10 a 20 minutos; infiltração local imediata. (queimadura por ácido fluorídrico com dor persistente, e hipocalcemia sintomática (condicional))
 - **IBP:** Omeprazol sódico (1ª linha) (lesão esofágica ou gástrica por ingestão de cáustico (condicional))
+- **Procedimentos à beira do leito:** Irrigação e descontaminação cutânea — Indicação: todo contato químico com a pele. Técnica: retirar o agente e a roupa, escovar o pó seco, irrigar em fluxo contínuo com água corrente a 37 °C por 20 a 30 minutos (45 a 60 no álcali), medir o pH da pele ao final e repetir se estiver alterado. Complicações: hipotermia em área extensa, aprofundamento da lesão quando a irrigação é curta e disseminação do agente para áreas íntegras pela água escorrida (procedimento indicado na síndrome) · Lavagem ocular e eversão palpebral — Indicação: exposição ocular por qualquer agente químico. Técnica: anestesiar com colírio de proximetacaína, evertar as pálpebras, irrigar com soro fisiológico por 20 a 30 minutos (60 no álcali) de medial para lateral, remover lente de contato e usar lente de Morgan quando disponível. Complicações: lesão corneal por irrigação insuficiente, contaminação do fórnice, abrasão por eversão traumática e retenção de corpo estranho (procedimento indicado na síndrome)
 
 ---
 
@@ -11537,6 +11814,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Reversor:** Complexo protrombínico — 25 a 50 UI/kg, conforme INR e peso. Via IV. Dose única. 10 a 20 minutos. (hemorragia intracraniana em uso de varfarina, para reversão imediata (condicional))
 - **Opioide:** Sulfato de morfina (1ª linha) (dor intensa refratária ao paracetamol, após tomografia e com exame neurológico seriado (resgate))
 - **Antídoto:** Idarucizumabe — 5 g, em duas infusões de 2,5 g. Via IV. Dose única; repetir 5 g se sangramento persistente. Dose única. 5 a 10 minutos por infusão. (hemorragia intracraniana em paciente em uso de dabigatrana (resgate))
+- **Procedimentos à beira do leito:** Tomografia de crânio sem contraste — Indicação: critério canadense de alto ou médio risco, anticoagulação, déficit focal, piora do Glasgow ou intoxicação. Técnica: cortes axiais de 5 mm da base ao vértice, sem contraste, com janela óssea e reconstrução de partes moles; no anticoagulado com tomografia inicial normal, repetir em 6 a 24 horas se houver piora. Complicações: transporte de paciente instável, radiação, sedação desnecessária para o exame e falso-negativo em lesão pequena ou isodensa (procedimento indicado na síndrome) · Observação clínica estruturada — Indicação: todo trauma craniano leve sem indicação imediata de tomografia. Técnica: Glasgow, pupilas e déficit a cada hora, com registro em ficha própria; exame médico antes da alta; tomografia imediata se queda de Glasgow, cefaleia progressiva, vômito repetido ou déficit novo. Complicações: deterioração não percebida em serviço com equipe insuficiente, alta precoce e erro por confiar em acompanhante não orientado (procedimento indicado na síndrome) · Sutura de ferimento de couro cabeludo — Indicação: ferimento cortante associado, sem afundamento ósseo. Técnica: tricotomia mínima, antissepsia com clorexidina, anestesia com lidocaína 2% com adrenalina, hemostasia e sutura com fio não absorvível 3-0 ou grampo, com revisão do estado vacinal. Complicações: infecção, hematoma subgaleal, deiscência e sutura sobre fratura deprimida não diagnosticada (procedimento indicado na síndrome)
 
 ---
 
@@ -11588,6 +11866,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Analgésico não opioide:** Paracetamol (1ª linha) (analgesia multimodal adjuvante para reduzir o consumo de opioide (alternativa) dor após imobilização)
 - **Aminoglicosídeo:** Sulfato de gentamicina (1ª linha) (fratura exposta grave, esmagamento ou contaminação por Gram-negativos, associada à cefazolina (condicional))
 - **Penicilina com inibidor de betalactamase:** Amoxicilina-clavulanato — 875/125 mg por via oral ou 1 g/200 mg por via intravenosa. Via VO ou IV. 12/12 h por via oral; 8/8 h por via intravenosa. 7 dias. Via intravenosa em 30 minutos; via oral não se aplica. (fratura exposta com ferida rural, terra, fezes ou material vegetal, pela cobertura de anaeróbios (condicional) fratura exposta com ferida rural ou contaminada, após alta)
+- **Procedimentos à beira do leito:** Imobilização provisória e transporte — Indicação: toda fratura de membro antes da mobilização, da radiografia em outra sala ou da transferência. Técnica: tração suave no eixo anatômico apenas o suficiente para alinhar, tala de fibra ou de gesso acolchoada envolvendo as duas articulações vizinhas, fixação com atadura sem apertar, reavaliação neurovascular imediata e registro. Complicações: isquemia por tala apertada, lesão de pele por pressão, conversão de fratura fechada em exposta e alinhamento insuficiente que impede o transporte (procedimento indicado na síndrome) · Bloqueio de hematoma — Indicação: fratura fechada distal de rádio, tornozelo ou falange com dor que impede a redução. Técnica: antissepsia e campo estéril, anestesia da pele com botão de lidocaína, agulha 22 G introduzida no foco de fratura guiada por radioscopia, aspiração de sangue do hematoma para confirmar o posicionamento, injeção lenta de 10 a 20 mL de lidocaína a 1% sem vasoconstritor e espera de 10 minutos. Complicações: infecção do foco, toxicidade sistêmica por injeção intravascular, bloqueio incompleto e dor residual (procedimento indicado na síndrome)
 
 ---
 
@@ -11636,6 +11915,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Aminoglicosídeo:** Sulfato de gentamicina (1ª linha) (coto com contaminação grosseira, esmagamento ou exposição a Gram-negativos, associada à cefazolina (condicional))
 - **Eletrólito:** Gluconato de cálcio 10% — 1 g (10 mL da solução a 10%). Via IV. Repetir conforme cálcio iônico; a cada 4 unidades de concentrado de hemácias em transfusão maciça. Infusão lenta; repetir enquanto durar a transfusão maciça. 10 a 20 minutos; em parada por hipercalemia, em 5 a 10 minutos. (hipocalcemia por transfusão maciça e prevenção de arritmia e coagulopatia no choque hemorrágico (condicional))
 - **Vasopressor:** Noradrenalina — 0,05 a 0,5 mcg/kg/min. Via IV em infusão contínua, em acesso calibroso ou cateter central. Infusão contínua com titulação pela pressão arterial média. Até controle hemodinâmico e hemostasia cirúrgica. Infusão contínua, titulada a cada 5 a 10 minutos. (choque hemorrágico com hipotensão persistente após reposição volêmica e transfusão (resgate))
+- **Procedimentos à beira do leito:** Controle de hemorragia por compressão e curativo compressivo — Indicação: toda amputação com sangramento ativo, como primeira medida. Técnica: gaze estéril dobrada sobre o coto, pressão manual firme e contínua por 10 minutos sem inspecionar, seguida de atadura compressiva e elevação do membro quando possível; reavaliar encharcamento do curativo e registrar a hora. Complicações: sangramento persistente sob o curativo, compressão excessiva com isquemia do coto, dor intensa e contaminação do ferimento (procedimento indicado na síndrome) · Torniquete tático proximal — Indicação: hemorragia arterial que não cessa com compressão, coto com vaso exposto ou múltiplos feridos. Técnica: posicionar 5 a 7 cm acima do foco, nunca sobre articulação, apertar até cessar o sangramento arterial, travar o catraca, escrever a hora na fita e no prontuário; se falhar, adicionar segundo torniquete acima sem soltar o primeiro. Complicações: lesão de nervo por compressão prolongada, isquemia de membro, rabdomiólise e síndrome de reperfusão ao soltar, necrose de pele sob a fita (procedimento indicado na síndrome)
 
 ---
 
@@ -11681,6 +11961,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Antiemético 5ht3:** Cloridrato de ondansetrona (1ª linha) (náusea e vômito induzidos por opioide durante ou após a sedação (condicional))
 - **Antagonista opioide:** Cloridrato de naloxona (1ª linha) (depressão respiratória por opioide durante a sedação para redução (resgate))
 - **Antagonista benzodiazepínico:** Flumazenil — 0,2 mg. Via IV. Repetir 0,2 mg a cada 60 segundos até resposta. Dose única ou repetida; efeito de 30 a 60 minutos. Bolus em 15 a 30 segundos. (sedação excessiva por midazolam durante a redução (resgate))
+- **Procedimentos à beira do leito:** Redução de luxação — Indicação: luxação de ombro, patela, dedo, mandíbula, cotovelo, punho ou tornozelo, sem fratura associada na imagem. Técnica: avaliação neurovascular registrada, radiografia em duas incidências, sedação e analgesia tituladas até sedação moderada ou dissociação, tração contínua no eixo da articulação com contratração por assistente, manobra específica por articulação sem alavanca, no máximo duas tentativas, reavaliação neurovascular imediata e radiografia pós-redução. Complicações: lesão do nervo axilar ou do nervo ciático, fratura do colo umeral ou do trocanter durante a manobra, lesão vascular com hematoma expansivo, síndrome compartimental, rigidez articular e luxação recorrente (procedimento indicado na síndrome) · Redução de luxação de quadril — Indicação: luxação de quadril confirmada, com ou sem fratura acetabular, sempre como emergência. Técnica: acionar ortopedia, radiografar e considerar tomografia se o tempo permitir, analgesia e sedação profunda ou anestesia geral em centro cirúrgico, tração longitudinal no eixo do fêmur com o quadril e o joelho em 90 graus e tração suave até o ressalto de entrada da cabeça no acetábulo, seguida de radiografia e exame do nervo ciático. Complicações: necrose avascular da cabeça femoral após 6 horas, lesão do nervo ciático, fratura do colo femoral durante a tração, lesão de cartilagem acetabular e artrose pós-traumática precoce (procedimento indicado na síndrome)
 
 ---
 
@@ -11736,6 +12017,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Opioide:** Fentanil — 1 a 2 mcg/kg. Via IV. Dose inicial; repetir 0,5 a 1 mcg/kg a cada 3 a 5 minutos. Procedimento; efeito de 30 a 60 minutos. Bolus lento em 1 a 2 minutos. (analgesia durante exploração dolorosa e sedação associada em retirada extensa (1a linha))
 - **Anestésico dissociativo:** Cetamina — 0,5 a 1 mg/kg para sedação dissociativa; 0,3 mg/kg para analgesia subdissociativa. Via IV. Dose única; repetir 0,25 a 0,5 mg/kg se o procedimento não terminou. Sedação de 10 a 15 minutos; analgesia de 20 a 30 minutos. Bolus lento em 1 a 2 minutos. (sedação para retirada extensa ou múltiplos fragmentos em paciente hipotensivo ou com dor refratária (alternativa))
 - **Benzodiazepínico:** Midazolam (1ª linha) (ansiólise e sedação associada ao fentanil em paciente ansioso ou em procedimento prolongado (condicional))
+- **Procedimentos à beira do leito:** Exploração e retirada de corpo estranho cutâneo sob anestesia local — Indicação: corpo estranho cutâneo visível, palpável ou localizado por imagem, sem lesão de tendão, nervo ou vaso. Técnica: antissepsia e campo estéril, magnificação, infiltração de lidocaína 2% sem vasoconstritor na pele e no trajeto, incisão de 3 a 5 mm no eixo do objeto, dissecção romba até visualizar o corpo estranho, apreensão com pinça de ponta fina e tração no eixo de entrada, conferência de retirada completa, irrigação e curativo aberto. Complicações: fragmento retido, lesão de nervo digital ou de tendão flexor, hematoma, infeção do sítio e cicatriz dolorosa (procedimento indicado na síndrome) · Remoção com pinça sob visão direta — Indicação: corpo estranho superficial com ponta visível no orifício de entrada. Técnica: sem incisão quando a ponta é visível, apreensão firme com pinça de relógio no eixo do objeto, tração contínua e lenta no mesmo ângulo de entrada, sem torção e sem fragmentar; se a ponta se partir, mudar para exploração formal com incisão. Complicações: fragmentação do objeto com ponta retida, lesão de tecido adjacente e infeção por manipulação repetida sem antissepsia (procedimento indicado na síndrome)
 
 ---
 
@@ -11911,6 +12193,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Mobilização precoce dos dedos livres — mobilizar ativamente os dedos não imobilizados desde o primeiro dia e iniciar flexoextensão ativa do dedo acometido em 48 a 72 horas quando liberado pela cirurgia · _(medida não farmacológica da síndrome)_
 - Registro fotográfico e funcional inicial — fotografar a lesão, registrar goniometria e força de preensão antes da analgesia e anexar ao prontuário, porque a evolução funcional é o desfecho que importa · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Exame funcional de tendões e nervos da mão — Indicação: toda ferida, contusão ou fratura de mão e dedo, antes de suturar ou imobilizar. Técnica: testar flexor profundo pela flexão da interfalângica distal com a proximal estabilizada, flexor superficial pela flexão da proximal com as demais dedos bloqueados em extensão, flexor longo do polegar pela flexão da interfalângica do polegar, extensores pela extensão contra resistência dedo por dedo; testar sensibilidade de polpa do indicador e médio (mediano), do quinto dedo (ulnar) e da região dorsal do primeiro espaço interósseo (radial), força de abdução e teste de Froment. Complicações: diagnóstico falso-negativo em paciente que não colabora ou sob sedação, dor que impede o teste sem analgesia e lesão iatrogênica ao forçar contra resistência (procedimento indicado na síndrome) · Bloqueio digital — Indicação: sutura, desbridamento, trepanação, drenagem ou retirada de unha em dedo. Técnica: antissepsia, agulha 25 x 7 na base do dedo, 1 a 2 mL de lidocaína 1% sem vasoconstritor de cada lado do pedículo, aspirando antes de injetar; aguardar 5 minutos e testar sensibilidade antes de iniciar. Complicações: hematoma, injeção intravascular com toxicidade, parestesia transitória, isquemia se usada solução com vasoconstritor (procedimento indicado na síndrome)
+
 ---
 
 ## Hematoma subungueal (`ws-tra_12`) — status: **aprovado**
@@ -11968,6 +12253,9 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - Reavaliação programada — retorno em 48 a 72 horas para conferir dor, sinais de infecção e posição do orifício, e nova avaliação em 3 a 4 semanas nos casos com fratura · _(medida não farmacológica da síndrome)_
 - Registro fotográfico da unha — fotografar o dedo na primeira consulta e nas reavaliações para documentar a evolução da mancha e detectar distrofia precocemente · _(medida não farmacológica da síndrome)_
 
+### Hospitalar (EV)
+- **Procedimentos à beira do leito:** Trepanação da lâmina ungueal com agulha — Indicação: hematoma acima de 25 a 50% da unha ou dor intensa e pulsátil, com lâmina íntegra. Técnica: antissepsia com clorexidina aquosa 2%, bloqueio digital com lidocaína 1% sem vasoconstritor, agulha 18 a 20 G apoiada perpendicularmente sobre a unha e girada suavemente entre os dedos até atravessar a lâmina, sem pressão sobre o leito; 1 a 2 orifícios até drenar o sangue, seguidos de leve expressão e curativo estéril. Complicações: perfuração do leito ungueal com dor e sangramento persistente, infecção do orifício, drenagem incompleta e distrofia ungueal (procedimento indicado na síndrome) · Trepanação com clipe de papel aquecido — Indicação: hematoma doloroso quando não há agulha calibrosa ou em lâmina muito espessa. Técnica: clipe de papel metálico aberto, extremidade aquecida em chama até ficar rubra, aplicado sobre a unha por 1 a 2 segundos por vez, repetindo até atravessar; nunca pressionar contra o leito e proteger a pele ao redor. Complicações: queimadura de pele adjacente, perfuração do leito, dor se a anestesia for insuficiente e fumaça com odor desagradável (procedimento indicado na síndrome) · Bloqueio digital — Indicação: qualquer drenagem, remoção de lâmina ou reparo do leito ungueal, inclusive em criança. Técnica: antissepsia, agulha 25 x 7 na base do dedo, 1 a 2 mL de lidocaína 1% sem vasoconstritor de cada lado do pedículo, aspirando antes de injetar; aguardar 5 minutos e testar a sensibilidade da polpa. Complicações: hematoma, injeção intravascular com toxicidade, parestesia transitória e isquemia se usada solução com vasoconstritor (procedimento indicado na síndrome)
+
 ---
 
 ## Hematúria aguda (`ws-uro_04`) — status: **aprovado**
@@ -12012,6 +12300,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Analogo vasopressina:** Desmopressina — 0,3 mcg/kg. Via IV. Dose única; repetir em 8 a 12 h se necessário, no máximo 2 a 3 doses. 1 a 3 doses. 30 minutos. (sangramento urinário por coagulopatia urêmica ou plaquetopatia, sem resposta à correção clínica (condicional))
 - **Analgésico antitérmico:** Dipirona (1ª linha) (dor associada à hematúria, cólica por coágulo ou dor da ITU (condicional) dor)
 - **Opioide:** Sulfato de morfina (1ª linha) (dor intensa por retenção de coágulo ou cólica refratária à dipirona (resgate) dor refratária)
+- **Procedimentos à beira do leito:** Sondagem vesical de três vias com irrigação contínua — Indicação: hematúria com coágulos, retenção urinária ou bexiga distendida. Técnica: Antissepsia, instalação de sonda de três vias de maior calibre, esvaziamento inicial e irrigação contínua com soro fisiológico, ajustando a velocidade pelo aspecto do efluente. Complicações: Trauma uretral, falsa via, infecção associada ao cateter, hiponatremia por absorção, distensão vesical se a irrigação exceder a drenagem e hipotermia (procedimento indicado na síndrome)
 
 ---
 
@@ -12116,6 +12405,7 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Penicilina com inibidor:** Ampicilina + sulbactam (1ª linha) (DIP hospitalar quando cefoxitina, cefotetana ou clindamicina não estão disponíveis (alternativa))
 - **Cefamicina:** Cefoxitina — 2 g (cefotetana 2 g 12/12 h como equivalente). Via IV. 6/6 h. Até 24 a 48 h após melhora clínica, completando 14 dias. 30 minutos. (DIP hospitalar, esquema clássico em associação com doxiciclina (alternativa) DIP hospitalar)
 - **Analgésico antitérmico:** Dipirona (1ª linha) (analgesia e antitermia na dor pélvica aguda já avaliada, sem abdome cirúrgico (condicional) analgesia e antitermia, após avaliação cirúrgica)
+- **Procedimentos à beira do leito:** Exame bimanual e especular com aplicação dos critérios mínimos — Indicação: toda dor pélvica aguda em mulher sexualmente ativa. Técnica: Inspeção do corrimento e do colo com espéculo, coleta de swab endocervical para teste de amplificação, seguida de toque bimanual pesquisando dor à mobilização do colo, dor uterina e dor anexial, além de massa. Complicações: Desconforto intenso, dificuldade de exame em virgem ou com dor importante, necessidade de sedação em casos selecionados (procedimento indicado na síndrome) · Ultrassonografia pélvica transvaginal — Indicação: suspeita de abscesso, massa anexial, torção, cisto roto e exclusão de ectópica. Técnica: Avaliação de útero, endométrio, ovários, trompas e líquido livre no fundo de saco, com Doppler para fluxo ovariano na suspeita de torção. Complicações: Exame inconclusivo em obesidade ou dor intensa, achados inespecíficos que não excluem DIP inicial (procedimento indicado na síndrome)
 
 ---
 
@@ -12206,5 +12496,6 @@ _Gerado em 2026-11-27T09:31:14.813Z; build: 239 condição(ões)._
 - **Aminoglicosídeo:** Amicacina — 15 mg/kg. Via IV. 1x/dia (dose única diária). 5 a 7 dias, o menor tempo possível. 30 minutos na dose única diária. (ITU complicada com alergia grave a beta-lactâmico ou indisponibilidade de cefalosporina, com cultura sensível (alternativa))
 - **Fluoroquinolona:** Ciprofloxacino (1ª linha) (ITU complicada com sensibilidade documentada e ausência de alternativa oral, sobretudo no descalonamento de enterobactéria resistente a beta-lactâmico oral (condicional) somente com sensibilidade documentada e sem alternativa oral; contraindicado na gestação)
 - **Analgésico antitérmico:** Paracetamol (1ª linha) (dor e febre associadas à ITU complicada, enquanto o antibiótico e o controle do foco fazem efeito (condicional) máximo 3 g/dia; não associar AINE)
+- **Procedimentos à beira do leito:** Coleta de urocultura e hemocultura antes da primeira dose de antibiótico — Indicação: toda ITU complicada, sem exceção, e todo paciente com febre ou sepse de foco urinário. Técnica: Colher urina por jato médio após higiene, ou por cateter recém-trocado, ou por punção suprapúbica quando não há via; identificar o método na requisição. Colher duas amostras de hemocultura de sítios distintos antes do antibiótico e enviar ao laboratório em até 2 h. Complicações: Contaminação com flora mista e tratamento desnecessário, resultado falso-negativo se a amostra demorar, punção seca e atraso do antibiótico em paciente instável - nesse caso, colher e tratar imediatamente (procedimento indicado na síndrome) · Cateterismo vesical de demora ou de alívio — Indicação: retenção urinária com infecção, necessidade de controle rigoroso de diurese na sepse ou coleta de urina estéril, com técnica estéril. Técnica: Antissepsia com clorexidina aquosa, campo estéril, sonda de calibre adequado, gel lubrificante com lidocaína e sistema fechado; em suspeita de trauma uretral, não cateterizar e solicitar uretrocistografia. Fixar sem tração e manter bolsa abaixo da bexiga. Complicações: ITU associada a cateter, trauma uretral, falsa via, hematúria, espasmo vesical, obstrução do cateter e retenção após a retirada (procedimento indicado na síndrome) · Desobstrução urinária com cateter duplo J ou nefrostomia percutânea — Indicação: ITU obstrutiva com febre, dor lombar, anúria, pionefrose ou sepse; obstrução por cálculo, tumor, estenose ou fibrose retroperitoneal. Técnica: Definir a via pela altura e pela causa da obstrução e pela disponibilidade do serviço: duplo J por cistoscopia quando a obstrução é ureteral e a bexiga é acessível; nefrostomia percutânea guiada por ultrassom quando o acesso retrógrado falha ou a obstrução é alta. Manter drenagem e antibiótico, e agendar a retirada ou a troca. Complicações: Sangramento, perfuração ureteral, deslocamento do cateter, obstrução do duplo J por coágulo, infecção do dispositivo, fístula urinária e lesão de órgão adjacente na nefrostomia (procedimento indicado na síndrome) · Drenagem percutânea de abscesso renal ou perinéfrico — Indicação: coleção maior de 3 cm, febre persistente após 72 h de antibiótico adequado ou instabilidade com foco não controlado. Técnica: Guiada por ultrassom ou tomografia, com antissepsia, anestesia local e cateter de drenagem; enviar material para Gram, cultura e pesquisa de fungo. Manter o dreno até débito mínimo e melhora clínica, com controle de imagem. Complicações: Sangramento, pneumotórax em lesão alta, fístula urinária, lesão de cólon, drenagem incompleta que exige nova punção e recidiva da coleção (procedimento indicado na síndrome)
 
 ---

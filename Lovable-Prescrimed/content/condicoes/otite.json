@@ -24,7 +24,8 @@
       "escopo": "aprovação registrada em chat"
     },
     "medidas_adicionadas": "PED-06 em 2026-11-27",
-    "fundido_workspace": "PED-06 em 2026-11-27"
+    "fundido_workspace": "PED-06 em 2026-11-27",
+    "lacuna_fechada": "PED-06 (+4) em 2026-11-27"
   },
   "alerta": "Diagnóstico: TM bulosa/hiperemiada com efusão + início agudo de otalgia (criança: irritabilidade, puxando o ouvido, choro noturno, febre). Otorreia (perfuração) NÃO muda o tratamento. Espectativa vigilante válida (> 2 anos, quadro leve, com retorno garantido em 48–72 h): analgesia + observação. ATB imediato: < 2 anos, bilateral, otorreia, quadra moderado-grave, sem condições de retorno. Durma: não há evidência para descongestionantes/antialérgicos mudarem o curso. Mastoidite (dor retroauricular, orelha abaulada) = complicação: EV + ORL.",
   "redFlags": [
@@ -219,6 +220,113 @@
             "motivo": "medida não farmacológica da síndrome"
           }
         ],
+        "origem": "workspace",
+        "fonte": "PED-06"
+      },
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "dar o analgésico em horário fixo, inclusive à noite, nas primeiras 48 a 72 horas"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "cotonete, hastes, óleo, alho ou qualquer solução caseira no ouvido"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "PED-06"
+      },
+      {
+        "nome": "Cefalosporina segunda geração",
+        "itens": [
+          {
+            "linha": 2,
+            "base": "cefuroxima",
+            "pos": "30 mg/kg/dia divididos em 2 tomadas (15 mg/kg/dose). Via VO. 12/12 h. 10 dias.",
+            "posTodas": true,
+            "motivo": "alergia a penicilina sem reação imediata e falha de amoxicilina em criança que não pode usar clavulanato (alternativa)",
+            "nota": "Suspensão: reconstituir com água filtrada até o traço, agitar e conservar em geladeira por até 10 dias; administrar com alimento para melhorar a absorção e disfarçar o gosto. Comprimido: uso direto com alimento - monitorar: aceitação da suspensão, pelo sabor amargo; monitorar: diarreia e dor abdominal; monitorar: melho",
+            "dose": {
+              "texto": "30 mg/kg/dia divididos em 2 tomadas (15 mg/kg/dose); 12/12 h; 10 dias; max. 1 g/dia",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": null,
+              "unidade": "mg/kg/dia",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true,
+        "origem": "workspace",
+        "fonte": "PED-06"
+      },
+      {
+        "nome": "Solução salina",
+        "itens": [
+          {
+            "linha": 2,
+            "novo": {
+              "id": "soro_fisiologico_para_irrigacao_nasal",
+              "n": "Soro fisiológico 0,9% para irrigação nasal",
+              "ap": "frasco 500 mL",
+              "q": "",
+              "pos": "2 a 5 mL por narina em cada irrigação. Via nasal. 2 a 3 vezes ao dia e antes das mamadas no lactente. Enquanto houver obstrução nasal, habitualmente 5 a 7 dias."
+            },
+            "motivo": "obstrução nasal associada a infecção de vias aéreas superiores que acompanha a otite; medida de conforto, não trata a otite (condicional) obstrução nasal; medida de conforto, não trata a otite",
+            "nota": "Usar solução fisiológica 0,9% estéril em temperatura ambiente, sem aditivos; aspirar com seringa e instilar suavemente sem pressão, mantendo a cabeça lateralizada no lactente e sentada na criança maior - monitorar: desobstrução nasal e conforto respiratório; monitorar: aceitação das mamadas no lactente; monitorar: sang",
+            "dose": {
+              "texto": "2 a 5 mL por narina em cada irrigação; 2 a 3 vezes ao dia e antes das mamadas no lactente; enquanto houver obstrução nasal, habitualmente 5 a 7 dias; max. 10 mL por narina por dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 5,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mL"
+              },
+              "ped": "lactente",
+              "freq_h": 8,
+              "freq_texto": "3 vezes ao dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "lactente"
+          }
+        ],
+        "semPreset": true,
         "origem": "workspace",
         "fonte": "PED-06"
       }
