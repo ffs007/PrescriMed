@@ -86,10 +86,15 @@ _Checklist completo extraído do texto-conceito do Dr. Felipe (2026-11-06), com 
 - **⑤ CARDIOVERSÃO/DESFIBRILAÇÃO** — ✅ energia adulto/pediátrica por ritmo e peso + sedação + pós-choque + checklist + registro.
 - **⑥ ECG/RX COM IA** — ✅ upload → laudo estruturado + acurácia + 3 ensinamentos; fallback honesto se a visualização não envia imagens.
 
+# RODADA 2 (27/11, pós-PR#8) — ⑦⑧⑪ IMPLEMENTADAS (`lovable-concepcao2.js` + `sw.js`)
+
+- **⑦ QUIZ DA CONDIÇÃO** ✅ — card na grade: 5 perguntas por rodada geradas do conteúdo curado (não usar, contraindicados de gestação, red flags, escore sugerido), 4 opções embaralhadas, feedback com explicação, placar e repetição — testado (gestação: Aceclofenaco ≥20 sem).
+- **⑧ RELATÓRIO DE PLANTÃO** ✅ — arquiva automaticamente cada atendimento com dados (psx.turno, local, máx 120) quando inicia o próximo ou fecha a página; botão "📋 Plantão" na home e no painel; lista por dia com resumo (paciente, condição/CID, destino, conduta), texto copiável e **PDF testado** ("PLANTAO_2026-11-27.pdf").
+- **⑪ OFFLINE-FIRST** ✅ — service worker (sw.js, rede-primeiro + cache reserva) registrado no load; cache `pm-proto-v1-2711` com **62 assets do núcleo** verificado no navegador. CDN/IA continuam exigindo rede (honesto).
+
 # PRÓXIMA FILA (sugestões, ordem proposta)
 
-**⑦ Exercício de repetição/espaçada**: quiz curto por condição (3 perguntas baseadas nos "não fazer" e nas doses) para o plantonista treinar — usa o conteúdo já curado, fecha o ciclo ensino-aplicação que o ⑥ começou.
-**⑧ Contexto de plantão**: relatório de fim de plantão (todos os atendimentos do turno, com escalas e destinos) exportável em PDF/clipboard.
-**⑹⑩ Backup/sincronia do caso**: `psx.case` espelha para tabela própria via `__psxBridge` (como tpl/prot) para retomar atendimento de outro dispositivo.
-**⑪ Offline-first completo**: service worker para o protótipo funcionar 100% offline no hospital (o banco já é local; falta cache dos assets).
-**⑫ Expansão do banco**: aplicar PROMPTS-PESQUISA.md às 20 condições de maior porta de PS que ainda têm versão resumida (fila de aprofundamento contínua).
+**⑩ Backup/sincronia do caso**: `psx.case` espelha para tabela própria via `__psxBridge` (como tpl/prot) para retomar atendimento de outro dispositivo — exige mudança também no src/ (PrototypePage), coordenar com curadoria.
+**⑫ Expansão do banco**: aplicar PROMPTS-PESQUISA.md às 20 condições de maior porta de PS que ainda têm versão resumida (fila de aprofundamento contínua — usa o pipeline 6 degraus com assinatura do Dr. Felipe).
+**⑬ Metrônomo no painel PCR**: bip de compressão (Web Audio, 100–120/min) com temporizador de ciclo — pequeno, alto impacto na sala vermelha.
+**⑹ Print direto**: botão "Imprimir" nos PDFs (iframe oculto + window.print) para impressora da sala sem passar por download.
