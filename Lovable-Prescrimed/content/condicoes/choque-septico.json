@@ -25,7 +25,8 @@
       "escopo": "aprovação registrada em chat"
     },
     "medidas_adicionadas": "INF-01 em 2026-11-27",
-    "fundido_workspace": "INF-01 em 2026-11-27"
+    "fundido_workspace": "INF-01 em 2026-11-27",
+    "lacuna_fechada": "INF-01 (+3) em 2026-11-27"
   },
   "alerta": "Sepse + hipotensão persistente após 30 mL/kg OU lactato ≥ 4 com hipoperfusão. 1) Duas vias calibrosas ou acesso central + noradrenalina 0,05–0,3 mcg/kg/min titulada para PAM ≥ 65 (inicie por via periférica diluída se central demorar — não espere); 2) vasopressina 0,03 U/min fixa se NA > 0,25–0,5; 3) hidrocortisona 50 mg EV 6/6h (200–300 mg/dia) se choque refratário — suspender na melhora; 4) antibiótico EV ≤ 1 h (ver classes) após hemoculturas; 5) metas: lactato seriado, diurese ≥ 0,5 mL/kg/h, PAM ≥ 65, ScvO2; 6) procurar foco drenável (coleta, abdome, pele); 7) monitor contínuo + leito de UTI/transferência com regulação JÁ; 8) não usar bolus adicional sem reavaliar (congestão = EAP iatrogênico).",
   "redFlags": [
@@ -123,6 +124,24 @@
             }
           }
         ]
+      },
+      {
+        "nome": "Procedimentos à beira do leito",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "proc_1",
+              "n": "Hemocultura de dois sítios",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: todo paciente com suspeita de sepse, antes do antibiótico. Técnica: antissepsia com clorexidina, 20 mL por par divididos em frasco aeróbio e anaeróbio, punção periférica e de cateter quando houver, sem atrasar a droga. Complicações: contaminação por técnica inadequada, hematoma, punção arterial acidental"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-01"
       }
     ]
   },
@@ -244,6 +263,34 @@
               "pos": "hora do antibiótico, hora das culturas, volume infundido, dose de vasopressor, lactato inicial e de controle, foco e pendências de controle"
             },
             "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-01"
+      },
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "completar o antibiótico prescrito mesmo após a melhora"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "interromper o antibiótico por melhora antes do tempo previsto"
+            },
+            "motivo": "evitar erro de manejo"
           }
         ],
         "origem": "workspace",

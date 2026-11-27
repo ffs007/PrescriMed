@@ -25,7 +25,8 @@
       "escopo": "aprovação registrada em chat"
     },
     "medidas_adicionadas": "END-08 em 2026-11-27",
-    "fundido_workspace": "END-08 em 2026-11-27"
+    "fundido_workspace": "END-08 em 2026-11-27",
+    "lacuna_fechada": "END-08 (+7) em 2026-11-27"
   },
   "alerta": "Confirmar (gasometria/hemólise falsa- alta é comum) MAS se ECG alterado tratar ANTES de confirmar. ECG: T apontada → QRS alargando → P some → sinusoide → PCR. K > 6,5 ou ECG alterado: 1) Gluconato de cálcio 10% 10 mL EV em 5 min (estabiliza miocárdio em minutos; não baixa o K) — não disponível no cadastro EV: providenciar na farmácia imediatamente; 2) Insulina regular 10 U EV + glicose 50% 50 mL EV em 15–30 min (desloca K, 30–60 min); 3) Salbutamol nebulizado 10–20 mg (adjuvante); 4) Bicarbonato só se acidose associada; 5) Furosemida 40 mg EV se diurese preservada; 6) ELIMINAR: resina/patiromer são lentas; DIÁLISE se refratário, anúrico ou IRA grave. Causas: IRA/IRC, IECA/BRA/espironolactona, AINE, KCl indevido, hemólise, acidose, tumor lisis, adrenal. Parar contribuintes JÁ.",
   "redFlags": [
@@ -73,6 +74,24 @@
             "motivo": "40 mg EV se diurese preservada"
           }
         ]
+      },
+      {
+        "nome": "Procedimentos à beira do leito",
+        "itens": [
+          {
+            "linha": 2,
+            "novo": {
+              "id": "proc_2",
+              "n": "Hemodiálise de urgência",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: anúria, doença renal crônica avançada, hipercalemia refratária ou sobrecarga de volume com potássio alto. Técnica: Acesso vascular temporário, banho com concentração de potássio definida pelo nefrologista e tempo conforme a massa corporal. Complicações: Hipotensão intradialítica, desequilíbrio eletrolítico, sangramento do cateter, arritmia durante a sessão"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "END-08"
       }
     ]
   },
@@ -194,6 +213,178 @@
             "motivo": "medida não farmacológica da síndrome"
           }
         ],
+        "origem": "workspace",
+        "fonte": "END-08"
+      },
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "avisar imediatamente palpitação, tontura ou desmaio"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "sal substituto e suplemento de potássio"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "END-08"
+      },
+      {
+        "nome": "Quelante potássio",
+        "itens": [
+          {
+            "linha": 2,
+            "novo": {
+              "id": "patiromer",
+              "n": "Patiromer",
+              "ap": "sachê 8,4 g",
+              "q": "",
+              "pos": "8,4 g. Via VO. 1x/dia; ajustar em incrementos de 8,4 g a cada semana conforme o potássio. Uso contínuo enquanto houver indicação."
+            },
+            "motivo": "hipercalemia crônica ou persistente em doença renal crônica ou em uso de IECA, ARA2 ou espironolactona que se quer manter (alternativa) hipercalemia crônica em doença renal crônica",
+            "nota": "Misturar o conteúdo do sachê em 100 a 200 mL de água; não aquecer nem triturar; tomar 3 h antes ou depois de outros fármacos orais - monitorar: potássio semanal no início e depois mensal; monitorar: magnésio; monitorar: evacuações; monitorar: separação de horário dos outros comprimidos",
+            "dose": {
+              "texto": "8,4 g; 1x/dia; ajustar em incrementos de 8,4 g a cada semana conforme o potássio; uso contínuo enquanto houver indicação; max. 25,2 g/dia",
+              "status": "ok",
+              "valor": 8.4,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 25.2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "ciclossilicato_de_zirconio_sodico",
+              "n": "Ciclossilicato de zircônio sódico",
+              "ap": "pó 5 g/sachê",
+              "q": "",
+              "pos": "10 g. Via VO. 3x/dia. Até 48 h no episódio agudo; uso crônico conforme potássio."
+            },
+            "motivo": "hipercalemia aguda leve a moderada ou crônica em doença renal, com início de ação mais rápido que a resina (alternativa)",
+            "nota": "Dispensar o pó em 45 mL de água e tomar imediatamente; não aquecer - monitorar: potássio de 4/4 h no episódio agudo; monitorar: peso, edema e pressão; monitorar: sódio; monitorar: evacuações",
+            "dose": {
+              "texto": "10 g; 3x/dia; até 48 h no episódio agudo; uso crônico conforme potássio; max. 15 g 3x/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 15,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "3x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "poliestirenossulfonato_de_calcio",
+              "n": "Poliestirenossulfonato de cálcio",
+              "ap": "pó 15 g/sachê",
+              "q": "",
+              "pos": "15-30 g. Via VO ou retal. A cada 6 h até potássio abaixo de 5,0 mEq/L. 24 a 48 h."
+            },
+            "motivo": "hipercalemia leve a moderada sem alteração de ECG, para remoção intestinal (condicional) hipercalemia sem alteração de ECG",
+            "nota": "Suspender em 50 a 100 mL de água ou sorbitol; para via retal, 30 a 50 g em 100 mL de água morna em retenção por 30 a 60 min - monitorar: potássio de 4/4 h; monitorar: abdome, ruídos hidroaéreos e evacuação; monitorar: sódio; monitorar: magnésio; monitorar: volume",
+            "dose": {
+              "texto": "15-30 g; a cada 6 h até potássio abaixo de 5,0 mEq/L; 24 a 48 h; max. 30 g por dose e 60 g/dia",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": 30,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "a cada 6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true,
+        "origem": "workspace",
+        "fonte": "END-08"
+      },
+      {
+        "nome": "Beta-2 agonista",
+        "itens": [
+          {
+            "linha": 2,
+            "base": "leg_salbutamol_spray",
+            "pos": "10-20 mg nebulizados (4 a 8 ampolas de 2,5 mg). Via inalatória (nebulização). Dose única; repetir em 2 h se necessário. Efeito de cerca de 2 h. Nebulização em 10 minutos.",
+            "posTodas": true,
+            "motivo": "hipercalemia como medida adjuvante de deslocamento intracelular, sobretudo quando o acesso venoso é difícil (alternativa)",
+            "nota": "Diluir em 3 a 5 mL de SF 0,9% no nebulizador com máscara; fluxo de oxigênio de 6 a 8 L/min - monitorar: frequência cardíaca e ECG; monitorar: potássio de 1/1 h; monitorar: tremor e dor torácica; monitorar: glicemia no diabético",
+            "dose": {
+              "texto": "10-20 mg nebulizados (4 a 8 ampolas de 2,5 mg); dose única; repetir em 2 h se necessário; efeito de cerca de 2 h; max. 20 mg por dose",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true,
         "origem": "workspace",
         "fonte": "END-08"
       }

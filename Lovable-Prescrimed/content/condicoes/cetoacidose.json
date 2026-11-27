@@ -25,7 +25,8 @@
       "escopo": "aprovação registrada em chat"
     },
     "medidas_adicionadas": "END-02 em 2026-11-27",
-    "fundido_workspace": "END-02 em 2026-11-27"
+    "fundido_workspace": "END-02 em 2026-11-27",
+    "lacuna_fechada": "END-02 (+7) em 2026-11-27"
   },
   "alerta": "Glicemia > 250 + pH < 7,3/HCO3 < 15 + cetemia/cetonúria. 1) SF 0,9% 1.000 mL em 1 h (reposição do déficit 15–20 mL/kg nas primeiras 2 h; caution se risco de EAP/idoso); depois 250–500 mL/h; 2) Insulina regular em infusão 0,1 U/kg/h (bolus NÃO é obrigatório) — só iniciar/continuar se K+ > 3,3; 3) K+: se 3,3–5,2 → 20–30 mEq/L na bomba; se > 5,2 → sem K, reavaliar 2/2 h; 4) Bicarbonato SOMENTE se pH < 6,9 (100 mEq em 400 mL SF); 5) glicemia dígital 1/1 h — quando < 200: adicionar glicose 5–10% na hidratação e NÃO parar a insulina até resolver a cetose; 6) achar o gatilho (infecção — ECO/urina/RX, suspensão de insulina, IAM, pancreatite); 7) EGAS/estado hiperosmolar glicemia > 600 sem cetose: hidratação ainda mais importante. Transição: primeira refeição → insulina regular SC 8/8h sobreposta à infusão 1–2 h antes de parar, ou esquema basal-correção.",
   "redFlags": [
@@ -74,6 +75,35 @@
             "motivo": "Conforme foco (ver protocolo Sepse) — infecção é o gatilho mais comum"
           }
         ]
+      },
+      {
+        "nome": "Procedimentos à beira do leito",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "proc_1",
+              "n": "Gasometria seriada com cálculo do ânion gap",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: todos os casos, na entrada e a cada 2-4 h. Técnica: Punção radial com teste de Allen ou gasometria venosa para pH e bicarbonato; calcular sódio menos cloro e bicarbonato. Complicações: Hematoma, punção arterial acidental, dor, resultado alterado por garrote prolongado"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "proc_2",
+              "n": "Acesso venoso central",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: necessidade de KCl acima de 10 mEq/h, droga vasoativa ou veias periféricas esgotadas. Técnica: Punção jugular ou subclávia guiada por ultrassom, confirmar posição com radiografia. Complicações: Pneumotórax, infecção de cateter, trombose, punção arterial"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "END-02"
       }
     ]
   },
@@ -228,6 +258,144 @@
             "motivo": "medida não farmacológica da síndrome"
           }
         ],
+        "origem": "workspace",
+        "fonte": "END-02"
+      },
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "aplicar a insulina basal todos os dias, mesmo sem comer"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "suspender a insulina basal por falta de apetite"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "END-02"
+      },
+      {
+        "nome": "Insulina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "insulina_glargina",
+              "n": "Insulina glargina",
+              "ap": "caneta 100 UI/mL 3 mL",
+              "q": "",
+              "pos": "0,2-0,3 UI/kg. Via SC. 1x/dia a cada 24 h. Uso contínuo."
+            },
+            "motivo": "insulina basal na transição para via subcutânea (1a linha) alta após cetoacidose",
+            "nota": "Uso direto; aplicar no abdome ou na coxa com rodízio de sítios - monitorar: glicemia capilar 4-6x/dia nas primeiras 48 h; monitorar: glicemia de madrugada no terceiro dia; monitorar: sítios de aplicação",
+            "dose": {
+              "texto": "0,2-0,3 UI/kg; 1x/dia a cada 24 h; uso contínuo; max. individualizar",
+              "status": "ok",
+              "valor": 0.2,
+              "valor_max": 0.3,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "a cada 24 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "insulina_regular_subcutanea",
+              "n": "Insulina regular subcutânea (bolus prandial)",
+              "ap": "frasco 100 UI/mL 10 mL",
+              "q": "",
+              "pos": "0,1 UI/kg por refeição. Via SC. Antes das três refeições. Uso contínuo."
+            },
+            "motivo": "cobertura prandial no esquema basal-bolus da transição (condicional) esquema basal-bolus",
+            "nota": "Uso direto; aplicar 15-30 min antes de comer - monitorar: glicemia 2 h pós-prandial; monitorar: aceitação alimentar antes de aplicar",
+            "dose": {
+              "texto": "0,1 UI/kg por refeição; antes das três refeições; uso contínuo; max. individualizar",
+              "status": "ok",
+              "valor": 0.1,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "END-02"
+      },
+      {
+        "nome": "Anticoagulante",
+        "itens": [
+          {
+            "linha": 2,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa 40 mg/0,4 mL",
+              "q": "",
+              "pos": "40 mg. Via SC. 1x/dia. Enquanto internado e imóvel."
+            },
+            "motivo": "profilaxia de trombose venosa profunda na cetoacidose grave (condicional)",
+            "nota": "Uso direto; não expelir a bolha da seringa - monitorar: plaquetas a cada 48 h; monitorar: sangramento; monitorar: função renal",
+            "dose": {
+              "texto": "40 mg; 1x/dia; enquanto internado e imóvel; max. 40 mg/dia na dose profilática",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true,
         "origem": "workspace",
         "fonte": "END-02"
       }

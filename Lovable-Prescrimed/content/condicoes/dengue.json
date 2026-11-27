@@ -28,7 +28,8 @@
       "escopo": "aprovação registrada em chat"
     },
     "medidas_adicionadas": "INF-02 em 2026-11-27",
-    "fundido_workspace": "INF-02 em 2026-11-27"
+    "fundido_workspace": "INF-02 em 2026-11-27",
+    "lacuna_fechada": "INF-02 (+4) em 2026-11-27"
   },
   "alerta": "Classificar (OMS A/B/C): A = sem alarme, tolera VO → hidratação + paracetamol/dipirona + retorno programado; B = alarme OU comorbidade/grupos de risco → observação/hidratação; C = choque/alarme grave → EV agressivo. SINAIS DE ALARME (fase crítica, dia 3–7 com a febre BAIXANDO — é quando tudo piora): dor abdominal intensa, vômitos persistentes, sangramento de mucosa, letargia/irrequietude, hepatomegalia, hemoconcentração. NUNCA AINE/AAS (sangramento). NS1/IgM conforme protocolo; hemograma com hematócrito seriado nos casos B/C.",
   "redFlags": [
@@ -208,6 +209,104 @@
             "motivo": "medida não farmacológica da síndrome"
           }
         ],
+        "origem": "workspace",
+        "fonte": "INF-02"
+      },
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "beber 60 mL/kg de líquidos por dia, metade em soro de reidratação oral"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "AAS, AINE, nimesulida e corticoide por conta própria"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-02"
+      },
+      {
+        "nome": "Reidratante oral",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_sais_de_reidratacao_oral_sro",
+            "pos": "60 mL/kg/dia, sendo 1/3 em solução de reidratação oral e 2/3 em líquidos caseiros. Via VO. Em pequenos volumes ao longo do dia, a cada 15 a 30 min. Até a fase crítica passar, em geral 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "hidratação do grupo A e manutenção do grupo B (1a linha) hidratação domiciliar",
+            "nota": "Diluir o sachê em 1 litro de água filtrada; não usar água mineral gaseificada nem acrescentar açúcar - monitorar: diurese e cor da urina; monitorar: peso diário; monitorar: aceitação e vômitos; monitorar: sinais de desidratação: mucosa, turgor e taquicardia",
+            "dose": {
+              "texto": "60 mL/kg/dia, sendo 1/3 em solução de reidratação oral e 2/3 em líquidos caseiros; em pequenos volumes ao longo do dia, a cada 15 a 30 min; até a fase crítica passar, em geral 5 a 7 dias; max. individualizar; no adulto de 70 kg corresponde a cerca de 4.200 mL/dia",
+              "status": "ok",
+              "valor": 60,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-02"
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 2,
+            "base": "ibuprofeno",
+            "pos": "400 mg. Via VO. 8/8 h. 7 a 10 dias.",
+            "posTodas": true,
+            "motivo": "dor articular de chikungunya após afastar dengue (condicional)",
+            "nota": "Uso direto, após a refeição - monitorar: sinais de sangramento; monitorar: creatinina e pressão arterial em uso prolongado; monitorar: dor epigástrica; monitorar: plaquetas",
+            "dose": {
+              "texto": "400 mg; 8/8 h; 7 a 10 dias; max. 1.200 mg/dia",
+              "status": "ok",
+              "valor": 400,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true,
         "origem": "workspace",
         "fonte": "INF-02"
       }

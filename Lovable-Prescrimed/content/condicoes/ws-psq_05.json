@@ -25,7 +25,8 @@
     },
     "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
     "medidas_adicionadas": "PSQ-05 em 2026-11-27",
-    "fundido_workspace": "PSQ-05 em 2026-11-27"
+    "fundido_workspace": "PSQ-05 em 2026-11-27",
+    "lacuna_fechada": "PSQ-05 (+3) em 2026-11-27"
   },
   "alerta": "Sinais de alarme: ideação suicida ativa, com plano, método ou acesso a meios -> interromper a consulta de rotina, avaliar risco estruturado e decidir internação ou plano de segurança; tentativa de suicídio nos últimos 3 meses -> tratar como risco alto, não prescrever grande quantidade de comprimidos e agendar retorno em 48 a 72 h; sintomas psicóticos, catatonia ou recusa alimentar com perda de peso -> encaminhar para avaliação hospitalar imediata; história de mania ou hipomania, inclusive induzida por antidepressivo -> não prescrever antidepressivo isolado; iniciar ou ajustar estabilizador de humor. 1) Avaliar risco suicida com C-SSRS e registrar antes de qualquer prescrição; se risco alto, interromper o fluxo ambulatorial e internação 2) Confirmar o episódio depressivo por critérios, medir gravidade com PHQ-9 e verificar prejuízo funcional 3) Rastrear bipolaridade: mania ou hipomania prévia, induzida por antidepressivo, história familiar e psicose 4) Excluir causa orgânica e fármaco depressogênico: TSH, hemograma, sódio, função renal e hepática, revisão da lista de medicamentos 5) Definir o cenário: ambulatorial com retorno em 7 a 14 dias, CAPS para casos graves e persistentes, ou internação 6) Iniciar ISRS em dose baixa com titulação, associar psicoterapia e psicoeducar sobre a janela de 2 a 4 semanas 7) Reavaliar em 2 a 4 semanas: adesão, efeitos adversos, ativação, ideação e resposta; ajustar a dose até a máxima tolerada 8) Falha após 4 a 8 semanas em dose adequada: confi",
   "redFlags": [
@@ -480,7 +481,48 @@
     ]
   },
   "hospitalar": {
-    "classes": []
+    "classes": [
+      {
+        "nome": "Procedimentos à beira do leito",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "proc_1",
+              "n": "Aplicação de PHQ-9 e de escala de risco suicida (C-SSRS)",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: todo atendimento por humor deprimido, na primeira consulta e em cada reavaliação. Técnica: PHQ-9 para gravidade e seguimento; C-SSRS para ideação, intensidade, plano, intenção e comportamento, aplicada na ordem do instrumento, com registro do escore no prontuário. Complicações: Falso negativo por resposta defensiva e uso do escore sem entrevista clínica, o que subestima risco"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "proc_2",
+              "n": "Plano de segurança escrito",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: risco moderado, ideação sem plano ou paciente com histórico de tentativa em acompanhamento ambulatorial. Técnica: Construir com o paciente sinais de alerta, estratégias de enfrentamento, pessoas e lugares de distração, contatos de confiança e CVV 188; entregar cópia e revisar em cada consulta. Complicações: Plano genérico, feito sem o paciente, não é usado"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "proc_3",
+              "n": "Internação psiquiátrica conforme a Lei 10.216/2001",
+              "ap": "",
+              "via": "procedimento",
+              "pos": "Indicação: risco suicida alto, psicose, catatonia, recusa alimentar, autonegligência grave ou falha do tratamento ambulatorial. Técnica: Internação voluntária com consentimento registrado; na involuntária, laudo médico fundamentado, comunicação ao Ministério Público em 72 h e revisão periódica da necessidade. Complicações: Perda de vínculo, constrangimento ilegal se mal fundamentada e prolongamento indevido"
+            },
+            "motivo": "procedimento indicado na síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "PSQ-05"
+      }
+    ]
   },
   "ws": {
     "id": "PSQ-05",
