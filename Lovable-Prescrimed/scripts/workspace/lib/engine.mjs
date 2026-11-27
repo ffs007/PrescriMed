@@ -21,7 +21,7 @@ export function carregarMotor() {
   vm.createContext(ctx);
   for (const f of ARQUIVOS) {
     try { vm.runInContext(readFileSync(resolve(protoDir, f), "utf8"), ctx, { filename: f }); } catch (e) {
-      if (f !== "curated-data.js") throw new Error("falha ao carregar " + f + ": " + e.message);
+      throw new Error("falha ao carregar " + f + ": " + e.message);
     }
   }
   const D = ctx.PROTO_DB, H = ctx.HOSP_DB;
