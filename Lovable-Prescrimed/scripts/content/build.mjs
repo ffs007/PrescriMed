@@ -30,6 +30,9 @@ const BANNED_RE = BANNED.map(b => new RegExp(b, "i"));
 const errors = [], warns = [];
 const err = (c, m) => errors.push(`[${c}] ${m}`);
 const warn = (c, m) => warns.push(`[${c}] ${m}`);
+/* V11: mesma molecula em duas classes da MESMA secao (amb x amb / hosp x hosp).
+   VO x EV e legitimo (ids diferentes); isto pega repeticao real dentro da secao. */
+const duplicatas = [];
 
 /* ---- lê condições ---- */
 const condDir = resolve(root, "content/condicoes");
@@ -65,6 +68,7 @@ for (const c of conds) {
   if (!anyPed) warn(id, "V8: nenhum item com pediatria");
 
   const clsKeys = [], hospKeys = [];
+  const secao = { amb: new Map(), hosp: new Map() };
 
   /* ---- ambulatorial ---- */
   for (const [i, k] of (c.ambulatorial?.classes || []).entries()) {
@@ -103,7 +107,13 @@ for (const c of conds) {
       } else if (it.ref) {                 // referência direta a id curado já criado
         drug = { __ref: `cur_${id}__${it.ref}` };
       }
-      if (drug) drugs.push(drug.id || drug.__ref);
+      if (drug) {
+        const chave = String(it.base || it.novo?.id || it.ref || drug.id || drug.__ref);
+        const dono = secao.amb.get(chave);
+        if (dono) duplicatas.push({ id, nome: c.nome, secao: "ambulatorial", chave, de: dono, para: k.nome });
+        else secao.amb.set(chave, k.nome);
+        drugs.push(drug.id || drug.__ref);
+      }
     }
     out.classes.push({ key, nome: (isOrient ? k.nome : k.nome), d: drugs });
     clsKeys.push(key);
@@ -113,6 +123,12 @@ for (const c of conds) {
   for (const [i, k] of (c.hospitalar?.classes || []).entries()) {
     const key = `curh_${id}__c${i + 1}`;
     const ids = [];
+    const addHosp = (idFinal, chave) => {
+      const dono = secao.hosp.get(chave);
+      if (dono) duplicatas.push({ id, nome: c.nome, secao: "hospitalar", chave, de: dono, para: k.nome });
+      else secao.hosp.set(chave, k.nome);
+      ids.push(idFinal);
+    };
     for (const it of (k.itens || [])) {
       if (it.novo) {                       // droga hospitalar NOVA (não cadastrada no HOSP_DB)
         const d = { id: `curh_${id}__${it.novo.id}`, n: it.novo.n, a: [it.novo.pos || "Conforme protocolo"].filter(Boolean), ap: it.novo.ap || "", via: it.novo.via || "EV", nota: [it.motivo, it.ped ? `Pediatria: ${it.ped}` : ""].filter(Boolean).join(" · "), origem: "curado" };
@@ -120,7 +136,7 @@ for (const c of conds) {
         if (BANNED_RE.some(re => re.test(d.n))) { err(id, `V2: droga banida (hosp novo) "${d.n}"`); continue; }
         const sh = sharedId("hosp-novo", d);
         if (sh) d.id = sh; else out.hospDrugs.push(d);
-        ids.push(d.id);
+        addHosp(d.id, "novo:" + it.novo.id);
       } else if (!H.drugs[it.hosp]) { err(id, `V3: hosp inexistente "${it.hosp}"`); continue; }
       else {
         const nat = H.drugs[it.hosp];
@@ -140,8 +156,8 @@ for (const c of conds) {
           if (it.dose) v.dose = it.dose;
           const sh = sharedId("hosp-base", v);
           if (sh) v.id = sh; else out.hospDrugs.push(v);
-          ids.push(v.id);
-        } else ids.push(it.hosp);
+          addHosp(v.id, it.hosp);
+        } else addHosp(it.hosp, it.hosp);
       }
     }
     if (ids.length) { out.hospClasses.push({ key, nome: k.nome, d: ids }); hospKeys.push(key); }
@@ -160,8 +176,19 @@ for (const c of conds) {
 }
 
 /* ---- relatório ---- */
-const r = { conds: digest.length, errors, warns, status: digest.map(c => `${c.id}:${c.status}`) };
+const r = { conds: digest.length, errors, warns, duplicatas: duplicatas.length, status: digest.map(c => `${c.id}:${c.status}`) };
 if (errors.length) { console.error(JSON.stringify(r, null, 1)); process.exit(1); }
+
+/* ---- V11: relatorio de molecula repetida na mesma secao ---- */
+if (duplicatas.length) {
+  const linhas = ["# V11 — molécula repetida na mesma seção", "",
+    "_Gerado por scripts/content/build.mjs. Não bloqueia o build: é dívida de curadoria._", "",
+    "| Condição | Nome | Seção | Molécula | Classe A | Classe B |", "|---|---|---|---|---|---|"];
+  for (const d of duplicatas) linhas.push(`| ${d.id} | ${d.nome} | ${d.secao} | ${d.chave} | ${d.de} | ${d.para} |`);
+  mkdirSync(resolve(root, "reports/curadoria"), { recursive: true });
+  writeFileSync(resolve(root, "reports/curadoria/DUPLICATAS-V11.md"), linhas.join("\n") + "\n", "utf8");
+  warn("V11", `${duplicatas.length} molécula(s) repetida(s) na mesma seção — ver reports/curadoria/DUPLICATAS-V11.md`);
+}
 
  /* ---- exite curated-data.js ---- */
 /* RXMAP: cada classe curada entra na taxonomia com queixa = nome da condição

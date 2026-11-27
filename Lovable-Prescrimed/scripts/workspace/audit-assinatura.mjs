@@ -2,7 +2,8 @@
 /* Auditoria da assinatura: cada condicao assinada tem representante vivo no runtime?
    Le o digest assinado, o mapa do import (reports/curadoria/IMPORT-WORKSPACE.md) e
    content/condicoes. Nao altera nada. Escreve reports/curadoria/AUDITORIA-ASSINATURA-<data>.md.
-   Uso: node scripts/workspace/audit-assinatura.mjs [--digest <arquivo.md>] */
+   Uso: node scripts/workspace/audit-assinatura.mjs [--digest <arquivo.md>] [--min <pct>]
+   Com --min, sai com codigo 1 quando a cobertura de itens fica abaixo do piso (CI). */
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,7 +11,9 @@ import { fileURLToPath } from "node:url";
 const raiz = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const args = process.argv.slice(2);
 const arg = (f, d) => { const i = args.indexOf(f); return i >= 0 ? args[i + 1] : d; };
-const DIGEST = resolve(raiz, arg("--digest", "C:\\Users\\ffs007\\Downloads\\digest-assinado-27-11-2026.md"));
+const DIGEST = resolve(raiz, arg("--digest", "reports/curadoria/DIGEST-ASSINADO-2026-11-27.md"));
+const MIN = arg("--min", null) ? Number(arg("--min")) : null;
+const SEM_ALVO = args.includes("--falhar-sem-alvo");
 const COND = resolve(raiz, "content/condicoes");
 const HOJE = new Date().toISOString().slice(0, 10);
 
@@ -149,3 +152,17 @@ writeFileSync(resolve(raiz, "reports/curadoria/AUDITORIA-ASSINATURA-" + HOJE + "
 console.log("assinadas lidas: " + assinadas.length + " | exato/mais: " + ok + " | menos itens: " + menor + " | ausente: " + ausente);
 console.log("assinatura: " + (assinatura.nome || "?") + " | " + (assinatura.crm || "?") + " | " + (assinatura.data || "?"));
 console.log("relatorio: reports/curadoria/AUDITORIA-ASSINATURA-" + HOJE + ".md");
+
+/* ---- gate de CI ---- */
+const cobertura = somaAssinada ? (somaLida / somaAssinada) * 100 : 0;
+let falhou = false;
+if (MIN != null && cobertura < MIN) {
+  console.error("CI: cobertura " + cobertura.toFixed(1) + "% abaixo do piso " + MIN + "%");
+  falhou = true;
+}
+if (SEM_ALVO && ausente > 0) {
+  console.error("CI: " + ausente + " condicao(oes) assinada(s) sem registro vivo");
+  falhou = true;
+}
+if (falhou) process.exit(1);
+console.log("cobertura: " + cobertura.toFixed(1) + "% | piso: " + (MIN == null ? "sem piso" : MIN + "%"));
