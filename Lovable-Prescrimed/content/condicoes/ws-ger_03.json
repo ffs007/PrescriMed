@@ -1,0 +1,648 @@
+{
+  "id": "ws-ger_03",
+  "nome": "Polifarmácia / revisão de medicações",
+  "cat": "Geriatria",
+  "alias": "polifarmacia revisao de medicacoes polifarmacia revisao de medicacoes muitos remedios deprescricao",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GER-03_polifarmacia.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de conciliação medicamentosa na admissão e na alta e formulário de revisão farmacológica",
+      "[verificar] sociedade_geriatria: critérios de Beers atualizados e STOPP/START para o idoso",
+      "[verificar] sociedade_nefrologia: ajuste de dose por TFG e suspensão peri-contraste",
+      "[verificar] anvisa: apresentações e doses de clonazepam, zolpidem, amitriptilina, ibuprofeno, glibenclamida, metformina, varfarina, omeprazol, sinvastatina, prednisona, tramadol e vitamina D"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GER-03 em 2026-11-27",
+    "fundido_workspace": "GER-03 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: queda recente, fratura por fragilidade ou síncope -> revisar a lista no mesmo dia, suspender o fármaco de maior risco e avaliar marcha e pressão em pé; confusão, sonolência ou delirium novo após mudança de prescrição -> suspender o fármaco suspeito e tratar como delirium até prova contrária; sangramento digestivo, hematoma extenso ou queda de hemoglobina -> suspender AINE, dosar hemograma e INR e reavaliar a anticoagulação; hipotensão postural, tontura ao levantar ou pressão sistólica abaixo de 100 mmHg -> reduzir ou retirar o fármaco menos essencial e orientar levantar devagar. 1) Montar a lista única com as embalagens na mão, incluindo fitoterápico, colírio, amostra e uso sob demanda 2) Para cada fármaco, responder: qual a indicação, quem prescreveu, desde quando e qual a meta terapêutica 3) Cruzar com Beers e STOPP e calcular a carga anticolinérgica total 4) Avaliar função renal e hepática, peso, fragilidade, cognição e expectativa de vida 5) Classificar cada fármaco em manter, ajustar dose, reduzir ou retirar - e registrar o motivo 6) Escolher um único alvo: o de maior risco e menor benefício 7) Planejar a retirada: dose de partida, velocidade, duração, sintoma esperado, substituto e plano de resgate escrito 8) Retirar, monitorizar em 2 a 4 semanas e registrar o resultado 9) Reiniciar em dose menor apenas se houver recidiva objetiva; caso contrário, seguir para o próximo alvo 10) Repetir a revisão completa em 12 meses ou antes se houver queda, confusão, ",
+  "redFlags": [
+    "queda recente, fratura por fragilidade ou síncope -> revisar a lista no mesmo dia, suspender o fármaco de maior risco e avaliar marcha e pressão em pé",
+    "confusão, sonolência ou delirium novo após mudança de prescrição -> suspender o fármaco suspeito e tratar como delirium até prova contrária",
+    "sangramento digestivo, hematoma extenso ou queda de hemoglobina -> suspender AINE, dosar hemograma e INR e reavaliar a anticoagulação",
+    "hipotensão postural, tontura ao levantar ou pressão sistólica abaixo de 100 mmHg -> reduzir ou retirar o fármaco menos essencial e orientar levantar devagar",
+    "glicemia abaixo de 70 mg/dL, sudorese, tremor ou confusão em uso de sulfonilureia ou insulina -> corrigir a glicemia, reduzir ou suspender o hipoglicemiante e revisar a meta",
+    "creatinina em elevação, potássio alterado ou diurese em queda -> suspender o nefrotóxico, hidratar e ajustar dose pelo clearance",
+    "paciente em uso de 10 ou mais fármacos sem revisão registrada no último ano -> agendar revisão farmacológica estruturada com lista única e plano de desprescrição",
+    "recusa alimentar, náusea e astenia em uso crônico de corticoide ou opioide -> não suspender o corticoide abruptamente e investigar a causa dos sintomas"
+  ],
+  "naoUsar": [
+    "hepatopatia grave",
+    "desnutrição grave com depleção de glutationa",
+    "uso de outro produto que contenha paracetamol",
+    "TFG abaixo de 30",
+    "acidose metabólica",
+    "insuficiência hepática grave",
+    "hipóxia, sepse ou desidratação aguda",
+    "uso de contraste iodado no mesmo dia"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "trazer todas as caixas, inclusive colírio, pomada, chá e remédio de farmácia, na próxima consulta"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "tomar remédio emprestado de outra pessoa ou indicado por vizinho e balconista"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Biguanida",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_metformina",
+            "pos": "500 mg. Via VO. 1 a 2x/dia, com alimento. Uso contínuo, reavaliar a cada 6 meses.",
+            "posTodas": true,
+            "motivo": "manutenção do controle glicêmico depois da retirada da sulfonilureia, se a função renal permitir (alternativa) após retirada da sulfonilureia, com TFG acima de 30",
+            "nota": "Uso direto, com alimento para reduzir efeito gastrointestinal - monitorar: TFG a cada 6 a 12 meses; monitorar: vitamina B12 se neuropatia ou anemia; monitorar: tolerância gastrointestinal; monitorar: peso · NÃO: TFG abaixo de 30; acidose metabólica; insuficiência hepática grave; hipóxia, sepse ou desidratação aguda; uso de contraste iodado no mesmo dia · Obs: É o hipoglicemiante que fica quando a sulfonilureia sai: risco hipoglicêmico praticamente nulo e benefício cardiovascular. Suspender 48 h antes de contraste iodado e durante doença aguda com desidratação, vômito ou sepse. · Renal: Máximo 1.000 mg/dia com TFG entre 30 e 45;…",
+            "dose": {
+              "texto": "500 mg; 1 a 2x/dia, com alimento; uso contínuo, reavaliar a cada 6 meses; max. 1.000 mg/dia com TFG entre 30 e 45; 2.000 mg/dia com TFG acima de 45",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "2x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Benzodiazepínico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "clonazepam",
+            "pos": "0,25-0,5 mg. Via VO. 1x à noite; no desmame, reduzir 25% da dose a cada 2 semanas. Desmame em 8 a 16 semanas.",
+            "posTodas": true,
+            "motivo": "uso crônico para insônia, ansiedade ou 'nervosismo' sem indicação atual - alvo prioritário de desprescrição (condicional) desmame de benzodiazepínico",
+            "nota": "Uso direto; para o desmame fracionado usar a solução oral em gotas, que permite reduzir 0,1 mg por vez - monitorar: sintomas de abstinência e insônia de rebote a cada 2 semanas; monitorar: sedação diurna e sonolência; monitorar: quedas, marcha e equilíbrio; monitorar: cognição e delirium; monitorar: uso real: receitas  · NÃO: miastenia gravis; insuficiência respiratória grave; apneia do sono grave sem tratamento; insuficiência hepática grave; associação com opioide sem indicação absoluta; história de queda recorrente · Obs: Alvo número um de desprescrição no idoso. Converter para dose equivalente de diazepam (0,5 mg de clonazepam…",
+            "dose": {
+              "texto": "0,25-0,5 mg; 1x à noite; no desmame, reduzir 25% da dose a cada 2 semanas; desmame em 8 a 16 semanas; max. 0,5 mg/dia no idoso; não iniciar benzodiazepínico novo",
+              "status": "ok",
+              "valor": 0.25,
+              "valor_max": 0.5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Hipnotico z",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_zolpidem",
+            "pos": "2,5-5 mg. Via VO. 1x à noite, no máximo 3 noites por semana durante o desmame. Desmame em 4 a 8 semanas.",
+            "posTodas": true,
+            "motivo": "insônia em uso crônico de Z-drug - alvo de retirada com terapia cognitivo-comportamental do sono (condicional)",
+            "nota": "Uso direto, imediatamente antes de deitar; não administrar com refeição pesada - monitorar: sedação residual pela manhã; monitorar: episódios de sonambulismo relatados pelo acompanhante; monitorar: quedas noturnas e ao levantar para urinar; monitorar: cognição e confusão; monitorar: latência do sono e uso real por sema",
+            "dose": {
+              "texto": "2,5-5 mg; 1x à noite, no máximo 3 noites por semana durante o desmame; desmame em 4 a 8 semanas; max. 5 mg/noite no idoso e na mulher",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antidepressivo tricíclico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_amitriptilina",
+            "pos": "10-25 mg. Via VO. 1x à noite; na retirada, reduzir 50% a cada 1 a 2 semanas. Retirada em 2 a 4 semanas.",
+            "posTodas": true,
+            "motivo": "uso crônico para dor neuropática, insônia ou cefaleia sem reavaliação, em paciente com carga anticolinérgica alta (condicional)",
+            "nota": "Uso direto, à noite, pelo efeito sedativo - monitorar: cognição e sinais de delirium; monitorar: boca seca, constipação e resíduo urinário; monitorar: pressão arterial sentado e em pé; monitorar: ECG com QTc antes de manter; monitorar: dor e sono, que eram a indicação original · NÃO: glaucoma de ângulo fechado; retenção urinária ou bexiga neurogênica; arritmia com QTc longo; infarto agudo do miocárdio recente; uso de IMAO; demência avançada · Obs: É o exemplo clássico de fármaco que entra por um sintoma e fica por anos: 25 mg à noite para dormir, sem reavaliação, com constipação, boca seca e confusão atribuídas à 'idade'. A…",
+            "dose": {
+              "texto": "10-25 mg; 1x à noite; na retirada, reduzir 50% a cada 1 a 2 semanas; retirada em 2 a 4 semanas; max. 25 mg/dia no idoso",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 25,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 25,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "400 mg. Via VO. 8/8 h se dor; na retirada, reduzir para uso sob demanda por 3 a 7 dias e suspender. Máximo 7 dias; uso crônico deve ser interrompido.",
+            "posTodas": true,
+            "motivo": "uso crônico para dor osteoarticular em idoso com risco renal, cardiovascular ou digestivo - alvo de retirada com substituição analgésica (condicional)",
+            "nota": "Uso direto, com alimento, para reduzir desconforto gástrico - monitorar: creatinina e potássio em 1 a 2 semanas se mantido; monitorar: pressão arterial e edema; monitorar: hemoglobina e sinais de sangramento digestivo; monitorar: dor em escala 0 a 10; monitorar: peso e dispneia · NÃO: TFG abaixo de 30; úlcera péptica ativa ou sangramento digestivo prévio; anticoagulação ou antiagregação dupla; insuficiência cardíaca descompensada; hipertensão não controlada; uso de IECA ou BRA com diurético (triplo bloqueio); alergia a AINE · Obs: Cascata clássica: AINE causa edema e hipertensão, entra anti-hipertensivo, entra diurético, piora o…",
+            "dose": {
+              "texto": "400 mg; 8/8 h se dor; na retirada, reduzir para uso sob demanda por 3 a 7 dias e suspender; máximo 7 dias; uso crônico deve ser interrompido; max. 1.200 mg/dia no idoso",
+              "status": "ok",
+              "valor": 400,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Sulfonilureia",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "glibenclamida",
+            "pos": "2,5-5 mg. Via VO. 1x/dia com a refeição; na retirada, reduzir 50% e reavaliar a glicemia em 1 semana. Retirada em 2 a 4 semanas.",
+            "posTodas": true,
+            "motivo": "diabetes tipo 2 em idoso com hipoglicemia, meta glicêmica já alcançada ou fragilidade - alvo de redução ou retirada (condicional)",
+            "nota": "Uso direto, junto da refeição que antecede o pico de ação - monitorar: glicemia capilar e HbA1c a cada 3 meses; monitorar: sintomas de hipoglicemia (sudorese, tremor, confusão, sonolência); monitorar: quedas; monitorar: peso e ingestão alimentar · NÃO: TFG abaixo de 30; hepatopatia grave; desnutrição ou baixo peso importante; etilismo crônico; uso concomitante de fluconazol ou sulfametoxazol-trimetoprima · Obs: Beers e STOPP apontam a sulfonilureia de ação longa como potencialmente inapropriada no idoso, e a hipoglicemia é a causa metabólica mais frequente de queda, convulsão e morte nessa faixa. Meta individualizada: HbA1c…",
+            "dose": {
+              "texto": "2,5-5 mg; 1x/dia com a refeição; na retirada, reduzir 50% e reavaliar a glicemia em 1 semana; retirada em 2 a 4 semanas; max. 5 mg/dia no idoso",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anticoagulante",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_varfarina",
+            "pos": "2,5-5 mg. Via VO. 1x/dia à noite, com dose ajustada pelo INR. Uso contínuo enquanto houver indicação.",
+            "posTodas": true,
+            "motivo": "anticoagulação em fibrilação atrial, prótese valvar ou tromboembolismo - manter e revisar interações, não desprescrever por polifarmácia (condicional)",
+            "nota": "Uso direto, sempre no mesmo horário - monitorar: INR conforme alvo e estabilidade; monitorar: hemoglobina e sinais de sangramento; monitorar: adesão e dieta rica em vitamina K; monitorar: revisão de toda nova prescrição antes de liberar",
+            "dose": {
+              "texto": "2,5-5 mg; 1x/dia à noite, com dose ajustada pelo INR; uso contínuo enquanto houver indicação; max. individualizada pelo INR alvo (2 a 3; 2,5 a 3,5 em prótese mecânica)",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "IBP",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "omeprazol",
+            "pos": "20 mg. Via VO. 1x/dia em jejum; no desmame, 20 mg em dias alternados por 2 a 4 semanas e depois sob demanda. Desmame em 4 a 8 semanas.",
+            "posTodas": true,
+            "motivo": "'gastroproteção' crônica sem indicação documentada - alvo de step-down e retirada (condicional) desmame de IBP sem indicação de manutenção",
+            "nota": "Uso direto, 30 a 60 minutos antes do café da manhã; não partir a cápsula de liberação entérica - monitorar: pirose e dispepsia nas duas primeiras semanas de desmame; monitorar: magnésio se uso acima de 1 ano; monitorar: vitamina B12; monitorar: função renal; monitorar: necessidade real: há indicação de manutenção regis · NÃO: hipersensibilidade a benzimidazol; uso concomitante de clopidogrel (omeprazol reduz a ativação — preferir pantoprazol) · Obs: Indicação de manutenção: Barrett, esofagite erosiva, úlcera cicatrizada com H. pylori tratado, uso de AINE em alto risco e síndrome de Zollinger-Ellison. Fora dessas situações, após 8…",
+            "dose": {
+              "texto": "20 mg; 1x/dia em jejum; no desmame, 20 mg em dias alternados por 2 a 4 semanas e depois sob demanda; desmame em 4 a 8 semanas; max. 20 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Estatina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "sinvastatina",
+            "pos": "20-40 mg. Via VO. 1x/dia à noite; a retirada pode ser direta, sem desmame. Reavaliar em 3 meses após a retirada.",
+            "posTodas": true,
+            "motivo": "prevenção primária em fragilidade avançada, demência avançada, acamado ou expectativa de vida curta - alvo de desprescrição (condicional)",
+            "nota": "Uso direto, à noite - monitorar: CK e sintomas musculares; monitorar: perfil lipídico e função hepática; monitorar: glicemia; monitorar: evento cardiovascular novo durante o seguimento · NÃO: hepatopatia ativa; gestação e amamentação; uso de inibidor potente de CYP3A4 (claritromicina, itraconazol, ritonavir); miopatia ativa · Obs: Desprescrever em prevenção primária quando há fragilidade avançada, demência avançada, expectativa de vida menor que 1 ano ou paciente acamado: o benefício aparece em anos e o risco — mialgia, interação, carga de comprimidos — é…",
+            "dose": {
+              "texto": "20-40 mg; 1x/dia à noite; a retirada pode ser direta, sem desmame; reavaliar em 3 meses após a retirada; max. 40 mg/dia (80 mg não é recomendada pelo risco de miopatia)",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 40,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "5-20 mg. Via VO. 1x/dia pela manhã; no desmame, reduzir 5 mg/semana acima de 20 mg, 2,5 mg/semana entre 5 e 20 mg e 1 mg a cada 2 a 4 semanas abaixo de 5 mg. Desmame em semanas a meses, conforme tempo de uso.",
+            "posTodas": true,
+            "motivo": "uso sistêmico prolongado por doença inflamatória, DPOC ou artrite - alvo de desmame estruturado (condicional)",
+            "nota": "Uso direto pela manhã, com alimento; fracionar o comprimido de 5 mg para ajustes finos no fim do desmame - monitorar: glicemia e pressão arterial; monitorar: peso e edema; monitorar: sintomas de insuficiência adrenal na retirada (astenia, hipotensão, náusea, dor abdominal); monitorar: densidade mineral óssea e fratura; · NÃO: infecção fúngica sistêmica não tratada; vacina de vírus vivo em uso de dose imunossupressora; psicose por corticoide prévia · Obs: Regra prática: uso por menos de 3 semanas em dose baixa pode ser suspenso direto; uso acima de 3 semanas ou dose acima de 20 mg/dia exige desmame. Nunca suspender abruptamente…",
+            "dose": {
+              "texto": "5-20 mg; 1x/dia pela manhã; no desmame, reduzir 5 mg/semana acima de 20 mg, 2,5 mg/semana entre 5 e 20 mg e 1 mg a cada 2 a 4 semanas abaixo de 5 mg; desmame em semanas a meses, conforme tempo de uso; max. individualizada pela doença de base",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 20,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "tramadol",
+            "pos": "25-50 mg. Via VO. 8/8 h; na retirada, reduzir 25 a 50% da dose a cada 1 a 2 semanas. Retirada em 2 a 4 semanas quando o uso passa de 4 semanas.",
+            "posTodas": true,
+            "motivo": "dor crônica em uso prolongado de opioide fraco no idoso - alvo de redução gradual e troca por analgesia não opioide (condicional)",
+            "nota": "Uso direto; a solução em gotas permite reduzir 5 mg por vez no desmame - monitorar: sódio sérico; monitorar: nível de sedação; monitorar: função intestinal e constipação; monitorar: convulsão e sinais serotoninérgicos; monitorar: dor em escala 0 a 10; monitorar: sintomas de abstinência na redução · NÃO: epilepsia não controlada; uso de IMAO; intoxicação por depressores do sistema nervoso central; TFG abaixo de 30 sem ajuste; história de convulsão com tramadol · Obs: Beers aponta o tramadol como opioide a evitar no idoso: causa convulsão, hiponatremia e síndrome serotoninérgica, e a analgesia é fraca. Retirada abrupta em uso…",
+            "dose": {
+              "texto": "25-50 mg; 8/8 h; na retirada, reduzir 25 a 50% da dose a cada 1 a 2 semanas; retirada em 2 a 4 semanas quando o uso passa de 4 semanas; max. 200 mg/dia no idoso",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 50,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "colecalciferol",
+              "n": "Colecalciferol (vitamina D)",
+              "ap": "cápsula 1.000 UI",
+              "q": "",
+              "pos": "1.000 UI. Via VO. 1x/dia. Uso contínuo, reavaliar em 12 meses."
+            },
+            "motivo": "reposição em idoso com deficiência, risco de queda ou fratura - exemplo do que não se retira por 'polifarmácia' (condicional) manter na prevenção de queda",
+            "nota": "Uso direto, com refeição que contenha gordura para melhor absorção - monitorar: cálcio sérico se dose acima de 2.000 UI/dia; monitorar: 25-OH-vitamina D em caso de dúvida de adesão; monitorar: quedas e fratura · NÃO: hipercalcemia; sarcoidose; hiperparatireoidismo primário não tratado · Obs: Exemplo do que não se desprescreve por 'polifarmácia': a reposição de 800 a 1.000 UI/dia é barata, segura e coerente com a prevenção de queda no idoso com deficiência. Retirar apenas com hipercalcemia, litíase, duplicidade de… · Renal: Na doença renal crônica avançada usar forma ativa (calcitriol) sob controle de cálcio,…",
+            "dose": {
+              "texto": "1.000 UI; 1x/dia; uso contínuo, reavaliar em 12 meses; max. 2.000 UI/dia sem controle de cálcio; doses maiores apenas com deficiência documentada",
+              "status": "ok",
+              "valor": 1000,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2000,
+                "unidade": "UI"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Lista única de medicações construída com as caixas na mão",
+              "ap": "",
+              "q": "",
+              "pos": "Pedir que o paciente traga todos os frascos, incluindo colírios, pomadas, fitoterápicos, amostras grátis e remédios de uso esporádico; anotar dose, horário, quem prescreveu e desde quando. A lista de memória subestima em cerca de um terço os fármacos em uso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Conciliação medicamentosa em toda transição de cuidado",
+              "ap": "",
+              "q": "",
+              "pos": "Comparar a lista do paciente com a prescrição hospitalar na admissão, na transferência e na alta; identificar duplicidade de classe, omissão e interação antes de liberar a receita. A alta é o momento de maior risco de erro"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Definir meta terapêutica por fármaco e por paciente",
+              "ap": "",
+              "q": "",
+              "pos": "Para cada fármaco registrar qual desfecho ele persegue (pressão, HbA1c, LDL, INR, dor, sono) e qual a meta individualizada conforme fragilidade e expectativa de vida. Fármaco sem meta declarada é candidato à retirada"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Revisão farmacológica estruturada anual com Beers e STOPP",
+              "ap": "",
+              "q": "",
+              "pos": "Aplicar as duas listas na mesma consulta, somar a carga anticolinérgica e registrar no prontuário o que foi mantido e por quê. A revisão anual reduz hospitalização por iatrogenia e é o padrão mínimo de seguimento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Retirada sequencial, um fármaco por vez",
+              "ap": "",
+              "q": "",
+              "pos": "Intervalo de 2 a 4 semanas entre retiradas, começando pelo de maior risco e menor benefício; registrar data, dose inicial, velocidade do desmame e sintomas esperados. Retirar vários ao mesmo tempo impede atribuir efeito e precipita abstinência"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Diário de sintomas e plano de resgate escrito",
+              "ap": "",
+              "q": "",
+              "pos": "Explicar por escrito o que esperar (insônia de rebote, pirose, dor, ansiedade), por quanto tempo e o que fazer; dar telefone de contato. A maior causa de falha da desprescrição é o paciente interpretar o sintoma de retirada como recidiva e voltar a dose antiga"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Simplificação do esquema posológico",
+              "ap": "",
+              "q": "",
+              "pos": "Reduzir o número de tomadas por dia, usar associações quando fizer sentido, alinhar horários à rotina e usar caixa organizadora ou aplicativo com alarme. Menos tomadas significa mais adesão e menos erro"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Envolver cuidador e farmacêutico",
+              "ap": "",
+              "q": "",
+              "pos": "Cuidador treinado reconhece efeito adverso e evita automedicação; o farmacêutico clínico faz a conciliação, checa interação e orienta o desmame. Nos casos de 10 ou mais fármacos, o acompanhamento compartilhado é o que sustenta a mudança"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GER-03"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "analgesia de substituição que viabiliza a retirada do AINE e do tramadol (1a linha) substituição do AINE ou do tramadol",
+            "nota": "Uso direto; a apresentação IV é infundida sem diluir ou em 50 mL de SF 0,9% - monitorar: soma da dose diária de todas as fontes, incluindo associações; monitorar: intensidade da dor em escala 0 a 10; monitorar: função hepática se uso prolongado · NÃO: hepatopatia grave; desnutrição grave com depleção de glutationa; uso de outro produto que contenha paracetamol · Obs: É o substituto que faz a desprescrição funcionar: prescrever em horário fixo e em dose plena, não 'se dor'. Sem analgesia de substituição, a retirada do AINE e do tramadol falha e o paciente volta ao fármaco de risco. Conferir…",
+            "dose": {
+              "texto": "500-750 mg; 6/6 h em horário fixo, se dor; enquanto houver dor; reavaliar em 2 semanas; max. 3 g/dia no idoso frágil, hepatopata ou etilista; 4 g/dia no idoso hígido",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 750,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ws": {
+    "id": "GER-03",
+    "versao": "0.2.0",
+    "arquivo": "GER-03_polifarmacia.json",
+    "area": "Geriatria",
+    "risco": "C",
+    "populacao": [
+      "idoso"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

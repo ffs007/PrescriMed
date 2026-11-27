@@ -1,0 +1,145 @@
+{
+  "id": "ivas-gripe",
+  "nome": "IVAS / síndrome gripal",
+  "cat": "Respiratório",
+  "alias": "gripe resfriado coriza tosse ivas virose sinusite viral nariz entupido",
+  "cid": [
+    [
+      "J06",
+      "IVAS"
+    ],
+    [
+      "J11",
+      "Síndrome gripal"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "SBP/SBPT — IVAS e gripe; MS — Influenza"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Gripe = febre alta + mialgia + tosse + cefaleia (súbito). IVAS = coriza/obstrução com pouca febre. Tratamento é SINTOMÁTICO — antibiótico NÃO muda nada e não previne complicações. Oseltamivir só se: < 48 h do início + grupo de risco (gestante, > 65, < 2 anos, imunossuprimido, pneumopata/cardiopata, obesidade grave) ou gripe grave. Diferenciais que mudam conduta: COVID (testar conforme protocolo), faringoamigdalite estreptocócica (Centor/McIsaac), sinusite bacteriana (critérios), otite, traqueíte/epiglotite (estridor = emergência).",
+  "redFlags": [
+    "Dispneia, tiragem, SpO2 < 94%, ou desconforto respiratório — reavaliar diagnóstico e gravidade",
+    "Febre > 3–4 dias ou que piora após melhora — complicação (otite, sinusite, pneumonia)",
+    "Estridor/dificuldade para engolir com voz abafada — epiglotite/abscesso peritonsilar: emergência",
+    "Gesta no 2º/3º trimestre com gripe — oseltamivir < 48 h",
+    "Imunossuprimido/quimioterapia com febre — neutropênico febril: ATB em 1 h",
+    "Dor facial/turbinação unilateral + pus + febre alta ≥ 10 dias — sinusite bacteriana"
+  ],
+  "naoUsar": [
+    "Antibiótico (não previne nem cura)",
+    "Antitussígeno em criança",
+    "Descongestionante tópico > 3–5 dias (rinite medicamentosa) e < 6 anos sem orientação",
+    "Associações 'gripe' com 4-5 fármacos de rotina"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Febre e mialgia (1ª linha)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "500 mg a 1 g VO a cada 6 h se febre/dor (máx 4 g/dia)",
+            "ped": "10–15 mg/kg/dose 6/6 h",
+            "motivo": "1ª linha"
+          },
+          {
+            "base": "paracetamol",
+            "pos": "750 mg a 1 g VO a cada 6 h (máx 4 g/dia; 3 g se hepatopatia/idoso)",
+            "ped": "10–15 mg/kg/dose 6/6 h",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "ibuprofeno",
+            "pos": "400 a 600 mg VO 8/8 h com alimento, ≤ 3 dias, para mialgia intensa (dengue excluído)",
+            "ped": "5–10 mg/kg 8/8 h (> 6 meses)",
+            "motivo": "Mialgia da gripe"
+          }
+        ]
+      },
+      {
+        "nome": "Antiviral (só < 48 h + risco)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "oseltamivir",
+            "pos": "75 mg VO a cada 12 h por 5 dias — iniciar JÁ se < 48 h do início em grupo de risco/grave",
+            "ped": "≤ 15 kg: 30 mg; 15–23 kg: 45 mg; 23–40 kg: 60 mg; > 40 kg: 75 mg — 12/12 h × 5 d",
+            "motivo": "Reduz complicações na influenza"
+          }
+        ]
+      },
+      {
+        "nome": "Obstrução nasal",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "soro_nasal",
+              "n": "Lavagem nasal com soro fisiológico",
+              "ap": "SF 0,9% (frasco/spray)",
+              "pos": "3 a 5 ml em cada narina, quantas vezes precisar — medida mais eficaz e segura em qualquer idade; realizar antes de mamar/dormir."
+            },
+            "ped": "Desde o recém-nascido",
+            "motivo": "1ª linha, sem efeitos"
+          },
+          {
+            "base": "oximetazolina",
+            "pos": "1 aplicação (0,05%) em cada narina a cada 12 h por NO MÁXIMO 3–5 dias (adulto e > 6 anos com orientação)",
+            "ped": "< 6 anos: não usar sem prescrição específica",
+            "motivo": "Descongestionante curto"
+          }
+        ]
+      },
+      {
+        "nome": "Tosse (sintomático leve)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ambroxol",
+            "pos": "30 mg VO 3x/dia enquanto houver tosse produtiva (até 7 dias); melhora com hidratação",
+            "ped": "1,2–1,6 mg/kg/dose 3x/dia (xarope)",
+            "motivo": "Mucolítico de baixo risco"
+          },
+          {
+            "novo": {
+              "id": "mel_tosse",
+              "n": "Mel (acima de 1 ano) e hidratação",
+              "ap": "",
+              "pos": "1 colher de chá de mel à noite reduz tosse noturna (NÃO em < 1 ano — botulismo); líquidos mornos; elevar cabeceira. Tosse de IVAS dura até 2–3 semanas — só persistindo além disso investigar."
+            },
+            "ped": "Mel só > 1 ano",
+            "motivo": "Evidência simples e segura"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno se",
+              "ap": "",
+              "pos": "Falta de ar, febre além de 3 dias, piora após melhora, dor de ouvido/face, tosse com pus/sangue, prostração em criança, recusa alimentar infantil com queda de urina. Repouso relativo, hidratação, máscara em ambientes fechados e lavagem de mãos (protege a família)."
+            },
+            "motivo": "Rede de segurança"
+          }
+        ]
+      }
+    ]
+  }
+}

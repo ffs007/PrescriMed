@@ -1,0 +1,597 @@
+{
+  "id": "ws-neu_15",
+  "nome": "Meningite bacteriana",
+  "cat": "Emergência",
+  "alias": "meningite bacteriana meningite meningite bacteriana meningococo",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (NEU-15_meningite.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: esquema empírico padronizado, fluxo de punção e de quimioprofilaxia, e disponibilidade de vancomicina e meropenem",
+      "[verificar] sociedade_infectologia: indicação de dexametasona, cobertura de Listeria por faixa de risco e duração por agente",
+      "[verificar] ms: notificação compulsória, quimioprofilaxia de contactantes e calendário vacinal",
+      "[verificar] anvisa: apresentações, reconstituição e estabilidade da ceftriaxona, vancomicina e aciclovir",
+      "[verificar] diretriz_de_meningite: critérios de contraindicação à punção lombar e alvo de vale de vancomicina"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "NEU-15 em 2026-11-27",
+    "fundido_workspace": "NEU-15 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: petéquias, púrpura ou livedo com hipoperfusão -> antibiótico imediato, ressuscitação com volume e UTI; rebaixamento de consciência com Glasgow 8 ou menos -> proteger via aérea, osmoterapia e UTI; adiar punção; déficit focal, anisocoria ou postura de descerebração -> tomografia imediata, manitol e neurocirurgia; convulsão ou estado de mal epiléptico -> benzodiazepínico e anticonvulsivante IV. 1) Suspeitar pela clínica, acionar o protocolo e colher dois pares de hemoculturas em até 15 minutos, sem tirar o paciente do leito 2) Administrar dexametasona 10 mg IV e, imediatamente, o antibiótico empírico: ceftriaxona 2 g 12/12 h mais vancomicina 15-20 mg/kg, com ampicilina 2 g 4/4 h se houver fator de risco para Listeria 3) Acrescentar aciclovir 10 mg/kg 8/8 h quando houver convulsão, déficit focal, alteração de comportamento ou líquor com hemácias, sem esperar o PCR 4) Classificar o risco de herniação: estável e sem sinal → punção lombar direta; com rebaixamento, déficit, convulsão recente, papiledema ou imunossupressão → tomografia antes, mantendo antibiótico e corticoide 5) Instável ou em choque: ressuscitar com volume, iniciar vasopressor se necessário e levar à UTI; punção e imagem depois da estabilização 6) Puncionar, medir pressão de abertura e enviar citologia, bioquímica, Gram, cultura, PCR e lactato; interpretar com a clínica e com o uso prévio de antibiótico 7) Com o resultado: suspender vancomicina e ampicilina se o agente for sensível, ajustar a duraçã",
+  "redFlags": [
+    "petéquias, púrpura ou livedo com hipoperfusão -> antibiótico imediato, ressuscitação com volume e UTI",
+    "rebaixamento de consciência com Glasgow 8 ou menos -> proteger via aérea, osmoterapia e UTI; adiar punção",
+    "déficit focal, anisocoria ou postura de descerebração -> tomografia imediata, manitol e neurocirurgia",
+    "convulsão ou estado de mal epiléptico -> benzodiazepínico e anticonvulsivante IV",
+    "hipotensão, lactato acima de 2 mmol/L ou tempo de enchimento capilar prolongado -> reposição volêmica de 30 mL/kg e vasopressor se necessário",
+    "papiledema, paralisia de sexto par ou tríade de Cushing -> tomografia, osmoterapia e punção adiada",
+    "imunossupressão, esplenectomia ou uso de imunobiológico -> ampliar cobertura e internar em UTI",
+    "gestação com febre e meningismo -> ampicilina associada e avaliação obstétrica"
+  ],
+  "naoUsar": [
+    "anafilaxia prévia a cefalosporina",
+    "anafilaxia a penicilina",
+    "neonato com hiperbilirrubinemia",
+    "infusão concomitante com solução contendo cálcio",
+    "hipersensibilidade a glicopeptídeo",
+    "insuficiência renal sem ajuste de dose",
+    "uso concomitante de outro nefrotóxico sem monitorização",
+    "infecção bacteriana sem antibiótico adequado em curso"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "cumprir o antibiótico no horário exato, sem falhar doses, durante todo o tempo prescrito"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "interromper o antibiótico por melhora clínica antes do prazo previsto"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico fluoroquinolona",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ciprofloxacino",
+            "pos": "500 mg. Via VO. Dose única. 1 dose.",
+            "posTodas": true,
+            "motivo": "quimioprofilaxia de contactante de meningococo em dose única (alternativa) quimioprofilaxia de contactante adulto não gestante",
+            "nota": "Uso direto - monitorar: dor tendínea; monitorar: reação cutânea; monitorar: hidratação; monitorar: sintomas neurológicos · NÃO: gestação; menor de 18 anos; tendinopatia prévia; miastenia gravis; uso concomitante de tizanidina · Obs: Não usar em gestante nem em criança: nesses casos preferir ceftriaxona 500 mg IM dose única ou rifampicina · Renal: ClCr abaixo de 30 mL/min: 250–500 mg em dose única, com cautela",
+            "dose": {
+              "texto": "500 mg; dose única; 1 dose; max. 500 mg",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico rifamicina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "rifampicina",
+              "n": "Rifampicina",
+              "ap": "cápsula 300 mg",
+              "q": "",
+              "pos": "600 mg. Via VO. 12/12 h. 2 dias na profilaxia; 2-4 dias como adjuvante."
+            },
+            "motivo": "quimioprofilaxia de contactantes de meningococo e adjuvante na meningite por pneumococo resistente (condicional) quimioprofilaxia de contactante de meningococo",
+            "nota": "Uso direto, em jejum ou com alimento - monitorar: transaminases se uso maior que 2 dias; monitorar: adesão do contactante; monitorar: sangramento em paciente anticoagulado; monitorar: orientação de método contraceptivo adicional · NÃO: icterícia colestática; hepatite ativa; hipersensibilidade a rifamicina; porfiria aguda · Obs: Profilaxia em até 24 h do contato para contactante domiciliar, de creche, alojamento e profissional de saúde sem máscara. Alternativas: ciprofloxacino 500 mg dose única ou ceftriaxona 500 mg IM dose única",
+            "dose": {
+              "texto": "600 mg; 12/12 h; 2 dias na profilaxia; 2-4 dias como adjuvante; max. 1.200 mg/dia",
+              "status": "ok",
+              "valor": 600,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 2,
+              "duracao_texto": "2 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Isolamento de gotículas por 24 horas",
+              "ap": "",
+              "q": "",
+              "pos": "Quarto privativo e máscara cirúrgica até 24 h de antibiótico eficaz; em meningococo, manter até a alta se a higiene de mãos não for garantida"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Cabeceira elevada a 30 graus com cabeça na linha média",
+              "ap": "",
+              "q": "",
+              "pos": "Reduz a pressão intracraniana por facilitar o retorno venoso jugular; manter também no transporte para a tomografia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Controle de sódio e restrição hídrica no SIADH",
+              "ap": "",
+              "q": "",
+              "pos": "Dosar sódio na admissão e a cada 24 h; se sódio abaixo de 130 mEq/L, restringir líquidos a 1.000–1.200 mL/dia e corrigir no máximo 8–10 mEq/L em 24 h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Controle glicêmico entre 140 e 180 mg/dL",
+              "ap": "",
+              "q": "",
+              "pos": "Glicemia de 6 em 6 h e insulina em infusão se acima de 180 mg/dL; hiperglicemia piora edema e desfecho neurológico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Notificação compulsória imediata",
+              "ap": "",
+              "q": "",
+              "pos": "Meningite bacteriana é de notificação imediata no SINAN, com preenchimento na primeira hora; meningococo exige comunicação à vigilância em até 24 h para bloqueio"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Quimioprofilaxia dos contactantes em até 24 horas",
+              "ap": "",
+              "q": "",
+              "pos": "Listar domiciliares, creche, alojamento e profissionais de saúde sem máscara; prescrever rifampicina, ciprofloxacino ou ceftriaxona e registrar quem recebeu"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Monitorização neurológica seriada",
+              "ap": "",
+              "q": "",
+              "pos": "Glasgow, pupilas, força e sinais de Cushing a cada hora na primeira 24 h, com registro em impresso e chamado imediato ao médico se piora"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Prevenção de complicação da imobilidade e de aspiração",
+              "ap": "",
+              "q": "",
+              "pos": "Teste de deglutição antes da primeira via oral, mudança de decúbito a cada 2 h, higiene oral e profilaxia de trombose com enoxaparina quando não houver contraindicação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "NEU-15"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antibiótico cefalosporina terceira",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "meningite bacteriana empírica do adulto, com cobertura de meningococo, pneumococo e Haemophilus (1a linha) quimioprofilaxia em gestante ou menor de 18 anos",
+            "nota": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: temperatura e nível de consciência a cada 24 h; monitorar: hemograma e transaminases na admissão e em 72 h; monitorar: diarreia e dor abdominal; monitorar: sítio de infusão · NÃO: anafilaxia prévia a cefalosporina; anafilaxia a penicilina; neonato com hiperbilirrubinemia; infusão concomitante com solução contendo cálcio · Obs: Nunca atrasar por punção, tomografia ou resultado de exame. Para quimioprofilaxia de contactante, dose única de 500 mg IM (250 mg se menor de 15 anos)",
+            "dose": {
+              "texto": "2 g; 12/12 h; 7 dias para meningococo, 14 dias para pneumococo, 21 dias para Listeria ou gram-negativo; max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico glicopeptideo",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "vancomicina",
+              "n": "Vancomicina",
+              "ap": "frasco-ampola 500 mg",
+              "via": "IV",
+              "pos": "15-20 mg/kg; ataque de 25-30 mg/kg no doente grave. Via IV. 8/8 h ou 12/12 h conforme função renal. Até o antibiograma; 14 dias se pneumococo resistente confirmado. 60 minutos, no mínimo 1 hora e velocidade máxima de 1 g/h."
+            },
+            "motivo": "cobertura de pneumococo com sensibilidade reduzida à ceftriaxona na meningite empírica (1a linha)",
+            "nota": "Reconstituir em 10 mL de água; diluir em 250 mL de SF 0,9% ou SG 5%; nunca em bolus - monitorar: vale sérico antes da quarta dose, alvo de 15-20 mcg/mL, ou AUC/MIC de 400-600; monitorar: creatinina e ureia a cada 48 h; monitorar: audição e zumbido; monitorar: velocidade de infusão e reação do homem vermelho · NÃO: hipersensibilidade a glicopeptídeo; insuficiência renal sem ajuste de dose; uso concomitante de outro nefrotóxico sem monitorização · Obs: Suspender quando o pneumococo for sensível à ceftriaxona. Em meningite por estafilococo de derivação, associar meropenem ou cefepime, porque a vancomicina isolada tem penetração…",
+            "dose": {
+              "texto": "15-20 mg/kg; ataque de 25-30 mg/kg no doente grave; 8/8 h ou 12/12 h conforme função renal; até o antibiograma; 14 dias se pneumococo resistente confirmado; max. 2 g por dose",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": 20,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dexametasona_ev",
+            "motivo": "meningite bacteriana comunitária, para reduzir perda auditiva e sequela neurológica (1a linha) antes ou junto da primeira dose do antibiótico, por 4 dias",
+            "nota": "Bolus IV direto ou diluído em 10 mL de SF 0,9% - monitorar: glicemia a cada 6 h; monitorar: pressão arterial; monitorar: melena e dor epigástrica; monitorar: glicemia em diabético com ajuste de insulina",
+            "dose": {
+              "texto": "10 mg; 6/6 h; 4 dias; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 4,
+              "duracao_texto": "4 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico carbapenemico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "meropenem",
+              "n": "Meropenem",
+              "ap": "frasco-ampola 500 mg",
+              "via": "IV",
+              "pos": "2 g. Via IV. 8/8 h. 14-21 dias conforme o agente isolado. 30 minutos; infusão estendida de 3 horas melhora a exposição no líquor."
+            },
+            "motivo": "meningite pós-neurocirurgia, derivação ventricular, trauma craniano, ou alergia grave a cefalosporina (alternativa) pós-neurocirurgia, derivação ventricular ou alergia grave a cefalosporina",
+            "nota": "Reconstituir em 10 mL de água; diluir em 100 mL de SF 0,9%; usar em até 1 hora após a reconstituição - monitorar: nível de consciência e crises; monitorar: creatinina a cada 48 h; monitorar: hemograma; monitorar: diarreia · NÃO: anafilaxia a carbapenêmico; convulsão prévia atribuída a carbapenêmico · Obs: Cobre gram-negativo resistente e estafilococo quando associado à vancomicina. Não substitui a vancomicina na suspeita de pneumococo resistente · Renal: ClCr 25–50 mL/min: 2 g 12/12 h; ClCr 10–25: 1 g 12/12 h; abaixo de 10: 1 g 24/24 h com…",
+            "dose": {
+              "texto": "2 g; 8/8 h; 14-21 dias conforme o agente isolado; max. 6 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 6,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico anfenicol",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "cloranfenicol",
+              "n": "Cloranfenicol",
+              "ap": "frasco-ampola 1 g (succinato)",
+              "via": "IV",
+              "pos": "1 g. Via IV. 6/6 h. 14 dias. 30 minutos."
+            },
+            "motivo": "meningite bacteriana em alergia grave a beta-lactâmico quando não há carbapenêmico disponível (alternativa)",
+            "nota": "Reconstituir em 10 mL de água; diluir em 100 mL de SF 0,9% - monitorar: hemograma a cada 48 h com reticulócitos; monitorar: nível de consciência; monitorar: função hepática; monitorar: acuidade visual em uso prolongado · NÃO: depressão medular prévia; porfiria; neonato; terceiro trimestre de gestação · Obs: Uso de exceção: só quando não há beta-lactâmico disponível. Não é primeira escolha em nenhum cenário",
+            "dose": {
+              "texto": "1 g; 6/6 h; 14 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico aminopenicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ampicilina",
+            "motivo": "cobertura de Listeria monocytogenes em maior de 50 anos, imunossuprimido, alcoolista, desnutrido, gestante ou transplantado (condicional) maior de 50 anos, imunossuprimido, alcoolista ou gestante",
+            "nota": "Reconstituir em 10 mL de água; diluir 2 g em 100 mL de SF 0,9% e infundir em até 30 minutos da diluição - monitorar: creatinina e potássio a cada 48 h; monitorar: nível de consciência e crises convulsivas; monitorar: rash cutâneo; monitorar: transaminases em uso prolongado · NÃO: anafilaxia a penicilina; alergia grave a beta-lactâmico; mononucleose infecciosa com rash prévio · Obs: Não é cobertura de rotina no adulto jovem imunocompetente: só entra com fator de risco para Listeria. Em alergia grave, a alternativa é sulfametoxazol-trimetoprima 15–20 mg/kg/dia de trimetoprima 6/6 h · Renal: ClCr 10–30 mL/min: 2 g 8/8 h; ClCr abaixo…",
+            "dose": {
+              "texto": "2 g; 4/4 h; enquanto houver fator de risco; 21 dias se Listeria confirmada; max. 12 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiviral",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "aciclovir",
+              "n": "Aciclovir",
+              "ap": "frasco-ampola 250 mg",
+              "via": "IV",
+              "pos": "10 mg/kg. Via IV. 8/8 h. Até PCR de HSV negativo; 14-21 dias se positivo. 60 minutos; nunca em bolus."
+            },
+            "motivo": "dúvida com encefalite herpética: convulsão, déficit focal, alteração de comportamento ou líquor com hemácias (condicional) dúvida com encefalite herpética",
+            "nota": "Reconstituir em 10 mL de água; diluir em 100-250 mL de SF 0,9% até concentração máxima de 7 mg/mL - monitorar: creatinina a cada 24-48 h; monitorar: diurese e balanço hídrico; monitorar: nível de consciência e confusão; monitorar: sódio sérico · NÃO: hipersensibilidade a aciclovir ou valaciclovir; insuficiência renal sem ajuste de dose · Obs: Hidratar com SF 0,9% antes e durante a infusão. Iniciar na suspeita, sem esperar o PCR: a mortalidade da encefalite herpética não tratada chega a 70% · Renal: ClCr 50–80 mL/min: 10 mg/kg 12/12 h; ClCr 25–50: 10 mg/kg 24/24 h; ClCr 10–25: 5–10…",
+            "dose": {
+              "texto": "10 mg/kg; 8/8 h; até PCR de HSV negativo; 14-21 dias se positivo; max. 1.200 mg por dose, com peso ideal em obeso",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anticonvulsivante",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "levetiracetam",
+              "n": "Levetiracetam",
+              "ap": "solução injetável 100 mg/mL",
+              "via": "IV",
+              "pos": "Ataque de 1.000-2.000 mg; manutenção de 500-1.000 mg. Via IV. 12/12 h. 7 dias na fase aguda, com reavaliação da necessidade. 15 minutos."
+            },
+            "motivo": "crise convulsiva na meningite ou profilaxia de crise em paciente com lesão cortical e edema (condicional) convulsão",
+            "nota": "Diluir a dose em 100 mL de SF 0,9% ou SG 5% - monitorar: controle das crises; monitorar: nível de consciência; monitorar: função renal; monitorar: comportamento · NÃO: hipersensibilidade; psicose ativa; insuficiência renal sem ajuste · Obs: Preferir à fenitoína e ao fenobarbital na meningite: não tem interação relevante e não deprime o nível de consciência a ponto de confundir a avaliação neurológica · Renal: ClCr 50–80 mL/min: 500–1.000 mg 12/12 h; 30–50: 250–750 mg 12/12 h; abaixo de 30:…",
+            "dose": {
+              "texto": "ataque de 1.000-2.000 mg; manutenção de 500-1.000 mg; 12/12 h; 7 dias na fase aguda, com reavaliação da necessidade; max. 3.000 mg/dia",
+              "status": "ok",
+              "valor": 1000,
+              "valor_max": 2000,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Osmotico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "manitol",
+              "n": "Manitol 20%",
+              "ap": "frasco 250 mL a 20%",
+              "via": "IV",
+              "pos": "0,25-1 g/kg. Via IV. 6/6 h ou 8/8 h. Até o controle da pressão intracraniana ou a descompressão cirúrgica. 20-30 minutos."
+            },
+            "motivo": "hipertensão intracraniana com risco de herniação, antes da punção ou na evolução (condicional) hipertensão intracraniana",
+            "nota": "Usar a solução a 20% já pronta, aquecida a 37 °C, com filtro em acesso calibroso - monitorar: diurese e balanço hídrico; monitorar: sódio e osmolaridade a cada 6-12 h; monitorar: creatinina; monitorar: pupilas e nível de consciência · NÃO: anúria; insuficiência cardíaca descompensada; edema agudo de pulmão; hipovolemia grave não corrigida · Obs: Não substitui a punção diagnóstica nem o antibiótico. Em hipotenso, preferir solução salina hipertônica a 20% · Renal: Contraindicado em anúria; evitar com ClCr abaixo de 30 mL/min",
+            "dose": {
+              "texto": "0,25-1 g/kg; 6/6 h ou 8/8 h; até o controle da pressão intracraniana ou a descompressão cirúrgica; max. 2 g/kg em herniação iminente",
+              "status": "ok",
+              "valor": 0.25,
+              "valor_max": 1,
+              "unidade": "g",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "NEU-15",
+    "versao": "0.2.0",
+    "arquivo": "NEU-15_meningite.json",
+    "area": "Neurológico",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

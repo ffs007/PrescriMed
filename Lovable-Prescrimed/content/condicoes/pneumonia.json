@@ -1,0 +1,152 @@
+{
+  "id": "pac",
+  "nome": "Pneumonia adquirida na comunidade",
+  "cat": "Respiratório",
+  "alias": "pneumonia febre tosse infiltrado pulmao consolidacao pac",
+  "cid": [
+    [
+      "J159",
+      "Pneumonia bacteriana NE"
+    ],
+    [
+      "J18"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "IDSA/ATS — CAP; SBPT"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Diagnóstico clínico + RX (se disponível; não atrasar ATB por causa da imagem). Estratificar (CURB-65/PSI): 0–1 ambulatorial; ≥ 2 ou comorbidades → discutir internação. ATB ≤ 1 h se grave (sepsis). Cobertura empírica ambulatorial saudável: amoxicilina ALTA dose ou macrolídeo (atípicos); comorbidade/uso recente de ATB: amox-clav ou respiratório quinolone. Duração: 5 dias se estável (mínimo e máximo eficazes — não mais que isso por rotina). Acompanhar: 48–72 h deve melhorar; não melhorou → reavaliar (cobertura, complicaÇÃo, outro diagnóstico).",
+  "redFlags": [
+    "CURB-65 ≥ 2, confusão, FR ≥ 30, PAS < 90 ou PAD ≤ 60 — internar (EV)",
+    "SpO2 < 92% (ar ambiente) — oxigênio e internação",
+    "Hipotensão + hipoxemia + infiltrado multilobar — pneumonia grave/sepse: protocolo Sepse",
+    "Derrame pleural grande/empiema (febre persistente) — drenar",
+    "Imunossuprimido/neutropênico — EV de entrada",
+    "Não melhora em 48–72 h de ATB correto — complicações (derrame/abscesso) ou coberturerrada: imagem"
+  ],
+  "naoUsar": [
+    "Antibiótico 'amplo' de rotina no ambulatório saudável",
+    "Duração fixa de 7-10 dias sem pensar (5 dias bastam se estável)",
+    "Corticoide de rotina na pneumonia grave não complicada",
+    "Expectorante como tratamento"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Antibiótico — ambulatorial saudável",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "1 g VO a cada 8 h por 5 dias (DOSE ALTA — pneumococo é o alvo)",
+            "ped": "80–90 mg/kg/dia dividido 8/8 h × 7–10 dias",
+            "motivo": "1ª linha saudável"
+          },
+          {
+            "base": "azitromicina",
+            "pos": "500 mg VO 1x/dia por 3–5 dias — se suspeita de atípicos (jovem, tosse seca, início gradual) ou alergia",
+            "ped": "10 mg/kg/dia × 3 dias",
+            "motivo": "Atípicos/alergia"
+          },
+          {
+            "base": "claritromicina",
+            "pos": "500 mg VO 12/12 h por 5 dias",
+            "ped": "15 mg/kg/dia 12/12 h",
+            "motivo": "Alternativa macrolídeo"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico — comorbidade/uso recente de ATB",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxclav",
+            "pos": "875/125 mg VO 12/12 h por 5–7 dias ± macrolídeo se atípicos suspeitados",
+            "ped": "45 mg/kg/dia (amox) 12/12 h",
+            "motivo": "Comorbidades/ATB recente"
+          },
+          {
+            "linha": 1,
+            "base": "levofloxacino",
+            "pos": "750 mg VO 1x/dia por 5 dias — monoterapia respiratória em adulto com comorbidade",
+            "motivo": "Quinolona respiratória"
+          }
+        ]
+      },
+      {
+        "nome": "Sintomático",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "1 g VO 6/6 h se febre/dor (máx 4 g/dia)",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Febre/dor torácica"
+          },
+          {
+            "base": "ambroxol",
+            "pos": "30 mg VO 3x/dia se tosse produtiva (sintomático, sem evidência forte)",
+            "ped": "1,2–1,6 mg/kg 3x/dia",
+            "motivo": "Tosse produtiva"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno 48–72 h OBRIGATÓRIO (ou antes se)",
+              "ap": "",
+              "pos": "Retorno programado em 48–72 h para confirmar melhora — se febre alta persistente, falta de ar, confusão, vomitar o antibiótico: voltar antes. Completar 5 dias completos; hidratação; repouso relativo; verificar vacinas (pneumo, influenza). RX de controle em 4–6 semanas só se > 50 anos/fumante/não melhorou (excluir neoplasia)."
+            },
+            "motivo": "Falha terapêutica definida em 48–72 h"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "ATB EV (internação)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1–2 g EV 1x/dia ± azitromicina (betalactâmico + macrolídeo na internação)"
+          },
+          {
+            "linha": 1,
+            "hosp": "azitromicina_ev",
+            "motivo": "500 mg EV 1x/dia — associação"
+          },
+          {
+            "linha": 1,
+            "hosp": "levofloxacino_ev",
+            "motivo": "750 mg EV 1x/dia — monoterapia alternativa"
+          },
+          {
+            "hosp": "amp_sulb",
+            "motivo": "3 g EV 6/6h — aspiração/HCA"
+          }
+        ]
+      }
+    ]
+  }
+}

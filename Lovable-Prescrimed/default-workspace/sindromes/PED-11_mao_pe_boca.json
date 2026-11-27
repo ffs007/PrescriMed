@@ -1,0 +1,1070 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-11",
+    "area": "Pediatria",
+    "nome": "Síndrome mão-pé-boca",
+    "aliases": [
+      "Síndrome mão-pé-boca",
+      "mão-pé-boca",
+      "doença de mão-pé-boca",
+      "HFMD",
+      "exantema vesicular por enterovírus",
+      "estomatite vesicular com exantema",
+      "herpangina com exantema"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Síndrome mão-pé-boca é a infecção por enterovírus — Coxsackie A16 é a causa clássica, e A6, A10 e enterovírus 71 também produzem o quadro —, típica de criança menor de 5 anos em creche. A transmissão é fecal-oral, por gotículas respiratórias e por contato com o líquido das vesículas; a incubação é de 3 a 6 dias e a eliminação fecal dura 4 a 8 semanas depois da doença. O quadro começa com febre baixa e odinofagia, seguidos de vesículas e úlceras em palato, língua e mucosa jugal, e de vesículas ovais com halo eritematoso em palmas, plantas, nádegas e joelhos. A lesão oral dói e é o que leva à complicação real da síndrome: desidratação por recusa hídrica. A doença é autolimitada, com resolução em 7 a 10 dias, e não existe antiviral indicado: o tratamento é analgesia em horário fixo, anestésico tópico oral e hidratação fracionada, com reidratação oral ou venosa quando a criança não bebe. Três diagnósticos precisam ser separados: herpangina, com lesões apenas em orofaringe posterior e sem lesões de pele; gengivoestomatite herpética, com gengiva edemaciada e sangrante e sem lesões em mãos e pés; e varicela, com vesículas disseminadas no couro cabeludo e no tronco. Enterovírus 71 é a exceção grave: mioclonia, ataxia, letargia, convulsão ou paralisia flácida indicam romboencefalite e exigem internação imediata. Notificar surtos à creche e à vigilância e afastar a criança até a resolução das lesões completam a conduta.",
+    "inclusao": [
+      "Criança com vesículas ovais com halo eritematoso em palmas, plantas, nádegas ou joelhos",
+      "Vesículas ou úlceras em palato, língua e mucosa jugal com odinofagia e sialorreia",
+      "Lactente ou pré-escolar com febre baixa, recusa alimentar e lesões em boca e mãos",
+      "Criança com mão-pé-boca que recusa líquidos e com diurese reduzida",
+      "Criança com mão-pé-boca e lesões extensas em tronco e membros, compatíveis com Coxsackie A6",
+      "Contato de caso em creche ou escola com quadro compatível, mesmo com poucas lesões",
+      "Criança com mão-pé-boca e mioclonia, tremor, ataxia, letargia ou convulsão",
+      "Criança com mão-pé-boca e desidratação que falhou na reidratação oral"
+    ],
+    "exclusao": [
+      {
+        "situacao": "vesículas apenas em palato mole, úvula e amígdalas, sem lesões em mãos e pés",
+        "fluxo": "herpangina por Coxsackie — mesmo suporte analgésico e hídrico, sem lesões cutâneas"
+      },
+      {
+        "situacao": "gengiva edemaciada e sangrante, vesículas em lábios e região perioral, febre alta e sialorreia, sem lesões em mãos e pés",
+        "fluxo": "gengivoestomatite herpética por HSV-1 — analgesia, hidratação e aciclovir apenas em caso grave e precoce"
+      },
+      {
+        "situacao": "vesículas disseminadas em couro cabeludo, face e tronco, em estágios diferentes, com prurido intenso",
+        "fluxo": "PED-10 varicela — suporte, bloqueio de AINE e AAS e vigilância de complicação"
+      },
+      {
+        "situacao": "placas eczematosas com vesículas sobre dermatite atópica preexistente, após contato com caso",
+        "fluxo": "eczema coxsackium — mesmo suporte, com cuidado de pele e hidratação do eczema"
+      },
+      {
+        "situacao": "úlceras únicas ou múltiplas em mucosa, sem febre e sem lesão cutânea, em criança maior",
+        "fluxo": "aftas recorrentes ou estomatite aftosa — analgesia tópica e investigação de causa"
+      },
+      {
+        "situacao": "faringite com exsudato, adenopatia e febre alta, sem vesículas e sem lesões em mãos e pés",
+        "fluxo": "faringoamigdalite bacteriana — teste rápido de estreptococo e antibiótico se confirmado"
+      },
+      {
+        "situacao": "lesões purulentas com crosta melicérica em região perioral e narinas, sem vesículas em palmas e plantas",
+        "fluxo": "impetigo — antibiótico tópico ou sistêmico"
+      },
+      {
+        "situacao": "criança com paralisia flácida aguda, ataxia ou rebaixamento de consciência, com ou sem exantema",
+        "fluxo": "síndrome neurológica por enterovírus ou Guillain-Barré — internação, neuroimagem e UTI"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "mucosa seca, olhos fundos, ausência de lágrimas, turgor reduzido, diurese menor que uma vez em 12 h ou perda de peso acima de 5%",
+        "por_que": "desidratação por recusa hídrica, a complicação mais comum e a única causa frequente de internação na mão-pé-boca",
+        "acao": "classificar o grau de desidratação, iniciar reidratação oral supervisionada e passar para via venosa se houver desidratação moderada ou grave",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "recusa total de líquidos por mais de 8 h, vômitos repetidos ou incapacidade de engolir a própria saliva",
+        "por_que": "falência da via oral com desidratação progressiva",
+        "acao": "analgesia plena, anestésico tópico, antiemético e reteste de reidratação oral; se falhar, hidratação venosa",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "mioclonia, tremor, ataxia, letargia, irritabilidade intensa, convulsão ou paralisia flácida",
+        "por_que": "romboencefalite, mielite ou encefalite por enterovírus 71, com risco de morte e sequela neurológica",
+        "acao": "internação imediata, UTI, neuroimagem, punção lombar com PCR de enterovírus e suporte ventilatório se necessário",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "taquipneia, taquicardia, extremidades frias, enchimento capilar lento ou hipotensão",
+        "por_que": "choque, inclusive edema pulmonar neurogênico na infecção por enterovírus 71",
+        "acao": "sala vermelha, oxigênio, acesso venoso, monitorização contínua e UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "febre por mais de 5 dias, retorno da febre após melhora ou lesões com pus e eritema ao redor",
+        "por_que": "infecção bacteriana secundária das lesões orais ou cutâneas",
+        "acao": "examinar a cavidade oral e a pele, colher hemograma e proteína C reativa e iniciar antibiótico se houver foco bacteriano",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "lactente menor de 6 meses com mão-pé-boca, mesmo com bom estado geral",
+        "por_que": "reserva hídrica pequena e maior risco de desidratação rápida e de forma grave",
+        "acao": "baixar o limiar de observação e de internação, garantir analgesia e reavaliar em 12 a 24 h",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "descamação das unhas ou das plantas 2 a 4 semanas após o quadro",
+        "por_que": "onicomadese pós-enterovírus, benigna e autolimitada, mas que assusta a família e é confundida com micose",
+        "acao": "tranquilizar, orientar que a unha cresce de novo e não prescrever antifúngico",
+        "severidade": "informativo"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Qual a idade da criança e ela frequenta creche ou escola?",
+      "Há quantos dias começou a febre e quando apareceram as feridas na boca?",
+      "A criança está bebendo? Quantas vezes urinou nas últimas 12 h?",
+      "A dor na boca impede de engolir até a saliva? Está babando mais que o normal?",
+      "Tem vesículas ou bolhas nas mãos, nos pés, nas nádegas ou nos joelhos?",
+      "As feridas estão só na garganta ou também na gengiva, na língua e nos lábios?",
+      "A gengiva está inchada e sangrando com facilidade?",
+      "A criança está mancando, tremendo, com soluços ou movimentos anormais dos olhos?",
+      "Está muito sonolenta, irritada ou teve convulsão?",
+      "Já teve varicela ou tomou vacina? Alguém em casa ou na creche está com lesões parecidas?",
+      "Quais remédios já foram dados, em que dose e com que resposta?",
+      "Há doença de pele, imunossupressão ou uso de corticoide?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Mão-pé-boca típica em criança acima de 6 meses, com boa aceitação hídrica e sem sinal de alarme",
+        "escolha": "Ambulatório: paracetamol 10 a 15 mg/kg/dose de 4/4 a 6/6 h em horário fixo, hidratação fracionada com líquidos frios, anestésico tópico antes das refeições se houver dor importante e afastamento escolar até a resolução das lesões",
+        "porque": "A doença é autolimitada e não tem antiviral indicado; o tratamento da dor é o que garante a ingestão hídrica e evita a internação por desidratação"
+      },
+      {
+        "cenario": "Criança que recusa líquido por dor, com língua e palato cobertos de úlceras",
+        "escolha": "Analgesia 20 a 30 minutos antes da oferta de líquido, anestésico tópico oral (lidocaína gel 2%) antes das refeições e reidratação oral em colheradas de 5 a 10 mL a cada 5 a 15 minutos; reavaliar aceitação e diurese em 2 a 4 h",
+        "porque": "A recusa é sintoma de dor, não de falta de sede: tratar a dor primeiro é o que muda o desfecho. Se a criança não aceitar volume útil em 2 a 4 h, a via oral falhou e a hidratação precisa ser venosa"
+      },
+      {
+        "cenario": "Vômitos repetidos que impedem a reidratação oral, em criança com dor controlada",
+        "escolha": "Ondansetrona 0,15 mg/kg/dose, máximo de 8 mg, dose única por via oral ou venosa, e reteste de reidratação oral após 30 a 60 minutos",
+        "porque": "O antiemético serve para viabilizar a via oral e evitar punção; não trata a doença e não substitui a hidratação"
+      },
+      {
+        "cenario": "Desidratação moderada ou grave, recusa persistente por mais de 8 h, lactente menor de 6 meses ou perda de peso acima de 5%",
+        "escolha": "Hidratação venosa com solução isotônica, cálculo pelo peso e correção do déficit, com internação e reavaliação clínica a cada 2 a 4 h",
+        "porque": "A via oral não é segura nesse cenário e a desidratação é a única causa frequente de morte na mão-pé-boca"
+      },
+      {
+        "cenario": "Mioclonia, tremor, ataxia, letargia, convulsão, paralisia flácida ou sinais de choque",
+        "escolha": "Internação imediata em UTI, neuroimagem, punção lombar com PCR de enterovírus e suporte ventilatório e hemodinâmico; não há antiviral com indicação estabelecida",
+        "porque": "Enterovírus 71 causa romboencefalite com edema pulmonar neurogênico e morte em horas, e o suporte precoce é o que reduz sequela"
+      },
+      {
+        "cenario": "Lesões apenas em palato mole, úvula e amígdalas, sem vesículas em mãos, pés ou nádegas",
+        "escolha": "Herpangina: mesmo suporte analgésico e hídrico da mão-pé-boca, com reavaliação da pele em 24 h para confirmar ausência de lesões",
+        "porque": "Herpangina e mão-pé-boca são a mesma família de enterovírus e o tratamento é igual; o que muda é o isolamento e a comunicação de surto, porque a herpangina não exige afastamento prolongado"
+      },
+      {
+        "cenario": "Gengiva edemaciada e sangrante, vesículas em lábios e região perioral, febre alta, sem lesões em mãos e pés",
+        "escolha": "Gengivoestomatite herpética: analgesia e hidratação com o mesmo rigor; aciclovir por via oral apenas em quadro grave, início nas primeiras 72 a 96 h e sob avaliação, seguindo o registro próprio de estomatite herpética",
+        "porque": "É herpes-vírus simples, não enterovírus: o suporte é igual, mas o antiviral só tem benefício em caso selecionado e precoce, e rotular como mão-pé-boca atrasa o diagnóstico de uma doença que pode desidratar do mesmo jeito"
+      },
+      {
+        "cenario": "Lesões extensas em tronco, membros e áreas de dermatite atópica (eczema coxsackium), com dúvida com varicela",
+        "escolha": "Suporte analgésico e hídrico, hidratação da pele com emoliente e anti-histamínico se houver prurido; afastar varicela pela distribuição e pela ausência de lesões em couro cabeludo e de prurido intenso",
+        "porque": "Coxsackie A6 produz quadro atípico e extenso, muitas vezes confundido com varicela; a diferença importa porque na varicela AINE e AAS estão proibidos e há risco de complicação visceral"
+      },
+      {
+        "cenario": "Caso confirmado em creche ou escola, com dois ou mais casos no mesmo grupo",
+        "escolha": "Comunicar a creche e a vigilância municipal, reforçar higiene das mãos e de superfícies, afastar os doentes até a resolução das lesões e orientar as famílias sobre sinais de desidratação",
+        "porque": "O enterovírus circula por fezes por semanas e a creche é o amplificador do surto; a comunicação é a única medida que reduz a transmissão no grupo"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "dor das lesões orais e febre na mão-pé-boca, em horário fixo e antes das refeições",
+        "dose": "10 a 15 mg/kg/dose, a cada 4 a 6 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "4/4 a 6/6 h",
+        "duracao": "5 a 7 dias, enquanto houver dor ou febre",
+        "dose_maxima": "75 mg/kg/dia, sem ultrapassar 4 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "náusea",
+          "exantema raro"
+        ],
+        "apresentacoes": [
+          "solução oral 200 mg/mL (gotas), frasco 15 mL",
+          "suspensão oral 160 mg/5 mL, frasco 60 e 100 mL",
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução para infusão 10 mg/mL, frasco 100 mL"
+        ],
+        "preparo": "Via oral: uso direto, medindo com seringa dosadora e conferindo a concentração do frasco. Via venosa: infundir a solução já diluída, sem reconstituição",
+        "tempo_infusao": "15 minutos por via venosa; não se aplica por via oral",
+        "monitorizacao": [
+          "dor à deglutição e aceitação alimentar",
+          "temperatura",
+          "dose total diária somada com outros produtos que contenham paracetamol",
+          "aceitação hídrica e diurese"
+        ],
+        "ajuste_renal": "Ampliar o intervalo para 6 a 8 h se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose máxima diária e evitar em hepatopatia grave",
+        "observacoes": "É o analgésico de escolha e deve ser dado em horário fixo, não sob demanda: a dor contínua da úlcera oral é o que impede a criança de beber. A superdose por soma de apresentações é a causa mais comum de hepatotoxicidade pediátrica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "dor e febre na mão-pé-boca quando o paracetamol é insuficiente ou não está disponível",
+        "dose": "10 a 15 mg/kg/dose, a cada 6 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "60 mg/kg/dia; 4 g/dia no adolescente",
+        "contraindicacoes": [
+          "menor de 3 meses",
+          "alergia a pirazolona",
+          "discrasia sanguínea ou porfiria",
+          "deficiência de glicose-6-fosfato desidrogenase"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "sudorese e palidez",
+          "agranulocitose rara",
+          "reação cutânea grave rara"
+        ],
+        "apresentacoes": [
+          "solução oral 500 mg/mL (gotas), frasco 10 e 20 mL",
+          "solução oral 50 mg/mL, frasco 100 mL",
+          "comprimido 500 mg e 1 g",
+          "ampola 500 mg/mL, 2 e 5 mL"
+        ],
+        "preparo": "Via oral: uso direto, medindo com seringa dosadora. Via venosa: diluir a dose em 10 a 20 mL de soro fisiológico ou água destilada",
+        "tempo_infusao": "5 minutos por via venosa, em infusão lenta; não se aplica por via oral",
+        "monitorizacao": [
+          "pressão arterial durante e após a infusão",
+          "dor e temperatura",
+          "hemograma se uso prolongado",
+          "lesões cutâneas"
+        ],
+        "ajuste_renal": "Ampliar o intervalo em insuficiência renal grave",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "A gota é útil porque a criança com úlcera oral aceita pequeno volume; a dipirona poupa o paracetamol quando há necessidade de alternância. Contraindicada abaixo de 3 meses e nunca em infusão rápida",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "condicional",
+        "indicacao": "dor e febre na mão-pé-boca quando paracetamol e dipirona são insuficientes, em criança com hidratação preservada e sem varicela nem dengue",
+        "dose": "10 mg/kg/dose, a cada 6 a 8 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "6/6 a 8/8 h",
+        "duracao": "3 dias",
+        "dose_maxima": "40 mg/kg/dia; 2.400 mg/dia no adolescente",
+        "contraindicacoes": [
+          "desidratação ou recusa hídrica",
+          "injúria renal aguda",
+          "varicela ou suspeita de varicela",
+          "dengue",
+          "úlcera péptica ou sangramento digestivo",
+          "asma induzida por AINE"
+        ],
+        "efeitos_adversos": [
+          "injúria renal aguda em criança desidratada",
+          "dor epigástrica",
+          "sangramento digestivo",
+          "broncoespasmo em asmático sensível"
+        ],
+        "apresentacoes": [
+          "suspensão oral 100 mg/5 mL, frasco 100 mL",
+          "solução oral 50 mg/mL (gotas), frasco 20 mL",
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "comprimido 600 mg"
+        ],
+        "preparo": "Uso direto, agitando a suspensão, medindo com seringa dosadora e administrando com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "diurese e estado de hidratação",
+          "dor abdominal e melena",
+          "dor e aceitação alimentar",
+          "plaquetas se houver sangramento"
+        ],
+        "ajuste_renal": "Evitar em injúria renal aguda e em filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Na mão-pé-boca é opção de terceira linha, e nunca na criança que não está bebendo: o AINE em desidratação precipita injúria renal. Se houver dúvida com varicela, está proibido",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "lidocaína gel 2%",
+        "papel": "condicional",
+        "indicacao": "anestesia tópica das úlceras orais antes das refeições, para permitir a ingestão em criança com odinofagia importante",
+        "dose": "0,1 a 0,3 mL de gel a 2% por aplicação, na lesão oral",
+        "unidade": "mL",
+        "via": "tópica oral",
+        "frequencia": "até 4 vezes ao dia, 15 a 20 minutos antes das refeições",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "3 mg/kg por aplicação; 6 aplicações ao dia",
+        "contraindicacoes": [
+          "menor de 2 anos",
+          "alergia a lidocaína ou a anestésico do grupo amida",
+          "lesão de mucosa extensa com absorção aumentada",
+          "dificuldade de deglutição com risco de aspiração"
+        ],
+        "efeitos_adversos": [
+          "dormência da mucosa com mordedura da língua ou do lábio",
+          "aspiração em criança pequena",
+          "metahemoglobinemia rara",
+          "irritação local e ardência",
+          "convulsão por absorção excessiva em aplicação repetida"
+        ],
+        "apresentacoes": [
+          "gel 2%, tubo 30 g",
+          "solução tópica 2%, frasco 10 mL",
+          "spray 10% (não usar na cavidade oral da criança)"
+        ],
+        "preparo": "Aplicar com cotonete ou dedo enluvado, quantidade do tamanho de uma ervilha, diretamente sobre a úlcera, sem diluir e sem engolir",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "alívio da dor e aceitação alimentar após 15 minutos",
+          "número de aplicações no dia",
+          "dormência excessiva, mordedura e sangramento",
+          "sinais de toxicidade: sonolência, tremor, convulsão"
+        ],
+        "ajuste_renal": "Sem ajuste na aplicação tópica isolada",
+        "ajuste_hepatico": "Reduzir o número de aplicações em hepatopatia grave",
+        "observacoes": "É o anestésico tópico oral que muda a aceitação alimentar, mas não substitui a analgesia sistêmica: usar as duas juntas. Não usar abaixo de 2 anos pelo risco de aspiração e de metahemoglobinemia, e não aplicar em toda a boca de uma vez, para não abolir o reflexo de deglutição",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_inflamatorio_topico_oral",
+        "agente": "benzidamina",
+        "papel": "alternativa",
+        "indicacao": "alívio local da odinofagia em criança maior, quando a dor limita a alimentação e a lidocaína não está disponível",
+        "dose": "spray 0,15%: 1 a 2 jatos na mucosa oral até 3 vezes ao dia; pastilha 3 mg: 1 pastilha até 3 vezes ao dia a partir de 6 anos",
+        "unidade": "jato ou pastilha",
+        "via": "tópica oral",
+        "frequencia": "até 3 vezes ao dia",
+        "duracao": "5 dias",
+        "dose_maxima": "6 jatos ao dia; 3 pastilhas ao dia",
+        "contraindicacoes": [
+          "menor de 2 anos",
+          "alergia a benzidamina ou a AINE",
+          "asma induzida por AINE",
+          "lesão extensa de mucosa com absorção aumentada"
+        ],
+        "efeitos_adversos": [
+          "ardência local",
+          "broncoespasmo",
+          "metahemoglobinemia rara",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "spray 0,15%, frasco 30 mL",
+          "pastilha 3 mg",
+          "solução para bochecho 0,15%, frasco 100 mL"
+        ],
+        "preparo": "Aplicar diretamente na lesão, sem diluir; usar solução para bochecho apenas em criança que consegue cuspir",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "alívio da dor",
+          "ardência e lesão de mucosa",
+          "sibilância ou broncoespasmo",
+          "número de aplicações no dia"
+        ],
+        "ajuste_renal": "Sem ajuste na aplicação tópica",
+        "ajuste_hepatico": "Sem ajuste na aplicação tópica",
+        "observacoes": "Serve para a criança maior que consegue usar pastilha ou spray; abaixo de 2 anos o risco de broncoespasmo e de metahemoglobinemia supera o benefício. Não é analgésico de resgate: a base continua sendo paracetamol ou dipirona",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "reidratante_oral",
+        "agente": "sais de reidratação oral (SRO)",
+        "papel": "primeira_linha",
+        "indicacao": "reidratação e manutenção em criança com mão-pé-boca que aceita via oral, com desidratação leve ou risco de desidratar",
+        "dose": "50 mL/kg em 4 h para desidratação leve; 10 mL/kg após cada evacuação líquida ou episódio de vômito",
+        "unidade": "mL/kg",
+        "via": "VO ou SNG",
+        "frequencia": "em colheradas de 5 a 10 mL a cada 5 a 15 minutos",
+        "duracao": "4 h de reidratação e manutenção enquanto durar a fase aguda",
+        "dose_maxima": "200 mL/kg/dia",
+        "contraindicacoes": [
+          "vômito incoercível",
+          "íleo ou distensão abdominal importante",
+          "rebaixamento de consciência sem proteção de via aérea",
+          "desidratação grave com choque, que exige via venosa imediata"
+        ],
+        "efeitos_adversos": [
+          "vômito quando oferecido em volume grande",
+          "distensão abdominal",
+          "hipernatremia se o preparo for feito com menos água",
+          "diarreia osmótica se a diluição estiver errada"
+        ],
+        "apresentacoes": [
+          "pó para solução oral, envelope para 1 L",
+          "solução pronta para uso, frasco 500 mL",
+          "sachê pediátrico para 200 mL"
+        ],
+        "preparo": "Diluir o envelope em 1 L de água filtrada, sem adicionar açúcar, suco, refrigerante ou leite; desprezar o que sobrar após 24 h",
+        "tempo_infusao": "não se aplica por via oral; por sonda nasogástrica, infundir em 4 a 6 h em débito controlado",
+        "monitorizacao": [
+          "diurese e peso",
+          "sede, mucosa e turgor",
+          "número de vômitos e de evacuações",
+          "sódio e potássio se desidratação moderada ou grave",
+          "aceitação e recusa"
+        ],
+        "ajuste_renal": "Sem ajuste na desidratação leve; usar com cautela em insuficiência renal com oligúria",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "A colherada fria é o que torna a reidratação tolerável na úlcera oral. O erro é oferecer volume grande de uma vez, que provoca vômito e leva à via venosa sem necessidade",
+        "confirmar_apresentacao_local": true,
+        "fonte": "Ministério da Saúde/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico",
+        "agente": "ondansetrona",
+        "papel": "resgate",
+        "indicacao": "vômito que impede a reidratação oral na mão-pé-boca, com dor já controlada",
+        "dose": "0,15 mg/kg/dose, máximo de 8 mg",
+        "unidade": "mg/kg/dose",
+        "via": "VO ou IV",
+        "frequencia": "dose única; repetir uma vez após 15 a 30 minutos se o vômito persistir",
+        "duracao": "1 a 2 doses",
+        "dose_maxima": "8 mg por dose; 16 mg/dia",
+        "contraindicacoes": [
+          "prolongamento do intervalo QT",
+          "uso concomitante de outros fármacos que prolongam o QT",
+          "alergia à ondansetrona",
+          "síndrome serotoninérgica"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "prolongamento do QT",
+          "constipação",
+          "sonolência"
+        ],
+        "apresentacoes": [
+          "solução oral 2 mg/5 mL, frasco 50 mL",
+          "comprimido 4 mg e 8 mg",
+          "ampola 2 mg/mL, 2 e 4 mL"
+        ],
+        "preparo": "Via oral: uso direto. Via venosa: administrar sem diluir ou em 10 mL de soro fisiológico",
+        "tempo_infusao": "via venosa em bolus lento de 2 a 5 minutos; não se aplica por via oral",
+        "monitorizacao": [
+          "número de vômitos após 30 a 60 minutos",
+          "frequência cardíaca e QT em cardiopata",
+          "aceitação da reidratação oral",
+          "cefaleia"
+        ],
+        "ajuste_renal": "Sem ajuste na dose habitual",
+        "ajuste_hepatico": "Máximo de 4 mg/dia em insuficiência hepática grave",
+        "observacoes": "É ferramenta para viabilizar a via oral e evitar punção, não tratamento da mão-pé-boca. Repetir a dose mais de uma vez sem reteste de hidratação é erro: se o vômito persistir, a via é venosa",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "fluido_venoso",
+        "agente": "solução de manutenção venosa (glicofisiológica)",
+        "papel": "resgate",
+        "indicacao": "desidratação moderada ou grave, recusa hídrica persistente ou vômito incoercível que impedem a via oral",
+        "dose": "Holliday-Segar: 100 mL/kg/dia até 10 kg; 1.000 mL mais 50 mL/kg para cada kg entre 10 e 20 kg; 1.500 mL mais 20 mL/kg acima de 20 kg. Na regra 4-2-1: 4 mL/kg/h até 10 kg, 2 mL/kg/h para cada kg entre 10 e 20 kg e 1 mL/kg/h acima de 20 kg",
+        "unidade": "mL/kg/dia",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até tolerar via oral, em geral 12 a 24 h",
+        "dose_maxima": "2.400 mL/dia, ou o cálculo por superfície corporal",
+        "contraindicacoes": [
+          "sobrecarga hídrica ou edema agudo de pulmão",
+          "insuficiência renal anúrica sem diálise",
+          "hiponatremia grave sem correção dirigida",
+          "choque, que exige expansão com cristaloide isotônico e não manutenção"
+        ],
+        "efeitos_adversos": [
+          "hiponatremia dilucional",
+          "hiperglicemia",
+          "flebite",
+          "sobrecarga de volume"
+        ],
+        "apresentacoes": [
+          "solução glicofisiológica (glicose 5% com cloreto de sódio 0,9%), frasco 500 mL",
+          "solução glicosada 5% com cloreto de sódio 0,45%, frasco 500 mL",
+          "ampola de cloreto de potássio 19,1% para adição",
+          "equipo com bureta graduada"
+        ],
+        "preparo": "Calcular o volume pelo peso, adicionar cloreto de potássio 20 mEq/L somente após diurese estabelecida e infundir em bomba de infusão com bureta",
+        "tempo_infusao": "infusão contínua por 24 h, com reavaliação a cada 4 a 6 h",
+        "monitorizacao": [
+          "peso e balanço hídrico",
+          "diurese horária",
+          "sódio e potássio séricos",
+          "glicemia",
+          "sítio de infusão e sinais de sobrecarga"
+        ],
+        "ajuste_renal": "Reduzir o volume em oligúria e avaliar diálise em anúria",
+        "ajuste_hepatico": "Reduzir o volume e monitorar sódio em cirrose com hiponatremia",
+        "observacoes": "Evitar soro glicosado isolado: a hiponatremia dilucional é a complicação grave da manutenção venosa em pediatria. A via venosa existe para atravessar a fase de dor intensa, não para manter a criança internada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "SBP/Ministério da Saúde",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Hidratação fracionada em colheradas",
+        "detalhe": "Oferecer 5 a 10 mL de líquido frio a cada 5 a 15 minutos, com colher, seringa dosadora ou copo pequeno, em vez de oferecer um copo cheio. Medir e anotar as micções: a diurese é o marcador que decide se a via oral está funcionando"
+      },
+      {
+        "medida": "Alimentação fria, pastosa e não ácida",
+        "detalhe": "Preferir sorvete, iogurte, purê, gelatina e leite gelado; evitar suco de laranja, limão, tomate, refrigerante, salgadinho e alimento duro ou quente, que ardem na úlcera. Não forçar volume: oferecer pouco e com frequência"
+      },
+      {
+        "medida": "Higiene oral suave",
+        "detalhe": "Limpar a boca com gaze embebida em água filtrada ou soro fisiológico após as refeições na criança pequena; na maior, escova macia e bochecho com água. Não usar álcool, produto com mentol nem bochecho antisséptico em criança que não consegue cuspir"
+      },
+      {
+        "medida": "Higiene das mãos, dos utensílios e das superfícies",
+        "detalhe": "Lavar as mãos após trocar fraldas e antes de preparar alimentos, porque o vírus é eliminado nas fezes por 4 a 8 semanas. Não compartilhar copos, talheres, toalhas nem brinquedos de colocar na boca, e limpar mesas e brinquedos com água e sabão"
+      },
+      {
+        "medida": "Afastamento escolar e comunicação de surto",
+        "detalhe": "Afastar a criança da creche ou escola até a resolução das lesões e a melhora do estado geral, em geral 5 a 7 dias. Comunicar a creche e a vigilância municipal quando houver dois ou mais casos no mesmo grupo, para que a higiene seja reforçada e as famílias orientadas"
+      },
+      {
+        "medida": "Controle da dor sem fármaco",
+        "detalhe": "Compressas frias externas, ambiente calmo, evitar manipular a boca e não insistir na alimentação no pico da dor. Dar o analgésico e o anestésico tópico antes da refeição, e não depois, é o que muda a aceitação"
+      },
+      {
+        "medida": "Cuidado das vesículas e da pele",
+        "detalhe": "Não furar, não espremer e não aplicar produto caseiro, pasta de dente ou pomada sem prescrição. Manter a pele limpa e seca, unhas curtas e, na dermatite atópica, emoliente diário para reduzir a extensão do eczema coxsackium"
+      },
+      {
+        "medida": "Manutenção do aleitamento materno",
+        "detalhe": "Manter o peito, oferecendo com mais frequência e em mamadas curtas, porque o leite materno hidrata, alimenta e consola. Se a sucção estiver dolorosa, ordenhar e oferecer em copo ou colher, sem suspender o aleitamento"
+      },
+      {
+        "medida": "Plano de hidratação e sinais de retorno por escrito",
+        "detalhe": "Entregar por escrito o volume por hora, o horário das tomadas de analgésico e os sinais que exigem retorno imediato — não urinar, não beber, vômito, sonolência, tremor — e agendar reavaliação em 24 h para lactente e para quem recusou líquidos na consulta"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Teste de reidratação oral supervisionada",
+        "indicacao": "criança com mão-pé-boca que recusa líquidos por dor ou com desidratação leve, para decidir entre alta e via venosa",
+        "tecnica": "Analgesia e anestésico tópico 15 a 20 minutos antes; oferecer solução de reidratação oral na dose de 50 mL/kg em 4 h, em colheradas de 5 a 10 mL a cada 5 a 15 minutos, com registro em ficha do volume aceito, dos vômitos e das micções; reavaliar peso, mucosa e diurese ao final ou antes se houver vômito persistente",
+        "complicacoes": "Vômito por volume excessivo, distensão abdominal, aspiração em criança com rebaixamento e falsa impressão de sucesso quando a família não registra o volume real"
+      },
+      {
+        "nome": "Acesso venoso periférico e hidratação venosa",
+        "indicacao": "desidratação moderada ou grave, falha do teste de reidratação oral, vômito incoercível e lactente menor de 6 meses com recusa hídrica",
+        "tecnica": "Puncionar veia periférica calibrosa, fixar o cateter, calcular o déficit e a manutenção pelo peso, usar solução isotônica para expansão e glicofisiológica para manutenção com cloreto de potássio após diurese, e reavaliar peso, diurese e eletrólitos a cada 4 a 6 h",
+        "complicacoes": "Hiponatremia dilucional por soro glicosado isolado, sobrecarga de volume, flebite, extravasamento e hipoglicemia em lactente"
+      },
+      {
+        "nome": "Sondagem nasogástrica para hidratação enteral",
+        "protocolo": "BOX-10",
+        "indicacao": "criança que recusa a via oral por dor mas tolera estômago, sem rebaixamento de consciência e sem vômito incoercível, como alternativa à punção venosa",
+        "tecnica": "Medir a sonda da ponta do nariz ao lóbulo da orelha e ao apêndice xifoide, lubrificar, introduzir pela narina com a criança sentada ou semifowler, confirmar o posicionamento por ausculta com injeção de ar e pH do aspirado, fixar e infundir a solução de reidratação em débito controlado por bomba",
+        "complicacoes": "Posicionamento incorreto com infusão em via aérea, aspiração, sangramento nasal, lesão de mucosa e vômito durante a infusão rápida"
+      },
+      {
+        "nome": "Coleta de swab de orofaringe e de vesícula para PCR de enterovírus",
+        "indicacao": "suspeita de enterovírus 71 com sinal neurológico, surto em creche ou serviço de saúde e quadro atípico extenso com dúvida diagnóstica",
+        "tecnica": "Friccionar a parede posterior da orofaringe e a base de uma vesícula recente com swab estéril, acondicionar em meio de transporte viral, manter refrigerado e enviar ao laboratório de referência com a ficha de investigação",
+        "complicacoes": "Falso-negativo por coleta tardia ou de crosta, contaminação bacteriana, desconforto e ausência de laboratório de referência no serviço"
+      }
+    ],
+    "metas": [
+      "Analgesia prescrita em horário fixo, e não sob demanda, em toda criança com mão-pé-boca",
+      "Diurese registrada na consulta inicial e na reavaliação de toda criança que recusou líquidos",
+      "Reidratação oral iniciada em até 1 h do atendimento e reavaliada em 2 a 4 h",
+      "Nenhuma criança menor de 6 meses com recusa hídrica liberada sem reavaliação em 12 a 24 h",
+      "Afastamento escolar e comunicação da creche registrados no prontuário em todo caso confirmado",
+      "Sinais de desidratação e de complicação neurológica entregues por escrito na alta",
+      "Nenhuma prescrição de antibiótico ou antiviral em mão-pé-boca típica sem foco bacteriano ou diagnóstico alternativo"
+    ],
+    "fluxo": [
+      "Confirmar o padrão clínico: vesículas ou úlceras em boca associadas a vesículas ovais com halo eritematoso em palmas, plantas, nádegas e joelhos, em criança pequena com contato em creche",
+      "Separar os três diagnósticos que se parecem: herpangina (só orofaringe posterior), gengivoestomatite herpética (gengiva edemaciada e sangrante, sem lesões em mãos e pés) e varicela (vesículas disseminadas em couro cabeludo e tronco)",
+      "Classificar a hidratação: peso, mucosa, turgor, lágrimas, diurese nas últimas 12 h e perda de peso em relação ao peso conhecido",
+      "Tratar a dor antes de testar a aceitação hídrica: paracetamol ou dipirona em horário fixo e anestésico tópico oral 15 a 20 minutos antes da oferta de líquido",
+      "Testar a via oral com reidratação supervisionada em colheradas; usar antiemético se o vômito impedir e repetir o teste; passar para via venosa se falhar ou se a desidratação for moderada ou grave",
+      "Procurar sinal neurológico em toda criança com mão-pé-boca: mioclonia, tremor, ataxia, letargia, convulsão e paralisia mudam o destino para UTI",
+      "Orientar por escrito, afastar da creche até a resolução das lesões, comunicar a escola e notificar surto à vigilância",
+      "Reavaliar em 24 h o lactente, a criança que recusou líquidos e a que tem lesões extensas; reavaliar de imediato se surgir sinal de alarme"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "lactente_menor_de_6_meses",
+        "ajuste": "baixar o limiar de internação e de reavaliação, garantir analgesia e anestésico tópico não indicado abaixo de 2 anos, e preferir reidratação oral supervisionada com reavaliação em 12 a 24 h",
+        "alerta": "a reserva hídrica é pequena e a desidratação instala-se em poucas horas de recusa"
+      },
+      {
+        "populacao": "crianca_com_dermatite_atopica",
+        "ajuste": "reconhecer o eczema coxsackium, manter emoliente e hidratação da pele, tratar a dor e diferenciar de varicela antes de liberar AINE",
+        "alerta": "a pele com barreira rota amplia as lesões e favorece infecção bacteriana secundária"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "internar, garantir hidratação e analgesia e investigar enterovírus com PCR; não há antiviral de rotina e o suporte é a única conduta",
+        "alerta": "a eliminação viral é prolongada e a doença pode ser prolongada e atípica, com lesões extensas"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "manter higiene rigorosa das mãos após trocar fraldas e evitar contato com o líquido das vesículas; não há síndrome congênita estabelecida por enterovírus",
+        "alerta": "a infecção no terceiro trimestre pode coincidir com o parto e exigir avaliação do recém-nascido"
+      },
+      {
+        "populacao": "adolescente_e_adulto_jovem",
+        "ajuste": "considerar Coxsackie A6, que produz quadro mais sintomático e lesões atípicas, e reforçar analgesia e hidratação",
+        "alerta": "o adulto doente é fonte de transmissão para a creche e para o recém-nascido em casa"
+      },
+      {
+        "populacao": "crianca_desnutrida",
+        "ajuste": "internar mais cedo, calcular a reidratação pelo peso real e monitorar eletrólitos, porque a reserva é menor e a desidratação é mais rápida",
+        "alerta": "desnutrição agrava a desidratação e a hipoglicemia durante a recusa alimentar"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "PCR de enterovírus em swab de orofaringe, vesícula ou líquor",
+          "indicacao": "suspeita de enterovírus 71 com sinal neurológico, surto em creche ou serviço e quadro atípico extenso",
+          "o_que_muda": "confirma o agente, define isolamento e investigação de contatos e sustenta a notificação de surto; no líquor alterado, confirma romboencefalite"
+        },
+        {
+          "nome": "eletrólitos, ureia, creatinina e glicemia",
+          "indicacao": "desidratação moderada ou grave, vômito persistente e necessidade de hidratação venosa",
+          "o_que_muda": "define o tipo de desidratação, corrige distúrbio antes da infusão, orienta a composição do soro e detecta hipoglicemia em lactente"
+        },
+        {
+          "nome": "hemograma com plaquetas e proteína C reativa",
+          "indicacao": "febre por mais de 5 dias, retorno da febre, lesões com pus ou suspeita de infecção bacteriana secundária",
+          "o_que_muda": "neutrofilia e PCR alta deslocam a conduta para antibiótico e investigação de foco; padrão viral afasta antibiótico"
+        },
+        {
+          "nome": "radiografia de tórax e neuroimagem",
+          "indicacao": "taquipneia, hipoxemia, rebaixamento de consciência, convulsão ou déficit focal na suspeita de enterovírus 71",
+          "o_que_muda": "infiltrado difuso ou edema pulmonar neurogênico e alteração de tronco encefálico indicam UTI e suporte ventilatório"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "sorologia de enterovírus de rotina",
+          "motivo": "não distingue sorotipos, tem reação cruzada e não muda a conduta, que é suporte clínico"
+        },
+        {
+          "exame": "coprocultura em quadro típico",
+          "motivo": "o agente é viral, o resultado não altera a conduta e o custo atrasa a orientação de hidratação"
+        },
+        {
+          "exame": "hemograma de rotina em mão-pé-boca típica com bom estado geral",
+          "motivo": "não muda a conduta de suporte e submete a criança a punção sem benefício"
+        },
+        {
+          "exame": "painel viral amplo sem hipótese definida",
+          "motivo": "resultado não interpretável, custo alto e risco de achar vírus sem relação com o quadro"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "dar o analgésico em horário fixo, mesmo que a criança pareça bem, e antes das refeições",
+        "oferecer líquido frio em colheradas pequenas e frequentes, e anotar quantas vezes a criança urinou",
+        "oferecer alimentos frios e pastosos e manter o aleitamento materno",
+        "manter as mãos lavadas, os utensílios separados e os brinquedos limpos",
+        "avisar a creche ou a escola e manter a criança em casa até as lesões sararem",
+        "voltar em 24 h se a criança tiver menos de 6 meses ou se tiver recusado líquidos na consulta"
+      ],
+      "evitar": [
+        "oferecer um copo cheio de líquido de uma vez, que provoca vômito",
+        "sucos ácidos, refrigerante, salgadinho, alimento quente ou duro",
+        "furar as bolhas, espremer lesões ou aplicar pasta de dente, álcool e produto caseiro",
+        "compartilhar copo, talher, toalha e brinquedo de colocar na boca",
+        "levar a criança à piscina, à praia ou a festas enquanto houver lesões",
+        "antibiótico ou antiviral por conta própria para uma doença viral"
+      ],
+      "retorno": [
+        "não beber nada, babar sem engolir ou vomitar tudo o que recebe",
+        "não urinar por mais de 12 h, urina escura ou boca muito seca",
+        "sonolência, irritabilidade intensa, tremor, mancar, convulsão ou fraqueza",
+        "falta de ar, respiração rápida, lábios arroxeados ou extremidades frias",
+        "febre que volta depois do 5º dia ou lesão com pus e vermelhidão ao redor",
+        "descamação das unhas após 2 a 4 semanas, para tranquilizar e afastar micose"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade em superdose",
+          "náusea"
+        ],
+        "observacao": "somar todas as apresentações usadas em casa antes de repetir a dose"
+      },
+      {
+        "agente": "dipirona",
+        "efeitos": [
+          "hipotensão em infusão rápida",
+          "sudorese",
+          "agranulocitose rara"
+        ],
+        "observacao": "infundir lentamente e não usar em menor de 3 meses"
+      },
+      {
+        "agente": "ibuprofeno",
+        "efeitos": [
+          "injúria renal em desidratação",
+          "sangramento digestivo",
+          "broncoespasmo"
+        ],
+        "observacao": "não prescrever na criança que recusa líquidos nem quando houver dúvida com varicela"
+      },
+      {
+        "agente": "lidocaína gel 2%",
+        "efeitos": [
+          "dormência com mordedura",
+          "aspiração",
+          "metahemoglobinemia rara",
+          "convulsão por absorção excessiva"
+        ],
+        "observacao": "limitar a 0,3 mL por aplicação e a 4 aplicações ao dia; não usar abaixo de 2 anos"
+      },
+      {
+        "agente": "benzidamina",
+        "efeitos": [
+          "ardência local",
+          "broncoespasmo",
+          "metahemoglobinemia rara"
+        ],
+        "observacao": "não usar abaixo de 2 anos nem em asmático com história de broncoespasmo por AINE"
+      },
+      {
+        "agente": "sais de reidratação oral",
+        "efeitos": [
+          "vômito por volume grande",
+          "distensão abdominal",
+          "hipernatremia por diluição errada"
+        ],
+        "observacao": "diluir exatamente em 1 L de água e oferecer em colheradas"
+      },
+      {
+        "agente": "ondansetrona",
+        "efeitos": [
+          "cefaleia",
+          "prolongamento do QT",
+          "constipação"
+        ],
+        "observacao": "não repetir sem reteste de hidratação e evitar em cardiopata com QT longo"
+      },
+      {
+        "agente": "solução de manutenção venosa",
+        "efeitos": [
+          "hiponatremia dilucional",
+          "hiperglicemia",
+          "flebite",
+          "sobrecarga de volume"
+        ],
+        "observacao": "não usar soro glicosado isolado; monitorar sódio e diurese"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose, via e manifestação no prontuário",
+      "Hiponatremia durante hidratação venosa: suspender o soro hipotônico, dosar sódio, corrigir com solução isotônica e restringir volume até normalizar",
+      "Sinais de toxicidade por lidocaína — sonolência, tremor, convulsão, metahemoglobinemia com cianose que não responde a oxigênio: suspender o gel, dosar metahemoglobina, dar oxigênio e suporte",
+      "Broncoespasmo com benzidamina: suspender, inalar beta-2 agonista e tratar como crise asmática",
+      "Vômito após reidratação oral: reduzir o volume por oferta, aumentar a frequência e repetir; se persistir, usar ondansetrona e passar para via venosa se o teste falhar",
+      "Ardência e piora da dor com anestésico tópico: suspender, lavar a boca com água e reavaliar a analgesia sistêmica",
+      "Reação alérgica cutânea com paracetamol, dipirona ou ibuprofeno: suspender, tratar sintoma e registrar no prontuário e no cartão da criança",
+      "Reavaliar o diagnóstico e reescrever a prescrição antes da alta; não dar alta com efeito adverso em curso"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol suspensão 160 mg/5 mL ou solução 200 mg/mL",
+            "dose": "10 a 15 mg/kg/dose = ___ mg = ___ mL",
+            "via": "VO",
+            "frequencia": "4/4 a 6/6 h em horário fixo",
+            "duracao": "5 a 7 dias",
+            "condicao": "analgésico de escolha; dar antes das refeições",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dipirona solução oral 500 mg/mL (gotas)",
+            "dose": "10 a 15 mg/kg/dose = ___ mg = ___ gotas",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "3 a 5 dias",
+            "condicao": "alternativa ou resgate quando a dor não cede com paracetamol",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lidocaína gel 2%",
+            "dose": "0,1 a 0,3 mL por aplicação = ___ (máximo 3 mg/kg por aplicação)",
+            "via": "tópica oral",
+            "frequencia": "até 4 vezes ao dia, 15 a 20 minutos antes das refeições",
+            "duracao": "3 a 5 dias",
+            "condicao": "odinofagia importante; não usar abaixo de 2 anos",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "sais de reidratação oral, envelope para 1 L",
+            "dose": "50 mL/kg em 4 h = ___ mL; depois 10 mL/kg após cada evacuação líquida",
+            "via": "VO",
+            "frequencia": "colheradas de 5 a 10 mL a cada 5 a 15 minutos",
+            "duracao": "4 h de reidratação e manutenção enquanto durar",
+            "condicao": "recusa hídrica ou desidratação leve; diluir em 1 L de água",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona solução oral 2 mg/5 mL",
+            "dose": "0,15 mg/kg/dose = ___ mg = ___ mL (máximo 8 mg)",
+            "via": "VO",
+            "frequencia": "dose única; repetir uma vez após 30 minutos se persistir vômito",
+            "duracao": "1 a 2 doses",
+            "condicao": "vômito que impede a reidratação oral",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "orientação escrita de hidratação fracionada, afastamento escolar e sinais de retorno",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a reavaliação",
+            "condicao": "entregar em toda alta com mão-pé-boca",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "solução de manutenção venosa glicofisiológica",
+            "dose": "Holliday-Segar calculado pelo peso = ___ mL/dia, com cloreto de potássio 20 mEq/L após diurese",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "peso, diurese horária, sódio, potássio e glicemia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol",
+            "dose": "10 a 15 mg/kg/dose de 4/4 a 6/6 h",
+            "via": "VO ou IV",
+            "frequencia": "4/4 a 6/6 h",
+            "monitorizacao": "dor, temperatura e dose total diária",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona",
+            "dose": "0,15 mg/kg/dose, máximo 8 mg",
+            "via": "IV",
+            "frequencia": "dose única, com reteste de reidratação após 30 a 60 minutos",
+            "monitorizacao": "vômitos, frequência cardíaca e QT",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lidocaína gel 2%",
+            "dose": "0,1 a 0,3 mL por aplicação",
+            "via": "tópica oral",
+            "frequencia": "até 4 vezes ao dia",
+            "monitorizacao": "alívio da dor, dormência excessiva e aceitação alimentar",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "PCR de enterovírus em swab de orofaringe, vesícula ou líquor",
+          "eletrólitos, ureia, creatinina e glicemia",
+          "hemograma com plaquetas e proteína C reativa",
+          "radiografia de tórax",
+          "neuroimagem e punção lombar na suspeita de enterovírus 71",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que a criança esteve sob meus cuidados nesta data, com quadro de síndrome mão-pé-boca, necessitando de afastamento escolar até a resolução das lesões, em geral por 5 a 7 dias, com manutenção de hidratação fracionada e analgesia.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e CID são decisão médica no ato; anexar plano de hidratação e sinais de retorno"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com idade, dias de sintomas, lesões, aceitação hídrica, diurese, peso, tentativa de reidratação oral, fármacos usados e sinal neurológico",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Criança de ___ anos com mão-pé-boca iniciada há ___ dias, lesões em ___, aceitação hídrica ___, diurese ___, peso ___ kg com perda de ___, classificada como desidratação ___, submetida a reidratação oral ___ com resposta ___, analgesia com ___ e anestésico tópico ___, sinal neurológico ___, alta com plano de hidratação, afastamento escolar e retorno em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "idade e frequência em creche ou escola",
+        "dias de febre e de lesões, e ordem de aparecimento",
+        "local das lesões: boca, mãos, pés, nádegas, joelhos e tronco",
+        "dor à deglutição, sialorreia e recusa alimentar",
+        "volume e tipo de líquido aceito nas últimas 24 h",
+        "número de micções nas últimas 12 a 24 h",
+        "vômitos e diarreia",
+        "sintomas neurológicos: tremor, mioclonia, ataxia, sonolência, convulsão",
+        "sintomas respiratórios: tosse, dispneia, taquipneia",
+        "doença de pele preexistente, imunossupressão e uso de corticoide",
+        "fármacos já usados, dose e resposta",
+        "contato com caso semelhante na creche, na escola ou em casa"
+      ],
+      "texto_template": "Criança de ___ anos, em creche ___, com febre há ___ dias e lesões em ___ iniciadas há ___ dias, dor à deglutição ___, sialorreia ___, aceitação hídrica ___, diurese em 12 h ___, vômitos ___, sintomas neurológicos ___, sintomas respiratórios ___, doença de pele ___, imunossupressão ___, fármacos usados ___ e contato de caso ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "peso, temperatura, frequência cardíaca, frequência respiratória e saturação",
+        "estado geral, irritabilidade e nível de consciência",
+        "hidratação: mucosa, lágrimas, turgor, fontanela e tempo de enchimento capilar",
+        "cavidade oral: número, tamanho e localização das úlceras, língua, palato e gengiva",
+        "gengiva edemaciada ou sangrante, que sugere herpes-vírus simples",
+        "pele: vesículas ovais com halo eritematoso em palmas, plantas, nádegas e joelhos",
+        "extensão das lesões em tronco e membros e presença de dermatite atópica",
+        "ausculta pulmonar, esforço respiratório e sinais de edema pulmonar",
+        "abdome e diurese registrada",
+        "neurológico: marcha, coordenação, tremor, mioclonia, nistagmo e força muscular"
+      ],
+      "texto_template": "Peso ___ kg, temperatura ___ °C, frequência cardíaca ___ bpm, frequência respiratória ___ rpm, saturação ___%, estado geral ___, hidratação com mucosa ___, lágrimas ___, turgor ___, úlceras orais em ___ (número ___), gengiva ___, vesículas em palmas, plantas, nádegas e joelhos ___, extensão em tronco ___, ausculta ___, diurese ___, marcha e coordenação ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de desidratação na emergência pediátrica, disponibilidade de sala de reidratação, bombas de infusão e material para sondagem nasogástrica",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "indicação de anestésico tópico oral e de antiemético na recusa hídrica, diferenças entre mão-pé-boca, herpangina e gengivoestomatite herpética e critérios de internação",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "protocolo de reidratação oral e venosa em pediatria, notificação de surto de doença exantemática e composição da solução de reidratação oral",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de paracetamol, dipirona, lidocaína gel 2%, benzidamina, solução de reidratação oral e ondansetrona disponíveis no serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "associação de enterovírus 71 com romboencefalite, eficácia do anestésico tópico na odinofagia, dose de ondansetrona na falha da reidratação oral e evolução benigna da onicomadese",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED11-01",
+        "tipo": "recusa_hidrica",
+        "gatilho": "mão-pé-boca com recusa de líquidos por mais de 8 h, diurese ausente por mais de 12 h ou perda de peso acima de 5%",
+        "severidade": "grave",
+        "mensagem": "Desidratação por odinofagia: analgesia em horário, anestésico tópico, reidratação oral supervisionada e via venosa se falhar. Não liberar sem reavaliação.",
+        "acao": "bloquear alta até registrar diurese e aceitação hídrica",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED11-02",
+        "tipo": "enterovirus_neurologico",
+        "gatilho": "mioclonia, tremor, ataxia, letargia, convulsão, paralisia flácida ou choque em criança com mão-pé-boca",
+        "severidade": "grave",
+        "mensagem": "Suspeita de romboencefalite por enterovírus 71: internação imediata em UTI, neuroimagem e punção lombar com PCR.",
+        "acao": "acionar UTI e neurologia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED11-03",
+        "tipo": "aine_em_desidratacao",
+        "gatilho": "ibuprofeno ou outro AINE prescrito em criança com recusa hídrica, desidratação ou suspeita de varicela",
+        "severidade": "grave",
+        "mensagem": "AINE em criança desidratada causa injúria renal e, se houver varicela, risco de síndrome de Reye: usar paracetamol ou dipirona.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED11-04",
+        "tipo": "antimicrobiano_sem_foco",
+        "gatilho": "antibiótico ou antiviral prescrito em mão-pé-boca típica, sem foco bacteriano e sem diagnóstico alternativo",
+        "severidade": "precaucao",
+        "mensagem": "Mão-pé-boca é viral e autolimitada: antibiótico e antiviral não têm indicação e só acrescentam efeito adverso.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED11-05",
+        "tipo": "surto_escolar",
+        "gatilho": "caso de mão-pé-boca sem registro de comunicação à creche ou à vigilância",
+        "severidade": "precaucao",
+        "mensagem": "Comunicar a creche e a vigilância em caso de surto, reforçar higiene e afastar os doentes até a resolução das lesões.",
+        "acao": "sugerir notificação e orientação",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED11-06",
+        "tipo": "anestesico_topico_idade",
+        "gatilho": "lidocaína gel 2% ou benzidamina prescrita em criança menor de 2 anos",
+        "severidade": "precaucao",
+        "mensagem": "Anestésico tópico oral abaixo de 2 anos tem risco de aspiração, mordedura e metahemoglobinemia: priorizar analgesia sistêmica.",
+        "acao": "alertar e sugerir substituição",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBP",
+        "Ministério da Saúde",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

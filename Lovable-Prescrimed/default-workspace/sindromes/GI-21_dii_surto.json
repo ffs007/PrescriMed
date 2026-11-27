@@ -1,0 +1,1078 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GI-21",
+    "area": "Gastrointestinal",
+    "nome": "Doença inflamatória intestinal em surto",
+    "aliases": [
+      "Doença inflamatória intestinal em surto",
+      "DII em atividade",
+      "surto de Crohn",
+      "surto de retocolite ulcerativa",
+      "colite ulcerativa ativa",
+      "doença de Crohn ativa"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Surto de doença inflamatória intestinal é atividade inflamatória nova ou piora em paciente com Crohn ou retocolite ulcerativa: diarreia com sangue, dor abdominal, urgência e tenesmo. A decisão central é separar surto leve-moderado, tratável ambulatorialmente, de colite grave — seis ou mais evacuações com sangue por dia somadas a febre, taquicardia, anemia ou PCR alta —, que exige internação, corticoide venoso, exclusão de infecção e avaliação cirúrgica precoce. Mesalazina induz remissão leve, prednisona 40 mg/dia com desmame resolve o moderado, budesonida poupa corticoide no Crohn ileocecal, e azatioprina ou biológico sustentam a manutenção. Antes de qualquer biológico, rastrear tuberculose. O que não se faz: loperamida em colite grave, AINE e antibiótico empírico sem cultura.",
+    "inclusao": [
+      "Diarreia com sangue, urgência e dor abdominal em paciente com DII conhecida",
+      "Suspeita de primeiro surto com diarreia sanguinolenta crônica e perda de peso",
+      "Colite grave com critérios sistêmicos de toxicidade",
+      "Surto com necessidade de corticoide, biológico ou avaliação cirúrgica"
+    ],
+    "exclusao": [
+      {
+        "situacao": "diarreia aguda infecciosa sem sangue, com duração menor que 7 dias e sem história de DII",
+        "fluxo": "GI-01 diarreia aguda"
+      },
+      {
+        "situacao": "diarreia com sangue e febre em paciente sem DII, com coprocultura positiva",
+        "fluxo": "GI-18 disenteria — tratar infecção"
+      },
+      {
+        "situacao": "dor abdominal intensa com defesa e pneumoperitônio",
+        "fluxo": "abdome agudo cirúrgico — urgência"
+      },
+      {
+        "situacao": "dor perianal isolada com abscesso em Crohn",
+        "fluxo": "drenagem cirúrgica e avaliação proctológica"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "seis ou mais evacuações com sangue por dia com febre ou taquicardia",
+        "por_que": "colite grave",
+        "acao": "internação, corticoide venoso e avaliação cirúrgica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "distensão abdominal com redução de ruídos e parada de eliminação de gases",
+        "por_que": "megacólon tóxico ou dilatação pré-perfurativa",
+        "acao": "suspender antidiarreico, descompressão e cirurgia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "hipotensão, oligúria, confusão ou lactato elevado",
+        "por_que": "sepse, hipovolemia ou perfuração",
+        "acao": "ressuscitação, hemocultura e antibiótico guiado",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "febre alta com diarreia após uso recente de antibiótico ou internação",
+        "por_que": "colite por C. difficile sobreposta",
+        "acao": "testar toxina/PCR e tratar antes de intensificar imunossupressão",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "perda de peso maior que 10% ou hemoglobina abaixo de 8 g/dL",
+        "por_que": "desnutrição e anemia graves",
+        "acao": "avaliar internação, suporte nutricional e transfusão",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "dor abdominal intensa com febre e massa palpável",
+        "por_que": "abscesso intra-abdominal em Crohn",
+        "acao": "tomografia e drenagem percutânea",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "sangramento retal volumoso e persistente",
+        "por_que": "colite grave com risco de transfusão e cirurgia",
+        "acao": "internar, tipar sangue e avaliar colectomia",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quantas evacuações por dia e quantas com sangue?",
+      "Tem febre, calafrios ou taquicardia?",
+      "A dor é em cólica difusa ou localizada e contínua?",
+      "Usou antibiótico ou foi internado nos últimos 60 dias?",
+      "Já usou corticoide? Está em desmame ou usa há mais de 8 semanas?",
+      "Já fez rastreio de tuberculose, hepatite B e vacinas?",
+      "Tem fístula, abscesso ou doença perianal?",
+      "Perdeu peso? Consegue beber líquidos?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Surto leve a moderado de retocolite ulcerativa distal",
+        "escolha": "Mesalazina 2,4–4,8 g/dia VO + mesalazina tópica 1 g supositório ou 4 g enema 1x/dia",
+        "porque": "A via tópica alcança a mucosa inflamada em concentração alta e induz remissão mais rápido que a oral isolada"
+      },
+      {
+        "cenario": "Surto moderado sem critérios de gravidade, em qualquer topografia",
+        "escolha": "Prednisona 40 mg/dia VO por 7–14 dias, com desmame de 5 mg por semana",
+        "porque": "Corticoide sistêmico induz remissão rápido; o desmame evita uso crônico e não serve como manutenção"
+      },
+      {
+        "cenario": "Crohn ileocecal leve a moderado ou colite leve com contraindicação a corticoide sistêmico",
+        "escolha": "Budesonida 9 mg/dia VO pela manhã por 8 semanas",
+        "porque": "Alto efeito de primeira passagem, menos efeito sistêmico; não tem eficácia em colite extensa nem em doença grave"
+      },
+      {
+        "cenario": "Dependência de corticoide, recaída em desmame ou necessidade de manutenção",
+        "escolha": "Azatioprina 2–2,5 mg/kg/dia VO, após dosar TPMT/NUDT15 e hemograma",
+        "porque": "Poupa corticoide e mantém remissão; leva 8–12 semanas para agir e exige vigilância hematológica"
+      },
+      {
+        "cenario": "Falha de tiopurina, doença fistulizante ou colite moderada a grave com indicação de biológico",
+        "escolha": "Infliximabe 5 mg/kg IV em 0, 2 e 6 semanas, somente após rastreio de tuberculose e hepatite B",
+        "porque": "Anti-TNF induz e mantém remissão; sem rastreio, reativa tuberculose latente"
+      },
+      {
+        "cenario": "Falha de anti-TNF, evento adverso ou preferência por menor imunossupressão",
+        "escolha": "Vedolizumabe 300 mg IV em 0, 2 e 6 semanas, depois 8/8 semanas",
+        "porque": "Bloqueio de integrina com perfil de segurança sistêmica melhor; início de ação mais lento"
+      },
+      {
+        "cenario": "Colite grave: seis ou mais evacuações com sangue, febre, taquicardia, anemia ou PCR alta",
+        "escolha": "Internação, hidratação, hidrocortisona 100 mg 6/6 h IV, enoxaparina profilática, testar C. difficile e avaliação cirúrgica em 24–48 h",
+        "porque": "Corticoide venoso é a primeira linha; a cirurgia precisa ser discutida antes de o paciente deteriorar, não depois"
+      },
+      {
+        "cenario": "Colite grave sem resposta ao corticoide venoso em 72 h",
+        "escolha": "Resgate com infliximabe ou colectomia; não insistir em corticoide",
+        "porque": "Cada dia de atraso aumenta perfuração, megacólon e mortalidade"
+      },
+      {
+        "cenario": "Diarreia sanguinolenta com teste de C. difficile positivo",
+        "escolha": "Vancomicina oral 125 mg 6/6 h por 10 dias; suspender ou reduzir imunossupressor",
+        "porque": "Tratar o agente antes de escalar imunossupressão evita colite fulminante"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "aminossalicilato",
+        "agente": "mesalazina",
+        "papel": "primeira_linha",
+        "indicacao": "surto leve a moderado de retocolite ulcerativa e manutenção",
+        "dose": "2,4–4,8 g/dia VO, divididos; tópico 1 g supositório ou 4 g enema 1x/dia",
+        "unidade": "g/dia",
+        "via": "VO e retal",
+        "frequencia": "VO 2–3x/dia; tópico 1x/dia",
+        "duracao": "indução 4–8 semanas; manutenção contínua",
+        "dose_maxima": "4,8 g/dia",
+        "contraindicacoes": [
+          "alergia a salicilato",
+          "insuficiência renal grave",
+          "obstrução intestinal"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "náusea",
+          "diarreia",
+          "nefrite intersticial rara",
+          "pancreatite rara"
+        ],
+        "apresentacoes": [
+          "comprimido 400 mg",
+          "comprimido 800 mg",
+          "comprimido 1,2 g",
+          "sachê 2 g",
+          "supositório 1 g",
+          "enema 4 g/60 mL"
+        ],
+        "preparo": "VO uso direto, com alimento; enema pronto para uso, aplicar ao deitar",
+        "tempo_infusao": "não se aplica (via oral e retal)",
+        "monitorizacao": [
+          "creatinina basal e a cada 6 meses",
+          "hemograma",
+          "resposta clínica em 2 semanas",
+          "aderência ao tópico"
+        ],
+        "ajuste_renal": "Evitar se ClCr < 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "A associação oral + tópico é superior à oral isolada na retocolite distal; manter na manutenção",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticosteroide_sistemico",
+        "agente": "prednisona",
+        "papel": "primeira_linha",
+        "indicacao": "surto moderado de DII, indução de remissão",
+        "dose": "40 mg/dia",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "7–14 dias na dose plena, depois desmame de 5 mg por semana",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": [
+          "infecção não controlada",
+          "abscesso não drenado",
+          "tuberculose ativa",
+          "psicose grave"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "insônia",
+          "retenção hídrica",
+          "osteoporose",
+          "infecção",
+          "supressão do eixo adrenal"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 20 mg",
+          "comprimido 50 mg"
+        ],
+        "preparo": "Uso direto, com alimento pela manhã",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia",
+          "PA",
+          "peso e edema",
+          "sinais de infecção",
+          "adesão ao desmame"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste relevante",
+        "observacoes": "Não usar como manutenção; curso acima de 8 semanas exige reavaliação e poupador de corticoide",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticosteroide_intestinal",
+        "agente": "budesonida",
+        "papel": "alternativa",
+        "indicacao": "Crohn ileocecal leve a moderado e colite leve com risco de efeito sistêmico",
+        "dose": "9 mg/dia",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "8 semanas, sem desmame obrigatório",
+        "dose_maxima": "9 mg/dia",
+        "contraindicacoes": [
+          "obstrução intestinal",
+          "infecção não controlada",
+          "cirrose com hipertensão portal"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "náusea",
+          "acne",
+          "supressão adrenal leve"
+        ],
+        "apresentacoes": [
+          "cápsula 3 mg (liberação ileal)",
+          "comprimido 9 mg (MMX)",
+          "enema 2 mg/100 mL"
+        ],
+        "preparo": "Uso direto, engolir inteiro, sem partir nem mastigar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "resposta em 4 semanas",
+          "cortisol matinal se uso prolongado",
+          "sinais de infecção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir em hepatopatia grave",
+        "observacoes": "Não substitui prednisona em colite extensa ou grave; 9 mg MMX é a apresentação para retocolite",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "tiopurina",
+        "agente": "azatioprina",
+        "papel": "condicional",
+        "indicacao": "manutenção e poupança de corticoide na DII",
+        "dose": "2–2,5 mg/kg/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "manutenção prolongada, com reavaliação anual",
+        "dose_maxima": "2,5 mg/kg/dia",
+        "contraindicacoes": [
+          "gestação sem avaliação",
+          "deficiência de TPMT ou NUDT15",
+          "pancreatite prévia por tiopurina",
+          "infecção ativa não controlada"
+        ],
+        "efeitos_adversos": [
+          "mielossupressão",
+          "pancreatite",
+          "hepatotoxicidade",
+          "náusea",
+          "linfoma em uso prolongado"
+        ],
+        "apresentacoes": [
+          "comprimido 50 mg",
+          "comprimido 100 mg"
+        ],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "hemograma a cada 2 semanas por 2 meses, depois trimestral",
+          "transaminases",
+          "amilase se dor abdominal",
+          "TPMT/NUDT15 antes de iniciar"
+        ],
+        "ajuste_renal": "Reduzir em ClCr < 30 mL/min",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Leva 8–12 semanas para agir; não serve para induzir surto grave; suspender se leucócitos abaixo de 3.000/mm³",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_tnf",
+        "agente": "infliximabe",
+        "papel": "condicional",
+        "indicacao": "DII moderada a grave, doença fistulizante ou resgate de colite grave refratária",
+        "dose": "5 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "semanas 0, 2 e 6; depois 8/8 semanas",
+        "duracao": "manutenção prolongada",
+        "dose_maxima": "10 mg/kg em esquema intensificado",
+        "contraindicacoes": [
+          "tuberculose ativa ou latente sem tratamento",
+          "abscesso não drenado",
+          "insuficiência cardíaca grave",
+          "doença desmielinizante",
+          "neoplasia recente"
+        ],
+        "efeitos_adversos": [
+          "reação infusional",
+          "infecção oportunista",
+          "reativação de tuberculose",
+          "formação de anticorpos",
+          "hepatite autoimune rara"
+        ],
+        "apresentacoes": [
+          "frasco 100 mg (pó)"
+        ],
+        "preparo": "Reconstituir 100 mg em 10 mL de água; diluir em 250 mL de SF 0,9%; usar filtro de 1,2 mícron",
+        "tempo_infusao": "2 horas (1 hora em protocolo acelerado após as primeiras doses)",
+        "monitorizacao": [
+          "PPD/IGRA e radiografia de tórax antes",
+          "HBsAg, anti-HBc e anti-HCV antes",
+          "reação infusional nas primeiras 24 h",
+          "hemograma e transaminases"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Cautela em hepatopatia; monitorar transaminases",
+        "observacoes": "Nunca iniciar sem rastreio de tuberculose; tratar latência por 4 semanas antes; vacinas vivas contraindicadas",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_integrina",
+        "agente": "vedolizumabe",
+        "papel": "alternativa",
+        "indicacao": "DII moderada a grave com falha ou contraindicação a anti-TNF",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "semanas 0, 2 e 6; depois 8/8 semanas",
+        "duracao": "manutenção prolongada",
+        "dose_maxima": "300 mg por infusão",
+        "contraindicacoes": [
+          "alergia ao fármaco",
+          "infecção ativa grave não controlada"
+        ],
+        "efeitos_adversos": [
+          "reação infusional",
+          "infecção de vias aéreas",
+          "cefaleia",
+          "artralgia",
+          "hepatotoxicidade rara"
+        ],
+        "apresentacoes": [
+          "frasco 300 mg (pó)"
+        ],
+        "preparo": "Reconstituir em 4,8 mL de água; diluir em 250 mL de SF; infundir com filtro",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "reação infusional",
+          "infecções",
+          "transaminases",
+          "resposta em 14 semanas"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Ação mais lenta que anti-TNF; rastreio de tuberculose conforme protocolo institucional, mesmo com menor risco",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticosteroide_venoso",
+        "agente": "hidrocortisona",
+        "papel": "primeira_linha",
+        "indicacao": "colite grave hospitalar",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "6/6 h",
+        "duracao": "72 h com reavaliação diária",
+        "dose_maxima": "400 mg/dia",
+        "contraindicacoes": [
+          "infecção não controlada",
+          "perfuração ou megacólon com indicação cirúrgica imediata"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipocalemia",
+          "infecção",
+          "retenção hídrica",
+          "confusão em idoso"
+        ],
+        "apresentacoes": [
+          "frasco 100 mg",
+          "frasco 500 mg",
+          "ampola 100 mg/2 mL"
+        ],
+        "preparo": "Reconstituir em 2 mL de água; diluir em 50–100 mL de SF",
+        "tempo_infusao": "15–30 minutos",
+        "monitorizacao": [
+          "glicemia 6/6 h",
+          "potássio",
+          "balanço hídrico",
+          "número de evacuações com sangue",
+          "PCR e hemoglobina em 48–72 h"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Alternativa: metilprednisolona 60 mg/dia IV; não reduzir antes de 72 h sem avaliar cirurgia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "heparina_baixo_peso_molecular",
+        "agente": "enoxaparina",
+        "papel": "condicional",
+        "indicacao": "profilaxia de trombose venosa no surto internado",
+        "dose": "40 mg",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "1x/dia",
+        "duracao": "enquanto internado",
+        "dose_maxima": "40 mg/dia na profilaxia",
+        "contraindicacoes": [
+          "sangramento digestivo ativo volumoso",
+          "plaquetas abaixo de 50.000/mm³",
+          "cirurgia iminente"
+        ],
+        "efeitos_adversos": [
+          "hematoma",
+          "sangramento",
+          "trombocitopenia induzida por heparina"
+        ],
+        "apresentacoes": [
+          "seringa 20 mg/0,2 mL",
+          "seringa 40 mg/0,4 mL"
+        ],
+        "preparo": "Pronta para uso; aplicar no abdome sem expelir a bolha",
+        "tempo_infusao": "não se aplica (via subcutânea)",
+        "monitorizacao": [
+          "plaquetas a cada 2–3 dias",
+          "sangramento retal",
+          "função renal"
+        ],
+        "ajuste_renal": "ClCr < 30 mL/min: 20 mg 1x/dia",
+        "ajuste_hepatico": "Cautela em coagulopatia",
+        "observacoes": "DII ativa é fator de risco trombótico; profilaxia é recomendada na internação, não é tratamento de trombose",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "dor abdominal e febre, quando AINE está contraindicado",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "6/6 h",
+        "duracao": "até 72 h",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a pirazolona",
+          "discrasia sanguínea",
+          "deficiência de G6PD",
+          "terceiro trimestre da gestação"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "agranulocitose rara",
+          "rash"
+        ],
+        "apresentacoes": [
+          "ampola 500 mg/mL (2 mL e 5 mL)",
+          "comprimido 500 mg",
+          "comprimido 1 g"
+        ],
+        "preparo": "Diluir 1 g em 100 mL de SF e infundir",
+        "tempo_infusao": "15–20 minutos",
+        "monitorizacao": [
+          "PA durante a infusão",
+          "temperatura",
+          "hemograma se uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste em uso curto",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Preferir à dipirona o paracetamol quando houver hepatopatia; AINE é evitado por risco de gatilho de surto e de injúria renal",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "glicopeptideo_oral",
+        "agente": "vancomicina oral",
+        "papel": "condicional",
+        "indicacao": "colite por C. difficile documentada no surto",
+        "dose": "125 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "10 dias",
+        "dose_maxima": "500 mg/dia",
+        "contraindicacoes": [
+          "alergia a glicopeptídeo",
+          "íleo paralítico sem sonda"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "gosto ruim",
+          "constipação",
+          "nefrotoxicidade mínima por via oral"
+        ],
+        "apresentacoes": [
+          "cápsula 125 mg",
+          "pó para solução oral 500 mg"
+        ],
+        "preparo": "Uso direto; na solução oral reconstituída, diluir conforme bula e administrar por sonda se íleo",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número de evacuações",
+          "febre",
+          "recidiva em 8 semanas"
+        ],
+        "ajuste_renal": "Sem ajuste por via oral",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não usar vancomicina IV para colite por C. difficile; não tratar empiricamente sem teste positivo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "nitroimidazol",
+        "agente": "metronidazol",
+        "papel": "condicional",
+        "indicacao": "doença perianal fistulizante em Crohn ou abscesso drenado",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "8/8 h",
+        "duracao": "7–14 dias",
+        "dose_maxima": "1,5 g/dia",
+        "contraindicacoes": [
+          "alergia a nitroimidazol",
+          "ingesta de álcool",
+          "primeiro trimestre da gestação"
+        ],
+        "efeitos_adversos": [
+          "gosto metálico",
+          "náusea",
+          "neuropatia periférica",
+          "efeito dissulfiram"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg",
+          "comprimido 400 mg",
+          "bolsa 500 mg/100 mL"
+        ],
+        "preparo": "Uso direto (VO); bolsa pronta (IV)",
+        "tempo_infusao": "não se aplica (VO); 30–60 minutos (IV)",
+        "monitorizacao": [
+          "sintomas neurológicos após 10 dias",
+          "náusea",
+          "resposta da fístula"
+        ],
+        "ajuste_renal": "Sem ajuste; repor após hemodiálise",
+        "ajuste_hepatico": "Reduzir 50% em Child C",
+        "observacoes": "Só com foco documentado (perianal ou abscesso drenado); não é tratamento empírico do surto",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Hidratação e correção de distúrbios",
+        "detalhe": "Ringer lactato ou SF conforme perdas; dosar potássio e magnésio na diarreia volumosa e repor"
+      },
+      {
+        "medida": "Profilaxia de trombose venosa",
+        "detalhe": "Enoxaparina 40 mg SC em todo paciente internado, salvo sangramento volumoso"
+      },
+      {
+        "medida": "Rastreio de tuberculose e hepatite B antes do biológico",
+        "detalhe": "PPD ou IGRA e radiografia de tórax; tratar latência por 4 semanas antes do anti-TNF"
+      },
+      {
+        "medida": "Cessar tabagismo",
+        "detalhe": "Tabagismo piora Crohn e aumenta recidiva; oferecer tratamento de cessação na consulta"
+      },
+      {
+        "medida": "Suporte nutricional",
+        "detalhe": "Manter dieta oral se tolerar; nutrição enteral em desnutrição ou estenose; evitar fibras insolúveis na estenose"
+      },
+      {
+        "medida": "Reposição de ferro e vitamina D",
+        "detalhe": "Ferro IV se hemoglobina abaixo de 10 g/dL e intolerância oral; dosar vitamina D e repor"
+      },
+      {
+        "medida": "Vacinação e prevenção de infecção",
+        "detalhe": "Atualizar vacinas antes de imunossuprimir; vacinas vivas contraindicadas em uso de biológico"
+      },
+      {
+        "medida": "Diário de evacuações e reavaliação programada",
+        "detalhe": "Registrar número de evacuações, sangue e febre; retorno em 48–72 h no surto moderado"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Retossigmoidoscopia flexível sem preparo",
+        "indicacao": "Colite grave ou suspeita de primeiro surto, com mínimo risco de perfuração",
+        "tecnica": "Exame até o ângulo esplênico com insuflação mínima e biópsias",
+        "complicacoes": "Perfuração, sangramento, bacteremia"
+      },
+      {
+        "nome": "Ileocolonoscopia com biópsias",
+        "indicacao": "Surto leve a moderado, definição de extensão e diagnóstico",
+        "tecnica": "Preparo oral, biópsias escalonadas de íleo e cólon",
+        "complicacoes": "Perfuração, sangramento, descompensação do surto"
+      },
+      {
+        "nome": "Tomografia ou enterorressonância",
+        "indicacao": "Suspeita de abscesso, estenose, fístula ou megacólon",
+        "tecnica": "Contraste venoso; enterografia para delgado",
+        "complicacoes": "Nefrotoxicidade do contraste, reação alérgica"
+      },
+      {
+        "nome": "Colectomia com ileostomia",
+        "indicacao": "Colite grave refratária ao corticoide em 72 h, megacólon, perfuração ou sangramento incontrolável",
+        "tecnica": "Colectomia total com ileostomia terminal; preservar reto conforme o caso",
+        "complicacoes": "Infecção, fístula, íleo prolongado, necessidade de reintervenção"
+      },
+      {
+        "nome": "Drenagem de abscesso perianal ou intra-abdominal",
+        "indicacao": "Abscesso documentado em Crohn",
+        "tecnica": "Drenagem cirúrgica ou percutânea guiada por imagem",
+        "complicacoes": "Fístula, incontinência, recidiva"
+      }
+    ],
+    "metas": [
+      "Três ou menos evacuações por dia, sem sangue, em 7 dias",
+      "PCR abaixo de 5 mg/L ou queda maior que 50% em 14 dias",
+      "Desmame completo de corticoide em 12 semanas",
+      "Rastreio de tuberculose concluído antes da primeira dose de biológico",
+      "Hemoglobina acima de 10 g/dL e albumina acima de 3 g/dL",
+      "Ausência de colectomia durante o surto índice"
+    ],
+    "fluxo": [
+      "Classificar o surto: número de evacuações com sangue, febre, taquicardia, anemia, PCR e albumina",
+      "Excluir infecção: coprocultura, C. difficile e, se refratário, CMV",
+      "Leve: mesalazina oral e tópica; reavaliar em 2 semanas",
+      "Moderado: prednisona 40 mg/dia com desmame, ou budesonida no Crohn ileocecal",
+      "Grave: internar, hidratar, hidrocortisona IV, enoxaparina, nutrição e avaliação cirúrgica em 24–48 h",
+      "Sem resposta em 72 h: resgate com infliximabe ou colectomia; não postergar",
+      "Manutenção: azatioprina ou biológico após rastreio, vacinas e plano de seguimento"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "Maior risco de infecção e de confusão com corticoide; preferir budesonida ou biológico e monitorar função renal",
+        "alerta": "Mortalidade de colite grave é maior acima de 60 anos"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "Manter mesalazina e biológico; prednisona é segura; evitar metronidazol no primeiro trimestre",
+        "alerta": "Surto ativo aumenta parto prematuro e perda fetal"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Evitar mesalazina se ClCr < 30; ajustar enoxaparina e hidratar com cautela",
+        "alerta": "Nefrite intersticial por mesalazina"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "Limiar menor para internar e para excluir infecção oportunista; não iniciar biológico com infecção ativa",
+        "alerta": "Sepse sem sinais clássicos"
+      },
+      {
+        "populacao": "adolescente",
+        "ajuste": "Avaliar crescimento e puberdade; corticoide prolongado compromete estatura",
+        "alerta": "Atraso de crescimento e baixa adesão"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "hemograma, PCR e albumina",
+          "indicacao": "todos",
+          "o_que_muda": "define gravidade e resposta ao tratamento"
+        },
+        {
+          "nome": "coprocultura e teste de C. difficile",
+          "indicacao": "todos os surtos, sobretudo com antibiótico recente",
+          "o_que_muda": "separa infecção de atividade e evita escalar imunossupressão"
+        },
+        {
+          "nome": "calprotectina fecal",
+          "indicacao": "surto leve e seguimento",
+          "o_que_muda": "diferencia atividade inflamatória de DII funcional"
+        },
+        {
+          "nome": "colonoscopia ou retossigmoidoscopia com biópsia",
+          "indicacao": "definição de extensão e diagnóstico",
+          "o_que_muda": "escolha do tratamento tópico e da cirurgia"
+        },
+        {
+          "nome": "tomografia ou enterorressonância",
+          "indicacao": "dor intensa, febre, massa ou suspeita de complicação",
+          "o_que_muda": "abscesso, fístula, estenose e indicação de drenagem"
+        },
+        {
+          "nome": "PPD/IGRA, radiografia de tórax e sorologias",
+          "indicacao": "antes de biológico",
+          "o_que_muda": "libera ou adia o início do imunossupressor"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "colonoscopia com preparo completo em colite grave",
+          "motivo": "risco de perfuração e de megacólon; preferir retossigmoidoscopia sem preparo"
+        },
+        {
+          "exame": "enema opaco na fase aguda",
+          "motivo": "risco de perfuração e baixo rendimento"
+        },
+        {
+          "exame": "pesquisa de sangue oculto para definir atividade",
+          "motivo": "não distingue atividade de infecção nem gradua gravidade"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter o tratamento de manutenção mesmo quando assintomático",
+        "completar o desmame do corticoide",
+        "tomar vacinas antes de iniciar biológico",
+        "retornar em 48–72 h se piora",
+        "informar febre ou piora da diarreia imediatamente"
+      ],
+      "evitar": [
+        "loperamida em colite grave ou com febre",
+        "AINE e ácido acetilsalicílico",
+        "antibiótico empírico sem cultura ou teste de C. difficile",
+        "parar o corticoide abruptamente",
+        "vacinas vivas em uso de biológico"
+      ],
+      "retorno": [
+        "mais de seis evacuações com sangue por dia",
+        "febre acima de 38 °C",
+        "dor abdominal intensa ou distensão",
+        "vômitos persistentes",
+        "tontura ou desmaio"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "insônia",
+          "infecção",
+          "osteoporose"
+        ],
+        "observacao": "Desmame gradual e reavaliação se uso acima de 8 semanas"
+      },
+      {
+        "agente": "azatioprina",
+        "efeitos": [
+          "mielossupressão",
+          "pancreatite",
+          "hepatotoxicidade"
+        ],
+        "observacao": "Hemograma e transaminases seriados; suspender se leucócitos abaixo de 3.000/mm³"
+      },
+      {
+        "agente": "infliximabe",
+        "efeitos": [
+          "reação infusional",
+          "infecção oportunista",
+          "reativação de tuberculose"
+        ],
+        "observacao": "Rastreio obrigatório antes e vigilância de infecção durante"
+      },
+      {
+        "agente": "hidrocortisona",
+        "efeitos": [
+          "hiperglicemia",
+          "hipocalemia",
+          "confusão"
+        ],
+        "observacao": "Glicemia e potássio 6/6 h no paciente grave"
+      },
+      {
+        "agente": "enoxaparina",
+        "efeitos": [
+          "sangramento",
+          "trombocitopenia"
+        ],
+        "observacao": "Plaquetas a cada 2–3 dias"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a droga implicada e registrar o evento",
+      "Mielossupressão por azatioprina: suspender, repetir hemograma e avaliar recuperação",
+      "Reação infusional ao biológico: interromper, tratar e reiniciar com pré-medicação em protocolo",
+      "Hiperglicemia por corticoide: ajustar insulina e reduzir dose quando possível",
+      "Sangramento com enoxaparina: suspender, comprimir e reverter conforme gravidade"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "mesalazina 800 mg",
+            "dose": "800 mg",
+            "via": "VO",
+            "frequencia": "8/8 h",
+            "duracao": "contínuo",
+            "condicao": "manutenção de retocolite",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisona 20 mg",
+            "dose": "40 mg/dia (2 comprimidos)",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "14 dias, depois desmame",
+            "condicao": "indução do surto",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "azatioprina 50 mg",
+            "dose": "2–2,5 mg/kg/dia",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "manutenção",
+            "condicao": "poupança de corticoide",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "hidrocortisona 100 mg",
+            "dose": "100 mg",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "glicemia e potássio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "enoxaparina 40 mg",
+            "dose": "40 mg",
+            "via": "SC",
+            "frequencia": "1x/dia",
+            "monitorizacao": "plaquetas e sangramento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "infliximabe 100 mg",
+            "dose": "5 mg/kg",
+            "via": "IV",
+            "frequencia": "resgate, esquema 0-2-6",
+            "monitorizacao": "reação infusional e PPD",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma",
+          "PCR",
+          "albumina",
+          "eletrólitos",
+          "coprocultura",
+          "toxina de C. difficile",
+          "calprotectina",
+          "PPD ou IGRA",
+          "radiografia de tórax",
+          "colonoscopia",
+          "tomografia",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com surto de doença inflamatória intestinal, necessitando de afastamento por __ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento ambulatorial ou hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com DII em surto, extensão, gravidade, tratamento de indução, rastreio infeccioso e plano de manutenção."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "número de evacuações",
+        "sangue nas fezes",
+        "febre",
+        "dor abdominal",
+        "perda de peso",
+        "antibiótico recente",
+        "uso de corticoide",
+        "cirurgia prévia"
+      ],
+      "texto_template": "Paciente com __ evacuações por dia, sangue __, febre __, dor __, perda de peso __, antibiótico recente __, corticoide __ e cirurgia prévia __."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "abdome",
+        "distensão",
+        "toque retal",
+        "perda de peso",
+        "desidratação",
+        "lesões perianais"
+      ],
+      "texto_template": "Sinais vitais, abdome com dor difusa, distensão, toque retal com sangue, desidratação e exame perianal."
+    },
+    "referencias": [
+      {
+        "tipo": "sociedade_gastroenterologia",
+        "o_que_verificar": "critérios de gravidade e esquema de corticoide",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_biologicos",
+        "o_que_verificar": "rastreio de tuberculose e esquema de indução",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo cirúrgico da colite grave e profilaxia de trombose",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e bulas",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GI21-01",
+        "tipo": "loperamida",
+        "gatilho": "loperamida prescrita em colite grave ou com febre",
+        "severidade": "grave",
+        "mensagem": "Antidiarreico na colite grave causa megacólon e perfuração.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI21-02",
+        "tipo": "biologico_sem_rastreio",
+        "gatilho": "infliximabe ou vedolizumabe sem PPD/IGRA e radiografia de tórax",
+        "severidade": "grave",
+        "mensagem": "Rastrear tuberculose antes de iniciar biológico.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI21-03",
+        "tipo": "colite_grave",
+        "gatilho": "seis evacuações com sangue ao dia com febre ou taquicardia",
+        "severidade": "grave",
+        "mensagem": "Colite grave: internar, corticoide IV e avaliação cirúrgica.",
+        "acao": "sugerir protocolo",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI21-04",
+        "tipo": "antibiotico_empirico",
+        "gatilho": "antibiótico prescrito sem coprocultura ou teste de C. difficile",
+        "severidade": "precaucao",
+        "mensagem": "Não usar antibiótico empírico no surto sem cultura.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GI21-05",
+        "tipo": "aine",
+        "gatilho": "AINE ou ácido acetilsalicílico prescrito em DII ativa",
+        "severidade": "precaucao",
+        "mensagem": "AINE pode reativar a DII e injuriar o rim.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GI21-06",
+        "tipo": "corticoide_prolongado",
+        "gatilho": "prednisona há mais de 8 semanas sem desmame",
+        "severidade": "precaucao",
+        "mensagem": "Corticoide não é manutenção: associar poupador e desmamar.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "diretrizes de gastroenterologia"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

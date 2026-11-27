@@ -1,0 +1,502 @@
+{
+  "id": "ws-derm_03",
+  "nome": "Erupção cutânea aguda (exantema)",
+  "cat": "Dermatológico",
+  "alias": "erupcao cutanea aguda exantema erupcao cutanea rash manchas na pele",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (DERM-03_exantema.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de exantema, acionamento de queimados e reavaliação em 24 a 48 h",
+      "[verificar] sociedade_dermatologia: critérios de SJS/NET, DRESS e AGEP e indicação de biópsia",
+      "[verificar] nota_tecnica_ministerio_saude: esquema de sífilis, notificação compulsória e quimioprofilaxia de meningococo",
+      "[verificar] anvisa: bulas, apresentações e notificação pelo Notivisa"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "DERM-03 em 2026-11-27",
+    "fundido_workspace": "DERM-03 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: dor cutânea ao toque ou sinal de Nikolsky positivo -> internar imediatamente e acionar dermatologia e unidade de queimados; bolhas flácidas, erosões ou pele descolando -> internação em unidade de queimados e suspensão de todos os fármacos não essenciais; erosão de mucosa oral, ocular ou genital -> avaliação oftalmológica no mesmo dia e internação; febre alta com petéquias ou púrpura e toxemia -> antibiótico na primeira hora, hemocultura e UTI. 1) Estabilizar e medir sinais vitais; febre com toxemia muda a prioridade 2) Pesquisar os quatro sinais de gravidade: dor cutânea, bolha ou descolamento, erosão de mucosa e púrpura com toxemia 3) Se houver sinal de gravidade: internação, dermatologia, oftalmologia, biópsia e suspensão de fármacos não essenciais 4) Se não houver: montar a linha do tempo dos fármacos dos últimos 60 dias e o padrão de distribuição da erupção 5) Definir a síndrome provável: viral, farmacodermia, DRESS, SJS/NET, sífilis, meningococcemia, AGEP ou vasculite 6) Pedir apenas exame que muda conduta; exantema viral leve não precisa de painel 7) Tratar o sintoma e retardar a decisão de corticoide até excluir SJS/NET 8) Agendar reavaliação em 24 a 48 h, notificar o que for compulsório e registrar o fármaco implicado",
+  "redFlags": [
+    "dor cutânea ao toque ou sinal de Nikolsky positivo -> internar imediatamente e acionar dermatologia e unidade de queimados",
+    "bolhas flácidas, erosões ou pele descolando -> internação em unidade de queimados e suspensão de todos os fármacos não essenciais",
+    "erosão de mucosa oral, ocular ou genital -> avaliação oftalmológica no mesmo dia e internação",
+    "febre alta com petéquias ou púrpura e toxemia -> antibiótico na primeira hora, hemocultura e UTI",
+    "febre, eosinofilia, edema facial e linfadenopatia após fármaco -> internar, dosar transaminases, creatinina e avaliar miocardite",
+    "icterícia, urina escura ou oligúria -> suspender hepatotóxicos e internar",
+    "exantema em uso de alopurinol, carbamazepina, fenitoína, lamotrigina ou sulfametoxazol -> limiar baixo para internação e biópsia precoce",
+    "pústulas estéreis com febre sobre área de exantema -> suspender o fármaco e colher neutrófilos"
+  ],
+  "naoUsar": [
+    "hipersensibilidade à cetirizina ou à hidroxizina",
+    "insuficiência renal terminal sem ajuste",
+    "pele com erosão extensa ou exsudato",
+    "hipersensibilidade a ureia ou conservantes",
+    "prolongamento do intervalo QT",
+    "glaucoma de ângulo fechado",
+    "hiperplasia prostática com retenção urinária",
+    "primeiro trimestre de gestação"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "suspender o fármaco suspeito e levar a lista completa de medicamentos ao retorno"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "voltar a usar o fármaco suspeito ou outro da mesma classe"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Anti-histamínico H1",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_cetirizina",
+            "pos": "10 mg; criança de 2 a 5 anos 2,5 mg, de 6 a 11 anos 5 mg. Via VO. 1x/dia. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "exantema pruriginoso leve a moderado, com ou sem suspeita viral (1a linha) prurido",
+            "nota": "Uso direto; pode ser tomado com ou sem alimento - monitorar: intensidade do prurido e da erupção em 24 a 48 h; monitorar: sonolência; monitorar: função renal em doença renal crônica · NÃO: hipersensibilidade à cetirizina ou à hidroxizina; insuficiência renal terminal sem ajuste · Obs: Não previne progressão para DRESS nem para SJS/NET. Se surgirem bolha, febre ou mucosite, a conduta muda no mesmo dia e não é ajustar anti-H1. · Renal: ClCr entre 30 e 50 mL/min: 5 mg/dia; abaixo de 30: 5 mg em dias alternados",
+            "dose": {
+              "texto": "10 mg; criança de 2 a 5 anos 2,5 mg, de 6 a 11 anos 5 mg; 1x/dia; 5 a 7 dias; max. 10 mg/dia; 5 mg/dia em insuficiência renal",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": "criança de 2 a 5 anos 2,5 mg, de 6 a 11 anos 5 mg",
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "predominam exantemas virais; doses por peso, evitar AAS e avaliar Kawasaki se febre por mais de 5 dias com conjuntivite e língua em framboesa"
+          },
+          {
+            "linha": 2,
+            "base": "leg_hidroxizina",
+            "pos": "25 mg; criança 0,5 a 1 mg/kg. Via VO. À noite; se necessário 8/8 h. 3 a 5 dias.",
+            "posTodas": true,
+            "motivo": "prurido intenso com prejuízo do sono, quando a cetirizina é insuficiente (alternativa)",
+            "nota": "Uso direto; a via IM é alternativa quando não há acesso oral - monitorar: nível de sedação; monitorar: ECG se cardiopata ou dose alta; monitorar: função urinária em hiperplasia prostática",
+            "dose": {
+              "texto": "25 mg; criança 0,5 a 1 mg/kg; à noite; se necessário 8/8 h; 3 a 5 dias; max. 100 mg/dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": "criança 0,5 a 1 mg/kg",
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            },
+            "ped": "predominam exantemas virais; doses por peso, evitar AAS e avaliar Kawasaki se febre por mais de 5 dias com conjuntivite e língua em framboesa"
+          }
+        ]
+      },
+      {
+        "nome": "Emoliente",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ureia_creme",
+              "n": "Ureia 10% creme",
+              "ap": "creme 10% 100 g",
+              "q": "",
+              "pos": "Camada generosa, cerca de 30 g por aplicação em corpo todo no adulto. Via tópica. 2 a 3x/dia, sempre após o banho. Até cessar a descamação."
+            },
+            "motivo": "xerose, descamação e prurido de qualquer exantema, inclusive viral (1a linha) xerose e descamação",
+            "nota": "Uso direto; aplicar com a pele ainda úmida após banho morno e curto - monitorar: xerose e descamação em 7 dias; monitorar: ardência; monitorar: adesão ao tratamento · NÃO: pele com erosão extensa ou exsudato; hipersensibilidade a ureia ou conservantes · Obs: Substitui o corticoide tópico no exantema viral sem inflamação. Não usar produto com fragrância ou álcool em pele com exantema.",
+            "dose": {
+              "texto": "camada generosa, cerca de 30 g por aplicação em corpo todo no adulto; 2 a 3x/dia, sempre após o banho; até cessar a descamação; max. sem limite de dose; limitar a frequência ao conforto",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "3x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            },
+            "ped": "predominam exantemas virais; doses por peso, evitar AAS e avaliar Kawasaki se febre por mais de 5 dias com conjuntivite e língua em framboesa"
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide tópico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "hidrocortisona_cr",
+            "pos": "Camada fina sobre a área afetada. Via tópica. 2x/dia. 7 a 10 dias.",
+            "posTodas": true,
+            "motivo": "exantema localizado, pouco extenso, sem erosão e sem sinais de gravidade (condicional) lesão localizada sem erosão",
+            "nota": "Uso direto sobre pele limpa e seca - monitorar: evolução da lesão em 7 dias; monitorar: atrofia, ardência ou irritação local",
+            "dose": {
+              "texto": "camada fina sobre a área afetada; 2x/dia; 7 a 10 dias; max. não exceder 2 semanas em face, dobras ou região genital",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "2x/dia",
+              "freq_min": null,
+              "duracao_dias": 10,
+              "duracao_texto": "10 dias",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            },
+            "ped": "predominam exantemas virais; doses por peso, evitar AAS e avaliar Kawasaki se febre por mais de 5 dias com conjuntivite e língua em framboesa"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide sistêmico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "40 a 60 mg (0,5 a 1 mg/kg/dia); no DRESS 1 mg/kg/dia. Via VO. 1x/dia pela manhã. 5 a 7 dias no exantema; 6 a 8 semanas com desmame no DRESS.",
+            "posTodas": true,
+            "motivo": "exantema maculopapular extenso e muito sintomático sem critérios de SJS/NET, e DRESS leve sem lesão de órgão grave (condicional) exantema extenso sem critérios de SJS/NET",
+            "nota": "Uso direto, preferencialmente com alimento - monitorar: glicemia; monitorar: pressão arterial; monitorar: sinais de infecção; monitorar: transaminases e creatinina no DRESS; monitorar: peso e edema · NÃO: SJS/NET em monoterapia; infecção sistêmica não tratada; diabetes descompensado (relativa); úlcera péptica ativa · Obs: Não iniciar antes de excluir SJS/NET: o corticoide melhora a aparência da pele e mascara a progressão do descolamento. Nunca usar como tratamento isolado de SJS/NET.",
+            "dose": {
+              "texto": "40 a 60 mg (0,5 a 1 mg/kg/dia); no DRESS 1 mg/kg/dia; 1x/dia pela manhã; 5 a 7 dias no exantema; 6 a 8 semanas com desmame no DRESS; max. 80 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 60,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 80,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "predominam exantemas virais; doses por peso, evitar AAS e avaliar Kawasaki se febre por mais de 5 dias com conjuntivite e língua em framboesa"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "penicilina_benzatina",
+            "pos": "2,4 milhões UI; criança 50.000 UI/kg (máximo 2,4 milhões UI). Via IM profunda. Dose única. Dose única na sífilis recente; 3 doses semanais na sífilis tardia ou de duração ignorada. Bolus IM profundo, sem diluição adicional.",
+            "posTodas": true,
+            "motivo": "sífilis secundária confirmada ou provável, incluindo gestante (condicional)",
+            "nota": "Reconstituir em 4 mL de água para injetáveis e aplicar imediatamente; dividir 1,2 milhão UI em cada glúteo - monitorar: 30 minutos após a injeção para anafilaxia; monitorar: febre e mialgia nas primeiras 24 h (Herxheimer); monitorar: VDRL de controle em 3, 6 e 12 meses",
+            "dose": {
+              "texto": "2,4 milhões UI; criança 50.000 UI/kg (máximo 2,4 milhões UI); dose única; dose única na sífilis recente; 3 doses semanais na sífilis tardia ou de duração ignorada; max. 2,4 milhões UI por dose",
+              "status": "ok",
+              "valor": 0,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": "criança 50",
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "predominam exantemas virais; doses por peso, evitar AAS e avaliar Kawasaki se febre por mais de 5 dias com conjuntivite e língua em framboesa"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Revisão farmacológica cronológica",
+              "ap": "",
+              "q": "",
+              "pos": "Listar todos os fármacos iniciados nos últimos 60 dias com data exata, incluindo fitoterápicos, suplementos e contraste; o fármaco mais recente é o principal suspeito"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Suspender todo fármaco não essencial",
+              "ap": "",
+              "q": "",
+              "pos": "Retirar também os da mesma classe e os de meia-vida longa; manter apenas o que sustenta a vida e registrar a decisão no prontuário"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Registro fotográfico padronizado",
+              "ap": "",
+              "q": "",
+              "pos": "Fotografar tronco, membros, palmas, plantas, boca e olhos com luz natural e escala; repetir em 24 h para comparar progressão de área"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Banho morno e curto com sabonete sem fragrância",
+              "ap": "",
+              "q": "",
+              "pos": "Evitar água quente, bucha e sabonete antibacteriano; aplicar emoliente com a pele ainda úmida, em até 3 minutos após o banho"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Não usar anti-H1 tópico nem corticoide em área de erosão",
+              "ap": "",
+              "q": "",
+              "pos": "Difenidramina e prometazina tópicas sensibilizam e pioram o exantema; corticoide em pele rota é absorvido e contamina a ferida"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Isolamento e notificação conforme a suspeita",
+              "ap": "",
+              "q": "",
+              "pos": "Sarampo exige isolamento aéreo e notificação imediata; meningococo, gotículas por 24 h; sífilis, notificação compulsória; farmacodermia grave, registro no Notivisa"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Reavaliação presencial agendada em 24 a 48 h",
+              "ap": "",
+              "q": "",
+              "pos": "Alta de exantema por fármaco só com retorno marcado, por escrito, e critério explícito de retorno imediato; não delegar a reavaliação ao paciente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Evitar AINE e ácido acetilsalicílico durante a erupção",
+              "ap": "",
+              "q": "",
+              "pos": "Podem agravar o exantema, confundir a leitura de progressão e, em criança com suspeita viral, expor ao risco de síndrome de Reye"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "DERM-03"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Corticoide sistêmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metilpred_ev",
+            "motivo": "DRESS grave ou exantema extenso com intolerância oral, disfagia ou vômitos (condicional)",
+            "nota": "Reconstituir com o diluente e diluir em 50 a 100 mL de SF 0,9% - monitorar: glicemia a cada 6 h; monitorar: pressão arterial; monitorar: potássio; monitorar: balanço hídrico; monitorar: sinais de infecção",
+            "dose": {
+              "texto": "1 a 2 mg/kg/dia (usual 125 mg/dia); pulsoterapia de 500 a 1.000 mg/dia por 3 dias no DRESS com lesão de órgão; 12/12 h ou 1x/dia; 3 a 5 dias, seguido de prednisona oral com desmame; max. 1 g/dia por até 3 dias em pulsoterapia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 2,
+              "unidade": "mg/kg/dia",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "por 3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Imunossupressor",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ciclosporina",
+              "n": "Ciclosporina",
+              "ap": "cápsula 25 mg",
+              "via": "VO ou IV",
+              "pos": "3 a 5 mg/kg/dia. Via VO ou IV. 12/12 h por via oral; 1x/dia por via IV. 7 a 14 dias. 2 a 3 horas."
+            },
+            "motivo": "SJS/NET com progressão nas primeiras 48 a 72 h, em decisão conjunta com dermatologia (condicional)",
+            "nota": "Via oral: uso direto. Via IV: diluir 1 mL (50 mg) em 100 a 250 mL de SF 0,9% ou SG 5% - monitorar: creatinina e potássio a cada 48 h; monitorar: pressão arterial diária; monitorar: nível sérico quando disponível; monitorar: sinais de infecção · NÃO: insuficiência renal estabelecida; infecção ativa grave; hipertensão não controlada; imunodeficiência · Obs: Evidência não universal e sem substituir o suporte tipo queimado. Não associar a corticoide em dose alta pelo risco de sepse. · Renal: Contraindicada com ClCr abaixo de 30 mL/min; reduzir para 2 a 3 mg/kg/dia entre 30 e 60…",
+            "dose": {
+              "texto": "3 a 5 mg/kg/dia; 12/12 h por via oral; 1x/dia por via IV; 7 a 14 dias; max. 5 mg/kg/dia",
+              "status": "ok",
+              "valor": 3,
+              "valor_max": 5,
+              "unidade": "mg/kg/dia",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "suspeita de meningococcemia com febre, petéquias, púrpura ou toxemia (resgate)",
+            "nota": "Reconstituir em 10 mL de água para injetáveis e diluir em 100 mL de SF 0,9% - monitorar: pressão arterial e perfusão; monitorar: lactato; monitorar: diurese; monitorar: hemocultura colhida antes da primeira dose quando não atrasa o antibiótico · NÃO: reação anafilática a cefalosporina; neonato com hiperbilirrubinemia; uso concomitante de solução com cálcio em neonato · Obs: Não atrasar por punção lombar, tomografia ou resultado de exame. Isolamento de gotículas nas primeiras 24 h de tratamento e quimioprofilaxia dos contactantes.",
+            "dose": {
+              "texto": "2 g; criança 100 mg/kg/dia; 12/12 h; 5 a 7 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": "criança 100 mg/kg/dia",
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "DERM-03",
+    "versao": "0.2.0",
+    "arquivo": "DERM-03_exantema.json",
+    "area": "Dermatológico",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

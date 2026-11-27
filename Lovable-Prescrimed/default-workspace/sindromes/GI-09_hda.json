@@ -1,0 +1,888 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GI-09",
+    "area": "Gastrointestinal",
+    "nome": "Sangramento digestivo alto suspeito",
+    "aliases": [
+      "hematêmese",
+      "melena",
+      "hemorragia digestiva alta",
+      "HDA",
+      "varizes esofágicas"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Sangramento digestivo alto é a perda sanguínea acima do ângulo de Treitz, manifestada por hematêmese, vômito em borra de café ou melena. A conduta muda radicalmente conforme a origem: varizes em cirrótico exigem vasoconstritor esplâncnico, antibiótico profilático e endoscopia precoce; úlcera exige IBP em alta dose; lesão de Dieulafoy ou Mallory-Weiss têm manejo próprio. A prioridade é estabilizar com transfusão restritiva, estratificar e levar à endoscopia — sem atrasar por exames que não mudam a conduta.",
+    "inclusao": [
+      "Hematêmese ou melena com instabilidade ou sem causa definida",
+      "Suspeita de varizes em cirrótico",
+      "Sangramento com necessidade de internação"
+    ],
+    "exclusao": [
+      {
+        "situacao": "sangramento apenas por hemorroida ou fissura, estável",
+        "fluxo": "ambulatorial"
+      },
+      {
+        "situacao": "hemoptise",
+        "fluxo": "respiratório"
+      },
+      {
+        "situacao": "sangramento de via aérea superior",
+        "fluxo": "otorrino"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "hipotensão, taquicardia ou confusão",
+        "por_que": "choque hipovolêmico",
+        "acao": "ressuscitação e sala vermelha",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "hematêmese volumosa ou vômito vivo",
+        "por_que": "sangramento ativo",
+        "acao": "estabilização e endoscopia urgente",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "cirrose, ascite ou icterícia",
+        "por_que": "varizes e risco de morte",
+        "acao": "protocolo de varizes",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "uso de anticoagulante ou antiagregante",
+        "por_que": "sangramento grave",
+        "acao": "reversão conforme protocolo",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "melena com síncope",
+        "por_que": "perda significativa",
+        "acao": "internação e transfusão",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "dor epigástrica intensa",
+        "por_que": "úlcera perfurada",
+        "acao": "cirurgia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "encefalopatia ou confusão em cirrótico",
+        "por_que": "sangramento + PBE",
+        "acao": "lactulose e antibiótico",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Vomitou sangue ou borra de café?",
+      "As fezes estão escuras e fétidas?",
+      "Houve tontura ou desmaio?",
+      "Tem cirrose, úlcera ou sangramento prévio?",
+      "Usa anticoagulante, AAS ou AINE?",
+      "Ingeriu álcool ou AINE recentemente?",
+      "Qual a última evacuação e o aspecto?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Cirrótico com suspeita de varizes",
+        "escolha": "Terlipressina + ceftriaxona + endoscopia em até 12 h",
+        "porque": "Vasoconstritor esplâncnico reduz mortalidade; antibiótico reduz PBE e ressangramento"
+      },
+      {
+        "cenario": "Sem cirrose, suspeita de úlcera",
+        "escolha": "IBP em bolus + infusão contínua + endoscopia em até 24 h",
+        "porque": "Estabiliza o coágulo; não substitui hemostasia endoscópica"
+      },
+      {
+        "cenario": "Varizes com falha de controle",
+        "escolha": "Balão de Sengstaken-Blakemore ou TIPS de resgate",
+        "porque": "Ponte para hemostasia definitiva; balão é temporário e exige UTI"
+      },
+      {
+        "cenario": "Anticoagulado com sangramento grave",
+        "escolha": "Reverter conforme o fármaco (vitamina K, CCP, idarucizumabe)",
+        "porque": "Coagulopatia persistente impede hemostasia"
+      },
+      {
+        "cenario": "Cirrótico com encefalopatia",
+        "escolha": "Lactulose + rifaximina",
+        "porque": "Sangramento no tubo digestivo é gatilho de encefalopatia"
+      },
+      {
+        "cenario": "Suspeita de Mallory-Weiss",
+        "escolha": "Suporte + IBP; endoscopia se sangramento persistente",
+        "porque": "Maioria resolve espontaneamente"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "vasoconstritor_esplancnico",
+        "agente": "terlipressina",
+        "papel": "primeira_linha",
+        "indicacao": "hemorragia varicosa",
+        "dose": "2 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "4/4 h",
+        "duracao": "até 5 dias",
+        "dose_maxima": "2 mg/4 h",
+        "contraindicacoes": [
+          "doença coronariana",
+          "gestação",
+          "hiponatremia grave"
+        ],
+        "efeitos_adversos": [
+          "isquemia digital",
+          "hiponatremia",
+          "dor abdominal",
+          "bradicardia"
+        ],
+        "apresentacoes": [
+          "ampola 1 mg/5 mL",
+          "ampola 8,5 mg/10 mL (acetato)"
+        ],
+        "preparo": "Diluir em 50–100 mL de SF 0,9% para infusão intermitente",
+        "tempo_infusao": "2–3 minutos (bolus lento) ou 15 minutos",
+        "monitorizacao": [
+          "sódio a cada 24 h",
+          "dor abdominal",
+          "perfusão de extremidades",
+          "FC"
+        ],
+        "ajuste_renal": "Contraindicada em creatinina > 3 mg/dL ou dialítico",
+        "observacoes": "Iniciar antes da endoscopia quando varizes são prováveis; manter por 2–5 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vasoconstritor_esplancnico",
+        "agente": "octreotida",
+        "papel": "alternativa",
+        "indicacao": "hemorragia varicosa (indisponibilidade de terlipressina)",
+        "dose": "50 mcg em bolus, seguido de 50 mcg/h",
+        "unidade": "mcg",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "3–5 dias",
+        "dose_maxima": "50 mcg/h",
+        "contraindicacoes": [
+          "alergia",
+          "bradicardia grave"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "hiperglicemia",
+          "bradicardia"
+        ],
+        "apresentacoes": [
+          "ampola 0,1 mg/mL (1 mL)",
+          "frasco 0,5 mg/1 mL"
+        ],
+        "preparo": "Bolus de 50 mcg; depois 50 mcg/h em bomba de infusão",
+        "tempo_infusao": "contínua",
+        "monitorizacao": [
+          "glicemia",
+          "FC",
+          "sangramento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Menor evidência que terlipressina, mas perfil de efeitos mais brando",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "ibp",
+        "agente": "pantoprazol",
+        "papel": "primeira_linha",
+        "indicacao": "sangramento não varicoso",
+        "dose": "80 mg em bolus, seguido de 8 mg/h",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "72 horas",
+        "dose_maxima": "8 mg/h",
+        "contraindicacoes": [
+          "alergia a benzimidazol"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "diarreia",
+          "hipomagnesemia"
+        ],
+        "apresentacoes": [
+          "frasco 40 mg (pó)",
+          "ampola 40 mg/5 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de SF; diluir 80 mg em 100 mL de SF para infusão",
+        "tempo_infusao": "bolus em 10 min; infusão contínua por 72 h",
+        "monitorizacao": [
+          "magnésio se uso prolongado",
+          "sangramento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em Child C",
+        "observacoes": "Preferir em bolus + infusão; após 72 h, 40 mg VO 1x/dia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "ibp",
+        "agente": "omeprazol",
+        "papel": "alternativa",
+        "indicacao": "sangramento não varicoso",
+        "dose": "80 mg em bolus, seguido de 8 mg/h",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "72 horas",
+        "dose_maxima": "8 mg/h",
+        "contraindicacoes": [
+          "alergia a benzimidazol"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "diarreia"
+        ],
+        "apresentacoes": [
+          "frasco 40 mg (pó)",
+          "ampola 40 mg"
+        ],
+        "preparo": "Reconstituir em 5 mL; diluir 80 mg em 100 mL de SF",
+        "tempo_infusao": "bolus em 10 min; infusão contínua",
+        "monitorizacao": [
+          "sangramento",
+          "hábito intestinal"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Equivalente ao pantoprazol quando este não está disponível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "profilaxia de PBE em cirrótico com HDA",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "7 dias",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "C. difficile"
+        ],
+        "apresentacoes": [
+          "frasco 1 g",
+          "solução injetável 1 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água; diluir em 100 mL de SF para infusão",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "função hepática",
+          "sinais de infecção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Reduz mortalidade e ressangramento em cirrótico; alternativa: norfloxacino 400 mg 12/12 h VO se via oral",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "laxante",
+        "agente": "lactulose",
+        "papel": "condicional",
+        "indicacao": "encefalopatia hepática",
+        "dose": "30–45 mL",
+        "unidade": "mL",
+        "via": "VO ou sonda",
+        "frequencia": "4/4 h até 2–3 evacuações pastosas, depois ajustar",
+        "duracao": "até resolução",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": [
+          "íleo paralítico",
+          "obstrução"
+        ],
+        "efeitos_adversos": [
+          "distensão",
+          "diarreia",
+          "desidratação"
+        ],
+        "apresentacoes": [
+          "xarope 667 mg/mL (120 mL)"
+        ],
+        "preparo": "Administrar puro ou diluído em água",
+        "tempo_infusao": "não se aplica (via oral ou sonda)",
+        "monitorizacao": [
+          "número de evacuações",
+          "nível de consciência",
+          "eletrólitos"
+        ],
+        "observacoes": "Titular pelo número de evacuações; evitar diarreia excessiva",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_intestinal",
+        "agente": "rifaximina",
+        "papel": "condicional",
+        "indicacao": "prevenção de recidiva de encefalopatia",
+        "dose": "550 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "até 6 meses",
+        "dose_maxima": "1.100 mg/dia",
+        "contraindicacoes": [
+          "alergia a rifamicina"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "constipação"
+        ],
+        "apresentacoes": [
+          "comprimido 550 mg"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "função hepática"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Associar à lactulose na prevenção secundária",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "expansor",
+        "agente": "albumina humana",
+        "papel": "condicional",
+        "indicacao": "cirrótico com PBE ou paracentese de grande volume",
+        "dose": "1–1,5 g/kg",
+        "unidade": "g/kg",
+        "via": "IV",
+        "frequencia": "dose única ou dividida",
+        "duracao": "1–3 dias",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": [
+          "sobrecarga",
+          "alergia"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga",
+          "reação alérgica"
+        ],
+        "apresentacoes": [
+          "frasco 20% 50 mL",
+          "frasco 20% 100 mL"
+        ],
+        "preparo": "Não diluir; infundir em acesso calibroso",
+        "tempo_infusao": "30–60 minutos",
+        "monitorizacao": [
+          "PA",
+          "diurese",
+          "edema",
+          "sódio"
+        ],
+        "observacoes": "Evidência para PBE e paracentese; em HDA isolada, uso individualizado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "fitomenadiona (vitamina K)",
+        "papel": "condicional",
+        "indicacao": "reversão de varfarina ou coagulopatia",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "1 dose",
+        "dose_maxima": "10 mg",
+        "contraindicacoes": [
+          "alergia"
+        ],
+        "efeitos_adversos": [
+          "reação anafilactoide rara"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL"
+        ],
+        "preparo": "Diluir em 50 mL de SF; infundir lentamente",
+        "tempo_infusao": "20–30 minutos",
+        "monitorizacao": [
+          "INR em 6–12 h"
+        ],
+        "observacoes": "Complementar com CCP quando disponível; reversão completa leva horas",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antifibrinolitico",
+        "agente": "ácido tranexâmico",
+        "papel": "condicional",
+        "indicacao": "sangramento não varicoso refratário (uso selecionado)",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "3 dias",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": [
+          "trombose",
+          "convulsão"
+        ],
+        "efeitos_adversos": [
+          "trombose",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "ampola 1 g/10 mL"
+        ],
+        "preparo": "Diluir em 100 mL de SF",
+        "tempo_infusao": "20 minutos",
+        "monitorizacao": [
+          "sangramento",
+          "sinais de trombose"
+        ],
+        "observacoes": "Não é rotina em HDA; evidência fraca fora de trauma",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Dois acessos venosos calibrosos",
+        "detalhe": "14–16 G; um para reposição, outro para drogas"
+      },
+      {
+        "medida": "Jejum oral",
+        "detalhe": "Nada por boca até endoscopia"
+      },
+      {
+        "medida": "Sonda vesical",
+        "detalhe": "Controle de diurese em instáveis"
+      },
+      {
+        "medida": "Transfusão restritiva",
+        "detalhe": "Alvo de Hb 7–8 g/dL; evitar sobrecarga e hipertransfusão em varizes"
+      },
+      {
+        "medida": "Correção de coagulopatia guiada",
+        "detalhe": "Plaquetas se < 50.000 e sangramento; não corrigir número isolado"
+      },
+      {
+        "medida": "Monitorização contínua",
+        "detalhe": "ECG, oximetria, PA invasiva se instável"
+      },
+      {
+        "medida": "Profilaxia de encefalopatia",
+        "detalhe": "Lactulose precoce em cirrótico, mesmo sem confusão"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Endoscopia digestiva alta",
+        "indicacao": "Todos com HDA após estabilização; urgente se instável",
+        "tecnica": "Diagnóstica e terapêutica na mesma sessão",
+        "complicacoes": "Perfuração, aspiração, sedação"
+      },
+      {
+        "nome": "Ligadura elástica",
+        "indicacao": "Varizes esofágicas sangrantes",
+        "tecnica": "Anéis elásticos sobre varizes",
+        "complicacoes": "Ressangramento, estenose, ulceração"
+      },
+      {
+        "nome": "Escleroterapia",
+        "indicacao": "Varizes quando ligadura indisponível",
+        "tecnica": "Injeção de esclerosante",
+        "complicacoes": "Necrose, estenose, perfuração"
+      },
+      {
+        "nome": "Hemostasia de úlcera",
+        "indicacao": "Úlcera com sangramento ativo",
+        "tecnica": "Clipe, injeção de adrenalina, termocoagulação",
+        "complicacoes": "Ressangramento, perfuração"
+      },
+      {
+        "nome": "Balão de Sengstaken-Blakemore",
+        "indicacao": "Varizes com falha de controle",
+        "tecnica": "Tamponamento esofágico/gástrico temporário",
+        "complicacoes": "Aspiração, necrose, ruptura esofágica"
+      },
+      {
+        "nome": "TIPS",
+        "indicacao": "Falha de hemostasia ou resgate",
+        "tecnica": "Derivação portossistêmica intra-hepática",
+        "complicacoes": "Encefalopatia, disfunção de shunt"
+      }
+    ],
+    "metas": [
+      "Pressão arterial média ≥ 65 mmHg",
+      "Hemoglobina 7–8 g/dL (individualizar em cardiopata)",
+      "Controle do sangramento em até 24 h",
+      "Endoscopia em até 12 h no cirrótico e 24 h no não cirrótico",
+      "Profilaxia antibiótica iniciada na primeira hora no cirrótico",
+      "Evitar encefalopatia e lesão renal"
+    ],
+    "fluxo": [
+      "Estabilizar: acessos, volume, transfusão restritiva",
+      "Estratificar: cirrose? anticoagulante? instabilidade?",
+      "Iniciar droga conforme suspeita (terlipressina/octreotida vs IBP)",
+      "Antibiótico profilático se cirrótico",
+      "Endoscopia precoce com hemostasia",
+      "Falha: balão, TIPS ou cirurgia",
+      "Pós-procedimento: IBP oral, erradicação de H. pylori, profilaxia secundária"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "cirrótico",
+        "ajuste": "terlipressina + ceftriaxona + lactulose",
+        "alerta": "mortalidade alta"
+      },
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "reverter conforme fármaco",
+        "alerta": "sangramento refratário"
+      },
+      {
+        "populacao": "cardiopata",
+        "ajuste": "evitar terlipressina; alvo de Hb mais alto",
+        "alerta": "isquemia"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "evitar terlipressina; ajustar doses",
+        "alerta": "toxicidade"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "avaliar comorbidades e sedação",
+        "alerta": "gravidade"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "hemograma, ureia, creatinina",
+          "indicacao": "todos",
+          "o_que_muda": "gravidade e transfusão"
+        },
+        {
+          "nome": "coagulograma e plaquetas",
+          "indicacao": "todos",
+          "o_que_muda": "reversão"
+        },
+        {
+          "nome": "endoscopia",
+          "indicacao": "todos",
+          "o_que_muda": "hemostasia"
+        },
+        {
+          "nome": "gasometria e lactato",
+          "indicacao": "instáveis",
+          "o_que_muda": "perfusão"
+        },
+        {
+          "nome": "paracentese",
+          "indicacao": "ascite com febre",
+          "o_que_muda": "PBE"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia de abdome de rotina",
+          "motivo": "não localiza sangramento"
+        },
+        {
+          "exame": "colonoscopia na suspeita de HDA",
+          "motivo": "atrasa endoscopia alta"
+        },
+        {
+          "exame": "transfusão guiada só por Hb baixa sem clínica",
+          "motivo": "sobrecarga"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "jejum até endoscopia",
+        "avisar recidiva de melena",
+        "tratar H. pylori após alta",
+        "evitar AINE"
+      ],
+      "evitar": [
+        "AINE",
+        "álcool",
+        "automedicação com AAS"
+      ],
+      "retorno": [
+        "nova hematêmese",
+        "síncope",
+        "melena",
+        "confusão"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "terlipressina",
+        "efeitos": [
+          "isquemia digital",
+          "hiponatremia"
+        ],
+        "observacao": "suspender se dor intensa ou Na < 130"
+      },
+      {
+        "agente": "pantoprazol",
+        "efeitos": [
+          "hipomagnesemia"
+        ],
+        "observacao": "uso prolongado"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "diarreia",
+          "C. difficile"
+        ],
+        "observacao": "monitorar"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a droga implicada",
+      "Terlipressina: suspender se isquemia ou hiponatremia",
+      "Registrar reação e ajustar o plano",
+      "Comunicar a equipe e reavaliar a indicação"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "omeprazol 40 mg",
+            "dose": "40 mg",
+            "via": "VO",
+            "frequencia": "1x/dia em jejum",
+            "duracao": "8 semanas",
+            "condicao": "úlcera",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina 1 g",
+            "dose": "1 g",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "14 dias",
+            "condicao": "erradicação H. pylori",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "claritromicina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "14 dias",
+            "condicao": "erradicação H. pylori",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "terlipressina",
+            "dose": "2 mg",
+            "via": "IV",
+            "frequencia": "4/4 h",
+            "monitorizacao": "Na e isquemia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ceftriaxona",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "infecção",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "pantoprazol",
+            "dose": "80 mg bolus + 8 mg/h",
+            "via": "IV",
+            "frequencia": "contínuo",
+            "monitorizacao": "sangramento",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma",
+          "coagulograma",
+          "ureia",
+          "creatinina",
+          "endoscopia",
+          "gasometria",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, com hemorragia digestiva alta.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com HDA, origem, gravidade, hemostasia, transfusão e evolução."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "hematêmese",
+        "melena",
+        "síncope",
+        "cirrose",
+        "anticoagulante",
+        "AINE",
+        "álcool"
+      ],
+      "texto_template": "Paciente com sangramento digestivo alto, hematêmese/melena, síncope, cirrose, anticoagulante, AINE e álcool."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "perfusão",
+        "abdome",
+        "estigmas de hepatopatia",
+        "toque retal"
+      ],
+      "texto_template": "Sinais vitais, perfusão, abdome, estigmas de hepatopatia e toque retal."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "protocolo de HDA",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_gastroenterologia",
+        "o_que_verificar": "varizes e úlcera",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "bulas e apresentações",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GI09-01",
+        "tipo": "choque",
+        "gatilho": "hipotensão ou síncope",
+        "severidade": "grave",
+        "mensagem": "Ressuscitação imediata.",
+        "acao": "acionar sala vermelha",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI09-02",
+        "tipo": "varizes",
+        "gatilho": "cirrose com hematêmese",
+        "severidade": "grave",
+        "mensagem": "Iniciar terlipressina e ceftriaxona.",
+        "acao": "sugerir protocolo",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI09-03",
+        "tipo": "anticoagulante",
+        "gatilho": "anticoagulado",
+        "severidade": "grave",
+        "mensagem": "Reverter anticoagulação.",
+        "acao": "alertar",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI09-04",
+        "tipo": "aine",
+        "gatilho": "AINE prescrito",
+        "severidade": "grave",
+        "mensagem": "Evitar AINE.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GI09-05",
+        "tipo": "transfusao",
+        "gatilho": "Hb acima de 9",
+        "severidade": "precaucao",
+        "mensagem": "Evitar hipertransfusão em varizes.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita com critérios de escolha, apresentações, preparo, monitorização, não farmacológico e procedimentos.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

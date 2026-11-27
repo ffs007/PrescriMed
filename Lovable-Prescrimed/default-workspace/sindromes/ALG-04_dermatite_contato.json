@@ -1,0 +1,442 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "ALG-04",
+    "area": "Alergias",
+    "nome": "Dermatite de contato",
+    "aliases": ["dermatite de contato", "dermatite alérgica", "irritação de pele", "alergia de contato"],
+    "contexto": ["ambulatorial"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Dermatite de contato é inflamação cutânea por exposição a substância irritante ou alérgeno, com eritema, vesículas, exsudação e prurido restritos à área exposta. Separar irritativa de alérgica muda a conduta: a irritativa é dose-dependente, arde mais do que coça, tem bordas bem demarcadas e ocorre em qualquer pessoa exposta; a alérgica é hipersensibilidade tipo IV, exige sensibilização prévia, surge em 24–72 h, ultrapassa a área de contato e tende a recorrer. O teste de contato epicutâneo é o procedimento central porque identifica o alérgeno e permite afastamento definitivo, com impacto ocupacional. O tratamento é retirar o agente, corticoide tópico por potência e sítio, corticoide sistêmico nas formas extensas ou com edema de face, anti-H1 para prurido, emoliente para restaurar a barreira e orientação de EPI e afastamento.",
+    "inclusao": [
+      "Lesão eczematosa limitada à área de contato ou com borda que reproduz o objeto manuseado",
+      "Dermatite de mãos, face ou área exposta com relação temporal com produto, luva ou metal",
+      "Quadro recidivante no trabalho ou após uso de cosmético, com melhora em afastamento"
+    ],
+    "exclusao": [
+      { "situacao": "queimadura química com necrose, bolha extensa ou exposição ocular", "fluxo": "queimadura" },
+      { "situacao": "eritrodermia ou mais de 20% da superfície corporal com sinais sistêmicos", "fluxo": "hospitalar" },
+      { "situacao": "urticária de contato com angioedema ou broncoespasmo", "fluxo": "ALG-01" },
+      { "situacao": "eczema em flexuras sem exposição identificável", "fluxo": "ALG-03" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "queimadura por ácido ou álcali, pele esbranquiçada ou necrose", "por_que": "lesão química profunda e progressiva", "acao": "lavagem copiosa por 15–20 min e avaliação em unidade de queimados", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "edema de face, lábios ou pálpebras com dispneia ou rouquidão", "por_que": "anafilaxia ou angioedema", "acao": "adrenalina IM e sala de emergência", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "vesículas agrupadas, erosões ou crosta melicérica", "por_que": "infecção secundária por S. aureus ou HSV", "acao": "antibiótico ou aciclovir conforme o agente", "severidade": "precaucao" },
+      { "id": "AL-04", "sinal": "eritema, calor e dor que ultrapassam a área de contato com febre", "por_que": "celulite", "acao": "antibiótico sistêmico e reavaliação em 48 h", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "lesão periorbital com secreção ou dor ocular", "por_que": "comprometimento ocular", "acao": "avaliação oftalmológica no mesmo dia", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "quadro que não melhora após 3 semanas de tratamento correto", "por_que": "diagnóstico errado ou alérgeno não identificado", "acao": "teste de contato e revisão diagnóstica", "severidade": "precaucao" },
+      { "id": "AL-07", "sinal": "extensão progressiva mesmo com afastamento", "por_que": "contato indireto ou disseminação por mãos", "acao": "revisar fonte oculta e corticoide sistêmico", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "O que manuseia no trabalho e em casa: cimento, produto de limpeza, solvente, tintura, luva, metal?",
+      "A lesão começou minutos ou horas após o contato, ou 24–72 h depois?",
+      "Arde ou coça mais?",
+      "A lesão fica restrita à área de contato ou ultrapassa a borda?",
+      "Melhora nos fins de semana, férias ou afastamento?",
+      "Outros colegas de trabalho têm o mesmo quadro?",
+      "Que luva usa e por quanto tempo por dia?",
+      "Usou cosmético, esmalte, tintura de cabelo ou protetor solar novo?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Irritativa leve e localizada, sem exsudato", "escolha": "Afastar o agente + emoliente e hidrocortisona 1% por 7 dias", "porque": "A barreira se recupera sozinha após a retirada; corticoide de baixa potência controla o eritema" },
+      { "cenario": "Irritativa intensa em mãos ou antebraço", "escolha": "Mometasona 0,1% 2x/dia por 7–14 dias + emoliente após cada lavagem", "porque": "Média potência trata a inflamação sem a atrofia rápida do potente em área extensa" },
+      { "cenario": "Contato com ácido ou álcali", "escolha": "Lavagem com água corrente por 15–20 min, sem neutralizante químico", "porque": "A diluição imediata limita a profundidade da lesão; neutralizar gera reação exotérmica" },
+      { "cenario": "Alérgica localizada em tronco e membros", "escolha": "Mometasona 0,1% 2x/dia por 7–14 dias e teste de contato se recorrer", "porque": "Controla a fase aguda e o teste evita novo contato" },
+      { "cenario": "Face, pálpebra ou pescoço", "escolha": "Hidrocortisona 1% por 5–7 dias ou tacrolimo 0,1%; nunca clobetasol", "porque": "Pele fina absorve mais e atrofia rápido; inibidor de calcineurina poupa corticoide" },
+      { "cenario": "Mãos, pés e pele espessa com liquenificação", "escolha": "Clobetasol 0,05% pomada 2x/dia por 2–4 semanas, com oclusão noturna", "porque": "A pele palmo-plantar tolera alta potência, que seria insegura na face" },
+      { "cenario": "Forma extensa (mais de 20% da superfície) ou face com edema importante", "escolha": "Prednisona 0,5–1 mg/kg/dia por 5–7 dias, com retirada se passar de 10 dias", "porque": "Tópico é inviável em área extensa e não controla edema de face" },
+      { "cenario": "Prurido intenso ou urticária de contato leve", "escolha": "Loratadina 10 mg à noite por 7–14 dias", "porque": "Anti-H1 de segunda geração controla o prurido sem sedação" },
+      { "cenario": "Impetiginização com crosta melicérica ou pústulas", "escolha": "Cefalexina 500 mg 6/6 h por 7–10 dias", "porque": "Cobre S. aureus e estreptococo sem retirar o controle anti-inflamatório" },
+      { "cenario": "Dermatite crônica de mãos em trabalhador com recidiva", "escolha": "Teste de contato epicutâneo antes de indicar afastamento definitivo", "porque": "Identificar o alérgeno permite troca de função ou de insumo e evita afastamento desnecessário" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "corticoide_topico_baixa_potencia",
+        "agente": "hidrocortisona 1% creme",
+        "papel": "primeira_linha",
+        "indicacao": "lesões leves, face, pálpebra e dobras",
+        "dose": "1 unidade de ponta de dedo por área de 2 palmas",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "2x/dia",
+        "duracao": "5–7 dias na face; até 14 dias no corpo",
+        "dose_maxima": "2 aplicações/dia",
+        "contraindicacoes": ["infecção cutânea ativa não tratada", "alergia", "rosácea ou acne na área"],
+        "efeitos_adversos": ["ardência", "atrofia com uso prolongado", "telangiectasia"],
+        "apresentacoes": ["creme 1% 10 g e 30 g", "pomada 1% 30 g", "loção 1% 60 mL"],
+        "preparo": "Uso direto; camada fina somente na área lesada",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["afinamento da pele", "telangiectasias", "resposta em 7 dias"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Escolha para face e pálpebra. Não usar sob oclusão em face.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_topico_media_potencia",
+        "agente": "mometasona 0,1% creme",
+        "papel": "primeira_linha",
+        "indicacao": "tronco, membros e mãos com lesão moderada",
+        "dose": "1 g por 100 cm²",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "1x/dia",
+        "duracao": "7–14 dias",
+        "dose_maxima": "30 g/semana",
+        "contraindicacoes": ["face e pálpebra", "infecção ativa", "alergia"],
+        "efeitos_adversos": ["atrofia", "estrias", "hipopigmentação"],
+        "apresentacoes": ["creme 0,1% 20 g e 40 g", "pomada 0,1% 20 g", "loção 0,1% 30 mL"],
+        "preparo": "Uso direto; camada fina",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["atrofia em uso maior que 4 semanas", "controle do prurido"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Base do tratamento da maioria das dermatites de contato em tronco e membros.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_topico_alta_potencia",
+        "agente": "clobetasol 0,05% creme ou pomada",
+        "papel": "condicional",
+        "indicacao": "mãos, pés e placas espessas liquenificadas",
+        "dose": "1–2 g por área de 2 palmas",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "2x/dia",
+        "duracao": "2 semanas no corpo; até 4 semanas em palma e planta",
+        "dose_maxima": "50 g/semana",
+        "contraindicacoes": ["face, pálpebra, dobras e genitais", "infecção ativa", "criança menor de 12 anos sem supervisão"],
+        "efeitos_adversos": ["atrofia", "estrias", "supressão do eixo HHA", "telangiectasia"],
+        "apresentacoes": ["creme 0,05% 30 g", "pomada 0,05% 30 g", "solução capilar 0,05% 50 mL"],
+        "preparo": "Uso direto; oclusão noturna com filme por 2–4 h em mãos e pés",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["atrofia", "gramas dispensadas", "sinais de supressão adrenal em uso extenso"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Nunca em face. Em mãos ocupacionais, associar oclusão e emoliente após cada lavagem.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_calcineurina_topico",
+        "agente": "tacrolimo 0,1% pomada",
+        "papel": "alternativa",
+        "indicacao": "face e pálpebra, sobretudo quando há necessidade de uso prolongado",
+        "dose": "camada fina",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "2x/dia",
+        "duracao": "até 6 semanas",
+        "dose_maxima": "2 aplicações/dia",
+        "contraindicacoes": ["infecção cutânea ativa", "herpes ativo na área", "imunodeficiência", "alergia a macrolídeo"],
+        "efeitos_adversos": ["ardência nos primeiros dias", "prurido", "quadro gripal"],
+        "apresentacoes": ["pomada 0,03% 30 g", "pomada 0,1% 30 g", "pomada 0,1% 60 g"],
+        "preparo": "Uso direto; não ocluir; evitar sol direto nas primeiras horas",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["ardência e tolerância", "infecção local"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Não causa atrofia: útil em pálpebra e em dermatite de contato facial crônica.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/FDA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisona",
+        "papel": "condicional",
+        "indicacao": "formas extensas, face com edema importante ou falha de tópico",
+        "dose": "0,5–1 mg/kg/dia (adulto 40–60 mg)",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "5–7 dias; retirada gradual se passar de 10 dias",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": ["infecção ativa não controlada", "diabetes descompensado", "úlcera péptica ativa", "psicose", "vacina de vírus vivo recente"],
+        "efeitos_adversos": ["hiperglicemia", "insônia", "aumento do apetite", "rebote ao suspender"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 20 mg", "comprimido 40 mg", "solução oral 3 mg/mL"],
+        "preparo": "Uso direto, com alimento pela manhã",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["glicemia", "pressão arterial", "sono e humor", "recidiva após suspensão"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste relevante; preferir prednisolona em hepatopatia grave",
+        "observacoes": "Retirada: curso de até 7 dias, suspender direto; acima de 10 dias, reduzir 25% a cada 3–5 dias. Suspensão abrupta causa rebote.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_2a_geracao",
+        "agente": "loratadina",
+        "papel": "condicional",
+        "indicacao": "prurido intenso e urticária de contato",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia à noite",
+        "duracao": "7–14 dias",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": ["alergia", "insuficiência hepática grave sem ajuste"],
+        "efeitos_adversos": ["cefaleia", "boca seca", "sonolência leve"],
+        "apresentacoes": ["comprimido 10 mg", "xarope 1 mg/mL 100 mL", "comprimido de desloratadina 5 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["sonolência", "alívio do prurido"],
+        "ajuste_renal": "Loratadina sem ajuste; desloratadina 5 mg em dias alternados se TFG menor que 30",
+        "ajuste_hepatico": "Reduzir para 10 mg em dias alternados em hepatopatia grave",
+        "observacoes": "Adjuvante do prurido, não substitui o corticoide nem o afastamento do agente.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "emoliente",
+        "agente": "emoliente sem fragrância (vaselina ou creme com ceramida)",
+        "papel": "primeira_linha",
+        "indicacao": "restauração da barreira e prevenção da recidiva irritativa",
+        "dose": "250 g/semana no adulto; aplicar após cada lavagem de mãos",
+        "unidade": "g/semana",
+        "via": "tópica",
+        "frequencia": "3–6x/dia, sobretudo após lavar as mãos",
+        "duracao": "contínua enquanto durar a exposição",
+        "dose_maxima": "sem limite superior",
+        "contraindicacoes": ["alergia a componentes", "dermatite de contato ao próprio emoliente"],
+        "efeitos_adversos": ["ardência em fissura", "foliculite oclusiva", "dermatite de contato a conservantes"],
+        "apresentacoes": ["creme 100 g e 200 g", "pomada 100 g", "vaselina sólida 100 g", "loção 200 mL"],
+        "preparo": "Uso direto sobre a pele limpa e seca",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["xerose", "fissuras", "gramas dispensadas"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Na dermatite irritativa crônica das mãos, o emoliente é parte do tratamento e não só cosmético. Preferir produto sem fragrância e sem conservante liberador de formaldeído.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "diretriz SBD",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico",
+        "agente": "cefalexina",
+        "papel": "condicional",
+        "indicacao": "impetiginização com crosta melicérica ou pústulas",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "7–10 dias",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": ["alergia a cefalosporina", "anafilaxia prévia a penicilina"],
+        "efeitos_adversos": ["diarreia", "rash", "colite por C. difficile"],
+        "apresentacoes": ["cápsula 500 mg", "comprimido 1 g", "suspensão 50 mg/mL 100 mL"],
+        "preparo": "Uso direto; reconstituir a suspensão conforme a bula",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["regressão das crostas em 48–72 h", "diarreia"],
+        "ajuste_renal": "TFG 15–30: 250–500 mg 8/8 h; em diálise, dose suplementar após a sessão",
+        "observacoes": "Alternativa: amoxicilina-clavulanato 875/125 mg 12/12 h. Manter corticoide tópico na área inflamada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "adstringente",
+        "agente": "acetato de alumínio 5% (solução de Burow)",
+        "papel": "condicional",
+        "indicacao": "fase exsudativa e vesiculosa com muito exsudato",
+        "dose": "compressa úmida sobre a área",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "3–4x/dia por 15–20 minutos",
+        "duracao": "2–3 dias, até secar as vesículas",
+        "dose_maxima": "4 aplicações/dia",
+        "contraindicacoes": ["pele íntegra extensa", "insuficiência renal grave", "alergia a alumínio"],
+        "efeitos_adversos": ["ressecamento", "irritação", "absorção sistêmica de alumínio em área extensa"],
+        "apresentacoes": ["solução 5% 100 mL", "pó para diluição 100 g", "compressa prensada"],
+        "preparo": "Diluir 1 parte da solução em 10–20 partes de água morna; umedecer gaze e aplicar sem esfregar",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["secagem das vesículas", "sinais de irritação", "área tratada"],
+        "ajuste_renal": "Evitar em área extensa no renal crônico pelo risco de acúmulo de alumínio",
+        "observacoes": "Secar a pele antes de aplicar o corticoide; não usar sob oclusão.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "barreira_fisica",
+        "agente": "pasta de óxido de zinco 10–20%",
+        "papel": "alternativa",
+        "indicacao": "proteção de área exposta e dermatite irritativa leve em dobras ou região de fralda",
+        "dose": "camada espessa",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "a cada troca ou após cada exposição",
+        "duracao": "enquanto durar a exposição",
+        "dose_maxima": "sem limite",
+        "contraindicacoes": ["lesão exsudativa infectada", "alergia"],
+        "efeitos_adversos": ["oclusão e foliculite", "ressecamento", "dificuldade de remoção"],
+        "apresentacoes": ["pasta 10% 100 g", "pasta 20% 100 g", "creme 20% 60 g"],
+        "preparo": "Uso direto em camada espessa; remover com óleo vegetal, não com álcool",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["integridade da pele", "sinais de oclusão excessiva"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Barreira física não substitui EPI: serve para área já lesionada e para reduzir atrito.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Remoção imediata do agente", "detalhe": "Suspender o produto, lavar a pele com água corrente e syndet sem fragrância, trocar a roupa contaminada; não usar solvente nem álcool para limpar a pele" },
+      { "medida": "Identificação do alérgeno por ocupação", "detalhe": "Níquel e cobalto: metalurgia, bijuteria, chaveiro, cabeleireiro, eletrônica. Cromo: cimento, curtume, galvanoplastia, solda. Borracha (tiuram, carbamato, mercaptobenzotiazol): luvas, mecânica, indústria, saúde. Epóxi e resina: construção, eletrônica, pintura, impressão 3D. Conservantes (metilisotiazolinona, quaternium-15, formaldeído): cosmético, produto de limpeza, tinta, fluido de corte. Acrilatos: unha em gel, odontologia, impressão 3D. Parafenilenodiamina: tintura de cabelo e couro. Formaldeído: tecido, papel, cosmético" },
+      { "medida": "EPI correto para o agente", "detalhe": "Epóxi e acrilato exigem luva de nitrila ou butila (látex não protege); sob luva de látex, usar luva de algodão; trocar a luva a cada 30–60 min quando há umidade; avental, manga longa e óculos conforme respingo" },
+      { "medida": "Higiene e reparo das mãos", "detalhe": "Syndet sem fragrância, água morna, secagem completa entre os dedos e emoliente após cada lavagem; evitar sabonete antisséptico repetido e álcool gel sobre pele fissurada" },
+      { "medida": "Substituição do insumo", "detalhe": "Cimento com baixo teor de cromo hexavalente, bijuteria de titânio ou aço cirúrgico, tintura sem parafenilenodiamina, luva sem tiuram, cosmético sem metilisotiazolinona" },
+      { "medida": "Afastamento e CAT", "detalhe": "Emitir CAT na suspeita ocupacional, orientar comunicação ao empregador (NR-7 e NR-9) e afastamento temporário da exposição; afastamento definitivo só após teste de contato e discussão com medicina do trabalho" },
+      { "medida": "Fotoproteção da área", "detalhe": "FPS 50 na lesão em resolução para evitar hiperpigmentação pós-inflamatória; evitar sol direto nas primeiras semanas" },
+      { "medida": "Controle do hábito de coçar", "detalhe": "Unhas curtas, compressa fria nos primeiros minutos de prurido e luva de algodão à noite nas crises" }
+    ],
+    "procedimentos": [
+      { "nome": "Teste de contato epicutâneo (patch test)", "indicacao": "Dermatite de contato suspeita ou confirmada com recidiva, ocupacional, face, pálpebra, mãos crônicas, ou falha de tratamento após 3 semanas", "tecnica": "Bateria padrão brasileira em câmaras de Finn nas costas, com pele limpa e sem corticoide tópico no local por 7 dias; oclusão por 48 h; primeira leitura em 48 h e segunda em 96 h (ou 72 h); leitura tardia em 7 dias para metais e corticoide; classificar em +, ++, +++ e reação irritativa", "complicacoes": "Reação intensa no local, falso-positivo por inflamação de pele ativa (angry back), pigmentação residual, sensibilização ativa rara" },
+      { "nome": "Compressa úmida com acetato de alumínio", "indicacao": "Fase exsudativa e vesiculosa com muito exsudato", "tecnica": "Gaze embebida em solução diluída morna, aplicada por 15–20 min, 3–4x/dia, sem esfregar; secar antes do corticoide", "complicacoes": "Ressecamento, irritação, absorção de alumínio em área extensa" },
+      { "nome": "Curativo úmido (wet wrap)", "indicacao": "Dermatite de contato extensa e exsudativa com prurido intratável", "tecnica": "Corticoide diluído, pijama de algodão úmido e pijama seco por cima, 2–12 h/dia por 3–7 dias", "complicacoes": "Maceração, infecção, hipotermia" },
+      { "nome": "Teste de uso aberto e repetido (ROAT)", "indicacao": "Suspeita de cosmético ou produto de uso diário sem alérgeno na bateria padrão", "tecnica": "Aplicar o produto em 5 cm² da face externa do braço, 2x/dia por 7 dias, com controle no braço oposto", "complicacoes": "Reação local intensa, dificuldade de interpretação em pele já inflamada" },
+      { "nome": "Biópsia cutânea", "indicacao": "Dúvida com psoríase, linfoma cutâneo, micose fungoide ou dermatite factícia", "tecnica": "Punch de 4–6 mm em lesão recente, sem tratar o local por 2 semanas", "complicacoes": "Sangramento, infecção, cicatriz, resultado inconclusivo" }
+    ],
+    "metas": [
+      "Reduzir a área acometida em pelo menos 50% em 2 semanas",
+      "Prurido com nota menor ou igual a 3 em escala de 0 a 10 em 7 dias",
+      "Identificar o agente ou o alérgeno em até 4 semanas",
+      "Retorno ao trabalho com EPI adequado ou função modificada quando ocupacional",
+      "Sem novas lesões em área previamente tratada por 3 meses",
+      "Uso de emoliente em pelo menos 5 dias por semana"
+    ],
+    "fluxo": [
+      "Confirmar o diagnóstico e separar irritativa de alérgica pela história, morfologia e cronologia",
+      "Identificar e remover o agente; orientar lavagem e troca de roupa",
+      "Classificar extensão e sítio e escolher corticoide por potência",
+      "Forma exsudativa: compressa adstringente 2–3 dias antes do corticoide",
+      "Face ou pálpebra: hidrocortisona ou tacrolimo, nunca clobetasol",
+      "Extensa ou com edema importante: prednisona 0,5–1 mg/kg por 5–7 dias",
+      "Impetiginização: cefalexina 7–10 dias, mantendo o tópico anti-inflamatório",
+      "Recidiva ou ocupacional: teste de contato, orientação de EPI e CAT",
+      "Reavaliar em 3 semanas; se não melhorou, revisar diagnóstico e fonte oculta"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "crianca", "ajuste": "Hidrocortisona 1% ou mometasona 0,1% por 7 dias; evitar clobetasol; suspeitar de brinco de níquel e de cosmético", "alerta": "Maior absorção e risco de atrofia" },
+      { "populacao": "gestante", "ajuste": "Hidrocortisona ou mometasona em área limitada; evitar corticoide sistêmico prolongado", "alerta": "Usar a menor potência e a menor área eficazes" },
+      { "populacao": "idoso", "ajuste": "Pele fina: hidrocortisona ou tacrolimo em face; clobetasol apenas em palmo-plantar", "alerta": "Atrofia, equimose e ruptura cutânea" },
+      { "populacao": "trabalhador", "ajuste": "Teste de contato precoce, EPI específico e CAT; considerar mudança de função", "alerta": "Cronificação e perda de renda se o alérgeno não for identificado" },
+      { "populacao": "renal_cronico", "ajuste": "Evitar compressa de acetato de alumínio em área extensa; ajustar cefalexina", "alerta": "Acúmulo de alumínio e toxicidade do antibiótico" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "teste de contato epicutâneo", "indicacao": "recidiva, suspeita ocupacional, face ou pálpebra, falha após 3 semanas", "o_que_muda": "identifica o alérgeno e define afastamento" },
+        { "nome": "avaliação clínica com cronologia e morfologia", "indicacao": "todos", "o_que_muda": "separa irritativa de alérgica e define tratamento" },
+        { "nome": "cultura de secreção", "indicacao": "suspeita de infecção secundária", "o_que_muda": "escolha do antibiótico" },
+        { "nome": "teste de uso aberto e repetido (ROAT)", "indicacao": "suspeita de cosmético sem alérgeno conhecido", "o_que_muda": "confirma o produto implicado" },
+        { "nome": "biópsia cutânea", "indicacao": "dúvida diagnóstica", "o_que_muda": "exclui psoríase, linfoma e micose fungoide" }
+      ],
+      "evitar": [
+        { "exame": "teste de contato na fase aguda e com corticoide no local", "motivo": "falso-positivo e falso-negativo por supressão da resposta" },
+        { "exame": "IgE específica para diagnóstico de dermatite de contato", "motivo": "é reação mediada por células, não por IgE" },
+        { "exame": "patch test caseiro com o produto puro", "motivo": "risco de queimadura química e de sensibilização" },
+        { "exame": "cultura de pele em lesão sem infecção", "motivo": "colonização não indica tratamento" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "Parar de usar o produto suspeito e lavar a área com água e sabonete neutro",
+        "Usar luva de nitrila para epóxi, acrilato e solvente; látex não protege",
+        "Aplicar emoliente após cada lavagem de mãos",
+        "Cobrir a lesão com gaze e evitar sol direto",
+        "Informar o empregador e solicitar CAT quando for do trabalho"
+      ],
+      "evitar": [
+        "Contato com o produto, inclusive por meio de roupa e ferramenta contaminada",
+        "Coçar e estourar vesículas",
+        "Sabonete perfumado, álcool e solvente na área",
+        "Uso de creme de outra pessoa ou de corticoide potente no rosto",
+        "Voltar à mesma exposição sem EPI"
+      ],
+      "retorno": [
+        "Pus, crosta amarelada ou febre",
+        "Piora ou extensão após 1 semana de tratamento",
+        "Lesão periorbital ou ocular",
+        "Novas lesões após retorno ao trabalho",
+        "Fissuras dolorosas nas mãos"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "clobetasol 0,05%", "efeitos": ["atrofia", "estrias", "supressão adrenal"], "observacao": "Suspender se atrofia; nunca em face" },
+      { "agente": "prednisona", "efeitos": ["hiperglicemia", "insônia", "rebote"], "observacao": "Retirada gradual se curso maior que 10 dias" },
+      { "agente": "tacrolimo 0,1%", "efeitos": ["ardência", "infecção local"], "observacao": "Ardência melhora em 3–5 dias" },
+      { "agente": "acetato de alumínio 5%", "efeitos": ["ressecamento", "irritação"], "observacao": "Suspender se piora do eritema" },
+      { "agente": "cefalexina", "efeitos": ["diarreia", "rash"], "observacao": "Suspender se rash extenso ou diarreia por C. difficile" },
+      { "agente": "emoliente", "efeitos": ["ardência", "dermatite de contato"], "observacao": "Trocar para vaselina pura se houver reação" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação na ficha",
+      "Atrofia por corticoide: suspender o potente na área e trocar por inibidor de calcineurina",
+      "Ardência por tacrolimo: manter com aplicação refrigerada ou espaçar para 1x/dia",
+      "Rebote após corticoide oral: reiniciar dose eficaz e programar retirada mais lenta",
+      "Dermatite ao próprio emoliente: substituir por vaselina pura sem conservante",
+      "Suspeita de infecção secundária: cultura e antibiótico dirigido",
+      "Comunicar a equipe e revisar o plano antes da próxima prescrição"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "hidrocortisona 1% creme", "dose": "camada fina", "via": "tópica", "frequencia": "2x/dia", "duracao": "7 dias", "condicao": "face e pálpebra", "confirmar_apresentacao_local": true },
+          { "item": "mometasona 0,1% creme", "dose": "1 g por 100 cm²", "via": "tópica", "frequencia": "1x/dia", "duracao": "14 dias", "condicao": "tronco e membros", "confirmar_apresentacao_local": true },
+          { "item": "clobetasol 0,05% pomada", "dose": "1–2 g por área de 2 palmas", "via": "tópica", "frequencia": "2x/dia", "duracao": "21 dias", "condicao": "mãos e pés", "confirmar_apresentacao_local": true },
+          { "item": "emoliente sem fragrância", "dose": "250 g/semana", "via": "tópica", "frequencia": "3–6x/dia", "duracao": "contínuo", "condicao": "restauração de barreira", "confirmar_apresentacao_local": true },
+          { "item": "loratadina 10 mg", "dose": "10 mg", "via": "VO", "frequencia": "1x/dia à noite", "duracao": "10 dias", "condicao": "prurido", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "prednisona", "dose": "0,5–1 mg/kg/dia", "via": "VO", "frequencia": "1x/dia pela manhã", "monitorizacao": "glicemia, PA, sono e rebote", "confirmar_apresentacao_local": true },
+          { "item": "cefalexina", "dose": "500 mg", "via": "VO", "frequencia": "6/6 h", "monitorizacao": "regressão das crostas e diarreia", "confirmar_apresentacao_local": true },
+          { "item": "acetato de alumínio 5%", "dose": "compressa úmida", "via": "tópica", "frequencia": "3–4x/dia", "monitorizacao": "secagem das vesículas e irritação", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["teste de contato", "cultura de secreção", "ROAT", "biópsia", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de dermatite de contato, necessitando de afastamento das atividades por dias.", "dias": null, "cid": null, "observacao": "dias são decisão médica; em caso ocupacional, emitir CAT" },
+      "encaminhamento": { "campos": ["destino", "motivo", "resumo", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente com dermatite de contato irritativa ou alérgica, agente suspeito, área acometida, extensão, tratamento, resultado do teste de contato e orientação de afastamento e EPI." }
+    },
+    "anamnese": {
+      "campos": ["agente suspeito", "tempo até o início", "prurido ou ardência", "ocupação e exposição", "extensão", "episódios prévios", "melhora em afastamento", "cosméticos novos"],
+      "texto_template": "Paciente com dermatite de contato, agente suspeito e tempo de exposição, latência até o início das lesões, predomínio de prurido ou ardência, ocupação e produtos manuseados, extensão e localização, episódios prévios, melhora em afastamento e uso recente de cosméticos."
+    },
+    "exame_fisico": {
+      "itens": ["área exposta e bordas da lesão", "vesículas e exsudato", "xerose e fissuras", "liquenificação", "sinais de infecção", "unhas e mãos"],
+      "texto_template": "Delimitação da área acometida com bordas que reproduzem o contato, presença de vesículas e exsudato, xerose, fissuras, liquenificação, sinais de infecção secundária e exame das mãos e unhas."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de dermatite de contato e indicação de teste", "verificar": true },
+      { "tipo": "sociedade_dermatologia", "o_que_verificar": "bateria padrão brasileira de teste de contato", "verificar": true },
+      { "tipo": "literatura", "o_que_verificar": "diretriz de dermatite de contato ocupacional e leitura do patch test", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações e bulas dos tópicos e do corticoide sistêmico", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-ALG04-01", "tipo": "quimica", "gatilho": "ácido, álcali ou solvente com necrose", "severidade": "grave", "mensagem": "Lavagem copiosa por 15–20 min e avaliação em queimados.", "acao": "acionar", "bloqueante": true },
+      { "id": "SA-ALG04-02", "tipo": "anafilaxia", "gatilho": "edema de face com dispneia ou rouquidão", "severidade": "grave", "mensagem": "Suspeita de anafilaxia: adrenalina IM imediata.", "acao": "acionar sala de emergência", "bloqueante": true },
+      { "id": "SA-ALG04-03", "tipo": "corticoide_potente_face", "gatilho": "clobetasol prescrito para face ou pálpebra", "severidade": "grave", "mensagem": "Corticoide de alta potência contraindicado em face.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-ALG04-04", "tipo": "infeccao", "gatilho": "crosta melicérica ou pústulas", "severidade": "precaucao", "mensagem": "Impetiginização: associar cefalexina.", "acao": "sugerir antibiótico", "bloqueante": false },
+      { "id": "SA-ALG04-05", "tipo": "ocupacional", "gatilho": "recidiva relacionada ao trabalho", "severidade": "precaucao", "mensagem": "Suspeita ocupacional: emitir CAT e indicar teste de contato.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "SBD", "literatura"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com distinção entre irritativa e alérgica, teste de contato como procedimento central, corticoide por potência e sítio, corticoide sistêmico, alérgenos por ocupação, EPI, apresentações, preparo e monitorização.", "data": null }
+      ]
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "END-01",
+    "area": "Endócrino",
+    "nome": "Hipoglicemia",
+    "aliases": ["hipoglicemia", "glicose baixa", "açúcar baixo", "crise hipoglicêmica"],
+    "contexto": ["ambulatorial", "hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Hipoglicemia é glicose plasmática abaixo de 70 mg/dL com sintomas adrenérgicos (tremor, sudorese, palpitação, fome) e, abaixo de 54 mg/dL, sintomas neuroglicopênicos (confusão, comportamento estranho, convulsão, coma). A conduta separa dois cenários que não se misturam: paciente consciente e deglutindo recebe 15 g de carboidrato por via oral e reavaliação em 15 min; paciente com rebaixamento, convulsão ou incapacidade de deglutir recebe glicose 50% 20–40 mL IV ou, sem acesso venoso, glucagon 1 mg IM. Corrigir a glicemia é metade do trabalho; a outra metade é achar a causa — insulina ou sulfonilureia em excesso, álcool, sepse, insuficiência adrenal, insuficiência renal, insulinoma — e nunca liberar o paciente sem refeição e sem glicemia de controle.",
+    "inclusao": [
+      "Glicemia capilar abaixo de 70 mg/dL com sintomas adrenérgicos ou neuroglicopênicos",
+      "Hipoglicemia grave com rebaixamento de consciência, convulsão ou coma",
+      "Hipoglicemia recorrente ou sem causa aparente em paciente sem diabetes",
+      "Hipoglicemia em uso de insulina ou sulfonilureia, com risco de recidiva prolongada"
+    ],
+    "exclusao": [
+      { "situacao": "hiperglicemia com cetose ou desidratação hipertônica", "fluxo": "END-02 e END-03" },
+      { "situacao": "rebaixamento de consciência sem glicemia medida", "fluxo": "medir glicemia imediatamente; só depois seguir o protocolo de coma" },
+      { "situacao": "hipoglicemia neonatal ou do lactente", "fluxo": "neonatologia e pediatria" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "rebaixamento de consciência, sonolência ou coma", "por_que": "neuroglicopenia com risco de lesão cerebral permanente", "acao": "glicose 50% 20–40 mL IV imediata, sem esperar exame", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "convulsão ou estado de mal", "por_que": "hipoglicemia grave em curso", "acao": "glicose IV, proteção de via aérea e reavaliação em 15 min", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "uso de sulfonilureia ou insulina de ação longa", "por_que": "hipoglicemia recidivante por 12–24 h", "acao": "internar, dextrose 10% contínua, octreotida se refratária", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "hipoglicemia que recidiva após duas doses de glicose", "por_que": "causa persistente: sulfonilureia, sepse, insuficiência adrenal", "acao": "unidade de terapia intensiva, infusão contínua e investigação em paralelo", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "etilismo, desnutrição ou vômitos prolongados", "por_que": "gliconeogênese bloqueada e risco de Wernicke", "acao": "tiamina 100 mg IV antes ou junto da glicose", "severidade": "precaucao" },
+      { "id": "AL-06", "sinal": "febre, hipotensão ou oligúria", "por_que": "sepse ou insuficiência adrenal como causa da hipoglicemia", "acao": "culturas, lactato, hidrocortisona se suspeita de adrenal", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "hipoglicemia em paciente sem diabetes", "por_que": "insulinoma, insulina exógena oculta ou sulfonilureia não declarada", "acao": "coleta crítica durante o episódio e teste de jejum supervisionado", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "Qual a glicemia capilar e há quanto tempo o paciente está sintomático?",
+      "O paciente está consciente e consegue deglutir?",
+      "Usa insulina, sulfonilureia ou glinida? Qual a última dose e o horário?",
+      "Quando foi a última refeição e o que comeu?",
+      "Ingeriu álcool nas últimas 24 h?",
+      "Tem diabetes, insuficiência renal, insuficiência adrenal ou fez cirurgia bariátrica?",
+      "Já teve episódios parecidos? Quantos no último mês?",
+      "Há febre, hipotensão ou foco infeccioso?",
+      "Há acesso venoso e qual o nível de consciência agora?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Consciente, deglutindo, glicemia abaixo de 70 mg/dL com sintomas", "escolha": "15 g de carboidrato oral e reavaliação em 15 min", "porque": "Absorção rápida sem acesso venoso e sem pico hiperglicêmico; é a via mais rápida no paciente que deglute" },
+      { "cenario": "Rebaixamento, convulsão ou incapacidade de deglutir com acesso venoso", "escolha": "Glicose 50% 20–40 mL IV em bolus lento", "porque": "Corrige em minutos e evita aspiração; 20–40 mL contém 10–20 g de glicose" },
+      { "cenario": "Grave sem acesso venoso", "escolha": "Glucagon 1 mg IM (0,5 mg se abaixo de 25 kg)", "porque": "Ponte até obter acesso; não funciona bem em etilista com glicogênio depletado nem em jejum prolongado" },
+      { "cenario": "Recidiva após a primeira dose, sulfonilureia ou insulina de ação longa", "escolha": "Dextrose 10% em infusão contínua 100 mL/h com glicemia horária", "porque": "O fármaco culpado continua agindo por 12–24 h e a glicose em bolus não sustenta a glicemia" },
+      { "cenario": "Hipoglicemia por sulfonilureia refratária à dextrose", "escolha": "Octreotida 50–100 mcg SC 8/8 h", "porque": "Suprime a secreção de insulina estimulada pela sulfonilureia e reduz recidiva e tempo de internação" },
+      { "cenario": "Etilista ou desnutrido", "escolha": "Tiamina 100 mg IV antes ou junto da glicose", "porque": "Previne encefalopatia de Wernicke sem atrasar a correção da glicemia" },
+      { "cenario": "Hipotensão, hiponatremia, hipercalemia ou hipoglicemia sem causa em paciente com doença crônica", "escolha": "Hidrocortisona 100 mg IV com coleta de cortisol antes", "porque": "Insuficiência adrenal é causa tratável e a hipoglicemia só resolve com corticoide" },
+      { "cenario": "Hipoglicemia inexplicada em paciente sem diabetes, com emagrecimento", "escolha": "Coleta crítica (insulina, peptídeo C, sulfonilureia, cortisol) e teste de jejum de 72 h", "porque": "Distingue insulinoma, insulina exógena e sulfonilureia oculta" },
+      { "cenario": "Paciente que corrigiu a glicemia mas recusa comer", "escolha": "Manter dextrose IV e não liberar até aceitar refeição", "porque": "Alta sem refeição é a causa mais comum de retorno em poucas horas" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "glicose_hipertonica",
+        "agente": "glicose 50%",
+        "papel": "primeira_linha",
+        "indicacao": "hipoglicemia grave com rebaixamento, convulsão ou incapacidade de deglutir",
+        "dose": "20–40 mL",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "dose única; repetir em 15 min se glicemia persistir abaixo de 70 mg/dL",
+        "duracao": "1 dose, até 3 repetições",
+        "dose_maxima": "40 mL por dose (20 g)",
+        "contraindicacoes": ["hiperglicemia sem hipoglicemia documentada", "veia periférica de criança para a solução a 50%"],
+        "efeitos_adversos": ["hiperglicemia", "flebite química", "necrose por extravasamento", "hipocalemia de rebote", "hiperosmolaridade em doses repetidas"],
+        "apresentacoes": ["ampola 50% 10 mL (5 g)", "ampola 50% 20 mL (10 g)", "frasco 50% 50 mL (25 g)"],
+        "preparo": "Usar a 50% sem diluir em veia calibrosa; se acesso fino, diluir 1:1 em água destilada para 25%",
+        "tempo_infusao": "bolus lento em 2–3 min (cerca de 10 mL/min)",
+        "monitorizacao": ["glicemia capilar 15 min após a dose", "nível de consciência e resposta motora", "sítio de infusão (extravasamento)", "potássio se doses repetidas"],
+        "ajuste_renal": "Sem ajuste de dose; em diálise corrigir e reavaliar a glicemia em 15 min",
+        "observacoes": "20–40 mL de glicose 50% equivalem a 10–20 g; em pediatria usar glicose 10% 2–5 mL/kg (0,2–0,5 g/kg) e nunca 50% em periférico",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz ADA",
+        "claim_id": null
+      },
+      {
+        "classe": "carboidrato_oral",
+        "agente": "glicose oral (15 g de carboidrato)",
+        "papel": "primeira_linha",
+        "indicacao": "hipoglicemia leve em paciente consciente e deglutindo",
+        "dose": "15 g",
+        "unidade": "g",
+        "via": "VO",
+        "frequencia": "repetir a cada 15 min até glicemia de 70 mg/dL ou mais",
+        "duracao": "até 3 doses, seguida de refeição",
+        "dose_maxima": "45 g",
+        "contraindicacoes": ["rebaixamento de consciência", "incapacidade de deglutir", "convulsão em curso", "vômito persistente"],
+        "efeitos_adversos": ["hiperglicemia transitória", "náusea", "aspiração se administrado com rebaixamento"],
+        "apresentacoes": ["sachê de glicose 15 g", "comprimido de glicose 5 g (3 comprimidos)", "gel de glicose 15 g sachê", "açúcar refinado 3 colheres de sopa (15 g) dissolvido em água"],
+        "preparo": "Uso direto; dissolver o açúcar em 100–150 mL de água; não usar chocolate nem bebida alcoólica",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["glicemia capilar em 15 min", "consciência e capacidade de deglutir antes de repetir", "sintomas adrenérgicos"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Após corrigir, dar refeição com carboidrato complexo e proteína; 15 g de carboidrato de absorção rápida é a dose padrão da regra 15/15",
+        "confirmar_apresentacao_local": true,
+        "fonte": "diretriz ADA/SBD",
+        "claim_id": null
+      },
+      {
+        "classe": "hormonio_hiperglicemiante",
+        "agente": "glucagon",
+        "papel": "alternativa",
+        "indicacao": "hipoglicemia grave sem acesso venoso",
+        "dose": "1 mg (0,5 mg se peso abaixo de 25 kg)",
+        "unidade": "mg",
+        "via": "IM ou SC",
+        "frequencia": "dose única; repetir em 15 min se sem resposta e ainda sem acesso",
+        "duracao": "1 dose",
+        "dose_maxima": "1 mg por dose; 3 mg por via intranasal",
+        "contraindicacoes": ["feocromocitoma", "jejum prolongado com glicogênio depletado (resposta fraca)", "hipoglicemia por sulfonilureia (resposta parcial)"],
+        "efeitos_adversos": ["náusea e vômito com risco de aspiração", "hiperglicemia", "taquicardia"],
+        "apresentacoes": ["frasco-ampola 1 mg (pó) com diluente 1 mL", "pó nasal 3 mg dose única", "seringa preenchida 1 mg"],
+        "preparo": "Reconstituir o pó no diluente fornecido; aplicar IM na coxa ou no deltoide; via nasal 3 mg em uma narina",
+        "tempo_infusao": "bolus IM",
+        "monitorizacao": ["glicemia em 10–15 min", "vômito e proteção de via aérea", "consciência"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Ponte para obter acesso venoso; ao recuperar consciência, dar carboidrato oral; não substitui glicose IV na hipoglicemia profunda",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "glicose_hipertonica",
+        "agente": "dextrose 10% em infusão contínua",
+        "papel": "condicional",
+        "indicacao": "hipoglicemia recidivante, sulfonilureia, insulina de ação longa ou insuficiência renal",
+        "dose": "100 mL/h (10 g/h), titulada",
+        "unidade": "mL/h",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "12–24 h, conforme a causa",
+        "dose_maxima": "individualizar pelo débito de glicose (10–15 g/h)",
+        "contraindicacoes": ["hiperglicemia", "sobrecarga volêmica"],
+        "efeitos_adversos": ["hiperglicemia", "hipocalemia", "flebite", "sobrecarga de volume"],
+        "apresentacoes": ["bolsa 10% 500 mL", "bolsa 10% 1.000 mL", "frasco 10% 500 mL"],
+        "preparo": "Pronta para uso; usar bomba de infusão; não adicionar potássio sem dosagem prévia",
+        "tempo_infusao": "contínua",
+        "monitorizacao": ["glicemia de 30/30 min nas primeiras 2 h e depois de 1/1 h", "potássio a cada 6 h", "balanço hídrico", "sítio de infusão"],
+        "ajuste_renal": "Reduzir o volume em oligúria e vigiar sobrecarga",
+        "observacoes": "Manter após a correção quando a causa é sulfonilureia, insulina de ação longa ou insuficiência renal; retirar só após 6–12 h sem recidiva",
+        "confirmar_apresentacao_local": true,
+        "fonte": "protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "somatostatina_analogo",
+        "agente": "octreotida",
+        "papel": "resgate",
+        "indicacao": "hipoglicemia por sulfonilureia refratária à dextrose",
+        "dose": "50–100 mcg",
+        "unidade": "mcg",
+        "via": "SC ou IV lento",
+        "frequencia": "8/8 h",
+        "duracao": "24–72 h, enquanto durar o efeito da sulfonilureia",
+        "dose_maxima": "100 mcg 8/8 h",
+        "contraindicacoes": ["alergia", "bradicardia grave"],
+        "efeitos_adversos": ["náusea", "dor abdominal", "hiperglicemia", "bradicardia", "esteatorreia em uso prolongado"],
+        "apresentacoes": ["ampola 0,05 mg/mL (1 mL)", "ampola 0,1 mg/mL (1 mL)", "frasco 0,5 mg/1 mL"],
+        "preparo": "Usar direto para via SC; para IV diluir em 50 mL de SF 0,9%",
+        "tempo_infusao": "SC não se aplica; IV 15–30 min",
+        "monitorizacao": ["glicemia horária nas primeiras 4 h", "frequência cardíaca", "dor abdominal"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Reduz a necessidade de glicose e o tempo de internação na intoxicação por sulfonilureia; uso off-label, decidir com o serviço",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura (off-label)",
+        "claim_id": null
+      },
+      {
+        "classe": "corticosteroide",
+        "agente": "hidrocortisona",
+        "papel": "condicional",
+        "indicacao": "suspeita de insuficiência adrenal",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose inicial; depois 50 mg 6/6 h",
+        "duracao": "até confirmação e estabilidade",
+        "dose_maxima": "200 mg/dia",
+        "contraindicacoes": ["infecção fúngica sistêmica não tratada", "hiperglicemia sem suspeita de adrenal"],
+        "efeitos_adversos": ["hiperglicemia", "hipernatremia", "hipocalemia", "imunossupressão"],
+        "apresentacoes": ["frasco-ampola 100 mg (pó)", "frasco-ampola 500 mg", "succinato sódico de hidrocortisona 100 mg"],
+        "preparo": "Reconstituir em 2 mL de água destilada e diluir em 50–100 mL de SF 0,9%",
+        "tempo_infusao": "bolus lento de 2–3 min ou 30 min",
+        "monitorizacao": ["glicemia", "pressão arterial", "sódio e potássio", "cortisol colhido antes da dose"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Suspeitar em hipoglicemia com hipotensão, hiponatremia, hipercalemia ou uso crônico de corticoide; colher cortisol basal antes quando possível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "tiamina",
+        "papel": "condicional",
+        "indicacao": "etilismo, desnutrição ou vômitos prolongados",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "IV ou IM",
+        "frequencia": "1x/dia",
+        "duracao": "3–5 dias",
+        "dose_maxima": "500 mg/dia na encefalopatia de Wernicke",
+        "contraindicacoes": ["alergia"],
+        "efeitos_adversos": ["reação anafilactoide rara em infusão rápida", "dor no local da aplicação IM"],
+        "apresentacoes": ["ampola 100 mg/mL", "ampola 300 mg/mL"],
+        "preparo": "Diluir 100 mg em 50–100 mL de SF 0,9%",
+        "tempo_infusao": "30 min, nunca em bolus rápido",
+        "monitorizacao": ["reação alérgica nas primeiras doses", "estado neurológico e marcha"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Dar antes ou junto da glicose em etilista; não atrasar a glicose esperando a tiamina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_da_secrecao_de_insulina",
+        "agente": "diazóxido",
+        "papel": "condicional",
+        "indicacao": "insulinoma ou hiperinsulinismo com hipoglicemia recorrente",
+        "dose": "50–100 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "até a definição cirúrgica",
+        "dose_maxima": "600 mg/dia",
+        "contraindicacoes": ["insuficiência cardíaca descompensada", "hipertensão grave não controlada"],
+        "efeitos_adversos": ["retenção hídrica e edema", "hipertricose", "náusea", "hipotensão"],
+        "apresentacoes": ["cápsula 50 mg", "comprimido 25 mg conforme serviço"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["glicemia capilar 4–6x/dia", "peso e edema", "pressão arterial"],
+        "ajuste_renal": "Reduzir na insuficiência renal grave por metabólito ativo",
+        "observacoes": "Ponte até a cirurgia no insulinoma; confirmar disponibilidade local antes de prescrever",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Regra 15/15", "detalhe": "15 g de carboidrato de absorção rápida, medir a glicemia em 15 min e repetir até 70 mg/dL; só então refeição" },
+      { "medida": "Refeição completa antes da alta", "detalhe": "30–40 g de carboidrato complexo com proteína e observação de 1 h com glicemia de controle; nunca liberar sem comer" },
+      { "medida": "Glicemia capilar seriada", "detalhe": "de 15/15 min durante a correção e de 1/1 h por 4–6 h; 12–24 h se sulfonilureia ou insulina de ação longa" },
+      { "medida": "Acesso venoso precoce", "detalhe": "dois acessos 18–20 G no paciente rebaixado; puncionar antes de acordar, não depois" },
+      { "medida": "Proteção de via aérea", "detalhe": "decúbito lateral e aspiração em convulsão ou coma; nunca dar líquido por boca com rebaixamento" },
+      { "medida": "Revisão do esquema culpado", "detalhe": "conferir dose, horário, técnica de aplicação, sítio de injeção e adesão com o prescritor antes da alta" },
+      { "medida": "Educação do paciente e do acompanhante", "detalhe": "reconhecer sintomas, portar 15 g de carboidrato e treinar o uso do glucagon" }
+    ],
+    "procedimentos": [
+      { "nome": "Acesso venoso periférico calibroso", "indicacao": "hipoglicemia grave ou rebaixamento", "tecnica": "18–20 G em veia de antebraço; testar refluxo antes de glicose 50% e evitar dobras de flexão", "complicacoes": "Flebite química, extravasamento com necrose, punção arterial acidental" },
+      { "nome": "Acesso intraósseo", "indicacao": "criança pequena ou adulto em choque sem acesso periférico após duas tentativas", "tecnica": "Agulha intraóssea na tíbia proximal ou no úmero; confirmar por aspiração e infusão sob pressão", "complicacoes": "Extravasamento subperiosteal, osteomielite, fratura óssea" },
+      { "nome": "Glicemia capilar seriada com protocolo de 15 min", "indicacao": "todos os casos em correção", "tecnica": "Glicosímetro calibrado, registro de hora e valor em cada medida, repetir 15 min após cada dose", "complicacoes": "Leitura falsa em hipoperfusão, edema ou anemia; ácido ascórbico interfere" },
+      { "nome": "Coleta crítica durante a hipoglicemia", "indicacao": "hipoglicemia inexplicada ou em paciente sem diabetes", "tecnica": "Colher glicose, insulina, peptídeo C, cortisol e sulfonilureia em tubo com fluoreto antes de administrar glicose", "complicacoes": "Coleta após a glicose invalida o diagnóstico e obriga a repetir o episódio" },
+      { "nome": "Teste de jejum de 72 h supervisionado", "indicacao": "suspeita de insulinoma com tríade de Whipple incompleta", "tecnica": "Internação com glicemia de 6/6 h, interrupção quando glicemia abaixo de 45 mg/dL com sintomas e coleta do pacote crítico", "complicacoes": "Hipoglicemia grave, convulsão, necessidade de interrupção precoce" }
+    ],
+    "metas": [
+      "Glicemia de 70 mg/dL ou mais em 15 min após o primeiro tratamento e 100 mg/dL ou mais antes da alta",
+      "Nenhuma glicemia abaixo de 54 mg/dL após a primeira correção",
+      "Refeição completa administrada antes da alta em todos os casos",
+      "Causa identificada e registrada no prontuário, com o esquema culpado revisado antes da alta",
+      "Observação mínima de 4–6 h sem recidiva; 12–24 h se sulfonilureia ou insulina de ação longa"
+    ],
+    "fluxo": [
+      "Medir a glicemia capilar em todo paciente com rebaixamento, convulsão, sudorese ou confusão, antes de qualquer outra hipótese",
+      "Classificar: leve (consciente e deglutindo) ou grave (rebaixamento, convulsão ou incapaz de deglutir)",
+      "Leve: 15 g de carboidrato oral, reavaliar em 15 min, repetir até 70 mg/dL e depois refeição",
+      "Grave com acesso: glicose 50% 20–40 mL IV em 2–3 min e reavaliação em 15 min",
+      "Grave sem acesso: glucagon 1 mg IM e obtenção de acesso em paralelo; sem resposta em 15 min, insistir no acesso",
+      "Recidiva ou causa de ação longa: dextrose 10% em infusão contínua, glicemia horária e octreotida se sulfonilureia refratária",
+      "Buscar a causa em todo episódio grave ou recorrente: insulina, sulfonilureia, álcool, sepse, adrenal, renal, insulinoma",
+      "Antes da alta: refeição, glicemia de controle em 1 h, revisão do esquema, receita de glucagon e orientação escrita"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "idoso", "ajuste": "alvo glicêmico mais alto (100–180 mg/dL) e reduzir ou trocar a sulfonilureia", "alerta": "hipoglicemia causa queda, fratura e declínio cognitivo; betabloqueador mascara os sintomas adrenérgicos" },
+      { "populacao": "renal_cronico", "ajuste": "reduzir insulina e sulfonilureia e prolongar a observação para 12–24 h", "alerta": "acúmulo de fármaco e hipoglicemia recorrente após a alta" },
+      { "populacao": "etilista_ou_desnutrido", "ajuste": "tiamina 100 mg IV antes ou junto da glicose e dextrose contínua", "alerta": "glicogênio depletado torna o glucagon pouco eficaz e há risco de Wernicke" },
+      { "populacao": "gestante", "ajuste": "alvo de 63–140 mg/dL, glicose IV sem restrição e monitorização fetal após episódio grave", "alerta": "hipoglicemia materna se associa a sofrimento fetal" },
+      { "populacao": "pediatria", "ajuste": "glicose 10% 2–5 mL/kg (0,2–0,5 g/kg) em vez de 50%; glucagon 0,5 mg abaixo de 25 kg e 1 mg acima", "alerta": "extravasamento e necrose com glicose hipertônica; evitar correção rápida e hiponatremia" },
+      { "populacao": "pos_bariatrica", "ajuste": "fracionar as refeições e evitar carboidrato simples isolado", "alerta": "hipoglicemia pós-prandial por dumping e hiperinsulinismo, com recidiva apesar do esquema correto" },
+      { "populacao": "cardiopata_em_uso_de_betabloqueador", "ajuste": "medir glicemia diante de qualquer alteração de consciência", "alerta": "sintomas adrenérgicos mascarados e bradicardia persistente após a correção" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "glicemia capilar e venosa", "indicacao": "todos", "o_que_muda": "confirma o diagnóstico, afasta erro do glicosímetro e define leve versus grave" },
+        { "nome": "insulina, peptídeo C e sulfonilureia em amostra crítica", "indicacao": "hipoglicemia sem diabetes ou recorrente", "o_que_muda": "insulina alta com peptídeo C alto sugere insulinoma; peptídeo C baixo com insulina alta sugere insulina exógena; sulfonilureia positiva fecha a causa medicamentosa oculta" },
+        { "nome": "cortisol e ACTH", "indicacao": "hipoglicemia com hipotensão, hiponatremia ou hipercalemia", "o_que_muda": "cortisol baixo indica insuficiência adrenal e muda o tratamento para hidrocortisona" },
+        { "nome": "ureia, creatinina, eletrólitos e função hepática", "indicacao": "todos", "o_que_muda": "insuficiência renal ou hepática prolonga a hipoglicemia e amplia a observação" },
+        { "nome": "hemograma, PCR, lactato e culturas", "indicacao": "febre ou hipotensão", "o_que_muda": "identifica sepse como causa e antecipa antibiótico" },
+        { "nome": "TSH e T4 livre", "indicacao": "bradicardia, hipotermia ou mixedema", "o_que_muda": "hipotireoidismo grave como causa e necessidade de reposição hormonal" }
+      ],
+      "evitar": [
+        { "exame": "dosar insulina depois de já ter administrado glicose", "motivo": "invalida o diagnóstico; a coleta precisa ocorrer durante a hipoglicemia" },
+        { "exame": "tomografia de crânio antes de medir a glicemia", "motivo": "atrasa a correção de uma causa reversível em minutos" },
+        { "exame": "alta guiada apenas por uma glicemia normal após a dose", "motivo": "sulfonilureia e insulina de ação longa recidivam em 6–24 h" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["carregar sempre 15 g de carboidrato e o glucagon", "medir a glicemia antes de dirigir ou de dormir", "fazer refeição com carboidrato complexo e proteína após cada episódio", "revisar dose e técnica de aplicação com a equipe", "ensinar o acompanhante a reconhecer os sinais e a aplicar o glucagon"],
+      "evitar": ["sair de casa sem carboidrato de resgate", "beber álcool em jejum", "corrigir com chocolate ou alimento gorduroso", "pular refeição após insulina de ação rápida", "ajustar a dose de insulina por conta própria"],
+      "retorno": ["nova hipoglicemia no mesmo dia", "confusão, convulsão ou sonolência", "sudorese e tremor que persistem apesar de comer", "febre ou vômitos com dificuldade de se alimentar"]
+    },
+    "efeitos_adversos": [
+      { "agente": "glicose 50%", "efeitos": ["hiperglicemia", "flebite e necrose por extravasamento"], "observacao": "usar veia calibrosa, conferir refluxo e inspecionar o sítio durante a infusão" },
+      { "agente": "glucagon", "efeitos": ["náusea e vômito", "hiperglicemia"], "observacao": "proteger via aérea, pois o vômito em paciente rebaixado pode ser aspirado" },
+      { "agente": "dextrose 10%", "efeitos": ["hiperglicemia", "hipocalemia", "sobrecarga de volume"], "observacao": "dosar potássio a cada 6 h e ajustar a taxa pela glicemia capilar" },
+      { "agente": "octreotida", "efeitos": ["náusea", "hiperglicemia", "bradicardia"], "observacao": "monitorar glicemia horária nas primeiras 4 h" },
+      { "agente": "hidrocortisona", "efeitos": ["hiperglicemia", "hipernatremia", "imunossupressão"], "observacao": "reavaliar necessidade após o resultado do cortisol" },
+      { "agente": "diazóxido", "efeitos": ["edema", "hipotensão", "hipertricose"], "observacao": "pesar diariamente e suspender se edema sintomático" }
+    ],
+    "conduta_efeito_adverso": [
+      "Interromper a infusão ou a via implicada e registrar hora, dose e sintoma",
+      "Extravasamento de glicose hipertônica: parar imediatamente, aspirar o resíduo, elevar o membro e avaliar cirurgia se necrose",
+      "Hiperglicemia acentuada após a correção: reduzir a taxa de dextrose e reavaliar em 30 min, sem suspender a vigilância",
+      "Hipocalemia em infusão contínua de dextrose: repor potássio e dosar magnésio",
+      "Náusea e vômito com glucagon: posicionar em decúbito lateral, aspirar e manter acesso venoso",
+      "Reação alérgica à tiamina: suspender, tratar conforme gravidade e registrar a reação",
+      "Reescrever a prescrição antes de sair do leito, com a alternativa escolhida"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "glicose 15 g sachê", "dose": "15 g", "via": "VO", "frequencia": "em hipoglicemia, repetir em 15 min", "duracao": "uso conforme necessidade", "condicao": "resgate domiciliar", "confirmar_apresentacao_local": true },
+          { "item": "glucagon 1 mg frasco-ampola", "dose": "1 mg", "via": "IM", "frequencia": "dose única em hipoglicemia grave", "duracao": "uso conforme necessidade", "condicao": "paciente em risco com acompanhante treinado", "confirmar_apresentacao_local": true },
+          { "item": "glucagon pó nasal 3 mg", "dose": "3 mg", "via": "intranasal", "frequencia": "dose única", "duracao": "uso conforme necessidade", "condicao": "alternativa sem agulha", "confirmar_apresentacao_local": true },
+          { "item": "tiamina 100 mg", "dose": "100 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "30 dias", "condicao": "etilismo ou desnutrição", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "glicose 50%", "dose": "20–40 mL", "via": "IV", "frequencia": "bolus, repetir em 15 min se necessário", "monitorizacao": "glicemia em 15 min e sítio de infusão", "confirmar_apresentacao_local": true },
+          { "item": "dextrose 10%", "dose": "100 mL/h titulado", "via": "IV", "frequencia": "infusão contínua", "monitorizacao": "glicemia horária e potássio", "confirmar_apresentacao_local": true },
+          { "item": "glucagon", "dose": "1 mg", "via": "IM", "frequencia": "dose única", "monitorizacao": "glicemia em 15 min", "confirmar_apresentacao_local": true },
+          { "item": "octreotida", "dose": "50–100 mcg", "via": "SC", "frequencia": "8/8 h", "monitorizacao": "glicemia e frequência cardíaca", "confirmar_apresentacao_local": true },
+          { "item": "tiamina", "dose": "100 mg", "via": "IV", "frequencia": "1x/dia", "monitorizacao": "reação alérgica", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["glicemia", "insulina", "peptídeo C", "sulfonilureia", "cortisol", "função renal", "função hepática", "hemograma", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de hipoglicemia, necessitando de afastamento por dias.", "dias": null, "cid": null, "observacao": "dias são decisão médica" },
+      "encaminhamento": { "campos": ["destino", "motivo", "resumo com glicemia inicial, tratamento usado e recidivas", "prioridade", "horário do contato"] },
+      "relatorio": { "texto_template": "Paciente com hipoglicemia, glicemia inicial, classificação leve ou grave, tratamento administrado, causa provável, recidivas e plano de ajuste." }
+    },
+    "anamnese": {
+      "campos": ["glicemia", "sintomas", "consciência", "diabetes", "insulina e sulfonilureia", "última refeição", "álcool", "episódios prévios", "febre"],
+      "texto_template": "Paciente com glicemia de ___ mg/dL, sintomas ___, consciência ___, diabetes ___, uso de insulina ou sulfonilureia ___, última refeição ___, álcool ___, episódios prévios ___ e febre ___."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais", "glicemia capilar", "nível de consciência", "exame neurológico", "sítios de aplicação de insulina", "perfusão", "sinais de infecção"],
+      "texto_template": "Sinais vitais, glicemia capilar, nível de consciência, exame neurológico, sítios de aplicação, perfusão e sinais de infecção."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de hipoglicemia, alvo glicêmico e critérios de observação", "verificar": true },
+      { "tipo": "sociedade_diabetes", "o_que_verificar": "regra 15/15, dose de glucagon e alvo por perfil", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações de glicose 50%, dextrose 10% e glucagon", "verificar": true },
+      { "tipo": "diretriz_endocrinologia", "o_que_verificar": "investigação de hipoglicemia em não diabético e teste de jejum", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-END01-01", "tipo": "hipoglicemia_grave", "gatilho": "rebaixamento de consciência ou convulsão sem glicemia registrada", "severidade": "grave", "mensagem": "Medir a glicemia e administrar glicose antes de qualquer outra conduta.", "acao": "acionar protocolo de hipoglicemia grave", "bloqueante": true },
+      { "id": "SA-END01-02", "tipo": "alta_sem_refeicao", "gatilho": "alta prescrita sem refeição registrada após correção da hipoglicemia", "severidade": "grave", "mensagem": "Não liberar sem refeição e glicemia de controle em 1 h.", "acao": "bloquear alta", "bloqueante": true },
+      { "id": "SA-END01-03", "tipo": "glicose_hipertonica_em_crianca", "gatilho": "glicose 50% prescrita para menor de 12 anos", "severidade": "grave", "mensagem": "Usar glicose 10% 2–5 mL/kg em vez de 50%.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-END01-04", "tipo": "sulfonilureia", "gatilho": "alta em menos de 12 h de hipoglicemia por sulfonilureia", "severidade": "grave", "mensagem": "Risco de recidiva prolongada; manter observação e dextrose.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-END01-05", "tipo": "wernicke", "gatilho": "etilismo ou desnutrição sem tiamina prescrita", "severidade": "precaucao", "mensagem": "Prescrever tiamina antes ou junto da glicose.", "acao": "sugerir item", "bloqueante": false },
+      { "id": "SA-END01-06", "tipo": "recorrencia", "gatilho": "segundo episódio de hipoglicemia em 30 dias sem investigação de causa", "severidade": "precaucao", "mensagem": "Investigar causa: insulina, sulfonilureia, adrenal, renal ou insulinoma.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "diretriz ADA/SBD", "literatura"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita integral: separação entre hipoglicemia leve (15 g de carboidrato oral) e grave (glicose 50% 20–40 mL IV ou glucagon 1 mg IM sem acesso), regra de reavaliação em 15 min, dextrose 10% em infusão contínua, octreotida na sulfonilureia refratária, busca de causa (insulina, sulfonilureia, álcool, sepse, adrenal, renal, insulinoma), bloqueio de alta sem refeição e apresentações, preparo, tempo de infusão e monitorização de cada fármaco.", "data": null }
+      ]
+    }
+  }
+}

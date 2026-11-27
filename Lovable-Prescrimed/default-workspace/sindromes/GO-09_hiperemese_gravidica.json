@@ -1,0 +1,1130 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GO-09",
+    "area": "Ginecologia/Obstetrícia",
+    "nome": "Hiperêmese gravídica",
+    "aliases": [
+      "Hiperêmese gravídica",
+      "hiperêmese gravídica",
+      "hiperemese",
+      "hyperemesis gravidarum",
+      "vômito incoercível da gestação",
+      "náusea e vômito da gestação",
+      "êmese gravídica"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Hiperêmese gravídica é a forma grave da náusea e do vômito da gestação, e não é enjoo matinal prolongado. O diagnóstico exige mais do que queixa de vômito: perda de peso acima de 5% do peso pré-gestacional, desidratação clínica, cetose urinária e distúrbio eletrolítico, em geral com início entre 4 e 10 semanas e sem outra causa que explique o quadro. A fisiopatologia envolve hormônios placentários, mas o que mata não é o hormônio: é a hipovolemia, a hipocalemia, a hiponatremia, a cetose prolongada e, sobretudo, a encefalopatia de Wernicke por deficiência de tiamina — que se instala quando se infunde glicose em paciente desnutrida sem repor tiamina antes. Por isso a regra de ouro é tiamina antes da glicose, sempre. A hidratação é com soro fisiológico acrescido de cloreto de potássio; soro glicosado isolado piora a hiponatremia e precipita Wernicke. O tratamento farmacológico é escalonado: doxilamina com piridoxina e metoclopramida na primeira linha, ondansetrona e prometazina quando falham, corticoide apenas no refratário e após 10 semanas pela associação com fissura orofacial. A ondansetrona não é proibida, mas não se usa em dose alta e por tempo prolongado no primeiro trimestre sem discutir o risco com a paciente e registrar a decisão. Quando a via oral falha por mais de uma semana, a nutrição enteral por sonda nasoenteral vem antes da parenteral; a nutrição parenteral total fica para falha da enteral, íleo ou complicação cirúrgica. Alta sem critério — paciente ainda com cetose, perda de peso ou potássio baixo — é o erro que devolve a paciente em pior estado.",
+    "inclusao": [
+      "Gestante com vômitos persistentes que impedem a ingestão oral adequada",
+      "Perda de peso acima de 5% do peso pré-gestacional",
+      "Cetose urinária com desidratação clínica na gestação",
+      "Distúrbio eletrolítico atribuído a vômitos: hipocalemia, hiponatremia ou alcalose metabólica",
+      "Hiperêmese que não responde ao tratamento ambulatorial com antieméticos orais",
+      "Recorrência de hiperêmese em gestação anterior com necessidade de internação"
+    ],
+    "exclusao": [
+      {
+        "situacao": "náusea matinal leve com ingestão preservada e sem perda de peso",
+        "fluxo": "acompanhamento ambulatorial de pré-natal"
+      },
+      {
+        "situacao": "dor abdominal localizada, febre ou sinal de irritação peritoneal",
+        "fluxo": "avaliação cirúrgica e GO-02 dor abdominal"
+      },
+      {
+        "situacao": "hipertensão após 20 semanas com cefaleia, escotomas ou dor epigástrica",
+        "fluxo": "GO-03 pré-eclâmpsia"
+      },
+      {
+        "situacao": "vômito com sangue ou melena",
+        "fluxo": "GI-09 hemorragia digestiva alta"
+      },
+      {
+        "situacao": "febre, disúria ou dor lombar",
+        "fluxo": "GO-10 infecção urinária na gestação"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "perda de peso acima de 5% com cetose e mucosas secas",
+        "por_que": "desidratação e catabolismo com risco de lesão renal",
+        "acao": "internação, hidratação com SF e potássio, controle de diurese",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "confusão, nistagmo, ataxia ou alteração de memória",
+        "por_que": "encefalopatia de Wernicke por deficiência de tiamina",
+        "acao": "tiamina 500 mg IV 8/8 h imediatamente e suspender glicose sem tiamina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "potássio abaixo de 3,0 mEq/L ou sódio abaixo de 130 mEq/L",
+        "por_que": "arritmia e convulsão",
+        "acao": "reposição monitorizada com eletrólitos seriados e eletrocardiograma",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "oligúria, creatinina em ascensão ou ureia acima de 50 mg/dL",
+        "por_que": "necrose tubular aguda por hipovolemia",
+        "acao": "reposição volêmica agressiva e avaliação de diálise se refratário",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "vômitos com sangue ou dor epigástrica intensa",
+        "por_que": "síndrome de Mallory-Weiss ou úlcera",
+        "acao": "avaliação digestiva e endoscopia após estabilização",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "febre, taquicardia e dor abdominal em paciente com hiperêmese",
+        "por_que": "infecção associada ou complicação cirúrgica",
+        "acao": "culturas, imagem dirigida e antibiótico",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "vômitos que persistem após 7 dias de tratamento escalonado",
+        "por_que": "hiperêmese refratária com risco nutricional",
+        "acao": "avaliar nutrição enteral e corticoide conforme idade gestacional",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Qual o peso antes da gestação e quanto perdeu desde o início dos vômitos?",
+      "Consegue manter líquidos e alimentos? Quantas vezes vomita por dia?",
+      "A urina está escura e em pequeno volume?",
+      "Tem tontura ao levantar, palpitação ou fraqueza muscular?",
+      "Já teve hiperêmese em gestação anterior?",
+      "Usa algum antiemético? Qual, em que dose e por quanto tempo?",
+      "Tem dor abdominal, febre, disúria ou corrimento?",
+      "A última ultrassonografia mostrou gestação única e viável?",
+      "Tem diabetes, doença renal ou hepática, ou usa medicação contínua?",
+      "Está conseguindo trabalhar e se alimentar, ou a doença já afastou das atividades?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Náusea e vômito com ingestão preservada, sem perda de peso e sem cetose",
+        "escolha": "Tratamento ambulatorial com doxilamina associada à piridoxina e medidas dietéticas",
+        "porque": "É o esquema com melhor perfil de segurança na gestação e resolve a maioria dos casos leves sem internação"
+      },
+      {
+        "cenario": "Perda de peso acima de 5%, cetose, desidratação ou distúrbio eletrolítico",
+        "escolha": "Internação, soro fisiológico com cloreto de potássio, tiamina antes de qualquer glicose e antiemético parenteral",
+        "porque": "A via oral não é confiável no vômito incoercível e a correção volêmica e eletrolítica é o que interrompe o ciclo"
+      },
+      {
+        "cenario": "Falha da doxilamina com piridoxina em dose plena",
+        "escolha": "Associar metoclopramida 10 mg 8/8 h, pelo menor tempo possível",
+        "porque": "A metoclopramida é eficaz e segura, mas o uso prolongado aumenta distonia e sintomas extrapiramidais"
+      },
+      {
+        "cenario": "Falha de duas classes de antieméticos",
+        "escolha": "Ondansetrona na menor dose eficaz, com discussão documentada do risco no primeiro trimestre",
+        "porque": "Há associação com fissura orofacial em grandes coortes, de magnitude absoluta pequena, e a decisão deve ser compartilhada"
+      },
+      {
+        "cenario": "Hiperêmese refratária após 10 semanas de gestação",
+        "escolha": "Prednisona 40 mg/dia por 3 a 5 dias, com desmame se houver resposta",
+        "porque": "O corticoide é eficaz no refratário, mas o risco de fissura orofacial é maior antes de 10 semanas"
+      },
+      {
+        "cenario": "Vômitos por mais de 7 dias com intolerância oral e perda de peso progressiva",
+        "escolha": "Nutrição enteral por sonda nasoenteral com fórmula polimérica; parenteral apenas se falha ou íleo",
+        "porque": "A via enteral preserva a mucosa intestinal, é mais barata e tem menos complicações infecciosas que a parenteral"
+      },
+      {
+        "cenario": "Paciente com hipotensão, taquicardia e oligúria",
+        "escolha": "Ringer lactato ou SF 0,9% em bolus de 1.000 mL, reavaliação e sonda vesical",
+        "porque": "A reposição volêmica é a prioridade e a diurese é o melhor marcador de resposta"
+      },
+      {
+        "cenario": "Paciente que retorna com os mesmos sintomas após alta precoce",
+        "escolha": "Reinternação e revisão dos critérios de alta; não reiniciar apenas antiemético oral",
+        "porque": "Alta com cetose ou eletrólito alterado é a causa mais comum de readmissão"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antiemetico_associacao",
+        "agente": "doxilamina + piridoxina",
+        "papel": "primeira_linha",
+        "indicacao": "náusea e vômito da gestação, incluindo hiperêmese leve a moderada",
+        "dose": "10 mg + 10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "2 comprimidos à noite e 1 pela manhã; ajustar até 8/8 h",
+        "duracao": "até controle dos sintomas, com reavaliação em 1 semana",
+        "dose_maxima": "4 comprimidos/dia (40 mg de cada componente)",
+        "contraindicacoes": [
+          "glaucoma de ângulo fechado",
+          "retenção urinária",
+          "uso de inibidor da monoaminoxidase",
+          "hipersensibilidade aos componentes"
+        ],
+        "efeitos_adversos": [
+          "sonolência",
+          "tontura",
+          "boca seca",
+          "visão turva",
+          "constipação"
+        ],
+        "apresentacoes": [
+          "comprimido de liberação prolongada 10 mg de doxilamina + 10 mg de piridoxina",
+          "comprimido 10 mg de cada componente"
+        ],
+        "preparo": "Uso direto, com um copo de água; não partir o comprimido de liberação prolongada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número de vômitos por dia",
+          "nível de sonolência e capacidade de dirigir",
+          "peso e aceitação alimentar",
+          "retenção urinária e visão turva"
+        ],
+        "ajuste_renal": "Sem ajuste na dose habitual; iniciar com 1 comprimido à noite em ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Primeira escolha na gestação por segurança; a sonolência é esperada e costuma ser o motivo de abandono, por isso orientar o uso noturno",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/FDA",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_dopaminergico",
+        "agente": "metoclopramida",
+        "papel": "primeira_linha",
+        "indicacao": "hiperêmese quando a doxilamina com piridoxina falha ou quando a via oral não é confiável",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "IV, IM ou VO",
+        "frequencia": "8/8 h",
+        "duracao": "até 5 dias por via parenteral; reavaliar a cada 24 h",
+        "dose_maxima": "30 mg/dia",
+        "contraindicacoes": [
+          "obstrução ou perfuração intestinal",
+          "feocromocitoma",
+          "epilepsia não controlada",
+          "doença de Parkinson",
+          "histórico de distonia por metoclopramida",
+          "hipersensibilidade ao fármaco"
+        ],
+        "efeitos_adversos": [
+          "distonia e crise oculógira",
+          "sonolência",
+          "inquietação",
+          "diarreia",
+          "galactorreia"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "solução oral 4 mg/mL",
+          "ampola 5 mg/mL (2 mL)",
+          "frasco 5 mg/mL"
+        ],
+        "preparo": "IV: diluir a ampola em 10 mL de SF 0,9% e infundir lentamente; VO: uso direto 30 minutos antes das refeições",
+        "tempo_infusao": "2 a 3 minutos por via intravenosa; não se aplica por via oral",
+        "monitorizacao": [
+          "movimentos anormais de pescoço, olhos e tronco após cada dose",
+          "nível de sedação",
+          "resposta clínica em 24 h",
+          "diarreia"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: reduzir para 5 mg 8/8 h",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não associar à prometazina: o risco de distonia e sedação se soma. Se houver reação extrapiramidal, usar biperideno e suspender o fármaco",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_5ht3",
+        "agente": "ondansetrona",
+        "papel": "condicional",
+        "indicacao": "hiperêmese refratária a duas classes de antieméticos, com decisão de risco documentada no primeiro trimestre",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "8/8 h",
+        "duracao": "até 48 a 72 horas, pelo menor tempo possível",
+        "dose_maxima": "8 mg por dose e 16 mg/dia; evitar dose cumulativa alta no primeiro trimestre",
+        "contraindicacoes": [
+          "síndrome do QT longo congênito",
+          "uso concomitante de apomorfina",
+          "hipersensibilidade ao fármaco"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "constipação",
+          "prolongamento do QT",
+          "tontura",
+          "rubor"
+        ],
+        "apresentacoes": [
+          "comprimido 4 mg e 8 mg",
+          "solução oral 4 mg/5 mL",
+          "ampola 4 mg/2 mL",
+          "ampola 8 mg/4 mL"
+        ],
+        "preparo": "IV: diluir a ampola em 50 mL de SF 0,9%; VO: uso direto",
+        "tempo_infusao": "15 minutos por via intravenosa; não se aplica por via oral",
+        "monitorizacao": [
+          "eletrocardiograma em cardiopatia ou uso de outros fármacos que prolongam o QT",
+          "potássio e magnésio",
+          "resposta clínica em 48 h",
+          "cefaleia e constipação"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em Child C",
+        "observacoes": "Não usar em dose alta nem por tempo prolongado no primeiro trimestre sem discutir o risco de fissura orofacial e registrar a decisão no prontuário. Preferir a menor dose eficaz e suspender assim que possível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "fenotiazina",
+        "agente": "prometazina",
+        "papel": "alternativa",
+        "indicacao": "hiperêmese refratária quando não há ondansetrona ou metoclopramida disponível",
+        "dose": "12,5 a 25 mg",
+        "unidade": "mg",
+        "via": "IV ou IM",
+        "frequencia": "6/6 h",
+        "duracao": "até 48 a 72 horas",
+        "dose_maxima": "100 mg/dia",
+        "contraindicacoes": [
+          "rebaixamento de consciência",
+          "uso de inibidor da monoaminoxidase",
+          "glaucoma de ângulo fechado",
+          "retenção urinária",
+          "hipotensão",
+          "alergia a fenotiazina"
+        ],
+        "efeitos_adversos": [
+          "sedação intensa",
+          "hipotensão",
+          "distonia",
+          "dor e necrose no local da injeção",
+          "fotossensibilidade"
+        ],
+        "apresentacoes": [
+          "comprimido 25 mg",
+          "ampola 50 mg/2 mL",
+          "solução oral 5 mg/mL"
+        ],
+        "preparo": "IM profunda no quadrante superior lateral da nádega; IV apenas diluída em 20 mL de SF 0,9% e em acesso calibroso",
+        "tempo_infusao": "10 a 15 minutos por via intravenosa; não se aplica por via intramuscular",
+        "monitorizacao": [
+          "pressão arterial após cada dose",
+          "nível de consciência",
+          "movimentos extrapiramidais",
+          "local da injeção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Nunca por via intra-arterial ou subcutânea: causa necrose. Não associar à metoclopramida e evitar em paciente já sedada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico",
+        "agente": "dimenidrinato",
+        "papel": "alternativa",
+        "indicacao": "náusea e vômito da gestação quando a doxilamina não está disponível",
+        "dose": "50 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "até 1 semana, com reavaliação",
+        "dose_maxima": "300 mg/dia",
+        "contraindicacoes": [
+          "glaucoma de ângulo fechado",
+          "retenção urinária",
+          "crise convulsiva",
+          "hipersensibilidade ao fármaco"
+        ],
+        "efeitos_adversos": [
+          "sonolência",
+          "boca seca",
+          "visão turva",
+          "tontura",
+          "taquicardia"
+        ],
+        "apresentacoes": [
+          "comprimido 50 mg",
+          "solução oral 3 mg/mL",
+          "ampola 50 mg/mL"
+        ],
+        "preparo": "VO: uso direto; IV: diluir a ampola em 10 mL de SF 0,9%",
+        "tempo_infusao": "2 a 3 minutos por via intravenosa; não se aplica por via oral",
+        "monitorizacao": [
+          "sonolência",
+          "pressão arterial",
+          "resposta clínica em 48 h"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Alternativa de custo baixo e ampla disponibilidade; não associar a outros anti-histamínicos sedativos",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "prednisona",
+        "papel": "resgate",
+        "indicacao": "hiperêmese refratária a pelo menos duas classes de antieméticos, após 10 semanas de gestação",
+        "dose": "40 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3 a 5 dias; se houver resposta, desmame em 2 semanas",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": [
+          "infecção não tratada",
+          "diabetes descompensado",
+          "gestação abaixo de 10 semanas",
+          "úlcera péptica ativa",
+          "psicose ativa"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "insônia",
+          "humor alterado",
+          "infecção",
+          "retenção hídrica"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg, 20 mg e 50 mg"
+        ],
+        "preparo": "Uso direto pela manhã, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia capilar",
+          "pressão arterial",
+          "humor e sono",
+          "sinais de infecção",
+          "resposta em 72 h para decidir manutenção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Cautela em hepatopatia grave; preferir prednisolona se houver disfunção hepática importante",
+        "observacoes": "Não iniciar antes de 10 semanas pelo risco de fissura orofacial. Se não houver resposta em 5 dias, suspender e não insistir",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "tiamina (vitamina B1)",
+        "papel": "primeira_linha",
+        "indicacao": "prevenção e tratamento de encefalopatia de Wernicke em hiperêmese com vômitos prolongados e desnutrição",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h por 2 a 3 dias; depois 100 mg/dia",
+        "duracao": "até retomada da dieta adequada",
+        "dose_maxima": "500 mg 8/8 h no tratamento de Wernicke instalada",
+        "contraindicacoes": [
+          "hipersensibilidade ao fármaco"
+        ],
+        "efeitos_adversos": [
+          "reação anafilactoide rara com infusão rápida",
+          "dor no local",
+          "hipotensão transitória"
+        ],
+        "apresentacoes": [
+          "ampola 100 mg/mL (1 mL)",
+          "frasco-ampola 100 mg"
+        ],
+        "preparo": "Diluir a ampola em 50 a 100 mL de SF 0,9%; nunca administrar junto da glicose na mesma via sem antes infundir a tiamina",
+        "tempo_infusao": "30 minutos por via intravenosa",
+        "monitorizacao": [
+          "estado neurológico: confusão, nistagmo, ataxia",
+          "pressão arterial durante a infusão",
+          "reação alérgica nas primeiras doses"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Infundir antes de qualquer solução glicosada. A glicose sem tiamina precipita Wernicke e é o erro mais grave no manejo da hiperêmese",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/MS",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide",
+        "agente": "soro fisiológico 0,9%",
+        "papel": "primeira_linha",
+        "indicacao": "reidratação na hiperêmese com desidratação, cetose e distúrbio eletrolítico",
+        "dose": "1.000 a 2.000 mL em 24 horas",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "infusão contínua, com bolus de 500 a 1.000 mL na hipotensão",
+        "duracao": "até tolerância oral e diurese adequada",
+        "dose_maxima": "individualizar pelo balanço hídrico e pela diurese",
+        "contraindicacoes": [
+          "edema agudo de pulmão",
+          "insuficiência cardíaca descompensada sem monitorização"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga volêmica",
+          "hipercloremia em volumes grandes",
+          "hipocalemia por diluição se não repuser potássio"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL",
+          "frasco 500 mL"
+        ],
+        "preparo": "Adicionar cloreto de potássio ao soro conforme o potássio sérico; nunca infundir potássio em bolus",
+        "tempo_infusao": "infusão contínua; bolus em 30 a 60 minutos na hipotensão",
+        "monitorizacao": [
+          "diurese por sonda vesical",
+          "sódio e potássio a cada 12 a 24 horas",
+          "peso diário",
+          "ausculta pulmonar e saturação",
+          "edema periférico"
+        ],
+        "ajuste_renal": "Cautela em oligúria; ajustar volume e potássio pela diurese",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Soro glicosado isolado não corrige a hipovolemia, piora a hiponatremia dilucional e precipita Wernicke. Preferir SF 0,9% com potássio",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "eletrolito",
+        "agente": "cloreto de potássio",
+        "papel": "condicional",
+        "indicacao": "hipocalemia associada aos vômitos prolongados",
+        "dose": "20 a 40 mEq",
+        "unidade": "mEq",
+        "via": "IV",
+        "frequencia": "adicionado ao soro de 24 horas, conforme potássio sérico",
+        "duracao": "até normalização do potássio",
+        "dose_maxima": "10 mEq/h em acesso periférico e 20 mEq/h em acesso central com monitorização",
+        "contraindicacoes": [
+          "hipercalemia",
+          "anúria sem diálise",
+          "insuficiência renal grave sem monitorização",
+          "bloqueio atrioventricular avançado sem marca-passo"
+        ],
+        "efeitos_adversos": [
+          "dor e flebite no local",
+          "arritmia por infusão rápida",
+          "hipercalemia"
+        ],
+        "apresentacoes": [
+          "ampola 19,1% 10 mL (2,5 mEq/mL)",
+          "solução concentrada 10% 10 mL",
+          "comprimido de liberação prolongada 600 mg"
+        ],
+        "preparo": "Diluir sempre em soro fisiológico; nunca administrar a ampola concentrada direto na veia",
+        "tempo_infusao": "infusão contínua; máximo 10 mEq/h em veia periférica",
+        "monitorizacao": [
+          "potássio sérico a cada 12 a 24 horas",
+          "eletrocardiograma na infusão acima de 10 mEq/h",
+          "diurese",
+          "local da punção"
+        ],
+        "ajuste_renal": "Reduzir a dose pela metade em ClCr abaixo de 30 mL/min e monitorar potássio a cada 12 h",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "A correção do potássio só funciona corrigindo o magnésio junto quando há hipomagnesemia associada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "carboidrato",
+        "agente": "glicose 5%",
+        "papel": "condicional",
+        "indicacao": "prevenção de cetose e hipoglicemia após a tiamina, em paciente sem tolerância oral",
+        "dose": "500 a 1.000 mL",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "12/12 h ou infusão contínua",
+        "duracao": "até retomada da dieta",
+        "dose_maxima": "individualizar; evitar sobrecarga hídrica",
+        "contraindicacoes": [
+          "hiperglicemia não controlada",
+          "encefalopatia de Wernicke não tratada",
+          "hiponatremia grave não corrigida"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hiponatremia dilucional",
+          "piora da cetose se infundida sem tiamina em paciente desnutrida"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL",
+          "ampola 50% 10 mL para correção de hipoglicemia"
+        ],
+        "preparo": "Usar a bolsa pronta; não adicionar potássio em concentração alta sem cálculo prévio",
+        "tempo_infusao": "infusão contínua; não se aplica para a bolsa de 5%",
+        "monitorizacao": [
+          "glicemia capilar a cada 6 horas",
+          "sódio sérico",
+          "cetose urinária",
+          "estado neurológico"
+        ],
+        "ajuste_renal": "Cautela em oligúria; monitorar glicemia",
+        "ajuste_hepatico": "Cautela em hepatopatia grave",
+        "observacoes": "Só depois da tiamina. Glicose em paciente desnutrida sem tiamina é a causa clássica de Wernicke iatrogênica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Reidratação venosa com soro fisiológico e potássio",
+        "detalhe": "1.000 a 2.000 mL em 24 horas com 20 a 40 mEq de KCl, guiado por diurese, eletrólitos e peso diário; sonda vesical se oligúria"
+      },
+      {
+        "medida": "Dieta fracionada, seca e pobre em odores",
+        "detalhe": "Pequenas porções a cada 2 a 3 horas, alimentos secos e frios, líquidos separados das refeições e fora do horário de maior náusea"
+      },
+      {
+        "medida": "Controle de gatilhos ambientais",
+        "detalhe": "Ambiente ventilado, sem perfume, fumaça, fritura ou odor de comida; afastar a paciente da cozinha e orientar a família"
+      },
+      {
+        "medida": "Pesagem diária e balanço hídrico rigoroso",
+        "detalhe": "Pesar em jejum, na mesma balança, e registrar ingesta, diurese e vômitos por turno; perda adicional de peso reabre a discussão de nutrição enteral"
+      },
+      {
+        "medida": "Tiamina antes da glicose, com registro no prontuário",
+        "detalhe": "Infundir 100 mg de tiamina antes de qualquer solução glicosada e anotar hora e dose; repetir 8/8 h nos primeiros 2 a 3 dias"
+      },
+      {
+        "medida": "Acupressão no ponto P6 do punho",
+        "detalhe": "Pulseira de acupressão ou pressão manual por 10 minutos, três vezes ao dia; benefício modesto e sem risco, útil como adjuvante"
+      },
+      {
+        "medida": "Gengibre em pequenas doses",
+        "detalhe": "Cápsula de 250 mg ou chá de gengibre até 1 g/dia; evidência fraca e contraindicação relativa em uso de anticoagulante"
+      },
+      {
+        "medida": "Apoio psicológico e afastamento do trabalho",
+        "detalhe": "Reconhecer o impacto funcional, oferecer suporte e afastamento quando a doença impede alimentação e sono; não tratar como fragilidade"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Acesso venoso periférico e hidratação venosa",
+        "indicacao": "hiperêmese com desidratação, cetose, vômitos incoercíveis ou intolerância oral",
+        "tecnica": "Punção de veia periférica calibrosa com cateter 18 a 20 G, coleta de eletrólitos, ureia, creatinina e hemograma na primeira punção e início de SF 0,9% com KCl",
+        "complicacoes": "Flebite, infiltração, hematoma, hipocalemia por diluição se não repuser potássio"
+      },
+      {
+        "nome": "Sondagem nasoenteral para nutrição",
+        "indicacao": "intolerância oral por mais de 7 dias, perda de peso progressiva ou falha do antiemético parenteral",
+        "tecnica": "Passagem de sonda nasogástrica ou nasojejunal, confirmação de posição e infusão de fórmula polimérica em bomba, iniciando com 20 a 30 mL/h e progredindo conforme tolerância",
+        "complicacoes": "Aspiração, deslocamento, obstrução da sonda, diarreia, desconforto nasal"
+      },
+      {
+        "nome": "Cateter central de inserção periférica para nutrição parenteral",
+        "indicacao": "falha da nutrição enteral, íleo, obstrução intestinal ou necessidade de NPT por mais de 7 dias",
+        "tecnica": "Passagem de PICC com técnica asséptica e confirmação radiológica da ponta; infusão de NPT em bomba, com controle glicêmico e eletrolítico diário",
+        "complicacoes": "Infecção de corrente sanguínea, trombose, pneumotórax na punção, hiperglicemia, síndrome de realimentação",
+        "protocolo": "BOX-01"
+      },
+      {
+        "nome": "Ultrassonografia obstétrica",
+        "indicacao": "toda hiperêmese na primeira avaliação e na piora clínica",
+        "tecnica": "Avaliar número de fetos, vitalidade, idade gestacional, placenta e sinais de mola hidatiforme; excluir gestação múltipla e doença trofoblástica",
+        "complicacoes": "Desconforto, limitação técnica em obesidade, dependência do operador"
+      }
+    ],
+    "metas": [
+      "Cetose urinária negativa em 24 a 48 horas de tratamento",
+      "Perda de peso interrompida e ganho de pelo menos 0,5 kg em 72 horas",
+      "Vômitos reduzidos a no máximo 2 episódios por dia em 72 horas",
+      "Potássio entre 3,5 e 5,0 mEq/L e sódio entre 135 e 145 mEq/L em 48 horas",
+      "Tiamina administrada antes de qualquer glicose em 100% das pacientes com vômitos prolongados",
+      "Diurese acima de 0,5 mL/kg/h e creatinina estável ou em queda",
+      "Dieta oral reintroduzida de forma progressiva em 48 a 72 horas, sem necessidade de nutrição artificial",
+      "Nenhuma alta com cetose, perda de peso acima de 5% ou eletrólito alterado"
+    ],
+    "fluxo": [
+      "Confirmar gestação, idade gestacional e peso pré-gestacional; calcular a perda ponderal",
+      "Avaliar gravidade: cetose urinária, mucosas, diurese, potássio, sódio, ureia e creatinina",
+      "Classificar: náusea matinal leve (ambulatorial) ou hiperêmese com critério de internação (perda acima de 5%, cetose, distúrbio eletrolítico)",
+      "Internar, instalar acesso venoso, colher eletrólitos e iniciar SF 0,9% com KCl",
+      "Administrar tiamina antes de qualquer glicose e manter 8/8 h nos primeiros dias",
+      "Iniciar antiemético escalonado: doxilamina com piridoxina; metoclopramida se falha; ondansetrona ou prometazina se refratário",
+      "Reavaliar em 48 a 72 horas: se persistir vômito e intolerância oral, considerar corticoide após 10 semanas e nutrição enteral",
+      "Falha da enteral ou íleo: nutrição parenteral total por cateter central",
+      "Alta somente com cetose negativa, eletrólitos normais, tolerância oral e retorno agendado em 48 a 72 horas",
+      "Orientar sinais de recaída e manter antiemético oral de manutenção com plano de resgate"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestação_multipla_ou_mola",
+        "ajuste": "maior risco de hiperêmese e de distúrbio eletrolítico; internar mais precocemente e investigar doença trofoblástica",
+        "alerta": "beta-hCG muito alto e útero maior que a idade gestacional"
+      },
+      {
+        "populacao": "diabetica",
+        "ajuste": "evitar corticoide; se inevitável, controle glicêmico rigoroso e ajuste de insulina",
+        "alerta": "hiperglicemia grave e cetoacidose"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "reduzir volume e potássio conforme diurese e função renal; metoclopramida em dose reduzida",
+        "alerta": "lesão renal aguda sobre crônica e hipercalemia"
+      },
+      {
+        "populacao": "baixo_peso_ou_desnutrida",
+        "ajuste": "iniciar tiamina antes da glicose e progredir a nutrição lentamente para evitar síndrome de realimentação",
+        "alerta": "Wernicke e síndrome de realimentação"
+      },
+      {
+        "populacao": "adolescente",
+        "ajuste": "atendimento confidencial, apoio psicossocial e atenção à violência sexual",
+        "alerta": "gestação não revelada e abandono do pré-natal"
+      },
+      {
+        "populacao": "obesa",
+        "ajuste": "não valorizar apenas o peso absoluto; usar perda percentual e cetose como critério",
+        "alerta": "diagnóstico tardio por subestimação da perda de peso"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "eletrólitos (sódio, potássio, cloro)",
+          "indicacao": "toda hiperêmese com vômitos por mais de 24 horas",
+          "o_que_muda": "define reposição de potássio, correção de hiponatremia e necessidade de monitorização cardíaca"
+        },
+        {
+          "nome": "ureia e creatinina",
+          "indicacao": "todos com desidratação ou oligúria",
+          "o_que_muda": "detecta lesão renal aguda e orienta volume e diálise"
+        },
+        {
+          "nome": "cetose urinária por fita",
+          "indicacao": "toda avaliação inicial e controle diário",
+          "o_que_muda": "confirma catabolismo e define internação e alta"
+        },
+        {
+          "nome": "hemograma",
+          "indicacao": "todos com vômitos prolongados",
+          "o_que_muda": "identifica hemoconcentração e anemia, além de apoiar a exclusão de infecção"
+        },
+        {
+          "nome": "ultrassonografia obstétrica",
+          "indicacao": "toda hiperêmese na primeira avaliação",
+          "o_que_muda": "define gestação única ou múltipla, vitalidade e suspeita de mola hidatiforme"
+        },
+        {
+          "nome": "TSH e T4 livre",
+          "indicacao": "hiperêmese refratária ou taquicardia persistente",
+          "o_que_muda": "identifica hipertireoidismo gestacional transitório e evita tratamento desnecessário"
+        },
+        {
+          "nome": "TGO, TGP e bilirrubinas",
+          "indicacao": "vômitos prolongados, dor abdominal ou antes do corticoide",
+          "o_que_muda": "detecta hepatopatia e contraindica corticoterapia"
+        },
+        {
+          "nome": "magnésio",
+          "indicacao": "hipocalemia refratária",
+          "o_que_muda": "a hipomagnesemia impede a correção do potássio"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia simples de abdome de rotina",
+          "motivo": "não muda a conduta da hiperêmese e expõe o feto sem necessidade"
+        },
+        {
+          "exame": "tomografia de abdome com contraste sem sinal de alarme",
+          "motivo": "a avaliação é clínica e ultrassonográfica; o contraste e a radiação não se justificam"
+        },
+        {
+          "exame": "endoscopia digestiva alta de rotina",
+          "motivo": "só se houver sangramento ou dor epigástrica persistente, não para náusea da gestação"
+        },
+        {
+          "exame": "beta-hCG seriado para acompanhar a hiperêmese",
+          "motivo": "o valor não mede gravidade nem orienta tratamento"
+        },
+        {
+          "exame": "reposição de potássio sem dosar o potássio sérico",
+          "motivo": "risco de hipercalemia e arritmia"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter antiemético em horário fixo, inclusive antes de levantar da cama",
+        "comer pequenas porções secas a cada 2 a 3 horas",
+        "beber líquidos aos poucos, entre as refeições e não durante",
+        "pesar-se diariamente e anotar o peso",
+        "retornar em 48 a 72 horas com o resultado dos exames",
+        "procurar atendimento se a urina ficar escura ou o volume diminuir"
+      ],
+      "evitar": [
+        "odores fortes de comida, perfume, fumaça e fritura",
+        "refeições grandes e gordurosas",
+        "soro glicosado sem tiamina em atendimento de emergência",
+        "automedicação com antiemético de outra pessoa",
+        "bebida alcoólica e cigarro",
+        "assumir que vômito intenso é normal na gestação"
+      ],
+      "retorno": [
+        "vômito que impede qualquer ingestão por 24 horas",
+        "urina escura, pouca ou ausente",
+        "tontura ao levantar, palpitação ou fraqueza intensa",
+        "confusão, visão dupla ou dificuldade para andar",
+        "perda de peso adicional",
+        "sangramento vaginal, dor abdominal ou febre"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "doxilamina + piridoxina",
+        "efeitos": [
+          "sonolência",
+          "tontura",
+          "boca seca"
+        ],
+        "observacao": "concentrar a dose à noite e orientar a não dirigir nas primeiras horas após a tomada"
+      },
+      {
+        "agente": "metoclopramida",
+        "efeitos": [
+          "distonia",
+          "inquietação",
+          "sonolência"
+        ],
+        "observacao": "suspender e usar biperideno se crise oculógira ou torcicolo"
+      },
+      {
+        "agente": "ondansetrona",
+        "efeitos": [
+          "cefaleia",
+          "constipação",
+          "prolongamento do QT"
+        ],
+        "observacao": "suspender se QT prolongado ou associação com outros fármacos que prolongam o QT"
+      },
+      {
+        "agente": "prometazina",
+        "efeitos": [
+          "sedação intensa",
+          "hipotensão",
+          "distonia",
+          "necrose no local da injeção"
+        ],
+        "observacao": "nunca por via intra-arterial; checar retorno venoso antes de infundir"
+      },
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "insônia",
+          "infecção",
+          "alteração de humor"
+        ],
+        "observacao": "monitorar glicemia e suspender se infecção ou ausência de resposta em 5 dias"
+      },
+      {
+        "agente": "tiamina",
+        "efeitos": [
+          "anafilaxia rara",
+          "hipotensão transitória"
+        ],
+        "observacao": "infundir em 30 minutos e observar nas primeiras doses"
+      },
+      {
+        "agente": "cloreto de potássio",
+        "efeitos": [
+          "flebite",
+          "arritmia",
+          "hipercalemia"
+        ],
+        "observacao": "nunca em bolus; máximo 10 mEq/h em veia periférica"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose e reação no prontuário",
+      "Reação extrapiramidal por metoclopramida ou prometazina: suspender, administrar biperideno 2 mg IV ou IM e não reintroduzir a mesma classe",
+      "Prolongamento do QT por ondansetrona: suspender, corrigir potássio e magnésio e repetir eletrocardiograma",
+      "Hiperglicemia por prednisona: ajustar insulina ou suspender o corticoide se não houver benefício claro",
+      "Anafilaxia por tiamina: interromper, tratar anafilaxia e registrar a alergia",
+      "Arritmia durante reposição de potássio: parar a infusão, dosar potássio e magnésio e monitorizar em ambiente com eletrocardiograma",
+      "Reavaliar o diagnóstico e reescrever a prescrição antes de sair do leito"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "doxilamina + piridoxina 10 mg + 10 mg",
+            "dose": "10 mg + 10 mg",
+            "via": "VO",
+            "frequencia": "2 comprimidos à noite e 1 pela manhã",
+            "duracao": "7 dias, com reavaliação",
+            "condicao": "náusea e vômito da gestação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metoclopramida 10 mg",
+            "dose": "10 mg",
+            "via": "VO",
+            "frequencia": "8/8 h se náusea",
+            "duracao": "5 dias",
+            "condicao": "resgate quando a doxilamina não controla",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona 4 mg",
+            "dose": "4 mg",
+            "via": "VO",
+            "frequencia": "8/8 h se náusea persistente",
+            "duracao": "3 dias",
+            "condicao": "resgate após falha de duas classes, com risco discutido",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dimenidrinato 50 mg",
+            "dose": "50 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "5 dias",
+            "condicao": "alternativa quando a doxilamina não está disponível",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "soro fisiológico 0,9% com cloreto de potássio",
+            "dose": "1.000 mL + 20 a 40 mEq de KCl",
+            "via": "IV",
+            "frequencia": "infusão contínua em 24 h",
+            "monitorizacao": "diurese, potássio e sódio a cada 12 a 24 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tiamina",
+            "dose": "100 mg",
+            "via": "IV",
+            "frequencia": "8/8 h por 2 a 3 dias",
+            "monitorizacao": "estado neurológico e reação alérgica; sempre antes da glicose",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metoclopramida",
+            "dose": "10 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "sintomas extrapiramidais e sedação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona",
+            "dose": "4 mg",
+            "via": "IV",
+            "frequencia": "8/8 h se refratário",
+            "monitorizacao": "QT e eletrólitos",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisona",
+            "dose": "40 mg",
+            "via": "VO",
+            "frequencia": "1x/dia após 10 semanas",
+            "monitorizacao": "glicemia, humor e infecção",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "sódio e potássio",
+          "ureia e creatinina",
+          "hemograma",
+          "cetose urinária",
+          "TGO e TGP",
+          "TSH e T4 livre",
+          "magnésio",
+          "ultrassonografia obstétrica",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de hiperêmese gravídica, necessitando de afastamento por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com peso, cetose, eletrólitos e tratamento já feito",
+          "prioridade",
+          "horário do contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com hiperêmese gravídica, idade gestacional, perda ponderal, cetose inicial, eletrólitos, tratamento instituído, resposta e plano de nutrição e seguimento."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "idade gestacional",
+        "peso pré-gestacional e peso atual",
+        "número de vômitos por dia",
+        "tolerância a líquidos e sólidos",
+        "volume e cor da urina",
+        "tontura, palpitação e fraqueza",
+        "antecedente de hiperêmese",
+        "antieméticos usados e resposta",
+        "dor abdominal, febre ou disúria",
+        "comorbidades e medicações contínuas"
+      ],
+      "texto_template": "Gestante de ___ semanas, com peso pré-gestacional de ___ kg e peso atual de ___, vômitos ___ vezes ao dia, tolerância oral ___, urina ___, tontura ___, antecedente de hiperêmese ___, antieméticos usados ___ e comorbidades ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "peso e índice de massa corporal",
+        "mucosas e turgor cutâneo",
+        "ausculta pulmonar",
+        "abdome",
+        "altura uterina",
+        "estado neurológico",
+        "diurese"
+      ],
+      "texto_template": "Sinais vitais com pressão de ___ mmHg e frequência de ___ bpm, peso de ___ kg, mucosas ___, turgor ___, abdome ___, altura uterina de ___ cm, estado neurológico ___ e diurese de ___ mL/h."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de hiperêmese, critérios de internação e nutrição enteral",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_ginecologia",
+        "o_que_verificar": "escalonamento antiemético e uso de corticoide na gestação",
+        "verificar": true
+      },
+      {
+        "tipo": "ms",
+        "o_que_verificar": "protocolo de pré-natal de risco e suplementação de tiamina",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de doxilamina com piridoxina, ondansetrona e tiamina",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GO09-01",
+        "tipo": "glicose_sem_tiamina",
+        "gatilho": "soro glicosado prescrito em gestante com vômitos prolongados sem tiamina registrada antes",
+        "severidade": "grave",
+        "mensagem": "Glicose sem tiamina precipita encefalopatia de Wernicke. Administrar tiamina primeiro.",
+        "acao": "bloquear item até registrar a tiamina",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GO09-02",
+        "tipo": "potassio_em_bolus",
+        "gatilho": "cloreto de potássio prescrito em bolus ou sem diluição",
+        "severidade": "grave",
+        "mensagem": "Potássio em bolus causa arritmia fatal. Diluir e infundir no máximo 10 mEq/h em veia periférica.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GO09-03",
+        "tipo": "alta_com_cetose",
+        "gatilho": "alta de hiperêmese com cetose positiva, perda de peso acima de 5% ou eletrólito alterado",
+        "severidade": "grave",
+        "mensagem": "Não dar alta sem correção da cetose, do peso e dos eletrólitos.",
+        "acao": "bloquear alta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GO09-04",
+        "tipo": "ondansetrona_alta_dose_primeiro_trimestre",
+        "gatilho": "ondansetrona em dose acima de 8 mg por vez ou uso prolongado antes de 14 semanas sem discussão de risco registrada",
+        "severidade": "precaucao",
+        "mensagem": "Discutir o risco de fissura orofacial e registrar a decisão antes de usar dose alta no primeiro trimestre.",
+        "acao": "alertar e exigir registro",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GO09-05",
+        "tipo": "corticoide_precoce",
+        "gatilho": "prednisona prescrita antes de 10 semanas de gestação",
+        "severidade": "precaucao",
+        "mensagem": "Corticoide antes de 10 semanas aumenta o risco de fissura orofacial.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GO09-06",
+        "tipo": "associacao_extrapiramidal",
+        "gatilho": "metoclopramida e prometazina prescritas juntas",
+        "severidade": "precaucao",
+        "mensagem": "A associação soma sedação e risco de distonia.",
+        "acao": "alertar e sugerir troca de classe",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GO09-07",
+        "tipo": "internacao_nao_indicada",
+        "gatilho": "alta em paciente com diagnóstico de hiperêmese e vômitos persistentes sem plano de retorno em 48 h",
+        "severidade": "precaucao",
+        "mensagem": "Hiperêmese exige reavaliação precoce; sem retorno agendado o risco de recaída é alto.",
+        "acao": "alertar e agendar retorno",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "MS",
+        "sociedade de ginecologia",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "id": "leg_2011",
+  "nome": "Infarto Agudo do Miocárdio",
+  "cat": "Emergência",
+  "alias": "iam infarto sca sindrome coronariana aguda dor no peito supradesnivelamento st",
+  "cid": [
+    [
+      "I219",
+      "Infarto agudo do miocárdio não especificado"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ESC 2023 — SCA",
+      "SBC — IAM",
+      "Protocolo fase aguda/farmaco-invasiva"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "ECG em ≤ 10 min de chegada! Supra de ST novo (ou BB novo) = IAMCSST: ativar via de reperfusão JÁ — ICP primária em ≤ 120 min; se impossível, trombólise (alteplase 100 mg EV em 2 h ou tenecteplase por peso) em ≤ 30 min + transferir para centro com ICP em 2–24 h (estratégia farmaco-invasiva). Dupla antiagregação IMEDIATA + anticoagulação: AAS 300 mg mastigado; clopidogrel 300–600 mg VO (ou ticagrelor 180 mg); enoxaparina 1 mg/kg SC (ou HNF se ICP imediata). Nitrato SL se dor e PAS ≥ 110 (NÃO se infra de parede/VD ou uso de iPDE5). Morfina 2–4 mg se dor refratária (usar o mínimo — associa pior prognóstico). O2 só se SpO2 < 90. Sem supra (SCASST): troponina seriada + escore de risco; IBP/AAS conforme estratificação. Monitor contínuo + desfibrilador por perto: FV pode vir a qualquer momento.",
+  "redFlags": [
+    "Dor torácica + sudorese + mal-estar iminente — tratar como SCA até ECG + troponina",
+    "Supra em parede inferior + hipotensão — envolvimento de VD: NITRATO NÃO; volume cuidadoso",
+    "Dor + bloqueio de ramo novo — IAM mascarado: discutir reperfusão",
+    "Taquicardia/FV — desfibrilador ligado junto da maca",
+    "Dor atípica (mandíbula, braço, epigástrio, só dispneia) em diabético/idoso/mulher — não se deixe enganar",
+    "Hipotensão persistente pós-trombólise/ICP — choque cardiogênico: discutir suporte avançado"
+  ],
+  "naoUsar": [
+    "Nitrato se PAS < 110, infarto de VD, ou iPDE5 < 24–48 h",
+    "Morfina em excesso/rotina (atrasa absorção dos antiagregantes)",
+    "O2 de rotina com SpO2 ≥ 90",
+    "AINEs para a dor isquêmica",
+    "Retardar reperfusão para 'melhorar o paciente' — tempo é músculo"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antiagregação + anticoagulação do IAMCSST",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "aas_mast",
+            "motivo": "AAS 300 mg mastigado AGORA (200 mg de manutenção após ICP conforme stent)"
+          },
+          {
+            "linha": 1,
+            "hosp": "clopidogrel_vo",
+            "motivo": "300–600 mg VO carga (600 se ICP prevista; 300 se trombólise/idade > 75: 75 mg)"
+          },
+          {
+            "linha": 1,
+            "hosp": "enoxaparina",
+            "motivo": "1 mg/kg SC 12/12h (ajuste renal) — ou HNF se ICP imediata"
+          }
+        ]
+      },
+      {
+        "nome": "Isquemia e dor",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "isossorbida_sl",
+            "motivo": "5 mg SL a cada 5 min se PAS ≥ 110 sem VD"
+          },
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV se dor residual leve"
+          },
+          {
+            "hosp": "morfina_ev",
+            "motivo": "2–4 mg EV lento somente se refratária — mínima dose possível"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Terapia dupla antiagregação na alta (DAPT)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "aas_100",
+              "n": "AAS 100 mg",
+              "ap": "100 mg comprimido",
+              "pos": "100 mg VO 1x/dia ao dia — indefinido (secundária)"
+            },
+            "motivo": "Base da DAPT"
+          },
+          {
+            "linha": 1,
+            "base": "clopidogrel",
+            "pos": "75 mg VO 1x/dia por 12 meses (stent farmacológico; 1 mês se tropina alto sem stent)",
+            "ped": "Não se aplica",
+            "motivo": "2º antiagregante da DAPT"
+          }
+        ]
+      },
+      {
+        "nome": "Estatina de alta potência",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "atorvastatina",
+            "pos": "80 mg VO à noite na alta (manter alta dose; alvo LDL < 55 mg/dL)",
+            "motivo": "Estatina de alta intensidade"
+          },
+          {
+            "base": "sinvastatina",
+            "pos": "40 mg VO à noite se atorvastatina indisponível (alvo LDL < 55)",
+            "motivo": "Alternativa de potência menor"
+          }
+        ]
+      },
+      {
+        "nome": "Outros cardioprotetores (individualizar)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "carvedilol",
+            "pos": "3,125–6,25 mg VO 2x/dia (iniciar após 24–48 h estável; titular ambulatorial)",
+            "motivo": "Betabloqueador se sem congestão/bloqueio/asma"
+          },
+          {
+            "base": "enalapril",
+            "pos": "2,5–5 mg VO 2x/dia se FE reduzida/DM/hipertensão (vigiar função renal e K)",
+            "motivo": "IECA"
+          },
+          {
+            "base": "espironolactona",
+            "pos": "25 mg VO 1x/dia se FE ≤ 35% com DM/hipertensão (K e creatinina em 1 semana)",
+            "motivo": "MRA selecionados"
+          },
+          {
+            "base": "omeprazol",
+            "pos": "20 mg VO 1x/dia SOMENTE se alto risco digestivo na DAPT (preferir pantoprazol — menor interação)",
+            "motivo": "Proteção gástrica seletiva na DAPT"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Dor no peito que volta (chamar SAMU 192, não vir dirigindo), falta de ar, desmaio, palpitações, sangramento incomum (gengiva, fezes pretas, manchas). NUNCA parar os antiagregantes por conta — mesmo para dentista/procedimento, falar com o cardiologista antes."
+            },
+            "motivo": "Ressangramento/nova isquemia"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Reabilitação e fatores de risco",
+              "ap": "",
+              "pos": "Reabilitação cardíaca assim que liberado; parar de fumar (o que mais salva); DM/HbA1c alvo; atividade conforme cardiologia; vacinas; consulta com cardiologia em 7 dias com ECO."
+            },
+            "motivo": "Secundária"
+          }
+        ]
+      }
+    ]
+  }
+}

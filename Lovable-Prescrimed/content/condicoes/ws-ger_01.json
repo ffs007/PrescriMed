@@ -1,0 +1,566 @@
+{
+  "id": "ws-ger_01",
+  "nome": "Quedas no idoso",
+  "cat": "Geriatria",
+  "alias": "quedas no idoso queda quedas idoso que caiu fratura por queda",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GER-01_quedas.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de queda no pronto-socorro, critério de TC de crânio e de observação",
+      "[verificar] sociedade_geriatria: avaliação multifatorial de queda, prevenção e síndrome pós-queda",
+      "[verificar] diretriz_osteoporose: indicação de bisfosfonato, denosumabe e alvo de vitamina D",
+      "[verificar] anvisa: apresentações e doses de colecalciferol, alendronato, denosumabe, tramadol e fitomenadiona"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GER-01 em 2026-11-27",
+    "fundido_workspace": "GER-01 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: trauma craniano em uso de anticoagulante ou antiagregante -> TC de crânio imediata e observação, mesmo com Glasgow 15; dor em quadril com rotação externa e encurtamento do membro -> imobilizar, analgesia multimodal e avaliação ortopédica para cirurgia em até 48 h; síncope ou pródromo (palpitação, escurecimento visual, dor torácica) antes da queda -> ECG, monitorização e investigação cardiológica antes de rotular como queda mecânica; déficit focal, disartria, assimetria facial ou desvio de rima -> protocolo de AVC e neuroimagem imediata. 1) Classificar o evento: houve trauma? houve síncope ou pródromo? está anticoagulado? 2) Exame dirigido de cabeça, coluna, quadril, punho, pele e neurológico, com PA sentado e em pé 3) Imagem dirigida: TC de crânio se trauma craniano ou anticoagulação; radiografia se dor óssea 4) Investigar a causa: glicemia, ECG, fármacos em uso, visão, pés e teste de marcha 5) Tratar a dor e a fratura: analgesia multimodal, imobilização provisória e ortopedia precoce 6) Retirar o que derruba: sedativo, anti-histamínico, anti-hipertensivo em excesso e anticolinérgico 7) Iniciar prevenção: exercício, vitamina D, cálcio, tratamento de osteoporose, adaptação e dispositivo de apoio 8) Reavaliar marcha antes da alta, entregar plano escrito e agendar seguimento e visita domiciliar",
+  "redFlags": [
+    "trauma craniano em uso de anticoagulante ou antiagregante -> TC de crânio imediata e observação, mesmo com Glasgow 15",
+    "dor em quadril com rotação externa e encurtamento do membro -> imobilizar, analgesia multimodal e avaliação ortopédica para cirurgia em até 48 h",
+    "síncope ou pródromo (palpitação, escurecimento visual, dor torácica) antes da queda -> ECG, monitorização e investigação cardiológica antes de rotular como queda mecânica",
+    "déficit focal, disartria, assimetria facial ou desvio de rima -> protocolo de AVC e neuroimagem imediata",
+    "hipotensão postural sintomática (queda de 20 mmHg na sistólica ou 10 mmHg na diastólica em 3 min) -> revisar anti-hipertensivo e diurético, hidratar, medir PA em pé antes da alta",
+    "permanência no chão por mais de 1 hora (long lie) -> hidratar, dosar creatinina e CPK, aquecer e internar para observação",
+    "dor em coluna com déficit motor, anestesia em sela ou retenção urinária -> imobilizar em prancha e ressonância de urgência",
+    "febre, disúria, tosse ou confusão após a queda -> investigar foco, colher culturas e tratar sem sedar"
+  ],
+  "naoUsar": [
+    "hipercalcemia",
+    "sarcoidose",
+    "hiperparatireoidismo não controlado",
+    "litíase cálcica ativa",
+    "TFG abaixo de 35 mL/min",
+    "esofagite, úlcera ou estenose esofágica",
+    "incapacidade de permanecer sentado ou em pé 30 min",
+    "hipocalcemia não corrigida"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "levantar devagar, sentando na beira da cama por 1 minuto antes de ficar de pé"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "tapete solto, fio no chão e piso molhado sem tapete antiderrapante"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Vitamina d",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "colecalciferol",
+              "n": "Colecalciferol (vitamina D3)",
+              "ap": "cápsula 1.000 UI",
+              "q": "",
+              "pos": "800-1.000 UI. Via VO. 1x/dia. Contínuo."
+            },
+            "motivo": "deficiência de vitamina D, prevenção de queda e de fratura (1a linha) prevenção de queda e fratura",
+            "nota": "Uso direto; a solução oleosa é melhor absorvida junto de refeição com gordura - monitorar: 25-OH-vitamina D após 3 meses; monitorar: cálcio sérico; monitorar: cálcio urinário se história de litíase; monitorar: adesão · NÃO: hipercalcemia; sarcoidose; hiperparatireoidismo não controlado; litíase cálcica ativa · Obs: Alvo de 25-OH-vitamina D acima de 30 ng/mL. Deficiência documentada: ataque de 50.000 UI por semana por 8 semanas. Reposição corrige deficiência e reduz queda em quem tem nível baixo; não é droga de efeito imediato.",
+            "dose": {
+              "texto": "800-1.000 UI; 1x/dia; contínuo; max. 4.000 UI/dia",
+              "status": "ok",
+              "valor": 800,
+              "valor_max": 1000,
+              "unidade": "ui",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4000,
+                "unidade": "UI"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Bisfosfonato",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "alendronato_de_sodio",
+              "n": "Alendronato de sódio",
+              "ap": "comprimido 10 mg",
+              "q": "",
+              "pos": "70 mg. Via VO. 1x/semana. 5 anos, com reavaliação."
+            },
+            "motivo": "osteoporose com fratura por fragilidade ou T-score ≤ -2,5 (1a linha) osteoporose confirmada",
+            "nota": "Uso direto em jejum com 200 mL de água; permanecer sentado ou em pé por 30 min e não deitar - monitorar: densitometria em 2 anos; monitorar: cálcio e 25-OH-vitamina D antes de iniciar; monitorar: sintomas esofágicos; monitorar: dor em coxa (fratura atípica) · NÃO: TFG abaixo de 35 mL/min; esofagite, úlcera ou estenose esofágica; incapacidade de permanecer sentado ou em pé 30 min; hipocalcemia não corrigida; fratura de fêmur atípica prévia · Obs: Após fratura de quadril, iniciar quando o paciente já estiver sentado, deglutindo e com vitamina D e cálcio corrigidos — em geral na primeira semana. Programar revisão odontológica antes…",
+            "dose": {
+              "texto": "70 mg; 1x/semana; 5 anos, com reavaliação; max. 70 mg/semana ou 10 mg/dia",
+              "status": "ok",
+              "valor": 70,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 70,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anticorpo antirrankl",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "denosumabe",
+              "n": "Denosumabe",
+              "ap": "seringa preenchida 60 mg/mL",
+              "q": "",
+              "pos": "60 mg. Via SC. A cada 6 meses. 3 anos, com reavaliação. Injeção subcutânea em cerca de 30 segundos."
+            },
+            "motivo": "osteoporose com contraindicação ou intolerância a bisfosfonato, ou com TFG muito reduzida (alternativa)",
+            "nota": "Aplicar no abdome, coxa ou braço; não agitar; retirar da geladeira 30 min antes - monitorar: cálcio antes de cada dose; monitorar: densitometria em 1-2 anos; monitorar: higiene oral e dor mandibular; monitorar: adesão ao esquema semestral · NÃO: hipocalcemia; hipersensibilidade ao produto; gestação · Obs: Nunca suspender sem planejar transição para bisfosfonato: a retirada isolada acelera a perda de massa óssea e causa fraturas vertebrais múltiplas. · Renal: Não exige ajuste; é opção na doença renal crônica, mas exige cálcio normal antes de cada…",
+            "dose": {
+              "texto": "60 mg; a cada 6 meses; 3 anos, com reavaliação; max. 60 mg/6 meses",
+              "status": "ok",
+              "valor": 60,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Mineralocorticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fludrocortisona",
+              "n": "Fludrocortisona",
+              "ap": "comprimido 0,1 mg",
+              "q": "",
+              "pos": "0,05-0,1 mg. Via VO. 1x/dia pela manhã. 2-4 semanas, com reavaliação."
+            },
+            "motivo": "hipotensão postural refratária, sobretudo neurogênica (alternativa)",
+            "nota": "Uso direto pela manhã - monitorar: sódio e potássio em 1-2 semanas; monitorar: PA supina; monitorar: edema e peso; monitorar: dispneia · NÃO: insuficiência cardíaca descompensada; hipertensão arterial; hipocalemia · Obs: Vigiar hipertensão supina e edema. Se aparecerem, reduzir sal e dose — não aumentar pela manhã o que causa dispneia à noite. · Renal: Cautela na doença renal crônica: risco de sobrecarga hídrica e hipocalemia",
+            "dose": {
+              "texto": "0,05-0,1 mg; 1x/dia pela manhã; 2-4 semanas, com reavaliação; max. 0,3 mg/dia",
+              "status": "ok",
+              "valor": 0.05,
+              "valor_max": 0.1,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.3,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Suplemento mineral",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "carbonato_de_calcio",
+              "n": "Carbonato de cálcio",
+              "ap": "comprimido 500 mg",
+              "q": "",
+              "pos": "500 mg de cálcio elementar. Via VO. 12/12 h, junto das refeições. Contínuo."
+            },
+            "motivo": "ingestão dietética de cálcio abaixo de 1.000-1.200 mg/dia em osteoporose ou fratura por fragilidade (condicional) ingestão dietética insuficiente",
+            "nota": "Uso direto com a refeição; separar 2 h de levotiroxina, quinolonas, tetraciclinas e ferro - monitorar: cálcio sérico anual; monitorar: cálcio urinário de 24 h se litíase; monitorar: constipação; monitorar: ingestão dietética · NÃO: hipercalcemia; hipercalciúria; litíase renal recorrente; imobilização prolongada · Obs: Preferir leite e derivados; o suplemento completa o que falta na dieta e não trata osteoporose sozinho. Nunca iniciar sem corrigir a vitamina D. · Renal: Evitar na doença renal crônica avançada: risco de hipercalcemia, calcificação vascular e…",
+            "dose": {
+              "texto": "500 mg de cálcio elementar; 12/12 h, junto das refeições; contínuo; max. 1.200 mg/dia de cálcio elementar",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Agonista alfa1",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "midodrina",
+              "n": "Midodrina",
+              "ap": "comprimido 2,5 mg",
+              "q": "",
+              "pos": "2,5 mg. Via VO. 8/8 h, última dose até 4 h antes de deitar. 4 semanas, com reavaliação."
+            },
+            "motivo": "hipotensão postural sintomática persistente após retirada de fármacos e medidas não farmacológicas (condicional)",
+            "nota": "Uso direto - monitorar: PA sentado e deitado; monitorar: PA 3 min após levantar; monitorar: tontura; monitorar: resíduo urinário · NÃO: hipertensão supina; retenção urinária; glaucoma de ângulo fechado; feocromocitoma; cardiopatia isquêmica grave · Obs: Antes de prescrever, retirar o anti-hipertensivo e o diurético que causam a hipotensão: boa parte dos casos resolve só com isso. Não usar à noite pelo risco de hipertensão supina. · Renal: Reduzir dose com TFG abaixo de 30",
+            "dose": {
+              "texto": "2,5 mg; 8/8 h, última dose até 4 h antes de deitar; 4 semanas, com reavaliação; max. 10 mg 8/8 h",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Revisão e desprescrição de fármacos",
+              "ap": "",
+              "q": "",
+              "pos": "Listar todos os remédios com dose e horário; suspender ou reduzir benzodiazepínico, zolpidem, anti-histamínico sedativo, anticolinérgico, anti-hipertensivo em excesso, diurético e hipoglicemiante de ação longa. Metade das quedas tem fármaco no caminho."
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Exercício de equilíbrio e força",
+              "ap": "",
+              "q": "",
+              "pos": "Programa tipo Otago, 3 sessões por semana, por no mínimo 12 semanas, com exercício domiciliar supervisionado; incluir transferência de sentado para de pé, apoio unipodal e marcha com mudança de direção"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Adaptação ambiental domiciliar",
+              "ap": "",
+              "q": "",
+              "pos": "Barra de apoio no banheiro e ao lado do vaso, corrimão em escada, luz noturna no trajeto cama–banheiro, retirada de tapetes soltos e fios, vaso sanitário elevado e cadeira para banho"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Bengala ou andador com treino",
+              "ap": "",
+              "q": "",
+              "pos": "Indicar por padrão de marcha: bengala no lado oposto ao membro mais fraco para déficit leve; andador com rodas e assento para instabilidade importante. Prescrever sem treino com fisioterapia não reduz queda."
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Correção de visão e de calçado",
+              "ap": "",
+              "q": "",
+              "pos": "Avaliar catarata e acuidade; trocar lente multifocal por monofocal para andar na rua; sapato fechado, firme, com solado antiderrapante e sem salto"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Manejo da hipotensão postural",
+              "ap": "",
+              "q": "",
+              "pos": "Levantar em duas etapas (sentar na beira da cama por 1 min antes de ficar de pé), hidratação, ingestão de sal quando não houver contraindicação, meia elástica de compressão e PA medida em pé antes da alta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Prevenção da síndrome pós-queda",
+              "ap": "",
+              "q": "",
+              "pos": "Não imobilizar no leito por medo de cair: sentar fora da cama no primeiro dia, deambular com apoio e fisioterapia precoce. Rastrear medo de cair e retomar atividade com supervisão."
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Visita domiciliar multiprofissional",
+              "ap": "",
+              "q": "",
+              "pos": "Médico, enfermeiro, fisioterapeuta e terapeuta ocupacional em até 4 semanas após queda grave; revisar casa, remédios, rede de apoio e risco de nova queda no próprio ambiente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GER-01"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "dor leve a moderada após trauma, contusão ou fratura (1a linha) dor pós-trauma",
+            "nota": "Uso direto; a apresentação IV é infundida sem diluir ou em 50 mL de SF - monitorar: soma da dose diária de todas as fontes (inclusive associações); monitorar: função hepática se uso prolongado; monitorar: intensidade da dor em escala 0-10 · NÃO: hepatopatia grave; desnutrição com depleção de glutationa; uso concomitante de outro produto com paracetamol · Obs: Base da analgesia pós-trauma no idoso. Prescrever em horário fixo, não apenas se dor: dor não tratada é causa de delirium e de imobilidade.",
+            "dose": {
+              "texto": "500-750 mg; 6/6 h em horário fixo; até 5 dias; max. 3 g/dia no idoso frágil; 4 g/dia no idoso hígido",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 750,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico pirazolona",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "dor ou febre quando o paracetamol é insuficiente ou indisponível (alternativa)",
+            "nota": "VO uso direto; IV diluir 1 g em 20 mL de SF ou água destilada - monitorar: PA durante e após a infusão; monitorar: temperatura; monitorar: hemograma se uso repetido; monitorar: dor · NÃO: alergia a pirazolonas; porfiria aguda intermitente; depressão de medula óssea; uso de outro pirazolônico · Obs: Escolha real para dor e febre no Brasil, mas não é boa opção em idoso com hipotensão postural: pode agravar a tontura e a queda. Não associar a outro pirazolônico. · Renal: Espaçar na TFG abaixo de 30; evitar em diálise sem indicação específica",
+            "dose": {
+              "texto": "500 mg-1 g; 6/6 h; até 3 dias; max. 3 g/dia no idoso (4 g/dia no adulto)",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "tramadol_ev",
+            "motivo": "dor moderada a intensa por fratura ou pós-operatório, quando paracetamol e dipirona não controlam (condicional)",
+            "nota": "VO uso direto; IV diluir 50-100 mg em 100 mL de SF - monitorar: sedação; monitorar: frequência respiratória; monitorar: náusea; monitorar: sódio; monitorar: equilíbrio e risco de nova queda",
+            "dose": {
+              "texto": "50 mg; 8/8 h; até 3-5 dias; max. 200 mg/dia no idoso; 400 mg/dia no adulto",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antídoto",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "fitomenadiona",
+              "n": "Fitomenadiona (vitamina K)",
+              "ap": "ampola 10 mg/mL (1 mL)",
+              "via": "IV",
+              "pos": "5-10 mg. Via IV. Dose única. 1 dose, com repetição conforme INR. 20-30 minutos."
+            },
+            "motivo": "usuário de varfarina que caiu com trauma craniano, hematoma em TC ou sangramento ativo (condicional)",
+            "nota": "Diluir em 50 mL de SF; proteger da luz - monitorar: INR em 6-12 h; monitorar: sangramento; monitorar: sinais de trombose · NÃO: hipersensibilidade; prótese valvar mecânica sem avaliação do risco trombótico · Obs: Cair anticoagulado não é indicação automática de reverter: reverter se houver sangramento na TC, sangramento ativo ou cirurgia indicada. Não reverte anticoagulante direto (apixabana, rivaroxabana) — para esses, avaliar suspensão…",
+            "dose": {
+              "texto": "5-10 mg; dose única; 1 dose, com repetição conforme INR; max. 10 mg",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GER-01",
+    "versao": "0.2.0",
+    "arquivo": "GER-01_quedas.json",
+    "area": "Geriatria",
+    "risco": "B",
+    "populacao": [
+      "idoso"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

@@ -1,0 +1,486 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-18",
+    "area": "Respiratório/ORL",
+    "nome": "Derrame pleural",
+    "aliases": [
+      "Derrame pleural",
+      "efusão pleural",
+      "derrame parapneumônico",
+      "empiema pleural",
+      "pleurite tuberculosa",
+      "derrame pleural maligno",
+      "hemotórax"
+    ],
+    "contexto": [
+      "hospitalar",
+      "ambulatorial"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Derrame pleural é líquido acumulado entre as pleuras, e o diagnóstico que importa não é o derrame em si, mas a sua causa. A primeira separação é transudato contra exsudato pelos critérios de Light: transudato vem de pressão hidrostática alta ou oncótica baixa, como insuficiência cardíaca, cirrose e síndrome nefrótica, e trata-se tratando a causa, sem dreno; exsudato vem de inflamação, infecção, neoplasia ou tromboembolismo, e obriga a analisar o líquido. Entre os exsudatos, cinco condutas são distintas: o derrame parapneumônico simples responde a antibiótico; o parapneumônico complicado e o empiema exigem drenagem, porque glicose baixa, pH baixo, LDH alto ou loculação significam pus organizado que antibiótico nenhum resolve; o tuberculoso exige esquema RIPE e às vezes biópsia, com ADA alto e linfocitose; o maligno exige citologia, controle do tumor e pleurodese na recidiva; e o hemotórax, no trauma, exige dreno de grosso calibre e cirurgia se o sangramento for maciço. Dois erros custam caro: puncionar sem ultrassom um derrame pequeno ou loculado, trocando um diagnóstico por um pneumotórax iatrogênico, e drenar um transudato sem tratar o coração ou o fígado, deixando o paciente com dreno, dor e infecção no lugar de diurético.",
+    "inclusao": [
+      "Dispneia, tosse seca e dor pleurítica com murmúrio vesicular reduzido, macicez e frêmito diminuído na base",
+      "Opacidade em base pulmonar com seio costofrênico obturado na radiografia de tórax",
+      "Líquido pleural identificado por ultrassonografia, tomografia ou decúbito lateral",
+      "Pneumonia com derrame associado, sobretudo com febre persistente após 72 horas de antibiótico",
+      "Suspeita de tuberculose pleural em paciente jovem com febre, sudorese noturna e perda de peso",
+      "Neoplasia conhecida com dispneia e derrame unilateral",
+      "Trauma torácico com hipofonese e opacidade em base, ou instabilidade após ferimento"
+    ],
+    "exclusao": [
+      { "situacao": "hipertimpanismo, murmúrio abolido e desvio de traqueia sem líquido", "fluxo": "RESP-17 pneumotórax" },
+      { "situacao": "consolidação pulmonar sem líquido pleural identificado", "fluxo": "RESP-14 pneumonia" },
+      { "situacao": "aumento do volume abdominal com macicez e sem alteração da ausculta pulmonar", "fluxo": "ascite — avaliação digestiva" },
+      { "situacao": "dor retroesternal e hipotensão com turgência jugular, sem líquido pleural", "fluxo": "CAR-09 tamponamento pericárdico" },
+      { "situacao": "dor pleurítica sem derrame, com exame pulmonar normal e radiografia sem opacidade", "fluxo": "RESP-16 dor torácica pleurítica" },
+      { "situacao": "derrame pequeno, assintomático, em paciente com insuficiência cardíaca já compensando com diurético", "fluxo": "seguimento ambulatorial da insuficiência cardíaca" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "desconforto respiratório, saturação abaixo de 90% ou uso de musculatura acessória", "por_que": "derrame extenso ou doença pulmonar associada com falha de troca", "acao": "oxigênio titulado, ultrassom à beira-leito e toracocentese de alívio se houver volume drenável", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "febre persistente, líquido purulento ou loculado em paciente com pneumonia", "por_que": "empiema ou derrame parapneumônico complicado", "acao": "drenagem pleural imediata e antibiótico de amplo espectro", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "hipotensão, taquicardia e hipofonese em trauma torácico", "por_que": "hemotórax maciço com choque hemorrágico", "acao": "dreno de grosso calibre, reposição volêmica e hemoderivados, avaliação cirúrgica imediata", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "desvio contralateral do mediastino com derrame volumoso e dispneia grave", "por_que": "efeito de massa com comprometimento hemodinâmico", "acao": "toracocentese de alívio guiada por ultrassom, retirando no máximo 1.000 a 1.500 mL por vez", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "saída de mais de 1.500 mL de sangue na drenagem inicial ou acima de 200 mL/h por 3 horas", "por_que": "hemotórax com sangramento ativo", "acao": "reanimação com hemoderivados e toracotomia de urgência", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "dispneia e hipoxemia poucas horas após toracocentese ou drenagem", "por_que": "edema pulmonar de reexpansão", "acao": "oxigênio, diurético com critério, suporte ventilatório e suspensão da aspiração", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "febre, sudorese noturna, perda de peso e linfocitose no líquor pleural", "por_que": "tuberculose pleural com risco de transmissão", "acao": "isolamento respiratório, ADA e cultura, notificação e início do esquema RIPE", "severidade": "precaucao" },
+      { "id": "AL-08", "sinal": "derrame recorrente em paciente oncológico com dispneia progressiva", "por_que": "derrame pleural maligno refratário", "acao": "avaliar pleurodese ou cateter pleural de permanência", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "A falta de ar começou de forma súbita ou progressiva, e há quanto tempo?",
+      "Tem febre, tosse com secreção ou pneumonia em tratamento?",
+      "Já teve tuberculose, contato recente ou perda de peso e sudorese noturna?",
+      "Tem insuficiência cardíaca, cirrose ou doença renal com edema?",
+      "Tem câncer conhecido, tabagismo importante ou emagrecimento recente?",
+      "Sofreu trauma torácico ou punção recente?",
+      "Usa anticoagulante ou tem alteração de coagulação?",
+      "O derrame é de um lado só ou bilateral?",
+      "Já teve derrame antes e foi drenado?",
+      "Está com febre que não cede após três dias de antibiótico?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Derrame bilateral, simétrico, em insuficiência cardíaca com edema e BNP alto", "escolha": "Tratar a insuficiência cardíaca com furosemida e espironolactona, sem drenagem, e reavaliar em 48 a 72 horas", "porque": "É transudato por pressão hidrostática alta e responde a diurético; drenar um transudato expõe a infecção, dor e pneumotórax sem resolver a causa" },
+      { "cenario": "Derrame parapneumônico simples: volume pequeno, pH acima de 7,20, glicose acima de 60 mg/dL, sem loculação e Gram negativo", "escolha": "Antibiótico sistêmico isolado com ceftriaxona e reavaliação clínica e ultrassonográfica em 48 a 72 horas", "porque": "Derrame livre com líquido não purulento resolve com o tratamento da pneumonia; drenar não acrescenta benefício" },
+      { "cenario": "Derrame parapneumônico complicado ou empiema: pH abaixo de 7,20, glicose abaixo de 60 mg/dL, LDH acima de 1.000 UI/L, Gram ou cultura positiva, loculação ou pus", "escolha": "Drenagem pleural fechada com dreno de grosso calibre e antibiótico de amplo espectro por 2 a 4 semanas", "porque": "O pus organizado não é esterilizado por antibiótico e evolui para fibrotórax e sepse; a drenagem precoce reduz mortalidade e necessidade de cirurgia" },
+      { "cenario": "Empiema com loculação persistente, falha de drenagem em 48 a 72 horas ou derrame septado", "escolha": "Fibrinólise intrapleural com alteplase e dornase alfa por 3 dias ou videotoracoscopia com decorticação", "porque": "A fibrina septa a cavidade e impede a drenagem; a associação de fibrinolítico e DNase dissolve o septo e reduz a necessidade de cirurgia" },
+      { "cenario": "Suspeita de tuberculose pleural com ADA acima de 40 U/L, linfocitose e proteína alta", "escolha": "Esquema RIPE com isoniazida, rifampicina, pirazinamida e etambutol por 2 meses, seguido de isoniazida e rifampicina por 4 meses, com notificação", "porque": "O tratamento cura o derrame tuberculoso e interrompe a transmissão; drenagem só é necessária em derrame volumoso com desconforto ou suspeita de empiema tuberculoso" },
+      { "cenario": "Derrame maligno com citologia positiva e dispneia recorrente", "escolha": "Toracocentese terapêutica de alívio, controle do tumor e pleurodese por videotoracoscopia com talco ou cateter pleural de permanência na recidiva", "porque": "O derrame maligno recidiva em mais de 60% dos casos em semanas; a pleurodese reduz a recidiva e o número de punções" },
+      { "cenario": "Hemotórax em trauma com instabilidade", "escolha": "Drenagem com dreno de grosso calibre de 28 a 32 Fr, reposição volêmica e hemoderivados, e toracotomia se a saída passar de 1.500 mL ou 200 mL/h", "porque": "O sangramento ativo não para com dreno e a morte é por choque hemorrágico; o dreno fino obstrui com coágulo" },
+      { "cenario": "Derrame de causa indeterminada após análise do líquido e tomografia", "escolha": "Biópsia pleural percutânea ou pleuroscopia com biópsia dirigida, além de repetir citologia e cultura", "porque": "Cerca de 15% dos exsudatos permanecem sem diagnóstico com uma única toracocentese, e a biópsia aumenta o rendimento para tuberculose e neoplasia" },
+      { "cenario": "Derrame pequeno, assintomático, sem diagnóstico, em paciente estável", "escolha": "Ultrassonografia para confirmar volume e segurança, e punção apenas se houver lâmina maior que 1 cm e janela segura; caso contrário, tomografia e seguimento", "porque": "Puncionar um derrame pequeno sem imagem é a principal causa de pneumotórax iatrogênico e de punção de víscera" },
+      { "cenario": "Paciente anticoagulado que precisa de toracocentese diagnóstica", "escolha": "Corrigir INR para abaixo de 1,5 ou suspender anticoagulante de ação direta por 24 a 48 horas, e puncionar com agulha fina guiada por ultrassom", "porque": "O risco de hemotórax é baixo com agulha fina e controle de coagulação, mas é alto com punção às cegas em paciente hipocoagulado" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antibiotico_cefalosporina_terceira_geracao",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "derrame parapneumônico comunitário e empiema de origem comunitária",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "7 a 14 dias na pneumonia com derrame simples; 2 a 4 semanas no empiema",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": ["alergia grave a cefalosporina", "anafilaxia prévia a betalactâmico", "hiperbilirrubinemia neonatal", "uso de solução com cálcio em neonato"],
+        "efeitos_adversos": ["diarreia", "rash", "elevação de transaminases", "colite por Clostridioides difficile", "lama biliar", "anemia hemolítica rara"],
+        "apresentacoes": ["frasco-ampola 1 g", "frasco-ampola 2 g", "solução injetável 1 g", "solução injetável 2 g"],
+        "preparo": "Reconstituir em 10 mL de água estéril e diluir em 100 mL de SF 0,9% ou glicose 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": ["febre e leucograma", "função hepática", "diarreia", "sítio de drenagem pleural", "controle ultrassonográfico do derrame"],
+        "ajuste_renal": "Sem ajuste em ClCr acima de 10 mL/min; não ultrapassar 2 g/dia em insuficiência renal grave",
+        "ajuste_hepatico": "Sem ajuste; monitorar transaminases em hepatopatia",
+        "observacoes": "Associar clindamicina quando houver suspeita de anaeróbios por aspiração ou abscesso pulmonar. Não substitui a drenagem no empiema",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de pneumonia",
+        "claim_id": null
+      },
+      {
+        "classe": "betalactamico_inibidor_de_betalactamase",
+        "agente": "amoxicilina com clavulanato",
+        "papel": "alternativa",
+        "indicacao": "derrame parapneumônico comunitário em paciente estável, com via oral disponível, e empiema de origem odontogênica ou por aspiração",
+        "dose": "875/125 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "12/12 h por via oral; 8/8 h por via intravenosa",
+        "duracao": "7 a 14 dias",
+        "dose_maxima": "1.750 mg de amoxicilina por dia na via oral; 12 g por dia na via intravenosa",
+        "contraindicacoes": ["alergia a penicilina", "hepatite prévia por amoxicilina com clavulanato", "mononucleose infecciosa", "insuficiência hepática grave com icterícia prévia pelo fármaco"],
+        "efeitos_adversos": ["diarreia", "náusea", "rash", "colite por Clostridioides difficile", "colestase", "elevação de transaminases"],
+        "apresentacoes": ["comprimido 500/125 mg", "comprimido 875/125 mg", "suspensão 250/62,5 mg por 5 mL", "frasco-ampola 1 g/200 mg", "frasco-ampola 2 g/200 mg"],
+        "preparo": "VO: uso direto com alimento. IV: reconstituir em 20 mL de água estéril e diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "não se aplica (via oral); 30 minutos na via intravenosa",
+        "monitorizacao": ["diarreia", "função hepática", "febre e leucograma", "resposta do derrame à ultrassonografia"],
+        "ajuste_renal": "ClCr 10 a 30 mL/min: 500/125 mg 12/12 h; ClCr abaixo de 10: 500/125 mg 1x/dia",
+        "ajuste_hepatico": "Evitar em hepatopatia grave e monitorar transaminases",
+        "observacoes": "Boa opção para alta hospitalar precoce no derrame parapneumônico simples. Não usar como monoterapia no empiema com anaeróbios exuberantes quando houver instabilidade",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de pneumonia",
+        "claim_id": null
+      },
+      {
+        "classe": "betalactamico_antipseudomonas",
+        "agente": "piperacilina com tazobactam",
+        "papel": "condicional",
+        "indicacao": "empiema hospitalar, pós-operatório, pós-aspiração ou em paciente com risco de germe multirresistente",
+        "dose": "4,5 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "6/6 h",
+        "duracao": "7 a 14 dias, prolongando conforme drenagem e cultura",
+        "dose_maxima": "18 g de piperacilina por dia",
+        "contraindicacoes": ["alergia grave a penicilina ou inibidor de betalactamase", "anafilaxia a betalactâmico"],
+        "efeitos_adversos": ["diarreia", "rash", "trombocitopenia", "lesão renal aguda", "hipocalemia", "colite por Clostridioides difficile"],
+        "apresentacoes": ["frasco-ampola 2,25 g", "frasco-ampola 4,5 g", "solução para infusão 4,5 g"],
+        "preparo": "Reconstituir em 20 mL de diluente e diluir em 100 a 250 mL de SF 0,9%",
+        "tempo_infusao": "30 minutos; 4 horas em infusão estendida quando a estabilidade clínica permitir",
+        "monitorizacao": ["função renal e plaquetas", "diarreia", "controle de foco com ultrassom", "cultura e antibiograma do líquido pleural"],
+        "ajuste_renal": "ClCr 20 a 40 mL/min: 3,375 g 6/6 h; ClCr abaixo de 20: 2,25 g 6/6 h; dialítico: 2,25 g 8/8 h",
+        "ajuste_hepatico": "Sem ajuste relevante",
+        "observacoes": "Cobrir anaeróbios e gram-negativos no empiema nosocomial. Escalonar para o antibiótico de menor espectro assim que a cultura do líquor pleural definir o agente",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de sepse e empiema",
+        "claim_id": null
+      },
+      {
+        "classe": "lincosamida",
+        "agente": "clindamicina",
+        "papel": "condicional",
+        "indicacao": "empiema por anaeróbios, aspiração, abscesso pulmonar associado ou alergia a betalactâmico",
+        "dose": "600 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "7 a 14 dias",
+        "dose_maxima": "2.700 mg/dia",
+        "contraindicacoes": ["colite prévia por Clostridioides difficile", "hipersensibilidade a lincosamida", "meningite como foco principal"],
+        "efeitos_adversos": ["diarreia", "colite por Clostridioides difficile", "rash", "elevação de transaminases", "gosto metálico"],
+        "apresentacoes": ["cápsula 300 mg", "ampola 300 mg/2 mL", "ampola 600 mg/4 mL", "solução injetável 900 mg/6 mL"],
+        "preparo": "Diluir a ampola em 100 a 250 mL de SF 0,9% ou glicose 5%",
+        "tempo_infusao": "30 minutos (não exceder 30 mg/min)",
+        "monitorizacao": ["diarreia e dor abdominal", "função hepática", "controle do foco pleural", "cultura do líquido"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Não penetra adequadamente a pleura quando há grande volume de pus; a drenagem continua sendo o tratamento principal do empiema por anaeróbios",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "primeira_linha",
+        "indicacao": "dor pleurítica e dor do pós-toracocentese ou da drenagem",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV ou VO",
+        "frequencia": "6/6 h",
+        "duracao": "até 3 a 5 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": ["alergia a pirazolonas", "porfiria hepática aguda", "deficiência de glicose-6-fosfato desidrogenase", "primeiro trimestre da gestação", "discrasia sanguínea"],
+        "efeitos_adversos": ["hipotensão em infusão rápida", "rash", "agranulocitose rara", "sudorese", "dor no local da injeção"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 1 g", "solução oral 500 mg/mL", "ampola 1 g/2 mL", "ampola 500 mg/mL"],
+        "preparo": "VO: uso direto. IV: diluir 1 g em 10 a 20 mL de SF 0,9%",
+        "tempo_infusao": "5 a 10 minutos",
+        "monitorizacao": ["pressão arterial durante a infusão", "intensidade da dor", "hemograma em uso repetido"],
+        "ajuste_renal": "Reduzir a dose em insuficiência renal grave e evitar uso prolongado",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Primeira escolha pela disponibilidade. Não cobre a dor intensa da drenagem, que exige opioide",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "resgate",
+        "indicacao": "dor intensa da drenagem, dispneia refratária do derrame volumoso ou do derrame maligno",
+        "dose": "2 a 4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "4/4 h ou a cada 15 minutos titulando pela escala",
+        "duracao": "até controle do sintoma",
+        "dose_maxima": "10 mg na primeira hora; depois individualizado",
+        "contraindicacoes": ["depressão respiratória", "rebaixamento de consciência sem causa esclarecida", "hipotensão não corrigida", "uso de IMAO"],
+        "efeitos_adversos": ["sedação", "depressão respiratória", "náusea", "prurido", "hipotensão", "retenção urinária", "constipação"],
+        "apresentacoes": ["ampola 10 mg/mL (1 mL)", "ampola 2 mg/mL (2 mL)", "solução oral 1 mg/mL", "comprimido de liberação prolongada 10 mg"],
+        "preparo": "Diluir 1 mL (10 mg) em 9 mL de SF 0,9% e administrar 2 a 4 mg (0,2 a 0,4 mL) por vez",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos",
+        "monitorizacao": ["frequência respiratória e saturação", "escala de sedação", "pressão arterial", "náusea e prurido", "naloxona disponível"],
+        "ajuste_renal": "Cautela com ClCr abaixo de 30 mL/min pelo acúmulo de metabólitos ativos",
+        "ajuste_hepatico": "Reduzir a dose em cirrose",
+        "observacoes": "Na dispneia refratária do derrame maligno, a dose baixa reduz o drive respiratório e o desconforto. Não usar em paciente hipotenso sem corrigir a causa",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "diuretico_de_alsa",
+        "agente": "furosemida",
+        "papel": "condicional",
+        "indicacao": "derrame transudativo por insuficiência cardíaca ou sobrecarga volêmica",
+        "dose": "40 mg",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "1x/dia, com ajuste pela diurese e pelo peso",
+        "duracao": "até compensação, com manutenção oral",
+        "dose_maxima": "individualizada pela resposta diurética e pela função renal",
+        "contraindicacoes": ["hipovolemia", "anúria", "hipocalemia grave não corrigida", "hiponatremia grave sem controle"],
+        "efeitos_adversos": ["hipocalemia", "hiponatremia", "hipotensão", "lesão renal por depleção", "hiperuricemia", "ototoxicidade em infusão rápida"],
+        "apresentacoes": ["ampola 20 mg/2 mL", "ampola 40 mg/4 mL", "comprimido 40 mg", "solução oral 10 mg/mL"],
+        "preparo": "IV: uso direto em bolus lento ou diluído em 50 mL de SF para infusão",
+        "tempo_infusao": "bolus em 2 minutos; infusão em 30 minutos quando se quer efeito mais controlado",
+        "monitorizacao": ["peso diário", "diurese", "potássio, sódio e creatinina", "pressão arterial", "ausculta pulmonar e edema"],
+        "ajuste_renal": "Doses maiores em insuficiência renal; monitorar resposta diurética e eletrólitos",
+        "ajuste_hepatico": "Cautela em cirrose com ascite: evitar depleção rápida e hiponatremia",
+        "observacoes": "No transudato por insuficiência cardíaca, o diurético é o tratamento do derrame; a toracocentese não é tratamento e só se justifica para alívio ou diagnóstico",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de insuficiência cardíaca",
+        "claim_id": null
+      },
+      {
+        "classe": "diuretico_poupador_de_potassio",
+        "agente": "espironolactona",
+        "papel": "condicional",
+        "indicacao": "derrame transudativo por cirrose com ascite ou por insuficiência cardíaca refratária",
+        "dose": "25 a 50 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "até compensação do edema e do derrame",
+        "dose_maxima": "100 mg/dia",
+        "contraindicacoes": ["hipercalemia acima de 5,5 mEq/L", "insuficiência renal anúrica", "uso de suplemento de potássio sem controle", "doença de Addison"],
+        "efeitos_adversos": ["hipercalemia", "ginecomastia", "impotência", "irregularidade menstrual", "elevação de creatinina"],
+        "apresentacoes": ["comprimido 25 mg", "comprimido 50 mg", "comprimido 100 mg"],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["potássio e creatinina em 1 semana e depois mensal", "peso e diurese", "ginecomastia", "pressão arterial"],
+        "ajuste_renal": "Evitar com ClCr abaixo de 30 mL/min pelo risco de hipercalemia",
+        "ajuste_hepatico": "Preferir no cirrótico com ascite, associada à furosemida na proporção de 100 mg para 40 mg",
+        "observacoes": "No cirrótico, é o diurético de escolha para o transudato; a toracocentese de grande volume exige reposição de albumina para evitar disfunção circulatória",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz de ascite",
+        "claim_id": null
+      },
+      {
+        "classe": "tuberculostatico",
+        "agente": "isoniazida",
+        "papel": "condicional",
+        "indicacao": "tuberculose pleural confirmada ou com alta suspeita clínica e ADA elevado",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia em jejum",
+        "duracao": "6 meses no total, em esquema combinado",
+        "dose_maxima": "300 mg/dia",
+        "contraindicacoes": ["hepatite aguda", "hipersensibilidade à isoniazida", "neuropatia periférica grave sem reposição de piridoxina"],
+        "efeitos_adversos": ["neuropatia periférica", "hepatotoxicidade", "náusea", "rash", "convulsão em superdose", "lúpus induzido"],
+        "apresentacoes": ["comprimido 100 mg", "comprimido 300 mg", "solução oral 10 mg/mL", "ampola 250 mg/5 mL"],
+        "preparo": "Uso direto, em jejum, com piridoxina 25 a 50 mg/dia associada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["transaminases na basal e mensal", "sintomas de hepatite", "força e sensibilidade distal", "adesão e teste de escarro"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Suspender se transaminases acima de 3 vezes o limite superior com sintomas ou 5 vezes sem sintomas",
+        "observacoes": "Esquema completo: isoniazida 300 mg, rifampicina 600 mg, pirazinamida 1.500 mg e etambutol 1.100 mg por dia nos 2 primeiros meses, seguidos de isoniazida e rifampicina por 4 meses. Sempre com piridoxina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "Ministério da Saúde/ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Confirmar o derrame e escolher o sítio com ultrassonografia antes de qualquer agulha", "detalhe": "Marcar o ponto na pele com o paciente na posição em que será puncionado, medir a lâmina líquida e identificar diafragma, fígado e baço; a marcação reduz o pneumotórax iatrogênico a menos de 3%" },
+      { "medida": "Posicionar o paciente sentado com apoio e cabeceira elevada", "detalhe": "Sentado à beira do leito com tronco inclinado à frente melhora a ventilação das bases e a drenagem; no paciente acamado, decúbito lateral com o lado afetado para cima para a punção" },
+      { "medida": "Controlar o volume e a velocidade de drenagem", "detalhe": "Não ultrapassar 1.000 a 1.500 mL na primeira hora e interromper se houver tosse intensa, dor torácica ou desconforto; o excesso causa edema de reexpansão" },
+      { "medida": "Manter o sistema de drenagem abaixo do tórax, sem clampear", "detalhe": "Frasco sempre abaixo do nível da inserção, sem dobras, com selo d'água de 2 cm; clampear apenas por segundos em troca de frasco ou transporte autorizado" },
+      { "medida": "Fisioterapia respiratória e deambulação precoce", "detalhe": "Exercícios respiratórios, tosse assistida e caminhada com o dreno no suporte aceleram a reexpansão e reduzem pneumonia e atelectasia" },
+      { "medida": "Oxigenoterapia titulada", "detalhe": "Alvo de saturação entre 92% e 96%, e 88% a 92% em DPOC com retenção de CO2; reavaliar após cada toracocentese" },
+      { "medida": "Controle glicêmico e nutricional no empiema", "detalhe": "Meta de glicemia entre 140 e 180 mg/dL e oferta proteica de 1,2 a 1,5 g/kg/dia; o empiema é catabólico e a desnutrição prolonga a drenagem" },
+      { "medida": "Cessação do tabagismo e vacinação", "detalhe": "Oferecer abordagem antitabágica na internação e atualizar vacinas contra influenza, pneumococo e COVID-19 antes da alta" },
+      { "medida": "Cuidado com o sítio de drenagem e mobilização do dreno", "detalhe": "Curativo oclusivo estéril, troca a cada 48 a 72 horas ou quando úmido, e orientação para não tracionar; dreno obstruído é a causa mais comum de falha de drenagem" }
+    ],
+    "procedimentos": [
+      { "nome": "Toracocentese diagnóstica guiada por ultrassom", "protocolo": "BOX-05", "indicacao": "todo derrame pleural novo com volume suficiente, para classificar em transudato ou exsudato e identificar a causa", "tecnica": "Ultrassom para marcar o sítio na linha axilar posterior ou média, antissepsia, campo estéril, lidocaína 1% por planos e agulha 21 a 22 G; aspirar 30 a 50 mL e enviar para celularidade, proteína, LDH, glicose, ADA, citologia, Gram, cultura e pH", "complicacoes": "Pneumotórax, hemotórax, dor, infecção do trajeto, punção de fígado ou baço e síncope vasovagal" },
+      { "nome": "Toracocentese terapêutica de alívio", "protocolo": "BOX-05", "indicacao": "derrame volumoso com dispneia, derrame maligno sintomático ou necessidade de reduzir o volume antes de imagem", "tecnica": "Mesma técnica da diagnóstica com cateter sobre agulha 16 a 18 G conectado a equipo e frasco; retirar no máximo 1.000 a 1.500 mL por sessão, com monitorização de tosse, dor e saturação", "complicacoes": "Edema pulmonar de reexpansão, pneumotórax, sangramento, hipotensão por retirada rápida e infecção" },
+      { "nome": "Drenagem pleural fechada em selo d'água", "protocolo": "BOX-04", "indicacao": "empiema, derrame parapneumônico complicado, hemotórax, derrame com pH abaixo de 7,20 ou glicose abaixo de 60 mg/dL e falha de punção simples", "tecnica": "Antissepsia, anestesia local, incisão de 2 a 3 cm no quinto ou sexto espaço intercostal na linha axilar média, dissecção romba, dreno de 28 a 32 Fr no empiema e no hemotórax, conexão ao selo d'água, fixação com sutura e radiografia de controle", "complicacoes": "Mau posicionamento, lesão de pulmão ou de vaso intercostal, hemotórax, empiema, obstrução do dreno, enfisema subcutâneo e edema de reexpansão" },
+      { "nome": "Ultrassonografia pleural à beira-leito", "indicacao": "confirmar volume, diferenciar líquido de consolidação, identificar loculação e escolher o sítio de punção ou drenagem", "tecnica": "Transdutor convexo ou linear em modo B, varredura da base até o seio costofrênico, medição da lâmina líquida em inspiração e expiração e marcação cutânea", "complicacoes": "Falso negativo em derrame mínimo, confusão com atelectasia e dependência do operador" },
+      { "nome": "Fibrinólise intrapleural com alteplase e dornase alfa", "indicacao": "empiema loculado com falha de drenagem em 48 a 72 horas ou derrame septado sem condições cirúrgicas", "tecnica": "Instilar 10 mg de alteplase e 5 mg de dornase alfa diluídos em 50 mL de SF pelo dreno, clampear por 1 hora e reabrir com aspiração; repetir por 3 dias", "complicacoes": "Sangramento pleural, dor, febre, pneumotórax e falha com necessidade de cirurgia" },
+      { "nome": "Videotoracoscopia com decorticação e pleurodese", "indicacao": "empiema organizado com paquipleurite, falha de drenagem e fibrinólise, ou derrame maligno recidivante", "tecnica": "Acesso videoassistido, remoção de coágulo e de casca fibrótica, lavagem da cavidade e instilação de talco estéril para pleurodese", "complicacoes": "Sangramento, fístula aérea persistente, infecção, dor crônica, recidiva e insuficiência respiratória no pós-operatório" },
+      { "nome": "Biópsia pleural percutânea", "indicacao": "exsudato sem diagnóstico após análise do líquido, sobretudo com suspeita de tuberculose ou neoplasia", "tecnica": "Biópsia com agulha de Abrams ou Tru-Cut guiada por ultrassom no ponto de maior espessamento pleural, com retirada de 3 a 4 fragmentos para histologia e cultura", "complicacoes": "Pneumotórax, sangramento, dor, infecção e resultado inconclusivo por amostra pequena" }
+    ],
+    "metas": [
+      "Classificação em transudato ou exsudato definida em até 24 horas da identificação do derrame",
+      "Toracocentese realizada sob guia ultrassonográfico em todos os casos",
+      "Antibiótico iniciado na primeira hora no empiema e no derrame parapneumônico complicado",
+      "Drenagem pleural realizada em até 24 horas do diagnóstico de empiema ou derrame complicado",
+      "Volume drenado na primeira hora limitado a 1.000 a 1.500 mL, sem sinal de edema de reexpansão",
+      "Retirada do dreno com débito abaixo de 50 a 100 mL por dia, expansão pulmonar confirmada e ausência de fístula aérea",
+      "Etiologia do derrame definida antes da alta em todos os exsudatos",
+      "Nenhum transudato drenado sem tratamento simultâneo da causa"
+    ],
+    "fluxo": [
+      "Confirmar o derrame com ultrassonografia à beira-leito e radiografia de tórax, e avaliar gravidade: saturação, esforço respiratório e estabilidade hemodinâmica",
+      "Estabilizar: oxigênio titulado, posição sentada, analgesia e acesso venoso; em instabilidade com suspeita de hemotórax, drenar antes de imagens complexas",
+      "Indicar toracocentese guiada por ultrassom quando houver lâmina líquida maior que 1 cm e janela segura; colher celularidade, proteína, LDH, glicose, pH, ADA, citologia, Gram e cultura",
+      "Classificar pelo critério de Light: transudato trata a causa, exsudato segue investigação dirigida",
+      "No exsudato, definir o grupo: parapneumônico simples, complicado ou empiema, tuberculoso, maligno, hemotórax ou tromboembolismo",
+      "Tratar conforme o grupo: antibiótico no simples, antibiótico mais drenagem no complicado e no empiema, RIPE no tuberculoso, citologia e pleurodese no maligno, dreno de grosso calibre e cirurgia no hemotórax",
+      "Reavaliar em 48 a 72 horas com clínica e ultrassom; falta de melhora indica drenagem inadequada, loculação ou germe resistente, e pede fibrinólise ou cirurgia",
+      "Retirar o dreno com critérios objetivos, repetir imagem e definir a causa antes da alta, com retorno precoce se recidiva"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "idoso", "ajuste": "preferir punção guiada por ultrassom com agulha fina, analgesia reduzida e atenção à desidratação; investigar malignidade e insuficiência cardíaca como causas mais prováveis", "alerta": "apresentação oligossintomática, maior risco de pneumonia e de complicação após drenagem" },
+      { "populacao": "gestante", "ajuste": "ultrassom como guia obrigatório, punção no quinto ou sexto espaço intercostal com proteção abdominal e alvo de saturação acima de 95%", "alerta": "hipoxemia materna causa sofrimento fetal e a drenagem não é contraindicada na gestação" },
+      { "populacao": "renal_cronico", "ajuste": "ajustar piperacilina com tazobactam e amoxicilina com clavulanato pela depuração, vigiar hipercalemia com espironolactona e evitar contraste desnecessário", "alerta": "derrame por sobrecarga volêmica e por hipoalbuminemia, além de maior risco de infecção pleural" },
+      { "populacao": "hepatopata", "ajuste": "tratar o transudato com espironolactona e furosemida, restringir sódio e repor albumina em toracocentese de grande volume", "alerta": "disfunção circulatória pós-punção e peritonite bacteriana espontânea devem ser excluídas" },
+      { "populacao": "oncologico", "ajuste": "toracocentese de alívio, citologia e imuno-histoquímica, e pleurodese ou cateter de permanência na recidiva", "alerta": "derrame maligno recidiva em semanas e o alívio sintomático é o objetivo principal" },
+      { "populacao": "anticoagulado", "ajuste": "agulha fina guiada por ultrassom, correção do INR para abaixo de 1,5 ou suspensão do anticoagulante de ação direta por 24 a 48 horas", "alerta": "hemotórax após punção e necessidade de reverter a anticoagulação se houver sangramento" },
+      { "populacao": "imunossuprimido", "ajuste": "investigar tuberculose, fungos, Pneumocystis e neoplasia, com ADA, cultura para micobactéria e biópsia precoce", "alerta": "derrame por infecção oportunista com apresentação atípica e cultura negativa" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "ultrassonografia pleural", "indicacao": "todos, antes de qualquer punção", "o_que_muda": "confirma volume, identifica loculação e septo, escolhe o sítio seguro e evita punção de víscera" },
+        { "nome": "radiografia de tórax em duas incidências", "indicacao": "suspeita clínica inicial", "o_que_muda": "confirma opacidade com seio costofrênico obturado e detecta desvio de mediastino e sinais de hemotórax" },
+        { "nome": "análise do líquido pleural com proteína, LDH, glicose e pH", "indicacao": "todo derrame puncionável", "o_que_muda": "aplica os critérios de Light, separa transudato de exsudato e define a urgência da drenagem" },
+        { "nome": "celularidade e diferencial do líquido pleural", "indicacao": "todo exsudato", "o_que_muda": "linfocitose sugere tuberculose ou neoplasia; neutrofilia sugere infecção; hemácias acima de 100.000 sugerem hemotórax ou neoplasia" },
+        { "nome": "ADA no líquido pleural", "indicacao": "suspeita de tuberculose pleural", "o_que_muda": "ADA acima de 40 U/L tem alta sensibilidade para tuberculose e permite iniciar o esquema antes da cultura" },
+        { "nome": "citologia e imuno-histoquímica do líquido", "indicacao": "suspeita de neoplasia", "o_que_muda": "confirma derrame maligno e define o tipo histológico e o tratamento oncológico" },
+        { "nome": "Gram, cultura e teste de sensibilidade do líquido", "indicacao": "suspeita de empiema ou derrame parapneumônico", "o_que_muda": "define o agente e permite reduzir o espectro do antibiótico; cultura para micobactéria na suspeita de tuberculose" },
+        { "nome": "tomografia de tórax com contraste", "indicacao": "derrame loculado, suspeita de massa, empiema organizado ou planejamento cirúrgico", "o_que_muda": "distingue derrame de espessamento pleural, identifica paquipleurite, abscesso e neoplasia" },
+        { "nome": "hemograma, proteína sérica, LDH sérico, glicose e creatinina", "indicacao": "todos, para aplicar os critérios de Light e ajustar dose", "o_que_muda": "permite a classificação correta e orienta o ajuste renal dos antibióticos" }
+      ],
+      "evitar": [
+        { "exame": "toracocentese sem ultrassom em derrame pequeno ou loculado", "motivo": "é a principal causa de pneumotórax iatrogênico e de punção de víscera; a marcação ultrassonográfica é obrigatória" },
+        { "exame": "drenagem pleural de transudato sem tratar a causa", "motivo": "expõe a infecção, dor e pneumotórax sem resolver o problema, que é cardíaco, hepático ou renal" },
+        { "exame": "radiografia apenas em decúbito lateral para quantificar derrame", "motivo": "não muda a conduta e atrasa a ultrassonografia, que é superior para volume e loculação" },
+        { "exame": "tomografia de tórax antes da ultrassonografia em paciente com derrame evidente", "motivo": "a ultrassonografia resolve a punção com menos tempo e sem radiação; a tomografia fica para planejamento" },
+        { "exame": "repetição diária de citologia e ADA no líquido", "motivo": "não altera a conduta e consome amostra; o seguimento é clínico e ultrassonográfico" },
+        { "exame": "biópsia pleural antes da análise do líquido", "motivo": "a primeira toracocentese com ADA e citologia resolve a maioria e é menos invasiva" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "comparecer ao retorno em 7 a 14 dias com radiografia ou ultrassom de controle",
+        "manter o curativo do dreno limpo e seco e avisar se houver secreção ou vermelhidão",
+        "respirar fundo e caminhar todos os dias para o pulmão expandir",
+        "tomar o antibiótico até o último dia, mesmo que a febre desapareça",
+        "manter o diurético no horário e pesar-se diariamente quando a causa for cardíaca ou hepática",
+        "levar o resultado da análise do líquido e o relatório da drenagem em qualquer retorno"
+      ],
+      "evitar": [
+        "interromper o antibiótico antes do prazo",
+        "praticar esforço físico intenso ou levantar peso enquanto o dreno estiver no lugar",
+        "molhar o sítio do dreno ou submergir em banheira e piscina",
+        "fumar durante o tratamento",
+        "ignorar falta de ar, febre ou dor torácica após a alta",
+        "usar anti-inflamatório sem orientação durante o tratamento antibiótico"
+      ],
+      "retorno": [
+        "falta de ar súbita ou piora progressiva da dispneia",
+        "febre que retorna ou persiste após 72 horas de antibiótico",
+        "saída de secreção purulenta ou borbulhamento no dreno",
+        "dor torácica nova ou tosse com sangue",
+        "perda de peso, sudorese noturna ou febre prolongada",
+        "edema de pernas e ganho de peso rápido quando a causa é cardíaca"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "ceftriaxona", "efeitos": ["diarreia", "rash", "colite por C. difficile", "lama biliar"], "observacao": "suspender se diarreia intensa, icterícia ou rash extenso" },
+      { "agente": "amoxicilina com clavulanato", "efeitos": ["diarreia", "colite por C. difficile", "colestase"], "observacao": "suspender se diarreia intensa ou icterícia e registrar a alergia" },
+      { "agente": "piperacilina com tazobactam", "efeitos": ["lesão renal aguda", "trombocitopenia", "diarreia"], "observacao": "dosar creatinina e plaquetas a cada 48 horas" },
+      { "agente": "clindamicina", "efeitos": ["diarreia", "colite por C. difficile", "rash"], "observacao": "suspender se diarreia com febre ou dor abdominal" },
+      { "agente": "dipirona", "efeitos": ["hipotensão", "agranulocitose rara", "rash"], "observacao": "infundir lentamente e suspender se neutropenia" },
+      { "agente": "morfina", "efeitos": ["sedação", "depressão respiratória", "hipotensão"], "observacao": "naloxona disponível e reavaliação após cada dose" },
+      { "agente": "furosemida", "efeitos": ["hipocalemia", "hipotensão", "lesão renal"], "observacao": "dosar eletrólitos e creatinina 48 horas após iniciar" },
+      { "agente": "espironolactona", "efeitos": ["hipercalemia", "ginecomastia"], "observacao": "potássio em 1 semana e não associar suplemento sem controle" },
+      { "agente": "isoniazida", "efeitos": ["neuropatia periférica", "hepatotoxicidade", "rash"], "observacao": "prescrever piridoxina e suspender se hepatite clínica" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose e sintoma no prontuário",
+      "Antibiótico com diarreia intensa ou febre: pesquisar Clostridioides difficile, suspender o agente e tratar",
+      "Rash extenso ou descamação com betalactâmico: suspender imediatamente e registrar a alergia em destaque",
+      "Morfina com sedação excessiva: reduzir a dose, monitorizar frequência respiratória e usar naloxona 0,04 a 0,4 mg IV titulada",
+      "Furosemida com hipocalemia ou hipotensão: repor potássio, ajustar dose e reavaliar o volume",
+      "Espironolactona com potássio acima de 5,5 mEq/L: suspender, restringir potássio e avaliar função renal",
+      "Isoniazida com transaminases acima de 3 vezes o limite com sintomas: suspender o esquema e investigar hepatite por fármaco",
+      "Isoniazida com parestesia: manter o esquema e aumentar a piridoxina",
+      "Drenagem com saída de mais de 1.500 mL de sangue: reposição volêmica, hemoderivados e acionar cirurgia",
+      "Reavaliar a indicação, escolher outra classe e reescrever a prescrição antes de liberar o paciente"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "amoxicilina com clavulanato 875/125 mg", "dose": "875/125 mg", "via": "VO", "frequencia": "12/12 h", "duracao": "7 a 14 dias", "condicao": "derrame parapneumônico simples em alta hospitalar", "confirmar_apresentacao_local": true },
+          { "item": "furosemida 40 mg", "dose": "40 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "30 dias", "condicao": "transudato por insuficiência cardíaca", "confirmar_apresentacao_local": true },
+          { "item": "espironolactona 25 mg", "dose": "25 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "30 dias", "condicao": "transudato por cirrose com ascite", "confirmar_apresentacao_local": true },
+          { "item": "isoniazida 300 mg", "dose": "300 mg", "via": "VO", "frequencia": "1x/dia em jejum", "duracao": "6 meses em esquema combinado", "condicao": "tuberculose pleural", "confirmar_apresentacao_local": true },
+          { "item": "piridoxina 50 mg", "dose": "50 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "durante todo o esquema", "condicao": "prevenção de neuropatia pela isoniazida", "confirmar_apresentacao_local": true },
+          { "item": "dipirona 1 g", "dose": "1 g", "via": "VO", "frequencia": "6/6 h se dor", "duracao": "5 dias", "condicao": "dor pleurítica residual", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "ceftriaxona", "dose": "2 g", "via": "IV", "frequencia": "1x/dia", "monitorizacao": "febre, leucograma e função hepática", "confirmar_apresentacao_local": true },
+          { "item": "piperacilina com tazobactam", "dose": "4,5 g", "via": "IV", "frequencia": "6/6 h", "monitorizacao": "função renal e plaquetas", "condicao": "empiema hospitalar", "confirmar_apresentacao_local": true },
+          { "item": "clindamicina", "dose": "600 mg", "via": "IV", "frequencia": "8/8 h", "monitorizacao": "diarreia e função hepática", "condicao": "anaeróbios ou alergia a betalactâmico", "confirmar_apresentacao_local": true },
+          { "item": "dipirona", "dose": "1 g", "via": "IV", "frequencia": "6/6 h", "monitorizacao": "pressão arterial", "confirmar_apresentacao_local": true },
+          { "item": "morfina", "dose": "2 a 4 mg", "via": "IV", "frequencia": "4/4 h ou titulada", "monitorizacao": "sedação e frequência respiratória", "condicao": "dor intensa ou dispneia refratária", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["radiografia de tórax PA e perfil", "ultrassonografia pleural", "análise do líquido pleural com proteína, LDH, glicose, pH e celularidade", "ADA", "citologia", "Gram e cultura", "cultura para micobactéria", "hemograma", "proteína e LDH séricos", "creatinina", "tomografia de tórax", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado(a) sob meus cuidados nesta data, com derrame pleural, submetido(a) a toracocentese e drenagem, necessitando de afastamento das atividades pelo período indicado.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento hospitalar; o período depende da causa e da necessidade de drenagem"
+      },
+      "encaminhamento": {
+        "campos": ["destino (pneumologia, cirurgia torácica ou oncologia)", "motivo", "resumo com causa, volume, análise do líquido e drenagem realizada", "prioridade", "horário do contato"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com derrame pleural à ___, volume ___, classificado como transudato ou exsudato por ___, análise do líquido com proteína ___, LDH ___, glicose ___ e pH ___, ADA ___, citologia ___, cultura ___, drenagem ___ com débito ___, antibiótico ___ e causa definida ___."
+      }
+    },
+    "anamnese": {
+      "campos": ["início e progressão da dispneia", "febre e tosse", "dor pleurítica", "pneumonia recente", "tuberculose prévia ou contato", "insuficiência cardíaca", "cirrose", "doença renal", "neoplasia", "trauma", "anticoagulante", "tabagismo e perda de peso"],
+      "texto_template": "Paciente com dispneia de início ___ e progressão ___, febre ___, tosse ___, dor pleurítica ___, pneumonia recente ___, tuberculose ou contato ___, insuficiência cardíaca ___, cirrose ___, doença renal ___, neoplasia ___, trauma ___, anticoagulante ___, tabagismo ___ e perda de peso ___."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais e saturação", "esforço respiratório", "expansibilidade torácica", "percussão", "ausculta comparada com murmúrio vesicular e frêmito", "desvio de traqueia e mediastino", "turgência jugular", "edema e perfusão", "abdome e ascite", "sinais de trauma e sítio de drenagem"],
+      "texto_template": "Sinais vitais, saturação, expansibilidade, percussão, ausculta comparada, posição da traqueia, turgência jugular, edema, abdome, sinais de trauma e sítio de drenagem."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "manejo do derrame pleural e disponibilidade de dreno, ultrassom e cirurgia torácica", "verificar": true },
+      { "tipo": "sociedade_pneumologia", "o_que_verificar": "critérios de Light, indicação de drenagem no derrame parapneumônico e conduta no empiema", "verificar": true },
+      { "tipo": "protocolo_de_tuberculose", "o_que_verificar": "esquema RIPE, dose por peso, notificação e critérios de isolamento", "verificar": true },
+      { "tipo": "diretriz_de_trauma", "o_que_verificar": "calibre do dreno e indicação de toracotomia no hemotórax", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações, diluições e estabilidade dos antimicrobianos", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-RESP18-01", "tipo": "drenagem_de_transudato", "gatilho": "drenagem pleural prescrita em derrame classificado como transudato sem tratamento simultâneo da causa", "severidade": "grave", "mensagem": "Transudato se trata com diurético e controle da causa; drenar expõe a infecção e não resolve nada.", "acao": "bloquear pedido de drenagem", "bloqueante": true },
+      { "id": "SA-RESP18-02", "tipo": "puncao_sem_ultrassom", "gatilho": "toracocentese prescrita em derrame pequeno, loculado ou sem marcação ultrassonográfica", "severidade": "grave", "mensagem": "Sem ultrassom a punção de derrame pequeno causa pneumotórax e punção de víscera.", "acao": "bloquear procedimento até marcação guiada", "bloqueante": true },
+      { "id": "SA-RESP18-03", "tipo": "empiema_sem_drenagem", "gatilho": "empiema ou derrame parapneumônico complicado diagnosticado sem drenagem pleural prescrita ou com alta hospitalar", "severidade": "grave", "mensagem": "Empiema não se resolve com antibiótico: drenagem é obrigatória.", "acao": "bloquear alta e sugerir drenagem", "bloqueante": true },
+      { "id": "SA-RESP18-04", "tipo": "volume_drenado_excessivo", "gatilho": "prescrição de retirada acima de 1.500 mL em uma única sessão ou drenagem contínua sem limite na primeira hora", "severidade": "grave", "mensagem": "Limitar a 1.000 a 1.500 mL na primeira hora para evitar edema de reexpansão.", "acao": "alertar e corrigir a prescrição", "bloqueante": false },
+      { "id": "SA-RESP18-05", "tipo": "liquido_complicado", "gatilho": "pH pleural abaixo de 7,20, glicose abaixo de 60 mg/dL, LDH acima de 1.000 UI/L ou Gram positivo sem drenagem", "severidade": "grave", "mensagem": "Líquido complicado exige drenagem: antibiótico isolado evolui para fibrotórax.", "acao": "alertar e sugerir drenagem", "bloqueante": false },
+      { "id": "SA-RESP18-06", "tipo": "tuberculose_sem_isolamento", "gatilho": "suspeita de tuberculose pleural sem isolamento respiratório e sem notificação registrada", "severidade": "precaucao", "mensagem": "Tuberculose pleural é de notificação compulsória e exige isolamento até a negativação.", "acao": "alertar e abrir notificação", "bloqueante": false },
+      { "id": "SA-RESP18-07", "tipo": "coagulacao_nao_avaliada", "gatilho": "toracocentese em paciente anticoagulado sem INR ou tempo de tromboplastina avaliados", "severidade": "precaucao", "mensagem": "Avaliar coagulação e corrigir antes da punção; usar agulha fina guiada por ultrassom.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "sociedade de pneumologia", "protocolo de tuberculose", "diretriz de trauma", "literatura"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Criação do registro a partir do catálogo mestre.", "data": null },
+        { "versao": "0.2.0", "descricao": "Primeira versão no padrão de diversidade.", "data": null }
+      ]
+    }
+  }
+}

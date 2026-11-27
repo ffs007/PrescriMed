@@ -1,0 +1,504 @@
+{
+  "id": "ws-resp_12",
+  "nome": "Crise asmática",
+  "cat": "Emergência",
+  "alias": "crise asmatica asma crise de asma broncoespasmo exacerbacao asmatica",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (RESP-12_asma.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: protocolo de crise asmática, fluxo de nebulização e critérios de internação",
+      "[verificar] sociedade_pneumologia: classificação de gravidade, papel do ipratrópio e do magnésio, estratégia com corticoide inalatório e formoterol",
+      "[verificar] diretriz_de_anafilaxia: dose e via da adrenalina, repetição e critérios de infusão contínua",
+      "[verificar] diretriz_de_ventilacao_mecanica: ventilação protetora na asma grave, hipercapnia permissiva e manejo de auto-PEEP",
+      "[verificar] anvisa: apresentações e concentrações de salbutamol, ipratrópio, corticoide e magnésio disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "RESP-12 em 2026-11-27",
+    "fundido_workspace": "RESP-12 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: tórax silencioso ou sibilos abolidos com esforço respiratório mantido -> sala vermelha, magnésio IV, preparar intubação; sonolência, confusão, agitação ou exaustão -> via aérea, intubação e UTI imediatos; saturação abaixo de 90% apesar de oxigênio titulado -> UTI, VNI em protocolo e avaliação de intubação; frequência respiratória acima de 30 rpm, fala em palavras isoladas ou incapacidade de falar -> sala vermelha e corticoterapia IV. 1) Triagem imediata: classificar gravidade em minutos por fala, frequência respiratória, saturação, pico de fluxo, uso de musculatura acessória e nível de consciência 2) Sala de emergência se grave ou iminência de parada: monitor, oxigênio com alvo de 93-95%, acesso venoso, salbutamol e ipratrópio nebulizados, corticoide sistêmico e magnésio IV 3) Leve e moderada: salbutamol por espaçador 4-8 jatos a cada 20 min e prednisona 40-50 mg VO na primeira hora, sem radiografia de rotina 4) Reavaliar em 20-60 min: pico de fluxo, saturação, frequência respiratória, frequência cardíaca e capacidade de falar 5) Respondeu, com pico de fluxo acima de 60-70% e saturação estável: observar 1 h, prescrever alta com inalatório e corticoide oral 6) Não respondeu: internar, manter nebulização, associar ipratrópio, corticoide IV e sulfato de magnésio 2 g 7) Crise grave refratária: UTI, VNI em protocolo por até 1 h e preparo imediato de intubação com ventilação protetora 8) Hipotensão, urticária ou angioedema: adrenalina IM 0,3-0,5 mg antes de qualqu",
+  "redFlags": [
+    "tórax silencioso ou sibilos abolidos com esforço respiratório mantido -> sala vermelha, magnésio IV, preparar intubação",
+    "sonolência, confusão, agitação ou exaustão -> via aérea, intubação e UTI imediatos",
+    "saturação abaixo de 90% apesar de oxigênio titulado -> UTI, VNI em protocolo e avaliação de intubação",
+    "frequência respiratória acima de 30 rpm, fala em palavras isoladas ou incapacidade de falar -> sala vermelha e corticoterapia IV",
+    "PaCO2 normal ou elevada em crise grave com acidose -> gasometria seriada, UTI e preparo de via aérea",
+    "pico de fluxo abaixo de 50% do predito ou do melhor pessoal -> internação, ipratrópio, magnésio e corticoide sistêmico",
+    "urticária, edema de face ou de lábios, hipotensão ou dor abdominal após exposição -> adrenalina IM 0,3-0,5 mg na coxa imediatamente",
+    "dor torácica pleurítica súbita com piora da dispneia e assimetria auscultatória -> radiografia ou ultrassom à beira-leito e drenagem"
+  ],
+  "naoUsar": [
+    "hipersensibilidade ao salbutamol",
+    "taquiarritmia grave não controlada",
+    "cautela em cardiopatia isquêmica descompensada e hipertireoidismo",
+    "cautela em cardiopatia isquêmica e hipertireoidismo",
+    "hipersensibilidade",
+    "infecção fúngica sistêmica não tratada",
+    "cautela em diabetes descompensado, úlcera péptica ativa e psicose",
+    "glaucoma de ângulo fechado"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "usar sempre o espaçador com o spray"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "AAS, AINE e betabloqueador não seletivo"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide sistêmico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prednisona",
+            "pos": "40-50 mg; criança 1-2 mg/kg. Via VO. 1x/dia pela manhã. 5-7 dias, sem desmame.",
+            "posTodas": true,
+            "motivo": "toda crise asmática, da leve à grave, iniciada na primeira hora (1a linha) toda crise, sem desmame",
+            "nota": "Uso direto, com alimento para reduzir dispepsia - monitorar: glicemia em diabético; monitorar: pressão arterial; monitorar: humor e sono; monitorar: potássio quando associado a beta-2 em dose alta; monitorar: adesão ao esquema curto · NÃO: hipersensibilidade; infecção fúngica sistêmica não tratada; cautela em diabetes descompensado, úlcera péptica ativa e psicose · Obs: Iniciar na primeira hora, mesmo na crise leve: reduz internação e recidiva em 7–10 dias. Cinco dias dispensam desmame. O corticoide inalatório não substitui o sistêmico durante a crise",
+            "dose": {
+              "texto": "40-50 mg; criança 1-2 mg/kg; 1x/dia pela manhã; 5-7 dias, sem desmame; max. 50 mg/dia no adulto; 40 mg/dia na criança",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 50,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": "criança 1-2 mg/kg",
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "criança 1-2 mg/kg"
+          },
+          {
+            "linha": 2,
+            "base": "prednisolona",
+            "pos": "1-2 mg/kg na criança (máximo 40 mg); 40-50 mg no adulto. Via VO. 1x/dia pela manhã. 3-5 dias.",
+            "posTodas": true,
+            "motivo": "criança e adulto com disfagia ou impossibilidade de deglutir comprimido (alternativa)",
+            "nota": "Uso direto; administrar com alimento ou diluído em água - monitorar: glicemia; monitorar: humor e sono; monitorar: adesão ao esquema curto · NÃO: hipersensibilidade; infecção fúngica sistêmica não tratada; cautela em diabetes descompensado · Obs: Mesma eficácia da prednisona em comprimido, com vantagem na pediatria e na disfagia. Medir com seringa graduada, nunca com colher de sopa",
+            "dose": {
+              "texto": "1-2 mg/kg na criança (máximo 40 mg); 40-50 mg no adulto; 1x/dia pela manhã; 3-5 dias; max. 40 mg/dia na criança; 50 mg/dia no adulto",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 2,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": "criança (máximo 40 mg)",
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            },
+            "ped": "criança (máximo 40 mg)"
+          }
+        ]
+      },
+      {
+        "nome": "Agonista beta-2 curta ação",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_salbutamol_spray",
+            "pos": "4-8 jatos (100 mcg por jato). Via inalatória com espaçador valvulado. A cada 20 min na primeira hora, até 3 ciclos; depois 1-2 jatos sob demanda, 4/4-6 h. Primeira hora de forma seriada; resgate até o controle.",
+            "posTodas": true,
+            "motivo": "crise leve e moderada, e resgate em qualquer gravidade quando há coordenação para usar espaçador (1a linha) resgate; reavaliar se usar mais de 2 dias por semana",
+            "nota": "Agitar o frasco, acoplar o espaçador e administrar 1 jato por vez, com 5-6 incursões respiratórias por jato; nunca usar sem espaçador na crise - monitorar: frequência cardíaca antes e após cada ciclo; monitorar: saturação e frequência respiratória; monitorar: pico de fluxo antes e após o broncodilatador; monitorar: tre",
+            "dose": {
+              "texto": "4-8 jatos (100 mcg por jato); a cada 20 min na primeira hora, até 3 ciclos; depois 1-2 jatos sob demanda, 4/4-6 h; primeira hora de forma seriada; resgate até o controle; max. 8 jatos por ciclo; reavaliar se a necessidade passar de 12 jatos/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": 8,
+              "unidade": "jatos",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 20 min",
+              "freq_min": 20,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antagonista muscarínico curta ação",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_brometo_de_ipratropio_gotas",
+            "pos": "4-8 jatos (20 mcg por jato). Via inalatória com espaçador. A cada 20 min por 3 ciclos; depois 4/4 h se necessário. Primeira hora em série; no máximo 24-48 h.",
+            "posTodas": true,
+            "motivo": "crise moderada a grave quando não há nebulizador disponível (alternativa)",
+            "nota": "Acoplar ao espaçador e administrar 1 jato por vez, com 5-6 incursões por jato - monitorar: frequência cardíaca; monitorar: boca seca e retenção urinária; monitorar: resposta em pico de fluxo",
+            "dose": {
+              "texto": "4-8 jatos (20 mcg por jato); a cada 20 min por 3 ciclos; depois 4/4 h se necessário; primeira hora em série; no máximo 24-48 h; max. 8 jatos por ciclo",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": 8,
+              "unidade": "jatos",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "ipratropio_solucao_para_nebulizacao_ml",
+              "n": "Ipratrópio solução para nebulização 0,25 mg/mL",
+              "ap": "solução 0,25 mg/mL, frasco 20 mL",
+              "q": "",
+              "pos": "0,5 mg (2 mL da solução 0,25 mg/mL). Via inalatória por nebulização. A cada 20 min por 3 doses, junto do salbutamol; depois 4/4 h por até 24-48 h. Primeira hora em série; no máximo 24-48 h. Nebulização em 10-15 min."
+            },
+            "motivo": "crise moderada e grave, associado ao salbutamol nas três primeiras horas (condicional)",
+            "nota": "Diluir 0,5 mg em 3 mL de SF 0,9% ou misturar ao salbutamol na mesma cuba, quando a compatibilidade local permitir - monitorar: frequência cardíaca; monitorar: boca seca e retenção urinária; monitorar: pupila e dor ocular em paciente com glaucoma; monitorar: pico de fluxo · NÃO: glaucoma de ângulo fechado; hipertrofia prostática com retenção urinária; hipersensibilidade a atropínicos · Obs: Só na crise moderada a grave e nas três primeiras horas: reduz internação e melhora o pico de fluxo quando combinado ao SABA. Não prolongar na manutenção — o ipratrópio de curta ação não substitui o LAMA",
+            "dose": {
+              "texto": "0,5 mg (2 mL da solução 0,25 mg/mL); a cada 20 min por 3 doses, junto do salbutamol; depois 4/4 h por até 24-48 h; primeira hora em série; no máximo 24-48 h; max. 1,5 mg na primeira hora",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1.5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide inalatório com laba",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "budesonida_formoterol",
+            "pos": "1-2 inalações de 160/4,5 mcg. Via inalatória. 12/12 h de manutenção; 1 inalação sob demanda como resgate, respeitando o total diário. Indefinida.",
+            "posTodas": true,
+            "motivo": "início ou otimização do tratamento de manutenção antes da alta, com estratégia de alívio e manutenção no mesmo inalador (condicional) manutenção; resgate conforme plano de ação",
+            "nota": "Não há preparo; inalar após expiração completa e bochechar a boca depois - monitorar: técnica inalatória observada; monitorar: adesão e número de inalações de resgate por semana; monitorar: pico de fluxo; monitorar: candidíase oral e disfonia; monitorar: frequência de crises · NÃO: hipersensibilidade; cautela em arritmia cardíaca, hipertireoidismo e hipocalemia · Obs: É o que muda o desfecho depois da crise: todo paciente deve sair com corticoide inalatório, e a estratégia com formoterol permite usar o mesmo inalador na manutenção e no alívio. Alta com apenas salbutamol é a causa mais comum…",
+            "dose": {
+              "texto": "1-2 inalações de 160/4,5 mcg; 12/12 h de manutenção; 1 inalação sob demanda como resgate, respeitando o total diário; indefinida; max. 12 inalações/dia somando manutenção e resgate",
+              "status": "ok",
+              "valor": 4.5,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Simpaticomimetico alfa beta",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "adrenalina_ml",
+              "n": "Adrenalina (epinefrina) 1 mg/mL",
+              "ap": "ampola 1 mg/mL (1 mL)",
+              "q": "",
+              "pos": "0,3-0,5 mg; criança 0,01 mg/kg (máximo 0,5 mg). Via IM, face anterolateral da coxa. Repetir a cada 5-15 min enquanto persistirem sinais de anafilaxia. Até a estabilização; infusão IV contínua apenas em UTI. Injeção IM profunda; infusão IV contínua apenas em UTI com monitorização."
+            },
+            "motivo": "anafilaxia com broncoespasmo ou iminência de parada com hipotensão e angioedema (resgate)",
+            "nota": "Uso direto, sem diluir, para via IM. Para infusão contínua, diluir 1 mg em 100 mL de SF 0,9% (10 mcg/mL) em bomba - monitorar: pressão arterial e frequência cardíaca; monitorar: ECG contínuo; monitorar: saturação; monitorar: perfusão e nível de consciência; monitorar: local da injeção · NÃO: não há contraindicação absoluta na anafilaxia; cautela em cardiopatia isquêmica, arritmia e uso de betabloqueador · Obs: Primeira droga quando a crise asmática é anafilaxia ou há iminência de parada com hipotensão e angioedema: vem antes do anti-H1 e do corticoide. Em uso de betabloqueador a resposta pode ser refratária e exigir glucagon 1–5…",
+            "dose": {
+              "texto": "0,3-0,5 mg; criança 0,01 mg/kg (máximo 0,5 mg); repetir a cada 5-15 min enquanto persistirem sinais de anafilaxia; até a estabilização; infusão IV contínua apenas em UTI; max. 0,5 mg por dose IM",
+              "status": "ok",
+              "valor": 0.3,
+              "valor_max": 0.5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.5,
+                "unidade": "mg"
+              },
+              "ped": "criança 0,01 mg/kg (máximo 0,5 mg)",
+              "freq_h": null,
+              "freq_texto": "a cada 5-15 min",
+              "freq_min": 5,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            },
+            "ped": "criança 0,01 mg/kg (máximo 0,5 mg)"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Posição sentada ou semi-sentada com tronco elevado",
+              "ap": "",
+              "q": "",
+              "pos": "Pernas pendentes e cabeceira a 45–60°; melhora a mecânica diafragmática e reduz o trabalho respiratório antes de qualquer droga. Não deitar o paciente dispneico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Oxigênio titulado com alvo de saturação de 93% a 95%",
+              "ap": "",
+              "q": "",
+              "pos": "Cânula nasal ou máscara com reservatório, com ajuste por oximetria a cada 15–30 min; em gestante manter acima de 95%. Não hiperoxigenar: saturação acima de 98% não traz benefício e mascara a gravidade"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Reavaliação seriada em 1 h com pico de fluxo, saturação, frequência respiratória e cardíaca",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar antes e após cada ciclo de broncodilatador; a resposta em 1 h é o que define alta, internação ou UTI, e não a impressão inicial"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Retirada do gatilho",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender AAS, AINE e betabloqueador não seletivo, afastar alérgeno, fumaça de cigarro e vapores; perguntar por exposição ocupacional e por uso de drogas inalatórias"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Não sedar e manter ambiente calmo",
+              "ap": "",
+              "q": "",
+              "pos": "Sedativo e opioide deprimem o drive respiratório e mascaram a piora; permitir acompanhante e explicar cada etapa reduz a ansiedade sem farmacologia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Hidratação cautelosa por via oral",
+              "ap": "",
+              "q": "",
+              "pos": "Pequenos volumes frequentes; soro apenas se intolerância oral ou taquicardia por desidratação, pois a sobrecarga hídrica piora a troca gasosa"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Ensino da técnica inalatória e do espaçador antes da alta",
+              "ap": "",
+              "q": "",
+              "pos": "Demonstração com retorno do paciente, checagem de coordenação, limpeza do espaçador e identificação de cada inalador por cor e nome"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Plano de ação escrito e retorno precoce",
+              "ap": "",
+              "q": "",
+              "pos": "Documento com sinais de alerta, dose de resgate, quando procurar emergência, telefone do serviço e retorno agendado em 7 dias; entregar cópia ao paciente e ao cuidador"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Controle ambiental, cessação do tabagismo e vacinação",
+              "ap": "",
+              "q": "",
+              "pos": "Vacinas contra influenza e pneumococo, orientação sobre ácaros e mofo, cessação tabágica com oferta de tratamento e revisão de exposição ocupacional"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "RESP-12"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Corticoide sistêmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metilpred_ev",
+            "motivo": "crise grave ou quando a via oral é impossível por vômito, rebaixamento ou intubação (alternativa)",
+            "nota": "Reconstituir com o diluente próprio e diluir em 50-100 mL de SF 0,9% - monitorar: glicemia; monitorar: pressão arterial; monitorar: potássio; monitorar: sinais de infecção; monitorar: sítio de infusão",
+            "dose": {
+              "texto": "40-80 mg; criança 1-2 mg/kg; até 125 mg na crise grave; 6/6 h ou 12/12 h; 2-3 dias, com conversão para via oral assim que possível; max. 125 mg por dose",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 80,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 125,
+                "unidade": "mg"
+              },
+              "ped": "criança 1-2 mg/kg",
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Sal de magnésio",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "sulfato_mg",
+            "motivo": "crise grave com pico de fluxo abaixo de 50% ou sem resposta a salbutamol, ipratrópio e corticoide na primeira hora (resgate)",
+            "nota": "Diluir 2 g (20 mL da solução 10%) em 50-100 mL de SF 0,9% - monitorar: pressão arterial a cada 5 min durante a infusão; monitorar: reflexo patelar e força muscular; monitorar: frequência respiratória; monitorar: diurese; monitorar: magnésio sérico se repetir a dose · NÃO: insuficiência renal com ClCr abaixo de 30 mL/min; bloqueio atrioventricular avançado; miastenia gravis; hipocalemia grave não corrigida · Obs: É o fármaco que só a crise grave usa: reservar para pico de fluxo abaixo de 50% ou falha da tríade SABA, ipratrópio e corticoide na primeira hora. Manter gluconato de cálcio 10% à beira do leito como antídoto · Renal:…",
+            "dose": {
+              "texto": "2 g; criança 40 mg/kg (máximo 2 g); dose única; repetir uma vez após 30-60 min se persistir a gravidade; infusão única de 20 min; max. 2 g por dose, 4 g no total",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": "criança 40 mg/kg (máximo 2 g)",
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "RESP-12",
+    "versao": "0.2.0",
+    "arquivo": "RESP-12_asma.json",
+    "area": "Respiratório/ORL",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

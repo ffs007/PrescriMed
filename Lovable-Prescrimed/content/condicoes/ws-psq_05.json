@@ -1,0 +1,499 @@
+{
+  "id": "ws-psq_05",
+  "nome": "Episódio depressivo",
+  "cat": "Psiquiatria",
+  "alias": "episodio depressivo depressao episodio depressivo transtorno depressivo maior tristeza persistente depressao maior",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (PSQ-05_depressao.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] diretriz_internacional: critérios de episódio depressivo, escolha de ISRS, tempo de manutenção e vigilância de ideação em jovem",
+      "[verificar] sociedade_psiquiatria: manejo da depressão resistente, depressão bipolar e risco suicida",
+      "[verificar] ministerio_da_saude: linha de cuidado em saúde mental, organização da RAPS e critérios de encaminhamento ao CAPS",
+      "[verificar] legislacao_brasileira: Lei 10.216/2001, internação involuntária e comunicação ao Ministério Público em 72 h",
+      "[verificar] anvisa: apresentações, indicações, interações e alertas de bula dos antidepressivos e estabilizadores",
+      "[verificar] protocolo_institucional: fluxo de retorno, tempo de consulta, disponibilidade de psicoterapia e de CAPS na rede"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "PSQ-05 em 2026-11-27",
+    "fundido_workspace": "PSQ-05 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: ideação suicida ativa, com plano, método ou acesso a meios -> interromper a consulta de rotina, avaliar risco estruturado e decidir internação ou plano de segurança; tentativa de suicídio nos últimos 3 meses -> tratar como risco alto, não prescrever grande quantidade de comprimidos e agendar retorno em 48 a 72 h; sintomas psicóticos, catatonia ou recusa alimentar com perda de peso -> encaminhar para avaliação hospitalar imediata; história de mania ou hipomania, inclusive induzida por antidepressivo -> não prescrever antidepressivo isolado; iniciar ou ajustar estabilizador de humor. 1) Avaliar risco suicida com C-SSRS e registrar antes de qualquer prescrição; se risco alto, interromper o fluxo ambulatorial e internação 2) Confirmar o episódio depressivo por critérios, medir gravidade com PHQ-9 e verificar prejuízo funcional 3) Rastrear bipolaridade: mania ou hipomania prévia, induzida por antidepressivo, história familiar e psicose 4) Excluir causa orgânica e fármaco depressogênico: TSH, hemograma, sódio, função renal e hepática, revisão da lista de medicamentos 5) Definir o cenário: ambulatorial com retorno em 7 a 14 dias, CAPS para casos graves e persistentes, ou internação 6) Iniciar ISRS em dose baixa com titulação, associar psicoterapia e psicoeducar sobre a janela de 2 a 4 semanas 7) Reavaliar em 2 a 4 semanas: adesão, efeitos adversos, ativação, ideação e resposta; ajustar a dose até a máxima tolerada 8) Falha após 4 a 8 semanas em dose adequada: confi",
+  "redFlags": [
+    "ideação suicida ativa, com plano, método ou acesso a meios -> interromper a consulta de rotina, avaliar risco estruturado e decidir internação ou plano de segurança",
+    "tentativa de suicídio nos últimos 3 meses -> tratar como risco alto, não prescrever grande quantidade de comprimidos e agendar retorno em 48 a 72 h",
+    "sintomas psicóticos, catatonia ou recusa alimentar com perda de peso -> encaminhar para avaliação hospitalar imediata",
+    "história de mania ou hipomania, inclusive induzida por antidepressivo -> não prescrever antidepressivo isolado; iniciar ou ajustar estabilizador de humor",
+    "jovem abaixo de 25 anos com ativação, insônia, irritabilidade ou piora da ideação nas primeiras semanas de ISRS -> reavaliar risco no mesmo dia, reduzir a dose ou suspender e reforçar o contato",
+    "uso de álcool, cocaína ou benzodiazepínico em dose crescente -> tratar o uso de substância junto do episódio e não prescrever benzodiazepínico de manutenção",
+    "puerpério com desesperança, ideia de morte ou ideação de machucar o bebê -> não deixar a puérpera sozinha com o bebê e acionar avaliação psiquiátrica imediata",
+    "hipotireoidismo, anemia, apneia do sono ou fármaco depressogênico identificado -> tratar a causa e reavaliar em 4 a 6 semanas antes de escalar psicofármaco"
+  ],
+  "naoUsar": [
+    "uso de IMAO nas últimas 2 semanas",
+    "uso de pimozida ou tioridazina",
+    "uso de linezolida ou azul de metileno",
+    "bipolaridade sem estabilizador",
+    "hipersensibilidade",
+    "uso de IMAO",
+    "QT longo ou QTc acima de 500 ms",
+    "hipocalemia ou hipomagnesemia não corrigidas"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar o comprimido no mesmo horário todos os dias e não dobrar a dose esquecida"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "interromper o antidepressivo por conta própria quando começar a melhorar"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "ISRS",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_sertralina",
+            "pos": "50 mg. Via VO. 1x/dia pela manhã. Mínimo de 6 a 12 meses após a remissão; 2 anos ou mais se recorrente.",
+            "posTodas": true,
+            "motivo": "episódio depressivo moderado a grave, com ou sem sintomas ansiosos (1a linha) episódio depressivo moderado a grave, somente com risco suicida avaliado e retorno agendado",
+            "nota": "Uso direto, com ou sem alimento - monitorar: risco suicida em cada contato, sobretudo nas primeiras 2 semanas e após cada aumento; monitorar: sódio em idoso e em uso de diurético; monitorar: sinais de síndrome serotoninérgica (febre, tremor, hiperreflexia, clônus); monitorar: adesão e efeitos sexuais; monitorar: sangra · NÃO: uso de IMAO nas últimas 2 semanas; uso de pimozida ou tioridazina; uso de linezolida ou azul de metileno; bipolaridade sem estabilizador; hipersensibilidade · Obs: Titulação: 25 mg nos primeiros 4 a 7 dias em idoso, ansiedade intensa ou hepatopatia, depois 50 mg; subir para 100 mg em 2 a 4 semanas se resposta…",
+            "dose": {
+              "texto": "50 mg; 1x/dia pela manhã; mínimo de 6 a 12 meses após a remissão; 2 anos ou mais se recorrente; max. 200 mg/dia, com aumentos de 25 a 50 mg a cada 1 a 2 semanas",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 50,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "leg_escitalopram",
+            "pos": "10 mg. Via VO. 1x/dia. Mínimo de 6 a 12 meses após a remissão.",
+            "posTodas": true,
+            "motivo": "episódio depressivo quando a sertralina não está disponível, não é tolerada ou há interação medicamentosa (alternativa)",
+            "nota": "Uso direto; a solução oral pode ser diluída em água - monitorar: ECG com QTc em cardiopata, idoso e uso de outro fármaco que prolonga QT; monitorar: sódio; monitorar: risco suicida e ativação; monitorar: adesão · NÃO: uso de IMAO; QT longo ou QTc acima de 500 ms; hipocalemia ou hipomagnesemia não corrigidas; bipolaridade sem estabilizador · Obs: Titulação: 5 mg nos primeiros 5 a 7 dias em idoso ou ansiedade intensa, depois 10 mg; 20 mg só após 2 a 4 semanas e com ECG. A apresentação em gotas facilita o ajuste fino em idoso e em quem não deglute comprimido.",
+            "dose": {
+              "texto": "10 mg; 1x/dia; mínimo de 6 a 12 meses após a remissão; max. 20 mg/dia; 10 mg/dia acima de 65 anos ou em hepatopatia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "leg_fluoxetina",
+            "pos": "20 mg. Via VO. 1x/dia pela manhã. Mínimo de 6 a 12 meses após a remissão.",
+            "posTodas": true,
+            "motivo": "episódio depressivo em rede de menor custo, em má adesão por esquecimento de doses e em adolescente de 8 a 18 anos (alternativa) alternativa de menor custo ou adolescente, com retorno em 7 dias",
+            "nota": "Uso direto, pela manhã, com ou sem alimento - monitorar: risco suicida e ativação nas primeiras semanas; monitorar: sódio em idoso; monitorar: interações com tamoxifeno, metoprolol, tricíclicos e antipsicóticos; monitorar: adesão · NÃO: uso de IMAO nas últimas 5 semanas; uso de tioridazina ou pimozida; bipolaridade sem estabilizador; hipersensibilidade · Obs: Meia-vida longa: protege de sintomas de retirada na má adesão, mas prolonga interações e exige 5 semanas de washout antes de IMAO. É o antidepressivo com mais dados em adolescente. Titulação em 10 mg por 1 a 2 semanas em jovem e…",
+            "dose": {
+              "texto": "20 mg; 1x/dia pela manhã; mínimo de 6 a 12 meses após a remissão; max. 60 mg/dia em adulto; 20 mg/dia em idoso",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 60,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Estabilizador humor",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "carbonato_de_litio",
+              "n": "Carbonato de lítio",
+              "ap": "comprimido 300 mg (carbonato de lítio)",
+              "q": "",
+              "pos": "300 mg. Via VO. 8/8 h ou 1x/dia na formulação de liberação prolongada. Longo prazo, com reavaliação a cada 6 meses."
+            },
+            "motivo": "depressão bipolar, prevenção de mania e de suicídio e potencialização em depressão refratária (condicional) depressão bipolar ou potencialização, após creatinina e TSH basais",
+            "nota": "Uso direto, com alimento; manter ingesta hídrica e salina habitual - monitorar: litemia 12 h após a última dose, alvo 0,6 a 0,8 mEq/L; monitorar: creatinina e TSH a cada 6 meses; monitorar: sódio e estado de hidratação; monitorar: tremor grosseiro, fala arrastada e ataxia; monitorar: adesão · NÃO: insuficiência renal grave; desidratação ou dieta hipossódica sem controle; insuficiência cardíaca grave; primeiro trimestre de gestação sem avaliação especializada; uso de tiazídico ou AINE sem ajuste · Obs: Não suspender abruptamente: a retirada rápida aumenta recaída e suicídio. É o estabilizador com maior evidência de redução de…",
+            "dose": {
+              "texto": "300 mg; 8/8 h ou 1x/dia na formulação de liberação prolongada; longo prazo, com reavaliação a cada 6 meses; max. 1.800 mg/dia, guiado pela litemia",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1800,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "leg_lamotrigina",
+            "pos": "25 mg. Via VO. 1x/dia por 2 semanas, depois 12/12 h. Longo prazo.",
+            "posTodas": true,
+            "motivo": "fase depressiva do transtorno bipolar e prevenção de recaída depressiva (condicional)",
+            "nota": "Uso direto, com ou sem alimento; o comprimido dispersível pode ser dissolvido em água - monitorar: rash cutâneo em cada contato nas primeiras 8 semanas: suspender imediatamente se surgir; monitorar: adesão à titulação lenta; monitorar: humor e sinais de virada maníaca; monitorar: nível de sedação",
+            "dose": {
+              "texto": "25 mg; 1x/dia por 2 semanas, depois 12/12 h; longo prazo; max. 200 mg/dia; 100 mg/dia com valproato",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "IRSN",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_venlafaxina",
+            "pos": "75 mg. Via VO. 1x/dia, com alimento. Mínimo de 6 a 12 meses após a remissão.",
+            "posTodas": true,
+            "motivo": "depressão moderada a grave com sintomas ansiosos, dor crônica associada ou falha de ISRS em dose adequada (alternativa)",
+            "nota": "Uso direto, com alimento; não partir nem mastigar a cápsula - monitorar: pressão arterial em toda consulta e após cada aumento; monitorar: risco suicida; monitorar: sintomas de retirada na redução ou suspensão; monitorar: sódio em idoso",
+            "dose": {
+              "texto": "75 mg; 1x/dia, com alimento; mínimo de 6 a 12 meses após a remissão; max. 225 mg/dia",
+              "status": "ok",
+              "valor": 75,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 225,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Nassa",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "mirtazapina",
+            "pos": "15 mg. Via VO. À noite. Mínimo de 6 a 12 meses após a remissão.",
+            "posTodas": true,
+            "motivo": "depressão com insônia intensa, inapetência, perda de peso ou náusea importante com ISRS (alternativa) insônia intensa e perda de peso associadas",
+            "nota": "Uso direto, à noite - monitorar: sedação diurna e risco de queda; monitorar: peso e perímetro abdominal; monitorar: hemograma se febre ou infecção; monitorar: sódio em idoso · NÃO: uso de IMAO; neutropenia ou agranulocitose; hipersensibilidade · Obs: Titulação: 15 mg por 1 a 2 semanas, depois 30 mg; doses acima de 30 mg aumentam a ativação e reduzem a sedação. Baixa toxicidade em overdose, útil quando o paciente está desnutrido e o risco de overdose é alto. · Renal: Reduzir a dose se ClCr abaixo de 40 mL/min",
+            "dose": {
+              "texto": "15 mg; à noite; mínimo de 6 a 12 meses após a remissão; max. 45 mg/dia",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 45,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antidepressivo tricíclico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_amitriptilina",
+            "pos": "25 mg. Via VO. À noite. Mínimo de 6 a 12 meses após a remissão.",
+            "posTodas": true,
+            "motivo": "depressão com dor crônica ou insônia, apenas em paciente sem risco de overdose e com ECG normal (condicional)",
+            "nota": "Uso direto, à noite - monitorar: ECG antes de iniciar e após cada aumento acima de 75 mg; monitorar: pressão arterial em ortostase; monitorar: nível sérico acima de 200 ng/mL já é tóxico; monitorar: constipação, retenção urinária e confusão em idoso; monitorar: risco suicida e quantidade dispensada · NÃO: risco de overdose ou tentativa prévia por medicamento; cardiopatia, arritmia, bloqueio de ramo ou QTc prolongado; glaucoma de ângulo fechado; hipertrofia prostática com retenção urinária; uso de IMAO; fase maníaca; gestação sem avaliação especializada · Obs: Titulação: 25 mg à noite, 50 mg após 3 a 7 dias, aumentos de 25 mg a…",
+            "dose": {
+              "texto": "25 mg; à noite; mínimo de 6 a 12 meses após a remissão; max. 150 mg/dia em ambulatório; 300 mg/dia apenas em internação com nível sérico",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 150,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antipsicótico atípico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_quetiapina",
+            "pos": "25 mg. Via VO. À noite. Pelo menor tempo possível, com reavaliação da indicação a cada 3 meses.",
+            "posTodas": true,
+            "motivo": "potencialização em depressão resistente, depressão bipolar e controle de insônia e ansiedade na fase inicial (condicional)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: pressão arterial e ortostatismo; monitorar: glicemia, perfil lipídico e peso; monitorar: QTc em cardiopata; monitorar: acatisia, que pode ser confundida com piora da ansiedade; monitorar: sedação diurna",
+            "dose": {
+              "texto": "25 mg; à noite; pelo menor tempo possível, com reavaliação da indicação a cada 3 meses; max. 200 mg/dia como adjuvante; 300 mg/dia na depressão bipolar; 150 mg/dia em idoso",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Avaliação de risco suicida antes de qualquer prescrição",
+              "ap": "",
+              "q": "",
+              "pos": "Aplicar C-SSRS, registrar ideação, plano, intenção, meios, tentativa prévia e rede de apoio no prontuário; a pergunta direta sobre morte não induz o ato e muda a conduta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Psicoeducação sobre latência e janela de risco",
+              "ap": "",
+              "q": "",
+              "pos": "Explicar que o efeito aparece em 2 a 4 semanas, que ansiedade e insônia podem piorar nos primeiros dias, que a ideação deve ser relatada imediatamente e que a suspensão abrupta causa retirada; entregar a orientação por escrito"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Ativação comportamental e higiene do sono",
+              "ap": "",
+              "q": "",
+              "pos": "Agenda diária com uma atividade prazerosa e uma produtiva por dia, horário fixo de despertar, restrição de cochilo e de tela à noite, exposição à luz pela manhã; começar pelo item mais fácil para evitar paralisia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Exercício aeróbico regular",
+              "ap": "",
+              "q": "",
+              "pos": "150 minutos por semana em sessões de 30 minutos, caminhada ou bicicleta, com intensidade moderada; efeito antidepressivo comparável ao de fármaco em quadros leves e melhora sono e ansiedade"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Psicoterapia estruturada",
+              "ap": "",
+              "q": "",
+              "pos": "Terapia cognitivo-comportamental ou ativação comportamental, 8 a 16 sessões semanais; em quadros graves, associar ao fármaco desde o início e não usar psicoterapia como substituta quando há risco"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Envolvimento da família e restrição de meios",
+              "ap": "",
+              "q": "",
+              "pos": "Chamar um familiar à consulta, explicar sinais de piora, orientar a guardar medicamentos e armas, definir quem acompanha o retorno e combinar contato imediato se houver ideação ou mudança brusca de comportamento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Retorno agendado e contato ativo",
+              "ap": "",
+              "q": "",
+              "pos": "Consulta em 7 a 14 dias após iniciar ou ajustar dose, contato telefônico em 48 h no jovem e no risco moderado; receita suficiente apenas até o retorno, com data e nome do profissional registrados"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Suspensão de álcool e revisão de fármacos depressogênicos",
+              "ap": "",
+              "q": "",
+              "pos": "Interromper álcool e drogas, revisar corticosteroides, isotretinoína, interferon, betabloqueador e anticoncepcional hormonal; tratar dor crônica e apneia do sono, que mantêm o quadro"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "PSQ-05"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": []
+  },
+  "ws": {
+    "id": "PSQ-05",
+    "versao": "0.2.0",
+    "arquivo": "PSQ-05_depressao.json",
+    "area": "Psiquiatria",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

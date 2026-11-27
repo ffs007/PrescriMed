@@ -1,0 +1,488 @@
+{
+  "id": "ws-gi_17",
+  "nome": "Intoxicação alimentar",
+  "cat": "Gastrointestinal",
+  "alias": "intoxicacao alimentar intoxicacao alimentar surto alimentar gastroenterite por alimento toxinfeccao",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-17_intoxicacao_alimentar.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] ministerio_da_saude: botulismo, antitoxina e notificação",
+      "[verificar] cdc: STEC, HUS e listeriose",
+      "[verificar] anvisa: apresentações e bulas",
+      "[verificar] vigilancia_sanitaria: fluxo de surto alimentar"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-17 em 2026-11-27",
+    "fundido_workspace": "GI-17 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: diplopia, ptose, disfagia, fala arrastada ou fraqueza descendente -> antitoxina imediata, UTI e notificação; diarreia sanguinolenta com palidez, petéquias ou oligúria -> internar e suspender antibiótico e antidiarreico; hipotensão, taquicardia, mucosas secas ou confusão -> reidratação venosa imediata; febre acima de 38,5 °C com calafrios e toxemia -> hemoculturas, internação e antibiótico. 1) Estabelecer a cronologia entre a refeição e o primeiro sintoma 2) Avaliar gravidade: perfusão, diurese, estado mental e temperatura 3) Exame neurológico dirigido para botulismo e inspeção das fezes para sangue 4) Toxinose de início rápido: suporte, SRO e antiemético, sem antibiótico 5) Infecção invasiva: coprocultura e antibiótico apenas nos casos selecionados 6) Suspeita de botulismo, STEC ou HUS: hospital, antitoxina ou suporte renal, e notificação 7) Surto: acionar vigilância sanitária e orientar contactantes",
+  "redFlags": [
+    "diplopia, ptose, disfagia, fala arrastada ou fraqueza descendente -> antitoxina imediata, UTI e notificação",
+    "diarreia sanguinolenta com palidez, petéquias ou oligúria -> internar e suspender antibiótico e antidiarreico",
+    "hipotensão, taquicardia, mucosas secas ou confusão -> reidratação venosa imediata",
+    "febre acima de 38,5 °C com calafrios e toxemia -> hemoculturas, internação e antibiótico",
+    "gestante com febre e diarreia -> ampicilina empírica e avaliação obstétrica",
+    "imunossuprimido com diarreia e febre -> internar e antibiótico de amplo espectro",
+    "dois ou mais casos no mesmo local ou manipulador de alimentos doente -> notificar vigilância sanitária e guardar amostras"
+  ],
+  "naoUsar": [
+    "vômitos incoercíveis",
+    "rebaixamento de consciência",
+    "obstrução intestinal",
+    "hipercalemia grave",
+    "alcalose metabólica",
+    "sobrecarga cardíaca",
+    "síndrome do QT longo",
+    "uso concomitante de apomorfina"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "beber SRO em colheradas"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "antidiarreico se houver febre ou sangue"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Reidratante oral",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_sais_de_reidratacao_oral_sro",
+            "pos": "50 a 100 mL/kg em 4 h; manutenção de 200 a 400 mL após cada evacuação líquida. Via VO. Colheradas a cada 5 a 10 min. Até diurese clara e sede resolvida.",
+            "posTodas": true,
+            "motivo": "desidratação leve a moderada com via oral preservada (1a linha) reidratação",
+            "nota": "Diluir o sachê em 1 L de água potável; não usar refrigerante nem água já açucarada - monitorar: diurese; monitorar: turgor cutâneo; monitorar: sede; monitorar: peso em criança; monitorar: sódio se desidratação grave",
+            "dose": {
+              "texto": "50 a 100 mL/kg em 4 h; manutenção de 200 a 400 mL após cada evacuação líquida; colheradas a cada 5 a 10 min; até diurese clara e sede resolvida; max. não se aplica",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            },
+            "ped": "SRO 50 mL/kg em 4 h, ondansetrona 0,15 mg/kg e zinco 20 mg/dia por 10 a 14 dias"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "azitromicina",
+            "pos": "1 g. Via VO. Dose única (Salmonella: 500 mg 1x/dia por 3 dias). 1 a 3 dias.",
+            "posTodas": true,
+            "motivo": "disenteria por Shigella, infecção por Campylobacter e alternativa em gestante (alternativa) disenteria bacteriana",
+            "nota": "Uso direto; suspensão reconstituir conforme bula - monitorar: QT se cardiopata; monitorar: resposta em 48 h; monitorar: função hepática · NÃO: alergia a macrolídeo; QT longo; suspeita de E. coli O157 · Obs: Preferida na gestante e na suspeita de Campylobacter. Dose única favorece adesão no atendimento ambulatorial.",
+            "dose": {
+              "texto": "1 g; dose única (Salmonella: 500 mg 1x/dia por 3 dias); 1 a 3 dias; max. 1 g por dose",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "SRO 50 mL/kg em 4 h, ondansetrona 0,15 mg/kg e zinco 20 mg/dia por 10 a 14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico fluorquinolona",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ciprofloxacino",
+            "pos": "500 mg. Via VO. 12/12 h. 3 dias. 60 minutos (IV).",
+            "posTodas": true,
+            "motivo": "disenteria bacteriana grave por Shigella ou Salmonella invasiva (condicional)",
+            "nota": "VO uso direto; IV infundir a bolsa sem diluição adicional - monitorar: diarreia por C. difficile; monitorar: dor no tendão de Aquiles; monitorar: QT; monitorar: resposta em 48 h · NÃO: suspeita de E. coli O157; gestação; criança e adolescente; tendinopatia prévia; miastenia gravis · Obs: Nunca prescrever em diarreia sanguinolenta com suspeita de STEC: o antibiótico aumenta o risco de síndrome hemolítico-urêmica. Não usar em diarreia aquosa sem sangue. · Renal: Ajustar se clearance abaixo de 30 mL/min",
+            "dose": {
+              "texto": "500 mg; 12/12 h; 3 dias; max. 1 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            },
+            "ped": "SRO 50 mL/kg em 4 h, ondansetrona 0,15 mg/kg e zinco 20 mg/dia por 10 a 14 dias"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Reidratação precoce",
+              "ap": "",
+              "q": "",
+              "pos": "Iniciar SRO antes de exames e manter mesmo com vômito, em colheradas de 5 min"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Manter alimentação leve",
+              "ap": "",
+              "q": "",
+              "pos": "Arroz, batata, banana, torrada e caldo salgado; não suspender dieta por mais de 24 h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Higiene e isolamento de contato",
+              "ap": "",
+              "q": "",
+              "pos": "Lavar as mãos e desinfetar superfícies; manipulador de alimentos afastado até 48 h sem sintomas e com coprocultura negativa quando exigido"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Notificação e investigação de surto",
+              "ap": "",
+              "q": "",
+              "pos": "Botulismo, cólera, febre tifoide e surto institucional são de notificação imediata; guardar restos do alimento em recipiente limpo e refrigerado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Controle de diurese e balanço hídrico",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar volume urinário e peso em desidratação moderada a grave e em idoso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Suspender fármacos que pioram a diarreia",
+              "ap": "",
+              "q": "",
+              "pos": "IBP, metformina, laxantes e inibidor de bomba durante o episódio agudo, se possível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Orientação escrita de retorno",
+              "ap": "",
+              "q": "",
+              "pos": "Sangue nas fezes, febre persistente, ausência de urina por 8 h, visão dupla, fraqueza"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-17"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cristaloide isotônico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ringer_lactato",
+              "n": "Ringer lactato",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "30 mL/kg. Via IV. Bolus, reavaliar a cada 30 min e repetir até perfusão adequada. Primeiras 24 h. Bolus em 15 a 30 min; no choque, infusão rápida pressurizada."
+            },
+            "motivo": "desidratação moderada a grave, vômito incoercível ou choque (1a linha) desidratação moderada a grave",
+            "nota": "Não diluir; administrar em acesso periférico calibroso - monitorar: pressão arterial; monitorar: frequência cardíaca; monitorar: diurese; monitorar: ausculta pulmonar; monitorar: eletrólitos; monitorar: balanço hídrico · NÃO: hipercalemia grave; alcalose metabólica; sobrecarga cardíaca · Obs: Preferível ao SF 0,9% em diarreia de grande volume. Em cardiopata, fracionar em bolus de 250 mL com reavaliação. · Renal: Cautela em oligúria ou anúria; avaliar diálise",
+            "dose": {
+              "texto": "30 mL/kg; bolus, reavaliar a cada 30 min e repetir até perfusão adequada; primeiras 24 h; max. individualizar pelo balanço hídrico",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 30 min",
+              "freq_min": 30,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético antagonista 5ht3",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "vômitos que impedem a reidratação oral (1a linha) vômito",
+            "nota": "IV direto ou diluído em 50 mL de SF 0,9%; VO sem preparo - monitorar: ECG se cardiopata ou QT longo; monitorar: potássio e magnésio; monitorar: número de vômitos",
+            "dose": {
+              "texto": "4 mg; 8/8 h se necessário; até 24 a 48 h; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antitoxina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "soro_antibotulinico",
+              "n": "Soro antibotulínico (trivalente A, B, E)",
+              "ap": "frasco 50 mL (trivalente A, B, E)",
+              "via": "IV",
+              "pos": "1 frasco (50 mL). Via IV. Dose única. 1 dia. 2 horas, sob vigilância contínua."
+            },
+            "motivo": "suspeita clínica de botulismo, sem esperar confirmação (1a linha) suspeita de botulismo",
+            "nota": "Diluir em 100 a 250 mL de SF 0,9%; testar sensibilidade e manter material de anafilaxia à beira do leito - monitorar: pressão e frequência cardíaca a cada 15 min na primeira hora; monitorar: sinais de anafilaxia; monitorar: força muscular; monitorar: capacidade vital e saturação · NÃO: alergia grave a soro equino (fazer dessensibilização, não omitir) · Obs: Não esperar cultura nem eletroneuromiografia. Manter UTI e suporte ventilatório, porque a falência respiratória é a causa de morte. Notificação imediata à vigilância.",
+            "dose": {
+              "texto": "1 frasco (50 mL); dose única; 1 dia; max. 1 frasco por episódio",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antiemético procinético",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "vômito com intolerância oral quando ondansetrona indisponível (alternativa)",
+            "nota": "IV lento, sem diluição obrigatória - monitorar: sintomas extrapiramidais; monitorar: sonolência; monitorar: resposta clínica",
+            "dose": {
+              "texto": "10 mg; 8/8 h; até 24 h; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico aminopenicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ampicilina",
+            "motivo": "listeriose em gestante, idoso, neonato ou imunossuprimido (condicional) suspeita de listeriose",
+            "nota": "Reconstituir em 10 mL de água destilada; diluir em 100 mL de SF 0,9% - monitorar: função renal; monitorar: nível de consciência; monitorar: rash cutâneo; monitorar: hemocultura de controle · NÃO: alergia a penicilina; mononucleose infecciosa · Obs: Cobre Listeria monocytogenes, que é resistente a cefalosporinas. Na meningite, associar gentamicina. Pediatria: 300 mg/kg/dia divididos em 4 doses. · Renal: Clearance 10 a 30 mL/min: 2 g 8/8 h; abaixo de 10: 2 g 12/12 h",
+            "dose": {
+              "texto": "2 g; 4/4 h; 14 dias (bacteremia); 21 dias (meningite); max. 12 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico cefalosporina 3a",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "salmonelose grave, bacteremia ou febre tifoide (condicional)",
+            "nota": "Reconstituir em 10 mL de água; diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: função hepática; monitorar: hemograma; monitorar: sinais de infecção; monitorar: diarreia · NÃO: alergia grave a cefalosporina; neonato com hiperbilirrubinemia; uso concomitante de solução com cálcio em neonato · Obs: Não cobre Listeria. Reservar para Salmonella invasiva confirmada ou com sinais de gravidade, não para diarreia aquosa simples.",
+            "dose": {
+              "texto": "2 g; 1x/dia; 7 a 14 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-17",
+    "versao": "0.2.0",
+    "arquivo": "GI-17_intoxicacao_alimentar.json",
+    "area": "Gastrointestinal",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

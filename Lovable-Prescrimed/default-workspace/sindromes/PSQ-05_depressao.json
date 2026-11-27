@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PSQ-05",
+    "area": "Psiquiatria",
+    "nome": "Episódio depressivo",
+    "aliases": ["depressão", "episódio depressivo", "transtorno depressivo maior", "tristeza persistente", "depressão maior"],
+    "contexto": ["ambulatorial"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Episódio depressivo é humor deprimido ou anedonia por pelo menos duas semanas, com prejuízo de sono, apetite, energia, concentração, autoestima e desejo de viver. A consulta não começa pela prescrição: começa pela estratificação do risco suicida, pela exclusão de bipolaridade e de causa orgânica — hipotireoidismo, anemia, apneia do sono, álcool, corticosteroides, isotretinoína, interferon — e pela definição do cenário de cuidado. ISRS é primeira linha por tolerabilidade e segurança em overdose, com titulação, retorno em 7 a 14 dias e reavaliação em 2 a 4 semanas; o efeito antidepressivo aparece em 2 a 4 semanas, e a janela de maior risco de ativação, ansiedade e ideação suicida é o início e cada aumento de dose, sobretudo abaixo dos 25 anos. O que não se faz: iniciar antidepressivo isolado sem seguimento garantido, prescrever tricíclico a quem tem risco de overdose e associar dois ISRS. Depressão bipolar não se trata com antidepressivo isolado: o estabilizador de humor vem primeiro ou junto.",
+    "inclusao": [
+      "Humor deprimido ou anedonia por duas semanas ou mais, com prejuízo funcional",
+      "PHQ-9 ≥ 10 ou critérios de episódio depressivo maior em entrevista clínica",
+      "Depressão leve a moderada sem risco suicida iminente e com rede de apoio",
+      "Depressão grave sem psicose, catatonia ou recusa alimentar, com seguimento garantido",
+      "Paciente em tratamento que precisa de ajuste de dose, troca por efeito adverso ou retirada gradual"
+    ],
+    "exclusao": [
+      { "situacao": "ideação suicida com plano, intenção ou tentativa recente", "fluxo": "PSQ-02 risco suicida" },
+      { "situacao": "delírios, alucinações, catatonia ou desorganização predominantes", "fluxo": "PSQ-06 psicose aguda" },
+      { "situacao": "agitação psicomotora com risco iminente de agressão", "fluxo": "PSQ-01 agitação" },
+      { "situacao": "história de mania ou hipomania, espontânea ou induzida por antidepressivo", "fluxo": "avaliação de transtorno bipolar" },
+      { "situacao": "rebaixamento de consciência, flutuação ou déficit neurológico focal", "fluxo": "GER-02 delirium ou neurologia" },
+      { "situacao": "luto sem critérios de episódio depressivo e sem prejuízo funcional", "fluxo": "acolhimento na atenção primária" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "ideação suicida ativa, com plano, método ou acesso a meios", "por_que": "é o desfecho que mata no episódio depressivo e não espera a resposta do antidepressivo", "acao": "interromper a consulta de rotina, avaliar risco estruturado e decidir internação ou plano de segurança", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "tentativa de suicídio nos últimos 3 meses", "por_que": "tentativa prévia é o principal preditor de morte por suicídio", "acao": "tratar como risco alto, não prescrever grande quantidade de comprimidos e agendar retorno em 48 a 72 h", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "sintomas psicóticos, catatonia ou recusa alimentar com perda de peso", "por_que": "define depressão grave com indicação de internação e de tratamento somatico", "acao": "encaminhar para avaliação hospitalar imediata", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "história de mania ou hipomania, inclusive induzida por antidepressivo", "por_que": "antidepressivo isolado precipita virada maníaca, acelera ciclagem e piora o prognóstico", "acao": "não prescrever antidepressivo isolado; iniciar ou ajustar estabilizador de humor", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "jovem abaixo de 25 anos com ativação, insônia, irritabilidade ou piora da ideação nas primeiras semanas de ISRS", "por_que": "a ativação inicial aumenta energia e impulsividade antes de melhorar o humor", "acao": "reavaliar risco no mesmo dia, reduzir a dose ou suspender e reforçar o contato", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "uso de álcool, cocaína ou benzodiazepínico em dose crescente", "por_que": "desinibição, intoxicação e abstinência pioram o humor e invalidam a avaliação", "acao": "tratar o uso de substância junto do episódio e não prescrever benzodiazepínico de manutenção", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "puerpério com desesperança, ideia de morte ou ideação de machucar o bebê", "por_que": "depressão pós-parto com ideação é emergência e o risco de infanticídio existe", "acao": "não deixar a puérpera sozinha com o bebê e acionar avaliação psiquiátrica imediata", "severidade": "grave" },
+      { "id": "AL-08", "sinal": "hipotireoidismo, anemia, apneia do sono ou fármaco depressogênico identificado", "por_que": "causa tratável que mantém o quadro e responde a outra conduta", "acao": "tratar a causa e reavaliar em 4 a 6 semanas antes de escalar psicofármaco", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "Nas últimas duas semanas, você perdeu o interesse ou o prazer nas coisas que gostava?",
+      "Como está o sono? E o apetite? Perdeu peso sem querer?",
+      "Você tem pensado em morrer, em se machucar ou que seria melhor não acordar?",
+      "Já pensou em como faria? Tem acesso a isso em casa ou no trabalho?",
+      "Já tentou antes? Quando, como e o que aconteceu depois?",
+      "Já teve uma fase de energia alta, pouco sono e pensamento acelerado?",
+      "Alguém na família tem bipolaridade, internação psiquiátrica ou morreu por suicídio?",
+      "Está usando álcool, maconha ou cocaína? Com que frequência?",
+      "Começou algum remédio novo, corticoide, isotretinoína ou interferon?",
+      "Tem alguém que possa acompanhar você e guardar os medicamentos nas próximas semanas?",
+      "Já fez tratamento para depressão? Com o quê, por quanto tempo e funcionou?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Todo atendimento por humor deprimido, antes de qualquer prescrição", "escolha": "Avaliação estruturada de risco suicida com C-SSRS e registro de ideação, plano, intenção, meios, tentativa prévia, impulsividade e rede de apoio", "porque": "a prescrição sem estratificação de risco é a falha mais grave do atendimento; o antidepressivo não protege nas primeiras semanas e pode aumentar a impulsividade" },
+      { "cenario": "Episódio leve, sem risco e com prejuízo funcional pequeno", "escolha": "Psicoeducação, ativação comportamental, higiene do sono e psicoterapia estruturada; antidepressivo apenas se não houver resposta em 4 a 6 semanas", "porque": "em quadros leves o benefício do fármaco é pequeno e a relação risco-benefício piora" },
+      { "cenario": "Episódio moderado a grave sem risco iminente", "escolha": "Sertralina 50 mg/dia com titulação, associada a psicoterapia, retorno em 7 a 14 dias e reavaliação em 2 a 4 semanas", "porque": "ISRS tem melhor tolerabilidade e segurança em overdose que tricíclicos e IRSN" },
+      { "cenario": "Jovem de 15 a 24 anos iniciando ISRS", "escolha": "Dose inicial baixa, consulta em 7 dias, contato telefônico em 48 h, família informada por escrito sobre o risco de ativação e de ideação", "porque": "o risco relativo de ideação e comportamento suicida é maior nessa faixa nas primeiras semanas e após cada aumento" },
+      { "cenario": "Paciente com risco de overdose ou tentativa prévia por medicamento", "escolha": "Evitar tricíclico, venlafaxina e qualquer fármaco com faixa terapêutica estreita; usar sertralina em embalagem semanal e dispensar poucas unidades por vez", "porque": "1 a 2 g de amitriptilina podem ser fatais por arritmia e convulsão, enquanto o ISRS raramente mata em overdose isolada" },
+      { "cenario": "Falha de um ISRS em dose adequada por 4 a 8 semanas", "escolha": "Confirmar adesão e diagnóstico, trocar por outro ISRS ou por venlafaxina; nunca associar dois ISRS", "porque": "a combinação de dois serotoninérgicos não aumenta eficácia e eleva o risco de síndrome serotoninérgica e de sangramento" },
+      { "cenario": "Depressão com insônia intensa, inapetência e perda de peso", "escolha": "Mirtazapina 15 mg à noite", "porque": "sedação e ganho de apetite são efeitos desejáveis nesse perfil e a toxicidade em overdose é baixa" },
+      { "cenario": "Suspeita de depressão bipolar ou ciclagem rápida", "escolha": "Lítio, lamotrigina ou quetiapina como base; antidepressivo só associado a estabilizador e por tempo curto", "porque": "antidepressivo isolado na bipolaridade precipita mania, acelera ciclagem e aumenta o risco suicida" },
+      { "cenario": "Depressão grave com risco suicida alto, psicose, catatonia ou recusa alimentar", "escolha": "Internação em unidade psiquiátrica, ambiente seguro e avaliação para eletroconvulsoterapia se houver risco refratário ou catatonia", "porque": "o hospital remove o meio, garante supervisão e permite tratamento somatico quando o fármaco não age a tempo" },
+      { "cenario": "Risco moderado, transtorno grave e persistente ou vulnerabilidade social importante", "escolha": "Encaminhamento ao CAPS com projeto terapêutico singular, equipe multiprofissional e articulação com a atenção primária", "porque": "o CAPS garante intensidade de acompanhamento e continuidade que a consulta isolada não sustenta" },
+      { "cenario": "Depressão refratária após dois antidepressivos em dose e tempo adequados", "escolha": "Potencialização com lítio ou quetiapina, ou eletroconvulsoterapia, com avaliação especializada", "porque": "mudar de fármaco sem otimizar dose, adesão e diagnóstico é a causa mais comum de refratariedade aparente" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "isrs",
+        "agente": "sertralina",
+        "papel": "primeira_linha",
+        "indicacao": "episódio depressivo moderado a grave, com ou sem sintomas ansiosos",
+        "dose": "50 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "mínimo de 6 a 12 meses após a remissão; 2 anos ou mais se recorrente",
+        "dose_maxima": "200 mg/dia, com aumentos de 25 a 50 mg a cada 1 a 2 semanas",
+        "contraindicacoes": ["uso de IMAO nas últimas 2 semanas", "uso de pimozida ou tioridazina", "uso de linezolida ou azul de metileno", "bipolaridade sem estabilizador", "hipersensibilidade"],
+        "efeitos_adversos": ["náusea e diarreia", "insônia ou sonolência", "disfunção sexual", "ativação e piora transitória da ansiedade", "hiponatremia em idoso", "sangramento digestivo com AINE ou anticoagulante", "síndrome serotoninérgica em interações"],
+        "apresentacoes": ["comprimido 25 mg, 50 mg e 100 mg"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["risco suicida em cada contato, sobretudo nas primeiras 2 semanas e após cada aumento", "sódio em idoso e em uso de diurético", "sinais de síndrome serotoninérgica (febre, tremor, hiperreflexia, clônus)", "adesão e efeitos sexuais", "sangramento digestivo se associado a AINE ou anticoagulante"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia; metabolismo hepático",
+        "observacoes": "Titulação: 25 mg nos primeiros 4 a 7 dias em idoso, ansiedade intensa ou hepatopatia, depois 50 mg; subir para 100 mg em 2 a 4 semanas se resposta parcial. É o ISRS de escolha em cardiopata e em gestante. Nunca iniciar sem consulta de retorno agendada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "isrs",
+        "agente": "escitalopram",
+        "papel": "alternativa",
+        "indicacao": "episódio depressivo quando a sertralina não está disponível, não é tolerada ou há interação medicamentosa",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "mínimo de 6 a 12 meses após a remissão",
+        "dose_maxima": "20 mg/dia; 10 mg/dia acima de 65 anos ou em hepatopatia",
+        "contraindicacoes": ["uso de IMAO", "QT longo ou QTc acima de 500 ms", "hipocalemia ou hipomagnesemia não corrigidas", "bipolaridade sem estabilizador"],
+        "efeitos_adversos": ["náusea", "cefaleia", "insônia", "disfunção sexual", "prolongamento de QT dose-dependente", "hiponatremia"],
+        "apresentacoes": ["comprimido 10 mg e 20 mg", "solução oral 20 mg/mL (gotas)"],
+        "preparo": "Uso direto; a solução oral pode ser diluída em água",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["ECG com QTc em cardiopata, idoso e uso de outro fármaco que prolonga QT", "sódio", "risco suicida e ativação", "adesão"],
+        "ajuste_renal": "Sem ajuste; cautela se ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Máximo de 10 mg/dia em hepatopatia",
+        "observacoes": "Titulação: 5 mg nos primeiros 5 a 7 dias em idoso ou ansiedade intensa, depois 10 mg; 20 mg só após 2 a 4 semanas e com ECG. A apresentação em gotas facilita o ajuste fino em idoso e em quem não deglute comprimido.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "isrs",
+        "agente": "fluoxetina",
+        "papel": "alternativa",
+        "indicacao": "episódio depressivo em rede de menor custo, em má adesão por esquecimento de doses e em adolescente de 8 a 18 anos",
+        "dose": "20 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "mínimo de 6 a 12 meses após a remissão",
+        "dose_maxima": "60 mg/dia em adulto; 20 mg/dia em idoso",
+        "contraindicacoes": ["uso de IMAO nas últimas 5 semanas", "uso de tioridazina ou pimozida", "bipolaridade sem estabilizador", "hipersensibilidade"],
+        "efeitos_adversos": ["náusea", "insônia e ativação", "cefaleia", "disfunção sexual", "hiponatremia em idoso", "interações por inibição de CYP2D6 e CYP3A4"],
+        "apresentacoes": ["cápsula 10 mg e 20 mg", "comprimido 20 mg", "solução oral 20 mg/mL"],
+        "preparo": "Uso direto, pela manhã, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["risco suicida e ativação nas primeiras semanas", "sódio em idoso", "interações com tamoxifeno, metoprolol, tricíclicos e antipsicóticos", "adesão"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia; metabolismo hepático",
+        "observacoes": "Meia-vida longa: protege de sintomas de retirada na má adesão, mas prolonga interações e exige 5 semanas de washout antes de IMAO. É o antidepressivo com mais dados em adolescente. Titulação em 10 mg por 1 a 2 semanas em jovem e em idoso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "irsn",
+        "agente": "venlafaxina",
+        "papel": "alternativa",
+        "indicacao": "depressão moderada a grave com sintomas ansiosos, dor crônica associada ou falha de ISRS em dose adequada",
+        "dose": "75 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia, com alimento",
+        "duracao": "mínimo de 6 a 12 meses após a remissão",
+        "dose_maxima": "225 mg/dia",
+        "contraindicacoes": ["uso de IMAO", "hipertensão não controlada", "arritmia cardíaca ou QTc prolongado", "glaucoma de ângulo fechado", "risco elevado de overdose"],
+        "efeitos_adversos": ["hipertensão dose-dependente", "náusea", "sudorese", "disfunção sexual", "síndrome de retirada intensa", "cardiotoxicidade e convulsão em overdose"],
+        "apresentacoes": ["cápsula de liberação prolongada 37,5 mg, 75 mg e 150 mg", "comprimido de liberação prolongada 75 mg e 150 mg"],
+        "preparo": "Uso direto, com alimento; não partir nem mastigar a cápsula",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["pressão arterial em toda consulta e após cada aumento", "risco suicida", "sintomas de retirada na redução ou suspensão", "sódio em idoso"],
+        "ajuste_renal": "Reduzir 25 a 50% se ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Reduzir 50% em hepatopatia",
+        "observacoes": "Titulação: 37,5 mg por 4 a 7 dias, depois 75 mg, com aumentos de 75 mg a cada 2 semanas. Não prescrever a quem tem risco de overdose pela toxicidade cardíaca; suspender sempre de forma gradual.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "nassa",
+        "agente": "mirtazapina",
+        "papel": "alternativa",
+        "indicacao": "depressão com insônia intensa, inapetência, perda de peso ou náusea importante com ISRS",
+        "dose": "15 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "à noite",
+        "duracao": "mínimo de 6 a 12 meses após a remissão",
+        "dose_maxima": "45 mg/dia",
+        "contraindicacoes": ["uso de IMAO", "neutropenia ou agranulocitose", "hipersensibilidade"],
+        "efeitos_adversos": ["sedação", "aumento de apetite e ganho de peso", "edema", "boca seca", "neutropenia rara", "hiponatremia"],
+        "apresentacoes": ["comprimido 15 mg, 30 mg e 45 mg", "comprimido orodispersível 15 mg, 30 mg e 45 mg"],
+        "preparo": "Uso direto, à noite",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["sedação diurna e risco de queda", "peso e perímetro abdominal", "hemograma se febre ou infecção", "sódio em idoso"],
+        "ajuste_renal": "Reduzir a dose se ClCr abaixo de 40 mL/min",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia",
+        "observacoes": "Titulação: 15 mg por 1 a 2 semanas, depois 30 mg; doses acima de 30 mg aumentam a ativação e reduzem a sedação. Baixa toxicidade em overdose, útil quando o paciente está desnutrido e o risco de overdose é alto.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidepressivo_triciclico",
+        "agente": "amitriptilina",
+        "papel": "condicional",
+        "indicacao": "depressão com dor crônica ou insônia, apenas em paciente sem risco de overdose e com ECG normal",
+        "dose": "25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "à noite",
+        "duracao": "mínimo de 6 a 12 meses após a remissão",
+        "dose_maxima": "150 mg/dia em ambulatório; 300 mg/dia apenas em internação com nível sérico",
+        "contraindicacoes": ["risco de overdose ou tentativa prévia por medicamento", "cardiopatia, arritmia, bloqueio de ramo ou QTc prolongado", "glaucoma de ângulo fechado", "hipertrofia prostática com retenção urinária", "uso de IMAO", "fase maníaca", "gestação sem avaliação especializada"],
+        "efeitos_adversos": ["boca seca, constipação e retenção urinária", "hipotensão ortostática e síncope", "arritmia e bloqueio cardíaco", "sedação e ganho de peso", "convulsão em overdose", "morte em intoxicação por 1 a 2 g"],
+        "apresentacoes": ["comprimido 25 mg e 75 mg", "comprimido de liberação prolongada 25 mg e 50 mg"],
+        "preparo": "Uso direto, à noite",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["ECG antes de iniciar e após cada aumento acima de 75 mg", "pressão arterial em ortostase", "nível sérico acima de 200 ng/mL já é tóxico", "constipação, retenção urinária e confusão em idoso", "risco suicida e quantidade dispensada"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia; metabolismo hepático de primeira passagem",
+        "observacoes": "Titulação: 25 mg à noite, 50 mg após 3 a 7 dias, aumentos de 25 mg a cada 1 a 2 semanas. Faixa terapêutica estreita e alta letalidade em overdose: não é opção para quem tem risco suicida, e a dispensação deve ser semanal com o medicamento guardado por um familiar.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antipsicotico_atipico",
+        "agente": "quetiapina",
+        "papel": "condicional",
+        "indicacao": "potencialização em depressão resistente, depressão bipolar e controle de insônia e ansiedade na fase inicial",
+        "dose": "25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "à noite",
+        "duracao": "pelo menor tempo possível, com reavaliação da indicação a cada 3 meses",
+        "dose_maxima": "200 mg/dia como adjuvante; 300 mg/dia na depressão bipolar; 150 mg/dia em idoso",
+        "contraindicacoes": ["hipotensão sintomática", "QTc acima de 500 ms", "demência com corpos de Lewy sem avaliação especializada", "inibidor potente de CYP3A4 sem ajuste"],
+        "efeitos_adversos": ["sedação", "hipotensão ortostática", "ganho de peso e síndrome metabólica", "prolongamento de QT", "acatisia", "catarata em uso prolongado"],
+        "apresentacoes": ["comprimido 25 mg, 100 mg, 200 mg e 300 mg", "comprimido de liberação prolongada 50 mg, 150 mg, 200 mg e 400 mg"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["pressão arterial e ortostatismo", "glicemia, perfil lipídico e peso", "QTc em cardiopata", "acatisia, que pode ser confundida com piora da ansiedade", "sedação diurna"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia",
+        "observacoes": "Titulação: 25 mg à noite, 50 mg após 2 a 3 dias, aumentos de 25 a 50 mg a cada 3 a 7 dias. Na depressão bipolar usar 300 mg à noite como monoterapia. Suspender se surgir agitação nova, que pode ser acatisia e não piora do humor.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "estabilizador_humor",
+        "agente": "carbonato de lítio",
+        "papel": "condicional",
+        "indicacao": "depressão bipolar, prevenção de mania e de suicídio e potencialização em depressão refratária",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h ou 1x/dia na formulação de liberação prolongada",
+        "duracao": "longo prazo, com reavaliação a cada 6 meses",
+        "dose_maxima": "1.800 mg/dia, guiado pela litemia",
+        "contraindicacoes": ["insuficiência renal grave", "desidratação ou dieta hipossódica sem controle", "insuficiência cardíaca grave", "primeiro trimestre de gestação sem avaliação especializada", "uso de tiazídico ou AINE sem ajuste"],
+        "efeitos_adversos": ["tremor fino", "poliúria e diabetes insípido", "hipotireoidismo", "hiperparatireoidismo", "nefrotoxicidade", "intoxicação com confusão, ataxia e vômitos"],
+        "apresentacoes": ["comprimido 300 mg (carbonato de lítio)", "comprimido de liberação prolongada 450 mg"],
+        "preparo": "Uso direto, com alimento; manter ingesta hídrica e salina habitual",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["litemia 12 h após a última dose, alvo 0,6 a 0,8 mEq/L", "creatinina e TSH a cada 6 meses", "sódio e estado de hidratação", "tremor grosseiro, fala arrastada e ataxia", "adesão"],
+        "ajuste_renal": "ClCr 30 a 60 mL/min: reduzir a dose e monitorar; ClCr abaixo de 30 mL/min: evitar",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não suspender abruptamente: a retirada rápida aumenta recaída e suicídio. É o estabilizador com maior evidência de redução de suicídio. Na depressão bipolar, associar ao antidepressivo apenas se necessário e por tempo curto.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "estabilizador_humor",
+        "agente": "lamotrigina",
+        "papel": "condicional",
+        "indicacao": "fase depressiva do transtorno bipolar e prevenção de recaída depressiva",
+        "dose": "25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia por 2 semanas, depois 12/12 h",
+        "duracao": "longo prazo",
+        "dose_maxima": "200 mg/dia; 100 mg/dia com valproato",
+        "contraindicacoes": ["rash cutâneo prévio por lamotrigina", "uso de valproato sem ajuste de titulação", "hipersensibilidade"],
+        "efeitos_adversos": ["rash cutâneo, incluindo Stevens-Johnson", "cefaleia", "insônia", "náusea", "tremor", "síndrome de hipersensibilidade com febre e linfadenopatia"],
+        "apresentacoes": ["comprimido 25 mg, 50 mg e 100 mg", "comprimido dispersível 5 mg, 25 mg e 100 mg"],
+        "preparo": "Uso direto, com ou sem alimento; o comprimido dispersível pode ser dissolvido em água",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["rash cutâneo em cada contato nas primeiras 8 semanas: suspender imediatamente se surgir", "adesão à titulação lenta", "humor e sinais de virada maníaca", "nível de sedação"],
+        "ajuste_renal": "Reduzir a dose em insuficiência renal grave",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Titulação obrigatória: 25 mg/dia por 2 semanas, 50 mg/dia por 2 semanas, 100 mg/dia por 1 semana e então 200 mg/dia. Com valproato, metade da dose e máximo de 100 mg/dia; com carbamazepina, o dobro. Titulação rápida causa Stevens-Johnson.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Avaliação de risco suicida antes de qualquer prescrição", "detalhe": "Aplicar C-SSRS, registrar ideação, plano, intenção, meios, tentativa prévia e rede de apoio no prontuário; a pergunta direta sobre morte não induz o ato e muda a conduta" },
+      { "medida": "Psicoeducação sobre latência e janela de risco", "detalhe": "Explicar que o efeito aparece em 2 a 4 semanas, que ansiedade e insônia podem piorar nos primeiros dias, que a ideação deve ser relatada imediatamente e que a suspensão abrupta causa retirada; entregar a orientação por escrito" },
+      { "medida": "Ativação comportamental e higiene do sono", "detalhe": "Agenda diária com uma atividade prazerosa e uma produtiva por dia, horário fixo de despertar, restrição de cochilo e de tela à noite, exposição à luz pela manhã; começar pelo item mais fácil para evitar paralisia" },
+      { "medida": "Exercício aeróbico regular", "detalhe": "150 minutos por semana em sessões de 30 minutos, caminhada ou bicicleta, com intensidade moderada; efeito antidepressivo comparável ao de fármaco em quadros leves e melhora sono e ansiedade" },
+      { "medida": "Psicoterapia estruturada", "detalhe": "Terapia cognitivo-comportamental ou ativação comportamental, 8 a 16 sessões semanais; em quadros graves, associar ao fármaco desde o início e não usar psicoterapia como substituta quando há risco" },
+      { "medida": "Envolvimento da família e restrição de meios", "detalhe": "Chamar um familiar à consulta, explicar sinais de piora, orientar a guardar medicamentos e armas, definir quem acompanha o retorno e combinar contato imediato se houver ideação ou mudança brusca de comportamento" },
+      { "medida": "Retorno agendado e contato ativo", "detalhe": "Consulta em 7 a 14 dias após iniciar ou ajustar dose, contato telefônico em 48 h no jovem e no risco moderado; receita suficiente apenas até o retorno, com data e nome do profissional registrados" },
+      { "medida": "Suspensão de álcool e revisão de fármacos depressogênicos", "detalhe": "Interromper álcool e drogas, revisar corticosteroides, isotretinoína, interferon, betabloqueador e anticoncepcional hormonal; tratar dor crônica e apneia do sono, que mantêm o quadro" }
+    ],
+    "procedimentos": [
+      { "nome": "Aplicação de PHQ-9 e de escala de risco suicida (C-SSRS)", "indicacao": "todo atendimento por humor deprimido, na primeira consulta e em cada reavaliação", "tecnica": "PHQ-9 para gravidade e seguimento; C-SSRS para ideação, intensidade, plano, intenção e comportamento, aplicada na ordem do instrumento, com registro do escore no prontuário", "complicacoes": "Falso negativo por resposta defensiva e uso do escore sem entrevista clínica, o que subestima risco" },
+      { "nome": "Plano de segurança escrito", "indicacao": "risco moderado, ideação sem plano ou paciente com histórico de tentativa em acompanhamento ambulatorial", "tecnica": "Construir com o paciente sinais de alerta, estratégias de enfrentamento, pessoas e lugares de distração, contatos de confiança e CVV 188; entregar cópia e revisar em cada consulta", "complicacoes": "Plano genérico, feito sem o paciente, não é usado" },
+      { "nome": "Internação psiquiátrica conforme a Lei 10.216/2001", "indicacao": "risco suicida alto, psicose, catatonia, recusa alimentar, autonegligência grave ou falha do tratamento ambulatorial", "tecnica": "Internação voluntária com consentimento registrado; na involuntária, laudo médico fundamentado, comunicação ao Ministério Público em 72 h e revisão periódica da necessidade", "complicacoes": "Perda de vínculo, constrangimento ilegal se mal fundamentada e prolongamento indevido" },
+      { "nome": "Eletroconvulsoterapia", "indicacao": "depressão grave com risco suicida refratário, catatonia, recusa alimentar ou psicose depressiva", "tecnica": "Sessões sob anestesia geral e bloqueio neuromuscular, três por semana, com avaliação pré-anestésica e consentimento", "complicacoes": "Confusão e amnésia transitórias, cefaleia, risco anestésico" },
+      { "nome": "Articulação com CAPS e atenção primária", "indicacao": "risco moderado, transtorno grave e persistente, uso de substâncias ou vulnerabilidade social", "tecnica": "Contato direto com o serviço de destino, resumo por escrito, agenda de encaixe, telefone de referência e confirmação do comparecimento em 48 h", "complicacoes": "Perda de seguimento e reavaliação tardia" }
+    ],
+    "metas": [
+      "Risco suicida avaliado e registrado em 100% dos atendimentos antes de qualquer prescrição",
+      "Redução de pelo menos 50% no PHQ-9 em 6 a 8 semanas de tratamento",
+      "Remissão com PHQ-9 abaixo de 5 em 12 a 16 semanas",
+      "Retorno em até 14 dias após iniciar ou ajustar antidepressivo, com contato em 48 h no jovem",
+      "Manutenção por 6 a 12 meses após a remissão, ou 2 anos ou mais em quadro recorrente",
+      "Nenhuma prescrição de dois ISRS associados nem de tricíclico em paciente com risco de overdose",
+      "Sono de pelo menos 7 horas e retomada de ao menos uma atividade prazerosa em 4 semanas"
+    ],
+    "fluxo": [
+      "Avaliar risco suicida com C-SSRS e registrar antes de qualquer prescrição; se risco alto, interromper o fluxo ambulatorial e internação",
+      "Confirmar o episódio depressivo por critérios, medir gravidade com PHQ-9 e verificar prejuízo funcional",
+      "Rastrear bipolaridade: mania ou hipomania prévia, induzida por antidepressivo, história familiar e psicose",
+      "Excluir causa orgânica e fármaco depressogênico: TSH, hemograma, sódio, função renal e hepática, revisão da lista de medicamentos",
+      "Definir o cenário: ambulatorial com retorno em 7 a 14 dias, CAPS para casos graves e persistentes, ou internação",
+      "Iniciar ISRS em dose baixa com titulação, associar psicoterapia e psicoeducar sobre a janela de 2 a 4 semanas",
+      "Reavaliar em 2 a 4 semanas: adesão, efeitos adversos, ativação, ideação e resposta; ajustar a dose até a máxima tolerada",
+      "Falha após 4 a 8 semanas em dose adequada: confirmar diagnóstico e adesão, trocar de antidepressivo ou potencializar com lítio ou quetiapina",
+      "Manter por 6 a 12 meses após a remissão; retirar de forma gradual em 4 semanas ou mais e manter retorno após a suspensão"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "adolescente e adulto jovem até 24 anos", "ajuste": "iniciar com metade da dose, consulta em 7 dias, contato em 48 h, família envolvida e alerta escrito sobre ativação e ideação; fluoxetina é o ISRS com mais dados nessa faixa", "alerta": "maior risco relativo de ideação e comportamento suicida nas primeiras semanas e após cada aumento de dose" },
+      { "populacao": "idoso", "ajuste": "iniciar com metade da dose, preferir sertralina, evitar tricíclico e benzodiazepínico, dosar sódio em 2 a 4 semanas e revisar polifarmácia e risco de queda", "alerta": "hiponatremia, queda, confusão e menor tolerância a efeitos anticolinérgicos" },
+      { "populacao": "gestante e puérpera", "ajuste": "manter ou iniciar sertralina, que tem mais dados de segurança; não suspender tratamento em curso e articular com pré-natal de alto risco", "alerta": "o transtorno não tratado tem risco maior que a exposição medicamentosa; no puerpério com ideação, emergência psiquiátrica" },
+      { "populacao": "hepatopata", "ajuste": "reduzir a dose inicial e titular mais lentamente; escitalopram máximo de 10 mg/dia e sertralina com cautela", "alerta": "metabolismo hepático reduzido e risco de encefalopatia com sedativos" },
+      { "populacao": "renal_cronico", "ajuste": "sertralina sem ajuste, venlafaxina com redução de 25 a 50% e mirtazapina com redução se ClCr abaixo de 40 mL/min; evitar lítio se ClCr abaixo de 30 mL/min", "alerta": "acúmulo de metabólitos e intoxicação por lítio" },
+      { "populacao": "cardiopata", "ajuste": "preferir sertralina; evitar tricíclico e venlafaxina; ECG antes de escitalopram e quetiapina", "alerta": "arritmia, hipotensão ortostática e morte em overdose de tricíclico" },
+      { "populacao": "transtorno bipolar conhecido", "ajuste": "estabilizador como base, antidepressivo apenas associado, em dose baixa e por tempo curto, com monitorização de virada maníaca", "alerta": "antidepressivo isolado precipita mania e acelera ciclagem" },
+      { "populacao": "transtorno por uso de álcool ou outras substâncias", "ajuste": "tratar abstinência e dependência, intervenção breve, naltrexona no uso de álcool e encaminhamento ao CAPS; não prescrever benzodiazepínico de manutenção", "alerta": "o álcool piora o humor, aumenta impulsividade e reduz a adesão" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "TSH", "indicacao": "todos, na primeira avaliação", "o_que_muda": "hipotireoidismo explica o quadro e muda o tratamento antes de escalar antidepressivo" },
+        { "nome": "hemograma", "indicacao": "todos, sobretudo com fadiga ou palidez", "o_que_muda": "anemia como causa de fadiga e de humor deprimido" },
+        { "nome": "sódio, potássio, ureia e creatinina", "indicacao": "todos, antes de ISRS em idoso e antes de lítio", "o_que_muda": "define ajuste de dose, risco de hiponatremia e contraindica lítio" },
+        { "nome": "ECG", "indicacao": "antes de tricíclico, escitalopram, quetiapina ou em cardiopata", "o_que_muda": "contraindica o fármaco se QTc acima de 500 ms ou bloqueio de condução" },
+        { "nome": "beta-hCG", "indicacao": "mulher em idade reprodutiva antes de prescrever", "o_que_muda": "muda a escolha do fármaco e exige aconselhamento" },
+        { "nome": "função hepática", "indicacao": "hepatopatia, alcoolismo ou antes de duloxetina e mirtazapina", "o_que_muda": "define redução de dose" },
+        { "nome": "B12 e ácido fólico", "indicacao": "anemia macrocítica, neuropatia ou idoso", "o_que_muda": "deficiência tratável que simula depressão" },
+        { "nome": "triagem toxicológica dirigida", "indicacao": "suspeita de uso de substância ou intoxicação", "o_que_muda": "define a segurança da avaliação e o manejo da abstinência" }
+      ],
+      "evitar": [
+        { "exame": "bateria extensa de testes psicológicos para decidir tratamento", "motivo": "não substitui a entrevista clínica, atrasa o início do tratamento e não muda a conduta" },
+        { "exame": "tomografia de crânio de rotina sem sinal neurológico focal", "motivo": "baixo rendimento em depressão sem alteração ao exame e exposição desnecessária" },
+        { "exame": "dosagem de serotonina ou de neurotransmissores no sangue", "motivo": "não tem valor clínico e induz decisão terapêutica errada" },
+        { "exame": "polissonografia de rotina na depressão sem suspeita de apneia", "motivo": "não muda a conduta; reservar para ronco, sonolência diurna ou apneia suspeita" },
+        { "exame": "painel hormonal completo sem hipótese clínica", "motivo": "achados incidentais geram exames em cascata e não tratam o episódio" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar o comprimido no mesmo horário todos os dias e não dobrar a dose esquecida",
+        "avisar imediatamente se piorar a ansiedade, aparecer insônia, agitação ou pensamentos de morte nas primeiras semanas",
+        "manter a consulta de retorno agendada e responder ao contato da equipe",
+        "dormir e acordar em horário fixo, sair de casa diariamente e praticar atividade física",
+        "manter álcool e drogas fora do tratamento",
+        "deixar os medicamentos guardados com um familiar de confiança",
+        "comparecer à psicoterapia e ao CAPS quando encaminhado"
+      ],
+      "evitar": [
+        "interromper o antidepressivo por conta própria quando começar a melhorar",
+        "beber álcool durante o tratamento",
+        "usar benzodiazepínico por conta própria ou por tempo prolongado",
+        "combinar dois antidepressivos por iniciativa própria ou por prescrição de serviços diferentes",
+        "guardar grande quantidade de comprimidos em casa quando há histórico de tentativa",
+        "tomar IMAO, tramadol, triptano ou ervas como erva-de-são-joão sem informar o médico"
+      ],
+      "retorno": [
+        "piora da ideação suicida ou aparecimento de plano",
+        "ansiedade, insônia ou agitação que aumentam nos primeiros dias de uso",
+        "febre, tremor, sudorese ou confusão, que sugerem síndrome serotoninérgica",
+        "manchas na pele, principalmente com lamotrigina",
+        "vômitos, diarreia intensa ou desidratação em uso de lítio",
+        "piora do humor após 4 a 6 semanas de tratamento",
+        "virada maníaca: euforia, pouco sono e aceleração do pensamento"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "sertralina", "efeitos": ["náusea", "insônia", "ativação e piora transitória da ansiedade", "disfunção sexual"], "observacao": "reavaliar risco nas primeiras 2 semanas e após cada aumento; suspender se síndrome serotoninérgica" },
+      { "agente": "escitalopram", "efeitos": ["prolongamento de QT", "hiponatremia", "cefaleia"], "observacao": "ECG em cardiopata e idoso; sódio em 2 a 4 semanas" },
+      { "agente": "fluoxetina", "efeitos": ["insônia e ativação", "náusea", "interações medicamentosas"], "observacao": "revisar a lista de fármacos; washout de 5 semanas antes de IMAO" },
+      { "agente": "venlafaxina", "efeitos": ["hipertensão", "síndrome de retirada", "cardiotoxicidade em overdose"], "observacao": "medir PA em toda consulta; evitar em risco de overdose e nunca suspender abruptamente" },
+      { "agente": "mirtazapina", "efeitos": ["sedação", "ganho de peso", "neutropenia rara"], "observacao": "hemograma se febre ou infecção; orientar sobre sonolência matinal" },
+      { "agente": "amitriptilina", "efeitos": ["arritmia", "hipotensão ortostática", "retenção urinária", "convulsão em overdose"], "observacao": "ECG obrigatório; não dispensar grande quantidade; suspender se síncope ou palpitação" },
+      { "agente": "quetiapina", "efeitos": ["sedação", "hipotensão", "acatisia", "síndrome metabólica"], "observacao": "suspender se agitação nova por acatisia; controlar peso, glicemia e lipídeos" },
+      { "agente": "carbonato de lítio", "efeitos": ["tremor", "hipotireoidismo", "nefrotoxicidade", "intoxicação"], "observacao": "litemia, creatinina e TSH seriados; orientar hidratação e evitar AINE e tiazídico" },
+      { "agente": "lamotrigina", "efeitos": ["rash cutâneo", "Stevens-Johnson", "cefaleia"], "observacao": "suspender imediatamente ao primeiro rash; nunca acelerar a titulação" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender ou reduzir o fármaco implicado e registrar a reação no prontuário",
+      "Ativação ou piora da ideação após iniciar antidepressivo: reavaliar risco no mesmo dia, não aumentar a dose e considerar internação",
+      "Síndrome serotoninérgica (febre, tremor, clônus, hiperreflexia): suspender o serotoninérgico, suporte, benzodiazepínico e monitorização",
+      "Rash com lamotrigina: suspender imediatamente e não reintroduzir sem avaliação especializada",
+      "Lítio com tremor grosseiro, ataxia, vômitos ou confusão: suspender, dosar litemia e creatinina, hidratar e avaliar diálise",
+      "Acatisia por quetiapina: reduzir a dose e avaliar propranolol; não confundir com piora da ansiedade",
+      "Hipotensão ortostática ou síncope: reduzir a dose, orientar levantar devagar e reavaliar a necessidade do fármaco",
+      "Comunicar a equipe, revisar o plano de segurança e registrar a conduta e a evolução"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "sertralina 50 mg", "dose": "50 mg", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "30 dias, com retorno em 7 a 14 dias", "condicao": "episódio depressivo moderado a grave, somente com risco suicida avaliado e retorno agendado", "confirmar_apresentacao_local": true },
+          { "item": "fluoxetina 20 mg", "dose": "20 mg", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "30 dias", "condicao": "alternativa de menor custo ou adolescente, com retorno em 7 dias", "confirmar_apresentacao_local": true },
+          { "item": "mirtazapina 15 mg", "dose": "15 mg", "via": "VO", "frequencia": "à noite", "duracao": "30 dias", "condicao": "insônia intensa e perda de peso associadas", "confirmar_apresentacao_local": true },
+          { "item": "carbonato de lítio 300 mg", "dose": "300 mg", "via": "VO", "frequencia": "8/8 h", "duracao": "30 dias, com litemia em 7 dias", "condicao": "depressão bipolar ou potencialização, após creatinina e TSH basais", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "sertralina", "dose": "50 mg", "via": "VO", "frequencia": "1x/dia", "monitorizacao": "risco suicida e ativação", "confirmar_apresentacao_local": true },
+          { "item": "quetiapina", "dose": "25 mg", "via": "VO", "frequencia": "à noite", "monitorizacao": "PA, sedação e acatisia", "confirmar_apresentacao_local": true },
+          { "item": "lorazepam", "dose": "1 mg", "via": "VO", "frequencia": "à noite, se necessário", "monitorizacao": "sedação e risco de queda", "confirmar_apresentacao_local": true },
+          { "item": "carbonato de lítio", "dose": "300 mg", "via": "VO", "frequencia": "8/8 h", "monitorizacao": "litemia, creatinina e sódio", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["avaliação de risco (C-SSRS)", "PHQ-9", "TSH", "hemograma", "sódio e potássio", "ureia e creatinina", "função hepática", "ECG", "beta-hCG", "B12 e ácido fólico", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de episódio depressivo, necessitando de afastamento de suas atividades por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "os dias são decisão médica; evitar CID quando o paciente pedir, salvo obrigação legal"
+      },
+      "encaminhamento": {
+        "campos": ["destino (CAPS, ambulatório de psiquiatria ou atenção primária)", "motivo", "resumo do episódio e da gravidade", "risco suicida avaliado", "medicações em uso", "retorno agendado", "prioridade"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com episódio depressivo, duração, gravidade pelo PHQ-9, risco suicida avaliado, diagnóstico diferencial excluído, tratamento iniciado, orientações e retorno agendado."
+      }
+    },
+    "anamnese": {
+      "campos": ["duração", "anedonia", "sono", "apetite e peso", "energia", "concentração", "ideação suicida", "mania prévia", "uso de substâncias", "fármacos", "tireoide", "tratamentos anteriores", "rede de apoio"],
+      "texto_template": "Paciente com humor deprimido há ___, anedonia ___, alteração de sono ___, apetite e peso ___, energia ___, concentração ___, ideação suicida ___, mania prévia ___, uso de substâncias ___, fármacos em uso ___, tireoide ___, tratamentos anteriores ___ e rede de apoio ___."
+    },
+    "exame_fisico": {
+      "itens": ["estado mental", "aparência e higiene", "fala e psicomotricidade", "sinais vitais", "peso e IMC", "palpação de tireoide", "sinais de autolesão", "exame neurológico"],
+      "texto_template": "Estado mental ___, aparência e higiene ___, fala e psicomotricidade ___, sinais vitais ___, peso e IMC ___, tireoide ___, sinais de autolesão ___ e exame neurológico ___."
+    },
+    "referencias": [
+      { "tipo": "diretriz_internacional", "o_que_verificar": "critérios de episódio depressivo, escolha de ISRS, tempo de manutenção e vigilância de ideação em jovem", "verificar": true },
+      { "tipo": "sociedade_psiquiatria", "o_que_verificar": "manejo da depressão resistente, depressão bipolar e risco suicida", "verificar": true },
+      { "tipo": "ministerio_da_saude", "o_que_verificar": "linha de cuidado em saúde mental, organização da RAPS e critérios de encaminhamento ao CAPS", "verificar": true },
+      { "tipo": "legislacao_brasileira", "o_que_verificar": "Lei 10.216/2001, internação involuntária e comunicação ao Ministério Público em 72 h", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações, indicações, interações e alertas de bula dos antidepressivos e estabilizadores", "verificar": true },
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de retorno, tempo de consulta, disponibilidade de psicoterapia e de CAPS na rede", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-PSQ05-01", "tipo": "risco_nao_avaliado", "gatilho": "prescrição de antidepressivo sem registro de avaliação de risco suicida", "severidade": "grave", "mensagem": "Avaliar risco suicida antes de qualquer prescrição e registrar no prontuário.", "acao": "bloquear a prescrição", "bloqueante": true },
+      { "id": "SA-PSQ05-02", "tipo": "antidepressivo_sem_retorno", "gatilho": "antidepressivo prescrito sem consulta de retorno agendada em até 14 dias", "severidade": "grave", "mensagem": "Iniciar antidepressivo isolado sem seguimento é prescrição de risco.", "acao": "bloquear até o agendamento", "bloqueante": true },
+      { "id": "SA-PSQ05-03", "tipo": "bipolaridade", "gatilho": "antidepressivo prescrito com história de mania ou hipomania sem estabilizador", "severidade": "grave", "mensagem": "Risco de virada maníaca e de piora do quadro.", "acao": "bloquear o item e sugerir estabilizador", "bloqueante": true },
+      { "id": "SA-PSQ05-04", "tipo": "triciclico_em_risco", "gatilho": "tricíclico prescrito em paciente com tentativa prévia ou risco de overdose", "severidade": "grave", "mensagem": "Tricíclico tem faixa terapêutica estreita e alta letalidade em overdose.", "acao": "bloquear o item e sugerir ISRS", "bloqueante": true },
+      { "id": "SA-PSQ05-05", "tipo": "dois_isrs", "gatilho": "dois ISRS ou dois serotoninérgicos prescritos simultaneamente", "severidade": "grave", "mensagem": "Associação não aumenta eficácia e eleva o risco de síndrome serotoninérgica.", "acao": "bloquear o segundo item", "bloqueante": true },
+      { "id": "SA-PSQ05-06", "tipo": "jovem_ativacao", "gatilho": "paciente abaixo de 25 anos iniciando ISRS sem reavaliação em 7 dias", "severidade": "grave", "mensagem": "Risco de ativação e de ideação nas primeiras semanas.", "acao": "exigir retorno em 7 dias e contato em 48 h", "bloqueante": true },
+      { "id": "SA-PSQ05-07", "tipo": "gravidade", "gatilho": "sintomas psicóticos, catatonia ou recusa alimentar", "severidade": "grave", "mensagem": "Depressão grave com indicação de avaliação hospitalar.", "acao": "sugerir internação e acionar psiquiatria", "bloqueante": false },
+      { "id": "SA-PSQ05-08", "tipo": "causa_organica", "gatilho": "TSH, hemograma ou sódio alterados sem tratamento", "severidade": "precaucao", "mensagem": "Tratar a causa orgânica antes de escalar psicofármaco.", "acao": "alertar a equipe", "bloqueante": false },
+      { "id": "SA-PSQ05-09", "tipo": "seguimento", "gatilho": "alta sem contato de follow-up e sem rede identificada", "severidade": "precaucao", "mensagem": "Risco de perda de seguimento no período de maior vulnerabilidade.", "acao": "alertar a equipe", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "literatura", "protocolo institucional", "Ministério da Saúde"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com avaliação de risco suicida antes da prescrição, ISRS com titulação e janela de ideação em jovem, condutas que não se fazem (antidepressivo isolado sem seguimento, tricíclico em risco de overdose, dois ISRS), critérios de internação e de encaminhamento ao CAPS, depressão bipolar tratada com estabilizador, apresentações, preparo, tempo de infusão, monitorização e ajuste renal, não farmacológico, procedimentos e alertas bloqueantes.", "data": null }
+      ]
+    }
+  }
+}

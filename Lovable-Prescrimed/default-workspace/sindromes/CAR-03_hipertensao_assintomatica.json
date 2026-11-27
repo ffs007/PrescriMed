@@ -1,0 +1,419 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "CAR-03",
+    "area": "Cardiovascular",
+    "nome": "Hipertensão assintomática",
+    "aliases": ["hipertensão", "pressão alta assintomática", "hipertensão arterial", "HAS", "hipertensão estágio 1", "hipertensão estágio 2", "hipertensão resistente"],
+    "contexto": ["ambulatorial"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "A maioria das pressões elevadas em paciente assintomático não é emergência: é hipertensão arterial a confirmar, estratificar e tratar por via oral, com meta e data de retorno definidas. Reduzir a cifra na hora, na sala de espera, não melhora desfecho e causa hipoperfusão; o que muda prognóstico é escolher a classe certa para o perfil, iniciar a dose certa e reavaliar em 4 semanas. A minoria que é emergência se reconhece por lesão aguda de órgão-alvo — neurológica, cardíaca, renal ou vascular — e não pelo número da pressão. Antes de rotular e antes de escalar dose, excluir causa secundária (apneia do sono, hiperaldosteronismo, estenose de artéria renal, feocromocitoma) e confirmar a medida com técnica adequada.",
+    "inclusao": [
+      "PA ≥ 140/90 mmHg em duas medidas adequadas, sem sintomas de lesão aguda de órgão-alvo",
+      "Hipertensão conhecida com PA acima da meta e sem critério de emergência",
+      "PA ≥ 180/120 mmHg assintomática, sem lesão de órgão-alvo",
+      "Necessidade de iniciar, combinar ou ajustar anti-hipertensivo oral"
+    ],
+    "exclusao": [
+      { "situacao": "cefaleia intensa, alteração visual, confusão ou déficit neurológico", "fluxo": "crise hipertensiva (CAR-02)" },
+      { "situacao": "dor torácica, dispneia ou edema agudo de pulmão", "fluxo": "SCA ou insuficiência cardíaca" },
+      { "situacao": "gestante com PA elevada", "fluxo": "pré-natal de alto risco / pré-eclâmpsia" },
+      { "situacao": "dor dorsal com assimetria de pulsos", "fluxo": "dissecção de aorta (emergência)" },
+      { "situacao": "hipertensão secundária já diagnosticada com indicação cirúrgica", "fluxo": "endocrinologia / cirurgia" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "PA ≥ 180/120 mmHg com cefaleia intensa, alteração visual ou confusão", "por_que": "encefalopatia hipertensiva", "acao": "reclassificar como emergência e tratar venoso", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "dor torácica, dispneia ou ortopneia", "por_que": "SCA ou edema agudo de pulmão", "acao": "ECG imediato e protocolo de dor torácica", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "déficit motor, disartria ou amaurose", "por_que": "AVC ou encefalopatia", "acao": "protocolo de AVC e imagem", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "síncope ou tontura ao levantar após a dose", "por_que": "hipotensão postural por excesso de tratamento", "acao": "medir PA em pé e reduzir dose", "severidade": "precaucao" },
+      { "id": "AL-05", "sinal": "gestante com PA ≥ 140/90 mmHg", "por_que": "pré-eclâmpsia", "acao": "encaminhar à obstetrícia no mesmo dia", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "hipocalemia espontânea com hipertensão resistente", "por_que": "hiperaldosteronismo primário", "acao": "dosar aldosterona e renina", "severidade": "precaucao" },
+      { "id": "AL-07", "sinal": "piora de creatinina acima de 30% após iniciar IECA ou BRA", "por_que": "estenose bilateral de artéria renal ou hipovolemia", "acao": "suspender e investigar", "severidade": "grave" }
+    ],
+    "perguntas_rapidas": [
+      "A medida foi feita com manguito do tamanho certo, 5 minutos de repouso e duas leituras?",
+      "Usa AINE, corticoide, descongestionante, anticoncepcional ou cocaína?",
+      "Ronca, tem sonolência diurna ou apneia presenciada pelo companheiro?",
+      "Tem crises de sudorese, palidez e cefaleia paroxística?",
+      "Já teve potássio baixo espontâneo, incidentaloma adrenal ou crise de paralisia?",
+      "Piorou a função renal ou teve edema agudo após começar IECA ou BRA?",
+      "Está tomando todos os comprimidos nos horários certos? Quantos comprimidos por dia?",
+      "Tem diabetes, DRC, AVC prévio, coronariopatia ou albuminúria?",
+      "Está gestante ou planejando engravidar?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "PA 140–159/90–99 mmHg, sem comorbidade, primeira consulta", "escolha": "Monoterapia oral (tiazídico, IECA/BRA ou BCE) + mudança de estilo de vida; reavaliar em 4 semanas", "porque": "Estágio 1 responde a um fármaco; associar dois de início soma efeito adverso sem ganho de desfecho na maioria" },
+      { "cenario": "PA ≥ 160/100 mmHg ou ≥ 20/10 mmHg acima da meta", "escolha": "Iniciar dois fármacos, de preferência em combinação de dose fixa (IECA/BRA + tiazídico ou BCE + IECA/BRA)", "porque": "Baixar 20/10 mmHg exige quase sempre duas classes; comprimido único melhora adesão e reduz efeito colateral por dose baixa de cada" },
+      { "cenario": "Paciente negro sem DRC e sem albuminúria", "escolha": "Tiazídico (clortalidona) ou BCE (anlodipino) em monoterapia; se precisar de duas classes, associar sobre essa base", "porque": "IECA/BRA isolado tem resposta pressórica menor em negro; o benefício renoprotetor do bloqueio do SRAA só aparece com albuminúria" },
+      { "cenario": "Diabético com albuminúria ou DRC com proteinúria", "escolha": "IECA ou BRA em dose máxima tolerada + BCE ou tiazídico", "porque": "Bloqueio do SRAA reduz progressão renal; a associação é necessária para chegar a < 130/80" },
+      { "cenario": "Idoso ≥ 65 anos, não frágil", "escolha": "Iniciar com metade da dose de tiazídico ou BCE; alvo de PAS 130–140 mmHg; subir a cada 4 semanas", "porque": "Abaixo de 130 mmHg aumenta síncope e queda; a resposta ao primeiro comprimido é maior e o risco de hipotensão postural é real" },
+      { "cenario": "Pós-AVC isquêmico ou AIT", "escolha": "IECA/BRA + tiazídico, iniciando após 48–72 h da fase aguda", "porque": "Reduz recorrência; baixar pressão nas primeiras 24–48 h de AVC isquêmico piora a penumbra" },
+      { "cenario": "Hipertensão resistente (3 fármacos, um deles diurético, em doses adequadas)", "escolha": "Espironolactona 25 mg + investigação de causa secundária", "porque": "Hiperaldosteronismo responde a antagonista do receptor mineralocorticoide; 25 mg reduz hipercalemia em relação a 50 mg" },
+      { "cenario": "PA elevada assintomática no pronto atendimento, sem lesão de órgão-alvo", "escolha": "Não reduzir na hora: manter ou iniciar via oral, observar 1–2 h e agendar retorno em 1–2 semanas", "porque": "Queda rápida não melhora prognóstico e causa hipoperfusão; a cifra isolada não é emergência" },
+      { "cenario": "Suspeita de feocromocitoma (sudorese, palidez e cefaleia paroxísticas)", "escolha": "Alfabloqueador antes de qualquer betabloqueador + metanefrinas plasmáticas", "porque": "Betabloqueador sem alfa bloqueio precipita crise hipertensiva por vasoconstrição sem oposição" },
+      { "cenario": "Coronariopatia, pós-IAM ou IC com fração de ejeção reduzida", "escolha": "Betabloqueador associado ao esquema de base", "porque": "A indicação é por desfecho cardiovascular, não pela cifra pressórica" },
+      { "cenario": "Hipertensão resistente com ronco e sonolência diurna", "escolha": "Polissonografia e CPAP antes de escalar doses", "porque": "Apneia não tratada mantém hipertensão noturna e resistência ao tratamento" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "bra",
+        "agente": "losartana",
+        "papel": "primeira_linha",
+        "indicacao": "hipertensão arterial, diabetes com albuminúria, DRC, pós-AVC",
+        "dose": "50 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "100 mg/dia",
+        "contraindicacoes": ["gestação", "estenose bilateral de artéria renal", "hipercalemia", "uso concomitante de alisquireno em diabético"],
+        "efeitos_adversos": ["hipercalemia", "tontura", "piora de creatinina", "angioedema raro"],
+        "apresentacoes": ["comprimido 25 mg", "comprimido 50 mg", "comprimido 100 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["creatinina e potássio em 1–2 semanas", "PA em 4 semanas", "sintomas de angioedema", "adesão"],
+        "ajuste_renal": "Sem ajuste até TFG 30; cautela e controle de potássio abaixo disso; não iniciar em estenose bilateral",
+        "ajuste_hepatico": "Reduzir para 25 mg/dia em cirrose; máximo 50 mg/dia em hepatopatia grave",
+        "observacoes": "Primeira escolha em diabético com albuminúria. Não associar a IECA. Suspender temporariamente em diarreia, vômitos ou antes de cirurgia com anestesia geral",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "ieca",
+        "agente": "enalapril",
+        "papel": "primeira_linha",
+        "indicacao": "hipertensão arterial, IC com fração de ejeção reduzida, pós-IAM, DRC com albuminúria",
+        "dose": "5 a 20 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia ou 12/12 h",
+        "duracao": "contínuo",
+        "dose_maxima": "40 mg/dia",
+        "contraindicacoes": ["gestação", "angioedema prévio por IECA", "estenose bilateral de artéria renal", "hipercalemia"],
+        "efeitos_adversos": ["tosse seca", "hipercalemia", "piora de creatinina", "angioedema", "hipotensão na primeira dose"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 10 mg", "comprimido 20 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["creatinina e potássio em 1–2 semanas", "PA em 4 semanas", "tosse", "edema de face ou língua"],
+        "ajuste_renal": "Iniciar 2,5 mg se TFG < 30; 2,5 mg em dia de diálise",
+        "ajuste_hepatico": "Pró-fármaco: evitar em cirrose descompensada por conversão imprevisível",
+        "observacoes": "Alternativa ao BRA quando o objetivo é custo; tosse seca em 10–15% e angioedema mais frequente em negro. Trocar por BRA se tosse intolerável",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "bloqueador_canal_calcio",
+        "agente": "anlodipino",
+        "papel": "primeira_linha",
+        "indicacao": "hipertensão arterial, hipertensão sistólica isolada do idoso, paciente negro",
+        "dose": "5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": ["alergia a diidropiridina", "choque cardiogênico", "estenose aórtica grave"],
+        "efeitos_adversos": ["edema maleolar dose-dependente", "cefaleia", "rubor", "hiperplasia gengival"],
+        "apresentacoes": ["comprimido 2,5 mg", "comprimido 5 mg", "comprimido 10 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["PA em 4 semanas", "edema de membros inferiores", "cefaleia nas primeiras semanas"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Iniciar 2,5 mg em hepatopatia; metabolismo hepático lento",
+        "observacoes": "Meia-vida longa permite uma tomada ao dia. Edema não responde a diurético: reduzir dose ou associar IECA/BRA. Não confundir com nifedipino de liberação imediata",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "tiazidico",
+        "agente": "hidroclorotiazida",
+        "papel": "primeira_linha",
+        "indicacao": "hipertensão arterial, hipertensão resistente, paciente negro, idoso",
+        "dose": "12,5 a 25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "contínuo",
+        "dose_maxima": "50 mg/dia",
+        "contraindicacoes": ["anúria", "gota ativa", "hiponatremia grave", "hipocalemia não corrigida"],
+        "efeitos_adversos": ["hiponatremia", "hipocalemia", "hiperuricemia e gota", "hiperglicemia", "fotossensibilidade"],
+        "apresentacoes": ["comprimido 25 mg", "comprimido 50 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["sódio e potássio em 2–4 semanas", "ácido úrico", "glicemia", "creatinina", "cálcio"],
+        "ajuste_renal": "Pouco eficaz com TFG < 30; preferir clortalidona ou diurético de alça",
+        "observacoes": "Menos potente que clortalidona. Risco de hiponatremia em idoso e de câncer de pele não melanoma: orientar fotoproteção. Não usar como monoterapia em gestante",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "tiazidico",
+        "agente": "clortalidona",
+        "papel": "alternativa",
+        "indicacao": "hipertensão resistente, DRC com TFG entre 30 e 45, paciente negro, preferência por efeito diurético prolongado",
+        "dose": "12,5 a 25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "contínuo",
+        "dose_maxima": "25 mg/dia",
+        "contraindicacoes": ["anúria", "hiponatremia grave", "hipocalemia não corrigida", "gota ativa"],
+        "efeitos_adversos": ["hipocalemia", "hiponatremia", "hiperuricemia", "tontura", "fotossensibilidade"],
+        "apresentacoes": ["comprimido 12,5 mg", "comprimido 25 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["potássio e sódio em 2–4 semanas", "ácido úrico", "creatinina", "PA em 4 semanas"],
+        "ajuste_renal": "Mantém efeito com TFG 30–45; abaixo de 30 trocar por furosemida",
+        "observacoes": "Mais potente e de meia-vida mais longa que hidroclorotiazida; preferida em hipertensão resistente. Evitar em atleta de endurance por hiponatremia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "combinacao_dose_fixa",
+        "agente": "losartana + hidroclorotiazida",
+        "papel": "primeira_linha",
+        "indicacao": "hipertensão estágio 2 ou meta não atingida com monoterapia",
+        "dose": "50/12,5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "100/25 mg/dia",
+        "contraindicacoes": ["gestação", "estenose bilateral de artéria renal", "anúria", "hipercalemia", "hiponatremia grave"],
+        "efeitos_adversos": ["hipotensão", "hipercalemia", "hiponatremia", "tontura", "piora de creatinina"],
+        "apresentacoes": ["comprimido 50/12,5 mg", "comprimido 100/25 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["creatinina, potássio e sódio em 1–2 semanas", "PA sentado e em pé", "adesão"],
+        "ajuste_renal": "Evitar se TFG < 30; controlar potássio",
+        "ajuste_hepatico": "Reduzir para a apresentação 50/12,5 em hepatopatia",
+        "observacoes": "Combinação de dose fixa melhora adesão e reduz custo. Alternativas equivalentes: anlodipino + IECA/BRA ou anlodipino + tiazídico. Não usar como primeira escolha em estágio 1 sem comorbidade",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_mineralocorticoide",
+        "agente": "espironolactona",
+        "papel": "resgate",
+        "indicacao": "hipertensão resistente e hiperaldosteronismo primário",
+        "dose": "25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo com reavaliação em 4 semanas",
+        "dose_maxima": "50 mg/dia",
+        "contraindicacoes": ["hipercalemia", "TFG < 30", "gestação", "ginecomastia intolerável"],
+        "efeitos_adversos": ["hipercalemia", "ginecomastia", "irregularidade menstrual", "piora de creatinina"],
+        "apresentacoes": ["comprimido 25 mg", "comprimido 100 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["potássio e creatinina em 1, 4 e 12 semanas", "PA", "ginecomastia", "sódio"],
+        "ajuste_renal": "Contraindicada se TFG < 30; não iniciar com K ≥ 5,0",
+        "ajuste_hepatico": "Cautela em cirrose: risco de hipercalemia e ginecomastia",
+        "observacoes": "Quarta droga da hipertensão resistente e tratamento clínico do hiperaldosteronismo. Suspender 4 semanas antes de dosar aldosterona/renina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      },
+      {
+        "classe": "betabloqueador",
+        "agente": "succinato de metoprolol",
+        "papel": "condicional",
+        "indicacao": "hipertensão com coronariopatia, pós-IAM, IC com fração de ejeção reduzida ou necessidade de controle de frequência",
+        "dose": "50 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "200 mg/dia",
+        "contraindicacoes": ["asma grave", "bradicardia sintomática", "bloqueio AV de 2º ou 3º grau sem marca-passo", "choque cardiogênico", "IC descompensada"],
+        "efeitos_adversos": ["bradicardia", "fadiga", "broncoespasmo", "disfunção sexual", "mascaramento de hipoglicemia"],
+        "apresentacoes": ["comprimido de liberação prolongada 25 mg", "comprimido de liberação prolongada 50 mg", "comprimido de liberação prolongada 100 mg"],
+        "preparo": "Uso direto; não partir comprimido de liberação prolongada",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["FC e PA", "broncoespasmo", "sintomas de IC", "glicemia em diabético"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em cirrose com ascite",
+        "observacoes": "Não é primeira linha em hipertensão sem indicação específica. Não suspender abruptamente: risco de angina e taquicardia rebote",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBC",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Redução de sódio", "detalhe": "Menos de 2 g de sódio/dia (cerca de 5 g de sal); retirar o saleiro da mesa e ler rótulos de embutidos, temperos prontos e industrializados" },
+      { "medida": "Padrão alimentar DASH", "detalhe": "Cinco ou mais porções de frutas e verduras ao dia, laticínios magros, grãos integrais, leguminosas e oleaginosas; cortar ultraprocessados" },
+      { "medida": "Atividade física", "detalhe": "150 minutos por semana de aeróbico (30 min em 5 dias) mais 2 sessões de resistência; reduz 5–8 mmHg" },
+      { "medida": "Perda de peso", "detalhe": "Cada 1 kg perdido equivale a cerca de 1 mmHg; alvo de 5–10% do peso em 6 meses ou IMC < 25" },
+      { "medida": "Álcool", "detalhe": "Máximo 2 doses/dia para homem e 1 para mulher; abstinência reduz 4/2 mmHg" },
+      { "medida": "Cessação do tabagismo", "detalhe": "Tabaco não sustenta hipertensão crônica, mas multiplica o risco cardiovascular; oferecer terapia de reposição de nicotina" },
+      { "medida": "Sono e rastreio de apneia", "detalhe": "7–9 h por noite; aplicar escala de Epworth e pedir polissonografia se ronco, apneia presenciada ou sonolência diurna" },
+      { "medida": "Automedida domiciliar padronizada", "detalhe": "Aparelho de braço validado, 5 min de repouso, 2 medidas pela manhã e 2 à noite por 5–7 dias antes da consulta; anotar e levar" }
+    ],
+    "procedimentos": [
+      { "nome": "MRPA (monitorização residencial da pressão arterial)", "indicacao": "Confirmar diagnóstico, afastar hipertensão do avental branco e ajustar tratamento", "tecnica": "Aparelho automático de braço; 3 medidas pela manhã e 3 à noite por 5–7 dias; média ≥ 130/80 mmHg é anormal", "complicacoes": "Erro de técnica e manguito inadequado geram diagnóstico falso" },
+      { "nome": "MAPA de 24 horas", "indicacao": "Suspeita de hipertensão do avental branco, hipertensão mascarada, resistente ou noturna", "tecnica": "Monitor automático com medidas a cada 20–30 min na vigília e 30–60 min no sono; analisar médias de 24 h, vigília e sono e o descenso noturno", "complicacoes": "Sono interrompido, hematoma no braço, falha de registro" },
+      { "nome": "Polissonografia", "indicacao": "Hipertensão resistente, ronco, apneia presenciada ou sonolência diurna", "tecnica": "Exame noturno tipo I em laboratório ou tipo III domiciliar com índice de apneia/hipopneia por hora", "complicacoes": "Falso-negativo em apneia leve; noite mal dormida" },
+      { "nome": "Doppler ou angiotomografia de artérias renais", "indicacao": "Hipertensão resistente, piora de creatinina após IECA/BRA, sopro abdominal ou rim pequeno", "tecnica": "Doppler com contraste ou angio-TC/angio-RM dos vasos renais", "complicacoes": "Nefrotoxicidade por contraste, falso-positivo, achado incidental" },
+      { "nome": "Cateterismo de veias adrenais", "indicacao": "Hiperaldosteronismo primário com indicação cirúrgica a definir", "tecnica": "Coleta seletiva de aldosterona em cada veia adrenal para lateralizar o adenoma", "complicacoes": "Sangramento, falha de cateterismo, insuficiência adrenal por lesão da glândula" }
+    ],
+    "metas": [
+      "PA < 130/80 mmHg para a maioria dos adultos, se tolerado",
+      "Idoso ≥ 65 anos: PAS entre 130 e 140 mmHg; não reduzir abaixo de 130 em frágil ou com hipotensão postural",
+      "Diabético: PA < 130/80 mmHg",
+      "Pós-AVC isquêmico ou AIT: PA < 130/80 mmHg após as primeiras 48–72 h",
+      "DRC com albuminúria: PA < 130/80 mmHg e redução de albuminúria ≥ 30%",
+      "Queda de 10 mmHg na PAS a cada 4 semanas de ajuste, sem hipotensão postural",
+      "Confirmação por MRPA ou MAPA antes de rotular hipertensão quando a medida de consulta é duvidosa"
+    ],
+    "fluxo": [
+      "Confirmar a medida: técnica, manguito adequado, duas leituras e MRPA/MAPA se dúvida",
+      "Procurar lesão aguda de órgão-alvo: se houver, reclassificar como emergência (CAR-02) e tratar na hora",
+      "Sem lesão aguda: estratificar risco (idade, diabetes, DRC, doença cardiovascular, albuminúria) e definir a meta",
+      "Iniciar mudança de estilo de vida em todos e decidir entre monoterapia (estágio 1) e combinação (≥ 160/100)",
+      "Escolher a classe pelo perfil: negro → tiazídico ou BCE; diabético/DRC → IECA ou BRA; idoso → metade da dose",
+      "Reavaliar em 4 semanas; se fora da meta, subir dose ou associar; terceira droga e espironolactona se resistente",
+      "Sem controle ou com pista de causa secundária: dosar aldosterona/renina, metanefrinas, Doppler renal e polissonografia, e encaminhar"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "idoso", "ajuste": "Iniciar com metade da dose (anlodipino 2,5 mg, losartana 25 mg, clortalidona 12,5 mg); subir a cada 4 semanas; medir PA sentado e em pé", "alerta": "Hipotensão postural, queda e síncope; alvo de PAS 130–140" },
+      { "populacao": "negro", "ajuste": "Preferir tiazídico (clortalidona) ou BCE (anlodipino); IECA/BRA apenas com albuminúria ou em associação", "alerta": "Resposta pressórica menor a IECA/BRA isolado; angioedema mais frequente com IECA" },
+      { "populacao": "diabetico", "ajuste": "IECA ou BRA se albuminúria; associar BCE ou tiazídico para chegar a < 130/80", "alerta": "Hipercalemia e piora de creatinina após bloqueio do SRAA" },
+      { "populacao": "renal_cronico", "ajuste": "IECA/BRA com creatinina e potássio em 1–2 semanas; clortalidona útil até TFG 30", "alerta": "Hipercalemia e lesão renal aguda em desidratação; suspender em diarreia" },
+      { "populacao": "gestante", "ajuste": "Suspender IECA, BRA e espironolactona; usar metildopa, nifedipino de liberação prolongada ou labetalol", "alerta": "Teratogenicidade do bloqueio do SRAA" },
+      { "populacao": "pos_avc", "ajuste": "Retomar o anti-hipertensivo após 48–72 h; preferir IECA/BRA + tiazídico", "alerta": "Hipotensão na fase aguda piora a penumbra isquêmica" },
+      { "populacao": "apneia_do_sono", "ajuste": "Tratar apneia com CPAP e perda de peso antes de escalar doses", "alerta": "Hipertensão noturna e resistência ao tratamento" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "creatinina, TFG e potássio", "indicacao": "todos, antes e 1–2 semanas após iniciar IECA/BRA ou espironolactona", "o_que_muda": "define ajuste de dose e detecta hipercalemia" },
+        { "nome": "sódio, potássio, cálcio, ácido úrico, glicemia e HbA1c", "indicacao": "avaliação inicial", "o_que_muda": "diurético causa hiponatremia e hipocalemia; glicemia define a meta" },
+        { "nome": "perfil lipídico, TSH e relação albumina/creatinina urinária", "indicacao": "avaliação inicial e estratificação de risco", "o_que_muda": "muda a meta e indica IECA ou BRA" },
+        { "nome": "ECG e ecocardiograma", "indicacao": "hipertrofia ventricular, isquemia ou arritmia", "o_que_muda": "confirma lesão de órgão-alvo e indica betabloqueador" },
+        { "nome": "relação aldosterona/renina", "indicacao": "hipertensão resistente, hipocalemia espontânea ou incidentaloma adrenal", "o_que_muda": "confirma hiperaldosteronismo primário" },
+        { "nome": "metanefrinas plasmáticas ou urinárias", "indicacao": "crises paroxísticas de sudorese, palidez e cefaleia", "o_que_muda": "confirma feocromocitoma e muda para alfa bloqueio" },
+        { "nome": "polissonografia", "indicacao": "ronco, sonolência diurna ou hipertensão noturna", "o_que_muda": "confirma apneia e indica CPAP" }
+      ],
+      "evitar": [
+        { "exame": "angiotomografia ou Doppler de artérias renais de rotina na hipertensão leve sem pista", "motivo": "não muda conduta, expõe a contraste e gera achado incidental" },
+        { "exame": "dosagem de catecolaminas fora de crise paroxística", "motivo": "alto índice de falso-positivo; só pedir com quadro típico" },
+        { "exame": "tomografia de crânio ou de abdome para procurar causa da pressão", "motivo": "achado incidental sem relação com a pressão e sem impacto no tratamento" },
+        { "exame": "aldosterona e renina em uso de espironolactona", "motivo": "falso-negativo; suspender 4 semanas antes da coleta" },
+        { "exame": "painel de exames de urgência no paciente assintomático e estável", "motivo": "não muda conduta e atrasa o início do tratamento oral" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "Tomar o comprimido no mesmo horário todos os dias e trazer as caixas na consulta",
+        "Medir a pressão em casa 5–7 dias antes do retorno e anotar os valores",
+        "Reduzir sal, perder peso e caminhar 30 minutos em 5 dias da semana",
+        "Fazer creatinina e potássio 1–2 semanas após iniciar IECA, BRA ou espironolactona",
+        "Voltar em 4 semanas para reavaliar a meta"
+      ],
+      "evitar": [
+        "Tomar nifedipino de liberação imediata para baixar a pressão na hora",
+        "Usar anti-inflamatório, descongestionante nasal ou corticoide sem avisar",
+        "Suspender o remédio por conta própria quando a pressão normaliza",
+        "Bebida alcoólica em excesso e excesso de sal em temperos prontos",
+        "Engravidar em uso de IECA, BRA ou espironolactona"
+      ],
+      "retorno": [
+        "cefaleia intensa, alteração visual ou confusão",
+        "dor torácica ou falta de ar",
+        "tontura ao levantar ou desmaio",
+        "piora da função renal ou potássio alterado no exame",
+        "pressão persistentemente acima da meta em casa"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "losartana", "efeitos": ["hipercalemia", "tontura", "angioedema"], "observacao": "Dosar potássio e creatinina em 1–2 semanas; suspender se edema de face ou língua" },
+      { "agente": "enalapril", "efeitos": ["tosse seca", "angioedema", "hipercalemia"], "observacao": "Trocar por BRA se tosse intolerável; angioedema exige suspensão definitiva da classe" },
+      { "agente": "anlodipino", "efeitos": ["edema maleolar", "cefaleia", "rubor"], "observacao": "Dose-dependente; reduzir ou associar IECA/BRA, não tratar com diurético" },
+      { "agente": "hidroclorotiazida", "efeitos": ["hiponatremia", "hipocalemia", "hiperuricemia"], "observacao": "Controlar sódio e potássio em 2–4 semanas; gota pode descompensar" },
+      { "agente": "clortalidona", "efeitos": ["hipocalemia", "hiponatremia", "hiperuricemia"], "observacao": "Meia-vida longa: hiponatremia pode surgir tardiamente em idoso" },
+      { "agente": "espironolactona", "efeitos": ["hipercalemia", "ginecomastia", "irregularidade menstrual"], "observacao": "Suspender se potássio ≥ 5,5 mEq/L ou creatinina subir mais de 30%" },
+      { "agente": "succinato de metoprolol", "efeitos": ["bradicardia", "fadiga", "broncoespasmo"], "observacao": "Não suspender abruptamente; reduzir gradualmente" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender ou reduzir a droga implicada e registrar a reação na evolução",
+      "Angioedema por IECA: suspender, garantir via aérea e nunca reintroduzir a classe",
+      "Hipercalemia por IECA, BRA ou espironolactona: suspender, revisar dieta, corrigir e reavaliar a indicação",
+      "Edema por anlodipino: reduzir dose ou associar IECA/BRA; diurético não resolve",
+      "Hipotensão postural: reduzir dose, fracionar e orientar levantar devagar; checar PA em pé",
+      "Hiponatremia por tiazídico: suspender, corrigir e trocar de classe"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "losartana + hidroclorotiazida 50/12,5 mg", "dose": "1 comprimido", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "30 dias", "condicao": "hipertensão estágio 2 ou meta não atingida com monoterapia", "confirmar_apresentacao_local": true },
+          { "item": "anlodipino 5 mg", "dose": "1 comprimido", "via": "VO", "frequencia": "1x/dia", "duracao": "30 dias", "condicao": "paciente negro, idoso ou necessidade de terceira classe", "confirmar_apresentacao_local": true },
+          { "item": "clortalidona 25 mg", "dose": "1 comprimido", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "30 dias", "condicao": "hipertensão resistente ou TFG entre 30 e 45", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "losartana 50 mg", "dose": "50 mg", "via": "VO", "frequencia": "1x/dia", "monitorizacao": "PA, creatinina e potássio", "confirmar_apresentacao_local": true },
+          { "item": "anlodipino 5 mg", "dose": "5 mg", "via": "VO", "frequencia": "1x/dia", "monitorizacao": "PA e edema de membros", "confirmar_apresentacao_local": true },
+          { "item": "hidroclorotiazida 25 mg", "dose": "25 mg", "via": "VO", "frequencia": "1x/dia pela manhã", "monitorizacao": "sódio, potássio e ácido úrico", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["creatinina", "TFG", "potássio", "sódio", "glicemia", "HbA1c", "perfil lipídico", "TSH", "relação albumina/creatinina urinária", "ECG", "ecocardiograma", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de hipertensão arterial em tratamento, necessitando de afastamento por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": ["destino", "motivo", "resumo", "prioridade"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com hipertensão arterial assintomática, valores de PA em consulta e em casa, risco cardiovascular, lesão de órgão-alvo, esquema em uso, meta definida e data de reavaliação."
+      }
+    },
+    "anamnese": {
+      "campos": ["PA em consulta e em casa", "sintomas de lesão de órgão-alvo", "adesão e horários", "comorbidades", "AINE e descongestionantes", "álcool e tabaco", "ronco e sonolência", "gestação"],
+      "texto_template": "Paciente com hipertensão arterial, valores de PA em consulta e em casa, ausência de sintomas de lesão aguda de órgão-alvo, adesão e horários, comorbidades, uso de AINE ou descongestionante, álcool, tabaco, ronco com sonolência diurna e status gestacional."
+    },
+    "exame_fisico": {
+      "itens": ["PA nos dois braços", "PA em pé após 1 e 3 minutos", "peso, altura e circunferência abdominal", "ausculta cardíaca e pulmonar", "pulsos periféricos e sopros abdominais", "fundo de olho", "edema de membros inferiores", "exame neurológico sumário"],
+      "texto_template": "PA nos dois braços e em pé, antropometria, ausculta cardíaca e pulmonar, pulsos e sopros abdominais, fundoscopia, edema e exame neurológico sumário."
+    },
+    "referencias": [
+      { "tipo": "diretriz_sociedade_cardiologia", "o_que_verificar": "metas pressóricas por perfil (SBC, ESC e ACC/AHA)", "verificar": true },
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de início e ajuste de anti-hipertensivo na atenção primária", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações, bulas e combinações em dose fixa disponíveis", "verificar": true },
+      { "tipo": "sociedade_nefrologia", "o_que_verificar": "manejo em DRC, albuminúria e hipercalemia", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-CAR03-01", "tipo": "nifedipino_sublingual", "gatilho": "prescrição de nifedipino de liberação imediata para baixar a pressão", "severidade": "grave", "mensagem": "Não reduzir cifra pressórica com nifedipino sublingual: risco de isquemia, AVC e hipotensão grave.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-CAR03-02", "tipo": "emergencia", "gatilho": "PA ≥ 180/120 com sintoma neurológico, dor torácica, dispneia ou oligúria", "severidade": "grave", "mensagem": "Reclassificar como emergência hipertensiva e seguir o protocolo CAR-02.", "acao": "acionar protocolo", "bloqueante": true },
+      { "id": "SA-CAR03-03", "tipo": "gestacao", "gatilho": "gestante ou suspeita de gestação", "severidade": "grave", "mensagem": "Suspender IECA, BRA e espironolactona; usar metildopa, nifedipino de liberação prolongada ou labetalol.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-CAR03-04", "tipo": "duplo_bloqueio_sraa", "gatilho": "IECA associado a BRA ou a alisquireno", "severidade": "grave", "mensagem": "Duplo bloqueio do SRAA aumenta lesão renal e hipercalemia sem ganho de desfecho.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-CAR03-05", "tipo": "hipercalemia", "gatilho": "potássio ≥ 5,5 mEq/L ou TFG < 30 ao iniciar IECA, BRA ou espironolactona", "severidade": "grave", "mensagem": "Risco de hipercalemia grave e arritmia.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-CAR03-06", "tipo": "imagem_sem_indicacao", "gatilho": "pedido de angiotomografia ou Doppler renal sem pista clínica", "severidade": "precaucao", "mensagem": "Imagem sem indicação não muda conduta e expõe a contraste e a achado incidental.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-CAR03-07", "tipo": "aine", "gatilho": "AINE, descongestionante ou corticoide em uso", "severidade": "precaucao", "mensagem": "Elevam a pressão e reduzem o efeito do anti-hipertensivo.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "diretriz SBC", "diretriz ESC", "ACC/AHA", "KDIGO"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com foco em quando tratar na hora e quando agendar, início e combinação de anti-hipertensivo oral, ajuste em idoso e em negro, investigação de causa secundária, metas por perfil, apresentações, preparo, monitorização e procedimentos.", "data": null }
+      ]
+    }
+  }
+}

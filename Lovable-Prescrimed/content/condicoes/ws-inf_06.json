@@ -1,0 +1,643 @@
+{
+  "id": "ws-inf_06",
+  "nome": "HIV agudo / profilaxia pós-exposição",
+  "cat": "Infectologia",
+  "alias": "hiv agudo profilaxia pos exposicao hiv agudo pep profilaxia pos exposicao soroconversao sindrome retroviral aguda prep profilaxia pre exposicao violencia sexual",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (INF-06_hiv_pep.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] ministerio_da_saude: protocolo de profilaxia pós-exposição, esquema de primeira linha, prazos e seguimento sorológico",
+      "[verificar] ministerio_da_saude: atenção integral a pessoas em situação de violência sexual, com fluxo de profilaxia, contracepção e notificação",
+      "[verificar] cdc: profilaxia de IST após exposição sexual, doses de ceftriaxona, doxiciclina e metronidazol, e profilaxia de hepatite B",
+      "[verificar] protocolo_institucional: fluxo de PrEP, critérios de elegibilidade e seguimento de pacientes em risco recorrente",
+      "[verificar] anvisa: apresentações e diluições dos antirretrovirais e imunobiológicos disponíveis no serviço",
+      "[verificar] literatura: diagnóstico da infecção aguda pelo HIV, janela imunológica e papel da carga viral"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "INF-06 em 2026-11-27",
+    "fundido_workspace": "INF-06 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: febre com rash maculopapular, adenopatia, faringite e úlceras orais ou genitais após exposição -> solicitar carga viral de HIV e teste combinado de antígeno p24, sem descartar o diagnóstico; exposição percutânea profunda com agulha calibrosa e sangue visível de fonte HIV positiva -> iniciar PEP imediatamente, idealmente na primeira hora; violência sexual recente, sobretudo com penetração anal ou vaginal e trauma -> acionar protocolo completo, com PEP, profilaxia de IST, contracepção de emergência e notificação; ideação suicida, automutilação ou sofrimento psíquico intenso após a exposição -> avaliação de risco imediata, acionamento de saúde mental e permanência com acompanhante. 1) Cronometrar: perguntar a hora exata da exposição e verificar se está dentro de 72 horas 2) Classificar o risco pelo tipo de exposição, pelo material e pelo estado sorológico da fonte 3) Colher exames basais e teste rápido de HIV, e iniciar a primeira dose da PEP sem esperar resultado 4) Prescrever tenofovir 300 mg mais lamivudina 300 mg uma vez ao dia e dolutegravir 50 mg uma vez ao dia por 28 dias, ajustando à função renal 5) Investigar síndrome retroviral aguda: se febre, rash, adenopatia ou faringite, solicitar carga viral de HIV e não descartar com teste rápido negativo 6) Se violência sexual, acionar protocolo completo: profilaxia de IST, hepatite B, contracepção de emergência, coleta de vestígios, notificação e saúde mental 7) Orientar adesão, efeitos adversos, preservativo ",
+  "redFlags": [
+    "febre com rash maculopapular, adenopatia, faringite e úlceras orais ou genitais após exposição -> solicitar carga viral de HIV e teste combinado de antígeno p24, sem descartar o diagnóstico",
+    "exposição percutânea profunda com agulha calibrosa e sangue visível de fonte HIV positiva -> iniciar PEP imediatamente, idealmente na primeira hora",
+    "violência sexual recente, sobretudo com penetração anal ou vaginal e trauma -> acionar protocolo completo, com PEP, profilaxia de IST, contracepção de emergência e notificação",
+    "ideação suicida, automutilação ou sofrimento psíquico intenso após a exposição -> avaliação de risco imediata, acionamento de saúde mental e permanência com acompanhante",
+    "cefaleia intensa, rigidez de nuca, confusão ou convulsão em síndrome retroviral -> hospitalizar e realizar punção lombar",
+    "creatinina elevada ou taxa de filtração abaixo de 50 mL/min antes da PEP -> escolher esquema sem tenofovir ou ajustar intervalo",
+    "rash extenso com febre, eosinofilia ou acometimento de mucosa em uso de antirretroviral -> suspender o esquema, tratar a reação e trocar de classe",
+    "gestação identificada depois do início da PEP -> manter tenofovir, lamivudina e dolutegravir e iniciar pré-natal"
+  ],
+  "naoUsar": [
+    "taxa de filtração glomerular abaixo de 30 mL/min",
+    "doença renal crônica avançada",
+    "hipersensibilidade aos componentes",
+    "acidose metabólica grave",
+    "hipersensibilidade ao dolutegravir",
+    "insuficiência hepática grave",
+    "uso de dofetilida ou anticonvulsivante indutor sem ajuste",
+    "filtração abaixo de 30 mL/min"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar a PEP todos os dias no mesmo horário, sem esquecer nenhuma dose"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "interromper a PEP por conta própria ao melhorar ou por náusea leve"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Itrn",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "tdf_3tc",
+            "pos": "300 mg de tenofovir com 300 mg de lamivudina (um comprimido da associação). Via VO. 1x/dia. 28 dias.",
+            "posTodas": true,
+            "motivo": "base da profilaxia pós-exposição ao HIV em adultos (1a linha) PEP para HIV, com filtração acima de 50 mL/min",
+            "nota": "Uso direto por via oral, com ou sem alimento - monitorar: creatinina e taxa de filtração na entrada e em 15 dias; monitorar: fósforo e proteinúria se doença renal prévia; monitorar: transaminases em portador de hepatite B; monitorar: adesão diária e tolerância digestiva · NÃO: taxa de filtração glomerular abaixo de 30 mL/min; doença renal crônica avançada; hipersensibilidade aos componentes; acidose metabólica grave · Obs: Nunca usar como dupla isolada para PEP: a associação é a base e precisa da terceira droga. Em paciente com hepatite B, a suspensão ao fim dos 28 dias pode reativar o vírus e deve ser acompanhada · Renal:…",
+            "dose": {
+              "texto": "300 mg de tenofovir com 300 mg de lamivudina (um comprimido da associação); 1x/dia; 28 dias; max. 300/300 mg por dia",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 28,
+              "duracao_texto": "28 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "tenofovir_alafenamida_emtricitabina",
+              "n": "Tenofovir alafenamida + emtricitabina",
+              "ap": "comprimido 25/200 mg",
+              "q": "",
+              "pos": "25 mg de tenofovir alafenamida com 200 mg de emtricitabina (um comprimido). Via VO. 1x/dia. 28 dias."
+            },
+            "motivo": "profilaxia pós-exposição em paciente com filtração entre 30 e 59 mL/min ou com osteopenia e osteoporose (alternativa)",
+            "nota": "Uso direto por via oral, com alimento - monitorar: creatinina e filtração na entrada e em 15 dias; monitorar: transaminases; monitorar: adesão · NÃO: filtração abaixo de 30 mL/min; hipersensibilidade; uso de rifampicina sem ajuste · Obs: É a troca mais simples quando o tenofovir disoproxila está contraindicado por rim; não é intercambiável com o tenofovir disoproxila em dose · Renal: Não usar com filtração abaixo de 30 mL/min; entre 30 e 59 mL/min não exige ajuste, ao…",
+            "dose": {
+              "texto": "25 mg de tenofovir alafenamida com 200 mg de emtricitabina (um comprimido); 1x/dia; 28 dias; max. 25/200 mg por dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 28,
+              "duracao_texto": "28 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "zidovudina_lamivudina",
+              "n": "Zidovudina + lamivudina",
+              "ap": "comprimido 300/150 mg",
+              "q": "",
+              "pos": "300 mg de zidovudina com 150 mg de lamivudina. Via VO. 12/12 h. 28 dias."
+            },
+            "motivo": "profilaxia pós-exposição quando o tenofovir é contraindicado por doença renal, osteoporose grave ou intolerância (alternativa) filtração abaixo de 30 mL/min ou contraindicação ao tenofovir",
+            "nota": "Uso direto por via oral, com ou sem alimento - monitorar: hemograma na entrada, em 2 e em 4 semanas; monitorar: transaminases; monitorar: sintomas de anemia: fadiga, palidez, dispneia; monitorar: adesão a cada 12 horas · NÃO: anemia grave ou hemoglobina abaixo de 8 g/dL; neutropenia abaixo de 1.000; hepatite alcoólica; hipersensibilidade · Obs: Exige tomada a cada 12 horas, o que reduz adesão em comparação ao esquema diário; reservar para quando o tenofovir não pode ser usado · Renal: Filtração 10 a 29 mL/min: zidovudina 300 mg a cada 12 horas com lamivudina 150 mg…",
+            "dose": {
+              "texto": "300 mg de zidovudina com 150 mg de lamivudina; 12/12 h; 28 dias; max. 600/300 mg por dia",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 28,
+              "duracao_texto": "28 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Insti",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dolutegravir",
+            "pos": "50 mg. Via VO. 1x/dia. 28 dias.",
+            "posTodas": true,
+            "motivo": "terceira droga da profilaxia pós-exposição, com alta barreira genética e boa tolerabilidade (1a linha) terceira droga da PEP",
+            "nota": "Uso direto por via oral; tomar longe de antiácido, cálcio, ferro e zinco, com pelo menos 2 horas de intervalo antes ou 6 horas depois - monitorar: transaminases na entrada e se sintomas; monitorar: humor, sono e cefaleia; monitorar: adesão diária; monitorar: interação com cátions e com rifampicina · NÃO: hipersensibilidade ao dolutegravir; insuficiência hepática grave; uso de dofetilida ou anticonvulsivante indutor sem ajuste · Obs: Com rifampicina, a dose passa a 50 mg a cada 12 horas. A quelação por cálcio, ferro e antiácido reduz a absorção e é a causa mais comum de falha silenciosa",
+            "dose": {
+              "texto": "50 mg; 1x/dia; 28 dias; max. 50 mg/dia (50 mg a cada 12 horas quando associado a rifampicina)",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "a cada 12 h",
+              "freq_min": null,
+              "duracao_dias": 28,
+              "duracao_texto": "28 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "raltegravir",
+              "n": "Raltegravir",
+              "ap": "comprimido 400 mg",
+              "q": "",
+              "pos": "400 mg. Via VO. 12/12 h. 28 dias."
+            },
+            "motivo": "substituição do dolutegravir em intolerância, interação medicamentosa ou indisponibilidade (alternativa)",
+            "nota": "Uso direto por via oral; não tomar junto com antiácido com alumínio ou magnésio - monitorar: transaminases e creatinina na entrada e em 2 semanas; monitorar: sintomas musculares e urina escura; monitorar: sono e humor; monitorar: adesão a cada 12 horas · NÃO: hipersensibilidade ao raltegravir; uso concomitante de antiácido com alumínio ou magnésio sem intervalo · Obs: Boa opção na gestação e em quem não tolera dolutegravir; exige duas tomadas diárias e tem mais náusea",
+            "dose": {
+              "texto": "400 mg; 12/12 h; 28 dias; max. 800 mg/dia",
+              "status": "ok",
+              "valor": 400,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 800,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 28,
+              "duracao_texto": "28 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Tetraciclina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "doxiciclina",
+            "pos": "100 mg. Via VO. 12/12 h. 7 dias.",
+            "posTodas": true,
+            "motivo": "profilaxia de clamídia e sífilis após violência sexual e profilaxia pós-exposição de IST bacteriana (condicional) profilaxia de clamídia e sífilis, fora da gestação",
+            "nota": "Uso direto por via oral, com um copo cheio de água, sem deitar por 30 minutos - monitorar: sintomas esofágicos; monitorar: exposição solar e fotossensibilidade; monitorar: teste de gravidez antes de prescrever · NÃO: gestação; lactação; hipersensibilidade a tetraciclina; insuficiência renal grave · Obs: Não usar na gestação; nesse caso a profilaxia de clamídia é feita com azitromicina. Exige teste de gravidez antes da prescrição",
+            "dose": {
+              "texto": "100 mg; 12/12 h; 7 dias; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cefalosporina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ceftriaxona",
+            "pos": "500 mg. Via IM. Dose única. Injeção intramuscular profunda em 1 a 2 minutos.",
+            "posTodas": true,
+            "motivo": "profilaxia de gonorreia após violência sexual ou exposição com risco de IST (condicional) profilaxia de gonorreia em violência sexual",
+            "nota": "Reconstituir em 2 mL de água para injeção ou lidocaína 1% e aplicar em glúteo com agulha de 40 por 7 mm ou maior - monitorar: dor e hematoma no local; monitorar: reação alérgica nas primeiras 30 minutos; monitorar: teste de gravidez e amamentação · NÃO: alergia grave a cefalosporina; anafilaxia prévia a penicilina; uso de solução com cálcio em neonato · Obs: Dose única, sem necessidade de repetição; aplicar antes da alta e registrar o local",
+            "dose": {
+              "texto": "500 mg; dose única; dose única; max. 500 mg em dose única para profilaxia (1 g em tratamento)",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "azitromicina",
+            "pos": "1 g. Via VO. Dose única.",
+            "posTodas": true,
+            "motivo": "profilaxia de clamídia quando a doxiciclina é contraindicada, sobretudo na gestação (condicional)",
+            "nota": "Uso direto por via oral, com ou sem alimento - monitorar: ECG se risco de QT; monitorar: tolerância digestiva; monitorar: transaminases se uso repetido · NÃO: alargamento de QT; uso de drogas que prolongam o QT; insuficiência hepática grave · Obs: Reservar para gestante e para intolerância à doxiciclina; a resistência de clamídia a macrolídeo é crescente",
+            "dose": {
+              "texto": "1 g; dose única; dose única; max. 1 g em dose única",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "metronidazol",
+            "pos": "2 g. Via VO. Dose única.",
+            "posTodas": true,
+            "motivo": "profilaxia de tricomoníase após violência sexual (condicional) profilaxia de tricomoníase",
+            "nota": "Uso direto por via oral, com alimento para reduzir náusea - monitorar: tolerância digestiva; monitorar: orientação de abstinência alcoólica por 24 horas; monitorar: teste de gravidez · NÃO: primeiro trimestre de gestação; uso de dissulfiram; hipersensibilidade a nitroimidazol; ingestão de álcool nas últimas 24 horas · Obs: Dose única é suficiente para profilaxia; não prolongar por 7 dias sem indicação de tratamento",
+            "dose": {
+              "texto": "2 g; dose única; dose única; max. 2 g em dose única",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Imunoglobulina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "imunoglobulina_humana_anti_hepatite_b",
+              "n": "Imunoglobulina humana anti-hepatite B",
+              "ap": "frasco 1 mL (200 UI)",
+              "q": "",
+              "pos": "0,06 mL/kg. Via IM. Dose única. Injeção intramuscular profunda."
+            },
+            "motivo": "profilaxia da hepatite B em exposto não vacinado, com vacinação incompleta ou com resposta desconhecida (condicional)",
+            "nota": "Pronta para uso; aplicar em músculo diferente do local da vacina - monitorar: reação local e sistêmica por 30 minutos; monitorar: registro do lote e da data; monitorar: confirmação da aplicação da vacina · NÃO: hipersensibilidade a imunoglobulina humana; deficiência seletiva de IgA com anticorpos anti-IgA · Obs: Idealmente em até 24 horas da exposição e no máximo até 7 dias; em exposição sexual, a eficácia além de 14 dias é improvável",
+            "dose": {
+              "texto": "0,06 mL/kg; dose única; dose única; max. 5 mL por dose",
+              "status": "ok",
+              "valor": 0.06,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vacina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "vacina_hepatite_b_recombinante",
+              "n": "Vacina hepatite B recombinante",
+              "ap": "frasco 1 mL (20 mcg)",
+              "q": "",
+              "pos": "20 mcg (1 mL). Via IM. 0, 1 e 6 meses (esquema acelerado 0, 1 e 2 meses em exposição ocupacional). 3 doses. Injeção intramuscular."
+            },
+            "motivo": "imunização ativa contra hepatite B em exposto suscetível, iniciando esquema na mesma visita (condicional) não vacinado ou esquema incompleto",
+            "nota": "Pronta para uso; aplicar no deltoide, em músculo diferente do usado para a imunoglobulina - monitorar: registro das três doses no cartão; monitorar: sorologia anti-HBs após 1 a 2 meses da última dose em profissional de saúde; monitorar: reação local · NÃO: hipersensibilidade a levedura ou a componente da vacina; febre alta no momento da aplicação · Obs: Não substitui a imunoglobulina na exposição; as duas são aplicadas juntas em suscetível e em locais diferentes",
+            "dose": {
+              "texto": "20 mcg (1 mL); 0, 1 e 6 meses (esquema acelerado 0, 1 e 2 meses em exposição ocupacional); 3 doses; max. 40 mcg por dose em imunossuprimido",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Progestagenio",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "levonorgestrel",
+            "pos": "1,5 mg. Via VO. Dose única.",
+            "posTodas": true,
+            "motivo": "contracepção de emergência após violência sexual ou falha de método contraceptivo (condicional) contracepção de emergência em até 72 horas",
+            "nota": "Uso direto por via oral, o mais cedo possível - monitorar: data da última menstruação e teste de gravidez; monitorar: sangramento e atraso menstrual; monitorar: repetir teste em 3 semanas se não menstruar · NÃO: gestação confirmada; sangramento vaginal sem diagnóstico; hipersensibilidade · Obs: Eficaz até 72 horas, com queda progressiva; o dispositivo intrauterino de cobre é mais eficaz e pode ser inserido até 5 dias. Não é abortivo e não protege contra IST",
+            "dose": {
+              "texto": "1,5 mg; dose única; dose única; max. 1,5 mg",
+              "status": "ok",
+              "valor": 1.5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1.5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor de protease",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "darunavir_ritonavir",
+              "n": "Darunavir + ritonavir",
+              "ap": "comprimido 800 mg de darunavir com comprimido 100 mg de ritonavir",
+              "q": "",
+              "pos": "800 mg de darunavir com 100 mg de ritonavir. Via VO. 1x/dia, com alimento. 28 dias."
+            },
+            "motivo": "profilaxia pós-exposição quando o dolutegravir não pode ser usado e há suspeita de resistência ao inibidor de integrase (resgate)",
+            "nota": "Uso direto por via oral, obrigatoriamente com refeição, pela necessidade de absorção com alimento - monitorar: transaminases na entrada e em 2 semanas; monitorar: glicemia e perfil lipídico; monitorar: ECG se cardiopatia ou distúrbio de condução; monitorar: rash cutâneo; monitorar: adesão · NÃO: insuficiência hepática grave; uso de rifampicina sem ajuste; uso de sinvastatina ou lovastatina; hipersensibilidade a sulfonamida · Obs: É esquema de resgate e não primeira escolha: tem mais efeito adverso, mais interação e pior tolerância que o dolutegravir",
+            "dose": {
+              "texto": "800 mg de darunavir com 100 mg de ritonavir; 1x/dia, com alimento; 28 dias; max. 800/100 mg por dia (ou 600/100 mg a cada 12 horas)",
+              "status": "ok",
+              "valor": 800,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "a cada 12 h",
+              "freq_min": null,
+              "duracao_dias": 28,
+              "duracao_texto": "28 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Registro cronometrado da exposição e do atendimento",
+              "ap": "",
+              "q": "",
+              "pos": "Anotar hora da exposição, hora da chegada, hora da primeira dose e tipo de material; esse registro define a indicação, protege o paciente e documenta a conduta em caso de acidente ocupacional"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Acolhimento com sigilo e sem julgamento",
+              "ap": "",
+              "q": "",
+              "pos": "Atendimento em local reservado, com escuta da história sexual e do uso de drogas sem constrangimento; o sigilo é obrigatório e a quebra de confiança afasta o paciente do seguimento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Preservativo e redução de risco durante e após a PEP",
+              "ap": "",
+              "q": "",
+              "pos": "Orientar preservativo em todas as relações até o teste de controle de 90 dias e explicar que a PEP não protege contra outras IST nem contra gestação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Estratégia de adesão aos 28 dias",
+              "ap": "",
+              "q": "",
+              "pos": "Alarme diário no celular, associação da tomada a um hábito fixo, fornecimento de comprimidos para 30 dias e contato telefônico em 7 e em 15 dias; perda de dose é o principal motivo de falha"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Notificação compulsória da violência sexual",
+              "ap": "",
+              "q": "",
+              "pos": "Preencher ficha de notificação de violência interpessoal e autoprovocada, com fluxo imediato, e acionar rede de proteção, conselho tutelar quando menor e autoridade policial conforme a vontade da pessoa"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Coleta de vestígios e preservação de prova",
+              "ap": "",
+              "q": "",
+              "pos": "Oferecer coleta até 72 horas em serviço de referência, guardar roupas em saco de papel, não lavar a região antes da coleta e explicar que a coleta não condiciona o atendimento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Aconselhamento e testagem de parcerias",
+              "ap": "",
+              "q": "",
+              "pos": "Oferecer testagem ao parceiro e, se fonte conhecida e HIV positiva, orientar sobre tratamento e indetectabilidade; comunicar sem expor a identidade"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Transição para PrEP ao final da PEP",
+              "ap": "",
+              "q": "",
+              "pos": "Quem mantém risco recorrente deve sair do serviço com PrEP agendada, não apenas com a PEP concluída; a PEP trata o episódio, a PrEP previne o próximo"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-06"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": []
+  },
+  "ws": {
+    "id": "INF-06",
+    "versao": "0.2.0",
+    "arquivo": "INF-06_hiv_pep.json",
+    "area": "Infectologia",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

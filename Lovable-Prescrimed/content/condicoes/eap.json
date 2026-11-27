@@ -1,0 +1,150 @@
+{
+  "id": "leg_2005",
+  "nome": "Edema Agudo de Pulmão",
+  "cat": "Emergência",
+  "alias": "eap congestao pulmonar aguda insuficiencia cardiaca descompensada dispneia ortopneia",
+  "cid": [
+    [
+      "J81",
+      "Edema agudo de pulmão"
+    ],
+    [
+      "I50",
+      "Insuficiência cardíaca"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ESC/ESICM — insuficiência cardíaca aguda",
+      "SBC — IC aguda"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Sentado com pernas pendentes (deitar = piora). O2 para SpO2 ≥ 94%; CPAP/BiPAP precoce se FR > 25 e SpO2 < 90 (contraindicação: PAS < 90, rebaixamento, vômito). Furosemida 40–80 mg EV (dobrar a dose de manutenção do dia; se virgem de diurético: 40 mg). Nitroglicerina SL 0,4–0,8 mg a cada 5 min SE PAS ≥ 110 (isquemia e congestão aliviam juntas). Morfina 2–4 mg EV apenas se dor refratária/ansiedade extrema (cautela: depressão respiratória). Achar o gatilho: IAM (ECG!), arritmia, anemia, infecção, excesso de sal, anti-inflamatório, não-adesão. BNP/ECO se disponível. Se choque + congestão: cardiogênico — inotrópico, NÃO diurético de alta dose, e discussão de ICP/ECMO.",
+  "redFlags": [
+    "PAS < 90 com congestão — choque cardiogênico: NÃO diurético de alta dose nem nitrato; inotrópico e leito",
+    "ECG com supradesnivelamento — IAM causando EAP: ativar protocolo IAM",
+    "SpO2 < 85% apesar de O2 alto fluxo ou rebaixando — intubar cedo, não tarde",
+    "FA nova rápida (> 150) — cardioversão discutir se instável",
+    "Estalos + hipotensão em uso de IECA/diurético recentemente — estenose de artéria renal/hiponatremia: rever"
+  ],
+  "naoUsar": [
+    "Deitar o paciente",
+    "Bolus de volume (qualquer)",
+    "Anti-inflamatório (piora IC)",
+    "Nitrato se PAS < 110, uso recente de inibidor de PDE5 (sildenafila 24 h / tadalafila 48 h), infarto de VD",
+    "Betabloqueador na fase aguda congestiva (iniciar só após estabilizar)"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Diurético EV (1ª linha)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "40–80 mg EV lento (1ª dose; dobra da manutenção habitual)"
+          }
+        ]
+      },
+      {
+        "nome": "Vasodilatador (se PAS ≥ 110)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "isossorbida_sl",
+            "motivo": "5 mg SL a cada 5–10 min enquanto PAS ≥ 110"
+          }
+        ]
+      },
+      {
+        "nome": "Broncodilatador se sibilo associado",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "fenoterol_neb",
+            "motivo": "Nebulização se broncoespasmo audível (cardíaco 'asma cardial') — cuidado taquicardia"
+          }
+        ]
+      },
+      {
+        "nome": "Analgesia se dor torácica",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV se dor"
+          },
+          {
+            "hosp": "morfina_ev",
+            "motivo": "2–4 mg EV lento apenas se dor refratária/extrema ansiedade — monitorar FR"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Manutenção da IC na alta (ajustar à terapia prévia)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "furosemida",
+            "pos": "20 a 40 mg VO 1x/dia pela manhã (voltar à dose domiciliar ou 20–40 se virgem); pesar-se diariamente",
+            "ped": "1–2 mg/kg/dose 1–2x/dia",
+            "motivo": "Congestão: manutenção"
+          },
+          {
+            "base": "enalapril",
+            "pos": "5 a 10 mg VO 2x/dia (iniciar 2,5 mg se PAS limítrofe); trocar por losartana 25–50 mg se tosse",
+            "motivo": "IECA/ARA na IC com FE reduzida"
+          },
+          {
+            "base": "carvedilol",
+            "pos": "3,125 a 6,25 mg VO 2x/dia — iniciar/retomar SOMENTE após estabilizar (48 h sem congestão)",
+            "motivo": "Betabloqueador: só na fase estável"
+          },
+          {
+            "base": "espironolactona",
+            "pos": "25 mg VO 1x/dia se FE reduzida ou alta dose de diurético (vigiar K+)",
+            "motivo": "MRA na IC"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Ganho de > 2 kg em 3 dias (tomar 1 comprimido extra de furosemida 40 mg e ligar para o serviço), falta de ar ao deitar (ortopneia nova), inchaço de pernas, tosse noturna, tontura com os remédios. Pesar-se toda manhã após urinar. Dieta com pouco sal (não usar sal light com K sem falar com médico)."
+            },
+            "motivo": "Descompensação precoce com autogestão orientada"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Ajuste ambulatorial",
+              "ap": "",
+              "pos": "Consultar cardiologia em 7 dias para titulação (IECA, betabloqueador, SGLT2 se disponível); ECO se não realizado."
+            },
+            "motivo": "Concordância com diretrizes"
+          }
+        ]
+      }
+    ]
+  }
+}

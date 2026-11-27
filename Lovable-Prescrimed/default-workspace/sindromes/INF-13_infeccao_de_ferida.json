@@ -1,0 +1,1079 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "INF-13",
+    "area": "Infectologia",
+    "nome": "Infecção de ferida",
+    "aliases": [
+      "infecção de ferida",
+      "ferida infectada",
+      "infecção de sítio cirúrgico",
+      "ferida cirúrgica infectada",
+      "abscesso de ferida",
+      "mordedura infectada",
+      "ferida traumática infectada",
+      "deiscência com secreção purulenta"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Infecção de ferida é a infecção de uma solução de continuidade da pele — traumática, cirúrgica, por mordedura, por pressão ou por queimadura — e o erro mais comum é tratar todas como se fossem a mesma coisa e prescrever antibiótico para tudo. A conduta começa pela classificação: celulite ao redor da ferida sem coleção, abscesso com flutuação, ferida cirúrgica infectada, mordedura e necrose. Coleção se drena; necrose com dor desproporcional e crepitação vai para cirurgia imediata; só a celulite difusa sem coleção e sem toxemia é tratada com antibiótico. A cultura antecede o antibiótico em ferida purulenta, mordedura, infecção profunda de sítio cirúrgico e falha de tratamento, e deve ser colhida de tecido ou de aspirado profundo, não de swab superficial. Cefalexina cobre estreptococo e MSSA na celulite leve; amoxicilina-clavulanato cobre mordedura, anaeróbios e Gram-negativos; sulfametoxazol-trimetoprima e clindamicina cobrem MRSA comunitário; ceftriaxona com metronidazol cobre a apresentação grave; vancomicina fica para MRSA grave no internado. Tratar abscesso só com antibiótico é o erro que mais causa recidiva; não reconhecer fasceíte necrosante é o que mata.",
+    "inclusao": [
+      "Ferida traumática, cirúrgica ou por mordedura com eritema, calor, dor, secreção purulenta, flutuação ou deiscência",
+      "Infecção de sítio cirúrgico superficial, profunda ou de órgão/espaço em até 30 dias da cirurgia, ou até 90 dias quando há implante",
+      "Abscesso de partes moles com flutuação ou coleção confirmada por ultrassonografia",
+      "Mordedura animal ou humana com ferida que exige antibiótico, desbridamento ou profilaxia antitetânica e antirrábica",
+      "Ferida com necrose, crepitação, bolhas ou dor desproporcional, tratada como emergência cirúrgica"
+    ],
+    "exclusao": [
+      {
+        "situacao": "celulite ou erisipela sem ferida de continuidade",
+        "fluxo": "DERM-01 celulite / erisipela"
+      },
+      {
+        "situacao": "abscesso cutâneo espontâneo sem ferida de continuidade",
+        "fluxo": "DERM-02 abscesso cutâneo"
+      },
+      {
+        "situacao": "úlcera crônica, ferida de pressão ou ferida vascular sem sinais de infecção",
+        "fluxo": "DERM-07 ferida crônica"
+      },
+      {
+        "situacao": "queimadura com infecção",
+        "fluxo": "DERM-08 queimadura"
+      },
+      {
+        "situacao": "fasceíte necrosante confirmada com choque",
+        "fluxo": "cirurgia urgente e fluxo de sepse"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "dor desproporcional à palpação, pele endurecida, crepitação ou bolhas hemorrágicas",
+        "por_que": "fasceíte necrosante de partes moles",
+        "acao": "acionar cirurgia imediatamente, sem esperar imagem nem antibiótico fazer efeito",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "hipotensão, confusão, oligúria ou lactato elevado",
+        "por_que": "sepse de foco de partes moles",
+        "acao": "ressuscitação, hemoculturas e antibiótico intravenoso na primeira hora",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "necrose de borda avançando rapidamente, mancha acinzentada ou ferida com gás",
+        "por_que": "gangrena e infecção por anaeróbios ou Gram-negativos",
+        "acao": "desbridamento cirúrgico amplo e ampliação da cobertura antibiótica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "ferida cirúrgica com deiscência, secreção purulenta e dor nova",
+        "por_que": "infecção de sítio cirúrgico com risco de coleção profunda e evisceração",
+        "acao": "abrir pontos, drenar, colher cultura e avaliar a fáscia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "mordedura em mão, punho, face, articulação ou com lesão de tendão",
+        "por_que": "risco de infecção profunda, artrite séptica e perda funcional",
+        "acao": "avaliação cirúrgica, antibioticoterapia e profilaxia antirrábica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "diabetes descompensado, neutropenia, corticoide ou quimioterapia",
+        "por_que": "progressão rápida e apresentação atenuada",
+        "acao": "baixar o limiar de internação e ampliar a cobertura",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "febre ou secreção persistente após 48 a 72 horas de antibiótico adequado",
+        "por_que": "coleção não drenada, corpo estranho, MRSA ou diagnóstico errado",
+        "acao": "reavaliar com ultrassonografia, cultura e avaliação cirúrgica",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quando a ferida apareceu e o que a causou: trauma, cirurgia, mordedura, queimadura ou pressão?",
+      "Há flutuação, ponto de drenagem ou coleção que aumentou de tamanho?",
+      "A dor é desproporcional ao aspecto da ferida?",
+      "Tem crepitação, bolhas, necrose ou mancha escura na borda?",
+      "Tem febre, calafrios, tontura ou queda de pressão?",
+      "A ferida foi suturada ou fechada após trauma contaminado?",
+      "É diabético, imunossuprimido ou usa corticoide?",
+      "Usou antibiótico nos últimos 90 dias ou já teve infecção por MRSA?",
+      "A vacinação antitetânica está em dia e qual a última dose?",
+      "É mordedura de animal ou humana? O animal é conhecido e vacinado?",
+      "Há material de síntese, prótese, dreno ou corpo estranho na ferida?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Abscesso com flutuação ou coleção confirmada por ultrassonografia",
+        "escolha": "Incisão e drenagem imediatas com coleta de cultura, mantendo antibiótico apenas como adjuvante quando há celulite extensa, toxemia ou comorbidade",
+        "porque": "Antibiótico não penetra em coleção purulenta e não substitui drenagem; tratar só com antibiótico é a causa mais comum de recidiva"
+      },
+      {
+        "cenario": "Celulite ao redor de ferida, sem coleção e sem toxemia",
+        "escolha": "Cefalexina 500 mg VO 6/6 h por 5 a 7 dias",
+        "porque": "Cobre estreptococo e S. aureus MSSA com espectro estreito, baixo custo e boa resposta em ferida comunitária"
+      },
+      {
+        "cenario": "Mordedura animal ou humana",
+        "escolha": "Amoxicilina-clavulanato 875/125 mg VO 12/12 h por 5 a 7 dias, associado a profilaxia antitetânica e antirrábica conforme o caso",
+        "porque": "Cobre Pasteurella multocida, anaeróbios e Eikenella corrodens; a ferida por mordedura não é suturada de primeira intenção"
+      },
+      {
+        "cenario": "Ferida cirúrgica superficial com secreção purulenta",
+        "escolha": "Abrir os pontos, drenar, colher cultura e manter antibiótico apenas se houver celulite além de 2 cm, febre ou comprometimento sistêmico",
+        "porque": "A infecção superficial de sítio cirúrgico resolve com abertura e drenagem; antibiótico sem drenagem não controla a coleção"
+      },
+      {
+        "cenario": "Suspeita de MRSA comunitário: purulência, recidiva, hospitalização recente, uso prévio de antibiótico ou usuário de drogas injetáveis",
+        "escolha": "Sulfametoxazol-trimetoprima 800/160 mg VO 12/12 h por 5 a 7 dias",
+        "porque": "É o oral com melhor cobertura de MRSA e boa penetração em pele; não cobre estreptococo, então reavaliar em 48 a 72 horas"
+      },
+      {
+        "cenario": "Alergia imediata a beta-lactâmico ou suspeita de MRSA com necessidade de cobertura de anaeróbios",
+        "escolha": "Clindamicina 300 mg VO 6/6 h ou 600 mg IV 8/8 h",
+        "porque": "Não tem reação cruzada relevante com beta-lactâmico, cobre MRSA comunitário e inibe a produção de toxina"
+      },
+      {
+        "cenario": "Ferida grave, profunda, com toxemia, celulite extensa ou necessidade de internação",
+        "escolha": "Ceftriaxona 2 g IV 1x/dia associada a metronidazol 500 mg IV 8/8 h",
+        "porque": "Cobre estreptococo, enterobactérias e anaeróbios em uma associação simples, com uma dose diária de ceftriaxona e boa penetração tecidual"
+      },
+      {
+        "cenario": "Suspeita ou confirmação de MRSA em paciente internado, grave ou com falha de beta-lactâmico",
+        "escolha": "Vancomicina 15 a 20 mg/kg IV 8/8 a 12/12 h, guiada por AUC ou nível sérico",
+        "porque": "É o parenteral de escolha para MRSA grave; exige creatinina seriada e infusão lenta para evitar nefrotoxicidade e reação de infusão"
+      },
+      {
+        "cenario": "Necrose, crepitação, bolhas hemorrágicas ou dor desproporcional",
+        "escolha": "Avaliação cirúrgica imediata para exploração e desbridamento, com antibiótico de amplo espectro em paralelo",
+        "porque": "Fasceíte necrosante é emergência cirúrgica e a mortalidade sobe a cada hora de atraso; imagem não pode adiar a cirurgia"
+      },
+      {
+        "cenario": "Ferida com terra, material orgânico, corpo estranho ou tecido desvitalizado",
+        "escolha": "Desbridamento, irrigação abundante e profilaxia antitetânica conforme o estado vacinal",
+        "porque": "Tecido necrótico e corpo estranho sustentam a infecção e são porta de entrada para tétano e anaeróbios"
+      },
+      {
+        "cenario": "Falha de tratamento após 48 a 72 horas",
+        "escolha": "Reavaliar com ultrassonografia, cultura e avaliação cirúrgica antes de trocar ou escalonar o antibiótico às cegas",
+        "porque": "Na maioria das falhas existe coleção, corpo estranho ou MRSA não coberto, e trocar a droga sem drenar mantém o problema"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "cefalosporina_primeira_geracao",
+        "agente": "cefalexina",
+        "papel": "primeira_linha",
+        "indicacao": "celulite ao redor de ferida sem coleção e sem toxemia",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina",
+          "anafilaxia prévia a penicilina"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "náusea",
+          "colite por C. difficile"
+        ],
+        "apresentacoes": [
+          "cápsula 500 mg",
+          "comprimido 500 mg",
+          "suspensão oral 250 mg/5 mL",
+          "suspensão oral 500 mg/5 mL"
+        ],
+        "preparo": "Uso direto, com água; tomar com alimento se houver desconforto gástrico",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "regressão do eritema e da dor em 48 a 72 h",
+          "diarreia",
+          "rash cutâneo",
+          "função renal no idoso"
+        ],
+        "ajuste_renal": "ClCr 30 a 59: 500 mg 8/8 h; ClCr abaixo de 30: 500 mg 12/12 h; em diálise, dose adicional após a sessão",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Não cobre anaeróbios, Pseudomonas nem MRSA. É a escolha de espectro estreito para ferida comunitária limpa.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_com_inibidor_de_betalactamase",
+        "agente": "amoxicilina-clavulanato",
+        "papel": "primeira_linha",
+        "indicacao": "mordedura animal ou humana, ferida com terra ou material orgânico e ferida cirúrgica com anaeróbios",
+        "dose": "875/125 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "5 a 7 dias no tratamento; 3 a 5 dias na profilaxia de mordedura",
+        "dose_maxima": "1.750/250 mg por tomada, duas tomadas ao dia",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "hepatite colestática prévia atribuída ao fármaco"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "rash",
+          "elevação de transaminases",
+          "candidíase"
+        ],
+        "apresentacoes": [
+          "comprimido 875/125 mg",
+          "comprimido 500/125 mg",
+          "suspensão oral 400/57 mg por 5 mL",
+          "frasco 1 g/200 mg pó para solução injetável"
+        ],
+        "preparo": "Via oral em uso direto, no início da refeição; via intravenosa reconstituir em 20 mL de água e diluir em 100 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "não se aplica na via oral; 30 a 60 minutos na via intravenosa",
+        "monitorizacao": [
+          "diarreia",
+          "transaminases se uso acima de 14 dias",
+          "rash",
+          "regressão da celulite e da secreção"
+        ],
+        "ajuste_renal": "ClCr 10 a 30: 500/125 mg 12/12 h; evitar o comprimido de 875 mg com ClCr abaixo de 30; em diálise, dose após a sessão",
+        "ajuste_hepatico": "Contraindicado se hepatite colestática prévia pelo fármaco",
+        "observacoes": "É a primeira escolha em mordedura e em ferida contaminada por terra. Não cobre MRSA nem Pseudomonas.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfonamida",
+        "agente": "sulfametoxazol-trimetoprima",
+        "papel": "condicional",
+        "indicacao": "suspeita ou confirmação de MRSA comunitário em ferida, com ou sem drenagem",
+        "dose": "800/160 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "1.600/320 mg/dia",
+        "contraindicacoes": [
+          "alergia a sulfonamida",
+          "gestação no primeiro trimestre e nas duas últimas semanas",
+          "deficiência grave de G6PD",
+          "ClCr abaixo de 15"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "síndrome de Stevens-Johnson",
+          "hipercalemia",
+          "cristalúria",
+          "mielossupressão",
+          "fotossensibilidade"
+        ],
+        "apresentacoes": [
+          "comprimido 800/160 mg",
+          "comprimido 400/80 mg",
+          "suspensão oral 200/40 mg por 5 mL"
+        ],
+        "preparo": "Uso direto com copo cheio de água; manter hidratação durante todo o tratamento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "rash e lesão de mucosa",
+          "potássio e creatinina",
+          "hemograma em uso acima de 7 dias",
+          "diurese"
+        ],
+        "ajuste_renal": "ClCr 15 a 30: metade da dose; ClCr abaixo de 15: evitar",
+        "ajuste_hepatico": "Evitar em insuficiência hepática grave",
+        "observacoes": "Não cobre estreptococo de forma confiável; usar quando MRSA é provável e reavaliar em 48 a 72 h. Alternativa em alergia a beta-lactâmico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "lincosamida",
+        "agente": "clindamicina",
+        "papel": "alternativa",
+        "indicacao": "alergia a beta-lactâmico, suspeita de MRSA comunitário e ferida com produção de toxina",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "1.800 mg/dia por via oral",
+        "contraindicacoes": [
+          "colite pseudomembranosa prévia",
+          "alergia a lincosamida"
+        ],
+        "efeitos_adversos": [
+          "diarreia por C. difficile",
+          "rash",
+          "gosto metálico",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "cápsula 300 mg",
+          "solução oral 75 mg/5 mL",
+          "ampola 300 mg/2 mL",
+          "ampola 600 mg/4 mL"
+        ],
+        "preparo": "Via oral em uso direto; via intravenosa diluir 600 mg em 100 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "não se aplica na via oral; 30 minutos na via intravenosa",
+        "monitorizacao": [
+          "diarreia e dor abdominal",
+          "hemograma em uso acima de 7 dias",
+          "transaminases",
+          "regressão da celulite"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Reduzir para 300 mg 8/8 h em hepatopatia grave",
+        "observacoes": "No internado, 600 mg IV 8/8 h. Cobre MRSA comunitário e inibe toxina, mas não é rotina pelo risco de colite por C. difficile.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_terceira_geracao",
+        "agente": "ceftriaxona",
+        "papel": "condicional",
+        "indicacao": "ferida grave, profunda, com toxemia ou necessidade de internação",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "7 a 10 dias, conforme o foco e o controle cirúrgico",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia grave a cefalosporina",
+          "anafilaxia prévia a penicilina",
+          "solução com cálcio em neonato"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "colite por C. difficile",
+          "lama biliar",
+          "neutropenia em uso prolongado"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g",
+          "solução injetável 1 g/10 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção e diluir em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "hemograma e função hepática em uso prolongado",
+          "diarreia e sinais de C. difficile",
+          "resposta clínica em 48 a 72 h",
+          "sítio de infusão"
+        ],
+        "ajuste_renal": "Sem ajuste até ClCr de 10 mL/min",
+        "ajuste_hepatico": "Sem ajuste isolado; evitar na insuficiência hepática e renal combinadas graves",
+        "observacoes": "Não cobre anaeróbios nem MRSA; associar metronidazol quando há componente anaeróbio e vancomicina quando há MRSA grave.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_nitroimidazol",
+        "agente": "metronidazol",
+        "papel": "condicional",
+        "indicacao": "cobertura de anaeróbios em mordedura, ferida com terra, ferida profunda e infecção de sítio cirúrgico abdominal ou pélvico",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "7 a 10 dias, conforme o foco",
+        "dose_maxima": "1.500 mg/dia",
+        "contraindicacoes": [
+          "alergia a nitroimidazol",
+          "uso de dissulfiram",
+          "primeiro trimestre de gestação sem indicação absoluta"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "gosto metálico",
+          "neuropatia periférica em uso prolongado",
+          "efeito dissulfiram com álcool",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "frasco 500 mg/100 mL solução pronta",
+          "comprimido 400 mg",
+          "comprimido 250 mg"
+        ],
+        "preparo": "Solução pronta para uso; não diluir; proteger da luz",
+        "tempo_infusao": "30 a 60 minutos",
+        "monitorizacao": [
+          "função hepática",
+          "sintomas neurológicos em uso acima de 10 dias",
+          "náusea e tolerância"
+        ],
+        "ajuste_renal": "Sem ajuste formal; em diálise, repetir a dose após a sessão",
+        "ajuste_hepatico": "Reduzir 50% em Child-Pugh C",
+        "observacoes": "Só entra quando há anaeróbio provável ou confirmado; não associar de rotina a amoxicilina-clavulanato, que já cobre anaeróbios.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "glicopeptideo",
+        "agente": "vancomicina",
+        "papel": "resgate",
+        "indicacao": "MRSA grave em ferida com toxemia, falha de beta-lactâmico ou infecção profunda de sítio cirúrgico",
+        "dose": "ataque de 25 a 30 mg/kg; manutenção de 15 a 20 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "8/8 a 12/12 h, guiada por AUC ou nível sérico",
+        "duracao": "7 a 14 dias, conforme a profundidade e o controle cirúrgico",
+        "dose_maxima": "3 g no ataque e 2 g por dose de manutenção",
+        "contraindicacoes": [
+          "alergia a glicopeptídeo",
+          "infusão rápida em bolus",
+          "insuficiência renal grave sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade",
+          "síndrome do homem vermelho",
+          "neutropenia",
+          "flebite",
+          "ototoxicidade"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "bolsa 1 g/200 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção e diluir em 250 mL de soro fisiológico 0,9%, com concentração final de até 5 mg/mL",
+        "tempo_infusao": "60 a 120 minutos, sem ultrapassar 10 mg por minuto",
+        "monitorizacao": [
+          "AUC/MIC entre 400 e 600, ou vale entre 15 e 20 mcg/mL",
+          "creatinina a cada 48 h",
+          "hemograma semanal",
+          "rubor e hipotensão durante a infusão"
+        ],
+        "ajuste_renal": "Ataque pelo peso real; manutenção guiada por nível; em diálise, dose após a sessão",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Não é droga ambulatorial. Reservar para MRSA grave ou falha de beta-lactâmico, pelo risco de nefrotoxicidade e de seleção de resistência.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vacina",
+        "agente": "toxoide tetânico (dT ou dTpa)",
+        "papel": "condicional",
+        "indicacao": "profilaxia do tétano em ferida contaminada, conforme o estado vacinal",
+        "dose": "0,5 mL",
+        "unidade": "mL",
+        "via": "IM",
+        "frequencia": "dose única na profilaxia; completar o esquema de três doses se incompleto",
+        "duracao": "esquema completo conforme o histórico",
+        "dose_maxima": "0,5 mL por dose",
+        "contraindicacoes": [
+          "anafilaxia prévia a componente da vacina",
+          "encefalopatia nas 7 dias após dose anterior de coqueluche"
+        ],
+        "efeitos_adversos": [
+          "dor e edema local",
+          "febre baixa",
+          "mal-estar",
+          "anafilaxia rara"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 0,5 mL dose única",
+          "seringa preenchida 0,5 mL",
+          "frasco multidose 5 mL"
+        ],
+        "preparo": "Uso direto; agitar antes de aspirar; aplicar no deltoide",
+        "tempo_infusao": "não se aplica (via intramuscular)",
+        "monitorizacao": [
+          "reação local nas primeiras 48 h",
+          "febre",
+          "registro de lote e data no cartão vacinal"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Ferida contaminada com esquema incompleto ou desconhecido exige toxoide e, em ferida de alto risco, imunoglobulina antitetânica conforme o protocolo de tétano. Em ferida de baixo risco com esquema completo, não é necessária dose.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "PNI/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "dor e febre associadas à infecção de ferida",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h, se dor ou febre",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "4 g/dia, ou 2 g/dia em hepatopatia e etilismo",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "alergia"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em overdose",
+          "rash",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "frasco de infusão 10 mg/mL"
+        ],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor pela escala de 0 a 10",
+          "temperatura",
+          "TGO e TGP se uso acima de 5 dias"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: espaçar para 8/8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia; evitar em Child C",
+        "observacoes": "Não associar a outro produto com paracetamol. Não usar AINE em ferida com risco de sangramento ou em renal crônico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Elevação e repouso do segmento acometido",
+        "detalhe": "manter o membro acima do nível do coração por 30 minutos, 3 a 4 vezes ao dia, e evitar ortostatismo prolongado até o edema ceder"
+      },
+      {
+        "medida": "Limpeza da ferida com soro fisiológico",
+        "detalhe": "irrigação com seringa e agulha ou frasco sob pressão, remoção de detritos e de tecido desvitalizado; não usar álcool, água oxigenada ou clorexidina em ferida aberta"
+      },
+      {
+        "medida": "Curativo e troca programada",
+        "detalhe": "curativo úmido com soro fisiológico 0,9% ou cobertura com prata conforme exsudato, troca a cada 24 a 48 h ou antes se saturado, com técnica asséptica"
+      },
+      {
+        "medida": "Não suturar ferida contaminada",
+        "detalhe": "mordedura, ferida com terra, corpo estranho ou mais de 6 a 12 h de evolução deve cicatrizar por segunda intenção ou com fechamento tardio"
+      },
+      {
+        "medida": "Controle glicêmico no diabético",
+        "detalhe": "glicemia capilar abaixo de 180 mg/dL no internado e HbA1c solicitada; hiperglicemia sustenta a infecção e atrasa a cicatrização"
+      },
+      {
+        "medida": "Higiene das mãos e isolamento de contato quando indicado",
+        "detalhe": "higiene antes e depois de cada curativo; em ferida colonizada por MRSA ou germe multirresistente, seguem-se as precauções de contato do serviço"
+      },
+      {
+        "medida": "Profilaxia de tromboembolismo no internado",
+        "detalhe": "enoxaparina 40 mg SC 1x/dia após controle de sangramento, com compressão pneumática quando houver contraindicação"
+      },
+      {
+        "medida": "Retorno programado em 48 a 72 horas",
+        "detalhe": "reavaliar borda demarcada, secreção e dor; ferida que não melhora nesse prazo exige ultrassonografia e reavaliação cirúrgica"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Incisão e drenagem de abscesso",
+        "indicacao": "flutuação ou coleção confirmada por ultrassonografia",
+        "tecnica": "antissepsia e anestesia local, incisão linear na porção mais dependente, ruptura de lojas com pinça, irrigação com soro fisiológico 0,9%, coleta de material para cultura e curativo com dreno quando a cavidade for grande",
+        "complicacoes": "sangramento, drenagem incompleta, cicatriz inestética, recidiva e disseminação de infecção"
+      },
+      {
+        "nome": "Coleta de cultura de ferida",
+        "indicacao": "ferida purulenta, mordedura, infecção profunda de sítio cirúrgico e falha de tratamento",
+        "tecnica": "limpeza prévia da superfície, coleta de aspirado com seringa ou de fragmento de tecido na cirurgia; evitar swab superficial; enviar em meio de transporte para aeróbios e anaeróbios",
+        "complicacoes": "contaminação por colonizante, resultado falso-positivo e sangramento no sítio"
+      },
+      {
+        "nome": "Desbridamento cirúrgico",
+        "indicacao": "tecido necrótico, corpo estranho, ferida crônica infectada ou suspeita de fasceíte",
+        "tecnica": "exploração sob anestesia, remoção de todo tecido desvitalizado até sangramento viável, lavagem abundante e hemostasia, com revisão programada em 24 a 48 h",
+        "complicacoes": "sangramento, lesão de estrutura nobre, amputação e sepse quando o desbridamento é incompleto"
+      },
+      {
+        "nome": "Abertura da ferida cirúrgica e retirada de pontos",
+        "indicacao": "infecção superficial de sítio cirúrgico com secreção ou coleção",
+        "tecnica": "abertura de pontos no ponto de maior flutuação, drenagem, irrigação, coleta de cultura e curativo aberto com fechamento tardio após controle da infecção",
+        "complicacoes": "deiscência, evisceração em ferida abdominal, hérnia incisional e cicatriz alargada"
+      },
+      {
+        "nome": "Avaliação cirúrgica urgente",
+        "indicacao": "dor desproporcional, crepitação, bolhas, necrose ou toxemia",
+        "tecnica": "exploração cirúrgica imediata com desbridamento amplo de todos os planos acometidos, coleta de cultura e revisão programada; não aguardar tomografia ou ressonância",
+        "complicacoes": "amputação, disfunção orgânica e morte quando o desbridamento é tardio"
+      }
+    ],
+    "metas": [
+      "Controle da infecção com regressão de 30 a 50% do eritema demarcado em 48 a 72 horas",
+      "Ausência de progressão além da borda marcada em 24 horas",
+      "Coleção drenada em até 6 horas do diagnóstico",
+      "Cultura colhida antes do antibiótico em toda ferida purulenta",
+      "Febre resolvida em 48 a 72 horas",
+      "Glicemia capilar abaixo de 180 mg/dL no diabético internado",
+      "Ferida com tecido de granulação e sem secreção purulenta em 7 dias"
+    ],
+    "fluxo": [
+      "Classificar a ferida: tempo de evolução, mecanismo, profundidade, presença de coleção, necrose e material de síntese",
+      "Procurar sinais de gravidade: dor desproporcional, crepitação, bolhas, necrose, toxemia e hipotensão; se presentes, acionar cirurgia imediatamente",
+      "Palpar flutuação e, se houver dúvida, fazer ultrassonografia à beira do leito; coleção confirmada indica drenagem",
+      "Colher cultura de aspirado ou tecido antes do antibiótico em ferida purulenta, mordedura e infecção profunda",
+      "Drenar o abscesso, abrir a ferida cirúrgica infectada e desbridar tecido necrótico, sem suturar ferida contaminada",
+      "Escolher o antibiótico pelo cenário: cefalexina na celulite leve, amoxicilina-clavulanato na mordedura, sulfametoxazol-trimetoprima ou clindamicina no MRSA, ceftriaxona com metronidazol na grave e vancomicina no MRSA grave internado",
+      "Atualizar a profilaxia antitetânica e, em mordedura, avaliar raiva e soro antirrábico",
+      "Reavaliar em 24 a 48 horas: dor, borda, secreção e febre; piora exige nova imagem, nova cultura e revisão cirúrgica",
+      "Definir duração do antibiótico: 5 a 7 dias na celulite e na mordedura tratada, 7 a 10 dias na infecção profunda, com descalonamento guiado por cultura"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "diabetico",
+        "ajuste": "controle glicêmico rigoroso, antibiótico por 10 a 14 dias e avaliação precoce de osteomielite em ferida profunda",
+        "alerta": "progressão rápida para fasceíte, neuropatia que esconde a dor e cicatrização lenta"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "internação, antibiótico intravenoso de amplo espectro e cultura de tecido profundo",
+        "alerta": "pode evoluir sem febre e sem leucocitose, com progressão silenciosa"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "cefalexina, amoxicilina-clavulanato e ceftriaxona são seguras; evitar sulfametoxazol-trimetoprima no primeiro trimestre e nas duas últimas semanas",
+        "alerta": "quadro febril exige avaliação obstétrica pelo risco de parto prematuro"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "cefalexina e amoxicilina-clavulanato com ajuste por ClCr; vancomicina guiada por nível; evitar sulfametoxazol-trimetoprima com ClCr abaixo de 15",
+        "alerta": "acúmulo, neurotoxicidade e hipercalemia"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "apresentação pode ser afebril e confusa; baixar o limiar de internação e revisar interações",
+        "alerta": "mortalidade maior quando evolui para sepse e delirium"
+      },
+      {
+        "populacao": "usuario_de_drogas_injetaveis",
+        "ajuste": "cobrir MRSA, colher hemoculturas e avaliar endocardite e tromboflebite",
+        "alerta": "ferida cutânea banal pode coexistir com bacteremia por S. aureus"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "cultura de aspirado ou de tecido profundo",
+          "indicacao": "ferida purulenta, mordedura, infecção profunda e falha de tratamento",
+          "o_que_muda": "identifica MSSA, MRSA, anaeróbios e Gram-negativos e permite descalonar"
+        },
+        {
+          "nome": "hemograma e PCR",
+          "indicacao": "sinais sistêmicos, comorbidade ou internação",
+          "o_que_muda": "define gravidade, via do antibiótico e serve de base para acompanhar a resposta"
+        },
+        {
+          "nome": "ultrassonografia à beira do leito",
+          "indicacao": "dúvida entre celulite e abscesso, dor localizada ou falha de tratamento",
+          "o_que_muda": "confirma coleção e indica drenagem imediata"
+        },
+        {
+          "nome": "tomografia computadorizada com contraste",
+          "indicacao": "suspeita de coleção profunda, gás nos tecidos ou fasceíte",
+          "o_que_muda": "define extensão e plano cirúrgico, sem adiar a cirurgia no paciente grave"
+        },
+        {
+          "nome": "radiografia da região",
+          "indicacao": "suspeita de corpo estranho, gás ou mordedura",
+          "o_que_muda": "mostra corpo estranho radiopaco e gás em partes moles"
+        },
+        {
+          "nome": "creatinina e eletrólitos",
+          "indicacao": "antes de vancomicina, sulfametoxazol-trimetoprima ou em renal crônico",
+          "o_que_muda": "ajusta dose e define segurança do esquema"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "swab superficial da ferida sem limpeza",
+          "motivo": "cresce colonizante e induz antibiótico desnecessário; a cultura útil é de tecido ou aspirado profundo"
+        },
+        {
+          "exame": "cultura colhida depois do antibiótico e interpretada como definitiva",
+          "motivo": "falso negativo e perda da oportunidade de descalonar"
+        },
+        {
+          "exame": "aguardar tomografia ou ressonância na suspeita de fasceíte necrosante",
+          "motivo": "o atraso cirúrgico aumenta a mortalidade; a exploração cirúrgica é o diagnóstico"
+        },
+        {
+          "exame": "radiografia simples para distinguir celulite de abscesso",
+          "motivo": "não tem resolução para coleção; a ultrassonografia é o exame correto"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter o curativo limpo e seco e trocá-lo conforme a orientação",
+        "elevar o membro e repousar enquanto houver edema e dor",
+        "completar o antibiótico mesmo após a melhora",
+        "retornar em 48 a 72 horas para reavaliação da ferida",
+        "manter a vacinação antitetânica em dia"
+      ],
+      "evitar": [
+        "espremer, furar ou aplicar produtos caseiros na ferida",
+        "suturar ferida contaminada por conta própria",
+        "molhar a ferida em piscina, mar ou banheira até cicatrizar",
+        "interromper o antibiótico por conta própria",
+        "usar antibiótico guardado de tratamento anterior"
+      ],
+      "retorno": [
+        "febre persistente ou nova após 48 horas",
+        "aumento da dor, do edema ou do eritema",
+        "secreção purulenta abundante ou mau cheiro",
+        "crepitação, bolhas ou escurecimento da pele",
+        "tontura, vômito ou queda de pressão"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "cefalexina",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "colite por C. difficile"
+        ],
+        "observacao": "suspender se diarreia aquosa intensa ou dor abdominal"
+      },
+      {
+        "agente": "amoxicilina-clavulanato",
+        "efeitos": [
+          "diarreia",
+          "elevação de transaminases",
+          "rash"
+        ],
+        "observacao": "dosar transaminases se icterícia ou uso acima de 14 dias"
+      },
+      {
+        "agente": "sulfametoxazol-trimetoprima",
+        "efeitos": [
+          "rash",
+          "síndrome de Stevens-Johnson",
+          "hipercalemia",
+          "cristalúria"
+        ],
+        "observacao": "suspender ao primeiro sinal de lesão de mucosa e manter hidratação"
+      },
+      {
+        "agente": "clindamicina",
+        "efeitos": [
+          "colite por C. difficile",
+          "diarreia"
+        ],
+        "observacao": "suspender ao primeiro sinal de diarreia aquosa"
+      },
+      {
+        "agente": "vancomicina",
+        "efeitos": [
+          "nefrotoxicidade",
+          "síndrome do homem vermelho",
+          "neutropenia"
+        ],
+        "observacao": "infundir em no mínimo 60 minutos e dosar creatinina a cada 48 h"
+      },
+      {
+        "agente": "metronidazol",
+        "efeitos": [
+          "náusea",
+          "neuropatia periférica",
+          "gosto metálico"
+        ],
+        "observacao": "reavaliar em uso acima de 10 dias e proibir álcool"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação com data e horário",
+      "Anafilaxia: adrenalina 0,5 mg IM na face lateral da coxa, oxigênio e reposição volêmica",
+      "Diarreia aquosa em uso de clindamicina, cefalexina ou ceftriaxona: suspender, testar C. difficile e hidratar",
+      "Rash com bolha ou acometimento de mucosa: suspender a sulfa, internar e avaliar com dermatologia",
+      "Homem vermelho ou queda de pressão na infusão de vancomicina: interromper, hidratar e reinfundir em 2 horas",
+      "Cristalúria por sulfametoxazol-trimetoprima: hidratar, suspender se dor lombar ou hematúria e avaliar função renal"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "cefalexina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "7 dias",
+            "condicao": "celulite ao redor de ferida sem coleção",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina-clavulanato 875/125 mg",
+            "dose": "875/125 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "mordedura ou ferida com terra",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "sulfametoxazol-trimetoprima 800/160 mg",
+            "dose": "800/160 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "suspeita de MRSA comunitário",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "clindamicina 300 mg",
+            "dose": "300 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "7 dias",
+            "condicao": "alergia a beta-lactâmico",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "3 dias",
+            "condicao": "dor e febre",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "resposta em 48 a 72 h e função hepática",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metronidazol",
+            "dose": "500 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "função hepática e neuropatia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "vancomicina",
+            "dose": "25 a 30 mg/kg de ataque; 15 a 20 mg/kg de manutenção",
+            "via": "IV",
+            "frequencia": "8/8 a 12/12 h",
+            "monitorizacao": "AUC ou vale e creatinina a cada 48 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "clindamicina",
+            "dose": "600 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "diarreia e dor abdominal",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "enoxaparina",
+            "dose": "40 mg",
+            "via": "SC",
+            "frequencia": "1x/dia",
+            "monitorizacao": "plaquetas no quarto dia e sangramento",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma",
+          "PCR",
+          "creatinina",
+          "eletrólitos",
+          "cultura de ferida",
+          "hemoculturas",
+          "ultrassonografia",
+          "tomografia",
+          "radiografia",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de infecção de ferida, necessitando de afastamento por período a ser definido conforme a evolução.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e CID são decisão médica no ato"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com mecanismo, tempo de evolução, coleção, cultura, antibiótico e procedimento realizado",
+          "prioridade",
+          "horário do contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com infecção de ferida em ___, de mecanismo ___, com ___ dias de evolução, coleção ___, cultura ___, antibiótico ___ iniciado em ___, drenagem ou desbridamento em ___ e evolução."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "mecanismo e tempo de evolução",
+        "cirurgia recente e data",
+        "mordedura animal ou humana",
+        "dor, febre e calafrios",
+        "secreção e mau cheiro",
+        "diabetes e imunossupressão",
+        "antibiótico prévio e MRSA anterior",
+        "vacinação antitetânica",
+        "corpo estranho ou material de síntese"
+      ],
+      "texto_template": "Paciente com ferida por ___ há ___ dias, cirurgia em ___, mordedura ___, dor ___, febre ___, secreção ___, diabetes ___, imunossupressão ___, antibiótico prévio ___, MRSA anterior ___, vacinação antitetânica ___ e corpo estranho ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e perfusão",
+        "localização, tamanho e profundidade da ferida",
+        "borda do eritema e demarcação",
+        "flutuação e crepitação",
+        "secreção: aspecto, volume e odor",
+        "necrose e tecido desvitalizado",
+        "exposição de fáscia, tendão, osso ou material de síntese",
+        "linfonodos regionais",
+        "força e sensibilidade distal"
+      ],
+      "texto_template": "Sinais vitais ___, ferida em ___ de ___ cm, borda demarcada ___, flutuação ___, crepitação ___, secreção ___, necrose ___, estruturas expostas ___, linfonodos ___ e exame neurovascular distal ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de infecção de sítio cirúrgico, critérios de internação e disponibilidade de drenagem",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_sociedade_infectologia",
+        "o_que_verificar": "escolha empírica em infecção de pele e partes moles, mordedura e MRSA",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_cirurgia",
+        "o_que_verificar": "indicação de desbridamento, drenagem e manejo da ferida cirúrgica infectada",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, reconstituição e estabilidade dos antimicrobianos",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "duração do antibiótico após drenagem e papel da cultura profunda",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-INF13-01",
+        "tipo": "abscesso_sem_drenagem",
+        "gatilho": "abscesso com flutuação ou coleção documentada sem prescrição de drenagem",
+        "severidade": "grave",
+        "mensagem": "Antibiótico não substitui drenagem: coleção exige incisão e drenagem.",
+        "acao": "bloquear alta e sugerir drenagem",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF13-02",
+        "tipo": "fasceite",
+        "gatilho": "dor desproporcional, crepitação, bolhas ou necrose",
+        "severidade": "grave",
+        "mensagem": "Suspeita de fasceíte necrosante: cirurgia imediata, sem aguardar imagem ou antibiótico.",
+        "acao": "acionar cirurgia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF13-03",
+        "tipo": "mordedura_suturada",
+        "gatilho": "fechamento primário de ferida por mordedura ou ferida contaminada",
+        "severidade": "grave",
+        "mensagem": "Não suturar ferida por mordedura ou contaminada: risco de abscesso e infecção profunda.",
+        "acao": "bloquear sutura e sugerir curativo aberto",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF13-04",
+        "tipo": "cultura_ausente",
+        "gatilho": "antibiótico prescrito para ferida purulenta sem cultura registrada",
+        "severidade": "precaucao",
+        "mensagem": "Colher cultura de aspirado ou tecido profundo antes do antibiótico.",
+        "acao": "alertar e incluir exame",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF13-05",
+        "tipo": "tetano_nao_avaliado",
+        "gatilho": "ferida traumática, mordedura ou ferida com terra sem registro do estado vacinal antitetânico",
+        "severidade": "precaucao",
+        "mensagem": "Avaliar e atualizar a profilaxia antitetânica em toda ferida contaminada.",
+        "acao": "sugerir prescrição de toxoide",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF13-06",
+        "tipo": "antibiotico_sem_ferida_infectada",
+        "gatilho": "antibiótico prescrito para ferida limpa sem sinais de infecção",
+        "severidade": "informativo",
+        "mensagem": "Ferida limpa sem infecção não exige antibiótico: tratar só o que está infectado.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "diretrizes de infecção de pele e partes moles"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

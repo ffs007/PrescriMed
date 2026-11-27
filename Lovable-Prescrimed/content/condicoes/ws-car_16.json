@@ -1,0 +1,624 @@
+{
+  "id": "ws-car_16",
+  "nome": "Miocardite",
+  "cat": "Emergência",
+  "alias": "miocardite miocardite miocardite aguda miocardite viral miocardite fulminante miocardite autoimune inflamacao do miocardio",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-16_miocardite.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de dor torácica e critérios de internação em unidade monitorizada",
+      "[verificar] sociedade_cardiologia: critérios de Lake Louise, indicação de ressonância e de biópsia endomiocárdica",
+      "[verificar] diretriz_de_insuficiencia_cardiaca: ordem e momento de início de IECA, BRA, betabloqueador, espironolactona e iSGLT2",
+      "[verificar] diretriz_de_cardio_oncologia: miocardite por inibidor de checkpoint e protocolo de corticoide",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-16 em 2026-11-27",
+    "fundido_workspace": "CAR-16 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, extremidades frias, lactato elevado ou oligúria -> UTI, dobutamina ou noradrenalina, avaliar suporte circulatório mecânico; taquicardia ventricular, fibrilação ventricular ou bloqueio atrioventricular completo -> monitorização contínua, desfibrilador ao lado, amiodarona e marca-passo transcutâneo se bloqueio; troponina muito elevada com fração de ejeção abaixo de 35% -> internação em unidade monitorizada e ecocardiograma seriado; edema agudo de pulmão com ortopneia e crepitações -> diurético intravenoso, nitrato se pressão permitir e ventilação não invasiva. 1) Triagem: dor torácica em jovem com troponina elevada entra em sala monitorizada com desfibrilador 2) ECG de 12 derivações e troponina seriada na primeira hora; repetir ECG em 6-12 h 3) Ecocardiograma à beira-leito para fração de ejeção, derrame e disfunção segmentar 4) Separar de SCA: se coronária obstruída, seguir o protocolo de SCA; se coronária normal com disfunção, é miocardite 5) Procurar gatilho: infecção viral, inibidor de checkpoint, autoimune, cocaína, droga injetável; colher hemoculturas se febre com sopro 6) Instável: UTI com inotrópico, vasopressor e avaliação de suporte mecânico; estável: enfermaria monitorizada 7) Tratar congestão com diurético; iniciar IECA/BRA, betabloqueador e espironolactona somente após estabilização e euvolêmia 8) Corticoide apenas em autoimune, células gigantes ou fulminante; biópsia se sem resposta em 48-72 h 9) Ressonância cardíaca antes da alta e re",
+  "redFlags": [
+    "hipotensão, extremidades frias, lactato elevado ou oligúria -> UTI, dobutamina ou noradrenalina, avaliar suporte circulatório mecânico",
+    "taquicardia ventricular, fibrilação ventricular ou bloqueio atrioventricular completo -> monitorização contínua, desfibrilador ao lado, amiodarona e marca-passo transcutâneo se bloqueio",
+    "troponina muito elevada com fração de ejeção abaixo de 35% -> internação em unidade monitorizada e ecocardiograma seriado",
+    "edema agudo de pulmão com ortopneia e crepitações -> diurético intravenoso, nitrato se pressão permitir e ventilação não invasiva",
+    "síncope ou palpitação com ECG alterado -> monitorização, Holter e avaliação de marca-passo",
+    "febre alta com sopro novo ou fenômenos embólicos -> três pares de hemoculturas e ecocardiograma antes de tratar como miocardite",
+    "uso recente de inibidor de checkpoint imunológico, lúpus ou miastenia -> suspender o imunoterápico e iniciar metilprednisolona"
+  ],
+  "naoUsar": [
+    "hipovolemia",
+    "hipotensão sintomática",
+    "hipocalemia grave",
+    "anúria sem diálise",
+    "gestação",
+    "angioedema prévio por IECA",
+    "hipercalemia acima de 5,5 mEq/L",
+    "estenose bilateral de artéria renal"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter repouso e não fazer exercício por 3 a 6 meses, com liberação apenas por escrito"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "atividade física, academia e esporte competitivo"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Inibidor da eca",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_enalapril",
+            "pos": "2,5 mg. Via VO. 12/12 h, com titulação a cada 1-2 semanas até 10-20 mg 12/12 h. Indefinida enquanto houver disfunção.",
+            "posTodas": true,
+            "motivo": "disfunção ventricular com fração de ejeção reduzida após estabilização hemodinâmica (1a linha) fração de ejeção reduzida após estabilização",
+            "nota": "Uso direto, com ou sem alimento - monitorar: potássio e creatinina em 7-14 dias após cada titulação; monitorar: pressão arterial; monitorar: tosse · NÃO: gestação; angioedema prévio por IECA; hipercalemia acima de 5,5 mEq/L; estenose bilateral de artéria renal; pressão sistólica abaixo de 90 mmHg · Obs: Não iniciar na fase aguda com pressão limítrofe ou creatinina em ascensão: espere 24–48 h de estabilidade · Renal: ClCr 30–60 mL/min: iniciar 2,5 mg 1x/dia; ClCr abaixo de 30: 1,25–2,5 mg 1x/dia sob…",
+            "dose": {
+              "texto": "2,5 mg; 12/12 h, com titulação a cada 1-2 semanas até 10-20 mg 12/12 h; indefinida enquanto houver disfunção; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Bloqueador do receptor de angiotensina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "losartana",
+            "pos": "25 mg. Via VO. 1x/dia, titulando até 50-100 mg/dia. Indefinida.",
+            "posTodas": true,
+            "motivo": "disfunção ventricular com tosse ou intolerância ao IECA (alternativa)",
+            "nota": "Uso direto - monitorar: potássio e creatinina em 7-14 dias; monitorar: pressão arterial",
+            "dose": {
+              "texto": "25 mg; 1x/dia, titulando até 50-100 mg/dia; indefinida; max. 100 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Betabloqueador",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "carvedilol",
+            "pos": "3,125 mg. Via VO. 12/12 h, dobrar a cada 2 semanas até 25 mg 12/12 h. Indefinida.",
+            "posTodas": true,
+            "motivo": "fração de ejeção reduzida, somente após estabilização hemodinâmica e sem arritmia ativa (condicional) euvolêmico, pressão sistólica acima de 90 mmHg e frequência acima de 60 bpm",
+            "nota": "Uso direto com alimento para reduzir hipotensão postural - monitorar: frequência cardíaca e pressão antes de cada titulação; monitorar: peso e sinais de congestão; monitorar: ECG se bradicardia · NÃO: choque cardiogênico; congestão ou edema agudo de pulmão na fase aguda; bradicardia abaixo de 50 bpm; bloqueio atrioventricular de 2º ou 3º grau sem marca-passo; asma grave descompensada; pressão sistólica abaixo de 90 mmHg · Obs: É o fármaco que mais se atrasa por erro: não iniciar na fase aguda, mas também não deixar de iniciar depois. Iniciar só com paciente euvolêmico",
+            "dose": {
+              "texto": "3,125 mg; 12/12 h, dobrar a cada 2 semanas até 25 mg 12/12 h; indefinida; max. 50 mg/dia",
+              "status": "ok",
+              "valor": 3.125,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antagonista mineralocorticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "espironolactona",
+            "pos": "25 mg. Via VO. 1x/dia. Indefinida.",
+            "posTodas": true,
+            "motivo": "fração de ejeção reduzida com potássio abaixo de 5,0 mEq/L e função renal preservada (condicional) potássio abaixo de 5,0 mEq/L e ClCr acima de 30 mL/min",
+            "nota": "Uso direto pela manhã - monitorar: potássio e creatinina em 3 dias, 1 semana e depois mensal; monitorar: ginecomastia · NÃO: potássio acima de 5,0 mEq/L; ClCr abaixo de 30 mL/min; ginecomastia intolerável; uso de suplemento de potássio · Obs: Suspender se potássio acima de 5,5 mEq/L. Não é diurético de congestão aguda · Renal: Contraindicada com ClCr abaixo de 30 mL/min",
+            "dose": {
+              "texto": "25 mg; 1x/dia; indefinida; max. 50 mg/dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor de sglt2",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dapagliflozina",
+            "pos": "10 mg. Via VO. 1x/dia. Indefinida.",
+            "posTodas": true,
+            "motivo": "insuficiência cardíaca com fração de ejeção reduzida, com ou sem diabetes (condicional) insuficiência cardíaca com fração de ejeção reduzida",
+            "nota": "Uso direto - monitorar: função renal; monitorar: glicemia; monitorar: sinais de desidratação; monitorar: cetonemia se náusea e dor abdominal · NÃO: cetoacidose em atividade; diabetes tipo 1; ClCr abaixo de 20 mL/min sem nefrologista; hipotensão sintomática · Obs: Suspender em jejum prolongado, cirurgia ou internação por doença aguda pelo risco de cetoacidose · Renal: ClCr 25–45 mL/min: manter 10 mg; abaixo de 25: individualizar com nefrologia",
+            "dose": {
+              "texto": "10 mg; 1x/dia; indefinida; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anti-inflamatorio não esteroidal",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "600 mg. Via VO. 8/8 h. 7-14 dias.",
+            "posTodas": true,
+            "motivo": "dor pericárdica residual em convalescença, sem troponina elevada e sem disfunção ventricular (condicional)",
+            "nota": "Uso direto após a refeição - monitorar: função renal; monitorar: pressão e peso; monitorar: dor epigástrica; monitorar: sangramento digestivo · NÃO: fase aguda de miocardite com troponina elevada; disfunção ventricular; insuficiência renal com ClCr abaixo de 30 mL/min; úlcera péptica ativa; terceiro trimestre de gestação; revascularização recente · Obs: Proibido na fase aguda: aumenta necrose miocárdica, arritmia e mortalidade. Só entra quando a lesão miocárdica já resolveu e o componente é pericárdico · Renal: Evitar com ClCr abaixo de 30 mL/min",
+            "dose": {
+              "texto": "600 mg; 8/8 h; 7-14 dias; max. 2.400 mg/dia",
+              "status": "ok",
+              "valor": 600,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anti-inflamatorio antigotoso",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "colchicina",
+            "pos": "0,5 mg. Via VO. 12/12 h. 7-14 dias.",
+            "posTodas": true,
+            "motivo": "componente pericárdico associado, em convalescença, junto ao AINE (condicional)",
+            "nota": "Uso direto - monitorar: número de evacuações; monitorar: hemograma; monitorar: creatinina e CPK se mialgia · NÃO: ClCr abaixo de 30 mL/min; cirrose grave; uso de inibidor potente de CYP3A4 e glicoproteína P; diarreia ativa · Obs: Reduz recidiva de pericardite; não tem papel na miocardite aguda isolada · Renal: Contraindicada com ClCr abaixo de 30 mL/min; reduzir para 0,5 mg 1x/dia entre 30 e 60…",
+            "dose": {
+              "texto": "0,5 mg; 12/12 h; 7-14 dias; max. 1,5 mg/dia",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1.5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Restrição de exercício por 3 a 6 meses",
+              "ap": "",
+              "q": "",
+              "pos": "Proibir treino, jogo e academia; liberar só com troponina normal, fração de ejeção normal, Holter sem arritmia e RM de controle; documentar por escrito no prontuário"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Monitorização cardíaca contínua",
+              "ap": "",
+              "q": "",
+              "pos": "Cardioscópio com alarme e desfibrilador testado ao lado do leito em todo paciente com troponina elevada, arritmia ou disfunção ventricular"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Balanço hídrico rigoroso e peso diário",
+              "ap": "",
+              "q": "",
+              "pos": "Anotar ingesta e diurese; pesar no mesmo horário e na mesma balança; alvo de perda de 0,5–1 kg/dia na congestão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Restrição de sódio e de líquidos na congestão",
+              "ap": "",
+              "q": "",
+              "pos": "Sódio abaixo de 2 g/dia e líquidos 1,5–2 L/dia enquanto houver congestão; liberar após compensação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Suspensão do agente causal",
+              "ap": "",
+              "q": "",
+              "pos": "Interromper inibidor de checkpoint imunológico, álcool, cocaína e fármacos cardiotóxicos; comunicar a oncologia no mesmo dia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Afastamento de atividade física e do trabalho de esforço",
+              "ap": "",
+              "q": "",
+              "pos": "Atestado com restrição explícita; atleta só retorna após reavaliação completa e liberação por escrito"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Repouso relativo com cabeceira elevada",
+              "ap": "",
+              "q": "",
+              "pos": "Cabeceira a 30–45° na dispneia; deambulação assistida após 24 h sem arritmia e sem congestão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Oxigênio apenas se saturação abaixo de 90%",
+              "ap": "",
+              "q": "",
+              "pos": "Manter saturação entre 94% e 98%; hiperóxia em normoxêmico aumenta a lesão de reperfusão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-16"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Diurético de de alça",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "congestão pulmonar ou sistêmica por disfunção ventricular na miocardite (1a linha) congestão residual",
+            "nota": "Uso direto IV em bolus lento; VO uso direto - monitorar: diurese horária; monitorar: peso diário; monitorar: potássio, sódio e creatinina a cada 24 h; monitorar: pressão arterial · NÃO: hipovolemia; hipotensão sintomática; hipocalemia grave; anúria sem diálise · Obs: Diurético é medida de resgate da congestão e não trata a inflamação. Não usar de rotina se não houver congestão · Renal: Manter dose alta na disfunção renal com congestão; a resposta depende de dose, não de…",
+            "dose": {
+              "texto": "40 mg; 12/12 h; se diurese insuficiente em 2-6 h, dobrar a dose; até compensação, depois via oral; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide sistêmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metilpred_ev",
+            "motivo": "miocardite autoimune, fulminante com suspeita imunomediada ou associada a inibidor de checkpoint (condicional)",
+            "nota": "Reconstituir em diluente próprio e diluir em 100 mL de SF 0,9% - monitorar: glicemia; monitorar: pressão arterial; monitorar: potássio; monitorar: sinais de infecção; monitorar: sangramento digestivo",
+            "dose": {
+              "texto": "1 g; 1x/dia por 3 dias, seguida de prednisona 1 mg/kg/dia por via oral; pulso de 3 dias; manutenção por 4-8 semanas com desmame; max. 1 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "por 3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiarrítmico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "amiodarona",
+              "n": "Amiodarona",
+              "ap": "ampola 50 mg/mL (3 mL, 150 mg)",
+              "via": "IV",
+              "pos": "150 mg em 10 min, seguida de 1 mg/min por 6 h e 0,5 mg/min por 18 h. Via IV. Bolus seguido de infusão contínua. 24 horas na fase aguda; depois avaliar via oral. Bolus em 10 min; infusão contínua."
+            },
+            "motivo": "taquicardia ventricular, fibrilação ventricular refratária ou arritmia supraventricular com instabilidade (resgate)",
+            "nota": "Diluir 150 mg em 100 mL de SG 5%; usar acesso calibroso ou central e bomba de infusão - monitorar: ECG contínuo e intervalo QT; monitorar: pressão arterial; monitorar: TSH e transaminases em uso acima de 48 h; monitorar: sítio de infusão · NÃO: bradicardia grave sem marca-passo; bloqueio atrioventricular avançado; disfunção tireoidiana descompensada; hipotensão refratária · Obs: Não é pró-arrítmico de primeira linha para taquicardia sinusal da miocardite: tratar a causa e a congestão primeiro",
+            "dose": {
+              "texto": "150 mg em 10 min, seguida de 1 mg/min por 6 h e 0,5 mg/min por 18 h; bolus seguido de infusão contínua; 24 horas na fase aguda; depois avaliar via oral; max. 2,2 g em 24 h",
+              "status": "ok",
+              "valor": 150,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2.2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inotrópico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "dobutamina",
+              "n": "Dobutamina",
+              "ap": "ampola 12,5 mg/mL (20 mL, 250 mg)",
+              "via": "IV",
+              "pos": "2,5-20 mcg/kg/min. Via IV. Infusão contínua titulada. Até recuperação da função ventricular ou transplante. Infusão contínua."
+            },
+            "motivo": "choque cardiogênico com baixo débito e pressão arterial mínima mantida (resgate)",
+            "nota": "250 mg em 250 mL de SF 0,9% ou SG 5% (1 mg/mL); usar bomba de infusão - monitorar: ECG contínuo; monitorar: pressão arterial; monitorar: lactato e diurese; monitorar: frequência cardíaca · NÃO: estenose aórtica grave; obstrução de via de saída; arritmia ventricular não controlada; hipovolemia não corrigida · Obs: Pode piorar hipotensão por vasodilatação; associar noradrenalina se pressão cair",
+            "dose": {
+              "texto": "2,5-20 mcg/kg/min; infusão contínua titulada; até recuperação da função ventricular ou transplante; max. 20 mcg/kg/min",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 20,
+              "unidade": "mcg/kg/min",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vasopressor",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "noradrenalina",
+              "n": "Noradrenalina",
+              "ap": "ampola 2 mg/mL (4 mL, 8 mg)",
+              "via": "IV",
+              "pos": "0,05-0,5 mcg/kg/min. Via IV. Infusão contínua titulada. Até estabilidade hemodinâmica. Infusão contínua."
+            },
+            "motivo": "choque cardiogênico com hipotensão apesar de inotrópico (resgate)",
+            "nota": "8 mg em 250 mL de SG 5% (32 mcg/mL); preferir acesso central e bomba de infusão - monitorar: pressão arterial média; monitorar: perfusão periférica e lactato; monitorar: diurese; monitorar: sítio de infusão · NÃO: hipovolemia não corrigida; uso em acesso periférico sem vigilância; arritmia ventricular não controlada · Obs: Titular pela pressão média acima de 65 mmHg e pela perfusão, não pela pressão sistólica isolada",
+            "dose": {
+              "texto": "0,05-0,5 mcg/kg/min; infusão contínua titulada; até estabilidade hemodinâmica; max. 1 mcg/kg/min ou conforme resposta",
+              "status": "ok",
+              "valor": 0.05,
+              "valor_max": 0.5,
+              "unidade": "mcg/kg/min",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "CAR-16",
+    "versao": "0.2.0",
+    "arquivo": "CAR-16_miocardite.json",
+    "area": "Cardiovascular",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

@@ -1,0 +1,1538 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GO-07",
+    "area": "Ginecologia/Obstetrícia",
+    "nome": "Violência sexual / profilaxia IST",
+    "aliases": [
+      "violência sexual",
+      "estupro",
+      "profilaxia IST",
+      "profilaxia HIV",
+      "abuso sexual",
+      "violência sexual e doméstica",
+      "profilaxia pós-exposição sexual",
+      "contracepção de emergência"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Violência sexual é emergência de saúde e de direitos humanos, e o atendimento é imediato, integral e incondicional. A pessoa é acolhida em local reservado, com sigilo, sem julgamento e sem exigência de boletim de ocorrência, de exame de corpo de delito ou de decisão sobre denunciar. A notificação compulsória no SINAN é obrigatória e independe da vontade da vítima; a comunicação à autoridade policial e o registro do boletim seguem a lei e a decisão da pessoa, com acompanhamento da equipe, e em menor de idade ou vulnerável aciona-se o Conselho Tutelar. Na mesma consulta iniciam-se cinco frentes que não podem esperar: profilaxia do HIV com tenofovir, lamivudina e dolutegravir por 28 dias, começando em até 72 horas e idealmente em até 2 horas; profilaxia da hepatite B com vacina e imunoglobulina conforme o esquema vacinal; profilaxia das IST bacterianas com ceftriaxona, azitromicina, metronidazol e penicilina benzatina conforme a sífilis; contracepção de emergência com levonorgestrel até 72 horas, ulipristal até 120 horas ou DIU de cobre até 5 dias; e atualização vacinal de HPV, hepatite B e dT. O que mata a oportunidade é o atraso: esperar resultado de teste para iniciar a PEP, prescrever esquema incompleto, condicionar o atendimento ao boletim ou expor a vítima. O seguimento sorológico em 30, 60, 90 e 180 dias é parte do tratamento, não formalidade.",
+    "inclusao": [
+      "Relato de violência sexual, tentativa ou consumada, em qualquer idade e em até 72 horas",
+      "Violência sexual com procura tardia, acima de 72 horas, para profilaxia de IST, contracepção, vacinação e seguimento",
+      "Contato sexual com pessoa desconhecida ou em situação de vulnerabilidade sem preservativo",
+      "Menor de idade com relato de abuso sexual, mesmo sem sinais físicos",
+      "Pessoa com deficiência, em situação de rua ou institucionalizada com relato de violência sexual",
+      "Gestante com relato de violência sexual"
+    ],
+    "exclusao": [
+      {
+        "situacao": "instabilidade hemodinâmica, trauma craniano ou lesão grave com risco de morte",
+        "fluxo": "sala vermelha primeiro; profilaxia em paralelo assim que estabilizar"
+      },
+      {
+        "situacao": "risco de suicídio, psicose ou agitação intensa",
+        "fluxo": "saúde mental e psiquiatria no mesmo atendimento, sem suspender a profilaxia"
+      },
+      {
+        "situacao": "violência sexual em menor de 18 anos ou em vulnerável",
+        "fluxo": "acionar Conselho Tutelar e autoridade competente, mantendo o atendimento"
+      },
+      {
+        "situacao": "violência física ou doméstica sem contato sexual",
+        "fluxo": "fluxo de violência interpessoal, com notificação e rede de proteção"
+      },
+      {
+        "situacao": "exposição ocupacional com material biológico",
+        "fluxo": "protocolo de acidente de trabalho, com CAT e seguimento próprio"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "atendimento em até 72 horas da violência, sobretudo nas primeiras 2 horas",
+        "por_que": "a eficácia da profilaxia do HIV cai com o tempo e o prazo é a única variável que não se recupera",
+        "acao": "iniciar tenofovir, lamivudina e dolutegravir na mesma consulta, antes de qualquer coleta ou registro",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "penetração vaginal ou anal sem preservativo, com ejaculação, sangramento ou trauma genital",
+        "por_que": "maior risco de transmissão do HIV, de hepatite B e de IST bacteriana",
+        "acao": "acionar o protocolo completo da violência sexual e não apenas a profilaxia do HIV",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "idade inferior a 18 anos ou pessoa com deficiência ou em situação de vulnerabilidade",
+        "por_que": "violência contra vulnerável tem notificação e comunicação obrigatórias e risco de repetição",
+        "acao": "acionar Conselho Tutelar e autoridade competente, sem interromper o atendimento",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "ideação suicida, automutilação, choro inconsolável ou dissociação durante o atendimento",
+        "por_que": "risco de morte por suicídio e de abandono completo do seguimento",
+        "acao": "avaliação de risco imediata, saúde mental no mesmo dia e permanência com acompanhante de confiança",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "laceração genital extensa, sangramento ativo, corpo estranho ou lesão perineal grave",
+        "por_que": "necessidade de sutura e de avaliação cirúrgica, além do risco de infecção",
+        "acao": "avaliação ginecológica imediata e sutura; antibiótico terapêutico, não apenas profilático",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "gestação em curso ou atraso menstrual no momento do atendimento",
+        "por_que": "muda a escolha da contracepção de emergência e contraindica doxiciclina e ulipristal",
+        "acao": "beta-HCG, manter esquema antirretroviral e usar apenas métodos permitidos na gestação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "sinais de infecção genital, corrimento purulento, úlcera ou dor pélvica",
+        "por_que": "IST já instalada exige tratamento e não apenas profilaxia, além de aumentar o risco de HIV",
+        "acao": "colher testes, tratar empiricamente e tratar as parcerias",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "procura após 72 horas da violência",
+        "por_que": "a janela da profilaxia do HIV está fechada, mas as demais condutas seguem indicadas",
+        "acao": "não prescrever PEP, manter testagem, contracepção de emergência quando cabível, vacinas e seguimento",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A quantas horas ocorreu a violência e que horas são agora?",
+      "Houve penetração vaginal, anal ou oral, com ou sem preservativo, e houve ejaculação?",
+      "Houve sangramento, ferida genital, mordida ou uso de objeto?",
+      "A pessoa conhece o agressor e sabe se ele tem HIV, hepatite ou alguma IST?",
+      "Está gestante, amamentando ou tem atraso menstrual?",
+      "Usa algum método contraceptivo e qual? Tem DIU de cobre no momento?",
+      "O esquema de vacinação para hepatite B está completo e documentado?",
+      "Já recebeu vacina de HPV e dT, e quando foi a última dose?",
+      "Fez teste de HIV, sífilis ou hepatite antes, e qual foi o resultado e a data?",
+      "Deseja registrar boletim de ocorrência e deseja coleta de vestígios?",
+      "Tem alergia conhecida a penicilina, cefalosporina ou macrolídeo?",
+      "Está acompanhada de alguém de confiança e onde vai dormir hoje?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Violência sexual consumada, atendida em até 72 horas, sem instabilidade",
+        "escolha": "Tenofovir 300 mg com lamivudina 300 mg 1x/dia mais dolutegravir 50 mg 1x/dia por 28 dias, associados a ceftriaxona, azitromicina, metronidazol, vacina e imunoglobulina para hepatite B, contracepção de emergência e vacinas de HPV e dT",
+        "porque": "Cada componente previne um desfecho diferente e todos precisam começar na mesma consulta; a profilaxia do HIV isolada deixa a pessoa exposta a hepatite B, IST e gestação"
+      },
+      {
+        "cenario": "Atendimento nas primeiras 2 horas da violência",
+        "escolha": "Primeira dose da profilaxia do HIV imediatamente, antes de colher exames, preencher ficha ou aguardar teste rápido",
+        "porque": "O bloqueio da replicação viral é mais eficaz quanto mais cedo; nas primeiras horas o benefício é máximo e a adesão melhora quando o início é percebido como urgente"
+      },
+      {
+        "cenario": "Procura após 72 horas da violência",
+        "escolha": "Não prescrever profilaxia do HIV; manter testagem de HIV, hepatites e sífilis, contracepção de emergência se ainda dentro de 120 horas para ulipristal, vacinação e seguimento",
+        "porque": "Não há evidência de benefício da PEP após 72 horas, mas as outras profilaxias e o diagnóstico precoce continuam indicados e não podem ser abandonados"
+      },
+      {
+        "cenario": "Esquema de hepatite B incompleto, desconhecido ou nunca vacinado",
+        "escolha": "Imunoglobulina anti-hepatite B 0,06 mL/kg por via intramuscular, idealmente em até 24 horas e no máximo até 7 dias, mais início ou complementação da vacina em três doses",
+        "porque": "A imunoglobulina dá proteção passiva imediata enquanto a vacina induz resposta ativa; quem já completou o esquema documentado não precisa de imunoglobulina"
+      },
+      {
+        "cenario": "Risco de gestação e atendimento em até 72 horas",
+        "escolha": "Levonorgestrel 1,5 mg por via oral em dose única; se o atendimento ocorrer entre 72 e 120 horas, ulipristal 30 mg",
+        "porque": "O levonorgestrel é o método mais disponível e seguro; o ulipristal mantém eficácia até 120 horas e é a melhor opção na janela tardia"
+      },
+      {
+        "cenario": "Risco de gestação com atendimento em até 5 dias e acesso a serviço que insere DIU",
+        "escolha": "Dispositivo intrauterino de cobre, que é o método mais eficaz e não depende do prazo de 72 horas",
+        "porque": "A eficácia do DIU de cobre supera a dos hormônios e resolve também a contracepção de longo prazo, sobretudo em quem não quer depender de método oral"
+      },
+      {
+        "cenario": "Sorologia para sífilis reagente no atendimento basal",
+        "escolha": "Penicilina benzatina 2,4 milhões de unidades por via intramuscular em dose única para sífilis recente, com tratamento da parceria",
+        "porque": "A penicilina benzatina é o único esquema com garantia de prevenção da sífilis congênita e continua sendo o padrão; dose única cobre sífilis primária, secundária e latente recente"
+      },
+      {
+        "cenario": "Alergia à penicilina em pessoa fora da gestação",
+        "escolha": "Doxiciclina 100 mg a cada 12 horas por 14 dias ou ceftriaxona 1 g por dia por 10 a 14 dias",
+        "porque": "São as alternativas com evidência para sífilis recente; a doxiciclina não pode ser usada na gestação e a ceftriaxona exige confirmação de que não há reação cruzada grave"
+      },
+      {
+        "cenario": "Gestante em situação de violência sexual",
+        "escolha": "Manter tenofovir, lamivudina e dolutegravir, usar levonorgestrel para contracepção de emergência, evitar doxiciclina e ulipristal, tratar sífilis com penicilina benzatina e aplicar dTpa",
+        "porque": "O esquema antirretroviral é seguro na gestação e a sífilis exige penicilina para evitar transmissão vertical, com dessensibilização quando houver alergia"
+      },
+      {
+        "cenario": "Corrimento purulento, úlcera genital ou teste positivo para gonorreia e clamídia",
+        "escolha": "Tratamento com ceftriaxona 500 mg intramuscular em dose única e azitromicina 1 g por via oral em dose única, mais tratamento da parceria",
+        "porque": "A profilaxia e o tratamento usam as mesmas drogas, mas a IST instalada exige tratar a parceria para evitar reinfecção e complicações como doença inflamatória pélvica"
+      },
+      {
+        "cenario": "Menor de 18 anos ou pessoa com deficiência",
+        "escolha": "Atender e prescrever a profilaxia com consentimento da própria pessoa, sem exigir acompanhante, e acionar Conselho Tutelar e autoridade competente",
+        "porque": "O sigilo é condição para o atendimento e a proteção legal não pode atrasar a primeira dose; a comunicação é obrigatória e é feita em paralelo"
+      },
+      {
+        "cenario": "Pessoa que não quer registrar boletim de ocorrência",
+        "escolha": "Realizar todo o atendimento, a notificação compulsória no SINAN e as profilaxias, oferecendo acompanhamento para o registro se e quando ela decidir",
+        "porque": "O atendimento é incondicional por lei; condicionar a profilaxia ao boletim é ilegal e é a principal causa de perda de seguimento"
+      },
+      {
+        "cenario": "Usuária de DIU de cobre já inserido no momento da violência",
+        "escolha": "Manter o dispositivo e não indicar contracepção de emergência hormonal, mantendo as demais profilaxias",
+        "porque": "O DIU de cobre já em posição é o método mais eficaz e não há benefício em associar hormônios"
+      },
+      {
+        "cenario": "Violência sexual com trauma genital extenso ou sangramento ativo",
+        "escolha": "Estabilizar, suturar e tratar infecção com esquema terapêutico, mantendo as profilaxias de HIV, hepatite B e IST",
+        "porque": "A prioridade é controlar o sangramento e prevenir infecção da ferida; a profilaxia não substitui a sutura nem o antibiótico em dose terapêutica"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "itrn",
+        "agente": "tenofovir + lamivudina",
+        "papel": "primeira_linha",
+        "indicacao": "base da profilaxia pós-exposição ao HIV na violência sexual",
+        "dose": "300 mg de tenofovir com 300 mg de lamivudina (1 comprimido da associação)",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "28 dias",
+        "dose_maxima": "300/300 mg por dia",
+        "contraindicacoes": [
+          "taxa de filtração glomerular abaixo de 30 mL/min",
+          "doença renal crônica avançada",
+          "hipersensibilidade aos componentes",
+          "acidose metabólica grave"
+        ],
+        "efeitos_adversos": [
+          "náusea e diarreia",
+          "nefrotoxicidade tubular com queda de filtração",
+          "redução de densidade mineral óssea",
+          "cefaleia",
+          "reativação de hepatite B na suspensão"
+        ],
+        "apresentacoes": [
+          "comprimido 300/300 mg",
+          "comprimido 300/200 mg de tenofovir com emtricitabina",
+          "frasco de tenofovir 300 mg e comprimido de lamivudina 150 mg separados"
+        ],
+        "preparo": "Uso direto por via oral, com ou sem alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "creatinina e taxa de filtração na entrada e em 15 dias",
+          "transaminases em portadora de hepatite B",
+          "adesão diária e tolerância digestiva"
+        ],
+        "ajuste_renal": "Filtração 30 a 49 mL/min: tenofovir 300 mg a cada 48 horas; 10 a 29 mL/min: a cada 72 a 96 horas; abaixo de 10 mL/min ou diálise: evitar tenofovir e trocar a base",
+        "ajuste_hepatico": "Sem ajuste de dose; em hepatite B crônica a suspensão aos 28 dias pode reativar o vírus e exige controle",
+        "observacoes": "Primeira dose na mesma consulta, sem aguardar resultado de exame. Nunca usar como dupla isolada: a associação precisa da terceira droga para ter eficácia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil, PCDT de profilaxia pós-exposição",
+        "claim_id": null
+      },
+      {
+        "classe": "insti",
+        "agente": "dolutegravir",
+        "papel": "primeira_linha",
+        "indicacao": "terceira droga da profilaxia pós-exposição ao HIV, com alta barreira genética",
+        "dose": "50 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "28 dias",
+        "dose_maxima": "50 mg/dia (50 mg a cada 12 horas quando associado a rifampicina)",
+        "contraindicacoes": [
+          "hipersensibilidade ao dolutegravir",
+          "insuficiência hepática grave",
+          "uso de dofetilida"
+        ],
+        "efeitos_adversos": [
+          "insônia",
+          "cefaleia",
+          "náusea",
+          "elevação de transaminases",
+          "aumento de peso",
+          "reação de hipersensibilidade com rash e sintomas sistêmicos"
+        ],
+        "apresentacoes": [
+          "comprimido 50 mg",
+          "comprimido dispersível 5 mg"
+        ],
+        "preparo": "Uso direto por via oral; tomar com pelo menos 2 horas de intervalo antes ou 6 horas depois de antiácido, cálcio, ferro ou zinco",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "transaminases na entrada e se houver sintomas",
+          "sono, humor e cefaleia",
+          "interação com cátions e com rifampicina",
+          "adesão diária"
+        ],
+        "ajuste_renal": "Sem ajuste em nenhum grau de função renal; em diálise não exige dose suplementar",
+        "ajuste_hepatico": "Sem ajuste em Child-Pugh A e B; evitar em Child-Pugh C",
+        "observacoes": "A quelação por cálcio, ferro e antiácido é a causa mais comum de falha silenciosa da profilaxia; orientar o intervalo por escrito",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil, PCDT de profilaxia pós-exposição",
+        "claim_id": null
+      },
+      {
+        "classe": "itrn",
+        "agente": "tenofovir alafenamida + emtricitabina",
+        "papel": "alternativa",
+        "indicacao": "profilaxia pós-exposição em filtração entre 30 e 59 mL/min, osteopenia ou osteoporose",
+        "dose": "25 mg de tenofovir alafenamida com 200 mg de emtricitabina (1 comprimido)",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "28 dias",
+        "dose_maxima": "25/200 mg por dia",
+        "contraindicacoes": [
+          "filtração abaixo de 30 mL/min",
+          "hipersensibilidade aos componentes",
+          "uso de rifampicina sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "cefaleia",
+          "aumento de peso e de lipídios",
+          "elevação de transaminases",
+          "proteinúria em doença renal prévia"
+        ],
+        "apresentacoes": [
+          "comprimido 25/200 mg",
+          "comprimido 25/200/50 mg em associação tripla com bictegravir"
+        ],
+        "preparo": "Uso direto por via oral, com alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "creatinina e filtração na entrada e em 15 dias",
+          "transaminases",
+          "adesão diária"
+        ],
+        "ajuste_renal": "Não usar com filtração abaixo de 30 mL/min; entre 30 e 59 mL/min não exige ajuste, ao contrário do tenofovir disoproxila",
+        "ajuste_hepatico": "Sem ajuste em Child-Pugh A e B; não recomendado em Child-Pugh C",
+        "observacoes": "É a troca mais simples quando o tenofovir disoproxila está contraindicado por rim; não é intercambiável com o disoproxila em dose",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura e protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "insti",
+        "agente": "raltegravir",
+        "papel": "alternativa",
+        "indicacao": "substituição do dolutegravir na intolerância, na interação medicamentosa ou na indisponibilidade",
+        "dose": "400 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "28 dias",
+        "dose_maxima": "800 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade ao raltegravir",
+          "uso de antiácido com alumínio ou magnésio sem intervalo"
+        ],
+        "efeitos_adversos": [
+          "insônia",
+          "cefaleia",
+          "náusea",
+          "elevação de transaminases e de creatinina",
+          "rabdomiólise rara",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 400 mg",
+          "comprimido 600 mg de liberação prolongada",
+          "comprimido 25 mg e comprimido 100 mg"
+        ],
+        "preparo": "Uso direto por via oral; não tomar junto de antiácido com alumínio ou magnésio",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "transaminases e creatinina na entrada e em 2 semanas",
+          "sintomas musculares e urina escura",
+          "sono e humor",
+          "adesão a cada 12 horas"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste em Child-Pugh A e B; cautela em Child-Pugh C",
+        "observacoes": "Alternativa quando o dolutegravir causa insônia incapacitante ou cefaleia; exige duas tomadas diárias e tem mais náusea",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura e protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "profilaxia e tratamento de gonorreia após violência sexual",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "500 mg em dose única para profilaxia; 1 g em dose única para tratamento",
+        "contraindicacoes": [
+          "anafilaxia prévia a cefalosporina",
+          "anafilaxia prévia a penicilina",
+          "uso de solução com cálcio em neonato"
+        ],
+        "efeitos_adversos": [
+          "dor e hematoma no local da aplicação",
+          "rash",
+          "diarreia",
+          "lama biliar",
+          "reação alérgica imediata"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg com diluente",
+          "frasco-ampola 1 g",
+          "seringa pronta 500 mg"
+        ],
+        "preparo": "Reconstituir em 2 mL de água para injeção ou lidocaína 1% e aplicar no glúteo com agulha de 40 por 7 mm ou maior",
+        "tempo_infusao": "injeção intramuscular profunda em 1 a 2 minutos",
+        "monitorizacao": [
+          "dor e hematoma no local",
+          "reação alérgica nos primeiros 30 minutos",
+          "registro do lote e do sítio de aplicação"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Aplicar antes da alta, na mesma visita; não atrasar a alta nem a profilaxia por falta de resultado de cultura",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil e CDC",
+        "claim_id": null
+      },
+      {
+        "classe": "macrolideo",
+        "agente": "azitromicina",
+        "papel": "primeira_linha",
+        "indicacao": "profilaxia e tratamento de clamídia após violência sexual, inclusive na gestação",
+        "dose": "1 g",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "1 g em dose única",
+        "contraindicacoes": [
+          "alargamento de QT conhecido",
+          "uso concomitante de drogas que prolongam o QT",
+          "insuficiência hepática grave",
+          "hipersensibilidade a macrolídeo"
+        ],
+        "efeitos_adversos": [
+          "náusea e diarreia",
+          "dor abdominal",
+          "prolongamento de QT",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 1 g",
+          "suspensão 200 mg/5 mL",
+          "frasco-ampola 500 mg para infusão"
+        ],
+        "preparo": "Uso direto por via oral, com ou sem alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "ECG se houver risco de QT",
+          "tolerância digestiva",
+          "transaminases em uso repetido"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "É a opção de escolha na gestante, porque a doxiciclina é contraindicada; a resistência de clamídia a macrolídeo é crescente e exige teste de cura quando disponível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil e CDC",
+        "claim_id": null
+      },
+      {
+        "classe": "tetraciclina",
+        "agente": "doxiciclina",
+        "papel": "alternativa",
+        "indicacao": "profilaxia ou tratamento de clamídia e de sífilis quando a azitromicina ou a penicilina não estão disponíveis, fora da gestação",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "7 dias para clamídia; 14 dias para sífilis recente",
+        "dose_maxima": "200 mg/dia",
+        "contraindicacoes": [
+          "gestação",
+          "lactação",
+          "hipersensibilidade a tetraciclina",
+          "insuficiência renal grave",
+          "menor de 8 anos"
+        ],
+        "efeitos_adversos": [
+          "fotossensibilidade",
+          "esofagite e úlcera esofágica",
+          "náusea",
+          "candidíase vaginal",
+          "hipertensão intracraniana benigna rara"
+        ],
+        "apresentacoes": [
+          "comprimido 100 mg",
+          "cápsula 100 mg"
+        ],
+        "preparo": "Uso direto por via oral, com um copo cheio de água, sem deitar por 30 minutos",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "sintomas esofágicos",
+          "exposição solar e fotossensibilidade",
+          "teste de gravidez antes de prescrever",
+          "adesão aos 7 ou 14 dias"
+        ],
+        "ajuste_renal": "Sem ajuste com filtração acima de 30 mL/min; evitar abaixo disso",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Exige teste de gravidez negativo antes da prescrição e não pode ser usada na gestante nem na lactante; a adesão aos 7 dias é pior que a dose única da azitromicina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "CDC e protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "nitroimidazol",
+        "agente": "metronidazol",
+        "papel": "condicional",
+        "indicacao": "profilaxia e tratamento de tricomoníase e de vaginose bacteriana após violência sexual",
+        "dose": "2 g",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "2 g em dose única",
+        "contraindicacoes": [
+          "primeiro trimestre de gestação",
+          "uso de dissulfiram",
+          "hipersensibilidade a nitroimidazol",
+          "ingestão de álcool nas últimas 24 horas"
+        ],
+        "efeitos_adversos": [
+          "gosto metálico",
+          "náusea",
+          "cefaleia",
+          "urina escura",
+          "efeito dissulfiram com álcool"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg",
+          "comprimido 400 mg",
+          "frasco 500 mg/100 mL para infusão"
+        ],
+        "preparo": "Uso direto por via oral, com alimento para reduzir a náusea",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "tolerância digestiva",
+          "orientação de abstinência alcoólica por 24 horas",
+          "teste de gravidez antes de prescrever"
+        ],
+        "ajuste_renal": "Sem ajuste em dose única",
+        "ajuste_hepatico": "Reduzir em hepatopatia grave",
+        "observacoes": "Dose única basta para profilaxia; não prolongar por 7 dias sem confirmação de tricomoníase. Tratar a parceria quando o teste for positivo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil e CDC",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina",
+        "agente": "penicilina benzatina",
+        "papel": "condicional",
+        "indicacao": "profilaxia e tratamento de sífilis recente após violência sexual, com sorologia reagente ou exposição a parceria com sífilis",
+        "dose": "2.400.000 UI (2,4 milhões de unidades)",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "dose única para sífilis recente",
+        "dose_maxima": "2.400.000 UI por dose",
+        "contraindicacoes": [
+          "hipersensibilidade grave a penicilina",
+          "anafilaxia prévia a penicilina sem dessensibilização"
+        ],
+        "efeitos_adversos": [
+          "dor intensa no local da aplicação",
+          "reação de Jarisch-Herxheimer com febre e mialgia nas primeiras 24 horas",
+          "rash",
+          "anafilaxia rara",
+          "abscesso glúteo por técnica inadequada"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1.200.000 UI",
+          "frasco-ampola 600.000 UI",
+          "frasco 2.400.000 UI em dose pronta"
+        ],
+        "preparo": "Reconstituir em 4 mL de água para injeção; dividir em duas aplicações intramusculares profundas nos glúteos quando o volume passar de 3 mL",
+        "tempo_infusao": "injeção intramuscular profunda e lenta, 1 a 2 minutos por sítio",
+        "monitorizacao": [
+          "reação alérgica nos primeiros 30 minutos",
+          "febre e mialgia nas primeiras 24 horas por Jarisch-Herxheimer",
+          "dor e abscesso no local",
+          "sorologia de controle em 3, 6 e 12 meses"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Na gestante é o único esquema aceitável e a alergia se resolve com dessensibilização em ambiente hospitalar, nunca com substituição por outra classe",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil, PCDT de sífilis",
+        "claim_id": null
+      },
+      {
+        "classe": "progestagenio",
+        "agente": "levonorgestrel",
+        "papel": "primeira_linha",
+        "indicacao": "contracepção de emergência após violência sexual, até 72 horas",
+        "dose": "1,5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "1,5 mg",
+        "contraindicacoes": [
+          "gestação confirmada",
+          "sangramento vaginal sem diagnóstico",
+          "hipersensibilidade ao levonorgestrel"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "cefaleia",
+          "sangramento de escape",
+          "alteração do ciclo menstrual",
+          "dor mamária",
+          "vômito nas primeiras 2 horas"
+        ],
+        "apresentacoes": [
+          "comprimido 1,5 mg",
+          "comprimido 0,75 mg para duas tomadas"
+        ],
+        "preparo": "Uso direto por via oral, o mais cedo possível após a violência",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "data da última menstruação e beta-HCG antes de prescrever",
+          "vômito em até 2 horas: repetir a dose",
+          "sangramento e atraso menstrual",
+          "repetir beta-HCG em 3 semanas se não menstruar"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Eficaz até 72 horas, com queda progressiva da eficácia; não é abortivo e não protege contra IST. Se houver DIU de cobre disponível, ele é mais eficaz e vale até 5 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil e OMS",
+        "claim_id": null
+      },
+      {
+        "classe": "modulador_receptor_progesterona",
+        "agente": "ulipristal",
+        "papel": "alternativa",
+        "indicacao": "contracepção de emergência após violência sexual, sobretudo entre 72 e 120 horas",
+        "dose": "30 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "30 mg",
+        "contraindicacoes": [
+          "gestação confirmada",
+          "lactação nas primeiras horas sem orientação",
+          "insuficiência hepática grave",
+          "hipersensibilidade ao ulipristal"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "náusea",
+          "dor abdominal",
+          "atraso menstrual",
+          "sangramento de escape"
+        ],
+        "apresentacoes": [
+          "comprimido 30 mg"
+        ],
+        "preparo": "Uso direto por via oral, com ou sem alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": [
+          "beta-HCG antes de prescrever",
+          "sangramento e atraso menstrual",
+          "repetir beta-HCG em 3 semanas se não menstruar"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Evitar em insuficiência hepática grave",
+        "observacoes": "Mantém eficácia até 120 horas e é superior ao levonorgestrel na janela tardia; a disponibilidade é restrita na rede pública, o que torna a conferência local obrigatória",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS e ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "imunoglobulina",
+        "agente": "imunoglobulina humana anti-hepatite B",
+        "papel": "condicional",
+        "indicacao": "profilaxia da hepatite B em pessoa não vacinada, com esquema incompleto ou com resposta desconhecida",
+        "dose": "0,06 mL/kg",
+        "unidade": "mL/kg",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "5 mL por dose",
+        "contraindicacoes": [
+          "hipersensibilidade a imunoglobulina humana",
+          "deficiência seletiva de IgA com anticorpos anti-IgA"
+        ],
+        "efeitos_adversos": [
+          "dor e endurecimento no local",
+          "febre baixa",
+          "rash",
+          "reação anafilática rara"
+        ],
+        "apresentacoes": [
+          "frasco 1 mL (200 UI)",
+          "frasco 5 mL (1.000 UI)",
+          "seringa preenchida"
+        ],
+        "preparo": "Pronta para uso; aplicar em músculo diferente do usado para a vacina",
+        "tempo_infusao": "injeção intramuscular profunda",
+        "monitorizacao": [
+          "reação local e sistêmica por 30 minutos",
+          "registro do lote e da data",
+          "confirmação da aplicação da vacina no mesmo dia"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Idealmente em até 24 horas e no máximo até 7 dias da exposição sexual; após esse prazo a eficácia é improvável e a conduta passa a ser apenas vacinação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil e CDC",
+        "claim_id": null
+      },
+      {
+        "classe": "vacina",
+        "agente": "vacina hepatite B recombinante",
+        "papel": "condicional",
+        "indicacao": "imunização ativa contra hepatite B em pessoa suscetível, iniciada na mesma visita",
+        "dose": "20 mcg (1 mL)",
+        "unidade": "mcg",
+        "via": "IM",
+        "frequencia": "0, 1 e 6 meses",
+        "duracao": "3 doses",
+        "dose_maxima": "40 mcg por dose em imunossuprimido",
+        "contraindicacoes": [
+          "hipersensibilidade a levedura ou a componente da vacina",
+          "febre alta no momento da aplicação"
+        ],
+        "efeitos_adversos": [
+          "dor local",
+          "febre baixa",
+          "mal-estar",
+          "rash"
+        ],
+        "apresentacoes": [
+          "frasco 1 mL (20 mcg)",
+          "seringa preenchida 1 mL",
+          "frasco 0,5 mL pediátrico"
+        ],
+        "preparo": "Pronta para uso; aplicar no deltoide, em músculo diferente do usado para a imunoglobulina",
+        "tempo_infusao": "injeção intramuscular",
+        "monitorizacao": [
+          "registro das três doses no cartão",
+          "anti-HBs após 1 a 2 meses da última dose em imunossuprimido",
+          "reação local"
+        ],
+        "ajuste_renal": "Sem ajuste; em diálise usar dose dobrada e verificar soroconversão",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Não substitui a imunoglobulina na exposição; em esquema vacinal completo e documentado não é preciso revacinar nem aplicar imunoglobulina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil, calendário nacional de vacinação",
+        "claim_id": null
+      },
+      {
+        "classe": "vacina",
+        "agente": "vacina HPV",
+        "papel": "condicional",
+        "indicacao": "imunização contra HPV após violência sexual, oferecida na mesma visita conforme faixa etária",
+        "dose": "0,5 mL",
+        "unidade": "mL",
+        "via": "IM",
+        "frequencia": "0, 2 e 6 meses (2 doses até 14 anos; 3 doses de 15 a 45 anos)",
+        "duracao": "2 ou 3 doses conforme a idade",
+        "dose_maxima": "0,5 mL por dose",
+        "contraindicacoes": [
+          "hipersensibilidade a levedura ou a componente da vacina",
+          "gestação em curso (adiar até o puerpério)",
+          "febre alta no momento da aplicação"
+        ],
+        "efeitos_adversos": [
+          "dor e edema local",
+          "cefaleia",
+          "febre baixa",
+          "síncope após a aplicação",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 0,5 mL",
+          "seringa preenchida 0,5 mL"
+        ],
+        "preparo": "Pronta para uso; aplicar no deltoide e manter a pessoa sentada por 15 minutos",
+        "tempo_infusao": "injeção intramuscular",
+        "monitorizacao": [
+          "reação local e síncope nos primeiros 15 minutos",
+          "registro das doses e do retorno",
+          "confirmação da próxima dose no cartão"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Não é profilaxia imediata e não substitui o rastreio de lesões precursoras; o benefício é de longo prazo e deve ser explicado para não gerar falsa proteção",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil, calendário nacional de vacinação",
+        "claim_id": null
+      },
+      {
+        "classe": "vacina",
+        "agente": "vacina dupla adulto (dT)",
+        "papel": "condicional",
+        "indicacao": "atualização do esquema antitetânico e antidiftérico, inclusive em feridas e lacerações genitais",
+        "dose": "0,5 mL",
+        "unidade": "mL",
+        "via": "IM",
+        "frequencia": "0, 2 e 4 a 6 meses, com reforço a cada 10 anos",
+        "duracao": "3 doses no esquema básico",
+        "dose_maxima": "0,5 mL por dose",
+        "contraindicacoes": [
+          "hipersensibilidade a componente da vacina",
+          "encefalopatia nas 7 dias após dose anterior"
+        ],
+        "efeitos_adversos": [
+          "dor e edema local",
+          "febre baixa",
+          "mal-estar",
+          "abscesso por técnica inadequada"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 0,5 mL",
+          "seringa preenchida 0,5 mL"
+        ],
+        "preparo": "Pronta para uso; aplicar no deltoide",
+        "tempo_infusao": "injeção intramuscular",
+        "monitorizacao": [
+          "registro das doses no cartão",
+          "reação local",
+          "indicação de imunoglobulina antitetânica em ferida suja com esquema incompleto"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Na gestante, substituir por dTpa a partir da 20ª semana; em ferida genital com esquema desconhecido, associar imunoglobulina antitetânica ao esquema vacinal",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/Brasil, calendário nacional de vacinação",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Acolhimento imediato em local reservado",
+        "detalhe": "Atendimento sem fila, em sala privativa, com a pessoa acompanhada de quem ela escolher; a primeira frase não é sobre o exame nem sobre o boletim, é sobre o que ela precisa naquele momento"
+      },
+      {
+        "medida": "Sigilo e prontuário protegido",
+        "detalhe": "Prontuário com acesso restrito à equipe que atende, registro de nome social quando solicitado, nenhuma informação em local visível na recepção e nenhuma comunicação a terceiros sem consentimento"
+      },
+      {
+        "medida": "Nenhuma exigência de boletim de ocorrência ou de exame de corpo de delito",
+        "detalhe": "O atendimento é incondicional por lei; o boletim e a perícia são oferecidos com acompanhamento e registrados apenas se a pessoa quiser, e a recusa não impede nenhuma profilaxia"
+      },
+      {
+        "medida": "Consentimento em cada etapa",
+        "detalhe": "Explicar antes de cada procedimento o que será feito, por quê e qual é a alternativa; a pessoa pode recusar o exame genital, a coleta ou a vacina e ainda assim receber todo o restante"
+      },
+      {
+        "medida": "Notificação compulsória no mesmo atendimento",
+        "detalhe": "Preencher a ficha de notificação de violência interpessoal e autoprovocada no SINAN, de forma imediata, com o mínimo de dados que identifiquem a vítima; a notificação é obrigatória e não depende de autorização"
+      },
+      {
+        "medida": "Comunicação à autoridade policial e à rede de proteção conforme a lei",
+        "detalhe": "Oferecer acompanhamento para o registro na delegacia quando a pessoa desejar; em menor de 18 anos, pessoa com deficiência ou vulnerável, acionar Conselho Tutelar e autoridade competente, documentando a comunicação"
+      },
+      {
+        "medida": "Coleta de vestígios oferecida até 72 horas",
+        "detalhe": "Explicar que as roupas devem ser guardadas em saco de papel, que a região não deve ser lavada antes da coleta e que a coleta não condiciona o atendimento; encaminhar a serviço de referência médico-legal"
+      },
+      {
+        "medida": "Suporte de saúde mental no mesmo dia",
+        "detalhe": "Avaliação de risco de suicídio e de transtorno mental, acionamento de psicologia e psiquiatria, técnicas de estabilização e agendamento de acompanhamento antes da alta, não em lista de espera"
+      },
+      {
+        "medida": "Plano de segurança e rede de apoio",
+        "detalhe": "Perguntar onde a pessoa vai dormir naquela noite, se o agressor tem acesso à casa, se há filhos no domicílio e acionar abrigo, casa da mulher ou medida protetiva quando houver risco de repetição"
+      },
+      {
+        "medida": "Contato ativo e busca ativa do seguimento",
+        "detalhe": "Telefone e endereço alternativo no prontuário, contato em 7 dias, lembrete antes de cada coleta sorológica e busca ativa em caso de falta, porque o abandono é a regra quando o retorno depende só do paciente"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Coleta de vestígios médico-legais",
+        "indicacao": "violência sexual recente, oferecida em até 72 horas, independentemente de boletim de ocorrência",
+        "tecnica": "Coleta de material de vagina, colo, ânus, boca e pele conforme o tipo de contato, com swabs secos, envelope lacrado, identificação, cadeia de custódia e registro fotográfico das lesões quando autorizado",
+        "complicacoes": "revitimização quando conduzida sem acolhimento, perda de material por acondicionamento inadequado, dor durante a coleta"
+      },
+      {
+        "nome": "Inserção de dispositivo intrauterino de cobre",
+        "indicacao": "contracepção de emergência após violência sexual, até 5 dias, quando não há contraindicação",
+        "tecnica": "Exame pélvico com consentimento, antissepsia, inserção com técnica asséptica, confirmação do posicionamento e orientação sobre sangramento e retorno",
+        "complicacoes": "dor e sangramento, perfuração uterina rara, expulsão, infecção pélvica, dificuldade de inserção em nulípara"
+      },
+      {
+        "nome": "Exame ginecológico com espéculo e coleta de material",
+        "indicacao": "toda vítima com penetração vaginal, corrimento, dor pélvica ou sangramento",
+        "tecnica": "Inspeção vulvar e perineal, espéculo com material estéril e lubrificante adequado, coleta de secreção para teste de amplificação de ácido nucleico de gonorreia e clamídia, exame a fresco para tricomonas e colpocitologia quando indicada",
+        "complicacoes": "dor, sangramento, desconforto psicológico, resultado falso negativo por coleta inadequada"
+      },
+      {
+        "nome": "Teste rápido de HIV e de sífilis com aconselhamento",
+        "indicacao": "todo atendimento de violência sexual, na entrada",
+        "tecnica": "Punção digital com lanceta estéril, uma gota de sangue no dispositivo, leitura em 15 a 30 minutos e confirmação com teste de segunda linha quando reagente; comunicar o resultado em local reservado",
+        "complicacoes": "falso negativo na janela imunológica, resultado indeterminado, ansiedade e necessidade de repetição em 30 dias"
+      },
+      {
+        "nome": "Sutura de lacerações genitais e perineais",
+        "indicacao": "laceração com sangramento ativo, ferida extensa ou deiscência",
+        "tecnica": "Anestesia local, hemostasia, sutura por planos com fio absorvível, revisão da ferida e profilaxia antitetânica conforme o esquema",
+        "complicacoes": "hematoma, infecção, deiscência, estenose, dispareunia e dor crônica"
+      },
+      {
+        "nome": "Notificação no SINAN e articulação com a rede de proteção",
+        "indicacao": "toda violência sexual, obrigatoriamente, no mesmo atendimento",
+        "tecnica": "Preenchimento da ficha de violência interpessoal e autoprovocada, registro do profissional e da unidade, envio imediato ao sistema e articulação com Conselho Tutelar, delegacia da mulher e serviço de assistência social",
+        "complicacoes": "exposição indevida de dados, notificação incompleta que impede o acompanhamento e perda do caso pela rede"
+      },
+      {
+        "nome": "Encaminhamento para seguimento ambulatorial e serviço de referência",
+        "indicacao": "todos os casos, antes da alta",
+        "tecnica": "Consulta agendada em até 7 dias, com resumo escrito contendo hora da violência, profilaxias aplicadas, exames colhidos, vacinas pendentes e datas de coleta de 30, 60, 90 e 180 dias",
+        "complicacoes": "perda de seguimento, atraso no diagnóstico de soroconversão e interrupção da profilaxia"
+      }
+    ],
+    "metas": [
+      "Profilaxia do HIV iniciada em até 72 horas da violência, com meta operacional de até 2 horas do atendimento",
+      "Esquema tríplice com tenofovir, lamivudina e dolutegravir mantido por 28 dias completos, com adesão de pelo menos 90% das doses",
+      "Contracepção de emergência administrada ou DIU de cobre inserido na primeira consulta quando houver risco reprodutivo",
+      "Imunoglobulina anti-hepatite B aplicada em até 24 horas nos suscetíveis, no máximo até 7 dias",
+      "Vacinas de hepatite B, HPV e dT verificadas e atualizadas antes da alta",
+      "Sorologias basais de HIV, hepatite B, hepatite C e sífilis colhidas na entrada, sem atrasar a primeira dose",
+      "Seguimento sorológico completo em 30, 60, 90 e 180 dias, com busca ativa em caso de falta",
+      "Notificação compulsória registrada no SINAN no mesmo atendimento e retorno agendado em até 7 dias",
+      "Nenhum exame, coleta ou procedimento realizado sem consentimento e nenhuma informação exposta a terceiros"
+    ],
+    "fluxo": [
+      "Acolher em local reservado, garantir sigilo e perguntar o que a pessoa precisa antes de qualquer anamnese detalhada",
+      "Registrar a hora exata da violência, o tipo de contato, o material envolvido e o tempo decorrido",
+      "Verificar as janelas: 72 horas para a profilaxia do HIV, 72 a 120 horas para a contracepção hormonal e 5 dias para o DIU de cobre",
+      "Colher sorologias basais e teste rápido de HIV e sífilis, e iniciar a primeira dose da profilaxia do HIV antes de qualquer resultado",
+      "Prescrever na mesma consulta a profilaxia do HIV por 28 dias, a profilaxia das IST bacterianas, a hepatite B com vacina e imunoglobulina e a contracepção de emergência",
+      "Verificar o cartão vacinal e aplicar ou completar hepatite B, HPV e dT, com dTpa na gestante",
+      "Oferecer coleta de vestígios, notificar no SINAN e acionar Conselho Tutelar e autoridade competente quando houver menor ou vulnerável",
+      "Acionar saúde mental, serviço social e rede de proteção, fazer plano de segurança e agendar o retorno em 7 dias",
+      "Reavaliar em 15 dias com creatinina, hemograma e tolerância; trocar a terceira droga se houver efeito adverso intolerável, sem suspender a profilaxia",
+      "Encerrar em 28 dias e completar o seguimento sorológico em 30, 60, 90 e 180 dias, tratando qualquer resultado reagente e encaminhando ao serviço de referência"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "Manter tenofovir, lamivudina e dolutegravir por 28 dias, usar levonorgestrel para contracepção de emergência, evitar doxiciclina e ulipristal, tratar sífilis com penicilina benzatina e aplicar dTpa a partir da 20ª semana",
+        "alerta": "A profilaxia é segura na gestação e a sífilis exige penicilina, com dessensibilização em caso de alergia; interromper a profilaxia por gestação é erro grave"
+      },
+      {
+        "populacao": "adolescente",
+        "ajuste": "Atender com sigilo e sem exigir acompanhante para testagem e profilaxia, avaliar a idade de consentimento e acionar Conselho Tutelar em caso de violência",
+        "alerta": "A confidencialidade é condição para a adesão; a comunicação legal é feita em paralelo e não pode atrasar a primeira dose"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Trocar tenofovir disoproxila por tenofovir alafenamida com emtricitabina se a filtração estiver entre 30 e 59 mL/min; abaixo de 30 mL/min usar zidovudina com lamivudina; dolutegravir sem ajuste",
+        "alerta": "Nefrotoxicidade por tenofovir e acúmulo de lamivudina exigem creatinina e fósforo na entrada e em 15 dias"
+      },
+      {
+        "populacao": "imunossuprimida",
+        "ajuste": "Manter o esquema tríplice, verificar resposta vacinal de hepatite B com anti-HBs após a última dose e usar dose dobrada da vacina quando indicado",
+        "alerta": "Risco maior de infecção genital grave e de soroconversão rápida; o seguimento sorológico não pode ser abreviado"
+      },
+      {
+        "populacao": "alergia_a_penicilina",
+        "ajuste": "Fora da gestação, usar doxiciclina 100 mg a cada 12 horas por 14 dias ou ceftriaxona 1 g por dia por 10 a 14 dias; na gestação, dessensibilizar e tratar com penicilina benzatina",
+        "alerta": "A gestante alérgica não pode ser tratada com outra classe por risco de sífilis congênita; a dessensibilização é obrigatória"
+      },
+      {
+        "populacao": "usuaria_de_diu",
+        "ajuste": "Manter o DIU de cobre já inserido e não associar contracepção hormonal de emergência; manter as demais profilaxias e a avaliação de fios",
+        "alerta": "Verificar posicionamento quando houver dor ou sangramento e considerar teste de gravidez se houver atraso menstrual"
+      },
+      {
+        "populacao": "puerpera",
+        "ajuste": "Manter o esquema tríplice, preferir levonorgestrel ao ulipristal durante a amamentação e iniciar contracepção de longo prazo antes da alta",
+        "alerta": "Risco de gestação em intervalo curto e de depressão pós-parto associada à violência"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "teste rápido de HIV",
+          "indicacao": "todo atendimento, na entrada",
+          "o_que_muda": "define se é profilaxia ou tratamento; resultado negativo na janela não exclui infecção recente e exige repetição em 30 dias"
+        },
+        {
+          "nome": "sorologias de hepatite B (HBsAg, anti-HBs, anti-HBc) e hepatite C",
+          "indicacao": "todos os atendimentos",
+          "o_que_muda": "define vacina, imunoglobulina e necessidade de seguimento com carga viral de hepatite C"
+        },
+        {
+          "nome": "VDRL com teste treponêmico",
+          "indicacao": "todos os atendimentos, com repetição em 30, 90 e 180 dias",
+          "o_que_muda": "define penicilina benzatina e tratamento da parceria; sorologia negativa na entrada não descarta sífilis recente"
+        },
+        {
+          "nome": "beta-HCG",
+          "indicacao": "toda mulher em idade fértil antes da contracepção de emergência e de doxiciclina",
+          "o_que_muda": "define método contraceptivo permitido, contraindica doxiciclina e ulipristal e muda o seguimento obstétrico"
+        },
+        {
+          "nome": "teste de amplificação de ácido nucleico para gonorreia e clamídia",
+          "indicacao": "toda vítima com penetração vaginal, anal ou oral",
+          "o_que_muda": "confirma IST e indica tratamento da parceria, além de orientar teste de cura"
+        },
+        {
+          "nome": "hemograma, creatinina, transaminases e glicemia",
+          "indicacao": "antes ou junto da primeira dose da profilaxia",
+          "o_que_muda": "define se o tenofovir pode ser usado, se há anemia que contraindica zidovudina e se há hepatopatia"
+        },
+        {
+          "nome": "exame a fresco de secreção vaginal",
+          "indicacao": "corrimento, odor ou prurido",
+          "o_que_muda": "identifica tricomoníase e vaginose e confirma a indicação do metronidazol"
+        },
+        {
+          "nome": "teste de gravidez e sorologia de sífilis no seguimento de 30, 60, 90 e 180 dias",
+          "indicacao": "todos os casos, mesmo com sorologia negativa na entrada",
+          "o_que_muda": "detecta soroconversão, trata infecção incidente e encerra o caso com segurança"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "aguardar o resultado do teste de HIV para iniciar a profilaxia",
+          "motivo": "o prazo de 72 horas corre e o atraso reduz a eficácia; a primeira dose é dada e o teste segue em paralelo"
+        },
+        {
+          "exame": "exigir boletim de ocorrência ou exame de corpo de delito para atender",
+          "motivo": "é ilegal e é a principal causa de perda de seguimento; o atendimento é incondicional"
+        },
+        {
+          "exame": "exame genital invasivo ou coleta de vestígios sem consentimento",
+          "motivo": "viola a autonomia, revitimiza e afasta a pessoa do serviço; a recusa não impede nenhuma profilaxia"
+        },
+        {
+          "exame": "repetir sorologia em poucos dias para decidir conduta",
+          "motivo": "a janela imunológica não fecha em dias; o seguimento é em 30, 60, 90 e 180 dias"
+        },
+        {
+          "exame": "prescrever profilaxia do HIV com apenas duas drogas por falta de dolutegravir",
+          "motivo": "dupla sem terceira droga tem eficácia insuficiente; usar raltegravir como alternativa de classe"
+        },
+        {
+          "exame": "ultrassonografia pélvica de rotina sem sintoma",
+          "motivo": "não muda a conduta profilática e atrasa a alta; a indicação é dor pélvica, sangramento ou suspeita de corpo estranho"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar a profilaxia do HIV todos os dias, no mesmo horário, por 28 dias completos",
+        "comparecer ao retorno em 7 dias e às coletas de 30, 60, 90 e 180 dias",
+        "usar preservativo em todas as relações até o fim do seguimento sorológico",
+        "tomar a contracepção de emergência o mais cedo possível e repetir o teste de gravidez em 3 semanas se não menstruar",
+        "informar qualquer efeito adverso em vez de parar a medicação por conta própria",
+        "guardar o telefone do serviço e procurar imediatamente se houver febre, corrimento, dor pélvica ou nova exposição",
+        "procurar a delegacia da mulher quando decidir registrar o boletim, com acompanhamento do serviço social",
+        "comparecer às consultas de saúde mental e levar alguém de confiança"
+      ],
+      "evitar": [
+        "interromper a profilaxia por náusea leve, por esquecimento ou por medo de julgamento",
+        "tomar antiácido, cálcio, ferro ou zinco junto com o dolutegravir",
+        "beber álcool em excesso durante o uso do metronidazol e nas 24 horas seguintes",
+        "considerar-se protegida antes de completar os 28 dias e o seguimento",
+        "lavar a região genital ou as roupas antes da coleta de vestígios, quando essa coleta for desejada",
+        "usar apenas preservativo como método contraceptivo se houve falha ou ausência de método",
+        "permanecer em local onde o agressor tenha acesso, quando houver risco de repetição"
+      ],
+      "retorno": [
+        "febre com rash, dor de garganta ou gânglios",
+        "corrimento, úlcera genital ou dor pélvica",
+        "sangramento uterino anormal ou atraso menstrual",
+        "vômitos que impeçam a tomada da profilaxia",
+        "icterícia, urina escura ou dor abdominal",
+        "ansiedade intensa, insônia ou pensamentos de morte",
+        "nova exposição sexual sem preservativo"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "tenofovir",
+        "efeitos": [
+          "nefrotoxicidade tubular",
+          "queda de fósforo",
+          "redução de densidade óssea",
+          "náusea"
+        ],
+        "observacao": "creatinina e filtração na entrada e em 15 dias; suspender e trocar se a creatinina subir mais de 0,3 mg/dL"
+      },
+      {
+        "agente": "dolutegravir",
+        "efeitos": [
+          "insônia",
+          "cefaleia",
+          "náusea",
+          "hepatotoxicidade",
+          "hipersensibilidade"
+        ],
+        "observacao": "transaminases se sintomas e intervalo de 2 horas de antiácido, cálcio, ferro e zinco"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "dor local",
+          "rash",
+          "diarreia",
+          "lama biliar"
+        ],
+        "observacao": "observar 30 minutos após a aplicação e registrar o sítio e o lote"
+      },
+      {
+        "agente": "azitromicina",
+        "efeitos": [
+          "náusea",
+          "diarreia",
+          "prolongamento de QT"
+        ],
+        "observacao": "ECG se houver cardiopatia ou uso de outra droga que prolongue o QT"
+      },
+      {
+        "agente": "metronidazol",
+        "efeitos": [
+          "gosto metálico",
+          "náusea",
+          "cefaleia",
+          "urina escura"
+        ],
+        "observacao": "evitar álcool por 24 horas e tomar com alimento"
+      },
+      {
+        "agente": "penicilina benzatina",
+        "efeitos": [
+          "dor local intensa",
+          "reação de Jarisch-Herxheimer",
+          "rash",
+          "anafilaxia"
+        ],
+        "observacao": "observar 30 minutos; febre e mialgia nas primeiras 24 horas são esperadas e não indicam suspensão"
+      },
+      {
+        "agente": "levonorgestrel",
+        "efeitos": [
+          "náusea",
+          "cefaleia",
+          "sangramento de escape",
+          "atraso menstrual"
+        ],
+        "observacao": "repetir a dose se houver vômito em até 2 horas e repetir o teste de gravidez em 3 semanas"
+      },
+      {
+        "agente": "doxiciclina",
+        "efeitos": [
+          "fotossensibilidade",
+          "esofagite",
+          "náusea",
+          "candidíase"
+        ],
+        "observacao": "tomar com água e não deitar por 30 minutos; prescrever apenas fora da gestação"
+      },
+      {
+        "agente": "imunoglobulina anti-hepatite B",
+        "efeitos": [
+          "dor local",
+          "febre baixa",
+          "rash",
+          "anafilaxia rara"
+        ],
+        "observacao": "observar 30 minutos e registrar o lote"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Náusea e intolerância digestiva: fracionar com alimento, associar antiemético e reafirmar que melhora em duas semanas; não suspender a profilaxia",
+      "Insônia ou cefaleia incapacitante por dolutegravir: trocar para raltegravir 400 mg a cada 12 horas, mantendo as outras duas drogas",
+      "Elevação de creatinina ou proteinúria em uso de tenofovir: repetir a creatinina, suspender o tenofovir e trocar para tenofovir alafenamida ou zidovudina conforme a filtração",
+      "Rash com febre, eosinofilia ou acometimento de mucosa: suspender o esquema, tratar a reação, colher hemograma e transaminases e reintroduzir com esquema alternativo após melhora",
+      "Reação de Jarisch-Herxheimer após penicilina: sintomático com antitérmico e analgesia, sem suspender o tratamento e sem confundir com alergia",
+      "Reação alérgica à penicilina com urticária extensa: suspender, tratar e, fora da gestação, trocar para doxiciclina; na gestação, encaminhar para dessensibilização",
+      "Abandono da profilaxia do HIV: buscar ativamente, reavaliar o risco, retomar o esquema se ainda dentro da janela e reforçar adesão com contato semanal",
+      "Teste reagente para HIV, sífilis ou hepatite no seguimento: encaminhar no mesmo dia ao serviço de referência, colher carga viral e CD4 e iniciar tratamento, sem julgamento e com sigilo"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "tenofovir 300 mg + lamivudina 300 mg",
+            "dose": "1 comprimido",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "28 dias",
+            "condicao": "profilaxia do HIV com filtração acima de 50 mL/min",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dolutegravir 50 mg",
+            "dose": "50 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "28 dias",
+            "condicao": "terceira droga da profilaxia, longe de cálcio, ferro e antiácido",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "azitromicina 1 g",
+            "dose": "1 g",
+            "via": "VO",
+            "frequencia": "dose única",
+            "duracao": "dose única",
+            "condicao": "profilaxia de clamídia, inclusive na gestação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metronidazol 2 g",
+            "dose": "2 g",
+            "via": "VO",
+            "frequencia": "dose única",
+            "duracao": "dose única",
+            "condicao": "profilaxia de tricomoníase, sem álcool por 24 horas",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "levonorgestrel 1,5 mg",
+            "dose": "1,5 mg",
+            "via": "VO",
+            "frequencia": "dose única",
+            "duracao": "dose única",
+            "condicao": "contracepção de emergência em até 72 horas",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "doxiciclina 100 mg",
+            "dose": "100 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "14 dias",
+            "condicao": "sífilis recente em alérgica à penicilina, fora da gestação, com teste de gravidez negativo",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "vacina hepatite B 20 mcg",
+            "dose": "20 mcg",
+            "via": "IM",
+            "frequencia": "0, 1 e 6 meses",
+            "duracao": "3 doses",
+            "condicao": "não vacinada ou esquema incompleto",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "vacina HPV 0,5 mL",
+            "dose": "0,5 mL",
+            "via": "IM",
+            "frequencia": "0, 2 e 6 meses",
+            "duracao": "3 doses de 15 a 45 anos",
+            "condicao": "oferta conforme faixa etária",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona 500 mg",
+            "dose": "500 mg",
+            "via": "IM",
+            "frequencia": "dose única",
+            "monitorizacao": "dor local e reação alérgica por 30 minutos",
+            "condicao": "profilaxia de gonorreia aplicada antes da alta",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "penicilina benzatina 2.400.000 UI",
+            "dose": "2.400.000 UI",
+            "via": "IM",
+            "frequencia": "dose única",
+            "monitorizacao": "anafilaxia por 30 minutos e Jarisch-Herxheimer em 24 horas",
+            "condicao": "sífilis recente confirmada ou exposição a parceria com sífilis",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "imunoglobulina anti-hepatite B 0,06 mL/kg",
+            "dose": "0,06 mL/kg",
+            "via": "IM",
+            "frequencia": "dose única",
+            "monitorizacao": "reação local e sistêmica por 30 minutos",
+            "condicao": "suscetível à hepatite B, em até 24 horas e no máximo 7 dias",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tenofovir 300 mg + lamivudina 300 mg",
+            "dose": "1 comprimido",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "monitorizacao": "creatinina, fósforo e transaminases",
+            "condicao": "profilaxia do HIV iniciada na emergência",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dolutegravir 50 mg",
+            "dose": "50 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "monitorizacao": "transaminases, sono e cefaleia",
+            "condicao": "terceira droga da profilaxia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "vacina dupla adulto (dT) 0,5 mL",
+            "dose": "0,5 mL",
+            "via": "IM",
+            "frequencia": "0, 2 e 4 a 6 meses",
+            "monitorizacao": "reação local e registro no cartão",
+            "condicao": "esquema antitetânico incompleto ou desconhecido",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "teste rápido de HIV",
+          "HBsAg, anti-HBs e anti-HBc",
+          "anti-HCV",
+          "VDRL com teste treponêmico",
+          "beta-HCG",
+          "hemograma",
+          "creatinina e taxa de filtração",
+          "transaminases",
+          "teste de amplificação de ácido nucleico para gonorreia e clamídia",
+          "exame a fresco de secreção vaginal",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, necessitando de afastamento de suas atividades por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento sigiloso, sem qualquer menção ao motivo do atendimento sem consentimento expresso"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com hora da violência, tipo de contato, profilaxias aplicadas, exames colhidos e vacinas pendentes",
+          "prioridade",
+          "horário do contato e forma de retorno"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente atendida em ___ por violência sexual ocorrida em ___, com contato ___. Prescritas profilaxias de HIV com tenofovir, lamivudina e dolutegravir por 28 dias, de IST bacterianas e de hepatite B, além de contracepção de emergência e vacinas. Exames basais colhidos em ___. Notificação compulsória registrada. Retorno agendado para ___ e seguimento sorológico em 30, 60, 90 e 180 dias."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "hora exata da violência e tempo até o atendimento",
+        "tipo de contato e presença de penetração vaginal, anal ou oral",
+        "uso de preservativo, ejaculação, sangramento e trauma",
+        "relação com o agressor e estado sorológico conhecido",
+        "última menstruação, gestação e método contraceptivo em uso",
+        "cartão vacinal de hepatite B, HPV e dT",
+        "história prévia de IST e de violência",
+        "doenças crônicas, função renal e medicamentos em uso",
+        "alergias a penicilina, cefalosporina e macrolídeo",
+        "desejo de registrar boletim e de coleta de vestígios",
+        "risco de suicídio, suporte familiar e local onde vai dormir"
+      ],
+      "texto_template": "Paciente atendida ___ horas após violência sexual ocorrida em ___, com contato ___ e preservativo ___. Última menstruação em ___, gestação ___, método contraceptivo ___. Cartão vacinal de hepatite B ___, HPV ___ e dT ___. História prévia de IST ___. Alergias ___. Deseja boletim ___ e coleta de vestígios ___. Risco de suicídio ___ e local de pernoite ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais, temperatura e estado geral",
+        "pele e mucosas com procura de equimoses, mordidas e marcas de contenção",
+        "exame da cabeça, pescoço e cavidade oral",
+        "abdome e região genital externa com descrição de lesões",
+        "exame com espéculo quando consentido, com secreção e sangramento",
+        "toque retal e inspeção anal quando houver relato de penetração anal",
+        "avaliação de lacerações, sangramento ativo e necessidade de sutura",
+        "estado psíquico, choro, dissociação e risco de suicídio"
+      ],
+      "texto_template": "Sinais vitais com PA ___, FC ___ e temperatura ___ °C. Pele com ___. Exame genital com ___. Espéculo com ___. Exame anal com ___. Lesões de trauma ___. Estado psíquico com ___ e risco de suicídio ___."
+    },
+    "referencias": [
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "atenção integral a pessoas em situação de violência sexual, com fluxo de acolhimento, profilaxias, contracepção de emergência, notificação e seguimento",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "PCDT de profilaxia pós-exposição ao HIV, esquema de primeira linha, prazo de 72 horas e seguimento sorológico",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "PCDT de sífilis, dose de penicilina benzatina, alternativas e conduta na gestação",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "calendário nacional de vacinação, esquemas de hepatite B, HPV e dT e indicação de imunoglobulina",
+        "verificar": true
+      },
+      {
+        "tipo": "cdc",
+        "o_que_verificar": "profilaxia e tratamento de IST após exposição sexual, doses de ceftriaxona, azitromicina, doxiciclina e metronidazol",
+        "verificar": true
+      },
+      {
+        "tipo": "legislacao",
+        "o_que_verificar": "Lei 12.845 de 2013, atendimento obrigatório e incondicional sem exigência de boletim de ocorrência, e normas de notificação compulsória vigentes",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo local de referência, disponibilidade de ulipristal e de DIU de cobre, serviço de medicina legal e rede de proteção",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e diluições dos antirretrovirais, imunobiológicos e vacinas disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GO07-01",
+        "tipo": "profilaxia_incompleta",
+        "gatilho": "profilaxia do HIV prescrita apenas com tenofovir e lamivudina, sem a terceira droga",
+        "severidade": "grave",
+        "mensagem": "Esquema com duas drogas tem eficácia insuficiente para profilaxia.",
+        "acao": "bloquear e exigir dolutegravir ou raltegravir",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GO07-02",
+        "tipo": "atendimento_condicionado",
+        "gatilho": "atendimento ou profilaxia condicionados a boletim de ocorrência, exame de corpo de delito ou autorização",
+        "severidade": "grave",
+        "mensagem": "O atendimento à violência sexual é incondicional e não pode depender de boletim ou perícia.",
+        "acao": "bloquear o registro e liberar o atendimento integral",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GO07-03",
+        "tipo": "notificacao_ausente",
+        "gatilho": "violência sexual registrada sem notificação compulsória no SINAN",
+        "severidade": "grave",
+        "mensagem": "A notificação compulsória é obrigatória e independe da vontade da vítima.",
+        "acao": "bloquear a alta até registrar a notificação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GO07-04",
+        "tipo": "exposicao_da_vitima",
+        "gatilho": "dados da vítima em local visível, prontuário aberto ou informação compartilhada com terceiros sem consentimento",
+        "severidade": "grave",
+        "mensagem": "Quebra de sigilo expõe a vítima, viola a lei e afasta do seguimento.",
+        "acao": "bloquear o acesso e registrar ocorrência",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GO07-05",
+        "tipo": "doxiciclina_na_gestacao",
+        "gatilho": "doxiciclina prescrita em gestante ou em teste de gravidez positivo",
+        "severidade": "grave",
+        "mensagem": "Doxiciclina é contraindicada na gestação; usar azitromicina.",
+        "acao": "bloquear a prescrição e trocar o esquema",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GO07-06",
+        "tipo": "pep_fora_do_prazo",
+        "gatilho": "profilaxia do HIV prescrita com mais de 72 horas da violência",
+        "severidade": "precaucao",
+        "mensagem": "Não há benefício de profilaxia após 72 horas; manter testagem, vacinas, contracepção quando cabível e seguimento.",
+        "acao": "alertar e registrar a orientação",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GO07-07",
+        "tipo": "hepatite_b_sem_profilaxia",
+        "gatilho": "violência sexual sem vacina nem imunoglobulina para hepatite B em suscetível",
+        "severidade": "grave",
+        "mensagem": "Suscetível à hepatite B exige vacina e imunoglobulina na mesma visita.",
+        "acao": "alertar e abrir o checklist de profilaxia",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GO07-08",
+        "tipo": "contracepcao_nao_ofertada",
+        "gatilho": "mulher em idade fértil sem oferta de contracepção de emergência ou DIU de cobre",
+        "severidade": "grave",
+        "mensagem": "Risco reprodutivo identificado exige oferta de contracepção de emergência.",
+        "acao": "alertar e registrar a oferta ou a recusa",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GO07-09",
+        "tipo": "seguimento_nao_agendado",
+        "gatilho": "atendimento encerrado sem retorno em 7 dias e sem coleta programada em 30, 60, 90 e 180 dias",
+        "severidade": "precaucao",
+        "mensagem": "Sem seguimento não se detecta soroconversão nem se corrige adesão.",
+        "acao": "alertar e incluir as datas no resumo de alta",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GO07-10",
+        "tipo": "violencia_em_menor",
+        "gatilho": "vítima menor de 18 anos ou vulnerável sem acionamento do Conselho Tutelar",
+        "severidade": "grave",
+        "mensagem": "Notificação e comunicação à autoridade competente são obrigatórias.",
+        "acao": "alertar e registrar a comunicação",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "Ministério da Saúde do Brasil",
+        "OMS",
+        "CDC",
+        "ANVISA",
+        "legislação brasileira",
+        "protocolo institucional"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: atendimento imediato e incondicional com acolhimento, sigilo, notificação compulsória e comunicação à autoridade policial sem exigir boletim de ocorrência; profilaxia do HIV com tenofovir, lamivudina e dolutegravir por 28 dias em até 72 horas, com testagem basal e seguimento em 30, 60, 90 e 180 dias; profilaxia da hepatite B com vacina e imunoglobulina conforme esquema vacinal; profilaxia das IST bacterianas com ceftriaxona, azitromicina, metronidazol e penicilina benzatina conforme sífilis; contracepção de emergência com levonorgestrel até 72 horas, ulipristal até 120 horas e DIU de cobre até 5 dias; vacinas de HPV, hepatite B e dT; critérios de escolha por cenário, apresentações, preparo, tempo de infusão, monitorização e ajuste renal de cada fármaco; e o que não fazer, com alertas bloqueantes para boletim obrigatório, esquema incompleto e quebra de sigilo.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

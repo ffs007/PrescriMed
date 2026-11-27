@@ -1,0 +1,1142 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-03",
+    "area": "Respiratório/ORL",
+    "nome": "Faringoamigdalite",
+    "aliases": [
+      "faringite",
+      "amigdalite",
+      "dor de garganta",
+      "angina",
+      "faringoamigdalite estreptocócica",
+      "abscesso periamigdaliano"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Faringoamigdalite é a inflamação da faringe e das amígdalas, e a primeira decisão não é qual antibiótico usar: é se existe antibiótico a usar. A maioria dos casos é viral — rinovírus, adenovírus, influenza, Epstein-Barr — e não melhora com antibiótico, só acumula efeito adverso e resistência. A etiologia bacteriana que importa é o estreptococo do grupo A, e ela se estima pelo escore de McIsaac (Modified Centor): 1 ponto para febre acima de 38 °C, 1 para exsudato ou aumento amigdaliano, 1 para adenopatia cervical anterior dolorosa e 1 para ausência de tosse, com ajuste por idade de 3 a 14 anos (+1), 15 a 44 anos (0) e 45 anos ou mais (−1). Escore de 0 a 1 não pede teste nem antibiótico; 2 a 3 pede teste rápido de estreptococo ou cultura; 4 ou mais autoriza tratamento empírico. O segundo erro grave é não olhar a garganta: trismo, voz abafada, desvio de úvula e abaulamento unilateral definem abscesso periamigdaliano, que é drenagem e não só comprimido. O terceiro é tratar sintoma com corticoide de rotina, que não tem indicação e mascara infecção. Quando o antibiótico está indicado, a penicilina benzatina 1.200.000 UI em dose única intramuscular resolve adesão em um ato, e a amoxicilina 500 mg 8/8 h por 10 dias é a via oral — os 10 dias não são negociáveis, porque o objetivo é erradicar o estreptococo e prevenir febre reumática, não apenas aliviar a dor.",
+    "inclusao": [
+      "Dor de garganta com febre, exsudato ou adenopatia cervical anterior, sem sinal de gravidade",
+      "Escore de McIsaac de 2 ou mais, com indicação de teste rápido ou cultura de orofaringe",
+      "Teste rápido de estreptococo positivo ou cultura positiva em paciente sintomático",
+      "Quadro viral com tosse, coriza, rouquidão e exsudato difuso, para manejo sintomático",
+      "Abaulamento amigdaliano unilateral com desvio de úvula, trismo ou voz abafada",
+      "Faringite recorrente com indicação de avaliação otorrinolaringológica"
+    ],
+    "exclusao": [
+      {
+        "situacao": "estridor, sialorreia, incapacidade de engolir saliva ou voz abafada com desconforto respiratório",
+        "fluxo": "via aérea — emergência, sala vermelha e anestesiologia"
+      },
+      {
+        "situacao": "exsudato pseudomembranoso acinzentado aderente com odinofagia intensa e toxemia",
+        "fluxo": "difteria suspeita — notificação e antitoxina"
+      },
+      {
+        "situacao": "ulceração oral, gengivite e linfadenopatia com febre alta em adulto jovem sexualmente ativo",
+        "fluxo": "gengivoestomatite herpética — manejo sintomático"
+      },
+      {
+        "situacao": "faringite com rash escarlatiniforme, língua em framboesa e descamação",
+        "fluxo": "escarlatina — tratar como estreptocócica e notificar surto escolar"
+      },
+      {
+        "situacao": "rouquidão isolada e disfonia com dor leve, sem exsudato",
+        "fluxo": "laringite — RESP-01 infecção de vias aéreas superiores"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "trismo, voz abafada em batata quente ou desvio de úvula",
+        "por_que": "abscesso periamigdaliano com coleção purulenta",
+        "acao": "avaliar via aérea, imagem em caso de dúvida e drenagem por otorrinolaringologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "sialorreia, incapacidade de engolir a própria saliva ou estridor",
+        "por_que": "obstrução de via aérea por edema ou epiglotite",
+        "acao": "não examinar a garganta com abaixador; sala vermelha e anestesiologia à beira do leito",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "abaulamento unilateral do pilar amigdaliano com úvula desviada e dor intensa de um lado",
+        "por_que": "abscesso periamigdaliano",
+        "acao": "punção ou drenagem e antibiótico com cobertura de anaeróbio",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "toxemia, hipotensão, taquicardia ou confusão",
+        "por_que": "infecção grave com sepse, abscesso profundo ou epiglotite",
+        "acao": "internação, acesso venoso, antibiótico intravenoso e avaliação de via aérea",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "rash cutâneo após amoxicilina ou ampicilina com febre arrastada e linfadenopatia generalizada",
+        "por_que": "mononucleose infecciosa com exantema induzido por aminopenicilina",
+        "acao": "suspender o antibiótico, pedir hemograma e sorologia para EBV",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "dor de garganta há mais de 7 dias sem melhora, ou piora apesar de antibiótico adequado",
+        "por_que": "abscesso, mononucleose ou diagnóstico alternativo",
+        "acao": "reavaliar orofaringe, palpar o pescoço e considerar imagem",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "hematúria, edema, oligúria ou artralgia migratória semanas após a faringite",
+        "por_que": "glomerulonefrite pós-estreptocócica ou febre reumática",
+        "acao": "exames renais, cultura de orofaringe e avaliação especializada",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Tem tosse e coriza junto com a dor de garganta, ou a dor veio sozinha?",
+      "Consegue engolir saliva e abrir a boca normalmente?",
+      "A voz está normal ou abafada, como se estivesse com algo na garganta?",
+      "A dor é dos dois lados ou muito mais intensa de um lado só?",
+      "Teve febre medida? Qual a temperatura e há quantos dias?",
+      "Tem placas ou pus visíveis na garganta, e o pescoço tem gânglios dolorosos?",
+      "Já teve reação alérgica a penicilina ou amoxicilina? Qual tipo de reação?",
+      "Tem contato com alguém com faringite ou escarlatina na casa, escola ou trabalho?",
+      "Usou antibiótico nos últimos 30 dias? Qual?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Quadro viral: tosse, coriza, rouquidão, exsudato difuso, febre baixa e escore de McIsaac de 0 a 1",
+        "escolha": "Nenhum antibiótico. Analgésico e antitérmico, hidratação e reavaliação se piorar",
+        "porque": "Antibiótico em faringite viral não encurta a doença, não previne complicação bacteriana e seleciona resistência; o erro mais comum do pronto atendimento é prescrever amoxicilina para todo mundo com dor de garganta"
+      },
+      {
+        "cenario": "Escore de McIsaac de 2 a 3, sem sinal de gravidade",
+        "escolha": "Teste rápido de estreptococo; se negativo em criança ou adolescente, confirmar com cultura. Antibiótico apenas se positivo",
+        "porque": "Na faixa intermediária o exame muda a conduta em cerca de um terço dos casos e evita tratar viral como bacteriano"
+      },
+      {
+        "cenario": "Escore de McIsaac de 4 ou mais, ou teste rápido positivo, em paciente sem alergia a penicilina",
+        "escolha": "Penicilina benzatina 1.200.000 UI intramuscular em dose única; se preferir via oral ou recusar injeção, amoxicilina 500 mg 8/8 h por 10 dias",
+        "porque": "A penicilina benzatina garante 10 dias de cobertura em uma aplicação e elimina o problema de adesão; a amoxicilina é equivalente quando o paciente completa o tratamento"
+      },
+      {
+        "cenario": "Alergia imediata ou anafilaxia documentada a penicilina",
+        "escolha": "Azitromicina 500 mg 1x/dia por 5 dias, ou clindamicina 300 mg 8/8 h por 10 dias",
+        "porque": "São as opções sem betalactâmico; a azitromicina é a mais simples, mas a resistência do estreptococo do grupo A a macrolídeo chega a 10% a 30% no Brasil e exige reavaliação em 48 a 72 h"
+      },
+      {
+        "cenario": "Alergia apenas a exantema tardio não grave a penicilina",
+        "escolha": "Cefalexina 500 mg 12/12 h por 10 dias",
+        "porque": "A reação cruzada com cefalosporina de primeira geração é baixa quando a alergia é exantema tardio; em anafilaxia, cefalosporina não é a escolha"
+      },
+      {
+        "cenario": "Abscesso periamigdaliano confirmado ou altamente provável",
+        "escolha": "Drenagem por otorrinolaringologia associada a amoxicilina-clavulanato 875/125 mg 12/12 h, ou clindamicina 300 mg 8/8 h por 10 a 14 dias",
+        "porque": "Antibiótico não penetra coleção purulenta; sem drenagem a febre persiste e o abscesso pode dissecar para o espaço parafaríngeo"
+      },
+      {
+        "cenario": "Dor intensa que impede a deglutição, em paciente sem sinais de gravidade",
+        "escolha": "Paracetamol 1 g 6/6 h ou ibuprofeno 400 mg 8/8 h, isolados ou alternados, com reavaliação da analgesia em 60 a 90 min",
+        "porque": "A analgesia é o que o paciente sente; AINE isolado é superior ao paracetamol isolado no alívio da dor de garganta, e a associação dos dois é aceitável"
+      },
+      {
+        "cenario": "Edema importante ou dor refratária, sem abscesso drenável",
+        "escolha": "Não usar corticoide de rotina. Reservar dexametasona em dose única para abscesso com edema de via aérea, como adjuvante da drenagem",
+        "porque": "O benefício do corticoide na faringite é pequeno e limitado à dor nas primeiras 24 h, ao custo de hiperglicemia e de mascarar infecção; corticoide de rotina em faringite é erro de prescrição"
+      },
+      {
+        "cenario": "Após iniciar antibiótico, antes da alta",
+        "escolha": "Registrar o escore de McIsaac ou o resultado do teste, a duração total do antibiótico, os sinais de alarme por escrito e o retorno em 48 a 72 h",
+        "porque": "A reavaliação programada detecta falha, abscesso em formação e mononucleose; alta sem esse registro é o que produz retorno tardio com complicação"
+      },
+      {
+        "cenario": "Faringite estreptocócica com três ou mais episódios documentados em um ano",
+        "escolha": "Encaminhar à otorrinolaringologia para avaliação de amigdalectomia; não repetir antibiótico indefinidamente",
+        "porque": "A amigdalectomia reduz episódios nos critérios de Paradise; prescrição repetida sem critério seleciona resistência e não resolve"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "penicilina_benzatina",
+        "agente": "penicilina benzatina",
+        "papel": "primeira_linha",
+        "indicacao": "faringoamigdalite estreptocócica confirmada por teste ou cultura, ou escore de McIsaac de 4 ou mais, em paciente sem alergia a penicilina",
+        "dose": "1.200.000 UI",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "1 dose",
+        "dose_maxima": "1.200.000 UI no adulto; 600.000 UI na criança de até 27 kg",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "anafilaxia prévia a betalactâmico",
+          "reação grave prévia a penicilina benzatina",
+          "administração por via intravenosa ou intra-arterial, que é proscrita"
+        ],
+        "efeitos_adversos": [
+          "dor e nódulo no local da aplicação, muito frequentes",
+          "reação de Hoigne: agitação, alucinação visual, sensação de morte iminente e convulsão passageira por embolia inadvertida",
+          "rash cutâneo",
+          "anafilaxia rara",
+          "necrose local por aplicação superficial ou em vaso"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1.200.000 UI (pó para suspensão injetável)",
+          "frasco-ampola 600.000 UI",
+          "seringa preenchida 1.200.000 UI"
+        ],
+        "preparo": "Reconstituir o pó em 4 mL de água para injeção, agitar até suspensão homogênea e aplicar imediatamente. Agulha 25x7 ou 30x7 no quadrante superior externo do glúteo, com tração da pele (técnica em Z) e aspiração antes de injetar",
+        "tempo_infusao": "não se aplica (via intramuscular)",
+        "monitorizacao": [
+          "observar por 30 min após a aplicação, com acesso venoso e adrenalina disponíveis",
+          "inspecionar o local em 24 a 48 h: nódulo, endurecimento, abscesso",
+          "temperatura e dor de garganta em 48 a 72 h",
+          "orientar retorno imediato se urticária, dispneia ou edema de face"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Dose única cobre 10 dias e resolve adesão em um ato; é a escolha quando o paciente não vai completar comprimidos. Nunca repetir a cada 3 semanas e nunca aplicar por via intravenosa. A dor local é esperada e não contraindica dose futura",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz IDSA/CDC",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina",
+        "agente": "amoxicilina",
+        "papel": "primeira_linha",
+        "indicacao": "faringoamigdalite estreptocócica em paciente que prefere via oral, recusa injeção ou precisa de manejo ambulatorial simples",
+        "dose": "500 mg no adulto; 50 mg/kg/dia na criança, em dose única diária ou dividida de 12/12 h",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "10 dias",
+        "dose_maxima": "1,5 g/dia no adulto; 1 g/dia na criança",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "anafilaxia prévia a betalactâmico",
+          "mononucleose infecciosa suspeita ou confirmada, pelo risco de exantema",
+          "insuficiência renal com clearance abaixo de 10 mL/min sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash cutâneo, muito frequente na mononucleose",
+          "candidíase oral ou vaginal",
+          "colite por Clostridioides difficile",
+          "anafilaxia rara"
+        ],
+        "apresentacoes": [
+          "cápsula 500 mg",
+          "comprimido 875 mg",
+          "comprimido 1 g",
+          "pó para suspensão 250 mg/5 mL",
+          "pó para suspensão 400 mg/5 mL",
+          "pó para suspensão 50 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento. A suspensão é reconstituída com água filtrada até a marca do frasco, agitada e mantida em geladeira por até 7 dias",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "queda da febre e da odinofagia em 48 a 72 h",
+          "diarreia e sinais de colite, com dor abdominal e febre",
+          "rash cutâneo, que obriga a pesquisar mononucleose",
+          "adesão até o décimo dia, conferida na consulta",
+          "candidíase oral em uso prolongado"
+        ],
+        "ajuste_renal": "ClCr entre 10 e 30 mL/min: 250 a 500 mg 12/12 h; ClCr abaixo de 10 mL/min ou diálise: 250 a 500 mg 1x/dia, com dose após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Os 10 dias são obrigatórios para erradicar o estreptococo do grupo A e prevenir febre reumática, mesmo que a dor desapareça em 48 h; encurtar para 5 dias é erro frequente. Suspender e reavaliar se aparecer exantema em adolescente com faringite arrastada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz IDSA",
+        "claim_id": null
+      },
+      {
+        "classe": "macrolideo",
+        "agente": "azitromicina",
+        "papel": "alternativa",
+        "indicacao": "faringoamigdalite estreptocócica em paciente com alergia imediata ou anafilaxia a penicilina",
+        "dose": "500 mg no adulto; 12 mg/kg na criança, com máximo de 500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "5 dias",
+        "dose_maxima": "500 mg/dia",
+        "contraindicacoes": [
+          "alergia a macrolídeo",
+          "QT longo congênito ou adquirido",
+          "hipocalemia ou hipomagnesemia não corrigidas",
+          "uso concomitante de fármacos que prolongam o QT",
+          "insuficiência hepática grave"
+        ],
+        "efeitos_adversos": [
+          "náusea e dor abdominal",
+          "diarreia",
+          "prolongamento do QT e torsades de pointes",
+          "elevação de transaminases",
+          "perda auditiva reversível em dose alta"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 600 mg",
+          "pó para suspensão 200 mg/5 mL",
+          "pó para suspensão 40 mg/mL",
+          "frasco-ampola 500 mg para uso intravenoso"
+        ],
+        "preparo": "Uso direto, com ou sem alimento. A suspensão é reconstituída com água filtrada e não exige refrigeração",
+        "tempo_infusao": "não se aplica (via oral); quando intravenosa, diluir em 250 a 500 mL de SF ou SG 5% e infundir em 1 h",
+        "monitorizacao": [
+          "ECG e intervalo QT em cardiopata, idoso ou uso de outra droga que prolonga o QT",
+          "potássio e magnésio antes de iniciar em paciente de risco",
+          "diarreia e tolerância gástrica",
+          "resposta clínica em 48 a 72 h, com reavaliação obrigatória",
+          "transaminases se surgir icterícia ou dor em hipocôndrio direito"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Evitar em insuficiência hepática grave",
+        "observacoes": "Reservar para alergia verdadeira a penicilina: a resistência do estreptococo do grupo A a macrolídeo é crescente e a falha terapêutica é possível. Revisar estatinas, varfarina e antiarrítmicos antes de prescrever",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz IDSA",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_de_primeira_geracao",
+        "agente": "cefalexina",
+        "papel": "alternativa",
+        "indicacao": "faringoamigdalite estreptocócica com alergia a penicilina limitada a exantema tardio não grave",
+        "dose": "500 mg no adulto; 30 mg/kg/dia na criança, divididos de 12/12 h",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "10 dias",
+        "dose_maxima": "2 g/dia no adulto; 1 g/dia na criança",
+        "contraindicacoes": [
+          "anafilaxia prévia a betalactâmico",
+          "alergia a cefalosporina",
+          "porfiria aguda intermitente"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash cutâneo",
+          "candidíase",
+          "colite por Clostridioides difficile",
+          "reação cruzada com penicilina em cerca de 1% a 2% quando a alergia é exantema tardio"
+        ],
+        "apresentacoes": [
+          "cápsula 500 mg",
+          "comprimido 1 g",
+          "pó para suspensão 250 mg/5 mL",
+          "pó para suspensão 100 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento; a suspensão é reconstituída com água filtrada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "rash nas primeiras 72 h, pela possibilidade de reação cruzada",
+          "diarreia e dor abdominal",
+          "resposta clínica em 48 a 72 h",
+          "adesão aos 10 dias"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: 250 mg 8/8 h ou 500 mg 12/12 h; em diálise, dose após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só serve quando a alergia a penicilina é exantema tardio; em anafilaxia, a escolha é azitromicina ou clindamicina. Não confundir exantema por mononucleose com alergia verdadeira",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "lincosamida",
+        "agente": "clindamicina",
+        "papel": "condicional",
+        "indicacao": "falha de penicilina ou amoxicilina, alergia grave a betalactâmico, ou abscesso periamigdaliano com necessidade de cobertura de anaeróbios",
+        "dose": "300 mg no adulto; 20 mg/kg/dia na criança, divididos de 8/8 h",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "8/8 h",
+        "duracao": "10 dias na faringite; 10 a 14 dias no abscesso",
+        "dose_maxima": "1.800 mg/dia por via oral; 2.700 mg/dia por via intravenosa",
+        "contraindicacoes": [
+          "colite prévia por Clostridioides difficile",
+          "alergia a lincosamida",
+          "uso de bloqueador neuromuscular não despolarizante em dose alta"
+        ],
+        "efeitos_adversos": [
+          "diarreia, às vezes colite pseudomembranosa, que é o efeito mais grave",
+          "gosto metálico",
+          "rash",
+          "elevação de transaminases",
+          "tromboflebite no acesso venoso"
+        ],
+        "apresentacoes": [
+          "cápsula 300 mg",
+          "solução injetável 150 mg/mL (ampola de 2 mL e de 4 mL)",
+          "gel tópico 1%"
+        ],
+        "preparo": "Via oral: uso direto com copo cheio de água, sentado. Via intravenosa: diluir 600 mg em 100 a 250 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "não se aplica (via oral); via intravenosa em 30 min, sem ultrapassar 30 mg/min",
+        "monitorizacao": [
+          "diarreia aquosa com dor abdominal e febre, que obriga a testar C. difficile",
+          "hemograma em uso acima de 10 dias",
+          "resposta clínica e regressão do trismo em 48 a 72 h",
+          "função hepática se surgir icterícia"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em insuficiência hepática grave",
+        "observacoes": "Não é primeira linha na faringite, mas é a melhor opção oral no abscesso e na alergia grave a betalactâmico. Suspender imediatamente se surgir diarreia com cólica e febre, e não reintroduzir",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "odinofagia e febre em qualquer etiologia, sempre prescrito independentemente do antibiótico",
+        "dose": "500 a 1.000 mg no adulto; 10 a 15 mg/kg/dose na criança",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "3 a 5 dias, enquanto houver dor ou febre",
+        "dose_maxima": "3 g/dia no adulto; 75 mg/kg/dia na criança; 2 g/dia em hepatopatia, etilismo ou peso abaixo de 50 kg",
+        "contraindicacoes": [
+          "insuficiência hepática grave",
+          "hepatite ativa",
+          "alergia ao paracetamol",
+          "desnutrição grave sem ajuste de dose"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em sobredose",
+          "rash cutâneo",
+          "elevação de transaminases",
+          "trombocitopenia rara"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL (gotas)",
+          "solução oral 32 mg/mL",
+          "frasco intravenoso 10 mg/mL (100 mL)"
+        ],
+        "preparo": "Via oral: uso direto. Via intravenosa: infundir a solução pronta, sem diluir",
+        "tempo_infusao": "não se aplica (via oral); via intravenosa em 15 min",
+        "monitorizacao": [
+          "escala de dor e temperatura em 60 a 90 min",
+          "soma da dose diária com produtos combinados que contêm paracetamol",
+          "transaminases se uso acima de 3 dias ou hepatopatia"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: intervalo de 8/8 h",
+        "ajuste_hepatico": "Máximo de 2 g/dia em hepatopatia; evitar em insuficiência hepática grave",
+        "observacoes": "Primeira escolha para dor e febre na faringite e no paciente com contraindicação a AINE, como doença ulcerosa ou doença renal. Não usar ácido acetilsalicílico em criança ou adolescente pelo risco de síndrome de Reye",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "condicional",
+        "indicacao": "odinofagia intensa e febre, em paciente sem contraindicação digestiva, renal ou cardiovascular",
+        "dose": "400 mg no adulto; 10 mg/kg/dose na criança",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "até 3 dias",
+        "dose_maxima": "1.200 mg/dia no adulto; 40 mg/kg/dia na criança",
+        "contraindicacoes": [
+          "doença ulcerosa péptica ativa ou sangramento digestivo prévio",
+          "ClCr abaixo de 30 mL/min",
+          "desidratação ou hipovolemia",
+          "asma induzida por AINE",
+          "terceiro trimestre de gestação",
+          "insuficiência cardíaca descompensada"
+        ],
+        "efeitos_adversos": [
+          "dor epigástrica e dispepsia",
+          "sangramento digestivo",
+          "lesão renal aguda em paciente desidratado",
+          "broncoespasmo em asmático sensível",
+          "elevação da pressão arterial"
+        ],
+        "apresentacoes": [
+          "comprimido 400 mg",
+          "comprimido 600 mg",
+          "cápsula líquida 200 mg",
+          "suspensão oral 50 mg/mL",
+          "solução oral 50 mg/mL (gotas)"
+        ],
+        "preparo": "Uso direto, de preferência com alimento ou após a refeição",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "alívio da dor em 60 a 90 min",
+          "dor epigástrica, melena ou hematêmese",
+          "diurese e creatinina em uso acima de 3 dias",
+          "pressão arterial em hipertenso"
+        ],
+        "ajuste_renal": "Evitar com ClCr abaixo de 60 mL/min; contraindicado abaixo de 30 mL/min",
+        "ajuste_hepatico": "Cautela em cirrose com ascite; evitar em hepatopatia descompensada",
+        "observacoes": "AINE isolado alivia a dor de garganta melhor que paracetamol isolado; alternar ou associar os dois é aceitável. Não associar a outro AINE nem a ácido acetilsalicílico, e hidratar antes de usar em paciente desidratado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "lidocaína 2% spray",
+        "papel": "condicional",
+        "indicacao": "dor de garganta intensa que limita a deglutição, como alívio sintomático de curta duração antes da alimentação",
+        "dose": "1 a 2 jatos de 10 mg",
+        "unidade": "jato",
+        "via": "orofaríngea",
+        "frequencia": "até 4x/dia",
+        "duracao": "até 3 dias",
+        "dose_maxima": "8 jatos/dia, sem ultrapassar 4,5 mg/kg de lidocaína",
+        "contraindicacoes": [
+          "alergia a anestésico do grupo amida",
+          "disfagia grave com risco de aspiração",
+          "criança abaixo de 2 anos",
+          "síndrome de QT longo",
+          "uso imediatamente antes de alimentar"
+        ],
+        "efeitos_adversos": [
+          "engasgo e aspiração por anestesia da faringe",
+          "ardor e gosto amargo",
+          "metahemoglobinemia com preparações de benzocaína",
+          "convulsão e arritmia em dose excessiva"
+        ],
+        "apresentacoes": [
+          "spray 10% com válvula dosadora de 10 mg por jato",
+          "spray 2%",
+          "solução 4% para uso tópico",
+          "pastilha com benzocaína 5 mg"
+        ],
+        "preparo": "Aplicar diretamente na orofaringe com o paciente sentado e orientado a não engolir durante a aplicação; não usar antes de comer ou beber",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "reflexo de deglutição e engasgo após a aplicação",
+          "duração do alívio, que é de 15 a 30 min",
+          "saturação em criança com uso repetido",
+          "necessidade de analgesia sistêmica"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a frequência em insuficiência hepática grave",
+        "observacoes": "É alívio sintomático curto e não substitui antibiótico nem analgesia sistêmica. Não usar em criança pequena pelo risco de aspiração; pastilhas com benzocaína em criança pequena podem causar metahemoglobinemia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "dexametasona",
+        "papel": "condicional",
+        "indicacao": "abscesso periamigdaliano com edema importante de via aérea, como adjuvante da drenagem e do antibiótico; não é indicada na faringite não complicada",
+        "dose": "8 a 10 mg no adulto; 0,15 a 0,6 mg/kg na criança",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "dose única",
+        "duracao": "1 dose",
+        "dose_maxima": "10 mg",
+        "contraindicacoes": [
+          "infecção fúngica sistêmica não tratada",
+          "diabetes descompensado sem controle",
+          "alergia a corticoide",
+          "vacina de vírus vivo recente"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia transitória",
+          "insônia e agitação",
+          "dispepsia",
+          "mascaramento de febre e de sinais de progressão da infecção"
+        ],
+        "apresentacoes": [
+          "comprimido 4 mg",
+          "ampola 4 mg/mL",
+          "ampola 10 mg/2,5 mL",
+          "frasco 10 mg/mL"
+        ],
+        "preparo": "Via oral: uso direto. Via intravenosa: infundir direto ou diluído em 10 mL de SF 0,9%",
+        "tempo_infusao": "não se aplica (via oral); via intravenosa em 1 a 2 min",
+        "monitorizacao": [
+          "glicemia capilar em diabético, antes e 4 h depois",
+          "dor e abertura de boca em 24 h",
+          "temperatura, para não mascarar progressão do abscesso",
+          "pressão arterial em hipertenso"
+        ],
+        "ajuste_renal": "Sem ajuste em dose única",
+        "ajuste_hepatico": "Sem ajuste em dose única",
+        "observacoes": "Corticoide de rotina na faringite é erro: o benefício é pequeno, restrito à dor nas primeiras 24 h, e vem com hiperglicemia e mascaramento de infecção. Reservar para abscesso com edema de via aérea. Corticoide não substitui drenagem nem antibiótico",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretrizes de otorrinolaringologia",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Hidratação e alimentação de consistência macia e fria",
+        "detalhe": "Ofertar 1,5 a 2 L de líquido por dia em pequenos volumes frequentes; sorvete, iogurte gelado e purês são aceitos melhor que alimento seco e reduzem a dor ao engolir. Evitar ácido, condimento e alimento duro"
+      },
+      {
+        "medida": "Gargarejo com água morna e sal",
+        "detalhe": "Uma colher de chá de sal em 250 mL de água morna, 3 a 4 vezes ao dia. O efeito é modesto e de curta duração, mas é barato, seguro e ajuda na higiene da orofaringe"
+      },
+      {
+        "medida": "Repouso e afastamento de escola ou trabalho",
+        "detalhe": "Afastar por 12 a 24 h após o início do antibiótico na forma estreptocócica, quando a febre cede; na viral, afastar enquanto houver febre. Manter repouso relativo e sono adequado"
+      },
+      {
+        "medida": "Etiqueta respiratória e higiene das mãos",
+        "detalhe": "Cobrir a boca ao tossir, descartar o lenço, lavar as mãos com água e sabão por 20 s ou álcool 70%. Não compartilhar copo, talher, toalha ou escova de dentes durante o período sintomático"
+      },
+      {
+        "medida": "Não introduzir objeto nem cotonete na garganta",
+        "detalhe": "Abaixador de língua improvisado ou espátula caseira podem traumatizar a úvula e provocar náusea e sangramento; a inspeção deve ser feita com boa iluminação e técnica, não com objeto doméstico"
+      },
+      {
+        "medida": "Controle do ambiente escolar e comunicação de caso",
+        "detalhe": "Em caso de estreptococo ou escarlatina, avisar a creche ou escola para vigilância de novos casos nos 7 dias seguintes; não é necessário tratar contatos assintomáticos nem fechar a turma"
+      },
+      {
+        "medida": "Reavaliação programada em 48 a 72 horas",
+        "detalhe": "Retorno presencial ou contato telefônico documentado com temperatura, dor, capacidade de deglutição e tolerância ao antibiótico; é o que detecta abscesso em formação e mononucleose"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Teste rápido de estreptococo com swab de orofaringe",
+        "indicacao": "escore de McIsaac de 2 a 3, contato com caso confirmado ou surto escolar; em criança com teste negativo, complementar com cultura",
+        "tecnica": "Friccionar o swab na parede posterior da faringe e em ambas as amígdalas, evitando língua e bochecha, e processar em até 5 min conforme o kit; resultado em 5 a 10 min",
+        "complicacoes": "Náusea e reflexo de gag, falso negativo por técnica inadequada ou antibioticoterapia recente, falso positivo por colonização assintomática"
+      },
+      {
+        "nome": "Punção aspirativa do abscesso periamigdaliano",
+        "indicacao": "abaulamento unilateral com dúvida diagnóstica, ou como primeira abordagem quando a drenagem incisional não está disponível",
+        "tecnica": "Anestesia tópica com lidocaína em spray, agulha acoplada a seringa no ponto de maior abaulamento, na altura do pilar anterior, aspirando até obter pus; não aprofundar mais de 1 cm para não lesar a carótida",
+        "complicacoes": "Punção de vaso, hematoma, aspiração de conteúdo purulento para a via aérea, recidiva por drenagem incompleta"
+      },
+      {
+        "nome": "Drenagem incisional do abscesso periamigdaliano",
+        "indicacao": "abscesso confirmado com coleção, toxemia ou falha da punção aspirativa",
+        "tecnica": "Anestesia local, incisão de 1 a 1,5 cm no ponto de flutuação, abertura com pinça hemostática e lavagem com soro fisiológico; manter antibiótico com cobertura de anaeróbio e reavaliar em 24 a 48 h",
+        "complicacoes": "Sangramento, lesão de vaso, aspiração, recidiva, fístula e disseminação para o espaço parafaríngeo"
+      },
+      {
+        "nome": "Manejo de via aérea difícil",
+        "indicacao": "estridor, sialorreia, incapacidade de engolir saliva ou rebaixamento por extensão do abscesso",
+        "tecnica": "Não sedar nem examinar a orofaringe com abaixador; levar ao centro cirúrgico com anestesiologia e material de cricotireoidostomia, preferindo intubação com fibroscópio ou traqueostomia de urgência",
+        "complicacoes": "Obstrução completa durante a indução, aspiração de pus, lesão de via aérea, parada cardiorrespiratória"
+      },
+      {
+        "nome": "Amigdalectomia",
+        "indicacao": "critérios de Paradise: 7 episódios em 1 ano, 5 por ano em 2 anos ou 3 por ano em 3 anos, com documentação clínica; ou abscesso recorrente",
+        "tecnica": "Procedimento sob anestesia geral, por dissecção ou técnica a frio, com hemostasia cuidadosa e observação hospitalar no pós-operatório imediato",
+        "complicacoes": "Hemorragia pós-operatória primária ou secundária, dor intensa com baixa ingesta, desidratação, disfagia, lesão dentária e estenose de pilares"
+      }
+    ],
+    "metas": [
+      "Escore de McIsaac, ou resultado do teste rápido de estreptococo, calculado e registrado no prontuário antes de prescrever antibiótico",
+      "Nenhuma prescrição de antibiótico em faringite viral: antibiótico apenas com teste positivo ou escore de McIsaac de 4 ou mais",
+      "Alívio da dor de pelo menos 2 pontos em escala de 0 a 10 em 60 a 90 min após a analgesia",
+      "Temperatura abaixo de 37,8 °C e capacidade de deglutição preservada em 48 a 72 h",
+      "Antibiótico completado por 10 dias na via oral, ou dose única aplicada e registrada na via intramuscular",
+      "Ausência de corticoide de rotina na faringite não complicada, com justificativa registrada quando usado",
+      "Alta com sinais de alarme por escrito, retorno agendado em 48 a 72 h e orientação sobre tempo de afastamento"
+    ],
+    "fluxo": [
+      "Triagem: dor de garganta entra com avaliação de via aérea antes de qualquer outra medida — verificar estridor, sialorreia, voz abafada ou incapacidade de engolir saliva",
+      "Via aérea comprometida: não examinar com abaixador, acionar anestesiologia, sala vermelha e imagem de pescoço",
+      "Inspeção da orofaringe com boa iluminação: procurar abaulamento unilateral, desvio de úvula e trismo — se presentes, tratar como abscesso periamigdaliano com drenagem",
+      "Distinguir viral de bacteriana: tosse, coriza e rouquidão apontam viral; febre alta, exsudato e adenopatia dolorosa sem tosse apontam estreptococo",
+      "Calcular o escore de McIsaac: 0 a 1 não faz teste nem antibiótico; 2 a 3 faz teste rápido e confirma com cultura na criança; 4 ou mais trata empiricamente",
+      "Prescrever analgesia e antitérmico em todos os casos, desde a primeira consulta, independentemente da etiologia",
+      "Se antibiótico indicado: penicilina benzatina 1.200.000 UI em dose única, ou amoxicilina 500 mg 8/8 h por 10 dias; em alergia, azitromicina, cefalexina ou clindamicina conforme o tipo de reação",
+      "Não prescrever corticoide de rotina; reservar dexametasona em dose única para abscesso com edema de via aérea",
+      "Reavaliar em 48 a 72 h: sem melhora, reexaminar a orofaringe, palpar o pescoço e pesquisar mononucleose e abscesso antes de trocar o antibiótico",
+      "Alta com sinais de alarme por escrito, retorno agendado, tempo de afastamento e orientação de higiene"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "pediatria",
+        "ajuste": "McIsaac soma 1 ponto entre 3 e 14 anos; amoxicilina 50 mg/kg/dia uma vez ao dia ou 25 mg/kg/dia de 12/12 h por 10 dias, e penicilina benzatina 600.000 UI se peso até 27 kg; teste rápido negativo pede cultura de confirmação",
+        "alerta": "febre reumática é a complicação a prevenir e a adesão aos 10 dias é o ponto frágil; nunca usar ácido acetilsalicílico pelo risco de síndrome de Reye"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "penicilina benzatina e amoxicilina são seguras e são a primeira escolha; em alergia, usar azitromicina ou cefalexina; evitar clindamicina no primeiro trimestre quando houver alternativa",
+        "alerta": "faringite estreptocócica não tratada aumenta o risco de febre reumática e de complicação puerperal"
+      },
+      {
+        "populacao": "adolescente e adulto jovem",
+        "ajuste": "pesquisar mononucleose antes de prescrever aminopenicilina quando houver febre arrastada, linfadenopatia generalizada, esplenomegalia ou transaminases alteradas; evitar esporte de contato por 4 semanas se houver esplenomegalia",
+        "alerta": "exantema por amoxicilina na mononucleose é confundido com alergia e rotula o paciente como alérgico a penicilina para sempre"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "baixar o limiar de investigação e de internação, ampliar a investigação para fungo, CMV e neutropenia, e não atribuir a quadro viral sem exame",
+        "alerta": "abscesso e sepse com progressão rápida e apresentação atípica, sem exsudato exuberante"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "rever interações e função renal antes do antibiótico, hidratação e risco de aspiração; considerar abscesso em idoso mesmo sem febre alta",
+        "alerta": "apresentação oligossintomática, maior risco de desidratação e de complicação supurativa"
+      },
+      {
+        "populacao": "alérgico a penicilina",
+        "ajuste": "caracterizar a reação: exantema tardio permite cefalexina; anafilaxia, broncoespasmo ou angioedema exigem azitromicina ou clindamicina e proíbem betalactâmico",
+        "alerta": "rótulo de alergia sem caracterização leva a antibioticoterapia de segunda linha desnecessária e a mais resistência"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "teste rápido de estreptococo por imunocromatografia",
+          "indicacao": "escore de McIsaac de 2 a 3, contato com caso confirmado ou surto",
+          "o_que_muda": "positivo indica antibiótico; negativo em adulto dispensa tratamento e em criança pede cultura de confirmação"
+        },
+        {
+          "nome": "cultura de orofaringe em ágar-sangue",
+          "indicacao": "teste rápido negativo em criança ou adolescente, dúvida diagnóstica, surto e falha terapêutica",
+          "o_que_muda": "confirma estreptococo do grupo A e permite teste de sensibilidade quando há falha"
+        },
+        {
+          "nome": "hemograma e PCR",
+          "indicacao": "quadro arrastado, toxemia, dúvida entre viral e bacteriana ou suspeita de mononucleose",
+          "o_que_muda": "linfocitose com atipia e neutropenia sugerem mononucleose e afastam estreptococo; leucocitose com desvio apoia bactéria"
+        },
+        {
+          "nome": "sorologia para Epstein-Barr ou teste de monospot",
+          "indicacao": "febre há mais de 7 dias, linfadenopatia generalizada, esplenomegalia, astenia intensa ou rash após amoxicilina",
+          "o_que_muda": "confirma mononucleose, suspende antibiótico e evita nova exposição a aminopenicilina"
+        },
+        {
+          "nome": "transaminases e bilirrubinas",
+          "indicacao": "suspeita de mononucleose, icterícia ou uso de amoxicilina-clavulanato",
+          "o_que_muda": "hepatite por EBV ou colestase por clavulanato mudam a conduta e obrigam a suspender o fármaco"
+        },
+        {
+          "nome": "tomografia de pescoço com contraste ou ultrassom cervical",
+          "indicacao": "suspeita de abscesso com trismo, abaulamento difuso, extensão parafaríngea ou falha de drenagem",
+          "o_que_muda": "define coleção, extensão e necessidade de drenagem cirúrgica imediata"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "ASLO para diagnóstico de faringite aguda",
+          "motivo": "marca exposição pregressa e não distingue infecção atual de colonização ou de episódio antigo; não muda a decisão de tratar"
+        },
+        {
+          "exame": "cultura de orofaringe de controle após o tratamento",
+          "motivo": "não é recomendada de rotina, porque a resposta clínica é o desfecho relevante e resultado positivo assintomático não indica novo antibiótico"
+        },
+        {
+          "exame": "hemograma de rotina em faringite típica sem gravidade",
+          "motivo": "não altera a conduta, que é definida pelo escore clínico e pelo teste rápido"
+        },
+        {
+          "exame": "painel viral amplo em quadro leve de vias aéreas superiores",
+          "motivo": "custo alto e resultado que não muda o manejo sintomático"
+        },
+        {
+          "exame": "radiografia de partes moles do pescoço",
+          "motivo": "baixa sensibilidade para abscesso; quando há dúvida, a tomografia ou o ultrassom resolvem"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar o antibiótico nos horários certos e completar os 10 dias quando a via for oral",
+        "usar analgésico e antitérmico mesmo que esteja com antibiótico",
+        "beber líquidos ao longo do dia e preferir alimento frio e macio",
+        "gargarejar com água morna e sal 3 a 4 vezes ao dia",
+        "lavar as mãos e não compartilhar copo, talher ou toalha",
+        "voltar em 48 a 72 horas se a febre ou a dor não cederem, ou antes se piorar",
+        "avisar a escola ou o trabalho em caso de estreptococo ou escarlatina"
+      ],
+      "evitar": [
+        "tomar antibiótico guardado de outra pessoa ou de outra vez",
+        "interromper o antibiótico quando a dor passar",
+        "usar corticoide por conta própria para dor de garganta",
+        "fumar e beber álcool durante o tratamento",
+        "introduzir cotonete ou objeto na garganta",
+        "dar ácido acetilsalicílico a criança ou adolescente"
+      ],
+      "retorno": [
+        "dificuldade para respirar, ruído ao respirar ou não conseguir engolir saliva",
+        "não conseguir abrir a boca ou voz abafada",
+        "dor muito mais intensa de um lado só, com abaulamento",
+        "febre que não cede em 72 h ou que volta depois de melhorar",
+        "rash cutâneo durante o antibiótico",
+        "urina escura, redução da urina, inchaço ou dor nas juntas semanas depois"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "penicilina benzatina",
+        "efeitos": [
+          "dor e nódulo local",
+          "reação de Hoigne",
+          "anafilaxia"
+        ],
+        "observacao": "a reação de Hoigne é autolimitada e não contraindica dose futura; anafilaxia exige adrenalina intramuscular e observação"
+      },
+      {
+        "agente": "amoxicilina",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "candidíase"
+        ],
+        "observacao": "rash em mononucleose não é alergia verdadeira: pesquisar EBV antes de rotular o paciente"
+      },
+      {
+        "agente": "azitromicina",
+        "efeitos": [
+          "náusea",
+          "QT longo",
+          "elevação de transaminases"
+        ],
+        "observacao": "ECG se cardiopatia, hipocalemia ou outra droga que prolonga o QT"
+      },
+      {
+        "agente": "clindamicina",
+        "efeitos": [
+          "diarreia",
+          "colite pseudomembranosa"
+        ],
+        "observacao": "suspender ao primeiro sinal de diarreia com cólica e febre e testar C. difficile"
+      },
+      {
+        "agente": "cefalexina",
+        "efeitos": [
+          "rash",
+          "diarreia"
+        ],
+        "observacao": "reação cruzada com penicilina em 1% a 2% quando a alergia é exantema tardio"
+      },
+      {
+        "agente": "ibuprofeno",
+        "efeitos": [
+          "dispepsia",
+          "sangramento digestivo",
+          "lesão renal"
+        ],
+        "observacao": "suspender se dor epigástrica intensa, melena ou redução da diurese"
+      },
+      {
+        "agente": "dexametasona",
+        "efeitos": [
+          "hiperglicemia",
+          "insônia",
+          "mascaramento de infecção"
+        ],
+        "observacao": "medir glicemia em diabético e reavaliar a via aérea em 24 h se foi usada por abscesso"
+      },
+      {
+        "agente": "lidocaína tópica",
+        "efeitos": [
+          "engasgo",
+          "aspiração",
+          "metahemoglobinemia com benzocaína"
+        ],
+        "observacao": "não usar antes de alimentar e evitar em criança abaixo de 2 anos"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose e via no prontuário",
+      "Anafilaxia: adrenalina 0,5 mg intramuscular na face lateral da coxa, oxigênio, cristaloide e observação mínima de 6 h",
+      "Reação de Hoigne após penicilina benzatina: tranquilizar, tratar convulsão se houver e registrar que não é alergia",
+      "Rash após amoxicilina em adolescente: suspender, pedir hemograma e sorologia para EBV antes de rotular alergia",
+      "Diarreia com cólica e febre em uso de clindamicina ou betalactâmico: testar C. difficile e suspender o antibiótico quando possível",
+      "QT longo com azitromicina: corrigir potássio e magnésio, suspender o fármaco e revisar outras drogas que prolongam o QT",
+      "Hiperglicemia após dexametasona: tratar com insulina de ação rápida titulada pela glicemia capilar e evitar repetir a dose",
+      "Engasgo após anestésico tópico: manter o paciente sentado, suspender a próxima aplicação e avaliar aspiração",
+      "Rever o diagnóstico e reescrever a prescrição antes de o paciente sair do serviço"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "penicilina benzatina 1.200.000 UI",
+            "dose": "1.200.000 UI",
+            "via": "IM",
+            "frequencia": "dose única",
+            "duracao": "1 dose",
+            "condicao": "faringite estreptocócica confirmada ou McIsaac de 4 ou mais",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "8/8 h",
+            "duracao": "10 dias",
+            "condicao": "faringite estreptocócica, alternativa oral à penicilina benzatina",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "azitromicina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "5 dias",
+            "condicao": "alergia imediata a penicilina",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cefalexina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "10 dias",
+            "condicao": "alergia a penicilina limitada a exantema tardio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor ou febre",
+            "duracao": "5 dias",
+            "condicao": "analgesia e antitermia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ibuprofeno 400 mg",
+            "dose": "400 mg",
+            "via": "VO",
+            "frequencia": "8/8 h se dor",
+            "duracao": "3 dias",
+            "condicao": "dor intensa, sem contraindicação digestiva ou renal",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "clindamicina",
+            "dose": "600 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "diarreia, C. difficile e resposta clínica",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina-clavulanato",
+            "dose": "1 g/200 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "diarreia, função hepática e resposta clínica",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dexametasona",
+            "dose": "10 mg",
+            "via": "IV",
+            "frequencia": "dose única",
+            "monitorizacao": "glicemia e reavaliação de via aérea em 24 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h se dor ou febre",
+            "monitorizacao": "dose total diária e transaminases se uso prolongado",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "solução fisiológica 0,9%",
+            "dose": "500 a 1.000 mL",
+            "via": "IV",
+            "frequencia": "conforme aceitação oral e estado de hidratação",
+            "monitorizacao": "diurese, sódio e ausculta pulmonar",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "escore de McIsaac calculado",
+          "teste rápido de estreptococo",
+          "cultura de orofaringe",
+          "hemograma",
+          "PCR",
+          "sorologia para Epstein-Barr",
+          "transaminases",
+          "tomografia de pescoço",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de faringoamigdalite, necessitando de afastamento por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "o número de dias é decisão médica e depende da febre, da capacidade de deglutição e da atividade exercida"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com escore de McIsaac, teste rápido, antibiótico em uso, duração e sinais de alarme",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com faringoamigdalite, escore de McIsaac ___, teste rápido ___, orofaringe com ___, conduta ___, analgesia ___ e reavaliação prevista para ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "duração da dor",
+        "temperatura medida",
+        "tosse e coriza",
+        "rouquidão",
+        "exsudato",
+        "trismo e voz abafada",
+        "sialorreia",
+        "linfadenopatia dolorosa",
+        "alergia a penicilina e tipo de reação",
+        "antibiótico nos últimos 30 dias",
+        "contato com caso de estreptococo ou escarlatina"
+      ],
+      "texto_template": "Paciente com dor de garganta há ___ dias, febre de ___ °C, tosse ___, coriza ___, exsudato ___, trismo ___, voz abafada ___, sialorreia ___, gânglios dolorosos ___, alergia a penicilina ___, antibiótico recente ___ e contato com caso ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e saturação",
+        "avaliação de via aérea: voz, estridor, sialorreia",
+        "abertura de boca e medida do trismo",
+        "orofaringe com amígdalas, pilares e exsudato",
+        "posição da úvula e simetria do abaulamento",
+        "palpação cervical com adenopatia e dor",
+        "rash cutâneo e língua em framboesa",
+        "ausculta cardíaca e pulmonar",
+        "hidratação e capacidade de deglutição"
+      ],
+      "texto_template": "Sinais vitais ___, saturação ___%, voz ___, abertura de boca ___ mm, orofaringe com ___, úvula ___, adenopatia cervical ___, rash ___, ausculta ___, hidratação ___ e capacidade de deglutição ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de faringite, disponibilidade de teste rápido e esquema de antibiótico do serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_internacional",
+        "o_que_verificar": "escore de McIsaac, indicação de teste, penicilina benzatina 1.200.000 UI e duração de 10 dias na via oral",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_infectologia",
+        "o_que_verificar": "resistência local do estreptococo do grupo A a macrolídeo e conduta na alergia a penicilina",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_otorrinolaringologia",
+        "o_que_verificar": "indicação de drenagem de abscesso e critérios de amigdalectomia",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, concentrações e reconstituição da penicilina benzatina disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-RESP03-01",
+        "tipo": "abscesso_periamigdaliano",
+        "gatilho": "trismo, voz abafada, desvio de úvula ou abaulamento unilateral",
+        "severidade": "grave",
+        "mensagem": "Sinais de abscesso periamigdaliano: antibiótico isolado não resolve, é preciso drenagem.",
+        "acao": "bloquear alta e acionar otorrinolaringologia para drenagem",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP03-02",
+        "tipo": "antibiotico_sem_criterio",
+        "gatilho": "antibiótico prescrito para faringite sem teste rápido positivo, cultura positiva ou escore de McIsaac de 4 ou mais registrado",
+        "severidade": "grave",
+        "mensagem": "Antibiótico sem critério bacteriano caracteriza tratamento de infecção viral.",
+        "acao": "bloquear item e exigir escore de McIsaac ou resultado do teste",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP03-03",
+        "tipo": "via_aerea",
+        "gatilho": "estridor, sialorreia ou incapacidade de engolir saliva",
+        "severidade": "grave",
+        "mensagem": "Risco de obstrução de via aérea: não examinar a orofaringe com abaixador.",
+        "acao": "acionar sala vermelha e anestesiologia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP03-04",
+        "tipo": "corticoide_rotina",
+        "gatilho": "corticoide prescrito em faringite sem abscesso ou sem justificativa registrada",
+        "severidade": "precaucao",
+        "mensagem": "Corticoide de rotina na faringite não tem indicação e mascara progressão de infecção.",
+        "acao": "alertar e solicitar justificativa",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP03-05",
+        "tipo": "duracao_curta",
+        "gatilho": "amoxicilina prescrita por menos de 10 dias na faringite estreptocócica",
+        "severidade": "precaucao",
+        "mensagem": "Duração inferior a 10 dias falha na erradicação do estreptococo e na prevenção de febre reumática.",
+        "acao": "alertar e corrigir a duração",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP03-06",
+        "tipo": "mononucleose",
+        "gatilho": "aminopenicilina prescrita em paciente com suspeita de mononucleose ou rash após dose prévia",
+        "severidade": "precaucao",
+        "mensagem": "Aminopenicilina em mononucleose causa exantema e leva a rótulo falso de alergia.",
+        "acao": "alertar e sugerir pesquisa de EBV",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP03-07",
+        "tipo": "alergia_nao_caracterizada",
+        "gatilho": "alergia a penicilina registrada sem descrição do tipo de reação",
+        "severidade": "informativo",
+        "mensagem": "Caracterizar a reação permite usar betalactâmico quando é exantema tardio e evita antibiótico de segunda linha desnecessário.",
+        "acao": "solicitar descrição da reação",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "diretriz IDSA de faringite estreptocócica",
+        "CDC",
+        "protocolo institucional"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: separação entre viral, estreptocócica e abscesso periamigdaliano com escore de McIsaac registrado; penicilina benzatina 1.200.000 UI em dose única, amoxicilina 500 mg 8/8 h por 10 dias, azitromicina, cefalexina e clindamicina na falha ou alergia; analgesia e antitermia com paracetamol, ibuprofeno e anestésico tópico; corticoide restrito ao abscesso com edema de via aérea; 10 fármacos com apresentações, preparo, tempo de infusão e monitorização; procedimentos de teste rápido, punção, drenagem, via aérea e amigdalectomia; bloqueios de prescrição de antibiótico sem critério bacteriano e de alta em suspeita de abscesso.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

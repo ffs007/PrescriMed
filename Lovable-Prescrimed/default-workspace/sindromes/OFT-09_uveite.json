@@ -1,0 +1,1241 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "OFT-09",
+    "area": "Oftalmo/Otorrino",
+    "nome": "Uveíte",
+    "aliases": [
+      "Uveíte",
+      "uveíte anterior",
+      "iridociclite",
+      "iritis",
+      "uveíte HLA-B27"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Uveíte anterior é a inflamação da íris e do corpo ciliar e se apresenta com dor ocular profunda, fotofobia, hiperemia ciliar (perilímbica), pupila miótica por espasmo do esfíncter da íris e queda de acuidade visual. Não é conjuntivite: não há secreção purulenta, a dor é profunda e piora com a luz, e antibiótico tópico não muda o curso. O diagnóstico é clínico e exige lâmpada de fenda, com células e flare na câmara anterior. O tratamento é corticoide tópico potente associado a cicloplegia, com desmame lento, sempre sob avaliação oftalmológica. Antes do corticoide é obrigatório corar a córnea com fluoresceína e excluir ceratite herpética: corticoide sem cobertura antiviral transforma úlcera dendrítica em úlcera geográfica e perfuração. A investigação etiológica é dirigida — HLA-B27 e espondiloartrites, sarcoidose, sífilis, tuberculose, herpes e trauma — e só pede painel amplo quando há sinal sistêmico. As complicações que cegam são sinequia posterior com íris bombé e glaucoma agudo por fechamento angular, hipertensão ocular induzida por corticoide, catarata e edema macular. Pupila irregular, pressão intraocular acima de 21 mmHg ou piora visual exigem reavaliação no mesmo dia.",
+    "inclusao": [
+      "Dor ocular profunda com fotofobia e hiperemia perilímbica unilateral",
+      "Pupila miótica no olho afetado, com ou sem irregularidade da borda iriana",
+      "Baixa visual unilateral com células e flare na câmara anterior à lâmpada de fenda",
+      "Olho vermelho unilateral sem secreção purulenta, com dor que não melhora com lubrificante",
+      "Episódio prévio de uveíte, espondiloartrite, sarcoidose ou herpes ocular com novo quadro de dor e fotofobia"
+    ],
+    "exclusao": [
+      {
+        "situacao": "secreção purulenta, prurido e pálpebras coladas, sem dor profunda nem fotofobia",
+        "fluxo": "conjuntivite — manejo ambulatorial"
+      },
+      {
+        "situacao": "midríase média fixa, córnea edemaciada, halos e náusea",
+        "fluxo": "glaucoma agudo — emergência oftalmológica"
+      },
+      {
+        "situacao": "úlcera dendrítica ou história de ceratite herpética em atividade",
+        "fluxo": "ceratite herpética — antiviral, corticoide apenas com cobertura"
+      },
+      {
+        "situacao": "dor e baixa visual após cirurgia ocular recente",
+        "fluxo": "endoftalmite — emergência cirúrgica"
+      },
+      {
+        "situacao": "proptose, febre e dor à movimentação ocular",
+        "fluxo": "celulite orbitária — internação"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "pupila irregular ou aderida ao cristalino (sinequia posterior)",
+        "por_que": "a sinequia leva a íris bombé, fechamento angular e glaucoma agudo",
+        "acao": "intensificar cicloplegia e acionar oftalmologia no mesmo dia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "pressão intraocular acima de 21 mmHg",
+        "por_que": "hipertensão ocular inflamatória ou induzida por corticoide, com perda de campo visual",
+        "acao": "medir de novo, tratar e reavaliar a frequência do corticoide com a oftalmologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "queda progressiva da acuidade visual em relação à visita anterior",
+        "por_que": "edema macular, catarata, hipópio ou glaucoma em instalação",
+        "acao": "oftalmologia no mesmo dia com acuidade registrada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "hipópio ou fibrina na câmara anterior",
+        "por_que": "uveíte grave ou endoftalmite, com risco de perda visual rápida",
+        "acao": "encaminhamento imediato e corticoide tópico de alta frequência sob supervisão",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "úlcera dendrítica ou história de herpes ocular",
+        "por_que": "corticoide isolado transforma ceratite epitelial em úlcera geográfica e perfuração",
+        "acao": "não iniciar corticoide sem antiviral e sem biomicroscopia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "dor com náusea, halo e midríase após instilar cicloplégico",
+        "por_que": "glaucoma agudo por fechamento angular desencadeado pela midríase",
+        "acao": "suspender atropina e tratar a crise com oftalmologia imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "febre, perda de peso, tosse, lesão genital ou exantema",
+        "por_que": "sarcoidose, sífilis, tuberculose ou HIV como causa da uveíte",
+        "acao": "investigação dirigida e encaminhamento conforme o achado",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "trauma ocular recente, mesmo leve",
+        "por_que": "uveíte pós-traumática, corpo estranho retido ou perfuração oculta",
+        "acao": "revisar córnea e conjuntiva com fluoresceína e encaminhar",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A dor é profunda e piora ao olhar para a luz?",
+      "A visão deste olho está embaçada em relação ao outro?",
+      "A pupila deste olho está menor que a do outro no espelho?",
+      "Há secreção purulenta ou o olho está apenas vermelho e dolorido?",
+      "Já teve uveíte, espondilite anquilosante, artrite psoriásica ou doença de Crohn?",
+      "Teve herpes labial ou ocular, ou usa colírio de corticoide por conta própria?",
+      "Teve lesão genital, exantema, febre ou perda de peso nos últimos meses?",
+      "Teve trauma ocular, cirurgia recente ou usa lente de contato?",
+      "Tem tosse, dispneia ou diagnóstico de sarcoidose ou tuberculose?",
+      "Usa imunossupressor ou tem HIV?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Uveíte anterior leve, células 1+ a 2+, acuidade preservada, sem fibrina",
+        "escolha": "Prednisolona 1% 4/4 h + tropicamida 1% 12/12 h, com reavaliação em 72 h",
+        "porque": "O corticoide tópico controla a inflamação da câmara anterior e a cicloplegia alivia a dor e afasta a íris do cristalino"
+      },
+      {
+        "cenario": "Uveíte anterior grave: células 3+ a 4+, fibrina, hipópio ou queda visual",
+        "escolha": "Prednisolona 1% 1/1 h + atropina 1% 12/12 h e oftalmologia no mesmo dia",
+        "porque": "A frequência alta é necessária para concentração intraocular adequada; a atropina é mais potente para romper sinequia incipiente"
+      },
+      {
+        "cenario": "Serviço sem prednisolona 1% ou intolerância ao conservante",
+        "escolha": "Dexametasona 0,1% na mesma frequência, preferindo apresentação em unidose",
+        "porque": "A potência anti-inflamatória é comparável; a escolha é por disponibilidade e tolerância, não por preferência"
+      },
+      {
+        "cenario": "Dor desproporcional ou necessidade de poupar corticoide em olho com risco de hipertensão ocular",
+        "escolha": "Cetorolaco 0,5% 6/6 h como adjuvante, mantendo o corticoide em dose menor",
+        "porque": "O AINE tópico reduz a prostaglandina inflamatória e a dor, mas não substitui o corticoide no controle da uveíte"
+      },
+      {
+        "cenario": "História de herpes ocular ou úlcera dendrítica identificada na biomicroscopia",
+        "escolha": "Aciclovir 400 mg VO 5x/dia por 7 a 10 dias; corticoide tópico apenas com antiviral em curso e oftalmologia",
+        "porque": "O corticoide isolado agrava a replicação viral e pode perfurar a córnea"
+      },
+      {
+        "cenario": "Uveíte recidivante associada a HLA-B27 ou espondiloartrite, com crises frequentes",
+        "escolha": "Metotrexato 15 a 25 mg uma vez por semana, com ácido fólico e acompanhamento",
+        "porque": "O imunossupressor poupador reduz a frequência das crises e a exposição cumulativa ao corticoide"
+      },
+      {
+        "cenario": "Uveíte bilateral, intermediária ou posterior, ou refratária ao tratamento tópico",
+        "escolha": "Prednisona VO 1 mg/kg/dia pela manhã, com desmame e avaliação oftalmológica",
+        "porque": "A inflamação fora da câmara anterior não é alcançada por colírio em concentração suficiente"
+      },
+      {
+        "cenario": "VDRL ou FTA-Abs positivos, com lesão genital, exantema ou uveíte sem causa",
+        "escolha": "Encaminhar para tratamento de neurossífilis com penicilina cristalina IV por 10 a 14 dias",
+        "porque": "Sífilis ocular é tratada como neurossífilis; benzatina isolada não atinge o sistema nervoso central"
+      },
+      {
+        "cenario": "IGRA ou radiografia de tórax sugestivos de tuberculose",
+        "escolha": "Encaminhar para esquema antituberculose antes ou junto do corticoide",
+        "porque": "Corticoide sem cobertura antituberculose pode reativar e disseminar a doença"
+      },
+      {
+        "cenario": "Atendimento em serviço sem lâmpada de fenda",
+        "escolha": "Lubrificante, analgesia e encaminhamento à oftalmologia no mesmo dia, sem corticoide",
+        "porque": "Prescrever corticoide sem biomicroscopia é o erro que perfura córnea em ceratite herpética"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "corticoide_topico",
+        "agente": "prednisolona 1% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "uveíte anterior não infecciosa, com células e flare na câmara anterior",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1/1 h enquanto acordado na fase aguda; reduzir para 4/4 h conforme melhora",
+        "duracao": "4 a 8 semanas com desmame progressivo; casos crônicos por meses",
+        "dose_maxima": "1 gota de 1/1 h no olho afetado",
+        "contraindicacoes": [
+          "ceratite herpética sem cobertura antiviral",
+          "ceratite fúngica",
+          "ceratite bacteriana sem antibiótico associado",
+          "olho vermelho sem biomicroscopia",
+          "hipersensibilidade ao conservante"
+        ],
+        "efeitos_adversos": [
+          "hipertensão ocular e glaucoma esteroide",
+          "catarata subcapsular posterior",
+          "retardo da cicatrização corneal",
+          "infecção secundária",
+          "ardência à instilação"
+        ],
+        "apresentacoes": [
+          "suspensão oftálmica 5 mL a 1%",
+          "suspensão oftálmica 10 mL a 1%",
+          "unidose 0,4 mL a 1% sem conservante"
+        ],
+        "preparo": "Agitar antes de usar; instilar 1 gota no fundo de saco conjuntival e comprimir o ponto lacrimal por 30 segundos",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular a cada 2 a 4 semanas",
+          "células e flare na câmara anterior",
+          "acuidade visual",
+          "sinais de infecção secundária"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "É o corticoide de escolha na uveíte anterior. A frequência inicial é de 1/1 h nos quadros graves e o desmame é lento, ao longo de 4 a 8 semanas: suspender de forma abrupta reativa a inflamação. Nunca iniciar sem fluoresceína e sem excluir herpes.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_topico",
+        "agente": "dexametasona 0,1% colírio",
+        "papel": "alternativa",
+        "indicacao": "uveíte anterior quando a prednisolona 1% não está disponível ou há intolerância ao conservante",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "4/4 h na fase aguda, com redução progressiva",
+        "duracao": "2 a 8 semanas com desmame",
+        "dose_maxima": "1 gota de 1/1 h sob supervisão especializada",
+        "contraindicacoes": [
+          "ceratite herpética ou fúngica sem cobertura",
+          "ceratite bacteriana sem antibiótico associado",
+          "olho vermelho sem biomicroscopia",
+          "glaucoma não controlado"
+        ],
+        "efeitos_adversos": [
+          "hipertensão ocular",
+          "catarata",
+          "retardo de cicatrização corneal",
+          "infecção secundária"
+        ],
+        "apresentacoes": [
+          "suspensão oftálmica 5 mL a 0,1%",
+          "unidose 0,4 mL a 0,1% sem conservante"
+        ],
+        "preparo": "Agitar antes de usar; instilar 1 gota no olho afetado",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular a cada 2 a 4 semanas",
+          "biomicroscopia seriada",
+          "acuidade visual"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Potência comparável à prednisolona 1%; a escolha depende da apresentação disponível. Mantém as mesmas restrições de segurança do corticoide tópico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "cicloplegico",
+        "agente": "atropina 1% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "cicloplegia e midríase para aliviar a dor e prevenir ou romper sinequia posterior",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "12/12 h",
+        "duracao": "1 a 2 semanas, até o controle da inflamação",
+        "dose_maxima": "1 gota 12/12 h no olho afetado",
+        "contraindicacoes": [
+          "glaucoma de ângulo fechado ou ângulo estreito conhecido",
+          "hiperplasia prostática com retenção urinária",
+          "taquiarritmia não controlada",
+          "hipersensibilidade à atropina"
+        ],
+        "efeitos_adversos": [
+          "visão borrada para perto por 7 a 14 dias",
+          "fotofobia",
+          "midríase prolongada",
+          "boca seca",
+          "taquicardia",
+          "retenção urinária",
+          "crise de glaucoma em olho predisposto"
+        ],
+        "apresentacoes": [
+          "colírio 5 mL a 1%",
+          "colírio 5 mL a 0,5%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 1 minuto para reduzir a absorção sistêmica",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular antes e depois da instilação",
+          "diâmetro e regularidade pupilar",
+          "dor e fotofobia",
+          "queixas urinárias e palpitações"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "A cicloplegia é parte do tratamento, não conforto opcional: relaxa o espasmo do corpo ciliar, alivia a dor e afasta a íris do cristalino, prevenindo sinequia. Verificar pressão intraocular e ângulo antes de usar em idoso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "cicloplegico",
+        "agente": "tropicamida 1% colírio",
+        "papel": "alternativa",
+        "indicacao": "cicloplegia em uveíte anterior leve, em pacientes que não toleram a midríase prolongada da atropina e para exame",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "8/8 h ou 12/12 h",
+        "duracao": "durante a fase aguda, geralmente 1 a 2 semanas",
+        "dose_maxima": "1 gota 6/6 h no olho afetado",
+        "contraindicacoes": [
+          "glaucoma de ângulo fechado",
+          "ângulo estreito conhecido",
+          "hipersensibilidade ao fármaco"
+        ],
+        "efeitos_adversos": [
+          "visão borrada para perto por 4 a 6 horas",
+          "fotofobia transitória",
+          "ardência",
+          "aumento transitório da pressão intraocular"
+        ],
+        "apresentacoes": [
+          "colírio 5 mL a 1%",
+          "colírio 5 mL a 0,5%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 30 segundos",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "diâmetro pupilar e alívio da dor",
+          "pressão intraocular em olho predisposto",
+          "acuidade visual para perto"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Ação curta, de 4 a 6 horas, com retorno mais rápido da acomodação. É menos eficaz que a atropina para romper sinequia já estabelecida: nesse caso, usar atropina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "aine_topico",
+        "agente": "cetorolaco 0,5% colírio",
+        "papel": "condicional",
+        "indicacao": "adjuvante no controle da dor e da inflamação, para poupar corticoide em olho com risco de hipertensão ocular",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "6/6 h",
+        "duracao": "2 a 4 semanas",
+        "dose_maxima": "4 gotas por dia no olho afetado",
+        "contraindicacoes": [
+          "alergia a AINE",
+          "afecção corneal com afinamento",
+          "olho seco grave",
+          "uso de lente de contato durante o tratamento"
+        ],
+        "efeitos_adversos": [
+          "ardência",
+          "ceratite ponteada superficial",
+          "afinamento corneal raro",
+          "reação alérgica de contato"
+        ],
+        "apresentacoes": [
+          "colírio 5 mL a 0,5%",
+          "unidose 0,4 mL a 0,5%"
+        ],
+        "preparo": "Uso direto; não tocar a ponta do frasco na conjuntiva",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "dor em escala 0 a 10",
+          "integridade corneal com fluoresceína",
+          "necessidade real de corticoide"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Não substitui o corticoide na uveíte anterior; serve como analgésico e poupador. Suspender se surgir infiltrado corneal ou piora da dor.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisona 20 mg comprimido",
+        "papel": "condicional",
+        "indicacao": "uveíte anterior grave com risco visual, uveíte bilateral, intermediária ou posterior, ou refratária ao tratamento tópico",
+        "dose": "1 mg/kg",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "2 a 4 semanas na dose plena, com desmame em 8 a 12 semanas",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": [
+          "infecção sistêmica não tratada",
+          "herpes ocular sem antiviral",
+          "tuberculose ativa sem esquema",
+          "diabetes descompensado",
+          "úlcera péptica ativa",
+          "psicose"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipertensão arterial",
+          "insônia e alteração de humor",
+          "retenção hídrica e ganho de peso",
+          "supressão do eixo adrenal",
+          "osteoporose",
+          "úlcera péptica",
+          "infecção oportunista"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 20 mg"
+        ],
+        "preparo": "Uso direto pela manhã, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia",
+          "pressão arterial",
+          "peso e edema",
+          "pressão intraocular",
+          "sinais infecciosos",
+          "potássio"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Preferir prednisolona em hepatopatia grave; a prednisona depende de conversão hepática",
+        "observacoes": "Só com oftalmologia e sempre com cobertura antiviral quando houver herpes. Não é primeira linha na uveíte anterior leve: o tratamento tópico resolve. Em diabético, monitorar glicemia diariamente.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunossupressor",
+        "agente": "metotrexato 2,5 mg comprimido",
+        "papel": "condicional",
+        "indicacao": "uveíte recidivante associada a HLA-B27 ou espondiloartrite, uveíte crônica corticodependente ou refratária",
+        "dose": "15 a 25 mg",
+        "unidade": "mg",
+        "via": "VO ou SC",
+        "frequencia": "1x/semana (nunca diária)",
+        "duracao": "6 a 12 meses, com reavaliação a cada 3 meses",
+        "dose_maxima": "25 mg/semana",
+        "contraindicacoes": [
+          "gestação e amamentação",
+          "hepatopatia grave",
+          "insuficiência renal",
+          "citopenia",
+          "alcoolismo",
+          "imunodeficiência"
+        ],
+        "efeitos_adversos": [
+          "náusea e estomatite",
+          "hepatotoxicidade",
+          "mielossupressão",
+          "pneumonite",
+          "teratogenicidade"
+        ],
+        "apresentacoes": [
+          "comprimido 2,5 mg",
+          "solução injetável 25 mg/mL (ampola)",
+          "caneta preenchida 7,5 a 25 mg"
+        ],
+        "preparo": "VO: uso direto. SC: aplicar no abdome ou na coxa; associar ácido fólico 5 mg 24 h após a dose",
+        "tempo_infusao": "não se aplica (via oral ou subcutânea)",
+        "monitorizacao": [
+          "hemograma, TGO, TGP e creatinina a cada 4 a 8 semanas",
+          "adesão ao esquema semanal",
+          "sintomas pulmonares",
+          "teste de gravidez antes de iniciar"
+        ],
+        "ajuste_renal": "Contraindicado com ClCr abaixo de 30; reduzir em ClCr de 30 a 60",
+        "ajuste_hepatico": "Evitar em hepatopatia grave ou fibrose",
+        "observacoes": "Sempre semanal: erro de dose diária é fatal. Exige contracepção, suplementação de ácido fólico e controle laboratorial regular.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunossupressor",
+        "agente": "azatioprina 50 mg comprimido",
+        "papel": "alternativa",
+        "indicacao": "uveíte crônica corticodependente, inclusive associada a sarcoidose, quando o metotrexato falha ou é contraindicado",
+        "dose": "2 a 2,5 mg/kg/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia ou 12/12 h",
+        "duracao": "6 a 12 meses",
+        "dose_maxima": "2,5 mg/kg/dia",
+        "contraindicacoes": [
+          "deficiência de TPMT",
+          "gestação",
+          "pancreatite",
+          "mielossupressão",
+          "gota"
+        ],
+        "efeitos_adversos": [
+          "mielossupressão",
+          "hepatotoxicidade",
+          "pancreatite",
+          "náusea",
+          "infecções de repetição"
+        ],
+        "apresentacoes": [
+          "comprimido 50 mg",
+          "comprimido 100 mg"
+        ],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "hemograma a cada 2 semanas no primeiro mês e depois mensal",
+          "TGO e TGP",
+          "amilase se dor abdominal",
+          "TPMT quando disponível"
+        ],
+        "ajuste_renal": "Reduzir em insuficiência renal grave",
+        "ajuste_hepatico": "Reduzir ou evitar em hepatopatia",
+        "observacoes": "Menos usada que o metotrexato pelo risco de mielotoxicidade; reservar para falha, intolerância ou contraindicação do metotrexato.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir 400 mg comprimido",
+        "papel": "condicional",
+        "indicacao": "uveíte anterior associada a herpes simples ou zoster e cobertura obrigatória quando o corticoide tópico é usado em paciente com herpes ocular",
+        "dose": "400 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "5x/dia, de 4/4 h omitindo a dose noturna",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "hipersensibilidade ao aciclovir",
+          "insuficiência renal sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "cefaleia",
+          "neurotoxicidade em renal crônico",
+          "cristalúria"
+        ],
+        "apresentacoes": [
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "suspensão oral 40 mg/mL",
+          "creme oftálmico 3%"
+        ],
+        "preparo": "Uso direto com água; manter hidratação adequada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "função renal",
+          "estado de hidratação",
+          "confusão mental em idoso",
+          "regressão da lesão corneal"
+        ],
+        "ajuste_renal": "ClCr de 25 a 50: 400 mg 8/8 h; ClCr de 10 a 25: 400 mg 12/12 h; abaixo de 10: 200 mg 12/12 h",
+        "ajuste_hepatico": "Sem ajuste em hepatopatia leve a moderada",
+        "observacoes": "Não substitui a avaliação oftalmológica. Em ceratite herpética, o corticoide só entra com antiviral em curso e sob supervisão especializada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico",
+        "agente": "penicilina benzatina 1.200.000 UI",
+        "papel": "condicional",
+        "indicacao": "sífilis ocular com VDRL ou FTA-Abs positivos, como início do tratamento enquanto se organiza o esquema endovenoso",
+        "dose": "2,4 milhões de UI",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única",
+        "duracao": "dose única; sífilis ocular exige esquema endovenoso de 10 a 14 dias",
+        "dose_maxima": "2,4 milhões de UI por dose",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "história de reação anafilática"
+        ],
+        "efeitos_adversos": [
+          "dor no local da aplicação",
+          "reação de Jarisch-Herxheimer",
+          "rash",
+          "anafilaxia"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1.200.000 UI",
+          "frasco-ampola 600.000 UI"
+        ],
+        "preparo": "Reconstituir com 4 mL do diluente; aplicar 1,2 milhão de UI em cada glúteo",
+        "tempo_infusao": "não se aplica (via intramuscular); aplicar em 2 a 3 minutos por glúteo",
+        "monitorizacao": [
+          "reação local e sistêmica por 30 minutos",
+          "VDRL quantitativo em 3, 6 e 12 meses",
+          "febre e mialgia por Jarisch-Herxheimer"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Sífilis ocular é tratada como neurossífilis: penicilina cristalina 18 a 24 milhões de UI/dia IV por 10 a 14 dias. A benzatina isolada não trata neurossífilis — serve apenas como início, com encaminhamento obrigatório no mesmo dia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "betabloqueador_topico",
+        "agente": "timolol 0,5% colírio",
+        "papel": "condicional",
+        "indicacao": "hipertensão ocular associada à uveíte ou induzida por corticoide",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "12/12 h",
+        "duracao": "até o controle pela oftalmologia",
+        "dose_maxima": "1 gota 12/12 h no olho afetado",
+        "contraindicacoes": [
+          "asma e DPOC grave",
+          "bloqueio atrioventricular de 2º ou 3º grau",
+          "bradicardia",
+          "insuficiência cardíaca descompensada"
+        ],
+        "efeitos_adversos": [
+          "bradicardia",
+          "broncoespasmo",
+          "hipotensão",
+          "ardência"
+        ],
+        "apresentacoes": [
+          "colírio 5 mL a 0,25%",
+          "colírio 5 mL a 0,5%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 1 minuto para reduzir a absorção sistêmica",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "frequência cardíaca e pressão arterial",
+          "pico de fluxo em asmático",
+          "pressão intraocular"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Baixa a pressão intraocular como ponte, mas não tratar hipertensão ocular da uveíte apenas com betabloqueador: a inflamação e a dose do corticoide precisam ser revistas junto.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Avaliação com lâmpada de fenda antes de iniciar e durante todo o tratamento",
+        "detalhe": "Registrar células e flare, pupila, pressão intraocular e acuidade visual em cada visita; sem esse exame não se prescreve corticoide"
+      },
+      {
+        "medida": "Óculos escuros e ambiente com pouca luz",
+        "detalhe": "A fotofobia da uveíte é intensa e limita a atividade; o óculos reduz o desconforto sem interferir no tratamento"
+      },
+      {
+        "medida": "Não coçar o olho nem comprimir o globo ocular",
+        "detalhe": "A compressão em olho inflamado pode agravar a dor e, em córnea com afinamento, causar perfuração"
+      },
+      {
+        "medida": "Higiene das mãos e não compartilhar colírios",
+        "detalhe": "Trocar a fronha e a toalha e descartar colírio vencido ou com a ponta contaminada; frasco aberto vale por 30 dias"
+      },
+      {
+        "medida": "Suspender a lente de contato até a liberação oftalmológica",
+        "detalhe": "Manter sem lente durante todo o tratamento e por 24 h após a suspensão do corticoide; a lente em olho inflamado favorece ceratite"
+      },
+      {
+        "medida": "Adesão ao desmame do corticoide por escrito",
+        "detalhe": "Entregar o esquema de redução em dias e gotas; parar o colírio quando a dor melhora é a principal causa de recidiva"
+      },
+      {
+        "medida": "Tratamento da doença de base",
+        "detalhe": "Espondiloartrite, sarcoidose, sífilis, tuberculose e herpes exigem tratamento específico; a uveíte recidiva enquanto a causa não é controlada"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Biomicroscopia com lâmpada de fenda e contagem de células",
+        "indicacao": "todo olho com dor, fotofobia, miose ou baixa visual",
+        "tecnica": "Instilar fluoresceína, examinar córnea, câmara anterior, íris e cristalino; graduar células e flare de 0 a 4+ e registrar a pressão intraocular",
+        "complicacoes": "Falso negativo sem magnificação adequada, contaminação do corante, desconforto"
+      },
+      {
+        "nome": "Tonometria de aplanação",
+        "indicacao": "toda uveíte, pelo risco de hipertensão ocular inflamatória e induzida por corticoide",
+        "tecnica": "Anestésico tópico e tonômetro sobre a córnea, medindo os dois olhos; repetir a cada 2 a 4 semanas durante o corticoide",
+        "complicacoes": "Abrasão por técnica inadequada, transmissão de infecção sem higienização do tonômetro, medida falsa em córnea edemaciada"
+      },
+      {
+        "nome": "Cicloplegia terapêutica e lise de sinequia",
+        "indicacao": "dor intensa, pupila miótica e sinequia incipiente",
+        "tecnica": "Instilar atropina 1% e, se necessário, associar fenilefrina 2,5% sob supervisão para romper a aderência iriana; repetir conforme a resposta",
+        "complicacoes": "Glaucoma agudo em olho predisposto, midríase prolongada, taquicardia e retenção urinária"
+      },
+      {
+        "nome": "Injeção periocular ou subconjuntival de corticoide",
+        "indicacao": "uveíte refratária ao colírio, com inflamação intensa e risco visual",
+        "tecnica": "Anestesia tópica, antissepsia e injeção de dexametasona ou triancinolona no espaço sub-Tenon ou subconjuntival, por oftalmologista",
+        "complicacoes": "Hipertensão ocular, ptose, perfuração ocular, endoftalmite, atrofia de gordura periocular"
+      },
+      {
+        "nome": "Punção de câmara anterior com PCR",
+        "indicacao": "uveíte com suspeita de herpes, citomegalovírus, toxoplasmose ou sífilis, quando a sorologia não fecha o diagnóstico",
+        "tecnica": "Antissepsia, anestesia tópica e coleta de 0,1 a 0,2 mL de humor aquoso com agulha de calibre fino, por oftalmologista",
+        "complicacoes": "Hipema, endoftalmite, lesão de cristalino, resultado falso negativo com amostra insuficiente"
+      }
+    ],
+    "metas": [
+      "Dor e fotofobia controladas em 48 a 72 horas",
+      "Ausência de células na câmara anterior em 4 a 8 semanas",
+      "Pupila dilatável e sem sinequia em toda avaliação",
+      "Pressão intraocular entre 10 e 21 mmHg",
+      "Acuidade visual mantida ou recuperada ao nível basal",
+      "Corticoide tópico suspenso com desmame completo e sem recidiva em 3 meses",
+      "Investigação etiológica dirigida concluída em até 30 dias"
+    ],
+    "fluxo": [
+      "Medir a acuidade visual e examinar com lâmpada de fenda antes de qualquer colírio; registrar células, flare, pupila e pressão intraocular",
+      "Separar uveíte de conjuntivite, ceratite e glaucoma agudo: dor profunda, fotofobia, miose e baixa visual apontam para uveíte",
+      "Antes do corticoide, corar a córnea com fluoresceína e excluir ceratite herpética; se houver úlcera dendrítica, iniciar antiviral e não usar corticoide isolado",
+      "Iniciar corticoide tópico potente e cicloplégico conforme a gravidade, com frequência definida e desmame programado por escrito",
+      "Medir a pressão intraocular em toda visita; se acima de 21 mmHg, tratar e reavaliar a frequência do corticoide",
+      "Investigar causa dirigida: HLA-B27, radiografia de tórax e ECA para sarcoidose, VDRL e FTA-Abs, IGRA e radiografia para tuberculose, PCR para herpes e história de trauma",
+      "Se refratária, bilateral ou recidivante, associar corticoide sistêmico e imunossupressor com a oftalmologia",
+      "Alta apenas com retorno agendado em 3 a 7 dias e sinais de alarme explicados por escrito"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "corticoide tópico e cicloplegia são permitidos; evitar metotrexato e azatioprina e usar prednisona com cautela",
+        "alerta": "imunossupressores são teratogênicos e exigem contracepção"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "medir pressão intraocular e avaliar ângulo antes da atropina; preferir tropicamida quando o risco de fechamento angular é alto",
+        "alerta": "crise de glaucoma agudo desencadeada por cicloplegia e retenção urinária"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "monitorar glicemia durante corticoide tópico de alta frequência e sistêmico; controle glicêmico antes de alta",
+        "alerta": "hiperglicemia e infecção secundária sob corticoide"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "excluir citomegalovírus, toxoplasmose, sífilis e tuberculose antes de intensificar corticoide; limiar baixo para punção de câmara anterior",
+        "alerta": "uveíte infecciosa mascarada e agravada por corticoide"
+      },
+      {
+        "populacao": "usuario_de_lente_de_contato",
+        "ajuste": "suspender a lente e avaliar córnea com fluoresceína antes de atribuir o quadro à uveíte",
+        "alerta": "ceratite por Pseudomonas coexistente"
+      },
+      {
+        "populacao": "monocular",
+        "ajuste": "prioridade máxima de encaminhamento e retorno em 24 a 48 horas",
+        "alerta": "cegueira funcional definitiva"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "acuidade visual com optotipo de Snellen",
+          "indicacao": "todos",
+          "o_que_muda": "define gravidade e documenta a resposta ao tratamento"
+        },
+        {
+          "nome": "biomicroscopia com lâmpada de fenda",
+          "indicacao": "todos",
+          "o_que_muda": "confirma células e flare, gradua a inflamação e separa uveíte de ceratite e conjuntivite"
+        },
+        {
+          "nome": "tonometria de aplanação",
+          "indicacao": "todos, a cada 2 a 4 semanas sob corticoide",
+          "o_que_muda": "detecta hipertensão ocular e define tratamento hipotensor"
+        },
+        {
+          "nome": "HLA-B27",
+          "indicacao": "uveíte anterior recidivante, dor lombar inflamatória ou artrite",
+          "o_que_muda": "associa a espondiloartrite e indica acompanhamento reumatológico e poupador de corticoide"
+        },
+        {
+          "nome": "VDRL e FTA-Abs",
+          "indicacao": "toda uveíte sem causa evidente",
+          "o_que_muda": "sífilis ocular muda o tratamento para esquema de neurossífilis"
+        },
+        {
+          "nome": "IGRA e radiografia de tórax",
+          "indicacao": "uveíte crônica, tosse, contato com tuberculose ou uso de imunossupressor",
+          "o_que_muda": "tuberculose e sarcoidose contraindicam corticoide sem cobertura específica"
+        },
+        {
+          "nome": "PCR de humor aquoso",
+          "indicacao": "suspeita de herpes, citomegalovírus ou toxoplasmose",
+          "o_que_muda": "define o agente e permite antiviral ou antiparasitário dirigido"
+        },
+        {
+          "nome": "glicemia, hemograma e função hepática e renal",
+          "indicacao": "antes de corticoide sistêmico ou imunossupressor",
+          "o_que_muda": "define contraindicação e ajuste de dose"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "cultura de secreção conjuntival",
+          "motivo": "não há secreção purulenta na uveíte e o resultado não altera a conduta"
+        },
+        {
+          "exame": "tomografia de crânio na uveíte anterior sem sinal neurológico",
+          "motivo": "irradiação e custo sem mudança de conduta"
+        },
+        {
+          "exame": "painel reumatológico completo sem achado clínico",
+          "motivo": "falsos positivos de FAN e fator reumatoide geram tratamento desnecessário"
+        },
+        {
+          "exame": "dosagem isolada de enzima conversora de angiotensina para excluir sarcoidose",
+          "motivo": "baixa sensibilidade e especificidade quando isolada"
+        },
+        {
+          "exame": "prescrição de corticoide antes da biomicroscopia com fluoresceína",
+          "motivo": "mascara ceratite herpética e leva à perfuração corneal"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "usar o colírio na frequência exata da receita, inclusive acordando à noite quando indicado",
+        "seguir o desmame por escrito, sem parar quando a dor melhorar",
+        "usar óculos escuros para a fotofobia",
+        "comparecer às reavaliações para medir a pressão intraocular",
+        "lavar as mãos antes e depois de pingar o colírio",
+        "avisar imediatamente se a visão piorar ou a pupila ficar diferente"
+      ],
+      "evitar": [
+        "usar colírio de corticoide por conta própria ou de outra pessoa",
+        "coçar ou comprimir o olho",
+        "lente de contato durante o tratamento",
+        "suspender o corticoide de forma abrupta",
+        "automédica com antibiótico tópico",
+        "exposição solar intensa sem óculos durante a cicloplegia"
+      ],
+      "retorno": [
+        "piora da visão",
+        "dor que não melhora em 72 h",
+        "pupila irregular ou que não dilata",
+        "visão de halos, náusea ou dor intensa após o colírio",
+        "olho muito vermelho com pus na câmara anterior",
+        "febre, lesão genital ou exantema"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "prednisolona e dexametasona",
+        "efeitos": [
+          "hipertensão ocular",
+          "catarata",
+          "infecção secundária",
+          "retardo de cicatrização"
+        ],
+        "observacao": "medir pressão intraocular a cada 2 a 4 semanas e desmamar lentamente"
+      },
+      {
+        "agente": "atropina",
+        "efeitos": [
+          "midríase prolongada",
+          "fotofobia",
+          "taquicardia",
+          "retenção urinária"
+        ],
+        "observacao": "suspender se dor, náusea ou halo sugerirem glaucoma agudo"
+      },
+      {
+        "agente": "tropicamida",
+        "efeitos": [
+          "visão borrada para perto",
+          "fotofobia transitória"
+        ],
+        "observacao": "efeito dura 4 a 6 horas; orientar sobre direção"
+      },
+      {
+        "agente": "cetorolaco",
+        "efeitos": [
+          "ceratite ponteada",
+          "afinamento corneal",
+          "ardência"
+        ],
+        "observacao": "suspender se surgir infiltrado corneal ou piora da dor"
+      },
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "hipertensão",
+          "insônia",
+          "infecção"
+        ],
+        "observacao": "monitorar glicemia, pressão e sinais infecciosos"
+      },
+      {
+        "agente": "metotrexato",
+        "efeitos": [
+          "mielossupressão",
+          "hepatotoxicidade",
+          "estomatite"
+        ],
+        "observacao": "hemograma e transaminases a cada 4 a 8 semanas"
+      },
+      {
+        "agente": "azatioprina",
+        "efeitos": [
+          "mielossupressão",
+          "pancreatite",
+          "hepatotoxicidade"
+        ],
+        "observacao": "hemograma quinzenal no primeiro mês"
+      },
+      {
+        "agente": "aciclovir",
+        "efeitos": [
+          "náusea",
+          "confusão mental em renal crônico"
+        ],
+        "observacao": "ajustar à função renal e hidratar"
+      },
+      {
+        "agente": "penicilina benzatina",
+        "efeitos": [
+          "dor local",
+          "Jarisch-Herxheimer",
+          "anafilaxia"
+        ],
+        "observacao": "observar 30 minutos após a aplicação"
+      },
+      {
+        "agente": "timolol",
+        "efeitos": [
+          "bradicardia",
+          "broncoespasmo",
+          "hipotensão"
+        ],
+        "observacao": "evitar em asmático e em bloqueio atrioventricular"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o colírio implicado e registrar a reação na evolução",
+      "Corticoide com pressão intraocular em ascensão: reduzir a frequência, associar hipotensor tópico e reavaliar com a oftalmologia em 7 dias",
+      "Atropina com dor, náusea, halo ou midríase fixa: suspender, medir a pressão intraocular e tratar crise de glaucoma agudo",
+      "Metotrexato com citopenia ou elevação de transaminases: suspender, dosar hemograma e função hepática e substituir por azatioprina",
+      "Prednisona com hiperglicemia ou hipertensão: intensificar controle clínico e acelerar o desmame com a oftalmologia",
+      "Reação alérgica de contato ao conservante: trocar para apresentação em unidose sem conservante",
+      "Comunicar a equipe e reavaliar a indicação na consulta seguinte"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "prednisolona 1% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "4/4 h enquanto acordado",
+            "duracao": "30 dias com desmame",
+            "condicao": "uveíte anterior confirmada por biomicroscopia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tropicamida 1% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "12/12 h",
+            "duracao": "14 dias",
+            "condicao": "cicloplegia para dor e prevenção de sinequia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "atropina 1% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "12/12 h",
+            "duracao": "14 dias",
+            "condicao": "uveíte grave ou sinequia incipiente",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cetorolaco 0,5% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "6/6 h",
+            "duracao": "14 dias",
+            "condicao": "adjuvante analgésico",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisona 20 mg",
+            "dose": "1 mg/kg/dia",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "desmame em 8 a 12 semanas",
+            "condicao": "uveíte bilateral, posterior ou refratária, com oftalmologia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metotrexato 2,5 mg",
+            "dose": "15 a 25 mg/semana",
+            "via": "VO ou SC",
+            "frequencia": "1x/semana",
+            "duracao": "6 a 12 meses",
+            "condicao": "uveíte recidivante corticodependente",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "aciclovir 400 mg",
+            "dose": "400 mg",
+            "via": "VO",
+            "frequencia": "5x/dia",
+            "duracao": "10 dias",
+            "condicao": "herpes ocular associado",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "prednisolona 1% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "1/1 h enquanto acordado",
+            "monitorizacao": "pressão intraocular, células e flare",
+            "condicao": "uveíte grave com hipópio ou fibrina",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "atropina 1% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "12/12 h",
+            "monitorizacao": "pressão intraocular, dor, pupilas",
+            "condicao": "sinequia ou risco de íris bombé",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisona 20 mg",
+            "dose": "1 mg/kg/dia",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "monitorizacao": "glicemia, pressão arterial, potássio",
+            "condicao": "uveíte com risco visual sob oftalmologia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "timolol 0,5% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "12/12 h",
+            "monitorizacao": "pressão intraocular, frequência cardíaca",
+            "condicao": "hipertensão ocular associada",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "acuidade visual com Snellen",
+          "biomicroscopia com lâmpada de fenda",
+          "tonometria de aplanação",
+          "HLA-B27",
+          "VDRL e FTA-Abs",
+          "IGRA e radiografia de tórax",
+          "PCR de humor aquoso",
+          "hemograma, glicemia, função hepática e renal",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de uveíte anterior, necessitando de afastamento das atividades por dias, em tratamento com corticoide tópico e cicloplegia.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica e dependem da acuidade visual e da atividade exercida"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "acuidade visual dos dois olhos",
+          "pressão intraocular",
+          "células e flare",
+          "pupila e sinequia",
+          "tempo de evolução",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com uveíte anterior à ___, acuidade visual ___ em olho direito e ___ em olho esquerdo, células ___ e flare ___, pupila ___, pressão intraocular ___, tratamento com ___ e plano de reavaliação em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "lado",
+        "dor",
+        "fotofobia",
+        "acuidade visual",
+        "secreção",
+        "trauma",
+        "herpes ocular",
+        "espondiloartrite",
+        "sarcoidose",
+        "sífilis",
+        "tuberculose",
+        "imunossupressão"
+      ],
+      "texto_template": "Paciente com dor ocular e fotofobia à ___, acuidade visual ___, secreção ___, trauma ___, herpes ocular ___, espondiloartrite ___, sarcoidose ___, sífilis ___, tuberculose ___ e imunossupressão ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "acuidade visual",
+        "pupilas e reflexo fotomotor",
+        "hiperemia perilímbica",
+        "córnea com fluoresceína",
+        "células e flare na câmara anterior",
+        "pressão intraocular",
+        "fundoscopia dilatada",
+        "pele e mucosas",
+        "articulações"
+      ],
+      "texto_template": "Acuidade visual ___ em olho direito e ___ em olho esquerdo, pupila ___ com reflexo fotomotor ___, hiperemia perilímbica ___, córnea com fluoresceína ___, células ___ e flare ___ na câmara anterior, pressão intraocular ___ e fundoscopia ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de uveíte e critérios de encaminhamento no mesmo dia",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_oftalmologia",
+        "o_que_verificar": "tratamento da uveíte anterior, frequência do corticoide e desmame",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_reumatologia",
+        "o_que_verificar": "uveíte associada a HLA-B27 e espondiloartrites",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_saude",
+        "o_que_verificar": "esquemas de sífilis e tuberculose e notificação compulsória",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de colírios, corticoide sistêmico e imunossupressores",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-OFT09-01",
+        "tipo": "corticoide_sem_exclusao_de_herpes",
+        "gatilho": "corticoide tópico prescrito sem fluoresceína registrada ou com história de herpes ocular",
+        "severidade": "grave",
+        "mensagem": "Corticoide sem excluir ceratite herpética pode perfurar a córnea.",
+        "acao": "bloquear o item e exigir biomicroscopia com fluoresceína e cobertura antiviral",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT09-02",
+        "tipo": "tratado_como_conjuntivite",
+        "gatilho": "antibiótico tópico prescrito em dor ocular com fotofobia e miose",
+        "severidade": "grave",
+        "mensagem": "Uveíte não é conjuntivite: antibiótico não trata e atrasa o corticoide.",
+        "acao": "bloquear antibiótico e encaminhar à oftalmologia no mesmo dia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT09-03",
+        "tipo": "sinequia_posterior",
+        "gatilho": "pupila irregular ou aderida ao cristalino",
+        "severidade": "grave",
+        "mensagem": "Sinequia posterior evolui para íris bombé e glaucoma agudo.",
+        "acao": "acionar oftalmologia no mesmo dia e intensificar a cicloplegia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT09-04",
+        "tipo": "hipertensao_ocular",
+        "gatilho": "pressão intraocular acima de 21 mmHg",
+        "severidade": "grave",
+        "mensagem": "Hipertensão ocular inflamatória ou por corticoide exige tratamento e revisão da dose.",
+        "acao": "alertar, tratar e reavaliar a frequência do corticoide",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-OFT09-05",
+        "tipo": "cicloplegico_em_idoso",
+        "gatilho": "atropina prescrita em maior de 60 anos ou em olho com ângulo estreito",
+        "severidade": "precaucao",
+        "mensagem": "Cicloplegia pode desencadear glaucoma agudo de ângulo fechado.",
+        "acao": "alertar para medir pressão intraocular e considerar tropicamida",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-OFT09-06",
+        "tipo": "baixa_visual_progressiva",
+        "gatilho": "queda de acuidade visual em relação à visita anterior",
+        "severidade": "grave",
+        "mensagem": "Piora visual na uveíte sugere edema macular, catarata, hipópio ou glaucoma.",
+        "acao": "bloquear alta e reavaliar no mesmo dia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT09-07",
+        "tipo": "investigacao_etiológica",
+        "gatilho": "febre, perda de peso, lesão genital ou tosse associada à uveíte",
+        "severidade": "precaucao",
+        "mensagem": "Sinal sistêmico exige investigação de sífilis, tuberculose, sarcoidose e HIV.",
+        "acao": "sugerir VDRL, IGRA, radiografia de tórax e HIV",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "protocolo institucional"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

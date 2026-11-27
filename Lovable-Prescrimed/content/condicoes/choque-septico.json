@@ -1,0 +1,254 @@
+{
+  "id": "leg_2002",
+  "nome": "Choque Séptico",
+  "cat": "Emergência",
+  "alias": "sepse grave choque septico hipotensao septica vasopressor noradrenalina",
+  "cid": [
+    [
+      "R572",
+      "Choque séptico"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "Surviving Sepsis Campaign 2021",
+      "AMIB — sepse e choque"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "INF-01 em 2026-11-27",
+    "fundido_workspace": "INF-01 em 2026-11-27"
+  },
+  "alerta": "Sepse + hipotensão persistente após 30 mL/kg OU lactato ≥ 4 com hipoperfusão. 1) Duas vias calibrosas ou acesso central + noradrenalina 0,05–0,3 mcg/kg/min titulada para PAM ≥ 65 (inicie por via periférica diluída se central demorar — não espere); 2) vasopressina 0,03 U/min fixa se NA > 0,25–0,5; 3) hidrocortisona 50 mg EV 6/6h (200–300 mg/dia) se choque refratário — suspender na melhora; 4) antibiótico EV ≤ 1 h (ver classes) após hemoculturas; 5) metas: lactato seriado, diurese ≥ 0,5 mL/kg/h, PAM ≥ 65, ScvO2; 6) procurar foco drenável (coleta, abdome, pele); 7) monitor contínuo + leito de UTI/transferência com regulação JÁ; 8) não usar bolus adicional sem reavaliar (congestão = EAP iatrogênico).",
+  "redFlags": [
+    "PAM < 65 apesar de NA ≥ 0,3 — adicionar vasopressina e reavaliar volume/coronária",
+    "Lactato subindo apesar da reposição — hipoperfusão persistente: source control e UTI",
+    "Anúria + pressão difícil — IRA isquêmica: discutir diálise precoce",
+    "Petéquias + choque — meningococcemia: antibiótico imediato + notificação compulsória",
+    "Temperatura < 36 °C com choque — pior prognóstico, não se engane com 'paciente estável'",
+    "Plaquetas em queda/Rapidíssimo INR — coagulopatia: cuidar sangramento antes de puncionar central",
+    "Choque refratário a volume — noradrenalina PRECOCE (periférica calibrosa aceita), não esperar leito de UTI"
+  ],
+  "naoUsar": [
+    "Dopamina como 1º vasopressor (mais arritmia) — noradrenalina é 1ª linha",
+    "Bolus repetidos 'cegos' sem reavaliação de congestão",
+    "Hidrocortisona em dose alta/estresse por rotina — só choque refratário, 200–300 mg/dia"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antibiótico de amplo espectro ≤ 1 h",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "cefepima",
+            "motivo": "2 g EV 8/8h — 1ª linha do choque até foco definido (Pseudomonas)"
+          },
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "500 mg EV 8/8h — cobertura anaeróbia se foco abdominal possível"
+          },
+          {
+            "hosp": "ceftriaxona_ev",
+            "motivo": "2 g EV 1x/dia — foco comunitário sem risco Pseudomonas"
+          },
+          {
+            "hosp": "amp_sulb",
+            "motivo": "3 g EV 6/6h — abdominal/aspização"
+          },
+          {
+            "hosp": "gentamicina",
+            "motivo": "5–7 mg/kg/dia EV — associação em foco urinário grave (renal!)"
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide do choque refratário",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "hidrocortisona_ev",
+            "motivo": "50 mg EV 6/6h enquanto choque refratário; desmame na melhora"
+          }
+        ]
+      },
+      {
+        "nome": "Tromboprofilaxia (estabilizado)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "enoxaparina",
+            "motivo": "40 mg SC/dia profilática — peso risco/sangramento"
+          }
+        ]
+      },
+      {
+        "nome": "Vasopressores e inotrópicos",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "noradrenalina_choque",
+              "n": "Noradrenalina",
+              "ap": "ampola 4 mg/4 mL (2 mg/mL)",
+              "via": "IV",
+              "pos": "0,05–0,5 mcg/kg/min, titular a cada 5 min (alvo PAM ≥ 65). Diluição: 4 mg em 250 mL = 16 mcg/mL. Se refratário: vasopressina 0,03 UI/min"
+            }
+          },
+          {
+            "novo": {
+              "id": "vasopressina_choque",
+              "n": "Vasopressina",
+              "ap": "ampola 20 UI/mL",
+              "via": "IV",
+              "pos": "0,03 UI/min fixa, sem titulação — poupa noradrenalina quando dose ≥ 0,25–0,5 mcg/kg/min"
+            }
+          },
+          {
+            "novo": {
+              "id": "dobutamina_choque",
+              "n": "Dobutamina",
+              "ap": "ampola 250 mg/20 mL",
+              "via": "IV",
+              "pos": "2–20 mcg/kg/min — débito baixo persistente (SE < 2,2) ou congestão apesar de noradrenalina + volume"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Alta só após estabilização",
+              "ap": "",
+              "pos": "Choque séptico NÃO recebe alta direta do PS: internação/UTI obrigatórias. Orientação à família: gravidade, foco em investigação, tempo esperado de antibioticoterapia (7–14 dias conforme foco)."
+            },
+            "motivo": "Fluxo correto"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Dois acessos venosos calibrosos e um acesso central quando indicado",
+              "ap": "",
+              "q": "",
+              "pos": "18 G em antebraço para volume; cateter central guiado por ultrassom se vasopressor em dose crescente, drogas irritantes ou veias periféricas ruins"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Monitorização com eletrocardiograma, oximetria e pressão arterial contínua",
+              "ap": "",
+              "q": "",
+              "pos": "pressão invasiva se noradrenalina acima de 0,3 mcg/kg/min ou instabilidade rápida; registrar pressão média a cada 5 min na titulação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Sonda vesical com diurese horária",
+              "ap": "",
+              "q": "",
+              "pos": "meta de 0,5 mL/kg/h; registrar em balanço hídrico com entrada, saída e peso diário"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Coleta de duas hemoculturas de sítios diferentes antes do antibiótico",
+              "ap": "",
+              "q": "",
+              "pos": "20 mL por par, uma periférica e uma de cateter se houver; não atrasar o antibiótico mais de 45 min por causa da coleta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Controle do foco nas primeiras 6 a 12 h",
+              "ap": "",
+              "q": "",
+              "pos": "drenagem de abscesso, retirada de cateter infectado, desbridamento, desobstrução urinária; sem controle do foco o choque não sai"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Reavaliação hemodinâmica estruturada após cada carga de volume",
+              "ap": "",
+              "q": "",
+              "pos": "prova de volume passiva, variação de pressão de pulso, elevação de pernas ou ultrassom à beira do leito; não repetir volume por hábito"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Profilaxia de trombose e de úlcera de estresse conforme risco",
+              "ap": "",
+              "q": "",
+              "pos": "enoxaparina 40 mg SC 1x/dia após controle de sangramento; IBP se ventilação mecânica, coagulopatia ou sangramento prévio"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Controle glicêmico e de temperatura",
+              "ap": "",
+              "q": "",
+              "pos": "alvo de glicemia 140–180 mg/dL com insulina em bomba; antitérmico e medidas físicas se febre alta, sem retardar o antibiótico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Comunicação estruturada na passagem de plantão",
+              "ap": "",
+              "q": "",
+              "pos": "hora do antibiótico, hora das culturas, volume infundido, dose de vasopressor, lactato inicial e de controle, foco e pendências de controle"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "INF-01"
+      }
+    ]
+  }
+}

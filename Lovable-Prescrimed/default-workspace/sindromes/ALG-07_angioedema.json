@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "ALG-07",
+    "area": "Alergias",
+    "nome": "Angioedema",
+    "aliases": ["Angioedema", "edema de Quincke", "angioedema alérgico", "angioedema histaminérgico", "angioedema por IECA", "angioedema hereditário", "angioedema bradicinínico"],
+    "contexto": ["hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Angioedema é edema profundo de derme e submucosa, com ou sem urticária, e a decisão que muda o desfecho é separar duas doenças diferentes que se parecem: o angioedema histaminérgico (mediado por mastócito, alérgico ou idiopático) e o angioedema de bradicinina (por IECA, hereditário ou adquirido). O histaminérgico responde a anti-H1, corticoide e adrenalina; o bradicinínico não responde a nenhum deles e exige icatibanto ou concentrado de C1-inibidor, além da suspensão definitiva do IECA. Tratar bradicinina como alergia é o erro que mata: o paciente recebe anti-H1, corticoide e alta, e volta com edema de glote. Angioedema de língua, assoalho de boca ou laringe é emergência de via aérea: intubação precoce com material de cricotireoidotomia pronto, sem esperar exames e sem sedar um paciente com estridor progressivo fora de ambiente controlado.",
+    "inclusao": [
+      "Edema de lábios, língua, pálpebras, face ou extremidades de início agudo",
+      "Edema de via aérea superior com disfonia, disfagia, sialorreia ou estridor",
+      "Angioedema sem urticária em usuário de IECA, sacubitril ou inibidor de DPP-4",
+      "Angioedema recorrente com história familiar ou dor abdominal associada",
+      "Angioedema com urticária após alimento, fármaco, contraste ou picada"
+    ],
+    "exclusao": [
+      { "situacao": "anafilaxia com hipotensão, broncoespasmo ou sintomas sistêmicos", "fluxo": "anafilaxia" },
+      { "situacao": "urticária isolada sem edema profundo", "fluxo": "urticária" },
+      { "situacao": "celulite, abscesso ou edema infeccioso de face com febre e dor", "fluxo": "infecção de partes moles" },
+      { "situacao": "edema de face por hipoalbuminemia, renal ou cardíaco, bilateral e indolor", "fluxo": "edema sistêmico" },
+      { "situacao": "edema laríngeo por refluxo, corpo estranho ou tumor", "fluxo": "otorrino" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "estridor, disfonia ou rouquidão", "por_que": "edema de laringe com obstrução iminente de via aérea", "acao": "adrenalina IM se suspeita histaminérgica e intubação precoce; icatibanto ou C1-inibidor se bradicinínico", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "edema de língua, assoalho de boca ou úvula", "por_que": "progressão para glote em minutos a horas", "acao": "acionar anestesia, preparar via aérea difícil e observar em unidade monitorizada", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "sialorreia, incapacidade de deglutir ou voz abafada", "por_que": "edema de hipofaringe com risco de aspiração e asfixia", "acao": "jejum, posição sentada e via aérea definitiva", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "angioedema sem urticária e sem prurido, de instalação lenta", "por_que": "angioedema de bradicinina, que não responde a anti-H1 nem a corticoide", "acao": "rever IECA, dosar C4 e C1-inibidor e tratar com icatibanto ou C1-inibidor", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "dor abdominal intensa e recorrente com vômitos", "por_que": "edema de alça intestinal no angioedema hereditário, que simula abdome cirúrgico", "acao": "tratar a crise e não indicar laparotomia sem sinais peritoneais", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "uso de IECA, sacubitril ou inibidor de DPP-4", "por_que": "bradicinina acumulada, com edema que pode recorrer por semanas após a suspensão", "acao": "suspender o fármaco definitivamente e registrar alerta de alergia", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "piora progressiva em 12 a 24 h apesar de anti-H1 e corticoide", "por_que": "diagnóstico errado de angioedema bradicinínico", "acao": "mudar para terapia específica e reavaliar via aérea", "severidade": "precaucao" },
+      { "id": "AL-08", "sinal": "SpO2 abaixo de 92% ou uso de musculatura acessória", "por_que": "falência respiratória por obstrução alta", "acao": "oxigênio, via aérea definitiva e cricotireoidotomia de resgate", "severidade": "grave" }
+    ],
+    "perguntas_rapidas": [
+      "Começou em minutos após contato ou em horas a fio, sem causa clara?",
+      "Tem urticária, coceira ou placas na pele?",
+      "Está com dificuldade para falar, engolir ou respirar?",
+      "Usa enalapril, captopril, lisinopril, sacubitril/valsartana ou sitagliptina?",
+      "Já teve crises iguais antes, e alguém da família tem?",
+      "Teve dor na barriga ou vômitos junto com o inchaço?",
+      "Tomou AINE, antibiótico, contraste ou alimento novo nas últimas horas?",
+      "Já usou adrenalina, anti-H1 ou corticoide nesta crise e melhorou?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Angioedema com urticária, prurido e início em minutos após alérgeno", "escolha": "Difenidramina 25–50 mg IV ou cetirizina 10 mg VO, associada a metilprednisolona 125 mg IV se edema importante; adrenalina IM se houver qualquer sinal de via aérea", "porque": "É angioedema histaminérgico: responde ao bloqueio H1 e ao corticoide, e a adrenalina é obrigatória quando a via aérea participa" },
+      { "cenario": "Edema de língua, glote ou laringe com estridor, independente do mecanismo", "escolha": "Adrenalina 0,3–0,5 mg IM no vasto lateral, preparo imediato de intubação e cricotireoidotomia; associar icatibanto se a suspeita for bradicinínica", "porque": "A adrenalina compra tempo no componente histaminérgico e a via aérea pode fechar antes de qualquer exame confirmar o mecanismo" },
+      { "cenario": "Angioedema facial ou de via aérea em usuário de IECA, sem urticária", "escolha": "Suspender o IECA em definitivo, icatibanto 30 mg SC e observação mínima de 24 h", "porque": "O edema por bradicinina não responde a anti-H1 nem a corticoide; o icatibanto bloqueia o receptor B2 e o edema pode recorrer por dias após a suspensão" },
+      { "cenario": "Crise de angioedema hereditário ou adquirido", "escolha": "Concentrado de C1-inibidor 20 U/kg IV; se indisponível, icatibanto 30 mg SC; se nenhum dos dois, ácido tranexâmico 1 g IV", "porque": "Repõe ou bloqueia o sistema das cininas, que é o mecanismo da doença; anti-H1 e corticoide não têm alvo aqui" },
+      { "cenario": "Angioedema de bradicinina sem acesso a icatibanto nem a C1-inibidor", "escolha": "Plasma fresco congelado 2 unidades (10–20 mL/kg) IV e ácido tranexâmico 1 g 8/8 h", "porque": "O plasma contém C1-inibidor e enzima conversora, que degradam bradicinina; é ponte até a terapia específica" },
+      { "cenario": "Angioedema histaminérgico leve, sem comprometimento de via aérea, em paciente que aceita via oral", "escolha": "Cetirizina 10 mg VO, com aumento para até 20 mg/dia se necessário, e prednisona 40 mg VO por 3 dias", "porque": "Trata o prurido e reduz a fase tardia sem injeção nem internação" },
+      { "cenario": "Urticária com angioedema recorrente refratário a anti-H1 em dose habitual", "escolha": "Quadruplicar a dose do anti-H1 de segunda geração e encaminhar ao alergista para avaliar omalizumabe 300 mg SC mensal", "porque": "A falha de anti-H1 em dose padrão define urticária refratária, e o omalizumabe reduz crises em mais de 70% desses casos" },
+      { "cenario": "Angioedema recorrente por IECA mesmo após a suspensão", "escolha": "Investigar deficiência de C1-inibidor adquirida (neoplasia hematológica) e tratar a doença de base", "porque": "Angioedema adquirido por consumo de C1-inibidor pode se manifestar depois da retirada do IECA e exige tratamento da causa" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "adrenalina_simpatomimetica",
+        "agente": "adrenalina (epinefrina)",
+        "papel": "primeira_linha",
+        "indicacao": "angioedema com comprometimento de via aérea, seja histaminérgico ou bradicinínico, enquanto se prepara a terapia específica",
+        "dose": "0,3–0,5 mg (0,3–0,5 mL da solução 1 mg/mL)",
+        "unidade": "mg",
+        "via": "IM na face anterolateral da coxa (vasto lateral)",
+        "frequencia": "repetir a cada 5–15 min se persistir estridor ou edema de língua",
+        "duracao": "até estabilização da via aérea ou inicio da terapia específica",
+        "dose_maxima": "1,5 mg (três doses de 0,5 mg); se refratário, infusão IV contínua 0,05–0,2 mcg/kg/min em unidade monitorizada",
+        "contraindicacoes": ["angioedema sem qualquer comprometimento de via aérea (não é a primeira escolha)", "arritmia ventricular instável sem monitorização"],
+        "efeitos_adversos": ["taquicardia sinusal", "tremor", "palidez", "hipertensão transitória", "arritmia em cardiopata", "necrose local por extravasamento"],
+        "apresentacoes": ["ampola 1 mg/mL (1:1.000) — 1 mL", "seringa preenchida 0,3 mg/0,3 mL", "autoinjetor 0,3 mg/0,3 mL", "frasco-ampola 1 mg/mL"],
+        "preparo": "Usar a solução 1 mg/mL sem diluir: aspirar 0,3–0,5 mL em seringa de 1 mL e aplicar no vasto lateral; o autoinjetor é aplicado pronto, mantido por 10 s",
+        "tempo_infusao": "bolus IM imediato, aplicação única",
+        "monitorizacao": ["PA e FC a cada 5 min na fase aguda", "ECG contínuo em cardiopata ou maior de 60 anos", "estridor e esforço respiratório", "local da injeção (palidez, extravasamento)", "horário de cada dose"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "A adrenalina compra tempo no angioedema histaminérgico com via aérea comprometida; no angioedema de bradicinina a resposta é fraca e imprevisível, por isso não se espera por ela — icatibanto ou C1-inibidor entram em paralelo. Não usar por via IV em bolus fora de unidade monitorizada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_receptor_bradicinina_b2",
+        "agente": "icatibanto",
+        "papel": "primeira_linha",
+        "indicacao": "angioedema de bradicinina: hereditário, adquirido e por IECA, com ou sem comprometimento de via aérea",
+        "dose": "30 mg (30 mg/3 mL)",
+        "unidade": "mg",
+        "via": "SC profunda em abdome",
+        "frequencia": "repetir 30 mg após 6 h se resposta incompleta ou recidiva",
+        "duracao": "até 3 doses em 24 h na crise",
+        "dose_maxima": "90 mg/24 h",
+        "contraindicacoes": ["hipersensibilidade ao icatibanto", "síndrome coronariana aguda recente ou angina instável (relativa)"],
+        "efeitos_adversos": ["reação no local da injeção", "náusea", "cefaleia", "tontura", "hipotensão", "elevação de transaminases"],
+        "apresentacoes": ["seringa preenchida 30 mg/3 mL", "seringa preenchida 10 mg/1 mL (pediátrica)"],
+        "preparo": "Pronto para uso; não diluir nem transferir para outra seringa; aplicar na pele do abdome, em ângulo de 90 graus",
+        "tempo_infusao": "injeção SC em 30 s; sem infusão",
+        "monitorizacao": ["resolução do edema em 30–60 min", "PA e FC", "dor abdominal e vômitos", "função hepática se uso repetido"],
+        "ajuste_renal": "Sem ajuste; não requer redução em insuficiência renal",
+        "ajuste_hepatico": "Evitar em hepatopatia grave; metabolismo hepático por CYP3A4/2C9",
+        "observacoes": "Não tem aprovação formal para angioedema por IECA no Brasil, mas é a terapia com melhor evidência e menor tempo de resolução nesse cenário; usar como primeira escolha quando disponível. Não esperar confirmação laboratorial para administrar.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/WAO/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_c1_esterase",
+        "agente": "concentrado de C1-inibidor humano",
+        "papel": "primeira_linha",
+        "indicacao": "crise de angioedema hereditário ou adquirido, e angioedema por IECA refratário ao icatibanto",
+        "dose": "20 U/kg",
+        "unidade": "U/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir em 1 h se resposta insuficiente",
+        "duracao": "1–2 doses por crise",
+        "dose_maxima": "2.500 U por dose",
+        "contraindicacoes": ["hipersensibilidade a derivados de plasma", "evento trombótico agudo (relativa)"],
+        "efeitos_adversos": ["cefaleia", "náusea", "reação alérgica", "trombose em acesso central (rara)"],
+        "apresentacoes": ["frasco 500 U (pó) com diluente 5 mL", "frasco 1.000 U com diluente 10 mL"],
+        "preparo": "Reconstituir com o diluente próprio por rotação suave, sem agitar; administrar em acesso venoso calibroso com filtro",
+        "tempo_infusao": "infundir em 5–10 min (1 mL/min); não exceder 4 mL/min",
+        "monitorizacao": ["resolução do edema em 30–90 min", "PA e FC", "sinais de trombose no sítio de infusão", "reação alérgica durante a infusão"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "É reposição do inibidor deficiente, não antialérgico. Não atrasar a infusão para aguardar dosagem de C1-inibidor. Em angioedema adquirido, a resposta costuma ser parcial e a recidiva é frequente enquanto a doença de base não é tratada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "difenidramina",
+        "papel": "primeira_linha",
+        "indicacao": "angioedema histaminérgico com prurido e urticária, sem comprometimento de via aérea",
+        "dose": "25–50 mg",
+        "unidade": "mg",
+        "via": "IV lento ou IM",
+        "frequencia": "dose única; repetir em 4–6 h se o prurido voltar",
+        "duracao": "1–3 doses",
+        "dose_maxima": "400 mg/dia",
+        "contraindicacoes": ["glaucoma de ângulo fechado", "retenção urinária por hiperplasia prostática", "neonato", "delirium anticolinérgico"],
+        "efeitos_adversos": ["sonolência", "boca seca", "taquicardia", "retenção urinária", "confusão mental em idoso"],
+        "apresentacoes": ["ampola 50 mg/mL (1 mL)", "comprimido 25 mg", "solução oral 12,5 mg/5 mL"],
+        "preparo": "IV: diluir a dose em 10 mL de SF 0,9%; IM: uso direto",
+        "tempo_infusao": "IV em 5–10 min; nunca em bolus rápido",
+        "monitorizacao": ["nível de consciência", "PA", "retenção urinária", "regressão do edema e do prurido em 30–60 min"],
+        "ajuste_renal": "Reduzir a dose ou espaçar em doença renal crônica avançada",
+        "observacoes": "Não trata angioedema de bradicinina e não substitui avaliação de via aérea. Anti-H1 isolado em angioedema de língua ou glote é conduta insegura: o edema continua a progredir enquanto o paciente sedado parece calmo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "cetirizina",
+        "papel": "alternativa",
+        "indicacao": "angioedema histaminérgico leve a moderado, sem comprometimento de via aérea, e manutenção ambulatorial",
+        "dose": "10 mg (até 20 mg/dia em urticária refratária)",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "5–7 dias na crise; uso prolongado na urticária crônica",
+        "dose_maxima": "40 mg/dia em urticária refratária, sob supervisão",
+        "contraindicacoes": ["insuficiência renal terminal sem ajuste", "hipersensibilidade a hidroxizina"],
+        "efeitos_adversos": ["sonolência leve", "boca seca", "cefaleia", "tontura"],
+        "apresentacoes": ["comprimido 10 mg", "solução oral 1 mg/mL", "comprimido de desintegração oral 10 mg"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["regressão do edema e do prurido em 60 min", "sonolência", "função renal em uso prolongado"],
+        "ajuste_renal": "ClCr 30–50 mL/min: 5 mg/dia; ClCr abaixo de 30: 5 mg em dias alternados",
+        "observacoes": "Anti-H1 de segunda geração, sem sedação relevante, é a melhor escolha para casa. Dose quádrupla é recurso de especialista na urticária crônica refratária.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/EAACI",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "metilprednisolona",
+        "papel": "condicional",
+        "indicacao": "angioedema histaminérgico moderado a grave, e prevenção da fase tardia",
+        "dose": "125 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única; 40–60 mg a cada 6 h se edema persistente",
+        "duracao": "1–3 dias",
+        "dose_maxima": "250 mg/dia",
+        "contraindicacoes": ["infecção sistêmica não tratada (relativa)", "vacina com vírus vivo recente (relativa)"],
+        "efeitos_adversos": ["hiperglicemia", "hipertensão", "insônia", "dispepsia", "psicose esteroide"],
+        "apresentacoes": ["frasco-ampola 125 mg (pó) com diluente 2 mL", "frasco-ampola 500 mg", "comprimido 4 mg"],
+        "preparo": "Reconstituir com o diluente próprio e diluir em 20–50 mL de SF 0,9%",
+        "tempo_infusao": "5–10 min em bolus lento; 15–30 min se diluído",
+        "monitorizacao": ["glicemia capilar", "PA", "potássio", "sinais de infecção"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; preferir metilprednisolona em hepatopatia grave",
+        "observacoes": "Não tem efeito no angioedema de bradicinina e não reverte edema de glote. O efeito anti-inflamatório só aparece após 4–6 h, portanto nunca é droga de resgate de via aérea.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/EAACI",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisona",
+        "papel": "alternativa",
+        "indicacao": "angioedema histaminérgico leve em paciente ambulatorial ou serviço sem corticoide parenteral",
+        "dose": "40–50 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3–5 dias, sem desmame",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": ["infecção fúngica sistêmica", "úlcera péptica ativa com sangramento"],
+        "efeitos_adversos": ["hiperglicemia", "insônia", "epigastralgia", "aumento do apetite"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 20 mg", "solução oral 1 mg/mL"],
+        "preparo": "Uso direto, preferencialmente com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["glicemia em diabético", "sintomas gástricos", "recidiva do edema após 48 h"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Preferir prednisolona em hepatopatia grave",
+        "observacoes": "Serve apenas para o componente histaminérgico. Prescrever corticoide e liberar o paciente sem definir o mecanismo é a causa mais comum de retorno com edema de glote.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antifibrinolitico",
+        "agente": "ácido tranexâmico",
+        "papel": "alternativa",
+        "indicacao": "angioedema de bradicinina quando icatibanto e C1-inibidor não estão disponíveis, e profilaxia de crises recorrentes",
+        "dose": "1 g IV; via oral 1–1,5 g",
+        "unidade": "g",
+        "via": "IV ou VO",
+        "frequencia": "IV: 8/8 h na crise; VO: 2 a 3 vezes ao dia como profilaxia",
+        "duracao": "3–5 dias na crise; uso contínuo na profilaxia",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": ["trombose venosa ou arterial ativa", "história de convulsão", "insuficiência renal grave sem ajuste", "hemorragia subaracnóidea"],
+        "efeitos_adversos": ["náusea", "diarreia", "tontura", "trombose", "convulsão em dose alta"],
+        "apresentacoes": ["ampola 1 g/10 mL", "comprimido 500 mg", "xarope 50 mg/mL"],
+        "preparo": "IV: diluir 1 g em 100 mL de SF 0,9%; VO: uso direto",
+        "tempo_infusao": "IV em 20–30 min; nunca em bolus rápido",
+        "monitorizacao": ["dor e edema em membros (trombose)", "sangramento", "função renal", "sinais neurológicos"],
+        "ajuste_renal": "ClCr 30–60 mL/min: 15 mg/kg 12/12 h; abaixo de 30: 15 mg/kg 1x/dia",
+        "observacoes": "É adjuvante e ponte, não terapia definitiva: reduz a conversão de plasminogênio em plasmina e a geração de bradicinina. Efeito clínico demora horas — não usar como única medida em via aérea comprometida.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/WAO",
+        "claim_id": null
+      },
+      {
+        "classe": "hemoderivado",
+        "agente": "plasma fresco congelado",
+        "papel": "resgate",
+        "indicacao": "angioedema de bradicinina grave sem acesso a icatibanto ou C1-inibidor",
+        "dose": "2 unidades (10–20 mL/kg)",
+        "unidade": "unidades",
+        "via": "IV",
+        "frequencia": "dose única; repetir conforme resposta",
+        "duracao": "infusão única por crise",
+        "dose_maxima": "4 unidades ou 20 mL/kg",
+        "contraindicacoes": ["sobrecarga hídrica descompensada", "reação transfusional prévia grave", "recusa documentada a hemoderivados"],
+        "efeitos_adversos": ["reação transfusional febril", "urticária", "sobrecarga volêmica", "TRALI", "transmissão de agente infeccioso (baixa)"],
+        "apresentacoes": ["bolsa 200–250 mL", "bolsa 400–500 mL"],
+        "preparo": "Descongelar em banho-maria a 37 °C, usar filtro de 170–200 mícrons e infundir em até 4 h após o descongelamento",
+        "tempo_infusao": "30–60 min; reduzir a velocidade em cardiopata",
+        "monitorizacao": ["PA e FC", "ausculta pulmonar e SpO2", "temperatura", "diurese", "resolução do edema"],
+        "ajuste_renal": "Sem ajuste; cuidado com sobrecarga em oligúria",
+        "observacoes": "Contém C1-inibidor e enzima conversora, que degradam bradicinina. É recurso de indisponibilidade, com evidência limitada; alguns casos respondem de forma transitória e recidivam em 12 h.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "WAO/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticorpo_monoclonal_anti_ige",
+        "agente": "omalizumabe",
+        "papel": "condicional",
+        "indicacao": "angioedema histaminérgico recorrente refratário a anti-H1 em dose alta, no seguimento ambulatorial",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "a cada 4 semanas",
+        "duracao": "uso contínuo, com reavaliação em 6 meses",
+        "dose_maxima": "600 mg/mês em esquema de especialista",
+        "contraindicacoes": ["hipersensibilidade ao omalizumabe", "não usar na crise aguda de via aérea"],
+        "efeitos_adversos": ["reação no local da injeção", "cefaleia", "anafilaxia (rara)", "artralgia"],
+        "apresentacoes": ["seringa preenchida 150 mg/1 mL", "seringa preenchida 300 mg/2 mL", "frasco-ampola 150 mg"],
+        "preparo": "Pronto para uso; deixar 30 min em temperatura ambiente antes de aplicar no abdome ou coxa",
+        "tempo_infusao": "injeção SC em 5–10 s; sem infusão",
+        "monitorizacao": ["frequência das crises", "reação local", "necessidade de anti-H1 de resgate", "sinais de anafilaxia na primeira aplicação"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Não tem papel na crise aguda e não substitui adrenalina, icatibanto nem C1-inibidor. É tratamento de manutenção da urticária crônica com angioedema, prescrito por especialista.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/EAACI",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Suspender o IECA em definitivo", "detalhe": "Interromper enalapril, captopril, lisinopril ou qualquer outro IECA na primeira suspeita, registrar alergia ao fármaco no prontuário e no cartão do paciente, e nunca reintroduzir — o edema pode recorrer mais grave na reexposição" },
+      { "medida": "Suspender sacubitril/valsartana e inibidores de DPP-4", "detalhe": "Também elevam bradicinina; trocar a classe, registrar o motivo e orientar o paciente a informar o antecedente em qualquer atendimento" },
+      { "medida": "Posição sentada e cabeceira elevada", "detalhe": "Nunca deitar o paciente com edema de via aérea: o decúbito aumenta o edema de faringe e a obstrução; manter jejum e não manipular a garganta com abaixador" },
+      { "medida": "Carro de via aérea difícil à beira do leito", "detalhe": "Videolaringoscópio, tubos 6,0 a 7,0, bougie, máscara laríngea, aspirador, capnógrafo e kit de cricotireoidotomia abertos antes de qualquer piora" },
+      { "medida": "Observação mínima de 24 h no angioedema por IECA", "detalhe": "O edema pode progredir por 24 a 48 h após a suspensão, mesmo com melhora inicial; observação em unidade com via aérea disponível, não em sala de espera" },
+      { "medida": "Monitorização contínua e registro do tamanho do edema", "detalhe": "Oximetria, FC, PA e avaliação de voz, deglutição e estridor a cada 30 min nas primeiras 6 h; fotografar ou medir a extensão do edema para comparação objetiva" },
+      { "medida": "Investigação familiar no angioedema hereditário", "detalhe": "Dosar C4 e C1-inibidor em parentes de primeiro grau, orientar sobre gatilhos (estrogênio, trauma, estresse, IECA) e encaminhar ao imunologista" },
+      { "medida": "Orientação de alta por escrito e plano de ação", "detalhe": "Explicar o mecanismo, listar os fármacos proibidos, definir o que fazer na próxima crise e agendar retorno em 7 a 14 dias; no hereditário, treinar o paciente para o tratamento domiciliar precoce" }
+    ],
+    "procedimentos": [
+      { "nome": "Intubação orotraqueal precoce", "indicacao": "edema de língua, assoalho de boca ou laringe com disfonia, disfagia ou estridor", "tecnica": "Pré-oxigenação, videolaringoscópio, tubo 6,0–7,0 (um a dois números menor pelo edema), bougie disponível, confirmação por capnografia; realizar antes de o edema fechar a glote", "complicacoes": "Via aérea difícil, sangramento, aspiração, edema que impede a passagem do tubo, parada cardíaca" },
+      { "nome": "Cricotireoidotomia cirúrgica", "indicacao": "falha de intubação com SpO2 em queda e estridor", "tecnica": "Incisão horizontal sobre a membrana cricotireóidea, abertura com pinça, dilatação e introdução de cânula 6,0, com capnografia", "complicacoes": "Sangramento, lesão de cartilagem cricoide, enfisema subcutâneo, estenose tardia" },
+      { "nome": "Nasofibrolaringoscopia", "indicacao": "dúvida sobre extensão do edema de faringe e laringe, ou antes de decidir pela intubação", "tecnica": "Fibra ótica nasal com anestesia tópica mínima, avaliando epiglote, aritenoides, cordas vocais e espaço subglótico; não usar em paciente com estridor e saturação instável", "complicacoes": "Laringoespasmo, piora do edema por manipulação, sangramento, desconforto" },
+      { "nome": "Observação monitorizada em unidade de emergência", "indicacao": "todo angioedema de via aérea, todo angioedema por IECA e todo bradicinínico tratado", "tecnica": "Leito com monitor, reavaliação a cada 30 min de voz, deglutição, estridor e saturação, por no mínimo 24 h, com anestesia acionável", "complicacoes": "Progressão do edema durante a observação, alta precoce, aspiração" },
+      { "nome": "Acesso intraósseo", "indicacao": "necessidade de droga IV em angioedema grave sem acesso venoso", "tecnica": "Punção da tíbia proximal com agulha intraóssea, confirmação por aspiração e infusão sob pressão", "complicacoes": "Extravasamento, fratura, osteomielite, infiltração de partes moles" }
+    ],
+    "metas": [
+      "Via aérea avaliada por profissional com treinamento em via aérea difícil nos primeiros 10 minutos",
+      "Icatibanto ou C1-inibidor administrado em até 60 minutos do reconhecimento do angioedema de bradicinina",
+      "Edema de língua, assoalho de boca e laringe com resolução ou estabilização em 2 horas",
+      "Nenhum paciente com angioedema por IECA liberado antes de 24 horas de observação",
+      "IECA suspenso e registrado como alergia medicamentosa antes da alta em 100% dos casos",
+      "Diagnóstico de mecanismo (histaminérgico ou bradicinínico) registrado no prontuário em até 6 horas"
+    ],
+    "fluxo": [
+      "Reconhecer e classificar de imediato: há urticária e prurido, ou é edema duro, sem coceira, de instalação lenta?",
+      "Avaliar a via aérea antes de qualquer prescrição: voz, deglutição, sialorreia, estridor, saturação e extensão do edema",
+      "Via aérea comprometida: adrenalina 0,3–0,5 mg IM, acionar anestesia, preparar intubação e cricotireoidotomia, e iniciar terapia específica em paralelo",
+      "Revisar fármacos: IECA, sacubitril ou gliptina em uso mudam o diagnóstico para bradicinina e exigem suspensão definitiva",
+      "Histaminérgico sem via aérea: anti-H1 e corticoide, observação de 4 a 6 h e alta com plano escrito",
+      "Bradicinínico: icatibanto 30 mg SC ou C1-inibidor 20 U/kg IV; sem eles, plasma fresco e ácido tranexâmico",
+      "Dosar C4 e C1-inibidor após a estabilização para separar hereditário de adquirido; investigar neoplasia hematológica no adquirido",
+      "Observar 24 h com via aérea disponível; reavaliar voz, deglutição e estridor a cada 30 min",
+      "Alta: suspender e registrar o gatilho, plano de ação por escrito, retorno em 7 a 14 dias e encaminhamento ao alergista ou imunologista"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "gestante", "ajuste": "preferir C1-inibidor no angioedema hereditário; icatibanto tem dados limitados e ácido tranexâmico é aceitável na crise; adrenalina IM mantida na dose usual", "alerta": "crise de angioedema hereditário piora na gestação e a hipóxia materna compromete o feto" },
+      { "populacao": "idoso", "ajuste": "adrenalina na dose usual com ECG; evitar difenidramina em dose plena e atentar para retenção urinária e confusão", "alerta": "maior risco de arritmia e de delirium anticolinérgico" },
+      { "populacao": "renal_cronico", "ajuste": "cetirizina 5 mg/dia se ClCr abaixo de 30; ácido tranexâmico com ajuste; sem ajuste para icatibanto, C1-inibidor e adrenalina", "alerta": "acúmulo de anti-H1 e risco de convulsão com tranexâmico em dose alta" },
+      { "populacao": "negro ou afrodescendente", "ajuste": "risco até 4 vezes maior de angioedema por IECA; considerar outra classe anti-hipertensiva desde o início", "alerta": "recidiva com a reexposição ao IECA" },
+      { "populacao": "cardiopata com insuficiência cardíaca", "ajuste": "suspender sacubitril/valsartana e contraindicar IECA pelo risco de angioedema; discutir alternativa com cardiologia", "alerta": "perda de opção terapêutica exige plano conjunto" },
+      { "populacao": "hepatopata", "ajuste": "evitar icatibanto em hepatopatia grave; preferir C1-inibidor; monitorar transaminases", "alerta": "metabolismo hepático do icatibanto e risco de acúmulo" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "C4 e C1-inibidor (antigênico e funcional)", "indicacao": "angioedema recorrente sem urticária ou suspeita de hereditário", "o_que_muda": "confirma deficiência de C1-inibidor e define terapia específica e investigação familiar; coletar após a estabilização" },
+        { "nome": "nasofibrolaringoscopia", "indicacao": "dúvida sobre extensão do edema de faringe e laringe", "o_que_muda": "define necessidade de intubação imediata" },
+        { "nome": "hemograma, ureia, creatinina e eletrólitos", "indicacao": "todos com angioedema grave", "o_que_muda": "avalia gravidade, função renal e ajuste de dose" },
+        { "nome": "triptase sérica", "indicacao": "angioedema com urticária e suspeita de anafilaxia ou mastocitose", "o_que_muda": "confirma ativação mastocitária quando colhida até 2 h do início" },
+        { "nome": "ECG de 12 derivações", "indicacao": "cardiopata, uso de adrenalina ou distúrbio eletrolítico", "o_que_muda": "detecta isquemia e arritmia induzidas por catecolamina" },
+        { "nome": "enzima conversora de angiotensina e sorologias dirigidas", "indicacao": "angioedema por IECA recorrente após a suspensão", "o_que_muda": "sugere angioedema adquirido e orienta investigação de neoplasia" }
+      ],
+      "evitar": [
+        { "exame": "dosagem de IgE específica e teste cutâneo na fase aguda", "motivo": "não muda a conduta imediata e desvia a equipe do manejo de via aérea" },
+        { "exame": "tomografia de pescoço como condição para intubar", "motivo": "atrasa a via aérea em paciente que está obstruindo" },
+        { "exame": "espera por C4 e C1-inibidor para iniciar icatibanto ou C1-inibidor", "motivo": "o resultado não chega a tempo e o tratamento é clínico" },
+        { "exame": "radiografia de tórax de rotina", "motivo": "não altera a conduta no angioedema de via aérea superior" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["informar em todo atendimento que tem angioedema e qual é o mecanismo", "carregar lista escrita dos fármacos proibidos, começando pelos IECA", "procurar emergência imediatamente se a voz mudar, se doer para engolir ou se a língua inchar", "retornar ao alergista ou imunologista em 7 a 14 dias", "no angioedema hereditário, tratar a crise no primeiro sinal e manter o medicamento em casa"],
+      "evitar": ["usar anti-H1 ou corticoide isolados quando há edema de língua ou glote", "aceitar a reintrodução de IECA depois de um episódio, mesmo leve", "usar sacubitril/valsartana ou inibidor de DPP-4 sem avaliação", "receber alta antes de 24 h após angioedema por IECA", "usar estrogênio ou trocar dose de hormônio sem falar com o especialista no angioedema hereditário"],
+      "retorno": ["mudança da voz, rouquidão ou choro abafado", "dificuldade para engolir ou sialorreia", "inchaço de língua ou assoalho de boca", "falta de ar ou estridor", "dor abdominal intensa com vômitos", "recidiva do edema nas primeiras 48 h"]
+    },
+    "efeitos_adversos": [
+      { "agente": "adrenalina", "efeitos": ["taquicardia", "tremor", "palidez", "arritmia"], "observacao": "esperados e autolimitados; não suspender a dose seguinte se houver indicação de via aérea" },
+      { "agente": "icatibanto", "efeitos": ["dor no local da injeção", "náusea", "hipotensão", "elevação de transaminases"], "observacao": "aplicar no abdome e monitorar PA; evitar em hepatopatia grave" },
+      { "agente": "concentrado de C1-inibidor", "efeitos": ["cefaleia", "reação alérgica", "trombose no sítio de infusão"], "observacao": "infundir com filtro e vigiar o acesso" },
+      { "agente": "difenidramina", "efeitos": ["sonolência", "confusão em idoso", "retenção urinária"], "observacao": "não interpretar sedação como melhora do edema" },
+      { "agente": "ácido tranexâmico", "efeitos": ["náusea", "trombose", "convulsão"], "observacao": "avaliar dor em membro e ajustar na insuficiência renal" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a droga implicada e registrar a reação no prontuário",
+      "Extravasamento de adrenalina: infundir fentolamina 5 a 10 mg diluída em 10 mL de SF 0,9% na área, sem compressa quente",
+      "Reação alérgica ao C1-inibidor: interromper a infusão, tratar com anti-H1 e adrenalina se houver via aérea, e trocar para icatibanto",
+      "Sedação excessiva por anti-H1: manter monitorização, suspender a próxima dose e não confundir com piora neurológica",
+      "Hipotensão após icatibanto: decúbito, cristaloide e reavaliação da via aérea antes de nova dose",
+      "Comunicar a equipe e a farmácia, e reavaliar a indicação de cada fármaco antes de nova exposição"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "cetirizina 10 mg", "dose": "10 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "7 dias", "condicao": "angioedema histaminérgico residual", "confirmar_apresentacao_local": true },
+          { "item": "prednisona 20 mg", "dose": "40 mg", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "3 dias", "condicao": "edema histaminérgico persistente sem sinal de via aérea", "confirmar_apresentacao_local": true },
+          { "item": "icatibanto 30 mg", "dose": "30 mg", "via": "SC", "frequencia": "dose única, repetir em 6 h se necessário", "duracao": "2 seringas para uso domiciliar", "condicao": "angioedema hereditário com treinamento de autoaplicação", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "adrenalina 1 mg/mL", "dose": "0,3–0,5 mg", "via": "IM vasto lateral", "frequencia": "repetir em 5–15 min se necessário", "monitorizacao": "PA, FC, ECG e local da injeção", "confirmar_apresentacao_local": true },
+          { "item": "icatibanto 30 mg/3 mL", "dose": "30 mg", "via": "SC abdome", "frequencia": "dose única, repetir em 6 h", "monitorizacao": "resolução do edema, PA e transaminases", "confirmar_apresentacao_local": true },
+          { "item": "concentrado de C1-inibidor 500 U", "dose": "20 U/kg", "via": "IV", "frequencia": "dose única, repetir em 1 h se necessário", "monitorizacao": "resolução do edema e sinais de reação", "confirmar_apresentacao_local": true },
+          { "item": "difenidramina 50 mg/mL", "dose": "25–50 mg", "via": "IV", "frequencia": "dose única, repetir em 4–6 h", "monitorizacao": "consciência e retenção urinária", "confirmar_apresentacao_local": true },
+          { "item": "metilprednisolona 125 mg", "dose": "125 mg", "via": "IV", "frequencia": "dose única", "monitorizacao": "glicemia e PA", "confirmar_apresentacao_local": true },
+          { "item": "ácido tranexâmico 1 g/10 mL", "dose": "1 g", "via": "IV", "frequencia": "8/8 h", "monitorizacao": "sinais de trombose e função renal", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["C4", "C1-inibidor antigênico", "C1-inibidor funcional", "hemograma", "ureia e creatinina", "eletrólitos", "triptase", "ECG", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de angioedema, necessitando de observação hospitalar e suspensão definitiva do fármaco desencadeante.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": ["destino (alergista ou imunologista)", "motivo", "resumo com mecanismo suspeito e fármaco gatilho", "resultado de C4 e C1-inibidor", "prioridade"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com angioedema de mecanismo histaminérgico ou bradicinínico, localização, tempo de instalação, fármacos implicados, tratamento recebido, resposta, tempo de observação e plano de alta."
+      }
+    },
+    "anamnese": {
+      "campos": ["localização do edema", "tempo de instalação", "urticária e prurido", "dor abdominal", "IECA ou sacubitril", "história familiar", "crises prévias", "alérgenos", "disfonia ou disfagia", "comorbidades"],
+      "texto_template": "Paciente com angioedema em ___, iniciado há ___, com urticária ___, prurido ___, dor abdominal ___, uso de IECA ou sacubitril ___, história familiar ___, crises prévias ___ e sintomas de via aérea ___."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais e saturação", "voz e qualidade do choro", "deglutição e sialorreia", "inspeção de língua, assoalho de boca e úvula", "estridor e esforço respiratório", "extensão e consistência do edema", "pele (urticária, prurido)", "abdome"],
+      "texto_template": "Sinais vitais, saturação ___%, voz ___, deglutição ___, edema de língua e assoalho de boca ___, estridor ___ e pele ___."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "carro de via aérea difícil, fluxo de observação de 24 h e registro de alergia medicamentosa", "verificar": true },
+      { "tipo": "sociedade_alergia", "o_que_verificar": "diretriz da ASBAI e da EAACI para angioedema histaminérgico e hereditário", "verificar": true },
+      { "tipo": "diretriz_internacional", "o_que_verificar": "recomendações da WAO para angioedema hereditário e por IECA", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações de icatibanto, C1-inibidor e adrenalina disponíveis no Brasil", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-ALG07-01", "tipo": "reintroducao_ieca", "gatilho": "IECA prescrito em paciente com angioedema prévio", "severidade": "grave", "mensagem": "IECA contraindicado para sempre após angioedema.", "acao": "bloquear o item e sugerir classe alternativa", "bloqueante": true },
+      { "id": "SA-ALG07-02", "tipo": "anti_h1_isolado", "gatilho": "angioedema de língua, glote ou assoalho de boca tratado apenas com anti-H1 ou corticoide", "severidade": "grave", "mensagem": "Não tratar angioedema de via aérea com anti-H1 isolado: avaliar via aérea e usar adrenalina e terapia específica.", "acao": "bloquear a prescrição e exigir avaliação de via aérea", "bloqueante": true },
+      { "id": "SA-ALG07-03", "tipo": "bradicinina_sem_terapia_especifica", "gatilho": "angioedema sem urticária em uso de IECA sem icatibanto ou C1-inibidor prescritos", "severidade": "grave", "mensagem": "Angioedema de bradicinina não responde a anti-H1 nem a corticoide.", "acao": "sugerir icatibanto ou C1-inibidor e suspender o IECA", "bloqueante": true },
+      { "id": "SA-ALG07-04", "tipo": "alta_precoce", "gatilho": "alta em menos de 24 h após angioedema por IECA", "severidade": "grave", "mensagem": "Risco de progressão do edema por 24 a 48 h.", "acao": "bloquear a alta e exigir justificativa registrada", "bloqueante": true },
+      { "id": "SA-ALG07-05", "tipo": "via_aerea_sem_preparo", "gatilho": "estridor ou disfonia sem material de via aérea difícil disponível", "severidade": "grave", "mensagem": "Acionar anestesia e preparar cricotireoidotomia.", "acao": "alertar a equipe e acionar apoio", "bloqueante": false },
+      { "id": "SA-ALG07-06", "tipo": "sedacao_com_estridor", "gatilho": "sedativo prescrito em paciente com estridor ou edema de via aérea", "severidade": "precaucao", "mensagem": "Sedação pode precipitar obstrução completa sem via aérea garantida.", "acao": "alertar e exigir avaliação de anestesia", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "WAO", "EAACI", "ASBAI", "protocolo institucional"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Criação do registro a partir do catálogo mestre.", "data": null },
+        { "versao": "0.2.0", "descricao": "Primeira versão no padrão de diversidade.", "data": null }
+      ]
+    }
+  }
+}

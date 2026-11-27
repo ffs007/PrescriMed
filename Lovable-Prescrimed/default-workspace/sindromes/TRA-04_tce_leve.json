@@ -1,0 +1,1185 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "TRA-04",
+    "area": "Pequenos traumas",
+    "nome": "Trauma craniano leve",
+    "aliases": [
+      "trauma craniano leve",
+      "TCE leve",
+      "trauma cranioencefálico leve",
+      "concussão",
+      "batida na cabeça",
+      "síndrome pós-concussiva"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Trauma craniano leve é o trauma fechado com Glasgow 13 a 15 na chegada, sem déficit focal, mas com risco real de hematoma intracraniano que se manifesta em horas. A decisão central não é \"tem ou não tem lesão\", é \"quem precisa de tomografia agora, quem pode observar e quem nunca vai para casa sem imagem\". A regra de Canadian CT Head é o instrumento de triagem: em adulto com Glasgow 13 a 15 e perda de consciência, amnésia ou desorientação testemunhadas, indica tomografia em até 1 hora quando há Glasgow abaixo de 15 duas horas após o trauma, suspeita de fratura aberta ou deprimida, sinal de fratura de base de crânio, dois ou mais vômitos, idade acima de 65 anos, amnésia acima de 30 minutos ou mecanismo perigoso, e em até 8 horas quando há apenas amnésia retrógrada prolongada ou mecanismo perigoso. Os critérios de New Orleans entram quando o Glasgow é 15 e há perda de consciência: cefaleia, vômito, idade acima de 60 anos, intoxicação, déficit de memória de curto prazo, convulsão ou trauma acima da clavícula indicam imagem. Anticoagulado e antiagregante não obedecem a regra nenhuma: fazem tomografia e ficam em observação, porque o hematoma pode crescer com tomografia inicial normal. Observação de 4 a 6 horas com Glasgow seriado é conduta ativa, não sala de espera. Analgesia é paracetamol; anti-inflamatório não esteroidal é contraindicado enquanto houver suspeita de sangramento. O que não se faz: dar alta a anticoagulado sem tomografia, sedar ou dar opioide antes de examinar e antes da imagem, e liberar para esporte no mesmo dia. Depois da fase aguda vem a síndrome pós-concussiva — cefaleia, tontura, fadiga, irritabilidade, insônia e dificuldade de concentração — que se maneja com educação, tratamento sintomático e retorno gradual e escalonado às atividades, não com repouso prolongado.",
+    "inclusao": [
+      "Trauma fechado de crânio com Glasgow 13 a 15 na avaliação inicial",
+      "Perda de consciência, amnésia ou desorientação testemunhadas após o trauma",
+      "Cefaleia, vômito ou tontura após batida na cabeça, sem déficit focal",
+      "Anticoagulado ou antiagregante com qualquer trauma craniano",
+      "Paciente que precisa de decisão documentada entre tomografia, observação e alta"
+    ],
+    "exclusao": [
+      {
+        "situacao": "Glasgow 8 ou menos, ou rebaixamento progressivo com risco de via aérea",
+        "fluxo": "sala vermelha, intubação e neurocirurgia"
+      },
+      {
+        "situacao": "déficit focal, anisocoria ou crise convulsiva em curso",
+        "fluxo": "NEU-08 AVC ou neurocirurgia, conforme imagem"
+      },
+      {
+        "situacao": "trauma penetrante de crânio ou afundamento ósseo palpável",
+        "fluxo": "neurocirurgia imediata"
+      },
+      {
+        "situacao": "suspeita de lesão de coluna cervical com déficit",
+        "fluxo": "imobilização e avaliação da coluna"
+      },
+      {
+        "situacao": "trauma craniano leve isolado em criança",
+        "fluxo": "protocolo pediátrico de TCE"
+      },
+      {
+        "situacao": "cefaleia súbita sem trauma",
+        "fluxo": "NEU-02 cefaleia de alarme"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "Glasgow abaixo de 15 duas horas após o trauma ou queda de 2 pontos",
+        "por_que": "hematoma em expansão ou edema cerebral",
+        "acao": "tomografia imediata, cabeceira elevada e acionar neurocirurgia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "pupila assimétrica, hemiparesia, afasia ou desvio do olhar",
+        "por_que": "herniação uncal por lesão expansiva",
+        "acao": "tomografia imediata, solução hipertônica e neurocirurgia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "cefaleia progressiva e refratária a analgésico",
+        "por_que": "hipertensão intracraniana",
+        "acao": "tomografia e reavaliação neurológica seriada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "dois ou mais episódios de vômito",
+        "por_que": "critério de alto risco da regra canadense",
+        "acao": "tomografia em até 1 hora",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "convulsão após o trauma",
+        "por_que": "lesão cortical, hematoma ou intoxicação",
+        "acao": "tomografia, glicemia, eletrólitos e observação em unidade monitorizada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "equimose periorbitária, sinal de Battle, hemotímpano ou saída de líquor pelo nariz ou ouvido",
+        "por_que": "fratura de base de crânio com risco de lesão vascular e meningite",
+        "acao": "tomografia com janela óssea, não passar sonda nasal e discutir antibiótico profilático com a neurocirurgia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "uso de varfarina, anticoagulante direto ou antiagregante",
+        "por_que": "hematoma tardio e progressão mesmo com tomografia inicial normal",
+        "acao": "tomografia, observação mínima de 6 a 24 horas e reversão se houver sangramento",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "intoxicação alcoólica ou por droga, agitação ou incapacidade de fornecer história",
+        "por_que": "confunde o exame e mascara deterioração",
+        "acao": "tomografia com limiar baixo, observação prolongada e reavaliação com acompanhante",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "amnésia retrógrada acima de 30 minutos ou mecanismo perigoso",
+        "por_que": "risco intermediário de lesão intracraniana",
+        "acao": "tomografia em até 8 horas ou observação com reavaliação",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-10",
+        "sinal": "idade acima de 65 anos ou uso de AINE",
+        "por_que": "cérebro atrófico com veias frágeis e maior risco de hematoma subdural",
+        "acao": "baixar o limiar para tomografia e internação",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Como foi o trauma: queda, atropelamento, colisão, agressão ou ejeção do veículo?",
+      "Houve perda de consciência? Por quanto tempo?",
+      "Qual a última coisa que lembra antes do trauma? Há amnésia e de quanto tempo?",
+      "Vomitou? Quantas vezes?",
+      "A cefaleia está piorando?",
+      "Teve convulsão depois da batida?",
+      "Usa anticoagulante, antiagregante ou AINE? Qual e qual a última dose?",
+      "Bebeu álcool ou usou droga hoje?",
+      "Já operou a cabeça, tem derivação ventricular ou aneurisma conhecido?",
+      "Está sozinho em casa ou tem acompanhante confiável nas próximas 24 horas?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Adulto com Glasgow 13 a 15 e perda de consciência, amnésia ou desorientação, com qualquer critério de alto risco da regra canadense",
+        "escolha": "tomografia de crânio sem contraste em até 1 hora",
+        "porque": "Glasgow abaixo de 15 em 2 horas, fratura aberta ou deprimida, sinal de base de crânio, dois vômitos, idade acima de 65 anos, amnésia acima de 30 minutos e mecanismo perigoso identificam o grupo com lesão cirúrgica e mortalidade relevantes"
+      },
+      {
+        "cenario": "Adulto com Glasgow 13 a 15 e apenas amnésia retrógrada prolongada ou mecanismo perigoso, sem critério de alto risco",
+        "escolha": "tomografia em até 8 horas ou observação de 4 a 6 horas com reavaliação e tomografia se houver piora",
+        "porque": "é o grupo de risco intermediário, em que a imagem pode ser adiada com segurança desde que exista observação clínica real"
+      },
+      {
+        "cenario": "Glasgow 15 com perda de consciência, em serviço que aplica os critérios de New Orleans",
+        "escolha": "tomografia se houver cefaleia, vômito, idade acima de 60 anos, intoxicação, déficit de memória de curto prazo, convulsão ou trauma acima da clavícula",
+        "porque": "os critérios de New Orleans foram validados para esse subgrupo e têm alta sensibilidade para lesão intracraniana, ao custo de mais tomografias"
+      },
+      {
+        "cenario": "Anticoagulado ou antiagregante com qualquer trauma craniano, mesmo Glasgow 15 e sem sintoma",
+        "escolha": "tomografia de crânio e observação mínima de 6 a 24 horas, com tomografia de controle se houver piora neurológica, cefaleia progressiva ou vômito",
+        "porque": "a coagulopatia permite hematoma tardio e crescimento de lesão pequena; alta sem imagem é a causa mais frequente de deterioração fora do hospital"
+      },
+      {
+        "cenario": "Trauma leve sem nenhum critério canadense nem de New Orleans, com acompanhante confiável",
+        "escolha": "observação de 4 a 6 horas com Glasgow seriado e alta com orientação escrita, acompanhante e retorno em 24 horas",
+        "porque": "a imensa maioria não tem lesão cirúrgica, e a observação com critério de reavaliação é o que separa a alta segura do risco"
+      },
+      {
+        "cenario": "Cefaleia após trauma craniano leve",
+        "escolha": "paracetamol 750 mg a 1 g a cada 6 horas",
+        "porque": "analgesia eficaz sem interferir na agregação plaquetária nem mascarar sangramento"
+      },
+      {
+        "cenario": "Dor intensa refratária ao paracetamol, com tomografia já realizada",
+        "escolha": "opioide em dose titulada, com Glasgow e saturação seriados",
+        "porque": "a dor intensa eleva a pressão intracraniana e a agitação; o risco é a sedação mascarar deterioração, e por isso a titulação exige exame seriado"
+      },
+      {
+        "cenario": "Vômitos após o trauma",
+        "escolha": "ondansetrona 4 a 8 mg intravenosa; metoclopramida 10 mg como alternativa",
+        "porque": "o vômito aumenta a pressão intracraniana e repete o critério de alto risco; controlar o sintoma não substitui a tomografia"
+      },
+      {
+        "cenario": "Anticoagulado com hemorragia intracraniana na tomografia",
+        "escolha": "reversão específica: varfarina com fitomenadiona 10 mg e complexo protrombínico; dabigatrana com idarucizumabe 5 g",
+        "porque": "a reversão rápida limita a expansão do hematoma e é o único tratamento que muda a história natural antes da cirurgia"
+      },
+      {
+        "cenario": "Trauma craniano leve com hemorragia intracraniana e janela de até 3 horas",
+        "escolha": "ácido tranexâmico 1 g intravenoso em 10 minutos, seguido de 1 g em 8 horas",
+        "porque": "reduz a progressão do sangramento e a mortalidade por lesão craniana no trauma com Glasgow 13 a 15 quando administrado precocemente"
+      },
+      {
+        "cenario": "Ferimento cortante de couro cabeludo associado",
+        "escolha": "sutura com lidocaína 2% com adrenalina e profilaxia antitetânica conforme o estado vacinal",
+        "porque": "o ferimento de couro cabeludo sangra muito e não muda o prognóstico neurológico; tratá-lo não deve atrasar a tomografia quando ela está indicada"
+      },
+      {
+        "cenario": "O que não fazer no trauma craniano leve",
+        "escolha": "não dar alta a anticoagulado sem tomografia, não sedar nem dar opioide antes de examinar e de imaginar, não prescrever AINE e não liberar para esporte no mesmo dia",
+        "porque": "cada uma dessas condutas mascara ou provoca deterioração, e a janela de tratamento do hematoma é curta"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "cefaleia e dor após trauma craniano leve",
+        "dose": "750 mg a 1 g",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h, se dor",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "4 g/dia, ou 2 g/dia em hepatopatia e etilismo",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em overdose",
+          "rash",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "frasco de infusão 10 mg/mL (100 mL)"
+        ],
+        "preparo": "Uso direto por via oral; na via intravenosa, infundir o frasco sem diluir",
+        "tempo_infusao": "não se aplica na via oral; 15 minutos na via intravenosa",
+        "monitorizacao": [
+          "dor pela escala de 0 a 10",
+          "dose total diária somando outros produtos com paracetamol",
+          "TGO e TGP em uso acima de 5 dias"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: espaçar para 8/8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia; evitar em Child C",
+        "observacoes": "Primeira escolha porque não altera a função plaquetária nem o nível de consciência. Não usar produto combinado com cafeína ou codeína sem necessidade.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "resgate",
+        "indicacao": "dor intensa refratária ao paracetamol, após tomografia e com exame neurológico seriado",
+        "dose": "2 mg em bolus, repetido a cada 10 minutos até dor abaixo de 3 em 10",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "titulação inicial; depois 2 a 4 mg a cada 4 h se dor",
+        "duracao": "24 a 48 horas",
+        "dose_maxima": "0,1 mg/kg por dose em idoso; reavaliar após cada bolus",
+        "contraindicacoes": [
+          "rebaixamento de consciência sem via aérea protegida",
+          "depressão respiratória não monitorizada",
+          "tomografia ainda não realizada em paciente com critério de imagem"
+        ],
+        "efeitos_adversos": [
+          "sedação que mascara deterioração neurológica",
+          "depressão respiratória",
+          "náusea e vômito",
+          "miose",
+          "hipotensão"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "ampola 2 mg/mL (2 mL)",
+          "comprimido 10 mg"
+        ],
+        "preparo": "Diluir 1 mL da ampola de 10 mg/mL em 9 mL de soro fisiológico 0,9% e administrar 1 mL por bolus",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos",
+        "monitorizacao": [
+          "Glasgow e pupilas antes e 15 minutos após cada bolus",
+          "frequência respiratória",
+          "saturação de oxigênio",
+          "escala de sedação",
+          "pressão arterial"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: reduzir a dose em 50% e espaçar",
+        "ajuste_hepatico": "Reduzir dose e intervalo em Child B e C",
+        "observacoes": "Nunca administrar antes de examinar e de indicar a tomografia: a sedação apaga o sinal que indica cirurgia. Manter naloxona disponível e registrar o Glasgow antes e depois.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide_fraco",
+        "agente": "tramadol",
+        "papel": "alternativa",
+        "indicacao": "dor de intensidade intermediária após trauma craniano leve, quando não há morfina disponível e a tomografia já foi realizada",
+        "dose": "50 a 100 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h, se dor",
+        "duracao": "2 a 3 dias",
+        "dose_maxima": "400 mg/dia, ou 300 mg/dia acima de 75 anos",
+        "contraindicacoes": [
+          "epilepsia não controlada",
+          "uso de inibidor da monoaminoxidase",
+          "intoxicação alcoólica aguda",
+          "rebaixamento de consciência"
+        ],
+        "efeitos_adversos": [
+          "náusea e vômito",
+          "tontura",
+          "sedação",
+          "convulsão",
+          "hipotensão postural"
+        ],
+        "apresentacoes": [
+          "cápsula 50 mg",
+          "comprimido 100 mg",
+          "comprimido de liberação prolongada 100 mg",
+          "ampola 50 mg/mL (2 mL)",
+          "solução oral 100 mg/mL"
+        ],
+        "preparo": "Via oral em uso direto; via intravenosa diluir a ampola em 100 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "30 minutos na via intravenosa",
+        "monitorizacao": [
+          "nível de consciência",
+          "náusea e vômito",
+          "limiar convulsivo em epiléptico",
+          "pressão arterial em idoso"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: 50 a 100 mg a cada 12 h e máximo de 200 mg/dia",
+        "ajuste_hepatico": "Reduzir a dose e espaçar em Child B e C",
+        "observacoes": "Alternativa de segunda escolha, não de primeira. Não associar a ondansetrona em paciente com QT longo nem a outros serotoninérgicos.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico",
+        "agente": "ondansetrona",
+        "papel": "primeira_linha",
+        "indicacao": "vômitos após trauma craniano leve",
+        "dose": "4 a 8 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h, se vômito",
+        "duracao": "24 a 48 horas",
+        "dose_maxima": "16 mg/dia por via intravenosa",
+        "contraindicacoes": [
+          "síndrome do QT longo",
+          "alergia a ondansetrona",
+          "uso de outro fármaco que prolongue o QT"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "constipação",
+          "prolongamento do intervalo QT",
+          "tontura"
+        ],
+        "apresentacoes": [
+          "ampola 2 mg/mL (2 mL, 4 mg)",
+          "ampola 2 mg/mL (4 mL, 8 mg)",
+          "comprimido 4 mg",
+          "comprimido 8 mg",
+          "solução oral 4 mg/5 mL"
+        ],
+        "preparo": "Diluir a ampola em 50 mL de soro fisiológico 0,9%; via oral em uso direto",
+        "tempo_infusao": "15 minutos",
+        "monitorizacao": [
+          "número de episódios de vômito",
+          "eletrocardiograma em cardiopata",
+          "potássio e magnésio"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em Child C",
+        "observacoes": "Controlar o vômito evita pico de pressão intracraniana, mas não substitui a tomografia: vômito repetido é critério de imagem.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico",
+        "agente": "metoclopramida",
+        "papel": "alternativa",
+        "indicacao": "vômitos após trauma craniano leve quando a ondansetrona não está disponível",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "8/8 h, se vômito",
+        "duracao": "24 horas",
+        "dose_maxima": "30 mg/dia, ou 0,5 mg/kg/dia em criança",
+        "contraindicacoes": [
+          "história de discinesia tardia",
+          "feocromocitoma",
+          "obstrução intestinal",
+          "epilepsia não controlada"
+        ],
+        "efeitos_adversos": [
+          "distonia aguda e acatisia, principalmente em adulto jovem",
+          "sonolência",
+          "diarreia",
+          "galactorreia"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (2 mL, 10 mg)",
+          "comprimido 10 mg",
+          "solução oral 4 mg/mL"
+        ],
+        "preparo": "Diluir a ampola em 50 mL de soro fisiológico 0,9%; via oral em uso direto",
+        "tempo_infusao": "15 minutos",
+        "monitorizacao": [
+          "movimentos involuntários e acatisia",
+          "número de episódios de vômito",
+          "sonolência"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: reduzir para 5 mg a cada 8 h",
+        "ajuste_hepatico": "Reduzir a dose em Child C",
+        "observacoes": "Preferir ondansetrona em adulto jovem pelo risco de distonia. A distonia é tratável com prometazina ou biperideno.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antifibrinolitico",
+        "agente": "ácido tranexâmico",
+        "papel": "condicional",
+        "indicacao": "trauma craniano com Glasgow 13 a 15 e hemorragia intracraniana, dentro de 3 horas do trauma",
+        "dose": "1 g em bolus, seguido de 1 g em infusão",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "bolus único seguido de infusão contínua",
+        "duracao": "8 horas de infusão",
+        "dose_maxima": "2 g no total",
+        "contraindicacoes": [
+          "trombose venosa ou arterial ativa",
+          "história de convulsão com dose alta",
+          "coagulação intravascular disseminada estabelecida"
+        ],
+        "efeitos_adversos": [
+          "trombose",
+          "convulsão em dose elevada",
+          "náusea",
+          "hipotensão no bolus rápido"
+        ],
+        "apresentacoes": [
+          "ampola 1 g/10 mL",
+          "ampola 500 mg/5 mL",
+          "comprimido 250 mg"
+        ],
+        "preparo": "Bolus: diluir 1 g em 100 mL de soro fisiológico 0,9%; infusão: 1 g em 250 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "bolus em 10 minutos; infusão contínua por 8 horas",
+        "monitorizacao": [
+          "sinais de trombose",
+          "nível de consciência e convulsão",
+          "pressão arterial durante o bolus",
+          "função renal"
+        ],
+        "ajuste_renal": "ClCr 30 a 59: reduzir a dose em 50%; ClCr abaixo de 30: evitar",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Administrar dentro de 3 horas do trauma. Não confundir com o uso em sangramento digestivo: aqui o alvo é a progressão do hematoma.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "fitomenadiona (vitamina K)",
+        "papel": "condicional",
+        "indicacao": "reversão de varfarina em paciente com trauma craniano e sangramento, ou com INR alargado",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única, com repetição conforme INR",
+        "duracao": "1 dose",
+        "dose_maxima": "10 mg por dose",
+        "contraindicacoes": [
+          "alergia ao fármaco",
+          "reação anafilactoide prévia"
+        ],
+        "efeitos_adversos": [
+          "reação anafilactoide rara",
+          "rubor e dor no local",
+          "falha de reversão nas primeiras horas"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "comprimido 10 mg"
+        ],
+        "preparo": "Diluir a ampola em 50 mL de soro fisiológico 0,9% e infundir lentamente, sem bolus rápido",
+        "tempo_infusao": "20 a 30 minutos",
+        "monitorizacao": [
+          "INR em 6 a 12 horas",
+          "sangramento neurológico",
+          "reação infusiona"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "A resposta é imprevisível em hepatopatia grave",
+        "observacoes": "Não substitui o complexo protrombínico quando há hemorragia intracraniana: a vitamina K leva horas e o complexo age em minutos.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "reversor",
+        "agente": "complexo protrombínico",
+        "papel": "condicional",
+        "indicacao": "hemorragia intracraniana em uso de varfarina, para reversão imediata",
+        "dose": "25 a 50 UI/kg, conforme INR e peso",
+        "unidade": "UI/kg",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "5.000 UI por dose",
+        "contraindicacoes": [
+          "trombose ativa",
+          "coagulação intravascular disseminada",
+          "anafilaxia prévia a componentes"
+        ],
+        "efeitos_adversos": [
+          "trombose",
+          "coagulação intravascular disseminada",
+          "reação alérgica",
+          "sobrecarga de volume"
+        ],
+        "apresentacoes": [
+          "frasco 500 UI",
+          "frasco 1.000 UI",
+          "frasco 2.500 UI"
+        ],
+        "preparo": "Reconstituir com o diluente próprio e infundir a dose calculada pelo peso; não agitar",
+        "tempo_infusao": "10 a 20 minutos",
+        "monitorizacao": [
+          "INR 30 minutos após a infusão",
+          "sinais de trombose",
+          "pressão arterial",
+          "nova tomografia se piora neurológica"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste de dose, com resposta reduzida em hepatopatia",
+        "observacoes": "Associar sempre à fitomenadiona, que cobre a meia-vida curta dos fatores. Não atrasar a infusão por falta de INR se a clínica de sangramento está instalada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidoto",
+        "agente": "idarucizumabe",
+        "papel": "resgate",
+        "indicacao": "hemorragia intracraniana em paciente em uso de dabigatrana",
+        "dose": "5 g, em duas infusões de 2,5 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "dose única; repetir 5 g se sangramento persistente",
+        "duracao": "dose única",
+        "dose_maxima": "10 g no total",
+        "contraindicacoes": [
+          "hipersensibilidade ao fármaco",
+          "uso de dabigatrana já suspenso há mais de 24 horas com função renal normal"
+        ],
+        "efeitos_adversos": [
+          "trombose",
+          "reação infusiona",
+          "febre",
+          "hipocalemia"
+        ],
+        "apresentacoes": [
+          "frasco 2,5 g (pó para solução)",
+          "frasco 5 g"
+        ],
+        "preparo": "Reconstituir cada frasco de 2,5 g em 50 mL de soro fisiológico 0,9% e infundir as duas soluções em sequência",
+        "tempo_infusao": "5 a 10 minutos por infusão",
+        "monitorizacao": [
+          "tempo de tromboplastina parcial ativada e tempo de trombina",
+          "sinais de trombose",
+          "piora neurológica",
+          "função renal"
+        ],
+        "ajuste_renal": "Sem ajuste; a dabigatrana é de depuração renal e o antidoto é indicado justamente na disfunção renal",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Específico para dabigatrana, sem ação sobre os inibidores do fator Xa. Para rivaroxabana e apixabana, usar andexanet alfa quando disponível; na falta dele, complexo protrombínico 50 UI/kg e reavaliação com tromboelastometria.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "lidocaína 2% com adrenalina 1:100.000",
+        "papel": "condicional",
+        "indicacao": "sutura de ferimento de couro cabeludo associado ao trauma",
+        "dose": "3 a 5 mL",
+        "unidade": "mL",
+        "via": "infiltração subcutânea",
+        "frequencia": "dose única por procedimento",
+        "duracao": "60 a 120 minutos de bloqueio",
+        "dose_maxima": "7 mg/kg, até 500 mg",
+        "contraindicacoes": [
+          "alergia a anestésico do tipo amida",
+          "ferida contaminada que exige desbridamento antes"
+        ],
+        "efeitos_adversos": [
+          "dor à infiltração",
+          "toxicidade sistêmica com zumbido e gosto metálico",
+          "convulsão em dose excessiva",
+          "hematoma do couro cabeludo"
+        ],
+        "apresentacoes": [
+          "frasco 20 mL a 2% com adrenalina 1:100.000",
+          "frasco 20 mL a 1% com adrenalina 1:100.000",
+          "ampola 5 mL a 2% com adrenalina 1:200.000"
+        ],
+        "preparo": "Aspirar sem diluir, aspirar antes de cada injeção e infiltrar na borda da ferida; alcalinizar 1:10 com bicarbonato 8,4% quando doer muito",
+        "tempo_infusao": "não se aplica (infiltração local); início do bloqueio em 2 a 5 minutos",
+        "monitorizacao": [
+          "nível de consciência durante a infiltração",
+          "zumbido, gosto metálico ou parestesia",
+          "frequência cardíaca e pressão em infiltração acima de 10 mL",
+          "hemostasia do campo"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Reduzir a dose máxima em 50% em hepatopatia grave",
+        "observacoes": "Não atrasa a tomografia e não altera o Glasgow. Em ferimento com afundamento ósseo palpável, não suturar antes da avaliação neurocirúrgica.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunobiologico",
+        "agente": "toxoide tetânico e diftérico (dT)",
+        "papel": "condicional",
+        "indicacao": "ferimento de couro cabeludo ou pele associado ao trauma, conforme estado vacinal",
+        "dose": "0,5 mL",
+        "unidade": "mL",
+        "via": "IM",
+        "frequencia": "dose única neste atendimento; completar o esquema de 3 doses quando incompleto",
+        "duracao": "reforço a cada 10 anos",
+        "dose_maxima": "0,5 mL por dose",
+        "contraindicacoes": [
+          "anafilaxia prévia a componente da vacina",
+          "encefalopatia nos 7 dias após dose anterior"
+        ],
+        "efeitos_adversos": [
+          "dor e edema no local",
+          "febre baixa",
+          "anafilaxia rara"
+        ],
+        "apresentacoes": [
+          "frasco multidose 10 doses de 0,5 mL",
+          "seringa preenchida 0,5 mL",
+          "frasco 5 doses de 0,5 mL"
+        ],
+        "preparo": "Uso direto; agitar antes de aspirar e aplicar no deltoide",
+        "tempo_infusao": "não se aplica (via intramuscular)",
+        "monitorizacao": [
+          "reação local em 24 horas",
+          "febre",
+          "anafilaxia nos primeiros 30 minutos",
+          "registro no cartão vacinal"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Aplicar antes da alta e registrar no cartão. Não atrasar a tomografia nem a observação por causa da vacina.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/PNI",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Observação clínica com Glasgow seriado",
+        "detalhe": "4 a 6 horas em serviço com reavaliação a cada hora por enfermagem e exame médico antes da alta; anticoagulado fica de 6 a 24 horas, com tomografia de controle se houver qualquer piora"
+      },
+      {
+        "medida": "Imobilização cervical até excluir lesão de coluna",
+        "detalhe": "colar cervical em trauma de alta energia, dor cervical, déficit neurológico ou intoxicação, mantido até avaliação clínica e de imagem da coluna"
+      },
+      {
+        "medida": "Cabeceira elevada e prevenção de hipertensão intracraniana",
+        "detalhe": "cabeceira a 30 graus, cabeça na linha média, evitar compressão de veias jugulares, tosse e Valsalva; não usar hiperventilação profilática"
+      },
+      {
+        "medida": "Repouso relativo curto e retorno gradual",
+        "detalhe": "24 a 48 horas de repouso relativo, sem isolamento prolongado; depois progressão em etapas de 24 horas cada, começando por atividade leve e só liberando contato pleno com avaliação médica"
+      },
+      {
+        "medida": "Educação e orientação escrita na alta",
+        "detalhe": "entregar por escrito os sinais de alarme, o telefone de retorno, a proibição de dirigir por 24 horas e a necessidade de acompanhante responsável pelas próximas 24 horas"
+      },
+      {
+        "medida": "Retirada de álcool e de sedativos",
+        "detalhe": "suspender álcool, benzodiazepínico e opioide não essencial durante a observação, porque confundem o exame e aumentam o risco de queda"
+      },
+      {
+        "medida": "Higiene do sono e controle de tela",
+        "detalhe": "sono regular, ambiente escuro e silencioso e redução de tela nas primeiras 48 horas; evitar repouso absoluto prolongado, que piora a síndrome pós-concussiva"
+      },
+      {
+        "medida": "Avaliação do risco social e de violência",
+        "detalhe": "perguntar como o trauma ocorreu, se houve agressão, se há cuidador e se o paciente mora sozinho; notificar violência quando o padrão não corresponde à história"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Tomografia de crânio sem contraste",
+        "indicacao": "critério canadense de alto ou médio risco, anticoagulação, déficit focal, piora do Glasgow ou intoxicação",
+        "tecnica": "cortes axiais de 5 mm da base ao vértice, sem contraste, com janela óssea e reconstrução de partes moles; no anticoagulado com tomografia inicial normal, repetir em 6 a 24 horas se houver piora",
+        "complicacoes": "transporte de paciente instável, radiação, sedação desnecessária para o exame e falso-negativo em lesão pequena ou isodensa"
+      },
+      {
+        "nome": "Observação clínica estruturada",
+        "indicacao": "todo trauma craniano leve sem indicação imediata de tomografia",
+        "tecnica": "Glasgow, pupilas e déficit a cada hora, com registro em ficha própria; exame médico antes da alta; tomografia imediata se queda de Glasgow, cefaleia progressiva, vômito repetido ou déficit novo",
+        "complicacoes": "deterioração não percebida em serviço com equipe insuficiente, alta precoce e erro por confiar em acompanhante não orientado"
+      },
+      {
+        "nome": "Sutura de ferimento de couro cabeludo",
+        "indicacao": "ferimento cortante associado, sem afundamento ósseo",
+        "tecnica": "tricotomia mínima, antissepsia com clorexidina, anestesia com lidocaína 2% com adrenalina, hemostasia e sutura com fio não absorvível 3-0 ou grampo, com revisão do estado vacinal",
+        "complicacoes": "infecção, hematoma subgaleal, deiscência e sutura sobre fratura deprimida não diagnosticada"
+      },
+      {
+        "nome": "Reversão de anticoagulação",
+        "indicacao": "hemorragia intracraniana ou necessidade de cirurgia em anticoagulado",
+        "tecnica": "suspender o anticoagulante, colher INR e tromboelastometria quando disponíveis, administrar fitomenadiona e complexo protrombínico na varfarina, idarucizumabe na dabigatrana e repetir a tomografia em 6 a 24 horas",
+        "complicacoes": "trombose por excesso de reversão, reversão incompleta, atraso por espera de exame de coagulação e nova expansão do hematoma"
+      },
+      {
+        "nome": "Avaliação e liberação para retorno esportivo",
+        "indicacao": "atleta ou trabalhador de atividade de risco após concussão",
+        "tecnica": "protocolo escalonado de 5 etapas com no mínimo 24 horas em cada uma: repouso relativo, atividade aeróbica leve, exercício específico sem contato, treino completo sem contato e liberação médica para contato pleno",
+        "complicacoes": "retorno precoce com segunda concussão, síndrome pós-concussiva prolongada e risco de edema cerebral maligno"
+      },
+      {
+        "nome": "Avaliação da coluna cervical",
+        "indicacao": "trauma de alta energia, dor cervical, déficit ou intoxicação",
+        "tecnica": "aplicar critérios clínicos de liberação do colar, examinar sensibilidade e força por dermátomo e miótomo e indicar tomografia de coluna cervical quando não houver critério de liberação",
+        "complicacoes": "lesão medular por mobilização inadequada, úlcera por colar prolongado e exame falso-negativo em intoxicado"
+      }
+    ],
+    "metas": [
+      "Tomografia realizada em até 1 hora nos critérios de alto risco e em até 8 horas no risco intermediário",
+      "Glasgow 15 mantido durante toda a observação de 4 a 6 horas antes da alta",
+      "Nenhum anticoagulado ou antiagregante liberado sem tomografia e sem observação registrada",
+      "Dor abaixo de 3 em 10 em até 60 minutos da analgesia",
+      "Reversão da anticoagulação iniciada em até 1 hora no paciente com hemorragia intracraniana",
+      "Sinais de alarme e acompanhante responsável documentados na alta em 100% dos casos",
+      "Retorno gradual às atividades concluído em 7 a 10 dias, com liberação médica registrada",
+      "Nenhuma prescrição de anti-inflamatório não esteroidal durante a investigação"
+    ],
+    "fluxo": [
+      "Avaliar via aérea, respiração e circulação, imobilizar a coluna cervical quando o mecanismo for de alta energia e medir o Glasgow",
+      "Caracterizar o mecanismo, a perda de consciência, a amnésia, os vômitos, a convulsão, a anticoagulação e a intoxicação",
+      "Aplicar a regra de Canadian CT Head e, no Glasgow 15 com perda de consciência, os critérios de New Orleans",
+      "Indicar tomografia em até 1 hora no alto risco, em até 8 horas no risco intermediário e sempre no anticoagulado ou antiagregante",
+      "Analisar com paracetamol e tratar vômito com ondansetrona; não usar anti-inflamatório e não sedar antes de examinar",
+      "Manter observação de 4 a 6 horas com Glasgow seriado e tomografia imediata se houver piora",
+      "No anticoagulado com hemorragia, reverter conforme o fármaco e acionar neurocirurgia",
+      "Dar alta com sinais de alarme por escrito, acompanhante, retorno em 24 a 48 horas e plano de retorno gradual às atividades"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "anticoagulado ou antiagregante",
+        "ajuste": "tomografia em qualquer trauma craniano e observação de 6 a 24 horas, com tomografia de controle se houver piora",
+        "alerta": "hematoma tardio com tomografia inicial normal e progressão rápida; alta sem imagem é o erro mais grave"
+      },
+      {
+        "populacao": "idoso acima de 65 anos",
+        "ajuste": "baixar o limiar para tomografia e internação, mesmo com mecanismo aparentemente banal",
+        "alerta": "cérebro atrófico com veias pontes frágeis e maior risco de hematoma subdural após queda da própria altura"
+      },
+      {
+        "populacao": "etilista ou intoxicado",
+        "ajuste": "tomografia com limiar baixo e observação prolongada até o exame ser confiável",
+        "alerta": "confusão atribuída à intoxicação pode ser hematoma; o exame só vale depois de o efeito do álcool ceder"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "a tomografia não deve ser adiada quando indicada; proteger o abdome e registrar a justificativa",
+        "alerta": "o risco de lesão cerebral não tratada supera o risco fetal da radiação cerebral isolada"
+      },
+      {
+        "populacao": "atleta",
+        "ajuste": "retirada imediata do jogo, protocolo escalonado de retorno e liberação médica antes do contato pleno",
+        "alerta": "segunda concussão antes da recuperação completa pode causar edema cerebral difuso e morte"
+      },
+      {
+        "populacao": "usuário de derivação ventricular ou neurocirurgia prévia",
+        "ajuste": "tomografia e avaliação neurocirúrgica em qualquer trauma, com limiar baixo para internação",
+        "alerta": "disfunção de válvula e hematoma com pequeno volume têm consequências desproporcionais"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "tomografia de crânio sem contraste",
+          "indicacao": "critério canadense, anticoagulação, déficit focal ou piora do Glasgow",
+          "o_que_muda": "identifica hematoma, fratura e desvio de linha média e define cirurgia"
+        },
+        {
+          "nome": "Glasgow e exame neurológico seriados",
+          "indicacao": "todo trauma craniano leve em observação",
+          "o_que_muda": "detecta deterioração e antecipa a tomografia"
+        },
+        {
+          "nome": "hemograma, INR, tempo de tromboplastina e plaquetas",
+          "indicacao": "anticoagulado, antiagregante, hepatopatia ou sangramento",
+          "o_que_muda": "orienta a reversão e o alvo de coagulação"
+        },
+        {
+          "nome": "glicemia e dosagem de etanol",
+          "indicacao": "rebaixamento, confusão ou hálito etílico",
+          "o_que_muda": "separa hipoglicemia e intoxicação de lesão cerebral"
+        },
+        {
+          "nome": "tomografia de coluna cervical",
+          "indicacao": "trauma de alta energia, dor cervical, déficit ou intoxicação",
+          "o_que_muda": "libera o colar e detecta fratura instável"
+        },
+        {
+          "nome": "creatinina e eletrólitos",
+          "indicacao": "antes de contraste, em uso de anticoagulante ou em idoso",
+          "o_que_muda": "ajusta dose de fármacos e orienta hidratação"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia simples de crânio",
+          "motivo": "não exclui fratura relevante nem lesão intracraniana e atrasa a tomografia"
+        },
+        {
+          "exame": "punção lombar na suspeita de hipertensão intracraniana",
+          "motivo": "risco de herniação antes da imagem"
+        },
+        {
+          "exame": "tomografia de crânio de rotina sem nenhum critério de risco",
+          "motivo": "radiação sem mudança de conduta em paciente de baixo risco"
+        },
+        {
+          "exame": "ressonância magnética na fase aguda",
+          "motivo": "demora e indisponibilidade; a tomografia é o exame de urgência para sangramento"
+        },
+        {
+          "exame": "eletroencefalograma de rotina após concussão sem convulsão",
+          "motivo": "não muda a conduta e não prevê síndrome pós-concussiva"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "ficar com acompanhante responsável nas próximas 24 horas",
+        "manter repouso relativo por 24 a 48 horas e retomar as atividades de forma gradual",
+        "tomar paracetamol se houver dor de cabeça",
+        "beber água e manter alimentação regular",
+        "comparecer ao retorno em 24 a 48 horas",
+        "retomar a atividade física em etapas, com liberação médica antes de esporte de contato",
+        "dormir em ambiente escuro e silencioso e reduzir telas nas primeiras 48 horas"
+      ],
+      "evitar": [
+        "dirigir por 24 horas e enquanto estiver com tontura ou sonolência",
+        "beber álcool nas primeiras 72 horas",
+        "usar anti-inflamatório, aspirina ou relaxante muscular sem orientação",
+        "praticar esporte de contato ou atividade de risco no mesmo dia",
+        "voltar ao trabalho com operação de máquina ou altura sem liberação",
+        "ficar sozinho ou dormir sem alguém por perto nas primeiras 24 horas"
+      ],
+      "retorno": [
+        "sonolência excessiva ou dificuldade de acordar",
+        "vômitos repetidos",
+        "dor de cabeça que piora",
+        "perda de força, visão dupla, fala arrastada ou convulsão",
+        "saída de líquido claro pelo nariz ou ouvido",
+        "confusão, agitação ou comportamento diferente do habitual",
+        "tontura persistente, insônia e dificuldade de concentração por mais de 2 semanas"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade em overdose"
+        ],
+        "observacao": "conferir a dose total diária somando outros produtos com paracetamol"
+      },
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "sedação",
+          "depressão respiratória",
+          "náusea",
+          "miose"
+        ],
+        "observacao": "registrar Glasgow antes e 15 minutos após cada bolus e manter naloxona disponível"
+      },
+      {
+        "agente": "tramadol",
+        "efeitos": [
+          "convulsão",
+          "náusea",
+          "tontura",
+          "hipotensão postural"
+        ],
+        "observacao": "evitar em epilepsia e em idoso frágil; não associar a serotoninérgicos"
+      },
+      {
+        "agente": "ondansetrona",
+        "efeitos": [
+          "cefaleia",
+          "prolongamento do QT",
+          "constipação"
+        ],
+        "observacao": "eletrocardiograma em cardiopata ou em associação com outro fármaco que prolongue o QT"
+      },
+      {
+        "agente": "ácido tranexâmico",
+        "efeitos": [
+          "trombose",
+          "convulsão",
+          "hipotensão no bolus rápido"
+        ],
+        "observacao": "infundir o bolus em 10 minutos e evitar em trombose ativa"
+      },
+      {
+        "agente": "complexo protrombínico",
+        "efeitos": [
+          "trombose",
+          "coagulação intravascular disseminada",
+          "reação alérgica"
+        ],
+        "observacao": "usar a menor dose eficaz e reavaliar INR e clínica em 30 minutos"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação com data e horário",
+      "Sedação por opioide com queda de Glasgow: suspender a titulação, oxigênio, naloxona 0,04 a 0,4 mg IV e tomografia imediata para afastar lesão",
+      "Convulsão por tramadol: interromper, proteger via aérea, benzodiazepínico e investigar lesão estrutural",
+      "Trombose após antifibrinolítico ou complexo protrombínico: suspender, avaliar com imagem e anticoagular conforme o caso",
+      "Reação infusiona ao idarucizumabe: interromper, anti-histamínico e corticosteroide, e reiniciar com vigilância",
+      "Distonia por metoclopramida: suspender e tratar com prometazina ou biperideno"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "3 dias",
+            "condicao": "cefaleia pós-trauma",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "toxoide tetânico e diftérico (dT)",
+            "dose": "0,5 mL",
+            "via": "IM",
+            "frequencia": "dose única",
+            "duracao": "reforço em 10 anos",
+            "condicao": "ferimento associado com esquema incompleto",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "paracetamol",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "dor e dose total diária",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona",
+            "dose": "4 mg",
+            "via": "IV",
+            "frequencia": "8/8 h se vômito",
+            "monitorizacao": "número de vômitos e QT",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ácido tranexâmico",
+            "dose": "1 g bolus + 1 g em 8 h",
+            "via": "IV",
+            "frequencia": "dose única com infusão",
+            "monitorizacao": "trombose, convulsão e pressão arterial",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "fitomenadiona",
+            "dose": "10 mg",
+            "via": "IV",
+            "frequencia": "dose única",
+            "monitorizacao": "INR em 6 a 12 h",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "tomografia de crânio",
+          "tomografia de coluna cervical",
+          "hemograma",
+          "INR e tempo de tromboplastina",
+          "plaquetas",
+          "glicemia",
+          "etanol",
+          "creatinina",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com trauma craniano leve, submetido a avaliação neurológica e tomografia quando indicada, necessitando de afastamento e de retorno gradual às atividades conforme decisão médica.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias e CID são decisão médica no ato"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com trauma craniano leve por mecanismo, com Glasgow inicial e evolutivo, perda de consciência e amnésia, critérios de tomografia aplicados, resultado da imagem, conduta analgésica, reversão de anticoagulação quando indicada e plano de retorno gradual às atividades."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "mecanismo e hora do trauma",
+        "perda de consciência e duração",
+        "amnésia retrógrada e anterógrada",
+        "vômitos e número de episódios",
+        "cefaleia progressiva",
+        "convulsão pós-trauma",
+        "anticoagulante, antiagregante e AINE",
+        "intoxicação alcoólica ou por droga",
+        "cirurgia craniana ou derivação prévia",
+        "acompanhante e condições de alta"
+      ],
+      "texto_template": "Paciente com trauma craniano leve por mecanismo, há tempo do atendimento, com perda de consciência de duração, amnésia, número de vômitos, cefaleia progressiva, convulsão, uso de anticoagulante, antiagregante ou AINE, intoxicação, cirurgia craniana prévia e condições de acompanhamento na alta."
+    },
+    "exame_fisico": {
+      "itens": [
+        "Glasgow e suas três aberturas",
+        "pupilas e reflexo fotomotor",
+        "força, sensibilidade e fala",
+        "sinais de fratura de base de crânio",
+        "couro cabeludo e afundamento ósseo",
+        "coluna cervical e dor à palpação",
+        "sinais vitais e saturação",
+        "sinais de intoxicação"
+      ],
+      "texto_template": "Glasgow com abertura ocular, resposta verbal e motora, pupilas e reflexo fotomotor, força, sensibilidade e fala, sinais de fratura de base de crânio, exame do couro cabeludo, coluna cervical, sinais vitais e sinais de intoxicação."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de tomografia, observação e critérios de alta no trauma craniano leve",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_canadense",
+        "o_que_verificar": "regra de Canadian CT Head e definição de mecanismo perigoso",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_new_orleans",
+        "o_que_verificar": "critérios de tomografia no Glasgow 15 com perda de consciência",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_neurocirurgia",
+        "o_que_verificar": "indicação cirúrgica, reversão de anticoagulação e manejo da hipertensão intracraniana",
+        "verificar": true
+      },
+      {
+        "tipo": "consenso_concussao",
+        "o_que_verificar": "síndrome pós-concussiva e protocolo escalonado de retorno às atividades",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de analgésicos, antifibrinolítico e reversores",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-TRA04-01",
+        "tipo": "deterioracao",
+        "gatilho": "Glasgow abaixo de 15 duas horas após o trauma ou queda de 2 pontos",
+        "severidade": "grave",
+        "mensagem": "Tomografia imediata e acionar neurocirurgia.",
+        "acao": "acionar sala vermelha",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA04-02",
+        "tipo": "anticoagulante",
+        "gatilho": "anticoagulado ou antiagregante com trauma craniano e alta sem tomografia",
+        "severidade": "grave",
+        "mensagem": "Anticoagulado não recebe alta sem tomografia e sem observação registrada.",
+        "acao": "bloquear alta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA04-03",
+        "tipo": "aine",
+        "gatilho": "prescrição de anti-inflamatório não esteroidal ou ácido acetilsalicílico",
+        "severidade": "grave",
+        "mensagem": "AINE e AAS aumentam o risco de sangramento: usar paracetamol.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA04-04",
+        "tipo": "sedacao",
+        "gatilho": "sedativo ou opioide prescrito antes do exame neurológico e da tomografia",
+        "severidade": "grave",
+        "mensagem": "Sedação antes de examinar apaga o sinal de deterioração: avaliar e imaginar primeiro.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA04-05",
+        "tipo": "alta_indevida",
+        "gatilho": "alta com critério canadense de tomografia não atendido",
+        "severidade": "grave",
+        "mensagem": "Paciente com critério de imagem não pode ser liberado sem tomografia ou observação.",
+        "acao": "bloquear alta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA04-06",
+        "tipo": "herniacao",
+        "gatilho": "pupila assimétrica, hemiparesia ou rebaixamento progressivo",
+        "severidade": "grave",
+        "mensagem": "Suspeita de herniação: tomografia imediata, cabeceira elevada e neurocirurgia.",
+        "acao": "acionar neurocirurgia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-TRA04-07",
+        "tipo": "convulsao",
+        "gatilho": "convulsão após o trauma",
+        "severidade": "precaucao",
+        "mensagem": "Convulsão pós-trauma exige imagem e observação monitorizada.",
+        "acao": "sugerir tomografia",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-TRA04-08",
+        "tipo": "retorno_esportivo",
+        "gatilho": "liberação para esporte de contato no mesmo dia da concussão",
+        "severidade": "precaucao",
+        "mensagem": "Retorno no mesmo dia não é permitido: aplicar protocolo escalonado.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "MS/PNI",
+        "diretrizes canadense e de New Orleans",
+        "literatura de trauma craniano"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita com regra de Canadian CT Head e critérios de New Orleans, critérios objetivos de tomografia, observação estruturada, analgesia com paracetamol e restrição a AINE, reversão da anticoagulação, ácido tranexâmico, síndrome pós-concussiva e protocolo escalonado de retorno às atividades, além da lista do que não fazer.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

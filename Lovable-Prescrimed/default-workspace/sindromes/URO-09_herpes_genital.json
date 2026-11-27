@@ -1,0 +1,1111 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "URO-09",
+    "area": "Urinário",
+    "nome": "Herpes genital",
+    "aliases": [
+      "herpes genital",
+      "herpes simples genital",
+      "vesículas genitais",
+      "úlcera genital herpética",
+      "herpes vulvar",
+      "herpes anal",
+      "HSV-2 genital"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Herpes genital é infecção pelo HSV-1 ou HSV-2, com vesículas agrupadas que ulceram sobre base eritematosa, dor, ardência e adenopatia inguinal dolorosa. Três situações exigem condutas diferentes e não podem ser tratadas como a mesma coisa: o primeiro episódio, o mais intenso, que dura 2 a 3 semanas, cursa com febre, mialgia, disúria intensa e pode causar retenção urinária, e no qual o antiviral encurta a doença quando iniciado nas primeiras 72 h ou enquanto houver lesão nova; a recorrência, mais curta, com pródromo de formigamento e poucas vesículas, em que o tratamento episódico precoce reduz dias de sintoma; e a recorrência frequente, com seis ou mais episódios por ano, que é indicação de terapia supressiva contínua por 6 a 12 meses, com reavaliação periódica. O diagnóstico é clínico e se confirma por teste de amplificação de ácido nucleico da lesão, colhido na base da vesícula. Toda úlcera genital é uma IST até prova em contrário: testar HIV e sífilis na mesma visita, oferecer hepatites e vacinar. Na gestante, o risco é transmissão neonatal: supressão a partir de 36 semanas e cesariana quando há lesão ativa no trabalho de parto. O que não se faz é corticoide isolado, alta sem orientar e tratar o parceiro e alta sem testar HIV.",
+    "inclusao": [
+      "Vesículas agrupadas, úlceras dolorosas ou fissuras genitais, anais ou perineais, com ou sem adenopatia inguinal",
+      "Primeiro episódio com febre, mialgia, disúria e lesões múltiplas",
+      "Recorrência típica com pródromo de formigamento e lesões limitadas",
+      "Seis ou mais episódios por ano, para avaliar terapia supressiva",
+      "Gestante com história de herpes genital, para supressão a partir de 36 semanas",
+      "Parceiro com lesão ativa ou contato sexual com caso confirmado"
+    ],
+    "exclusao": [
+      {
+        "situacao": "úlcera única, indolor, de borda endurecida e fundo limpo",
+        "fluxo": "sífilis — testar e tratar com penicilina benzatina, fluxo URO-08"
+      },
+      {
+        "situacao": "úlcera de borda irregular, exsudato purulento e adenopatia inguinal flutuante",
+        "fluxo": "cancroide — pesquisar Haemophilus ducreyi e tratar com azitromicina ou ceftriaxona"
+      },
+      {
+        "situacao": "lesão extensa, disseminada, com hepatite, pneumonite ou encefalite",
+        "fluxo": "hospitalar — aciclovir intravenoso"
+      },
+      {
+        "situacao": "gestante em trabalho de parto com lesão ativa",
+        "fluxo": "obstetrícia — cesariana e avaliação neonatal"
+      },
+      {
+        "situacao": "recém-nascido com vesículas, letargia, sucção fraca ou convulsão",
+        "fluxo": "neonatologia — aciclovir intravenoso imediato"
+      },
+      {
+        "situacao": "corrimento uretral purulento sem vesícula",
+        "fluxo": "uretrite — fluxo URO-06, com testagem de IST"
+      },
+      {
+        "situacao": "dor testicular aguda, massa escrotal ou febre com dor no epidídimo",
+        "fluxo": "fluxo URO-10 — excluir torção antes de qualquer outra conduta"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "retenção urinária, bexigoma palpável e dor suprapúbica",
+        "por_que": "disúria intensa e disfunção vesical do primeiro episódio",
+        "acao": "sondagem vesical de alívio e analgesia; internação se persistir",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "lesões extensas, necróticas ou disseminadas em imunodeprimido",
+        "por_que": "doença visceral e risco de encefalite",
+        "acao": "internação e aciclovir intravenoso",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "gestante com lesão ativa em trabalho de parto ou com bolsa rota",
+        "por_que": "transmissão neonatal com alta letalidade",
+        "acao": "cesariana imediata e equipe neonatal presente",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "recém-nascido exposto com vesícula, letargia ou convulsão",
+        "por_que": "herpes neonatal disseminado",
+        "acao": "neonatologia e aciclovir intravenoso sem esperar exame",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "cefaleia intensa, fotofobia, rigidez de nuca ou confusão",
+        "por_que": "meningite asséptica por HSV",
+        "acao": "internação, punção lombar e aciclovir intravenoso",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "vesícula na pálpebra, olho vermelho ou ceratoconjuntivite",
+        "por_que": "ceratite herpética com risco de cicatriz corneal",
+        "acao": "oftalmologia imediata, sem corticoide ocular",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "febre alta, toxemia e úlcera com secreção purulenta fétida",
+        "por_que": "infecção bacteriana secundária ou neutropenia",
+        "acao": "cultura, antibiótico sistêmico e internação se toxemia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "parceiro não orientado e relação sem preservativo durante as lesões",
+        "por_que": "transmissão e reinfecção, que se confundem com falha terapêutica",
+        "acao": "orientar, registrar o aconselhamento e oferecer preservativo",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "diagnóstico de úlcera genital sem testagem de HIV e sífilis registrada",
+        "por_que": "coinfecção frequente e janela diagnóstica",
+        "acao": "solicitar teste rápido de HIV e teste treponêmico na mesma visita",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "É o primeiro episódio ou já teve antes? Quantos episódios no último ano?",
+      "Começou com formigamento, queimação ou dor antes de aparecerem as lesões?",
+      "As lesões são vesículas agrupadas, úlceras ou fissuras? Onde ficam?",
+      "Tem febre, mialgia, dor de cabeça ou mal-estar geral?",
+      "Está com dor ou dificuldade para urinar? Consegue urinar?",
+      "Há ferida única indolor, corrimento ou caroço na virilha?",
+      "Está gestante? Quantas semanas? Já teve herpes genital antes?",
+      "Usa imunossupressor, tem HIV ou faz quimioterapia?",
+      "O parceiro tem lesão ou já teve herpes? Usam preservativo?",
+      "Quando foi a última testagem de HIV, sífilis e hepatites?",
+      "Tem alergia a aciclovir ou à penicilina? Alguma alteração de função renal?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Primeiro episódio com lesões múltiplas, dor intensa e sintomas sistêmicos, visto nas primeiras 72 h",
+        "escolha": "Aciclovir 400 mg VO 8/8 h por 7 a 10 dias, ou valaciclovir 1 g VO 12/12 h por 7 a 10 dias, ou famciclovir 250 mg VO 8/8 h por 7 a 10 dias",
+        "porque": "O antiviral iniciado na fase aguda encurta o tempo de lesão, a dor e o shedding viral; os três esquemas têm eficácia equivalente e a escolha depende de apresentação, custo e número de tomadas"
+      },
+      {
+        "cenario": "Primeiro episódio com retenção urinária, lesões extensas, hepatite ou imunossupressão grave",
+        "escolha": "Aciclovir 5 a 10 mg/kg IV 8/8 h por 5 a 7 dias, com hidratação e sondagem de alívio",
+        "porque": "A via oral não garante concentração adequada na doença visceral; a retenção urinária exige esvaziamento vesical além do antiviral"
+      },
+      {
+        "cenario": "Recorrência com pródromo ou lesão recente, menos de 6 episódios por ano",
+        "escolha": "Valaciclovir 500 mg VO 12/12 h por 3 dias, ou aciclovir 400 mg VO 8/8 h por 5 dias, ou famciclovir 125 mg VO 12/12 h por 5 dias, iniciados no pródromo",
+        "porque": "O tratamento episódico encurta a crise em 1 a 2 dias, mas só funciona se começar antes ou logo no início das vesículas"
+      },
+      {
+        "cenario": "Seis ou mais recorrências por ano, com impacto na vida sexual e no sono",
+        "escolha": "Valaciclovir 500 mg VO 1x/dia (ou 250 mg 12/12 h), ou aciclovir 400 mg VO 12/12 h, ou famciclovir 250 mg VO 12/12 h, por 6 a 12 meses",
+        "porque": "A supressão contínua reduz em 70 a 80% o número de episódios e o shedding assintomático, reduzindo também a transmissão; precisa de reavaliação para não virar prescrição eterna"
+      },
+      {
+        "cenario": "Gestante com herpes genital recorrente a partir de 36 semanas",
+        "escolha": "Aciclovir 400 mg VO 8/8 h até o parto, com registro da via de parto planejada",
+        "porque": "A supressão no fim da gestação reduz recidiva no parto e o número de cesarianas; não há indicação de cesariana eletiva apenas por história de herpes"
+      },
+      {
+        "cenario": "Gestante com lesão ativa no trabalho de parto ou com bolsa rota",
+        "escolha": "Cesariana e aciclovir intravenoso para o recém-nascido conforme a avaliação neonatal",
+        "porque": "O parto vaginal com lesão ativa é a via de transmissão neonatal; a conduta muda o desfecho e não pode esperar resultado de exame"
+      },
+      {
+        "cenario": "Paciente com HIV ou uso de imunossupressor",
+        "escolha": "Dose mais alta e tempo mais longo, com aciclovir 400 a 800 mg 8/8 h por 10 a 14 dias e avaliação para via intravenosa",
+        "porque": "A replicação viral é maior e as lesões são extensas, atípicas e recorrentes; a resposta ao esquema padrão é pior"
+      },
+      {
+        "cenario": "Dor e ardência que impedem a micção ou a higiene",
+        "escolha": "Dipirona 1 g VO 6/6 h, ou paracetamol 500 a 750 mg VO 6/6 h, com lidocaína gel 2% antes de urinar",
+        "porque": "A analgesia não trata a infecção, mas permite urinar e higienizar, evitando retenção e infecção secundária"
+      },
+      {
+        "cenario": "Úlcera genital atípica ou sorologia de sífilis reagente na mesma visita",
+        "escolha": "Testar sífilis e HIV e, se confirmada, tratar com benzilpenicilina benzatina 2.400.000 UI IM dose única",
+        "porque": "Herpes e sífilis coexistem e a úlcera herpética pode esconder um cancro; tratar apenas o herpes deixa a sífilis evoluir"
+      },
+      {
+        "cenario": "Função renal reduzida ou diálise",
+        "escolha": "Aciclovir 400 mg 12/12 h com clearance entre 10 e 25 mL/min e 200 mg 12/12 h abaixo de 10 mL/min, ou valaciclovir 1 g 24/24 h",
+        "porque": "Aciclovir é eliminado por filtração glomerular e se acumula, causando cristalúria e neurotoxicidade"
+      },
+      {
+        "cenario": "Parceiro assintomático de paciente com herpes genital",
+        "escolha": "Aconselhamento, testagem de HIV e sífilis, preservativo e oferta de supressão ao paciente para reduzir transmissão",
+        "porque": "Não existe tratamento que erradique o HSV; o que reduz transmissão é preservativo, supressão antiviral e educação sobre shedding assintomático"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antiviral_nucleosideo",
+        "agente": "aciclovir",
+        "papel": "primeira_linha",
+        "indicacao": "primeiro episódio de herpes genital e terapia supressiva de recorrências frequentes",
+        "dose": "400 mg no primeiro episódio; 400 mg 12/12 h na supressão; 800 mg 12/12 h na recidiva grave",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h por 7 a 10 dias no primeiro episódio; 12/12 h na supressão",
+        "duracao": "7 a 10 dias no primeiro episódio; 6 a 12 meses na supressão, com reavaliação",
+        "dose_maxima": "1.200 mg/dia no primeiro episódio; 800 mg/dia na supressão",
+        "contraindicacoes": [
+          "alergia a aciclovir ou valaciclovir",
+          "insuficiência renal sem ajuste de dose",
+          "desidratação grave",
+          "uso concomitante de outros nefrotóxicos sem hidratação"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "diarreia",
+          "cefaleia",
+          "nefrotoxicidade por cristalúria em dose alta",
+          "tontura e confusão em renal crônico",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "comprimido 800 mg",
+          "suspensão oral 200 mg/5 mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento, com copo cheio de água; manter hidratação ao longo do dia",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "creatinina e diurese no uso prolongado ou em dose alta",
+          "resolução das vesículas e da dor em 7 a 10 dias",
+          "número de episódios por ano na supressão",
+          "adesão, conferindo comprimidos restantes na farmácia",
+          "confusão e tremor em renal crônico"
+        ],
+        "ajuste_renal": "Clearance 10 a 25 mL/min: 400 mg 12/12 h; abaixo de 10 mL/min: 200 mg 12/12 h; na supressão, metade da dose e intervalo dobrado; em diálise, dose após a sessão",
+        "ajuste_hepatico": "Sem ajuste em dose usual; cautela em hepatopatia grave com encefalopatia",
+        "observacoes": "Iniciar nas primeiras 72 h do primeiro episódio ou enquanto houver lesão nova; não encurta a latência nem cura a infecção. Na supressão, reavaliar em 6 a 12 meses para decidir manutenção.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/MS/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral_pro_farmaco",
+        "agente": "valaciclovir",
+        "papel": "primeira_linha",
+        "indicacao": "primeiro episódio, tratamento episódico da recorrência e supressão de recorrências frequentes",
+        "dose": "1 g no primeiro episódio; 500 mg 12/12 h na recorrência; 500 mg 1x/dia na supressão",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h por 7 a 10 dias no primeiro episódio; 12/12 h por 3 dias na recorrência; 1x/dia na supressão",
+        "duracao": "7 a 10 dias no primeiro episódio; 3 dias na recorrência; 6 a 12 meses na supressão",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": [
+          "alergia a aciclovir ou valaciclovir",
+          "insuficiência renal sem ajuste",
+          "desidratação grave",
+          "imunossupressão grave sem avaliação de via intravenosa"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "náusea",
+          "dor abdominal",
+          "tontura",
+          "nefrotoxicidade rara",
+          "confusão em renal crônico"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 1 g"
+        ],
+        "preparo": "Uso direto, com ou sem alimento, com água; manter hidratação",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "resolução das lesões em 7 a 10 dias",
+          "cefaleia e tontura",
+          "creatinina em uso contínuo",
+          "frequência de episódios na supressão",
+          "adesão ao esquema de 1 tomada diária"
+        ],
+        "ajuste_renal": "Clearance 30 a 49 mL/min: 1 g 12/12 h no episódio e 500 mg 24/24 h na supressão; 10 a 29 mL/min: 1 g 24/24 h e 500 mg 48/48 h; abaixo de 10 mL/min: dose única semanal, com nefrologia",
+        "ajuste_hepatico": "Sem ajuste em dose usual; cautela em hepatopatia grave",
+        "observacoes": "Pró-fármaco do aciclovir com biodisponibilidade 3 a 5 vezes maior, o que permite menos tomadas; é a melhor escolha quando adesão é o problema. Custo maior que o aciclovir.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/MS/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral_pro_farmaco",
+        "agente": "famciclovir",
+        "papel": "alternativa",
+        "indicacao": "primeiro episódio, recorrência e supressão quando há intolerância ou falha dos esquemas com aciclovir e valaciclovir",
+        "dose": "250 mg no primeiro episódio; 125 mg 12/12 h na recorrência; 250 mg 12/12 h na supressão",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h por 7 a 10 dias no primeiro episódio; 12/12 h por 5 dias na recorrência; 12/12 h na supressão",
+        "duracao": "7 a 10 dias no primeiro episódio; 5 dias na recorrência; 6 a 12 meses na supressão",
+        "dose_maxima": "750 mg/dia",
+        "contraindicacoes": [
+          "alergia a famciclovir ou penciclovir",
+          "insuficiência renal sem ajuste",
+          "galactosemia ou má absorção de glicose e galactose pela lactose do comprimido"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "náusea",
+          "diarreia",
+          "tontura",
+          "sonolência",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 125 mg",
+          "comprimido 250 mg",
+          "comprimido 500 mg"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "resolução das lesões",
+          "cefaleia e sonolência",
+          "creatinina em uso prolongado",
+          "adesão na supressão"
+        ],
+        "ajuste_renal": "Clearance 40 a 59 mL/min: 500 mg 12/12 h no episódio e 250 mg 12/12 h na supressão; 20 a 39 mL/min: 500 mg 1x/dia e 250 mg 1x/dia; abaixo de 20 mL/min: 250 mg 1x/dia e 125 mg 1x/dia",
+        "ajuste_hepatico": "Sem ajuste em dose usual",
+        "observacoes": "Alternativa de terceira linha na prática brasileira, limitada por custo e disponibilidade. Não é mais eficaz que aciclovir ou valaciclovir.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral_nucleosideo",
+        "agente": "aciclovir intravenoso",
+        "papel": "condicional",
+        "indicacao": "herpes genital extenso, disseminado, com retenção urinária, meningite, imunossupressão grave ou recém-nascido exposto",
+        "dose": "5 a 10 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "5 a 7 dias no adulto; 14 a 21 dias no neonato e no imunossuprimido",
+        "dose_maxima": "10 mg/kg 8/8 h",
+        "contraindicacoes": [
+          "alergia a aciclovir",
+          "anúria sem ajuste de dose",
+          "desidratação grave sem correção prévia",
+          "infusão rápida ou concentração acima de 7 mg/mL"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade por cristalúria",
+          "flebite no local da infusão",
+          "confusão, tremor e mioclonias em renal crônico",
+          "náusea",
+          "elevação de creatinina"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 250 mg",
+          "frasco-ampola 500 mg",
+          "solução injetável 250 mg/10 mL"
+        ],
+        "preparo": "Reconstituir em água para injeção e diluir em 100 mL de soro fisiológico 0,9% ou glicose 5%, sem exceder 7 mg/mL; hidratar antes e durante a infusão",
+        "tempo_infusao": "60 minutos, nunca em bolus",
+        "monitorizacao": [
+          "creatinina e diurese a cada 24 a 48 h",
+          "nível de consciência, tremor e mioclonia",
+          "local da punção por flebite",
+          "hemograma em uso prolongado",
+          "volume urinário e balanço hídrico"
+        ],
+        "ajuste_renal": "Clearance 25 a 50 mL/min: 5 a 10 mg/kg 12/12 h; 10 a 25 mL/min: 5 a 10 mg/kg 24/24 h; abaixo de 10 mL/min: metade da dose 24/24 h; em diálise, dose após a sessão",
+        "ajuste_hepatico": "Sem ajuste específico; monitorar sinais de neurotoxicidade",
+        "observacoes": "No neonato, 20 mg/kg 8/8 h por 14 a 21 dias, dose diferente da do adulto. A infusão rápida é a principal causa de nefrotoxicidade.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/MS/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "dipirona",
+        "papel": "condicional",
+        "indicacao": "dor e ardência das lesões, em especial quando impedem a micção",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "3 a 5 dias, enquanto houver dor",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a pirazolonas",
+          "discrasia sanguínea ou neutropenia",
+          "porfiria hepática aguda",
+          "deficiência de glicose-6-fosfato desidrogenase",
+          "terceiro trimestre de gestação",
+          "hepatopatia grave"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "rash e urticária",
+          "agranulocitose rara",
+          "náusea",
+          "dor no local da injeção"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 1 g",
+          "solução oral 500 mg/mL",
+          "ampola 1 g/2 mL",
+          "solução injetável 500 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral; na via intravenosa, diluir em 10 mL de água destilada ou soro fisiológico",
+        "tempo_infusao": "não se aplica (via oral); na via intravenosa, 5 minutos",
+        "monitorizacao": [
+          "intensidade da dor em 30 a 60 min",
+          "pressão arterial após dose intravenosa",
+          "hemograma se uso prolongado",
+          "erupção cutânea"
+        ],
+        "ajuste_renal": "Evitar em clearance abaixo de 30 mL/min; se indispensável, intervalos de 8 h",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Analgesia de resgate; não trata a infecção e não substitui o antiviral. Não associar a outro produto que contenha dipirona.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "alternativa",
+        "indicacao": "dor das lesões quando a dipirona é contraindicada ou indisponível",
+        "dose": "500 a 750 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave ou descompensada",
+          "desnutrição grave",
+          "alcoolismo crônico ativo",
+          "alergia a paracetamol"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "elevação de transaminases em dose alta",
+          "hepatotoxicidade em superdose",
+          "rash raro"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "solução intravenosa 10 mg/mL"
+        ],
+        "preparo": "Uso direto; na via intravenosa, infundir sem diluição adicional",
+        "tempo_infusao": "não se aplica (via oral); na via intravenosa, 15 minutos",
+        "monitorizacao": [
+          "alívio da dor em 1 h",
+          "transaminases em uso acima de 5 dias",
+          "uso concomitante de outro produto com paracetamol"
+        ],
+        "ajuste_renal": "Clearance abaixo de 30 mL/min: intervalo de 6 a 8 h e máximo de 2 g/dia",
+        "ajuste_hepatico": "Máximo de 2 g/dia em hepatopatia leve; evitar em hepatopatia grave",
+        "observacoes": "Alternativa segura na gestação e no renal crônico, ao contrário da dipirona no terceiro trimestre. Conferir se o paciente já toma produto combinado com paracetamol.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_topico",
+        "agente": "lidocaína gel 2%",
+        "papel": "condicional",
+        "indicacao": "dor e ardência das lesões genitais, aplicada antes da micção e da higiene",
+        "dose": "camada fina sobre a lesão",
+        "unidade": "aplicação",
+        "via": "tópica",
+        "frequencia": "até 6 vezes ao dia, antes de urinar",
+        "duracao": "até 7 dias",
+        "dose_maxima": "6 aplicações por dia",
+        "contraindicacoes": [
+          "alergia a anestésico do grupo amida",
+          "lesão extensa com absorção sistêmica significativa",
+          "aplicação em mucosa com solução concentrada",
+          "uso em prematuro ou lactente pequeno"
+        ],
+        "efeitos_adversos": [
+          "ardência inicial",
+          "irritação local",
+          "dermatite de contato",
+          "metahemoglobinemia rara em aplicação extensa"
+        ],
+        "apresentacoes": [
+          "gel 2% bisnaga 30 g",
+          "gel 2% frasco 50 mL",
+          "pomada 5% bisnaga 30 g"
+        ],
+        "preparo": "Aplicar camada fina sobre a lesão, sem ocluir, 5 minutos antes de urinar; retirar o excesso com gaze",
+        "tempo_infusao": "não se aplica (via tópica)",
+        "monitorizacao": [
+          "alívio da dor ao urinar",
+          "irritação local",
+          "área aplicada, pelo risco de absorção",
+          "sinais de toxicidade se aplicação extensa"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "observacoes": "Alívio sintomático que permite urinar e higienizar; não substitui o antiviral. Não usar lidocaína com vasoconstritor na região genital.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina",
+        "agente": "benzilpenicilina benzatina",
+        "papel": "condicional",
+        "indicacao": "sífilis recente confirmada na testagem feita na mesma visita da úlcera genital",
+        "dose": "2.400.000 UI (1.200.000 UI em cada glúteo)",
+        "unidade": "UI",
+        "via": "IM",
+        "frequencia": "dose única na sífilis recente; semanal por 3 semanas na sífilis tardia",
+        "duracao": "1 a 3 semanas, conforme o estágio",
+        "dose_maxima": "2.400.000 UI por dose",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "anafilaxia prévia a beta-lactâmico",
+          "uso de diluente com lidocaína em paciente alérgico"
+        ],
+        "efeitos_adversos": [
+          "dor local intensa",
+          "reação de Jarisch-Herxheimer nas primeiras 24 h",
+          "rash",
+          "febre e mialgia por 1 a 2 dias",
+          "necrose local por injeção superficial"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 600.000 UI",
+          "frasco-ampola 1.200.000 UI",
+          "frasco-ampola 2.400.000 UI"
+        ],
+        "preparo": "Reconstituir em 4 mL de água para injeção; aplicar 1,2 milhão de UI em cada glúteo com agulha longa",
+        "tempo_infusao": "injeção intramuscular profunda lenta, 1 a 2 minutos por glúteo",
+        "monitorizacao": [
+          "reação de Jarisch-Herxheimer nas primeiras 24 h",
+          "dor e hematoma local",
+          "sorologia de controle em 3, 6, 9 e 12 meses",
+          "testagem e tratamento do parceiro"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "observacoes": "Coinfecção frequente: a úlcera herpética não exclui sífilis. Se a sorologia vier reagente, tratar na mesma visita e não atribuir a úlcera apenas ao HSV.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/MS",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Higiene local com água e sabão neutro e secagem completa",
+        "detalhe": "Lavar as lesões com água morna e sabão neutro 2 vezes ao dia, secar com toalha própria por compressão e não esfregar; evitar sabonete perfumado, álcool, talco e lenço umedecido na região"
+      },
+      {
+        "medida": "Compressa fria e roupa folgada",
+        "detalhe": "Compressa de água fria por 10 a 15 minutos, 3 a 4 vezes ao dia, para reduzir dor e edema; usar roupa íntima de algodão, folgada, trocada diariamente"
+      },
+      {
+        "medida": "Esvaziamento vesical sem dor",
+        "detalhe": "Urinar em água morna ou durante o banho, com lidocaína gel aplicada 5 minutos antes, para evitar retenção urinária; se não conseguir urinar por 6 h, procurar atendimento"
+      },
+      {
+        "medida": "Abstinência sexual durante as lesões",
+        "detalhe": "Suspender relação sexual, inclusive com preservativo, desde o pródromo até a queda completa das crostas, e manter preservativo nas relações fora das crises"
+      },
+      {
+        "medida": "Orientação e testagem do parceiro",
+        "detalhe": "Conversar com o parceiro, oferecer testagem de HIV, sífilis e hepatites, explicar shedding assintomático e registrar o aconselhamento no prontuário; não há indicação de tratar o parceiro com antiviral de forma presumida"
+      },
+      {
+        "medida": "Testagem de HIV, sífilis e hepatites na mesma visita",
+        "detalhe": "Teste rápido de HIV de quarta geração e teste treponêmico antes de o paciente sair, com oferta de hepatite B e C, vacinação contra hepatite B e HPV conforme o calendário e notificação compulsória quando indicada"
+      },
+      {
+        "medida": "Controle de gatilhos de recorrência",
+        "detalhe": "Sono regular, controle de estresse, proteção solar, tratamento de febre e de infecções intercorrentes; revisar imunossupressores quando possível"
+      },
+      {
+        "medida": "Retorno programado e diário de crises",
+        "detalhe": "Retorno em 7 a 10 dias no primeiro episódio e em 4 a 12 semanas na supressão; orientar o paciente a anotar data e duração de cada crise para decidir manutenção ou suspensão"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Coleta de material da lesão para teste de amplificação de HSV",
+        "indicacao": "primeiro episódio, dúvida diagnóstica, gestante, imunossuprimido e lesão atípica",
+        "tecnica": "Selecionar vesícula recente com menos de 48 h, romper com zaragatoa estéril e coletar a base úmida, com pressão firme; enviar em meio de transporte para reação em cadeia da polimerase, sem tocar a pele ao redor",
+        "complicacoes": "Amostra insuficiente, resultado falso-negativo em lesão já cicatrizada, dor local e contaminação"
+      },
+      {
+        "nome": "Sondagem vesical de alívio na retenção urinária",
+        "indicacao": "retenção urinária com bexigoma e dor suprapúbica no primeiro episódio",
+        "tecnica": "Sonda de Foley 14 a 16 Fr com técnica asséptica, esvaziamento lento em alíquotas de 200 a 300 mL, medida do resíduo e manutenção pelo tempo necessário à resolução da disúria, com analgesia e antiviral associados",
+        "complicacoes": "Infecção urinária, trauma uretral, hematúria, desconforto e necessidade de cateterismo intermitente"
+      },
+      {
+        "nome": "Cesariana na gestante com lesão ativa",
+        "indicacao": "lesão ativa ou pródromo no trabalho de parto ou com bolsa rota, independentemente do tempo de ruptura",
+        "tecnica": "Cesariana conforme técnica obstétrica, com equipe neonatal presente, evitando instrumentação e ruptura artificial de membranas; notificar a neonatologia para avaliação e aciclovir se indicado",
+        "complicacoes": "Infecção de ferida, hemorragia, maior tempo de internação e transmissão ainda possível por contato"
+      },
+      {
+        "nome": "Testagem rápida de HIV, sífilis e hepatites",
+        "indicacao": "toda úlcera genital, na mesma visita",
+        "tecnica": "Teste rápido de HIV de quarta geração e teste treponêmico em sangue capilar, com confirmação sorológica e aconselhamento pré e pós-teste; oferecer hepatite B e C e vacinar",
+        "complicacoes": "Resultado reagente sem confirmação, janela imunológica com falso-negativo e necessidade de repetir em 30 dias"
+      },
+      {
+        "nome": "Aconselhamento e notificação de parceiros",
+        "indicacao": "todo herpes genital confirmado ou presumido",
+        "tecnica": "Entrevista de parceiros, oferta de testagem, orientação sobre preservativo e shedding assintomático, registro em ficha de notificação quando aplicável e agendamento de reavaliação",
+        "complicacoes": "Perda de seguimento, recusa do parceiro, quebra de confidencialidade e conflito conjugal"
+      }
+    ],
+    "metas": [
+      "Antiviral iniciado na primeira consulta, nas primeiras 72 h do primeiro episódio ou enquanto houver lesão nova",
+      "Testagem de HIV e sífilis solicitada e registrada na mesma visita em 100% das úlceras genitais",
+      "Terapia supressiva indicada apenas com seis ou mais episódios por ano e reavaliada em até 12 meses",
+      "Parceiro orientado e registrado no prontuário em 100% dos casos",
+      "Resolução da dor e das lesões em até 10 dias no primeiro episódio e em até 5 dias na recorrência",
+      "Gestante com supressão iniciada até 36 semanas e via de parto definida e registrada",
+      "Nenhuma alta com corticoide isolado ou sem analgesia e orientação de retorno"
+    ],
+    "fluxo": [
+      "Classificar o episódio: primeiro episódio, recorrência ou recorrência frequente, e perguntar sobre gestação e imunossupressão",
+      "Examinar e descrever as lesões, palpar linfonodos inguinais e procurar ferida única indolor, corrimento ou sinais sistêmicos",
+      "Coletar teste de amplificação de HSV na lesão recente, sem atrasar o tratamento, e testar HIV, sífilis e hepatites na mesma visita",
+      "Iniciar o antiviral na primeira consulta: aciclovir 400 mg 8/8 h, valaciclovir 1 g 12/12 h ou famciclovir 250 mg 8/8 h por 7 a 10 dias no primeiro episódio",
+      "Tratar a dor com dipirona ou paracetamol e lidocaína gel, e resolver retenção urinária com sondagem de alívio",
+      "Na recorrência, usar esquema curto iniciado no pródromo; com seis ou mais episódios por ano, indicar supressão contínua por 6 a 12 meses",
+      "Na gestante, iniciar supressão a partir de 36 semanas e definir cesariana se houver lesão ativa no trabalho de parto",
+      "Orientar o parceiro, prescrever preservativo, registrar a testagem e marcar retorno para reavaliar lesões, adesão e necessidade de manutenção da supressão"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "aciclovir 400 mg 8/8 h é o esquema preferido; valaciclovir é alternativa; supressão a partir de 36 semanas e cesariana se lesão ativa no parto",
+        "alerta": "herpes neonatal tem alta letalidade; a infecção primária no terceiro trimestre é o maior risco porque não há tempo para transferência de anticorpos"
+      },
+      {
+        "populacao": "neonato exposto",
+        "ajuste": "avaliação por neonatologia e aciclovir intravenoso 20 mg/kg 8/8 h por 14 a 21 dias quando há suspeita, sem esperar confirmação laboratorial",
+        "alerta": "vesícula, letargia, sucção fraca, convulsão ou sepse no recém-nascido exigem tratamento imediato"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "dose mais alta e tempo mais longo, com aciclovir 400 a 800 mg 8/8 h por 10 a 14 dias e avaliação para via intravenosa; considerar supressão prolongada",
+        "alerta": "lesões extensas, atípicas e resistência ao aciclovir em uso crônico; testar HIV em toda úlcera genital extensa ou recorrente"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "reduzir e espaçar aciclovir, valaciclovir e famciclovir conforme o clearance; hidratar e evitar associação com outros nefrotóxicos",
+        "alerta": "acúmulo causa cristalúria, confusão, tremor e mioclonia; a dose precisa ser conferida antes da alta"
+      },
+      {
+        "populacao": "adolescente",
+        "ajuste": "garantir confidencialidade, testagem de HIV e sífilis, aconselhamento e tratamento do parceiro com o mesmo rigor do adulto",
+        "alerta": "medo de exposição leva a abandono e a recidiva; a notificação não deve funcionar como barreira ao atendimento"
+      },
+      {
+        "populacao": "parceiro_assintomatico",
+        "ajuste": "não tratar com antiviral presumido; orientar sobre shedding, oferecer preservativo, testar HIV e sífilis e considerar supressão no paciente índice",
+        "alerta": "a transmissão ocorre também sem lesão visível, e a supressão reduz esse risco em cerca de metade"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "teste de amplificação de ácido nucleico ou PCR de HSV na lesão",
+          "indicacao": "primeiro episódio, gestante, imunossuprimido, lesão atípica ou dúvida com sífilis",
+          "o_que_muda": "confirma o HSV, diferencia de sífilis e cancroide e permite tratar o parceiro com base em evidência"
+        },
+        {
+          "nome": "teste rápido e sorologia para HIV",
+          "indicacao": "toda úlcera genital, na mesma visita",
+          "o_que_muda": "identifica infecção não diagnosticada, muda o seguimento e indica profilaxia e tratamento antirretroviral"
+        },
+        {
+          "nome": "teste treponêmico e VDRL para sífilis",
+          "indicacao": "toda úlcera genital e todo contato sexual de risco",
+          "o_que_muda": "define tratamento com penicilina benzatina e monitorização sorológica"
+        },
+        {
+          "nome": "sorologia para hepatites B e C",
+          "indicacao": "toda IST e oferta de vacinação",
+          "o_que_muda": "identifica infecção crônica, indica vacinação e encaminha para seguimento"
+        },
+        {
+          "nome": "teste de amplificação de gonococo e clamídia",
+          "indicacao": "corrimento uretral ou anal associado, ou parceiro com uretrite",
+          "o_que_muda": "identifica coinfecção que exige antibiótico próprio, sem o qual as lesões não resolvem"
+        },
+        {
+          "nome": "sorologia tipo-específica para HSV-2",
+          "indicacao": "parceiro assintomático e dúvida sobre infecção prévia, nunca para diagnóstico de lesão aguda",
+          "o_que_muda": "documenta infecção prévia e orienta aconselhamento; não serve para confirmar o episódio atual"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "cultura viral de rotina no primeiro episódio típico",
+          "motivo": "rendimento baixo em lesão já crostosa, resultado demorado e não muda a conduta inicial; reservar para falha ou dúvida"
+        },
+        {
+          "exame": "IgM anti-HSV isolada",
+          "motivo": "falso-positivo frequente, não distingue primo-infecção de recorrência e não deve ser usada para decidir tratamento"
+        },
+        {
+          "exame": "citologia de Tzanck isolada",
+          "motivo": "não diferencia HSV de varicela-zóster e não tem sensibilidade para excluir herpes"
+        },
+        {
+          "exame": "teste de cura por PCR com paciente assintomático",
+          "motivo": "o HSV permanece latente no gânglio e o PCR pode ficar positivo sem doença ativa, levando a retratamento desnecessário"
+        },
+        {
+          "exame": "sorologia de HSV para decidir cesariana",
+          "motivo": "não muda a conduta no trabalho de parto; a decisão é clínica, pela presença de lesão ativa"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar o antiviral até o último dia, mesmo que as lesões desapareçam antes",
+        "lavar as lesões com água e sabão neutro e secar bem, 2 vezes ao dia",
+        "urinar em água morna e aplicar lidocaína gel antes, se houver dor",
+        "usar preservativo em todas as relações, inclusive fora das crises",
+        "avisar o parceiro e oferecer testagem de HIV, sífilis e hepatites",
+        "comparecer ao retorno em 7 a 10 dias e anotar a data de cada nova crise",
+        "fazer a testagem de HIV e sífilis e repetir em 3 meses se houve risco recente"
+      ],
+      "evitar": [
+        "relação sexual durante as lesões, até a queda completa das crostas",
+        "pomada de corticoide ou antibiótico por conta própria nas lesões",
+        "sabonete perfumado, álcool, talco e lenço umedecido na região genital",
+        "compartilhar toalha e roupa íntima",
+        "interromper a supressão por conta própria, sem reavaliação",
+        "automedicação com aciclovir de sobra de tratamento anterior"
+      ],
+      "retorno": [
+        "não conseguir urinar ou dor intensa ao urinar",
+        "febre, mal-estar intenso ou lesões que se espalham",
+        "lesão que não melhora em 10 dias ou que aumenta",
+        "nova ferida única e indolor na região genital",
+        "gestação confirmada durante o tratamento",
+        "resultado reagente para HIV ou sífilis",
+        "mais de seis crises em um ano, para avaliar supressão"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "aciclovir",
+        "efeitos": [
+          "náusea",
+          "cefaleia",
+          "nefrotoxicidade",
+          "confusão em renal crônico"
+        ],
+        "observacao": "hidratar, conferir creatinina e ajustar a dose no renal crônico"
+      },
+      {
+        "agente": "valaciclovir",
+        "efeitos": [
+          "cefaleia",
+          "náusea",
+          "tontura"
+        ],
+        "observacao": "ajustar ao clearance e evitar em desidratação"
+      },
+      {
+        "agente": "famciclovir",
+        "efeitos": [
+          "cefaleia",
+          "náusea",
+          "sonolência"
+        ],
+        "observacao": "ajustar ao clearance; suspender se reação alérgica"
+      },
+      {
+        "agente": "aciclovir intravenoso",
+        "efeitos": [
+          "nefrotoxicidade",
+          "flebite",
+          "mioclonia e confusão"
+        ],
+        "observacao": "infundir em 60 min, com concentração máxima de 7 mg/mL e hidratação"
+      },
+      {
+        "agente": "dipirona",
+        "efeitos": [
+          "hipotensão",
+          "rash",
+          "agranulocitose rara"
+        ],
+        "observacao": "infundir lento por via IV e suspender se erupção cutânea"
+      },
+      {
+        "agente": "lidocaína gel",
+        "efeitos": [
+          "ardência local",
+          "irritação",
+          "dermatite de contato"
+        ],
+        "observacao": "suspender se irritação intensa e limitar a área de aplicação"
+      },
+      {
+        "agente": "benzilpenicilina benzatina",
+        "efeitos": [
+          "dor local",
+          "reação de Jarisch-Herxheimer",
+          "rash"
+        ],
+        "observacao": "a reação ocorre em 24 h, é autolimitada e não contraindica a próxima dose"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado, registrar o evento na evolução e reescrever a prescrição antes de o paciente sair",
+      "Nefrotoxicidade por aciclovir: suspender, hidratar, dosar creatinina e reiniciar com dose ajustada e infusão mais lenta",
+      "Neurotoxicidade com confusão, tremor ou mioclonia: suspender o antiviral, revisar o clearance e considerar diálise em caso grave",
+      "Reação alérgica cutânea: suspender, tratar conforme gravidade, registrar a alergia no prontuário e trocar para outra classe de antiviral",
+      "Reação de Jarisch-Herxheimer na sífilis: tranquilizar, tratar com dipirona se febre e manter o esquema, porque não é alergia",
+      "Retenção urinária que não resolve com analgesia: manter sondagem, investigar causas associadas e reavaliar em 48 h",
+      "Falha terapêutica com lesões que não regridem em 10 dias: revisar adesão, afastar resistência, colher teste de amplificação e considerar via intravenosa",
+      "Comunicar a equipe, reavaliar a indicação e registrar a conduta e a nova orientação no relatório de alta"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "aciclovir 400 mg",
+            "dose": "400 mg",
+            "via": "VO",
+            "frequencia": "8/8 h",
+            "duracao": "7 a 10 dias",
+            "condicao": "primeiro episódio de herpes genital",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "valaciclovir 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "3 dias",
+            "condicao": "recorrência, iniciada no pródromo",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "valaciclovir 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "6 a 12 meses",
+            "condicao": "supressão em seis ou mais episódios por ano, com reavaliação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dipirona 1 g",
+            "dose": "1 g",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "3 a 5 dias",
+            "condicao": "dor",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lidocaína gel 2%",
+            "dose": "camada fina",
+            "via": "tópica",
+            "frequencia": "até 6 vezes ao dia",
+            "duracao": "7 dias",
+            "condicao": "dor ao urinar",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "benzilpenicilina benzatina 2.400.000 UI",
+            "dose": "2.400.000 UI",
+            "via": "IM",
+            "frequencia": "dose única",
+            "duracao": "1 dia",
+            "condicao": "sífilis recente confirmada",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "aciclovir intravenoso",
+            "dose": "5 a 10 mg/kg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "duracao": "5 a 7 dias",
+            "monitorizacao": "creatinina, diurese e nível de consciência",
+            "condicao": "forma extensa, disseminada, retenção urinária ou imunossupressão grave",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dipirona",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "duracao": "3 a 5 dias",
+            "monitorizacao": "pressão arterial",
+            "condicao": "dor intensa",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol",
+            "dose": "750 mg",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "duracao": "3 dias",
+            "monitorizacao": "transaminases",
+            "condicao": "dor, quando dipirona contraindicada",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "teste de amplificação de HSV na lesão",
+          "teste rápido de HIV",
+          "teste treponêmico e VDRL",
+          "sorologia de hepatite B e C",
+          "teste de amplificação de gonococo e clamídia",
+          "creatinina",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de herpes genital, necessitando de afastamento por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; o atestado não deve conter o diagnóstico de IST sem consentimento do paciente"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com episódio, número de crises no ano, esquema usado e exames colhidos",
+          "necessidade de avaliação obstétrica ou de infectologia",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com herpes genital, primeiro episódio/recorrência/supressão, iniciado em ___, tratado com ___ por ___ dias, testagem de HIV e sífilis ___, parceiro orientado ___, analgesia ___ e retorno marcado em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "número de episódios no último ano e data do primeiro",
+        "pródromo de formigamento ou queimação antes das lesões",
+        "localização, número e aspecto das lesões",
+        "febre, mialgia, cefaleia e mal-estar",
+        "disúria, retenção urinária e capacidade de urinar",
+        "corrimento uretral, ferida única indolor e adenopatia inguinal",
+        "gestação, idade gestacional e história obstétrica",
+        "HIV, uso de imunossupressor e quimioterapia",
+        "parceiros, uso de preservativo e lesão no parceiro",
+        "alergia a aciclovir, valaciclovir e penicilina",
+        "função renal conhecida e uso de nefrotóxicos",
+        "última testagem de HIV, sífilis e hepatites"
+      ],
+      "texto_template": "Paciente com herpes genital, ___ episódios no último ano, primeiro em ___, pródromo ___, lesões em ___ com aspecto ___, febre ___, disúria e retenção ___, corrimento ___, gestação ___, HIV ou imunossupressão ___, parceiros e preservativo ___, alergia ___ e última testagem de HIV e sífilis ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "temperatura e estado geral",
+        "inspeção de vulva, vagina, colo, pênis, glande, prepúcio, períneo e região anal",
+        "caracterização das lesões: vesículas, úlceras, fissuras, número, tamanho e base",
+        "palpação de linfonodos inguinais",
+        "palpação suprapúbica e avaliação de bexigoma",
+        "exame abdominal e pesquisa de sinais de disseminação",
+        "inspeção ocular e de orofaringe em caso de autoinoculação",
+        "avaliação de sensibilidade e de lesões neurológicas quando há sintomas meníngeos"
+      ],
+      "texto_template": "Temperatura ___, estado geral ___, lesões em ___ com aspecto ___, número ___ , linfonodos inguinais ___, bexigoma ___, abdome ___ e sinais de disseminação ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de IST, esquema empírico vigente, notificação compulsória e busca de parceiros",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "protocolo de atenção integral às IST e esquemas de herpes genital, sífilis e HIV",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_infectologia",
+        "o_que_verificar": "terapia supressiva, manejo na gestação e herpes neonatal",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e ajustes renais de aciclovir, valaciclovir e famciclovir disponíveis no serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "eficácia da supressão na redução de transmissão e conduta na resistência ao aciclovir",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-URO09-01",
+        "tipo": "retencao_urinaria",
+        "gatilho": "retenção urinária, bexigoma ou incapacidade de urinar",
+        "severidade": "grave",
+        "mensagem": "Retenção urinária no herpes genital: sondar e tratar a dor.",
+        "acao": "acionar sondagem vesical de alívio e analgesia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-URO09-02",
+        "tipo": "gestante_lesao_ativa",
+        "gatilho": "gestante em trabalho de parto ou com bolsa rota e lesão ativa",
+        "severidade": "grave",
+        "mensagem": "Lesão ativa no parto: cesariana e avaliação neonatal.",
+        "acao": "acionar obstetrícia e neonatologia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-URO09-03",
+        "tipo": "corticoide_isolado",
+        "gatilho": "corticoide tópico ou sistêmico prescrito como único tratamento do herpes genital",
+        "severidade": "precaucao",
+        "mensagem": "Corticoide isolado não trata herpes e piora a lesão: prescrever antiviral.",
+        "acao": "bloquear o item e sugerir antiviral",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-URO09-04",
+        "tipo": "hiv_sifilis_ausente",
+        "gatilho": "diagnóstico de úlcera genital sem solicitação de teste de HIV e de sífilis",
+        "severidade": "precaucao",
+        "mensagem": "Toda úlcera genital exige testagem de HIV e sífilis na mesma visita.",
+        "acao": "alertar e incluir os testes no pedido",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-URO09-05",
+        "tipo": "parceiro_nao_orientado",
+        "gatilho": "prescrição de herpes genital sem registro de orientação do parceiro",
+        "severidade": "precaucao",
+        "mensagem": "Registrar orientação e testagem do parceiro antes da alta.",
+        "acao": "alertar e exigir registro do aconselhamento",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-URO09-06",
+        "tipo": "supressao_sem_indicacao",
+        "gatilho": "prescrição de terapia supressiva sem registro de seis ou mais episódios por ano",
+        "severidade": "informativo",
+        "mensagem": "Supressão sem critério: revisar número de episódios e reavaliar em 12 meses.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-URO09-07",
+        "tipo": "imunossupressao",
+        "gatilho": "HIV, quimioterapia ou imunossupressor com herpes genital extenso",
+        "severidade": "grave",
+        "mensagem": "Imunossupressão: avaliar via intravenosa e prolongar o tratamento.",
+        "acao": "sugerir aciclovir intravenoso e internação",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-URO09-08",
+        "tipo": "dose_renal",
+        "gatilho": "aciclovir ou valaciclovir prescrito sem ajuste em clearance abaixo de 30 mL/min",
+        "severidade": "precaucao",
+        "mensagem": "Ajustar a dose ao clearance para evitar neurotoxicidade.",
+        "acao": "alertar e recalcular a dose",
+        "bloqueante": true
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "Ministério da Saúde",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: separação entre primeiro episódio, recorrência e terapia supressiva; aciclovir 400 mg 8/8 h por 7 a 10 dias, valaciclovir 1 g 12/12 h e famciclovir, com esquemas curtos na recorrência e supressão em seis ou mais episódios por ano; aciclovir intravenoso nas formas graves; analgesia com dipirona, paracetamol e lidocaína tópica; herpes na gestação com supressão a partir de 36 semanas e cesariana na lesão ativa; herpes neonatal e regra de testar HIV e sífilis em toda úlcera genital; penicilina benzatina na coinfecção; o que não fazer: corticoide isolado e alta sem orientar o parceiro.", "data": null
+        }
+      ]
+    }
+  }
+}

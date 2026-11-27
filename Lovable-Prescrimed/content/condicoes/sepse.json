@@ -1,0 +1,227 @@
+{
+  "id": "leg_2001",
+  "nome": "Sepse",
+  "cat": "Emergência",
+  "alias": "sepsis infeccao generalizada sirs fonte desconhecida choque infeccioso",
+  "cid": [
+    [
+      "A419",
+      "Sepse"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "Surviving Sepsis Campaign 2021",
+      "AMIB — protocolo sepse",
+      "MS/Anvisa — uso racional de antimicrobianos"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Bundle 1 h (inicie JÁ, não espere leito): 1) lactato + hemoculturas 2 amostras ANTES do antibiótico; 2) antibiótico EV de amplo espectro ≤ 1 h do reconhecimento; 3) SF 0,9% 30 mL/kg (1–2 L) em 3 h se hipotensão ou lactato ≥ 4; 4) noradrenalina (0,05–0,3 mcg/kg/min, acesso central) se PAM < 65 após volume — não derrube o paciente esperando 'terminar o volume'; 5) reavaliar perfusão (lactato seriado, débito urinário ≥ 0,5 mL/kg/h, enchimento capilar). Foco provável guia o antibiótico: pulmonar (ceftriaxona + azitromicina), abdominal (ceftriaxona/ampicilina-sulbactam + metronidazol), urinário (ciprofloxacino ou ceftriaxona), pele (cefazolina ou oxacilina). Corticoide NÃO é rotina (só choque refratário — ver Choque Séptico).",
+  "redFlags": [
+    "qSOFA ≥ 2 (PA sistólica ≤ 100, FR ≥ 22, rebaixamento) ou NEWS2 alto — sepse até prova contrária",
+    "Lactato ≥ 4 mmol/L ou lactato ≥ 2 persistente após reposição — hipoperfusão tissular",
+    "Hipotensão que não responde a 30 mL/kg — iniciar noradrenalina e chamar terapia intensiva",
+    "Anúria < 0,5 mL/kg/h por 2 h — lesão renal aguda na sepse",
+    "Rebaixamento novo + hipotermia ou febre extrema (> 39,5 °C) — o idoso e o imunossuprimido ficam 'calmos' e graves",
+    "Manchas/petequias + hipotensão — meningococcemia: ceftriaxona já e notificação",
+    "Lactato > 2 ou hipotensão persistente após cristaloide — choque séptico: noradrenalina AGORA, não esperar UTI",
+    "PA após 30 mL/kg sem resposta — reavaliar foco (drenagem) e iniciar vasopressor"
+  ],
+  "naoUsar": [
+    "Antibiótico 'de cobertura larga por cobertura' sem coleta prévia de hemocultura",
+    "Corticoide como rotina na sepse sem choque refratário",
+    "Hidratação em bolus em paciente com congestão/EAP conhecido (usar aliquots 250–500 mL com reavaliação)",
+    "Coloide/gelatina para expansão — usar cristaloide",
+    "Hidrocortisona sem dependência de vasopressor (200 mg/dia só se choque refratário)",
+    "Noradrenalina adiada por falta de acesso central — iniciar em periférico calibroso"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antibiótico empírico — foco abdominal / biliar",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1–2 g EV 1x/dia — 1ª linha abdominal"
+          },
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "500 mg EV 8/8h — anaeróbios, associar sempre ao esquema abdominal"
+          },
+          {
+            "hosp": "amp_sulb",
+            "motivo": "3 g EV 6/6h — alternativa de 1ª linha (ESBL local)"
+          },
+          {
+            "hosp": "ciprofloxacino_ev",
+            "motivo": "400 mg EV 12/12h — foco urinário/biliar"
+          },
+          {
+            "hosp": "cefepima",
+            "motivo": "1–2 g EV 8/8h — imunossuprimido/Pseudomonas"
+          },
+          {
+            "hosp": "gentamicina",
+            "motivo": "5 mg/kg/dia — sinérgico em foco urinário grave (ajustar função renal)"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico empírico — foco respiratório",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1–2 g EV 1x/dia + azitromicina = CAP grave"
+          },
+          {
+            "linha": 1,
+            "hosp": "azitromicina_ev",
+            "motivo": "500 mg EV 1x/dia — atípicos"
+          },
+          {
+            "hosp": "levofloxacino_ev",
+            "motivo": "750 mg EV 1x/dia — monoterapia alternativa em alergia"
+          },
+          {
+            "hosp": "amp_sulb",
+            "motivo": "3 g EV 6/6h — aspiração/HCA"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico empírico — foco pele/tecidos moles",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "cefazolina",
+            "motivo": "1–2 g EV 8/8h — estreptococo/MSSA"
+          },
+          {
+            "hosp": "oxacilina",
+            "motivo": "2 g EV 4/4h — MSSA"
+          },
+          {
+            "hosp": "clindamicina_ev",
+            "motivo": "600–900 mg EV 8/8h — sinergismo toxina/anaeróbios em fasciíte"
+          },
+          {
+            "hosp": "ceftriaxona_ev",
+            "motivo": "1 g EV — alternativa em alergia leve à penicilina"
+          }
+        ]
+      },
+      {
+        "nome": "Tromboprofilaxia (após estabilizar)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "enoxaparina",
+            "motivo": "40 mg SC 1x/dia profilática (hemodinamicamente estável, sem sangramento ativo)"
+          }
+        ]
+      },
+      {
+        "nome": "Suporte sintomático",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV 6/6h se dor/febre"
+          },
+          {
+            "hosp": "ondansetrona_ev",
+            "motivo": "8 mg EV 8/8h se vômitos"
+          },
+          {
+            "hosp": "metoclopramida_ev",
+            "motivo": "10 mg EV 8/8h se vômitos"
+          }
+        ]
+      },
+      {
+        "nome": "Reanimação hemodinâmica (Surviving Sepsis 2021)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ringer_sepse",
+              "n": "Ringer lactato (cristaloide)",
+              "ap": "bolsa 500/1000 mL",
+              "via": "IV",
+              "pos": "30 mL/kg em bolus nas primeiras 3 h se hipoperfusão/lactato ≥ 2; reavaliar a cada bolus (congestão, estertores) — 1–2 L em adulto típico. Cristaloide balanceado preferível a SF 0,9%"
+            }
+          },
+          {
+            "linha": 1,
+            "novo": {
+              "id": "noradrenalina_sepse",
+              "n": "Noradrenalina",
+              "ap": "ampola 4 mg/4 mL (2 mg/mL)",
+              "via": "IV",
+              "pos": "0,05–0,5 mcg/kg/min (titular até PAS ≥ 90/PAM ≥ 65). 1º vasopressor — iniciar precoce; diluir 4 mg em 250 mL SG 5% ou SF (16 mcg/mL). URGÊNCIA: pode iniciar em acesso periférico calibroso se central não disponível"
+            }
+          },
+          {
+            "novo": {
+              "id": "vasopressina_sepse",
+              "n": "Vasopressina",
+              "ap": "ampola 20 UI/mL",
+              "via": "IV",
+              "pos": "0,03 UI/min fixa — 2º vasopressor quando noradrenalina ≥ 0,25–0,5 mcg/kg/min"
+            }
+          },
+          {
+            "novo": {
+              "id": "dobutamina_sepse",
+              "n": "Dobutamina",
+              "ap": "ampola 250 mg/20 mL",
+              "via": "IV",
+              "pos": "2–20 mcg/kg/min — disfunção cardíaca (SE < 2,2) ou congestão persistente com noradrenalina"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações de alta pós-sepse",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Febre nova ou persistente > 48 h após alta, calafrios, confusão, dor lombar com febre, falta de ar, queda de pressão, diminuição de urina — retornar ao PS imediatamente (sepse pode recorrer)."
+            },
+            "motivo": "Recorrência e foco não controlado"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Concluir o antibiótico",
+              "ap": "",
+              "pos": "Completar TODA a duração do antibiótico oral orientada; não interromper ao melhorar. Vacinas (pneumococo, influenza) em follow-up."
+            },
+            "motivo": "Falha terapêutica por abandono"
+          }
+        ]
+      }
+    ]
+  }
+}

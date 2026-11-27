@@ -1,0 +1,178 @@
+{
+  "id": "ferimento",
+  "nome": "Ferimento / mordedura",
+  "cat": "Trauma",
+  "alias": "ferida corte perfulcontante mordida cachorro gato humano esmagamento laceração",
+  "cid": [
+    [
+      "S61",
+      "Ferimento do punho e da mão"
+    ],
+    [
+      "T14",
+      "Ferimento NE"
+    ],
+    [
+      "W54",
+      "Mordedura de cão"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ATS — ferimentos; MS — profilaxia raiva/tétano; IDSA — mordeduras"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Limpeza copiosa com SF + debridamento: é o que reduz infecção, mais que antibiótico. Avaliar: profundidade (tendo/artéria/articulação — teste + RX se suspeita de corpo estranho/dentes), vacinal tetânica, mordedura (animal → notificação + profilaxia raiva conforme situação do animal; HUMANA → cobertura flora oral + risco HBV/HIV se mordedor desconhecido/sangue). Sutura: bordas limpas < 6-12 h pode; MORDEDURA NÃO suturar de rotina (exceto face < 12 h com cirurgião). Profilaxia do tétano conforme ferida + última dose (vacina/IGHAT/SAT). PIC em mão/pé = alto risco de infecção (cartilha: deixar aberto).",
+  "redFlags": [
+    "Ferimento com exposição óssea/tendinosa/articular ou sangramento não controlável — cirurgia",
+    "Mordedura em mão/pé/face/genital — alto risco: ATB profilático SEMPRE + especialista",
+    "Mordedura HUMANA com punho fechado (fight bite) — artrite séptica de MCP: ORTOPEDIA",
+    "Suspeita de corpo estranho/dente — RX antes de fechar",
+    "Animal desconhecido/silvestre ou raiva na região — profilaxia antirrábica + Vigilância",
+    "Ferimento por arma de fogo/esmagamento/queimadura elétrica — trauma real: protocolo"
+  ],
+  "naoUsar": [
+    "Suturar mordedura de rotina (exceto face precoce)",
+    "Antibiótico tópico como tratamento de ferida infectada profunda",
+    "Fechamento de ferida com > 12 h não-limpa (delação secundária)",
+    "Pomada anestésica/desinfetante cáustico (povidona concentrada) na ferida aberta"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Antibiótico profilático (mordedura SEMPRE; PIC seletivo)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxclav",
+            "pos": "875/125 mg VO a cada 12 h por 5–7 dias — TODA mordedura (flora oral animal/humana: Pasteurella, anaeróbios)",
+            "ped": "45 mg/kg/dia (amox) dividido 12/12 h",
+            "motivo": "1ª linha universal da mordedura"
+          },
+          {
+            "base": "clindamicina",
+            "pos": "300 mg VO 6/6 h + ciprofloxacino 500 mg 12/12 h — alergia à penicilina (cobrir anaeróbios + gram-negativos)",
+            "motivo": "Alergia penicilina"
+          },
+          {
+            "base": "cefalexina",
+            "pos": "500 mg VO 6/6 h por 5–7 dias — ferimento PIC LIMPO de baixo risco, sem mordedura",
+            "ped": "50 mg/kg/dia 6/6 h",
+            "motivo": "Ferimento simples selecionado"
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "1 g VO 6/6 h se dor (máx 4 g/dia)",
+            "ped": "10–15 mg/kg 6/6 h",
+            "motivo": "Dor"
+          },
+          {
+            "base": "ibuprofeno",
+            "pos": "600 mg VO 8/8 h com alimento por 3 dias se dor inflamatória",
+            "ped": "5–10 mg/kg 8/8 h",
+            "motivo": "Anti-inflamatório"
+          }
+        ]
+      },
+      {
+        "nome": "Curativo domiciliar",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "curativo",
+              "n": "Cobertura e sinais",
+              "ap": "",
+              "pos": "Manter a ferida limpa e coberta com soro + gaze; trocar 1-2x/dia ou quando molhar; NADA de álcool/iodo puro dentro da ferida. Mão/pé: elevar. Observar bordas: se dor AUMENTANDO após 24-48 h, vermelhidão expandindo, pus, febre — voltar: ferida infectada."
+            },
+            "motivo": "Infecção secundária"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Mordedura: vacinas e vigilância",
+              "ap": "",
+              "pos": "Anotar dados do animal (dono, vacinação, comportamento) — Vigilância Epidemiológica acompanha o animal 10 dias; NÃO matar o animal. Retorno em 48 h obrigatório para reavaliar a ferida. Se o animal adoecer/morrer ou for silvestre/desconhecido: VOLTAR IMEDIATAMENTE (antirrábica completa). Tétano: manter caderneta em dia."
+            },
+            "motivo": "Raiva e tétano são o que mata"
+          }
+        ]
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Profilaxia tetânica (conforme ferida + esquema)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "vacina_dt",
+            "motivo": "dT 0,5 mL IM — ferida suja com esquema desconhecido/incompleto"
+          },
+          {
+            "linha": 1,
+            "hosp": "ighat",
+            "motivo": "250–500 UI IM (local oposto à vacina) — ferida tetanogênica com < 3 doses ou desconhecido"
+          },
+          {
+            "linha": 1,
+            "hosp": "sat",
+            "motivo": "Alternativa ao IGHAT conforme protocolo do serviço"
+          }
+        ]
+      },
+      {
+        "nome": "Profilaxia antirrábica (conforme situação do animal)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "vacina_raiva",
+            "motivo": "Esquema conforme protocolo (MS) — animal ausente/suspeito/silvestre"
+          },
+          {
+            "linha": 1,
+            "hosp": "ighar",
+            "motivo": "Imunoglobulina antirrábica humana — mordedura grave/transfixante em suspeitos"
+          }
+        ]
+      },
+      {
+        "nome": "Analgesia",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "1 g EV 6/6 h"
+          },
+          {
+            "hosp": "tramadol_ev",
+            "motivo": "100 mg EV se dor importante"
+          }
+        ]
+      }
+    ]
+  }
+}

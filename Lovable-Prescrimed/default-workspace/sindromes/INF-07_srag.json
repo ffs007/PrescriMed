@@ -1,0 +1,1309 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "INF-07",
+    "area": "Infectologia",
+    "nome": "Síndrome respiratória viral grave",
+    "aliases": [
+      "SRAG",
+      "síndrome respiratória aguda grave",
+      "influenza grave",
+      "COVID grave"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Síndrome respiratória viral grave é a infecção respiratória por influenza, COVID-19 ou outro vírus que ultrapassa a via aérea alta e chega ao parênquima pulmonar com hipoxemia. Não é um diagnóstico único: são quatro cenários que exigem condutas diferentes. Síndrome gripal complicada tem febre e tosse com dispneia aos esforços e saturação ainda preservada em repouso, e o objetivo é antiviral precoce e vigilância. Pneumonia viral tem infiltrado intersticial ou bilateral, hipoxemia em repouso e exige oxigênio titulado e internação, sem antibiótico de rotina. SDRA é a falência hipoxêmica com infiltrado bilateral, relação PaO2/FiO2 abaixo de 300 e ausência de causa cardíaca, e o tratamento é ventilação protetora com 6 mL/kg de peso predito, prona e tempo. Coinfecção bacteriana é a consolidação lobar, o escarro purulento, a leucocitose com desvio ou a piora depois de 48 a 72 horas, e só ela justifica antibiótico. Os quatro erros que mais matam são dar alta com hipoxemia, atrasar o oseltamivir esperando teste, usar corticoide em influenza isolada e prescrever antibiótico em todo mundo por precaução. O suporte é titulado: alvo de SpO2 entre 92% e 96%, cânula nasal de alto fluxo ou VNI antes da intubação, prona quando a relação cai abaixo de 150, profilaxia de tromboembolismo em todos e reabilitação depois da alta.",
+    "inclusao": [
+      "Síndrome gripal com dispneia, desconforto respiratório ou SpO2 abaixo de 95% em ar ambiente",
+      "Infiltrado pulmonar novo em radiografia ou tomografia com quadro viral e necessidade de internação",
+      "Hipoxemia que exige oxigênio suplementar, cânula nasal de alto fluxo, VNI ou ventilação mecânica",
+      "Suspeita de influenza em paciente de grupo de risco, mesmo sem hipoxemia, com indicação de antiviral",
+      "SDRA de provável etiologia viral, com infiltrado bilateral e relação PaO2/FiO2 abaixo de 300"
+    ],
+    "exclusao": [
+      {
+        "situacao": "choque de outra causa, sepse de foco não respiratório ou anafilaxia",
+        "fluxo": "INF-01 ou investigação específica"
+      },
+      {
+        "situacao": "pneumonia bacteriana comunitária isolada, sem quadro viral",
+        "fluxo": "protocolo de pneumonia adquirida na comunidade"
+      },
+      {
+        "situacao": "crise asmática ou exacerbação de DPOC como causa principal da dispneia",
+        "fluxo": "protocolo de asma ou de DPOC"
+      },
+      {
+        "situacao": "edema agudo de pulmão cardiogênico",
+        "fluxo": "protocolo de insuficiência cardíaca"
+      },
+      {
+        "situacao": "embolia pulmonar como hipótese principal, sem infiltrado",
+        "fluxo": "protocolo de tromboembolismo pulmonar"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "SpO2 abaixo de 90% em ar ambiente ou queda de 3 pontos ou mais em relação ao basal",
+        "por_que": "hipoxemia grave com shunt e risco de falência respiratória",
+        "acao": "oxigênio titulado imediato, gasometria e avaliação para UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "frequência respiratória acima de 30 por minuto ou uso de musculatura acessória",
+        "por_que": "esforço respiratório em exaustão, com falha iminente",
+        "acao": "cânula nasal de alto fluxo ou VNI e acionar UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "rebaixamento de consciência, agitação ou Glasgow 13 ou menos",
+        "por_que": "hipoxemia, hipercapnia ou encefalopatia e perda de proteção de via aérea",
+        "acao": "avaliar via aérea e intubação, sem VNI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "hipotensão, tempo de enchimento capilar acima de 3 s ou lactato acima de 2 mmol/L",
+        "por_que": "choque associado, séptico ou cardiogênico",
+        "acao": "sala vermelha, volume cauteloso e vasopressor se necessário",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "relação PaO2/FiO2 abaixo de 200 ou infiltrado bilateral extenso",
+        "por_que": "SDRA moderada a grave",
+        "acao": "ventilação protetora, prona e UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "cianose, respiração paradoxal ou ausculta com murmúrio muito reduzido",
+        "por_que": "falência ventilatória e risco de parada",
+        "acao": "intubação imediata com sequência rápida",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "febre persistente além de 72 h, escarro purulento ou piora depois de melhora inicial",
+        "por_que": "coinfecção bacteriana secundária",
+        "acao": "culturas, imagem e antibiótico dirigido ao foco",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "oligúria, livedo ou extremidades frias",
+        "por_que": "hipoperfusão e disfunção de órgão",
+        "acao": "avaliar volemia, diurese horária e UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "dor torácica pleurítica súbita, hemoptise ou taquicardia desproporcional",
+        "por_que": "tromboembolismo pulmonar associado à infecção viral",
+        "acao": "angiotomografia e anticoagulação terapêutica se confirmado",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Qual o dia de início da febre e quando apareceu a falta de ar?",
+      "Consegue falar frases completas ou precisa parar para respirar?",
+      "Qual a SpO2 em ar ambiente e com quanto de oxigênio ela está agora?",
+      "Tem vacina de influenza e de COVID-19 em dia, e quando foi a última dose?",
+      "Tem comorbidade: DPOC, asma, obesidade, diabetes, cardiopatia, doença renal, hepatopatia?",
+      "Usa imunossupressor, corticoide crônico ou fez quimioterapia?",
+      "Teve contato domiciliar ou institucional com caso respiratório confirmado?",
+      "Já fez teste viral e qual foi o resultado e a data?",
+      "Tem escarro purulento, dor pleurítica ou febre que não cede com antitérmico?",
+      "Está acamado, tem câncer ativo, TEV prévio ou usa anticoagulante?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Síndrome gripal complicada: febre, tosse, dispneia aos esforços, SpO2 acima de 92% em repouso e sem infiltrado extenso",
+        "escolha": "Oseltamivir 75 mg 12/12 h por 5 dias, antitérmico, hidratação oral e observação com reavaliação em 24 h",
+        "porque": "Ainda não há falência instalada; o antiviral precoce reduz complicação e o retorno programado detecta a queda de saturação antes da internação tardia"
+      },
+      {
+        "cenario": "Pneumonia viral: infiltrado intersticial ou bilateral, SpO2 abaixo de 92% em ar ambiente e ausência de consolidação lobar",
+        "escolha": "Internação, oseltamivir se influenza provável, oxigênio titulado a 92–96% e monitorização contínua; antibiótico somente se houver foco bacteriano",
+        "porque": "O dano é viral e difuso; antibiótico empírico sem foco não muda desfecho e seleciona resistência"
+      },
+      {
+        "cenario": "SDRA: infiltrado bilateral, PaO2/FiO2 abaixo de 300 e ausência de causa cardíaca predominante",
+        "escolha": "Ventilação protetora com volume corrente de 6 mL/kg de peso predito, PEEP titulada, platô até 30 cmH2O e prona se PaO2/FiO2 abaixo de 150",
+        "porque": "Volume corrente alto e platô elevado causam volutrauma e barotrauma; a prona reduz mortalidade nos casos moderados e graves"
+      },
+      {
+        "cenario": "Coinfecção bacteriana: consolidação lobar, escarro purulento, leucocitose com desvio à esquerda, procalcitonina elevada ou piora após 48 a 72 h",
+        "escolha": "Ceftriaxona 2 g 1x/dia associada a azitromicina 500 mg 1x/dia, com culturas antes e reavaliação em 48 a 72 h",
+        "porque": "Só esse cenário justifica antibiótico; a associação cobre pneumococo e atípicos, e a reavaliação permite descalonar ou suspender"
+      },
+      {
+        "cenario": "Suspeita de influenza em grupo de risco, gestante, imunossuprimido ou paciente grave",
+        "escolha": "Oseltamivir imediato, sem esperar RT-PCR, mesmo com mais de 48 h de sintomas",
+        "porque": "O benefício em doente grave e de risco persiste após 48 h; esperar o resultado atrasa o único antiviral disponível"
+      },
+      {
+        "cenario": "COVID-19 com hipoxemia, precisando de oxigênio suplementar ou com SpO2 abaixo de 94% em ar ambiente",
+        "escolha": "Dexametasona 6 mg 1x/dia por 7 a 10 dias, associada a oxigênio titulado",
+        "porque": "O corticoide reduz mortalidade na COVID com hipoxemia; a mesma droga aumenta mortalidade e pneumonia secundária em influenza isolada"
+      },
+      {
+        "cenario": "Influenza isolada, sem choque e sem coinfecção bacteriana",
+        "escolha": "Oseltamivir e suporte; não prescrever corticoide",
+        "porque": "Corticoide em influenza prolonga a eliminação viral, aumenta pneumonia bacteriana secundária e mortalidade"
+      },
+      {
+        "cenario": "Hipoxemia refratária a máscara com reservatório, paciente cooperativo e sem rebaixamento",
+        "escolha": "Cânula nasal de alto fluxo com 40 a 60 L/min e FiO2 titulada; VNI em casos selecionados de DPOC ou edema associado",
+        "porque": "CNAF e VNI evitam intubação em parte dos casos, mas exigem reavaliação em 1 a 2 h pelo índice ROX"
+      },
+      {
+        "cenario": "Falha do suporte não invasivo: ROX abaixo de 4,88, frequência respiratória acima de 30, esforço crescente ou rebaixamento",
+        "escolha": "Intubação orotraqueal com sequência rápida e ventilação protetora",
+        "porque": "Insistir em VNI ou CNAF em paciente que falha atrasa a via aérea definitiva e aumenta mortalidade"
+      },
+      {
+        "cenario": "SDRA com PaO2/FiO2 abaixo de 150 em ventilação protetora e hemodinâmica estável",
+        "escolha": "Posição prona por 12 a 16 h por dia, com equipe treinada e proteção de proeminências",
+        "porque": "A prona melhora a relação ventilação-perfusão e reduz mortalidade nesse intervalo de gravidade"
+      },
+      {
+        "cenario": "Paciente internado com SRAG, mobilidade reduzida e sem contraindicação de sangramento",
+        "escolha": "Enoxaparina 40 mg subcutânea 1x/dia em profilaxia; dose terapêutica apenas com TEV confirmado ou alta suspeita documentada",
+        "porque": "A profilaxia reduz TEV associado à internação; dose terapêutica empírica em COVID sem trombose aumenta sangramento sem benefício"
+      },
+      {
+        "cenario": "Critérios de UTI: PaO2/FiO2 abaixo de 300, frequência respiratória acima de 30, rebaixamento, PaCO2 acima de 50 com pH abaixo de 7,30 ou necessidade de vasopressor",
+        "escolha": "Transferir para UTI com suporte titulado e reavaliação de limite terapêutico",
+        "porque": "A mortalidade cai quando o suporte avançado começa antes da exaustão; a discussão precoce evita intubação fútil"
+      },
+      {
+        "cenario": "Paciente com melhora clínica que pede alta ainda com SpO2 abaixo de 92% em ar ambiente",
+        "escolha": "Não liberar; manter oxigênio, reavaliar em 24 h e só dar alta com SpO2 de 92% ou mais em ar ambiente",
+        "porque": "Alta com hipoxemia é a principal causa de reinternação e morte evitável nesse grupo"
+      },
+      {
+        "cenario": "Pós-viral, 4 a 6 semanas após a alta, com dispneia ou tosse persistente",
+        "escolha": "Espirometria, oximetria de esforço, TC de tórax se hipoxemia persistir e encaminhamento para reabilitação pulmonar",
+        "porque": "Parte dos pacientes fica com distúrbio ventilatório, fibrose ou intolerância ao esforço que só o seguimento identifica"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antiviral_inibidor_da_neuraminidase",
+        "agente": "oseltamivir",
+        "papel": "primeira_linha",
+        "indicacao": "influenza suspeita ou confirmada, sobretudo em grupo de risco e em doente grave",
+        "dose": "75 mg",
+        "unidade": "mg",
+        "via": "VO ou sonda nasoenteral",
+        "frequencia": "12/12 h",
+        "duracao": "5 dias",
+        "dose_maxima": "150 mg 12/12 h (300 mg/dia) em doença grave ou imunossuprimido",
+        "contraindicacoes": [
+          "alergia ao fosfato de oseltamivir",
+          "insuficiência renal sem ajuste de dose"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "vômito",
+          "cefaleia",
+          "evento neuropsiquiátrico raro, mais em criança e adolescente"
+        ],
+        "apresentacoes": [
+          "cápsula 30 mg",
+          "cápsula 45 mg",
+          "cápsula 75 mg",
+          "comprimido 75 mg",
+          "pó para suspensão oral 6 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral; em sonda nasoenteral, abrir a cápsula e diluir o conteúdo em 10 mL de água",
+        "tempo_infusao": "não se aplica (via oral ou sonda)",
+        "monitorizacao": [
+          "função renal a cada 48 h",
+          "náusea e vômito",
+          "estado mental e agitação",
+          "SpO2 e frequência respiratória",
+          "temperatura e curva de defervescência"
+        ],
+        "ajuste_renal": "CrCl acima de 60: 75 mg 12/12 h; CrCl 30 a 60: 30 mg 12/12 h; CrCl 10 a 30: 30 mg 1x/dia; hemodiálise: 30 mg após cada sessão",
+        "ajuste_hepatico": "Sem ajuste em Child-Pugh A e B; em Child-Pugh C manter dose padrão com vigilância clínica",
+        "observacoes": "Iniciar na suspeita, sem esperar RT-PCR. Em paciente grave, gestante ou imunossuprimido considerar 150 mg 12/12 h por 10 dias. Não substitui oxigênio, isolamento nem suporte ventilatório",
+        "confirmar_apresentacao_local": true,
+        "fonte": "MS/ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticosteroide",
+        "agente": "dexametasona",
+        "papel": "condicional",
+        "indicacao": "COVID-19 com hipoxemia que precisa de oxigênio suplementar ou tem SpO2 abaixo de 94% em ar ambiente",
+        "dose": "6 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "1x/dia",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "6 mg/dia",
+        "contraindicacoes": [
+          "influenza isolada sem coinfecção bacteriana",
+          "infecção bacteriana ou fúngica não tratada",
+          "úlcera péptica ativa com sangramento",
+          "psicose ou delirium grave em curso"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipocalemia",
+          "infecção secundária",
+          "delirium e insônia",
+          "fraqueza muscular adquirida",
+          "hipernatremia"
+        ],
+        "apresentacoes": [
+          "comprimido 4 mg",
+          "ampola 4 mg/mL (2,5 mL)",
+          "ampola 10 mg/2,5 mL",
+          "solução oral 0,1 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral; por via IV, bolus lento ou diluído em 20 mL de SF 0,9%",
+        "tempo_infusao": "2 a 5 minutos em bolus lento",
+        "monitorizacao": [
+          "glicemia capilar de 6/6 h",
+          "sódio e potássio",
+          "sinais de infecção secundária",
+          "força muscular e deglutição",
+          "glicosúria e balanço hídrico"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; em cirrose descompensada vigiar infecção e sangramento",
+        "observacoes": "A indicação é COVID com hipoxemia, nunca dispneia sem hipoxemia nem influenza isolada. Se houver coinfecção bacteriana, tratar o foco e manter o corticoide apenas se a hipoxemia da COVID persistir",
+        "confirmar_apresentacao_local": true,
+        "fonte": "WHO/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "imunomodulador_anti_interleucina_6",
+        "agente": "tocilizumabe",
+        "papel": "resgate",
+        "indicacao": "COVID-19 grave com hipoxemia progressiva, proteína C reativa ou ferritina muito elevadas e necessidade crescente de oxigênio, em uso de dexametasona",
+        "dose": "8 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir uma vez após 12 a 24 h se não houver melhora e não houver toxicidade",
+        "duracao": "1 a 2 doses",
+        "dose_maxima": "800 mg por dose",
+        "contraindicacoes": [
+          "infecção bacteriana, fúngica ou viral não controlada",
+          "neutrófilos abaixo de 500/mm³",
+          "plaquetas abaixo de 50.000/mm³",
+          "transaminases acima de 5 vezes o limite superior",
+          "suspeita de diverticulite ou perfuração intestinal",
+          "imunossupressão grave não relacionada à COVID"
+        ],
+        "efeitos_adversos": [
+          "infecção secundária",
+          "neutropenia",
+          "trombocitopenia",
+          "elevação de transaminases",
+          "perfuração intestinal",
+          "reação infusional"
+        ],
+        "apresentacoes": [
+          "frasco 80 mg/4 mL",
+          "frasco 200 mg/10 mL",
+          "frasco 400 mg/20 mL"
+        ],
+        "preparo": "Diluir a dose calculada em 100 mL de SF 0,9% e administrar em bomba de infusão",
+        "tempo_infusao": "60 minutos",
+        "monitorizacao": [
+          "neutrófilos, plaquetas e transaminases antes e 72 h após",
+          "proteína C reativa e ferritina",
+          "sinais de infecção secundária",
+          "dor abdominal e alteração do hábito intestinal"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Não usar com transaminases acima de 5 vezes o limite superior",
+        "observacoes": "Reserva para serviço com laboratório disponível; não usar em influenza nem em SRAG de outra etiologia. Sempre associado a corticoide e com infecção bacteriana afastada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "WHO/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_de_terceira_geracao",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "coinfecção bacteriana comunitária documentada ou fortemente suspeita em SRAG",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "4 g/dia (2 g 12/12 h)",
+        "contraindicacoes": [
+          "alergia grave a cefalosporina",
+          "uso simultâneo de solução contendo cálcio no mesmo acesso"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "colite por Clostridioides difficile",
+          "elevação de transaminases",
+          "barro biliar"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g",
+          "solução injetável 1 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção e diluir em 100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "função renal e hepática",
+          "curva de temperatura",
+          "secreção respiratória e ausculta",
+          "diarreia",
+          "hemograma e proteína C reativa em 48 a 72 h"
+        ],
+        "ajuste_renal": "Sem ajuste, inclusive em diálise",
+        "ajuste_hepatico": "Máximo de 2 g/dia em insuficiência hepática grave",
+        "observacoes": "Só entra com foco bacteriano: consolidação lobar, escarro purulento, leucocitose com desvio ou piora após 48 a 72 h. Reavaliar e suspender se o foco não se confirmar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "macrolideo",
+        "agente": "azitromicina",
+        "papel": "alternativa",
+        "indicacao": "cobertura de patógenos atípicos na coinfecção bacteriana comunitária, associada a betalactâmico",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "1x/dia",
+        "duracao": "3 dias por via IV, completando 5 dias por via oral",
+        "dose_maxima": "500 mg/dia",
+        "contraindicacoes": [
+          "QTc acima de 500 ms",
+          "hipocalemia não corrigida",
+          "uso concomitante de outras drogas que prolongam o QT",
+          "hepatopatia grave"
+        ],
+        "efeitos_adversos": [
+          "prolongamento do QT e torsades de pointes",
+          "diarreia",
+          "elevação de transaminases",
+          "náusea",
+          "perda auditiva reversível em curso prolongado"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "pó para solução injetável 500 mg",
+          "suspensão oral 200 mg/5 mL"
+        ],
+        "preparo": "Reconstituir o frasco em 4,8 mL de água para injeção e diluir 500 mg em 250 mL de SF 0,9% ou SG 5%, com concentração final entre 1 e 2 mg/mL",
+        "tempo_infusao": "60 a 180 minutos, nunca menos de 60 minutos",
+        "monitorizacao": [
+          "ECG e QTc em paciente com risco cardíaco",
+          "potássio e magnésio",
+          "transaminases",
+          "diarreia"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Não tem benefício em COVID isolada e não deve ser associada de rotina a antiviral. Entra apenas no cenário de coinfecção bacteriana comunitária, junto com betalactâmico",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_com_inibidor_de_betalactamase",
+        "agente": "piperacilina-tazobactam",
+        "papel": "condicional",
+        "indicacao": "pneumonia tardia, suspeita de pneumonia associada à ventilação ou choque séptico com foco pulmonar",
+        "dose": "4,5 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "6/6 h",
+        "duracao": "7 dias, com reavaliação em 48 a 72 h",
+        "dose_maxima": "18 g/dia de piperacilina",
+        "contraindicacoes": [
+          "alergia grave a penicilina ou a inibidor de betalactamase"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "trombocitopenia",
+          "lesão renal aguda",
+          "convulsão em insuficiência renal sem ajuste",
+          "rash"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 4,5 g (4 g de piperacilina + 0,5 g de tazobactam)",
+          "frasco-ampola 2,25 g"
+        ],
+        "preparo": "Reconstituir em 20 mL de SF 0,9% ou água para injeção e diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "30 minutos; infusão estendida de 4 h nos casos graves",
+        "monitorizacao": [
+          "creatinina e diurese",
+          "plaquetas",
+          "diarreia",
+          "nível de consciência e crise convulsiva",
+          "hemoculturas e cultura de secreção traqueal"
+        ],
+        "ajuste_renal": "CrCl 20 a 40: 3,375 g 6/6 h; CrCl abaixo de 20: 2,25 g 6/6 h; hemodiálise: 2,25 g 8/8 h",
+        "ajuste_hepatico": "Sem ajuste isolado; em cirrose vigiar trombocitopenia",
+        "observacoes": "Escolha quando há suspeita de germe hospitalar ou ventilação prolongada; descalonar assim que a cultura sair. Não usar como antibiótico de rotina na SRAG viral",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "heparina_de_baixo_peso_molecular",
+        "agente": "enoxaparina",
+        "papel": "primeira_linha",
+        "indicacao": "profilaxia de tromboembolismo em todo paciente internado com SRAG; tratamento apenas com TEV confirmado ou alta suspeita documentada",
+        "dose": "40 mg em profilaxia; 1 mg/kg em dose terapêutica",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "profilaxia 1x/dia; terapêutica 12/12 h",
+        "duracao": "durante a internação e até 14 dias se mobilidade reduzida persistir",
+        "dose_maxima": "1 mg/kg 12/12 h em terapêutica",
+        "contraindicacoes": [
+          "sangramento ativo",
+          "plaquetas abaixo de 50.000/mm³ em dose terapêutica",
+          "história de trombocitopenia induzida por heparina",
+          "endocardite infecciosa",
+          "insuficiência renal grave em dose terapêutica"
+        ],
+        "efeitos_adversos": [
+          "sangramento",
+          "hematoma no local da aplicação",
+          "trombocitopenia induzida por heparina",
+          "hipercalemia",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "seringa preenchida 20 mg/0,2 mL",
+          "seringa preenchida 40 mg/0,4 mL",
+          "seringa preenchida 60 mg/0,6 mL",
+          "seringa preenchida 80 mg/0,8 mL",
+          "frasco 100 mg/mL (10 mL)"
+        ],
+        "preparo": "Pronta para uso; não expelir a bolha da seringa antes da aplicação",
+        "tempo_infusao": "não se aplica (via subcutânea)",
+        "monitorizacao": [
+          "plaquetas na admissão e a cada 3 a 4 dias",
+          "sinais de sangramento",
+          "creatinina e clearance",
+          "anti-Xa se obesidade extrema, gestação ou insuficiência renal leve",
+          "hematoma e dor no local"
+        ],
+        "ajuste_renal": "CrCl 30 a 50: profilaxia 20 a 30 mg 1x/dia e não usar dose terapêutica; CrCl abaixo de 30: profilaxia 20 mg 1x/dia e trocar a terapêutica por heparina não fracionada",
+        "ajuste_hepatico": "Evitar dose terapêutica em cirrose com plaquetopenia ou coagulopatia",
+        "observacoes": "Profilaxia em todos sem contraindicação; IMC acima de 40: 40 mg 12/12 h. Dose terapêutica empírica em COVID sem TEV confirmado aumenta sangramento sem reduzir mortalidade",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "heparina_nao_fracionada",
+        "agente": "heparina sódica",
+        "papel": "alternativa",
+        "indicacao": "profilaxia ou anticoagulação terapêutica quando a enoxaparina é contraindicada, indisponível ou há insuficiência renal grave",
+        "dose": "5.000 UI em profilaxia; terapêutica com bolus de 80 UI/kg seguido de 18 UI/kg/h",
+        "unidade": "UI",
+        "via": "SC ou IV",
+        "frequencia": "profilaxia 8/8 h ou 12/12 h; terapêutica em infusão contínua",
+        "duracao": "durante a internação, com reavaliação diária da indicação",
+        "dose_maxima": "titulada pelo aPTT, alvo de 1,5 a 2,5 vezes o controle",
+        "contraindicacoes": [
+          "sangramento ativo",
+          "trombocitopenia induzida por heparina prévia",
+          "plaquetas abaixo de 30.000/mm³",
+          "hipertensão intracraniana com risco de sangramento"
+        ],
+        "efeitos_adversos": [
+          "sangramento",
+          "trombocitopenia induzida por heparina",
+          "hipercalemia",
+          "osteoporose em uso prolongado",
+          "alopecia"
+        ],
+        "apresentacoes": [
+          "frasco 5.000 UI/mL (5 mL)",
+          "frasco 5.000 UI/0,25 mL",
+          "ampola 5.000 UI/0,25 mL"
+        ],
+        "preparo": "Pronta para uso por via subcutânea; para infusão contínua diluir a dose em 100 mL de SF 0,9% e administrar em bomba",
+        "tempo_infusao": "subcutânea não se aplica; bolus IV em 1 a 2 minutos",
+        "monitorizacao": [
+          "aPTT de 6/6 h até estabilizar e depois 1x/dia",
+          "plaquetas a cada 2 a 3 dias",
+          "sinais de sangramento",
+          "potássio em uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste de dose; é a preferida na insuficiência renal grave por não acumular",
+        "ajuste_hepatico": "Reduzir a dose terapêutica em hepatopatia com coagulopatia",
+        "observacoes": "Alternativa à enoxaparina em ClCr abaixo de 30, obesidade extrema, gestação ou risco de sangramento. Reversível com protamina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "febre e desconforto em SRAG",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h se febre ou dor",
+        "duracao": "até 72 h, enquanto houver febre",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição crônica",
+          "alcoolismo ativo",
+          "alergia"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "elevação de transaminases",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL (gotas)",
+          "frasco para infusão 10 mg/mL (1 g/100 mL)"
+        ],
+        "preparo": "Uso direto por via oral; o frasco para infusão é administrado sem diluição adicional",
+        "tempo_infusao": "via oral não se aplica; via IV, 15 minutos",
+        "monitorizacao": [
+          "temperatura",
+          "transaminases se uso acima de 3 dias",
+          "dor e conforto",
+          "dose total diária somada de todas as fontes"
+        ],
+        "ajuste_renal": "CrCl abaixo de 30: intervalo de 8 h",
+        "ajuste_hepatico": "Máximo de 2 g/dia em hepatopatia leve a moderada; evitar em Child-Pugh C",
+        "observacoes": "Evitar AAS e AINE na SRAG: risco de sangramento, lesão renal e síndrome de Reye na influenza. Não associar outro produto que contenha paracetamol",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "oxigenoterapia",
+        "agente": "oxigênio medicinal",
+        "papel": "primeira_linha",
+        "indicacao": "hipoxemia com SpO2 abaixo de 92% em ar ambiente",
+        "dose": "titulado para SpO2 entre 92% e 96%; 88% a 92% em DPOC com risco de retenção de CO2",
+        "unidade": "%",
+        "via": "inalatória",
+        "frequencia": "contínuo",
+        "duracao": "até retirada com SpO2 de 92% ou mais em ar ambiente por 24 h",
+        "dose_maxima": "cânula nasal de alto fluxo até 60 L/min com FiO2 de 0,21 a 1,0",
+        "contraindicacoes": [
+          "DPOC com retenção crônica de CO2 sem titulação",
+          "hiperóxia mantida com SpO2 acima de 96%"
+        ],
+        "efeitos_adversos": [
+          "ressecamento de mucosa",
+          "atelectasia de absorção",
+          "retenção de CO2 em DPOC",
+          "lesão por pressão do dispositivo"
+        ],
+        "apresentacoes": [
+          "cateter nasal tipo óculos (1 a 6 L/min)",
+          "máscara simples (5 a 10 L/min)",
+          "máscara com reservatório (10 a 15 L/min)",
+          "máscara de Venturi (FiO2 de 24% a 50%)",
+          "cânula nasal de alto fluxo (até 60 L/min)",
+          "rede de oxigênio hospitalar e cilindro"
+        ],
+        "preparo": "Umidificar quando o fluxo passar de 4 L/min; ajustar o dispositivo ao fluxo e à FiO2 prescritos e conferir a conexão antes de sair do leito",
+        "tempo_infusao": "contínuo, com reavaliação a cada hora na fase aguda",
+        "monitorizacao": [
+          "SpO2 contínua",
+          "frequência respiratória e uso de musculatura acessória",
+          "gasometria 1 h após iniciar ou mudar o dispositivo",
+          "conforto, umidificação e lesão de pele",
+          "necessidade crescente de FiO2"
+        ],
+        "ajuste_renal": "não se aplica",
+        "observacoes": "Não buscar SpO2 acima de 96%: hiperóxia não traz benefício. Saturação normal em repouso não exclui hipoxemia de esforço. Se precisar de FiO2 acima de 0,5 ou mantiver SpO2 abaixo de 92% com máscara, avaliar alto fluxo, VNI e UTI",
+        "confirmar_apresentacao_local": true,
+        "fonte": "protocolo institucional/MS",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide",
+        "agente": "solução fisiológica 0,9%",
+        "papel": "condicional",
+        "indicacao": "reposição volêmica na hipoperfusão associada e diluição de drogas; não é tratamento da SRAG",
+        "dose": "250 a 500 mL em bolus",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "reavaliar perfusão e ausculta após cada bolus",
+        "duracao": "até 3 bolus, com reavaliação entre eles",
+        "dose_maxima": "individualizar; evitar balanço positivo acima de 1 a 2 L nas primeiras 24 h no SARA",
+        "contraindicacoes": [
+          "edema pulmonar ou sobrecarga estabelecida",
+          "SARA com balanço hídrico já positivo e sem hipoperfusão",
+          "anúria sem diálise"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga volêmica",
+          "edema pulmonar",
+          "acidose hiperclorêmica",
+          "edema de extremidades"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL",
+          "frasco 500 mL"
+        ],
+        "preparo": "Pronta para uso; aquecer se hipotermia",
+        "tempo_infusao": "15 a 30 minutos por bolus",
+        "monitorizacao": [
+          "ausculta pulmonar antes e depois de cada bolus",
+          "balanço hídrico",
+          "diurese horária",
+          "lactato e perfusão periférica",
+          "peso diário"
+        ],
+        "ajuste_renal": "Sem ajuste de dose; reduzir o volume em oligúria e avaliar diálise se anúria",
+        "ajuste_hepatico": "Cautela em cirrose com ascite; avaliar albumina e evitar sobrecarga",
+        "observacoes": "No SARA a estratégia é conservadora de fluidos: repetir bolus apenas com hipoperfusão documentada, não por taquicardia isolada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "protocolo institucional/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Isolamento com precauções para gotículas e aerossol",
+        "detalhe": "quarto privativo ou coorte, máscara cirúrgica no paciente e PFF2/N95 na equipe; precaução de aerossol em intubação, broncoscopia, prona, aspiração e fisioterapia respiratória"
+      },
+      {
+        "medida": "Notificação compulsória imediata",
+        "detalhe": "SRAG e COVID-19 entram na lista de notificação imediata: preencher e-SUS Notifica ou ficha do SINAN em até 24 h e comunicar a vigilância do município"
+      },
+      {
+        "medida": "Oxigenoterapia titulada com alvo definido",
+        "detalhe": "alvo de SpO2 entre 92% e 96%; registrar dispositivo, fluxo e FiO2 a cada turno e escalar se a necessidade de oxigênio subir"
+      },
+      {
+        "medida": "Posição prona acordada em paciente com alto fluxo ou VNI",
+        "detalhe": "prona vigil por 1 a 2 h, com almofadas em tórax e quadril, monitorização contínua e retorno imediato a supino se piorar o conforto ou a saturação"
+      },
+      {
+        "medida": "Ventilação protetora desde a intubação",
+        "detalhe": "volume corrente de 6 mL/kg de peso predito, platô até 30 cmH2O, pressão de distensão até 15 cmH2O e hipercapnia permissiva com pH de 7,25 ou mais"
+      },
+      {
+        "medida": "Estratégia conservadora de fluidos",
+        "detalhe": "balanço hídrico diário, bolus apenas com hipoperfusão documentada e reavaliação da ausculta depois de cada volume"
+      },
+      {
+        "medida": "Profilaxia de tromboembolismo",
+        "detalhe": "prescrever enoxaparina profilática na admissão, salvo contraindicação registrada; reavaliar a dose em obesidade, insuficiência renal e sangramento"
+      },
+      {
+        "medida": "Controle glicêmico e nutrição precoce",
+        "detalhe": "alvo de glicemia entre 140 e 180 mg/dL, dieta enteral em até 48 h se o paciente não conseguir via oral e vigilância de disfagia"
+      },
+      {
+        "medida": "Reabilitação e mobilização precoce",
+        "detalhe": "fisioterapia motora e respiratória desde a estabilização hemodinâmica, com sedação interrompida diariamente e teste de respiração espontânea"
+      },
+      {
+        "medida": "Vacinação e quimioprofilaxia de contatos",
+        "detalhe": "atualizar influenza e COVID-19; em contato domiciliar de alto risco de influenza, oseltamivir 75 mg 1x/dia por 7 a 10 dias"
+      },
+      {
+        "medida": "Decisão compartilhada sobre limite terapêutico",
+        "detalhe": "discutir com a família, ainda na enfermaria, o que fazer em caso de falha de suporte; registrar a diretiva no prontuário antes da intubação"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Intubação orotraqueal em sequência rápida",
+        "indicacao": "falha de oxigênio, alto fluxo ou VNI, rebaixamento de consciência, exaustão respiratória ou instabilidade",
+        "tecnica": "pré-oxigenação por 3 a 5 min, aspiração pronta, vídeo-laringoscópio, indutor e bloqueador neuromuscular, confirmação por capnografia e fixação",
+        "complicacoes": "hipoxemia na indução, aspiração, hipotensão pós-intubação, lesão de via aérea, pneumotórax"
+      },
+      {
+        "nome": "Ventilação mecânica protetora",
+        "indicacao": "SDRA e toda insuficiência respiratória sob ventilação invasiva",
+        "tecnica": "modo volume ou pressão controlado, volume corrente de 6 mL/kg de peso predito, PEEP titulada pela tabela de SDRA, platô até 30 cmH2O e frequência para pH de 7,25 ou mais",
+        "complicacoes": "assincronia, hipercapnia, pneumotórax, atrofia diafragmática e lesão pulmonar induzida pela ventilação"
+      },
+      {
+        "nome": "Posição prona",
+        "indicacao": "SDRA com PaO2/FiO2 abaixo de 150 em ventilação protetora e hemodinâmica estável",
+        "tecnica": "equipe de 4 a 5 pessoas, proteção de olhos, face e proeminências, 12 a 16 h por dia, com retorno a supino para higiene e reavaliação",
+        "complicacoes": "extubação acidental, lesão por pressão, edema facial, obstrução de cânula e instabilidade hemodinâmica na rotação"
+      },
+      {
+        "nome": "Cânula nasal de alto fluxo e ventilação não invasiva",
+        "indicacao": "hipoxemia com esforço preservado e sem rebaixamento, como ponte para intubação ou teste de tolerância",
+        "tecnica": "cânula de alto fluxo com 40 a 60 L/min e FiO2 titulada; VNI com CPAP ou pressão de suporte, interface bem vedada e vigilância em unidade monitorizada",
+        "complicacoes": "falha tardia com intubação de emergência, distensão gástrica, lesão de pele, aerossolização e atraso de via aérea definitiva"
+      },
+      {
+        "nome": "Traqueostomia",
+        "indicacao": "ventilação mecânica prolongada por mais de 10 a 14 dias, falha de desmame ou obstrução de via aérea superior",
+        "tecnica": "percutânea à beira do leito guiada por broncoscopia ou ultrassom, ou cirúrgica, com equipe de proteção respiratória completa",
+        "complicacoes": "sangramento, infecção de estoma, estenose traqueal, fístula traqueoesofágica e decanulação acidental"
+      },
+      {
+        "nome": "Broncoscopia",
+        "indicacao": "atelectasia lobar por tampão, suspeita de obstrução, hemoptise e coleta de aspirado ou lavado quando o diagnóstico muda a conduta",
+        "tecnica": "broncoscópio por tubo orotraqueal ou por traqueostomia, com sedação, FiO2 a 100% durante o exame e precaução de aerossol",
+        "complicacoes": "hipoxemia, broncoespasmo, pneumotórax, sangramento e disseminação de aerossol para a equipe"
+      },
+      {
+        "nome": "ECMO venovenoso",
+        "indicacao": "SDRA refratária com PaO2/FiO2 abaixo de 80 por mais de 6 h, pH abaixo de 7,25 com PaCO2 acima de 60 por mais de 6 h, apesar de ventilação protetora e prona",
+        "tecnica": "canulação femoral ou jugular em centro de referência, bomba centrífuga e oxigenador de membrana, com anticoagulação e equipe dedicada",
+        "complicacoes": "sangramento, trombose do circuito, embolia, infecção de cateter, hemólise e falha de transferência por atraso"
+      }
+    ],
+    "metas": [
+      "SpO2 entre 92% e 96% em todas as aferições, sem hiperóxia",
+      "Volume corrente de 6 mL/kg de peso predito, com platô de 30 cmH2O ou menos e pressão de distensão de 15 cmH2O ou menos",
+      "Relação PaO2/FiO2 acima de 200 e pH de 7,25 ou mais com hipercapnia permissiva",
+      "Prona por 12 a 16 h por dia quando PaO2/FiO2 estiver abaixo de 150",
+      "Oseltamivir iniciado na primeira hora do reconhecimento em paciente grave ou de risco",
+      "Antibiótico reavaliado em 48 a 72 h, com suspensão se não houver foco bacteriano",
+      "Profilaxia de tromboembolismo prescrita em todos os internados sem contraindicação",
+      "Notificação de SRAG registrada em até 24 h",
+      "Alta somente com SpO2 de 92% ou mais em ar ambiente por 24 h"
+    ],
+    "fluxo": [
+      "Confirmar o quadro e separar os quatro cenários: síndrome gripal complicada, pneumonia viral, SDRA ou coinfecção bacteriana",
+      "Medir SpO2 em ar ambiente, frequência respiratória e esforço; classificar em leve, moderado ou grave",
+      "Iniciar oxigênio titulado a 92–96% e escalar o dispositivo conforme a FiO2 necessária",
+      "Iniciar oseltamivir na suspeita de influenza, sem esperar teste, e dexametasona apenas se COVID com hipoxemia",
+      "Colher RT-PCR ou teste rápido, hemograma, proteína C reativa, gasometria e imagem de tórax",
+      "Decidir internação, enfermaria monitorizada ou UTI pelos critérios de PaO2/FiO2, frequência respiratória e nível de consciência",
+      "Se hipoxemia refratária a máscara: cânula nasal de alto fluxo ou VNI, com reavaliação em 1 a 2 h pelo índice ROX",
+      "Se falha do suporte não invasivo: intubação com sequência rápida e ventilação protetora de 6 mL/kg de peso predito",
+      "Se PaO2/FiO2 abaixo de 150 em ventilação protetora: prona por 12 a 16 h por dia",
+      "Se SDRA refratária apesar de prona e otimização: avaliar ECMO e transferir para centro de referência",
+      "Antibiótico apenas com foco bacteriano, com culturas antes e reavaliação em 48 a 72 h para descalonar",
+      "Prescrever enoxaparina profilática na admissão; dose terapêutica só com TEV confirmado",
+      "Notificar, manter isolamento e planejar alta com SpO2 de 92% ou mais em ar ambiente, com seguimento em 4 a 6 semanas"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "oseltamivir na dose padrão em qualquer trimestre, sem ajuste; oxigênio com alvo de 92% a 96%, decúbito lateral esquerdo e equipe obstétrica desde a admissão",
+        "alerta": "influenza e COVID na gestação aumentam parto prematuro e morte materna; a vacina é segura e indicada"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "internar mais cedo, avaliar delirium e disfagia, titular oxigênio com cautela em DPOC e revisar polifarmácia",
+        "alerta": "apresentação atípica sem febre, queda funcional e maior mortalidade"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "oseltamivir por 10 dias e dose de 150 mg 12/12 h, ampliar investigação para fungo e Pneumocystis, e considerar corticoide apenas com indicação específica",
+        "alerta": "eliminação viral prolongada, coinfecção fúngica e evolução arrastada"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "ajustar oseltamivir pelo clearance, preferir heparina não fracionada à enoxaparina terapêutica, evitar AINE e vigiar sobrecarga de volume",
+        "alerta": "acúmulo de metabólito do oseltamivir e sangramento com anticoagulação"
+      },
+      {
+        "populacao": "cardiopata",
+        "ajuste": "oxigênio titulado, fluidos em bolus menores, ecocardiograma se hipotensão e cuidado com QT ao associar azitromicina",
+        "alerta": "SDRA simulando edema agudo e arritmia por hipoxemia e drogas"
+      },
+      {
+        "populacao": "dpoc",
+        "ajuste": "alvo de SpO2 entre 88% e 92%, broncodilatador e corticoide conforme protocolo de exacerbação, VNI como primeira escolha se acidose hipercápnica",
+        "alerta": "retenção de CO2 com oxigênio alto e dificuldade de desmame"
+      },
+      {
+        "populacao": "obesidade",
+        "ajuste": "volume corrente calculado por peso predito, PEEP mais alta, prona com equipe maior e enoxaparina profilática 40 mg 12/12 h se IMC acima de 40",
+        "alerta": "atelectasia de base, dificuldade de intubação e trombose"
+      },
+      {
+        "populacao": "hepatopata",
+        "ajuste": "paracetamol no máximo 2 g/dia, evitar azitromicina e dose terapêutica de enoxaparina, e vigiar encefalopatia com hipoxemia",
+        "alerta": "coagulopatia, trombocitopenia e piora da função hepática por hipoperfusão"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "RT-PCR ou teste rápido para influenza, COVID-19 e painel viral",
+          "indicacao": "todos com SRAG, na admissão",
+          "o_que_muda": "define antiviral, isolamento, coorte e necessidade de corticoide; resultado negativo não suspende oseltamivir em caso grave"
+        },
+        {
+          "nome": "gasometria arterial",
+          "indicacao": "hipoxemia, esforço respiratório ou necessidade de oxigênio acima de 4 L/min",
+          "o_que_muda": "calcula PaO2/FiO2, define gravidade da SDRA, indica UTI e detecta hipercapnia"
+        },
+        {
+          "nome": "radiografia e tomografia de tórax",
+          "indicacao": "todos na admissão; tomografia se dúvida diagnóstica ou piora",
+          "o_que_muda": "separa padrão intersticial bilateral de consolidação lobar, derrame e cavitação, orientando ou afastando antibiótico"
+        },
+        {
+          "nome": "hemograma, proteína C reativa e procalcitonina",
+          "indicacao": "admissão e reavaliação em 48 a 72 h",
+          "o_que_muda": "leucocitose com desvio e procalcitonina elevada sustentam coinfecção bacteriana; linfopenia isolada não indica antibiótico"
+        },
+        {
+          "nome": "culturas de escarro, hemocultura e aspirado traqueal",
+          "indicacao": "suspeita de coinfecção bacteriana, ventilação mecânica ou piora secundária",
+          "o_que_muda": "permite descalonar ou dirigir o antibiótico e identificar germe resistente"
+        },
+        {
+          "nome": "D-dímero, troponina e ECG",
+          "indicacao": "dor torácica, taquicardia desproporcional ou hipotensão",
+          "o_que_muda": "levanta tromboembolismo e miocardite; D-dímero alto isolado não indica anticoagulação terapêutica"
+        },
+        {
+          "nome": "creatinina, eletrólitos, transaminases e glicemia",
+          "indicacao": "todos, na admissão e conforme drogas em uso",
+          "o_que_muda": "ajusta oseltamivir, enoxaparina e antibióticos e detecta disfunção de órgão"
+        },
+        {
+          "nome": "ecocardiograma",
+          "indicacao": "hipotensão, sopro novo ou dúvida entre SDRA e edema cardiogênico",
+          "o_que_muda": "identifica disfunção ventricular e afasta causa cardíaca da hipoxemia"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "tomografia de tórax diária para acompanhar a evolução",
+          "motivo": "não muda a conduta e expõe o paciente a transporte e radiação; reavaliar por SpO2, FiO2 e clínica"
+        },
+        {
+          "exame": "D-dímero seriado para decidir dose terapêutica de anticoagulante",
+          "motivo": "D-dímero alto é inespecífico na infecção viral e leva a anticoagulação sem trombose, com mais sangramento"
+        },
+        {
+          "exame": "antibiótico empírico de rotina em toda SRAG viral",
+          "motivo": "não reduz mortalidade, seleciona resistência e aumenta colite por C. difficile"
+        },
+        {
+          "exame": "corticoide em influenza isolada sem hipoxemia de outra causa",
+          "motivo": "aumenta pneumonia bacteriana secundária, prolonga a eliminação viral e eleva mortalidade"
+        },
+        {
+          "exame": "alta com oximetria abaixo de 92% em ar ambiente",
+          "motivo": "é a principal causa de reinternação e morte evitável; repetir a oximetria antes de liberar"
+        },
+        {
+          "exame": "VNI em paciente com rebaixamento de consciência ou vômitos",
+          "motivo": "risco de aspiração e de atraso da via aérea definitiva"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter isolamento e usar máscara até a orientação da vigilância",
+        "medir a saturação com oximetro em repouso e após caminhar, se tiver alta com oxigênio",
+        "tomar o oseltamivir até o fim do curso, mesmo se melhorar",
+        "fazer fisioterapia respiratória e caminhadas leves conforme tolerância",
+        "retornar em 4 a 6 semanas para espirometria se ainda tiver falta de ar",
+        "manter a vacinação de influenza e COVID-19 em dia"
+      ],
+      "evitar": [
+        "AAS, AINE e corticoide por conta própria",
+        "fumar e ambientes com fumaça",
+        "esforço físico intenso nas primeiras semanas",
+        "automedicação com antibiótico",
+        "voltar ao trabalho com saturação baixa ou dispneia aos pequenos esforços"
+      ],
+      "retorno": [
+        "falta de ar em repouso ou com esforço leve",
+        "saturação abaixo de 92% em ar ambiente",
+        "febre que volta após melhora",
+        "expectoração purulenta ou com sangue",
+        "confusão, sonolência ou desmaio",
+        "dor torácica ou palpitação",
+        "piora da tosse por mais de 3 semanas"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "oseltamivir",
+        "efeitos": ["náusea", "vômito", "cefaleia", "evento neuropsiquiátrico"],
+        "observacao": "administrar com alimento; ajustar pela função renal e suspender se agitação ou confusão nova"
+      },
+      {
+        "agente": "dexametasona",
+        "efeitos": ["hiperglicemia", "hipocalemia", "infecção secundária", "delirium"],
+        "observacao": "glicemia de 6/6 h, potássio diário e reavaliação da indicação a cada 48 h"
+      },
+      {
+        "agente": "tocilizumabe",
+        "efeitos": ["neutropenia", "infecção secundária", "elevação de transaminases", "perfuração intestinal"],
+        "observacao": "hemograma e transaminases antes e 72 h após; suspender se neutrófilos abaixo de 500"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": ["diarreia", "rash", "colite por C. difficile", "barro biliar"],
+        "observacao": "suspender se diarreia profusa ou rash extenso; não misturar com solução contendo cálcio"
+      },
+      {
+        "agente": "azitromicina",
+        "efeitos": ["prolongamento do QT", "diarreia", "hepatotoxicidade"],
+        "observacao": "ECG se QTc acima de 480 ms ou uso de outra droga que prolonga o QT; corrigir potássio e magnésio"
+      },
+      {
+        "agente": "piperacilina-tazobactam",
+        "efeitos": ["trombocitopenia", "lesão renal", "convulsão", "diarreia"],
+        "observacao": "ajustar ao clearance e dosar plaquetas e creatinina a cada 48 h"
+      },
+      {
+        "agente": "enoxaparina",
+        "efeitos": ["sangramento", "trombocitopenia induzida por heparina", "hipercalemia"],
+        "observacao": "plaquetas a cada 3 a 4 dias; suspender se queda de 50% ou trombose nova"
+      },
+      {
+        "agente": "heparina sódica",
+        "efeitos": ["sangramento", "trombocitopenia induzida por heparina", "hipercalemia"],
+        "observacao": "aPTT de 6/6 h até estabilizar; reverter com protamina se sangramento grave"
+      },
+      {
+        "agente": "paracetamol",
+        "efeitos": ["hepatotoxicidade", "elevação de transaminases"],
+        "observacao": "respeitar o teto de 3 g/dia e suspender se transaminases acima de 3 vezes o normal"
+      },
+      {
+        "agente": "oxigênio medicinal",
+        "efeitos": ["ressecamento de mucosa", "atelectasia de absorção", "retenção de CO2 em DPOC"],
+        "observacao": "titular pelo alvo e reavaliar a gasometria 1 h após cada mudança de dispositivo"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a droga implicada e registrar o evento no prontuário antes de sair do leito",
+      "Hipoglicemia ou hiperglicemia com dexametasona: ajustar insulina e manter a menor dose eficaz pelo menor tempo",
+      "Neutropenia ou infecção nova após tocilizumabe: suspender, colher culturas e iniciar antibiótico de amplo espectro",
+      "QT longo com azitromicina: suspender, corrigir potássio e magnésio e evitar outras drogas que prolongam o QT",
+      "Sangramento com enoxaparina ou heparina: suspender, dosar hemograma e coagulograma e reverter conforme a gravidade",
+      "Queda de plaquetas acima de 50% com heparina: suspender imediatamente e investigar trombocitopenia induzida por heparina",
+      "Hepatotoxicidade por paracetamol: suspender, dosar transaminases e INR e avaliar N-acetilcisteína se houver ingestão excessiva",
+      "Retenção de CO2 com oxigênio em DPOC: reduzir o fluxo para alvo de 88% a 92% e reavaliar a gasometria",
+      "Reação infusional: interromper a infusão, tratar sintomas e reiniciar em velocidade menor se a reação for leve",
+      "Comunicar a equipe, reescrever a prescrição e reavaliar a indicação da droga antes da próxima dose"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "oseltamivir 75 mg",
+            "dose": "75 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "5 dias",
+            "condicao": "influenza confirmada ou suspeita, completando o curso iniciado no hospital",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se febre ou dor",
+            "duracao": "3 dias",
+            "condicao": "febre ou desconforto; máximo 3 g/dia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "enoxaparina 40 mg",
+            "dose": "40 mg",
+            "via": "SC",
+            "frequencia": "1x/dia",
+            "duracao": "14 dias",
+            "condicao": "alta com mobilidade reduzida e sem contraindicação de sangramento",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "oxigênio medicinal",
+            "dose": "titular para SpO2 de 92% a 96%",
+            "via": "inalatória",
+            "frequencia": "contínuo",
+            "monitorizacao": "SpO2, frequência respiratória e FiO2",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "oseltamivir",
+            "dose": "75 mg (150 mg 12/12 h se grave)",
+            "via": "VO ou sonda",
+            "frequencia": "12/12 h",
+            "monitorizacao": "função renal, náusea e estado mental",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dexametasona",
+            "dose": "6 mg",
+            "via": "VO ou IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "glicemia, potássio e sinais de infecção",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ceftriaxona",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "foco bacteriano, hemograma e proteína C reativa em 48 a 72 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "enoxaparina",
+            "dose": "40 mg (profilaxia)",
+            "via": "SC",
+            "frequencia": "1x/dia",
+            "monitorizacao": "plaquetas e sinais de sangramento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol",
+            "dose": "750 mg",
+            "via": "VO ou IV",
+            "frequencia": "6/6 h se febre",
+            "monitorizacao": "temperatura e dose total diária",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "RT-PCR ou teste rápido viral",
+          "gasometria arterial",
+          "hemograma",
+          "proteína C reativa",
+          "procalcitonina",
+          "creatinina",
+          "eletrólitos",
+          "transaminases",
+          "D-dímero",
+          "radiografia de tórax",
+          "tomografia de tórax",
+          "hemoculturas",
+          "cultura de escarro ou aspirado traqueal",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado(a) sob meus cuidados nesta data, com síndrome respiratória viral grave, necessitando de afastamento por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; documento hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com dia de doença, SpO2, FiO2, PaO2/FiO2, imagem, antiviral e anticoagulação",
+          "prioridade",
+          "horário do contato",
+          "necessidade de isolamento"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com síndrome respiratória viral grave por ___, no ___ dia de doença, SpO2 de ___% com FiO2 de ___, relação PaO2/FiO2 de ___, imagem com ___, em uso de oseltamivir ___, dexametasona ___, antibiótico ___ e profilaxia de tromboembolismo ___, com evolução ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "dia de início da febre",
+        "dispneia e tempo de evolução",
+        "tosse e expectoração",
+        "febre e defervescência",
+        "saturação em ar ambiente e com oxigênio",
+        "vacinas de influenza e COVID-19",
+        "comorbidades",
+        "imunossupressão",
+        "contato com caso respiratório",
+        "teste viral e data",
+        "uso de anticoagulante",
+        "tabagismo"
+      ],
+      "texto_template": "Paciente com quadro respiratório iniciado há ___ dias, febre ___, tosse ___, expectoração ___, dispneia ___, SpO2 de ___% em ar ambiente e ___% com oxigênio, vacinas ___, comorbidades ___, imunossupressão ___, contato ___, teste viral ___, anticoagulante ___ e tabagismo ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e temperatura",
+        "frequência respiratória e uso de musculatura acessória",
+        "SpO2 em ar ambiente e com o dispositivo em uso",
+        "ausculta pulmonar",
+        "nível de consciência",
+        "perfusão e tempo de enchimento capilar",
+        "hidratação e mucosas",
+        "orofaringe e congestão nasal",
+        "edema e sinais de trombose",
+        "esforço respiratório e fala entrecortada"
+      ],
+      "texto_template": "Sinais vitais ___, temperatura ___, frequência respiratória ___, uso de musculatura acessória ___, SpO2 de ___% em ar ambiente e ___% com ___, ausculta pulmonar ___, consciência ___, perfusão ___, hidratação ___, orofaringe ___, edema ___ e esforço respiratório ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_ministerio_saude",
+        "o_que_verificar": "definição de SRAG, notificação imediata e fluxo de oseltamivir",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "critérios de UTI, alvo de saturação e fluxo de alto fluxo e VNI",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_respiratoria",
+        "o_que_verificar": "ventilação protetora, prona e indicação de ECMO",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_infectologia",
+        "o_que_verificar": "indicação de corticoide na COVID, coinfecção bacteriana e descalonamento",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de oseltamivir, dexametasona, enoxaparina e antibióticos",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "prona, ECMO, anticoagulação profilática e seguimento pós-viral",
+        "verificar": true
+      },
+      {
+        "tipo": "vigilancia_epidemiologica",
+        "o_que_verificar": "critérios de notificação de SRAG e COVID-19 no município",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-INF07-01",
+        "tipo": "hipoxemia_grave",
+        "gatilho": "SpO2 abaixo de 90% em ar ambiente ou queda de 3 pontos ou mais",
+        "severidade": "grave",
+        "mensagem": "Hipoxemia grave: oxigênio titulado imediato, gasometria e avaliação de UTI.",
+        "acao": "acionar suporte respiratório e UTI",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF07-02",
+        "tipo": "alta_com_hipoxemia",
+        "gatilho": "alta solicitada com SpO2 abaixo de 92% em ar ambiente",
+        "severidade": "grave",
+        "mensagem": "Não dar alta com hipoxemia: manter oxigênio e reavaliar em 24 h.",
+        "acao": "bloquear alta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF07-03",
+        "tipo": "antibiotico_sem_foco",
+        "gatilho": "antibiótico prescrito em SRAG sem consolidação, escarro purulento ou procalcitonina elevada registrados",
+        "severidade": "grave",
+        "mensagem": "Antibiótico só com foco bacteriano: registrar a justificativa e reavaliar em 48 a 72 h.",
+        "acao": "exigir justificativa e sugerir suspensão",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF07-04",
+        "tipo": "corticoide_em_influenza",
+        "gatilho": "dexametasona ou outro corticoide prescrito com influenza isolada e sem hipoxemia de outra causa",
+        "severidade": "grave",
+        "mensagem": "Corticoide em influenza isolada aumenta mortalidade e pneumonia secundária.",
+        "acao": "bloquear item e sugerir revisão",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF07-05",
+        "tipo": "antiviral_tardio",
+        "gatilho": "oseltamivir iniciado após 48 h em paciente grave ou de grupo de risco",
+        "severidade": "precaucao",
+        "mensagem": "Antiviral tardio: em doente grave ainda há benefício, não atrasar mais.",
+        "acao": "alertar e registrar o horário",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF07-06",
+        "tipo": "anticoagulacao_terapeutica_sem_te",
+        "gatilho": "enoxaparina em dose terapêutica sem diagnóstico ou suspeita documentada de TEV",
+        "severidade": "grave",
+        "mensagem": "Dose terapêutica sem TEV aumenta sangramento sem reduzir mortalidade; usar profilática.",
+        "acao": "exigir diagnóstico registrado",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF07-07",
+        "tipo": "profilaxia_tev_ausente",
+        "gatilho": "internação por SRAG sem prescrição de profilaxia de tromboembolismo e sem contraindicação registrada",
+        "severidade": "precaucao",
+        "mensagem": "Profilaxia de TEV indicada em todo internado sem contraindicação.",
+        "acao": "sugerir enoxaparina profilática",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF07-08",
+        "tipo": "vni_em_rebaixamento",
+        "gatilho": "VNI ou alto fluxo prescrito com Glasgow 13 ou menos",
+        "severidade": "grave",
+        "mensagem": "VNI contraindicada em rebaixamento: risco de aspiração e atraso da via aérea.",
+        "acao": "alertar e sugerir intubação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF07-09",
+        "tipo": "notificacao_ausente",
+        "gatilho": "atendimento de SRAG sem notificação registrada",
+        "severidade": "precaucao",
+        "mensagem": "SRAG é notificação compulsória imediata: preencher e-SUS Notifica ou SINAN.",
+        "acao": "gerar ficha de notificação",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "Ministério da Saúde",
+        "ANVISA",
+        "WHO",
+        "protocolo institucional",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: separação de síndrome gripal complicada, pneumonia viral, SDRA e coinfecção bacteriana; oxigênio titulado a 92–96% com escalonamento para alto fluxo e VNI; ventilação protetora de 6 mL/kg de peso predito e prona com PaO2/FiO2 abaixo de 150; oseltamivir precoce sem esperar teste; dexametasona apenas em COVID com hipoxemia e bloqueio em influenza isolada; antibiótico restrito ao foco bacteriano com reavaliação em 48 a 72 h; enoxaparina profilática e terapêutica apenas com TEV; critérios de UTI, ECMO e traqueostomia; notificação, isolamento e seguimento pós-viral; alertas bloqueantes para alta com hipoxemia, corticoide em influenza, antibiótico sem foco e anticoagulação terapêutica sem trombose.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

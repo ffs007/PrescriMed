@@ -1,0 +1,704 @@
+{
+  "id": "ws-derm_08",
+  "nome": "Queimadura superficial",
+  "cat": "Dermatológico",
+  "alias": "queimadura superficial queimadura queimadura de grau queimadura superficial escaldadura",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (DERM-08_queimadura.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de queimadura, critérios de internação e de transferência ao centro de queimados",
+      "[verificar] diretriz_sociedade_cirurgia_plastica: classificação de profundidade, coberturas e momento do desbridamento cirúrgico",
+      "[verificar] protocolo_atls: reposição volêmica inicial e avaliação de via aérea",
+      "[verificar] programa_nacional_de_imunizacoes: indicação de toxoide e de imunoglobulina antitetânica",
+      "[verificar] anvisa: apresentações, registro de coberturas e de antimicrobianos tópicos"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "DERM-08 em 2026-11-27",
+    "fundido_workspace": "DERM-08 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: fuligem em boca ou narina, rouquidão, estridor, tosse com escarro carbonáceo ou queimadura de vibrissas -> oxigênio, avaliar intubação precoce e acionar sala vermelha; extensão acima de 10% da superfície corporal em adulto ou acima de 5% em criança -> acesso venoso, Ringer lactato pela fórmula de Parkland e internação; queimadura circunferencial de membro ou de tórax -> avaliação cirúrgica imediata para escarotomia; queimadura de face, mãos, pés, períneo ou articulação -> encaminhar a centro de queimados. 1) Interromper o agente causador e resfriar com água corrente por 20 minutos, sem gelo e sem produto caseiro 2) Avaliar via aérea: fuligem, rouquidão, estridor ou explosão em ambiente fechado indicam intubação precoce 3) Classificar a profundidade em primeiro grau, segundo grau superficial, segundo grau profunda ou terceiro grau 4) Calcular a superfície corporal queimada pela regra dos 9 e pela palma do paciente 5) Verificar critérios de centro de queimados: extensão, face, mãos, pés, períneo, articulação, elétrica, química e circunferencial 6) Analgesiar de forma programada e antes de qualquer manipulação, com dipirona ou paracetamol e morfina se dor intensa 7) Limpar, drenar bolhas tensas, escolher a cobertura conforme exsudato e profundidade e aplicar curativo sem compressão 8) Atualizar a vacina antitetânica, prescrever hidratação e reavaliar em 48 horas ou antes se febre, dor crescente ou secreção",
+  "redFlags": [
+    "fuligem em boca ou narina, rouquidão, estridor, tosse com escarro carbonáceo ou queimadura de vibrissas -> oxigênio, avaliar intubação precoce e acionar sala vermelha",
+    "extensão acima de 10% da superfície corporal em adulto ou acima de 5% em criança -> acesso venoso, Ringer lactato pela fórmula de Parkland e internação",
+    "queimadura circunferencial de membro ou de tórax -> avaliação cirúrgica imediata para escarotomia",
+    "queimadura de face, mãos, pés, períneo ou articulação -> encaminhar a centro de queimados",
+    "queimadura elétrica com ponto de entrada e saída, arritmia ou perda de consciência -> monitorização cardíaca, eletrólitos, creatinina e encaminhamento",
+    "queimadura química sem agente identificado ou com lesão ocular -> irrigação copiosa por 20 a 30 minutos e avaliação oftalmológica",
+    "febre, secreção purulenta, celulite ao redor ou dor que piora após o quarto dia -> cultura, antibiótico sistêmico e reavaliação do curativo",
+    "queimadura em criança abaixo de 2 anos, idoso acima de 70 anos ou gestante -> baixar o limiar de internação e encaminhar"
+  ],
+  "naoUsar": [
+    "hepatopatia grave",
+    "desnutrição grave",
+    "depressão respiratória",
+    "uso de inibidor da monoaminoxidase nas últimas 2 semanas",
+    "íleo paralítico",
+    "alergia a sulfonamida",
+    "gestação a termo e lactente abaixo de 2 meses",
+    "deficiência de G6PD"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "resfriar com água corrente por 20 minutos"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "gelo, pasta de dente, manteiga, borra de café, clara de ovo ou pomada caseira"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "paracetamol",
+            "pos": "750 mg. Via VO. 6/6 h, se dor. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "dor de queimadura de primeiro e segundo grau (1a linha) dor",
+            "nota": "Uso direto; administrar 30 a 60 minutos antes da troca de curativo - monitorar: dor pela escala de 0 a 10; monitorar: TGO e TGP se uso acima de 5 dias; monitorar: dose total de todos os produtos com paracetamol · NÃO: hepatopatia grave; alergia; desnutrição grave · Obs: Em criança, 15 mg/kg por dose a cada 6 horas, máximo de 75 mg/kg/dia ou 4 g/dia. Não associar a outro produto que contenha paracetamol. · Renal: ClCr abaixo de 30: espaçar para 8/8 h",
+            "dose": {
+              "texto": "750 mg; 6/6 h, se dor; 5 a 7 dias; max. 4 g/dia, ou 2 g/dia em hepatopatia e etilismo",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ]
+      },
+      {
+        "nome": "Sulfonamida topica",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "sulfadiazina_prata",
+            "pos": "Camada de 3 a 5 mm sobre todo o leito. Via tópica. 1 a 2 vezes ao dia. Até a reepitelização, no máximo 14 dias de uso contínuo.",
+            "posTodas": true,
+            "motivo": "queimadura de segundo grau superficial e profunda com exsudato (1a linha) queimadura de segundo grau com exsudato",
+            "nota": "Uso direto com luva estéril; retirar completamente a camada anterior com soro fisiológico e gaze antes de reaplicar - monitorar: hemograma se uso acima de 7 dias; monitorar: aspecto do leito e da pele ao redor; monitorar: coloração cinzenta da pele; monitorar: função hepática e renal · NÃO: alergia a sulfonamida; gestação a termo e lactente abaixo de 2 meses; deficiência de G6PD; queimadura de face e próximo de mucosas; insuficiência hepática ou renal grave; grandes superfícies por tempo prolongado · Obs: Não é analgésico nem anestésico: a ferida precisa de analgesia antes da troca. Em queimadura acima de 20% da superfície…",
+            "dose": {
+              "texto": "camada de 3 a 5 mm sobre todo o leito; 1 a 2 vezes ao dia; até a reepitelização, no máximo 14 dias de uso contínuo; max. individualizar",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "2 vezes ao dia",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ]
+      },
+      {
+        "nome": "Curativo filme",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "filme_de_poliuretano_transparente",
+              "n": "Filme de poliuretano transparente",
+              "ap": "filme 10 x 12 cm",
+              "q": "",
+              "pos": "Cobrir a lesão com margem de 2 cm de pele sã. Via tópica. Troca a cada 3 a 5 dias. Até a reepitelização."
+            },
+            "motivo": "queimadura de primeiro grau e segundo grau superficial em epitelização, sem exsudato (1a linha) queimadura superficial sem exsudato",
+            "nota": "Aplicar sobre pele seca, sem tensionar, com 2 cm de sobreposição em pele íntegra; não usar sobre creme ou pomada - monitorar: acúmulo de líquido sob o filme; monitorar: odor; monitorar: dor; monitorar: integridade das bordas · NÃO: ferida com exsudato abundante; infecção ativa; pele íntegra com bolha tensa não drenada; alergia ao adesivo · Obs: É a cobertura que menos adere e menos dói na retirada, ideal para face e para áreas de atrito. Remover puxando paralelamente à pele.",
+            "dose": {
+              "texto": "cobrir a lesão com margem de 2 cm de pele sã; troca a cada 3 a 5 dias; até a reepitelização; max. individualizar",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ]
+      },
+      {
+        "nome": "Antisseptico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "clorexidina_degermante",
+              "n": "Clorexidina degermante 2%",
+              "ap": "frasco 500 mL",
+              "q": "",
+              "pos": "5 a 10 mL diluídos em 500 mL de soro fisiológico. Via tópica. Na primeira avaliação e a cada troca de curativo. Até a reepitelização."
+            },
+            "motivo": "limpeza inicial da queimadura e antissepsia da pele ao redor (1a linha)",
+            "nota": "Diluir na proporção indicada em soro fisiológico 0,9%; não misturar com sabão nem com iodopovidona - monitorar: ardência; monitorar: ressecamento do leito; monitorar: integridade da pele perilesional; monitorar: irritação ocular · NÃO: alergia à clorexidina; aplicação em face, olhos, ouvido médio e mucosa; queimadura de córnea; recém-nascido · Obs: Na maioria das trocas, soro fisiológico morno é suficiente. Preferir água e sabão neutro em queimadura de face e não usar álcool ou clorexidina alcoólica sobre a lesão.",
+            "dose": {
+              "texto": "5 a 10 mL diluídos em 500 mL de soro fisiológico; na primeira avaliação e a cada troca de curativo; até a reepitelização; max. individualizar",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ]
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "400 mg. Via VO. 8/8 h, com alimento. 3 a 5 dias.",
+            "posTodas": true,
+            "motivo": "dor e componente inflamatório de queimadura pequena em paciente estável (alternativa)",
+            "nota": "Uso direto, sempre com alimento ou leite - monitorar: dor; monitorar: creatinina em uso acima de 3 dias; monitorar: dor epigástrica e melena; monitorar: diurese · NÃO: úlcera péptica ativa; insuficiência renal com ClCr abaixo de 30; desidratação ou hipovolemia; terceiro trimestre da gestação; alergia a AINE; cirurgia de enxerto recente · Obs: Evitar em queimadura acima de 10% da superfície corporal: a hipovolemia do grande queimado soma-se à lesão renal do AINE. Em criança, 10 mg/kg por dose a cada 8 horas. · Renal: ClCr abaixo de 30: contraindicado",
+            "dose": {
+              "texto": "400 mg; 8/8 h, com alimento; 3 a 5 dias; max. 1.200 mg/dia",
+              "status": "ok",
+              "valor": 400,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Curativo hidrogel",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "hidrogel_amorfo",
+              "n": "Hidrogel amorfo",
+              "ap": "gel amorfo bisnaga 15 g",
+              "q": "",
+              "pos": "Camada de 3 a 5 mm sobre o leito. Via tópica. Troca a cada 24 a 48 horas. Até a reepitelização."
+            },
+            "motivo": "queimadura de segundo grau superficial com leito seco, doloroso e sem exsudato abundante (alternativa) leito seco e doloroso",
+            "nota": "Uso direto sobre o leito limpo, sem diluição; cobrir com filme ou gaze não aderente - monitorar: dor imediatamente após a aplicação; monitorar: umidade do leito; monitorar: pele perilesional; monitorar: odor · NÃO: queimadura com exsudato abundante; infecção não tratada; alergia aos componentes; queimadura de terceiro grau · Obs: Gel resfriado em geladeira reduz a dor na aplicação, mas nunca usar gelo direto sobre a pele. Não usar em queimadura infectada sem associação de antimicrobiano.",
+            "dose": {
+              "texto": "camada de 3 a 5 mm sobre o leito; troca a cada 24 a 48 horas; até a reepitelização; max. individualizar",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anestésico local",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "lidocaina_gel",
+            "pos": "1 a 2 g de gel sobre a área a manipular. Via tópica. 15 a 20 minutos antes do procedimento. Uso pontual, no máximo 3 aplicações ao dia.",
+            "posTodas": true,
+            "motivo": "dor na troca de curativo e no desbridamento de bolhas (condicional)",
+            "nota": "Uso direto sobre gaze aplicada na ferida; retirar completamente antes de reaplicar o curativo definitivo - monitorar: dor durante o procedimento; monitorar: tontura, zumbido ou gosto metálico; monitorar: palidez e cianose por metemoglobinemia",
+            "dose": {
+              "texto": "1 a 2 g de gel sobre a área a manipular; 15 a 20 minutos antes do procedimento; uso pontual, no máximo 3 aplicações ao dia; max. 3 mg/kg de lidocaína por aplicação",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": 2,
+              "unidade": "g",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vacina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "toxoide_tetanico",
+              "n": "Toxoide tetânico (dT)",
+              "ap": "frasco-ampola 0,5 mL",
+              "q": "",
+              "pos": "0,5 mL. Via IM. Dose única agora; completar o esquema conforme o calendário. Esquema de 3 doses com reforço a cada 10 anos."
+            },
+            "motivo": "profilaxia do tétano em queimadura com esquema vacinal incompleto ou desconhecido (condicional) esquema vacinal incompleto",
+            "nota": "Uso direto, sem diluição, por via intramuscular profunda no deltoide - monitorar: reação local em 24 a 48 horas; monitorar: febre; monitorar: reação alérgica nos primeiros 30 minutos · NÃO: anafilaxia prévia a componente da vacina; encefalopatia após dose anterior · Obs: Indicada quando o esquema está incompleto ou é desconhecido. Em queimadura suja ou profunda com esquema desconhecido, associar imunoglobulina antitetânica em sítio diferente.",
+            "dose": {
+              "texto": "0,5 mL; dose única agora; completar o esquema conforme o calendário; esquema de 3 doses com reforço a cada 10 anos; max. 0,5 mL por dose",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.5,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Imunoglobulina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "imunoglobulina_humana_antitetanica",
+              "n": "Imunoglobulina humana antitetânica",
+              "ap": "ampola 250 UI",
+              "q": "",
+              "pos": "250 UI. Via IM. Dose única. Dose única, com proteção imediata e curta."
+            },
+            "motivo": "queimadura contaminada, profunda ou com esquema vacinal desconhecido, para imunização passiva (condicional)",
+            "nota": "Uso direto, sem diluição, por via intramuscular profunda em grupo muscular diferente do da vacina - monitorar: reação local; monitorar: reação alérgica nos primeiros 30 minutos; monitorar: sinais de tétano nas duas semanas seguintes · NÃO: anafilaxia prévia a imunoglobulina humana; deficiência seletiva de IgA · Obs: Não substitui a vacina: aplicar sempre que houver indicação e registrar as duas aplicações no boletim. Ferida com mais de 24 horas e tecido desvitalizado tem maior risco.",
+            "dose": {
+              "texto": "250 UI; dose única; dose única, com proteção imediata e curta; max. 500 UI em ferida de alto risco ou com mais de 24 horas",
+              "status": "ok",
+              "valor": 250,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "UI"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "regra de Lund-Browder para superfície, paracetamol 15 mg/kg, dipirona 15 mg/kg e morfina 0,1 mg/kg; internar acima de 5% e em qualquer queimadura de face ou mão"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Resfriamento imediato com água corrente",
+              "ap": "",
+              "q": "",
+              "pos": "água corrente em temperatura ambiente, entre 15 e 25 graus, sobre a lesão por 20 minutos, iniciada nos primeiros 20 minutos e sem gelo; nunca aplicar gelo, porque a vasoconstrição e a lesão por frio aprofundam a queimadura"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Remoção de roupas, joias e anéis",
+              "ap": "",
+              "q": "",
+              "pos": "retirar imediatamente tecido quente e objetos que possam causar garrote quando o edema aumentar; aderências não devem ser arrancadas, apenas recortadas ao redor"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Cálculo da superfície corporal queimada",
+              "ap": "",
+              "q": "",
+              "pos": "regra dos 9 no adulto: cabeça 9%, cada membro superior 9%, tronco anterior 18%, tronco posterior 18%, cada membro inferior 18% e períneo 1%; usar a palma do paciente, incluindo os dedos, como 1% para áreas pequenas e irregulares e, na criança, a regra de Lund-Browder, porque a cabeça é proporcionalmente maior"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Cobertura da ferida com curativo não aderente",
+              "ap": "",
+              "q": "",
+              "pos": "gaze de silicone ou filme sobre o leito, seguido de camada absorvente e atadura sem compressão; troca conforme o exsudato, entre 1 e 5 dias, sempre com analgesia prévia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Hidratação oral ou enteral precoce",
+              "ap": "",
+              "q": "",
+              "pos": "em queimadura até 10% da superfície corporal, ofertar solução de reidratação oral em pequenos volumes frequentes; acima de 20%, iniciar dieta enteral em 6 a 12 horas, porque a parede intestinal transloca e a desnutrição é rápida"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Controle térmico do ambiente",
+              "ap": "",
+              "q": "",
+              "pos": "manter o paciente aquecido durante o procedimento, com cobertor e soro aquecido, porque o grande queimado perde calor e evolui com hipotermia e coagulopatia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Elevação e repouso do membro queimado",
+              "ap": "",
+              "q": "",
+              "pos": "elevar o membro acima do nível do coração nas primeiras 48 a 72 horas para reduzir edema e dor, com mobilização precoce das articulações não acometidas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Proteção solar da área cicatrizada",
+              "ap": "",
+              "q": "",
+              "pos": "fotoprotetor acima de 50 e cobertura física por 12 meses, porque a pele neoformada pigmenta de forma irregular e é fotossensível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Notificação de suspeita de violência",
+              "ap": "",
+              "q": "",
+              "pos": "em lesão com padrão de imersão, simétrica, em região protegida ou com história incompatível, notificar o conselho tutelar ou a autoridade sanitária e acionar serviço social"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "DERM-08"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "morfina_ev",
+            "motivo": "dor intensa, queimadura extensa ou troca de curativo dolorosa (1a linha)",
+            "nota": "Diluir 1 mL da ampola de 10 mg/mL em 9 mL de soro fisiológico e administrar 2 a 4 mL (2 a 4 mg) por via intravenosa lenta - monitorar: frequência respiratória e saturação antes e após cada dose; monitorar: sedação pela escala de 0 a 3; monitorar: pressão arterial; monitorar: náusea; monitorar: prontidão de naloxona",
+            "dose": {
+              "texto": "2 a 4 mg; 4/4 h, titulada pela escala de dor; até o controle da dor, com redução gradual; max. 10 mg por dose em paciente não tolerante, com reavaliação a cada 10 minutos",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 4,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "hosp": "tramadol_ev",
+            "motivo": "dor moderada a intensa quando a morfina não está disponível ou no ambulatório (alternativa) dor refratária",
+            "nota": "Via oral em uso direto; via intravenosa diluir 50 mg em 100 mL de soro fisiológico - monitorar: dor pela escala de 0 a 10; monitorar: sonolência e frequência respiratória; monitorar: náusea; monitorar: convulsão",
+            "dose": {
+              "texto": "50 a 100 mg; 6/6 h, se dor; 3 a 5 dias; max. 400 mg/dia, ou 200 mg/dia acima de 75 anos",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "dor e febre da queimadura, sobretudo quando há necessidade de via intravenosa (alternativa) dor e febre",
+            "nota": "Via oral em uso direto; via intravenosa diluir 1 g em 10 a 20 mL de soro fisiológico ou água destilada - monitorar: pressão arterial após a injeção; monitorar: dor; monitorar: temperatura; monitorar: hemograma se uso prolongado · NÃO: alergia a pirazolonas; deficiência de medula óssea; porfiria hepática aguda; gestação no primeiro trimestre · Obs: Em criança, 15 mg/kg por dose a cada 6 horas, máximo de 60 mg/kg/dia. Evitar em hipotensão ou em choque, pelo risco de queda adicional de pressão. · Renal: ClCr abaixo de 30: evitar ou espaçar para 8/8 h",
+            "dose": {
+              "texto": "1 g; 6/6 h, se dor ou febre; 5 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiemético",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "náusea e vômito induzidos por opioide (condicional) náusea por opioide",
+            "nota": "Via intravenosa em uso direto ou diluída em 50 mL de soro fisiológico; via oral em uso direto - monitorar: náusea e vômito; monitorar: eletrocardiograma em cardiopata ou uso de outro fármaco que prolongue o QT; monitorar: potássio e magnésio",
+            "dose": {
+              "texto": "4 a 8 mg; 8/8 h, se necessário; até cessar o estímulo; max. 24 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": 8,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 24,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cristaloide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ringer_lactato",
+              "n": "Ringer lactato",
+              "ap": "bolsa 500 mL",
+              "via": "IV",
+              "pos": "2 mL por kg por porcentagem de superfície corporal queimada nas primeiras 24 horas. Via IV. Metade do volume nas primeiras 8 horas e o restante nas 16 horas seguintes. 24 horas, com reavaliação a cada 2 horas pelo diurese. Infusão contínua, com titulação pelo débito urinário."
+            },
+            "motivo": "reposição volêmica em queimadura acima de 10% da superfície corporal (condicional)",
+            "nota": "Uso direto em bomba de infusão ou equipo simples, sem adição de medicamentos - monitorar: débito urinário de 0,5 mL/kg/h no adulto e 1 mL/kg/h na criança; monitorar: pressão arterial; monitorar: sódio, potássio e hematócrito; monitorar: ausculta pulmonar · NÃO: sobrecarga hídrica; edema agudo de pulmão; hipercalemia grave; alcalose metabólica · Obs: A fórmula de Parkland é apenas ponto de partida: o volume real é o que garante diurese. Evitar coloide na primeira hora e não usar soro glicosado para reposição. · Renal: Titular pelo débito urinário; evitar sobrecarga em oligúria",
+            "dose": {
+              "texto": "2 mL por kg por porcentagem de superfície corporal queimada nas primeiras 24 horas; metade do volume nas primeiras 8 horas e o restante nas 16 horas seguintes; 24 horas, com reavaliação a cada 2 horas pelo diurese; max. individualizar pelo débito urinário",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 2,
+              "freq_texto": "a cada 2 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "DERM-08",
+    "versao": "0.2.0",
+    "arquivo": "DERM-08_queimadura.json",
+    "area": "Dermatológico",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

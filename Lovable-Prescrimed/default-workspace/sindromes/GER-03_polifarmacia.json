@@ -1,0 +1,1364 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "GER-03",
+    "area": "Geriatria",
+    "nome": "Polifarmácia / revisão de medicações",
+    "aliases": [
+      "polifarmácia",
+      "revisão de medicações",
+      "muitos remédios",
+      "deprescrição"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "idoso"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Polifarmácia não é 'tomar muito remédio': é o uso simultâneo de fármacos cujo risco somado supera o benefício, quase sempre sem indicação documentada, mantidos por inércia e por prescritores diferentes. Cinco ou mais fármacos é gatilho de rastreio, não diagnóstico. O núcleo da conduta é desprescrever com critério — retirar um fármaco por vez, começando pelo de maior risco e menor benefício, com plano de retirada, substituto quando existe, sintoma esperado e reavaliação em 2 a 4 semanas. Os critérios de Beers e STOPP não são listas de proibição: apontam o que evitar no idoso e o que exige justificativa registrada em prontuário. A cascata de prescrição é o erro mais comum e o mais caro — o AINE causa edema e pressão alta, prescreve-se anti-hipertensivo e depois um diurético que lesa o rim; o anticolinérgico causa constipação, prescreve-se laxante; o benzodiazepínico causa insônia de rebote e a dose sobe; o IBP causa diarreia e prescreve-se outro fármaco. Tratar o efeito adverso com mais uma prescrição, sem retirar o fármaco índice, multiplica o problema em vez de resolvê-lo. Os alvos de maior rendimento são benzodiazepínico e Z-drug, anticolinérgico, AINE, hipoglicemiante de risco, anticoagulante, IBP crônico sem indicação, estatina em fragilizado e corticoide sistêmico. O que não se faz: suspender tudo de uma vez — risco de abstinência, convulsão, delirium, angina, descompensação glicêmica e crise adrenal —, ignorar interação grave já instalada e manter fármaco sem indicação por medo de 'mexer no que está estável'. Conciliação medicamentosa na primeira consulta, na alta hospitalar e a cada mudança de prescritor; revisão farmacológica estruturada pelo menos uma vez por ano, com lista única, metas individualizadas por fragilidade e expectativa de vida, e registro do que foi retirado, por quê e com qual resultado.",
+    "inclusao": [
+      "Uso de 5 ou mais fármacos, incluindo fitoterápicos, colírios, amostras e uso sob demanda",
+      "Qualquer idoso com queda, confusão, hipotensão postural, sangramento ou piora funcional inexplicada",
+      "Suspeita de reação adversa a medicamento ou de cascata de prescrição",
+      "Prescrição de fármaco potencialmente inapropriado segundo Beers ou STOPP",
+      "Paciente com 3 ou mais prescritores ou que compra remédio sem receita",
+      "Pré-operatório, alta hospitalar ou transição de cuidado com risco de duplicidade"
+    ],
+    "exclusao": [
+      {
+        "situacao": "intoxicação aguda com instabilidade, rebaixamento ou arritmia",
+        "fluxo": "toxicologia"
+      },
+      {
+        "situacao": "sangramento ativo ou suspeita de hemorragia digestiva",
+        "fluxo": "hospitalar"
+      },
+      {
+        "situacao": "confusão aguda com flutuação (delirium instalado)",
+        "fluxo": "delirium"
+      },
+      {
+        "situacao": "hipoglicemia grave em curso ou crise convulsiva",
+        "fluxo": "emergência"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "queda recente, fratura por fragilidade ou síncope",
+        "por_que": "sedativo, hipnótico, anti-hipertensivo, anticolinérgico e hipoglicemiante são as causas medicamentosas mais frequentes",
+        "acao": "revisar a lista no mesmo dia, suspender o fármaco de maior risco e avaliar marcha e pressão em pé",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "confusão, sonolência ou delirium novo após mudança de prescrição",
+        "por_que": "anticolinérgico, benzodiazepínico, opioide e corticoide descompensam a cognição em horas",
+        "acao": "suspender o fármaco suspeito e tratar como delirium até prova contrária",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "sangramento digestivo, hematoma extenso ou queda de hemoglobina",
+        "por_que": "AINE associado a anticoagulante ou antiagregante multiplica o risco de hemorragia",
+        "acao": "suspender AINE, dosar hemograma e INR e reavaliar a anticoagulação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "hipotensão postural, tontura ao levantar ou pressão sistólica abaixo de 100 mmHg",
+        "por_que": "soma de anti-hipertensivos, diurético, alfa-bloqueador e antidepressivo",
+        "acao": "reduzir ou retirar o fármaco menos essencial e orientar levantar devagar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "glicemia abaixo de 70 mg/dL, sudorese, tremor ou confusão em uso de sulfonilureia ou insulina",
+        "por_que": "hipoglicemia grave e prolongada, com risco de sequela neurológica",
+        "acao": "corrigir a glicemia, reduzir ou suspender o hipoglicemiante e revisar a meta",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "creatinina em elevação, potássio alterado ou diurese em queda",
+        "por_que": "AINE, IECA, BRA, diurético e contraste somam lesão renal",
+        "acao": "suspender o nefrotóxico, hidratar e ajustar dose pelo clearance",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "paciente em uso de 10 ou mais fármacos sem revisão registrada no último ano",
+        "por_que": "é a população de maior risco de hospitalização evitável por iatrogenia",
+        "acao": "agendar revisão farmacológica estruturada com lista única e plano de desprescrição",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "recusa alimentar, náusea e astenia em uso crônico de corticoide ou opioide",
+        "por_que": "insuficiência adrenal por retirada inadequada ou intoxicação por acúmulo",
+        "acao": "não suspender o corticoide abruptamente e investigar a causa dos sintomas",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quais remédios o senhor toma, com dose e horário? Traga as caixas, não a lista de memória.",
+      "Quem prescreveu cada um e quando começou? Ainda existe o motivo?",
+      "Toma algo sem receita, chá, fitoterápico, colírio, injetável ou remédio emprestado?",
+      "Já caiu, ficou tonto ao levantar ou teve confusão depois de começar algum remédio?",
+      "Como está a memória e o sono? Usa remédio para dormir ou para os nervos?",
+      "Qual foi a última creatinina e quando foi dosada?",
+      "Tem histórico de úlcera, sangramento, infarto, AVC ou diabetes com hipoglicemia?",
+      "Quantos médicos diferentes prescrevem e em quantas farmácias compra?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Benzodiazepínico ou Z-drug em uso crônico para insônia, sem indicação atual, principalmente com queda ou confusão",
+        "escolha": "Desmame gradual: reduzir 25% da dose a cada 2 semanas, os últimos 25% mais devagar, associado a higiene do sono e terapia cognitivo-comportamental para insônia",
+        "porque": "É o fármaco com maior relação risco-benefício negativa no idoso: dobra o risco de queda, fratura de quadril e delirium. A retirada abrupta causa insônia de rebote, ansiedade e convulsão, e é justamente o rebote que faz o paciente voltar à dose antiga. Desmame lento é o que sustenta a retirada"
+      },
+      {
+        "cenario": "IBP em uso há mais de 8 semanas sem Barrett, DRGE erosiva, úlcera documentada ou uso de AINE/anticoagulante",
+        "escolha": "Step-down: reduzir para 20 mg em dias alternados por 2 a 4 semanas e depois sob demanda",
+        "porque": "O uso crônico sem indicação acrescenta hipomagnesemia, deficiência de B12, C. difficile e fratura de quadril sem benefício. A redução gradual evita o rebote ácido das duas primeiras semanas, que é confundido com recidiva da doença"
+      },
+      {
+        "cenario": "AINE crônico em idoso com doença renal crônica, hipertensão, insuficiência cardíaca ou anticoagulação",
+        "escolha": "Suspender o AINE e substituir por paracetamol em dose plena em horário fixo; se dor inflamatória, corticoide em dose baixa por curto prazo ou AINE tópico",
+        "porque": "O AINE é o fármaco que mais causa lesão renal aguda, descompensação cardíaca e hemorragia digestiva no idoso, e a substituição analgésica é o que impede o retorno a ele. Suspender sem plano analgésico garante falha da retirada"
+      },
+      {
+        "cenario": "Sulfonilureia com hipoglicemia, HbA1c abaixo da meta individualizada ou fragilidade avançada",
+        "escolha": "Reduzir 50% ou suspender a glibenclamida e manter metformina se a função renal permitir, com meta de HbA1c 7,5–8,5% no fragilizado",
+        "porque": "A hipoglicemia da sulfonilureia de ação longa é a causa metabólica mais frequente de queda, convulsão e morte no idoso, e metas glicêmicas rígidas não trazem benefício microvascular nessa faixa. A metformina tem risco hipoglicêmico praticamente nulo"
+      },
+      {
+        "cenario": "Estatina em prevenção primária com fragilidade avançada, demência avançada, acamado ou expectativa de vida menor que 1 ano",
+        "escolha": "Desprescrever a estatina, com retirada direta e reavaliação em 3 meses",
+        "porque": "O benefício cardiovascular aparece em anos e o paciente não tem esse tempo; o risco de mialgia, interação e carga de comprimidos é imediato. Em prevenção secundária (infarto, AVC, revascularização) a estatina é mantida, salvo decisão paliativa compartilhada"
+      },
+      {
+        "cenario": "Corticoide sistêmico em uso por mais de 3 semanas",
+        "escolha": "Desmame escalonado: reduzir 5 mg por semana acima de 20 mg/dia, 2,5 mg por semana entre 5 e 20 mg e 1 mg a cada 2 a 4 semanas abaixo de 5 mg",
+        "porque": "A retirada abrupta após uso prolongado precipita insuficiência adrenal aguda, com hipotensão e choque. O desmame é a única forma segura de sair do corticoide e deve ser mais lento quanto maior o tempo de uso"
+      },
+      {
+        "cenario": "Anticolinérgico (amitriptilina, oxibutinina, prometazina, ciclobenzaprina) em paciente com demência, constipação, retenção urinária ou glaucoma",
+        "escolha": "Retirar o anticolinérgico e trocar por alternativa não anticolinérgica conforme o alvo: duloxetina ou gabapentina para dor neuropática, higiene do sono para insônia, fisioterapia e beta-3 para bexiga hiperativa",
+        "porque": "A carga anticolinérgica total é o melhor preditor de delirium, queda e declínio cognitivo no idoso, e o efeito é somatório entre fármacos. Trocar por classe alternativa mantém o tratamento do sintoma sem a toxicidade"
+      },
+      {
+        "cenario": "Anticoagulante em paciente com 10 ou mais fármacos",
+        "escolha": "Manter o anticoagulante e revisar interações, dose por peso e função renal, controle de INR e adesão",
+        "porque": "Anticoagulante não é alvo de desprescrição por polifarmácia: a retirada expõe a AVC e embolia. O que se faz é retirar os fármacos que interagem — AINE, antiagregante duplicado, sulfametoxazol-trimetoprima, amiodarona — e garantir a menor dose eficaz"
+      },
+      {
+        "cenario": "Cascata de prescrição identificada (fármaco novo prescrito para efeito adverso de outro)",
+        "escolha": "Retirar o fármaco índice, não o fármaco acrescentado",
+        "porque": "Exemplo típico: AINE causa edema e pressão alta, entra anti-hipertensivo, entra diurético, piora a função renal. Retirar o AINE resolve os três problemas; aumentar a dose do anti-hipertensivo apenas aprofunda a cascata"
+      },
+      {
+        "cenario": "Idoso com 12 fármacos, queixa inespecífica e nenhum sintoma grave",
+        "escolha": "Retirar um fármaco por vez, com intervalo de 2 a 4 semanas entre as retiradas, começando pelo de maior risco",
+        "porque": "Retirar tudo de uma vez torna impossível saber o que causou melhora ou piora, precipita abstinência e descompensação, e costuma resultar no retorno de toda a lista. Uma mudança por vez é o que permite atribuir o efeito e sustentar a decisão"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "benzodiazepinico",
+        "agente": "clonazepam",
+        "papel": "condicional",
+        "indicacao": "uso crônico para insônia, ansiedade ou 'nervosismo' sem indicação atual — alvo prioritário de desprescrição",
+        "dose": "0,25–0,5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x à noite; no desmame, reduzir 25% da dose a cada 2 semanas",
+        "duracao": "desmame em 8 a 16 semanas",
+        "dose_maxima": "0,5 mg/dia no idoso; não iniciar benzodiazepínico novo",
+        "contraindicacoes": [
+          "miastenia gravis",
+          "insuficiência respiratória grave",
+          "apneia do sono grave sem tratamento",
+          "insuficiência hepática grave",
+          "associação com opioide sem indicação absoluta",
+          "história de queda recorrente"
+        ],
+        "efeitos_adversos": [
+          "sedação e sonolência diurna",
+          "quedas e fratura de quadril",
+          "delirium e piora cognitiva",
+          "depressão respiratória quando associado a opioide",
+          "dependência e síndrome de abstinência",
+          "amnésia anterógrada"
+        ],
+        "apresentacoes": [
+          "comprimido 0,5 mg",
+          "comprimido 2 mg",
+          "solução oral 2,5 mg/mL com conta-gotas (0,1 mg por gota)"
+        ],
+        "preparo": "Uso direto; para o desmame fracionado usar a solução oral em gotas, que permite reduzir 0,1 mg por vez",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sintomas de abstinência e insônia de rebote a cada 2 semanas",
+          "sedação diurna e sonolência",
+          "quedas, marcha e equilíbrio",
+          "cognição e delirium",
+          "uso real: receitas repetidas, vários prescritores, compra sem receita"
+        ],
+        "ajuste_renal": "Sem ajuste formal; metabólitos ativos acumulam no idoso e no renal crônico — reduzir a dose e desmamar mais devagar",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia; se for necessário manter um benzodiazepínico, preferir oxazepam ou lorazepam, que não têm metabólito ativo",
+        "observacoes": "Alvo número um de desprescrição no idoso. Converter para dose equivalente de diazepam (0,5 mg de clonazepam equivale a cerca de 10 mg de diazepam) pode facilitar o desmame pela meia-vida longa e pela apresentação em comprimidos de 5 e 10 mg. Suspender abruptamente causa ansiedade intensa, insônia, tremor, delirium e convulsão — e é a principal razão de falha da retirada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (Beers, STOPP)",
+        "claim_id": null
+      },
+      {
+        "classe": "hipnotico_z",
+        "agente": "zolpidem",
+        "papel": "condicional",
+        "indicacao": "insônia em uso crônico de Z-drug — alvo de retirada com terapia cognitivo-comportamental do sono",
+        "dose": "2,5–5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x à noite, no máximo 3 noites por semana durante o desmame",
+        "duracao": "desmame em 4 a 8 semanas",
+        "dose_maxima": "5 mg/noite no idoso e na mulher",
+        "contraindicacoes": [
+          "apneia do sono grave sem tratamento",
+          "miastenia gravis",
+          "insuficiência respiratória grave",
+          "história de sonambulismo complexo ou direção durante o sono",
+          "uso concomitante de álcool"
+        ],
+        "efeitos_adversos": [
+          "sonambulismo, comer ou dirigir dormindo",
+          "amnésia e confusão",
+          "quedas e fratura de quadril à noite",
+          "sedação residual matinal",
+          "tolerância e dependência",
+          "delirium"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido sublingual 5 mg",
+          "comprimido sublingual 10 mg",
+          "comprimido de liberação prolongada 6,25 mg",
+          "comprimido de liberação prolongada 12,5 mg"
+        ],
+        "preparo": "Uso direto, imediatamente antes de deitar; não administrar com refeição pesada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sedação residual pela manhã",
+          "episódios de sonambulismo relatados pelo acompanhante",
+          "quedas noturnas e ao levantar para urinar",
+          "cognição e confusão",
+          "latência do sono e uso real por semana"
+        ],
+        "ajuste_renal": "Sem ajuste formal; em diálise não há dado suficiente — evitar",
+        "ajuste_hepatico": "Reduzir para 2,5–5 mg em hepatopatia",
+        "observacoes": "Beers lista Z-drug como potencialmente inapropriado no idoso pelos mesmos motivos do benzodiazepínico, com risco adicional de comportamento complexo durante o sono. O que funciona para insônia crônica é terapia cognitivo-comportamental, restrição de tempo na cama e higiene do sono; se houver insônia de rebote na retirada, não aumentar a dose — é esse reflexo que cronifica o uso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (Beers)",
+        "claim_id": null
+      },
+      {
+        "classe": "antidepressivo_triciclico",
+        "agente": "amitriptilina",
+        "papel": "condicional",
+        "indicacao": "uso crônico para dor neuropática, insônia ou cefaleia sem reavaliação, em paciente com carga anticolinérgica alta",
+        "dose": "10–25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x à noite; na retirada, reduzir 50% a cada 1 a 2 semanas",
+        "duracao": "retirada em 2 a 4 semanas",
+        "dose_maxima": "25 mg/dia no idoso",
+        "contraindicacoes": [
+          "glaucoma de ângulo fechado",
+          "retenção urinária ou bexiga neurogênica",
+          "arritmia com QTc longo",
+          "infarto agudo do miocárdio recente",
+          "uso de IMAO",
+          "demência avançada"
+        ],
+        "efeitos_adversos": [
+          "boca seca",
+          "constipação",
+          "retenção urinária",
+          "confusão e delirium",
+          "hipotensão postural e queda",
+          "taquicardia e prolongamento de QT",
+          "sudorese e visão turva"
+        ],
+        "apresentacoes": [
+          "comprimido 25 mg",
+          "comprimido 75 mg"
+        ],
+        "preparo": "Uso direto, à noite, pelo efeito sedativo",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "cognição e sinais de delirium",
+          "boca seca, constipação e resíduo urinário",
+          "pressão arterial sentado e em pé",
+          "ECG com QTc antes de manter",
+          "dor e sono, que eram a indicação original"
+        ],
+        "ajuste_renal": "Sem ajuste formal; metabólitos ativos acumulam no idoso e no renal crônico — reduzir",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia",
+        "observacoes": "É o exemplo clássico de fármaco que entra por um sintoma e fica por anos: 25 mg à noite para dormir, sem reavaliação, com constipação, boca seca e confusão atribuídas à 'idade'. A síndrome de descontinuação (náusea, mal-estar, insônia, parestesia) é branda e passa em 1 a 2 semanas; não confundir com recidiva e não voltar a dose por causa dela. Substituir conforme o alvo: duloxetina ou gabapentina para dor neuropática, higiene do sono para insônia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (Beers, STOPP)",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "condicional",
+        "indicacao": "uso crônico para dor osteoarticular em idoso com risco renal, cardiovascular ou digestivo — alvo de retirada com substituição analgésica",
+        "dose": "400 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h se dor; na retirada, reduzir para uso sob demanda por 3 a 7 dias e suspender",
+        "duracao": "máximo 7 dias; uso crônico deve ser interrompido",
+        "dose_maxima": "1.200 mg/dia no idoso",
+        "contraindicacoes": [
+          "TFG abaixo de 30",
+          "úlcera péptica ativa ou sangramento digestivo prévio",
+          "anticoagulação ou antiagregação dupla",
+          "insuficiência cardíaca descompensada",
+          "hipertensão não controlada",
+          "uso de IECA ou BRA com diurético (triplo bloqueio)",
+          "alergia a AINE"
+        ],
+        "efeitos_adversos": [
+          "hemorragia digestiva alta",
+          "lesão renal aguda",
+          "retenção hídrica e edema",
+          "elevação da pressão arterial",
+          "descompensação de insuficiência cardíaca",
+          "confusão"
+        ],
+        "apresentacoes": [
+          "comprimido 400 mg",
+          "comprimido 600 mg",
+          "suspensão oral 50 mg/mL",
+          "solução oral gotas 50 mg/mL"
+        ],
+        "preparo": "Uso direto, com alimento, para reduzir desconforto gástrico",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "creatinina e potássio em 1 a 2 semanas se mantido",
+          "pressão arterial e edema",
+          "hemoglobina e sinais de sangramento digestivo",
+          "dor em escala 0 a 10",
+          "peso e dispneia"
+        ],
+        "ajuste_renal": "Evitar com TFG abaixo de 30; não usar em doença renal crônica sem discussão explícita do risco",
+        "ajuste_hepatico": "Evitar em cirrose com ascite pelo risco de síndrome hepatorrenal",
+        "observacoes": "Cascata clássica: AINE causa edema e hipertensão, entra anti-hipertensivo, entra diurético, piora o rim. Em paciente anticoagulado o risco de hemorragia digestiva praticamente dobra. A retirada só funciona com substituto: paracetamol em dose plena em horário fixo e, se dor inflamatória, corticoide em dose baixa por curto prazo ou AINE tópico. Não suspender AINE de artrite sem plano analgésico — o paciente volta ao balcão da farmácia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (Beers, STOPP)",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfonilureia",
+        "agente": "glibenclamida",
+        "papel": "condicional",
+        "indicacao": "diabetes tipo 2 em idoso com hipoglicemia, meta glicêmica já alcançada ou fragilidade — alvo de redução ou retirada",
+        "dose": "2,5–5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia com a refeição; na retirada, reduzir 50% e reavaliar a glicemia em 1 semana",
+        "duracao": "retirada em 2 a 4 semanas",
+        "dose_maxima": "5 mg/dia no idoso",
+        "contraindicacoes": [
+          "TFG abaixo de 30",
+          "hepatopatia grave",
+          "desnutrição ou baixo peso importante",
+          "etilismo crônico",
+          "uso concomitante de fluconazol ou sulfametoxazol-trimetoprima"
+        ],
+        "efeitos_adversos": [
+          "hipoglicemia grave e prolongada",
+          "queda e confusão por hipoglicemia",
+          "ganho de peso",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg"
+        ],
+        "preparo": "Uso direto, junto da refeição que antecede o pico de ação",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia capilar e HbA1c a cada 3 meses",
+          "sintomas de hipoglicemia (sudorese, tremor, confusão, sonolência)",
+          "quedas",
+          "peso e ingestão alimentar"
+        ],
+        "ajuste_renal": "Contraindicada com TFG abaixo de 30; evitar entre 30 e 59 pelo acúmulo e risco de hipoglicemia prolongada",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Beers e STOPP apontam a sulfonilureia de ação longa como potencialmente inapropriada no idoso, e a hipoglicemia é a causa metabólica mais frequente de queda, convulsão e morte nessa faixa. Meta individualizada: HbA1c 7,5–8,5% no fragilizado, abaixo de 8% com multimorbidade e cerca de 7% apenas no idoso hígido. Desprescrever quando HbA1c está abaixo da meta em uso de sulfonilureia, quando já houve hipoglicemia ou quando a meta é paliativa.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (Beers, STOPP)",
+        "claim_id": null
+      },
+      {
+        "classe": "biguanida",
+        "agente": "metformina",
+        "papel": "alternativa",
+        "indicacao": "manutenção do controle glicêmico depois da retirada da sulfonilureia, se a função renal permitir",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1 a 2x/dia, com alimento",
+        "duracao": "uso contínuo, reavaliar a cada 6 meses",
+        "dose_maxima": "1.000 mg/dia com TFG entre 30 e 45; 2.000 mg/dia com TFG acima de 45",
+        "contraindicacoes": [
+          "TFG abaixo de 30",
+          "acidose metabólica",
+          "insuficiência hepática grave",
+          "hipóxia, sepse ou desidratação aguda",
+          "uso de contraste iodado no mesmo dia"
+        ],
+        "efeitos_adversos": [
+          "diarreia e náusea",
+          "deficiência de vitamina B12",
+          "acidose lática (rara)",
+          "gosto metálico"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 850 mg",
+          "comprimido 1.000 mg",
+          "comprimido de liberação prolongada 500 mg",
+          "comprimido de liberação prolongada 750 mg"
+        ],
+        "preparo": "Uso direto, com alimento para reduzir efeito gastrointestinal",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "TFG a cada 6 a 12 meses",
+          "vitamina B12 se neuropatia ou anemia",
+          "tolerância gastrointestinal",
+          "peso"
+        ],
+        "ajuste_renal": "Máximo 1.000 mg/dia com TFG entre 30 e 45; suspender com TFG abaixo de 30",
+        "ajuste_hepatico": "Evitar em insuficiência hepática grave pelo risco de acidose lática",
+        "observacoes": "É o hipoglicemiante que fica quando a sulfonilureia sai: risco hipoglicêmico praticamente nulo e benefício cardiovascular. Suspender 48 h antes de contraste iodado e durante doença aguda com desidratação, vômito ou sepse.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticoagulante",
+        "agente": "varfarina",
+        "papel": "condicional",
+        "indicacao": "anticoagulação em fibrilação atrial, prótese valvar ou tromboembolismo — manter e revisar interações, não desprescrever por polifarmácia",
+        "dose": "2,5–5 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia à noite, com dose ajustada pelo INR",
+        "duracao": "uso contínuo enquanto houver indicação",
+        "dose_maxima": "individualizada pelo INR alvo (2 a 3; 2,5 a 3,5 em prótese mecânica)",
+        "contraindicacoes": [
+          "sangramento ativo",
+          "plaquetas abaixo de 50.000",
+          "hipertensão grave não controlada",
+          "impossibilidade de controle de INR",
+          "gestação"
+        ],
+        "efeitos_adversos": [
+          "sangramento maior",
+          "necrose cutânea",
+          "hematoma",
+          "interações medicamentosas e alimentares"
+        ],
+        "apresentacoes": [
+          "comprimido 1 mg",
+          "comprimido 2,5 mg",
+          "comprimido 5 mg"
+        ],
+        "preparo": "Uso direto, sempre no mesmo horário",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "INR conforme alvo e estabilidade",
+          "hemoglobina e sinais de sangramento",
+          "adesão e dieta rica em vitamina K",
+          "revisão de toda nova prescrição antes de liberar"
+        ],
+        "ajuste_renal": "Sem ajuste por TFG, mas o risco de sangramento é maior na doença renal crônica — controlar o INR com mais frequência",
+        "ajuste_hepatico": "Reduzir e controlar o INR com mais frequência em hepatopatia",
+        "observacoes": "Anticoagulante não é alvo de desprescrição por polifarmácia: suspender expõe a AVC e embolia. Suspender apenas com sangramento, INR instável sem causa corrigível ou decisão compartilhada de fim de vida. O que se faz é revisar a interação — AINE, amiodarona, sulfametoxazol-trimetoprima, fluconazol, eritromicina, claritromicina — e confirmar que a dose é a menor eficaz para o alvo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "ibp",
+        "agente": "omeprazol",
+        "papel": "condicional",
+        "indicacao": "'gastroproteção' crônica sem indicação documentada — alvo de step-down e retirada",
+        "dose": "20 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia em jejum; no desmame, 20 mg em dias alternados por 2 a 4 semanas e depois sob demanda",
+        "duracao": "desmame em 4 a 8 semanas",
+        "dose_maxima": "20 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade a benzimidazol",
+          "uso concomitante de clopidogrel (omeprazol reduz a ativação — preferir pantoprazol)"
+        ],
+        "efeitos_adversos": [
+          "hipomagnesemia",
+          "deficiência de vitamina B12",
+          "infecção por C. difficile",
+          "fratura de quadril",
+          "nefrite intersticial",
+          "rebote ácido na retirada"
+        ],
+        "apresentacoes": [
+          "cápsula 10 mg",
+          "cápsula 20 mg",
+          "cápsula 40 mg",
+          "comprimido dispersível 10 mg",
+          "comprimido dispersível 20 mg",
+          "frasco-ampola 40 mg"
+        ],
+        "preparo": "Uso direto, 30 a 60 minutos antes do café da manhã; não partir a cápsula de liberação entérica",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "pirose e dispepsia nas duas primeiras semanas de desmame",
+          "magnésio se uso acima de 1 ano",
+          "vitamina B12",
+          "função renal",
+          "necessidade real: há indicação de manutenção registrada?"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em Child B e C",
+        "observacoes": "Indicação de manutenção: Barrett, esofagite erosiva, úlcera cicatrizada com H. pylori tratado, uso de AINE em alto risco e síndrome de Zollinger-Ellison. Fora dessas situações, após 8 semanas o IBP é retirado. 'Gastroproteção' em quem não usa AINE, não usa anticoagulante e nunca teve úlcera é o exemplo mais comum de fármaco sem indicação do catálogo — e o rebote ácido da primeira quinzena é o que faz o paciente e o médico concluírem, erradamente, que o remédio era necessário.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (STOPP)",
+        "claim_id": null
+      },
+      {
+        "classe": "estatina",
+        "agente": "sinvastatina",
+        "papel": "condicional",
+        "indicacao": "prevenção primária em fragilidade avançada, demência avançada, acamado ou expectativa de vida curta — alvo de desprescrição",
+        "dose": "20–40 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia à noite; a retirada pode ser direta, sem desmame",
+        "duracao": "reavaliar em 3 meses após a retirada",
+        "dose_maxima": "40 mg/dia (80 mg não é recomendada pelo risco de miopatia)",
+        "contraindicacoes": [
+          "hepatopatia ativa",
+          "gestação e amamentação",
+          "uso de inibidor potente de CYP3A4 (claritromicina, itraconazol, ritonavir)",
+          "miopatia ativa"
+        ],
+        "efeitos_adversos": [
+          "mialgia",
+          "elevação de CK",
+          "rabdomiólise (rara)",
+          "elevação de transaminases",
+          "novo diagnóstico de diabetes",
+          "catarata"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido 20 mg",
+          "comprimido 40 mg",
+          "comprimido 80 mg"
+        ],
+        "preparo": "Uso direto, à noite",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "CK e sintomas musculares",
+          "perfil lipídico e função hepática",
+          "glicemia",
+          "evento cardiovascular novo durante o seguimento"
+        ],
+        "ajuste_renal": "Sem ajuste até TFG 30; evitar 80 mg na doença renal crônica",
+        "ajuste_hepatico": "Evitar em hepatopatia ativa ou transaminases acima de 3 vezes o limite",
+        "observacoes": "Desprescrever em prevenção primária quando há fragilidade avançada, demência avançada, expectativa de vida menor que 1 ano ou paciente acamado: o benefício aparece em anos e o risco — mialgia, interação, carga de comprimidos — é imediato. Manter em prevenção secundária (infarto, AVC, revascularização), salvo decisão paliativa compartilhada e registrada. Não existe síndrome de retirada da estatina: a retirada pode ser direta, com reavaliação clínica e lipídica em 3 meses.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (STOPP)",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "prednisona",
+        "papel": "condicional",
+        "indicacao": "uso sistêmico prolongado por doença inflamatória, DPOC ou artrite — alvo de desmame estruturado",
+        "dose": "5–20 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã; no desmame, reduzir 5 mg/semana acima de 20 mg, 2,5 mg/semana entre 5 e 20 mg e 1 mg a cada 2 a 4 semanas abaixo de 5 mg",
+        "duracao": "desmame em semanas a meses, conforme tempo de uso",
+        "dose_maxima": "individualizada pela doença de base",
+        "contraindicacoes": [
+          "infecção fúngica sistêmica não tratada",
+          "vacina de vírus vivo em uso de dose imunossupressora",
+          "psicose por corticoide prévia"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipertensão",
+          "osteoporose e fratura vertebral",
+          "miopatia proximal",
+          "catarata",
+          "delirium e insônia",
+          "infecção oportunista",
+          "supressão do eixo adrenal"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 20 mg"
+        ],
+        "preparo": "Uso direto pela manhã, com alimento; fracionar o comprimido de 5 mg para ajustes finos no fim do desmame",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia e pressão arterial",
+          "peso e edema",
+          "sintomas de insuficiência adrenal na retirada (astenia, hipotensão, náusea, dor abdominal)",
+          "densidade mineral óssea e fratura",
+          "catarata e infecção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Em hepatopatia grave preferir prednisolona, que não depende de conversão hepática",
+        "observacoes": "Regra prática: uso por menos de 3 semanas em dose baixa pode ser suspenso direto; uso acima de 3 semanas ou dose acima de 20 mg/dia exige desmame. Nunca suspender abruptamente após uso prolongado: a crise adrenal cursa com hipotensão e choque e mata. Cobrir estresse cirúrgico ou infecção grave com hidrocortisona em dose de estresse e registrar isso na lista de medicações.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "tramadol",
+        "papel": "condicional",
+        "indicacao": "dor crônica em uso prolongado de opioide fraco no idoso — alvo de redução gradual e troca por analgesia não opioide",
+        "dose": "25–50 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h; na retirada, reduzir 25 a 50% da dose a cada 1 a 2 semanas",
+        "duracao": "retirada em 2 a 4 semanas quando o uso passa de 4 semanas",
+        "dose_maxima": "200 mg/dia no idoso",
+        "contraindicacoes": [
+          "epilepsia não controlada",
+          "uso de IMAO",
+          "intoxicação por depressores do sistema nervoso central",
+          "TFG abaixo de 30 sem ajuste",
+          "história de convulsão com tramadol"
+        ],
+        "efeitos_adversos": [
+          "náusea e vômito",
+          "constipação",
+          "sedação",
+          "convulsão",
+          "hiponatremia por SIADH",
+          "síndrome serotoninérgica com ISRS",
+          "queda",
+          "dependência"
+        ],
+        "apresentacoes": [
+          "comprimido 50 mg",
+          "comprimido 100 mg",
+          "cápsula de liberação prolongada 100 mg",
+          "cápsula de liberação prolongada 150 mg",
+          "cápsula de liberação prolongada 200 mg",
+          "solução oral gotas 100 mg/mL",
+          "ampola 50 mg/mL"
+        ],
+        "preparo": "Uso direto; a solução em gotas permite reduzir 5 mg por vez no desmame",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sódio sérico",
+          "nível de sedação",
+          "função intestinal e constipação",
+          "convulsão e sinais serotoninérgicos",
+          "dor em escala 0 a 10",
+          "sintomas de abstinência na redução"
+        ],
+        "ajuste_renal": "TFG abaixo de 30: 50 mg 12/12 h, máximo 200 mg/dia",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia",
+        "observacoes": "Beers aponta o tramadol como opioide a evitar no idoso: causa convulsão, hiponatremia e síndrome serotoninérgica, e a analgesia é fraca. Retirada abrupta em uso prolongado causa síndrome de abstinência e dor difusa. Quando o motivo é dor crônica, escalonar antes de retirar: paracetamol em dose plena, duloxetina ou gabapentina para dor neuropática e fisioterapia. Prescrever laxante enquanto o opioide estiver em uso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura (Beers)",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "analgesia de substituição que viabiliza a retirada do AINE e do tramadol",
+        "dose": "500–750 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h em horário fixo, se dor",
+        "duracao": "enquanto houver dor; reavaliar em 2 semanas",
+        "dose_maxima": "3 g/dia no idoso frágil, hepatopata ou etilista; 4 g/dia no idoso hígido",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave com depleção de glutationa",
+          "uso de outro produto que contenha paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose alta",
+          "náusea",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral gotas 200 mg/mL",
+          "solução oral 32 mg/mL",
+          "frasco IV 10 mg/mL"
+        ],
+        "preparo": "Uso direto; a apresentação IV é infundida sem diluir ou em 50 mL de SF 0,9%",
+        "tempo_infusao": "não se aplica (via oral); 15 minutos na via IV",
+        "monitorizacao": [
+          "soma da dose diária de todas as fontes, incluindo associações",
+          "intensidade da dor em escala 0 a 10",
+          "função hepática se uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste; espaçar para 6/8 h com TFG abaixo de 30",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia; evitar em Child C",
+        "observacoes": "É o substituto que faz a desprescrição funcionar: prescrever em horário fixo e em dose plena, não 'se dor'. Sem analgesia de substituição, a retirada do AINE e do tramadol falha e o paciente volta ao fármaco de risco. Conferir se há paracetamol escondido em associações e antigripais antes de somar a dose.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "colecalciferol (vitamina D)",
+        "papel": "condicional",
+        "indicacao": "reposição em idoso com deficiência, risco de queda ou fratura — exemplo do que não se retira por 'polifarmácia'",
+        "dose": "1.000 UI",
+        "unidade": "UI",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "uso contínuo, reavaliar em 12 meses",
+        "dose_maxima": "2.000 UI/dia sem controle de cálcio; doses maiores apenas com deficiência documentada",
+        "contraindicacoes": [
+          "hipercalcemia",
+          "sarcoidose",
+          "hiperparatireoidismo primário não tratado"
+        ],
+        "efeitos_adversos": [
+          "hipercalcemia",
+          "hipercalciúria",
+          "nefrolitíase"
+        ],
+        "apresentacoes": [
+          "cápsula 1.000 UI",
+          "cápsula 2.000 UI",
+          "cápsula 7.000 UI",
+          "solução oral gotas 400 UI/gota"
+        ],
+        "preparo": "Uso direto, com refeição que contenha gordura para melhor absorção",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "cálcio sérico se dose acima de 2.000 UI/dia",
+          "25-OH-vitamina D em caso de dúvida de adesão",
+          "quedas e fratura"
+        ],
+        "ajuste_renal": "Na doença renal crônica avançada usar forma ativa (calcitriol) sob controle de cálcio, fósforo e PTH",
+        "observacoes": "Exemplo do que não se desprescreve por 'polifarmácia': a reposição de 800 a 1.000 UI/dia é barata, segura e coerente com a prevenção de queda no idoso com deficiência. Retirar apenas com hipercalcemia, litíase, duplicidade de prescrição ou quando não há mais meta de prevenção de fratura.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Lista única de medicações construída com as caixas na mão",
+        "detalhe": "Pedir que o paciente traga todos os frascos, incluindo colírios, pomadas, fitoterápicos, amostras grátis e remédios de uso esporádico; anotar dose, horário, quem prescreveu e desde quando. A lista de memória subestima em cerca de um terço os fármacos em uso"
+      },
+      {
+        "medida": "Conciliação medicamentosa em toda transição de cuidado",
+        "detalhe": "Comparar a lista do paciente com a prescrição hospitalar na admissão, na transferência e na alta; identificar duplicidade de classe, omissão e interação antes de liberar a receita. A alta é o momento de maior risco de erro"
+      },
+      {
+        "medida": "Definir meta terapêutica por fármaco e por paciente",
+        "detalhe": "Para cada fármaco registrar qual desfecho ele persegue (pressão, HbA1c, LDL, INR, dor, sono) e qual a meta individualizada conforme fragilidade e expectativa de vida. Fármaco sem meta declarada é candidato à retirada"
+      },
+      {
+        "medida": "Revisão farmacológica estruturada anual com Beers e STOPP",
+        "detalhe": "Aplicar as duas listas na mesma consulta, somar a carga anticolinérgica e registrar no prontuário o que foi mantido e por quê. A revisão anual reduz hospitalização por iatrogenia e é o padrão mínimo de seguimento"
+      },
+      {
+        "medida": "Retirada sequencial, um fármaco por vez",
+        "detalhe": "Intervalo de 2 a 4 semanas entre retiradas, começando pelo de maior risco e menor benefício; registrar data, dose inicial, velocidade do desmame e sintomas esperados. Retirar vários ao mesmo tempo impede atribuir efeito e precipita abstinência"
+      },
+      {
+        "medida": "Diário de sintomas e plano de resgate escrito",
+        "detalhe": "Explicar por escrito o que esperar (insônia de rebote, pirose, dor, ansiedade), por quanto tempo e o que fazer; dar telefone de contato. A maior causa de falha da desprescrição é o paciente interpretar o sintoma de retirada como recidiva e voltar a dose antiga"
+      },
+      {
+        "medida": "Simplificação do esquema posológico",
+        "detalhe": "Reduzir o número de tomadas por dia, usar associações quando fizer sentido, alinhar horários à rotina e usar caixa organizadora ou aplicativo com alarme. Menos tomadas significa mais adesão e menos erro"
+      },
+      {
+        "medida": "Envolver cuidador e farmacêutico",
+        "detalhe": "Cuidador treinado reconhece efeito adverso e evita automedicação; o farmacêutico clínico faz a conciliação, checa interação e orienta o desmame. Nos casos de 10 ou mais fármacos, o acompanhamento compartilhado é o que sustenta a mudança"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Conciliação medicamentosa estruturada",
+        "indicacao": "Toda admissão, transferência, alta e primeira consulta de idoso em polifarmácia",
+        "tecnica": "Entrevista com as embalagens, conferência com prontuário e farmácia, checagem de duplicidade de classe, interação e ajuste por função renal; gerar lista única assinada e entregue ao paciente",
+        "complicacoes": "Lista incompleta se feita por telefone, omissão de fitoterápico e de amostra, conflito entre prescritores e descontinuação acidental de fármaco essencial"
+      },
+      {
+        "nome": "Revisão farmacológica com critérios de Beers e STOPP",
+        "indicacao": "Idoso com 5 ou mais fármacos, ou anualmente em todos com 65 anos ou mais",
+        "tecnica": "Aplicar as duas listas, calcular carga anticolinérgica, classificar cada fármaco em manter, ajustar, reduzir ou retirar, e registrar a justificativa de cada manutenção",
+        "complicacoes": "Aplicação mecânica da lista sem considerar meta e prognóstico, retirada de fármaco essencial por erro de classificação e fadiga do paciente com muitas mudanças de uma vez"
+      },
+      {
+        "nome": "Teste de retirada supervisionada",
+        "indicacao": "Fármaco sem indicação clara, em uso por tempo indeterminado, com risco maior que benefício",
+        "tecnica": "Reduzir por etapas com intervalo definido, monitorizar sintomas por diário e consulta em 2 a 4 semanas, e reinstalar em dose menor apenas se houver recidiva objetiva comprovada",
+        "complicacoes": "Síndrome de abstinência confundida com recidiva, descompensação de doença de base e retorno permanente ao fármaco por falta de plano de resgate"
+      },
+      {
+        "nome": "Monitorização terapêutica de fármaco",
+        "indicacao": "Fármacos com janela estreita (varfarina, digoxina, lítio, fenitoína, aminoglicosídeo) ou ajuste por função renal",
+        "tecnica": "Coletar nível sérico no tempo correto em relação à dose, interpretar junto da clínica e ajustar a dose; repetir após 5 meias-vidas",
+        "complicacoes": "Coleta em tempo errado, interpretação isolada do nível, ajuste sem reavaliar a indicação e risco de toxicidade por acúmulo na doença renal crônica"
+      },
+      {
+        "nome": "Avaliação de fragilidade e prognóstico",
+        "indicacao": "Decisão de manter ou retirar prevenção primária (estatina, hipoglicemiante, anti-hipertensivo) no idoso",
+        "tecnica": "Aplicar índice de fragilidade clínica ou escala de fragilidade de Fried, estimar expectativa de vida pela combinação de comorbidade, função e cognição, e registrar a meta no prontuário",
+        "complicacoes": "Subestimar a fragilidade por boa aparência social, manter prevenção primária em quem não tem tempo de se beneficiar e retirar fármaco de prevenção secundária por engano"
+      },
+      {
+        "nome": "Avaliação de adesão e do uso real",
+        "indicacao": "Dúvida sobre adesão, prescrição repetida sem controle, ou farmácia diferente a cada mês",
+        "tecnica": "Contagem de comprimidos, consulta ao registro de dispensação, entrevista sem julgamento e teste de conhecimento do esquema; comparar o prescrito com o usado",
+        "complicacoes": "Confundir não adesão com falha terapêutica e intensificar dose, ou atribuir sintoma a doença quando é abstinência por uso irregular"
+      }
+    ],
+    "metas": [
+      "Lista única de medicações conciliada e registrada em 100% dos pacientes na primeira consulta e em toda transição de cuidado",
+      "Revisão farmacológica com Beers e STOPP documentada ao menos uma vez por ano",
+      "Pelo menos um fármaco de alto risco desprescrito ou com dose reduzida por revisão, quando houver alvo elegível",
+      "Nenhum fármaco mantido sem indicação registrada no prontuário",
+      "Nenhuma suspensão abrupta de benzodiazepínico, corticoide, opioide, antiepiléptico ou antidepressivo",
+      "Zero episódio de hipoglicemia grave em paciente com sulfonilureia após ajuste da meta",
+      "Carga anticolinérgica reduzida em paciente com demência, constipação ou retenção urinária",
+      "Interações graves identificadas e resolvidas antes da alta hospitalar",
+      "Reavaliação clínica em 2 a 4 semanas após cada retirada, com registro de melhora, piora ou recidiva"
+    ],
+    "fluxo": [
+      "Montar a lista única com as embalagens na mão, incluindo fitoterápico, colírio, amostra e uso sob demanda",
+      "Para cada fármaco, responder: qual a indicação, quem prescreveu, desde quando e qual a meta terapêutica",
+      "Cruzar com Beers e STOPP e calcular a carga anticolinérgica total",
+      "Avaliar função renal e hepática, peso, fragilidade, cognição e expectativa de vida",
+      "Classificar cada fármaco em manter, ajustar dose, reduzir ou retirar — e registrar o motivo",
+      "Escolher um único alvo: o de maior risco e menor benefício",
+      "Planejar a retirada: dose de partida, velocidade, duração, sintoma esperado, substituto e plano de resgate escrito",
+      "Retirar, monitorizar em 2 a 4 semanas e registrar o resultado",
+      "Reiniciar em dose menor apenas se houver recidiva objetiva; caso contrário, seguir para o próximo alvo",
+      "Repetir a revisão completa em 12 meses ou antes se houver queda, confusão, nova prescrição ou internação"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "ajustar dose pelo clearance (metformina, gabapentina, tramadol, digoxina, anticoagulante) e suspender AINE e contraste eletivo desnecessário",
+        "alerta": "acúmulo e toxicidade mesmo com creatinina 'normal' no idoso sarcopênico"
+      },
+      {
+        "populacao": "demencia",
+        "ajuste": "retirar anticolinérgico e benzodiazepínico, evitar antipsicótico crônico e revisar a necessidade de estatina e hipoglicemiante",
+        "alerta": "piora cognitiva e delirium confundidos com progressão da doença"
+      },
+      {
+        "populacao": "idoso_fragil",
+        "ajuste": "priorizar sintoma e função, metas menos rígidas de pressão, glicemia e LDL, e desmame mais lento",
+        "alerta": "hipotensão, hipoglicemia e queda com metas de adulto jovem"
+      },
+      {
+        "populacao": "hepatopata",
+        "ajuste": "evitar benzodiazepínico de ação longa, AINE e metformina; preferir oxazepam, lorazepam e prednisolona",
+        "alerta": "encefalopatia e insuficiência adrenal precipitadas por fármaco"
+      },
+      {
+        "populacao": "etilista",
+        "ajuste": "somar risco de hepatotoxicidade do paracetamol, sangramento e abstinência; tiamina antes da glicose",
+        "alerta": "crise convulsiva na retirada de benzodiazepínico e Wernicke"
+      },
+      {
+        "populacao": "fim_de_vida",
+        "ajuste": "desprescrever prevenção primária (estatina, bifosfonato, hipoglicemiante, IBP sem sintoma) e manter o que controla sintoma",
+        "alerta": "carga de comprimidos e desconforto sem benefício plausível no tempo de vida restante"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "creatinina com TFG estimada",
+          "indicacao": "todos, antes de ajustar dose",
+          "o_que_muda": "define se metformina, gabapentina, tramadol e anticoagulante precisam de ajuste ou suspensão"
+        },
+        {
+          "nome": "sódio, potássio, cálcio e magnésio",
+          "indicacao": "todos em uso de diurético, IECA/BRA, IBP ou tramadol",
+          "o_que_muda": "identifica hiponatremia, hipercalemia e hipomagnesemia que explicam queda, confusão e arritmia"
+        },
+        {
+          "nome": "hemograma",
+          "indicacao": "todos, sobretudo em uso de anticoagulante, AINE ou antiagregante",
+          "o_que_muda": "anemia e plaquetopenia mudam a decisão de manter anticoagulação e AINE"
+        },
+        {
+          "nome": "glicemia e HbA1c",
+          "indicacao": "diabético em uso de sulfonilureia ou insulina",
+          "o_que_muda": "HbA1c abaixo da meta indica redução ou retirada do hipoglicemiante"
+        },
+        {
+          "nome": "INR",
+          "indicacao": "uso de varfarina",
+          "o_que_muda": "guia a dose e detecta interação antes do sangramento"
+        },
+        {
+          "nome": "ECG de 12 derivações",
+          "indicacao": "uso de fármaco que alarga o QT ou cardiopatia",
+          "o_que_muda": "QTc acima de 500 ms contraindica antipsicótico, tricíclico e alguns antiarrítmicos"
+        },
+        {
+          "nome": "TSH",
+          "indicacao": "fadiga, queda, fibrilação atrial ou uso de amiodarona e levotiroxina",
+          "o_que_muda": "hipertireoidismo e hipotireoidismo simulam e agravam iatrogenia"
+        },
+        {
+          "nome": "nível sérico de fármaco",
+          "indicacao": "digoxina, lítio, fenitoína, vancomicina e outros de janela estreita",
+          "o_que_muda": "confirma toxicidade por acúmulo e define redução de dose"
+        },
+        {
+          "nome": "função hepática",
+          "indicacao": "uso de estatina, paracetamol, corticoide ou hepatopatia conhecida",
+          "o_que_muda": "contraindica ou exige redução de dose"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "suspender todos os fármacos de uma vez para 'limpar' a lista",
+          "motivo": "precipita abstinência, convulsão, delirium, angina, crise adrenal e descompensação glicêmica; impede atribuir o efeito de cada retirada"
+        },
+        {
+          "exame": "manter fármaco sem indicação documentada por inércia ou por 'está estável assim'",
+          "motivo": "é a definição operacional de polifarmácia e a principal fonte de iatrogenia evitável"
+        },
+        {
+          "exame": "prescrever um fármaco novo para tratar efeito adverso de outro sem retirar o primeiro",
+          "motivo": "é a cascata de prescrição: resolve o sintoma por semanas e multiplica o problema por anos"
+        },
+        {
+          "exame": "AINE em idoso anticoagulado, com doença renal crônica ou insuficiência cardíaca",
+          "motivo": "multiplica o risco de hemorragia digestiva, lesão renal aguda e descompensação cardíaca"
+        },
+        {
+          "exame": "benzodiazepínico ou Z-drug para insônia em idoso",
+          "motivo": "dobra o risco de queda, fratura de quadril e delirium, e a retirada posterior é difícil"
+        },
+        {
+          "exame": "estatina e hipoglicemiante de meta rígida em fragilidade avançada ou fim de vida",
+          "motivo": "o benefício não se realiza no tempo de vida restante e o risco é imediato"
+        },
+        {
+          "exame": "bateria de exames de rotina sem que o resultado mude conduta",
+          "motivo": "gera achado incidental, novo exame e nova prescrição, sem melhorar desfecho"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "trazer todas as caixas, inclusive colírio, pomada, chá e remédio de farmácia, na próxima consulta",
+        "manter uma lista única atualizada no celular ou na carteira, com dose e horário",
+        "avisar todo prescritor sobre os remédios que já usa, inclusive os de outro médico",
+        "registrar no calendário as datas de redução do desmame combinado",
+        "contar ao médico qualquer sintoma novo nas duas semanas seguintes a uma retirada",
+        "usar caixa organizadora de comprimidos e alarme no celular",
+        "informar imediatamente queda, tontura ao levantar, confusão ou sangramento"
+      ],
+      "evitar": [
+        "tomar remédio emprestado de outra pessoa ou indicado por vizinho e balconista",
+        "parar um remédio por conta própria, sobretudo corticoide, remédio para dormir, para convulsão e para o coração",
+        "aumentar a dose do remédio para dormir quando a noite é ruim",
+        "usar AINE por conta própria, ainda mais com anticoagulante ou 'remédio para o rim'",
+        "acumular receitas de vários médicos sem mostrar todas ao mesmo profissional",
+        "guardar remédio vencido e continuar usando a cartela antiga"
+      ],
+      "retorno": [
+        "queda, tontura ao levantar ou desmaio",
+        "confusão, sonolência excessiva ou agitação nova",
+        "sangramento, fezes escuras ou hematoma grande",
+        "glicemia baixa, sudorese ou tremor",
+        "insônia intensa ou ansiedade após iniciar o desmame",
+        "falta de ar, edema ou ganho de peso rápido"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "clonazepam",
+        "efeitos": [
+          "sedação diurna",
+          "queda",
+          "delirium",
+          "depressão respiratória com opioide"
+        ],
+        "observacao": "reduzir 25% a cada 2 semanas; nunca suspender abruptamente; não associar a opioide sem necessidade absoluta"
+      },
+      {
+        "agente": "zolpidem",
+        "efeitos": [
+          "sonambulismo",
+          "amnésia",
+          "queda noturna"
+        ],
+        "observacao": "suspender se houver comportamento complexo durante o sono; não repor dose em caso de insônia de rebote"
+      },
+      {
+        "agente": "amitriptilina",
+        "efeitos": [
+          "boca seca",
+          "constipação",
+          "retenção urinária",
+          "confusão",
+          "QT longo"
+        ],
+        "observacao": "reduzir 50% a cada 1 a 2 semanas; ECG se cardiopatia"
+      },
+      {
+        "agente": "ibuprofeno",
+        "efeitos": [
+          "hemorragia digestiva",
+          "lesão renal aguda",
+          "edema e hipertensão"
+        ],
+        "observacao": "suspender ao primeiro sinal de sangramento ou elevação de creatinina; substituir por paracetamol"
+      },
+      {
+        "agente": "glibenclamida",
+        "efeitos": [
+          "hipoglicemia grave e prolongada",
+          "queda",
+          "confusão"
+        ],
+        "observacao": "reduzir 50% e medir glicemia em 1 semana; suspender se hipoglicemia recorrente"
+      },
+      {
+        "agente": "omeprazol",
+        "efeitos": [
+          "hipomagnesemia",
+          "deficiência de B12",
+          "C. difficile",
+          "rebote ácido"
+        ],
+        "observacao": "desmame com dias alternados por 2 a 4 semanas; magnésio se uso acima de 1 ano"
+      },
+      {
+        "agente": "sinvastatina",
+        "efeitos": [
+          "mialgia",
+          "elevação de CK",
+          "rabdomiólise rara"
+        ],
+        "observacao": "suspender se mialgia com CK acima de 10 vezes o limite; retirada pode ser direta"
+      },
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "hipertensão",
+          "fratura",
+          "insuficiência adrenal na retirada"
+        ],
+        "observacao": "desmame lento; cobrir estresse com hidrocortisona"
+      },
+      {
+        "agente": "tramadol",
+        "efeitos": [
+          "convulsão",
+          "hiponatremia",
+          "constipação",
+          "serotoninérgico"
+        ],
+        "observacao": "dosar sódio, prescrever laxante e reduzir 25 a 50% a cada 1 a 2 semanas"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender ou reduzir o fármaco implicado e registrar a reação em prontuário com data e dose",
+      "Queda ou síncope: revisar sedativo, hipnótico, anti-hipertensivo e hipoglicemiante antes de atribuir à 'idade'",
+      "Sangramento com anticoagulante e AINE: suspender o AINE, dosar hemograma e INR e reavaliar a anticoagulação",
+      "Hipoglicemia com sulfonilureia: corrigir a glicemia, reduzir 50% ou suspender e individualizar a meta de HbA1c",
+      "Suspeita de insuficiência adrenal na retirada do corticoide: retomar a dose anterior, investigar e desmamar mais devagar",
+      "Sintoma de abstinência de benzodiazepínico: voltar à última dose tolerada por 2 semanas e retomar o desmame em passo menor; não reiniciar a dose original",
+      "Reavaliar a lista completa após qualquer reação: um efeito adverso é indicação de revisão, não de nova prescrição"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol 500 mg",
+            "dose": "500–750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor, em horário fixo",
+            "duracao": "30 dias",
+            "condicao": "substituição do AINE ou do tramadol",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metformina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "2x/dia com alimento",
+            "duracao": "90 dias",
+            "condicao": "após retirada da sulfonilureia, com TFG acima de 30",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "colecalciferol (vitamina D) 1.000 UI",
+            "dose": "1.000 UI",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "90 dias",
+            "condicao": "manter na prevenção de queda",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "omeprazol 20 mg em dias alternados",
+            "dose": "20 mg",
+            "via": "VO",
+            "frequencia": "em dias alternados por 2 a 4 semanas, depois sob demanda",
+            "duracao": "4 semanas",
+            "condicao": "desmame de IBP sem indicação de manutenção",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "clonazepam solução oral 2,5 mg/mL",
+            "dose": "redução de 25% a cada 2 semanas",
+            "via": "VO",
+            "frequencia": "1x à noite",
+            "duracao": "12 semanas",
+            "condicao": "desmame de benzodiazepínico",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO ou IV",
+            "frequencia": "6/6 h se dor",
+            "monitorizacao": "dose total diária e função hepática",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "hidrocortisona 100 mg",
+            "dose": "100 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "glicemia e pressão, em paciente com corticoide crônico e estresse agudo",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "omeprazol 40 mg",
+            "dose": "40 mg",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "indicação de manutenção e magnésio",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "creatinina e TFG",
+          "sódio e potássio",
+          "hemograma",
+          "glicemia e HbA1c",
+          "INR",
+          "ECG",
+          "função hepática",
+          "magnésio",
+          "TSH",
+          "nível sérico de fármaco",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, em revisão de medicações e ajuste de esquema terapêutico.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento médico"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com lista de fármacos atual",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente idoso em polifarmácia, com lista única de medicações, indicação de cada fármaco, critérios de Beers e STOPP aplicados, fármacos retirados e motivo, velocidade do desmame, substitutos introduzidos, metas individualizadas e plano de reavaliação em 2 a 4 semanas."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "lista completa de fármacos com dose e horário",
+        "prescritores e data de início",
+        "automedicação, fitoterápico e amostra",
+        "queda, tontura e síncope",
+        "cognição e sono",
+        "adesão real e efeitos adversos",
+        "função renal e hepática conhecidas",
+        "metas e expectativa de vida",
+        "internações e reações prévias"
+      ],
+      "texto_template": "Idoso em revisão de medicações, com lista completa e respectivos prescritores e datas, uso de fitoterápico e automedicação, história de queda, tontura e síncope, cognição e sono, adesão real e efeitos adversos relatados, função renal e hepática conhecidas, metas individualizadas conforme fragilidade e registro de internações e reações prévias."
+    },
+    "exame_fisico": {
+      "itens": [
+        "pressão arterial sentado e em pé",
+        "pulso e frequência cardíaca",
+        "peso e índice de massa corporal",
+        "marcha, equilíbrio e teste de levantar da cadeira",
+        "cognição e atenção",
+        "pele e sinais de sangramento",
+        "ausculta cardíaca e pulmonar",
+        "abdome e função intestinal",
+        "hidratação e mucosas"
+      ],
+      "texto_template": "Pressão arterial em duas posições, pulso, peso, avaliação de marcha e equilíbrio com teste de levantar da cadeira, cognição e atenção, pele e sinais de sangramento, ausculta cardiorrespiratória, abdome e hábito intestinal, hidratação e mucosas."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de conciliação medicamentosa na admissão e na alta e formulário de revisão farmacológica",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_geriatria",
+        "o_que_verificar": "critérios de Beers atualizados e STOPP/START para o idoso",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_nefrologia",
+        "o_que_verificar": "ajuste de dose por TFG e suspensão peri-contraste",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e doses de clonazepam, zolpidem, amitriptilina, ibuprofeno, glibenclamida, metformina, varfarina, omeprazol, sinvastatina, prednisona, tramadol e vitamina D",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-GER03-01",
+        "tipo": "anticoagulante_com_aine",
+        "gatilho": "AINE prescrito em paciente anticoagulado ou com antiagregante",
+        "severidade": "grave",
+        "mensagem": "AINE com anticoagulante multiplica o risco de hemorragia digestiva.",
+        "acao": "bloquear item e sugerir paracetamol",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER03-02",
+        "tipo": "benzo_com_opioide",
+        "gatilho": "benzodiazepínico ou Z-drug associado a opioide",
+        "severidade": "grave",
+        "mensagem": "Associação sedativo-opioide: risco de depressão respiratória e morte.",
+        "acao": "bloquear item e exigir justificativa",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER03-03",
+        "tipo": "suspensao_abrupta",
+        "gatilho": "suspensão abrupta de benzodiazepínico, corticoide, opioide, antiepiléptico ou antidepressivo",
+        "severidade": "grave",
+        "mensagem": "Retirada abrupta causa abstinência, convulsão e crise adrenal.",
+        "acao": "bloquear conduta e sugerir plano de desmame",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER03-04",
+        "tipo": "hipoglicemia",
+        "gatilho": "sulfonilureia em idoso com TFG abaixo de 45 ou glicemia capilar abaixo de 70 mg/dL",
+        "severidade": "grave",
+        "mensagem": "Sulfonilureia com função renal reduzida: risco de hipoglicemia prolongada.",
+        "acao": "sugerir redução ou retirada e individualizar a meta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER03-05",
+        "tipo": "nefrotoxicidade",
+        "gatilho": "fármaco nefrotóxico ou de excreção renal sem ajuste em TFG abaixo de 45",
+        "severidade": "grave",
+        "mensagem": "Dose não ajustada à função renal.",
+        "acao": "alertar e exigir ajuste calculado",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-GER03-06",
+        "tipo": "cascata",
+        "gatilho": "novo fármaco prescrito nos últimos 90 dias com sintoma coincidente de efeito adverso de outro",
+        "severidade": "precaucao",
+        "mensagem": "Suspeita de cascata de prescrição: revisar o fármaco índice antes de manter o novo.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER03-07",
+        "tipo": "sem_revisao",
+        "gatilho": "10 ou mais fármacos sem revisão farmacológica registrada em 12 meses",
+        "severidade": "precaucao",
+        "mensagem": "Polifarmácia sem revisão anual documentada.",
+        "acao": "sugerir revisão com Beers e STOPP",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-GER03-08",
+        "tipo": "duplicidade",
+        "gatilho": "dois fármacos da mesma classe ou princípio ativo em associação",
+        "severidade": "precaucao",
+        "mensagem": "Duplicidade terapêutica identificada.",
+        "acao": "alertar e sugerir consolidação",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "Beers",
+        "STOPP"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: polifarmácia como síndrome iatrogênica e não como contagem de comprimidos, com desprescrição criteriosa como núcleo da conduta; critérios de Beers e STOPP como triagem e não como proibição; cascata de prescrição identificada e tratada pela retirada do fármaco índice; 13 fármacos com apresentações, preparo, tempo de infusão, monitorização, ajuste renal e hepático, cobrindo benzodiazepínico, Z-drug, anticolinérgico tricíclico, AINE, sulfonilureia com metformina como substituta, anticoagulante que se mantém, IBP crônico, estatina em fragilizado, corticoide, tramadol, paracetamol de substituição e vitamina D como exemplo do que não se retira; desmame detalhado de benzodiazepínico, IBP e corticoide; proibição explícita de suspender tudo de uma vez, ignorar interação e manter fármaco sem indicação; conciliação medicamentosa, revisão anual, metas individualizadas por fragilidade e reavaliação em 2 a 4 semanas após cada retirada.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

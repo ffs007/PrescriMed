@@ -1,0 +1,599 @@
+{
+  "id": "ws-neu_13",
+  "nome": "Ataque isquêmico transitório",
+  "cat": "Neurológico",
+  "alias": "ataque isquemico transitorio ait ataque isquemico transitorio isquemia cerebral transitoria deficit neurologico transitorio amaurose fugaz",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (NEU-13_ait.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de AIT com imagem e Doppler em 24 h, disponibilidade de endarterectomia e de monitorização de ritmo",
+      "[verificar] sociedade_neurologia: definição tecidual de AIT, aplicação do ABCD2 e indicação de dupla antiagregação por 21 dias",
+      "[verificar] diretriz_de_prevencao_secundaria: alvo de LDL, alvo pressórico, anticoagulação na fibrilação atrial e prazo dos antiagregantes",
+      "[verificar] sociedade_vascular: indicação e momento da endarterectomia e do stent carotídeo na estenose sintomática",
+      "[verificar] anvisa: apresentações disponíveis de clopidogrel, ticagrelor, dipiridamol e DOAC no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "NEU-13 em 2026-11-27",
+    "fundido_workspace": "NEU-13 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: déficit recorrente ou flutuante em 7 dias (AIT em cascata) -> internar, dupla antiagregação imediata e imagem vascular de urgência; fibrilação atrial no ECG ou no monitor -> iniciar anticoagulação plena e suspender a dupla antiagregação; sopro carotídeo ou estenose de 50% a 99% ipsilateral ao déficit -> acionar cirurgia vascular no mesmo dia; déficit motor ou de fala com duração acima de 60 minutos -> internação e DAPT por 21 dias. 1) Confirmar que é AIT: déficit resolvido, hora de início e de resolução, exame neurológico normal agora e glicemia capilar medida para excluir hipoglicemia 2) Imagem imediata: ressonância com difusão quando disponível, tomografia sem contraste quando não; restrição à difusão reclassifica o caso como AVC e muda o fluxo 3) Estratificar risco com ABCD2 mais clínica e causa: déficit motor, fala, duração acima de 60 min, recorrência em 7 dias, fibrilação atrial ou estenose conhecida definem alto risco e internação 4) Iniciar antiagregação sem esperar os exames: AAS 300 mg mais clopidogrel 300 mg no alto risco; monoterapia no baixo risco 5) Investigar etiologia no mesmo dia: Doppler ou angiotomografia de carótidas, ECG, telemetria, ecocardiograma e laboratório com perfil lipídico e HbA1c 6) Iniciar estatina de alta potência e ajustar anti-hipertensivo com alvo abaixo de 130/80 mmHg, sem queda brusca nas primeiras 48 horas 7) Fibrilação atrial identificada: substituir a antiagregação por anticoagulação plena, sem manter dupla antiagrega",
+  "redFlags": [
+    "déficit recorrente ou flutuante em 7 dias (AIT em cascata) -> internar, dupla antiagregação imediata e imagem vascular de urgência",
+    "fibrilação atrial no ECG ou no monitor -> iniciar anticoagulação plena e suspender a dupla antiagregação",
+    "sopro carotídeo ou estenose de 50% a 99% ipsilateral ao déficit -> acionar cirurgia vascular no mesmo dia",
+    "déficit motor ou de fala com duração acima de 60 minutos -> internação e DAPT por 21 dias",
+    "ABCD2 de 6 a 7 ou AIT com duas ou mais crises em 24 horas -> internação em unidade com monitorização e imagem no mesmo dia",
+    "pressão acima de 220/120 mmHg com encefalopatia, edema agudo de pulmão ou síndrome aórtica -> reduzir pressão de forma controlada com droga intravenosa titulável",
+    "cefaleia súbita intensa, convulsão ou rebaixamento associados ao déficit -> imagem imediata com angiotomografia e não tratar como AIT"
+  ],
+  "naoUsar": [
+    "alergia a salicilato",
+    "sangramento ativo",
+    "úlcera péptica com sangramento recente",
+    "plaquetas abaixo de 30.000/mm³",
+    "asma com pólipo nasal e broncoespasmo prévio",
+    "hemorragia intracraniana prévia",
+    "insuficiência hepática grave Child C",
+    "alergia ao fármaco"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar o antiagregante todos os dias e saber a data exata de término do duplo antiagregante"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "faltar à investigação por sentir-se bem: o AIT não deixou sequela, mas o risco de AVC é imediato"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antiagregante plaquetário",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "aas",
+            "pos": "300 mg no primeiro dia; 100 mg/dia na manutenção. Via VO ou enteral por sonda. 1x/dia. Indefinida; 21 dias em associação ao clopidogrel no AIT de alto risco.",
+            "posTodas": true,
+            "motivo": "AIT confirmado sem hemorragia na imagem, iniciado nas primeiras 24 horas (1a linha) AIT não cardioembólico",
+            "nota": "Uso direto; se disfagia ou sonda, triturar e diluir em 20 mL de água - monitorar: sangramento digestivo, equimoses e sangramento gengival; monitorar: hemograma se sangramento clinicamente relevante; monitorar: dor epigástrica e teste de deglutição antes da primeira dose · NÃO: alergia a salicilato; sangramento ativo; úlcera péptica com sangramento recente; plaquetas abaixo de 30.000/mm³; asma com pólipo nasal e broncoespasmo prévio; hemorragia intracraniana prévia · Obs: Nunca iniciar antes da imagem: a tomografia é o que separa AIT de hemorragia. AAS isolado não é plano de AIT — a alta exige etiologia definida, estatina e…",
+            "dose": {
+              "texto": "300 mg no primeiro dia; 100 mg/dia na manutenção; 1x/dia; indefinida; 21 dias em associação ao clopidogrel no AIT de alto risco; max. 300 mg/dia",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 1,
+            "base": "leg_clopidogrel",
+            "pos": "300 mg no ataque; 75 mg/dia na manutenção. Via VO ou enteral por sonda. 1x/dia. 21 dias em associação ao AAS; monoterapia indefinida se intolerância ao AAS.",
+            "posTodas": true,
+            "motivo": "AIT de alto risco em dupla antiagregação por 21 dias; monoterapia quando há intolerância ao AAS (1a linha) AIT de alto risco",
+            "nota": "Uso direto; triturar e diluir em água quando administrado por sonda - monitorar: sangramento e equimoses; monitorar: adesão e data de término dos 21 dias; monitorar: plaquetas e hemograma se febre ou petéquias",
+            "dose": {
+              "texto": "300 mg no ataque; 75 mg/dia na manutenção; 1x/dia; 21 dias em associação ao AAS; monoterapia indefinida se intolerância ao AAS; max. 300 mg no ataque",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "ticagrelor",
+              "n": "Ticagrelor",
+              "ap": "comprimido 90 mg",
+              "q": "",
+              "pos": "180 mg no ataque; 90 mg 12/12 h. Via VO. 12/12 h. 30 dias em associação ao AAS."
+            },
+            "motivo": "AIT de alto risco quando o clopidogrel é indisponível, mal tolerado ou há falha prévia, em associação ao AAS por 30 dias (alternativa)",
+            "nota": "Uso direto, com ou sem alimento; não triturar o comprimido de liberação prolongada - monitorar: dispneia e ausculta pulmonar; monitorar: frequência cardíaca e ritmo; monitorar: sangramento; monitorar: ácido úrico se gota · NÃO: hemorragia intracraniana prévia; sangramento ativo; insuficiência hepática grave; bradicardia sintomática sem marca-passo; uso de inibidor forte de CYP3A4; plaquetas abaixo de 30.000/mm³ · Obs: Não usar com AAS acima de 100 mg/dia: a dose alta de AAS antagoniza o benefício. A dispneia é comum e raramente obriga a suspender; o prazo é de 30 dias, diferente dos 21 dias do clopidogrel",
+            "dose": {
+              "texto": "180 mg no ataque; 90 mg 12/12 h; 12/12 h; 30 dias em associação ao AAS; max. 180 mg/dia",
+              "status": "ok",
+              "valor": 180,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 180,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 30,
+              "duracao_texto": "30 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "dipiridamol",
+              "n": "Dipiridamol",
+              "ap": "cápsula 200 mg de liberação prolongada",
+              "q": "",
+              "pos": "200 mg. Via VO. 12/12 h. Indefinida enquanto durar a prevenção secundária."
+            },
+            "motivo": "AIT quando o clopidogrel não está disponível, em associação ao AAS (alternativa)",
+            "nota": "Uso direto; a cápsula de liberação prolongada não pode ser triturada nem aberta - monitorar: cefaleia e adesão; monitorar: pressão arterial; monitorar: sintomas de angina; monitorar: hábito intestinal · NÃO: angina instável; infarto do miocárdio recente; estenose aórtica grave; hipotensão; miastenia gravis; alergia · Obs: A cefaleia é o principal motivo de abandono; orientar analgésico e persistência. Esquema menos eficaz que AAS mais clopidogrel no alto risco, mas é alternativa real quando o clopidogrel falta",
+            "dose": {
+              "texto": "200 mg; 12/12 h; indefinida enquanto durar a prevenção secundária; max. 400 mg/dia",
+              "status": "ok",
+              "valor": 200,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Estatina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "atorvastatina",
+            "pos": "40 a 80 mg. Via VO ou enteral. 1x/dia, à noite. Indefinida.",
+            "posTodas": true,
+            "motivo": "AIT, iniciada na internação independentemente do LDL basal (1a linha) AIT",
+            "nota": "Uso direto, com ou sem alimento; triturar e diluir em água se via enteral - monitorar: CK se dor muscular; monitorar: ALT e AST na basal e se sintomas; monitorar: perfil lipídico em 4 a 12 semanas",
+            "dose": {
+              "texto": "40 a 80 mg; 1x/dia, à noite; indefinida; max. 80 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 80,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 80,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "rosuvastatina",
+            "pos": "20 a 40 mg. Via VO. 1x/dia. Indefinida.",
+            "posTodas": true,
+            "motivo": "AIT quando há intolerância à atorvastatina ou interação medicamentosa relevante por CYP3A4 (alternativa)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: CK se dor muscular; monitorar: transaminases na basal; monitorar: perfil lipídico em 4 a 12 semanas; monitorar: função renal em dose alta",
+            "dose": {
+              "texto": "20 a 40 mg; 1x/dia; indefinida; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 40,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anticoagulante doac",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "apixabana",
+              "n": "Apixabana",
+              "ap": "comprimido 2,5 mg",
+              "q": "",
+              "pos": "5 mg 12/12 h; 2,5 mg 12/12 h se dois entre idade 80 anos ou mais, peso até 60 kg e creatinina de 1,5 mg/dL ou mais. Via VO. 12/12 h. Indefinida."
+            },
+            "motivo": "AIT com fibrilação atrial não valvar, após excluir hemorragia na imagem (1a linha) fibrilação atrial",
+            "nota": "Uso direto, com ou sem alimento; pode ser triturado e administrado por sonda - monitorar: hemograma e função renal pelo menos 1x/ano, a cada 6 meses se idoso ou renal crônico; monitorar: sinais de sangramento; monitorar: adesão, porque a meia-vida é curta e a suspensão deixa o paciente desprotegido em 12 a 24 h · NÃO: válvula cardíaca mecânica; estenose mitral reumática moderada ou grave; sangramento ativo; Child C; plaquetas abaixo de 50.000/mm³; gestação; ClCr abaixo de 15 mL/min · Obs: Iniciar assim que a hemorragia for excluída, sem ponte com heparina na maioria dos casos. AIT cardioembólico não se trata com dupla…",
+            "dose": {
+              "texto": "5 mg 12/12 h; 2,5 mg 12/12 h se dois entre idade 80 anos ou mais, peso até 60 kg e creatinina de 1,5 mg/dL ou mais; 12/12 h; indefinida; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anti-hipertensivo bra",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "losartana",
+            "pos": "50 mg. Via VO. 12/12 h. Indefinida.",
+            "posTodas": true,
+            "motivo": "hipertensão arterial após a fase aguda do AIT, com alvo abaixo de 130/80 mmHg (1a linha) hipertensão após a fase aguda",
+            "nota": "Uso direto, com ou sem alimento - monitorar: pressão arterial em 2 a 4 semanas; monitorar: potássio e creatinina em 1 a 2 semanas após iniciar ou subir dose; monitorar: adesão",
+            "dose": {
+              "texto": "50 mg; 12/12 h; indefinida; max. 100 mg 12/12 h",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anticoagulante avk",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_varfarina",
+            "pos": "5 mg à noite, ajustada pelo INR; 2,5 mg em idoso, hepatopata ou uso de amiodarona. Via VO. 1x/dia, sempre no mesmo horário. Indefinida.",
+            "posTodas": true,
+            "motivo": "AIT com fibrilação atrial e válvula mecânica, estenose mitral reumática ou ClCr abaixo de 15 mL/min (alternativa) válvula mecânica ou estenose mitral reumática",
+            "nota": "Uso direto, com ou sem alimento; manter ingestão de vitamina K constante - monitorar: INR diário até estabilizar, depois semanal e mensal; monitorar: tempo na faixa terapêutica acima de 70%; monitorar: sinais de sangramento; monitorar: revisão de interações a cada nova prescrição",
+            "dose": {
+              "texto": "5 mg à noite, ajustada pelo INR; 2,5 mg em idoso, hepatopata ou uso de amiodarona; 1x/dia, sempre no mesmo horário; indefinida; max. individualizada pelo INR",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anti-hipertensivo bloqueador canal cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "amlodipino",
+              "n": "Amlodipino",
+              "ap": "comprimido 2,5 mg",
+              "q": "",
+              "pos": "5 mg. Via VO. 1x/dia. Indefinida."
+            },
+            "motivo": "hipertensão arterial no AIT quando o BRA é contraindicado ou o alvo não é atingido em monoterapia (alternativa)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: pressão arterial; monitorar: edema de membros inferiores; monitorar: frequência cardíaca · NÃO: estenose aórtica grave; hipotensão; choque cardiogênico; hipersensibilidade a diidropiridina · Obs: Bom para associação com BRA e para idoso com pressão sistólica isolada elevada. O edema depende da dose e melhora ao associar bloqueador do sistema renina-angiotensina",
+            "dose": {
+              "texto": "5 mg; 1x/dia; indefinida; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor absorcao colesterol",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ezetimiba",
+              "n": "Ezetimiba",
+              "ap": "comprimido 10 mg",
+              "q": "",
+              "pos": "10 mg. Via VO. 1x/dia. Indefinida."
+            },
+            "motivo": "LDL acima do alvo apesar de estatina de alta potência, ou intolerância à estatina (condicional)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: perfil lipídico em 4 a 12 semanas; monitorar: transaminases; monitorar: sintomas musculares · NÃO: hepatopatia com Child C; hipersensibilidade; uso concomitante de estatina com hepatotoxicidade ativa · Obs: Associar à estatina, não substituir. Cada 40 mg/dL de queda adicional de LDL corresponde a redução adicional de risco; o alvo de 55 mg/dL vale também para o AIT",
+            "dose": {
+              "texto": "10 mg; 1x/dia; indefinida; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Internação ou avaliação acelerada no mesmo dia",
+              "ap": "",
+              "q": "",
+              "pos": "ABCD2 de 4 ou mais, déficit motor ou de fala, duração acima de 60 min, AIT recorrente em 7 dias ou fibrilação atrial obrigam internação; em serviço sem leito, estruturar consulta de AIT em 24 h com imagem e carótidas no mesmo dia, nunca alta sem plano"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Ressonância de crânio com difusão em até 24 horas",
+              "ap": "",
+              "q": "",
+              "pos": "A difusão separa AIT de AVC pequeno e muda o diagnóstico em até um terço dos casos; quando indisponível, tomografia sem contraste exclui hemorragia e massa, mas não exclui isquemia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Doppler de carótidas em até 24 horas",
+              "ap": "",
+              "q": "",
+              "pos": "É o exame que identifica a estenose de 50% a 99% com indicação de endarterectomia em até 14 dias; pedir como urgente, não como exame de rotina ambulatorial"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Monitorização de ritmo por pelo menos 24 horas",
+              "ap": "",
+              "q": "",
+              "pos": "ECG de 12 derivações mais telemetria na internação, ou Holter de 24 h no ambulatório; fibrilação atrial paroxística é a causa mais comum de AIT sem causa aparente e muda o tratamento para anticoagulação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Ecocardiograma transtorácico na investigação inicial",
+              "ap": "",
+              "q": "",
+              "pos": "Procura disfunção ventricular, valvopatia, trombo e cardiopatia embólica; em jovem ou criptogênico, avançar para ecocardiograma transesofágico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Controle de fatores de risco com alvo pressórico definido",
+              "ap": "",
+              "q": "",
+              "pos": "Alvo abaixo de 130/80 mmHg, cessação do tabagismo com apoio, atividade física de 150 min por semana, dieta mediterrânea e controle glicêmico com HbA1c abaixo de 7%; registrar a meta na prescrição, não apenas orientar"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Investigação de causas raras no paciente jovem",
+              "ap": "",
+              "q": "",
+              "pos": "Abaixo de 55 anos, pesquisar dissecção de artéria cervical, forame oval patente, trombofilia, vasculite, anemia falciforme e uso de cocaína ou anfetamina, porque o tratamento muda completamente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Educação e plano de retorno por escrito",
+              "ap": "",
+              "q": "",
+              "pos": "Ensinar a reconhecer novo déficit, orientar a chamar emergência e não esperar melhora, informar o prazo do duplo antiagregante e agendar reavaliação em 7 dias com exames e adesão em mãos"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "NEU-13"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "IBP",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "pantoprazol_ev",
+            "motivo": "gastroproteção durante a dupla antiagregação em paciente com risco de sangramento digestivo (condicional) gastroproteção",
+            "nota": "Uso direto por via oral; o frasco é reconstituído em 10 mL de soro fisiológico e diluído em 100 mL - monitorar: magnésio se uso acima de 1 ano; monitorar: sintomas dispépticos e sangramento digestivo",
+            "dose": {
+              "texto": "40 mg; 1x/dia, em jejum; enquanto durar a dupla antiagregação; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "NEU-13",
+    "versao": "0.2.0",
+    "arquivo": "NEU-13_ait.json",
+    "area": "Neurológico",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

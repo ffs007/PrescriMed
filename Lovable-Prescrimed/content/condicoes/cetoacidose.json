@@ -1,0 +1,236 @@
+{
+  "id": "leg_2012",
+  "nome": "Cetoacidose Diabética",
+  "cat": "Emergência",
+  "alias": "cad cetose diabetica hiperglicemia com cetoacidose glicemia alta acidose",
+  "cid": [
+    [
+      "E101",
+      "Cetoacidose diabética"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ADA — Standards of Care 2024/25",
+      "SBD — CAD"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "medidas_adicionadas": "END-02 em 2026-11-27",
+    "fundido_workspace": "END-02 em 2026-11-27"
+  },
+  "alerta": "Glicemia > 250 + pH < 7,3/HCO3 < 15 + cetemia/cetonúria. 1) SF 0,9% 1.000 mL em 1 h (reposição do déficit 15–20 mL/kg nas primeiras 2 h; caution se risco de EAP/idoso); depois 250–500 mL/h; 2) Insulina regular em infusão 0,1 U/kg/h (bolus NÃO é obrigatório) — só iniciar/continuar se K+ > 3,3; 3) K+: se 3,3–5,2 → 20–30 mEq/L na bomba; se > 5,2 → sem K, reavaliar 2/2 h; 4) Bicarbonato SOMENTE se pH < 6,9 (100 mEq em 400 mL SF); 5) glicemia dígital 1/1 h — quando < 200: adicionar glicose 5–10% na hidratação e NÃO parar a insulina até resolver a cetose; 6) achar o gatilho (infecção — ECO/urina/RX, suspensão de insulina, IAM, pancreatite); 7) EGAS/estado hiperosmolar glicemia > 600 sem cetose: hidratação ainda mais importante. Transição: primeira refeição → insulina regular SC 8/8h sobreposta à infusão 1–2 h antes de parar, ou esquema basal-correção.",
+  "redFlags": [
+    "Glasgow caindo / dor abdominal + vômitos — CAD grave: via aérea e hidratação cuidadosa (edema cerebral é a maior causa de morte na CAD pediátrica)",
+    "K+ < 3,3 ao apresentar — repor ANTES da insulina (hipocalemia fatal na terapia)",
+    "Glicemia normaliza mas cetose/ânion gap persistem — continuar insulina com glicose, não parar",
+    "Hipotermia na CAD (não febre) — grave por si; febre = procurar infecção",
+    "Oligúria persistente após hidratação — IRA: reduzir velocidade e reavaliar",
+    "Gestante com CAD — emergência materno-fetal: obstetrícia JÁ"
+  ],
+  "naoUsar": [
+    "Bolus inicial de insulina em CAD leve-moderada (desnecessário, risco de hipoglicemia/hipocalemia)",
+    "Bicarbonato de rotina (pH > 6,9)",
+    "Parar a infusão de insulina quando a glicemia cai (a meta é limpar a CETOSE — mantenha com glicose)",
+    "Hidratação rápida não monitorada em criança/idoso/IRA (edema cerebral/EAP)",
+    "Soluções hipotônicas iniciais"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Insulinoterapia da CAD",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "insulina_reg_sc",
+            "motivo": "Infusão IV 0,1 U/kg/h (bombas de insulina regular; sem bolus inicial rotineiro) — manter até resolução da cetose com glicose quando glicemia < 200"
+          }
+        ]
+      },
+      {
+        "nome": "Glicose (quando glicemia < 200)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "glicose10",
+            "motivo": "SG 5–10% junto à hidratação para permitir continuar a insulina e limpar a cetose"
+          }
+        ]
+      },
+      {
+        "nome": "Se gatilho infeccioso",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "Conforme foco (ver protocolo Sepse) — infecção é o gatilho mais comum"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Transição na alta (esquema domiciliar)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nph_alta",
+              "n": "Insulina NPH + regular de ação curta",
+              "ap": "frascos/canetas",
+              "pos": "NPH 0,5–0,6 U/kg/dia dividido em 2 doses (2/3 manhã, 1/3 noite) + regular 10–15 min antes das refeições conforme glicemia — OU continuar esquema prévio ajustado. Primeira aplicação com a enfermagem antes da alta."
+            },
+            "motivo": "Adesão: nunca sair sem esquema definido"
+          },
+          {
+            "novo": {
+              "id": "orient_glic",
+              "n": "Monitorização e ajuste",
+              "ap": "",
+              "pos": "Glicemia 4x/dia (antes das refeições) e 3 h da madrugada 1x/semana; alvo individualizado; KETONÚRIA/tira se glicemia > 250 ou doença intercorrente. Anotar tudo no caderno/app."
+            },
+            "motivo": "Autocuidado"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Regras dos dias de doença",
+              "ap": "",
+              "pos": "NUNCA parar a insulina quando doente (a CAD vem daí); hidratar com soro caseiro/água; medir glicemia 4x e cetona se > 250; procurar o serviço se vômitos, glicemia > 400 persistente ou cetona positiva — não esperar piorar."
+            },
+            "motivo": "Prevenir recorrência"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Vômitos, respiração rápida/profunda, hálito frutado, dor abdominal, confusão, glicemia que não desce — CAD de novo."
+            },
+            "motivo": "Recorrência"
+          },
+          {
+            "novo": {
+              "id": "orient3",
+              "n": "Follow-up",
+              "ap": "",
+              "pos": "Endócrino/nutrição em 7 dias; educação em diabetes (aplicação, rotação de sítios, hipoglicemia — regra dos 15/15); verificar acesso ao fornecimento de insulina e tiras."
+            },
+            "motivo": "Educação e acesso"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Dois acessos venosos calibrosos e bomba dedicada",
+              "ap": "",
+              "q": "",
+              "pos": "18 G em antebraço; um acesso exclusivo para insulina com equipo identificado e saturado com a solução"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Monitorização horária à beira do leito",
+              "ap": "",
+              "q": "",
+              "pos": "glicemia, potássio, sinais vitais, diurese e consciência em planilha de cetoacidose com hora e valor"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Balanço hídrico rigoroso",
+              "ap": "",
+              "q": "",
+              "pos": "sonda vesical se oligúria ou instabilidade; meta de diurese de 0,5–1 mL/kg/h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Jejum inicial e dieta precoce",
+              "ap": "",
+              "q": "",
+              "pos": "nada por boca até melhora do sensório e do abdome; iniciar dieta quando aceitar, pois é pré-requisito da transição"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Controle do precipitante no mesmo dia",
+              "ap": "",
+              "q": "",
+              "pos": "culturas e antibiótico se infecção, ECG e troponina se dor, beta-hCG em mulher em idade fértil, toxicológico se suspeita"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Redução programada da velocidade de correção",
+              "ap": "",
+              "q": "",
+              "pos": "não deixar a glicemia cair mais de 100 mg/dL/h; se cair, reduzir a insulina e adicionar glicose, não parar a insulina"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Profilaxia de trombose e de úlcera de estresse conforme risco",
+              "ap": "",
+              "q": "",
+              "pos": "enoxaparina após controle do sangramento; IBP se ventilação mecânica ou coagulopatia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Plano escrito na alta",
+              "ap": "",
+              "q": "",
+              "pos": "esquema basal-bolus com doses e horários, dose de correção, quando medir cetonas, sinais de alarme e retorno em 48–72 h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "END-02"
+      }
+    ]
+  }
+}

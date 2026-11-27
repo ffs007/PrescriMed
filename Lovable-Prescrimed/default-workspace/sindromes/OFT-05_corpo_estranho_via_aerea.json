@@ -1,0 +1,1232 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "OFT-05",
+    "area": "Oftalmo/Otorrino",
+    "nome": "Corpo estranho de via aérea",
+    "aliases": [
+      "corpo estranho de via aérea",
+      "engasgo",
+      "obstrução de via aérea",
+      "aspiração",
+      "obstrução de vias aéreas por corpo estranho",
+      "asfixia por corpo estranho"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Corpo estranho de via aérea é obstrução por alimento ou objeto, parcial ou completa, que mata em minutos quando é completa. A decisão que governa tudo é uma só: a tosse é eficaz? Quem tosse forte, fala e troca ar não recebe manobra — golpe em quem tosse eficazmente pode impactar o objeto e virar obstrução completa. Quem não tosse, não fala, não emite som e cianosa é desobstruído na hora: golpes dorsais e compressões abdominais no adulto consciente, golpes dorsais e compressões torácicas no lactente, e, se houver inconsciência, RCP com inspeção apenas da boca, sem varredura digital às cegas. O corpo estranho que passou da laringe e se alojou em brônquio conta outra história: tosse e sibilância monofônica unilateral, pneumonia de repetição no mesmo território e, muitas vezes, radiografia normal, porque amendoim, feijão, plástico e osso fino são radiolúcidos. A remoção é broncoscópica, rígida para corpos laríngeos e volumosos, flexível para os distais. O erro que mata é o dedo na garganta às cegas; o que custa o pulmão é atrasar a broncoscopia em corpo estranho radiopaco sintomático; o que confunde é tratar sibilância unilateral de início súbito como crise de asma; e o que é quase sempre desnecessário é cricotireoidotomia, recurso extremo de obstrução laríngea completa com falha de todas as manobras.",
+    "inclusao": [
+      "Engasgo com tosse ineficaz, apneia, incapacidade de falar ou cianose",
+      "Engasgo com tosse eficaz e troca de ar preservada, em observação",
+      "História testemunhada de aspiração, mesmo com exame normal",
+      "Tosse persistente, sibilância monofônica ou pneumonia de repetição no mesmo território",
+      "Criança com engasgo não testemunhado, tosse arrastada ou recusa alimentar de início súbito",
+      "Corpo estranho visível em orofaringe ou identificado em radiografia"
+    ],
+    "exclusao": [
+      {
+        "situacao": "estridor inspiratório com febre, sialorreia e posição de tripé em criança sem engasgo",
+        "fluxo": "OFT-03 via aérea superior obstrutiva"
+      },
+      {
+        "situacao": "sibilância difusa bilateral com pródromos de infecção viral e história de asma",
+        "fluxo": "RESP-04 crise asmática"
+      },
+      {
+        "situacao": "inconsciência sem testemunha e sem história de engasgo",
+        "fluxo": "parada cardiorrespiratória - ACLS"
+      },
+      {
+        "situacao": "disfagia com alimento parado em esôfago e via aérea livre",
+        "fluxo": "GI-05 corpo estranho esofágico"
+      },
+      {
+        "situacao": "reação alérgica com edema de glote após contato com alérgeno",
+        "fluxo": "anafilaxia"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "tosse ineficaz, silêncio, incapacidade de falar ou de emitir som",
+        "por_que": "obstrução completa da via aérea com asfixia iminente",
+        "acao": "desobstrução imediata: golpes dorsais e compressões abdominais (Heimlich) até a saída do objeto ou a inconsciência",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "cianose, saturação abaixo de 90% ou bradicardia",
+        "por_que": "hipóxia grave com risco de parada",
+        "acao": "desobstrução, oxigênio em alto fluxo e preparo de via aérea avançada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "inconsciência durante o engasgo",
+        "por_que": "parada respiratória e risco de parada cardíaca",
+        "acao": "iniciar RCP, inspecionar a boca a cada ventilação e remover apenas o objeto visível com pinça",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "estridor inspiratório, rouquidão e sialorreia após engasgo",
+        "por_que": "corpo estranho laríngeo com edema",
+        "acao": "não manipular a orofaringe, levar ao centro cirúrgico para broncoscopia rígida com anestesia geral",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "corpo estranho radiopaco visível em radiografia em paciente sintomático",
+        "por_que": "obstrução brônquica com risco de atelectasia e pneumonia",
+        "acao": "broncoscopia sem atraso, no mesmo internamento, com jejum e equipe de anestesia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "sibilância monofônica unilateral persistente ou pneumonia de repetição no mesmo território",
+        "por_que": "corpo estranho retido em brônquio",
+        "acao": "radiografia em inspiração e expiração, tomografia de baixa dose e broncoscopia eletiva",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "engasgo presenciado em criança com tosse que cede e retorna em crises",
+        "por_que": "corpo estranho móvel em via aérea, ainda não removido",
+        "acao": "não liberar para casa sem radiografia e avaliação otorrinolaringológica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "expectoração purulenta, febre e halitose após episódio de engasgo",
+        "por_que": "pneumonia por aspiração ou abscesso pulmonar",
+        "acao": "antibiótico dirigido, imagem e broncoscopia para excluir corpo estranho retido",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Consegue falar, tossir forte e emitir som? A tosse é eficaz ou fraca e silenciosa?",
+      "O engasgo foi presenciado? Que objeto ou alimento estava na boca?",
+      "Há quanto tempo? Foi hoje ou há dias ou semanas?",
+      "O que aconteceu com o objeto: saiu, foi engolido ou ninguém viu?",
+      "Tem chiado no peito de um lado só, tosse que não passa ou febre repetida?",
+      "Já teve pneumonia no mesmo pulmão mais de uma vez?",
+      "É criança? Qual a idade e o peso?",
+      "Está consciente, sonolento ou desmaiou?",
+      "Tem asma, DPOC, demência, AVC prévio ou dificuldade de engolir?",
+      "Faz uso de sedativo, álcool ou droga que altere o reflexo de deglutição?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Engasgo com tosse eficaz: paciente fala, tosse forte e troca ar",
+        "escolha": "Não intervir com manobras. Incentivar a tosse, manter o paciente sentado, oferecer oxigênio se saturação abaixo de 94% e monitorizar até a resolução ou a piora",
+        "porque": "A tosse eficaz é o melhor mecanismo de expulsão e gera pressões muito maiores que qualquer manobra externa; compressões em quem está tossindo podem deslocar o objeto e obstruir completamente a via aérea"
+      },
+      {
+        "cenario": "Obstrução completa em adulto consciente",
+        "escolha": "Cinco golpes dorsais com a mão aberta entre as escápulas e, se não resolver, cinco compressões abdominais (Heimlich) acima do umbigo, alternando os ciclos até a saída do objeto ou a inconsciência",
+        "porque": "O golpe dorsal desloca o objeto com a coluna de ar e a compressão abdominal eleva o diafragma de forma abrupta; alternar as duas manobras aumenta a chance de sucesso e reduz lesão de víscera"
+      },
+      {
+        "cenario": "Obstrução completa em gestante, obeso ou paciente com abdome volumoso",
+        "escolha": "Compressões torácicas: mão no terço inferior do esterno, no lugar da compressão abdominal",
+        "porque": "A compressão abdominal não gera pressão útil no abdome volumoso e pode lesar fígado e útero gravídico; a compressão torácica obtém a mesma elevação de pressão intratorácica"
+      },
+      {
+        "cenario": "Obstrução completa em lactente menor de 1 ano, consciente",
+        "escolha": "Cinco golpes dorsais com o bebê em decúbito ventral no antebraço e cinco compressões torácicas com dois dedos no esterno, alternando; nunca compressão abdominal",
+        "porque": "A compressão abdominal no lactente lesa fígado e vísceras, e a manobra de Heimlich não é indicada nessa faixa; o ciclo golpe-compressão é eficaz e seguro"
+      },
+      {
+        "cenario": "Obstrução completa em criança maior de 1 ano, consciente",
+        "escolha": "Cinco golpes dorsais e cinco compressões abdominais adaptadas ao tamanho, com o socorrista ajoelhado atrás da criança",
+        "porque": "A partir de 1 ano a anatomia permite a compressão abdominal, que é mais eficaz que a torácica na expulsão do objeto"
+      },
+      {
+        "cenario": "Paciente inconsciente durante a manobra de desobstrução",
+        "escolha": "Deitar em superfície rígida, iniciar RCP de alta qualidade com compressões e ventilações, inspecionar a boca a cada ciclo e retirar apenas o objeto visível com pinça",
+        "porque": "As compressões torácicas da RCP geram picos de pressão que também desobstruem; a varredura digital às cegas empurra o objeto e lesa a mucosa"
+      },
+      {
+        "cenario": "Obstrução completa com falha das manobras, inconsciência e impossibilidade de intubação",
+        "escolha": "Laringoscopia direta com pinça de Magill ou aspiração rígida e, se a via aérea não se estabelecer, cricotireoidotomia de resgate por profissional treinado",
+        "porque": "É a única saída quando não há passagem de ar e a intubação não é possível; a cricotireoidotomia é procedimento de exceção, não alternativa à manobra nem tratamento de obstrução parcial"
+      },
+      {
+        "cenario": "Corpo estranho aspirado, já abaixo da laringe, com sibilância monofônica ou radiografia com atelectasia",
+        "escolha": "Broncoscopia rígida sob anestesia geral, com pinça óptica ou cesta, em centro cirúrgico",
+        "porque": "A rígida controla a via aérea, permite ventilação durante a extração e remove objetos volumosos, orgânicos ou impactados que o flexível não traciona"
+      },
+      {
+        "cenario": "Corpo estranho distal, em brônquio segmentar, sem risco imediato de asfixia e com via aérea superior livre",
+        "escolha": "Broncoscopia flexível com sedação, pinça e cesta, sob anestesia tópica e monitorização",
+        "porque": "O flexível alcança brônquios distais e segmentares que o rígido não visualiza, com menos trauma de via aérea superior"
+      },
+      {
+        "cenario": "Corpo estranho laríngeo em criança com estridor, sialorreia e posição de tripé",
+        "escolha": "Não manipular a orofaringe, manter a criança na posição de conforto, oxigênio e transporte imediato ao centro cirúrgico para broncoscopia rígida com equipe de anestesia",
+        "porque": "Qualquer manipulação pode impactar o objeto e causar obstrução completa; a via aérea deve ser assumida por quem tem o equipamento e a técnica para retirá-lo"
+      },
+      {
+        "cenario": "Edema de via aérea, estridor ou laringoespasmo após a remoção do corpo estranho",
+        "escolha": "Adrenalina nebulizada 5 mg, dexametasona 0,15–0,6 mg/kg IV e observação em unidade monitorizada por 4–6 h",
+        "porque": "O edema pós-manipulação é a principal causa de reintubação depois de uma remoção bem-sucedida; a adrenalina reduz o edema em minutos e o corticoide age nas horas seguintes"
+      },
+      {
+        "cenario": "Sibilância difusa bilateral, pródromos de infecção viral, história de asma e nenhum episódio de engasgo",
+        "escolha": "Tratar como crise de asma com salbutamol e corticoide; radiografia apenas se febre, dor ou assimetria auscultatória",
+        "porque": "A asma é bilateral e difusa, responde ao broncodilatador e não tem início abrupto com engasgo; corpo estranho dá sibilância unilateral e fixa, e broncodilatador não a resolve"
+      },
+      {
+        "cenario": "Engasgo presenciado, objeto não encontrado e paciente assintomático com radiografia normal",
+        "escolha": "Observação por 24 h, orientação escrita de sinais de alarme e reavaliação com nova imagem se surgir tosse, febre ou sibilância",
+        "porque": "A maioria dos objetos radiolúcidos não aparece na radiografia e parte dos episódios é apenas engasgo sem aspiração; a observação evita broncoscopia desnecessária sem perder o retido"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "gas_medicinal",
+        "agente": "oxigênio",
+        "papel": "primeira_linha",
+        "indicacao": "hipoxemia, cianose e oxigenação durante a manobra de desobstrução e a broncoscopia",
+        "dose": "10–15 L/min em máscara com reservatório, titulando para saturação entre 94% e 98%",
+        "unidade": "L/min",
+        "via": "inalatória",
+        "frequencia": "contínuo",
+        "duracao": "até desobstrução, recuperação e alta",
+        "dose_maxima": "saturação de 98%; em DPOC com retenção de CO2, manter 88–92%",
+        "contraindicacoes": [
+          "DPOC com retenção crônica de CO2 sem controle por gasometria",
+          "incêndio ou fonte de calor próxima em uso de alto fluxo"
+        ],
+        "efeitos_adversos": [
+          "hiperóxia",
+          "ressecamento de mucosa",
+          "atelectasia de absorção",
+          "retenção de CO2 em DPOC",
+          "desconforto nasal"
+        ],
+        "apresentacoes": [
+          "cateter nasal tipo óculos",
+          "máscara com reservatório 10–15 L/min",
+          "máscara de Venturi 24–50%",
+          "cânula nasal de alto fluxo",
+          "cilindro medicinal 1 m³",
+          "rede de oxigênio com umidificador"
+        ],
+        "preparo": "Umidificar acima de 4 L/min; na máscara com reservatório, manter o balão inflado antes de posicionar no paciente; não interromper durante o transporte ao centro cirúrgico",
+        "tempo_infusao": "contínuo",
+        "monitorizacao": [
+          "oximetria contínua",
+          "frequência respiratória e esforço",
+          "nível de consciência",
+          "gasometria em DPOC ou hipoxemia refratária"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Oxigênio não desobstrui nada: é suporte enquanto a manobra ou a broncoscopia resolve a obstrução mecânica. Em DPOC, o alvo é 88–92%",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "agonista_alfa_adrenergico",
+        "agente": "adrenalina (epinefrina) nebulizada",
+        "papel": "condicional",
+        "indicacao": "edema de via aérea, estridor e laringoespasmo após remoção do corpo estranho, após extubação ou por manipulação de laringe",
+        "dose": "5 mg (5 mL de solução 1:1.000) diluídos em 5 mL de SF 0,9%; em criança, 0,5 mL/kg de solução 1:1.000, máximo de 5 mL",
+        "unidade": "mg",
+        "via": "nebulização",
+        "frequencia": "dose única, repetível a cada 20–30 minutos se o estridor persistir",
+        "duracao": "até 24–48 h conforme resposta",
+        "dose_maxima": "5 mg por nebulização; 3 nebulizações na primeira hora",
+        "contraindicacoes": [
+          "taquiarritmia grave",
+          "cardiopatia isquêmica instável",
+          "hipertensão grave não controlada",
+          "hipersensibilidade a adrenalina"
+        ],
+        "efeitos_adversos": [
+          "taquicardia",
+          "tremor",
+          "palpitação",
+          "hipertensão",
+          "hiperglicemia",
+          "isquemia miocárdica em coronariopata",
+          "rebote de edema após o efeito"
+        ],
+        "apresentacoes": [
+          "ampola 1 mg/mL (1:1.000) com 1 mL",
+          "frasco 1 mg/mL com 10 mL",
+          "seringa pronta 1 mg/mL",
+          "solução para nebulização 1:1.000"
+        ],
+        "preparo": "Diluir 5 mL (5 mg) da solução 1:1.000 em 5 mL de SF 0,9%, total de 10 mL no nebulizador; conferir a concentração do frasco antes de aspirar, porque a apresentação 1:10.000 exige volume dez vezes maior",
+        "tempo_infusao": "nebulização contínua por 10–15 minutos com máscara facial e oxigênio a 6–8 L/min",
+        "monitorizacao": [
+          "frequência cardíaca e ritmo",
+          "pressão arterial",
+          "saturação",
+          "estridor e esforço respiratório antes e depois",
+          "glicemia em diabético"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É ponte, não tratamento definitivo: reduz o edema e compra tempo para a broncoscopia. Não substitui a remoção do objeto e não deve ser repetida indefinidamente para mascarar obstrução mecânica persistente",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "dexametasona",
+        "papel": "condicional",
+        "indicacao": "edema de via aérea, laringite pós-intubação, edema após broncoscopia rígida e crupe",
+        "dose": "0,15–0,6 mg/kg; adulto 8–10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "12/12 h ou dose única",
+        "duracao": "1–3 dias",
+        "dose_maxima": "10 mg por dose; 24 mg/dia",
+        "contraindicacoes": [
+          "infecção bacteriana não tratada",
+          "úlcera péptica sangrante ativa",
+          "hipersensibilidade a corticosteroide",
+          "vacina viva recente"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipertensão",
+          "retenção hídrica",
+          "desconforto epigástrico",
+          "agitação",
+          "infecção em uso prolongado"
+        ],
+        "apresentacoes": [
+          "ampola 4 mg/mL com 2,5 mL",
+          "frasco 10 mg/5 mL",
+          "ampola 8 mg/2 mL",
+          "comprimido 4 mg"
+        ],
+        "preparo": "IV: uso direto ou diluir em 10 mL de SF 0,9%; VO: uso direto",
+        "tempo_infusao": "bolus lento em 2–3 minutos",
+        "monitorizacao": [
+          "glicemia",
+          "pressão arterial",
+          "estridor e esforço respiratório",
+          "sinais de infecção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em uso curto",
+        "observacoes": "Corticoide não desobstrui mecanicamente e não substitui manobra nem broncoscopia. Serve para o componente edematoso, que costuma aparecer horas depois da manipulação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "prednisolona",
+        "papel": "alternativa",
+        "indicacao": "edema leve de via aérea após remoção, manutenção após dexametasona e alta com corticoide oral",
+        "dose": "1–2 mg/kg/dia; adulto 40–60 mg/dia",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3–5 dias",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": [
+          "infecção bacteriana não tratada",
+          "diabetes descompensado sem plano de controle",
+          "úlcera péptica sangrante ativa",
+          "hipersensibilidade"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "insônia",
+          "aumento do apetite",
+          "dispepsia",
+          "alteração de humor"
+        ],
+        "apresentacoes": [
+          "solução oral 3 mg/mL",
+          "solução oral 5 mg/mL",
+          "comprimido 5 mg",
+          "comprimido 20 mg"
+        ],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia em diabético",
+          "estridor e tosse",
+          "pressão arterial"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em uso curto",
+        "observacoes": "Usar quando o paciente tolera via oral e não há necessidade de corticoide injetável; não prescrever junto com dexametasona IV no mesmo dia por duplicidade",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "broncodilatador_beta2",
+        "agente": "salbutamol",
+        "papel": "condicional",
+        "indicacao": "broncoespasmo associado à manipulação de via aérea e prova terapêutica no diferencial com crise de asma",
+        "dose": "2,5–5 mg no adulto; 0,15 mg/kg na criança, mínimo de 2,5 mg",
+        "unidade": "mg",
+        "via": "nebulização",
+        "frequencia": "a cada 20 minutos na primeira hora, se necessário",
+        "duracao": "até 3 doses ou estabilização",
+        "dose_maxima": "15 mg na primeira hora",
+        "contraindicacoes": [
+          "taquiarritmia grave",
+          "hipocalemia grave não corrigida",
+          "hipersensibilidade a salbutamol"
+        ],
+        "efeitos_adversos": [
+          "tremor",
+          "taquicardia",
+          "hipocalemia",
+          "hiperglicemia",
+          "agitação",
+          "cefaleia"
+        ],
+        "apresentacoes": [
+          "solução para nebulização 5 mg/mL com 10 mL",
+          "solução para nebulização 1 mg/mL",
+          "aerossol dosimetrado 100 mcg por jato",
+          "solução em unidose 2,5 mg/2,5 mL"
+        ],
+        "preparo": "Diluir 0,5–1 mL (2,5–5 mg) em 3–5 mL de SF 0,9% e nebulizar com máscara e oxigênio a 6–8 L/min",
+        "tempo_infusao": "nebulização por 10–15 minutos",
+        "monitorizacao": [
+          "frequência cardíaca",
+          "potássio em doses repetidas",
+          "sibilância e esforço respiratório",
+          "tremor",
+          "glicemia"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não remove corpo estranho. Em sibilância monofônica unilateral de início súbito, o broncodilatador não resolve: insistir em doses repetidas e rotular o caso como asma é o erro que atrasa a broncoscopia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "lidocaína 2%",
+        "papel": "condicional",
+        "indicacao": "anestesia tópica de orofaringe, laringe e traqueia para broncoscopia flexível e laringoscopia",
+        "dose": "adulto até 200 mg (10 mL de solução a 2%); criança 4 mg/kg",
+        "unidade": "mg",
+        "via": "tópica",
+        "frequencia": "dose única fracionada durante o procedimento",
+        "duracao": "procedimento",
+        "dose_maxima": "4,5 mg/kg sem vasoconstritor; 300 mg no adulto",
+        "contraindicacoes": [
+          "alergia a anestésico do tipo amida",
+          "cardiopatia grave descompensada",
+          "infecção no sítio de aplicação",
+          "porfiria"
+        ],
+        "efeitos_adversos": [
+          "zumbido",
+          "gosto metálico",
+          "tontura",
+          "convulsão em dose excessiva",
+          "metemoglobinemia",
+          "broncoaspiração por perda de reflexo",
+          "depressão respiratória"
+        ],
+        "apresentacoes": [
+          "spray 10% (100 mg por jato)",
+          "solução 2% (20 mg/mL) com 20 mL",
+          "gel 2%",
+          "lidocaína 2% com adrenalina 1:100.000",
+          "solução 4% para nebulização"
+        ],
+        "preparo": "Diluir para 2% quando necessário, fracionar em alíquotas de 2 mL e aspirar secreções antes de aplicar; somar a dose tópica à dose injetada",
+        "tempo_infusao": "não se aplica (via tópica)",
+        "monitorizacao": [
+          "nível de consciência",
+          "sinais de toxicidade: zumbido, gosto metálico, tremor",
+          "saturação e frequência respiratória",
+          "frequência cardíaca",
+          "sangramento no sítio"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave pelo metabolismo hepático",
+        "observacoes": "Calcular a dose máxima antes de começar. Nunca usar anestésico tópico para testar tolerância em obstrução completa: a perda do reflexo de tosse piora a asfixia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "midazolam",
+        "papel": "condicional",
+        "indicacao": "sedação para broncoscopia rígida ou flexível e para laringoscopia de remoção",
+        "dose": "0,05–0,1 mg/kg IV; adulto 1–2 mg em bolus, com reforços de 0,5 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "a cada 3–5 minutos até o nível de sedação desejado",
+        "duracao": "procedimento e recuperação",
+        "dose_maxima": "5 mg no procedimento; 0,05 mg/kg em idoso ou debilitado",
+        "contraindicacoes": [
+          "depressão respiratória sem suporte",
+          "hipotensão grave",
+          "miastenia grave",
+          "insuficiência hepática grave",
+          "apneia do sono não tratada em uso de opioide"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "hipotensão",
+          "amnesia",
+          "agitação paradoxal",
+          "sonolência prolongada em idoso"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL com 1 mL",
+          "ampola 5 mg/mL com 3 mL",
+          "ampola 1 mg/mL com 5 mL",
+          "comprimido 7,5 mg",
+          "solução oral 2 mg/mL"
+        ],
+        "preparo": "Diluir 1 mL (5 mg) em 4 mL de SF 0,9% para concentração de 1 mg/mL quando se titula em 0,5 mg",
+        "tempo_infusao": "bolus lento em 2–3 minutos",
+        "monitorizacao": [
+          "sedação pela escala de Ramsay ou Richmond",
+          "frequência respiratória e saturação contínuas",
+          "pressão arterial",
+          "disponibilidade de flumazenil"
+        ],
+        "ajuste_renal": "Cautela em ClCr abaixo de 30 mL/min pelo acúmulo de metabólito ativo",
+        "ajuste_hepatico": "Reduzir a dose pela metade em cirrose Child B ou C",
+        "observacoes": "Sedação para broncoscopia exige equipe capaz de intubar e resgatar a via aérea no mesmo ambiente. Nunca sedar paciente em obstrução completa sem plano cirúrgico imediato",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "fentanil",
+        "papel": "condicional",
+        "indicacao": "analgesia e sedação durante broncoscopia, laringoscopia e remoção de corpo estranho",
+        "dose": "1–2 mcg/kg IV; adulto 25–50 mcg em bolus, com reforços de 12,5–25 mcg",
+        "unidade": "mcg",
+        "via": "IV",
+        "frequencia": "a cada 5 minutos até o nível desejado",
+        "duracao": "procedimento e recuperação",
+        "dose_maxima": "2 mcg/kg no procedimento; individualizado no idoso",
+        "contraindicacoes": [
+          "depressão respiratória",
+          "hipovolemia grave não corrigida",
+          "uso de IMAO",
+          "hipersensibilidade a opioide"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "rigidez torácica em bolus rápido",
+          "bradicardia",
+          "náusea",
+          "hipotensão",
+          "prurido"
+        ],
+        "apresentacoes": [
+          "ampola 50 mcg/mL com 2 mL",
+          "ampola 50 mcg/mL com 10 mL",
+          "frasco 0,5 mg/10 mL"
+        ],
+        "preparo": "Uso direto ou diluir 1 mL (50 mcg) em 9 mL de SF 0,9% para 5 mcg/mL quando se titula em microdoses",
+        "tempo_infusao": "bolus lento em 1–2 minutos; bolus rápido causa rigidez torácica",
+        "monitorizacao": [
+          "frequência respiratória e saturação contínuas",
+          "sedação",
+          "pressão arterial e frequência cardíaca",
+          "rigidez torácica",
+          "naloxona à beira-leito"
+        ],
+        "ajuste_renal": "Sem ajuste relevante em dose única",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Em criança pequena a depressão respiratória é rápida; associar à cetamina e manter material de via aérea pronto. Não usar opioide como único sedativo em obstrução alta",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_dissociativo",
+        "agente": "cetamina",
+        "papel": "alternativa",
+        "indicacao": "indução e sedação dissociativa para broncoscopia rígida em criança e em adulto com instabilidade hemodinâmica",
+        "dose": "1–2 mg/kg IV na indução; reforços de 0,5–1 mg/kg; 4–5 mg/kg por via IM quando não há acesso",
+        "unidade": "mg/kg",
+        "via": "IV ou IM",
+        "frequencia": "reforço a cada 5–10 minutos ou infusão contínua de 0,5–1 mg/kg/h",
+        "duracao": "procedimento e recuperação",
+        "dose_maxima": "4 mg/kg por via IV no procedimento; 5 mg/kg por via IM",
+        "contraindicacoes": [
+          "hipertensão grave não controlada",
+          "cardiopatia isquêmica",
+          "hipertensão intracraniana",
+          "psicose ativa",
+          "hipertireoidismo descompensado"
+        ],
+        "efeitos_adversos": [
+          "hipertensão",
+          "taquicardia",
+          "sialorreia",
+          "laringoespasmo",
+          "apneia transitória",
+          "recuperação agitada",
+          "alucinação"
+        ],
+        "apresentacoes": [
+          "frasco 50 mg/mL com 10 mL",
+          "frasco 50 mg/mL com 2 mL",
+          "solução 10 mg/mL",
+          "comprimido 50 mg"
+        ],
+        "preparo": "Uso direto por via IV; para infusão, diluir 1 mL (50 mg) em 9 mL de SF 0,9% para 5 mg/mL; pré-medicar com glicopirrolato quando houver sialorreia intensa",
+        "tempo_infusao": "bolus lento em 1–2 minutos; infusão contínua conforme titulação",
+        "monitorizacao": [
+          "pressão arterial e frequência cardíaca",
+          "saturação e apneia",
+          "sialorreia e laringoespasmo",
+          "qualidade da recuperação"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Preserva o drive respiratório e a pressão arterial, por isso é o indutor preferido na criança com corpo estranho e via aérea compartilhada; manter sucção, laringoscópio e tubo prontos",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticolinergico",
+        "agente": "glicopirrolato",
+        "papel": "condicional",
+        "indicacao": "redução de secreção e prevenção de bradicardia vagal durante broncoscopia rígida, laringoscopia e aspiração",
+        "dose": "0,2 mg IV no adulto; 0,01 mg/kg na criança",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única antes do procedimento, repetível em 30 minutos",
+        "duracao": "procedimento",
+        "dose_maxima": "0,4 mg por procedimento",
+        "contraindicacoes": [
+          "glaucoma de ângulo fechado",
+          "retenção urinária",
+          "taquiarritmia",
+          "miastenia grave",
+          "íleo paralítico"
+        ],
+        "efeitos_adversos": [
+          "taquicardia",
+          "boca seca",
+          "retenção urinária",
+          "agitação",
+          "hipertermia"
+        ],
+        "apresentacoes": [
+          "ampola 0,2 mg/mL com 1 mL",
+          "frasco 0,2 mg/mL com 5 mL"
+        ],
+        "preparo": "Uso direto por via IV, sem diluição",
+        "tempo_infusao": "bolus em 1 minuto",
+        "monitorizacao": [
+          "frequência cardíaca",
+          "volume de secreção",
+          "temperatura",
+          "diurese"
+        ],
+        "ajuste_renal": "Cautela em ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não é obrigatório em todo procedimento; reservar para sialorreia intensa ou bradicardia por manipulação vagal",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Não intervir quando a tosse é eficaz",
+        "detalhe": "Paciente que fala, tosse forte e troca ar fica sentado, recebe oxigênio se necessário e é monitorizado; nenhum golpe, nenhuma compressão e nenhuma tentativa de retirar objeto da boca"
+      },
+      {
+        "medida": "Chamar ajuda e acionar o serviço de emergência antes de iniciar a manobra",
+        "detalhe": "Delegar a ligação a outra pessoa e manter a manobra em curso; em ambiente hospitalar, acionar carrinho de via aérea, anestesia e cirurgia"
+      },
+      {
+        "medida": "Posicionamento adequado para a manobra",
+        "detalhe": "Adulto sentado ou em pé, socorrista atrás; lactente em decúbito ventral sobre o antebraço com a cabeça mais baixa que o tronco; criança maior ajoelhada à frente do socorrista"
+      },
+      {
+        "medida": "Jejum e preparo para broncoscopia",
+        "detalhe": "Jejum de 8 h para sólidos e 2 h para líquidos claros em eletivo; em urgência, assumir estômago cheio e preparar aspiração, sonda gástrica e indução com sequência rápida"
+      },
+      {
+        "medida": "Guardar o objeto ou documentar seu tipo, tamanho e material",
+        "detalhe": "Fotografar ou trazer o objeto semelhante e registrar o material, porque amendoim e feijão causam reação inflamatória intensa e exigem remoção mais precoce e corticoide"
+      },
+      {
+        "medida": "Observação de 24 h no engasgo presenciado sem objeto encontrado",
+        "detalhe": "Paciente assintomático com radiografia normal recebe orientação escrita e retorno imediato se surgir tosse, febre, sibilância ou recusa alimentar"
+      },
+      {
+        "medida": "Cessar sedativos e álcool em paciente com disfagia",
+        "detalhe": "Revisar benzodiazepínicos, antipsicóticos e opioides em idoso e em paciente com AVC prévio; encaminhar para avaliação de deglutição antes da reintrodução da dieta"
+      },
+      {
+        "medida": "Fisioterapia respiratória e reavaliação após a remoção",
+        "detalhe": "Exercícios inspiratórios, tosse assistida e radiografia de controle em 24 h; fisioterapia não remove corpo estranho retido e nunca substitui a broncoscopia"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Manobra de desobstrução em adulto consciente (golpes dorsais e compressões abdominais tipo Heimlich)",
+        "indicacao": "obstrução completa com tosse ineficaz em adulto ou criança maior de 1 ano, consciente",
+        "tecnica": "Socorrista atrás do paciente; cinco golpes com a base da mão entre as escápulas, com o paciente inclinado para frente; se não resolver, cinco compressões abdominais com punho acima do umbigo e abaixo do apêndice xifoide, em movimento rápido para cima e para dentro; alternar até a saída do objeto ou a inconsciência",
+        "complicacoes": "Laceração de fígado ou baço, fratura de arcos costais, regurgitação com broncoaspiração, ruptura de víscera oca e agravamento da impactação"
+      },
+      {
+        "nome": "Manobra de desobstrução em lactente menor de 1 ano",
+        "indicacao": "obstrução completa com tosse ineficaz em lactente consciente",
+        "tecnica": "Lactente em decúbito ventral sobre o antebraço, cabeça mais baixa que o tórax e mandíbula apoiada; cinco golpes dorsais com o calcanhar da mão entre as escápulas; virar em decúbito dorsal e aplicar cinco compressões torácicas com dois dedos no terço inferior do esterno; alternar os ciclos; não comprimir o abdome",
+        "complicacoes": "Fratura de costelas, contusão hepática, regurgitação e aspiração, lesão de coluna cervical por manipulação inadequada"
+      },
+      {
+        "nome": "Laringoscopia direta com pinça de Magill ou aspiração rígida",
+        "indicacao": "corpo estranho visível em faringe, hipofaringe ou laringe, com via aérea parcialmente pérvia e equipe treinada",
+        "tecnica": "Pré-oxigenação, monitorização, sedação ou anestesia geral; laringoscópio com lâmina adequada, visualização do objeto e retirada com pinça de Magill ou pinça óptica sob visão direta, sem varredura às cegas",
+        "complicacoes": "Impactação e obstrução completa durante a tentativa, sangramento, edema de glote, laringoespasmo, perfuração de faringe e aspiração de fragmentos"
+      },
+      {
+        "nome": "Broncoscopia rígida com remoção de corpo estranho",
+        "indicacao": "corpo estranho laríngeo, traqueal ou brônquico volumoso, orgânico, impactado ou com risco de asfixia; criança com corpo estranho",
+        "tecnica": "Centro cirúrgico, anestesia geral com ventilação controlada, broncoscópio rígido com óptica e pinças; ventilação pela lateral do aparelho; extração do objeto inteiro e revisão de toda a árvore brônquica para procurar fragmentos, seguida de aspiração e lavagem",
+        "complicacoes": "Laringoespasmo, edema de via aérea, hipoxemia, trauma de cordas vocais ou brônquio, pneumotórax, sangramento e fragmentação do objeto com aspiração distal"
+      },
+      {
+        "nome": "Broncoscopia flexível com pinça ou cesta",
+        "indicacao": "corpo estranho distal ou segmentar, sem risco imediato de asfixia, ou complemento da rígida para limpar fragmentos",
+        "tecnica": "Sedação com anestesia tópica de vias aéreas; broncoscópio flexível pelo canal de trabalho com pinça ou cesta; se o objeto não passar pela glote, retirar o aparelho com o objeto junto à glote e tracionar sob visão direta",
+        "complicacoes": "Falha de extração, impactação na glote, trauma de mucosa, sangramento, hipoxemia por ocupação do canal e broncoespasmo"
+      },
+      {
+        "nome": "Cricotireoidotomia de resgate",
+        "indicacao": "obstrução laríngea completa com falha de todas as manobras, inconsciência e impossibilidade de intubação ou de broncoscopia imediata",
+        "tecnica": "Identificar a membrana cricotireóidea, antissepsia rápida, incisão transversal e introdução de tubo de pequeno calibre ou cateter conectado a oxigênio; confirmar ventilação e seguir para via aérea definitiva",
+        "complicacoes": "Sangramento, criação de via aérea falsa, enfisema subcutâneo, estenose subglótica, lesão de cartilagem e infecção"
+      }
+    ],
+    "metas": [
+      "Reconhecer a obstrução completa e iniciar a manobra em menos de 1 minuto",
+      "Não realizar nenhuma manobra em paciente com tosse eficaz",
+      "Saturação entre 94% e 98% ao final do atendimento, com 88–92% em DPOC com retenção de CO2",
+      "Broncoscopia realizada em menos de 6 horas no corpo estranho sintomático com via aérea comprometida e em menos de 24 horas nos demais casos retidos",
+      "Nenhuma varredura digital às cegas registrada no atendimento",
+      "Radiografia de controle em 24 horas após a remoção e antes da alta",
+      "Alta apenas com orientação escrita de sinais de corpo estranho retido e retorno em 48–72 horas"
+    ],
+    "fluxo": [
+      "Avaliar em segundos: o paciente fala, tosse e troca ar?",
+      "Tosse eficaz: não intervir, sentar, oxigênio se saturação abaixo de 94%, monitorizar e observar a evolução",
+      "Tosse ineficaz em adulto consciente: cinco golpes dorsais alternados com cinco compressões abdominais até a saída do objeto ou a inconsciência",
+      "Lactente: cinco golpes dorsais e cinco compressões torácicas, sem compressão abdominal; criança maior de 1 ano: golpes dorsais e compressões abdominais",
+      "Inconsciente: RCP de alta qualidade, inspeção da boca a cada ciclo e remoção apenas do objeto visível; preparar laringoscopia e broncoscopia",
+      "Objeto não removido e via aérea superior livre: radiografia de tórax e de partes moles do pescoço, tomografia de baixa dose se dúvida, e broncoscopia rígida ou flexível conforme o nível",
+      "Obstrução laríngea completa com falha de tudo: cricotireoidotomia de resgate por profissional treinado",
+      "Após a remoção: adrenalina nebulizada e corticoide se edema, observação de 4–6 h, radiografia de controle e reavaliação de deglutição",
+      "Alta com orientação escrita, retorno em 48–72 h e investigação de disfagia em idoso, AVC ou uso de sedativos"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "crianca",
+        "ajuste": "manobra adaptada ao tamanho, sedação com cetamina para broncoscopia rígida e doses por kg de todos os fármacos",
+        "alerta": "corpo estranho orgânico em criança pequena evolui com edema e obstrução completa em horas; a história de engasgo pode não ser testemunhada"
+      },
+      {
+        "populacao": "lactente",
+        "ajuste": "ciclo de cinco golpes dorsais e cinco compressões torácicas com dois dedos, nunca compressão abdominal; broncoscopia rígida em centro cirúrgico",
+        "alerta": "a compressão abdominal lesa fígado e vísceras e não é a manobra correta nessa faixa"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "compressões torácicas no lugar das abdominais, deslocamento uterino à esquerda e cesárea de emergência se a parada ocorrer com útero acima do umbigo",
+        "alerta": "o útero gravídico reduz o retorno venoso e a compressão abdominal é ineficaz e perigosa"
+      },
+      {
+        "populacao": "obeso",
+        "ajuste": "compressões torácicas quando a circunferência abdominal impede a pegada; posicionar em superfície rígida e considerar laringoscopia com lâmina especial",
+        "alerta": "a profundidade das compressões abdominais é insuficiente no abdome volumoso"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "limiar baixo para imagem e broncoscopia, revisão de sedativos e avaliação de deglutição antes da alta",
+        "alerta": "disfagia neurogênica e demência aumentam a recidiva e a pneumonia por aspiração"
+      },
+      {
+        "populacao": "dpoc",
+        "ajuste": "oxigênio titulado para 88–92%, gasometria e broncoscopia com equipe de anestesia; evitar sedação excessiva",
+        "alerta": "reserva pulmonar mínima e risco de retenção de CO2 com hiperóxia"
+      },
+      {
+        "populacao": "rebaixamento_de_consciencia",
+        "ajuste": "proteger via aérea com intubação precoce, sonda gástrica e broncoscopia para remoção; reflexo de tosse ausente impede manobra de desobstrução efetiva",
+        "alerta": "o corpo estranho pode passar despercebido e a aspiração é silenciosa"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "radiografia de tórax em inspiração e expiração",
+          "indicacao": "suspeita de corpo estranho brônquico e paciente estável",
+          "o_que_muda": "mostra objeto radiopaco, atelectasia, hiperinsuflação unilateral e desvio de mediastino; a expiração revela aprisionamento aéreo que a inspiração esconde"
+        },
+        {
+          "nome": "radiografia de partes moles do pescoço",
+          "indicacao": "suspeita de corpo estranho laríngeo ou em hipofaringe",
+          "o_que_muda": "identifica osso ou metal e orienta a escolha entre laringoscopia direta e broncoscopia"
+        },
+        {
+          "nome": "tomografia de tórax de baixa dose",
+          "indicacao": "radiografia normal com história de aspiração, suspeita de corpo estranho radiolúcido ou complicação",
+          "o_que_muda": "detecta objeto não radiopaco, bronquiectasia focal, abscesso e a posição exata do objeto antes da broncoscopia"
+        },
+        {
+          "nome": "broncoscopia diagnóstica e terapêutica",
+          "indicacao": "confirmação e remoção em todo corpo estranho suspeito",
+          "o_que_muda": "é o padrão-ouro: confirma, localiza e remove na mesma sessão"
+        },
+        {
+          "nome": "oximetria e gasometria arterial",
+          "indicacao": "desconforto respiratório, cianose ou DPOC",
+          "o_que_muda": "define a gravidade da hipoxemia e o alvo de oxigênio durante a broncoscopia"
+        },
+        {
+          "nome": "hemograma, proteína C reativa e hemocultura",
+          "indicacao": "febre, expectoração purulenta ou suspeita de pneumonia pós-aspiração",
+          "o_que_muda": "define antibiótico e necessidade de imagem adicional, sem atrasar a remoção"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia de tórax normal usada para excluir corpo estranho",
+          "motivo": "amendoim, feijão, plástico, osso fino e a maioria dos materiais orgânicos são radiolúcidos; radiografia normal não exclui aspiração"
+        },
+        {
+          "exame": "qualquer imagem antes da desobstrução em obstrução completa",
+          "motivo": "o transporte e o exame consomem os minutos que separam a asfixia da parada cardíaca"
+        },
+        {
+          "exame": "broncoscopia flexível como primeira escolha em corpo estranho laríngeo obstrutivo de criança",
+          "motivo": "a via aérea é compartilhada e o flexível não controla a ventilação; a rígida permite ventilar e extrair objetos volumosos"
+        },
+        {
+          "exame": "tomografia de rotina em paciente instável ou com estridor importante",
+          "motivo": "atrasa a via aérea definitiva e pode precipitar obstrução completa no trajeto"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "chamar ajuda imediatamente e manter a calma, sem oferecer água ou alimento",
+        "deixar o paciente tossir enquanto a tosse for eficaz",
+        "comparecer ao retorno em 48 a 72 horas com radiografia de controle",
+        "observar tosse, chiado, febre e recusa alimentar nas próximas 48 horas",
+        "informar qualquer profissional de saúde sobre o episódio de engasgo antes de anestesia",
+        "manter objetos pequenos, moedas, pilhas e amendoim fora do alcance de crianças"
+      ],
+      "evitar": [
+        "colocar o dedo na garganta às cegas ou tentar puxar o objeto sem visão",
+        "dar água, pão ou óleo para empurrar o objeto",
+        "bater nas costas de quem está tossindo eficazmente",
+        "sedar ou deitar o paciente com estridor antes da avaliação da via aérea",
+        "esperar a melhora espontânea quando há chiado de um lado só ou tosse que não passa",
+        "atrasar a broncoscopia porque a radiografia não mostrou o objeto"
+      ],
+      "retorno": [
+        "falta de ar súbita ou chiado que piora",
+        "tosse com sangue",
+        "febre, dor torácica ou expectoração purulenta",
+        "rouquidão, dificuldade para engolir ou babar",
+        "recusa alimentar ou perda de peso na criança",
+        "engasgo repetido com líquidos ou sólidos"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "oxigênio",
+        "efeitos": [
+          "hiperóxia",
+          "retenção de CO2 em DPOC",
+          "ressecamento de mucosa"
+        ],
+        "observacao": "titular pela saturação e colher gasometria no DPOC"
+      },
+      {
+        "agente": "adrenalina nebulizada",
+        "efeitos": [
+          "taquicardia",
+          "hipertensão",
+          "tremor",
+          "isquemia miocárdica"
+        ],
+        "observacao": "monitorizar ritmo e pressão; não repetir além de três nebulizações na primeira hora sem reavaliar a via aérea"
+      },
+      {
+        "agente": "dexametasona",
+        "efeitos": [
+          "hiperglicemia",
+          "hipertensão",
+          "desconforto epigástrico"
+        ],
+        "observacao": "checar glicemia em diabético e não prolongar além de 3 dias"
+      },
+      {
+        "agente": "prednisolona",
+        "efeitos": [
+          "hiperglicemia",
+          "insônia",
+          "dispepsia"
+        ],
+        "observacao": "administrar pela manhã com alimento"
+      },
+      {
+        "agente": "salbutamol",
+        "efeitos": [
+          "tremor",
+          "taquicardia",
+          "hipocalemia"
+        ],
+        "observacao": "dosar potássio se doses repetidas e não insistir se a sibilância é unilateral e fixa"
+      },
+      {
+        "agente": "lidocaína 2%",
+        "efeitos": [
+          "zumbido",
+          "gosto metálico",
+          "convulsão",
+          "metemoglobinemia"
+        ],
+        "observacao": "somar dose tópica e injetada e interromper ao primeiro sinal de toxicidade"
+      },
+      {
+        "agente": "midazolam",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão",
+          "agitação paradoxal"
+        ],
+        "observacao": "ter flumazenil e material de via aérea disponíveis"
+      },
+      {
+        "agente": "fentanil",
+        "efeitos": [
+          "depressão respiratória",
+          "rigidez torácica",
+          "bradicardia"
+        ],
+        "observacao": "bolus lento e naloxona à beira-leito"
+      },
+      {
+        "agente": "cetamina",
+        "efeitos": [
+          "hipertensão",
+          "sialorreia",
+          "laringoespasmo",
+          "recuperação agitada"
+        ],
+        "observacao": "aspirar secreção, pré-medicar com glicopirrolato e recuperar em ambiente monitorizado"
+      },
+      {
+        "agente": "glicopirrolato",
+        "efeitos": [
+          "taquicardia",
+          "boca seca",
+          "retenção urinária"
+        ],
+        "observacao": "evitar em glaucoma de ângulo fechado e em retenção urinária"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender imediatamente o fármaco implicado e registrar hora e última dose",
+      "Adrenalina nebulizada com taquicardia ou dor torácica: interromper, monitorizar ritmo, ECG e troponina se dor persistente",
+      "Lidocaína com zumbido, gosto metálico ou tremor: interromper a aplicação, suporte de via aérea e monitorização cardíaca; emulsão lipídica se convulsão ou colapso",
+      "Midazolam com sedação profunda: reverter com flumazenil 0,2 mg IV titulado e suporte ventilatório",
+      "Fentanil com depressão respiratória: ventilar com máscara e reverter com naloxona 0,04–0,4 mg IV titulada",
+      "Cetamina com laringoespasmo: pausar o estímulo, aprofundar a anestesia, aspirar secreção e ventilar com pressão positiva",
+      "Broncoscopia com sangramento: instilar soro gelado, adrenalina tópica 1:20.000 e compressão com o aparelho; acionar cirurgia se persistir",
+      "Edema de via aérea após remoção: adrenalina nebulizada, corticoide IV e reavaliação para intubação precoce",
+      "Reação alérgica a betalactâmico ou anestésico: suspender, tratar conforme gravidade e registrar a alergia em destaque",
+      "Reavaliar a indicação, escolher outra classe e reescrever a prescrição antes de sair do leito"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "prednisolona 3 mg/mL",
+            "dose": "1 mg/kg/dia, máximo 60 mg/dia",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "3 dias",
+            "condicao": "edema leve após remoção de corpo estranho; não usar se já recebeu dexametasona IV",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "salbutamol aerossol 100 mcg",
+            "dose": "100–200 mcg (1–2 jatos)",
+            "via": "inalatória",
+            "frequencia": "4/4 h se chiado, máximo 8 jatos por dia",
+            "duracao": "5 dias",
+            "condicao": "broncoespasmo residual com diagnóstico de asma associada confirmado",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "oxigênio",
+            "dose": "10–15 L/min em máscara com reservatório, alvo de 94–98%",
+            "via": "inalatória",
+            "frequencia": "contínuo",
+            "monitorizacao": "oximetria e gasometria no DPOC",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "adrenalina nebulizada",
+            "dose": "5 mg (5 mL a 1:1.000) em 5 mL de SF",
+            "via": "nebulização",
+            "frequencia": "dose única, repetível a cada 20–30 minutos",
+            "monitorizacao": "frequência cardíaca, pressão e estridor",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dexametasona",
+            "dose": "0,15–0,6 mg/kg; adulto 8–10 mg",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "monitorizacao": "glicemia e pressão arterial",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cetamina",
+            "dose": "1–2 mg/kg na indução",
+            "via": "IV",
+            "frequencia": "reforço de 0,5–1 mg/kg a cada 5–10 minutos",
+            "monitorizacao": "pressão, saturação e sialorreia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "midazolam",
+            "dose": "0,05–0,1 mg/kg; adulto 1–2 mg",
+            "via": "IV",
+            "frequencia": "titulado no procedimento",
+            "monitorizacao": "sedação e frequência respiratória",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lidocaína 2%",
+            "dose": "até 4,5 mg/kg, máximo 300 mg no adulto",
+            "via": "tópica",
+            "frequencia": "dose fracionada durante o procedimento",
+            "monitorizacao": "toxicidade e nível de consciência",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "radiografia de tórax em inspiração e expiração",
+          "radiografia de partes moles do pescoço",
+          "tomografia de tórax de baixa dose",
+          "oximetria e gasometria arterial",
+          "hemograma e proteína C reativa",
+          "broncoscopia rígida ou flexível",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de corpo estranho de via aérea, submetido a manobra de desobstrução e/ou broncoscopia, necessitando de afastamento das atividades pelo período indicado.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com horário do engasgo, tipo de objeto, manobras realizadas, nível da obstrução e resultado da broncoscopia",
+          "prioridade",
+          "horário do contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com corpo estranho de via aérea, tipo ___, nível ___, tempo de evolução ___, tosse eficaz ou ineficaz ___, manobras realizadas ___, broncoscopia rígida ou flexível ___, remoção completa ___, edema residual ___, radiografia de controle ___ e orientações de alta."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "horário do engasgo",
+        "tipo e material do objeto",
+        "tosse eficaz ou ineficaz",
+        "capacidade de falar",
+        "cianose",
+        "manobras já realizadas",
+        "consciência",
+        "história de engasgo não testemunhado",
+        "pneumonia de repetição",
+        "disfagia e uso de sedativos"
+      ],
+      "texto_template": "Paciente com engasgo às ___, objeto ___, tosse eficaz ou ineficaz ___, fala preservada ___, cianose ___, manobras já realizadas ___, consciência ___, história de engasgo não testemunhado ___, pneumonia de repetição ___, disfagia ___ e uso de sedativos ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e saturação",
+        "capacidade de falar e emitir som",
+        "esforço respiratório e uso de musculatura acessória",
+        "inspeção da orofaringe sem varredura digital",
+        "ausculta pulmonar comparada com sibilância monofônica",
+        "estridor e posição de tripé",
+        "nível de consciência",
+        "palpação de enfisema subcutâneo",
+        "sinais de trauma torácico"
+      ],
+      "texto_template": "Sinais vitais, saturação, capacidade de falar, esforço respiratório, orofaringe, ausculta comparada, estridor, nível de consciência, enfisema subcutâneo e sinais de trauma."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de obstrução de via aérea por corpo estranho, disponibilidade de broncoscópio rígido e escala de acionamento de anestesia e cirurgia",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_suporte_de_vida",
+        "o_que_verificar": "sequência de golpes dorsais, compressões abdominais e torácicas por faixa etária e conduta na inconsciência",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_de_broncoscopia",
+        "o_que_verificar": "indicação de broncoscopia rígida e flexível, cuidados anestésicos e técnica de extração",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_de_pediatria",
+        "o_que_verificar": "manobra em lactente, doses pediátricas e prevenção de aspiração por objetos pequenos",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, concentrações e registro dos fármacos usados na sedação e no edema de via aérea",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-OFT05-01",
+        "tipo": "obstrucao_completa",
+        "gatilho": "tosse ineficaz, silêncio, incapacidade de falar ou cianose",
+        "severidade": "grave",
+        "mensagem": "Obstrução completa: iniciar golpes dorsais e compressões abdominais imediatamente.",
+        "acao": "acionar sala de emergência e equipe de via aérea",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT05-02",
+        "tipo": "inconsciencia",
+        "gatilho": "inconsciência durante o engasgo ou após a manobra",
+        "severidade": "grave",
+        "mensagem": "Inconsciência: iniciar RCP e remover apenas objeto visível.",
+        "acao": "acionar carrinho de parada",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT05-03",
+        "tipo": "varredura_digital",
+        "gatilho": "prescrição ou registro de varredura digital da orofaringe às cegas",
+        "severidade": "grave",
+        "mensagem": "Nunca fazer varredura digital às cegas: empurra o objeto e lesa a mucosa.",
+        "acao": "bloquear conduta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT05-04",
+        "tipo": "broncoscopia_postergada",
+        "gatilho": "corpo estranho radiopaco sintomático com broncoscopia agendada além de 24 horas",
+        "severidade": "grave",
+        "mensagem": "Corpo estranho sintomático não espera: broncoscopia no mesmo internamento.",
+        "acao": "bloquear agendamento e acionar broncoscopia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT05-05",
+        "tipo": "cricotireoidotomia_indevida",
+        "gatilho": "cricotireoidotomia proposta sem obstrução laríngea completa e sem falha de manobras",
+        "severidade": "grave",
+        "mensagem": "Cricotireoidotomia não é atalho de via aérea difícil: só na obstrução completa irresolvida.",
+        "acao": "bloquear procedimento",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT05-06",
+        "tipo": "asma_mascarando_corpo_estranho",
+        "gatilho": "sibilância monofônica unilateral tratada com broncodilatador repetido sem imagem",
+        "severidade": "precaucao",
+        "mensagem": "Chiado de um lado só sugere corpo estranho: radiografia e broncoscopia, não mais salbutamol.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-OFT05-07",
+        "tipo": "sedacao_sem_resgate",
+        "gatilho": "sedação para broncoscopia sem equipe capaz de intubar e sem material de via aérea",
+        "severidade": "precaucao",
+        "mensagem": "Sedação em via aérea compartilhada exige resgate imediato disponível.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-OFT05-08",
+        "tipo": "alta_sem_controle",
+        "gatilho": "alta em engasgo presenciado com objeto não encontrado, sem radiografia e sem orientação registrada",
+        "severidade": "precaucao",
+        "mensagem": "Registrar radiografia, observação de 24 h e sinais de retorno antes da alta.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "diretriz de suporte de vida",
+        "sociedade de broncoscopia",
+        "sociedade de pediatria",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: eixo tosse eficaz versus ineficaz como decisão que governa a conduta; Heimlich no adulto consciente, golpes dorsais e compressões torácicas no lactente e compressões abdominais na criança maior; RCP na inconsciência sem varredura digital às cegas; broncoscopia rígida e flexível com sedação, cetamina, fentanil, midazolam, lidocaína tópica e glicopirrolato; adrenalina nebulizada e corticoide no edema de via aérea; distinção explícita de crise de asma pela sibilância monofônica unilateral; 10 fármacos com apresentações, preparo, tempo de infusão e monitorização; bloqueio de varredura digital, de cricotireoidotomia sem indicação e de broncoscopia postergada em corpo estranho radiopaco sintomático.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

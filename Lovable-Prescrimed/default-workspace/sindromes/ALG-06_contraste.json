@@ -1,0 +1,410 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "ALG-06",
+    "area": "Alergias",
+    "nome": "Reação a contraste",
+    "aliases": ["reação a contraste", "alergia a contraste", "reação ao contraste iodado"],
+    "contexto": ["hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Reação a contraste iodado é evento adverso de hipersensibilidade ao meio de contraste e, na maioria dos casos, não é mediada por IgE. A classificação que muda a conduta é dupla: pelo tempo — imediata, até 1 h, ou tardia, de 1 h a 7 dias — e pela gravidade — leve (pele e prurido), moderada (urticária extensa, vômitos, broncoespasmo leve) ou grave (via aérea, choque, arritmia). Reação imediata grave é anafilaxia e o tratamento é adrenalina IM; anti-H1 e corticoide não revertem obstrução de via aérea nem choque. A pré-medicação com corticoide e anti-H1 tem evidência fraca: reduz reações leves e não previne anafilaxia. Hidratação, menor volume e contraste de baixa osmolaridade previnem nefropatia; extravasamento tem manejo próprio e imediato. Toda reação precisa ser registrada, e novo exame contrastado sem preparo é contraindicado.",
+    "inclusao": [
+      "Urticária, prurido, rubor ou angioedema após injeção de contraste iodado",
+      "Broncoespasmo, estridor ou hipotensão durante o exame ou até 1 h após",
+      "Exantema maculopapular, urticária tardia ou edema entre 1 h e 7 dias após o exame",
+      "Extravasamento de contraste com dor, edema, bolhas ou alteração de perfusão distal",
+      "Paciente com reação prévia que precisa de novo exame contrastado"
+    ],
+    "exclusao": [
+      { "situacao": "reação a gadolínio ou a contraste não iodado", "fluxo": "protocolo próprio de ressonância" },
+      { "situacao": "lesão renal aguda com oligúria após contraste", "fluxo": "nefrologia / URO-11" },
+      { "situacao": "síncope vasovagal durante a punção, sem urticária", "fluxo": "observação e hidratação" },
+      { "situacao": "reação a opioide, sedativo ou látex do procedimento", "fluxo": "ALG-02 alergia a medicamento" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "estridor, disfonia ou edema de laringe", "por_que": "obstrução de via aérea superior", "acao": "adrenalina IM imediata e via aérea preparada", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "hipotensão com bradicardia e sem urticária", "por_que": "reação vagal ou hipotensiva, não anafilática", "acao": "decúbito, pernas elevadas, volume e atropina se bradicardia persistir", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "broncoespasmo com queda de saturação", "por_que": "broncoespasmo grave, mais comum em asmático", "acao": "adrenalina IM e salbutamol", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "urticária com vômitos, dispneia ou hipotensão", "por_que": "anafilaxia com dois ou mais sistemas", "acao": "adrenalina IM e observação 4–6 h", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "dor intensa, bolhas, necrose ou perfusão distal reduzida no local da infusão", "por_que": "extravasamento com risco de síndrome compartimental", "acao": "parar a infusão, aspirar, elevar e acionar cirurgia plástica", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "oligúria entre 24 e 72 h após o contraste", "por_que": "nefropatia induzida por contraste", "acao": "hidratar, suspender nefrotóxicos e dosar creatinina", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "exantema extenso com febre, eosinofilia, linfadenopatia ou hepatite", "por_que": "DRESS, reação tardia grave", "acao": "suspender o contraste, corticoide sistêmico e internação", "severidade": "grave" },
+      { "id": "AL-08", "sinal": "asma mal controlada ou crise recente", "por_que": "principal preditor de broncoespasmo grave", "acao": "otimizar controle e adiar exame eletivo", "severidade": "grave" },
+      { "id": "AL-09", "sinal": "exantema tardio limitado, sem febre ou eosinofilia", "por_que": "exantema maculopapular por contraste", "acao": "corticoide oral e anti-H1, sem adrenalina", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "Qual contraste, iônico ou não iônico, e qual volume foi injetado?",
+      "Quanto tempo depois da injeção começaram os sintomas?",
+      "Já teve reação a contraste antes? De que tipo e como foi tratada?",
+      "Fez pré-medicação? Com quais fármacos e quantas horas antes?",
+      "Tem asma? Está controlada? Usou salbutamol nos últimos dias?",
+      "Qual a creatinina e a TFG atuais? Usa metformina, IECA, AINE ou diurético?",
+      "Houve extravasamento? Qual volume e em qual região?",
+      "Tem alergia a medicamento, látex ou alimento?",
+      "Está gestante ou amamentando?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Reação imediata leve: urticária, prurido ou rubor isolados", "escolha": "Difenidramina 25–50 mg e observação de 30–60 min, sem corticoide de rotina", "porque": "Resolve em minutos e não há critério de anafilaxia; corticoide não tem início de ação útil nessa janela" },
+      { "cenario": "Reação imediata moderada: urticária extensa, angioedema leve, vômitos ou broncoespasmo leve", "escolha": "Anti-H1 IV, corticoide IV, salbutamol se sibilância e observação de 4–6 h", "porque": "O corticoide cobre a fase tardia e o broncoespasmo exige beta-2, mas nenhum dos dois substitui adrenalina se houver gravidade" },
+      { "cenario": "Anafilaxia: via aérea, hipotensão ou broncoespasmo grave", "escolha": "Adrenalina IM 0,5 mg, oxigênio, volume e repetição em 5–15 min", "porque": "É a única droga que reverte a obstrução de via aérea e o choque; atraso aumenta mortalidade" },
+      { "cenario": "Hipotensão com bradicardia e sem urticária durante a injeção", "escolha": "Decúbito, elevação das pernas, SF 0,9% rápido e atropina 0,5–1 mg se bradicardia persistir", "porque": "Reação vagal não responde a adrenalina e melhora com volume e posição" },
+      { "cenario": "Reação tardia exantemática entre 6 h e 7 dias", "escolha": "Prednisona 40–50 mg VO por 3–5 dias e anti-H1; rastrear DRESS se houver febre ou eosinofilia", "porque": "A mediação é celular e não histamínica, portanto adrenalina não tem papel" },
+      { "cenario": "Reação prévia grave com exame contrastado indispensável", "escolha": "Contraste de baixa osmolaridade não iônico, pré-medicação completa, equipe e carrinho de anafilaxia na sala; considerar US ou RM como alternativa", "porque": "A pré-medicação reduz reações leves, mas não elimina anafilaxia; o preparo é o que muda o desfecho" },
+      { "cenario": "Asmático que precisa de contraste", "escolha": "Otimizar controle antes, pré-medicar e manter salbutamol disponível", "porque": "Broncoespasmo é a manifestação grave mais frequente e a asma mal controlada é o maior fator de risco" },
+      { "cenario": "TFG abaixo de 30 mL/min ou nefropata", "escolha": "SF 0,9% 1 mL/kg/h por 6–12 h antes e 6 h depois, suspender metformina e nefrotóxicos e usar o menor volume de contraste", "porque": "Hidratação e volume são as únicas medidas com evidência consistente para prevenção de nefropatia" },
+      { "cenario": "Extravasamento de contraste", "escolha": "Parar a infusão, aspirar pelo cateter, elevar o membro, compressa fria e avaliação da cirurgia plástica; hialuronidase se disponível e dentro da primeira hora", "porque": "Reduz necrose de pele e síndrome compartimental, que são tempo-dependentes" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "corticoide",
+        "agente": "prednisona",
+        "papel": "primeira_linha",
+        "indicacao": "pré-medicação de paciente com reação prévia ao contraste iodado",
+        "dose": "50 mg (adulto) 13, 7 e 1 h antes; alternativa 40 mg 12–24 h antes e 1 h antes; criança 1 mg/kg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "esquema de 2 a 3 tomadas antes do exame",
+        "duracao": "até o dia do exame",
+        "dose_maxima": "50 mg por tomada",
+        "contraindicacoes": ["infecção sistêmica não tratada", "diabetes descompensado sem monitorização"],
+        "efeitos_adversos": ["hiperglicemia", "insônia", "desconforto gástrico", "rubor"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 20 mg", "solução oral 3 mg/mL"],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["glicemia em diabético", "PA", "adesão ao esquema completo antes do exame"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; preferir prednisolona em hepatopatia grave",
+        "observacoes": "Evidência fraca: reduz reações leves e não previne anafilaxia; nunca substitui equipe preparada e contraste de baixa osmolaridade",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ACR Manual on Contrast Media/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "metilprednisolona",
+        "papel": "alternativa",
+        "indicacao": "pré-medicação intravenosa quando a via oral é impossível e tratamento de reação moderada",
+        "dose": "40 mg IV 1 h antes (ou 125 mg em reação moderada); criança 1–2 mg/kg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única antes do exame; repetir 6/6 h se necessário no tratamento",
+        "duracao": "1–3 doses",
+        "dose_maxima": "125 mg por dose",
+        "contraindicacoes": ["infecção não tratada", "hipersensibilidade ao fármaco"],
+        "efeitos_adversos": ["hiperglicemia", "hipertensão", "rubor facial", "insônia"],
+        "apresentacoes": ["frasco 40 mg pó com diluente", "frasco 125 mg", "ampola 500 mg"],
+        "preparo": "Reconstituir no diluente e diluir em 50–100 mL de SF 0,9%",
+        "tempo_infusao": "10–20 min",
+        "monitorizacao": ["PA", "glicemia", "sódio", "local da infusão"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Não previne reação imediata grave; em pré-medicação, iniciar no mínimo 1 h antes, idealmente com esquema oral prévio",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ACR Manual on Contrast Media/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h1",
+        "agente": "difenidramina",
+        "papel": "primeira_linha",
+        "indicacao": "pré-medicação e tratamento de urticária e prurido por contraste",
+        "dose": "50 mg (pré-medicação, 1 h antes); 25–50 mg no tratamento; criança 1 mg/kg, máx. 50 mg",
+        "unidade": "mg",
+        "via": "VO, IV lenta ou IM",
+        "frequencia": "dose única; repetir em 6 h se necessário",
+        "duracao": "1–3 doses",
+        "dose_maxima": "50 mg por dose",
+        "contraindicacoes": ["glaucoma de ângulo fechado", "retenção urinária", "uso de IMAO", "neonato"],
+        "efeitos_adversos": ["sonolência", "boca seca", "taquicardia", "hipotensão se IV rápido", "agitação paradoxal em criança"],
+        "apresentacoes": ["ampola 50 mg/mL (1 mL)", "comprimido 25 mg", "cápsula 50 mg"],
+        "preparo": "Diluir 50 mg em 50 mL de SF 0,9% para infusão curta",
+        "tempo_infusao": "5–10 min (IV lenta)",
+        "monitorizacao": ["PA", "nível de consciência", "frequência cardíaca"],
+        "ajuste_renal": "Sem ajuste formal; reduzir em nefropata grave",
+        "ajuste_hepatico": "Reduzir em hepatopatia grave",
+        "observacoes": "Cobre apenas pele e prurido; não trata broncoespasmo nem choque e não deve ser a única medida em reação grave",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ACR Manual on Contrast Media/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_h2",
+        "agente": "famotidina",
+        "papel": "condicional",
+        "indicacao": "pré-medicação associada ao anti-H1 em paciente com reação prévia",
+        "dose": "20 mg IV ou 40 mg VO, 1 h antes do exame",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "dose única",
+        "duracao": "1 dose",
+        "dose_maxima": "40 mg por dose",
+        "contraindicacoes": ["hipersensibilidade a bloqueador H2", "insuficiência renal grave sem ajuste"],
+        "efeitos_adversos": ["cefaleia", "tontura", "constipação", "bradicardia rara"],
+        "apresentacoes": ["comprimido 20 mg", "comprimido 40 mg", "frasco-ampola 20 mg pó"],
+        "preparo": "Comprimido: uso direto; frasco-ampola: reconstituir em 5 mL de SF 0,9% e diluir em 20 mL",
+        "tempo_infusao": "2–5 min (IV lento)",
+        "monitorizacao": ["PA", "frequência cardíaca", "função renal se uso repetido"],
+        "ajuste_renal": "ClCr abaixo de 50 mL/min: 20 mg/dia ou 50% da dose",
+        "observacoes": "Evidência fraca e benefício marginal; faz parte do esquema clássico de pré-medicação, não substitui corticoide",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ACR Manual on Contrast Media",
+        "claim_id": null
+      },
+      {
+        "classe": "simpatomimetico",
+        "agente": "adrenalina (epinefrina)",
+        "papel": "resgate",
+        "indicacao": "anafilaxia por contraste: via aérea, broncoespasmo grave ou hipotensão",
+        "dose": "0,5 mg (adulto); 0,01 mg/kg na criança, máx. 0,5 mg",
+        "unidade": "mg",
+        "via": "IM no vasto lateral da coxa",
+        "frequencia": "repetir a cada 5–15 min se não houver resposta, até 3 doses",
+        "duracao": "até estabilização",
+        "dose_maxima": "1,5 mg por evento",
+        "contraindicacoes": ["não há contraindicação absoluta na anafilaxia", "injeção IV em bolus de solução 1:1000 é proscrita"],
+        "efeitos_adversos": ["taquicardia", "tremor", "palpitação", "hipertensão transitória", "isquemia miocárdica em cardiopata"],
+        "apresentacoes": ["ampola 1 mg/mL (1 mL)", "seringa preenchida 1 mg/mL", "auto-injetor 0,3 mg"],
+        "preparo": "Ampola 1:1000 aplicada sem diluição por via IM; diluição 1:10.000 apenas para infusão IV em bomba",
+        "tempo_infusao": "bolus IM; sem infusão na via IM",
+        "monitorizacao": ["PA e FC a cada 5 min", "ECG em cardiopata", "saturação e ausculta", "regressão do estridor e do edema"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste relevante",
+        "observacoes": "Disponível na sala de exame antes da injeção do contraste; não atrasar por anti-H1, corticoide ou acesso venoso difícil",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ACR Manual on Contrast Media/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "broncodilatador_beta2",
+        "agente": "salbutamol spray",
+        "papel": "condicional",
+        "indicacao": "broncoespasmo por contraste, persistente após adrenalina",
+        "dose": "4–8 jatos de 100 mcg com espaçador (adulto); 2–4 jatos na criança",
+        "unidade": "jato",
+        "via": "inalatória",
+        "frequencia": "a cada 20 min na primeira hora, depois 4/4–6 h",
+        "duracao": "24–48 h",
+        "dose_maxima": "individualizar; acima de 10 jatos em 24 h indica reavaliar gravidade",
+        "contraindicacoes": ["arritmia grave descompensada (relativa)", "hipocalemia grave não corrigida"],
+        "efeitos_adversos": ["tremor", "taquicardia", "hipocalemia", "hiperglicemia"],
+        "apresentacoes": ["aerossol 100 mcg/jato (200 doses)", "solução para nebulização 5 mg/mL", "espaçador adulto e infantil"],
+        "preparo": "Agitar e acoplar ao espaçador; na nebulização diluir 2,5–5 mg em 3 mL de SF 0,9%",
+        "tempo_infusao": "nebulização em 10–15 min",
+        "monitorizacao": ["frequência respiratória e ausculta", "frequência cardíaca", "saturação", "potássio em doses repetidas"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Trata o broncoespasmo e não a anafilaxia: se a adrenalina ainda não foi dada, ela vem primeiro",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/GINA",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide",
+        "agente": "solução fisiológica 0,9%",
+        "papel": "primeira_linha",
+        "indicacao": "hidratação para prevenção de nefropatia por contraste e reposição volêmica na hipotensão",
+        "dose": "1 mL/kg/h por 6–12 h antes e 6 h depois; na hipotensão, 500–1.000 mL em bolus",
+        "unidade": "mL/kg/h",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "12–24 h no peri-procedimento",
+        "dose_maxima": "individualizar; cautela em insuficiência cardíaca e oligúria",
+        "contraindicacoes": ["edema agudo de pulmão", "anúria sem diálise", "hiponatremia grave com risco de sobrecarga"],
+        "efeitos_adversos": ["sobrecarga volêmica", "edema periférico", "hiponatremia dilucional"],
+        "apresentacoes": ["bolsa 500 mL", "bolsa 1.000 mL", "frasco 250 mL"],
+        "preparo": "Pronto para uso; não adicionar fármacos sem conferir compatibilidade",
+        "tempo_infusao": "contínua por bomba ou equipo de macro",
+        "monitorizacao": ["diurese horária", "peso", "edema e ausculta pulmonar", "sódio", "creatinina em 48–72 h"],
+        "ajuste_renal": "Reduzir volume em oligúria ou anúria; não hidratar por rotina em anúrico dialítico",
+        "observacoes": "Hidratação é a medida preventiva com melhor evidência; não há benefício comprovado de bicarbonato ou N-acetilcisteína",
+        "confirmar_apresentacao_local": true,
+        "fonte": "KDIGO/ACR Manual on Contrast Media",
+        "claim_id": null
+      },
+      {
+        "classe": "enzima",
+        "agente": "hialuronidase",
+        "papel": "condicional",
+        "indicacao": "extravasamento de grande volume de contraste, com dor intensa ou risco de necrose",
+        "dose": "150–1.500 UI diluídas em 1–10 mL de SF 0,9%, infiltradas no subcutâneo do local",
+        "unidade": "UI",
+        "via": "SC local, em roseta",
+        "frequencia": "dose única, idealmente na primeira hora do extravasamento",
+        "duracao": "1 dose",
+        "dose_maxima": "1.500 UI por local",
+        "contraindicacoes": ["infecção no local", "hipersensibilidade à enzima", "extravasamento de vasoconstritor, situação em que se prefere fentolamina"],
+        "efeitos_adversos": ["dor local", "urticária local", "reação alérgica rara", "hematoma"],
+        "apresentacoes": ["frasco 1.500 UI pó liofilizado", "solução 150 UI/mL (1 mL)", "solução 200 UI/mL"],
+        "preparo": "Reconstituir 1.500 UI em 1 mL de SF 0,9% e diluir para 10 mL; não agitar",
+        "tempo_infusao": "infiltração local em 5–10 min",
+        "monitorizacao": ["dor e perfusão distal a cada 30 min nas primeiras 2 h", "área do extravasamento desenhada na pele", "sensibilidade e força da mão ou do pé"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Uso off-label e disponibilidade restrita: confirmar com a farmácia antes do exame; não atrasa a conduta de elevar o membro e acionar cirurgia plástica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura/ACR Manual on Contrast Media",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Acesso venoso calibroso com teste de refluxo antes da injeção", "detalhe": "Cateter 20 G ou maior em veia de antebraço; aspirar e confirmar refluxo antes de conectar a bomba, e conferir o local após os primeiros segundos de infusão" },
+      { "medida": "Observação de 30 min após a injeção", "detalhe": "A maior parte das reações imediatas ocorre nos primeiros 5 min; manter o paciente no serviço com acesso puncionado por 30 min" },
+      { "medida": "Carrinho de anafilaxia e equipe treinada na sala de exame", "detalhe": "Adrenalina, oxigênio, aspirador, ambu, acesso para volume e protocolo impresso; simulação periódica com a equipe de radiologia" },
+      { "medida": "Hidratação e suspensão de nefrotóxicos", "detalhe": "Suspender metformina por 48 h se TFG abaixo de 30 ou lesão renal aguda, e revisar IECA, AINE e diuréticos 48 h antes em pacientes de risco" },
+      { "medida": "Contraste de baixa osmolaridade não iônico em quem já reagiu", "detalhe": "Padronizar o perfil do contraste no pedido e avisar o setor de imagem sobre a reação prévia antes da data do exame" },
+      { "medida": "Registro estruturado da reação e alerta no prontuário", "detalhe": "Anotar nome do contraste, lote, volume, tempo até o sintoma, gravidade e tratamento; emitir laudo ao paciente e marcar alerta eletrônico permanente" },
+      { "medida": "Manejo imediato do extravasamento", "detalhe": "Parar a bomba, aspirar pelo cateter antes de removê-lo, elevar o membro, compressa fria por 15–20 min, desenhar o contorno da área e reavaliar em 2–4 h e em 24 h" }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Protocolo de pré-medicação para contraste iodado",
+        "indicacao": "Paciente com reação imediata prévia moderada ou grave que precisa de novo exame contrastado",
+        "tecnica": "Prednisona 50 mg VO 13, 7 e 1 h antes, ou 40 mg 12–24 h antes e 1 h antes; associar difenidramina 50 mg e famotidina 40 mg 1 h antes; quando a via oral é impossível, metilprednisolona 40 mg IV 1 h antes; manter contraste de baixa osmolaridade e equipe preparada",
+        "complicacoes": "Hiperglicemia, sonolência, sensação falsa de segurança, reação breakthrough mesmo com esquema completo",
+        "ambiente": "Ambulatório de imagem com carrinho de anafilaxia",
+        "contraindicacoes": "Não substitui a indicação do exame; usar com cautela em diabetes descompensado e infecção ativa"
+      },
+      {
+        "nome": "Teste cutâneo com contraste iodado (prick e intradérmico)",
+        "indicacao": "Investigação de reação imediata grave quando o exame é indispensável e não há alternativa",
+        "tecnica": "Diluições seriadas do contraste (1:1.000 a 1:10) em prick e intradérmico, com controle negativo e positivo, em centro de alergia; leitura em 15–20 min",
+        "complicacoes": "Anafilaxia, falso negativo e falso positivo, urticária local prolongada",
+        "ambiente": "Centro de alergia com suporte de ressuscitação",
+        "contraindicacoes": "Não é exame de rotina e não deve ser feito na fase aguda ou em paciente instável"
+      },
+      {
+        "nome": "Manejo de extravasamento de contraste",
+        "indicacao": "Extravasamento confirmado com dor, edema, bolhas ou alteração de perfusão",
+        "tecnica": "Interromper a infusão, aspirar o contraste pelo cateter, retirar o acesso, elevar o membro, compressa fria por 15–20 min, fotografar e demarcar a área, analgesia e avaliação da cirurgia plástica",
+        "complicacoes": "Necrose de pele, síndrome compartimental, fibrose e contratura, dor crônica",
+        "ambiente": "Sala de exame e pronto atendimento",
+        "contraindicacoes": "Compressa quente e massagem local estão contraindicadas nas primeiras horas"
+      },
+      {
+        "nome": "Hidratação peri-procedimento para prevenção de nefropatia",
+        "indicacao": "TFG abaixo de 45 mL/min, diabetes com nefropatia, insuficiência cardíaca compensada ou mieloma",
+        "tecnica": "SF 0,9% 1 mL/kg/h por 6–12 h antes e 6 h depois, ou 3 mL/kg/h por 1 h antes e 1 mL/kg/h por 6 h depois; usar o menor volume de contraste eficaz",
+        "complicacoes": "Sobrecarga volêmica, edema agudo de pulmão, hiponatremia dilucional",
+        "ambiente": "Hospital-dia, enfermaria ou ambulatório de imagem",
+        "contraindicacoes": "Anúria sem diálise e insuficiência cardíaca descompensada sem monitorização"
+      }
+    ],
+    "metas": [
+      "Adrenalina IM aplicada em até 5 min do reconhecimento da anafilaxia",
+      "Observação de 30 min após a injeção em todos os pacientes",
+      "Reação registrada no prontuário com contraste, lote, gravidade e tratamento em 100% dos casos",
+      "Nenhum exame contrastado repetido sem pré-medicação e justificativa documentada",
+      "Creatinina estável em 48–72 h nos pacientes de risco renal",
+      "Extravasamento avaliado por cirurgia plástica em até 2 h quando houver bolha ou dor intensa"
+    ],
+    "fluxo": [
+      "Classificar pelo tempo: até 1 h é reação imediata; de 1 h a 7 dias é tardia",
+      "Classificar a gravidade: leve (pele apenas), moderada (pele mais vômito ou broncoespasmo leve) ou grave (via aérea, choque, arritmia)",
+      "Grave: adrenalina IM, oxigênio, volume, salbutamol e chamar ajuda; não perder tempo com anti-H1",
+      "Leve: anti-H1 e observação de 30–60 min; moderada: anti-H1 e corticoide IV, observação de 4–6 h",
+      "Tardia: corticoide oral e anti-H1, com rastreio de DRESS se houver febre, eosinofilia ou hepatite",
+      "Extravasamento: parar, aspirar, elevar, compressa fria e avaliação cirúrgica",
+      "Antes do próximo exame: registrar a reação, definir alternativa sem contraste, pré-medicar e preparar a sala"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "asmático", "ajuste": "otimizar controle antes, pré-medicar e manter salbutamol na sala", "alerta": "broncoespasmo grave é a manifestação de maior risco" },
+      { "populacao": "renal_cronico", "ajuste": "hidratar, usar menor volume e suspender metformina e nefrotóxicos", "alerta": "nefropatia induzida por contraste" },
+      { "populacao": "alergico_previo", "ajuste": "contraste de baixa osmolaridade, pré-medicação completa e equipe preparada", "alerta": "reação breakthrough mesmo com preparo correto" },
+      { "populacao": "cardiopata", "ajuste": "hidratação cautelosa e monitorização de peso e ausculta", "alerta": "edema agudo de pulmão por sobrecarga" },
+      { "populacao": "idoso", "ajuste": "checar TFG, reduzir volume e revisar nefrotóxicos", "alerta": "maior risco renal e de extravasamento por fragilidade venosa" },
+      { "populacao": "gestante", "ajuste": "indicar apenas quando indispensável e registrar reação prévia", "alerta": "evitar exames eletivos repetidos" },
+      { "populacao": "crianca", "ajuste": "dose de adrenalina 0,01 mg/kg e volume de contraste pelo peso", "alerta": "extravasamento em veia fina e subdose de adrenalina" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "creatinina e TFG antes do contraste", "indicacao": "todos com risco renal", "o_que_muda": "define hidratação, volume e necessidade de nefroproteção" },
+        { "nome": "triptase sérica até 2 h do início", "indicacao": "reação imediata grave", "o_que_muda": "confirma ativação de mastócito e separa anafilaxia de reação vagal" },
+        { "nome": "hemograma com eosinófilos, transaminases e função renal", "indicacao": "reação tardia extensa", "o_que_muda": "identifica DRESS e orienta internação" },
+        { "nome": "creatinina e urina tipo 1 em 48–72 h", "indicacao": "paciente de risco após contraste", "o_que_muda": "detecta nefropatia induzida por contraste" },
+        { "nome": "teste cutâneo ou intradérmico com contraste", "indicacao": "reação imediata grave com exame indispensável", "o_que_muda": "identifica sensibilização, mas não exclui reação" }
+      ],
+      "evitar": [
+        { "exame": "exames que atrasem a adrenalina na reação grave", "motivo": "o atraso é o principal determinante de morte" },
+        { "exame": "IgE total ou específica para contraste iodado", "motivo": "não é validada e não prevê reação" },
+        { "exame": "teste cutâneo de rotina antes de todo exame contrastado", "motivo": "não prevê reação e gera falso positivo com suspensão desnecessária do exame" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["informar em todo exame que já reagiu a contraste", "portar o laudo da reação com o nome do contraste", "cumprir o esquema de pré-medicação completo", "avisar o serviço de imagem antes da data do exame", "beber líquidos nas 24 h seguintes quando não houver restrição"],
+      "evitar": ["repetir exame contrastado sem preparo", "tomar anti-H1 por conta própria como proteção", "considerar a pré-medicação como garantia de segurança", "massagear ou aquecer o local do extravasamento"],
+      "retorno": ["falta de ar, rouquidão ou inchaço de língua", "urticária que retorna após a alta", "redução de urina em até 72 h", "dor, bolha ou dormência no local da infusão"]
+    },
+    "efeitos_adversos": [
+      { "agente": "difenidramina", "efeitos": ["sonolência", "boca seca", "retenção urinária"], "observacao": "Evitar em idoso, glaucoma e próstata; sonolência não é sinal de controle da reação" },
+      { "agente": "prednisona", "efeitos": ["hiperglicemia", "insônia", "desconforto gástrico"], "observacao": "Curso curto; monitorar glicemia em diabético" },
+      { "agente": "metilprednisolona", "efeitos": ["rubor facial", "hipertensão", "hiperglicemia"], "observacao": "Infundir em 10–20 min; rubor perineal transitório é esperado" },
+      { "agente": "adrenalina", "efeitos": ["taquicardia", "tremor", "isquemia miocárdica"], "observacao": "Monitorar ECG em cardiopata; não suspender por taquicardia isolada" },
+      { "agente": "solução fisiológica 0,9%", "efeitos": ["sobrecarga volêmica", "edema"], "observacao": "Reavaliar diurese e ausculta a cada 4 h em cardiopata" },
+      { "agente": "hialuronidase", "efeitos": ["dor local", "urticária local", "reação alérgica"], "observacao": "Aplicar apenas em protocolo com cirurgia plástica de apoio" }
+    ],
+    "conduta_efeito_adverso": [
+      "Interromper a injeção do contraste ao primeiro sinal de reação e registrar o volume já infundido",
+      "Anafilaxia: adrenalina IM imediata, suporte e observação mínima de 4–6 h",
+      "Extravasamento: parar, aspirar, elevar, compressa fria e acionar cirurgia plástica",
+      "Suspeita de DRESS: suspender contraste e corticoide em curso, internar e dosar eosinófilos e transaminases",
+      "Registrar a reação no prontuário, emitir laudo ao paciente e bloquear novo contraste sem preparo"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "prednisona 20 mg", "dose": "50 mg", "via": "VO", "frequencia": "13, 7 e 1 h antes do exame", "duracao": "3 tomadas", "condicao": "pré-medicação para contraste", "confirmar_apresentacao_local": true },
+          { "item": "difenidramina 25 mg", "dose": "50 mg", "via": "VO", "frequencia": "1 h antes do exame", "duracao": "dose única", "condicao": "pré-medicação para contraste", "confirmar_apresentacao_local": true },
+          { "item": "famotidina 40 mg", "dose": "40 mg", "via": "VO", "frequencia": "1 h antes do exame", "duracao": "dose única", "condicao": "pré-medicação para contraste", "confirmar_apresentacao_local": true },
+          { "item": "prednisona 20 mg", "dose": "40 mg", "via": "VO", "frequencia": "1x/dia", "duracao": "4 dias", "condicao": "exantema tardio por contraste", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "adrenalina 1 mg/mL", "dose": "0,5 mg IM", "via": "IM", "frequencia": "repetir em 5–15 min se necessário", "monitorizacao": "PA, FC e saturação", "confirmar_apresentacao_local": true },
+          { "item": "metilprednisolona 125 mg", "dose": "40–125 mg", "via": "IV", "frequencia": "dose única", "monitorizacao": "glicemia e PA", "confirmar_apresentacao_local": true },
+          { "item": "difenidramina 50 mg", "dose": "25–50 mg", "via": "IV lenta", "frequencia": "dose única", "monitorizacao": "PA e consciência", "confirmar_apresentacao_local": true },
+          { "item": "solução fisiológica 0,9%", "dose": "1 mL/kg/h", "via": "IV", "frequencia": "contínua", "monitorizacao": "diurese e ausculta", "confirmar_apresentacao_local": true },
+          { "item": "salbutamol spray 100 mcg", "dose": "4–8 jatos", "via": "inalatória", "frequencia": "a cada 20 min", "monitorizacao": "ausculta e FC", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["creatinina", "TFG", "triptase", "hemograma com eosinófilos", "transaminases", "urina tipo 1", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de reação a contraste iodado, necessitando de afastamento por dias.", "dias": null, "cid": null, "observacao": "documento hospitalar" },
+      "encaminhamento": { "campos": ["destino", "motivo", "resumo", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente com reação a contraste iodado, contraste e volume utilizados, tempo até o sintoma, classificação, tratamento, resposta e plano de prevenção para novo exame." }
+    },
+    "anamnese": {
+      "campos": ["contraste e volume", "tempo até o sintoma", "reação prévia", "pré-medicação", "dispneia", "angioedema", "asma", "função renal", "metformina", "extravasamento"],
+      "texto_template": "Paciente com reação a contraste iodado, tipo ___, volume ___, início ___ minutos após a injeção; reação prévia, pré-medicação realizada, dispneia, angioedema, asma, função renal, uso de metformina e extravasamento local."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais", "via aérea e voz", "pele e mucosas", "ausculta pulmonar", "perfusão", "local da punção e perfusão distal"],
+      "texto_template": "Sinais vitais, via aérea e voz, pele e mucosas, ausculta pulmonar, perfusão e inspeção do local da punção com perfusão distal."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "protocolo de contraste e carrinho de anafilaxia da radiologia", "verificar": true },
+      { "tipo": "sociedade_radiologia", "o_que_verificar": "ACR Manual on Contrast Media para pré-medicação e extravasamento", "verificar": true },
+      { "tipo": "sociedade_alergia", "o_que_verificar": "ASBAI e EAACI para anafilaxia e teste cutâneo", "verificar": true },
+      { "tipo": "diretriz_renal", "o_que_verificar": "KDIGO para nefropatia induzida por contraste", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "bulas e apresentações dos contrastes e antagonistas H2", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-ALG06-01", "tipo": "anafilaxia", "gatilho": "estridor, hipotensão ou broncoespasmo grave após contraste", "severidade": "grave", "mensagem": "Anafilaxia: adrenalina IM agora.", "acao": "acionar carrinho de anafilaxia", "bloqueante": true },
+      { "id": "SA-ALG06-02", "tipo": "repeticao_sem_preparo", "gatilho": "novo contraste em paciente com reação prévia sem pré-medicação registrada", "severidade": "grave", "mensagem": "Contraindicado repetir contraste sem preparo e equipe pronta.", "acao": "bloquear pedido", "bloqueante": true },
+      { "id": "SA-ALG06-03", "tipo": "anti_histaminico_isolado", "gatilho": "anti-H1 como única medida em reação grave", "severidade": "grave", "mensagem": "Anti-H1 não reverte via aérea nem choque.", "acao": "bloquear item e sugerir adrenalina", "bloqueante": true },
+      { "id": "SA-ALG06-04", "tipo": "premedicacao_falsa_seguranca", "gatilho": "pré-medicação registrada sem equipe ou adrenalina na sala", "severidade": "precaucao", "mensagem": "Pré-medicação tem evidência fraca e não previne anafilaxia.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-ALG06-05", "tipo": "metformina", "gatilho": "metformina mantida com TFG abaixo de 30", "severidade": "precaucao", "mensagem": "Suspender metformina por 48 h pelo risco de acidose lática.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-ALG06-06", "tipo": "extravasamento", "gatilho": "extravasamento sem registro de avaliação em 2 h", "severidade": "precaucao", "mensagem": "Risco de necrose e síndrome compartimental.", "acao": "alertar e sugerir cirurgia plástica", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "ACR Manual on Contrast Media", "KDIGO", "ASBAI", "EAACI", "GINA"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com classificação imediata e tardia, leve e grave, pré-medicação com evidência fraca explicitada, protocolo de resgate com adrenalina, hidratação, manejo de extravasamento, conduta no asmático e no alérgico prévio e obrigação de registrar a reação.", "data": null }
+      ]
+    }
+  }
+}

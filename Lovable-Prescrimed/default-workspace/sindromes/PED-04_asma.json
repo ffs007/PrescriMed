@@ -1,0 +1,1131 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-04",
+    "area": "Pediatria",
+    "nome": "Asma na infância",
+    "aliases": [
+      "asma infantil",
+      "crise asmática",
+      "exacerbação de asma",
+      "sibilância recorrente",
+      "broncoespasmo",
+      "chiado no peito"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Asma na infância é inflamação crônica das vias aéreas com obstrução variável e reversível, e a crise é a exacerbação aguda dessa obstrução. Gravidade define tudo: o tratamento, o local, o tempo de observação e a alta. Crise leve responde a broncodilatador por espaçador em casa ou no ambulatório; crise moderada exige broncodilatador repetido, corticoide sistêmico na primeira hora e reavaliação seriada; crise grave exige oxigênio, broncodilatador e ipratrópio nebulizados, corticoide venoso se a via oral falhar, sulfato de magnésio quando não responde e preparo de UTI. O broncodilatador de escolha é o salbutamol por espaçador com máscara ou bocal, 4–8 jatos por dose, com a técnica correta — não o jato direto na boca, que deposita na orofaringe e não chega ao brônquio. A nebulização com 0,15 mg/kg fica para quem não colabora com o espaçador, para a crise grave e para o serviço sem espaçador disponível. O que não se faz: antibiótico (a crise é viral e não há infecção bacteriana a tratar), sedativo (mascara a piora e deprime o drive respiratório) e radiografia de tórax de rotina (achado inespecífico que leva a antibiótico desnecessário). A alta é o momento mais negligenciado: sai com corticoide oral por 3 a 5 dias, corticoide inalatório prescrito e revisado, técnica do espaçador demonstrada e plano de ação escrito. O que mata é o tórax silencioso reconhecido como melhora, a sedação do criança exausta e a alta sem corticoide inalatório, que devolve a criança em nova crise em semanas.",
+    "inclusao": [
+      "Sibilância aguda com dispneia, tosse e aperto torácico em criança com diagnóstico de asma",
+      "Crise asmática leve, moderada ou grave com necessidade de broncodilatador",
+      "Exacerbação com hipoxemia ou esforço respiratório que exige observação hospitalar",
+      "Criança com sibilância recorrente e resposta documentada a broncodilatador, para tratamento de crise e início de controle",
+      "Crise em criança com história de internação, UTI ou intubação prévia por asma",
+      "Asma com uso irregular de corticoide inalatório e crise frequente, para revisão de controle"
+    ],
+    "exclusao": [
+      {
+        "situacao": "primeiro episódio de sibilância em lactente menor de 12 meses com coriza e taquipneia, sem resposta a broncodilatador",
+        "fluxo": "PED-02 bronquiolite"
+      },
+      {
+        "situacao": "tosse metálica, estridor inspiratório, rouquidão e piora à noite",
+        "fluxo": "PED-05 crupe"
+      },
+      {
+        "situacao": "sibilância unilateral de início súbito com engasgo em criança previamente sadia",
+        "fluxo": "corpo estranho em via aérea"
+      },
+      {
+        "situacao": "febre alta, toxemia, crepitações localizadas e dor torácica",
+        "fluxo": "pneumonia bacteriana"
+      },
+      {
+        "situacao": "estridor, urticária, angioedema ou hipotensão após exposição a alérgeno ou fármaco",
+        "fluxo": "anafilaxia"
+      },
+      {
+        "situacao": "sibilância com estridor e disfonia progressiva sem resposta a broncodilatador",
+        "fluxo": "disfunção de cordas vocais ou obstrução de via aérea superior"
+      },
+      {
+        "situacao": "tosse crônica produtiva, baqueamento e baixo ganho ponderal",
+        "fluxo": "fibrose cística ou bronquiectasia"
+      },
+      {
+        "situacao": "dispneia com edema, hepatomegalia e crepitações bibasais",
+        "fluxo": "insuficiência cardíaca"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "tórax silencioso, ausculta com sibilo mínimo ou ausente em criança em esforço",
+        "por_que": "fluxo aéreo quase nulo, não melhora: é obstrução crítica, e o silêncio engana",
+        "acao": "sala vermelha, oxigênio, broncodilatador e ipratrópio nebulizados, sulfato de magnésio e chamar UTI",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "saturação abaixo de 90% em ar ambiente ou cianose",
+        "por_que": "hipoxemia com shunt e fadiga iminente",
+        "acao": "oxigênio titulado, monitorização contínua e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "sonolência, confusão, fala em palavras isoladas ou incapacidade de beber",
+        "por_que": "exaustão e hipercapnia, não sedação a tratar",
+        "acao": "UTI, gasometria, suporte ventilatório e preparo de intubação; nunca sedar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "frequência cardíaca acima de 140 bpm, bradicardia ou respiração irregular",
+        "por_que": "falência respiratória iminente e acidose",
+        "acao": "UTI imediata com ventilação não invasiva ou intubação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "uso intenso de musculatura acessória, batimento de asa nasal e retração de fúrcula",
+        "por_que": "trabalho respiratório insustentável",
+        "acao": "oxigênio, broncodilatador e ipratrópio, corticoide sistêmico e reavaliação em 20 min",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "história de internação em UTI, intubação ou crise grave prévia",
+        "por_que": "risco de morte por asma, mesmo em crise aparentemente leve",
+        "acao": "baixar o limiar de internação e observar por 4 a 6 h",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "crise que não responde a três séries de broncodilatador em 1 h",
+        "por_que": "obstrução refratária com indicação de tratamento adicional e internação",
+        "acao": "ipratrópio, corticoide sistêmico, sulfato de magnésio e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "assimetria auscultatória ou dor torácica súbita com piora",
+        "por_que": "pneumotórax ou pneumomediastino",
+        "acao": "radiografia de tórax e drenagem se confirmado",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Há quanto tempo começou a crise e o que a desencadeou (infecção, fumaça, exercício, alérgeno)?",
+      "A criança fala em frases completas, frases curtas ou só palavras?",
+      "Qual a saturação em ar ambiente e a frequência respiratória?",
+      "Quantos jatos de salbutamol já usou, com que técnica e com quanto tempo de intervalo?",
+      "Usa corticoide inalatório de manutenção? Com que frequência e qual a adesão na última semana?",
+      "Já precisou de UTI, intubação ou internação por asma?",
+      "Já tomou corticoide oral nesta crise ou nas últimas 4 semanas?",
+      "Tem febre, tosse produtiva ou dor torácica focal?",
+      "Tem rinite, eczema, alergia alimentar ou história familiar de asma e atopia?",
+      "Há fumantes em casa, mofo, ácaro, animal ou obra recente?",
+      "Quanto tempo levaria para voltar ao serviço em caso de piora?",
+      "A criança tem plano de ação escrito e sabe quando usar o broncodilatador?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Crise leve: fala em frases completas, saturação de 95% ou mais em ar, frequência cardíaca normal, sem uso de musculatura acessória",
+        "escolha": "Salbutamol por espaçador com máscara ou bocal, 4–8 jatos (200–400 mcg) por dose, repetidos a cada 20 min até 3 séries na primeira hora, com reavaliação do escore antes e depois",
+        "porque": "O espaçador entrega a mesma quantidade ao pulmão que a nebulização, com menos taquicardia e tremor, e permite tratar em casa; a resposta em 1 h define se o caso fica ambulatorial ou interna"
+      },
+      {
+        "cenario": "Crise moderada: frases curtas, saturação entre 90 e 95%, taquicardia, tiragem subcostal e uso de musculatura acessória",
+        "escolha": "Oxigênio para manter saturação de 94–98%, salbutamol por espaçador 4–8 jatos a cada 20 min ou nebulizado 0,15 mg/kg, ipratrópio associado nas primeiras 3 séries e prednisolona 1–2 mg/kg na primeira hora",
+        "porque": "O corticoide na primeira hora reduz internação e recidiva, mas leva 2 a 4 h para agir; o ipratrópio associado ao broncodilatador reduz internação em crise moderada a grave, e o oxigênio corrige a hipoxemia enquanto a via aérea abre"
+      },
+      {
+        "cenario": "Crise grave: palavras isoladas, saturação abaixo de 90%, tórax silencioso, exaustão ou rebaixamento",
+        "escolha": "Sala de emergência, oxigênio, salbutamol nebulizado 0,15 mg/kg com ipratrópio a cada 20 min por 3 doses, corticoide sistêmico venoso e sulfato de magnésio 40–50 mg/kg se não responder em 1 h; chamar UTI",
+        "porque": "A via inalatória em altas doses e o magnésio revertem o broncoespasmo refratário; a demora em escalar para UTI é o principal fator de morte evitável, e o tórax silencioso é obstrução crítica, não melhora"
+      },
+      {
+        "cenario": "Criança que não colabora com o espaçador, vomita ou está em crise grave com FiO2 alta",
+        "escolha": "Salbutamol nebulizado 0,15 mg/kg/dose (mínimo 2,5 mg e máximo 5 mg) diluído em 3 mL de soro fisiológico, com fluxo de oxigênio de 6–8 L/min, a cada 20 min na primeira hora",
+        "porque": "A nebulização não depende da coordenação da criança e permite acoplar oxigênio; perde em eficiência de depósito quando comparada ao espaçador bem usado, por isso não é a primeira escolha de rotina"
+      },
+      {
+        "cenario": "Crise moderada a grave com necessidade de corticoide e criança que vomita, está muito dispneica para deglutir ou já falhou a via oral",
+        "escolha": "Metilprednisolona 1 mg/kg/dose por via venosa a cada 6 h, com máximo de 40 mg por dose, até tolerar a via oral",
+        "porque": "A potência anti-inflamatória é equivalente à da prednisolona oral; a via venosa só se justifica pela impossibilidade de deglutir, e a troca para oral deve ocorrer assim que possível"
+      },
+      {
+        "cenario": "Crise grave sem resposta a broncodilatador, ipratrópio e corticoide em 1 h",
+        "escolha": "Sulfato de magnésio 40–50 mg/kg (máximo 2 g) diluído em 30–50 mL de soro fisiológico, infundido em 20 min, com monitorização de pressão arterial e reflexos",
+        "porque": "O magnésio relaxa a musculatura lisa brônquica por bloqueio de cálcio e reduz internação na crise grave refratária; é a droga que só a asma grave usa, e a hipotensão é o limite prático da infusão"
+      },
+      {
+        "cenario": "Crise leve a moderada que responde bem em 1 a 2 h, com saturação de 94% ou mais em ar e boa ingestão",
+        "escolha": "Alta com prednisolona oral 1–2 mg/kg/dia por 3 a 5 dias, corticoide inalatório prescrito e técnica do espaçador demonstrada, com reavaliação em 48–72 h",
+        "porque": "O corticoide curto reduz recidiva em 7 a 10 dias, e a prescrição do corticoide inalatório na alta é o que evita a próxima crise; alta sem controlador é a causa mais comum de retorno precoce"
+      },
+      {
+        "cenario": "Crise grave, saturação abaixo de 92% após tratamento, exaustão, necessidade de magnésio ou história de UTI por asma",
+        "escolha": "Internação em unidade com monitorização, oxigênio, broncodilatador de horário e corticoide sistêmico; UTI se houver sonolência, acidose, bradicardia ou necessidade de ventilação",
+        "porque": "Esses critérios identificam quem pode deteriorar em horas; a observação de 4 a 6 h após a última dose é o mínimo para garantir que a melhora se sustenta"
+      },
+      {
+        "cenario": "Crise asmática com febre, tosse produtiva ou infiltrado na radiografia",
+        "escolha": "Não prescrever antibiótico de rotina; tratar a crise e reavaliar em 48 h, reservando antibiótico para foco bacteriano documentado",
+        "porque": "A maioria das crises é desencadeada por infecção viral; o antibiótico não encurta a crise, não reduz internação e seleciona resistência"
+      },
+      {
+        "cenario": "Criança agitada ou exausta em crise grave, com equipe querendo sedar para acalmar",
+        "escolha": "Não sedar; tratar a hipoxemia e o broncoespasmo, posicionar, acalmar com a presença do cuidador e escalar para suporte ventilatório se necessário",
+        "porque": "Sedativo deprime o drive respiratório e mascara a piora do sensório, que é justamente o sinal que indica intubação; a agitação na crise grave é hipoxemia, não ansiedade"
+      },
+      {
+        "cenario": "Primeira crise ou crises recorrentes em criança com sibilância episódica e fatores de risco para asma",
+        "escolha": "Iniciar corticoide inalatório em dose baixa e reavaliar em 4 a 6 semanas com técnica e adesão verificadas, mantendo broncodilatador de resgate",
+        "porque": "O controlador reduz exacerbações e melhora a função pulmonar; prescrever só o resgate condena a criança a crises repetidas e a remodelamento de via aérea"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "oxigenio",
+        "agente": "oxigênio umidificado",
+        "papel": "primeira_linha",
+        "indicacao": "hipoxemia com saturação abaixo de 94% em ar ambiente, cianose ou esforço respiratório importante",
+        "dose": "1–2 L/min por cânula nasal em lactente e pré-escolar; 2–4 L/min em escolar; máscara com reservatório 5–10 L/min em crise grave, titulado para saturação de 94–98%",
+        "unidade": "L/min",
+        "via": "inalatória",
+        "frequencia": "contínuo, com reavaliação do fluxo e do alvo a cada 30–60 min",
+        "duracao": "até saturação de 94% ou mais mantida em ar por 30–60 min",
+        "dose_maxima": "titular pela oximetria; evitar saturação acima de 98%",
+        "contraindicacoes": [
+          "não há contraindicação absoluta na hipoxemia",
+          "cautela em displasia broncopulmonar e prematuro, com alvo mais baixo"
+        ],
+        "efeitos_adversos": [
+          "ressecamento de mucosa nasal",
+          "atelectasia de absorção por hiperóxia",
+          "desconforto e recusa da máscara",
+          "risco de retinopatia em prematuro com saturação alta"
+        ],
+        "apresentacoes": [
+          "cânula nasal infantil",
+          "máscara de Venturi com válvula",
+          "máscara com reservatório",
+          "regulador com umidificador de bolha",
+          "sistema de alto fluxo nasal com umidificador aquecido"
+        ],
+        "preparo": "Umidificar com água destilada estéril, ajustar o fluxo no rotâmetro e fixar sem tracionar a face; conferir vazão, alarme da fonte e nível de água do umidificador",
+        "tempo_infusao": "contínuo, com reavaliação a cada 30–60 min",
+        "monitorizacao": [
+          "saturação contínua por oximetria",
+          "frequência respiratória e escore de desconforto",
+          "fluxo e fração inspirada prescritos versus administrados",
+          "conforto e aceitação da interface",
+          "gasometria se necessidade crescente de oxigênio"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Corrige a hipoxemia enquanto o broncodilatador age, mas não trata a obstrução. Em crise grave, nunca atrasar o broncodilatador para instalar oxigênio: as duas coisas são feitas ao mesmo tempo, e a nebulização pode ser movida com oxigênio a 6–8 L/min",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "agonista_beta2_curta_acao",
+        "agente": "salbutamol aerossol 100 mcg com espaçador",
+        "papel": "primeira_linha",
+        "indicacao": "crise leve e moderada, e toda crise em criança que coopera com o espaçador",
+        "dose": "4–8 jatos por dose (200–400 mcg), um jato por vez, com 5 a 6 incursões por jato",
+        "unidade": "jato",
+        "via": "inalatória com espaçador valvulado e máscara facial ou bocal",
+        "frequencia": "a cada 20 min na primeira hora; depois 1–2 jatos a cada 4–6 h conforme necessidade",
+        "duracao": "primeira hora em série; resgate por 3 a 5 dias após a crise",
+        "dose_maxima": "até 10 jatos por dose na primeira hora; não ultrapassar 3 séries por hora sem reavaliação médica",
+        "contraindicacoes": [
+          "hipersensibilidade ao salbutamol",
+          "taquiarritmia não controlada",
+          "uso sem espaçador em criança pequena (jato direto na boca)"
+        ],
+        "efeitos_adversos": [
+          "tremor de extremidades",
+          "taquicardia e palpitação",
+          "agitação e cefaleia",
+          "hipocalemia em doses repetidas",
+          "hiperglicemia e acidose lática em uso intenso"
+        ],
+        "apresentacoes": [
+          "aerossol 100 mcg/dose, frasco 200 doses",
+          "aerossol 100 mcg/dose, frasco 120 doses",
+          "espaçador valvulado 200 mL com máscara facial infantil",
+          "espaçador valvulado 200 mL com bocal"
+        ],
+        "preparo": "Agitar o frasco, acoplar ao espaçador, disparar um jato no espaçador e deixar a criança respirar 5 a 6 vezes pelo bocal ou máscara; aguardar 30 s entre jatos e repetir até completar a dose prescrita",
+        "tempo_infusao": "não se aplica (via inalatória)",
+        "monitorizacao": [
+          "frequência cardíaca antes e após cada série",
+          "saturação e frequência respiratória",
+          "escore de desconforto respiratório antes e após",
+          "potássio se doses repetidas ou uso de corticoide associado",
+          "técnica do espaçador observada diretamente"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a primeira linha e substitui a nebulização na maioria dos casos, com menos taquicardia e tremor. A técnica é o que define o resultado: jato direto na boca em criança pequena deposita na orofaringe e não chega ao brônquio, o que é o erro mais frequente na emergência",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/GINA",
+        "claim_id": null
+      },
+      {
+        "classe": "agonista_beta2_curta_acao",
+        "agente": "salbutamol solução para nebulização 5 mg/mL",
+        "papel": "alternativa",
+        "indicacao": "crise grave, criança que não colabora com o espaçador, vômito ou serviço sem espaçador disponível",
+        "dose": "0,15 mg/kg/dose, com mínimo de 2,5 mg e máximo de 5 mg",
+        "unidade": "mg/kg/dose",
+        "via": "inalatória por nebulização",
+        "frequencia": "a cada 20 min por 3 doses na primeira hora; depois 1/1 a 4/4 h conforme resposta",
+        "duracao": "3 doses na primeira hora; manutenção por 24–48 h na crise internada",
+        "dose_maxima": "5 mg por dose; 15 mg na primeira hora",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "taquiarritmia não controlada",
+          "nebulização sem oxigênio em criança hipoxêmica"
+        ],
+        "efeitos_adversos": [
+          "taquicardia e tremor",
+          "hipocalemia em doses repetidas",
+          "hiperglicemia e acidose lática",
+          "piora paradoxal da saturação por broncoespasmo",
+          "aerossol frio e desconforto com máscara"
+        ],
+        "apresentacoes": [
+          "solução 5 mg/mL, frasco 10 mL",
+          "solução 1 mg/mL, frasco 100 mL",
+          "ampola 2,5 mg/2,5 mL",
+          "ampola 5 mg/10 mL"
+        ],
+        "preparo": "Diluir a dose em 3 mL de soro fisiológico 0,9% e nebulizar com fluxo de oxigênio de 6–8 L/min, com máscara facial bem adaptada e criança sentada",
+        "tempo_infusao": "nebulização em 10–15 min",
+        "monitorizacao": [
+          "frequência cardíaca antes e após",
+          "saturação e frequência respiratória",
+          "escore de desconforto respiratório antes e após",
+          "potássio e glicemia em doses repetidas",
+          "necessidade de oxigênio durante a nebulização"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Equivalente ao espaçador em eficácia quando usado em dose adequada, mas exige fonte de oxigênio, tempo de 10–15 min por dose e equipe disponível. Não é upgrade automático: na crise que responde ao espaçador, trocar para nebulização só acrescenta tempo e taquicardia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/GINA",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_muscarinico",
+        "agente": "ipratrópio",
+        "papel": "condicional",
+        "indicacao": "crise moderada a grave, associado ao salbutamol nas primeiras 3 séries; nunca como monoterapia",
+        "dose": "0,25 mg por nebulização abaixo de 20 kg e 0,5 mg acima de 20 kg; ou 4–8 jatos (20 mcg/jato) com espaçador",
+        "unidade": "mg",
+        "via": "inalatória por nebulização ou espaçador",
+        "frequencia": "a cada 20 min por 3 doses na primeira hora; depois de 6/6 h se necessário",
+        "duracao": "primeira hora, no máximo 3 doses; não manter de rotina",
+        "dose_maxima": "1,5 mg na primeira hora",
+        "contraindicacoes": [
+          "hipersensibilidade à atropina ou derivados",
+          "glaucoma de ângulo fechado",
+          "retenção urinária por hiperplasia prostática ou bexiga neurogênica"
+        ],
+        "efeitos_adversos": [
+          "boca seca",
+          "taquicardia",
+          "midríase e borramento visual se atingir os olhos",
+          "retenção urinária",
+          "irritação de vias aéreas e tosse"
+        ],
+        "apresentacoes": [
+          "solução 0,25 mg/mL, frasco 20 mL",
+          "solução 0,25 mg/mL, ampola 1 mL",
+          "solução 0,5 mg/2 mL",
+          "aerossol 20 mcg/dose"
+        ],
+        "preparo": "Diluir a dose em 3 mL de soro fisiológico e nebulizar junto do salbutamol, na mesma sessão, com máscara bem adaptada e proteção dos olhos; no espaçador, um jato por vez",
+        "tempo_infusao": "nebulização em 10–15 min",
+        "monitorizacao": [
+          "frequência cardíaca",
+          "saturação e escore de desconforto",
+          "volume urinário e queixa de retenção",
+          "queixa visual e diâmetro pupilar",
+          "resposta à associação nas 3 primeiras doses"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reduz internação quando associado ao salbutamol na crise moderada a grave, mas não acrescenta nada na crise leve e não deve ser mantido após a primeira hora nem prescrito na alta como controlador — não é corticoide inalatório e não tem efeito anti-inflamatório",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/GINA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisolona",
+        "papel": "primeira_linha",
+        "indicacao": "crise moderada a grave, com início na primeira hora; e todo paciente que precisa de internação ou de alta após crise",
+        "dose": "1–2 mg/kg/dia em dose única pela manhã",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3 a 5 dias, sem desmame",
+        "dose_maxima": "40 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "infecção sistêmica não tratada (não impede o uso na crise grave, com cobertura do foco)",
+          "varicela ou herpes em imunossuprimido (risco de disseminação)"
+        ],
+        "efeitos_adversos": [
+          "aumento do apetite e hiperglicemia",
+          "alteração de humor e insônia",
+          "dor abdominal e vômito",
+          "hipertensão transitória",
+          "supressão adrenal em cursos repetidos"
+        ],
+        "apresentacoes": [
+          "solução oral 3 mg/mL, frasco 60 mL",
+          "solução oral 1 mg/mL, frasco 100 mL",
+          "comprimido 5 mg",
+          "comprimido 20 mg"
+        ],
+        "preparo": "Uso direto por via oral, medido com seringa graduada; oferecer com alimento para reduzir desconforto gástrico e conferir a concentração da apresentação antes de calcular o volume",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "escore de desconforto e saturação em 2–4 h",
+          "glicemia em criança diabética ou em uso repetido",
+          "aceitação e vômito após a dose",
+          "pressão arterial em cursos prolongados",
+          "reavaliação da necessidade de manter após 5 dias"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em curso curto",
+        "observacoes": "Iniciar na primeira hora da crise moderada a grave: reduz internação e recidiva, com efeito máximo em 2 a 4 h. Curso de 3 a 5 dias não precisa de desmame nem de dose decrescente. Criança que já usou corticoide oral nas últimas 4 semanas tem risco maior e deve ser reavaliada com mais cautela",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/GINA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "metilprednisolona",
+        "papel": "alternativa",
+        "indicacao": "crise grave com vômito, dispneia intensa que impede deglutição ou falha da via oral",
+        "dose": "1 mg/kg/dose",
+        "unidade": "mg/kg/dose",
+        "via": "IV",
+        "frequencia": "6/6 h",
+        "duracao": "até tolerar a via oral, habitualmente 24–48 h",
+        "dose_maxima": "40 mg por dose",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "infecção fúngica sistêmica não tratada",
+          "vacina de vírus vivo recente"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipertensão",
+          "irritabilidade e insônia",
+          "hipocalemia",
+          "dor e flebite no sítio de infusão"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 125 mg/2 mL",
+          "frasco-ampola 500 mg/8 mL",
+          "frasco-ampola 1 g com diluente"
+        ],
+        "preparo": "Reconstituir conforme o rótulo e diluir em 20–50 mL de soro fisiológico 0,9%; nunca administrar em bolus rápido",
+        "tempo_infusao": "10–20 min",
+        "monitorizacao": [
+          "glicemia capilar",
+          "pressão arterial",
+          "potássio",
+          "sítio de infusão",
+          "escore de desconforto e saturação após 2–4 h"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em curso curto",
+        "observacoes": "Trocar para prednisolona oral assim que a criança deglutir: mesma eficácia, sem punção e sem custo de internação. Não usar dose alta repetida como rotina na asma pediátrica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfato_de_magnesio",
+        "agente": "sulfato de magnésio",
+        "papel": "resgate",
+        "indicacao": "crise grave refratária a broncodilatador, ipratrópio e corticoide sistêmico em 1 h",
+        "dose": "40–50 mg/kg/dose (máximo 2 g)",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir apenas com reavaliação em UTI",
+        "duracao": "infusão única de 20 min",
+        "dose_maxima": "2 g por dose",
+        "contraindicacoes": [
+          "insuficiência renal grave com oligúria (risco de hipermagnesemia)",
+          "bloqueio atrioventricular avançado",
+          "hipotensão ou bradicardia significativas",
+          "miastenia gravis"
+        ],
+        "efeitos_adversos": [
+          "hipotensão arterial",
+          "rubor facial e calor",
+          "náusea e vômito",
+          "bradicardia",
+          "perda de reflexos profundos e depressão respiratória em hipermagnesemia"
+        ],
+        "apresentacoes": [
+          "ampola 10% 10 mL (1 g/10 mL)",
+          "ampola 50% 10 mL (5 g/10 mL)",
+          "frasco 10% 50 mL"
+        ],
+        "preparo": "Diluir a dose em 30–50 mL de soro fisiológico 0,9% e infundir em bomba de infusão; nunca administrar a solução concentrada em bolus",
+        "tempo_infusao": "20 minutos",
+        "monitorizacao": [
+          "pressão arterial a cada 5 min durante a infusão",
+          "frequência cardíaca e saturação",
+          "reflexos profundos e força muscular",
+          "frequência respiratória",
+          "função renal antes da dose",
+          "escore de desconforto 30–60 min após"
+        ],
+        "ajuste_renal": "Contraindicado em insuficiência renal grave; reduzir a dose e monitorar magnésio se clearance abaixo de 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a droga que só a crise grave usa: reduz internação e melhora o escore quando a obstrução não cede ao broncodilatador. Exige acesso venoso, bomba e monitorização; hipotensão durante a infusão obriga a parar. Não é tratamento de crise leve e não deve ser repetido sem UTI",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/GINA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_inalatorio",
+        "agente": "budesonida inalatório",
+        "papel": "condicional",
+        "indicacao": "controle de manutenção e prescrição obrigatória na alta após crise; início após primeira crise com fatores de risco para asma",
+        "dose": "200 mcg/dia abaixo de 5 anos e 200–400 mcg/dia a partir de 5 anos, divididos em 2 tomadas (100–200 mcg 12/12 h)",
+        "unidade": "mcg/dia",
+        "via": "inalatória com espaçador e máscara facial ou bocal",
+        "frequencia": "12/12 h, com enxágue da boca após cada uso",
+        "duracao": "mínimo de 3 meses, com reavaliação em 4–6 semanas e depois a cada 3 meses",
+        "dose_maxima": "400 mcg/dia em criança; doses acima exigem avaliação de especialista",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "candidíase oral não tratada",
+          "uso de jato sem espaçador em criança pequena"
+        ],
+        "efeitos_adversos": [
+          "candidíase oral",
+          "rouquidão e disfonia",
+          "irritação de orofaringe e tosse",
+          "crescimento linear reduzido em dose alta prolongada",
+          "sangramento nasal se houver ulceração"
+        ],
+        "apresentacoes": [
+          "suspensão para nebulização 0,25 mg/2 mL",
+          "suspensão para nebulização 0,5 mg/2 mL",
+          "aerossol 200 mcg/dose",
+          "pó inalatório 100 mcg/dose",
+          "pó inalatório 200 mcg/dose"
+        ],
+        "preparo": "Agitar o frasco, acoplar ao espaçador, disparar um jato e deixar a criança respirar 5 a 6 vezes; na apresentação em nebulização, não diluir e usar máscara bem adaptada. Enxaguar a boca ou oferecer água após cada inalação",
+        "tempo_infusao": "não se aplica (via inalatória)",
+        "monitorizacao": [
+          "técnica de inalação observada em cada consulta",
+          "adesão e número de frascos usados por mês",
+          "número de resgates por semana e de crises por ano",
+          "crescimento e peso a cada 3 a 6 meses",
+          "candidíase oral e rouquidão",
+          "espirometria quando a criança coopera"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em dose baixa; monitorar em hepatopatia grave",
+        "observacoes": "Prescrever na alta de toda crise: é o que reduz a próxima. Explicar que é de uso diário, mesmo sem sintomas, e que não serve para aliviar crise — o resgate é o salbutamol. Nunca substituir o corticoide inalatório por broncodilatador de horário",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/GINA",
+        "claim_id": null
+      },
+      {
+        "classe": "adrenalina",
+        "agente": "adrenalina (epinefrina) 1:1000",
+        "papel": "resgate",
+        "indicacao": "crise com estridor, urticária, angioedema ou hipotensão após alérgeno — anafilaxia com broncoespasmo, não asma isolada",
+        "dose": "0,01 mg/kg/dose (0,01 mL/kg da solução 1:1000)",
+        "unidade": "mg/kg",
+        "via": "IM, na face anterolateral da coxa",
+        "frequencia": "dose única; repetir após 5–15 min se não houver resposta",
+        "duracao": "1 a 2 doses no episódio agudo",
+        "dose_maxima": "0,5 mg por dose (0,3 mg em criança abaixo de 30 kg)",
+        "contraindicacoes": [
+          "não há contraindicação absoluta na anafilaxia",
+          "cautela em cardiopatia e uso de betabloqueador"
+        ],
+        "efeitos_adversos": [
+          "taquicardia e palidez",
+          "tremor e ansiedade",
+          "hipertensão transitória",
+          "arritmia em cardiopata",
+          "necrose local se extravasar"
+        ],
+        "apresentacoes": [
+          "ampola 1 mg/mL (1:1000), 1 mL",
+          "seringa preenchida autoinjetável 0,15 mg",
+          "seringa preenchida autoinjetável 0,3 mg"
+        ],
+        "preparo": "Usar a solução 1 mg/mL sem diluir, aspirar o volume por peso e aplicar por via intramuscular profunda na face anterolateral da coxa; não usar a via subcutânea nem a IV periférica",
+        "tempo_infusao": "aplicação IM direta, sem infusão",
+        "monitorizacao": [
+          "pressão arterial e frequência cardíaca a cada 5 min",
+          "saturação e padrão respiratório",
+          "resolução do estridor e do broncoespasmo em 5–10 min",
+          "necessidade de segunda dose",
+          "observação hospitalar por 4 a 6 h pelo risco de reação bifásica"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só entra quando a crise tem componente anafilático; não é tratamento de asma. A via IM na coxa é a única correta no primeiro atendimento, e o atraso na dose é o principal fator de morte por anafilaxia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Técnica do espaçador com máscara por idade",
+        "detalhe": "Abaixo de 4 anos, usar espaçador valvulado de 200 mL com máscara facial que cubra nariz e boca, sem frestas, com a criança sentada ou no colo; um jato por vez, 5 a 6 incursões por jato. De 4 a 6 anos, manter máscara enquanto não houver cooperação e trocar para bocal assim que a criança conseguir vedar os lábios. Acima de 6 anos, espaçador com bocal. Nunca disparar o jato direto na boca: a deposição é orofaríngea e o brônquio não recebe a dose"
+      },
+      {
+        "medida": "Posicionamento sentado ou elevado, nunca deitado",
+        "detalhe": "Sentar a criança com o tronco elevado a 45–90°, no colo do cuidador se pequena, e permitir que ela encontre a posição de maior conforto respiratório; o decúbito dorsal reduz a capacidade residual funcional e piora a dispneia e a hipoxemia"
+      },
+      {
+        "medida": "Reavaliação seriada com escore e oximetria",
+        "detalhe": "Registrar frequência respiratória, frequência cardíaca, saturação em ar, uso de musculatura acessória e escore de desconforto antes e depois de cada série de broncodilatador; é o registro que mostra se houve resposta e evita decisão por impressão"
+      },
+      {
+        "medida": "Controle de gatilhos ambientais",
+        "detalhe": "Proibir fumaça de cigarro dentro de casa e do carro, reduzir mofo e umidade, lavar roupa de cama com água quente semanalmente, retirar tapete e bicho de pelúcia do quarto e evitar obra, incenso e desinfetante em spray. Tabagismo passivo aumenta exacerbação e reduz a resposta ao corticoide inalatório"
+      },
+      {
+        "medida": "Plano de ação escrito e educação do cuidador",
+        "detalhe": "Entregar por escrito quantos jatos usar em cada cenário (leve, moderada, grave), quando procurar o serviço e quando iniciar corticoide oral; demonstrar a técnica com o espaçador do próprio paciente e pedir que o cuidador repita antes da alta"
+      },
+      {
+        "medida": "Verificação de adesão e técnica a cada consulta",
+        "detalhe": "Perguntar quantos frascos de corticoide inalatório foram usados no último mês, conferir a data da última receita e observar a inalação; mais da metade das crises graves ocorre em criança com controlador prescrito e não usado ou usado com técnica errada"
+      },
+      {
+        "medida": "Não sedar a criança agitada ou exausta",
+        "detalhe": "Sedativo deprime o centro respiratório, mascara a piora do sensório e atrasa a intubação; a agitação na crise grave é hipoxemia e exaustão, e a conduta é oxigênio, broncodilatador e escalada de suporte"
+      },
+      {
+        "medida": "Vacinação contra influenza e medidas de prevenção de infecção viral",
+        "detalhe": "Vacina anual contra influenza em criança com asma, higiene de mãos e afastamento de contactantes doentes; a infecção viral é o principal desencadeador de exacerbação em pediatria"
+      },
+      {
+        "medida": "Encaminhamento a especialista quando houver crise grave ou controle inadequado",
+        "detalhe": "Encaminhar se houver necessidade de UTI, duas ou mais internações no ano, uso de corticoide oral repetido, sintomas diários ou limitação de atividade apesar da dose baixa de controlador"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Inalação com espaçador valvulado e máscara facial",
+        "indicacao": "toda crise em criança que não consegue usar bocal, principalmente abaixo de 4 anos",
+        "tecnica": "Agitar o aerossol, acoplar ao espaçador, adaptar a máscara cobrindo nariz, boca e queixo sem frestas, disparar um único jato e manter a máscara por 5 a 6 incursões respiratórias; aguardar 30 s e repetir até completar a dose. Sentar a criança e observar a válvula se movimentar a cada respiração",
+        "complicacoes": "Deposição facial e ocular por máscara mal adaptada, fresta que reduz a dose entregue, choro que diminui o volume corrente, contaminação do espaçador por falta de limpeza e uso de espaçador compartilhado entre pacientes"
+      },
+      {
+        "nome": "Nebulização com máscara e fluxo de oxigênio",
+        "indicacao": "crise grave, criança que não colabora com o espaçador, vômito ou indisponibilidade de espaçador",
+        "tecnica": "Diluir a dose em 3 mL de soro fisiológico, montar o nebulizador com máscara facial bem adaptada, ajustar o fluxo de oxigênio em 6–8 L/min e manter até cessar a névoa, em 10–15 min; sentar a criança e reavaliar escore e saturação ao final",
+        "complicacoes": "Taquicardia e tremor por dose alta, hipóxia se o fluxo de gás for insuficiente, aerossol frio com broncoespasmo, contaminação do circuito e atraso do atendimento pelo tempo de montagem"
+      },
+      {
+        "nome": "Oximetria de pulso e monitorização cardiorrespiratória",
+        "indicacao": "toda crise com saturação abaixo de 94%, crise grave ou criança internada",
+        "tecnica": "Sensor em membro com perfusão preservada, alarme de saturação em 92% e de frequência cardíaca para bradicardia; registrar em impresso horário e conferir o alarme a cada turno",
+        "complicacoes": "Falso alarme por movimento e má perfusão, lesão de pele por pressão do sensor, alarme fadiga da equipe e dependência do monitor em detrimento do exame clínico"
+      },
+      {
+        "nome": "Acesso venoso e infusão de sulfato de magnésio",
+        "indicacao": "crise grave refratária que não responde a broncodilatador, ipratrópio e corticoide em 1 h",
+        "tecnica": "Obter acesso venoso calibroso, diluir 40–50 mg/kg (máximo 2 g) em 30–50 mL de soro fisiológico e infundir em bomba em 20 min; manter monitorização de pressão arterial a cada 5 min, reflexos profundos e saturação, com sulfato de cálcio disponível ao lado",
+        "complicacoes": "Hipotensão e bradicardia durante a infusão, depressão respiratória por hipermagnesemia, náusea e vômito, flebite e extravasamento"
+      },
+      {
+        "nome": "Intubação orotraqueal e ventilação mecânica na crise refratária",
+        "indicacao": "exaustão, rebaixamento de consciência, apneia, acidose respiratória com pH abaixo de 7,20 ou hipoxemia refratária",
+        "tecnica": "Pré-oxigenação, sequência rápida com cetamina 1–2 mg/kg e rocurônio 1,2 mg/kg, tubo de calibre adequado para a idade, volume corrente de 6–8 mL/kg, frequência baixa e tempo expiratório prolongado com PEEP de 5 cmH2O, aceitando hipercapnia permissiva",
+        "complicacoes": "Hipotensão pós-intubação, pneumotórax e pneumomediastino por hiperinsuflação, atelectasia, barotrauma e morte em via aérea difícil"
+      }
+    ],
+    "metas": [
+      "Saturação de 94% ou mais em ar ambiente mantida por 30–60 min antes da alta",
+      "Redução do escore de desconforto e da frequência respiratória em 1 h de tratamento",
+      "Uso de broncodilatador espaçado para 4/4 h em 12–24 h, com necessidade decrescente de resgate",
+      "Corticoide sistêmico iniciado na primeira hora em toda crise moderada ou grave",
+      "Nenhuma prescrição de antibiótico, sedativo ou radiografia de tórax sem indicação registrada",
+      "Alta com corticoide inalatório prescrito, técnica demonstrada e plano de ação escrito",
+      "Retorno em 48–72 h agendado e reavaliação de controle em 4 a 6 semanas",
+      "Reconhecimento da indicação de UTI em menos de 30 min após a deterioração"
+    ],
+    "fluxo": [
+      "Triagem imediata: saturação em ar, frequência respiratória, frequência cardíaca, fala, uso de musculatura acessória e nível de consciência",
+      "Classificar a gravidade em leve, moderada ou grave antes de qualquer exame; saturação abaixo de 90%, tórax silencioso ou sonolência já colocam a criança na sala de emergência",
+      "Procurar diagnóstico alternativo que muda a conduta: corpo estranho, anafilaxia, pneumonia, crupe, disfunção de cordas vocais — nenhum deles responde a broncodilatador",
+      "Crise leve: salbutamol por espaçador com máscara ou bocal, 4–8 jatos por dose, até 3 séries em 1 h, com reavaliação do escore",
+      "Crise moderada: oxigênio para alvo de 94–98%, salbutamol por espaçador ou nebulizado, ipratrópio nas 3 primeiras séries e prednisolona 1–2 mg/kg na primeira hora",
+      "Crise grave: oxigênio, salbutamol nebulizado 0,15 mg/kg com ipratrópio a cada 20 min, corticoide venoso se não deglutir e chamar a UTI desde o início",
+      "Sem resposta em 1 h: sulfato de magnésio 40–50 mg/kg em 20 min com monitorização de pressão, e decisão de internação ou UTI",
+      "Reavaliar após 1–2 h: quem melhora e mantém saturação de 94% ou mais em ar por 30–60 min vai para alta; quem precisa de broncodilatador mais de 4/4 h fica internado",
+      "Na alta: prednisolona por 3 a 5 dias, corticoide inalatório prescrito, técnica do espaçador demonstrada, plano de ação escrito e retorno em 48–72 h",
+      "Registrar o que foi retirado da prescrição — antibiótico, sedativo, radiografia — para não haver reintrodução por hábito da equipe"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "menor_5_anos",
+        "ajuste": "usar espaçador com máscara facial, dose de salbutamol 4–8 jatos e corticoide inalatório em dose baixa com espaçador",
+        "alerta": "não coopera com bocal e não faz espirometria; diagnóstico é clínico e a técnica é o fator limitante"
+      },
+      {
+        "populacao": "historia_de_uti_ou_intubacao",
+        "ajuste": "baixar o limiar de internação, observar por 4–6 h e considerar UTI precocemente",
+        "alerta": "risco de morte por asma mesmo em crise aparentemente leve"
+      },
+      {
+        "populacao": "adolescente",
+        "ajuste": "investigar adesão, uso de cigarro e vape, e prescrever plano de ação com autonomia",
+        "alerta": "subestimação de sintomas e risco de crise fatal por abandono do controlador"
+      },
+      {
+        "populacao": "obeso",
+        "ajuste": "dose de salbutamol por jato mantida, corticoide inalatório em dose adequada ao peso e reavaliação de controle mais frequente",
+        "alerta": "pior resposta ao broncodilatador e maior risco de crise grave"
+      },
+      {
+        "populacao": "cardiopata",
+        "ajuste": "monitorização contínua, cautela com salbutamol em dose alta e com sulfato de magnésio",
+        "alerta": "arritmia e hipotensão com broncodilatador e magnésio"
+      },
+      {
+        "populacao": "uso_de_betabloqueador",
+        "ajuste": "considerar troca para cardioseletivo com a especialidade e ter glucagon disponível se houver broncoespasmo refratário",
+        "alerta": "broncoespasmo resistente ao salbutamol"
+      },
+      {
+        "populacao": "adolescente_gestante",
+        "ajuste": "manter o tratamento habitual da asma, sem reduzir controlador por causa da gestação",
+        "alerta": "crise mal tratada é mais grave para o feto que o medicamento"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "oximetria de pulso em ar ambiente",
+          "indicacao": "todos os casos, na primeira avaliação e após cada série de broncodilatador",
+          "o_que_muda": "define gravidade, necessidade de oxigênio, internação e critério de alta"
+        },
+        {
+          "nome": "escore clínico de desconforto e frequência respiratória",
+          "indicacao": "todos os casos, antes e depois do tratamento",
+          "o_que_muda": "objetiva a resposta e define se a criança pode ir para casa"
+        },
+        {
+          "nome": "pico de fluxo expiratório",
+          "indicacao": "criança acima de 5 anos que coopera, antes e após o broncodilatador",
+          "o_que_muda": "mede a reversibilidade e classifica gravidade quando o valor é comparável ao basal"
+        },
+        {
+          "nome": "gasometria arterial ou capilar",
+          "indicacao": "crise grave, saturação abaixo de 90% ou suspeita de exaustão",
+          "o_que_muda": "CO2 normal ou elevado com acidose indica falência ventilatória e antecipa a intubação"
+        },
+        {
+          "nome": "radiografia de tórax",
+          "indicacao": "suspeita de pneumonia, pneumotórax, corpo estranho ou piora inexplicada",
+          "o_que_muda": "identifica complicação e evita antibiótico quando o pulmão está limpo"
+        },
+        {
+          "nome": "espirometria com prova broncodilatadora",
+          "indicacao": "após a estabilização, para confirmar diagnóstico e acompanhar controle em criança acima de 5 anos",
+          "o_que_muda": "documenta obstrução reversível e orienta o ajuste do corticoide inalatório"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia de tórax de rotina em crise típica sem febre ou assimetria",
+          "motivo": "achados inespecíficos levam a antibiótico desnecessário e não mudam a conduta"
+        },
+        {
+          "exame": "hemograma, PCR e hemocultura de rotina na crise",
+          "motivo": "não alteram a decisão de broncodilatador e corticoide e aumentam punção e permanência"
+        },
+        {
+          "exame": "espirometria durante a crise",
+          "motivo": "não é factível nem segura na fase aguda; repetir após a estabilização"
+        },
+        {
+          "exame": "teste de alergia e IgE durante a crise",
+          "motivo": "não muda o tratamento da crise e pode ser feito ambulatorialmente depois"
+        },
+        {
+          "exame": "tomografia de tórax na crise não complicada",
+          "motivo": "irradiação e sedação sem indicação, sem impacto na conduta imediata"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "usar o espaçador com máscara ou bocal, um jato por vez, com 5 a 6 respirações por jato",
+        "manter o corticoide inalatório todos os dias, mesmo sem sintomas, e enxaguar a boca depois",
+        "usar o salbutamol de resgate apenas quando houver sintomas e anotar quantas vezes por semana",
+        "tomar o corticoide oral por 3 a 5 dias, sem interromper quando melhorar",
+        "manter a casa livre de fumaça, mofo e bicho de pelúcia no quarto",
+        "levar o plano de ação escrito e o espaçador em toda consulta e viagem"
+      ],
+      "evitar": [
+        "jato direto na boca sem espaçador em criança pequena",
+        "antibiótico e xarope para tosse por conta própria durante a crise",
+        "sedativo, antialérgico sedante e antitussígeno em crise",
+        "suspender o corticoide inalatório porque a criança melhorou",
+        "fumaça de cigarro, vape, incenso e spray dentro de casa ou do carro",
+        "nebulização em casa como substituto do espaçador e do controlador"
+      ],
+      "retorno": [
+        "dificuldade para falar, cansaço extremo ou sonolência",
+        "saturação abaixo de 92% ou lábios arroxeados",
+        "necessidade de salbutamol mais de 4/4 h por mais de 24 h",
+        "piora progressiva após melhora inicial nas primeiras 24 h",
+        "febre alta, dor torácica ou falta de ar em repouso",
+        "vômito que impeça tomar o corticoide oral"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "salbutamol por espaçador ou nebulizado",
+        "efeitos": ["tremor", "taquicardia", "hipocalemia", "agitação"],
+        "observacao": "reduzir a frequência após a primeira hora e dosar potássio se houver associação com corticoide e doses repetidas"
+      },
+      {
+        "agente": "oxigênio",
+        "efeitos": ["ressecamento de mucosa", "atelectasia de absorção"],
+        "observacao": "umidificar sempre e titular pela oximetria, evitando saturação acima de 98%"
+      },
+      {
+        "agente": "ipratrópio",
+        "efeitos": ["boca seca", "taquicardia", "retenção urinária", "midríase"],
+        "observacao": "proteger os olhos durante a nebulização e suspender se houver retenção urinária"
+      },
+      {
+        "agente": "prednisolona e metilprednisolona",
+        "efeitos": ["hiperglicemia", "alteração de humor", "dor abdominal", "hipertensão"],
+        "observacao": "curso curto de 3 a 5 dias dispensa desmame; conferir glicemia em diabético"
+      },
+      {
+        "agente": "sulfato de magnésio",
+        "efeitos": ["hipotensão", "bradicardia", "náusea", "perda de reflexos"],
+        "observacao": "parar a infusão se houver queda de pressão ou reflexos abolidos e ter sulfato de cálcio disponível"
+      },
+      {
+        "agente": "budesonida inalatório",
+        "efeitos": ["candidíase oral", "rouquidão", "tosse"],
+        "observacao": "enxágue da boca após cada inalação e revisão da técnica em cada consulta"
+      },
+      {
+        "agente": "adrenalina IM",
+        "efeitos": ["taquicardia", "tremor", "palidez", "hipertensão transitória"],
+        "observacao": "observar por 4 a 6 h pelo risco de reação bifásica e não repetir sem reavaliação"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a intervenção implicada e registrar hora, dose, via e resposta",
+      "Tremor e taquicardia com salbutamol: espaçar as doses, manter oxigênio e checar potássio se houve doses repetidas",
+      "Hipotensão ou bradicardia durante o sulfato de magnésio: interromper a infusão, colocar em Trendelenburg, checar reflexos e considerar sulfato de cálcio",
+      "Candidíase oral com corticoide inalatório: tratar com antifúngico tópico, reforçar enxágue e revisar a técnica",
+      "Hiperglicemia com corticoide sistêmico: monitorar glicemia e manter o curso curto; não suspender o corticoide na crise por causa da glicemia",
+      "Piora paradoxal da saturação durante a nebulização: interromper, reavaliar a via aérea e trocar para espaçador se possível",
+      "Reavaliar a gravidade e reescrever a prescrição antes da alta; não dar alta com efeito adverso em curso"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "salbutamol aerossol 100 mcg com espaçador valvulado",
+            "dose": "4–8 jatos por dose (200–400 mcg) = ___ jatos (calcular pelo peso e pela gravidade)",
+            "via": "inalatória com espaçador e máscara facial ou bocal",
+            "frequencia": "a cada 20 min na primeira hora; depois 1–2 jatos a cada 4–6 h se necessário",
+            "duracao": "3 a 5 dias após a crise",
+            "condicao": "um jato por vez, 5 a 6 respirações por jato; nunca jato direto na boca",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisolona solução oral 3 mg/mL",
+            "dose": "1–2 mg/kg/dia = ___ mg = ___ mL (máximo 40 mg/dia)",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "3 a 5 dias, sem desmame",
+            "condicao": "iniciar na primeira hora da crise; oferecer com alimento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "budesonida aerossol 200 mcg/dose ou pó inalatório 100 mcg/dose",
+            "dose": "200 mcg/dia abaixo de 5 anos; 200–400 mcg/dia a partir de 5 anos, em 2 tomadas",
+            "via": "inalatória com espaçador",
+            "frequencia": "12/12 h",
+            "duracao": "mínimo de 3 meses, com reavaliação em 4–6 semanas",
+            "condicao": "uso diário mesmo sem sintomas; enxaguar a boca após cada inalação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "plano de ação escrito da asma",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a próxima revisão",
+            "condicao": "todo paciente na alta, com técnica demonstrada pelo cuidador",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "oxigênio umidificado",
+            "dose": "1–4 L/min por cânula nasal, alvo de saturação de 94–98%",
+            "via": "inalatória",
+            "frequencia": "contínuo com reavaliação a cada 30–60 min",
+            "monitorizacao": "saturação, frequência respiratória e aceitação da interface",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "salbutamol solução para nebulização 5 mg/mL",
+            "dose": "0,15 mg/kg/dose, mínimo 2,5 mg e máximo 5 mg, em 3 mL de soro fisiológico",
+            "via": "nebulização com oxigênio a 6–8 L/min",
+            "frequencia": "a cada 20 min por 3 doses na primeira hora",
+            "monitorizacao": "frequência cardíaca, saturação, escore de desconforto e potássio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ipratrópio solução 0,25 mg/mL",
+            "dose": "0,25 mg abaixo de 20 kg e 0,5 mg acima de 20 kg",
+            "via": "nebulização, junto do salbutamol",
+            "frequencia": "a cada 20 min por 3 doses",
+            "monitorizacao": "frequência cardíaca, retenção urinária e queixa visual",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metilprednisolona",
+            "dose": "1 mg/kg/dose, máximo 40 mg",
+            "via": "IV",
+            "frequencia": "6/6 h até tolerar via oral",
+            "monitorizacao": "glicemia, pressão arterial, potássio e sítio de infusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "sulfato de magnésio 10%",
+            "dose": "40–50 mg/kg, máximo 2 g, diluído em 30–50 mL de soro fisiológico",
+            "via": "IV em bomba",
+            "frequencia": "dose única em 20 min",
+            "monitorizacao": "pressão arterial a cada 5 min, reflexos profundos, frequência cardíaca e saturação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisolona solução oral (na transição para via oral)",
+            "dose": "1–2 mg/kg/dia, máximo 40 mg",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "monitorizacao": "aceitação, vômito e escore de desconforto",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "oximetria em ar ambiente",
+          "frequência respiratória e escore de desconforto",
+          "pico de fluxo expiratório quando cooperativo",
+          "gasometria quando grave",
+          "radiografia de tórax quando indicada",
+          "espirometria após estabilização",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que a criança esteve sob meus cuidados nesta data, com crise asmática, necessitando de afastamento escolar por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; anexar plano de ação e orientação de retorno"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com idade, gravidade da crise, saturação, tratamento usado, resposta, controlador em uso e adesão",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Criança de ___ anos com asma, em crise de gravidade ___, saturação de ___% em ar, tratada com ___ jatos de salbutamol por espaçador e/ou nebulização 0,15 mg/kg, ipratrópio ___, prednisolona ___ mg/kg e ___, com resposta ___, alta com corticoide oral por ___ dias, corticoide inalatório ___ mcg/dia, técnica demonstrada e plano de ação escrito."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tempo de início da crise e desencadeador",
+        "fala em frases, frases curtas ou palavras",
+        "número de jatos de salbutamol usados, técnica e intervalo",
+        "uso de corticoide oral nesta crise ou nas últimas 4 semanas",
+        "corticoide inalatório em uso, dose, adesão e frascos por mês",
+        "crises, internações, UTI e intubação prévias",
+        "febre, tosse produtiva e dor torácica",
+        "atopia: rinite, eczema, alergia alimentar e história familiar",
+        "gatilhos ambientais: fumaça, mofo, ácaro, animal, obra",
+        "plano de ação escrito e conhecimento do cuidador",
+        "comorbidades: obesidade, cardiopatia, uso de betabloqueador",
+        "distância e meio de transporte até o serviço"
+      ],
+      "texto_template": "Criança de ___ anos com asma, em crise há ___, desencadeada por ___, falando em ___, com ___ jatos de salbutamol por ___, corticoide oral ___, corticoide inalatório ___ mcg/dia com adesão ___, história de ___ internações e ___ intubações, febre ___, atopia ___, gatilhos ___, plano de ação ___, comorbidades ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "peso, temperatura e estado geral",
+        "frequência respiratória, frequência cardíaca e saturação em ar ambiente",
+        "fala e capacidade de beber",
+        "uso de musculatura acessória, tiragem e retração de fúrcula",
+        "ausculta pulmonar com sibilos, tempo expiratório e simetria",
+        "nível de consciência e agitação",
+        "pele: sudorese, cianose e perfusão",
+        "abdome e sinais de esforço com distensão gástrica",
+        "orofaringe, otoscopia e foco infeccioso associado"
+      ],
+      "texto_template": "Peso ___ kg, temperatura ___ °C, frequência respiratória ___ rpm, frequência cardíaca ___ bpm, saturação ___% em ar, fala ___, musculatura acessória ___, ausculta com ___, tempo expiratório ___, consciência ___, perfusão ___, foco associado ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de crise asmática na emergência pediátrica, critérios de internação, de UTI e de alta",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "classificação de gravidade, papel do espaçador versus nebulização, dose de ipratrópio e indicação de sulfato de magnésio",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_asma",
+        "o_que_verificar": "dose de corticoide sistêmico, duração do curso curto e início de corticoide inalatório na alta",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "protocolo de asma na infância, calendário de influenza e dispensação de corticoide inalatório",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de salbutamol, ipratrópio, prednisolona, budesonida e sulfato de magnésio disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED04-01",
+        "tipo": "crise_grave",
+        "gatilho": "tórax silencioso, saturação abaixo de 90%, exaustão, sonolência ou bradicardia",
+        "severidade": "grave",
+        "mensagem": "Crise grave com risco de parada: oxigênio, broncodilatador e ipratrópio imediatos e UTI acionada.",
+        "acao": "acionar sala de emergência e UTI",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED04-02",
+        "tipo": "sedativo",
+        "gatilho": "sedativo, ansiolítico ou anti-histamínico sedante prescrito durante a crise",
+        "severidade": "grave",
+        "mensagem": "Sedativo deprime o drive respiratório e mascara a piora: não usar na crise asmática.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED04-03",
+        "tipo": "antibiotico_sem_foco",
+        "gatilho": "antibiótico prescrito em crise asmática sem foco bacteriano documentado",
+        "severidade": "grave",
+        "mensagem": "Antibiótico não trata crise asmática: a maioria é viral e o uso empírico seleciona resistência.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED04-04",
+        "tipo": "radiografia_rotina",
+        "gatilho": "radiografia de tórax solicitada de rotina em crise típica",
+        "severidade": "precaucao",
+        "mensagem": "Radiografia de rotina não muda a conduta e induz antibiótico desnecessário.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED04-05",
+        "tipo": "alta_sem_controlador",
+        "gatilho": "alta após crise sem corticoide inalatório prescrito ou sem corticoide oral de 3 a 5 dias",
+        "severidade": "grave",
+        "mensagem": "Alta sem corticoide inalatório e sem corticoide oral: risco de nova crise em semanas.",
+        "acao": "bloquear alta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED04-06",
+        "tipo": "jato_sem_espacador",
+        "gatilho": "salbutamol prescrito por jato direto na boca em criança menor de 5 anos",
+        "severidade": "precaucao",
+        "mensagem": "Sem espaçador a dose deposita na orofaringe: prescrever espaçador com máscara.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED04-07",
+        "tipo": "nao_resposta",
+        "gatilho": "crise sem resposta a três séries de broncodilatador em 1 h",
+        "severidade": "grave",
+        "mensagem": "Falha de resposta em 1 h: ipratrópio, corticoide sistêmico e sulfato de magnésio com avaliação de UTI.",
+        "acao": "sugerir protocolo de resgate",
+        "bloqueante": true
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBP",
+        "GINA",
+        "Ministério da Saúde",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral centrada em gravidade: classificação em leve, moderada e grave com conduta própria, salbutamol por espaçador 4–8 jatos como primeira linha e 0,15 mg/kg nebulizado como alternativa, ipratrópio nas três primeiras séries, prednisolona 1–2 mg/kg na primeira hora, metilprednisolona venosa na falha da via oral, sulfato de magnésio 40–50 mg/kg apenas na crise grave refratária e budesonida prescrita na alta. Nove fármacos com apresentações, preparo, tempo de infusão e monitorização, em sete classes. Critérios de internação e de UTI explicitados, técnica do espaçador com máscara por idade, alta com corticoide curto mais corticoide inalatório e bloqueios de antibiótico, sedativo e radiografia de rotina.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

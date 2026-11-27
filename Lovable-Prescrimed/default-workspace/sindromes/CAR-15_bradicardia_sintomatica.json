@@ -1,0 +1,1153 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "CAR-15",
+    "area": "Cardiovascular",
+    "nome": "Bradicardia sintomática",
+    "aliases": [
+      "bradicardia sintomática",
+      "bradiarritmia",
+      "bradicardia com instabilidade",
+      "bloqueio atrioventricular",
+      "bloqueio AV total",
+      "BAV total",
+      "doença do nó sinusal",
+      "bradicardia grave"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Bradicardia sintomática é FC baixa associada a hipoperfusão: hipotensão, rebaixamento de consciência, dor isquêmica ou insuficiência cardíaca congestiva. O número da frequência não trata ninguém — o que indica conduta é a repercussão. Com instabilidade, a sequência é atropina 1 mg IV a cada 3–5 minutos até 3 mg, marca-passo transcutâneo montado em paralelo (BOX-12) e, se refratário ou dependente, dopamina 5–20 mcg/kg/min, adrenalina 2–10 mcg/min ou isoproterenol 2–10 mcg/min como ponte para o marca-passo transvenoso. Atropina não é solução única em bloqueio de alto grau (Mobitz II e BAV total): o bloqueio é infranodal e não responde a vagolítico — atrasar o marca-passo para repetir atropina é o erro que leva à assistolia. Toda bradicardia com instabilidade obriga a procurar causa reversível em paralelo: hipercalemia, hipotireoidismo, fármaco bradicardizante, isquemia (principalmente infarto de parede inferior), hipóxia e hipotermia. Corrigir a causa é parte do tratamento, não etapa posterior.",
+    "inclusao": [
+      "FC menor que 60 bpm com hipoperfusão: PAS menor que 90, rebaixamento, dor isquêmica, edema pulmonar ou síncope",
+      "Bloqueio AV de 2º grau Mobitz II ou de 3º grau, com ou sem sintoma",
+      "Pausa sinusal maior que 3 segundos ou FC menor que 40 bpm",
+      "Bradicardia por fármaco bradicardizante, hipercalemia ou hipotireoidismo com repercussão"
+    ],
+    "exclusao": [
+      {
+        "situacao": "bradicardia sinusal assintomática de atleta, durante o sono ou em uso crônico tolerado de betabloqueador",
+        "fluxo": "observação e revisão de fármacos, sem atropina e sem marca-passo"
+      },
+      {
+        "situacao": "assistolia ou atividade elétrica sem pulso",
+        "fluxo": "RCP e adrenalina (CAR-11), não marca-passo"
+      },
+      {
+        "situacao": "bradicardia com hipotensão por hipovolemia ou sepse sem bloqueio",
+        "fluxo": "ressuscitação volêmica e tratamento da causa"
+      },
+      {
+        "situacao": "síncope sem bradicardia documentada",
+        "fluxo": "investigação de síncope (NEU-04 / GER-07)"
+      },
+      {
+        "situacao": "intoxicação digitálica com bradicardia e distúrbio eletrolítico grave",
+        "fluxo": "antídoto específico e sala vermelha"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "PAS menor que 90 mmHg, choque ou necessidade de vasopressor",
+        "por_que": "baixo débito pela bradicardia",
+        "acao": "atropina imediata e marca-passo transcutâneo em paralelo",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "rebaixamento de consciência, síncope ou convulsão",
+        "por_que": "hipoperfusão cerebral",
+        "acao": "atropina e marca-passo imediatos; sala vermelha",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "dor torácica isquêmica ou supra de ST",
+        "por_que": "isquemia por baixo débito ou infarto de parede inferior",
+        "acao": "tratar isquemia e marca-passo precoce; evitar isoproterenol",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "dispneia, ortopneia ou crepitações pulmonares",
+        "por_que": "insuficiência cardíaca congestiva por bradicardia",
+        "acao": "marca-passo e suporte ventilatório",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "FC menor que 40 bpm ou pausa maior que 3 segundos",
+        "por_que": "risco de assistolia",
+        "acao": "atropina e marca-passo transcutâneo preparado",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "bloqueio AV de 2º grau Mobitz II ou de 3º grau no ECG",
+        "por_que": "bloqueio infranodal, de progressão imprevisível",
+        "acao": "marca-passo transcutâneo imediato; atropina não é solução única",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "QRS largo com ritmo de escape lento",
+        "por_que": "escape ventricular instável e risco de parada",
+        "acao": "marca-passo imediato e avaliação para transvenoso",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "onda T apiculada, QRS largo, ausência de onda P ou ritmo sinusoidal",
+        "por_que": "hipercalemia grave com risco de fibrilação ventricular",
+        "acao": "gluconato de cálcio imediato e tratamento da hipercalemia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "uso de betabloqueador, diltiazem, verapamil, digoxina, amiodarona ou opioide",
+        "por_que": "bradicardia induzida por fármaco",
+        "acao": "revisar e suspender o fármaco; considerar antídoto",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Teve tontura, escurecimento visual, síncope ou rebaixamento?",
+      "Tem dor no peito, falta de ar ou edema?",
+      "Usa betabloqueador, diltiazem, verapamil, digoxina, amiodarona ou opioide?",
+      "Teve vômito, diarreia ou usa diurético, IECA ou espironolactona (potássio)?",
+      "Tem hipotireoidismo, tireoide operada ou radioterapia cervical?",
+      "É atleta ou já tinha frequência baixa assintomática?",
+      "Tem marca-passo implantado? Quando foi a última avaliação?",
+      "Já teve infarto, principalmente de parede inferior?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Bradicardia instável com bloqueio nodal (sinusal, BAV de 1º grau ou Mobitz I)",
+        "escolha": "Atropina 1 mg IV a cada 3–5 min até 3 mg, com marca-passo transcutâneo sendo montado em paralelo",
+        "porque": "O mecanismo é vagal e responde rápido ao anticolinérgico, mas o marca-passo não pode esperar a falha da atropina"
+      },
+      {
+        "cenario": "Bloqueio AV de 2º grau Mobitz II ou BAV total",
+        "escolha": "Marca-passo transcutâneo imediato e transvenoso; atropina apenas como medida adjuvante",
+        "porque": "O bloqueio é infranodal e não responde a vagolítico; repetir atropina enquanto se espera é o que leva à assistolia"
+      },
+      {
+        "cenario": "Bradicardia refratária à atropina, com ou sem captura do transcutâneo",
+        "escolha": "Dopamina 5–20 mcg/kg/min ou adrenalina 2–10 mcg/min; isoproterenol 2–10 mcg/min se disfunção sinusal",
+        "porque": "A infusão mantém o débito enquanto se obtém captura estável e o marca-passo transvenoso definitivo"
+      },
+      {
+        "cenario": "Hipercalemia com bradicardia e alteração de ECG",
+        "escolha": "Gluconato de cálcio 1 g IV imediato, seguido de insulina com glicose e diálise; marca-passo se persistir",
+        "porque": "O cálcio estabiliza a membrana em minutos; sem isso a atropina não funciona e a fibrilação ventricular é iminente"
+      },
+      {
+        "cenario": "Intoxicação por betabloqueador ou bloqueador de canal de cálcio",
+        "escolha": "Glucagon 3 mg IV, cálcio, insulina euglicêmica e marca-passo se refratário",
+        "porque": "O glucagon contorna o receptor beta bloqueado e aumenta o AMP cíclico intracelular"
+      },
+      {
+        "cenario": "Suspeita de infarto de parede inferior (dor, supra em II, III e aVF)",
+        "escolha": "Tratar a isquemia, atropina se houver resposta e marca-passo precoce; evitar isoproterenol",
+        "porque": "A bradicardia é vagal por isquemia do nó e costuma responder à atropina, mas o isoproterenol aumenta o consumo de oxigênio"
+      },
+      {
+        "cenario": "Hipotireoidismo grave ou coma mixedematoso com bradicardia",
+        "escolha": "Levotiroxina IV, hidrocortisona e aquecimento; marca-passo se instável",
+        "porque": "A reposição hormonal leva horas a dias e não substitui o suporte elétrico imediato"
+      },
+      {
+        "cenario": "Bradicardia com depressão respiratória e uso de opioide",
+        "escolha": "Naloxona titulada pela frequência respiratória",
+        "porque": "Reverte o tônus vagal e a depressão respiratória; titular evita abstinência e edema pulmonar"
+      },
+      {
+        "cenario": "Bradicardia sinusal 40–50 bpm assintomática em atleta, no sono ou com betabloqueador tolerado",
+        "escolha": "Observação, revisão de fármacos e nenhuma intervenção",
+        "porque": "Tratar o número e não o paciente gera marca-passo e restrição de atividade sem benefício"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "anticolinergico",
+        "agente": "atropina",
+        "papel": "primeira_linha",
+        "indicacao": "bradicardia sintomática com instabilidade e bloqueio nodal (sinusal, BAV de 1º grau ou Mobitz I)",
+        "dose": "1 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "a cada 3–5 minutos",
+        "duracao": "até resposta ou dose máxima",
+        "dose_maxima": "3 mg no total",
+        "contraindicacoes": [
+          "glaucoma de ângulo fechado",
+          "retenção urinária por obstrução prostática",
+          "taquiarritmia instável",
+          "hipersensibilidade à atropina"
+        ],
+        "efeitos_adversos": [
+          "taquicardia",
+          "boca seca",
+          "retenção urinária",
+          "confusão em idoso",
+          "midríase",
+          "arritmia ventricular em dose alta"
+        ],
+        "apresentacoes": [
+          "ampola 0,25 mg/mL (1 mL)",
+          "ampola 0,5 mg/mL (1 mL)",
+          "seringa preenchida 0,5 mg/5 mL"
+        ],
+        "preparo": "Uso direto; não diluir",
+        "tempo_infusao": "bolus rápido",
+        "monitorizacao": [
+          "FC e ritmo em monitor cardíaco",
+          "PA após cada dose",
+          "nível de consciência",
+          "retenção urinária e distensão vesical",
+          "resposta de captura se marca-passo em uso"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não usar dose menor que 0,5 mg: pode causar efeito parassimpomimético paradoxal e piorar a bradicardia. Em Mobitz II e BAV total pode não responder — seguir para marca-passo sem repetir indefinidamente. Dose total máxima 3 mg.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS 2020",
+        "claim_id": null
+      },
+      {
+        "classe": "catecolamina",
+        "agente": "adrenalina",
+        "papel": "resgate",
+        "indicacao": "bradicardia refratária à atropina e ao marca-passo transcutâneo, ou choque associado",
+        "dose": "2 a 10 mcg/min",
+        "unidade": "mcg/min",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até marca-passo definitivo ou reversão da causa",
+        "dose_maxima": "10 mcg/min",
+        "contraindicacoes": [
+          "taquiarritmia",
+          "isquemia miocárdica ativa",
+          "uso de IMAO"
+        ],
+        "efeitos_adversos": [
+          "taquicardia",
+          "hipertensão",
+          "isquemia miocárdica",
+          "arritmia ventricular",
+          "hiperglicemia",
+          "necrose por extravasamento"
+        ],
+        "apresentacoes": [
+          "ampola 1 mg/mL (1 mL)",
+          "frasco-ampola 1 mg/mL (10 mL)"
+        ],
+        "preparo": "1 mg em 250 mL de SF 0,9% (4 mcg/mL); administrar em bomba de infusão, preferencialmente em acesso central",
+        "tempo_infusao": "infusão contínua",
+        "monitorizacao": [
+          "FC e ritmo",
+          "PA",
+          "dor torácica e ECG para isquemia",
+          "lactato e perfusão",
+          "glicemia",
+          "local da infusão"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Para bradicardia usar infusão, nunca bolus. Em parada cardíaca a dose é 1 mg IV em bolus a cada 3–5 minutos.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS 2020",
+        "claim_id": null
+      },
+      {
+        "classe": "catecolamina",
+        "agente": "dopamina",
+        "papel": "alternativa",
+        "indicacao": "bradicardia refratária com hipotensão, como ponte para o marca-passo",
+        "dose": "5 a 20 mcg/kg/min",
+        "unidade": "mcg/kg/min",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até marca-passo definitivo",
+        "dose_maxima": "20 mcg/kg/min",
+        "contraindicacoes": [
+          "taquiarritmia",
+          "fibrilação ventricular",
+          "feocromocitoma",
+          "uso de IMAO"
+        ],
+        "efeitos_adversos": [
+          "taquicardia",
+          "arritmia ventricular",
+          "hipertensão",
+          "necrose por extravasamento",
+          "náusea"
+        ],
+        "apresentacoes": [
+          "ampola 50 mg/10 mL",
+          "frasco 50 mg/50 mL",
+          "solução 250 mg/250 mL"
+        ],
+        "preparo": "50 mg em 250 mL de SF ou SG 5% (200 mcg/mL); via preferencialmente central",
+        "tempo_infusao": "infusão contínua",
+        "monitorizacao": [
+          "PA",
+          "FC e ritmo",
+          "diurese",
+          "perfusão de extremidades",
+          "local da infusão a cada hora"
+        ],
+        "ajuste_renal": "Sem ajuste; não há benefício renal na dose baixa",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Dose abaixo de 5 mcg/kg/min não é dose renal: é subterapêutica. Extravasamento causa necrose — checar o acesso a cada hora e preferir veia central.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS 2020",
+        "claim_id": null
+      },
+      {
+        "classe": "agonista_beta",
+        "agente": "isoproterenol",
+        "papel": "alternativa",
+        "indicacao": "bradicardia por disfunção sinusal ou bloqueio AV como ponte para o marca-passo, quando não há choque",
+        "dose": "2 a 10 mcg/min",
+        "unidade": "mcg/min",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até marca-passo definitivo",
+        "dose_maxima": "10 mcg/min",
+        "contraindicacoes": [
+          "isquemia miocárdica ativa",
+          "taquiarritmia",
+          "hipertireoidismo não tratado"
+        ],
+        "efeitos_adversos": [
+          "taquicardia",
+          "tremor",
+          "cefaleia",
+          "isquemia miocárdica",
+          "arritmia ventricular"
+        ],
+        "apresentacoes": [
+          "ampola 0,2 mg/mL (1 mL)"
+        ],
+        "preparo": "0,2 mg em 100 mL de SF ou SG 5% (2 mcg/mL); infusão em bomba",
+        "tempo_infusao": "infusão contínua",
+        "monitorizacao": [
+          "FC e ritmo",
+          "PA",
+          "dor torácica",
+          "ECG para isquemia"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Útil quando o bloqueio é nodal e há betabloqueio excessivo. Evitar em coronariopatia ativa e em infarto de parede inferior com isquemia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ACLS 2020",
+        "claim_id": null
+      },
+      {
+        "classe": "eletrolito",
+        "agente": "gluconato de cálcio 10%",
+        "papel": "condicional",
+        "indicacao": "hipercalemia com bradicardia e alteração de ECG",
+        "dose": "1 g (10 mL da solução a 10%)",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "repetir a cada 5–10 minutos se o ECG não melhorar",
+        "duracao": "1 a 3 doses",
+        "dose_maxima": "3 g",
+        "contraindicacoes": [
+          "hipercalcemia",
+          "intoxicação digitálica (usar com cautela; preferir outros agentes)",
+          "hipersensibilidade"
+        ],
+        "efeitos_adversos": [
+          "bradicardia",
+          "irritação venosa e flebite",
+          "necrose por extravasamento",
+          "hipercalcemia"
+        ],
+        "apresentacoes": [
+          "ampola 10% 10 mL (1 g)",
+          "frasco 10% 100 mL"
+        ],
+        "preparo": "Uso direto ou diluído em 100 mL de SG 5%; preferir acesso venoso calibroso, por ser irritante",
+        "tempo_infusao": "5 a 10 minutos",
+        "monitorizacao": [
+          "ECG contínuo: encurtamento do QT e desaparecimento da onda T apiculada",
+          "PA e FC",
+          "local da infusão",
+          "cálcio sérico"
+        ],
+        "ajuste_renal": "Sem ajuste na dose de emergência; não repetir sem dosar cálcio em renal crônico",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não remove potássio do organismo: antagoniza a membrana e compra tempo para insulina com glicose e diálise. Sempre associar a medida que reduz o potássio sérico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "hormonio_metabolico",
+        "agente": "insulina regular com glicose",
+        "papel": "condicional",
+        "indicacao": "hipercalemia com bradicardia, após o cálcio, para transferir potássio para o intracelular",
+        "dose": "10 U de insulina regular com 25 g de glicose (50 mL de glicose 50%)",
+        "unidade": "U",
+        "via": "IV",
+        "frequencia": "dose única; repetir conforme potássio sérico",
+        "duracao": "1 a 2 doses",
+        "dose_maxima": "20 U de insulina por episódio",
+        "contraindicacoes": [
+          "hipoglicemia",
+          "hipersensibilidade à insulina"
+        ],
+        "efeitos_adversos": [
+          "hipoglicemia tardia",
+          "hipocalemia",
+          "hipotensão",
+          "hipofosfatemia"
+        ],
+        "apresentacoes": [
+          "insulina regular frasco 100 U/mL (10 mL)",
+          "glicose 50% ampola 20 mL (10 g)",
+          "glicose 50% frasco 500 mL"
+        ],
+        "preparo": "10 U de insulina regular em 25 g de glicose; infundir imediatamente, sem misturar com outros fármacos na mesma via",
+        "tempo_infusao": "15 a 30 minutos",
+        "monitorizacao": [
+          "glicemia a cada 30 minutos por 6 horas",
+          "potássio a cada 1–2 horas",
+          "ECG contínuo",
+          "nível de consciência"
+        ],
+        "ajuste_renal": "Reduzir para 5 U se TFG menor que 30 mL/min e vigiar hipoglicemia",
+        "ajuste_hepatico": "Monitorar glicemia com mais frequência em hepatopatia",
+        "observacoes": "A hipoglicemia pode ocorrer até 6 horas depois, mesmo com glicose inicial normal. Em normoglicêmico, manter infusão de glicose de manutenção.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidoto",
+        "agente": "glucagon",
+        "papel": "condicional",
+        "indicacao": "bradicardia e hipotensão por intoxicação com betabloqueador ou bloqueador de canal de cálcio",
+        "dose": "3 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "bolus; manutenção em infusão de 1 a 5 mg/h",
+        "duracao": "até reversão ou desmame do fármaco causal",
+        "dose_maxima": "10 mg no bolus; 5 mg/h na infusão",
+        "contraindicacoes": [
+          "feocromocitoma",
+          "hipersensibilidade ao glucagon",
+          "insulinoma"
+        ],
+        "efeitos_adversos": [
+          "náusea e vômito",
+          "hiperglicemia",
+          "hipocalemia",
+          "rubor"
+        ],
+        "apresentacoes": [
+          "frasco 1 mg (pó) com diluente de 1 mL",
+          "frasco 10 mg (pó)"
+        ],
+        "preparo": "Reconstituir 1 mg em 1 mL do diluente; para infusão, diluir em 100 mL de SG 5%",
+        "tempo_infusao": "bolus em 3 a 5 minutos; infusão contínua",
+        "monitorizacao": [
+          "glicemia",
+          "FC e ritmo",
+          "PA",
+          "proteção de via aérea (vômito)"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste relevante",
+        "observacoes": "Aumenta o AMP cíclico por via independente do receptor beta. Náusea e vômito são frequentes: manter aspiração e cabeceira elevada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "hormonio_tireoidiano",
+        "agente": "levotiroxina",
+        "papel": "condicional",
+        "indicacao": "bradicardia por hipotireoidismo grave ou coma mixedematoso",
+        "dose": "200 a 400 mcg",
+        "unidade": "mcg",
+        "via": "IV",
+        "frequencia": "dose de ataque; manutenção 50 a 100 mcg/dia",
+        "duracao": "ataque e manutenção diária",
+        "dose_maxima": "500 mcg na dose de ataque",
+        "contraindicacoes": [
+          "infarto agudo do miocárdio recente sem avaliação",
+          "tireotoxicose",
+          "hipersensibilidade"
+        ],
+        "efeitos_adversos": [
+          "taquiarritmia",
+          "isquemia miocárdica",
+          "hipertensão",
+          "intolerância ao calor e tremor"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 200 mcg (pó liofilizado)",
+          "frasco-ampola 500 mcg (pó liofilizado)",
+          "comprimido 25, 50, 75 e 100 mcg"
+        ],
+        "preparo": "Reconstituir o frasco em 5 mL de SF 0,9%; infundir lentamente, sem misturar na mesma via",
+        "tempo_infusao": "5 a 10 minutos",
+        "monitorizacao": [
+          "FC e ritmo",
+          "PA",
+          "temperatura",
+          "TSH e T4 livre",
+          "ECG para isquemia em idoso"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste na dose de emergência",
+        "observacoes": "O efeito clínico leva horas a dias: nunca substitui marca-passo, cálcio ou a correção da hipercalemia. Associar hidrocortisona antes da levotiroxina se houver suspeita de insuficiência adrenal.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_opioide",
+        "agente": "naloxona",
+        "papel": "condicional",
+        "indicacao": "bradicardia com depressão respiratória por opioide",
+        "dose": "0,4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "repetir a cada 2–3 minutos até resposta respiratória",
+        "duracao": "até reversão sustentada; pode exigir infusão",
+        "dose_maxima": "2 mg",
+        "contraindicacoes": [
+          "hipersensibilidade à naloxona",
+          "dependência de opioide sem suporte ventilatório (usar doses menores e tituladas)"
+        ],
+        "efeitos_adversos": [
+          "abstinência aguda",
+          "agitação",
+          "vômito",
+          "edema pulmonar",
+          "taquicardia e hipertensão"
+        ],
+        "apresentacoes": [
+          "ampola 0,4 mg/mL (1 mL)"
+        ],
+        "preparo": "Uso direto IV; em usuário crônico, diluir 0,4 mg em 10 mL de SF e titular 0,04–0,08 mg por vez",
+        "tempo_infusao": "bolus rápido",
+        "monitorizacao": [
+          "frequência respiratória e saturação",
+          "nível de consciência",
+          "FC e PA",
+          "sinais de abstinência"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Titular pela respiração, não pela consciência: reversão total em usuário crônico precipita abstinência, vômito e edema pulmonar. A meia-vida é menor que a da maioria dos opioides — vigiar renarcotização.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_opioide",
+        "agente": "fentanil",
+        "papel": "condicional",
+        "indicacao": "analgesia para marca-passo transcutâneo, cuja captura causa contração muscular dolorosa",
+        "dose": "25 a 50 mcg",
+        "unidade": "mcg",
+        "via": "IV",
+        "frequencia": "repetir 25 mcg a cada 5–10 minutos conforme dor",
+        "duracao": "durante a estimulação",
+        "dose_maxima": "100 mcg",
+        "contraindicacoes": [
+          "depressão respiratória não suportada",
+          "hipotensão grave sem ressuscitação",
+          "hipersensibilidade a opioide"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "hipotensão",
+          "bradicardia",
+          "náusea",
+          "rigidez torácica com doses altas"
+        ],
+        "apresentacoes": [
+          "ampola 50 mcg/mL (2 mL)",
+          "ampola 50 mcg/mL (10 mL)"
+        ],
+        "preparo": "Uso direto IV; diluir 1 mL (50 mcg) em 9 mL de SF para titulação em idoso",
+        "tempo_infusao": "bolus lento em 1 a 2 minutos",
+        "monitorizacao": [
+          "frequência respiratória e saturação",
+          "sedação",
+          "PA e FC",
+          "dor durante a estimulação"
+        ],
+        "ajuste_renal": "Sem ajuste na dose única",
+        "ajuste_hepatico": "Reduzir dose em cirrose",
+        "observacoes": "Associar midazolam 1–2 mg se necessário, conforme BOX-12, mantendo material de via aérea pronto. Analgesia adequada é o que permite manter corrente de captura suficiente.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/BOX-12",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Monitorização cardíaca contínua",
+        "detalhe": "ECG contínuo com alarme para FC menor que 40 bpm, pausa maior que 3 segundos e QRS largo, desde a chegada"
+      },
+      {
+        "medida": "Dois acessos venosos calibrosos",
+        "detalhe": "18 G ou maior; um acesso exclusivo para a infusão de catecolamina, de preferência central"
+      },
+      {
+        "medida": "Marca-passo transcutâneo montado antes de precisar",
+        "detalhe": "Pás coladas e cabos conectados ao lado do paciente com bradicardia sintomática, antes da segunda dose de atropina"
+      },
+      {
+        "medida": "Oxigênio apenas se saturação menor que 90%",
+        "detalhe": "Manter oximetria contínua; hiperóxia não melhora o débito e resseca a mucosa"
+      },
+      {
+        "medida": "Correção da causa reversível em paralelo",
+        "detalhe": "Dosar potássio, TSH, troponina e revisar fármacos enquanto se trata a bradicardia; hipercalemia, hipotireoidismo, isquemia e intoxicação exigem tratamento próprio"
+      },
+      {
+        "medida": "Revisão e suspensão de fármacos bradicardizantes",
+        "detalhe": "Suspender betabloqueador, diltiazem, verapamil, digoxina, amiodarona e opioide quando possível; ajustar em vez de manter a dose que causou o quadro"
+      },
+      {
+        "medida": "Proteção contra queda e posicionamento seguro",
+        "detalhe": "Paciente deitado, cabeceira baixa, sem deambular; síncope com bradicardia pode ocorrer durante o transporte"
+      },
+      {
+        "medida": "Registro de ritmo antes e depois de cada intervenção",
+        "detalhe": "Imprimir tira de ECG antes e após atropina, captura do marca-passo e início de infusão, com horário"
+      },
+      {
+        "medida": "Transferência precoce para unidade com marca-passo",
+        "detalhe": "Acionar o serviço de hemodinâmica ou eletrofisiologia assim que o transcutâneo for necessário, sem esperar vaga em UTI"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Marca-passo transcutâneo",
+        "indicacao": "Bradicardia instável refratária à atropina, bloqueio AV de alto grau e ponte para marca-passo transvenoso",
+        "tecnica": "Pás anteroposterior, modo demanda, frequência inicial 60–70 bpm; elevar a corrente até captura elétrica (espícula seguida de QRS largo) e confirmar captura mecânica por pulso; ajustar 10% acima do limiar; analgesia e sedação",
+        "complicacoes": "Dor e contratura muscular, falha de captura, queimadura de pele, estimulação do diafragma, arritmia ventricular",
+        "protocolo": "BOX-12"
+      },
+      {
+        "nome": "Marca-passo transvenoso temporário",
+        "indicacao": "Bloqueio AV de alto grau, disfunção sinusal sintomática e dependência do transcutâneo por mais de poucas horas",
+        "tecnica": "Cateter por acesso jugular ou subclávio, posicionado no ventrículo direito sob fluoroscopia ou guia ecográfico, com limiar de captura testado",
+        "complicacoes": "Pneumotórax, perfuração cardíaca, tamponamento, infecção, trombose venosa, deslocamento do cateter"
+      },
+      {
+        "nome": "Implante de marca-passo definitivo",
+        "indicacao": "Bloqueio AV total ou Mobitz II sintomático, disfunção sinusal sintomática e bradicardia irreversível por fármaco",
+        "tecnica": "Implante endocárdico em sala de eletrofisiologia, com programação conforme o tipo de bloqueio e teste de limiar",
+        "complicacoes": "Infecção de bolsa, pneumotórax, deslocamento de eletrodo, síndrome de marca-passo"
+      },
+      {
+        "nome": "Hemodiálise de emergência",
+        "indicacao": "Hipercalemia refratária ao cálcio e à insulina com glicose, com bradicardia ou alteração de ECG",
+        "tecnica": "Acesso vascular temporário e sessão de hemodiálise convencional, com monitorização cardíaca durante o procedimento",
+        "complicacoes": "Hipotensão intradialítica, arritmia, desequilíbrio eletrolítico, complicações do acesso vascular"
+      }
+    ],
+    "metas": [
+      "Perfusão restaurada: PAM maior ou igual a 65 mmHg, consciência preservada e diurese mantida",
+      "Atropina administrada em até 3 minutos do reconhecimento da instabilidade",
+      "Marca-passo transcutâneo com captura elétrica e mecânica confirmada em até 10 minutos quando indicado",
+      "FC entre 60 e 80 bpm com o marca-passo, sem dependência de dose crescente de catecolamina",
+      "Potássio menor que 5,5 mEq/L (ideal entre 4,0 e 5,0) na hipercalemia, com cálcio administrado quando há alteração de ECG",
+      "Causa reversível identificada e tratada em até 1 hora",
+      "Ritmo documentado antes e depois de cada intervenção, no mesmo registro",
+      "Nenhum atraso de marca-passo por aguardar TSH, troponina, vaga de UTI ou parecer"
+    ],
+    "fluxo": [
+      "ABC, monitor cardíaco, oximetria, dois acessos e ECG de 12 derivações em até 10 minutos",
+      "Instável (PAS menor que 90, rebaixamento, dor isquêmica ou congestão): atropina 1 mg IV imediata e marca-passo transcutâneo montado em paralelo",
+      "Identificar o bloqueio: sinusal, BAV de 1º grau e Mobitz I respondem a atropina; Mobitz II e BAV total vão direto para marca-passo",
+      "Atropina até 3 mg a cada 3–5 minutos; sem resposta, marca-passo transcutâneo com captura confirmada (BOX-12)",
+      "Sem captura ou dependência: marca-passo transvenoso e infusão de dopamina, adrenalina ou isoproterenol como ponte",
+      "Corrigir a causa em paralelo: hipercalemia (cálcio, insulina com glicose, diálise), hipotireoidismo, fármaco, infarto de parede inferior, hipóxia e hipotermia",
+      "Reavaliar perfusão e consciência a cada 1–2 minutos; escalar sem esperar nova dosagem de exame",
+      "Definir destino: marca-passo definitivo, unidade coronariana, UTI ou observação com monitor"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "Atropina em dose cheia causa confusão e retenção urinária; preferir marca-passo quando o bloqueio é infranodal e avaliar sonda vesical",
+        "alerta": "Queda, síncope e delirium por polifarmácia bradicardizante"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "Maior risco de hipercalemia; reduzir insulina para 5 U se TFG menor que 30; ajustar dopamina e evitar magnésio",
+        "alerta": "Hipercalemia silenciosa e acúmulo de fármacos bradicardizantes"
+      },
+      {
+        "populacao": "cardiopata",
+        "ajuste": "Infarto de parede inferior: atropina costuma responder, marca-passo precoce se não responder; evitar isoproterenol",
+        "alerta": "Isquemia e baixo débito agravados por catecolamina"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "Atropina pode causar taquicardia fetal e não atravessa mal a placenta; marca-passo é seguro; monitorar batimentos fetais",
+        "alerta": "Hipoperfusão materna compromete o feto"
+      },
+      {
+        "populacao": "portador_de_marca_passo",
+        "ajuste": "Revisar programação, bateria e captura antes de tratar como bradicardia primária; usar ímã se houver inibição por interferência",
+        "alerta": "Falha de captura ou de sensibilidade simula bradicardia grave"
+      },
+      {
+        "populacao": "atleta",
+        "ajuste": "Bradicardia sinusal de 40–50 bpm em repouso pode ser fisiológica; não tratar sem sintoma",
+        "alerta": "Rotular como doença um ritmo normal e restringir atividade sem motivo"
+      },
+      {
+        "populacao": "hipotireoideo",
+        "ajuste": "Levotiroxina IV e hidrocortisona; marca-passo se instável, sem esperar o efeito hormonal",
+        "alerta": "Coma mixedematoso tem mortalidade alta e resposta lenta à reposição"
+      },
+      {
+        "populacao": "intoxicado",
+        "ajuste": "Glucagon, cálcio, insulina euglicêmica e marca-passo; diálise se digoxina com risco",
+        "alerta": "Bradicardia refratária a atropina em intoxicação por betabloqueador ou bloqueador de cálcio"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "ECG de 12 derivações",
+          "indicacao": "todos, em até 10 minutos",
+          "o_que_muda": "define o tipo de bloqueio, o ritmo de escape e se há isquemia ou hipercalemia"
+        },
+        {
+          "nome": "potássio, creatinina, ureia e gasometria",
+          "indicacao": "todos com bradicardia",
+          "o_que_muda": "hipercalemia e acidose exigem tratamento imediato e independente da atropina"
+        },
+        {
+          "nome": "TSH e T4 livre",
+          "indicacao": "bradicardia sem causa evidente, hipotermia ou história de tireoide",
+          "o_que_muda": "hipotireoidismo grave indica levotiroxina e explica a resistência ao tratamento"
+        },
+        {
+          "nome": "troponina",
+          "indicacao": "dor torácica, supra de ST ou suspeita de infarto de parede inferior",
+          "o_que_muda": "isquemia muda a prioridade para reperfusão e para marca-passo precoce"
+        },
+        {
+          "nome": "nível sérico de digoxina",
+          "indicacao": "uso de digital com bradicardia, náusea ou alteração visual",
+          "o_que_muda": "toxicidade digitálica exige suspensão e antídoto específico"
+        },
+        {
+          "nome": "hemograma",
+          "indicacao": "avaliação inicial",
+          "o_que_muda": "anemia e infecção como causa de baixo débito"
+        },
+        {
+          "nome": "ecocardiograma",
+          "indicacao": "suspeita de cardiopatia estrutural ou disfunção ventricular",
+          "o_que_muda": "define prognóstico e a indicação de marca-passo definitivo"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "aguardar TSH, troponina ou eletrólitos para iniciar marca-passo no paciente instável",
+          "motivo": "a instabilidade exige suporte elétrico imediato; exames não tratam assistolia"
+        },
+        {
+          "exame": "Holter antes do ECG de 12 derivações",
+          "motivo": "atrasa o diagnóstico do bloqueio que muda a conduta imediata"
+        },
+        {
+          "exame": "radiografia de tórax de rotina na bradicardia sem dispneia",
+          "motivo": "baixo rendimento e não altera o manejo"
+        },
+        {
+          "exame": "troponina seriada em bradicardia sinusal assintomática com ECG normal",
+          "motivo": "não muda conduta e gera internação desnecessária"
+        },
+        {
+          "exame": "esperar o resultado do potássio para tratar hipercalemia com alteração típica de ECG",
+          "motivo": "o cálcio deve ser dado na suspeita clínica com ECG compatível"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "Fazer o ECG e levar o traçado ao retorno ou à consulta de cardiologia",
+        "Anotar os episódios de tontura, escurecimento visual e síncope, com horário",
+        "Revisar com o médico todos os fármacos que baixam a frequência cardíaca",
+        "Tratar hipotireoidismo, anemia e distúrbio eletrolítico",
+        "Manter acompanhamento de marca-passo a cada 6 a 12 meses, se implantado"
+      ],
+      "evitar": [
+        "Usar atropina como solução única em Mobitz II ou BAV total",
+        "Atrasar o marca-passo transcutâneo aguardando exames, vaga de UTI ou parecer",
+        "Repetir atropina além de 3 mg ou usar dose menor que 0,5 mg",
+        "Usar isoproterenol em isquemia coronariana ativa",
+        "Tratar bradicardia assintomática de atleta ou de paciente com marca-passo que captura"
+      ],
+      "retorno": [
+        "síncope ou pré-síncope",
+        "tontura persistente ou escurecimento visual",
+        "falta de ar, dor torácica ou edema",
+        "frequência cardíaca persistentemente abaixo de 50 bpm com sintoma",
+        "nova bradicardia após ajuste de dose de fármaco"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "atropina",
+        "efeitos": [
+          "taquicardia",
+          "confusão",
+          "retenção urinária",
+          "midríase"
+        ],
+        "observacao": "Reduzir a dose em idoso; avaliar necessidade de sonda vesical e não repetir sem reavaliar o ritmo"
+      },
+      {
+        "agente": "adrenalina",
+        "efeitos": [
+          "isquemia",
+          "arritmia ventricular",
+          "hiperglicemia"
+        ],
+        "observacao": "Titular pela menor dose com perfusão; monitorar ECG continuamente"
+      },
+      {
+        "agente": "dopamina",
+        "efeitos": [
+          "arritmia",
+          "necrose por extravasamento",
+          "hipertensão"
+        ],
+        "observacao": "Preferir acesso central e checar o local a cada hora"
+      },
+      {
+        "agente": "isoproterenol",
+        "efeitos": [
+          "isquemia",
+          "taquicardia",
+          "tremor"
+        ],
+        "observacao": "Suspender se dor torácica ou alteração de ST"
+      },
+      {
+        "agente": "gluconato de cálcio",
+        "efeitos": [
+          "bradicardia",
+          "flebite",
+          "necrose por extravasamento"
+        ],
+        "observacao": "Acesso calibroso e checagem do local durante a infusão"
+      },
+      {
+        "agente": "insulina com glicose",
+        "efeitos": [
+          "hipoglicemia tardia",
+          "hipocalemia"
+        ],
+        "observacao": "Glicemia a cada 30 minutos por 6 horas"
+      },
+      {
+        "agente": "glucagon",
+        "efeitos": [
+          "vômito",
+          "hiperglicemia"
+        ],
+        "observacao": "Proteger via aérea e aspirar se necessário"
+      },
+      {
+        "agente": "levotiroxina",
+        "efeitos": [
+          "taquiarritmia",
+          "isquemia miocárdica"
+        ],
+        "observacao": "ECG em idoso e cardiopata durante a reposição"
+      },
+      {
+        "agente": "naloxona",
+        "efeitos": [
+          "abstinência",
+          "vômito",
+          "edema pulmonar"
+        ],
+        "observacao": "Titular pela respiração e vigiar renarcotização"
+      },
+      {
+        "agente": "fentanil",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão"
+        ],
+        "observacao": "Sedar para o marca-passo apenas com via aérea pronta"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a infusão ou a droga implicada e registrar o evento no prontuário",
+      "Taquicardia e confusão por atropina: suspender, reavaliar o ritmo e considerar sonda vesical",
+      "Isquemia por adrenalina ou isoproterenol: reduzir a dose, tratar isquemia e priorizar o marca-passo",
+      "Hipoglicemia por insulina: glicose 50% 20–40 mL IV e infusão de manutenção de glicose",
+      "Vômito e broncoaspiração por glucagon: aspirar, elevar a cabeceira e reavaliar a via aérea",
+      "Extravasamento de dopamina, cálcio ou adrenalina: interromper no local, aspirar e infundir fentolamina quando disponível"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "levotiroxina 50 mcg",
+            "dose": "1 comprimido",
+            "via": "VO",
+            "frequencia": "1x/dia em jejum",
+            "duracao": "30 dias",
+            "condicao": "bradicardia por hipotireoidismo",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "atropina",
+            "dose": "1 mg",
+            "via": "IV",
+            "frequencia": "a cada 3–5 min até 3 mg",
+            "monitorizacao": "FC, ritmo e PA",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "adrenalina",
+            "dose": "2–10 mcg/min",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "FC, PA, isquemia e glicemia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dopamina",
+            "dose": "5–20 mcg/kg/min",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "PA, diurese e local da infusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "gluconato de cálcio 10%",
+            "dose": "1 g (10 mL)",
+            "via": "IV",
+            "frequencia": "dose única; repetir se ECG não melhorar",
+            "monitorizacao": "ECG, PA e local da infusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "glucagon",
+            "dose": "3 mg",
+            "via": "IV",
+            "frequencia": "bolus; manutenção 1–5 mg/h",
+            "monitorizacao": "glicemia, vômito e via aérea",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "ECG de 12 derivações",
+          "potássio",
+          "creatinina",
+          "ureia",
+          "gasometria",
+          "TSH",
+          "T4 livre",
+          "troponina",
+          "hemograma",
+          "nível de digoxina",
+          "ecocardiograma",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de bradicardia sintomática, necessitando de afastamento por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com bradicardia sintomática, ritmo e tipo de bloqueio documentados, estabilidade hemodinâmica, uso de atropina, marca-passo transcutâneo e drogas em infusão, causa reversível identificada e plano de seguimento."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "síncope ou pré-síncope",
+        "tontura",
+        "dor torácica",
+        "dispneia",
+        "fármacos bradicardizantes",
+        "perdas digestivas e diurético",
+        "hipotireoidismo",
+        "infarto prévio",
+        "marca-passo",
+        "atividade física e frequência habitual"
+      ],
+      "texto_template": "Paciente com bradicardia, síncope ou pré-síncope, tontura, dor torácica, dispneia, uso de fármacos bradicardizantes, perdas digestivas ou diurético, hipotireoidismo, infarto prévio, marca-passo e frequência habitual."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais e saturação",
+        "FC e regularidade do pulso",
+        "nível de consciência",
+        "ausculta cardíaca e pulmonar",
+        "perfusão e tempo de enchimento capilar",
+        "pressão venosa jugular",
+        "tireoide e pele (mixedema)",
+        "edema de membros inferiores"
+      ],
+      "texto_template": "Sinais vitais, frequência e regularidade do pulso, nível de consciência, ausculta cardíaca e pulmonar, perfusão, pressão venosa jugular, tireoide e pele, e edema de membros inferiores."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "protocolo de bradiarritmia, fluxo de sala vermelha e disponibilidade do marca-passo transcutâneo",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_cardiologia",
+        "o_que_verificar": "diretriz de bradicardia e indicação de marca-passo definitivo",
+        "verificar": true
+      },
+      {
+        "tipo": "acls",
+        "o_que_verificar": "algoritmo de bradicardia, dose de atropina e de infusão de catecolamina",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, diluições e estabilidade das ampolas",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-CAR15-01",
+        "tipo": "instabilidade",
+        "gatilho": "PAS menor que 90, rebaixamento, dor isquêmica ou congestão com bradicardia",
+        "severidade": "grave",
+        "mensagem": "Atropina imediata e marca-passo transcutâneo em paralelo. Não atrasar por exames.",
+        "acao": "acionar sala vermelha e BOX-12",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-CAR15-02",
+        "tipo": "bloqueio_alto_grau",
+        "gatilho": "Mobitz II ou BAV total no ECG",
+        "severidade": "grave",
+        "mensagem": "Atropina não é solução única em bloqueio de alto grau: marca-passo transcutâneo agora.",
+        "acao": "bloquear conduta de repetir atropina isolada",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-CAR15-03",
+        "tipo": "atraso_marca_passo",
+        "gatilho": "segunda dose de atropina sem marca-passo montado ao lado do paciente",
+        "severidade": "grave",
+        "mensagem": "Montar o marca-passo antes da segunda dose de atropina. Atraso leva a assistolia.",
+        "acao": "bloquear item e exigir justificativa",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-CAR15-04",
+        "tipo": "hipercalemia",
+        "gatilho": "bradicardia com onda T apiculada, QRS largo ou ausência de onda P",
+        "severidade": "grave",
+        "mensagem": "Hipercalemia grave: gluconato de cálcio imediato e tratamento da hipercalemia.",
+        "acao": "bloquear atraso e sugerir protocolo",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-CAR15-05",
+        "tipo": "dose_atropina",
+        "gatilho": "atropina em dose menor que 0,5 mg",
+        "severidade": "precaucao",
+        "mensagem": "Dose menor que 0,5 mg pode piorar a bradicardia por efeito paradoxal.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-CAR15-06",
+        "tipo": "isoproterenol_isquemia",
+        "gatilho": "isoproterenol em isquemia coronariana ativa ou infarto de parede inferior",
+        "severidade": "precaucao",
+        "mensagem": "Isoproterenol aumenta consumo de oxigênio e piora a isquemia.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-CAR15-07",
+        "tipo": "marca_passo_que_captura",
+        "gatilho": "paciente com marca-passo definitivo capturando adequadamente",
+        "severidade": "precaucao",
+        "mensagem": "Revisar programação e captura antes de indicar transcutâneo.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-CAR15-08",
+        "tipo": "vasopressor_periferia",
+        "gatilho": "dopamina ou adrenalina em acesso periférico distal",
+        "severidade": "precaucao",
+        "mensagem": "Risco de necrose por extravasamento: preferir acesso central ou veia calibrosa proximal.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "ACLS/AHA 2020",
+        "diretriz SBC",
+        "diretriz ESC 2021"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

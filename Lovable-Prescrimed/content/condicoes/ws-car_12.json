@@ -1,0 +1,649 @@
+{
+  "id": "ws-car_12",
+  "nome": "Angina estável",
+  "cat": "Cardiovascular",
+  "alias": "angina estavel angina estavel angina de esforco angina pectoris estavel doenca arterial coronariana cronica isquemia miocardica estavel angina estavel cronica",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-12_angina_estavel.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] diretriz_sociedade_cardiologia: definição de angina estável, estratificação de risco e metas de LDL",
+      "[verificar] diretriz_de_reabilitacao_cardiaca: prescrição de exercício e critérios de inclusão",
+      "[verificar] protocolo_institucional: fluxo de estratificação e critérios de cateterismo",
+      "[verificar] anvisa: apresentações de nitrato, estatina e antianginosos disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-12 em 2026-11-27",
+    "fundido_workspace": "CAR-12 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: dor em repouso com mais de 20 minutos ou que não cede após 3 nitratos em 15 minutos -> ECG em 10 minutos, troponina e protocolo de SCA; dor com síncope, hipotensão ou sudorese fria -> monitor contínuo, acesso venoso e emergência; dor com dispneia, ortopneia ou estertores -> ECG, radiografia de tórax, BNP e diurético; angina em crescendo, com limiar cada vez menor -> internação e estratificação invasiva urgente. 1) Caracterizar a dor: relação com esforço, duração, alívio com repouso ou nitrato e equivalente anginoso 2) Afastar síndrome coronariana aguda e angina vasoespástica: ECG de repouso, troponina se dor ativa, história de dor noturna 3) Estratificar risco com probabilidade pré-teste, ECG, fração de ejeção, comorbidades e capacidade funcional 4) Iniciar os quatro pilares: AAS, estatina de alta potência, betabloqueador e IECA se insuficiência cardíaca, diabetes ou hipertensão; nitrato apenas de resgate 5) Reavaliar em 4 a 6 semanas, titular até a frequência alvo e adicionar diltiazem, ivabradina, ranolazina ou trimetazidina se refratário 6) Indicar estratificação invasiva e revascularização se alto risco, angina refratária ou anatomia desfavorável, com heart team na multiarterial 7) Prescrever reabilitação cardíaca, cessação tabágica e metas de LDL, pressão e glicemia por escrito 8) Seguimento ambulatorial com perfil lipídico em 4 a 12 semanas, reavaliação anual e reestratificação se o padrão da dor mudar",
+  "redFlags": [
+    "dor em repouso com mais de 20 minutos ou que não cede após 3 nitratos em 15 minutos -> ECG em 10 minutos, troponina e protocolo de SCA",
+    "dor com síncope, hipotensão ou sudorese fria -> monitor contínuo, acesso venoso e emergência",
+    "dor com dispneia, ortopneia ou estertores -> ECG, radiografia de tórax, BNP e diurético",
+    "angina em crescendo, com limiar cada vez menor -> internação e estratificação invasiva urgente",
+    "infradesnivelamento de ST ≥ 0,5 mm ou inversão nova de onda T em repouso -> tratar como SCA até prova contrária",
+    "sopro novo de insuficiência mitral ou crepitações pulmonares -> ecocardiograma urgente e cirurgia cardíaca",
+    "dor noturna com supradesnivelamento transitório de ST -> BCC e nitrato; não usar betabloqueador isolado",
+    "diabético ou idoso com apenas dispneia, náusea ou confusão ao esforço -> ECG e troponina antes de atribuir a outra causa"
+  ],
+  "naoUsar": [
+    "alergia ou intolerância ao AAS",
+    "sangramento digestivo ativo",
+    "úlcera péptica ativa",
+    "plaquetopenia grave",
+    "coagulopatia grave",
+    "hepatite ativa ou transaminases acima de 3 vezes o limite",
+    "gestação e amamentação",
+    "miopatia ativa"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar AAS e estatina todos os dias, mesmo sem dor"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "usar nitrato após sildenafila ou tadalafila"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antiagregante plaquetário",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "aas",
+            "pos": "75-100 mg. Via VO. 1x/dia. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "angina estável com doença arterial coronariana confirmada ou suspeita, sem contraindicação (1a linha) doença arterial coronariana",
+            "nota": "Uso direto, com alimento para reduzir dispepsia - monitorar: sinais de sangramento; monitorar: hemoglobina na primeira consulta e em 6 meses; monitorar: dispepsia · NÃO: alergia ou intolerância ao AAS; sangramento digestivo ativo; úlcera péptica ativa; plaquetopenia grave; coagulopatia grave · Obs: Não é antianginoso e não alivia a crise. Não associar AINE de forma contínua; em intolerância, trocar por clopidogrel",
+            "dose": {
+              "texto": "75-100 mg; 1x/dia; uso contínuo; max. 100 mg/dia",
+              "status": "ok",
+              "valor": 75,
+              "valor_max": 100,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "leg_clopidogrel",
+            "pos": "75 mg. Via VO. 1x/dia. Uso contínuo quando isolado; 6-12 meses após stent.",
+            "posTodas": true,
+            "motivo": "intolerância ou alergia ao AAS; dupla antiagregação após angioplastia com stent (alternativa)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: sangramento; monitorar: hemograma se febre ou petéquias; monitorar: adesão nos 6 meses pós-stent",
+            "dose": {
+              "texto": "75 mg; 1x/dia; uso contínuo quando isolado; 6-12 meses após stent; max. 75 mg/dia de manutenção",
+              "status": "ok",
+              "valor": 75,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 75,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Estatina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "atorvastatina",
+            "pos": "40-80 mg. Via VO. 1x/dia. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "doença arterial coronariana estabelecida, com meta de LDL abaixo de 55 mg/dL (1a linha) meta de LDL abaixo de 55 mg/dL",
+            "nota": "Uso direto, em qualquer horário, com ou sem alimento - monitorar: perfil lipídico em 4-12 semanas e depois anual; monitorar: TGO e TGP na basal e se sintoma; monitorar: CPK se mialgia intensa ou urina escura",
+            "dose": {
+              "texto": "40-80 mg; 1x/dia; uso contínuo; max. 80 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 80,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 80,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "rosuvastatina",
+            "pos": "20-40 mg. Via VO. 1x/dia. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "doença arterial coronariana estabelecida, quando há intolerância ou resposta insuficiente à atorvastatina (alternativa)",
+            "nota": "Uso direto, em qualquer horário - monitorar: perfil lipídico em 4-12 semanas; monitorar: TGO e TGP na basal; monitorar: CPK se mialgia; monitorar: creatinina se dose alta",
+            "dose": {
+              "texto": "20-40 mg; 1x/dia; uso contínuo; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 40,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Betabloqueador",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "metoprolol",
+              "n": "Metoprolol",
+              "ap": "comprimido 25 mg",
+              "q": "",
+              "pos": "25-100 mg. Via VO. 12/12 h (succinato 1x/dia). Uso contínuo."
+            },
+            "motivo": "angina estável sintomática; primeira escolha para reduzir crises e para pós-infarto (1a linha) angina sintomática",
+            "nota": "Uso direto, com ou sem alimento; não partir o comprimido de liberação prolongada - monitorar: frequência cardíaca e pressão a cada titulação; monitorar: ausculta respiratória; monitorar: sintomas de fadiga e congestão; monitorar: glicemia no diabético · NÃO: frequência abaixo de 50 bpm; bloqueio atrioventricular de 2º ou 3º grau sem marca-passo; asma grave descompensada; insuficiência cardíaca descompensada; choque cardiogênico; angina vasoespástica como monoterapia · Obs: Titular até frequência de repouso de 55–60 bpm. Não iniciar durante crise ou suspeita de SCA antes de afastar instabilidade: nesse cenário o betabloqueador é da…",
+            "dose": {
+              "texto": "25-100 mg; 12/12 h (succinato 1x/dia); uso contínuo; max. 200 mg/dia (succinato) ou 400 mg/dia (tartarato)",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 100,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Betabloqueador com ação alfa",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "carvedilol",
+            "pos": "6,25-25 mg. Via VO. 12/12 h. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "angina estável associada a insuficiência cardíaca de fração de ejeção reduzida ou hipertensão (alternativa)",
+            "nota": "Uso direto, com alimento para reduzir hipotensão postural - monitorar: pressão em pé e sentado; monitorar: frequência cardíaca; monitorar: peso e congestão; monitorar: creatinina e potássio na titulação · NÃO: asma grave; bloqueio atrioventricular avançado sem marca-passo; insuficiência cardíaca descompensada; bradicardia abaixo de 50 bpm; insuficiência hepática grave · Obs: Preferir quando há insuficiência cardíaca de fração de ejeção reduzida associada; hipotensão postural é o limitante da titulação",
+            "dose": {
+              "texto": "6,25-25 mg; 12/12 h; uso contínuo; max. 50 mg/dia",
+              "status": "ok",
+              "valor": 6.25,
+              "valor_max": 25,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Bloqueador de canal de cálcio não diidropiridinico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "diltiazem",
+              "n": "Diltiazem",
+              "ap": "comprimido 30 mg",
+              "q": "",
+              "pos": "30-120 mg. Via VO. 8/8 h ou 12/12 h; liberação prolongada 1x/dia. Uso contínuo."
+            },
+            "motivo": "intolerância ou contraindicação a betabloqueador; angina vasoespástica (alternativa)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: frequência cardíaca; monitorar: pressão arterial; monitorar: ECG se tontura ou síncope; monitorar: edema · NÃO: insuficiência cardíaca de fração de ejeção reduzida; bloqueio atrioventricular; bradicardia abaixo de 50 bpm; hipotensão; fibrilação atrial com pré-excitação · Obs: Não associar a betabloqueador por risco de bradicardia e bloqueio. É droga de escolha na angina vasoespástica, junto com o nitrato",
+            "dose": {
+              "texto": "30-120 mg; 8/8 h ou 12/12 h; liberação prolongada 1x/dia; uso contínuo; max. 360 mg/dia",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": 120,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 360,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor da corrente if",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ivabradina",
+              "n": "Ivabradina",
+              "ap": "comprimido 5 mg",
+              "q": "",
+              "pos": "5 mg. Via VO. 12/12 h. Uso contínuo."
+            },
+            "motivo": "angina estável em ritmo sinusal com frequência ≥ 70 bpm apesar de betabloqueador otimizado, ou intolerância a ele (alternativa)",
+            "nota": "Uso direto, com alimento - monitorar: frequência cardíaca em repouso; monitorar: sintomas visuais; monitorar: ECG na titulação · NÃO: fibrilação ou flutter atrial; bloqueio atrioventricular; frequência abaixo de 60 bpm; hipotensão; insuficiência cardíaca descompensada · Obs: Só funciona em ritmo sinusal; não controla frequência na fibrilação atrial e não serve para alívio da crise · Renal: ClCr abaixo de 15 mL/min: evitar",
+            "dose": {
+              "texto": "5 mg; 12/12 h; uso contínuo; max. 7,5 mg 12/12 h",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 7.5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor da corrente tardia de sódio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ranolazina",
+              "n": "Ranolazina",
+              "ap": "comprimido de liberação prolongada 500 mg",
+              "q": "",
+              "pos": "500 mg. Via VO. 12/12 h. Uso contínuo."
+            },
+            "motivo": "angina refratária a dois antianginosos, sobretudo em diabético (alternativa)",
+            "nota": "Uso direto, com ou sem alimento - monitorar: ECG com QT antes e após titular; monitorar: potássio; monitorar: constipação; monitorar: função renal e hepática · NÃO: QT longo; cirrose Child C; uso de inibidor potente de CYP3A4; insuficiência renal grave; hipocalemia não corrigida · Obs: Não é droga de crise. Não associar a diltiazem ou verapamil, que aumentam o nível sérico e o risco de QT · Renal: Evitar se ClCr abaixo de 30 mL/min",
+            "dose": {
+              "texto": "500 mg; 12/12 h; uso contínuo; max. 1.000 mg 12/12 h",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antianginoso metabolico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "trimetazidina",
+              "n": "Trimetazidina",
+              "ap": "comprimido 20 mg",
+              "q": "",
+              "pos": "35 mg. Via VO. 12/12 h (liberação modificada) ou 20 mg 8/8 h. Uso contínuo."
+            },
+            "motivo": "adjuvante na angina refratária quando ranolazina é indisponível ou contraindicada (alternativa)",
+            "nota": "Uso direto, com alimento - monitorar: sintomas extrapiramidais e tremor; monitorar: marcha e risco de queda; monitorar: função renal · NÃO: doença de Parkinson; parkinsonismo induzido por fármaco; insuficiência renal grave; hipersensibilidade · Obs: Suspender ao primeiro sinal de parkinsonismo: o quadro costuma reverter, mas pode persistir · Renal: Reduzir para 35 mg 1x/dia se ClCr 30–60; contraindicada abaixo de 30 mL/min",
+            "dose": {
+              "texto": "35 mg; 12/12 h (liberação modificada) ou 20 mg 8/8 h; uso contínuo; max. 70 mg/dia",
+              "status": "ok",
+              "valor": 35,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 70,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Nitrato de ação prolongada",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_isossorbida",
+            "pos": "20 mg. Via VO. 2x/dia, às 8 h e às 14 h, com 10-12 h de janela livre noturna. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "angina refratária a betabloqueador e BCC enquanto se aguarda revascularização (condicional) angina refratária, com janela livre noturna",
+            "nota": "Uso direto, com ou sem alimento - monitorar: pressão arterial; monitorar: cefaleia; monitorar: controle das crises; monitorar: sintoma de tolerância",
+            "dose": {
+              "texto": "20 mg; 2x/dia, às 8 h e às 14 h, com 10-12 h de janela livre noturna; uso contínuo; max. 80 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 80,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "2x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor da eca",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ramipril",
+              "n": "Ramipril",
+              "ap": "comprimido 2,5 mg",
+              "q": "",
+              "pos": "2,5-10 mg. Via VO. 1x/dia. Uso contínuo."
+            },
+            "motivo": "angina estável com insuficiência cardíaca, disfunção de ventrículo esquerdo, diabetes ou hipertensão associada (condicional) diabetes, hipertensão ou disfunção ventricular",
+            "nota": "Uso direto, com ou sem alimento - monitorar: creatinina e potássio em 1-2 semanas após iniciar ou titular; monitorar: pressão arterial; monitorar: tosse · NÃO: gestação; estenose bilateral de artéria renal; angioedema prévio por IECA; hipercalemia acima de 5,5 mEq/L; insuficiência renal aguda · Obs: A indicação é a comorbidade — insuficiência cardíaca, diabetes, hipertensão — e não a angina em si. Nunca na gestação · Renal: ClCr abaixo de 30 mL/min: iniciar 1,25 mg e titular devagar",
+            "dose": {
+              "texto": "2,5-10 mg; 1x/dia; uso contínuo; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 10,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Nitrato de ação rapida",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nitroglicerina_sublingual",
+              "n": "Nitroglicerina sublingual",
+              "ap": "comprimido sublingual 0,3 mg",
+              "q": "",
+              "pos": "0,4 mg (1 dose). Via sublingual. A cada 5 minutos, até 3 doses. Resgate, conforme a crise."
+            },
+            "motivo": "crise de angina para alívio imediato (resgate) crise de angina",
+            "nota": "Uso direto, sem diluição; administrar sentado e com acesso a apoio - monitorar: pressão arterial após a primeira dose; monitorar: frequência cardíaca; monitorar: cefaleia; monitorar: alívio da dor · NÃO: uso de sildenafila nas últimas 24 h ou tadalafila nas últimas 48 h; pressão sistólica abaixo de 90 mmHg; infarto de ventrículo direito; estenose aórtica grave; aumento de pressão intracraniana · Obs: Se três doses não aliviam em 15 minutos, o quadro é síndrome coronariana aguda até prova contrária e o paciente vai à emergência. Orientar o paciente a sentar antes de usar",
+            "dose": {
+              "texto": "0,4 mg (1 dose); a cada 5 minutos, até 3 doses; resgate, conforme a crise; max. 1,2 mg em 15 minutos",
+              "status": "ok",
+              "valor": 0.4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1.2,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 5 min",
+              "freq_min": 5,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Reabilitação cardíaca supervisionada",
+              "ap": "",
+              "q": "",
+              "pos": "30–45 minutos de exercício aeróbico 5 vezes por semana, com ECG nas primeiras sessões e prescrição individualizada por teste de esforço; reduz mortalidade e aumenta a capacidade funcional"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Cessação do tabagismo",
+              "ap": "",
+              "q": "",
+              "pos": "Abordagem cognitivo-comportamental associada a farmacoterapia (vareniclina, bupropiona ou reposição de nicotina), com data de parada marcada e seguimento em 1, 2 e 4 semanas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Padrão alimentar mediterrâneo e controle de peso",
+              "ap": "",
+              "q": "",
+              "pos": "Azeite, oleaginosas, peixe, frutas e vegetais; reduzir ultraprocessados e sódio para menos de 5 g de sal por dia; meta de índice de massa corporal abaixo de 25"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Controle de pressão e glicemia",
+              "ap": "",
+              "q": "",
+              "pos": "Alvo de pressão abaixo de 130/80 mmHg e hemoglobina glicada abaixo de 7% no diabético, com ajuste das drogas de base na mesma consulta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Plano de ação escrito para a crise",
+              "ap": "",
+              "q": "",
+              "pos": "Parar a atividade, sentar, usar nitrato sublingual até 3 doses em 15 minutos e acionar emergência se a dor não ceder; entregar por escrito e treinar com o paciente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Adaptação do esforço e do ambiente",
+              "ap": "",
+              "q": "",
+              "pos": "Evitar esforço intenso em jejum, no frio e após refeição copiosa; aquecimento antes do exercício e caminhada regular em vez de esforço explosivo"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Investigação e tratamento da apneia do sono",
+              "ap": "",
+              "q": "",
+              "pos": "Aplicar questionário de rastreio em obesos e hipertensos resistentes; tratar apneia reduz crises noturnas e melhora o controle pressórico"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-12"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": []
+  },
+  "ws": {
+    "id": "CAR-12",
+    "versao": "0.2.0",
+    "arquivo": "CAR-12_angina_estavel.json",
+    "area": "Cardiovascular",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

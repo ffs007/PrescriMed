@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "NEU-10",
+    "area": "Neurológico",
+    "nome": "Paralisia facial periférica",
+    "aliases": ["paralisia facial", "paralisia de Bell", "fraqueza facial", "paralisia facial idiopática", "síndrome de Ramsay Hunt"],
+    "contexto": ["ambulatorial"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Paralisia facial periférica é a fraqueza unilateral de toda a hemiface, incluindo a fronte, por lesão do nervo facial no trajeto periférico — Bell (idiopática) em 60 a 75% dos casos, zoster oticus, otite, trauma, tumor ou Lyme no restante. A primeira decisão não é prescrever corticoide: é separar periférica de central, porque paralisia que poupa a fronte, com paresia de membro, disartria ou desvio de olhar é AVC até prova contrária. Confirmada a periférica, prednisona 1 mg/kg por 7 dias iniciada em até 72 h muda o prognóstico; Ramsay Hunt exige antiviral associado; e todo lagoftalmo exige proteção ocular imediata, porque a córnea exposta ulcera em dias. O erro a evitar é dar corticoide a quem tem vesícula sem antiviral, ignorar paresia de membro e não proteger o olho.",
+    "inclusao": [
+      "Fraqueza unilateral de toda a hemiface, com apagamento da fronte do lado fraco",
+      "Início agudo em até 72 h, sem déficit de membros",
+      "Paralisia com vesículas no pavilhão auricular ou otalgia intensa (Ramsay Hunt)",
+      "Lagoftalmo com necessidade de proteção ocular"
+    ],
+    "exclusao": [
+      { "situacao": "fraqueza que poupa a fronte, com paresia de membro, disartria ou hemianopsia", "fluxo": "AVC" },
+      { "situacao": "vesículas com dor intensa e vertigem incapacitante", "fluxo": "zoster grave com internação" },
+      { "situacao": "paralisia bilateral, progressiva ou com arreflexia ascendente", "fluxo": "investigação de Guillain-Barré" },
+      { "situacao": "paralisia por trauma, otite média ou pós-operatório de ouvido", "fluxo": "otorrinolaringologia" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "paresia de membro, disartria, desvio de rima ou hemianopsia", "por_que": "é paralisia central por AVC, não periférica", "acao": "acionar protocolo de AVC e tomografia imediatamente", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "vesículas no pavilhão ou conduto auditivo com otalgia intensa", "por_que": "zoster oticus com pior prognóstico de recuperação", "acao": "associar antiviral ao corticoide", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "paralisia bilateral ou progressiva", "por_que": "Guillain-Barré, Lyme ou doença sistêmica", "acao": "internar e avaliar capacidade vital", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "lagoftalmo com dor ocular, fotofobia ou opacidade corneana", "por_que": "ceratite por exposição", "acao": "oftalmologia em 24 h e lubrificação intensiva", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "febre, cefaleia intensa ou rigidez de nuca", "por_que": "meningite ou complicação de otite", "acao": "imagem, punção e antibiótico", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "piora após 3 semanas, paralisia recorrente ou espasmo hemifacial", "por_que": "tumor do ângulo pontocerebelar ou causa secundária", "acao": "ressonância de crânio e eletroneuromiografia", "severidade": "precaucao" },
+      { "id": "AL-07", "sinal": "trauma, otite média ou cirurgia de ouvido recente", "por_que": "paralisia secundária que não responde a corticoide", "acao": "avaliação otorrinolaringológica urgente", "severidade": "grave" }
+    ],
+    "perguntas_rapidas": [
+      "A fronte do mesmo lado também está fraca?",
+      "Quando começou? Já passou de 72 h?",
+      "Sentiu dor no ouvido, vesículas ou diminuição da audição?",
+      "Tem fraqueza no braço ou na perna, ou dificuldade para falar?",
+      "Perdeu o paladar ou sente sons mais altos do que o normal?",
+      "Consegue fechar o olho? Sente dor, areia ou visão embaçada?",
+      "É diabético, hipertenso, tem glaucoma ou está gestante?",
+      "Já teve paralisia facial antes ou tem HIV, Lyme ou sarcoidose?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Paralisia periférica típica vista em até 72 h do início", "escolha": "Prednisona 1 mg/kg/dia por 7 dias", "porque": "Corticoide precoce aumenta a taxa de recuperação e reduz sinquinesia; depois de 72 h o ganho é pequeno" },
+      { "cenario": "Vesículas no pavilhão ou conduto, otalgia intensa ou vertigem", "escolha": "Prednisona + valaciclovir 1 g 8/8 h por 7 dias", "porque": "Ramsay Hunt tem pior prognóstico e o antiviral reduz paralisia residual; corticoide isolado aqui é erro" },
+      { "cenario": "Ramsay Hunt com vertigem incapacitante, hipoacusia, encefalite ou imunossupressão", "escolha": "Aciclovir IV 10 mg/kg 8/8 h, corticoide e internação", "porque": "Doença grave com disseminação; a via oral não garante nível sérico confiável" },
+      { "cenario": "Fraqueza poupando a fronte, com paresia de membro, disartria ou desvio de olhar", "escolha": "Não é Bell: protocolo de AVC com tomografia e trombólise se elegível", "porque": "Paralisia central é AVC até prova contrária e o corticoide não trata isquemia" },
+      { "cenario": "Paralisia bilateral, progressiva, com arreflexia ou parestesia ascendente", "escolha": "Internar, avaliar capacidade vital e investigar Guillain-Barré e Lyme", "porque": "A progressão pode comprometer ventilação e o corticoide isolado não é o tratamento" },
+      { "cenario": "Lagoftalmo com ceratite, dor ocular ou hiperemia conjuntival", "escolha": "Colírio lubrificante de hora em hora, pomada ao deitar, oclusão noturna e oftalmologia em 24 h", "porque": "Córnea exposta ulcera em dias e a perda visual é evitável" },
+      { "cenario": "Início acima de 72 h, quadro leve, sem vesícula e sem lagoftalmo importante", "escolha": "Proteção ocular, fisioterapia e reavaliação em 3 semanas, sem corticoide obrigatório", "porque": "Benefício do corticoide é marginal fora da janela e a recuperação espontânea é frequente" },
+      { "cenario": "Dor neuropática persistente após 4 semanas", "escolha": "Amitriptilina 25 mg à noite ou gabapentina titulada", "porque": "Dor pós-zoster responde a tricíclico e anticonvulsivante, não a corticoide" },
+      { "cenario": "Olho seco intenso refratário a lubrificante, com ceratite", "escolha": "Encaminhar à oftalmologia para oclusão definitiva, lente de contato terapêutica ou cirurgia palpebral", "porque": "Lubrificante não resolve exposição grave e a córnea precisa de proteção mecânica" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "corticoide",
+        "agente": "prednisona",
+        "papel": "primeira_linha",
+        "indicacao": "paralisia de Bell, iniciada em até 72 h do início",
+        "dose": "1 mg/kg",
+        "unidade": "mg/kg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "7 dias, sem retirada gradual",
+        "dose_maxima": "80 mg/dia",
+        "contraindicacoes": ["infecção bacteriana não tratada", "herpes zoster sem antiviral associado", "diabetes descompensado", "úlcera péptica ativa", "psicose corticoide prévia"],
+        "efeitos_adversos": ["hiperglicemia", "insônia", "aumento do apetite", "hipertensão", "alteração de humor"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 20 mg", "comprimido 25 mg"],
+        "preparo": "Uso direto, com alimento, pela manhã",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["glicemia em diabético (2x/dia na primeira semana)", "pressão arterial", "humor e insônia", "sinais de infecção"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em curso curto",
+        "observacoes": "Iniciar em até 72 h; após essa janela o benefício é pequeno e a conduta passa a ser proteção ocular e reavaliação. Nunca prescrever corticoide isolado quando há vesícula, otalgia ou paralisia grave — associar antiviral",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "valaciclovir",
+        "papel": "primeira_linha",
+        "indicacao": "síndrome de Ramsay Hunt junto com prednisona",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "7 dias",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": ["hipersensibilidade", "desidratação grave sem correção"],
+        "efeitos_adversos": ["náusea", "cefaleia", "nefrotoxicidade em desidratado", "confusão em renal crônico"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 1 g"],
+        "preparo": "Uso direto, com água; manter hidratação",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["creatinina se doença renal", "hidratação", "dor e evolução das vesículas"],
+        "ajuste_renal": "ClCr 30–49: 1 g 12/12 h; ClCr 10–29: 1 g 24 h; ClCr < 10: 500 mg 24 h",
+        "observacoes": "Preferir ao aciclovir pela posologia de 3 tomadas e maior biodisponibilidade; iniciar na primeira semana, idealmente em 72 h",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir",
+        "papel": "alternativa",
+        "indicacao": "Ramsay Hunt quando valaciclovir não está disponível",
+        "dose": "800 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "5x/dia (a cada 4 h, omitindo a dose noturna)",
+        "duracao": "7 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": ["hipersensibilidade", "insuficiência renal grave sem ajuste"],
+        "efeitos_adversos": ["náusea", "diarreia", "nefrotoxicidade", "confusão"],
+        "apresentacoes": ["comprimido 200 mg", "comprimido 400 mg", "suspensão oral 200 mg/5 mL"],
+        "preparo": "Uso direto, com água; manter hidratação",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["creatinina em renal crônico", "hidratação", "adesão às 5 tomadas"],
+        "ajuste_renal": "ClCr 25–50: 800 mg 12/12 h; ClCr 10–25: 800 mg 24 h; ClCr < 10: 400 mg 24 h",
+        "observacoes": "Cinco tomadas por dia derrubam adesão; orientar por escrito o horário de cada dose",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir intravenoso",
+        "papel": "condicional",
+        "indicacao": "Ramsay Hunt grave com vertigem, hipoacusia, encefalite ou imunossupressão",
+        "dose": "10 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "7–10 dias",
+        "dose_maxima": "20 mg/kg 8/8 h (usar peso ideal em obesos)",
+        "contraindicacoes": ["hipersensibilidade", "desidratação grave sem correção"],
+        "efeitos_adversos": ["nefrotoxicidade", "cristalúria", "confusão", "flebite"],
+        "apresentacoes": ["frasco 250 mg", "frasco 500 mg"],
+        "preparo": "Reconstituir em 10 mL de água destilada; diluir em 250 mL de SF 0,9% (concentração ≤ 7 mg/mL)",
+        "tempo_infusao": "60 minutos",
+        "monitorizacao": ["creatinina a cada 48 h", "débito urinário e hidratação", "nível de consciência", "local da infusão"],
+        "ajuste_renal": "ClCr 25–50: 10 mg/kg 12/12 h; ClCr 10–25: 10 mg/kg 24 h; ClCr < 10: 5 mg/kg 24 h",
+        "observacoes": "Indicação de internação; não é necessário para todo Ramsay Hunt, apenas para as formas graves",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "lubrificante_ocular",
+        "agente": "carboximetilcelulose 0,5% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "lagoftalmo e exposição corneana por paralisia facial",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "a cada 3–4 h enquanto acordado, até de hora em hora se necessário",
+        "duracao": "até recuperação do fechamento palpebral",
+        "dose_maxima": "1 gota de hora em hora no olho afetado",
+        "contraindicacoes": ["hipersensibilidade ao conservante", "infecção ocular ativa sem tratamento"],
+        "efeitos_adversos": ["ardência transitória", "visão borrada por minutos", "reação alérgica rara"],
+        "apresentacoes": ["frasco 10 mL a 0,5%", "frasco 15 mL a 1%", "unidose 0,4 mL sem conservante"],
+        "preparo": "Uso direto no olho afetado; não tocar a ponta do frasco na córnea",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": ["dor e fotofobia", "hiperemia e opacidade corneana", "acuidade visual", "frequência de instilação"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Preferir unidose sem conservante em uso frequente; manter o frasco no bolso para não esquecer",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "lubrificante_ocular",
+        "agente": "pomada oftálmica lubrificante",
+        "papel": "condicional",
+        "indicacao": "proteção noturna quando o olho não fecha durante o sono",
+        "dose": "0,5 cm",
+        "unidade": "cm",
+        "via": "ocular",
+        "frequencia": "1x/dia ao deitar",
+        "duracao": "até recuperação do fechamento palpebral",
+        "dose_maxima": "1 aplicação ao deitar",
+        "contraindicacoes": ["hipersensibilidade", "ceratite bacteriana sem tratamento"],
+        "efeitos_adversos": ["visão borrada ao acordar", "ardência", "oclusão do ponto lacrimal"],
+        "apresentacoes": ["bisnaga 3,5 g", "bisnaga 5 g"],
+        "preparo": "Uso direto: aplicar fita de 0,5 cm na margem palpebral inferior do olho afetado",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": ["ceratite ao acordar", "dor ocular", "aderência da pálpebra"],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Sempre associada ao colírio diurno; a pomada sozinha não protege durante o dia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "otalgia e cefaleia do zoster oticus",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "5–7 dias",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": ["hepatopatia grave", "desnutrição grave", "uso de álcool crônico"],
+        "efeitos_adversos": ["hepatotoxicidade em dose alta", "náusea", "rash"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 750 mg", "solução oral 200 mg/mL"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["dor (escala 0–10)", "função hepática se uso prolongado", "dose total diária somada com outros produtos"],
+        "ajuste_renal": "ClCr < 30: intervalo de 8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia leve; evitar em grave",
+        "observacoes": "Checar se o paciente já usa paracetamol em associação para não exceder a dose diária; AINE deve ser evitado em doença renal e em uso de corticoide",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidepressivo_triciclico",
+        "agente": "amitriptilina",
+        "papel": "condicional",
+        "indicacao": "dor neuropática persistente após 4 semanas, incluindo dor pós-zoster",
+        "dose": "25 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia ao deitar",
+        "duracao": "8–12 semanas após controle da dor",
+        "dose_maxima": "75 mg/dia",
+        "contraindicacoes": ["glaucoma de ângulo fechado", "arritmia e bloqueio cardíaco", "uso de IMAO", "infarto recente", "retenção urinária"],
+        "efeitos_adversos": ["boca seca", "constipação", "sonolência", "hipotensão postural", "arritmia"],
+        "apresentacoes": ["comprimido 25 mg", "comprimido 75 mg"],
+        "preparo": "Uso direto ao deitar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["ECG em cardiopata ou idoso", "ortostase", "humor e ideação suicida no início", "efeito analgésico em 2–4 semanas"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia",
+        "observacoes": "Iniciar em dose baixa e subir a cada 5–7 dias; o efeito é analgésico, não antidepressivo, e aparece antes",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anticonvulsivante",
+        "agente": "gabapentina",
+        "papel": "alternativa",
+        "indicacao": "dor neuropática quando tricíclico é contraindicado ou insuficiente",
+        "dose": "300 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia ao deitar, titular até 300 mg 8/8 h",
+        "duracao": "8–12 semanas após controle da dor",
+        "dose_maxima": "3.600 mg/dia",
+        "contraindicacoes": ["hipersensibilidade", "insuficiência renal grave sem ajuste"],
+        "efeitos_adversos": ["tontura", "sonolência", "edema periférico", "ataxia"],
+        "apresentacoes": ["cápsula 300 mg", "cápsula 400 mg", "comprimido 600 mg"],
+        "preparo": "Uso direto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["sonolência e tontura", "função renal", "dor (escala 0–10)"],
+        "ajuste_renal": "ClCr 50–79: 300 mg 8/8 h; 30–49: 300 mg 12/12 h; 15–29: 300 mg 24 h; < 15: 300 mg em dias alternados",
+        "observacoes": "Titular devagar em idoso; não suspender abruptamente. Alternativa ao tricíclico em glaucoma e cardiopatia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Proteção ocular diurna", "detalhe": "Colírio lubrificante a cada 3–4 h enquanto acordado, óculos de sol e evitar vento, ar-condicionado e poeira no olho afetado" },
+      { "medida": "Oclusão palpebral noturna", "detalhe": "Pomada lubrificante e gaze com fita adesiva fechando a pálpebra sem comprimir o globo; nunca fitar a pálpebra diretamente na pele fina" },
+      { "medida": "Higiene e inspeção diária do olho", "detalhe": "Olhar no espelho todo dia procurando hiperemia, opacidade ou dor; procurar atendimento no mesmo dia se aparecer" },
+      { "medida": "Fisioterapia facial", "detalhe": "Exercícios de mímica em frente ao espelho, 10 min, 3x/dia, iniciados após 2–3 semanas; evitar contração excessiva que favorece sinquinesia" },
+      { "medida": "Orientação sobre a evolução", "detalhe": "80 a 85% recuperam em 3 a 6 meses; piora nas primeiras 72 h é esperada e não indica troca de conduta" },
+      { "medida": "Cuidado com o olho durante o sono", "detalhe": "Dormir com a cabeceira elevada e com a oclusão noturna; verificar de manhã se a pálpebra ficou aberta" },
+      { "medida": "Retirada de fatores de piora", "detalhe": "Suspender tabagismo, controlar glicemia e evitar automedicação com AINE em uso de corticoide" }
+    ],
+    "procedimentos": [
+      { "nome": "Oclusão palpebral noturna (tapa-olho)", "indicacao": "lagoftalmo com risco de ceratite por exposição", "tecnica": "Pomada lubrificante, gaze estéril sobre a pálpebra fechada e fita adesiva de fora para dentro, sem pressão no globo", "complicacoes": "Abrasão corneana se houver pressão, dermatite pela fita, oclusão mal feita que mantém o olho aberto" },
+      { "nome": "Avaliação oftalmológica com lâmpada de fenda", "indicacao": "lagoftalmo importante, dor ocular, fotofobia ou rebaixamento de acuidade visual", "tecnica": "Biomicroscopia, teste de fluoresceína e avaliação do filme lacrimal", "complicacoes": "Ceratite não diagnosticada evolui para úlcera e perfuração" },
+      { "nome": "Eletroneuromiografia facial", "indicacao": "após 3 semanas sem melhora, paralisia grave ou dúvida diagnóstica", "tecnica": "Estimulação do nervo facial e registro em músculos da mímica; comparar com o lado sadio", "complicacoes": "Desconforto local, resultado confundido se feita na primeira semana" },
+      { "nome": "Ressonância magnética de crânio e ângulo pontocerebelar", "indicacao": "progressão após 3 semanas, paralisia recorrente, espasmo hemifacial ou suspeita de tumor", "tecnica": "Cortes finos com gadolínio sobre o trajeto do nervo facial", "complicacoes": "Reação ao contraste, claustrofobia, custo e acesso" },
+      { "nome": "Descompressão cirúrgica do nervo facial", "indicacao": "paralisia completa com degeneração grave na eletroneuromiografia, em centros especializados", "tecnica": "Descompressão do segmento meatal/labiríntico por via transmastoidea", "complicacoes": "Hipoacusia, fístula de líquor, lesão do nervo" }
+    ],
+    "metas": [
+      "Prednisona iniciada em até 72 h do início dos sintomas",
+      "Olho protegido em todas as consultas, sem ceratite ou dor ocular",
+      "Reavaliação em 3 semanas com graduação de House-Brackmann registrada",
+      "Recuperação funcional (House-Brackmann ≤ II) em 3 a 6 meses",
+      "Dor neuropática controlada com EVA ≤ 3",
+      "Nenhum corticoide prescrito em Ramsay Hunt sem antiviral associado"
+    ],
+    "fluxo": [
+      "Confirmar que é periférica: a fronte do lado fraco não enruga e o olho não fecha",
+      "Procurar sinal central: força de membros, fala e campo visual — se presente, é AVC e o fluxo muda",
+      "Otoscopia e inspeção da pele: vesícula ou otalgia intensa significa Ramsay Hunt",
+      "Excluir causa secundária: trauma, otite, tumor, Lyme, HIV, sarcoidose e gestação",
+      "Iniciar prednisona 1 mg/kg por 7 dias se estiver dentro de 72 h; associar antiviral se houver vesícula ou otalgia",
+      "Proteger o olho no mesmo dia e encaminhar à oftalmologia se lagoftalmo",
+      "Reavaliar em 3 semanas com House-Brackmann; sem melhora, eletroneuromiografia e ressonância"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "gestante", "ajuste": "prednisona é aceitável em curso curto; valaciclovir e aciclovir são compatíveis; evitar gabapentina", "alerta": "Ramsay Hunt tem pior prognóstico na gestação" },
+      { "populacao": "diabetico", "ajuste": "glicemia 2x/dia durante o corticoide e ajuste do antidiabético", "alerta": "hiperglicemia e descompensação" },
+      { "populacao": "idoso", "ajuste": "afastar AVC com mais rigor e checar interação com polifarmácia; amitriptilina em dose menor", "alerta": "paralisia central confundida com Bell" },
+      { "populacao": "imunossuprimido", "ajuste": "considerar zoster disseminado, aciclovir IV e pesquisa de HIV", "alerta": "zoster grave e encefalite" },
+      { "populacao": "glaucoma", "ajuste": "evitar amitriptilina; preferir gabapentina para dor neuropática", "alerta": "crise de glaucoma de ângulo fechado" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "exame neurológico dirigido (fronte, força, fala, campo visual)", "indicacao": "todos", "o_que_muda": "separa periférica de central e define a conduta" },
+        { "nome": "otoscopia e inspeção do pavilhão auricular", "indicacao": "todos", "o_que_muda": "identifica vesícula, otite e Ramsay Hunt" },
+        { "nome": "glicemia capilar e pressão arterial", "indicacao": "antes de iniciar corticoide", "o_que_muda": "define monitorização e contraindicação relativa" },
+        { "nome": "sorologia de Lyme, HIV e sífilis", "indicacao": "epidemiologia, paralisia bilateral ou refratária", "o_que_muda": "muda o tratamento específico" },
+        { "nome": "eletroneuromiografia", "indicacao": "após 3 semanas sem melhora ou paralisia completa", "o_que_muda": "define prognóstico e indicação cirúrgica" },
+        { "nome": "ressonância do ângulo pontocerebelar", "indicacao": "progressão, recorrência ou espasmo hemifacial", "o_que_muda": "detecta tumor ou lesão desmielinizante" }
+      ],
+      "evitar": [
+        { "exame": "tomografia de crânio de rotina na paralisia periférica típica", "motivo": "não avalia o nervo facial e atrasa o corticoide" },
+        { "exame": "eletroneuromiografia na primeira semana", "motivo": "não altera conduta e o resultado é confundido pela degeneração precoce" },
+        { "exame": "sorologias em massa sem epidemiologia", "motivo": "baixo rendimento e custo sem mudança de conduta" },
+        { "exame": "ressonância em todo caso no início", "motivo": "reservar para progressão, recorrência ou suspeita de tumor" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": ["usar colírio lubrificante durante o dia e pomada com oclusão à noite", "voltar em 3 semanas para reavaliação", "iniciar os exercícios de mímica após 2–3 semanas", "procurar oftalmologia se o olho doer, lacrimejar ou embaçar"],
+      "evitar": ["expor o olho a vento, ar-condicionado e sol sem proteção", "automedicação com AINE ou corticoide por conta própria", "massagear o rosto com força", "interromper o corticoide antes de completar os 7 dias"],
+      "retorno": ["fraqueza em braço ou perna", "vesículas ou dor de ouvido", "dor ocular ou perda de visão", "piora após 3 semanas", "glicemia alta ou muito baixa em diabético"]
+    },
+    "efeitos_adversos": [
+      { "agente": "prednisona", "efeitos": ["hiperglicemia", "insônia", "aumento do apetite"], "observacao": "curso curto de 7 dias; monitorar glicemia em diabético" },
+      { "agente": "valaciclovir", "efeitos": ["náusea", "nefrotoxicidade"], "observacao": "hidratar e ajustar em doença renal" },
+      { "agente": "aciclovir intravenoso", "efeitos": ["nefrotoxicidade", "confusão"], "observacao": "infundir em 60 min com hidratação" },
+      { "agente": "amitriptilina", "efeitos": ["boca seca", "hipotensão postural", "arritmia"], "observacao": "ECG em cardiopata; iniciar com 25 mg" },
+      { "agente": "gabapentina", "efeitos": ["tontura", "sonolência"], "observacao": "titular devagar e ajustar à função renal" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar a reação",
+      "Prednisona: hiperglicemia — reforçar controle glicêmico, não suspender o curso curto sem orientação",
+      "Valaciclovir ou aciclovir: creatinina em ascensão — hidratar, ajustar a dose e repetir a creatinina em 48 h",
+      "Amitriptilina: hipotensão postural ou arritmia — reduzir a dose e trocar por gabapentina",
+      "Reavaliar a indicação na consulta seguinte e comunicar a equipe"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "prednisona 20 mg", "dose": "1 mg/kg/dia (máximo 80 mg)", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "7 dias", "condicao": "Bell com início em até 72 h", "confirmar_apresentacao_local": true },
+          { "item": "valaciclovir 500 mg", "dose": "1 g", "via": "VO", "frequencia": "8/8 h", "duracao": "7 dias", "condicao": "Ramsay Hunt (vesícula ou otalgia)", "confirmar_apresentacao_local": true },
+          { "item": "carboximetilcelulose 0,5% colírio", "dose": "1 gota", "via": "ocular", "frequencia": "a cada 3–4 h", "duracao": "até recuperação", "condicao": "lagoftalmo", "confirmar_apresentacao_local": true },
+          { "item": "pomada oftálmica lubrificante", "dose": "0,5 cm", "via": "ocular", "frequencia": "ao deitar", "duracao": "até recuperação", "condicao": "lagoftalmo noturno", "confirmar_apresentacao_local": true },
+          { "item": "paracetamol 750 mg", "dose": "750 mg", "via": "VO", "frequencia": "6/6 h", "duracao": "5 dias", "condicao": "otalgia", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "aciclovir intravenoso", "dose": "10 mg/kg", "via": "IV", "frequencia": "8/8 h", "monitorizacao": "creatinina e hidratação", "condicao": "Ramsay Hunt grave com vertigem ou hipoacusia", "confirmar_apresentacao_local": true },
+          { "item": "prednisona", "dose": "1 mg/kg/dia", "via": "VO", "frequencia": "1x/dia", "monitorizacao": "glicemia e PA", "condicao": "internação por Ramsay Hunt", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": { "campos": ["glicemia", "pressão arterial", "exame neurológico", "otoscopia", "sorologia conforme risco", "eletroneuromiografia", "ressonância", "justificativa", "prioridade"] },
+      "atestado": { "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de paralisia facial periférica, necessitando de afastamento por dias.", "dias": null, "cid": null, "observacao": "dias são decisão médica e dependem da atividade exercida" },
+      "encaminhamento": { "campos": ["destino", "motivo", "lado e House-Brackmann", "início", "uso de corticoide e antiviral", "prioridade"] },
+      "relatorio": { "texto_template": "Paciente com paralisia facial periférica à ___, House-Brackmann ___, início em ___, com/sem vesícula, conduta com prednisona e antiviral, proteção ocular e plano de reavaliação em 3 semanas." }
+    },
+    "anamnese": {
+      "campos": ["lado", "fronte", "hora do início", "dor", "vesículas", "audição", "membros", "comorbidades"],
+      "texto_template": "Paciente com paralisia facial à ___, com acometimento da fronte ___, iniciada em ___, dor ___, vesículas ___, audição ___, déficit de membros ___ e comorbidades ___."
+    },
+    "exame_fisico": {
+      "itens": ["fronte", "fechamento ocular e sinal de Bell", "força de membros", "fala", "sensibilidade", "otoscopia", "pele do pavilhão"],
+      "texto_template": "Fronte ___, fechamento ocular ___ com sinal de Bell ___, força de membros ___, fala ___, sensibilidade ___, otoscopia ___ e pele do pavilhão ___."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de paralisia facial e critérios de encaminhamento", "verificar": true },
+      { "tipo": "sociedade_neurologia", "o_que_verificar": "Bell, Ramsay Hunt e escala de House-Brackmann", "verificar": true },
+      { "tipo": "sociedade_otorrinolaringologia", "o_que_verificar": "zoster oticus, reabilitação facial e indicação cirúrgica", "verificar": true },
+      { "tipo": "diretriz_oftalmologia", "o_que_verificar": "proteção ocular no lagoftalmo e ceratite por exposição", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações e posologia do valaciclovir e do aciclovir", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-NEU10-01", "tipo": "central", "gatilho": "paresia de membro, disartria ou fronte preservada", "severidade": "grave", "mensagem": "Suspeita de AVC: não prescrever corticoide; acionar protocolo de déficit focal.", "acao": "bloquear corticoide e acionar AVC", "bloqueante": true },
+      { "id": "SA-NEU10-02", "tipo": "zoster_sem_antiviral", "gatilho": "corticoide prescrito com vesícula, otalgia ou paralisia grave sem antiviral", "severidade": "grave", "mensagem": "Ramsay Hunt exige antiviral associado; corticoide isolado piora o prognóstico.", "acao": "bloquear item e sugerir valaciclovir", "bloqueante": true },
+      { "id": "SA-NEU10-03", "tipo": "olho_desprotegido", "gatilho": "lagoftalmo registrado sem lubrificante ocular", "severidade": "grave", "mensagem": "Córnea exposta: prescrever lubrificante e oclusão noturna.", "acao": "bloquear alta sem proteção ocular", "bloqueante": true },
+      { "id": "SA-NEU10-04", "tipo": "janela_terapeutica", "gatilho": "prednisona prescrita após 72 h do início", "severidade": "precaucao", "mensagem": "Fora da janela de 72 h o benefício do corticoide é marginal.", "acao": "alertar e justificar", "bloqueante": false },
+      { "id": "SA-NEU10-05", "tipo": "bilateral", "gatilho": "paralisia bilateral ou progressiva", "severidade": "grave", "mensagem": "Investigar Guillain-Barré e causas sistêmicas; avaliar capacidade vital.", "acao": "sugerir internação", "bloqueante": true },
+      { "id": "SA-NEU10-06", "tipo": "glicemia", "gatilho": "corticoide em diabético sem plano de monitorização glicêmica", "severidade": "precaucao", "mensagem": "Monitorar glicemia durante o curso de prednisona.", "acao": "exigir glicemia", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "literatura", "protocolo institucional"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com separação entre paralisia periférica e central, critérios de escolha, antiviral em Ramsay Hunt, apresentações, preparo, monitorização, proteção ocular, reavaliação em 3 semanas, não farmacológico e procedimentos.", "data": null }
+      ]
+    }
+  }
+}

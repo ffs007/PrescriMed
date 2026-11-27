@@ -1,0 +1,671 @@
+{
+  "id": "ws-neu_01",
+  "nome": "Cefaleia primária / enxaqueca",
+  "cat": "Neurológico",
+  "alias": "cefaleia primaria enxaqueca cefaleia enxaqueca dor de cabeca migranea",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (NEU-01_cefaleia_primaria.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de cefaleia e critérios de neuroimagem",
+      "[verificar] sociedade_neurologia: critérios diagnósticos de migrânea, tensional e salvas e indicação de profilaxia",
+      "[verificar] diretriz_obstetrica: uso de analgésico e triptano na gestação",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "NEU-01 em 2026-11-27",
+    "fundido_workspace": "NEU-01 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: início súbito em segundos, em trovoada -> sair do fluxo de cefaleia primária, tomografia imediata e protocolo do NEU-02; pior cefaleia da vida ou mudança do padrão habitual -> neuroimagem e investigação antes de qualquer alta; febre com rigidez de nuca ou alteração de consciência -> antibiótico empírico na primeira hora e punção lombar após imagem, quando não houver contraindicação; déficit focal, convulsão ou rebaixamento -> protocolo de acidente vascular cerebral e neuroimagem urgente. 1) Confirmar que é primária: anamnese completa, exame neurológico normal e ausência de qualquer bandeira vermelha; se houver bandeira, sair deste fluxo e ir para o NEU-02 2) Classificar o fenótipo em migrânea, tensional ou salvas pelos critérios clínicos, sem exame de imagem de rotina 3) Medir frequência mensal de dor e de uso de analgésico; identificar uso excessivo e gatilhos 4) Tratar a crise conforme a intensidade: AINE ou paracetamol na leve, triptano mais antiemético na moderada a grave, oxigênio mais sumatriptano subcutâneo nas salvas 5) Reavaliar em 2 horas; se refratária, dexametasona intravenosa, antiemético e hidratação, sem repetir opioide nem somar analgésico simples 6) Indicar profilaxia quando há 4 dias ou mais de dor por mês, crises incapacitantes ou uso excessivo de analgésico, escolhendo pela comorbidade 7) Reavaliar profilaxia em 8 a 12 semanas na dose alvo; se falhou, trocar de classe e só então encaminhar 8) Alta com plano de crise escrito, limite de dia",
+  "redFlags": [
+    "início súbito em segundos, em trovoada -> sair do fluxo de cefaleia primária, tomografia imediata e protocolo do NEU-02",
+    "pior cefaleia da vida ou mudança do padrão habitual -> neuroimagem e investigação antes de qualquer alta",
+    "febre com rigidez de nuca ou alteração de consciência -> antibiótico empírico na primeira hora e punção lombar após imagem, quando não houver contraindicação",
+    "déficit focal, convulsão ou rebaixamento -> protocolo de acidente vascular cerebral e neuroimagem urgente",
+    "papiledema, vômitos em jato ou piora ao deitar -> neuroimagem antes de punção lombar e avaliação de neurocirurgia",
+    "cefaleia nova após 50 anos, em câncer, HIV ou anticoagulado -> velocidade de hemossedimentação, neuroimagem e coagulograma no mesmo atendimento",
+    "gestante ou puérpera com pressão alta e cefaleia -> avaliação obstétrica imediata e exames de pré-eclâmpsia"
+  ],
+  "naoUsar": [
+    "úlcera péptica ativa",
+    "doença renal crônica avançada",
+    "insuficiência cardíaca descompensada",
+    "terceiro trimestre de gestação",
+    "alergia a AINE",
+    "revascularização miocárdica recente",
+    "doença coronariana ou vasoespasmo coronariano",
+    "acidente vascular cerebral ou ataque isquêmico transitório prévio"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar o remédio no início da dor, não quando a dor já está em 10"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "opioide, codeína e analgésico composto para crise de cefaleia"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "diclofenaco",
+            "pos": "50 mg VO ou 75 mg IM. 8/8 h. Até 3 dias na crise.",
+            "posTodas": true,
+            "motivo": "crise de migrânea leve a moderada e cefaleia tensional (1a linha)",
+            "nota": "VO: uso direto, com alimento. IM: sem diluição, injeção profunda no quadrante superior externo do glúteo - monitorar: dor epigástrica e melena; monitorar: pressão arterial; monitorar: creatinina se uso repetido · NÃO: úlcera péptica ativa; doença renal crônica avançada; insuficiência cardíaca descompensada; terceiro trimestre de gestação; alergia a AINE; revascularização miocárdica recente · Obs: Tomar no início da dor: o AINE precoce reduz a sensibilização central e a necessidade de resgate · Renal: Evitar com clearance abaixo de 30 mL/min; não usar em diálise",
+            "dose": {
+              "texto": "50 mg VO ou 75 mg IM; 8/8 h; até 3 dias na crise; max. 150 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 150,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "cetoprofeno",
+            "pos": "50 mg VO ou 100 mg IM. 8/8 h. Até 3 dias na crise.",
+            "posTodas": true,
+            "motivo": "crise de migrânea leve a moderada e cefaleia tensional quando o diclofenaco não está disponível (alternativa)",
+            "nota": "VO: uso direto com alimento. IM: sem diluição, aplicação profunda no glúteo - monitorar: dor epigástrica; monitorar: creatinina se uso repetido; monitorar: pressão arterial · NÃO: úlcera péptica ativa; doença renal crônica avançada; insuficiência cardíaca descompensada; terceiro trimestre de gestação; alergia a AINE · Obs: Alternativa ao diclofenaco com perfil semelhante; não associar dois AINEs · Renal: Evitar com clearance abaixo de 30 mL/min",
+            "dose": {
+              "texto": "50 mg VO ou 100 mg IM; 8/8 h; até 3 dias na crise; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "naproxeno",
+            "pos": "500 mg (750 mg na primeira dose). Via VO. 12/12 h. Até 3 dias na crise.",
+            "posTodas": true,
+            "motivo": "crise de migrânea, sobretudo quando se quer meia-vida longa e cobertura de até 12 horas (alternativa) crise de migrânea leve a moderada",
+            "nota": "Uso direto, com alimento ou após a refeição - monitorar: dor epigástrica; monitorar: pressão arterial; monitorar: creatinina se uso repetido · NÃO: úlcera péptica ativa; doença renal crônica avançada; insuficiência cardíaca descompensada; terceiro trimestre de gestação; alergia a AINE · Obs: Meia-vida de 12 a 17 horas: cobre a crise inteira com duas tomadas, o que melhora adesão · Renal: Evitar com clearance abaixo de 30 mL/min",
+            "dose": {
+              "texto": "500 mg (750 mg na primeira dose); 12/12 h; até 3 dias na crise; max. 1.250 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1250,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Triptano",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "sumatriptano",
+              "n": "Sumatriptano",
+              "ap": "seringa preenchida 6 mg/0,5 mL com auto-injetor",
+              "q": "",
+              "pos": "6 mg SC ou 20 mg intranasal. Dose única; repetir em 2 h se a dor retornar (mínimo de 1 h entre doses na via subcutânea). 1 dia de crise."
+            },
+            "motivo": "crise de migrânea moderada a grave e crise de cefaleia em salvas (1a linha) crise moderada a grave sem contraindicação cardiovascular",
+            "nota": "SC: uso direto no abdome ou na coxa, sem diluição. Nasal: uma nebulização em uma narina, cabeça levemente inclinada para trás - monitorar: pressão arterial após a dose; monitorar: dor torácica opressiva (suspender e avaliar isquemia); monitorar: resposta de dor em 2 h · NÃO: doença coronariana ou vasoespasmo coronariano; acidente vascular cerebral ou ataque isquêmico transitório prévio; hipertensão não controlada; migrânea hemiplégica ou basilar; uso de IMAO nas últimas 2 semanas; ergotamina nas últimas 24 horas; insuficiência hepática grave · Obs: A via subcutânea é a mais rápida e a única com eficácia consistente em salvas; o…",
+            "dose": {
+              "texto": "6 mg SC ou 20 mg intranasal; dose única; repetir em 2 h se a dor retornar (mínimo de 1 h entre doses na via subcutânea); 1 dia de crise; max. 12 mg/dia pela via subcutânea ou 40 mg/dia pela via nasal",
+              "status": "ok",
+              "valor": 6,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "rizatriptano",
+              "n": "Rizatriptano",
+              "ap": "comprimido 10 mg",
+              "q": "",
+              "pos": "10 mg. Via VO. Dose única; repetir em 2 h se necessário. 1 dia de crise."
+            },
+            "motivo": "crise de migrânea moderada a grave em paciente que tolera via oral e não tem contraindicação a triptano (alternativa)",
+            "nota": "Uso direto; o orodispersível dissolve na língua sem água - monitorar: pressão arterial; monitorar: dor torácica; monitorar: resposta de dor em 2 h · NÃO: doença coronariana; acidente vascular cerebral ou ataque isquêmico transitório prévio; hipertensão não controlada; migrânea hemiplégica ou basilar; uso de IMAO nas últimas 2 semanas; insuficiência hepática grave · Obs: Início de ação em 30 a 60 minutos e meia-vida de 2 a 3 horas: útil na crise que retorna, com menor risco de acúmulo que os triptanos de meia-vida longa",
+            "dose": {
+              "texto": "10 mg; dose única; repetir em 2 h se necessário; 1 dia de crise; max. 20 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Bloqueador de canal de cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "verapamil",
+              "n": "Verapamil",
+              "ap": "comprimido 80 mg e 120 mg",
+              "q": "",
+              "pos": "80 mg a cada 8 h, com aumentos de 80 mg a cada 1 a 2 semanas até o controle. Via VO. 8/8 h. Durante o período de agrupamento e por 2 a 4 semanas após o último episódio."
+            },
+            "motivo": "profilaxia de cefaleia em salvas durante o período de agrupamento (1a linha) profilaxia de cefaleia em salvas",
+            "nota": "Uso direto, com alimento - monitorar: eletrocardiograma antes do início e 1 a 2 semanas após cada aumento, buscando aumento do intervalo PR e bradicardia; monitorar: pressão arterial; monitorar: constipação · NÃO: bloqueio atrioventricular de segundo ou terceiro grau; insuficiência cardíaca com fração de ejeção reduzida; hipotensão; síndrome de Wolff-Parkinson-White; uso de betabloqueador intravenoso · Obs: Exige dose alta e eletrocardiograma seriado: sem essa monitorização, o risco de bloqueio atrioventricular supera o benefício",
+            "dose": {
+              "texto": "80 mg a cada 8 h, com aumentos de 80 mg a cada 1 a 2 semanas até o controle; 8/8 h; durante o período de agrupamento e por 2 a 4 semanas após o último episódio; max. 960 mg/dia",
+              "status": "ok",
+              "valor": 80,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 960,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "flunarizina",
+            "pos": "5 mg à noite, podendo subir para 10 mg. Via VO. 1x/dia, à noite. Até 6 meses, com reavaliação obrigatória antes de prolongar.",
+            "posTodas": true,
+            "motivo": "profilaxia de migrânea quando betabloqueador, tricíclico e topiramato falharam ou são contraindicados (alternativa)",
+            "nota": "Uso direto à noite - monitorar: humor e sinais de depressão a cada consulta; monitorar: sintomas extrapiramidais; monitorar: peso; monitorar: sonolência diurna",
+            "dose": {
+              "texto": "5 mg à noite, podendo subir para 10 mg; 1x/dia, à noite; até 6 meses, com reavaliação obrigatória antes de prolongar; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Betabloqueador",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_propranolol",
+            "pos": "40 mg 12/12 h, com titulação até 80 a 160 mg/dia. Via VO. 12/12 h. 3 a 6 meses, com reavaliação a cada 8 a 12 semanas.",
+            "posTodas": true,
+            "motivo": "profilaxia de migrânea episódica ou crônica (1a linha) profilaxia de migrânea sem asma nem bradicardia",
+            "nota": "Uso direto, sempre no mesmo horário - monitorar: frequência cardíaca e pressão a cada consulta; monitorar: ausculta respiratória; monitorar: sintomas de hipoglicemia em diabéticos; monitorar: adesão, pois a suspensão abrupta causa taquicardia e rebote",
+            "dose": {
+              "texto": "40 mg 12/12 h, com titulação até 80 a 160 mg/dia; 12/12 h; 3 a 6 meses, com reavaliação a cada 8 a 12 semanas; max. 240 mg/dia",
+              "status": "ok",
+              "valor": 80,
+              "valor_max": 160,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 240,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antidepressivo tricíclico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_amitriptilina",
+            "pos": "10 a 25 mg à noite, com titulação até 25 a 50 mg. Via VO. 1x/dia, ao deitar. 3 a 6 meses, com reavaliação em 8 semanas.",
+            "posTodas": true,
+            "motivo": "profilaxia de migrânea e de cefaleia tensional crônica, sobretudo com insônia ou dor musculoesquelética associada (1a linha) profilaxia com insônia ou cefaleia tensional crônica",
+            "nota": "Uso direto ao deitar - monitorar: eletrocardiograma se dose acima de 50 mg ou cardiopatia; monitorar: sonolência diurna; monitorar: peso; monitorar: pressão postural no idoso · NÃO: glaucoma de ângulo fechado; arritmia cardíaca significativa; uso de IMAO; infarto do miocárdio recente; retenção urinária por hiperplasia prostática · Obs: Dose profilática é muito menor que a antidepressiva; iniciar baixo e subir a cada 1 a 2 semanas para reduzir efeitos anticolinérgicos",
+            "dose": {
+              "texto": "10 a 25 mg à noite, com titulação até 25 a 50 mg; 1x/dia, ao deitar; 3 a 6 meses, com reavaliação em 8 semanas; max. 100 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 25,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antiepileptico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "topiramato",
+            "pos": "25 mg à noite, com aumento de 25 mg por semana até 50 a 100 mg/dia. Via VO. 1x/dia ou 12/12 h. 3 a 6 meses, com reavaliação em 8 a 12 semanas.",
+            "posTodas": true,
+            "motivo": "profilaxia de migrânea, sobretudo com obesidade ou quando o betabloqueador é contraindicado (1a linha) profilaxia com obesidade ou contraindicação a betabloqueador",
+            "nota": "Uso direto, com bastante água; deglutir o comprimido inteiro - monitorar: bicarbonato e potássio em uso prolongado; monitorar: cognição e fluência verbal; monitorar: peso; monitorar: hidratação e sinais de cálculo renal; monitorar: pressão ocular se dor ocular · NÃO: nefrolitíase; glaucoma de ângulo fechado; gestação ou planejamento gestacional sem contracepção adequada; acidose tubular renal · Obs: Teratogênico: exigir contracepção eficaz em mulher em idade fértil. Titulação lenta é o que permite tolerar os efeitos cognitivos · Renal: Metade da dose com clearance abaixo de 70 mL/min; contraindicado em diálise sem ajuste…",
+            "dose": {
+              "texto": "25 mg à noite, com aumento de 25 mg por semana até 50 a 100 mg/dia; 1x/dia ou 12/12 h; 3 a 6 meses, com reavaliação em 8 a 12 semanas; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Repouso em ambiente escuro e silencioso",
+              "ap": "",
+              "q": "",
+              "pos": "Quarto com luz apagada, sem telas e sem ruído por 30 a 60 minutos no início da crise; fotofobia e fonofobia são parte do quadro e não frescura"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Diário de cefaleia prospectivo",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar data, horário, duração, intensidade de 0 a 10, gatilho, medicação usada e resposta; é o instrumento que define frequência mensal, uso excessivo e resposta à profilaxia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Higiene do sono",
+              "ap": "",
+              "q": "",
+              "pos": "Horário fixo de dormir e acordar, inclusive fim de semana, 7 a 9 horas por noite; privação e excesso de sono são gatilhos diretos de migrânea"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Alimentação regular e hidratação",
+              "ap": "",
+              "q": "",
+              "pos": "Não pular refeições, beber 1,5 a 2 litros de água por dia; jejum prolongado é gatilho frequente e evitável"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Exercício aeróbico regular",
+              "ap": "",
+              "q": "",
+              "pos": "30 a 40 minutos, 3 a 5 vezes por semana, em intensidade moderada; tem efeito profilático comparável a droga em migrânea episódica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Redução de cafeína e álcool",
+              "ap": "",
+              "q": "",
+              "pos": "Máximo 2 doses de cafeína por dia e retirada gradual, porque a suspensão abrupta causa cefaleia; álcool, sobretudo vinho tinto, é gatilho de crise"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Terapia cognitivo-comportamental e técnicas de relaxamento",
+              "ap": "",
+              "q": "",
+              "pos": "Oito a doze sessões com treino de respiração e relaxamento muscular; reduz frequência e uso de analgésico em migrânea crônica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Oxigênio a 100% na crise de salvas",
+              "ap": "",
+              "q": "",
+              "pos": "Máscara com reservatório, 12 a 15 L/min por 15 a 20 minutos, sentado e sem retirar a máscara; iniciar nos primeiros minutos da dor"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Retirada programada do analgésico em uso excessivo",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender o analgésico em uso por 8 a 12 semanas, com profilaxia iniciada no mesmo dia e diário; avisar que haverá piora por 1 a 2 semanas antes da melhora"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_10",
+              "n": "Identificação e manejo de gatilhos",
+              "ap": "",
+              "q": "",
+              "pos": "Luz intermitente, odores fortes, calor, estresse e alteração de rotina; não se trata de evitar tudo, mas de reconhecer os três ou quatro gatilhos pessoais mais consistentes"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "NEU-01"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antiemético",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "náusea e vômito da crise, com efeito analgésico adjuvante e melhora da absorção do analgésico (1a linha) náusea na crise",
+            "nota": "IV: diluir a ampola em 10 mL de soro fisiológico 0,9%. VO: uso direto - monitorar: movimentos extrapiramidais nas primeiras 24 h; monitorar: sonolência; monitorar: nível de consciência",
+            "dose": {
+              "texto": "10 mg; 8/8 h; até 3 dias, no máximo 5 dias; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "hosp": "ondansetrona_ev",
+            "motivo": "náusea e vômito da crise quando há parkinsonismo, distonia prévia ou contraindicação à metoclopramida (alternativa)",
+            "nota": "IV: diluir em 50 mL de soro fisiológico 0,9%. VO: uso direto - monitorar: eletrocardiograma se cardiopatia ou uso de outra droga que prolonga o QT; monitorar: potássio e magnésio; monitorar: cefaleia",
+            "dose": {
+              "texto": "4 mg; 8/8 h; até 3 dias; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "crise leve, gestante, cardiopata, renal crônico e paciente com contraindicação a AINE (alternativa)",
+            "nota": "VO: uso direto. IV: solução pronta, não diluir - monitorar: dose total diária somada de todas as fontes; monitorar: função hepática em uso repetido · NÃO: hepatopatia grave; alergia; desnutrição grave · Obs: É o analgésico mais seguro na gestação e no cardiopata, mas não é específico da migrânea: se a crise é moderada a grave, o triptano entra junto · Renal: Espaçar para 6/6 h ou 8/8 h com clearance abaixo de 30 mL/min",
+            "dose": {
+              "texto": "1 g; 6/6 h; até 3 dias na crise; max. 4 g/dia (3 g/dia em hepatopatia, idoso frágil ou peso abaixo de 50 kg)",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dexametasona_ev",
+            "motivo": "crise refratária em pronto-socorro e prevenção de recorrência em 24 a 48 horas (resgate)",
+            "nota": "Diluir em 20 mL de soro fisiológico 0,9% ou administrar sem diluição em bolus lento - monitorar: glicemia; monitorar: pressão arterial; monitorar: resposta de dor em 1 h",
+            "dose": {
+              "texto": "10 mg; dose única; 1 dose no pronto-socorro; max. 10 mg",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "NEU-01",
+    "versao": "0.2.0",
+    "arquivo": "NEU-01_cefaleia_primaria.json",
+    "area": "Neurológico",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

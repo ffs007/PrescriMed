@@ -1,0 +1,550 @@
+{
+  "id": "ws-uro_08",
+  "nome": "Dor pélvica aguda / DIP",
+  "cat": "Urinário",
+  "alias": "dor pelvica aguda dip dor pelvica dip doenca inflamatoria pelvica anexite",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (URO-08_dip.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de dor pélvica, critérios de internação, esquema empírico vigente e disponibilidade de cefoxitina",
+      "[verificar] ministerio_da_saude: protocolo de atenção integral às IST, esquemas de DIP e notificação compulsória",
+      "[verificar] sociedade_ginecologia: critérios mínimos diagnósticos, esquema ambulatorial e hospitalar e manejo do abscesso tubo-ovariano",
+      "[verificar] anvisa: apresentações e diluentes de ceftriaxona, doxiciclina, metronidazol, clindamicina, gentamicina e cefoxitina disponíveis no serviço",
+      "[verificar] literatura: papel do metronidazol na cobertura de anaeróbios, duração de 14 dias e conduta com o DIU durante o tratamento"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "URO-08 em 2026-11-27",
+    "fundido_workspace": "URO-08 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: teste de gravidez positivo ou não realizado em mulher em idade fértil com dor pélvica -> β-hCG imediato e ultrassom transvaginal; não tratar como DIP antes do resultado; hipotensão, taquicardia, defesa abdominal ou dor difusa -> acionar cirurgia e sala de emergência, com acesso venoso e reposição; febre acima de 38,5 °C com massa anexial dolorosa -> internação, antibiótico parenteral e imagem para drenagem; vômitos incoercíveis ou incapacidade de manter medicação oral -> internação para esquema parenteral e hidratação. 1) Testar β-hCG em toda mulher em idade fértil com dor pélvica, antes de qualquer antibiótico 2) Excluir as quatro emergências: ectópica, apendicite, torção anexial e cisto roto ou hemorrágico; dor com defesa, instabilidade ou massa aguda vai para cirurgia 3) Aplicar os critérios mínimos ao exame bimanual e especular: dor pélvica mais dor à mobilização do colo, dor uterina ou dor anexial 4) Colher swab endocervical para clamídia e gonococo e testar HIV, sífilis e hepatites na mesma visita 5) Classificar em ambulatorial ou hospitalar: abscesso, gestação, vômitos, febre alta com toxemia, imunossupressão, falha prévia ou dúvida cirúrgica internam 6) Iniciar esquema com cobertura de gonococo, clamídia e anaeróbios: ceftriaxona IM mais doxiciclina e metronidazol por 14 dias, ou esquema parenteral na internação 7) Tratar o parceiro na mesma consulta e orientar abstinência até o tratamento de ambos 8) Reavaliar em 48 a 72 h; sem melhora, repetir imag",
+  "redFlags": [
+    "teste de gravidez positivo ou não realizado em mulher em idade fértil com dor pélvica -> β-hCG imediato e ultrassom transvaginal; não tratar como DIP antes do resultado",
+    "hipotensão, taquicardia, defesa abdominal ou dor difusa -> acionar cirurgia e sala de emergência, com acesso venoso e reposição",
+    "febre acima de 38,5 °C com massa anexial dolorosa -> internação, antibiótico parenteral e imagem para drenagem",
+    "vômitos incoercíveis ou incapacidade de manter medicação oral -> internação para esquema parenteral e hidratação",
+    "gestação confirmada com DIP -> internação obrigatória com esquema sem doxiciclina e avaliação obstétrica",
+    "dor pélvica e sangramento com amenorreia -> β-hCG e ultrassom urgentes, antes de qualquer antibiótico",
+    "ausência de melhora da dor e da febre em 48 a 72 h de esquema correto -> reavaliar, repetir imagem, internar e ampliar cobertura",
+    "DIU com dor intensa, febre ou massa anexial -> tratar e manter o DIU; retirar apenas se abscesso, falha em 48 a 72 h ou desejo da paciente"
+  ],
+  "naoUsar": [
+    "anafilaxia prévia a cefalosporina ou a penicilina",
+    "alergia à lidocaína quando usada como diluente",
+    "hiperbilirrubinemia neonatal",
+    "uso de solução contendo cálcio em neonato",
+    "gestação e lactação",
+    "menores de 8 anos",
+    "insuficiência hepática grave",
+    "alergia a tetraciclina"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar doxiciclina e metronidazol até o último dia, mesmo sem dor"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "álcool durante o metronidazol e por 72 h após"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Fluoroquinolona",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "levofloxacino",
+            "pos": "500 mg. Via VO. 1x/dia. 14 dias, sempre associado ao metronidazol.",
+            "posTodas": true,
+            "motivo": "DIP ambulatorial quando a ceftriaxona intramuscular não está disponível (alternativa)",
+            "nota": "Uso direto, com ou sem alimento; não tomar junto de antiácido, ferro ou cálcio - monitorar: dor tendínea; monitorar: QT e palpitação; monitorar: sintomas neurológicos; monitorar: regressão da dor em 48 a 72 h · NÃO: gestação e lactação; menores de 18 anos; tendinopatia prévia por quinolona; miastenia gravis; QT longo; alergia a quinolona · Obs: A resistência do gonococo a quinolona é alta: usar apenas quando não há beta-lactâmico injetável, colher teste de amplificação e reavaliar em 48 a 72 h. Não usar na gestação. · Renal: Clearance abaixo de 50 mL/min: 500 mg em dose de ataque e depois 250 mg 1x/dia",
+            "dose": {
+              "texto": "500 mg; 1x/dia; 14 dias, sempre associado ao metronidazol; max. 750 mg/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 750,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "azitromicina",
+            "pos": "1 g. Via VO. 1x/semana. 2 semanas.",
+            "posTodas": true,
+            "motivo": "DIP na gestação, substituindo a doxiciclina, sempre com internação (condicional)",
+            "nota": "Uso direto, com ou sem alimento; na via intravenosa, diluir em 250 a 500 mL de soro fisiológico - monitorar: náusea e diarreia; monitorar: ECG se risco de QT; monitorar: regressão da dor e da febre em 72 h; monitorar: avaliação obstétrica e vitalidade fetal · NÃO: alergia a macrolídeo; QT longo congênito; hipocalemia ou hipomagnesemia não corrigidas; insuficiência hepática grave; uso simultâneo de ergotamina · Obs: Só entra na gestante, porque a doxiciclina é contraindicada. A evidência é menor que a do esquema padrão e a internação é obrigatória para vigilância materno-fetal.",
+            "dose": {
+              "texto": "1 g; 1x/semana; 2 semanas; max. 1 g por semana",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Teste de gravidez antes de qualquer prescrição",
+              "ap": "",
+              "q": "",
+              "pos": "β-hCG em toda mulher em idade fértil com dor pélvica, na mesma consulta; sem esse resultado não se trata DIP, porque a ectópica é a causa de morte que não se pode perder"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Tratamento do parceiro na mesma consulta",
+              "ap": "",
+              "q": "",
+              "pos": "Tratar todos os parceiros dos últimos 60 dias com ceftriaxona 500 mg IM mais doxiciclina por 7 dias e metronidazol por 7 dias, sem esperar exame, registrando identificação, esquema e data"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Abstinência sexual até completar o tratamento",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender relação, inclusive com preservativo, até o fim dos 14 dias da paciente e dos 7 dias do parceiro; sem isso a reinfecção é a regra"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Reavaliação obrigatória em 48 a 72 h no regime ambulatorial",
+              "ap": "",
+              "q": "",
+              "pos": "Retorno agendado antes da alta, com exame abdominal e bimanual, conferência de adesão e checagem do tratamento do parceiro; a falha silenciosa é o que leva a abscesso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Manter o DIU durante o tratamento",
+              "ap": "",
+              "q": "",
+              "pos": "Não retirar de rotina; retirar apenas em abscesso tubo-ovariano, ausência de melhora em 48 a 72 h, sangramento intenso ou desejo da paciente, com contracepção alternativa garantida"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Testagem de HIV, sífilis e hepatites",
+              "ap": "",
+              "q": "",
+              "pos": "Teste rápido de HIV de quarta geração e de sífilis antes da alta, com oferta de hepatite B e C e vacinação conforme o calendário"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Notificação e busca ativa de parceiros",
+              "ap": "",
+              "q": "",
+              "pos": "Notificar gonorreia, clamídia, sífilis, HIV e hepatites conforme a lista nacional, registrar no prontuário e acionar a vigilância para entrevista de parceiros"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Repouso relativo e hidratação",
+              "ap": "",
+              "q": "",
+              "pos": "Evitar esforço físico e relação sexual durante o tratamento; manter hidratação oral e alimentação leve, com retorno imediato se a dor ou a febre piorarem"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Contracepção efetiva durante e após o tratamento",
+              "ap": "",
+              "q": "",
+              "pos": "Oferecer preservativo e método contraceptivo reversível de longa duração após a cura; a DIP prévia aumenta o risco de ectópica, que exige diagnóstico precoce de gestação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "URO-08"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Cefalosporina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "cobertura de gonococo na DIP, no esquema ambulatorial e no hospitalar (1a linha) DIP - cobertura de gonococo",
+            "nota": "Reconstituir 500 mg em 2 mL de lidocaína 1% sem epinefrina ou em água para injeção; na via intravenosa, diluir 1 g em 100 mL de soro fisiológico ou glicosado; não diluir em solução com cálcio - monitorar: dor e hematoma no local nas primeiras 24 h; monitorar: reação alérgica nos primeiros 30 min; monitorar: defervescên · NÃO: anafilaxia prévia a cefalosporina ou a penicilina; alergia à lidocaína quando usada como diluente; hiperbilirrubinemia neonatal; uso de solução contendo cálcio em neonato · Obs: A dose intramuscular única resolve o gonococo do esquema ambulatorial; o restante do tratamento é doxiciclina com metronidazol por…",
+            "dose": {
+              "texto": "500 mg na forma ambulatorial; 1 g na hospitalar; dose única no ambulatorial; 1x/dia no hospitalar; 1 dia no ambulatorial; até 14 dias no hospitalar, com via oral assim que possível; max. 1 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Tetraciclina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "doxiciclina",
+              "n": "Doxiciclina",
+              "ap": "comprimido 100 mg",
+              "via": "VO (IV quando a via oral é impossível)",
+              "pos": "100 mg. Via VO (IV quando a via oral é impossível). 12/12 h. 14 dias."
+            },
+            "motivo": "cobertura de clamídia na DIP, pilar do esquema de 14 dias (1a linha) DIP - cobertura de clamídia",
+            "nota": "Uso direto com copo cheio de água, em pé e sem se deitar por 30 min; na via intravenosa, diluir em 250 a 500 mL de soro fisiológico ou glicosado - monitorar: adesão aos 14 dias, conferindo os comprimidos restantes; monitorar: dor retroesternal por esofagite; monitorar: queimadura solar e fotossensibilidade; monitorar:  · NÃO: gestação e lactação; menores de 8 anos; insuficiência hepática grave; alergia a tetraciclina · Obs: São 14 dias, não 7: o esquema curto falha e deixa sequela tubária. Não usar na gestação. O parceiro faz 7 dias, a paciente faz 14.",
+            "dose": {
+              "texto": "100 mg; 12/12 h; 14 dias; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Nitroimidazol",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metronidazol_ev",
+            "motivo": "cobertura de anaeróbios na DIP, incluindo os associados à vaginose bacteriana (1a linha) DIP - cobertura de anaeróbios",
+            "nota": "Uso direto, com alimento; na via intravenosa, infundir o frasco sem diluição adicional - monitorar: náusea e gosto metálico; monitorar: ingestão de álcool; monitorar: regressão da dor e da febre em 48 a 72 h; monitorar: sintomas neurológicos em uso acima de 14 dias · NÃO: álcool durante o tratamento e por 72 h após; primeiro trimestre de gestação sem avaliação; alergia a nitroimidazol; doença neurológica descompensada; insuficiência hepática grave sem ajuste · Obs: O esquema sem metronidazol falha mais: cerca de um terço das DIP tem anaeróbios associados à vaginose bacteriana. Não trocar por secnidazol em dose única na DIP: aqui a…",
+            "dose": {
+              "texto": "500 mg; 12/12 h por via oral; 8/8 h por via intravenosa; 14 dias; max. 2 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Lincosamida",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "clindamicina_ev",
+            "motivo": "DIP hospitalar em alergia a beta-lactâmico ou como esquema de cobertura anaeróbia com gentamicina (alternativa) alergia a beta-lactâmico",
+            "nota": "Diluir 900 mg em 100 a 250 mL de soro fisiológico ou glicosado; nunca aplicar em bolus - monitorar: diarreia e pesquisa de C. difficile se houver sangue; monitorar: dor no local e tromboflebite; monitorar: função hepática; monitorar: creatinina e níveis de gentamicina no esquema combinado · NÃO: alergia a lincosamida; colite pseudomembranosa prévia por clindamicina; meningite (não atinge concentração liquórica adequada) · Obs: Não usar isolada: associa-se sempre à gentamicina. A cobertura de anaeróbios é excelente, mas o risco de colite por C. difficile exige reavaliação se a diarreia aparecer.",
+            "dose": {
+              "texto": "900 mg; 8/8 h; até 24 a 48 h após melhora clínica, completando 14 dias por via oral; max. 2.700 mg/dia",
+              "status": "ok",
+              "valor": 900,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2700,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Aminoglicosídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "gentamicina",
+            "motivo": "DIP hospitalar em associação com clindamicina, sobretudo na alergia a beta-lactâmico (alternativa) associada à clindamicina",
+            "nota": "Diluir a dose em 50 a 100 mL de soro fisiológico ou glicosado; nunca infundir sem diluição - monitorar: creatinina a cada 48 h; monitorar: nível sérico de vale quando disponível; monitorar: audiometria se uso acima de 72 h; monitorar: diurese e equilíbrio hídrico",
+            "dose": {
+              "texto": "2 mg/kg de ataque, seguidos de 1,5 mg/kg, ou 5 mg/kg em dose única diária; 8/8 h, ou dose única diária; até 24 a 48 h após melhora clínica, dentro dos 14 dias totais; max. 5 mg/kg/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Penicilina com inibidor",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "amp_sulb",
+            "motivo": "DIP hospitalar quando cefoxitina, cefotetana ou clindamicina não estão disponíveis (alternativa)",
+            "nota": "Reconstituir em 10 mL de água para injeção e diluir em 100 mL de soro fisiológico - monitorar: função renal e diurese; monitorar: diarreia; monitorar: reação alérgica nas primeiras doses; monitorar: regressão da dor e da febre em 48 a 72 h · NÃO: anafilaxia a penicilina; alergia a sulbactam; mononucleose infecciosa; insuficiência renal grave sem ajuste · Obs: Cobre anaeróbios e gram-negativos e é a alternativa prática onde cefoxitina e cefotetana não existem. Não substitui a drenagem quando há abscesso maior que 7 cm. · Renal: Clearance abaixo de 30 mL/min: 3 g a cada 12 h; abaixo de 15 mL/min: 3 g a cada 24 h",
+            "dose": {
+              "texto": "3 g (2 g de ampicilina + 1 g de sulbactam); 6/6 h; até 24 a 48 h após melhora clínica, completando 14 dias por via oral; max. 12 g/dia",
+              "status": "ok",
+              "valor": 3,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cefamicina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "cefoxitina",
+              "n": "Cefoxitina",
+              "ap": "frasco-ampola 1 g",
+              "via": "IV",
+              "pos": "2 g (cefotetana 2 g 12/12 h como equivalente). Via IV. 6/6 h. Até 24 a 48 h após melhora clínica, completando 14 dias. 30 minutos."
+            },
+            "motivo": "DIP hospitalar, esquema clássico em associação com doxiciclina (alternativa) DIP hospitalar",
+            "nota": "Reconstituir em 10 mL de água para injeção e diluir em 100 mL de soro fisiológico ou glicosado - monitorar: coagulograma em uso prolongado; monitorar: diarreia; monitorar: função renal; monitorar: regressão da dor e da febre em 48 a 72 h · NÃO: anafilaxia a cefalosporina; alergia a penicilina com reação imediata; insuficiência renal grave sem ajuste · Obs: Cobre anaeróbios, gram-negativos e gonococo. Onde não está disponível, usar ampicilina-sulbactam ou clindamicina com gentamicina — nunca deixar a paciente sem cobertura anaeróbia. · Renal: Clearance abaixo de 30 mL/min: reduzir a dose ou prolongar o intervalo para 12/12 h",
+            "dose": {
+              "texto": "2 g (cefotetana 2 g 12/12 h como equivalente); 6/6 h; até 24 a 48 h após melhora clínica, completando 14 dias; max. 8 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 8,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dipirona_ev",
+            "motivo": "analgesia e antitermia na dor pélvica aguda já avaliada, sem abdome cirúrgico (condicional) analgesia e antitermia, após avaliação cirúrgica",
+            "nota": "Via intravenosa: diluir em 10 a 20 mL de água destilada ou soro fisiológico; via oral: uso direto - monitorar: pressão arterial durante e após a infusão; monitorar: temperatura e intensidade da dor; monitorar: hemograma se uso repetido; monitorar: reavaliação do abdome a cada 6 h · NÃO: alergia a pirazolona; deficiência de glicose-6-fosfato desidrogenase; discrasia sanguínea; porfiria hepática aguda; hipotensão ou instabilidade hemodinâmica; terceiro trimestre de gestação · Obs: Não é tratamento de DIP: serve para dor e febre enquanto o diagnóstico é firmado. Não administrar antes da avaliação cirúrgica, porque mascara peritonite…",
+            "dose": {
+              "texto": "1 g; 6/6 h se dor ou febre; até 72 h, enquanto se investiga a causa; max. 4 g/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "URO-08",
+    "versao": "0.2.0",
+    "arquivo": "URO-08_dip.json",
+    "area": "Urinário",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

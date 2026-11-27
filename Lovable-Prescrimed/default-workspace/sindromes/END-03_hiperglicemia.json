@@ -1,0 +1,478 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "END-03",
+    "area": "Endócrino",
+    "nome": "Hiperglicemia assintomática",
+    "aliases": ["hiperglicemia", "glicose alta", "diabetes descompensado", "glicemia elevada"],
+    "contexto": ["ambulatorial"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Glicose elevada sem cetose, sem desidratação e sem sintoma de crise é, na maioria das vezes, diabetes mellitus a confirmar e tratar por via oral — não emergência. O erro de um lado é tratar o número: derrubar 180 mg/dL de um paciente estável com insulina de resgate, provocar hipoglicemia e não mudar prognóstico nenhum. O erro do outro é não fechar o diagnóstico: ver glicemia de 210 mg/dL num paciente com infecção, corticosteroide ou pancreatite aguda, rotular de hiperglicemia de estresse e nunca repetir o exame, perdendo um diabetes que já vinha evoluindo. O que muda desfecho é confirmar o critério diagnóstico, estratificar o perfil (idoso frágil, doença cardiovascular, DRC, obesidade), escolher a classe por esse perfil, titular a dose e marcar a data da reavaliação — e, antes de escalar qualquer droga, procurar causa secundária.",
+    "inclusao": [
+      "Glicemia de jejum entre 100 e 125 mg/dL, HbA1c entre 5,7 e 6,4% ou TOTG 2 h entre 140 e 199 mg/dL (pré-diabetes)",
+      "Glicemia de jejum ≥ 126 mg/dL, HbA1c ≥ 6,5% ou TOTG 2 h ≥ 200 mg/dL sem sintomas (diabetes a confirmar)",
+      "Diabetes conhecido com HbA1c acima da meta e sem critério de crise",
+      "Necessidade de iniciar, associar ou titular hipoglicemiante oral ou insulina basal"
+    ],
+    "exclusao": [
+      { "situacao": "cetose, acidose ou respiração de Kussmaul", "fluxo": "cetoacidose diabética (END-02)" },
+      { "situacao": "glicemia > 600 mg/dL com rebaixamento, desidratação grave ou hiperosmolaridade", "fluxo": "emergência hospitalar" },
+      { "situacao": "gestante com hiperglicemia", "fluxo": "pré-natal de alto risco / diabetes gestacional" },
+      { "situacao": "dor abdominal intensa com lipase elevada", "fluxo": "pancreatite aguda (GI-13)" },
+      { "situacao": "criança ou adolescente com suspeita de diabetes tipo 1", "fluxo": "pediatria / endocrinologia pediátrica" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "cetonúria ou cetonemia com glicemia > 250 mg/dL", "por_que": "cetoacidose diabética", "acao": "encaminhar ao hospital, hidratar e iniciar insulina venosa", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "respiração de Kussmaul, hálito cetônico ou dor abdominal", "por_que": "cetoacidose avançada", "acao": "sala de emergência e gasometria imediata", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "rebaixamento do sensório com glicemia > 600 mg/dL", "por_que": "estado hiperglicêmico hiperosmolar", "acao": "hospital, hidratação venosa e insulina", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "perda de peso rápida com poliúria e polidipsia", "por_que": "catabolismo e deficiência absoluta de insulina", "acao": "iniciar insulina basal e investigar DM1/LADA", "severidade": "precaucao" },
+      { "id": "AL-05", "sinal": "febre, disúria, tosse produtiva ou dor abdominal", "por_que": "infecção como precipitante", "acao": "tratar o foco antes de atribuir a glicemia ao diabetes", "severidade": "precaucao" },
+      { "id": "AL-06", "sinal": "náusea, vômito ou dor abdominal em uso de inibidor de SGLT2 com glicemia < 250 mg/dL", "por_que": "cetoacidose euglicêmica", "acao": "dosar cetonas e gasometria mesmo com glicemia normal", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "início de corticoide em dose alta com glicemia subindo", "por_que": "hiperglicemia induzida por corticoide", "acao": "monitorar glicemia pós-prandial e ajustar o esquema", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "Qual foi a glicemia, em que horário e em que condição: jejum, casual ou 2 h após comer?",
+      "Tem sede intensa, urina muito à noite ou perdeu peso sem dieta?",
+      "Teve náusea, vômito, dor abdominal ou respiração rápida?",
+      "Usa corticoide, tiazídico, antipsicótico, amiodarona ou inibidor de SGLT2?",
+      "Teve infecção, pancreatite, cirurgia ou internação nos últimos 3 meses?",
+      "Qual a HbA1c e qual a TFG (creatinina) deste paciente?",
+      "Este é o primeiro exame alterado ou já existe diagnóstico de diabetes?",
+      "Quantos comprimidos toma por dia e em que horários? Trouxe as caixas?",
+      "Tem doença cardiovascular, insuficiência cardíaca, DRC ou obesidade?",
+      "Está gestante ou planejando engravidar?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Glicemia de jejum 100–125 mg/dL, HbA1c 5,7–6,4% ou TOTG 140–199 mg/dL (pré-diabetes)", "escolha": "Mudança de estilo de vida estruturada e, se IMC ≥ 35, idade < 60 anos, HbA1c ≥ 6,0% ou história de diabetes gestacional, metformina 500 mg 12/12 h", "porque": "Metformina e perda de peso reduzem em cerca de 30% a progressão para diabetes; fora desses critérios o ganho é pequeno e o custo do efeito adverso gastrointestinal é real" },
+      { "cenario": "Diabetes confirmado, HbA1c < 7,5%, assintomático, TFG ≥ 45", "escolha": "Metformina em titulação lenta + plano alimentar; reavaliar em 3 meses", "porque": "É a base do tratamento: barata, sem hipoglicemia isolada e com redução de eventos cardiovasculares em sobrepeso" },
+      { "cenario": "HbA1c ≥ 9%, glicemia ≥ 300 mg/dL ou emagrecimento com poliúria", "escolha": "Insulina basal 0,1–0,2 U/kg ou 10 U ao deitar, mantendo ou retirando a sulfonilureia", "porque": "Glicotoxicidade e catabolismo não respondem a oral isolado; a insulina basal corrige o jejum sem esquema de corretivo deslizante" },
+      { "cenario": "Doença cardiovascular aterosclerótica, insuficiência cardíaca ou DRC com albuminúria", "escolha": "Inibidor de SGLT2 (dapagliflozina 10 mg ou empagliflozina 10 mg) associado, independentemente da HbA1c", "porque": "Reduz hospitalização por IC e progressão renal por mecanismo hemodinâmico, não apenas por baixar glicose" },
+      { "cenario": "Obesidade ou doença cardiovascular com HbA1c acima da meta em uso de metformina", "escolha": "Agonista de GLP-1 (semaglutida 0,5 mg/semana, titular até 1 mg)", "porque": "Maior perda de peso e maior queda de HbA1c entre os não insulínicos, com benefício cardiovascular demonstrado" },
+      { "cenario": "Idoso ≥ 75 anos, frágil ou com TFG entre 30 e 45", "escolha": "Sitagliptina com ajuste renal ou gliclazida em dose mínima; meta de HbA1c 7,5–8%", "porque": "O objetivo é evitar hipoglicemia e sintoma, não normalizar número; a expectativa de vida limita o benefício de controle rígido" },
+      { "cenario": "Serviço sem inibidor de SGLT2 nem agonista de GLP-1, ou paciente sem condições de custear", "escolha": "Gliclazida de liberação modificada 30 mg/dia, com automonitorização e orientação de hipoglicemia", "porque": "Alternativa de custo com menor risco de hipoglicemia grave que glibenclamida; exige educação do paciente" },
+      { "cenario": "Hiperglicemia induzida por corticoide em dose alta", "escolha": "Metformina ou sitagliptina se predomínio pós-prandial; insulina NPH ou glargina pela manhã se o jejum estiver alto", "porque": "O corticoide eleva a glicemia da tarde e da noite; a insulina basal matinal cobre esse padrão melhor que o corretivo avulso" },
+      { "cenario": "TFG < 30 mL/min/1,73 m²", "escolha": "Suspender metformina; insulina como base; sitagliptina 25 mg; dapagliflozina apenas se a indicação for cardíaca ou renal", "porque": "Metformina contraindicada pelo risco de acidose lática e os demais orais perdem eficácia ou exigem ajuste" },
+      { "cenario": "Suspeita de causa secundária: pancreatite de repetição, hemocromatose, Cushing, acromegalia, câncer de pâncreas ou uso de fármaco hiperglicemiante", "escolha": "Investigar antes de escalar o hipoglicemiante (lipase, ferritina, cortisol livre, IGF-1, imagem de pâncreas, revisão da farmácia)", "porque": "Trocar a droga ou tratar a causa muda a evolução; escalar oral em causa secundária apenas mascara o diagnóstico" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "biguanida",
+        "agente": "metformina",
+        "papel": "primeira_linha",
+        "indicacao": "diabetes tipo 2, pré-diabetes selecionado, base de qualquer esquema combinado",
+        "dose": "iniciar 500 mg 1x/dia com a refeição; subir 500 mg por semana até 1.000 mg 12/12 h",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h após titulação",
+        "duracao": "contínuo",
+        "dose_maxima": "2.550 mg/dia (2.000 mg/dia na prática clínica)",
+        "contraindicacoes": ["TFG < 30 mL/min/1,73 m²", "acidose metabólica de qualquer causa", "hipóxia, sepse, choque ou insuficiência cardíaca instável", "hepatopatia descompensada", "etilismo crônico com consumo diário", "pancreatite aguda em curso"],
+        "efeitos_adversos": ["diarreia", "náusea", "dor abdominal", "gosto metálico", "deficiência de vitamina B12", "acidose lática (rara)"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 850 mg", "comprimido 1 g", "comprimido de liberação prolongada 500 mg", "comprimido de liberação prolongada 750 mg", "solução oral 500 mg/5 mL"],
+        "preparo": "Uso direto, sempre com alimento para reduzir o efeito gastrointestinal",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["creatinina e TFG ao menos anual, a cada 3–6 meses se TFG 30–45", "B12 em uso prolongado, anemia ou neuropatia", "tolerância gastrointestinal nas primeiras 4 semanas", "HbA1c em 3 meses"],
+        "ajuste_renal": "Não iniciar com TFG < 45. Com TFG 30–44, máximo 1.000 mg/dia e reavaliação frequente. Contraindicada com TFG < 30. Suspender 48 h antes de contraste iodado quando TFG 30–60 e reiniciar após 48 h com função estável",
+        "ajuste_hepatico": "Evitar em cirrose descompensada (Child B ou C) e em hepatite aguda pelo risco de acidose lática",
+        "observacoes": "Titular devagar: é a diferença entre tolerar e abandonar. Suspender temporariamente em diarreia, vômito, sepse, hipóxia e antes de cirurgia. Não é a droga da hiperglicemia sintomática grave.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD/ADA",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfonilureia",
+        "agente": "gliclazida de liberação modificada",
+        "papel": "alternativa",
+        "indicacao": "diabetes tipo 2 sem controle com metformina, custo limitado, sem doença cardiovascular estabelecida",
+        "dose": "30 mg 1x/dia pela manhã, com o café",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "120 mg/dia",
+        "contraindicacoes": ["diabetes tipo 1", "cetoacidose", "TFG < 30", "insuficiência hepática grave", "alergia a sulfonilureia", "porfiria", "gestação e amamentação"],
+        "efeitos_adversos": ["hipoglicemia", "ganho de peso", "náusea", "rash cutâneo", "hiponatremia"],
+        "apresentacoes": ["comprimido de liberação modificada 30 mg", "comprimido de liberação modificada 60 mg", "comprimido 80 mg"],
+        "preparo": "Uso direto, com alimento; não partir nem triturar o comprimido de liberação modificada",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["glicemia capilar em jejum e 2 h após o almoço", "sintomas de hipoglicemia, sobretudo após 4–6 h da dose", "HbA1c em 3 meses", "peso"],
+        "ajuste_renal": "Iniciar 30 mg e não ultrapassar 60 mg/dia com TFG 30–59; contraindicada com TFG < 30",
+        "ajuste_hepatico": "Reduzir dose em cirrose; risco de hipoglicemia por gliconeogênese reduzida",
+        "observacoes": "Preferir gliclazida a glibenclamida em idoso: menor taxa de hipoglicemia grave. Não associar a insulina sem reavaliar a dose da sulfonilureia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfonilureia",
+        "agente": "glibenclamida",
+        "papel": "condicional",
+        "indicacao": "diabetes tipo 2 quando gliclazida não está disponível e não há alternativa de custo",
+        "dose": "2,5 a 5 mg 1x/dia",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia antes do café da manhã",
+        "duracao": "contínuo",
+        "dose_maxima": "20 mg/dia",
+        "contraindicacoes": ["idoso ≥ 60 anos ou frágil", "TFG < 60 mL/min/1,73 m²", "diabetes tipo 1", "cetoacidose", "insuficiência hepática grave", "alergia a sulfonilureia", "gestação"],
+        "efeitos_adversos": ["hipoglicemia grave e prolongada", "hipoglicemia recorrente", "ganho de peso", "hiponatremia por SIADH", "rash"],
+        "apresentacoes": ["comprimido 5 mg"],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["glicemia capilar ao menos 2x/dia nas primeiras 2 semanas", "sintomas neuroglicopênicos (sudorese, tremor, confusão, convulsão)", "função renal", "sódio"],
+        "ajuste_renal": "Evitar com TFG < 60. Contraindicada com TFG < 30: metabólitos ativos se acumulam e a hipoglicemia pode durar mais de 24 h",
+        "ajuste_hepatico": "Contraindicada em hepatopatia grave",
+        "observacoes": "Droga a ser evitada em idoso, não a primeira escolha de custo. Hipoglicemia por glibenclamida costuma exigir internação e infusão de glicose por 24–48 h. Não usar em paciente que mora sozinho ou com comprometimento cognitivo.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/critérios de Beers",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_sglt2",
+        "agente": "dapagliflozina",
+        "papel": "primeira_linha",
+        "indicacao": "diabetes tipo 2 com doença cardiovascular aterosclerótica, insuficiência cardíaca ou DRC com albuminúria",
+        "dose": "10 mg 1x/dia",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "contínuo",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": ["diabetes tipo 1", "cetoacidose prévia em uso da classe", "diálise", "alergia à classe", "gestação e amamentação"],
+        "efeitos_adversos": ["candidíase genital", "infecção urinária", "hipotensão e desidratação", "cetoacidose euglicêmica", "gangrena de Fournier (rara)"],
+        "apresentacoes": ["comprimido 5 mg", "comprimido 10 mg"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["cetonas sanguíneas ou urinárias se náusea, vômito ou dor abdominal, mesmo com glicemia < 250 mg/dL", "creatinina e TFG em 2–4 semanas", "pressão arterial e volemia", "higiene genital e sinais de infecção"],
+        "ajuste_renal": "Para controle glicêmico, não iniciar com TFG < 45. Quando a indicação é insuficiência cardíaca ou DRC, pode iniciar com TFG ≥ 20 e manter até o início da diálise",
+        "ajuste_hepatico": "Sem ajuste; cautela em cirrose com ascite pelo risco de hipotensão",
+        "observacoes": "Suspender 3 dias antes de cirurgia, colonoscopia ou jejum prolongado pelo risco de cetoacidose euglicêmica. Não é a droga para hiperglicemia sintomática grave: baixa glicose devagar e depende de função renal.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD/ADA",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_sglt2",
+        "agente": "empagliflozina",
+        "papel": "alternativa",
+        "indicacao": "diabetes tipo 2 com doença cardiovascular, insuficiência cardíaca ou DRC",
+        "dose": "10 mg 1x/dia",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "contínuo",
+        "dose_maxima": "25 mg/dia",
+        "contraindicacoes": ["diabetes tipo 1", "diálise", "cetoacidose em uso da classe", "gestação e amamentação"],
+        "efeitos_adversos": ["candidíase genital", "infecção urinária", "hipotensão", "cetoacidose euglicêmica", "aumento do hematócrito"],
+        "apresentacoes": ["comprimido 10 mg", "comprimido 25 mg"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["cetonas se sintoma gastrointestinal", "TFG em 2–4 semanas", "pressão arterial", "sinais de infecção genital"],
+        "ajuste_renal": "Não iniciar para controle glicêmico com TFG < 45; manter 10 mg na indicação cardíaca ou renal com TFG ≥ 20",
+        "observacoes": "Equivalente à dapagliflozina na prática; escolher pela disponibilidade local. Mesma regra de suspensão antes de cirurgia e jejum.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD/ADA",
+        "claim_id": null
+      },
+      {
+        "classe": "insulina_basal",
+        "agente": "insulina glargina",
+        "papel": "condicional",
+        "indicacao": "HbA1c ≥ 9%, glicemia ≥ 300 mg/dL, emagrecimento, falha de dois ou mais orais",
+        "dose": "10 U/dia ou 0,1 a 0,2 U/kg/dia ao deitar",
+        "unidade": "U",
+        "via": "SC",
+        "frequencia": "1x/dia no mesmo horário",
+        "duracao": "contínuo",
+        "dose_maxima": "individualizar conforme glicemia de jejum (habitual 0,5 U/kg/dia)",
+        "contraindicacoes": ["hipoglicemia em curso", "hipersensibilidade à formulação", "uso de bomba intravenosa"],
+        "efeitos_adversos": ["hipoglicemia", "ganho de peso", "lipohipertrofia no sítio de aplicação", "edema"],
+        "apresentacoes": ["caneta 100 U/mL (3 mL)", "frasco 100 U/mL (10 mL)", "caneta 300 U/mL (1,5 mL)"],
+        "preparo": "Não diluir. Aplicar no subcutâneo de abdome, coxa ou braço com rodízio de sítios; caneta em uso pode ficar em temperatura ambiente por até 28 dias",
+        "tempo_infusao": "não se aplica (via subcutânea)",
+        "monitorizacao": ["glicemia de jejum diária nas 2 primeiras semanas", "titulação de 2 U a cada 3 dias até jejum de 80–130 mg/dL", "hipoglicemia noturna", "HbA1c em 3 meses", "sítios de aplicação"],
+        "ajuste_renal": "Sem ajuste formal pela TFG; reduzir 20–30% com TFG < 30, porque a depuração de insulina cai e a hipoglicemia fica mais frequente",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave: gliconeogênese e degradação de insulina reduzidas",
+        "observacoes": "Primeira escolha quando o paciente precisa de insulina: basal ao deitar mais hipoglicemiante oral é melhor que esquema de corretivo deslizante. Reduzir 20–30% se houver qualquer hipoglicemia sintomática.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD/ADA",
+        "claim_id": null
+      },
+      {
+        "classe": "insulina_basal",
+        "agente": "insulina NPH",
+        "papel": "alternativa",
+        "indicacao": "necessidade de insulina basal com custo limitado ou indisponibilidade de análogo",
+        "dose": "0,1 a 0,2 U/kg ao deitar",
+        "unidade": "U",
+        "via": "SC",
+        "frequencia": "1x/dia ao deitar ou 2x/dia (antes do café e ao deitar)",
+        "duracao": "contínuo",
+        "dose_maxima": "individualizar",
+        "contraindicacoes": ["hipoglicemia em curso", "hipersensibilidade à formulação"],
+        "efeitos_adversos": ["hipoglicemia noturna", "ganho de peso", "lipohipertrofia", "variabilidade glicêmica"],
+        "apresentacoes": ["frasco 100 U/mL (10 mL)", "caneta 100 U/mL (3 mL)"],
+        "preparo": "Rolar o frasco ou a caneta entre as mãos até homogeneizar; nunca agitar. Aplicar no subcutâneo com rodízio",
+        "tempo_infusao": "não se aplica (via subcutânea)",
+        "monitorizacao": ["glicemia de jejum", "hipoglicemia entre 4 e 8 h após a dose noturna", "HbA1c em 3 meses", "sítios de aplicação"],
+        "ajuste_renal": "Sem ajuste formal; reduzir dose com TFG < 30",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave",
+        "observacoes": "Pico mais acentuado e maior variabilidade que glargina, com mais hipoglicemia noturna. Se usada 1x/dia, aplicar ao deitar; o esquema 12/12 h exige lanche e maior adesão.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD",
+        "claim_id": null
+      },
+      {
+        "classe": "inibidor_dpp4",
+        "agente": "sitagliptina",
+        "papel": "alternativa",
+        "indicacao": "idoso frágil, TFG baixa ou intolerância a metformina, com necessidade de droga sem hipoglicemia",
+        "dose": "100 mg 1x/dia",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "100 mg/dia",
+        "contraindicacoes": ["hipersensibilidade", "história de pancreatite", "diabetes tipo 1", "cetoacidose"],
+        "efeitos_adversos": ["cefaleia", "nasofaringite", "pancreatite (rara)", "artralgia", "penfigoide bolhoso (raro)"],
+        "apresentacoes": ["comprimido 25 mg", "comprimido 50 mg", "comprimido 100 mg"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["TFG antes de iniciar e ao menos anual", "dor abdominal persistente (pancreatite)", "HbA1c em 3 meses", "lesões cutâneas bolhosas"],
+        "ajuste_renal": "50 mg/dia com TFG 30–44; 25 mg/dia com TFG < 30 e em diálise",
+        "ajuste_hepatico": "Sem ajuste em hepatopatia leve a moderada",
+        "observacoes": "Neutra em peso, sem hipoglicemia isolada e bem tolerada em idoso, mas pouco potente: não baixa HbA1c ≥ 9%. Não associar a agonista de GLP-1 (mesma via).",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD",
+        "claim_id": null
+      },
+      {
+        "classe": "agonista_glp1",
+        "agente": "semaglutida",
+        "papel": "condicional",
+        "indicacao": "diabetes tipo 2 com obesidade ou doença cardiovascular e HbA1c acima da meta em uso de metformina",
+        "dose": "0,25 mg/semana por 4 semanas, depois 0,5 mg/semana",
+        "unidade": "mg",
+        "via": "SC",
+        "frequencia": "1x/semana no mesmo dia",
+        "duracao": "contínuo",
+        "dose_maxima": "2 mg/semana (subcutâneo) ou 14 mg/dia (oral)",
+        "contraindicacoes": ["história pessoal ou familiar de carcinoma medular de tireoide", "neoplasia endócrina múltipla tipo 2", "pancreatite prévia", "gestação e amamentação", "retinopatia diabética proliferativa não tratada"],
+        "efeitos_adversos": ["náusea", "vômito", "diarreia", "constipação", "colelitíase", "pancreatite", "perda de peso acentuada"],
+        "apresentacoes": ["caneta 0,25 mg", "caneta 0,5 mg", "caneta 1 mg", "caneta 2 mg", "comprimido 3 mg", "comprimido 7 mg", "comprimido 14 mg"],
+        "preparo": "Caneta pronta para uso; aplicar no subcutâneo de abdome ou coxa, sempre no mesmo dia da semana",
+        "tempo_infusao": "não se aplica (via subcutânea)",
+        "monitorizacao": ["peso e IMC a cada consulta", "sintomas gastrointestinais na titulação", "amilase e lipase se dor abdominal intensa", "HbA1c em 3 meses", "fundo de olho em diabético com retinopatia"],
+        "ajuste_renal": "Sem ajuste; experiência limitada com TFG < 30",
+        "ajuste_hepatico": "Sem ajuste em hepatopatia leve a moderada; evitar em cirrose descompensada",
+        "observacoes": "Maior queda de HbA1c e de peso entre os não insulínicos. Titular devagar: a náusea é o principal motivo de abandono. Suspender 2 semanas antes de cirurgia com anestesia geral por risco de aspiração.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD/ADA",
+        "claim_id": null
+      },
+      {
+        "classe": "tiazolidinediona",
+        "agente": "pioglitazona",
+        "papel": "condicional",
+        "indicacao": "resistência insulínica com esteatose hepática, sem insuficiência cardíaca",
+        "dose": "15 mg 1x/dia",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "contínuo",
+        "dose_maxima": "30 mg/dia",
+        "contraindicacoes": ["insuficiência cardíaca classe III ou IV", "edema importante", "hepatopatia ativa com ALT > 2,5 vezes o limite", "câncer de bexiga", "osteoporose com fratura prévia", "gestação"],
+        "efeitos_adversos": ["edema", "ganho de peso", "descompensação de insuficiência cardíaca", "fratura osteoporótica", "câncer de bexiga (sinal controverso)"],
+        "apresentacoes": ["comprimido 15 mg", "comprimido 30 mg", "comprimido 45 mg"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica",
+        "monitorizacao": ["edema de membros e dispneia", "peso", "ALT e AST na baseline e a cada 2 meses no primeiro ano", "hemoglobina", "sinais de insuficiência cardíaca"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Não iniciar se ALT > 2,5 vezes o limite superior; suspender se houver icterícia",
+        "observacoes": "Nunca em insuficiência cardíaca, nem em idoso com risco de queda e fratura. Efeito depende de resistência insulínica preservada e leva 8–12 semanas para aparecer.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/diretriz SBD",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Plano alimentar com déficit calórico", "detalhe": "Déficit de 500–750 kcal/dia sobre o gasto estimado; cortar bebida açucarada e ultraprocessado; prato com metade de vegetais, um quarto de proteína e um quarto de carboidrato integral" },
+      { "medida": "Atividade física estruturada", "detalhe": "150 minutos por semana de aeróbico (30 min em 5 dias) mais 2 sessões de resistência; reduz HbA1c em 0,5–0,7% e é o que sustenta a perda de peso" },
+      { "medida": "Perda de peso de 5–10%", "detalhe": "Meta em 6 meses; em diabetes com menos de 5 anos de diagnóstico e sem insulina, perda acima de 10% pode levar à remissão — reavaliar a droga a cada 3 meses" },
+      { "medida": "Educação em diabetes e autocuidado", "detalhe": "Curso estruturado com técnica de glicemia capilar, leitura de rótulo, contagem de carboidrato e plano escrito para hipoglicemia (15 g de glicose, repetir em 15 min)" },
+      { "medida": "Cessação do tabagismo", "detalhe": "Tabaco dobra o risco cardiovascular do diabético; oferecer aconselhamento, terapia de reposição de nicotina e vareniclina quando indicado" },
+      { "medida": "Cuidado com os pés", "detalhe": "Inspeção diária incluindo sola e entre os dedos, hidratação sem umidade entre os dedos, calçado fechado e avaliação anual com monofilamento de 10 g" },
+      { "medida": "Vacinação", "detalhe": "Influenza anual, pneumocócica conforme esquema, hepatite B e covid-19; infecção é o precipitante mais comum de descompensação" },
+      { "medida": "Sono e álcool", "detalhe": "7–9 h por noite e no máximo 1 dose/dia para mulher e 2 para homem; rastrear apneia com Epworth se ronco ou sonolência" }
+    ],
+    "procedimentos": [
+      { "nome": "Glicemia capilar estruturada", "indicacao": "Todos em uso de insulina ou sulfonilureia; em metformina isolada, apenas para educação", "tecnica": "Lavar as mãos, punturar a lateral da polpa digital, descartar a primeira gota; medir em jejum e 2 h após a maior refeição em 2–3 dias da semana e anotar em diário", "complicacoes": "Dor, hematoma, erro por tira vencida ou dedo contaminado com açúcar" },
+      { "nome": "Monitorização contínua de glicose (CGM)", "indicacao": "Diabetes tipo 1, diabetes tipo 2 em insulina basal com hipoglicemia noturna ou HbA1c discordante da glicemia", "tecnica": "Sensor subcutâneo por 10–14 dias com leitura a cada 5 min; analisar tempo no alvo (70–180 mg/dL > 70%), tempo abaixo de 70 e variabilidade", "complicacoes": "Irritação cutânea, descalibração, alarme falso e custo" },
+      { "nome": "TOTG com 75 g de glicose", "indicacao": "Glicemia de jejum e HbA1c discordantes, suspeita de diabetes gestacional e rastreio de pré-diabetes", "tecnica": "Jejum de 8–12 h; 75 g de glicose anidra em 250–300 mL de água em 5 min; coletar glicemia em 0 e 120 min; repousar e não fumar durante o teste", "complicacoes": "Náusea, vômito (invalida o teste), hiperglicemia sintomática rara" },
+      { "nome": "Rastreio de retinopatia", "indicacao": "Todo diabético tipo 2 ao diagnóstico e depois anualmente; tipo 1 após 5 anos de doença", "tecnica": "Fundoscopia dilatada ou retinografia digital, com classificação de retinopatia e avaliação da mácula", "complicacoes": "Midríase transitória, desconforto, diagnóstico falso-negativo sem dilatação" },
+      { "nome": "Relação albumina/creatinina urinária", "indicacao": "Todo diabético ao diagnóstico e anualmente; DRC conhecida a cada 6 meses", "tecnica": "Amostra isolada de urina, preferencialmente primeira da manhã; confirmar alteração em 3 a 6 meses; excluir infecção, febre e exercício recente", "complicacoes": "Falso-positivo por ITU, menstruação ou exercício; variabilidade biológica" },
+      { "nome": "Exame dos pés com monofilamento de 10 g", "indicacao": "Anual em todos; a cada consulta se neuropatia, deformidade ou úlcera prévia", "tecnica": "Testar 10 pontos plantares com monofilamento, avaliar pulsos pediosos e tibial posterior, inspecionar calçado e classificar risco", "complicacoes": "Não detecta neuropatia incipiente; precisa de vibração e reflexo para completar" }
+    ],
+    "metas": [
+      "HbA1c < 7% para a maioria dos adultos não gestantes",
+      "HbA1c < 6,5% se diagnóstico recente, jovem, sem hipoglicemia e sem doença cardiovascular",
+      "HbA1c 7,5–8% em idoso frágil, comorbidade grave ou expectativa de vida < 10 anos",
+      "Glicemia de jejum 80–130 mg/dL e pós-prandial < 180 mg/dL",
+      "Idoso ≥ 75 anos: jejum 90–150 mg/dL, evitando valores < 90 para não provocar hipoglicemia",
+      "Nenhum episódio de hipoglicemia grave (glicemia < 54 mg/dL com necessidade de terceiro)",
+      "Perda de 5–10% do peso corporal em 6 meses quando IMC ≥ 25",
+      "TFG estável e queda de albuminúria ≥ 30% em uso de inibidor de SGLT2 ou bloqueio do SRAA"
+    ],
+    "fluxo": [
+      "Confirmar o diagnóstico: repetir glicemia de jejum, HbA1c ou TOTG; não rotular por uma medida isolada em paciente agudamente doente",
+      "Excluir crise: cetonas, gasometria, hidratação e sensório — se alterados, tratar cetoacidose ou estado hiperosmolar (END-02)",
+      "Classificar: pré-diabetes, diabetes tipo 2, ou tipo 1/LADA (jovem, magro, perda de peso rápida → anti-GAD e peptídeo C)",
+      "Procurar causa secundária e precipitante: corticoide, infecção, pancreatite, Cushing, acromegalia, hemocromatose, fármacos",
+      "Definir a meta pelo perfil (idade, fragilidade, doença cardiovascular, DRC, hipoglicemia prévia)",
+      "Escolher a classe: metformina como base; inibidor de SGLT2 se DCV, IC ou DRC; agonista de GLP-1 se obesidade; insulina se catabolismo",
+      "Titular a dose, orientar técnica e hipoglicemia, e marcar retorno em 4 a 12 semanas com exames",
+      "Fora da meta ou intolerância: associar segunda classe; não empilhar sulfonilureia com insulina sem reduzir a sulfonilureia"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "idoso", "ajuste": "Metformina se TFG permitir; sitagliptina com ajuste renal ou gliclazida 30 mg; evitar glibenclamida; meta de HbA1c 7,5–8%", "alerta": "Hipoglicemia grave, queda, confusão e perda de apetite; o número importa menos que o sintoma" },
+      { "populacao": "renal_cronico", "ajuste": "Suspender metformina com TFG < 30; insulina como base; sitagliptina 25 mg; dapagliflozina mantida se indicação cardíaca ou renal", "alerta": "Acidose lática por metformina e hipoglicemia por acúmulo de insulina e sulfonilureia" },
+      { "populacao": "cardiopata", "ajuste": "Inibidor de SGLT2 e agonista de GLP-1 com benefício cardiovascular; evitar pioglitazona e glibenclamida", "alerta": "Insuficiência cardíaca descompensada por pioglitazona e hipoglicemia com taquicardia e isquemia" },
+      { "populacao": "gestante", "ajuste": "Suspender os orais e tratar com insulina; metformina só em situações específicas com acompanhamento especializado", "alerta": "Alvo de jejum < 95 mg/dL e 1 h pós-prandial < 140 mg/dL; os orais não têm registro para gestação" },
+      { "populacao": "obeso", "ajuste": "Agonista de GLP-1 ou inibidor de SGLT2 associado à metformina; avaliar cirurgia bariátrica se IMC ≥ 40 ou ≥ 35 com comorbidade", "alerta": "Perda de peso rápida com agonista de GLP-1 exige ajuste das drogas e monitorização de colelitíase" },
+      { "populacao": "hepatopata", "ajuste": "Evitar metformina em cirrose descompensada e pioglitazona em hepatopatia ativa; preferir insulina e sitagliptina", "alerta": "Hipoglicemia por gliconeogênese reduzida e encefalopatia precipitada por descompensação" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "glicemia de jejum repetida", "indicacao": "confirmação diagnóstica", "o_que_muda": "fecha o diagnóstico e evita rotular glicemia de estresse" },
+        { "nome": "HbA1c", "indicacao": "todos, para diagnóstico e seguimento", "o_que_muda": "define a meta, a necessidade de insulina e a resposta em 3 meses" },
+        { "nome": "TOTG 75 g", "indicacao": "jejum e HbA1c discordantes ou suspeita de diabetes gestacional", "o_que_muda": "detecta diabetes com jejum normal e intolerância isolada" },
+        { "nome": "creatinina e TFG", "indicacao": "todos, antes de metformina, sulfonilureia e inibidor de SGLT2", "o_que_muda": "define contraindicação e ajuste de dose" },
+        { "nome": "cetonas sanguíneas ou urinárias", "indicacao": "glicemia > 250 mg/dL, sintoma gastrointestinal ou uso de inibidor de SGLT2", "o_que_muda": "separa cetoacidose de hiperglicemia simples, inclusive com glicemia normal" },
+        { "nome": "perfil lipídico, relação albumina/creatinina e fundoscopia", "indicacao": "avaliação inicial e anual", "o_que_muda": "estratifica risco e indica estatina, bloqueio do SRAA e tratamento ocular" },
+        { "nome": "peptídeo C e anti-GAD", "indicacao": "jovem, magro, perda de peso rápida ou falha precoce de oral", "o_que_muda": "identifica diabetes tipo 1 ou LADA e indica insulina" },
+        { "nome": "lipase e imagem abdominal", "indicacao": "dor abdominal, pancreatite de repetição ou emagrecimento", "o_que_muda": "confirma pancreatite ou neoplasia como causa secundária" }
+      ],
+      "evitar": [
+        { "exame": "insulina de resgate ou esquema de corretivo deslizante para glicemia entre 150 e 250 mg/dL sem sintoma", "motivo": "provoca hipoglicemia, ganho de peso e não melhora desfecho" },
+        { "exame": "diagnóstico de diabetes por glicosúria isolada", "motivo": "glicosúria depende do limiar renal e aparece com glicemia normal em algumas condições" },
+        { "exame": "HbA1c como critério único em anemia, hemoglobinopatia, DRC avançada ou gestação", "motivo": "o valor é falsamente alto ou baixo e muda o diagnóstico" },
+        { "exame": "tomografia de abdome para investigar hiperglicemia leve sem pista clínica", "motivo": "achado incidental sem impacto e exposição desnecessária" },
+        { "exame": "automonitorização 4 vezes ao dia em diabetes tipo 2 sem insulina", "motivo": "não muda conduta na maioria e aumenta custo e ansiedade" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "Tomar metformina com a refeição e subir a dose devagar, uma vez por semana",
+        "Medir a glicemia em jejum e 2 h depois do almoço em 2 ou 3 dias da semana e anotar",
+        "Caminhar 30 minutos em 5 dias da semana e fazer resistência 2 vezes",
+        "Perder 5 a 10% do peso em 6 meses",
+        "Fazer exames de controle (HbA1c, creatinina, albuminúria, fundo de olho) na data marcada",
+        "Reconhecer e tratar hipoglicemia: 15 g de glicose e repetir em 15 minutos"
+      ],
+      "evitar": [
+        "Tomar insulina por conta própria porque a glicemia estava alta",
+        "Suspender o remédio quando a glicemia normaliza",
+        "Bebida açucarada, suco de caixinha e ultraprocessado diários",
+        "Usar corticoide ou descongestionante sem avisar a equipe",
+        "Engravidar em uso de orais sem planejamento"
+      ],
+      "retorno": [
+        "náusea, vômito, dor abdominal ou respiração rápida",
+        "glicemia persistentemente acima de 300 mg/dL",
+        "hipoglicemia repetida ou glicemia abaixo de 70 mg/dL",
+        "perda de peso rápida ou muita sede e urina",
+        "febre ou infecção",
+        "ferida nos pés que não cicatriza"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "metformina", "efeitos": ["diarreia", "náusea", "deficiência de B12"], "observacao": "Tomar com alimento e titular devagar; dosar B12 em uso prolongado" },
+      { "agente": "gliclazida de liberação modificada", "efeitos": ["hipoglicemia", "ganho de peso"], "observacao": "Orientar sintomas e horário de maior risco (4–6 h após a dose)" },
+      { "agente": "glibenclamida", "efeitos": ["hipoglicemia grave e prolongada", "hiponatremia"], "observacao": "Evitar em idoso e em TFG < 60; hipoglicemia pode exigir glicose venosa por 24–48 h" },
+      { "agente": "dapagliflozina", "efeitos": ["candidíase genital", "cetoacidose euglicêmica", "hipotensão"], "observacao": "Suspender 3 dias antes de cirurgia ou jejum prolongado; dosar cetonas se sintoma gastrointestinal" },
+      { "agente": "empagliflozina", "efeitos": ["infecção urinária", "cetoacidose euglicêmica"], "observacao": "Mesma regra de suspensão da classe; orientar higiene genital" },
+      { "agente": "insulina glargina", "efeitos": ["hipoglicemia", "ganho de peso", "lipohipertrofia"], "observacao": "Titular 2 U a cada 3 dias e reduzir 20–30% se hipoglicemia" },
+      { "agente": "insulina NPH", "efeitos": ["hipoglicemia noturna"], "observacao": "Maior variabilidade; checar glicemia de madrugada se hipoglicemia matinal" },
+      { "agente": "sitagliptina", "efeitos": ["cefaleia", "pancreatite rara", "artralgia"], "observacao": "Suspender se dor abdominal persistente com lipase elevada" },
+      { "agente": "semaglutida", "efeitos": ["náusea", "vômito", "colelitíase", "pancreatite"], "observacao": "Titular devagar e suspender 2 semanas antes de cirurgia com anestesia geral" },
+      { "agente": "pioglitazona", "efeitos": ["edema", "ganho de peso", "descompensação de IC"], "observacao": "Suspender ao primeiro sinal de dispneia ou ganho de peso rápido" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender ou reduzir a droga implicada e registrar a reação na evolução",
+      "Hipoglicemia por sulfonilureia: glicose venosa, monitorar por 24 h e trocar de classe; não apenas dar açúcar e liberar",
+      "Náusea e diarreia por metformina: reduzir a dose, fracionar e trocar para liberação prolongada antes de abandonar a droga",
+      "Suspeita de cetoacidose euglicêmica por inibidor de SGLT2: suspender, dosar cetonas e gasometria, hidratar com glicose e insulina mesmo com glicemia normal",
+      "Febre, dor de garganta ou úlcera oral em uso de tionamida não se aplica aqui; em uso de sitagliptina, investigar pancreatite se dor abdominal",
+      "Edema ou dispneia em uso de pioglitazona: suspender e investigar insuficiência cardíaca",
+      "Comunicar a equipe, revisar a meta e reavaliar a indicação antes de substituir a droga"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "metformina 500 mg", "dose": "1 comprimido", "via": "VO", "frequencia": "1x/dia com o almoço por 7 dias, depois 12/12 h", "duracao": "90 dias", "condicao": "diabetes tipo 2 com TFG ≥ 45", "confirmar_apresentacao_local": true },
+          { "item": "dapagliflozina 10 mg", "dose": "1 comprimido", "via": "VO", "frequencia": "1x/dia pela manhã", "duracao": "90 dias", "condicao": "doença cardiovascular, insuficiência cardíaca ou DRC com albuminúria", "confirmar_apresentacao_local": true },
+          { "item": "gliclazida de liberação modificada 30 mg", "dose": "1 comprimido", "via": "VO", "frequencia": "1x/dia no café da manhã", "duracao": "90 dias", "condicao": "necessidade de segunda classe com custo limitado", "confirmar_apresentacao_local": true },
+          { "item": "insulina glargina 100 U/mL", "dose": "10 U", "via": "SC", "frequencia": "1x/dia ao deitar", "duracao": "30 dias", "condicao": "HbA1c ≥ 9% ou glicemia ≥ 300 mg/dL", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "insulina regular", "dose": "conforme glicemia capilar", "via": "SC", "frequencia": "6/6 h se glicemia > 180 mg/dL", "monitorizacao": "glicemia capilar antes de cada dose", "confirmar_apresentacao_local": true },
+          { "item": "glicose 50%", "dose": "20 a 40 mL", "via": "IV", "frequencia": "se glicemia < 70 mg/dL", "monitorizacao": "glicemia 15 min após", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["glicemia de jejum", "HbA1c", "TOTG 75 g", "cetonas", "creatinina", "TFG", "sódio", "potássio", "perfil lipídico", "relação albumina/creatinina", "peptídeo C", "anti-GAD", "lipase", "fundoscopia", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de diabetes mellitus descompensado, necessitando de afastamento por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica"
+      },
+      "encaminhamento": {
+        "campos": ["destino", "motivo", "resumo", "prioridade"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com hiperglicemia assintomática, valores de glicemia e HbA1c, critério diagnóstico utilizado, perfil clínico, causa secundária investigada, esquema iniciado com doses, meta definida e data de reavaliação."
+      }
+    },
+    "anamnese": {
+      "campos": ["valor e horário da glicemia", "sintomas de hiperglicemia", "cetose e sintomas gastrointestinais", "adesão e horários", "corticosteroide e outros fármacos", "infecção ou pancreatite recente", "peso e variação", "comorbidades cardiovasculares e renais", "história familiar", "gestação"],
+      "texto_template": "Paciente com hiperglicemia, valor e horário da medida, presença ou ausência de sintomas e de cetose, adesão e horários das medicações, uso de corticoide ou outros fármacos hiperglicemiantes, infecção ou pancreatite recente, variação de peso, comorbidades cardiovasculares e renais, história familiar e status gestacional."
+    },
+    "exame_fisico": {
+      "itens": ["peso, altura, IMC e circunferência abdominal", "pressão arterial e frequência cardíaca", "estado de hidratação e mucosas", "glicemia capilar", "ausculta cardíaca e pulmonar", "exame dos pés com monofilamento e pulsos", "fundoscopia quando disponível", "sinais de infecção cutânea ou urinária"],
+      "texto_template": "Antropometria com IMC e circunferência abdominal, pressão arterial, frequência cardíaca, hidratação, glicemia capilar, ausculta cardiorrespiratória, exame dos pés com monofilamento e pulsos, fundoscopia e busca de foco infeccioso."
+    },
+    "referencias": [
+      { "tipo": "diretriz_sociedade_diabetes", "o_que_verificar": "critérios diagnósticos, metas por perfil e algoritmo de escolha (SBD e ADA)", "verificar": true },
+      { "tipo": "protocolo_institucional", "o_que_verificar": "fluxo de confirmação diagnóstica e de início de insulina na atenção primária", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações, bulas e ajuste renal dos hipoglicemiantes disponíveis", "verificar": true },
+      { "tipo": "sociedade_nefrologia", "o_que_verificar": "uso de inibidor de SGLT2 e metformina na DRC (KDIGO)", "verificar": true },
+      { "tipo": "criterios_beers", "o_que_verificar": "fármacos a evitar em idoso, em especial sulfonilureias de ação prolongada", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-END03-01", "tipo": "insulina_sem_indicacao", "gatilho": "prescrição de insulina de resgate com glicemia entre 150 e 250 mg/dL e sem sintoma", "severidade": "grave", "mensagem": "Hiperglicemia leve assintomática não se trata com insulina de resgate: risco de hipoglicemia sem ganho de desfecho.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-END03-02", "tipo": "cetoacidose", "gatilho": "cetonúria ou cetonemia positiva, respiração de Kussmaul ou dor abdominal com glicemia > 250 mg/dL", "severidade": "grave", "mensagem": "Suspeita de cetoacidose: hidratação venosa, insulina e gasometria imediatas.", "acao": "acionar protocolo END-02", "bloqueante": true },
+      { "id": "SA-END03-03", "tipo": "metformina_renal", "gatilho": "prescrição de metformina com TFG < 30 mL/min/1,73 m²", "severidade": "grave", "mensagem": "Metformina contraindicada nesta TFG: risco de acidose lática.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-END03-04", "tipo": "sglt2_cirurgia", "gatilho": "inibidor de SGLT2 em paciente com cirurgia, colonoscopia ou jejum prolongado em menos de 3 dias", "severidade": "grave", "mensagem": "Suspender o inibidor de SGLT2 3 dias antes: risco de cetoacidose euglicêmica.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-END03-05", "tipo": "diagnostico_sem_confirmacao", "gatilho": "diagnóstico de diabetes registrado com uma única glicemia alterada", "severidade": "precaucao", "mensagem": "Confirmar com segunda medida, HbA1c ou TOTG antes de rotular.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-END03-06", "tipo": "sulfonilureia_idoso", "gatilho": "glibenclamida prescrita para paciente com 60 anos ou mais", "severidade": "precaucao", "mensagem": "Sulfonilureia de ação prolongada em idoso: risco de hipoglicemia grave e prolongada. Preferir gliclazida ou classe sem hipoglicemia.", "acao": "alertar", "bloqueante": false },
+      { "id": "SA-END03-07", "tipo": "causa_secundaria", "gatilho": "hiperglicemia nova em uso de corticoide, com infecção ou com pancreatite", "severidade": "precaucao", "mensagem": "Investigar e tratar o precipitante antes de escalar o hipoglicemiante.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "diretriz SBD", "ADA Standards of Care", "KDIGO", "critérios de Beers"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Estrutura inicial.", "data": null },
+        { "versao": "0.2.0", "descricao": "Reescrita com critérios diagnósticos e metas por perfil, titulação da metformina, risco de sulfonilureia em idoso, cetoacidose euglicêmica por inibidor de SGLT2, insulina basal e investigação de causa secundária; apresentações, preparo, tempo de infusão, monitorização, ajuste renal e o que não fazer.", "data": null }
+      ]
+    }
+  }
+}

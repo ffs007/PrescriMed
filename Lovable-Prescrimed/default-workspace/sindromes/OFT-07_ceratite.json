@@ -1,0 +1,1178 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "OFT-07",
+    "area": "Oftalmo/Otorrino",
+    "nome": "Ceratite",
+    "aliases": [
+      "Ceratite",
+      "ceratite bacteriana",
+      "ceratite por lente de contato",
+      "ceratite herpética",
+      "ceratite fúngica",
+      "úlcera corneal",
+      "abrasão corneal infectada",
+      "infiltrado corneal"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Ceratite é a infecção ou inflamação da córnea, e o que define o desfecho não é a intensidade da dor: é o agente e o tempo até o tratamento. A bacteriana é a mais rápida e a mais comum, com Pseudomonas aeruginosa dominando nos usuários de lente de contato e capacidade de perfurar a córnea em 24 a 48 horas; Staphylococcus e Streptococcus predominam após trauma, cirurgia ou doença de superfície ocular. A herpética se apresenta como úlcera dendrítica com terminações bulbosas na fluoresceína, e o erro que cega é prescrever corticoide, que transforma a úlcera em perfuração em poucos dias. A fúngica é a mais lenta e a mais subdiagnosticada: trauma com material vegetal, agricultor, usuário de lente com higiene precária, imunossuprimido ou uso prévio de corticoide, com infiltrado de bordas fofas, satélites e piora apesar de antibiótico. O quadro típico é dor, fotofobia, lacrimejamento, blefaroespasmo, queda de acuidade, infiltrado corneal com halo e, nos casos graves, hipópio e edema palpebral. A conduta inicial é sempre a mesma: suspender a lente de contato e descartar lente, estojo e solução, iniciar quinolona tópica de amplo espectro em regime frequente, dar cicloplegia para o espasmo ciliar e analgesia, e encaminhar à oftalmologia no mesmo dia, porque o colírio de amplo espectro é ponte e não trata ceratite central, com hipópio ou em iminência de perfuração. Corticoide tópico não existe na atenção primária: sem lâmpada de fenda não se distingue ceratite herpética de bacteriana, e esse é o erro que converte uma úlcera tratável em transplante de córnea.",
+    "inclusao": [
+      "Olho vermelho com dor, fotofobia, lacrimejamento e queda de acuidade visual",
+      "Usuário de lente de contato com dor ocular, fotofobia ou opacidade corneal, mesmo unilateral",
+      "Infiltrado ou opacidade corneal visível à lanterna ou à lupa",
+      "Úlcera corneal com captação de fluoresceína, dendrítica ou geográfica",
+      "Ceratite após trauma com material vegetal, terra, areia ou corpo estranho",
+      "Olho vermelho com hipópio, edema palpebral e baixa visual"
+    ],
+    "exclusao": [
+      {
+        "situacao": "olho vermelho sem dor, sem fotofobia e com acuidade preservada, com secreção aquosa ou purulenta",
+        "fluxo": "OFT-01 olho vermelho / conjuntivite"
+      },
+      {
+        "situacao": "dor intensa com midríase média fixa, córnea edemaciada e náusea, sem infiltrado",
+        "fluxo": "OFT-08 glaucoma agudo"
+      },
+      {
+        "situacao": "fotofobia com miose e hiperemia ciliar, câmara anterior com células, sem úlcera",
+        "fluxo": "OFT-09 uveíte"
+      },
+      {
+        "situacao": "trauma ocular penetrante, perfuração ou queimadura química",
+        "fluxo": "trauma ocular — emergência cirúrgica"
+      },
+      {
+        "situacao": "olho seco, ceratocone ou abrasão traumática sem infiltrado e sem sinais infecciosos",
+        "fluxo": "acompanhamento oftalmológico ambulatorial"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "hipópio, edema corneal intenso, câmara anterior rasa ou perfuração com saída de humor aquoso",
+        "por_que": "ceratite grave com risco de endoftalmite e perda do globo ocular",
+        "acao": "não comprimir o globo, não instilar colírio, oftalmologia imediata com internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "úlcera dendrítica ou geográfica com vesículas na pálpebra ou na ponta do nariz",
+        "por_que": "ceratite herpética, em que corticoide causa perfuração",
+        "acao": "suspender qualquer corticoide, iniciar aciclovir e encaminhar no mesmo dia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "usuário de lente de contato com dor, fotofobia ou opacidade corneal",
+        "por_que": "ceratite por Pseudomonas com progressão para perfuração em 24 a 48 horas",
+        "acao": "suspender e descartar a lente, iniciar ciprofloxacino de hora em hora e encaminhar no mesmo dia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "trauma com planta, madeira, terra ou material vegetal, ou infiltrado que piora com antibiótico",
+        "por_que": "ceratite fúngica, que não responde a antibacteriano e exige antifúngico por semanas",
+        "acao": "raspado corneal para cultura antes do antifúngico e oftalmologia imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "queda de acuidade visual em relação ao outro olho, mesmo parcial",
+        "por_que": "infiltrado central, edema corneal ou comprometimento do eixo visual",
+        "acao": "registrar a acuidade e encaminhar no mesmo dia, sem alta",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "dor desproporcional, blefaroespasmo e fotofobia intensa",
+        "por_que": "ceratite com espasmo ciliar e risco de sinéquia",
+        "acao": "cicloplegia com atropina, analgesia e avaliação oftalmológica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "diabetes descompensado, HIV, quimioterapia ou corticoide sistêmico",
+        "por_que": "ceratite fúngica ou bacteriana fulminante com apresentação atípica",
+        "acao": "baixo limiar para raspado, cultura e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "ausência de melhora em 48 a 72 horas de antibiótico tópico",
+        "por_que": "agente resistente, fúngico ou herpético, ou adesão inadequada ao intervalo",
+        "acao": "reavaliar com lâmpada de fenda e cultura, não trocar o colírio às cegas",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Usa lente de contato? Dormiu com ela, nadou ou lavou com água da torneira?",
+      "A dor piora com a luz? Está evitando abrir o olho?",
+      "A visão deste olho está embaçada em relação ao outro?",
+      "Enxerga uma mancha branca ou um halo na córnea?",
+      "Teve trauma com planta, madeira, terra, solda ou esmerilhamento, mesmo leve?",
+      "Já teve herpes ocular? Apareceu vesícula na pálpebra ou na ponta do nariz?",
+      "Usou colírio de corticoide, inclusive de outra pessoa, nos últimos 30 dias?",
+      "Tem diabetes, HIV, quimioterapia ou usa corticoide oral?",
+      "A secreção é purulenta? A pálpebra amanhece colada?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Ceratite bacteriana leve, periférica, menor que 2 mm, sem hipópio e sem acometimento do eixo visual",
+        "escolha": "Ciprofloxacino 0,3% de hora em hora enquanto acordado, com encaminhamento oftalmológico no mesmo dia",
+        "porque": "A quinolona cobre Pseudomonas e os Gram-positivos habituais em monoterapia e é o que existe na maioria dos serviços; a lesão pequena e periférica tolera algumas horas de ponte"
+      },
+      {
+        "cenario": "Usuário de lente de contato com dor, fotofobia e opacidade corneal",
+        "escolha": "Suspender e descartar lente, estojo e solução, ciprofloxacino 0,3% de hora em hora e oftalmologia no mesmo dia, sem corticoide",
+        "porque": "Pseudomonas perfura a córnea em 24 a 48 horas e a lente funciona como reservatório de reinfecção"
+      },
+      {
+        "cenario": "Ceratite bacteriana grave: central, maior que 2 mm, com hipópio, dor intensa ou risco de perfuração",
+        "escolha": "Cefazolina fortificada 50 mg/mL e tobramicina fortificada 14 mg/mL, alternadas de hora em hora, sob oftalmologista, com internação quando indicado",
+        "porque": "A cobertura combinada de Gram-positivo e Gram-negativo em concentração alta é o padrão da ceratite com risco de perda visual, e nenhum colírio comercial atinge essa concentração"
+      },
+      {
+        "cenario": "Serviço sem colírio fortificado manipulado",
+        "escolha": "Ciprofloxacino 0,3% e tobramicina 0,3% alternados de hora em hora, com transferência imediata",
+        "porque": "Alternar duas classes comerciais amplia a cobertura enquanto o paciente é transferido, mas não substitui o fortificado na ceratite central"
+      },
+      {
+        "cenario": "Úlcera dendrítica com terminações bulbosas, ou herpes com vesículas na pálpebra e no nariz",
+        "escolha": "Aciclovir pomada oftálmica 3% 5x/dia ou aciclovir 400 mg VO 5x/dia, com oftalmologia no mesmo dia e nenhum corticoide",
+        "porque": "O antiviral interrompe a replicação viral; o corticoide em herpes epitelial ativo amplia a ulceração e perfura a córnea"
+      },
+      {
+        "cenario": "Herpes com acometimento estromal, uveíte ou ceratite disciforme",
+        "escolha": "Somente com oftalmologista: antiviral sistêmico associado a corticoide tópico sob supervisão, com desmame",
+        "porque": "O estroma é mediado por resposta imune e exige corticoide, mas o vírus precisa estar coberto: a decisão é do especialista, com lâmpada de fenda"
+      },
+      {
+        "cenario": "Suspeita de ceratite fúngica: trauma vegetal, agricultor, imunossuprimido, infiltrado de bordas fofas ou piora com antibiótico",
+        "escolha": "Raspado corneal para cultura e exame direto, natamicina 5% de 1/1 h a 2/2 h e voriconazol 200 mg VO 12/12 h, sem corticoide",
+        "porque": "O fungo cresce devagar e o antibacteriano não muda o curso; o tratamento dura semanas e depende do agente isolado"
+      },
+      {
+        "cenario": "Fotofobia intensa com espasmo ciliar e dor",
+        "escolha": "Atropina 1% 12/12 h no olho afetado, com paracetamol e compressa fria",
+        "porque": "A cicloplegia relaxa o espasmo do corpo ciliar, alivia a dor e previne sinéquia posterior"
+      },
+      {
+        "cenario": "Ceratite em serviço sem oftalmologia, com dor intensa",
+        "escolha": "Tratamento inicial, analgesia, encaminhamento imediato e nenhum anestésico tópico para uso domiciliar",
+        "porque": "O anestésico tópico alivia a dor por minutos e destrói o epitélio em uso repetido, mascarando a piora e agravando a úlcera"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antibiotico_topico",
+        "agente": "ciprofloxacino 0,3% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "ceratite bacteriana presumida, sobretudo em usuário de lente de contato, como ponte até a oftalmologia",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "de hora em hora enquanto acordado nas primeiras 24 a 48 h; depois 4/4 h",
+        "duracao": "até 48 a 72 h após a melhora, com mínimo de 7 a 10 dias e seguimento oftalmológico",
+        "dose_maxima": "1 gota de 1/1 h no olho afetado",
+        "contraindicacoes": [
+          "hipersensibilidade a quinolonas",
+          "associação com corticoide tópico sem biomicroscopia",
+          "ceratite fúngica ou herpética isolada sem diagnóstico"
+        ],
+        "efeitos_adversos": [
+          "ardência transitória",
+          "gosto amargo",
+          "precipitado corneal branco",
+          "reação alérgica de contato",
+          "toxicidade epitelial em uso prolongado"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 0,3%",
+          "pomada oftálmica 3,5 g a 0,3%",
+          "frasco 10 mL a 0,3%"
+        ],
+        "preparo": "Uso direto no olho afetado; não tocar a ponta do frasco na córnea, na pálpebra ou na conjuntiva e não compartilhar o frasco",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "tamanho do infiltrado e do hipópio a cada 24 h",
+          "dor e fotofobia",
+          "acuidade visual",
+          "resposta em 48 a 72 h",
+          "surgimento de precipitado corneal"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "É a primeira escolha na ceratite por lente de contato pela cobertura de Pseudomonas, mas não substitui o oftalmologista no mesmo dia. Em ceratite central maior que 2 mm ou com hipópio, passar aos fortificados",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_fortificado",
+        "agente": "tobramicina fortificada 14 mg/mL colírio",
+        "papel": "primeira_linha",
+        "indicacao": "ceratite bacteriana grave, central, com hipópio ou risco de perfuração, cobertura de Gram-negativo e Pseudomonas",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "de hora em hora, alternada com a cefazolina fortificada",
+        "duracao": "até melhora clínica, com desmame conforme a oftalmologia",
+        "dose_maxima": "1 gota de 1/1 h no olho afetado",
+        "contraindicacoes": [
+          "hipersensibilidade a aminoglicosídeo",
+          "ceratite fúngica sem diagnóstico",
+          "uso domiciliar sem supervisão especializada"
+        ],
+        "efeitos_adversos": [
+          "ardência intensa",
+          "toxicidade do epitélio corneal",
+          "hiperemia conjuntival",
+          "dermatite de contato palpebral"
+        ],
+        "apresentacoes": [
+          "solução manipulada 14 mg/mL a partir de ampola 80 mg/2 mL",
+          "frasco manipulado 5 mL a 14 mg/mL"
+        ],
+        "preparo": "Acrescentar 3,7 mL de SF 0,9% à ampola de 80 mg/2 mL, obtendo 5,7 mL a 14 mg/mL; rotular com data, validade e via ocular",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "infiltrado e hipópio a cada 12 a 24 h com lâmpada de fenda",
+          "toxicidade epitelial",
+          "acuidade visual",
+          "esterilidade e validade da manipulação"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Concentração dez vezes maior que a apresentação comercial: só existe manipulada e só tem sentido em ceratite com risco de perda visual, alternada com cefazolina. Não prescrever para uso domiciliar sem oftalmologista",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_fortificado",
+        "agente": "cefazolina fortificada 50 mg/mL colírio",
+        "papel": "primeira_linha",
+        "indicacao": "ceratite bacteriana grave, cobertura de Gram-positivo, associada à tobramicina fortificada",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "de hora em hora, alternada com a tobramicina fortificada",
+        "duracao": "até melhora clínica, com desmame conforme a oftalmologia",
+        "dose_maxima": "1 gota de 1/1 h no olho afetado",
+        "contraindicacoes": [
+          "hipersensibilidade a cefalosporina",
+          "ceratite fúngica ou herpética sem diagnóstico",
+          "uso sem supervisão oftalmológica"
+        ],
+        "efeitos_adversos": [
+          "ardência",
+          "reação alérgica de contato",
+          "toxicidade epitelial",
+          "precipitado corneal"
+        ],
+        "apresentacoes": [
+          "solução manipulada 50 mg/mL a partir de frasco de 1 g",
+          "frasco manipulado 5 mL a 50 mg/mL"
+        ],
+        "preparo": "Reconstituir o frasco de 1 g em 10 mL de água para injeção, obtendo 100 mg/mL, e diluir 1:1 em SF 0,9% para 50 mg/mL; refrigerar e descartar conforme protocolo da farmácia",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "infiltrado e hipópio a cada 12 a 24 h",
+          "dor e fotofobia",
+          "toxicidade epitelial",
+          "validade da manipulação"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Cobre Staphylococcus e Streptococcus, incluindo os de ceratite pós-trauma e pós-cirúrgica; a associação com tobramicina cobre o espectro que a monoterapia deixa descoberto",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_topico",
+        "agente": "tobramicina 0,3% colírio",
+        "papel": "alternativa",
+        "indicacao": "ceratite bacteriana periférica leve ou quando a quinolona não está disponível",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1/1 h enquanto acordado nas primeiras 24 h, depois 4/4 h",
+        "duracao": "7 a 10 dias, com reavaliação oftalmológica",
+        "dose_maxima": "1 gota de 1/1 h",
+        "contraindicacoes": [
+          "hipersensibilidade a aminoglicosídeo",
+          "ceratite fúngica ou herpética sem diagnóstico"
+        ],
+        "efeitos_adversos": [
+          "ardência",
+          "dermatite de contato palpebral",
+          "toxicidade epitelial acima de 10 dias de uso"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 0,3%",
+          "pomada oftálmica 3,5 g a 0,3%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 30 segundos após a instilação",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "infiltrado corneal",
+          "dor e fotofobia",
+          "resposta em 48 a 72 h"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Boa cobertura de Gram-negativo, incluindo Pseudomonas, mas com menor penetração corneal que a quinolona; é alternativa, não primeira escolha em ceratite por lente de contato",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral_topico",
+        "agente": "aciclovir pomada oftálmica 3%",
+        "papel": "primeira_linha",
+        "indicacao": "ceratite herpética epitelial, com úlcera dendrítica ou geográfica",
+        "dose": "aproximadamente 1 cm de pomada",
+        "unidade": "cm",
+        "via": "ocular",
+        "frequencia": "5x/dia",
+        "duracao": "7 a 10 dias, ou até a reepitelização completa",
+        "dose_maxima": "5 aplicações por dia no olho afetado",
+        "contraindicacoes": [
+          "hipersensibilidade ao aciclovir",
+          "uso em ceratite bacteriana ou fúngica isolada",
+          "associação com corticoide tópico sem oftalmologista"
+        ],
+        "efeitos_adversos": [
+          "ardência transitória",
+          "visão borrada por minutos após a aplicação",
+          "reação alérgica de contato",
+          "ceratopatia puntata superficial em uso prolongado"
+        ],
+        "apresentacoes": [
+          "bisnaga 4,5 g a 3%",
+          "bisnaga 5 g a 3%"
+        ],
+        "preparo": "Aplicar dentro do saco conjuntival inferior, sem tocar a ponta da bisnaga no olho",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "tamanho e formato da úlcera com fluoresceína a cada 2 a 3 dias",
+          "dor e fotofobia",
+          "sinais de acometimento estromal",
+          "acuidade visual"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Trata o epitélio, não o estroma. Se houver infiltrado estromal, uveíte ou ceratite disciforme, o caso é do oftalmologista: aí entra corticoide com antiviral sistêmico, nunca corticoide isolado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral_sistemico",
+        "agente": "aciclovir 400 mg comprimido",
+        "papel": "primeira_linha",
+        "indicacao": "ceratite herpética extensa, recorrente, com envolvimento palpebral ou zoster oftálmico, e alternativa quando a pomada não está disponível",
+        "dose": "400 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "5x/dia, a cada 4 h enquanto acordado",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "hipersensibilidade ao aciclovir",
+          "insuficiência renal grave sem ajuste",
+          "desidratação"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "cefaleia",
+          "cristalúria e nefrotoxicidade se houver desidratação",
+          "neurotoxicidade em renal crônico",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "suspensão oral 200 mg/5 mL"
+        ],
+        "preparo": "Uso direto com copo cheio de água; manter hidratação durante o tratamento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "função renal e creatinina",
+          "estado de hidratação",
+          "confusão ou tremor em idoso e renal crônico",
+          "reepitelização corneal"
+        ],
+        "ajuste_renal": "ClCr 25 a 50: 400 mg 3x/dia; ClCr 10 a 25: 400 mg 2x/dia; ClCr abaixo de 10: 200 mg 2x/dia",
+        "ajuste_hepatico": "Sem ajuste em hepatopatia leve a moderada",
+        "observacoes": "Preferir a via oral na ceratite herpética extensa e no zoster oftálmico, pela concentração intraocular maior; no zoster, a dose sobe para 800 mg 5x/dia por 7 a 10 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral_topico",
+        "agente": "ganciclovir gel 0,15%",
+        "papel": "alternativa",
+        "indicacao": "ceratite herpética epitelial quando a pomada de aciclovir não está disponível ou há intolerância",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "5x/dia enquanto acordado",
+        "duracao": "7 a 14 dias, até a reepitelização",
+        "dose_maxima": "5 aplicações por dia no olho afetado",
+        "contraindicacoes": [
+          "hipersensibilidade ao ganciclovir",
+          "ceratite bacteriana ou fúngica isolada"
+        ],
+        "efeitos_adversos": [
+          "ardência e irritação transitória",
+          "visão borrada",
+          "reação de contato"
+        ],
+        "apresentacoes": [
+          "gel oftálmico 5 g a 0,15%"
+        ],
+        "preparo": "Uso direto no saco conjuntival inferior; não tocar a ponta do frasco no olho",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "reepitelização com fluoresceína",
+          "dor e fotofobia",
+          "sinais de toxicidade epitelial"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Ativo contra HSV e citomegalovírus; a eficácia na ceratite epitelial é comparável à do aciclovir tópico, e a escolha depende da disponibilidade local",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antifungico",
+        "agente": "natamicina 5% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "ceratite fúngica filamentosa suspeita ou confirmada",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1/1 h nas primeiras 24 a 48 h, depois 2/2 h e desmame progressivo",
+        "duracao": "6 a 12 semanas, com seguimento oftalmológico",
+        "dose_maxima": "1 gota de 1/1 h",
+        "contraindicacoes": [
+          "hipersensibilidade à natamicina",
+          "ceratite bacteriana isolada",
+          "uso sem confirmação ou suspeita forte e sem oftalmologista"
+        ],
+        "efeitos_adversos": [
+          "ardência intensa",
+          "hiperemia conjuntival",
+          "toxicidade epitelial",
+          "pontuado corneal"
+        ],
+        "apresentacoes": [
+          "suspensão manipulada 5% (15 mL)",
+          "suspensão manipulada 3,5%"
+        ],
+        "preparo": "Agitar antes de usar; suspensão manipulada em farmácia, mantida refrigerada e protegida da luz",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "borda e densidade do infiltrado com lâmpada de fenda semanal",
+          "surgimento de lesões satélites",
+          "toxicidade epitelial",
+          "resposta em 2 a 3 semanas"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Não prescrever corticoide em ceratite fúngica: ele acelera a penetração do fungo e a perfuração. Se o raspado vier negativo e a lesão piorar, a suspeita fúngica continua até prova contrária",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antifungico",
+        "agente": "voriconazol 200 mg comprimido",
+        "papel": "alternativa",
+        "indicacao": "ceratite fúngica grave, profunda ou com acometimento de câmara anterior, associado ao tópico",
+        "dose": "200 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "4 a 12 semanas, conforme a resposta",
+        "dose_maxima": "400 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade a azólico",
+          "hepatopatia grave",
+          "uso concomitante com terfenadina, cisaprida ou sinvastatina em dose alta"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade",
+          "alteração visual transitória",
+          "fotossensibilidade",
+          "náusea",
+          "prolongamento do QT"
+        ],
+        "apresentacoes": [
+          "comprimido 50 mg",
+          "comprimido 200 mg",
+          "suspensão oral 40 mg/mL"
+        ],
+        "preparo": "Uso direto em jejum, 1 h antes ou 1 h após a refeição",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "enzimas hepáticas a cada 2 semanas",
+          "acuidade visual e percepção de cor",
+          "eletrólitos e QT em cardiopata",
+          "interações medicamentosas"
+        ],
+        "ajuste_renal": "Sem ajuste por via oral; preferir a via oral à intravenosa em insuficiência renal, porque o veículo da apresentação intravenosa se acumula",
+        "ajuste_hepatico": "Reduzir para 100 mg 12/12 h em Child-Pugh B ou C",
+        "observacoes": "A associação de antifúngico tópico e sistêmico é o padrão na ceratite fúngica grave; o tratamento é longo e não se interrompe pela melhora inicial aparente",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "cicloplegico",
+        "agente": "atropina 1% colírio",
+        "papel": "condicional",
+        "indicacao": "fotofobia intensa e espasmo ciliar na ceratite, para alívio da dor e prevenção de sinéquia posterior",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "12/12 h",
+        "duracao": "3 a 7 dias, enquanto durar o espasmo",
+        "dose_maxima": "1 gota 2x/dia no olho afetado",
+        "contraindicacoes": [
+          "glaucoma de ângulo fechado no olho afetado ou no contralateral",
+          "hipersensibilidade a anticolinérgico",
+          "íris com sinéquia total"
+        ],
+        "efeitos_adversos": [
+          "midríase prolongada por até 7 dias",
+          "visão borrada para perto",
+          "fotofobia",
+          "gosto amargo",
+          "retenção urinária em idoso"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 1%",
+          "frasco 5 mL a 0,5%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 1 minuto para reduzir a absorção sistêmica",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "dor e fotofobia",
+          "diâmetro pupilar e simetria",
+          "pressão intraocular em olho com risco de ângulo fechado",
+          "retenção urinária e confusão em idoso"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "A cicloplegia é analgésica, não antimicrobiana: relaxa o corpo ciliar e reduz a dor. Nunca usar atropina como teste diagnóstico em olho com suspeita de glaucoma agudo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol 750 mg",
+        "papel": "condicional",
+        "indicacao": "dor ocular da ceratite",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "alcoolismo crônico",
+          "desnutrição grave"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose alta",
+          "náusea",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor em escala 0 a 10",
+          "dose total diária somada a outros produtos com paracetamol",
+          "função hepática se o uso passar de 5 dias"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30: intervalo de 8 h",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia leve; evitar em hepatopatia grave",
+        "observacoes": "A dor da ceratite se trata com cicloplegia e analgésico simples; AINE não é necessário e o anestésico tópico é proibido para uso domiciliar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_topico",
+        "agente": "dexametasona 0,1% colírio",
+        "papel": "condicional",
+        "indicacao": "adjuvante em ceratite bacteriana em tratamento, com infiltrado estromal e resposta inflamatória desproporcional, exclusivamente por oftalmologista",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "4/4 h",
+        "duracao": "conforme a oftalmologia, com desmame progressivo",
+        "dose_maxima": "1 gota de 1/1 h sob supervisão especializada",
+        "contraindicacoes": [
+          "ceratite herpética epitelial ativa",
+          "ceratite fúngica",
+          "ceratite bacteriana sem antibiótico eficaz em uso",
+          "prescrição sem biomicroscopia",
+          "perfuração ou ameaça de perfuração"
+        ],
+        "efeitos_adversos": [
+          "perfuração corneal em herpes ou fungo",
+          "hipertensão ocular e glaucoma esteroide",
+          "retardo da cicatrização epitelial",
+          "infecção secundária",
+          "catarata subcapsular posterior"
+        ],
+        "apresentacoes": [
+          "suspensão oftálmica 5 mL a 0,1%"
+        ],
+        "preparo": "Agitar antes de usar; instilar 1 gota no olho afetado",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular semanal",
+          "biomicroscopia com fluoresceína a cada retorno",
+          "tamanho do infiltrado",
+          "sinais de recrudescência herpética"
+        ],
+        "ajuste_renal": "Sem ajuste com uso tópico",
+        "observacoes": "Não é colírio de atenção primária e não entra em ceratite sem lâmpada de fenda. O corticoide só reduz cicatriz quando a infecção está coberta e o agente está identificado; fora disso, é o principal fator de agravamento da ceratite",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Suspender a lente de contato e descartar lente, estojo e solução",
+        "detalhe": "Manter sem lente até 24 h após a resolução completa e a liberação oftalmológica; descartar o estoque aberto, porque a lente e o estojo funcionam como reservatório de Pseudomonas e reinfectam a córnea"
+      },
+      {
+        "medida": "Nunca ocluir o olho com ceratite",
+        "detalhe": "A oclusão eleva a temperatura e a umidade, retém secreção e favorece a proliferação bacteriana; usar óculos escuros para a fotofobia"
+      },
+      {
+        "medida": "Higiene rigorosa das mãos e do material de instilação",
+        "detalhe": "Lavar as mãos antes e depois de cada colírio, não tocar a ponta do frasco no olho, não compartilhar frascos e anotar os horários para não perder as instilações de hora em hora"
+      },
+      {
+        "medida": "Não usar anestésico tópico para alívio da dor",
+        "detalhe": "Tetracaína e proximetacaína aliviam por minutos e destroem o epitélio em uso repetido, mascarando a piora; a dor se controla com cicloplegia e analgésico oral"
+      },
+      {
+        "medida": "Remover a secreção e a crosta palpebral",
+        "detalhe": "Gaze estéril com soro fisiológico, de dentro para fora, descartando a gaze a cada passagem e sem usar o mesmo material nos dois olhos"
+      },
+      {
+        "medida": "Compressa fria e repouso visual",
+        "detalhe": "Gaze fria por 10 minutos, 3 vezes ao dia, para o edema e a dor; evitar leitura prolongada e telas enquanto durar o espasmo ciliar"
+      },
+      {
+        "medida": "Encaminhamento oftalmológico no mesmo dia com registro escrito",
+        "detalhe": "Anotar acuidade visual, tamanho do infiltrado, presença de hipópio e colírio já instilado; o paciente sai com destino, horário e orientação de retorno imediato se a dor ou a visão piorarem no trajeto"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Biomicroscopia com fluoresceína",
+        "indicacao": "todo olho com dor, fotofobia ou queda de acuidade, para definir o tamanho, a profundidade e o formato da úlcera",
+        "tecnica": "Instilar fluoresceína e examinar com luz azul de cobalto e aumento: procurar captação epitelial, infiltrado estromal, hipópio, células na câmara anterior e o padrão dendrítico com terminações bulbosas",
+        "complicacoes": "Falso negativo sem filtro adequado, contaminação do frasco, desconforto e abrasão por técnica inadequada"
+      },
+      {
+        "nome": "Raspado corneal para cultura e exame direto",
+        "indicacao": "ceratite grave, central, com hipópio, refratária a antibiótico ou com suspeita fúngica, antes de iniciar o antimicrobiano específico",
+        "tecnica": "Anestesia tópica, lâmina de bisturi estéril ou espátula sob lâmpada de fenda, raspando a base e a borda do infiltrado; semear em ágar sangue, ágar chocolate e Sabouraud, além de lâmina para Gram e Giemsa",
+        "complicacoes": "Perfuração em córnea já adelgaçada, sangramento, dor, resultado tardio que não muda a conduta inicial e contaminação por flora palpebral"
+      },
+      {
+        "nome": "Cultura da lente, do estojo e da solução",
+        "indicacao": "ceratite em usuário de lente de contato, para identificar o agente e orientar a troca do material",
+        "tecnica": "Recolher a lente em solução estéril, swab do estojo e da solução, enviar ao laboratório com identificação do material e do tempo de uso",
+        "complicacoes": "Contaminação da amostra, resultado tardio e falsa segurança quando o material já foi descartado"
+      },
+      {
+        "nome": "Debridamento epitelial",
+        "indicacao": "ceratite fúngica ou bacteriana com epitélio necrótico que impede a penetração do colírio",
+        "tecnica": "Sob lâmpada de fenda e anestesia tópica, remover o epitélio solto com espátula estéril, sem ultrapassar a área de infiltração",
+        "complicacoes": "Dor, sangramento, retardo da reepitelização e perfuração em córnea fina"
+      },
+      {
+        "nome": "Ceratoplastia penetrante terapêutica",
+        "indicacao": "perfuração corneal, úlcera refratária com risco de perda do globo ou necrose corneana",
+        "tecnica": "Troca do disco corneal central por enxerto doador, sob anestesia geral ou bloqueio, com sutura e antibioticoterapia perioperatória",
+        "complicacoes": "Rejeição do enxerto, infecção, glaucoma, astigmatismo irregular e falha do enxerto"
+      }
+    ],
+    "metas": [
+      "Dor e fotofobia controladas em 24 a 48 horas do início do tratamento",
+      "Infiltrado corneal sem progressão e hipópio em regressão em 48 a 72 horas",
+      "Acuidade visual registrada na primeira consulta e comparada em cada retorno",
+      "Encaminhamento oftalmológico concluído no mesmo dia em toda ceratite com infiltrado",
+      "Nenhum corticoide tópico prescrito sem biomicroscopia registrada",
+      "Lente de contato suspensa e descartada em 100% dos casos de ceratite por lente",
+      "Reepitelização completa em 7 a 14 dias na ceratite bacteriana leve e em até 3 semanas na fúngica"
+    ],
+    "fluxo": [
+      "Medir a acuidade visual e registrar dor, fotofobia e uso de lente antes de instilar qualquer colírio",
+      "Examinar com lanterna e fluoresceína: há infiltrado, úlcera, dendrito, hipópio ou perfuração?",
+      "Se houver lente de contato em uso, suspender e descartar lente, estojo e solução antes de qualquer outra medida",
+      "Classificar o padrão: bacteriana (infiltrado com halo, secreção purulenta), herpética (dendrito, vesícula, recidiva) ou fúngica (trauma vegetal, bordas fofas, refratária)",
+      "Iniciar o antimicrobiano conforme o padrão, sempre sem corticoide, e associar cicloplegia e analgesia",
+      "Coletar raspado corneal e cultura antes do antimicrobiano específico nos casos graves, centrais, com hipópio ou suspeita fúngica",
+      "Encaminhar à oftalmologia no mesmo dia, com registro escrito da acuidade, do achado e do que já foi instilado",
+      "Reavaliar em 24 a 48 h: piora, ausência de melhora ou novo hipópio exigem troca de esquema guiada por cultura e reavaliação especializada"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "usuario_de_lente_de_contato",
+        "ajuste": "suspender e descartar lente, estojo e solução; ciprofloxacino de hora em hora e oftalmologia no mesmo dia",
+        "alerta": "ceratite por Pseudomonas com perfuração em 24 a 48 horas"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "aciclovir oral e colírios antimicrobianos são compatíveis; evitar voriconazol e usar natamicina tópica",
+        "alerta": "ceratite fúngica na gestação exige decisão compartilhada com a oftalmologia"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "rever colírios com conservante, atenção à atropina em próstata e cognição, e checar adesão ao regime de hora em hora",
+        "alerta": "retenção urinária e confusão com cicloplégico anticolinérgico"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "baixo limiar para raspado, cultura e internação; controle glicêmico e acompanhamento conjunto",
+        "alerta": "ceratite fulminante e endoftalmite com apresentação atípica"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "não usar corticoide sem diagnóstico etiológico, considerar fúngica e herpética e internar precocemente",
+        "alerta": "infecção fúngica ou herpética grave sob corticoide"
+      },
+      {
+        "populacao": "monocular",
+        "ajuste": "prioridade máxima de encaminhamento e limiar mais baixo para internação e raspado",
+        "alerta": "cegueira funcional definitiva no único olho útil"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "acuidade visual com optotipo de Snellen",
+          "indicacao": "todos",
+          "o_que_muda": "define gravidade, separa ceratite central de periférica e documenta a evolução"
+        },
+        {
+          "nome": "biomicroscopia com fluoresceína",
+          "indicacao": "dor, fotofobia, baixa visual ou uso de lente de contato",
+          "o_que_muda": "identifica tamanho, profundidade e padrão da úlcera e diferencia dendrito de infiltrado bacteriano"
+        },
+        {
+          "nome": "raspado corneal com Gram, Giemsa e cultura",
+          "indicacao": "ceratite grave, central, com hipópio, refratária ou com suspeita fúngica",
+          "o_que_muda": "define o agente e permite trocar o antimicrobiano com base no antibiograma"
+        },
+        {
+          "nome": "cultura de lente, estojo e solução",
+          "indicacao": "ceratite em usuário de lente de contato",
+          "o_que_muda": "confirma a fonte e orienta o descarte e a troca do material"
+        },
+        {
+          "nome": "pressão intraocular",
+          "indicacao": "dor intensa, suspeita de glaucoma associado ou uso de corticoide",
+          "o_que_muda": "detecta hipertensão ocular e glaucoma esteroide"
+        },
+        {
+          "nome": "hemograma, glicemia e sorologia conforme risco",
+          "indicacao": "quadro grave, internação ou imunossupressão suspeita",
+          "o_que_muda": "identifica diabetes descompensado e imunossupressão que mudam o plano"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "cultura de secreção conjuntival de rotina na ceratite leve",
+          "motivo": "não altera a conduta inicial e atrasa o início do antimicrobiano"
+        },
+        {
+          "exame": "tonometria de contato em córnea com suspeita de perfuração",
+          "motivo": "a compressão do globo extravasa conteúdo intraocular"
+        },
+        {
+          "exame": "tomografia de órbita em ceratite sem proptose, febre ou limitação de movimento",
+          "motivo": "irradiação e custo sem mudança de conduta"
+        },
+        {
+          "exame": "biomicroscopia sem fluoresceína no olho com dor",
+          "motivo": "perde a úlcera, que é justamente o achado que muda a conduta"
+        },
+        {
+          "exame": "raspado corneal em ceratite periférica leve já em tratamento e com boa resposta",
+          "motivo": "risco de perfuração e desconforto sem impacto terapêutico"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "instilar o colírio nos intervalos prescritos, inclusive de hora em hora no primeiro dia",
+        "lavar as mãos antes e depois de cada instilação",
+        "usar óculos escuros para a fotofobia",
+        "comparecer à oftalmologia no mesmo dia, com o papel do encaminhamento",
+        "retornar imediatamente se a dor ou a visão piorarem"
+      ],
+      "evitar": [
+        "usar lente de contato até liberação oftalmológica",
+        "coçar o olho ou pressionar o globo",
+        "usar colírio de corticoide, inclusive de outra pessoa",
+        "usar anestésico tópico para dor",
+        "nadar, usar piscina ou lavar o olho com água da torneira",
+        "compartilhar toalha, fronha ou maquiagem"
+      ],
+      "retorno": [
+        "piora da dor ou da fotofobia",
+        "queda de visão",
+        "mancha branca que aumenta na córnea",
+        "secreção purulenta ou pus na câmara anterior",
+        "ausência de melhora em 48 a 72 horas",
+        "trauma ocular novo ou saída de líquido pelo olho"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "ciprofloxacino e tobramicina tópicos",
+        "efeitos": [
+          "ardência",
+          "toxicidade epitelial",
+          "precipitado corneal"
+        ],
+        "observacao": "suspender e reavaliar se surgir infiltrado branco ou piora da úlcera"
+      },
+      {
+        "agente": "cefazolina fortificada",
+        "efeitos": [
+          "ardência",
+          "reação alérgica de contato",
+          "toxicidade epitelial"
+        ],
+        "observacao": "suspender se houver reação palpebral importante"
+      },
+      {
+        "agente": "aciclovir oral",
+        "efeitos": [
+          "náusea",
+          "nefrotoxicidade por cristalúria",
+          "neurotoxicidade"
+        ],
+        "observacao": "hidratar, dosar creatinina e ajustar na insuficiência renal"
+      },
+      {
+        "agente": "natamicina tópica",
+        "efeitos": [
+          "ardência intensa",
+          "hiperemia",
+          "toxicidade epitelial"
+        ],
+        "observacao": "manter o antifúngico e tratar o desconforto com lubrificante sem conservante"
+      },
+      {
+        "agente": "voriconazol",
+        "efeitos": [
+          "hepatotoxicidade",
+          "alteração visual transitória",
+          "fotossensibilidade"
+        ],
+        "observacao": "enzimas hepáticas a cada 2 semanas e proteção solar"
+      },
+      {
+        "agente": "atropina 1%",
+        "efeitos": [
+          "midríase prolongada",
+          "retenção urinária",
+          "confusão em idoso"
+        ],
+        "observacao": "suspender se retenção urinária ou agitação"
+      },
+      {
+        "agente": "dexametasona tópica",
+        "efeitos": [
+          "hipertensão ocular",
+          "perfuração em herpes ou fungo",
+          "retardo de cicatrização"
+        ],
+        "observacao": "só sob oftalmologista, com pressão intraocular semanal"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o colírio implicado e registrar a reação na evolução",
+      "Toxicidade epitelial por aminoglicosídeo ou quinolona: reduzir a frequência, trocar de classe e reavaliar com fluoresceína",
+      "Aciclovir oral com creatinina em ascensão: suspender, hidratar e ajustar a dose pela função renal",
+      "Voriconazol com enzimas hepáticas acima de 3 vezes o limite: suspender e discutir alternativa com a oftalmologia",
+      "Atropina com retenção urinária ou confusão: suspender e trocar por tropicamida de curta duração",
+      "Corticoide com pressão intraocular em ascensão: suspender o corticoide e encaminhar ao glaucoma",
+      "Comunicar a equipe e reavaliar a indicação na consulta seguinte"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "ciprofloxacino 0,3% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "de hora em hora enquanto acordado no primeiro dia, depois 4/4 h",
+            "duracao": "7 dias",
+            "condicao": "ceratite bacteriana presumida",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "atropina 1% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "12/12 h",
+            "duracao": "5 dias",
+            "condicao": "fotofobia e espasmo ciliar",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "5 dias",
+            "condicao": "dor",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "aciclovir pomada oftálmica 3%",
+            "dose": "1 cm",
+            "via": "ocular",
+            "frequencia": "5x/dia",
+            "duracao": "10 dias",
+            "condicao": "ceratite herpética confirmada",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "cefazolina fortificada 50 mg/mL colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "de hora em hora, alternada",
+            "monitorizacao": "infiltrado, hipópio e toxicidade epitelial",
+            "condicao": "ceratite bacteriana grave",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tobramicina fortificada 14 mg/mL colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "de hora em hora, alternada",
+            "monitorizacao": "infiltrado, hipópio e toxicidade epitelial",
+            "condicao": "ceratite bacteriana grave",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "aciclovir 400 mg",
+            "dose": "400 mg",
+            "via": "VO",
+            "frequencia": "5x/dia",
+            "monitorizacao": "função renal e hidratação",
+            "condicao": "ceratite herpética extensa",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "voriconazol 200 mg",
+            "dose": "200 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "monitorizacao": "enzimas hepáticas e visão",
+            "condicao": "ceratite fúngica",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "acuidade visual com Snellen",
+          "biomicroscopia com fluoresceína",
+          "raspado corneal com Gram, Giemsa e cultura",
+          "cultura de lente e estojo",
+          "pressão intraocular",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com ceratite, necessitando de afastamento de suas atividades por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica e dependem da acuidade visual e da atividade exercida"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "acuidade visual dos dois olhos",
+          "tamanho e localização do infiltrado",
+          "presença de hipópio",
+          "uso de lente de contato",
+          "colírio já instilado",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com ceratite à ___, acuidade visual ___ em olho direito e ___ em olho esquerdo, infiltrado de ___ mm em ___, hipópio ___, uso de lente de contato ___, padrão ___, tratamento iniciado com ___ e encaminhamento à oftalmologia em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "lado",
+        "dor",
+        "acuidade visual",
+        "fotofobia",
+        "secreção",
+        "lente de contato",
+        "trauma",
+        "herpes ocular prévio",
+        "corticoide tópico recente",
+        "comorbidades"
+      ],
+      "texto_template": "Paciente com ceratite à ___, dor ___, acuidade visual ___, fotofobia ___, secreção ___, uso de lente de contato ___, trauma ocular ___, herpes ocular prévio ___, corticoide tópico recente ___ e comorbidades ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "acuidade visual",
+        "pupilas e reflexo fotomotor",
+        "pálpebras e cílios",
+        "conjuntiva e secreção",
+        "córnea com fluoresceína",
+        "câmara anterior e hipópio",
+        "pressão intraocular",
+        "sensibilidade corneal"
+      ],
+      "texto_template": "Acuidade visual ___ em olho direito e ___ em olho esquerdo, pupilas ___, pálpebras ___, conjuntiva ___, córnea com fluoresceína mostrando ___, câmara anterior ___, pressão intraocular ___ e sensibilidade corneal ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de ceratite, critérios de encaminhamento no mesmo dia e farmácia de manipulação dos fortificados",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_oftalmologia",
+        "o_que_verificar": "ceratite bacteriana, herpética e fúngica, e uso de corticoide tópico",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_oftalmologia",
+        "o_que_verificar": "raspado corneal, cultura e esquema de fortificados",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, concentrações e validade dos colírios manipulados",
+        "verificar": true
+      },
+      {
+        "tipo": "vigilancia_epidemiologica",
+        "o_que_verificar": "surto de ceratite por lente de contato e recall de soluções",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-OFT07-01",
+        "tipo": "corticoide_sem_lampada",
+        "gatilho": "corticoide tópico prescrito sem biomicroscopia registrada",
+        "severidade": "grave",
+        "mensagem": "Corticoide sem lâmpada de fenda pode perfurar a córnea em ceratite herpética.",
+        "acao": "bloquear item e exigir diagnóstico por biomicroscopia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT07-02",
+        "tipo": "corticoide_em_herpes",
+        "gatilho": "corticoide tópico prescrito com úlcera dendrítica, vesícula palpebral ou herpes ocular prévio",
+        "severidade": "grave",
+        "mensagem": "Corticoide em herpes ocular ativo amplia a úlcera e leva à perfuração.",
+        "acao": "bloquear item e sugerir aciclovir com oftalmologia no mesmo dia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT07-03",
+        "tipo": "lente_mantida",
+        "gatilho": "ceratite em usuário de lente de contato sem registro de suspensão e descarte",
+        "severidade": "grave",
+        "mensagem": "Manter a lente em ceratite reinfecta a córnea e favorece perfuração.",
+        "acao": "bloquear alta e orientar descarte de lente, estojo e solução",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT07-04",
+        "tipo": "anestesico_domiciliar",
+        "gatilho": "anestésico tópico prescrito para uso domiciliar em ceratite",
+        "severidade": "grave",
+        "mensagem": "Anestésico tópico repetido destrói o epitélio e mascara a piora da úlcera.",
+        "acao": "bloquear item e substituir por cicloplegia e analgésico oral",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT07-05",
+        "tipo": "oclusao_ocular",
+        "gatilho": "oclusão ocular prescrita em ceratite",
+        "severidade": "precaucao",
+        "mensagem": "Ocluir olho com ceratite retém secreção e aquece o foco infeccioso.",
+        "acao": "alertar e sugerir óculos escuros",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-OFT07-06",
+        "tipo": "fungica_refrataria",
+        "gatilho": "ceratite com trauma vegetal ou refratária a antibiótico há mais de 72 h sem raspado",
+        "severidade": "grave",
+        "mensagem": "Ceratite que não responde a antibacteriano sugere fungo ou herpes: colher material antes de trocar o esquema.",
+        "acao": "sugerir raspado e antifúngico com oftalmologia",
+        "bloqueante": true
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "sociedade de oftalmologia",
+        "diretriz de córnea e superfície ocular",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade: separação entre ceratite bacteriana, por lente de contato, herpética e fúngica; 12 fármacos em 8 classes com apresentações, preparo, tempo de infusão, monitorização e ajuste renal; fortificados de cefazolina e tobramicina; aciclovir tópico e oral e ganciclovir; natamicina e voriconazol; cicloplegia, analgesia e o corticoide condicionado ao oftalmologista; regra de proibição de corticoide em herpes e sem lâmpada de fenda; suspensão e descarte da lente; raspado corneal, cultura de lente e ceratoplastia terapêutica.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

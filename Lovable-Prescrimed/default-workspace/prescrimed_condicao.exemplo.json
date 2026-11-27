@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.0.0",
+  "condicao": {
+    "id": "cond_placeholder",
+    "status": "rascunho",
+    "risk_class": "A",
+    "nome_canonico": "«nome canônico da condição»",
+    "nome_exibicao": "«nome de exibição»",
+    "slug": "nome-da-condicao",
+    "cid10": ["«CID-10»"],
+    "especialidade": "«emergencia»",
+    "populacao": ["adulto"],
+    "definicao_operacional": "«É uma condição caracterizada por ... No pronto-socorro, aplica-se quando ... Não se aplica quando ...»",
+    "escopo": {
+      "inclusoes": ["«apresentação clínica incluída»"],
+      "exclusoes": [
+        {
+          "item": "«achado ou situação excluída»",
+          "condicao_alternativa": "«condição existente no catálogo»",
+          "observacao": "«como diferenciar em uma frase»"
+        }
+      ],
+      "diferenciais": ["«diagnóstico diferencial 1»", "«diagnóstico diferencial 2»"]
+    },
+    "termos_busca": {
+      "canonico": "«nome canônico»",
+      "termos": [
+        { "termo": "«nome canônico»", "tipo": "canonico", "peso": 1.0, "justificativa": "nome canônico", "testado": false, "claim_id": null },
+        { "termo": "«sinônimo técnico»", "tipo": "sinonimo", "peso": 0.8, "justificativa": "«uso corrente»", "testado": false, "claim_id": null },
+        { "termo": "«termo popular»", "tipo": "popular", "peso": 0.6, "justificativa": "«como o paciente relata»", "testado": false, "claim_id": null },
+        { "termo": "«abreviação»", "tipo": "abreviacao", "peso": 0.7, "justificativa": "«sigla usada no plantão»", "testado": false, "claim_id": null },
+        { "termo": "«erro de digitação comum»", "tipo": "erro_comum", "peso": 0.4, "justificativa": "«variação observada em logs»", "testado": false, "claim_id": null },
+        { "termo": "«expressão regional»", "tipo": "regional", "peso": 0.5, "justificativa": "«região de uso»", "testado": false, "claim_id": null }
+      ]
+    },
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "«sinal observável»",
+        "por_que": "«o que ele indica»",
+        "acao": "«acionar / monitorizar / solicitar»",
+        "destino": "sala_vermelha",
+        "claim_id": null
+      },
+      {
+        "id": "AL-02",
+        "sinal": "«sinal observável»",
+        "por_que": "«o que ele indica»",
+        "acao": "«ação imediata»",
+        "destino": "observacao",
+        "claim_id": null
+      },
+      {
+        "id": "AL-03",
+        "sinal": "«sinal observável»",
+        "por_que": "«o que ele indica»",
+        "acao": "«ação imediata»",
+        "destino": "transferencia",
+        "claim_id": null
+      }
+    ],
+    "anamnese": {
+      "campos": [
+        {
+          "id": "AN-01",
+          "rotulo": "Queixa e duração",
+          "tipo": "texto_curto",
+          "obrigatoriedade": "O",
+          "exibicao": "sempre",
+          "porque": "define o enquadramento inicial",
+          "opcoes": []
+        },
+        {
+          "id": "AN-02",
+          "rotulo": "Início",
+          "tipo": "enum",
+          "obrigatoriedade": "O",
+          "exibicao": "sempre",
+          "porque": "diferencia etiologias",
+          "opcoes": ["súbito", "progressivo"]
+        },
+        {
+          "id": "AN-03",
+          "rotulo": "Sintomas associados",
+          "tipo": "multienum",
+          "obrigatoriedade": "O",
+          "exibicao": "sempre",
+          "porque": "«qual decisão muda»",
+          "opcoes": ["«opção 1»", "«opção 2»"]
+        },
+        {
+          "id": "AN-04",
+          "rotulo": "Alergias",
+          "tipo": "lista",
+          "obrigatoriedade": "O",
+          "exibicao": "sempre",
+          "porque": "contraindicação absoluta",
+          "opcoes": []
+        }
+      ],
+      "texto_template": "Paciente de «idade» anos, «sexo», com «queixa» de início «início», associado a «sintomas». Nega «negativos». Alergias: «alergias».",
+      "negativos_relevantes": ["«negativo relevante 1»", "«negativo relevante 2»"]
+    },
+    "exame_fisico": {
+      "itens": [
+        { "bloco": "vitais", "item": "PA, FC, FR, T, SpO2", "obrigatoriedade": "O", "porque": "«critério de gravidade»", "achado_que_muda_conduta": "«limiar»" },
+        { "bloco": "geral", "item": "Estado geral e perfusão", "obrigatoriedade": "O", "porque": "«estratifica risco»", "achado_que_muda_conduta": "«achado»" },
+        { "bloco": "segmentar", "item": "«exame dirigido»", "obrigatoriedade": "O", "porque": "«qual decisão muda»", "achado_que_muda_conduta": "«achado»" },
+        { "bloco": "negativos", "item": "«achado negativo relevante»", "obrigatoriedade": "O", "porque": "exclui gravidade", "achado_que_muda_conduta": null }
+      ],
+      "achados_negativos": ["«o que se pesquisou e não se encontrou»"]
+    },
+    "prescricoes": {
+      "ambulatorial": {
+        "itens": [
+          {
+            "id": "PA-01",
+            "classe": "sintomatico",
+            "item": "«medicamento»",
+            "indicacao": "«indicação específica nesta condição»",
+            "dose": { "valor": null, "unidade": "«mg»", "por_kg": false },
+            "via": "VO",
+            "frequencia": { "valor": null, "unidade": "«h»" },
+            "duracao": { "valor": null, "unidade": "«dias»", "maxima": true },
+            "dose_maxima": null,
+            "diluicao": null,
+            "tempo_infusao": null,
+            "ajustes": ["«renal»"],
+            "precaucoes": ["«precaução principal»"],
+            "monitorizacao": [],
+            "alternativa_de": [],
+            "dupla_checagem": false,
+            "claim_id": null,
+            "risk_class": "B"
+          },
+          {
+            "id": "PA-02",
+            "classe": "medida_nao_farmacologica",
+            "item": "«medida de suporte»",
+            "indicacao": "«indicação»",
+            "dose": { "valor": null, "unidade": "«—»", "por_kg": false },
+            "via": "outra",
+            "frequencia": { "valor": null, "unidade": "«—»" },
+            "duracao": { "valor": null, "unidade": "«—»", "maxima": false },
+            "ajustes": [],
+            "precaucoes": [],
+            "monitorizacao": [],
+            "claim_id": null,
+            "risk_class": "C"
+          }
+        ]
+      },
+      "intrahospitalar": {
+        "itens": [
+          {
+            "id": "PI-01",
+            "classe": "suporte",
+            "item": "«medicamento»",
+            "indicacao": "«indicação»",
+            "dose": { "valor": null, "unidade": "«mg»", "por_kg": true },
+            "via": "IV",
+            "frequencia": { "valor": null, "unidade": "«h»" },
+            "duracao": { "valor": null, "unidade": "«dose única»", "maxima": true },
+            "dose_maxima": { "valor": null, "unidade": "«mg»", "por_kg": false },
+            "diluicao": "«volume + diluente»",
+            "tempo_infusao": "«minutos»",
+            "ajustes": ["«renal»", "«pediátrico»"],
+            "precaucoes": ["«precaução»"],
+            "monitorizacao": ["«o que medir»"],
+            "dupla_checagem": true,
+            "claim_id": null,
+            "risk_class": "A"
+          }
+        ]
+      }
+    },
+    "medicacoes_principais": [
+      { "classe": "«classe terapêutica»", "papel": "primeira_linha", "por_que": "«objetivo clínico»", "quando_evitar": "«situação»", "claim_id": null },
+      { "classe": "«classe de suporte»", "papel": "suporte", "por_que": "«objetivo»", "quando_evitar": "«situação»", "claim_id": null }
+    ],
+    "alternativas": [
+      { "alternativa": "«alternativa»", "criterio_troca": "indisponivel_local", "quando_nao_usar": "«situação»", "claim_id": null },
+      { "alternativa": "«alternativa»", "criterio_troca": "alergia", "quando_nao_usar": "«situação»", "claim_id": null }
+    ],
+    "ajustes": [
+      { "populacao": "renal", "dado_entrada": "ClCr estimada", "regra": "«faixas»", "monitorizacao": "«o que medir»", "risco": "«risco»", "claim_id": null },
+      { "populacao": "pediatrico", "dado_entrada": "peso (kg)", "regra": "«regra por peso»", "monitorizacao": "«o que medir»", "risco": "«risco»", "claim_id": null }
+    ],
+    "exames": {
+      "urgencia": [
+        {
+          "id": "EU-01",
+          "nome": "«exame»",
+          "tipo": "urgencia",
+          "indicacao": "«indicação»",
+          "o_que_muda": "«decisão que altera»",
+          "prazo": "«min»",
+          "recurso": "lab",
+          "codigos": { "tuss": null, "sigtap": null, "loinc": null },
+          "claim_id": null
+        }
+      ],
+      "complementares": [
+        {
+          "id": "EC-01",
+          "nome": "«exame»",
+          "tipo": "complementar",
+          "indicacao": "«indicação»",
+          "o_que_muda": "«decisão»",
+          "prazo": "«horas»",
+          "recurso": "rx",
+          "codigos": { "tuss": null, "sigtap": null, "loinc": null },
+          "claim_id": null
+        }
+      ],
+      "nao_rotineiros": [
+        {
+          "id": "EN-01",
+          "nome": "«exame»",
+          "tipo": "nao_rotineiro",
+          "indicacao": "«gatilho»",
+          "o_que_muda": "«decisão»",
+          "prazo": "«horas»",
+          "recurso": "tc",
+          "codigos": { "tuss": null, "sigtap": null, "loinc": null },
+          "claim_id": null
+        }
+      ],
+      "evitar": [
+        {
+          "id": "EV-01",
+          "nome": "«exame»",
+          "tipo": "evitar",
+          "indicacao": "«quando não solicitar»",
+          "o_que_muda": null,
+          "prazo": "«não se aplica»",
+          "recurso": "outro",
+          "codigos": { "tuss": null, "sigtap": null, "loinc": null },
+          "motivo": "«baixo valor, radiação, custo ou tempo»",
+          "alternativa": "«conduta alternativa»",
+          "claim_id": null
+        }
+      ]
+    },
+    "orientacoes": [
+      { "id": "OR-01", "categoria": "cuidados", "texto": "«orientação em linguagem clara»", "obrigatoria": true },
+      { "id": "OR-02", "categoria": "sinais_de_alarme", "texto": "«procure emergência se ...»", "obrigatoria": true }
+    ],
+    "documentos": [
+      {
+        "tipo": "atestado",
+        "aplicavel": false,
+        "quando": null,
+        "campos": [],
+        "observacao": "«definir política institucional»"
+      }
+    ],
+    "encaminhamentos": [
+      {
+        "destino": "psf",
+        "criterio": "«critério»",
+        "prioridade": "eletiva",
+        "informacoes_minimas": ["«diagnóstico»", "«conduta realizada»", "«pendências»"],
+        "claim_id": null
+      }
+    ],
+    "criterios": {
+      "alta": [
+        { "id": "CA-01", "tipo": "alta", "descricao": "«critério objetivo»", "natureza": "obrigatorio", "verificacao": "«como verificar»", "claim_id": null },
+        { "id": "CA-02", "tipo": "alta", "descricao": "«situação que impede a alta»", "natureza": "contraindicador", "verificacao": "«como verificar»", "claim_id": null }
+      ],
+      "observacao": [
+        {
+          "id": "OB-01",
+          "tipo": "observacao",
+          "descricao": "«critério»",
+          "natureza": "obrigatorio",
+          "verificacao": "«como verificar»",
+          "tempo_minimo": "«horas»",
+          "reavaliacao": "«a cada X horas»",
+          "claim_id": null
+        }
+      ],
+      "transferencia": [
+        {
+          "id": "TR-01",
+          "tipo": "transferencia",
+          "descricao": "«situação que exige recurso indisponível»",
+          "natureza": "obrigatorio",
+          "verificacao": "«recurso declarado indisponível na unidade»",
+          "recurso_ausente": "«UTI»",
+          "claim_id": null
+        }
+      ]
+    },
+    "alertas": [
+      {
+        "id": "SA-01",
+        "tipo": "alergia",
+        "gatilho": "«medicamento ou classe»",
+        "severidade": "grave",
+        "mensagem": "«risco em uma frase curta»",
+        "acao": "«trocar ou justificar»",
+        "override_permitido": true,
+        "reason_codes": ["alergia_conhecida"]
+      },
+      {
+        "id": "SA-02",
+        "tipo": "dose_maxima",
+        "gatilho": "«dose acima do teto cadastrado»",
+        "severidade": "grave",
+        "mensagem": "«risco em uma frase curta»",
+        "acao": "«reduzir ou justificar»",
+        "override_permitido": true,
+        "reason_codes": ["necessidade_clinica"]
+      }
+    ],
+    "contraindicacoes": [
+      { "situacao": "«situação»", "conduta": "«não usar / trocar por»", "claim_id": null }
+    ],
+    "dados_paciente": [
+      { "dado": "Idade", "obrigatoriedade": "O", "porque": "faixa etária, dose e critérios", "validacao": "0–120 anos" },
+      { "dado": "Peso", "obrigatoriedade": "C", "porque": "dose por kg", "validacao": "> 0 kg" },
+      { "dado": "Alergias", "obrigatoriedade": "O", "porque": "alerta grave", "validacao": "lista ou 'nega' explícito" },
+      { "dado": "Função renal (ClCr)", "obrigatoriedade": "C", "porque": "ajuste renal", "validacao": "valor + unidade" }
+    ],
+    "fontes": [
+      {
+        "id": "src_placeholder",
+        "tipo": "protocolo_institucional",
+        "titulo": "«título da fonte»",
+        "localizador": "«URL, DOI ou caminho interno»",
+        "versao": "«versão/edição»",
+        "data": "«AAAA-MM»",
+        "acessado_em": null,
+        "hash": null,
+        "trecho": "«trecho usado»"
+      }
+    ],
+    "auditoria": {
+      "autor": "«nome do autor»",
+      "crm_autor": "«CRM/UF»",
+      "revisores": [],
+      "versao": "0.1.0",
+      "datas": { "criacao": null, "aprovacao": null, "publicacao": null },
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Criação do esqueleto a partir do template.", "data": null }
+      ],
+      "hash_conteudo": null
+    },
+    "lacunas": [
+      {
+        "id": "L-01",
+        "bloco": "6",
+        "descricao": "Sinais de alarme não definidos.",
+        "impacto": "critico",
+        "o_que_pesquisar": "«critérios de gravidade e conduta imediata»",
+        "tipo_fonte": "diretriz + protocolo institucional",
+        "responsavel": "«revisor clínico»",
+        "bloqueia_publicacao": true
+      },
+      {
+        "id": "L-02",
+        "bloco": "9-10",
+        "descricao": "Nenhuma prescrição definida.",
+        "impacto": "critico",
+        "o_que_pesquisar": "«esquemas, doses, diluições e ajustes»",
+        "tipo_fonte": "diretriz + bulário + farmácia",
+        "responsavel": "«revisor clínico»",
+        "bloqueia_publicacao": true
+      },
+      {
+        "id": "L-03",
+        "bloco": "24",
+        "descricao": "Revisores e próxima revisão não definidos.",
+        "impacto": "critico",
+        "o_que_pesquisar": "«governança e calendário de revisão»",
+        "tipo_fonte": "coordenação clínica",
+        "responsavel": "«coordenação»",
+        "bloqueia_publicacao": true
+      }
+    ]
+  }
+}

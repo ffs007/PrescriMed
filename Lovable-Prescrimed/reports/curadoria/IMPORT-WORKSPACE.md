@@ -1,0 +1,213 @@
+# IMPORT WORKSPACE — síndromes → pipeline de curadoria
+
+_Gerado em 2026-11-06T03:57:38.833Z_
+
+**Importadas:** 200 · **Puladas (curada equivalente existe):** 21 · **Itens:** 2291 (motor: 1158 · novos: 1133)
+
+**Puladas:** ALG-01, CAR-08, CAR-11, DERM-01, DERM-04, END-02, END-08, INF-01, INF-02, MSK-01, PED-06, RESP-03, RESP-05, RESP-20, URO-03, ALG-07, GI-04, GI-11, INF-08, MSK-06, PED-07
+
+
+- **ALG-02 Reação alérgica a medicamento** → `ws-alg_02.json` _(protocolo novo)_ — amb:4cls hosp:5cls meds:9
+- **ALG-03 Dermatite atópica** → `leg_2213.json` _(substitui legado 'leg_2213')_ — amb:11cls hosp:0cls meds:11
+- **ALG-04 Dermatite de contato** → `leg_31.json` _(substitui legado 'leg_31')_ — amb:11cls hosp:0cls meds:10
+- **ALG-05 Alergia alimentar** → `ws-alg_05.json` _(protocolo novo)_ — amb:5cls hosp:4cls meds:9
+- **ALG-06 Reação a contraste** → `ws-alg_06.json` _(protocolo novo)_ — amb:2cls hosp:7cls meds:8
+- **CAR-01 Dor torácica cardiovascular** → `ws-car_01.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:11
+- **CAR-02 Crise hipertensiva (urgência vs emergência)** → `ws-car_02.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **CAR-03 Hipertensão assintomática** → `ws-car_03.json` _(protocolo novo)_ — amb:8cls hosp:0cls meds:8
+- **CAR-04 Palpitações / taquicardia / bradicardia** → `ws-car_04.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:9
+- **CAR-05 Edema de membros inferiores** → `ws-car_05.json` _(protocolo novo)_ — amb:9cls hosp:0cls meds:9
+- **CAR-06 Insuficiência cardíaca descompensada** → `leg_39.json` _(substitui legado 'leg_39')_ — amb:2cls hosp:11cls meds:12
+- **CAR-07 Dor em panturrilha / suspeita de TVP** → `ws-car_07.json` _(protocolo novo)_ — amb:5cls hosp:5cls meds:10
+- **CAR-09 Síndrome coronariana aguda** → `ws-car_09.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:12
+- **CAR-10 Dissecção de aorta** → `ws-car_10.json` _(protocolo novo)_ — amb:2cls hosp:4cls meds:8
+- **CAR-12 Angina estável** → `ws-car_12.json` _(protocolo novo)_ — amb:12cls hosp:0cls meds:13
+- **CAR-13 Fibrilação atrial com resposta rápida** → `ws-car_13.json` _(protocolo novo)_ — amb:5cls hosp:5cls meds:10
+- **CAR-14 Taquicardia supraventricular** → `ws-car_14.json` _(protocolo novo)_ — amb:2cls hosp:7cls meds:9
+- **CAR-15 Bradicardia sintomática** → `ws-car_15.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:10
+- **CAR-16 Miocardite** → `ws-car_16.json` _(protocolo novo)_ — amb:2cls hosp:12cls meds:12
+- **CAR-17 Endocardite infecciosa** → `ws-car_17.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **CAR-18 Pericardite aguda** → `ws-car_18.json` _(protocolo novo)_ — amb:2cls hosp:6cls meds:8
+- **DERM-02 Abscesso cutâneo** → `ws-derm_02.json` _(protocolo novo)_ — amb:8cls hosp:3cls meds:10
+- **DERM-03 Erupção cutânea aguda (exantema)** → `ws-derm_03.json` _(protocolo novo)_ — amb:7cls hosp:0cls meds:9
+- **DERM-05 Escabiose / pediculose** → `escabiose.json` _(substitui legado 'escabiose')_ — amb:10cls hosp:0cls meds:10
+- **DERM-06 Herpes zoster** → `leg_50.json` _(substitui legado 'leg_50')_ — amb:8cls hosp:0cls meds:11
+- **DERM-07 Ferida cutânea crônica** → `ws-derm_07.json` _(protocolo novo)_ — amb:14cls hosp:0cls meds:13
+- **DERM-08 Queimadura superficial** → `ws-derm_08.json` _(protocolo novo)_ — amb:8cls hosp:6cls meds:14
+- **DERM-09 Picada de inseto / reação local** → `ws-derm_09.json` _(protocolo novo)_ — amb:11cls hosp:0cls meds:10
+- **DERM-10 Foliculite / impetigo** → `foliculite.json` _(substitui legado 'foliculite')_ — amb:10cls hosp:0cls meds:10
+- **DERM-11 Herpes simples** → `ws-derm_11.json` _(protocolo novo)_ — amb:9cls hosp:0cls meds:10
+- **DERM-12 Micose superficial** → `leg_33.json` _(substitui legado 'leg_33')_ — amb:8cls hosp:0cls meds:9
+- **DERM-13 Pediculose** → `pediculose.json` _(substitui legado 'pediculose')_ — amb:8cls hosp:0cls meds:8
+- **END-01 Hipoglicemia** → `hipoglicemia.json` _(substitui legado 'hipoglicemia')_ — amb:3cls hosp:5cls meds:8
+- **END-03 Hiperglicemia assintomática** → `ws-end_03.json` _(protocolo novo)_ — amb:8cls hosp:0cls meds:10
+- **END-04 Crise tireotóxica / hipotireoidismo** → `leg_41.json` _(substitui legado 'leg_41')_ — amb:2cls hosp:6cls meds:11
+- **END-05 Distúrbio eletrolítico (Na/K)** → `leg_2235.json` _(substitui legado 'leg_2235')_ — amb:2cls hosp:11cls meds:13
+- **END-06 Insuficiência adrenal** → `ws-end_06.json` _(protocolo novo)_ — amb:2cls hosp:5cls meds:8
+- **END-07 Síndrome metabólica / obesidade** → `ws-end_07.json` _(protocolo novo)_ — amb:12cls hosp:0cls meds:13
+- **END-09 Estado hiperosmolar** → `ws-end_09.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:13
+- ⚠ **END-10 Hiponatremia** colidia com `leg_2235` → gerada como protocolo novo `ws-end_10`
+- **END-10 Hiponatremia** → `ws-end_10.json` _(substitui legado 'leg_2235')_ — amb:2cls hosp:11cls meds:12
+- **GER-01 Quedas no idoso** → `ws-ger_01.json` _(protocolo novo)_ — amb:6cls hosp:5cls meds:10
+- **GER-02 Delirium no idoso** → `ws-ger_02.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:9
+- **GER-03 Polifarmácia / revisão de medicações** → `ws-ger_03.json` _(protocolo novo)_ — amb:14cls hosp:0cls meds:13
+- **GER-04 Incontinência urinária** → `ws-ger_04.json` _(protocolo novo)_ — amb:7cls hosp:0cls meds:9
+- **GER-05 Constipação no idoso** → `ws-ger_05.json` _(protocolo novo)_ — amb:8cls hosp:0cls meds:10
+- **GER-06 Úlcera por pressão** → `ws-ger_06.json` _(protocolo novo)_ — amb:12cls hosp:2cls meds:13
+- **GER-07 Síncope no idoso** → `ws-ger_07.json` _(protocolo novo)_ — amb:3cls hosp:7cls meds:9
+- **GER-08 Desnutrição no idoso** → `ws-ger_08.json` _(protocolo novo)_ — amb:9cls hosp:1cls meds:9
+- **GER-09 Fratura de fragilidade** → `ws-ger_09.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **GER-10 Demência com agitação** → `ws-ger_10.json` _(protocolo novo)_ — amb:7cls hosp:3cls meds:10
+- **GI-01 Diarreia aguda / gastroenterite** → `ws-gi_01.json` _(protocolo novo)_ — amb:8cls hosp:2cls meds:9
+- **GI-02 Diarreia persistente** → `leg_25.json` _(substitui legado 'leg_25')_ — amb:11cls hosp:1cls meds:12
+- **GI-03 Náuseas e vômitos inespecíficos** → `ws-gi_03.json` _(protocolo novo)_ — amb:5cls hosp:6cls meds:10
+- **GI-05 Dispepsia / gastrite / epigastralgia** → `ws-gi_05.json` _(protocolo novo)_ — amb:10cls hosp:0cls meds:11
+- **GI-06 DRGE (exacerbação)** → `leg_20.json` _(substitui legado 'leg_20')_ — amb:6cls hosp:0cls meds:9
+- **GI-07 Constipação aguda ou cronificada** → `ws-gi_07.json` _(protocolo novo)_ — amb:8cls hosp:1cls meds:11
+- **GI-08 Hemorroida / fissura anal** → `fissura-anal.json` _(substitui legado 'fissura-anal')_ — amb:10cls hosp:0cls meds:10
+- **GI-09 Sangramento digestivo alto suspeito** → `ws-gi_09.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **GI-10 Sangramento digestivo baixo suspeito** → `ws-gi_10.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **GI-12 Cólica biliar suspeita** → `ws-gi_12.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **GI-13 Pancreatite aguda** → `ws-gi_13.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:10
+- **GI-14 Apendicite suspeita** → `ws-gi_14.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:11
+- **GI-15 Diverticulite suspeita** → `ws-gi_15.json` _(protocolo novo)_ — amb:4cls hosp:8cls meds:11
+- **GI-16 Parasitoses intestinais** → `parasitoses.json` _(substitui legado 'parasitoses')_ — amb:7cls hosp:0cls meds:9
+- **GI-17 Intoxicação alimentar** → `ws-gi_17.json` _(protocolo novo)_ — amb:4cls hosp:6cls meds:9
+- **GI-18 Disenteria / diarreia invasiva** → `ws-gi_18.json` _(protocolo novo)_ — amb:6cls hosp:3cls meds:9
+- **GI-19 Doença ulcerosa / H. pylori** → `ws-gi_19.json` _(protocolo novo)_ — amb:9cls hosp:0cls meds:9
+- **GI-20 Colecistite aguda** → `ws-gi_20.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **GI-21 Doença inflamatória intestinal em surto** → `ws-gi_21.json` _(protocolo novo)_ — amb:6cls hosp:6cls meds:11
+- **GI-22 Abscesso perianal** → `ws-gi_22.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **GO-01 Sangramento uterino agudo** → `ws-go_01.json` _(protocolo novo)_ — amb:7cls hosp:5cls meds:11
+- **GO-02 Dor pélvica / ameaça de abortamento** → `ws-go_02.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **GO-03 Pré-eclâmpsia / eclâmpsia** → `ws-go_03.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:11
+- **GO-04 Trabalho de parto / ameaça de parto prematuro** → `ws-go_04.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:11
+- **GO-05 Infecção puerperal / mastite** → `mastite.json` _(substitui legado 'mastite')_ — amb:4cls hosp:6cls meds:9
+- **GO-06 Contracepção de emergência** → `contracepcao-emergencia.json` _(substitui legado 'contracepcao-emergencia')_ — amb:11cls hosp:0cls meds:10
+- ⚠ **GO-07 Violência sexual / profilaxia IST** colidia com `contracepcao-emergencia` → gerada como protocolo novo `ws-go_07`
+- **GO-07 Violência sexual / profilaxia IST** → `ws-go_07.json` _(substitui legado 'contracepcao-emergencia')_ — amb:2cls hosp:11cls meds:15
+- **GO-08 Gravidez ectópica** → `ws-go_08.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:9
+- **GO-09 Hiperêmese gravídica** → `ws-go_09.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:10
+- **GO-10 ITU na gestação** → `ws-go_10.json` _(protocolo novo)_ — amb:7cls hosp:2cls meds:9
+- **GO-11 Abscesso mamário** → `ws-go_11.json` _(protocolo novo)_ — amb:8cls hosp:2cls meds:9
+- **GO-12 Dismenorreia** → `dismenorreia.json` _(substitui legado 'dismenorreia')_ — amb:9cls hosp:0cls meds:10
+- **GO-13 Amenorreia** → `ws-go_13.json` _(protocolo novo)_ — amb:11cls hosp:0cls meds:11
+- **INF-03 Leptospirose** → `exp-lepto.json` _(substitui legado 'exp-lepto')_ — amb:4cls hosp:7cls meds:10
+- **INF-04 Malária** → `leg_2221.json` _(substitui legado 'leg_2221')_ — amb:2cls hosp:8cls meds:10
+- **INF-05 Tuberculose** → `ws-inf_05.json` _(protocolo novo)_ — amb:11cls hosp:0cls meds:10
+- **INF-06 HIV agudo / profilaxia pós-exposição** → `ws-inf_06.json` _(protocolo novo)_ — amb:8cls hosp:3cls meds:13
+- **INF-07 Síndrome respiratória viral grave** → `ws-inf_07.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **INF-09 Zika** → `ws-inf_09.json` _(protocolo novo)_ — amb:5cls hosp:4cls meds:9
+- **INF-10 Mononucleose** → `exp-mono.json` _(substitui legado 'exp-mono')_ — amb:7cls hosp:2cls meds:9
+- **INF-11 Sífilis** → `sifilis.json` _(substitui legado 'sifilis')_ — amb:5cls hosp:5cls meds:9
+- **INF-12 Tétano** → `ws-inf_12.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:9
+- **INF-13 Infecção de ferida** → `ws-inf_13.json` _(protocolo novo)_ — amb:6cls hosp:4cls meds:9
+- **INF-14 Febre sem foco no adulto** → `febre-crianca.json` _(substitui legado 'febre-crianca')_ — amb:5cls hosp:4cls meds:9
+- **MSK-02 Cervicalgia / torcicolo** → `cervicalgia.json` _(substitui legado 'cervicalgia')_ — amb:5cls hosp:3cls meds:9
+- **MSK-03 Dor articular aguda (ombro/joelho)** → `ws-msk_03.json` _(protocolo novo)_ — amb:6cls hosp:5cls meds:11
+- **MSK-04 Entorse de tornozelo** → `entorse.json` _(substitui legado 'entorse')_ — amb:4cls hosp:5cls meds:8
+- **MSK-05 Contusão / trauma leve** → `ws-msk_05.json` _(protocolo novo)_ — amb:8cls hosp:0cls meds:9
+- **MSK-07 Tendinite / bursite** → `ws-msk_07.json` _(protocolo novo)_ — amb:10cls hosp:0cls meds:10
+- **MSK-08 Síndrome do túnel do carpo** → `exp-carpo.json` _(substitui legado 'exp-carpo')_ — amb:8cls hosp:0cls meds:10
+- **MSK-09 Fibromialgia** → `leg_2226.json` _(substitui legado 'leg_2226')_ — amb:8cls hosp:0cls meds:9
+- **MSK-10 Osteoartrite em crise** → `ws-msk_10.json` _(protocolo novo)_ — amb:10cls hosp:0cls meds:10
+- **MSK-11 Dor miofascial** → `ws-msk_11.json` _(protocolo novo)_ — amb:9cls hosp:0cls meds:9
+- **MSK-12 Lesão meniscal / ligamentar** → `ws-msk_12.json` _(protocolo novo)_ — amb:7cls hosp:0cls meds:8
+- **MSK-13 Artrite séptica** → `ws-msk_13.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:10
+- **MSK-14 Costocondrite** → `dor-toracica-baixo-risco.json` _(substitui legado 'dor-toracica-baixo-risco')_ — amb:9cls hosp:1cls meds:10
+- **NEU-01 Cefaleia primária / enxaqueca** → `ws-neu_01.json` _(protocolo novo)_ — amb:7cls hosp:5cls meds:14
+- **NEU-02 Cefaleia com sinais de alarme** → `ws-neu_02.json` _(protocolo novo)_ — amb:2cls hosp:13cls meds:14
+- **NEU-03 Tontura / vertigem (central vs periférica)** → `ws-neu_03.json` _(protocolo novo)_ — amb:7cls hosp:4cls meds:10
+- **NEU-04 Síncope e perda transitória de consciência** → `ws-neu_04.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:10
+- **NEU-05 Crise epiléptica** → `ws-neu_05.json` _(protocolo novo)_ — amb:1cls hosp:9cls meds:12
+- **NEU-06 Primeiro episódio convulsivo** → `ws-neu_06.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:11
+- **NEU-07 Parestesias e neuralgias** → `exp-trigemeo.json` _(substitui legado 'exp-trigemeo')_ — amb:10cls hosp:0cls meds:11
+- **NEU-08 Suspeita de AVC** → `ws-neu_08.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:13
+- **NEU-09 Confusão mental / rebaixamento** → `ws-neu_09.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:11
+- **NEU-10 Paralisia facial periférica** → `paralisia-facial.json` _(substitui legado 'paralisia-facial')_ — amb:7cls hosp:0cls meds:9
+- **NEU-11 Lombociatalgia com sinais neurológicos** → `ws-neu_11.json` _(protocolo novo)_ — amb:7cls hosp:3cls meds:11
+- **NEU-12 AVC hemorrágico / hemorragia subaracnóidea** → `ws-neu_12.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:13
+- **NEU-13 Ataque isquêmico transitório** → `ws-neu_13.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:12
+- **NEU-14 Estado de mal epiléptico** → `ws-neu_14.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:14
+- **NEU-15 Meningite bacteriana** → `ws-neu_15.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **NEU-16 Encefalite** → `ws-neu_16.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:12
+- **NEU-17 Neuropatia periférica aguda** → `ws-neu_17.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **OFT-01 Olho vermelho / conjuntivite grave** → `conjuntivite.json` _(substitui legado 'conjuntivite')_ — amb:9cls hosp:1cls meds:12
+- **OFT-02 Trauma ocular** → `ws-oft_02.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:13
+- **OFT-03 Abscesso periamigdaliano** → `ws-oft_03.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **OFT-04 Epistaxe posterior** → `ws-oft_04.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:10
+- **OFT-05 Corpo estranho de via aérea** → `ws-oft_05.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:10
+- **OFT-06 Surdez súbita** → `ws-oft_06.json` _(protocolo novo)_ — amb:7cls hosp:2cls meds:9
+- **OFT-07 Ceratite** → `ws-oft_07.json` _(protocolo novo)_ — amb:9cls hosp:0cls meds:12
+- **OFT-08 Glaucoma agudo** → `ws-oft_08.json` _(protocolo novo)_ — amb:6cls hosp:4cls meds:10
+- **OFT-09 Uveíte** → `ws-oft_09.json` _(protocolo novo)_ — amb:9cls hosp:0cls meds:11
+- **OFT-10 Hordéolo / calázio** → `ws-oft_10.json` _(protocolo novo)_ — amb:8cls hosp:0cls meds:10
+- **OFT-11 Blefarite** → `hordeolo.json` _(substitui legado 'hordeolo')_ — amb:8cls hosp:0cls meds:9
+- **OFT-12 Perda visual súbita** → `ws-oft_12.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:9
+- **PED-01 Febre sem foco** → `ws-ped_01.json` _(protocolo novo)_ — amb:4cls hosp:5cls meds:8
+- **PED-02 Bronquiolite** → `bronquiolite.json` _(substitui legado 'bronquiolite')_ — amb:5cls hosp:5cls meds:9
+- **PED-03 Diarreia e vômitos agudos** → `ws-ped_03.json` _(protocolo novo)_ — amb:6cls hosp:4cls meds:10
+- **PED-04 Asma na infância** → `ws-ped_04.json` _(protocolo novo)_ — amb:5cls hosp:5cls meds:9
+- **PED-05 Crupe / laringite** → `ws-ped_05.json` _(protocolo novo)_ — amb:5cls hosp:5cls meds:9
+- **PED-08 Exantema febril** → `exp-escarlatina.json` _(substitui legado 'exp-escarlatina')_ — amb:11cls hosp:0cls meds:11
+- **PED-09 Convulsão febril** → `ws-ped_09.json` _(protocolo novo)_ — amb:4cls hosp:7cls meds:11
+- **PED-10 Varicela** → `varicela.json` _(substitui legado 'varicela')_ — amb:7cls hosp:4cls meds:11
+- **PED-11 Síndrome mão-pé-boca** → `ws-ped_11.json` _(protocolo novo)_ — amb:6cls hosp:3cls meds:8
+- ⚠ **PED-12 Escarlatina** colidia com `exp-escarlatina` → gerada como protocolo novo `ws-ped_12`
+- **PED-12 Escarlatina** → `ws-ped_12.json` _(substitui legado 'exp-escarlatina')_ — amb:7cls hosp:2cls meds:9
+- **PED-13 ITU pediátrica** → `ws-ped_13.json` _(protocolo novo)_ — amb:6cls hosp:4cls meds:10
+- **PED-14 Pneumonia pediátrica** → `ws-ped_14.json` _(protocolo novo)_ — amb:6cls hosp:5cls meds:10
+- **PED-15 Constipação pediátrica** → `ws-ped_15.json` _(protocolo novo)_ — amb:9cls hosp:0cls meds:8
+- **PED-16 Cólica do lactente** → `colica-lactente.json` _(substitui legado 'colica-lactente')_ — amb:6cls hosp:0cls meds:7
+- **PSQ-01 Agitação psicomotora** → `agitacao.json` _(substitui legado 'agitacao')_ — amb:2cls hosp:7cls meds:10
+- **PSQ-02 Ideação suicida** → `ws-psq_02.json` _(protocolo novo)_ — amb:2cls hosp:7cls meds:9
+- **PSQ-03 Abstinência alcoólica** → `ws-psq_03.json` _(protocolo novo)_ — amb:2cls hosp:6cls meds:9
+- **PSQ-04 Crise de ansiedade / pânico** → `ansiedade.json` _(substitui legado 'ansiedade')_ — amb:6cls hosp:2cls meds:8
+- **PSQ-05 Episódio depressivo** → `ws-psq_05.json` _(protocolo novo)_ — amb:7cls hosp:0cls meds:9
+- **PSQ-06 Psicose aguda** → `ws-psq_06.json` _(protocolo novo)_ — amb:2cls hosp:6cls meds:10
+- **PSQ-07 Insônia aguda** → `insonia.json` _(substitui legado 'insonia')_ — amb:9cls hosp:0cls meds:9
+- **PSQ-08 Intoxicação por drogas** → `ws-psq_08.json` _(protocolo novo)_ — amb:2cls hosp:14cls meds:14
+- **PSQ-09 Transtorno bipolar em crise** → `ws-psq_09.json` _(protocolo novo)_ — amb:2cls hosp:7cls meds:11
+- **PSQ-10 Intoxicação alcoólica aguda** → `ws-psq_10.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **RESP-01 IVAS / resfriado comum** → `leg_18.json` _(substitui legado 'leg_18')_ — amb:8cls hosp:1cls meds:8
+- **RESP-02 Síndrome gripal / suspeita de COVID e influenza** → `leg_19.json` _(substitui legado 'leg_19')_ — amb:5cls hosp:5cls meds:10
+- **RESP-04 Otite média e externa** → `otite-externa.json` _(substitui legado 'otite-externa')_ — amb:7cls hosp:3cls meds:10
+- **RESP-06 Rinite alérgica (crise)** → `leg_14.json` _(substitui legado 'leg_14')_ — amb:8cls hosp:0cls meds:10
+- **RESP-07 Epistaxe** → `exp-epistaxe.json` _(substitui legado 'exp-epistaxe')_ — amb:6cls hosp:6cls meds:11
+- **RESP-08 Corpo estranho ouvido/nariz** → `ws-resp_08.json` _(protocolo novo)_ — amb:8cls hosp:2cls meds:9
+- ⚠ **RESP-09 Conjuntivite** colidia com `conjuntivite` → gerada como protocolo novo `ws-resp_09`
+- **RESP-09 Conjuntivite** → `ws-resp_09.json` _(substitui legado 'conjuntivite')_ — amb:9cls hosp:0cls meds:9
+- **RESP-10 Dor de garganta inespecífica** → `ws-resp_10.json` _(protocolo novo)_ — amb:6cls hosp:0cls meds:8
+- **RESP-11 Tosse aguda / bronquite** → `ws-resp_11.json` _(protocolo novo)_ — amb:12cls hosp:0cls meds:11
+- **RESP-12 Crise asmática** → `ws-resp_12.json` _(protocolo novo)_ — amb:5cls hosp:5cls meds:10
+- **RESP-13 DPOC exacerbado** → `ws-resp_13.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:12
+- **RESP-14 Pneumonia suspeita (PAC)** → `ws-resp_14.json` _(protocolo novo)_ — amb:6cls hosp:5cls meds:10
+- **RESP-15 Dispneia a esclarecer** → `ws-resp_15.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **RESP-16 Dor torácica pleurítica** → `ws-resp_16.json` _(protocolo novo)_ — amb:6cls hosp:5cls meds:12
+- **RESP-17 Pneumotórax** → `ws-resp_17.json` _(protocolo novo)_ — amb:2cls hosp:7cls meds:9
+- **RESP-18 Derrame pleural** → `ws-resp_18.json` _(protocolo novo)_ — amb:3cls hosp:7cls meds:9
+- **RESP-19 Hemoptise** → `ws-resp_19.json` _(protocolo novo)_ — amb:2cls hosp:13cls meds:13
+- **TRA-01 Ferimento cortante / sutura** → `ws-tra_01.json` _(protocolo novo)_ — amb:12cls hosp:0cls meds:13
+- **TRA-02 Mordedura animal** → `ws-tra_02.json` _(protocolo novo)_ — amb:7cls hosp:5cls meds:13
+- **TRA-03 Queimadura química** → `ws-tra_03.json` _(protocolo novo)_ — amb:2cls hosp:12cls meds:12
+- **TRA-04 Trauma craniano leve** → `ws-tra_04.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:11
+- **TRA-05 Fratura de membro** → `ws-tra_05.json` _(protocolo novo)_ — amb:2cls hosp:10cls meds:10
+- **TRA-06 Amputação traumática** → `ws-tra_06.json` _(protocolo novo)_ — amb:2cls hosp:11cls meds:11
+- **TRA-07 Luxação** → `ws-tra_07.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **TRA-08 Corpo estranho cutâneo** → `ws-tra_08.json` _(protocolo novo)_ — amb:5cls hosp:6cls meds:10
+- **TRA-09 Picada de animal peçonhento** → `ws-tra_09.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:11
+- **TRA-10 Trauma dentário** → `ws-tra_10.json` _(protocolo novo)_ — amb:9cls hosp:3cls meds:11
+- **TRA-11 Trauma de mão e dedo** → `ws-tra_11.json` _(protocolo novo)_ — amb:8cls hosp:2cls meds:10
+- **TRA-12 Hematoma subungueal** → `ws-tra_12.json` _(protocolo novo)_ — amb:8cls hosp:2cls meds:10
+- **URO-01 Infecção urinária baixa (cistite)** → `leg_8.json` _(substitui legado 'leg_8')_ — amb:10cls hosp:0cls meds:9
+- **URO-02 Pielonefrite suspeita** → `pielonefrite.json` _(substitui legado 'pielonefrite')_ — amb:2cls hosp:9cls meds:10
+- **URO-04 Hematúria aguda** → `ws-uro_04.json` _(protocolo novo)_ — amb:2cls hosp:8cls meds:10
+- **URO-05 Retenção urinária aguda** → `ws-uro_05.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:10
+- **URO-06 Corrimento uretral / balanopostite** → `exp-balano.json` _(substitui legado 'exp-balano')_ — amb:10cls hosp:0cls meds:10
+- **URO-07 Corrimento vaginal / vulvovaginite** → `corrimento-vaginal.json` _(substitui legado 'corrimento-vaginal')_ — amb:10cls hosp:0cls meds:10
+- **URO-08 Dor pélvica aguda / DIP** → `ws-uro_08.json` _(protocolo novo)_ — amb:3cls hosp:8cls meds:10
+- **URO-09 Herpes genital** → `herpes-genital.json` _(substitui legado 'herpes-genital')_ — amb:6cls hosp:0cls meds:8
+- **URO-10 Dor testicular / orquiepididimite** → `orquiepididimite.json` _(substitui legado 'orquiepididimite')_ — amb:6cls hosp:3cls meds:9
+- **URO-11 Injúria renal aguda** → `ws-uro_11.json` _(protocolo novo)_ — amb:2cls hosp:9cls meds:10
+- **URO-12 ITU complicada** → `ws-uro_12.json` _(protocolo novo)_ — amb:2cls hosp:7cls meds:9
+- **URO-13 Prostatite aguda** → `prostatite.json` _(substitui legado 'prostatite')_ — amb:5cls hosp:6cls meds:10

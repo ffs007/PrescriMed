@@ -1,0 +1,1242 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "URO-12",
+    "area": "Urinário",
+    "nome": "ITU complicada",
+    "aliases": [
+      "ITU complicada",
+      "infecção urinária complicada",
+      "pielonefrite complicada",
+      "ITU em gestante",
+      "ITU em homem",
+      "ITU associada a cateter",
+      "ITU obstrutiva",
+      "sepse de foco urinário"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "ITU complicada é a infecção do trato urinário em paciente que tem um fator capaz de transformar uma infecção simples em falha terapêutica, recidiva ou sepse: gestação, sexo masculino, idade avançada com fragilidade, diabetes, cateter ou outro dispositivo, obstrução ou anomalia estrutural, imunossupressão, ITU recorrente e função renal reduzida. A classificação não é acadêmica: ela muda via, espectro, duração e necessidade de imagem. Três regras organizam o manejo. A primeira é cultura antes do antibiótico — urocultura com antibiograma é obrigatória em toda ITU complicada, porque a escolha empírica erra e a duração depende do agente; sem cultura não há descalonamento nem tratamento dirigido. A segunda é procurar e remover o fator: cateter infectado se troca ou se retira, obstrução se drena com cateter duplo J ou nefrostomia, abscesso se drena — antibiótico sem controle do foco não resolve obstrução. A terceira é escolher o esquema pelo cenário, não pelo hábito: ceftriaxona para a ITU complicada comunitária sem gravidade, amoxicilina-clavulanato no descalonamento oral quando a cultura permite, piperacilina-tazobactam na sepse, no cateter e na instrumentação recente, ertapenem quando há ESBL confirmado ou suspeito, meropenem no choque séptico e na falha do ertapenem, aminoglicosídeo na alergia grave a beta-lactâmico, e ciprofloxacino apenas reservado, com sensibilidade documentada. O erro que mais mata é tratar ITU complicada com esquema de cistite simples — nitrofurantoína, fosfomicina ou três dias de qualquer antibiótico: esses fármacos não atingem parênquima renal, falham e evoluem para bacteremia. O segundo erro é prescrever quinolona de rotina, inclusive em gestante, e o terceiro é tratar bacteriúria assintomática em cateterizado ou idoso, que é colonização e não infecção.",
+    "inclusao": [
+      "Pielonefrite ou ITU baixa em gestante, em qualquer trimestre",
+      "ITU em homem, com disúria, febre, dor perineal ou sintomas obstrutivos",
+      "ITU em idoso frágil, institucionalizado, com delirium, queda ou incontinência de início recente",
+      "ITU em diabético, com ou sem controle glicêmico adequado",
+      "ITU associada a cateter vesical, cateter duplo J, nefrostomia ou cateterismo intermitente",
+      "ITU com obstrução urinária, cálculo impactado, hiperplasia prostática, estenose ou tumor",
+      "ITU em imunossuprimido, transplantado renal, neutropênico ou em uso de imunobiológico",
+      "ITU recorrente — duas ou mais em seis meses ou três ou mais em doze meses",
+      "ITU com sinais de sepse, hipotensão, confusão ou oligúria de foco urinário"
+    ],
+    "exclusao": [
+      {
+        "situacao": "mulher adulta não gestante, sem anomalia, com disúria e urgência sem febre nem dor lombar",
+        "fluxo": "cistite não complicada — URO-01"
+      },
+      {
+        "situacao": "mulher adulta não gestante com pielonefrite e sem fator de complicação",
+        "fluxo": "pielonefrite não complicada — URO-02"
+      },
+      {
+        "situacao": "dor lombar em cólica, com hematúria e sem febre ou disúria",
+        "fluxo": "cólica renal — URO-03"
+      },
+      {
+        "situacao": "corrimento uretral, disúria sem febre e sem bacteriúria em homem jovem",
+        "fluxo": "uretrite — URO-06"
+      },
+      {
+        "situacao": "retenção urinária aguda com globo vesical doloroso e sem infecção",
+        "fluxo": "retenção urinária — URO-05"
+      },
+      {
+        "situacao": "hematúria macroscópica persistente sem febre nem disúria",
+        "fluxo": "investigação de hematúria — URO-04"
+      },
+      {
+        "situacao": "criança com ITU, inclusive com refluxo",
+        "fluxo": "ITU pediátrica — PED-13"
+      },
+      {
+        "situacao": "gestante com bacteriúria assintomática, sem febre, dor lombar ou contração",
+        "fluxo": "rastreamento e tratamento ambulatorial do pré-natal — GO-10"
+      },
+      {
+        "situacao": "prostatite aguda com febre alta, dor perineal e dificuldade miccional intensa",
+        "fluxo": "avaliação urológica específica, com antibioticoterapia prolongada"
+      },
+      {
+        "situacao": "bacteriúria assintomática em cateterizado, idoso institucionalizado ou diabético sem sintoma",
+        "fluxo": "não tratar; caracterizar como colonização"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "hipotensão, taquicardia, confusão, extremidades frias ou oligúria",
+        "por_que": "sepse de foco urinário com disfunção orgânica",
+        "acao": "acionar protocolo de sepse, cristaloide 30 mL/kg, antibiótico na primeira hora e UTI conforme resposta",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "dor lombar intensa com anúria, globo vesical ou obstrução documentada",
+        "por_que": "ITU obstrutiva, com risco de pionefrose e perda renal",
+        "acao": "drenagem urinária de urgência com duplo J ou nefrostomia, além do antibiótico",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "febre persistente após 72 h de antibiótico adequado",
+        "por_que": "abscesso renal ou perinéfrico, obstrução não resolvida, agente resistente ou foco associado",
+        "acao": "tomografia de abdome e pelve com contraste, revisar cultura e reavaliar drenagem",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "gestante com febre, dor lombar, contrações ou redução de movimentos fetais",
+        "por_que": "pielonefrite na gestação com risco de parto prematuro e sepse materna",
+        "acao": "internação obstétrica, antibiótico parenteral, monitorização fetal e urocultura de controle",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "idoso frágil com delirium, queda ou incontinência de início recente",
+        "por_que": "ITU é causa tratável de confusão, mas também é diagnóstico de conveniência",
+        "acao": "confirmar com urocultura e sintomas urinários antes de tratar; investigar outras causas de delirium",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "imunossuprimido ou transplantado renal com febre, mesmo sem sintoma urinário",
+        "por_que": "apresentação atenuada e progressão rápida para bacteremia e abscesso",
+        "acao": "internar, colher hemocultura e urocultura, iniciar cobertura ampliada e imagem precoce",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "cateter vesical com febre, dor suprapúbica ou urina purulenta",
+        "por_que": "biofilme no dispositivo mantém a infecção e impede a erradicação",
+        "acao": "trocar ou retirar o cateter antes do antibiótico e colher cultura do novo cateter",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "creatinina em ascensão ou potássio elevado durante o tratamento",
+        "por_que": "lesão renal aguda por sepse, obstrução ou nefrotoxicidade do esquema",
+        "acao": "revisar volume, ajustar dose pelo clearance, suspender nefrotóxico e avaliar drenagem",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "ITU recorrente com mesmo agente em menos de 4 semanas após o tratamento",
+        "por_que": "recidiva por foco não removido, próstata, cálculo ou resistência",
+        "acao": "repetir urocultura com antibiograma, imagem do trato urinário e avaliação urológica",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-10",
+        "sinal": "uso de antibiótico nos últimos 90 dias, viagem recente ou colonização prévia por ESBL",
+        "por_que": "risco de enterobactéria produtora de beta-lactamase de espectro estendido",
+        "acao": "tratar com ertapenem empiricamente e colher cultura antes da primeira dose",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quantos dias de febre, dor lombar ou disúria e já usou antibiótico para este episódio?",
+      "Está grávida, há possibilidade de gestação ou está no puerpério?",
+      "Tem cateter vesical, duplo J, nefrostomia ou faz cateterismo intermitente?",
+      "É diabético, transplantado, neutropênico ou usa imunossupressor?",
+      "Quantas ITU teve nos últimos 6 e 12 meses e quais agentes cresceram nas culturas?",
+      "Usou antibiótico nos últimos 90 dias, esteve internado ou viajou para área de resistência?",
+      "Tem cálculo renal, hiperplasia prostática, bexiga neurogênica ou cirurgia urológica recente?",
+      "Qual a creatinina, o clearance estimado e o potássio atuais?",
+      "Foi coletada urocultura antes da primeira dose de antibiótico?",
+      "Há alergia a penicilina, cefalosporina ou carbapenem, e qual foi a reação?",
+      "A febre cedeu nas primeiras 72 h ou persiste apesar do antibiótico?",
+      "Tem dor perineal, dificuldade para urinar, retenção ou resíduo pós-miccional aumentado?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "ITU complicada comunitária sem sepse, sem uso recente de antibiótico e sem risco de ESBL — gestante, homem ou diabético estável",
+        "escolha": "Ceftriaxona 1 g IV 1x/dia, com urocultura e hemocultura colhidas antes da primeira dose, e reavaliação em 48 a 72 h para descalonamento oral",
+        "porque": "Cobre as enterobactérias comunitárias com uma dose diária, sem ajuste renal e com pouca toxicidade; a duração e o descalonamento dependem da cultura, e não da impressão clínica"
+      },
+      {
+        "cenario": "ITU complicada com sepse, choque, cateter infectado, instrumentação urológica recente ou suspeita de Pseudomonas",
+        "escolha": "Piperacilina-tazobactam 4,5 g IV 6/6 h, associada a cristaloide 30 mL/kg e controle do foco — troca do cateter ou drenagem",
+        "porque": "É o cenário em que a ceftriaxona isolada falha: precisa cobrir Pseudomonas, enterococo e produtores de beta-lactamase; sem remover o cateter ou drenar a obstrução, o antibiótico não resolve"
+      },
+      {
+        "cenario": "Risco documentado ou suspeito de ESBL — cultura prévia com ESBL, uso de cefalosporina nos últimos 90 dias, viagem a área endêmica ou colonização conhecida",
+        "escolha": "Ertapenem 1 g IV 1x/dia, com cultura antes da primeira dose e reavaliação em 72 h",
+        "porque": "Cobre Enterobacteriaceae produtoras de ESBL com uma dose diária e boa penetração renal; não cobre Pseudomonas nem enterococo, o que obriga a reavaliar se houver cateter ou instrumentação"
+      },
+      {
+        "cenario": "Choque séptico de foco urinário, falha do ertapenem ou suspeita de Pseudomonas multirresistente",
+        "escolha": "Meropenem 1 g IV 8/8 h, em infusão estendida de 3 h, com reavaliação diária para descalonar",
+        "porque": "É o resgate com maior espectro e maior estabilidade frente a beta-lactamases; o preço é seleção de resistência e convulsão, o que exige cultura, foco controlado e descalonamento precoce"
+      },
+      {
+        "cenario": "Alergia grave a beta-lactâmico, com anafilaxia documentada, e impossibilidade de teste de provocação",
+        "escolha": "Amicacina 15 mg/kg IV em dose única diária, com nível sérico e creatinina diária, por 5 a 7 dias",
+        "porque": "É a alternativa com cobertura de enterobactérias quando não há beta-lactâmico seguro; a nefrotoxicidade e a ototoxicidade limitam a duração e obrigam monitorização que a alta precoce não permite"
+      },
+      {
+        "cenario": "Paciente afebril há 48 a 72 h, com cultura sensível e tolerância oral, após fase parenteral",
+        "escolha": "Amoxicilina-clavulanato 875/125 mg VO 12/12 h para completar 7 a 14 dias, ou ciprofloxacino 500 mg VO 12/12 h quando a cultura só é sensível a quinolona",
+        "porque": "Descalonar reduz tempo de internação e custo sem perder eficácia; o clavulanato não protege contra todas as ESBL, então a escolha do oral depende do antibiograma, e não da preferência"
+      },
+      {
+        "cenario": "Gestante com pielonefrite ou ITU complicada",
+        "escolha": "Ceftriaxona 1 g IV 1x/dia durante a internação, seguida de cefalexina 500 mg VO 6/6 h ou amoxicilina-clavulanato até completar 7 a 10 dias, com urocultura de controle em 1 a 2 semanas e supressão até o fim da gestação",
+        "porque": "Beta-lactâmico é seguro na gestação e cobre as enterobactérias habituais; quinolona e sulfametoxazol-trimetoprima têm restrição por trimestre, e a recidiva pós-parto é frequente sem supressão"
+      },
+      {
+        "cenario": "Homem com ITU complicada, sintomas obstrutivos ou suspeita de foco prostático",
+        "escolha": "Ceftriaxona 1 g IV 1x/dia ou amoxicilina-clavulanato 875/125 mg VO 12/12 h por 7 a 14 dias, com toque retal, avaliação de resíduo pós-miccional e urocultura",
+        "porque": "Homem tem ITU complicada até prova contrária, com foco prostático frequente; esquema de 3 dias falha e a recidiva é a regra, além de exigir avaliação da obstrução baixa"
+      },
+      {
+        "cenario": "Idoso frágil, institucionalizado ou com delirium e urocultura positiva sem sintoma urinário",
+        "escolha": "Não tratar como ITU; investigar outra causa de delirium e repetir a avaliação com sintomas urinários e cultura adequada",
+        "porque": "Bacteriúria assintomática é colonização e tratá-la não melhora delirium, aumenta C. difficile e seleciona resistência; o erro é aceitar a urina como explicação única da confusão"
+      },
+      {
+        "cenario": "Obstrução urinária com infecção — cálculo impactado, hiperplasia prostática com retenção, tumor ou estenose",
+        "escolha": "Antibiótico de amplo espectro e drenagem urinária de urgência com cateter duplo J ou nefrostomia percutânea, em até poucas horas",
+        "porque": "Antibiótico não atravessa urina obstruída e a pionefrose evolui para choque; a drenagem é o tratamento que muda o desfecho, e a via de drenagem depende da altura da obstrução e da disponibilidade do serviço"
+      },
+      {
+        "cenario": "Cateter vesical com ITU sintomática",
+        "escolha": "Trocar ou retirar o cateter antes de iniciar o antibiótico, colher cultura do novo cateter e tratar por 7 dias se houver melhora rápida",
+        "porque": "O biofilme no dispositivo mantém a infecção; tratar sem trocar o cateter recidiva em dias, e prolongar o antibiótico sem remover o foco só aumenta resistência"
+      },
+      {
+        "cenario": "Prescrição de esquema de cistite simples — nitrofurantoína, fosfomicina em dose única ou três dias de qualquer antibiótico — para ITU complicada",
+        "escolha": "Não prescrever; substituir por esquema sistêmico com penetração tecidual, colher urocultura e definir duração de 7 a 14 dias",
+        "porque": "Nitrofurantoína e fosfomicina concentram-se na urina e não atingem parênquima renal; o esquema curto de cistite falha em gestante, homem, diabético e obstrução, e a falha é bacteremia"
+      },
+      {
+        "cenario": "Quinolona cogitada para gestante, adolescente ou paciente com tendinopatia prévia por quinolona",
+        "escolha": "Trocar por beta-lactâmico — ceftriaxona, cefalexina ou amoxicilina-clavulanato — e reservar ciprofloxacino para quando não há alternativa e a cultura é sensível",
+        "porque": "Quinolona é contraindicada na gestação e tem risco de tendinite, neuropatia e prolongamento de QT; o uso empírico amplo seleciona ESBL e MRSA e retira a última opção oral"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "cefalosporina_terceira_geracao",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "ITU complicada comunitária sem sepse e sem risco de ESBL — gestante, homem, diabético estável e idoso sem gravidade",
+        "dose": "1 g (2 g em pielonefrite grave ou bacteremia)",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "7 dias na ITU baixa complicada com resposta em 48–72 h; 10 a 14 dias na pielonefrite, na bacteremia e na obstrução",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "hipersensibilidade a cefalosporina ou anafilaxia prévia a penicilina",
+          "neonato com hiperbilirrubinemia ou em uso de solução contendo cálcio",
+          "histórico de hemólise imune pela ceftriaxona"
+        ],
+        "efeitos_adversos": [
+          "rash cutâneo",
+          "diarreia",
+          "colite por C. difficile",
+          "lama biliar e colelitíase",
+          "hemólise imune rara",
+          "flebite no sítio de infusão"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 500 mg",
+          "frasco-ampola 2 g",
+          "solução injetável 1 g/10 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injetáveis e diluir em 100 mL de soro fisiológico 0,9% ou glicose 5%; nunca diluir em Ringer lactato ou em solução com cálcio, pela precipitação do sal de cálcio",
+        "tempo_infusao": "30 minutos; 60 minutos para 2 g",
+        "monitorizacao": [
+          "temperatura, frequência cardíaca e pressão arterial a cada 6 h nas primeiras 48 h",
+          "hemograma e creatinina em uso acima de 5 dias",
+          "diarreia e pesquisa de toxina de C. difficile",
+          "urocultura e antibiograma em 48 a 72 h para descalonar",
+          "sítio de infusão e sinais de flebite"
+        ],
+        "ajuste_renal": "Sem ajuste até clearance de 10 mL/min; em diálise não é necessário suplementar dose",
+        "ajuste_hepatico": "Reduzir para 1 g/dia em cirrose com icterícia; monitorar sinais de lama biliar",
+        "observacoes": "Não cobre enterococo nem Pseudomonas. Em suspeita de obstrução, cateter infectado ou sepse, a cobertura precisa ser ampliada com piperacilina-tazobactam. Colher cultura antes da primeira dose é o que permite reduzir para 7 dias e descalonar para via oral.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_inibidor_betalactamase",
+        "agente": "amoxicilina-clavulanato",
+        "papel": "alternativa",
+        "indicacao": "descalonamento oral após fase parenteral, ITU complicada em homem ou gestante com cultura sensível, e ITU de trato baixo complicada sem sinal sistêmico",
+        "dose": "875/125 mg (via oral) ou 1 g/200 mg (via intravenosa)",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "12/12 h por via oral; 8/8 h por via intravenosa",
+        "duracao": "7 a 10 dias, completando o total definido pela cultura e pelo foco",
+        "dose_maxima": "1.750/250 mg/dia por via oral",
+        "contraindicacoes": [
+          "hipersensibilidade a penicilina",
+          "hepatite colestática prévia atribuída à associação",
+          "mononucleose infecciosa pelo risco de exantema",
+          "clearance abaixo de 10 mL/min sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea e vômito",
+          "candidíase oral ou vaginal",
+          "colite por C. difficile",
+          "hepatite colestática",
+          "rash cutâneo"
+        ],
+        "apresentacoes": [
+          "comprimido 875/125 mg",
+          "comprimido 500/125 mg",
+          "suspensão oral 400/57 mg por 5 mL",
+          "frasco-ampola 1 g/200 mg",
+          "frasco-ampola 500/100 mg"
+        ],
+        "preparo": "Via oral: uso direto, com alimento para reduzir desconforto gástrico. Via intravenosa: reconstituir em 20 mL de água para injetáveis e diluir em 100 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "30 minutos na via intravenosa; não se aplica na via oral",
+        "monitorizacao": [
+          "função hepática em uso acima de 7 dias",
+          "diarreia, dor abdominal e sinais de colite",
+          "urocultura de controle em gestante, recidiva e obstrução",
+          "adesão e tolerância gástrica no esquema oral",
+          "creatinina para confirmar que o ajuste renal está correto"
+        ],
+        "ajuste_renal": "Clearance 10 a 30 mL/min: máximo 500/125 mg 12/12 h; abaixo de 10 mL/min: 500/125 mg 24/24 h",
+        "ajuste_hepatico": "Evitar em hepatite colestática prévia pela associação; monitorar transaminases",
+        "observacoes": "Boa opção de descalonamento quando a cultura é sensível, mas não é empírico confiável para ESBL: o clavulanato não protege contra todas as beta-lactamases de espectro estendido. Em suspeita de ESBL, manter ertapenem até o antibiograma.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "fluoroquinolona",
+        "agente": "ciprofloxacino",
+        "papel": "condicional",
+        "indicacao": "ITU complicada com sensibilidade documentada e ausência de alternativa oral, sobretudo no descalonamento de enterobactéria resistente a beta-lactâmico oral",
+        "dose": "500 mg por via oral ou 400 mg por via intravenosa",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "12/12 h",
+        "duracao": "7 dias na ITU complicada; 10 a 14 dias na prostatite e no foco profundo",
+        "dose_maxima": "1.000 mg/dia",
+        "contraindicacoes": [
+          "gestação e amamentação",
+          "menores de 18 anos fora de indicação específica",
+          "tendinopatia ou ruptura de tendão prévia por quinolona",
+          "miastenia gravis",
+          "prolongamento de QT ou uso de fármacos que prolongam o QT",
+          "aneurisma de aorta ou dissecção prévia",
+          "uso concomitante de tizanidina"
+        ],
+        "efeitos_adversos": [
+          "tendinite e ruptura de tendão de Aquiles",
+          "neuropatia periférica",
+          "prolongamento do intervalo QT e torsades de pointes",
+          "disglucemia em diabético",
+          "convulsão",
+          "colite por C. difficile",
+          "fotossensibilidade"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 250 mg",
+          "solução injetável 400 mg/200 mL",
+          "solução injetável 200 mg/100 mL"
+        ],
+        "preparo": "Via oral: uso direto, com ou sem alimento, com intervalo de 2 h de antiácido, ferro, cálcio, magnésio ou leite. Via intravenosa: infundir a bolsa pronta, sem diluir em solução contendo cálcio",
+        "tempo_infusao": "60 minutos na via intravenosa; não se aplica na via oral",
+        "monitorizacao": [
+          "dor no tendão de Aquiles, edema e dificuldade para deambular",
+          "intervalo QT e eletrólitos em paciente cardiopata",
+          "glicemia em diabético, pelo risco de hipoglicemia",
+          "creatinina e ajuste de dose",
+          "sinais de neuropatia periférica: parestesia, queimação, fraqueza"
+        ],
+        "ajuste_renal": "Clearance 30 a 60 mL/min: 500 mg 12/12 h; abaixo de 30 mL/min: 500 mg 24/24 h; em diálise, administrar após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reservado: só com sensibilidade documentada ou quando não há alternativa oral. É a última opção oral eficaz em ITU complicada por enterobactéria resistente, e o uso empírico amplo seleciona ESBL e MRSA, além de expor o paciente a tendinite e neuropatia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "carbapenem",
+        "agente": "ertapenem",
+        "papel": "condicional",
+        "indicacao": "ITU complicada por enterobactéria produtora de ESBL confirmada ou suspeita, com paciente estável e sem suspeita de Pseudomonas",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "7 a 14 dias conforme foco, resposta e cultura",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "hipersensibilidade a carbapenem",
+          "anafilaxia prévia a beta-lactâmico sem avaliação especializada",
+          "epilepsia não controlada",
+          "clearance abaixo de 30 mL/min sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "cefaleia",
+          "convulsão em disfunção renal ou epilepsia",
+          "elevação de transaminases",
+          "colite por C. difficile"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 500 mg"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injetáveis ou soro fisiológico e diluir em 50 mL de soro fisiológico 0,9%; não usar glicose 5% como diluente pela menor estabilidade",
+        "tempo_infusao": "30 minutos; até 4 horas em infusão estendida",
+        "monitorizacao": [
+          "nível de consciência e episódios de convulsão",
+          "creatinina e débito urinário diários",
+          "diarreia e sinais de colite",
+          "transaminases em uso acima de 7 dias",
+          "urocultura e antibiograma para descalonar em 72 h"
+        ],
+        "ajuste_renal": "Clearance abaixo de 30 mL/min: 500 mg 24/24 h; em diálise, 500 mg após a sessão",
+        "ajuste_hepatico": "Sem ajuste; monitorar transaminases",
+        "observacoes": "É a escolha para ESBL confirmado ou suspeito, inclusive com bacteremia, quando o paciente está estável. Não cobre Pseudomonas nem enterococo: em sepse com cateter, instrumentação ou pós-operatório, a cobertura precisa ser ampliada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_inibidor_betalactamase",
+        "agente": "piperacilina-tazobactam",
+        "papel": "condicional",
+        "indicacao": "ITU complicada com sepse, cateter infectado, instrumentação urológica recente, pós-operatório urológico ou suspeita de Pseudomonas",
+        "dose": "4,5 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "6/6 h (8/8 h se clearance entre 20 e 40 mL/min)",
+        "duracao": "7 a 14 dias conforme foco e resposta",
+        "dose_maxima": "18 g/dia",
+        "contraindicacoes": [
+          "hipersensibilidade a penicilina ou a inibidor de beta-lactamase",
+          "clearance abaixo de 20 mL/min sem ajuste",
+          "associação com vancomicina sem monitorização de função renal"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "hipocalemia",
+          "trombocitopenia",
+          "nefrotoxicidade somada à vancomicina",
+          "convulsão em disfunção renal",
+          "colite por C. difficile"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 4,5 g",
+          "frasco-ampola 3,375 g",
+          "frasco-ampola 2,25 g"
+        ],
+        "preparo": "Reconstituir em 20 mL de água para injetáveis ou soro fisiológico e diluir em 100 a 250 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "30 minutos; 3 a 4 horas em infusão estendida na sepse",
+        "monitorizacao": [
+          "creatinina e potássio diários",
+          "plaquetas e hemograma a cada 48 h",
+          "controle do foco: cateter trocado, obstrução drenada",
+          "urocultura e antibiograma para descalonar em 48 a 72 h",
+          "nível de consciência e convulsão em disfunção renal"
+        ],
+        "ajuste_renal": "Clearance 20 a 40 mL/min: 4,5 g 8/8 h; abaixo de 20 mL/min: 4,5 g 12/12 h; em diálise, 2,25 g 8/8 h com dose adicional após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Entra quando há sepse, cateter, instrumentação urológica recente ou suspeita de Pseudomonas — cenários em que a ceftriaxona isolada falha. Não é esquema para ITU comunitária sem gravidade, pelo custo e pela seleção de resistência.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "carbapenem",
+        "agente": "meropenem",
+        "papel": "resgate",
+        "indicacao": "choque séptico de foco urinário, falha do ertapenem ou suspeita de Pseudomonas multirresistente",
+        "dose": "1 g (2 g em meningite ou infecção do sistema nervoso central)",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "7 a 14 dias, com reavaliação diária para descalonar",
+        "dose_maxima": "6 g/dia",
+        "contraindicacoes": [
+          "hipersensibilidade a carbapenem",
+          "anafilaxia prévia a beta-lactâmico sem avaliação especializada",
+          "clearance abaixo de 10 mL/min sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "convulsão, sobretudo em disfunção renal e epilepsia",
+          "diarreia",
+          "rash",
+          "elevação de transaminases",
+          "trombocitopenia",
+          "colite por C. difficile"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 500 mg",
+          "frasco-ampola 2 g"
+        ],
+        "preparo": "Reconstituir em 20 mL de água para injetáveis e diluir em 100 mL de soro fisiológico 0,9%; usar imediatamente após a reconstituição",
+        "tempo_infusao": "30 minutos; 3 horas em infusão estendida",
+        "monitorizacao": [
+          "nível de consciência e episódios de convulsão",
+          "creatinina e débito urinário diários",
+          "hemograma e plaquetas",
+          "urocultura e antibiograma para descalonar",
+          "controle do foco e resposta hemodinâmica"
+        ],
+        "ajuste_renal": "Clearance 25 a 50 mL/min: 1 g 12/12 h; 10 a 25 mL/min: 500 mg 12/12 h; abaixo de 10 mL/min: 500 mg 24/24 h; em diálise, após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Resgate em choque séptico de foco urinário, falha do ertapenem e suspeita de Pseudomonas multirresistente. Prescrever com cultura em mãos, controlar o foco e descalonar assim que houver antibiograma: é o antibiótico que mais seleciona resistência no hospital.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/IDSA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "aminoglicosideo",
+        "agente": "amicacina",
+        "papel": "alternativa",
+        "indicacao": "ITU complicada com alergia grave a beta-lactâmico ou indisponibilidade de cefalosporina, com cultura sensível",
+        "dose": "15 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "1x/dia (dose única diária)",
+        "duracao": "5 a 7 dias, o menor tempo possível",
+        "dose_maxima": "1,5 g/dia",
+        "contraindicacoes": [
+          "insuficiência renal sem ajuste e sem nível sérico",
+          "miastenia gravis ou bloqueio neuromuscular",
+          "surdez neurossensorial prévia",
+          "gestação, pelo risco de ototoxicidade fetal",
+          "uso concomitante de outro nefrotóxico"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade",
+          "ototoxicidade coclear e vestibular",
+          "bloqueio neuromuscular",
+          "hipomagnesemia",
+          "parestesia perioral"
+        ],
+        "apresentacoes": [
+          "ampola 500 mg/2 mL",
+          "ampola 100 mg/2 mL",
+          "frasco 1 g/4 mL"
+        ],
+        "preparo": "Diluir a dose em 100 mL de soro fisiológico 0,9% ou glicose 5%; nunca administrar em bolus",
+        "tempo_infusao": "30 minutos na dose única diária",
+        "monitorizacao": [
+          "creatinina e débito urinário diários",
+          "nível sérico de vale antes da terceira dose",
+          "audiometria se uso acima de 5 dias",
+          "sinais de bloqueio neuromuscular e fraqueza",
+          "magnésio e potássio"
+        ],
+        "ajuste_renal": "Ajustar pela clearance, com intervalo prolongado de 24 a 48 h e nível sérico; evitar em clearance abaixo de 20 mL/min sem monitorização",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Alternativa na alergia grave a beta-lactâmico ou quando não há cefalosporina disponível. Não é primeira linha porque a nefrotoxicidade e a ototoxicidade exigem nível sérico e audiometria que a maioria dos serviços não faz.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide_isotônico",
+        "agente": "soro fisiológico 0,9%",
+        "papel": "primeira_linha",
+        "indicacao": "reposição volêmica na ITU complicada com sepse, hipotensão ou desidratação",
+        "dose": "30 mL/kg na primeira hora na sepse; 250 a 500 mL por vez no idoso frágil e no cardiopata",
+        "unidade": "mL/kg",
+        "via": "IV",
+        "frequencia": "em bolus, com reavaliação hemodinâmica após cada um",
+        "duracao": "primeiras 3 horas da sepse, com reavaliação contínua",
+        "dose_maxima": "30 mL/kg na primeira hora, com reavaliação a cada 500 mL no cardiopata",
+        "contraindicacoes": [
+          "insuficiência cardíaca descompensada com edema agudo de pulmão",
+          "anúria sem diálise",
+          "sobrecarga hídrica documentada"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga hídrica com edema e dispneia",
+          "acidose metabólica hiperclorêmica em volumes grandes",
+          "hiponatremia dilucional",
+          "hipotermia com volume gelado",
+          "infiltração no sítio de infusão"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 1.000 mL",
+          "frasco 500 mL",
+          "bolsa 250 mL"
+        ],
+        "preparo": "Não requer diluição; aquecer a 37 °C em volume grande e usar bomba ou equipo calibrado no idoso e no cardiopata",
+        "tempo_infusao": "15 a 30 minutos por bolus; 5 a 10 minutos no choque descompensado",
+        "monitorizacao": [
+          "pressão arterial, frequência cardíaca e perfusão após cada bolus",
+          "ausculta pulmonar, saturação e esforço respiratório",
+          "débito urinário e balanço hídrico",
+          "sódio, cloro e bicarbonato após 30 mL/kg",
+          "peso diário e edema"
+        ],
+        "ajuste_renal": "Sem ajuste em bolus; reduzir o volume em oligúria e monitorar diurese",
+        "ajuste_hepatico": "Sem ajuste; vigiar ascite e edema",
+        "observacoes": "Reposição volêmica é parte do tratamento da ITU complicada com sepse, mas não substitui antibiótico nem drenagem. No idoso frágil e no cardiopata, 250 a 500 mL por vez com reavaliação evitam edema agudo de pulmão.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/Surviving Sepsis/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "dor e febre associadas à ITU complicada, enquanto o antibiótico e o controle do foco fazem efeito",
+        "dose": "500 a 1.000 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h se necessário",
+        "duracao": "até 72 h, ou enquanto houver febre e dor",
+        "dose_maxima": "3 g/dia; 2 g/dia em hepatopatia, desnutrição ou alcoolismo",
+        "contraindicacoes": [
+          "hipersensibilidade ao paracetamol",
+          "hepatopatia grave ou insuficiência hepática",
+          "desnutrição grave sem redução de dose"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose excessiva",
+          "náusea",
+          "rash cutâneo raro",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral gotas 200 mg/mL",
+          "frasco intravenoso 1 g/100 mL"
+        ],
+        "preparo": "Via oral: uso direto, com ou sem alimento. Via intravenosa: infundir o frasco pronto, sem diluição adicional",
+        "tempo_infusao": "15 minutos na via intravenosa; não se aplica na via oral",
+        "monitorizacao": [
+          "temperatura e intensidade da dor",
+          "dose total em 24 h, incluindo associações antigripais",
+          "função hepática em uso acima de 3 dias",
+          "função renal e intervalo entre doses"
+        ],
+        "ajuste_renal": "Intervalo de 6 a 8 h em clearance abaixo de 30 mL/min",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia; evitar em insuficiência hepática grave",
+        "observacoes": "Analgesia e antitérmico não tratam a infecção e não substituem antibiótico nem drenagem. Evitar AINE: em ITU complicada com desidratação, lesão renal ou uso de aminoglicosídeo, o AINE precipita lesão renal aguda.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Retirar ou trocar o cateter vesical antes de iniciar o antibiótico",
+        "detalhe": "Em ITU associada a cateter, retirar o dispositivo se não houver indicação de permanência e trocar quando a cateterização for indispensável; colher cultura do novo cateter e registrar a data da troca. Sem isso, o biofilme mantém a infecção e a recidiva ocorre em dias, mesmo com antibiótico correto"
+      },
+      {
+        "medida": "Hidratação oral e controle do balanço hídrico",
+        "detalhe": "Oferecer 1,5 a 2 L de água por dia ao paciente estável, com balanço hídrico e peso diário; em sepse, o volume é venoso e calculado. Desidratação reduz o fluxo urinário, favorece obstrução por coágulo e piora a função renal já exposta ao antibiótico"
+      },
+      {
+        "medida": "Controle glicêmico no diabético",
+        "detalhe": "Manter glicemia entre 140 e 180 mg/dL durante a infecção, com insulina conforme protocolo, e não suspender o antidiabético oral sem substituir por insulina. Hiperglicemia sustenta a infecção, aumenta o risco de candidíase e de abscesso e prolonga a internação"
+      },
+      {
+        "medida": "Drenagem e desobstrução como parte do tratamento, não como complemento",
+        "detalhe": "Obstrução por cálculo, hiperplasia prostática, tumor ou estenose exige cateter duplo J ou nefrostomia em horas, e não em dias. Abscesso renal ou perinéfrico acima de 3 cm exige drenagem percutânea. Antibiótico não atravessa urina obstruída nem coleção purulenta"
+      },
+      {
+        "medida": "Revisão diária da prescrição com meta de descalonamento",
+        "detalhe": "Reavaliar em 48 a 72 h com cultura, temperatura, leucograma e função renal em mãos, e trocar para o antibiótico de menor espectro que cubra o agente. Cada dia de carbapenem sem indicação aumenta resistência e C. difficile"
+      },
+      {
+        "medida": "Evitar cateterismo desnecessário e manejo de bexiga neurogênica",
+        "detalhe": "Não cateterizar por conveniência, por incontinência ou para coleta de cultura em paciente assintomático; preferir cateterismo intermitente limpo na bexiga neurogênica e retirar o cateter o mais cedo possível. Cada dia de cateter aumenta o risco de ITU associada a dispositivo"
+      },
+      {
+        "medida": "Higiene, posicionamento e cuidados com o dispositivo",
+        "detalhe": "Higiene diária do meato com água e sabão, sistema de drenagem fechado e bolsa abaixo do nível da bexiga, sem refluxo e sem tração. Não usar antisséptico rotineiro no meato nem irrigação profilática, que não previnem infecção e selecionam resistência"
+      },
+      {
+        "medida": "Investigação da causa em ITU recorrente",
+        "detalhe": "Em duas ou mais infecções em seis meses ou três ou mais em doze, investigar cálculo, refluxo, bexiga neurogênica, fístula, próstata e corpo estranho com ultrassonografia e tomografia quando indicada. Recorrência tratada apenas com antibiótico é recorrência garantida"
+      },
+      {
+        "medida": "Avaliação urológica antes da alta nos casos com obstrução ou anomalia",
+        "detalhe": "Agendar seguimento urológico com imagem e plano de retirada do duplo J ou da nefrostomia antes da alta; sair sem data de retirada é causa comum de readmissão por obstrução e infecção do dispositivo"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Coleta de urocultura e hemocultura antes da primeira dose de antibiótico",
+        "indicacao": "toda ITU complicada, sem exceção, e todo paciente com febre ou sepse de foco urinário",
+        "tecnica": "Colher urina por jato médio após higiene, ou por cateter recém-trocado, ou por punção suprapúbica quando não há via; identificar o método na requisição. Colher duas amostras de hemocultura de sítios distintos antes do antibiótico e enviar ao laboratório em até 2 h",
+        "complicacoes": "Contaminação com flora mista e tratamento desnecessário, resultado falso-negativo se a amostra demorar, punção seca e atraso do antibiótico em paciente instável — nesse caso, colher e tratar imediatamente"
+      },
+      {
+        "nome": "Cateterismo vesical de demora ou de alívio",
+        "indicacao": "retenção urinária com infecção, necessidade de controle rigoroso de diurese na sepse ou coleta de urina estéril, com técnica estéril",
+        "tecnica": "Antissepsia com clorexidina aquosa, campo estéril, sonda de calibre adequado, gel lubrificante com lidocaína e sistema fechado; em suspeita de trauma uretral, não cateterizar e solicitar uretrocistografia. Fixar sem tração e manter bolsa abaixo da bexiga",
+        "complicacoes": "ITU associada a cateter, trauma uretral, falsa via, hematúria, espasmo vesical, obstrução do cateter e retenção após a retirada",
+        "protocolo": "BOX-09"
+      },
+      {
+        "nome": "Desobstrução urinária com cateter duplo J ou nefrostomia percutânea",
+        "indicacao": "ITU obstrutiva com febre, dor lombar, anúria, pionefrose ou sepse; obstrução por cálculo, tumor, estenose ou fibrose retroperitoneal",
+        "tecnica": "Definir a via pela altura e pela causa da obstrução e pela disponibilidade do serviço: duplo J por cistoscopia quando a obstrução é ureteral e a bexiga é acessível; nefrostomia percutânea guiada por ultrassom quando o acesso retrógrado falha ou a obstrução é alta. Manter drenagem e antibiótico, e agendar a retirada ou a troca",
+        "complicacoes": "Sangramento, perfuração ureteral, deslocamento do cateter, obstrução do duplo J por coágulo, infecção do dispositivo, fístula urinária e lesão de órgão adjacente na nefrostomia"
+      },
+      {
+        "nome": "Drenagem percutânea de abscesso renal ou perinéfrico",
+        "indicacao": "coleção maior de 3 cm, febre persistente após 72 h de antibiótico adequado ou instabilidade com foco não controlado",
+        "tecnica": "Guiada por ultrassom ou tomografia, com antissepsia, anestesia local e cateter de drenagem; enviar material para Gram, cultura e pesquisa de fungo. Manter o dreno até débito mínimo e melhora clínica, com controle de imagem",
+        "complicacoes": "Sangramento, pneumotórax em lesão alta, fístula urinária, lesão de cólon, drenagem incompleta que exige nova punção e recidiva da coleção"
+      },
+      {
+        "nome": "Ultrassonografia e tomografia do trato urinário",
+        "indicacao": "suspeita de obstrução, sepse, febre persistente acima de 72 h, ITU recorrente, cálculo conhecido ou avaliação de abscesso",
+        "tecnica": "Ultrassonografia à beira-leito como primeiro exame para hidronefrose e bexigoma; tomografia de abdome e pelve com contraste para cálculo, abscesso, enfisematosa e planejamento de drenagem. Ajustar contraste à função renal e hidratar",
+        "complicacoes": "Nefrotoxicidade por contraste em função renal reduzida, reação alérgica ao contraste, achado incidental sem impacto clínico e atraso do tratamento enquanto se aguarda o exame"
+      }
+    ],
+    "metas": [
+      "Antibiótico adequado infundido na primeira hora em sepse e em até 3 horas nos demais casos graves",
+      "Urocultura colhida antes da primeira dose em 100% dos casos, com antibiograma disponível em 72 h",
+      "Controle do foco em até 24 h quando há obstrução ou cateter infectado: drenagem realizada ou dispositivo trocado",
+      "Queda da temperatura e melhora clínica em 48 a 72 h; febre persistente acima disso obriga imagem",
+      "Descalonamento para o antibiótico de menor espectro possível em até 72 h após o antibiograma",
+      "Função renal estável, com creatinina e potássio sem piora durante o tratamento",
+      "Nenhuma prescrição de nitrofurantoína, fosfomicina ou esquema de 3 dias para ITU complicada",
+      "Urocultura de controle negativa em gestante, em ITU recorrente e após bacteremia"
+    ],
+    "fluxo": [
+      "Triagem: sinais vitais, perfusão, estado mental, débito urinário e glicemia; hipotensão ou confusão aciona protocolo de sepse antes de qualquer outra decisão",
+      "Confirmar que é ITU: sintoma urinário, febre, dor lombar, piúria e nitrito; em idoso e cateterizado, não tratar cultura isolada sem sintoma",
+      "Classificar como complicada e identificar o fator: gestante, homem, idoso frágil, diabético, cateter, obstrução, imunossupressão, ITU recorrente, função renal reduzida",
+      "Colher urocultura e hemocultura antes da primeira dose; não atrasar o antibiótico no paciente instável",
+      "Escolher o esquema pelo cenário: ceftriaxona na comunidade estável; piperacilina-tazobactam na sepse, cateter e instrumentação; ertapenem no risco de ESBL; meropenem no choque e na falha",
+      "Procurar obstrução com ultrassonografia à beira-leito e drenar em horas quando houver hidronefrose, anúria ou pionefrose",
+      "Trocar ou retirar cateter infectado e colher cultura do novo dispositivo",
+      "Reavaliar em 48 a 72 h com cultura, temperatura, leucograma e creatinina; febre persistente pede tomografia e revisão de foco",
+      "Descalonar para o antibiótico de menor espectro e para via oral quando afebril e tolerando dieta, completando 7 a 14 dias conforme o foco",
+      "Antes da alta: cultura de controle quando indicada, ajuste de dose pela função renal, avaliação urológica com data de retirada do dispositivo e orientação de retorno"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "internar para pielonefrite, usar ceftriaxona 1 g IV 1x/dia e manter cefalexina ou amoxicilina-clavulanato até completar 7 a 10 dias, com urocultura de controle em 1 a 2 semanas e supressão antibiótica até o fim da gestação; monitorizar contrações e movimentos fetais",
+        "alerta": "pielonefrite na gestação causa parto prematuro, sepse materna e morte fetal; quinolona e sulfametoxazol-trimetoprima têm restrição por trimestre"
+      },
+      {
+        "populacao": "homem",
+        "ajuste": "tratar como complicada por 7 a 14 dias, com toque retal, avaliação de resíduo pós-miccional e urocultura; suspeita de prostatite exige 14 a 21 dias e avaliação urológica",
+        "alerta": "foco prostático e obstrução baixa são a regra; esquema de 3 dias de cistite falha e recidiva"
+      },
+      {
+        "populacao": "idoso_fragil",
+        "ajuste": "hidratar em bolus de 250 a 500 mL com ausculta entre eles, ajustar antibiótico pela creatinina desde a primeira dose, evitar cateter por conveniência e revisar polifarmácia",
+        "alerta": "febre e leucocitose podem faltar, delirium e queda podem ser a única manifestação, e bacteriúria assintomática é frequente — tratar cultura sem sintoma é erro"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "controle glicêmico com insulina durante a infecção, internação mais frequente, tomografia precoce se a febre persistir e atenção a infecção por Candida e a abscesso",
+        "alerta": "pielonefrite enfisematosa, abscesso renal e bacteremia são mais comuns e exigem drenagem"
+      },
+      {
+        "populacao": "usuario_de_cateter_ou_dispositivo",
+        "ajuste": "retirar ou trocar o cateter, colher cultura do novo dispositivo e tratar por 7 dias quando há melhora rápida; avaliar bexiga neurogênica com cateterismo intermitente limpo",
+        "alerta": "biofilme impede erradicação sem remoção do dispositivo e a recidiva é precoce"
+      },
+      {
+        "populacao": "imunossuprimido_ou_transplantado",
+        "ajuste": "internar, ampliar cobertura conforme o esquema de base, colher culturas fúngicas e micobacterianas, repetir imagem em 72 h e ajustar dose pelos níveis de imunossupressor",
+        "alerta": "sinais inflamatórios atenuados, progressão rápida, agentes atípicos e risco de abscesso e de infecção fúngica"
+      },
+      {
+        "populacao": "renal_cronico_ou_dialitico",
+        "ajuste": "ajustar dose e intervalo de todos os beta-lactâmicos e da amicacina, evitar aminoglicosídeo e AINE, e evitar contraste sem necessidade",
+        "alerta": "nefrotoxicidade acumulada e risco de lesão renal aguda sobre doença crônica, com necessidade de diálise"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "urocultura com antibiograma",
+          "indicacao": "toda ITU complicada, antes da primeira dose de antibiótico",
+          "o_que_muda": "define agente, espectro e duração, permite descalonar e detectar ESBL"
+        },
+        {
+          "nome": "hemocultura",
+          "indicacao": "febre, sepse, calafrios, imunossupressão, cateter ou instrumentação recente",
+          "o_que_muda": "confirma bacteremia, orienta duração e identifica foco persistente"
+        },
+        {
+          "nome": "hemograma, proteína C reativa e creatinina com clearance estimado",
+          "indicacao": "todos, na entrada e na reavaliação de 48 a 72 h",
+          "o_que_muda": "define gravidade, ajuste de dose e detecção de lesão renal aguda"
+        },
+        {
+          "nome": "ultrassonografia do trato urinário",
+          "indicacao": "suspeita de obstrução, anúria, sepse, cálculo conhecido ou ITU recorrente",
+          "o_que_muda": "identifica hidronefrose e bexigoma e indica drenagem urgente"
+        },
+        {
+          "nome": "tomografia de abdome e pelve com contraste",
+          "indicacao": "febre persistente acima de 72 h, suspeita de abscesso, enfisematosa, cálculo obstrutivo ou sepse sem foco definido",
+          "o_que_muda": "diagnostica coleção, gás no parênquima e obstrução, e planeja drenagem"
+        },
+        {
+          "nome": "glicemia e hemoglobina glicada",
+          "indicacao": "todos os diabéticos e todo paciente com infecção grave",
+          "o_que_muda": "define necessidade de insulina e identifica diabetes não diagnosticado"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "urocultura de rastreamento em paciente cateterizado ou idoso assintomático",
+          "motivo": "bacteriúria assintomática é colonização; tratar não melhora desfecho e seleciona resistência"
+        },
+        {
+          "exame": "repetição de urocultura durante o tratamento em paciente que está melhorando",
+          "motivo": "não muda a conduta e pode levar a tratar contaminação; reservar para gestante, recidiva e bacteremia"
+        },
+        {
+          "exame": "ultrassonografia de rotina em ITU baixa complicada sem obstrução, sepse ou recidiva",
+          "motivo": "achado incidental sem impacto e atraso do tratamento; reservar para os cenários definidos"
+        },
+        {
+          "exame": "tomografia com contraste em paciente instável antes de estabilizar e iniciar antibiótico",
+          "motivo": "atrasa antibiótico e drenagem, que são o que muda o desfecho na sepse de foco urinário"
+        },
+        {
+          "exame": "pesquisa de IST e de vaginose em homem com ITU complicada sem sintoma uretral",
+          "motivo": "não muda o esquema antibiótico nem a duração na ausência de sintoma e de exposição"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar o antibiótico nos horários certos e completar todos os dias prescritos, mesmo após a melhora",
+        "beber 1,5 a 2 L de água por dia, se não houver restrição de volume",
+        "urinar com frequência e não segurar a urina por longos períodos",
+        "esvaziar a bexiga por completo e, no homem, avaliar jato fraco e resíduo",
+        "manter a bolsa de drenagem abaixo do nível da bexiga e não tracionar o cateter",
+        "controlar a glicemia todos os dias, no caso do diabético",
+        "comparecer ao retorno e repetir a urocultura quando solicitado",
+        "procurar o serviço se a febre não ceder em 48 a 72 h ou se surgir dor lombar intensa"
+      ],
+      "evitar": [
+        "usar antibiótico guardado de outra ocasião ou de outra pessoa",
+        "tratar cultura positiva sem sintoma, principalmente com cateter",
+        "tomar anti-inflamatório para dor, sobretudo com desidratação ou uso de aminoglicosídeo",
+        "manter cateter vesical sem indicação ou sem data de retirada",
+        "tomar quinolona sem prescrição, na gestação ou com dor em tendão",
+        "interromper o antibiótico ao melhorar a febre",
+        "usar banho de assento com antisséptico ou irrigação vesical por conta própria"
+      ],
+      "retorno": [
+        "febre que persiste por mais de 72 h ou volta depois de melhorar",
+        "dor lombar intensa, calafrios ou vômitos incoercíveis",
+        "confusão, sonolência, queda ou pressão baixa",
+        "diminuição da urina, urina muito escura ou sangue na urina",
+        "dor no tendão, dificuldade para andar ou dormência nas pernas",
+        "diarreia intensa durante ou após o antibiótico",
+        "contrações, sangramento vaginal ou redução dos movimentos do bebê, se gestante"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "rash",
+          "diarreia",
+          "lama biliar",
+          "hemólise imune"
+        ],
+        "observacao": "Diarreia com sangue ou febre exige pesquisa de C. difficile e suspensão; icterícia exige ultrassonografia e troca de esquema"
+      },
+      {
+        "agente": "amoxicilina-clavulanato",
+        "efeitos": [
+          "diarreia",
+          "hepatite colestática",
+          "rash"
+        ],
+        "observacao": "Suspender se icterícia ou colestase e não reintroduzir a associação; registrar a reação no prontuário"
+      },
+      {
+        "agente": "ciprofloxacino",
+        "efeitos": [
+          "tendinite e ruptura de tendão",
+          "neuropatia periférica",
+          "QT longo",
+          "disglucemia"
+        ],
+        "observacao": "Suspender imediatamente com dor em tendão, parestesia ou hipoglicemia e não reintroduzir a classe"
+      },
+      {
+        "agente": "ertapenem",
+        "efeitos": [
+          "convulsão",
+          "diarreia",
+          "elevação de transaminases"
+        ],
+        "observacao": "Ajustar à função renal, vigiar nível de consciência e revisar indicação diariamente"
+      },
+      {
+        "agente": "piperacilina-tazobactam",
+        "efeitos": [
+          "diarreia",
+          "hipocalemia",
+          "trombocitopenia",
+          "nefrotoxicidade com vancomicina"
+        ],
+        "observacao": "Potássio, plaquetas e creatinina de 24/24 h; reavaliar a associação com vancomicina e descalonar"
+      },
+      {
+        "agente": "meropenem",
+        "efeitos": [
+          "convulsão",
+          "diarreia",
+          "trombocitopenia"
+        ],
+        "observacao": "Conferir ajuste renal, vigiar consciência e descalonar com o antibiograma"
+      },
+      {
+        "agente": "amicacina",
+        "efeitos": [
+          "nefrotoxicidade",
+          "ototoxicidade",
+          "bloqueio neuromuscular"
+        ],
+        "observacao": "Creatinina diária, nível sérico de vale e audiometria se uso acima de 5 dias; suspender com piora renal ou zumbido"
+      },
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade",
+          "náusea"
+        ],
+        "observacao": "Conferir dose acumulada em 24 h, inclusive associações, e reduzir em hepatopatia e desnutrição"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar agente, dose, horário, via e reação observada",
+      "Reação alérgica cutânea leve: suspender, tratar com anti-histamínico e trocar por classe diferente, com cultura em mãos",
+      "Anafilaxia: adrenalina intramuscular 0,3 a 0,5 mg na face lateral da coxa, suporte e registro de alergia definitiva",
+      "Diarreia com sangue ou febre durante o antibiótico: pesquisar toxina de C. difficile, suspender o antimicrobiano quando possível e tratar conforme gravidade",
+      "Elevação de creatinina ou potássio: revisar volume e nefrotóxicos, ajustar dose pelo clearance e suspender aminoglicosídeo",
+      "Convulsão com carbapenem: excluir distúrbio metabólico e foco neurológico, ajustar dose renal e trocar de classe",
+      "Tendinite ou parestesia com quinolona: suspender e não reintroduzir a classe, independentemente da cultura",
+      "Reavaliar a gravidade, o foco e a necessidade de drenagem antes de apenas trocar o antibiótico"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "cefalexina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "7 a 10 dias, conforme o foco e a cultura",
+            "condicao": "gestante ou ITU baixa complicada com cultura sensível; não usar como esquema de 3 dias",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina-clavulanato 875/125 mg",
+            "dose": "875/125 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 a 10 dias",
+            "condicao": "descalonamento com cultura sensível; conferir função renal",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ciprofloxacino 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "somente com sensibilidade documentada e sem alternativa oral; contraindicado na gestação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor ou febre",
+            "duracao": "até 72 h",
+            "condicao": "máximo 3 g/dia; não associar AINE",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "orientações escritas de hidratação, sinais de retorno e retirada do cateter",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a alta clínica",
+            "condicao": "todo caso, com data de retorno e de retirada do dispositivo registrada",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona",
+            "dose": "1 g (2 g em pielonefrite grave)",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "temperatura, função renal, diarreia e cultura em 72 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "piperacilina-tazobactam",
+            "dose": "4,5 g",
+            "via": "IV",
+            "frequencia": "6/6 h (ajustar ao clearance)",
+            "monitorizacao": "creatinina, potássio, plaquetas e controle do foco",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ertapenem",
+            "dose": "1 g (500 mg se clearance abaixo de 30 mL/min)",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "consciência, creatinina e transaminases",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "meropenem",
+            "dose": "1 g em infusão estendida de 3 h",
+            "via": "IV",
+            "frequencia": "8/8 h (ajustar ao clearance)",
+            "monitorizacao": "consciência, creatinina e plaquetas",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "soro fisiológico 0,9%",
+            "dose": "30 mL/kg na primeira hora em sepse; 250 a 500 mL por bolus no idoso",
+            "via": "IV",
+            "frequencia": "com reavaliação após cada bolus",
+            "monitorizacao": "pressão, ausculta pulmonar, diurese e eletrólitos",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amicacina (somente em alergia grave a beta-lactâmico)",
+            "dose": "15 mg/kg em dose única diária",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "creatinina diária, nível sérico de vale e audiometria",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "urocultura com antibiograma",
+          "hemocultura quando febre ou sepse",
+          "hemograma, proteína C reativa, creatinina e clearance estimado",
+          "potássio e sódio",
+          "glicemia e hemoglobina glicada",
+          "ultrassonografia do trato urinário",
+          "tomografia de abdome e pelve quando febre persistente ou suspeita de abscesso",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com infecção do trato urinário complicada, necessitando de afastamento de suas atividades por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; anexar orientação de retorno e resultado de cultura"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com fator de complicação, agente e antibiograma, esquema usado, duração, drenagem realizada e função renal",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente de ___ anos, com ITU complicada por ___, em uso de ___ desde ___, com urocultura ___ e antibiograma ___. Creatinina de entrada ___ e atual ___. Realizada drenagem ___ em ___. Evolução com febre ___ após 72 h. Plano: descalonamento para ___ até completar ___ dias, controle de cultura em ___ e seguimento urológico em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "duração dos sintomas e tratamento antibiótico já iniciado",
+        "febre, calafrios, dor lombar, disúria e frequência urinária",
+        "gestação, possibilidade de gestação ou puerpério",
+        "cateter vesical, duplo J, nefrostomia ou cateterismo intermitente, com data de inserção",
+        "comorbidades: diabetes, imunossupressão, transplantado, doença renal crônica, litíase",
+        "número de ITU nos últimos 6 e 12 meses e agentes prévios",
+        "antibiótico nos últimos 90 dias, internação recente e viagem",
+        "alergias a antibióticos e reação apresentada",
+        "cirurgia ou instrumentação urológica recente",
+        "sintomas obstrutivos: jato fraco, esforço, resíduo, incontinência",
+        "função renal conhecida e creatinina atual",
+        "uso de AINE, anticoagulante e nefrotóxico"
+      ],
+      "texto_template": "Paciente de ___ anos, com quadro de ___ dias de febre ___, dor lombar ___, disúria ___ e ___ episódios de ITU no último ano. Fator de complicação: ___. Cateter/dispositivo: ___ desde ___. Antibiótico prévio: ___. Comorbidades: ___. Alergia: ___. Creatinina de ___ mg/dL. Uso de ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais, incluindo temperatura, pressão arterial e frequência cardíaca",
+        "perfusão, enchimento capilar e nível de consciência",
+        "ausculta pulmonar e saturação",
+        "abdome: dor, defesa, distensão e globo vesical",
+        "punho-percussão lombar bilateral",
+        "palpação de flancos e pesquisa de massa",
+        "genitália: meato, secreção, lesão e cateter",
+        "toque retal no homem, com avaliação de próstata e tônus",
+        "débito urinário, aspecto e cor da urina",
+        "pele: lesão por pressão, candidíase e sítio de punção"
+      ],
+      "texto_template": "Temperatura ___ °C, pressão arterial ___ mmHg, frequência cardíaca ___ bpm, saturação ___%, consciente e orientado ___. Ausculta pulmonar ___. Abdome ___ com globo vesical ___. Punho-percussão lombar dolorosa à ___ . Genitália ___. Toque retal ___. Diurese ___ mL, urina ___. Cateter ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "protocolo de ITU complicada e de sepse de foco urinário, critérios de internação, fluxo de drenagem e política de descalonamento antimicrobiano",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_sociedade_infeccao",
+        "o_que_verificar": "definição de ITU complicada, duração por cenário, papel da urocultura e indicação de imagem",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_urologia",
+        "o_que_verificar": "indicação e via de desobstrução, manejo de cateter e seguimento de ITU recorrente",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e diluições dos antimicrobianos disponíveis, bulas e ajuste renal",
+        "verificar": true
+      },
+      {
+        "tipo": "cultura_e_antibiograma_local",
+        "o_que_verificar": "prevalência de ESBL e perfil de resistência das enterobactérias no serviço, que define a escolha empírica",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-URO12-01",
+        "tipo": "esquema_de_cistite_em_itu_complicada",
+        "gatilho": "prescrição de nitrofurantoína, fosfomicina em dose única ou esquema de 3 dias para ITU complicada",
+        "severidade": "grave",
+        "mensagem": "Esquema de cistite simples não atinge parênquima renal e falha em ITU complicada.",
+        "acao": "bloquear item e sugerir esquema sistêmico de 7 a 14 dias",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-URO12-02",
+        "tipo": "quinolona_na_gestacao",
+        "gatilho": "ciprofloxacino, levofloxacino ou norfloxacino prescrito em gestante ou em idade fértil sem teste negativo",
+        "severidade": "grave",
+        "mensagem": "Quinolona é contraindicada na gestação: trocar por beta-lactâmico.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-URO12-03",
+        "tipo": "obstrucao_sem_drenagem",
+        "gatilho": "hidronefrose, anúria, pionefrose ou obstrução documentada sem drenagem programada, ou febre com obstrução há mais de 24 h",
+        "severidade": "grave",
+        "mensagem": "ITU obstrutiva sem drenagem evolui para pionefrose e choque.",
+        "acao": "acionar urologia e bloquear alta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-URO12-04",
+        "tipo": "sepse_de_foco_urinario",
+        "gatilho": "hipotensão, confusão, oligúria ou lactato elevado com suspeita de ITU",
+        "severidade": "grave",
+        "mensagem": "Sepse de foco urinário: antibiótico na primeira hora e controle do foco.",
+        "acao": "acionar protocolo de sepse",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-URO12-05",
+        "tipo": "urocultura_ausente",
+        "gatilho": "antibiótico iniciado em ITU complicada sem urocultura registrada antes da primeira dose",
+        "severidade": "precaucao",
+        "mensagem": "Sem cultura não há descalonamento nem duração correta; colher agora não substitui a coleta prévia.",
+        "acao": "alertar e solicitar coleta imediata",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-URO12-06",
+        "tipo": "cateter_nao_manejado",
+        "gatilho": "ITU associada a cateter com antibiótico iniciado sem troca, retirada ou data de retirada registrada",
+        "severidade": "precaucao",
+        "mensagem": "Cateter infectado mantém a infecção por biofilme.",
+        "acao": "alertar e exigir conduta sobre o dispositivo",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-URO12-07",
+        "tipo": "bacteriuria_assintomatica",
+        "gatilho": "antibiótico prescrito para cultura positiva em paciente cateterizado, idoso institucionalizado ou diabético sem sintoma urinário",
+        "severidade": "precaucao",
+        "mensagem": "Bacteriúria assintomática é colonização, fora de gestação e de pré-procedimento urológico.",
+        "acao": "alertar e sugerir suspensão",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-URO12-08",
+        "tipo": "carbapenem_sem_descalonamento",
+        "gatilho": "ertapenem ou meropenem em uso por mais de 72 h sem antibiograma registrado ou sem revisão de espectro",
+        "severidade": "informativo",
+        "mensagem": "Revisar espectro com o antibiograma e descalonar quando possível.",
+        "acao": "alertar a equipe",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "diretrizes de ITU complicada",
+        "diretrizes de urologia",
+        "Surviving Sepsis Campaign",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade: ITU complicada definida por cenário — gestante, homem, idoso frágil, diabético, cateter, obstrução, imunossupressão e ITU recorrente —, com urocultura obrigatória antes do antibiótico e controle do foco como tratamento; nove fármacos em sete classes com apresentações, preparo, tempo de infusão, monitorização e ajuste renal, incluindo ceftriaxona, amoxicilina-clavulanato, ciprofloxacino reservado, ertapenem em ESBL, piperacilina-tazobactam na sepse e meropenem no resgate; nove medidas não farmacológicas com retirada de cateter, drenagem e descalonamento; bloqueios de esquema de cistite simples em ITU complicada, de quinolona na gestação, de obstrução sem drenagem e de sepse sem antibiótico na primeira hora.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,671 @@
+{
+  "id": "ws-neu_08",
+  "nome": "Suspeita de AVC",
+  "cat": "Emergência",
+  "alias": "suspeita de avc avc derrame acidente vascular cerebral isquemia cerebral avc isquemico agudo deficit neurologico focal",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (NEU-08_avc.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: código AVC, tempo porta-imagem e porta-agulha, disponibilidade de trombectomia e trombolítico padronizado",
+      "[verificar] sociedade_neurologia: critérios de elegibilidade e contraindicações à trombólise e janela de trombectomia",
+      "[verificar] diretriz_de_reperfusao: doses de alteplase e tenecteplase, alvos pressóricos e critérios de mismatch para trombectomia tardia",
+      "[verificar] anvisa: apresentações e reconstituição do trombolítico disponível no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "NEU-08 em 2026-11-27",
+    "fundido_workspace": "NEU-08 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: déficit focal súbito com hora de início dentro de 4,5 h -> acionar código AVC, tomografia em até 20 min e NIHSS imediato; NIHSS acima de 6 com desvio de olhar, hemiplegia densa ou afasia global -> angiotomografia imediata e acionar neurorradiologia intervencionista; rebaixamento de consciência progressivo com anisocoria ou postura de descerebração -> osmoterapia imediata, intubação e avaliação para hemicraniectomia; cefaleia súbita intensa, vômito ou convulsão no início do quadro -> tomografia imediata; não trombolisar antes da imagem. 1) Reconhecer o déficit na triagem e acionar o código AVC imediatamente, com registro da hora de início ou da última vez visto bem 2) Medir glicemia capilar, aplicar NIHSS e obter dois acessos venosos calibrosos; não atrasar a imagem por exames laboratoriais 3) Levar à tomografia de crânio em até 20 minutos: hemorragia exclui trombólise e encaminha para NEU-12; isquemia libera a janela 4) Angiotomografia no mesmo exame se houver suspeita de oclusão de grande vaso: NIHSS 6 ou mais, desvio de olhar, hemiplegia densa ou afasia global 5) Checar contraindicações à trombólise, pressão e anticoagulação antes de prescrever; corrigir hipoglicemia e reduzir pressão para abaixo de 185/110 mmHg 6) Decidir a reperfusão: trombólise até 4,5 h com alteplase ou tenecteplase e trombectomia até 6 h, ou até 24 h em casos selecionados por mismatch 7) Após a reperfusão: NIHSS e pressão seriados, tomografia de controle em 24 h, nenhum antiagregante ",
+  "redFlags": [
+    "déficit focal súbito com hora de início dentro de 4,5 h -> acionar código AVC, tomografia em até 20 min e NIHSS imediato",
+    "NIHSS acima de 6 com desvio de olhar, hemiplegia densa ou afasia global -> angiotomografia imediata e acionar neurorradiologia intervencionista",
+    "rebaixamento de consciência progressivo com anisocoria ou postura de descerebração -> osmoterapia imediata, intubação e avaliação para hemicraniectomia",
+    "cefaleia súbita intensa, vômito ou convulsão no início do quadro -> tomografia imediata; não trombolisar antes da imagem",
+    "pressão arterial acima de 185/110 mmHg em candidato a trombólise -> reduzir com labetalol ou nicardipina e confirmar abaixo do alvo antes do bolus",
+    "piora neurológica súbita após a infusão do trombolítico -> suspender infusão, tomografia imediata, hemograma e coagulação",
+    "edema de língua, lábios ou disfonia durante a trombólise -> suspender infusão, avaliar via aérea e tratar com anti-histamínico e corticoide",
+    "hipoglicemia ou hiperglicemia grave no momento da avaliação -> corrigir glicemia e reavaliar o déficit antes de concluir o diagnóstico"
+  ],
+  "naoUsar": [
+    "hemorragia intracraniana na tomografia",
+    "AVC isquêmico ou trauma craniano nos últimos 3 meses",
+    "hemorragia intracraniana prévia em qualquer tempo",
+    "neoplasia, malformação vascular ou aneurisma cerebral",
+    "cirurgia de grande porte ou trauma maior nas últimas 3 semanas",
+    "punção arterial em vaso não compressível nas últimas 7 dias",
+    "sangramento gastrointestinal ou geniturinário ativo",
+    "plaquetas abaixo de 100.000/mm³ ou INR acima de 1,7",
+    "AAS/antiagregante/anticoagulante antes da TC excluir hemorragia",
+    "Trombólise fora da janela de 4,5 h ou quando não se sabe a hora do início (última vez visto bem)",
+    "Reduzir PA agressivamente no isquêmico sem trombólise — permitir até 220/120 (derrubar 15–25% apenas se trombólise: alvo < 185/110)",
+    "O2 de rotina sem hipoxemia (SpO2 ≥ 94% não precisa)"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar AAS ou o antiagregante prescrito todos os dias, sem interrupção"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "suspender antiagregante por conta própria ou por orientação de terceiros"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antiagregante plaquetário",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "aas",
+            "pos": "300 mg no primeiro dia; 100 mg/dia na manutenção. Via VO ou enteral por sonda. 1x/dia. Indefinida.",
+            "posTodas": true,
+            "motivo": "AVC isquêmico sem trombólise, iniciado em 24-48 h; após trombólise, somente depois de 24 h e da tomografia de controle (1a linha) AVC isquêmico não cardioembólico",
+            "nota": "Uso direto; se disfagia, triturar e administrar por sonda enteral com água - monitorar: sangramento digestivo e em acessos; monitorar: hemograma se sangramento; monitorar: dor epigástrica; monitorar: teste de deglutição antes da primeira dose · NÃO: hemorragia intracraniana; sangramento ativo; trombólise nas últimas 24 h; plaquetas abaixo de 30.000/mm³; alergia a salicilato; úlcera péptica com sangramento recente · Obs: Nunca antes da tomografia: dar AAS antes de excluir hemorragia transforma um hematoma operável em catástrofe. Após trombólise, aguardar 24 h e a imagem de controle",
+            "dose": {
+              "texto": "300 mg no primeiro dia; 100 mg/dia na manutenção; 1x/dia; indefinida; max. 300 mg/dia",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "leg_clopidogrel",
+            "pos": "300 mg no ataque; 75 mg/dia na manutenção. Via VO ou enteral por sonda. 1x/dia. 21 dias em associação ao AAS; monoterapia indefinida se intolerância ao AAS.",
+            "posTodas": true,
+            "motivo": "AVC menor ou AIT de alto risco em duplo antiagregante por 21 dias, ou intolerância ao AAS (condicional) AVC menor ou AIT de alto risco",
+            "nota": "Uso direto; triturar e diluir em água se administrado por sonda - monitorar: sangramento; monitorar: plaquetas e hemograma se febre ou petéquias; monitorar: adesão ao esquema de 21 dias",
+            "dose": {
+              "texto": "300 mg no ataque; 75 mg/dia na manutenção; 1x/dia; 21 dias em associação ao AAS; monoterapia indefinida se intolerância ao AAS; max. 300 mg no ataque",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Estatina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "atorvastatina",
+            "pos": "40-80 mg. Via VO ou enteral. 1x/dia, à noite. Indefinida.",
+            "posTodas": true,
+            "motivo": "AVC isquêmico ou AIT, iniciada na internação independentemente do LDL basal (1a linha) AVC isquêmico ou AIT",
+            "nota": "Uso direto, com ou sem alimento; triturar e diluir em água se via enteral - monitorar: CK se dor muscular; monitorar: ALT e AST na basal e se sintomas; monitorar: perfil lipídico em 4-12 semanas",
+            "dose": {
+              "texto": "40-80 mg; 1x/dia, à noite; indefinida; max. 80 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 80,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 80,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anticoagulante heparina baixo peso",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa 20 mg/0,2 mL",
+              "q": "",
+              "pos": "40 mg 1x/dia na profilaxia; 1 mg/kg 12/12 h no tratamento de trombose documentada. Via SC. 1x/dia na profilaxia; 12/12 h no tratamento. Até a deambulação ou a alta."
+            },
+            "motivo": "profilaxia de tromboembolismo venoso em paciente imobilizado, iniciada após 24 h da trombólise e após excluir hemorragia (condicional) profilaxia após 24 h da trombólise",
+            "nota": "Uso direto na seringa; não expelir a bolha; aplicar no subcutâneo do abdome - monitorar: plaquetas a cada 48-72 h; monitorar: sinais de sangramento; monitorar: função renal; monitorar: anti-Xa se ClCr abaixo de 30 mL/min ou obesidade grave · NÃO: hemorragia intracraniana; trombólise nas primeiras 24 h; sangramento ativo; plaquetas abaixo de 50.000/mm³; insuficiência renal grave sem ajuste; hematoma em expansão na tomografia · Obs: Não é tratamento de AVC isquêmico agudo: anticoagulação plena não melhora desfecho e aumenta hemorragia. Só há indicação específica em fibrilação atrial, dissecção ou trombose venosa, com início após 24…",
+            "dose": {
+              "texto": "40 mg 1x/dia na profilaxia; 1 mg/kg 12/12 h no tratamento de trombose documentada; 1x/dia na profilaxia; 12/12 h no tratamento; até a deambulação ou a alta; max. 1 mg/kg por dose",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Código AVC com cronometragem em minutos",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar hora da chegada, do NIHSS, da tomografia, do bolus e da punção femoral; a meta é porta-imagem de 20 min e porta-agulha de 30 min, auditada mensalmente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "NIHSS na chegada e seriado",
+              "ap": "",
+              "q": "",
+              "pos": "Escore completo na primeira avaliação, repetido a cada 15 min na primeira hora pós-trombólise e a cada 2 h por 24 h; registrar quem aplicou e o valor, porque a piora é o gatilho da tomografia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Glicemia capilar antes de qualquer decisão",
+              "ap": "",
+              "q": "",
+              "pos": "Medir em todos; hipoglicemia é o principal mimetizador de AVC e precisa ser corrigida antes de trombolisar"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Cabeceira elevada a 30 graus e proteção de via aérea",
+              "ap": "",
+              "q": "",
+              "pos": "Cabeceira a 30 graus melhora o retorno venoso sem reduzir perfusão; testar deglutição antes de qualquer via oral e manter dieta zero até a avaliação fonoaudiológica"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Oxigênio apenas se saturação abaixo de 94%",
+              "ap": "",
+              "q": "",
+              "pos": "Hiperóxia em normoxêmico aumenta o estresse oxidativo; manter saturação entre 94% e 98%"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Controle térmico e glicêmico",
+              "ap": "",
+              "q": "",
+              "pos": "Tratar febre acima de 37,5 °C, investigar o foco e manter glicemia de 140–180 mg/dL com insulina em infusão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Mobilização precoce e prevenção de complicações",
+              "ap": "",
+              "q": "",
+              "pos": "Mobilizar em 24–48 h quando estável, profilaxia de úlcera de pressão com mudança de decúbito, higiene oral e rastreio de disfagia para prevenir pneumonia aspirativa"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Unidade de AVC com monitorização contínua",
+              "ap": "",
+              "q": "",
+              "pos": "Cardioscópio, oximetria e pressão não invasiva; a internação em unidade especializada reduz mortalidade e dependência de forma independente da reperfusão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_9",
+              "n": "Comunicação com a família sobre a janela terapêutica",
+              "ap": "",
+              "q": "",
+              "pos": "Explicar em linguagem clara o déficit, a decisão de trombolisar ou não, os riscos de hemorragia e o plano das próximas 24 h, com registro do consentimento quando aplicável"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "NEU-08"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Trombolítico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "alteplase",
+              "n": "Alteplase",
+              "ap": "frasco-ampola 50 mg (pó) com diluente de 50 mL",
+              "via": "IV",
+              "pos": "0,9 mg/kg; 10% da dose em bolus em 1 minuto e o restante em 60 minutos. Via IV. Dose única, com bolus seguido de infusão contínua de 60 min. 60 minutos de infusão. Bolus em 1 minuto; restante em 60 minutos."
+            },
+            "motivo": "AVC isquêmico com início até 4,5 h, tomografia sem hemorragia e sem contraindicação (1a linha)",
+            "nota": "Reconstituir com o diluente próprio até 1 mg/mL; retirar o excesso para atingir a dose calculada por peso; não agitar. Separar 10% da dose para o bolus e o restante para a bomba - monitorar: NIHSS e pressão a cada 15 min na primeira hora, a cada 30 min nas 6 h seguintes e a cada hora até 24 h; monitorar: tomografia de  · NÃO: hemorragia intracraniana na tomografia; AVC isquêmico ou trauma craniano nos últimos 3 meses; hemorragia intracraniana prévia em qualquer tempo; neoplasia, malformação vascular ou aneurisma cerebral; cirurgia de grande porte ou trauma maior nas últimas 3 semanas; punção arterial em vaso não compressível nas…",
+            "dose": {
+              "texto": "0,9 mg/kg; 10% da dose em bolus em 1 minuto e o restante em 60 minutos; dose única, com bolus seguido de infusão contínua de 60 min; 60 minutos de infusão; max. 90 mg",
+              "status": "ok",
+              "valor": 0.9,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 90,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "tenecteplase",
+              "n": "Tenecteplase",
+              "ap": "frasco-ampola 40 mg (pó) com diluente",
+              "via": "IV",
+              "pos": "0,25 mg/kg em bolus único. Via IV. Dose única. Bolus único. Bolus único em 5-10 segundos."
+            },
+            "motivo": "AVC isquêmico elegível até 4,5 h, sobretudo com oclusão de grande vaso e transferência para trombectomia (alternativa)",
+            "nota": "Reconstituir com o diluente próprio até 5 mL; administrar sem diluição adicional, com seringa de baixo volume - monitorar: NIHSS e pressão a cada 15 min na primeira hora; monitorar: tomografia de controle em 24 h; monitorar: sinais de sangramento; monitorar: nível de consciência e via aérea · NÃO: as mesmas do alteplase; hipersensibilidade à tenecteplase ou à gentamicina (resíduo de fabricação); coagulopatia grave; hipertensão refratária acima de 185/110 mmHg · Obs: Bolus único facilita o transporte para o centro de trombectomia. Não confundir com a dose do infarto do miocárdio, que é por faixa de peso e chega a 50 mg. Confirmar…",
+            "dose": {
+              "texto": "0,25 mg/kg em bolus único; dose única; bolus único; max. 25 mg",
+              "status": "ok",
+              "valor": 0.25,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 25,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anti-hipertensivo alfa beta",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "labetalol",
+              "n": "Labetalol",
+              "ap": "ampola 5 mg/mL (20 mL, 100 mg)",
+              "via": "IV",
+              "pos": "10-20 mg IV em bolus lento; repetir a cada 10-20 min ou manter infusão de 1-2 mg/min. Bolus a cada 10-20 min ou infusão contínua. Até atingir o alvo; manter controle nas primeiras 24 h. Bolus lento em 1-2 minutos; infusão contínua titulada."
+            },
+            "motivo": "controle pressórico antes e depois da trombólise e nas emergências hipertensivas com AVC (1a linha)",
+            "nota": "Bolus IV sem diluição; para infusão contínua, diluir 100 mg em 100 mL de SF 0,9% (1 mg/mL) - monitorar: pressão a cada 5-15 min durante a titulação; monitorar: frequência cardíaca e ritmo; monitorar: ausculta respiratória; monitorar: nível de consciência e NIHSS após cada redução · NÃO: bradicardia abaixo de 50 bpm; bloqueio atrioventricular de 2º ou 3º grau sem marca-passo; choque cardiogênico; asma grave descompensada; insuficiência cardíaca descompensada; hipotensão · Obs: Reduzir no máximo 15% da pressão por vez. Não baixar pressão de hipertenso crônico sem indicação: a penumbra depende dessa pressão. Suspender se pressão…",
+            "dose": {
+              "texto": "10-20 mg IV em bolus lento; repetir a cada 10-20 min ou manter infusão de 1-2 mg/min; bolus a cada 10-20 min ou infusão contínua; até atingir o alvo; manter controle nas primeiras 24 h; max. 300 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 10-20 min",
+              "freq_min": 10,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Osmotico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "solucao_salina_hipertonica",
+              "n": "Solução salina hipertônica 20%",
+              "ap": "frasco 20 mL a 20%",
+              "via": "IV em acesso central",
+              "pos": "20-40 mL de solução a 20% em bolus. Via IV em acesso central. A cada 6-8 h ou em bolus único na herniação. 48-96 h conforme resposta. 10-20 minutos (20%); 30-60 minutos (3%)."
+            },
+            "motivo": "edema cerebral com hipotensão ou hipovolemia, quando o manitol é inadequado (alternativa)",
+            "nota": "Não diluir a solução a 20%; administrar por acesso central. A solução a 3% pode ser infundida em acesso periférico calibroso - monitorar: sódio a cada 6-12 h, alvo de 145-155 mEq/L; monitorar: pressão e diurese; monitorar: ausculta pulmonar; monitorar: osmolaridade sérica; monitorar: nível de consciência e pupilas · NÃO: hipernatremia acima de 155 mEq/L; sobrecarga de volume; insuficiência cardíaca descompensada; anúria · Obs: Preferida no hipotenso porque expande o volume intravascular além de reduzir o edema. Não corrigir o sódio rápido demais: risco de mielinólise",
+            "dose": {
+              "texto": "20-40 mL de solução a 20% em bolus; a cada 6-8 h ou em bolus único na herniação; 48-96 h conforme resposta; max. 120 mL/dia de solução a 20%",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 40,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 120,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "a cada 6-8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "manitol",
+              "n": "Manitol 20%",
+              "ap": "frasco 250 mL a 20%",
+              "via": "IV",
+              "pos": "0,25-1 g/kg. Via IV. A cada 6-8 h conforme resposta. 48-96 h, enquanto se define a cirurgia. 20-30 minutos."
+            },
+            "motivo": "edema cerebral com rebaixamento progressivo, desvio de linha média ou sinais de herniação (condicional)",
+            "nota": "Usar a solução a 20% já pronta; aquecer a 37 °C e infundir por filtro em acesso calibroso - monitorar: pressão, diurese e balanço hídrico; monitorar: sódio e osmolaridade a cada 6-12 h; monitorar: função renal; monitorar: ausculta pulmonar e saturação; monitorar: nível de consciência e pupilas · NÃO: anúria; insuficiência cardíaca congestiva descompensada; edema agudo de pulmão; hipovolemia grave não corrigida; hemorragia intracraniana ativa · Obs: É ponte para a cirurgia, não tratamento definitivo. Não usar em hipotensão: piora a perfusão da penumbra. Preferir salina hipertônica em hipovolêmico ou hipotenso · Renal:…",
+            "dose": {
+              "texto": "0,25-1 g/kg; a cada 6-8 h conforme resposta; 48-96 h, enquanto se define a cirurgia; max. 2 g/kg por dose em herniação iminente",
+              "status": "ok",
+              "valor": 0.25,
+              "valor_max": 1,
+              "unidade": "g",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "a cada 6-8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anti-hipertensivo bloqueador canal cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nicardipina",
+              "n": "Nicardipina",
+              "ap": "ampola 1 mg/mL (10 mL)",
+              "via": "IV",
+              "pos": "5 mg/h em infusão; aumentar 2,5 mg/h a cada 5-15 min até o alvo. Via IV. Infusão contínua. Até 24-48 h conforme controle. Infusão contínua; titular a cada 5-15 min."
+            },
+            "motivo": "controle pressórico titulável no AVC, sobretudo quando o labetalol é contraindicado por asma ou bradicardia (alternativa)",
+            "nota": "Diluir 25 mg em 240 mL de SF 0,9% ou SG 5% (0,1 mg/mL) e infundir em bomba, em acesso central ou periférico calibroso - monitorar: pressão a cada 5 min no início e a cada 15 min após estabilizar; monitorar: frequência cardíaca; monitorar: sítio de infusão; monitorar: NIHSS após cada redução · NÃO: estenose aórtica grave; choque cardiogênico; insuficiência cardíaca descompensada; hipotensão; hipersensibilidade a diidropiridina · Obs: Mais titulável que o labetalol e sem broncoespasmo, mas causa taquicardia reflexa e flebite. Não é a escolha em insuficiência cardíaca descompensada",
+            "dose": {
+              "texto": "5 mg/h em infusão; aumentar 2,5 mg/h a cada 5-15 min até o alvo; infusão contínua; até 24-48 h conforme controle; max. 15 mg/h",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 15,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 5-15 min",
+              "freq_min": 5,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Insulina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "insulina_regular",
+              "n": "Insulina regular",
+              "ap": "frasco 100 UI/mL (10 mL)",
+              "via": "IV em infusão contínua",
+              "pos": "Infusão de 0,05-0,1 UI/kg/h, com ajuste por protocolo de glicemia. Via IV em infusão contínua. Infusão contínua com glicemia de 1 em 1 h. Até estabilização glicêmica e retomada da via oral. Infusão contínua."
+            },
+            "motivo": "hiperglicemia acima de 180 mg/dL na fase aguda do AVC (condicional)",
+            "nota": "Diluir 100 UI em 100 mL de SF 0,9% (1 UI/mL) e infundir em bomba, com equipo dedicado - monitorar: glicemia capilar de 1 em 1 h; monitorar: potássio a cada 6-12 h; monitorar: sinais de hipoglicemia em paciente com afasia ou rebaixamento · NÃO: hipoglicemia; glicemia abaixo de 70 mg/dL · Obs: Alvo de 140–180 mg/dL. Controle muito rígido aumenta hipoglicemia e mortalidade. Hipoglicemia em paciente com afasia pode passar despercebida e simular piora neurológica · Renal: Reduzir a dose e intensificar a monitorização em insuficiência renal, pelo risco de…",
+            "dose": {
+              "texto": "infusão de 0,05-0,1 UI/kg/h, com ajuste por protocolo de glicemia; infusão contínua com glicemia de 1 em 1 h; até estabilização glicêmica e retomada da via oral; max. conforme protocolo, titulada pela glicemia",
+              "status": "ok",
+              "valor": 0.05,
+              "valor_max": 0.1,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 1,
+              "freq_texto": "de 1 em 1 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antitérmico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "paracetamol_vo",
+            "motivo": "febre acima de 37,5 °C na fase aguda do AVC (condicional)",
+            "nota": "Uso direto por via oral; o frasco IV é infundido sem diluição ou diluído em SF 0,9% - monitorar: temperatura a cada 4 h; monitorar: transaminases em uso prolongado; monitorar: peso e função hepática para calcular a dose máxima · NÃO: hepatopatia grave; hipersensibilidade; desnutrição grave com depleção de glutationa · Obs: Tratar febre e investigar o foco: infecção, aspiração ou acesso venoso. Cada grau de febre aumenta o metabolismo cerebral e a lesão de penumbra · Renal: ClCr abaixo de 30 mL/min: intervalo de 6–8 h",
+            "dose": {
+              "texto": "500-750 mg; 6/6 h se necessário; até a resolução do foco febril; max. 4 g/dia (3 g/dia em hepatopata, desnutrido ou alcoolista)",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": 750,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anticonvulsivante",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "levetiracetam",
+              "n": "Levetiracetam",
+              "ap": "comprimido 250 mg",
+              "via": "IV ou VO",
+              "pos": "Ataque de 1.000-2.000 mg; manutenção de 500-1.000 mg 12/12 h. Via IV ou VO. 12/12 h. Avaliar em 7-14 dias; manter apenas se houver epilepsia estabelecida. 15 minutos."
+            },
+            "motivo": "crise convulsiva no contexto do AVC agudo, sem indicação de profilaxia de rotina (condicional)",
+            "nota": "Diluir a dose IV em 100 mL de SF 0,9% ou SG 5% e infundir - monitorar: nível de consciência e comportamento; monitorar: função renal antes da manutenção; monitorar: plaquetas em uso prolongado; monitorar: controle das crises · NÃO: hipersensibilidade; insuficiência renal grave sem ajuste; psicose ativa · Obs: Profilaxia anticonvulsivante de rotina não é indicada no AVC. Tratar apenas crise clínica ou eletrográfica, e reavaliar a necessidade após a fase aguda · Renal: ClCr 50–80 mL/min: 500–1.000 mg 12/12 h; ClCr 30–50: 250–750 mg 12/12 h; ClCr abaixo de…",
+            "dose": {
+              "texto": "ataque de 1.000-2.000 mg; manutenção de 500-1.000 mg 12/12 h; 12/12 h; avaliar em 7-14 dias; manter apenas se houver epilepsia estabelecida; max. 3.000 mg/dia",
+              "status": "ok",
+              "valor": 1000,
+              "valor_max": 2000,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3000,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "NEU-08",
+    "versao": "0.2.0",
+    "arquivo": "NEU-08_avc.json",
+    "area": "Neurológico",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

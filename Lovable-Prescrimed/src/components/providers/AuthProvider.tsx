@@ -1,0 +1,103 @@
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useQueryClient } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import type { Session, User } from "@supabase/supabase-js";
+import { clearLocalAppData, ensureLocalDataOwner } from "@/lib/sessionCleanup";
+
+type AuthContextValue = {
+  session: Session | null;
+  user: User | null;
+  loading: boolean;
+  roles: string[];
+  rolesLoading: boolean;
+  isAdmin: boolean;
+  signOut: () => Promise<void>;
+};
+
+const AuthContext = createContext<AuthContextValue | null>(null);
+
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [session, setSession] = useState<Session | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [roles, setRoles] = useState<string[]>([]);
+  const [rolesLoadingState, setRolesLoading] = useState(true);
+  const [rolesFor, setRolesFor] = useState<string | null>(null);
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    // 1) Listener primeiro (evita perder eventos), sem chamadas assíncronas dentro do callback
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, s) => {
+      if (event === "SIGNED_OUT") {
+        queryClient.clear();
+        clearLocalAppData();
+      } else if (s?.user?.id && ensureLocalDataOwner(s.user.id)) {
+        queryClient.clear();
+      }
+      setSession(s);
+      setLoading(false);
+    });
+
+    // 2) Sessão existente
+    supabase.auth.getSession().then(({ data: { session: s } }) => {
+      if (s?.user?.id && ensureLocalDataOwner(s.user.id)) queryClient.clear();
+      setSession(s);
+      setLoading(false);
+    });
+
+    return () => subscription.unsubscribe();
+  }, [queryClient]);
+
+  const userId = session?.user?.id ?? null;
+
+  useEffect(() => {
+    let active = true;
+    if (!userId) {
+      setRoles([]);
+      setRolesLoading(false);
+      return () => { active = false; };
+    }
+    setRolesLoading(true);
+    supabase
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", userId)
+      .then(({ data }) => {
+        if (!active) return;
+        setRoles((data ?? []).map((r: { role: string }) => r.role));
+        setRolesFor(userId);
+        setRolesLoading(false);
+      });
+    return () => { active = false; };
+  }, [userId]);
+
+  // Evita um quadro em que o usuário já existe mas os papéis ainda não foram buscados.
+  const rolesLoading = rolesLoadingState || (!!userId && rolesFor !== userId);
+
+  const value = useMemo<AuthContextValue>(() => ({
+    session,
+    user: session?.user ?? null,
+    loading,
+    roles,
+    rolesLoading,
+    isAdmin: roles.includes("admin"),
+    signOut: async () => {
+      try {
+        const { error } = await supabase.auth.signOut();
+        if (error) throw error;
+      } finally {
+        queryClient.clear();
+        clearLocalAppData();
+      }
+    },
+  }), [session, loading, roles, rolesLoading, queryClient]);
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+export function useAuth() {
+  const ctx = useContext(AuthContext);
+  if (!ctx) {
+    throw new Error("useAuth deve ser usado dentro de <AuthProvider> (montado em App.tsx).");
+  }
+  return ctx;
+}

@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "INF-14",
+    "area": "Infectologia",
+    "nome": "Febre sem foco no adulto",
+    "aliases": ["Febre sem foco no adulto", "febre sem foco", "febre aguda sem foco", "síndrome febril aguda sem foco", "febre sem sinais localizatórios", "febre de curta duração"],
+    "contexto": ["ambulatorial", "hospitalar"],
+    "populacao": ["adulto"],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Febre sem foco no adulto é a temperatura acima de 38 °C aferida em duas ocasiões, sem sintoma ou sinal que localize a infecção depois de anamnese dirigida e exame físico completo. O erro que mais causa dano não é deixar de pedir exame: é prescrever antibiótico antes de procurar o foco e antes de colher cultura, e é dar alta sem reavaliação. A conduta é sequencial — refazer a história procurando exposição, viagem, animal, fármaco e imunossupressão, repetir o exame físico desnudo, colher hemograma, urina tipo 1 com urocultura e radiografia de tórax, e reservar hemoculturas para quem tem toxemia ou febre alta persistente. Antitérmico e hidratação tratam o sintoma, não a causa. Reavaliar em 48 horas é obrigatório: a febre sem foco que não melhora em 48 a 72 horas deixou de ser sem foco e exige nova investigação. Febre de origem indeterminada é outra entidade — três semanas de febre documentada, sem diagnóstico após investigação adequada — e não se maneja com antibiótico empírico.",
+    "inclusao": [
+      "Temperatura acima de 38 °C em duas aferições, sem queixa ou sinal localizatório após anamnese e exame dirigidos",
+      "Febre aguda de até 3 semanas de duração em adulto previamente hígido, sem foco evidente",
+      "Idoso com febre baixa, confusão ou queda do estado geral sem sintoma específico",
+      "Paciente com febre e exame físico inicial normal, mas com fator de risco: viagem recente, imunossupressão, prótese ou dispositivo",
+      "Febre persistente após 48 a 72 horas de observação sem foco definido"
+    ],
+    "exclusao": [
+      { "situacao": "febre com foco evidente: dispneia e crepitações, disúria ou dor lombar, rigidez de nuca, dor abdominal localizada", "fluxo": "protocolo específico do foco" },
+      { "situacao": "febre acima de 3 semanas documentada, sem diagnóstico após investigação ambulatorial e hospitalar adequada", "fluxo": "febre de origem indeterminada — investigação sistematizada" },
+      { "situacao": "neutropenia febril com neutrófilos abaixo de 500/mm³", "fluxo": "emergência oncológica — antibiótico de amplo espectro na primeira hora" },
+      { "situacao": "febre com toxemia, hipotensão ou lactato elevado", "fluxo": "sepse — sala vermelha e protocolo de sepse" },
+      { "situacao": "febre recorrente com calafrios e períodos assintomáticos, ou febre após retorno de área endêmica", "fluxo": "malária e doenças febris de retorno de viagem" }
+    ],
+    "sinais_alarme": [
+      { "id": "AL-01", "sinal": "toxemia: prostração, palidez, perfusão lentificada ou confusão", "por_que": "sepse com disfunção orgânica, independente do foco", "acao": "sala vermelha, dois acessos, lactato e hemoculturas, antibiótico de amplo espectro na primeira hora", "severidade": "grave" },
+      { "id": "AL-02", "sinal": "hipotensão, pressão sistólica abaixo de 90 mmHg ou frequência cardíaca acima de 120 bpm", "por_que": "choque séptico ou outra emergência cardiovascular", "acao": "reposição volêmica guiada, noradrenalina se refratário e internação em unidade monitorizada", "severidade": "grave" },
+      { "id": "AL-03", "sinal": "rigidez de nuca, cefaleia intensa, fotofobia ou rebaixamento de consciência", "por_que": "meningite bacteriana com risco de morte em horas", "acao": "ceftriaxona imediata, punção lombar (BOX-07) quando seguro e internação", "severidade": "grave" },
+      { "id": "AL-04", "sinal": "petéquias, equimoses espontâneas ou sangramento de mucosa", "por_que": "meningococcemia, dengue grave ou coagulopatia", "acao": "internação imediata, hemograma e coagulograma, antibiótico empírico e isolamento", "severidade": "grave" },
+      { "id": "AL-05", "sinal": "imunossupressão: neutropenia, HIV com CD4 baixo, quimioterapia, transplantado ou corticoide crônico", "por_que": "infecção oportunista e evolução atípica sem sinais localizatórios", "acao": "internar, ampliar investigação (hemoculturas, imagem, sorologias) e não dar alta", "severidade": "grave" },
+      { "id": "AL-06", "sinal": "viagem recente a área de malária, febre amarela ou dengue nas últimas 4 semanas", "por_que": "doença febris de retorno de viagem com risco de morte", "acao": "gota espessa e teste rápido de malária no mesmo dia; notificação compulsória quando indicada", "severidade": "grave" },
+      { "id": "AL-07", "sinal": "febre acima de 39,5 °C refratária a antitérmico ou persistente por mais de 72 horas", "por_que": "infecção bacteriana oculta ou foco não identificado", "acao": "reavaliação clínica completa, exames e reconsiderar internação", "severidade": "precaucao" },
+      { "id": "AL-08", "sinal": "prótese articular, valvar, dispositivo cardíaco ou cateter de longa permanência", "por_que": "infecção de material protético com foco difícil", "acao": "hemoculturas seriadas, ecocardiograma e avaliação especializada", "severidade": "precaucao" }
+    ],
+    "perguntas_rapidas": [
+      "Qual a temperatura medida, em qual termômetro e há quantos dias?",
+      "Como a febre se comporta no dia: contínua, em picos ou com calafrios e sudorese?",
+      "Viajou nos últimos 30 dias? Para onde e com que exposição: água, mata, fazenda, área de malária?",
+      "Teve contato com animal, picada de inseto, mordida ou exposição a esgoto e enchente?",
+      "Tem tosse, dispneia, disúria, diarreia, dor abdominal, dor articular ou cefaleia, mesmo leve?",
+      "Usa ou usou antibiótico, corticoide, imunossupressor ou quimioterapia nos últimos 90 dias?",
+      "Tem prótese, cateter, marca-passo, diálise ou ferida cirúrgica recente?",
+      "Alguém em casa ou no trabalho está com febre, tosse ou diarreia?",
+      "Perdeu peso, tem sudorese noturna ou febre há mais de 3 semanas?",
+      "Já foi operado ou internado nos últimos 30 dias? Usa droga injetável?"
+    ],
+    "criterios_escolha": [
+      { "cenario": "Adulto hígido, febre de até 72 horas, sem toxemia, exame físico sem foco", "escolha": "Antitérmico, hidratação oral e investigação dirigida (hemograma, urina tipo 1 com urocultura, radiografia de tórax); reavaliação obrigatória em 48 horas, sem antibiótico", "porque": "A maioria é viral e autolimitada, e o antibiótico empírico sem foco seleciona resistência, mascara a evolução e não reduz mortalidade" },
+      { "cenario": "Toxemia, hipotensão ou suspeita de sepse sem foco definido", "escolha": "Dois pares de hemoculturas, lactato, acesso venoso, cristaloide 30 mL/kg e ceftriaxona 2 g IV na primeira hora; ajustar após cultura e evolução", "porque": "Na sepse, cada hora de atraso do antibiótico aumenta a mortalidade, e a cultura colhida antes muda a terapia dirigida" },
+      { "cenario": "Febre com rigidez de nuca, cefaleia intensa ou rebaixamento de consciência", "escolha": "Ceftriaxona 2 g IV 12/12 h imediata, associada a ampicilina se suspeita de pneumococo resistente ou idade acima de 50 anos; punção lombar (BOX-07) após avaliação de risco de herniação", "porque": "A meningite bacteriana mata em horas e o antibiótico não pode esperar a punção quando há sinais focais ou instabilidade" },
+      { "cenario": "Suspeita de arbovirose conforme epidemiologia local: dengue, chikungunya ou zika", "escolha": "NS1 e sorologia para dengue, PCR ou sorologia conforme o agente; hidratação e antitérmico; proibir AINE e AAS", "porque": "AINE e AAS aumentam sangramento na dengue, e a hidratação precoce é a única medida que reduz choque por extravasamento" },
+      { "cenario": "Síndrome gripal com febre, mialgia e tosse em período de circulação de influenza ou em paciente de risco", "escolha": "Oseltamivir 75 mg 12/12 h por 5 dias, iniciado idealmente em 48 horas, com teste rápido quando disponível", "porque": "O antiviral reduz complicação nos grupos de risco e não deve esperar confirmação laboratorial nesses pacientes" },
+      { "cenario": "Retorno de área endêmica de malária com febre", "escolha": "Gota espessa e teste rápido no mesmo dia; tratamento conforme espécie e gravidade, com internação se sinais de malária grave", "porque": "Malária por Plasmodium falciparum pode evoluir para óbito em 24 a 48 horas, e o atraso do exame é o principal erro" },
+      { "cenario": "Imunossupressão, neutropenia ou uso de quimioterapia recente com febre", "escolha": "Internar, colher hemoculturas e iniciar cefepima 2 g IV 8/8 h em até 60 minutos, com avaliação de cobertura para fungo e de cateter", "porque": "Na neutropenia febril a infecção bacteriana progride sem sinais localizatórios e a antibioticoterapia precoce muda o desfecho" },
+      { "cenario": "Febre há mais de 3 semanas, documentada, sem foco após investigação inicial", "escolha": "Reclassificar como febre de origem indeterminada e seguir investigação sistematizada (infecção, neoplasia, doença inflamatória) com exames dirigidos, sem antibiótico empírico", "porque": "A febre de origem indeterminada tem causas não infecciosas em boa parte dos casos e o antibiótico empírico mascara linfoma e doença inflamatória" },
+      { "cenario": "Febre sem foco com exame de urina alterado e sintoma urinário leve", "escolha": "Urocultura antes do antibiótico e tratar como infecção urinária somente com confirmação ou quadro clínico compatível", "porque": "Tratar bacteriúria assintomática é um dos principais erros de prescrição e não melhora desfecho" }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "primeira_linha",
+        "indicacao": "febre e mal-estar em adulto sem contraindicação",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h se necessário",
+        "duracao": "até 3 dias, enquanto se investiga a causa",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": ["alergia a pirazolona", "porfiria aguda", "discrasia sanguínea", "terceiro trimestre de gestação", "ClCr < 30 mL/min", "deficiência de glicose-6-fosfato desidrogenase"],
+        "efeitos_adversos": ["hipotensão", "rash cutâneo", "agranulocitose rara", "reação anafilática"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 1 g", "solução oral 500 mg/mL", "ampola 1 g/2 mL", "ampola 500 mg/mL"],
+        "preparo": "VO: uso direto. IV: diluir 1 g em 10 mL de água destilada ou SF 0,9%",
+        "tempo_infusao": "IV em 5 minutos (não exceder 1 g/min)",
+        "monitorizacao": ["temperatura antes e 1 h após", "pressão arterial após dose IV", "hemograma se uso acima de 5 dias", "rash e sinais de anafilaxia"],
+        "ajuste_renal": "ClCr < 30 mL/min: evitar; ClCr 30–59: espaçar para 8/8 h",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave",
+        "observacoes": "Trata o sintoma e não a causa: não substitui investigação. Evitar uso prolongado apenas para manter o paciente afebril sem diagnóstico",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "alternativa",
+        "indicacao": "febre em paciente com contraindicação a dipirona ou gestante",
+        "dose": "750–1.000 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h se necessário",
+        "duracao": "até 3 dias",
+        "dose_maxima": "4 g/dia (3 g/dia em hepatopatia, alcoolismo ou idoso frágil)",
+        "contraindicacoes": ["hepatopatia grave descompensada", "alergia", "desnutrição grave com depleção de glutationa"],
+        "efeitos_adversos": ["hepatotoxicidade em overdose", "náusea", "rash raro"],
+        "apresentacoes": ["comprimido 500 mg", "comprimido 750 mg", "solução oral 200 mg/mL", "frasco 100 mL"],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["temperatura", "dose total diária somada de todas as fontes", "transaminases se uso acima de 5 dias ou hepatopatia"],
+        "ajuste_renal": "ClCr < 30 mL/min: intervalos de 8 h",
+        "ajuste_hepatico": "Máximo 2 a 3 g/dia em hepatopatia; evitar em Child C descompensado",
+        "observacoes": "É a primeira escolha na gestação e no paciente com doença renal. Conferir se o paciente já toma paracetamol em associação antigripal para não ultrapassar a dose máxima",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "condicional",
+        "indicacao": "febre com dor importante em adulto sem contraindicação e sem suspeita de arbovirose",
+        "dose": "400–600 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "até 3 dias",
+        "dose_maxima": "2.400 mg/dia",
+        "contraindicacoes": ["suspeita ou confirmação de dengue, chikungunya ou zika", "úlcera péptica ativa", "ClCr < 30 mL/min", "insuficiência cardíaca descompensada", "anticoagulação plena", "terceiro trimestre de gestação", "alergia a AINE"],
+        "efeitos_adversos": ["dispepsia", "sangramento digestivo", "lesão renal", "retenção hídrica"],
+        "apresentacoes": ["comprimido 400 mg", "comprimido 600 mg", "cápsula 200 mg", "suspensão oral 100 mg/mL"],
+        "preparo": "Uso direto, com alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["sangramento digestivo", "creatinina", "pressão arterial", "plaquetas e sinais de sangramento se suspeita de arbovirose"],
+        "ajuste_renal": "ClCr 30–59 mL/min: reduzir dose e não ultrapassar 1,2 g/dia; ClCr < 30: contraindicado",
+        "ajuste_hepatico": "Evitar em cirrose descompensada",
+        "observacoes": "Não é antitérmico de primeira linha: o risco digestivo e renal supera o benefício em febre sem foco. Perguntar sempre sobre dengue antes de prescrever",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "oseltamivir",
+        "papel": "condicional",
+        "indicacao": "síndrome gripal com febre em paciente de risco ou em período de circulação de influenza",
+        "dose": "75 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "5 dias",
+        "dose_maxima": "150 mg/dia",
+        "contraindicacoes": ["alergia", "insuficiência renal grave sem ajuste"],
+        "efeitos_adversos": ["náusea", "vômito", "cefaleia", "neuropsiquiátrico raro"],
+        "apresentacoes": ["cápsula 75 mg", "cápsula 30 mg", "cápsula 45 mg", "suspensão oral 6 mg/mL"],
+        "preparo": "Uso direto, com alimento para reduzir náusea",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["melhora da febre em 48 h", "náusea e vômito", "função renal"],
+        "ajuste_renal": "ClCr 30–60 mL/min: 30 mg 12/12 h; ClCr < 30: 30 mg 1x/dia; dialítico: 30 mg após cada sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Iniciar idealmente em 48 horas do início dos sintomas; em paciente grave ou de risco, iniciar mesmo após esse prazo. Não é tratamento de febre sem foco sem síndrome gripal",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/CDC",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina",
+        "agente": "ceftriaxona",
+        "papel": "condicional",
+        "indicacao": "toxemia ou suspeita de infecção bacteriana grave sem foco, após hemoculturas; meningite empírica",
+        "dose": "1–2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia (meningite: 2 g 12/12 h)",
+        "duracao": "até definição do foco; 7 a 14 dias conforme síndrome",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": ["alergia a cefalosporina", "alergia grave a penicilina com anafilaxia prévia", "icterícia neonatal por hiperbilirrubinemia"],
+        "efeitos_adversos": ["rash", "diarreia", "C. difficile", "elevação de transaminases", "barro biliar"],
+        "apresentacoes": ["frasco 1 g", "frasco 2 g", "solução injetável 1 g"],
+        "preparo": "Reconstituir em 10 mL de água destilada; diluir em 50–100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 minutos (bolus em 5 min apenas na sepse com acesso calibroso)",
+        "monitorizacao": ["função hepática", "hemograma", "diarreia", "sinais de melhora em 48–72 h"],
+        "ajuste_renal": "Sem ajuste na dose usual; em diálise, dose máxima 2 g/dia",
+        "ajuste_hepatico": "Cautela em hepatopatia e em neonatos com hiperbilirrubinemia",
+        "observacoes": "Não prescrever como rotina em febre sem foco: só após culturas e com critério de gravidade. Não associar a solução com cálcio no mesmo equipo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_com_inibidor_de_betalactamase",
+        "agente": "amoxicilina com clavulanato",
+        "papel": "condicional",
+        "indicacao": "foco bacteriano definido na reavaliação (vias aéreas, pele ou urinário) sem critério de internação",
+        "dose": "875/125 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "1.750/250 mg por dia",
+        "contraindicacoes": ["alergia a penicilina", "mononucleose infecciosa", "hepatite colestática prévia por amoxicilina-clavulanato"],
+        "efeitos_adversos": ["diarreia", "náusea", "rash", "colite por C. difficile", "hepatotoxicidade"],
+        "apresentacoes": ["comprimido 500/125 mg", "comprimido 875/125 mg", "suspensão oral 400/57 mg por 5 mL"],
+        "preparo": "Uso direto, com alimento para melhorar absorção e reduzir diarreia",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": ["melhora da febre em 72 h", "diarreia", "transaminases se uso prolongado"],
+        "ajuste_renal": "ClCr 10–30 mL/min: no máximo 500/125 mg 12/12 h; ClCr < 10: evitar",
+        "ajuste_hepatico": "Evitar em hepatopatia colestática prévia; monitorar transaminases",
+        "observacoes": "Só depois de definir o foco. Não é tratamento empírico de febre sem foco e não cobre Pseudomonas nem germes hospitalares",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina",
+        "agente": "cefepima",
+        "papel": "condicional",
+        "indicacao": "neutropenia febril com neutrófilos abaixo de 500/mm³",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "até recuperação de neutrófilos e 48 h afebril; mínimo 7 dias",
+        "dose_maxima": "6 g/dia",
+        "contraindicacoes": ["alergia a cefalosporina", "anafilaxia prévia a betalactâmico"],
+        "efeitos_adversos": ["rash", "diarreia", "encefalopatia em disfunção renal", "C. difficile", "elevação de transaminases"],
+        "apresentacoes": ["frasco 1 g", "frasco 2 g"],
+        "preparo": "Reconstituir em 10 mL de água e diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": ["temperatura a cada 4 h", "hemograma diário até recuperação", "função renal", "nível de consciência"],
+        "ajuste_renal": "ClCr 30–60 mL/min: 2 g 12/12 h; ClCr 11–29: 2 g 1x/dia; ClCr < 11: 1 g 1x/dia",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Iniciar em até 60 minutos da febre na neutropenia. Reavaliar cobertura fúngica se febre persistir acima de 4 a 7 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_antagonista_5ht3",
+        "agente": "ondansetrona",
+        "papel": "condicional",
+        "indicacao": "náusea ou vômito que impede hidratação oral e uso de antitérmico",
+        "dose": "4 mg",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "8/8 h se necessário",
+        "duracao": "até 3 dias",
+        "dose_maxima": "16 mg/dia",
+        "contraindicacoes": ["síndrome do QT longo", "uso concomitante de apomorfina", "hipocalemia não corrigida"],
+        "efeitos_adversos": ["cefaleia", "constipação", "prolongamento do QT", "tontura"],
+        "apresentacoes": ["ampola 2 mg/mL (2 mL e 4 mL)", "comprimido 4 mg", "comprimido 8 mg", "solução oral 4 mg/5 mL"],
+        "preparo": "IV: uso direto em bolus lento; VO: uso direto",
+        "tempo_infusao": "IV em 2 a 5 minutos",
+        "monitorizacao": ["ECG se cardiopatia ou outros fármacos que prolongam QT", "potássio e magnésio", "número de vômitos"],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Máximo 8 mg/dia em Child C",
+        "observacoes": "Trata o sintoma que impede a via oral; não substitui a investigação do foco. Cautela em idoso pelo risco de constipação e confusão",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide",
+        "agente": "cloreto de sódio 0,9%",
+        "papel": "condicional",
+        "indicacao": "hidratação em paciente que não tolera via oral, com hipotensão ou toxemia",
+        "dose": "500–1.000 mL",
+        "unidade": "mL",
+        "via": "IV",
+        "frequencia": "em bolus, reavaliando a cada 500 mL",
+        "duracao": "até restabelecer perfusão e via oral",
+        "dose_maxima": "30 mL/kg na reposição inicial de sepse",
+        "contraindicacoes": ["insuficiência cardíaca descompensada sem monitorização", "edema agudo de pulmão", "anúria sem diálise"],
+        "efeitos_adversos": ["sobrecarga hídrica", "edema", "hipercloremia", "hiponatremia dilucional"],
+        "apresentacoes": ["frasco 500 mL", "frasco 1.000 mL", "bolsa 500 mL", "bolsa 1.000 mL"],
+        "preparo": "Uso direto; equipo de macrogotas ou bomba conforme o caso",
+        "tempo_infusao": "500 mL em 15–30 minutos na reposição; infusão contínua na manutenção",
+        "monitorizacao": ["pressão arterial e frequência cardíaca", "ausculta pulmonar e saturação", "diurese", "sódio e potássio"],
+        "ajuste_renal": "Cautela em oligúria e diálise: volumes menores e reavaliação frequente",
+        "ajuste_hepatico": "Cautela em cirrose com ascite: preferir albúmina em grandes volumes",
+        "observacoes": "Hidratação é medida de suporte: em febre sem foco com via oral preservada, preferir oral. Não usar como justificativa para adiar a investigação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      { "medida": "Anamnese dirigida e exame físico completo desnudo", "detalhe": "Repetir a história procurando viagem, animal, carrapato, água, alimento, fármaco, procedimento e contato doente; examinar pele, orofaringe, linfonodos, abdome, punhos e pés" },
+      { "medida": "Hidratação oral vigorosa", "detalhe": "2 a 3 litros por dia, em pequenos volumes frequentes, com solução de reidratação quando houver perda digestiva" },
+      { "medida": "Curva térmica e diário de sintomas", "detalhe": "Registrar temperatura, horário do antitérmico e sintomas novos a cada 6 h; leve a anotação na reavaliação de 48 h" },
+      { "medida": "Reavaliação presencial em 48 horas", "detalhe": "Consulta agendada antes da alta, com exame físico repetido; febre que persiste além de 72 h exige nova rodada de exames" },
+      { "medida": "Repouso relativo e afastamento do trabalho", "detalhe": "Atestado conforme quadro clínico; evitar esforço até 24 h afebril sem antitérmico" },
+      { "medida": "Isolamento respiratório e etiqueta de tosse", "detalhe": "Máscara cirúrgica em síndrome gripal, ambiente ventilado e higiene de mãos até afastar influenza e COVID-19" },
+      { "medida": "Notificação e vigilância epidemiológica", "detalhe": "Notificar dengue, chikungunya, zika, malária, meningite e febre tifoide conforme lista compulsória, sem esperar confirmação laboratorial quando o caso é suspeito" },
+      { "medida": "Coleta de culturas antes do antibiótico", "detalhe": "Hemoculturas e urocultura colhidas antes da primeira dose sempre que houver critério de antibioticoterapia" }
+    ],
+    "procedimentos": [
+      { "nome": "Coleta de hemoculturas (dois pares)", "indicacao": "toxemia, febre alta persistente, suspeita de endocardite ou infecção de material protético", "tecnica": "Dois pares de duas punções venosas distintas, 20 a 30 mL por par, com antissepsia rigorosa da pele e do frasco; colher antes do antibiótico e repetir em 48 h se persistir febre", "complicacoes": "Contaminação de pele com cultura falso-positiva, punção arterial acidental, hematoma e atraso do antibiótico" },
+      { "nome": "Punção lombar diagnóstica", "protocolo": "BOX-07", "indicacao": "suspeita de meningite em paciente estável, após afastar risco de herniação", "tecnica": "Decúbito lateral, referência na linha entre as cristas ilíacas, antissepsia, anestesia local e agulha 22 G; enviar celularidade, glicose, proteína, Gram, cultura e PCR", "complicacoes": "Cefaleia pós-punção, hematoma, infecção, herniação quando feita sem critério" },
+      { "nome": "Acesso venoso periférico calibroso", "indicacao": "toxemia, hipotensão, necessidade de hidratação ou antibiótico endovenoso", "tecnica": "Cateter 18 a 20 G em membro superior, com dois acessos quando há instabilidade; coletar exames na primeira punção", "complicacoes": "Hematoma, extravasamento, flebite e punção arterial acidental" },
+      { "nome": "Ultrassom à beira-leito (POCUS) dirigido ao foco", "protocolo": "BOX-19", "indicacao": "busca de foco em paciente sem sinais localizatórios: pulmão, pleura, abdome, via urinária e partes moles", "tecnica": "Protocolo rápido de tórax, abdome e pelve, com janelas pulmonares para consolidação e derrame, e avaliação de bexiga e via urinária", "complicacoes": "Exame inconclusivo, falso-positivo que atrasa a investigação e dependência do operador" },
+      { "nome": "Radiografia de tórax em duas incidências", "indicacao": "todo adulto com febre sem foco e sintoma respiratório, mesmo leve", "tecnica": "Póstero-anterior e perfil, com inspiração máxima; comparar com exame prévio quando existir", "complicacoes": "Exposição a radiação, baixa sensibilidade para foco inicial e achado inespecífico que desvia a investigação" }
+    ],
+    "metas": [
+      "Temperatura abaixo de 37,8 °C em 4 a 6 horas após o antitérmico",
+      "Frequência cardíaca abaixo de 100 bpm e pressão sistólica acima de 90 mmHg em 6 horas do atendimento inicial",
+      "Nenhuma prescrição de antibiótico sem foco documentado ou sem cultura colhida",
+      "Reavaliação clínica registrada em até 48 horas em todo paciente liberado",
+      "Diagnóstico etiológico ou plano de investigação definido em até 72 horas",
+      "Coleta de hemoculturas antes da primeira dose de antibiótico em 100% dos casos com indicação"
+    ],
+    "fluxo": [
+      "Triagem: febre acima de 38 °C entra em avaliação; toxemia, hipotensão, rigidez de nuca ou petéquias vão direto para a sala vermelha",
+      "Anamnese dirigida: tempo de febre, padrão, viagem, animal, alimento, água, fármacos, procedimento, contato doente e imunossupressão",
+      "Exame físico completo desnudo, incluindo pele, orofaringe, linfonodos, abdome, articulações, punhos e pés",
+      "Definir se há foco: se sim, tratar o protocolo específico e sai deste fluxo",
+      "Sem foco e sem toxemia: hemograma, urina tipo 1 com urocultura, radiografia de tórax e testes dirigidos pela epidemiologia, sem antibiótico",
+      "Com toxemia ou critério de gravidade: dois pares de hemoculturas, lactato, acesso venoso, cristaloide e antibiótico de amplo espectro na primeira hora",
+      "Estratificar risco: imunossupressão, prótese, gestação, idade acima de 65 anos, viagem a área endêmica",
+      "Decidir destino: internação se critério de gravidade ou impossibilidade de reavaliação; ambulatorial apenas com retorno garantido em 48 h",
+      "Reavaliar em 48 a 72 horas: febre persistente reabre a investigação; febre acima de 3 semanas passa a ser febre de origem indeterminada"
+    ],
+    "populacoes_especiais": [
+      { "populacao": "idoso", "ajuste": "Febre pode ser baixa ou ausente; valorizar confusão, queda e desidratação. Baixar o limiar de internação e sempre dosar urina, radiografia e eletrólitos", "alerta": "apresentação atípica e maior mortalidade por sepse" },
+      { "populacao": "gestante", "ajuste": "Preferir paracetamol; evitar AINE após 32 semanas e dipirona no terceiro trimestre; investigar corioamnionite, ITU e listeriose", "alerta": "febre materna se associa a trabalho de parto prematuro" },
+      { "populacao": "imunossuprimido", "ajuste": "Internar e ampliar investigação: hemoculturas, sorologias, imagem de seios da face e tórax, e considerar fungo; neutropenia febril recebe cefepima em até 60 minutos", "alerta": "infecção oportunista sem sinais localizatórios" },
+      { "populacao": "renal_cronico", "ajuste": "Evitar AINE e dipirona com ClCr abaixo de 30; preferir paracetamol e ajustar oseltamivir, cefepima e amoxicilina-clavulanato", "alerta": "acúmulo de fármacos e piora da função renal" },
+      { "populacao": "usuario_de_droga_injetavel", "ajuste": "Investigar endocardite, abscesso e infecção de pele; hemoculturas seriadas, ecocardiograma e internação na maioria dos casos", "alerta": "endocardite direita e embolia pulmonar séptica" },
+      { "populacao": "viajante_retorno", "ajuste": "Gota espessa e teste rápido de malária no mesmo dia para retorno de área endêmica; considerar dengue, febre tifoide e hepatite conforme incubação", "alerta": "malária grave evolui em 24 a 48 horas" }
+    ],
+    "exames": {
+      "comuns": [
+        { "nome": "hemograma com diferencial", "indicacao": "todos", "o_que_muda": "leucocitose com desvio sugere bactéria; leucopenia e plaquetopenia sugerem arbovirose ou sepse; neutropenia muda o destino para internação" },
+        { "nome": "urina tipo 1 e urocultura", "indicacao": "todos, antes de qualquer antibiótico", "o_que_muda": "identifica infecção urinária, causa frequente de febre sem foco em idoso, e evita tratar bacteriúria assintomática" },
+        { "nome": "radiografia de tórax em duas incidências", "indicacao": "todos com sintoma respiratório ou sem foco", "o_que_muda": "revela pneumonia oculta e derrame pleural" },
+        { "nome": "hemoculturas (dois pares)", "indicacao": "toxemia, febre alta persistente, prótese ou imunossupressão", "o_que_muda": "identifica agente e permite terapia dirigida, além de afastar endocardite" },
+        { "nome": "teste de HIV com consentimento", "indicacao": "todo adulto com febre sem foco, especialmente com candidíase, perda de peso ou linfadenopatia", "o_que_muda": "infecção aguda pelo HIV é causa clássica de febre sem foco e muda toda a investigação" },
+        { "nome": "testes de arbovirose conforme epidemiologia (NS1, sorologia, PCR)", "indicacao": "febre em área com transmissão ou viagem recente", "o_que_muda": "confirma dengue, chikungunya ou zika e define hidratação e proibição de AINE" },
+        { "nome": "gota espessa e teste rápido de malária", "indicacao": "febre após retorno de área endêmica, no mesmo dia", "o_que_muda": "diagnóstico de malária e decisão de internação por gravidade" },
+        { "nome": "PCR, VHS, hepatograma e creatinina", "indicacao": "febre persistente acima de 72 h ou suspeita de causa inflamatória", "o_que_muda": "separa processo inflamatório de infeccioso e orienta investigação de febre de origem indeterminada" }
+      ],
+      "evitar": [
+        { "exame": "antibiótico antes da coleta de culturas", "motivo": "esteriliza culturas e impede terapia dirigida, sem ganho clínico em paciente estável" },
+        { "exame": "painel viral amplo sem síndrome compatível", "motivo": "custo alto e resultado que não muda conduta na febre sem foco" },
+        { "exame": "tomografia de tórax, abdome e pelve de rotina em febre de 24 horas", "motivo": "exposição e custo sem indicação clínica; a investigação é dirigida pela história e pelo exame" },
+        { "exame": "hemocultura única", "motivo": "baixa sensibilidade e alto risco de contaminação, levando a tratamento indevido" },
+        { "exame": "alta sem reavaliação agendada em 48 horas", "motivo": "é a principal causa de sepse diagnosticada tarde em paciente liberado" }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "medir a temperatura e anotar os horários até a reavaliação",
+        "beber 2 a 3 litros de líquido por dia, em pequenos volumes",
+        "tomar o antitérmico apenas se febre ou dor, respeitando o intervalo",
+        "comparecer à reavaliação em 48 horas, mesmo se estiver melhor",
+        "levar a lista de exames e a curva térmica na consulta de retorno",
+        "informar imediatamente se surgir falta de ar, manchas na pele ou rigidez de nuca"
+      ],
+      "evitar": [
+        "tomar antibiótico por conta própria ou guardado de outra infecção",
+        "usar AINE ou AAS se houver suspeita de dengue",
+        "esperar em casa mais de 72 horas se a febre não ceder",
+        "tomar dois antitérmicos diferentes ao mesmo tempo sem orientação",
+        "interromper a investigação porque a febre cedeu com antitérmico"
+      ],
+      "retorno": [
+        "febre que persiste por mais de 72 horas ou volta após melhora",
+        "falta de ar, dor no peito ou saturação baixa",
+        "manchas vermelhas ou roxas na pele, sangramento de gengiva ou nariz",
+        "rigidez de nuca, confusão ou convulsão",
+        "vômitos persistentes, impossibilidade de beber líquidos ou urina muito reduzida",
+        "dor abdominal intensa, icterícia ou urina escura"
+      ]
+    },
+    "efeitos_adversos": [
+      { "agente": "dipirona", "efeitos": ["hipotensão", "rash", "agranulocitose rara"], "observacao": "infundir em 5 minutos e checar pressão; suspender se rash ou febre com odinofagia e neutropenia" },
+      { "agente": "paracetamol", "efeitos": ["hepatotoxicidade em overdose", "náusea"], "observacao": "somar todas as fontes de paracetamol e respeitar o máximo diário; avaliar transaminases se uso prolongado" },
+      { "agente": "ibuprofeno", "efeitos": ["dispepsia", "sangramento digestivo", "lesão renal"], "observacao": "suspender se sangramento ou creatinina em elevação; nunca na suspeita de arbovirose" },
+      { "agente": "oseltamivir", "efeitos": ["náusea", "vômito", "cefaleia"], "observacao": "administrar com alimento; eventos neuropsiquiátricos raros exigem suspensão" },
+      { "agente": "ceftriaxona", "efeitos": ["diarreia", "rash", "C. difficile", "barro biliar"], "observacao": "monitorar diarreia e transaminases; suspender se reação anafilática" },
+      { "agente": "cefepima", "efeitos": ["rash", "encefalopatia em disfunção renal", "C. difficile"], "observacao": "ajustar à função renal e vigiar nível de consciência em idoso" },
+      { "agente": "ondansetrona", "efeitos": ["cefaleia", "constipação", "prolongamento do QT"], "observacao": "corrigir potássio e magnésio e evitar em QT longo" }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose e reação",
+      "Dipirona com hipotensão: deitar, elevar membros inferiores e infundir volume",
+      "Paracetamol com suspeita de overdose: dosar transaminases e iniciar N-acetilcisteína conforme protocolo",
+      "Antibiótico com rash extenso ou anafilaxia: suspender, tratar a reação e trocar de classe após avaliar gravidade",
+      "Ondansetrona com QT longo: suspender, corrigir eletrólitos e monitorizar ECG",
+      "Reavaliar o foco e a indicação do fármaco antes de reintroduzir qualquer antimicrobiano"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          { "item": "dipirona 1 g", "dose": "1 g", "via": "VO", "frequencia": "6/6 h se febre ou dor", "duracao": "3 dias", "condicao": "febre sem foco em investigação", "confirmar_apresentacao_local": true },
+          { "item": "paracetamol 750 mg", "dose": "750 mg", "via": "VO", "frequencia": "6/6 h se necessário", "duracao": "3 dias", "condicao": "alternativa à dipirona", "confirmar_apresentacao_local": true },
+          { "item": "solução de reidratação oral", "dose": "200 mL", "via": "VO", "frequencia": "após cada evacuação ou vômito", "duracao": "até cessar a perda", "condicao": "hidratação", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          { "item": "dipirona", "dose": "1 g", "via": "IV", "frequencia": "6/6 h se necessário", "monitorizacao": "pressão arterial", "confirmar_apresentacao_local": true },
+          { "item": "cloreto de sódio 0,9%", "dose": "500–1.000 mL", "via": "IV", "frequencia": "conforme perfusão", "monitorizacao": "pressão, diurese e ausculta", "confirmar_apresentacao_local": true },
+          { "item": "ceftriaxona", "dose": "1–2 g", "via": "IV", "frequencia": "1x/dia", "monitorizacao": "função hepática e cultura", "confirmar_apresentacao_local": true },
+          { "item": "cefepima", "dose": "2 g", "via": "IV", "frequencia": "8/8 h", "monitorizacao": "hemograma e função renal", "confirmar_apresentacao_local": true },
+          { "item": "oseltamivir", "dose": "75 mg", "via": "VO", "frequencia": "12/12 h", "monitorizacao": "náusea e função renal", "confirmar_apresentacao_local": true }
+        ]
+      },
+      "pedido_exames": {
+        "campos": ["hemograma com diferencial", "urina tipo 1", "urocultura", "radiografia de tórax", "hemoculturas", "teste de HIV", "NS1 ou sorologia de dengue", "gota espessa", "PCR", "VHS", "hepatograma", "creatinina", "justificativa", "prioridade"]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de síndrome febril aguda sem foco definido, necessitando de afastamento das atividades por ___ dias e reavaliação em 48 horas.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento ambulatorial ou hospitalar"
+      },
+      "encaminhamento": {
+        "campos": ["destino", "motivo", "resumo com tempo de febre, exames e antibiótico prévio", "prioridade", "horário do contato"]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com febre sem foco, tempo de evolução, epidemiologia, exames colhidos, culturas, antibiótico instituído, resposta e plano de reavaliação."
+      }
+    },
+    "anamnese": {
+      "campos": ["tempo de febre", "padrão térmico", "calafrios e sudorese", "viagem", "contato com animal", "picada de inseto", "alimento e água", "antibiótico prévio", "imunossupressão", "prótese ou cateter", "perda de peso", "sudorese noturna"],
+      "texto_template": "Paciente com febre há ___, padrão ___, calafrios ___, sudorese ___, viagem ___, contato com animal ___, picada de inseto ___, alimento ou água de risco ___, antibiótico prévio ___, imunossupressão ___, prótese ou cateter ___, perda de peso ___ e sudorese noturna ___."
+    },
+    "exame_fisico": {
+      "itens": ["sinais vitais completos", "estado geral e perfusão", "pele e mucosas", "orofaringe", "linfonodos", "ausculta pulmonar e cardíaca", "abdome", "punhos e pés", "exame neurológico", "loja cirúrgica e cateteres"],
+      "texto_template": "Sinais vitais completos, estado geral e perfusão, pele e mucosas, orofaringe, linfonodos, ausculta pulmonar e cardíaca, abdome, punhos e pés, exame neurológico e inspeção de feridas e cateteres."
+    },
+    "referencias": [
+      { "tipo": "protocolo_institucional", "o_que_verificar": "protocolo de febre sem foco e fluxo de sepse", "verificar": true },
+      { "tipo": "sociedade_infectologia", "o_que_verificar": "investigação de febre aguda e critérios de febre de origem indeterminada", "verificar": true },
+      { "tipo": "ministerio_da_saude", "o_que_verificar": "lista de notificação compulsória e manejo de arboviroses", "verificar": true },
+      { "tipo": "anvisa", "o_que_verificar": "apresentações de antitérmicos e antimicrobianos do serviço", "verificar": true }
+    ],
+    "alertas_sistema": [
+      { "id": "SA-INF14-01", "tipo": "antibiotico_sem_foco", "gatilho": "antimicrobiano prescrito sem foco documentado e sem cultura colhida", "severidade": "grave", "mensagem": "Não prescrever antibiótico empírico sem foco: colher culturas e reavaliar em 48 h.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-INF14-02", "tipo": "alta_sem_reavaliacao", "gatilho": "alta de febre sem foco sem retorno agendado em 48 h", "severidade": "grave", "mensagem": "Toda alta exige reavaliação presencial em 48 horas.", "acao": "bloquear alta", "bloqueante": true },
+      { "id": "SA-INF14-03", "tipo": "toxemia", "gatilho": "toxemia, hipotensão ou lactato elevado com febre", "severidade": "grave", "mensagem": "Suspeita de sepse: sala vermelha, culturas e antibiótico na primeira hora.", "acao": "acionar protocolo de sepse", "bloqueante": true },
+      { "id": "SA-INF14-04", "tipo": "aine_em_arbovirose", "gatilho": "AINE ou AAS em suspeita de dengue, chikungunya ou zika", "severidade": "grave", "mensagem": "AINE e AAS proibidos na suspeita de arbovirose.", "acao": "bloquear item", "bloqueante": true },
+      { "id": "SA-INF14-05", "tipo": "neutropenia_febril", "gatilho": "neutrófilos abaixo de 500/mm³ com febre", "severidade": "grave", "mensagem": "Neutropenia febril: cefepima em até 60 minutos e internação.", "acao": "alertar e sugerir protocolo", "bloqueante": false },
+      { "id": "SA-INF14-06", "tipo": "malaria_nao_pesquisada", "gatilho": "retorno de área endêmica sem gota espessa solicitada", "severidade": "precaucao", "mensagem": "Solicitar gota espessa e teste rápido de malária no mesmo dia.", "acao": "alertar", "bloqueante": false }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": ["ANVISA", "Ministério da Saúde", "literatura"],
+      "proxima_revisao": null,
+      "changelog": [
+        { "versao": "0.1.0", "descricao": "Criação do registro a partir do catálogo mestre.", "data": null },
+        { "versao": "0.2.0", "descricao": "Primeira versão no padrão de diversidade.", "data": null }
+      ]
+    }
+  }
+}

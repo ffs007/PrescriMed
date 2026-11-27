@@ -1,0 +1,3 @@
+ALTER POLICY "stg_med_restricoes_select_auth" ON public.stg_med_restricoes TO authenticated USING (public.fn_curadoria_pode_editar());
+ALTER POLICY "Autenticados leem testes_clinicos_v2" ON public.testes_clinicos_v2 TO authenticated USING (public.fn_curadoria_pode_editar());
+ALTER POLICY "resolver alertas" ON public.prot_alertas TO authenticated WITH CHECK (COALESCE(public.fn_prot_nivel(protocolo_id), '') = ANY (ARRAY['admin'::text, 'coordenador'::text, 'dono'::text]));

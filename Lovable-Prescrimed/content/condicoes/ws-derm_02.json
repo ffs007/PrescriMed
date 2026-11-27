@@ -1,0 +1,559 @@
+{
+  "id": "ws-derm_02",
+  "nome": "Abscesso cutâneo",
+  "cat": "Dermatológico",
+  "alias": "abscesso cutaneo abscesso furunculo colecao purulenta carbunculo abscesso de pele abscesso recorrente",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (DERM-02_abscesso.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de drenagem de abscesso e critérios de antibiótico adjuvante",
+      "[verificar] diretriz_sociedade_infectologia: indicação de antibiótico em abscesso drenado e manejo de MRSA",
+      "[verificar] diretriz_sociedade_dermatologia: distinção entre abscesso, hidradenite e cisto infectado",
+      "[verificar] anvisa: apresentações de anestésicos locais e antimicrobianos"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "DERM-02 em 2026-11-27",
+    "fundido_workspace": "DERM-02 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: dor desproporcional, crepitação, bolha ou necrose -> acionar cirurgia imediatamente, sem aguardar imagem; febre alta, toxemia, hipotensão ou confusão -> ressuscitação e antibiótico intravenoso na primeira hora; abscesso em face central, região periorbitária ou triângulo nasolabial -> antibiótico intravenoso e avaliação especializada imediata; usuário de drogas injetáveis com febre ou lesões múltiplas -> hemoculturas, internação e avaliação cardiológica. 1) Confirmar coleção: flutuação, ponto de drenagem ou ultrassonografia à beira-leito 2) Decidir drenar: flutuante ou maior que 5 mm drena; menor que 5 mm sem flutuação e sem risco observa com calor local 3) Anestesiar, incisar, esvaziar todas as lojas, irrigar e decidir se usa packing 4) Avaliar fatores de risco para antibiótico adjuvante e colher cultura quando indicado 5) Reavaliar em 24 a 48 horas; piora exige imagem, nova drenagem e internação 6) Na recidiva, descolonizar, tratar hidradenite e investigar causa",
+  "redFlags": [
+    "dor desproporcional, crepitação, bolha ou necrose -> acionar cirurgia imediatamente, sem aguardar imagem",
+    "febre alta, toxemia, hipotensão ou confusão -> ressuscitação e antibiótico intravenoso na primeira hora",
+    "abscesso em face central, região periorbitária ou triângulo nasolabial -> antibiótico intravenoso e avaliação especializada imediata",
+    "usuário de drogas injetáveis com febre ou lesões múltiplas -> hemoculturas, internação e avaliação cardiológica",
+    "neutropenia, corticoide ou quimioterapia -> internação e antibiótico intravenoso",
+    "celulite que se estende mais de 2 cm além da borda do abscesso -> internação e antibiótico sistêmico",
+    "três ou mais episódios em 12 meses -> descolonizar e investigar causa",
+    "diabetes descompensado -> controle glicêmico e seguimento próximo"
+  ],
+  "naoUsar": [
+    "alergia a anestésico do tipo amida",
+    "isquemia da extremidade",
+    "arritmia grave descompensada",
+    "alergia a sulfonamida",
+    "gestação no primeiro trimestre",
+    "gestação nas duas últimas semanas",
+    "deficiência grave de G6PD",
+    "ClCr abaixo de 15"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter o curativo limpo e trocar diariamente"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "espremer a lesão"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Anestésico local",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "lidocaina_com_adrenalina",
+              "n": "Lidocaína com adrenalina",
+              "ap": "frasco 20 mL a 1% com adrenalina 1:100.000",
+              "q": "",
+              "pos": "3 a 5 mL de lidocaína 1% com adrenalina 1:100.000. Via infiltração subcutânea. Dose única por procedimento. 60 a 120 minutos de bloqueio."
+            },
+            "motivo": "anestesia local para incisão e drenagem (1a linha)",
+            "nota": "Aspirar sem diluir, aquecer à temperatura corporal e alcalinizar com bicarbonato de sódio na proporção de 1:10; infiltrar lentamente na borda e no trajeto da incisão - monitorar: nível de consciência e fala durante a infiltração; monitorar: frequência cardíaca e pressão em injeção extensa; monitorar: sangramento do cam · NÃO: alergia a anestésico do tipo amida; isquemia da extremidade; arritmia grave descompensada · Obs: Em dedos, usar solução sem vasoconstritor quando houver dúvida sobre perfusão. Não ultrapassar 7 mg/kg e aguardar 5 a 10 minutos antes de incisar.",
+            "dose": {
+              "texto": "3 a 5 mL de lidocaína 1% com adrenalina 1:100.000; dose única por procedimento; 60 a 120 minutos de bloqueio; max. 7 mg/kg, limitado a 500 mg com adrenalina",
+              "status": "ok",
+              "valor": 3,
+              "valor_max": 5,
+              "unidade": "ml",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 7,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "drenar quando flutuante e usar antibiótico apenas com fator de risco, em mg/kg: cefalexina 50 mg/kg/dia 6/6 h e clindamicina 20 a 30 mg/kg/dia 6/6 h"
+          }
+        ]
+      },
+      {
+        "nome": "Sulfonamida",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "smx_tmp",
+            "pos": "800/160 mg. Via VO. 12/12 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "suspeita ou confirmação de MRSA comunitário (alternativa) suspeita de MRSA comunitário",
+            "nota": "Uso direto com copo cheio de água, mantendo boa hidratação - monitorar: rash e lesão de mucosa; monitorar: potássio e creatinina; monitorar: hemograma em uso acima de 7 dias · NÃO: alergia a sulfonamida; gestação no primeiro trimestre; gestação nas duas últimas semanas; deficiência grave de G6PD; ClCr abaixo de 15 · Obs: Não cobre estreptococo, então associar beta-lactâmico quando houver celulite ao redor. Não usar como monoterapia empírica em abscesso com celulite extensa. · Renal: ClCr 15 a 30: metade da dose; ClCr abaixo de 15: evitar",
+            "dose": {
+              "texto": "800/160 mg; 12/12 h; 5 a 7 dias; max. 1.600/320 mg/dia",
+              "status": "ok",
+              "valor": 160,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "drenar quando flutuante e usar antibiótico apenas com fator de risco, em mg/kg: cefalexina 50 mg/kg/dia 6/6 h e clindamicina 20 a 30 mg/kg/dia 6/6 h"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Lincosamida",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "clindamicina",
+            "pos": "300 mg. Via VO. 6/6 h. 5 a 7 dias. Via oral não se aplica; via intravenosa 30 minutos, sem ultrapassar 30 mg por minuto.",
+            "posTodas": true,
+            "motivo": "MRSA comunitário, alergia a beta-lactâmico e carbúnculo com sinais de toxina (alternativa) alergia a penicilina ou carbúnculo",
+            "nota": "Via oral em uso direto; via intravenosa diluir 600 mg em 100 mL de soro fisiológico 0,9% - monitorar: diarreia e dor abdominal; monitorar: hemograma em uso acima de 7 dias; monitorar: regressão da celulite; monitorar: transaminases · NÃO: colite pseudomembranosa prévia; alergia a lincosamida · Obs: No internado usar 600 mg IV 8/8 h. Efeito antitoxina útil em carbúnculo e foliculite necrótica. Em criança, 20 a 30 mg/kg/dia divididos 6/6 h.",
+            "dose": {
+              "texto": "300 mg; 6/6 h; 5 a 7 dias; max. 1.800 mg/dia por via oral",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1800,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "drenar quando flutuante e usar antibiótico apenas com fator de risco, em mg/kg: cefalexina 50 mg/kg/dia 6/6 h e clindamicina 20 a 30 mg/kg/dia 6/6 h"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Alcalinizante",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "bicarbonato_de_sodio",
+              "n": "Bicarbonato de sódio 8,4%",
+              "ap": "ampola 10 mL a 8,4%",
+              "q": "",
+              "pos": "1 mL para cada 9 mL de lidocaína. Via na mesma seringa do anestésico. Dose única por procedimento. Usar a mistura em até 1 hora."
+            },
+            "motivo": "reduzir a dor da infiltração de lidocaína (condicional)",
+            "nota": "Adicionar 1 mL de bicarbonato 8,4% a 9 mL de lidocaína 1% e homogeneizar; desprezar se houver turvação ou precipitado - monitorar: aspecto da solução antes da infiltração; monitorar: conforto do paciente durante a infiltração; monitorar: resposta anestésica ao estímulo · NÃO: alcalose metabólica grave; hipocalemia grave · Obs: A ampola de 8,4% não deve ser infundida por via intravenosa sem diluição; neste registro o uso é exclusivamente local, para tamponar o anestésico.",
+            "dose": {
+              "texto": "1 mL para cada 9 mL de lidocaína; dose única por procedimento; usar a mistura em até 1 hora; max. 1 mL de bicarbonato por 10 mL de anestésico",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "drenar quando flutuante e usar antibiótico apenas com fator de risco, em mg/kg: cefalexina 50 mg/kg/dia 6/6 h e clindamicina 20 a 30 mg/kg/dia 6/6 h"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cefalosporina primeira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "cefalexina",
+            "pos": "500 mg. Via VO. 6/6 h. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "adjuvante após drenagem em paciente com fator de risco (condicional) abscesso drenado com fator de risco",
+            "nota": "Uso direto, com copo de água - monitorar: regressão da celulite e da dor em 48 horas; monitorar: diarreia; monitorar: rash; monitorar: secreção da ferida · NÃO: alergia a cefalosporina; anafilaxia prévia a penicilina · Obs: Não prescrever de rotina: a drenagem isolada resolve a maioria. Em criança, 50 mg/kg/dia divididos 6/6 h, máximo 4 g/dia. · Renal: ClCr 30 a 59: 500 mg 8/8 h; ClCr abaixo de 30: 500 mg 12/12 h; diálise: dose adicional…",
+            "dose": {
+              "texto": "500 mg; 6/6 h; 5 a 7 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "drenar quando flutuante e usar antibiótico apenas com fator de risco, em mg/kg: cefalexina 50 mg/kg/dia 6/6 h e clindamicina 20 a 30 mg/kg/dia 6/6 h"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Penicilina com inibidor de betalactamase",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "875/125 mg. Via VO. 12/12 h. 7 dias.",
+            "posTodas": true,
+            "motivo": "abscesso com mordida, diabetes, região perineal ou celulite extensa (condicional) mordida, diabetes ou região perineal",
+            "nota": "Uso direto, no início da refeição - monitorar: diarreia; monitorar: transaminases se uso acima de 10 dias; monitorar: regressão da celulite",
+            "dose": {
+              "texto": "875/125 mg; 12/12 h; 7 dias; max. 1.750/250 mg por tomada, 2 tomadas ao dia",
+              "status": "ok",
+              "valor": 125,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "drenar quando flutuante e usar antibiótico apenas com fator de risco, em mg/kg: cefalexina 50 mg/kg/dia 6/6 h e clindamicina 20 a 30 mg/kg/dia 6/6 h"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "paracetamol",
+            "pos": "750 mg. Via VO. 6/6 h, se dor ou febre. 3 a 5 dias.",
+            "posTodas": true,
+            "motivo": "dor e febre após a drenagem (condicional) dor após drenagem",
+            "nota": "Uso direto - monitorar: dor pela escala de 0 a 10; monitorar: TGO e TGP se uso acima de 5 dias; monitorar: temperatura · NÃO: hepatopatia grave; alergia · Obs: Evitar associar a outro produto que contenha paracetamol. Não substitui a drenagem e não controla dor por drenagem incompleta. · Renal: ClCr abaixo de 30: espaçar para 8/8 h",
+            "dose": {
+              "texto": "750 mg; 6/6 h, se dor ou febre; 3 a 5 dias; max. 4 g/dia, ou 2 g/dia em hepatopatia e etilismo",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            },
+            "ped": "drenar quando flutuante e usar antibiótico apenas com fator de risco, em mg/kg: cefalexina 50 mg/kg/dia 6/6 h e clindamicina 20 a 30 mg/kg/dia 6/6 h"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico tópico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "mupirocina",
+            "pos": "Uma aplicação em cada narina. Via intranasal. 2x/dia. 5 dias.",
+            "posTodas": true,
+            "motivo": "descolonização nasal de S. aureus em abscesso recorrente (condicional)",
+            "nota": "Uso direto com cotonete ou dedo enluvado, aplicando pequena quantidade na parte interna de cada narina - monitorar: irritação nasal; monitorar: adesão ao esquema de 5 dias; monitorar: novos abscessos em 6 meses",
+            "dose": {
+              "texto": "uma aplicação em cada narina; 2x/dia; 5 dias; max. uma aplicação por narina, 2 vezes ao dia",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "2x/dia",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            },
+            "ped": "drenar quando flutuante e usar antibiótico apenas com fator de risco, em mg/kg: cefalexina 50 mg/kg/dia 6/6 h e clindamicina 20 a 30 mg/kg/dia 6/6 h"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Calor local úmido",
+              "ap": "",
+              "q": "",
+              "pos": "compressa morna por 10 a 15 minutos, 3 a 4 vezes ao dia, apenas em lesão sem coleção; ajuda a resolver ou a amadurecer"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Não espremer nem manipular",
+              "ap": "",
+              "q": "",
+              "pos": "espremer empurra conteúdo para o subcutâneo e aumenta bacteremia e recidiva"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Higiene com clorexidina",
+              "ap": "",
+              "q": "",
+              "pos": "banho com clorexidina 4% por 5 a 7 dias em abscessos recorrentes, iniciando após a drenagem"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Cuidado da ferida drenada",
+              "ap": "",
+              "q": "",
+              "pos": "curativo limpo com troca diária, lavagem com soro fisiológico 0,9% e retirada do packing em 48 a 72 horas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Controle glicêmico",
+              "ap": "",
+              "q": "",
+              "pos": "glicemia capilar abaixo de 180 mg/dL no diabético e HbA1c solicitada na alta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Repouso e elevação do segmento",
+              "ap": "",
+              "q": "",
+              "pos": "elevar o membro drenado e evitar esforço por 48 horas para reduzir edema e sangramento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Redução de danos em usuário de drogas injetáveis",
+              "ap": "",
+              "q": "",
+              "pos": "orientar material estéril, rodízio de sítio e não reutilização de agulha, com rastreio de endocardite"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Reavaliação programada",
+              "ap": "",
+              "q": "",
+              "pos": "retorno em 24 a 48 horas para conferir drenagem, dor, celulite e retirada do packing"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "DERM-02"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Oxazolidinona",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "linezolida",
+              "n": "Linezolida",
+              "ap": "comprimido 600 mg",
+              "via": "VO ou IV",
+              "pos": "600 mg. Via VO ou IV. 12/12 h. 7 a 14 dias. 60 a 120 minutos."
+            },
+            "motivo": "MRSA grave com falha ou intolerância à vancomicina, ou alta precoce com via oral (alternativa)",
+            "nota": "Via oral em uso direto; via intravenosa infundir a bolsa pronta ou diluir 600 mg em 300 mL de soro fisiológico - monitorar: hemograma semanal; monitorar: sinais de neuropatia; monitorar: pressão arterial se usar simpaticomimético · NÃO: plaquetopenia grave; uso de inibidor da monoaminoxidase nas últimas 2 semanas; alergia · Obs: Permite alta precoce por biodisponibilidade oral de 100%. Reservar para falha de vancomicina ou MRSA com MIC elevada.",
+            "dose": {
+              "texto": "600 mg; 12/12 h; 7 a 14 dias; max. 1.200 mg/dia",
+              "status": "ok",
+              "valor": 600,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Glicopeptideo",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "vancomicina",
+              "n": "Vancomicina",
+              "ap": "frasco-ampola 500 mg",
+              "via": "IV",
+              "pos": "15 a 20 mg/kg. Via IV. 8/8 a 12/12 h, guiada por AUC ou nível sérico. 7 a 14 dias conforme o foco. 60 a 120 minutos, sem ultrapassar 10 mg por minuto."
+            },
+            "motivo": "abscesso grave com internação, face central, imunossupressão ou sepse (condicional)",
+            "nota": "Reconstituir em 10 mL de água destilada e diluir em 250 mL de soro fisiológico 0,9%, com concentração final de até 5 mg/mL - monitorar: AUC/MIC entre 400 e 600 ou vale entre 15 e 20 mg/L; monitorar: creatinina a cada 48 horas; monitorar: hemograma semanal; monitorar: sítio de infusão · NÃO: alergia a glicopeptídeo; infusão rápida em bolus · Obs: Reservar para quadros sistêmicos e topografia de risco; não é necessária na maioria dos abscessos drenados. · Renal: Dose inicial pelo peso real; manutenção guiada por nível sérico; em diálise, dose após a…",
+            "dose": {
+              "texto": "15 a 20 mg/kg; 8/8 a 12/12 h, guiada por AUC ou nível sérico; 7 a 14 dias conforme o foco; max. 2 g por dose e 4 g/dia",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": 20,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "DERM-02",
+    "versao": "0.2.0",
+    "arquivo": "DERM-02_abscesso.json",
+    "area": "Dermatológico",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

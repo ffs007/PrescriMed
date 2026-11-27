@@ -1,0 +1,1214 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-03",
+    "area": "Pediatria",
+    "nome": "Diarreia e vômitos agudos",
+    "aliases": [
+      "diarreia aguda",
+      "vômitos agudos",
+      "gastroenterite aguda",
+      "doença diarreica aguda",
+      "desidratação",
+      "plano A",
+      "plano B",
+      "plano C",
+      "solução de reidratação oral"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Diarreia e vômitos agudos são, na maioria, virais e autolimitados, e a morte não vem do agente infeccioso: vem da desidratação e do distúrbio hidroeletrolítico. A conduta é reidratação, e só isso organiza o caso — o plano da Organização Mundial da Saúde define via, volume e destino em três degraus. Plano A é domiciliar: solução de reidratação oral depois de cada evacuação, alimentação mantida e retorno pactuado. Plano B é reidratação oral supervisionada com 50–100 mL/kg em 4 h, oferecida em colheradas, com reavaliação do peso, da diurese e do estado de hidratação ao fim do período. Plano C é desidratação grave ou choque: cristaloide isotônico 20 mL/kg em 30–60 min, repetido com reavaliação, até restabelecer perfusão e diurese. Em qualquer plano entra zinco por 10–14 dias, que encurta a diarreia e reduz recidiva, e a alimentação não é suspensa. Ondansetrona 0,15 mg/kg em dose única destrava a reidratação oral quando o vômito impede a ingestão, e a sonda nasogástrica é a saída quando a criança não bebe mas o intestino funciona — a via venosa não é o passo seguinte da via oral, é o último recurso. O que não se faz: loperamida e qualquer antidiarreico (íleo, distensão, morte em criança), antibiótico de rotina em diarreia aquosa (não encurta a doença e seleciona resistência) e soro caseiro em desidratação moderada, porque a concentração de sódio e glicose é imprevisível e a correção fica incompleta. O que mata é a desidratação hipernatrêmica corrigida rápido demais, a hiponatremia com convulsão e o choque hipovolêmico reconhecido tarde.",
+    "inclusao": [
+      "Diarreia aquosa aguda, com ou sem vômito, em criança de qualquer idade",
+      "Vômito agudo com diarreia e sinais de desidratação leve, moderada ou grave",
+      "Desidratação com necessidade de reidratação oral supervisionada ou venosa",
+      "Diarreia com sangue e muco, para estratificação de disenteria",
+      "Diarreia em lactente menor de 6 meses, com risco de desidratação rápida",
+      "Criança com diarreia e vômito que não consegue manter a ingestão em casa"
+    ],
+    "exclusao": [
+      {
+        "situacao": "vômito bilioso ou esverdeado, com distensão e ausência de evacuação",
+        "fluxo": "cirurgia pediátrica, obstrução intestinal"
+      },
+      {
+        "situacao": "dor abdominal localizada com defesa, dor à descompressão ou massa palpável",
+        "fluxo": "abdome cirúrgico, avaliação imediata"
+      },
+      {
+        "situacao": "sangue nas fezes com toxemia, febre alta e dor abdominal intensa",
+        "fluxo": "disenteria grave, internação e antibiótico"
+      },
+      {
+        "situacao": "vômito isolado e recorrente sem diarreia em lactente de 2 a 8 semanas",
+        "fluxo": "estenose hipertrófica do piloro"
+      },
+      {
+        "situacao": "febre com rigidez de nuca, convulsão ou petéquias",
+        "fluxo": "sepse ou meningite"
+      },
+      {
+        "situacao": "diarreia com duração acima de 14 dias ou perda de peso progressiva",
+        "fluxo": "diarreia crônica, gastroenterologia pediátrica"
+      },
+      {
+        "situacao": "escape fecal com massa fecal palpável e histórico de constipação",
+        "fluxo": "impactação fecal, não é diarreia"
+      },
+      {
+        "situacao": "diarreia após antibiótico com febre e leucocitose, em criança internada",
+        "fluxo": "colite por C. difficile"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "letargia, hipotonia ou criança que não acorda ao estímulo",
+        "por_que": "desidratação grave com comprometimento do sensório, ou hiponatremia e hipoglicemia",
+        "acao": "plano C imediato, acesso venoso ou intraósseo, glicemia capilar e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "olhos fundos, fontanela deprimida, turgor pastoso e mucosas secas",
+        "por_que": "perda de volume superior a 9% do peso",
+        "acao": "classificar como desidratação grave e iniciar cristaloide isotônico 20 mL/kg",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "pulso rápido e fraco, enchimento capilar acima de 3 s, extremidades frias e moteadas",
+        "por_que": "choque hipovolêmico descompensado",
+        "acao": "sala de emergência, dois acessos, bolus de 20 mL/kg e reavaliação a cada 15 min",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "ausência de diurese por 6 a 8 h, ou diurese abaixo de 1 mL/kg/h",
+        "por_que": "lesão renal por hipoperfusão e desidratação instalada",
+        "acao": "reidratação venosa, controle de diurese e creatinina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "vômito bilioso, esverdeado ou em jato, com distensão abdominal",
+        "por_que": "obstrução intestinal ou abdome cirúrgico",
+        "acao": "jejum, sonda de alívio, cirurgia pediátrica e imagem",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "sangue vivo nas fezes com febre alta, toxemia e dor abdominal",
+        "por_que": "disenteria bacteriana invasiva, com risco de sepse e síndrome hemolítico-urêmica",
+        "acao": "internação, coprocultura, hemograma e antibiótico guiado",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "convulsão durante a reidratação",
+        "por_que": "hiponatremia dilucional ou correção rápida de sódio",
+        "acao": "interromper a reidratação, dosar sódio e glicemia, corrigir com salina hipertônica se sintomático",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "perda de peso acima de 9% em relação ao peso conhecido",
+        "por_que": "desidratação grave objetiva, mesmo com exame físico enganoso",
+        "acao": "plano C e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "lactente menor de 6 meses com recusa alimentar e mais de 6 evacuações líquidas em 12 h",
+        "por_que": "reserva de volume pequena e desidratação rápida",
+        "acao": "reidratação supervisionada e baixar o limiar de internação",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-10",
+        "sinal": "diarreia há mais de 14 dias com perda de peso",
+        "por_que": "diarreia persistente com desnutrição e intolerância à lactose secundária",
+        "acao": "avaliar internação, investigar agente e acompanhar nutrição",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quantas evacuações líquidas nas últimas 24 h e há quantos dias começou?",
+      "Quantos episódios de vômito e a criança consegue beber alguma coisa?",
+      "Quantas vezes urinou nas últimas 24 h e qual o volume da fralda?",
+      "Qual o peso de hoje e existe peso recente para comparar a perda?",
+      "Há sangue ou muco nas fezes, ou febre alta com dor abdominal?",
+      "O vômito é bilioso, esverdeado ou em jato?",
+      "Já usou loperamida, antidiarreico, antibiótico ou chá caseiro por conta própria?",
+      "Como foi preparado o soro caseiro ou a solução de reidratação, e em que volume?",
+      "Mantém aleitamento materno, dieta habitual ou só líquidos?",
+      "Tem desnutrição, imunodeficiência, cardiopatia, doença renal ou uso de diurético?",
+      "Há outros casos de diarreia na casa, na creche ou na escola?",
+      "Teve convulsão, sonolência excessiva ou ficou mole durante o quadro?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Diarreia aquosa, sem sinais de desidratação, criança que bebe e urina normalmente",
+        "escolha": "Plano A: solução de reidratação oral oferecida após cada evacuação, dieta habitual mantida, zinco por 10–14 dias e retorno pactuado em 24–48 h",
+        "porque": "Repõe a perda antes que vire desidratação; manter a alimentação preserva a mucosa e reduz a duração da diarreia, e o zinco reduz recidiva nos 2 a 3 meses seguintes"
+      },
+      {
+        "cenario": "Desidratação leve a moderada (perda de 5 a 9% do peso), com olhos fundos, sede intensa ou turgor reduzido, mas criança alerta e capaz de beber",
+        "escolha": "Plano B: solução de reidratação oral 50–100 mL/kg em 4 h, em colheradas de 5–10 mL a cada 5–10 min, sob observação, com reavaliação do peso e da diurese ao fim das 4 h",
+        "porque": "A via oral tem a mesma eficácia da venosa na desidratação leve e moderada, sem punção, sem infecção e sem custo de internação; o volume é calculado por peso e o tempo é fixo para que a correção seja verificável"
+      },
+      {
+        "cenario": "Desidratação grave (perda acima de 9% do peso), choque, letargia, pulso fraco ou enchimento capilar acima de 3 s",
+        "escolha": "Plano C: Ringer lactato ou soro fisiológico 0,9% 20 mL/kg em 30–60 min, repetido até 40–60 mL/kg na primeira hora, com reavaliação após cada bolus e passagem para manutenção isotônica",
+        "porque": "Choque é a única situação em que a via venosa vem antes da oral; reavaliar entre bolus evita sobrecarga e identifica precocemente o choque que não responde, que exige droga vasoativa e UTI"
+      },
+      {
+        "cenario": "Criança com desidratação leve a moderada que continua vomitando e não consegue ingerir a solução de reidratação",
+        "escolha": "Ondansetrona 0,15 mg/kg em dose única por via oral, aguardar 15–30 min e reiniciar a reidratação oral; repetir a dose no máximo uma vez",
+        "porque": "Dose única de ondansetrona reduz vômito, falha da reidratação oral e necessidade de soro intravenoso; doses repetidas e uso de rotina aumentam diarreia, cefaleia e risco de prolongamento do QT"
+      },
+      {
+        "cenario": "Vômito persistente que impede a via oral, mas a criança está alerta, sem distensão e com intestino funcionante",
+        "escolha": "Sonda nasogástrica com solução de reidratação oral em infusão contínua de 20 mL/kg/h por 4 h, ou em ofertas de 20 mL/kg a cada 30 min",
+        "porque": "A via nasogástrica preserva o benefício da reidratação enteral, evita punção e internação prolongada e é a alternativa formal quando a via oral falha; só se abandona quando há íleo, distensão ou rebaixamento de consciência"
+      },
+      {
+        "cenario": "Diarreia aquosa em criança menor de 5 anos, em qualquer plano de reidratação",
+        "escolha": "Zinco por via oral: 10 mg/dia abaixo de 6 meses e 20 mg/dia a partir de 6 meses (1,25–2,5 mg/kg/dia), por 10–14 dias, mesmo depois da melhora",
+        "porque": "O zinco encurta a diarreia em cerca de 25%, reduz o volume das evacuações e diminui novos episódios nos 2 a 3 meses seguintes; suspender ao melhorar é o erro mais comum"
+      },
+      {
+        "cenario": "Desidratação moderada em casa, com cuidador que pretende usar soro caseiro (água, açúcar e sal medidos em colher)",
+        "escolha": "Não usar soro caseiro; prescrever solução de reidratação oral industrializada com 45–75 mEq/L de sódio e 75–90 mmol/L de glicose, na diluição exata do rótulo",
+        "porque": "Soro caseiro tem concentração imprevisível, erra para menos em glicose (sem reabsorção de sódio) ou para mais em sal (hipernatremia), e não corrige a desidratação moderada; a OMS só aceita a solução caseira em plano A, com medida padronizada e cuidador treinado"
+      },
+      {
+        "cenario": "Diarreia aquosa sem sangue, sem toxemia, com febre baixa",
+        "escolha": "Não prescrever antibiótico; reidratar, manter dieta e reavaliar em 48 h",
+        "porque": "A maioria é viral e o antibiótico de rotina não encurta a diarreia, não reduz complicações e seleciona resistência; em algumas bactérias ainda aumenta o risco de síndrome hemolítico-urêmica"
+      },
+      {
+        "cenario": "Disenteria com sangue vivo, febre alta, toxemia ou criança imunossuprimida",
+        "escolha": "Coprocultura e azitromicina empírica 10 mg/kg no primeiro dia e 5 mg/kg do segundo ao quinto dia, com reavaliação em 48 h",
+        "porque": "É o subgrupo em que o antibiótico muda a evolução; a escolha recai sobre azitromicina pela resistência atual a ampicilina e pela cobertura de Shigella, com cultura para descalonar"
+      },
+      {
+        "cenario": "Diarreia com vômito, sem sinais de desidratação grave, mas com febre alta e desconforto que impede a ingestão",
+        "escolha": "Paracetamol 10–15 mg/kg/dose e reoferta da solução de reidratação, sem antitérmico de horário",
+        "porque": "Tratar a febre aqui serve para permitir a ingestão, não para normalizar o termômetro; dipirona e anti-inflamatório não têm papel na diarreia aguda"
+      },
+      {
+        "cenario": "Prescrição de loperamida, racecadotril fora de indicação, antidiarreico, adsorvente ou probiótico como substituto da reidratação",
+        "escolha": "Não prescrever loperamida nem antidiarreico em nenhuma faixa etária; retirar o item e registrar o motivo na prescrição",
+        "porque": "Loperamida causa íleo, distensão, megacólon tóxico e morte em criança, e nenhum antidiarreico substitui volume; a reidratação é o tratamento e o resto é adjuvante"
+      },
+      {
+        "cenario": "Diarreia com desnutrição grave, imunodeficiência ou uso de diurético e IECA",
+        "escolha": "Internar para reidratação supervisionada, dosar eletrólitos antes de volume grande e corrigir distúrbio com solução isotônica",
+        "porque": "Desnutrido tem potássio corporal baixo e risco de hipoglicemia; diurético e IECA alteram a resposta renal e favorecem distúrbio eletrolítico grave durante a reidratação"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "solucao_reidratante_oral",
+        "agente": "solução de reidratação oral (SRO)",
+        "papel": "primeira_linha",
+        "indicacao": "plano A (perdas em casa) e plano B (desidratação leve a moderada), com ou sem sonda nasogástrica",
+        "dose": "plano B: 50–100 mL/kg em 4 h; plano A: 50–100 mL após cada evacuação (10 mL/kg por evacuação abaixo de 2 anos)",
+        "unidade": "mL/kg",
+        "via": "VO ou sonda nasogástrica",
+        "frequencia": "colheradas de 5–10 mL a cada 5–10 min; por sonda, infusão contínua de 20 mL/kg/h",
+        "duracao": "4 h para reidratar; reposição de perdas mantida até 24 h após a última evacuação líquida",
+        "dose_maxima": "100 mL/kg em 4 h no plano B; acima disso reavaliar o plano e investigar perda adicional",
+        "contraindicacoes": [
+          "choque ou desidratação grave sem estabilização inicial (fazer plano C antes)",
+          "íleo paralítico, distensão abdominal importante ou vômito fecaloide",
+          "rebaixamento de consciência sem proteção de via aérea",
+          "vômito incoercível que não cede após ondansetrona"
+        ],
+        "efeitos_adversos": [
+          "vômito por oferta rápida ou volume grande",
+          "distensão abdominal e desconforto gástrico",
+          "hiponatremia dilucional se a solução for preparada com água em excesso",
+          "hipernatremia se o sachê for diluído em menos água que o rótulo",
+          "saciedade e recusa alimentar durante as 4 h de reidratação"
+        ],
+        "apresentacoes": [
+          "sachê em pó para reconstituir 1 L (245 mOsm/L, sódio 75 mEq/L)",
+          "sachê em pó para reconstituir 500 mL",
+          "solução pronta para uso 500 mL",
+          "sachê pediátrico de 200 mL com sabor"
+        ],
+        "preparo": "Diluir o sachê exatamente no volume de água potável indicado no rótulo, sem acrescentar açúcar, sal, leite ou suco; não ferver a solução depois de pronta e desprezar o que sobrar após 24 h; ofertar com seringa, colher ou copo, com a criança sentada e elevada",
+        "tempo_infusao": "não se aplica (via oral); por sonda, infusão contínua em 4 h, ou 30–60 min por oferta em bolus",
+        "monitorizacao": [
+          "peso antes e depois das 4 h de reidratação",
+          "diurese e número de fraldas molhadas",
+          "número de episódios de vômito e de evacuação durante a oferta",
+          "mucosas, turgor, fontanela e estado de consciência a cada hora",
+          "sódio sérico se desidratação moderada, convulsão ou reidratação acima de 50 mL/kg"
+        ],
+        "ajuste_renal": "Sem ajuste na função renal preservada; em oligúria ou insuficiência renal, reduzir o volume e monitorar sódio e potássio",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É o tratamento, não um coadjuvante. Não suspender a alimentação durante a reidratação: manter leite materno e dieta habitual reduz a duração da diarreia. Soro caseiro não substitui a solução industrializada em desidratação moderada, e refrigerante, suco e isotônico esportivo têm osmolaridade e sódio inadequados",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/Ministerio da Saude/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide_isotônico",
+        "agente": "Ringer lactato",
+        "papel": "primeira_linha",
+        "indicacao": "plano C: desidratação grave, choque hipovolêmico, íleo ou falha da via enteral",
+        "dose": "20 mL/kg em 30–60 min; repetir 20 mL/kg se persistir hipoperfusão, até 40–60 mL/kg na primeira hora",
+        "unidade": "mL/kg",
+        "via": "IV ou intraóssea",
+        "frequencia": "bolus com reavaliação clínica completa após cada um",
+        "duracao": "até restabelecer perfusão e diurese; depois manutenção isotônica",
+        "dose_maxima": "60 mL/kg na primeira hora; acima disso associar droga vasoativa e avaliar UTI",
+        "contraindicacoes": [
+          "edema agudo de pulmão ou sobrecarga cardíaca conhecida (fracionar em 10 mL/kg)",
+          "anúria sem diálise",
+          "hipercalemia grave (preferir soro fisiológico)",
+          "hiperlactatemia por hipoperfusão hepática (usar soro fisiológico e reavaliar)"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga hídrica com edema e piora respiratória",
+          "hiponatremia dilucional em volumes grandes",
+          "alcalose metabólica em infusão prolongada",
+          "hipotermia se administrado gelado",
+          "infiltração e necrose no sítio de infusão"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 250 mL",
+          "frasco 500 mL",
+          "bolsa 100 mL para uso pediátrico"
+        ],
+        "preparo": "Não requer diluição; aquecer a 37 °C, usar equipo com bureta em lactente e calcular o volume pelo peso aferido na entrada",
+        "tempo_infusao": "30–60 min por bolus; 5–10 min em choque descompensado",
+        "monitorizacao": [
+          "frequência cardíaca e pressão arterial antes e após cada bolus",
+          "enchimento capilar, perfusão e nível de consciência",
+          "ausculta pulmonar, esforço respiratório e saturação",
+          "diurese por sonda vesical se choque",
+          "sódio, potássio, cloro e bicarbonato após 40 mL/kg",
+          "glicemia capilar em lactente e desnutrido"
+        ],
+        "ajuste_renal": "Sem ajuste em bolus; ajustar a manutenção pela diurese e pela creatinina",
+        "ajuste_hepatico": "Sem ajuste; vigiar lactato em hepatopatia",
+        "observacoes": "É o cristaloide de escolha do plano C da OMS em grandes volumes, por causar menos hipercloremia que o soro fisiológico. Não é sinônimo de plano C completo: depois do bolus, a criança precisa de manutenção isotônica com potássio após diurese",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/SBP/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "cristaloide_isotônico",
+        "agente": "soro fisiológico 0,9%",
+        "papel": "alternativa",
+        "indicacao": "plano C quando o Ringer lactato não está disponível, hipercalemia ou necessidade de veículo para drogas",
+        "dose": "20 mL/kg em 30–60 min; repetir conforme resposta até 40–60 mL/kg na primeira hora",
+        "unidade": "mL/kg",
+        "via": "IV ou intraóssea",
+        "frequencia": "bolus único com reavaliação, repetido se necessário",
+        "duracao": "até perfusão e diurese restabelecidas",
+        "dose_maxima": "60 mL/kg na primeira hora",
+        "contraindicacoes": [
+          "sobrecarga cardíaca conhecida (fracionar o volume)",
+          "edema agudo de pulmão",
+          "anúria sem diálise"
+        ],
+        "efeitos_adversos": [
+          "acidose metabólica hiperclorêmica em volumes grandes",
+          "hipernatremia",
+          "sobrecarga hídrica",
+          "hipotermia com volume gelado",
+          "infiltração no sítio de infusão"
+        ],
+        "apresentacoes": [
+          "bolsa 500 mL",
+          "bolsa 250 mL",
+          "frasco 100 mL",
+          "ampola 10 mL"
+        ],
+        "preparo": "Não requer diluição; aquecer a 37 °C e usar equipo com bureta em lactente para evitar infusão acidental de grande volume",
+        "tempo_infusao": "30–60 min por bolus; 5–10 min em choque",
+        "monitorizacao": [
+          "perfusão, frequência cardíaca e pressão arterial",
+          "ausculta pulmonar e saturação",
+          "diurese",
+          "cloro e bicarbonato após volumes repetidos",
+          "sítio de infusão"
+        ],
+        "ajuste_renal": "Sem ajuste em bolus; ajustar a manutenção pela diurese",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Equivalente ao Ringer lactato no bolus inicial; a diferença aparece em volumes acima de 40 mL/kg, quando a carga de cloro causa acidose hiperclorêmica e dificulta a interpretação da gasometria",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "fluido_manutencao",
+        "agente": "solução de manutenção isotônica (glicose 5% com cloreto de sódio 0,9%)",
+        "papel": "condicional",
+        "indicacao": "manutenção venosa após o plano C, enquanto a via enteral não é tolerada",
+        "dose": "100 mL/kg/dia até 10 kg; 50 mL/kg/dia entre 10 e 20 kg; 20 mL/kg/dia acima de 20 kg (Holliday-Segar)",
+        "unidade": "mL/kg/dia",
+        "via": "IV",
+        "frequencia": "infusão contínua em bomba de infusão",
+        "duracao": "até retomar a dieta enteral, habitualmente 12–24 h",
+        "dose_maxima": "individualizar; reduzir 20–30% em suspeita de SIADH, pós-operatório e edema",
+        "contraindicacoes": [
+          "hiponatremia grave",
+          "insuficiência cardíaca descompensada",
+          "anúria sem diálise",
+          "edema agudo de pulmão"
+        ],
+        "efeitos_adversos": [
+          "hiponatremia dilucional se a solução for hipotônica",
+          "hiperglicemia",
+          "sobrecarga hídrica",
+          "hipercloremia em infusão prolongada"
+        ],
+        "apresentacoes": [
+          "bolsa glicose 5% com cloreto de sódio 0,9%, 500 mL",
+          "bolsa glicose 5% com cloreto de sódio 0,9%, 250 mL",
+          "frasco de glicose 5% 500 mL para adição de eletrólitos"
+        ],
+        "preparo": "Usar solução isotônica; adicionar cloreto de potássio 20 mEq/L apenas após diurese documentada; nunca usar glicose 5% isolada como manutenção",
+        "tempo_infusao": "infusão contínua em bomba",
+        "monitorizacao": [
+          "sódio 24 h após iniciar e a cada 48 h",
+          "potássio e função renal",
+          "glicemia capilar",
+          "diurese e peso diário",
+          "balanço hídrico"
+        ],
+        "ajuste_renal": "Reduzir o volume em oligúria e monitorar potássio",
+        "ajuste_hepatico": "Sem ajuste; vigiar glicemia em hepatopatia",
+        "observacoes": "A diarreia aguda cursa com secreção de hormônio antidiurético; soro hipotônico de manutenção é a causa clássica de hiponatremia com convulsão em criança internada. Suspender assim que a via oral for tolerada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "SBP/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "suplemento_mineral",
+        "agente": "zinco (sulfato ou gluconato)",
+        "papel": "primeira_linha",
+        "indicacao": "toda diarreia aguda em criança menor de 5 anos, como adjuvante obrigatório da reidratação",
+        "dose": "10 mg/dia abaixo de 6 meses; 20 mg/dia a partir de 6 meses (1,25–2,5 mg/kg/dia)",
+        "unidade": "mg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "10–14 dias, mesmo após a diarreia cessar",
+        "dose_maxima": "20 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade ao sal de zinco",
+          "insuficiência renal grave com oligúria (risco de acúmulo)"
+        ],
+        "efeitos_adversos": [
+          "vômito quando administrado em jejum",
+          "gosto metálico e recusa da criança",
+          "dor abdominal e náusea",
+          "constipação em uso prolongado"
+        ],
+        "apresentacoes": [
+          "solução oral 10 mg/mL",
+          "solução oral 20 mg/5 mL",
+          "comprimido dispersível 10 mg",
+          "comprimido dispersível 20 mg",
+          "cápsula 20 mg"
+        ],
+        "preparo": "Diluir o comprimido dispersível em água ou oferecer a solução com seringa graduada, junto da refeição para reduzir vômito e náusea; não misturar na solução de reidratação",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "aceitação e ocorrência de vômito após a dose",
+          "duração e número de evacuações por dia",
+          "adesão até o 10º ao 14º dia",
+          "peso e ganho ponderal em uso prolongado"
+        ],
+        "ajuste_renal": "Reduzir a dose ou evitar em insuficiência renal grave com oligúria",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Encurta a diarreia em cerca de 25% e reduz a recidiva nos 2 a 3 meses seguintes. O erro mais comum é suspender quando a criança melhora: o curso é de 10 a 14 dias. Não substitui a reidratação em nenhum plano",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/Ministerio da Saude/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico_antagonista_5ht3",
+        "agente": "ondansetrona",
+        "papel": "condicional",
+        "indicacao": "vômito que impede a reidratação oral em criança de 6 meses a 12 anos, sem sinais de desidratação grave",
+        "dose": "0,15 mg/kg/dose em dose única",
+        "unidade": "mg/kg/dose",
+        "via": "VO ou IV",
+        "frequencia": "dose única; repetir no máximo uma vez se o vômito retornar após 30 min",
+        "duracao": "1 a 2 doses no episódio agudo; não manter de horário",
+        "dose_maxima": "4 mg por dose; 8 mg em criança acima de 15 kg",
+        "contraindicacoes": [
+          "síndrome do QT longo congênito",
+          "uso concomitante de outros fármacos que prolongam o QT",
+          "distúrbio eletrolítico não corrigido, principalmente hipocalemia e hipomagnesemia",
+          "obstrução intestinal ou vômito bilioso",
+          "menor de 6 meses, pela imaturidade do metabolismo hepático"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "constipação",
+          "diarreia (aumento do número de evacuações)",
+          "prolongamento do intervalo QT e torsades de pointes",
+          "sonolência e tontura",
+          "elevação de transaminases em uso repetido"
+        ],
+        "apresentacoes": [
+          "comprimido orodispersível 4 mg",
+          "comprimido orodispersível 8 mg",
+          "solução oral 0,8 mg/mL",
+          "ampola 4 mg/2 mL",
+          "ampola 8 mg/4 mL"
+        ],
+        "preparo": "Uso direto na via oral, dissolvendo o comprimido orodispersível na língua; na via IV, diluir em 20–50 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "não se aplica (via oral); 15 minutos na via venosa",
+        "monitorizacao": [
+          "número de episódios de vômito antes e depois da dose",
+          "frequência cardíaca e intervalo QT se houver monitor",
+          "potássio e magnésio antes de repetir a dose",
+          "número de evacuações nas 24 h seguintes",
+          "aceitação da solução de reidratação após 15–30 min"
+        ],
+        "ajuste_renal": "Sem ajuste em dose única",
+        "ajuste_hepatico": "Máximo de 8 mg/dia em insuficiência hepática grave (Child-Pugh C)",
+        "observacoes": "Destrava a via oral e evita soro venoso, mas não é antiemético de horário nem tratamento de gastroenterite. Não usar em desidratação grave antes de estabilizar e não associar a outro fármaco que prolongue o QT",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "antissecretor_intestinal",
+        "agente": "racecadotril",
+        "papel": "alternativa",
+        "indicacao": "diarreia aquosa aguda como adjuvante da reidratação, quando o serviço não dispõe de zinco ou como opção ao probiótico",
+        "dose": "1,5 mg/kg/dose",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "até 5 dias ou até 12 h sem evacuação líquida",
+        "dose_maxima": "100 mg/dose",
+        "contraindicacoes": [
+          "menor de 3 meses",
+          "insuficiência renal grave",
+          "diarreia sanguinolenta ou disenteria",
+          "vômito bilioso e suspeita de obstrução",
+          "hipersensibilidade ao fármaco"
+        ],
+        "efeitos_adversos": [
+          "vômito",
+          "constipação",
+          "cefaleia",
+          "sonolência",
+          "rash cutâneo"
+        ],
+        "apresentacoes": [
+          "cápsula 100 mg",
+          "sachê granulado 10 mg",
+          "sachê granulado 30 mg"
+        ],
+        "preparo": "Uso direto; o sachê pode ser misturado em pequena quantidade de alimento ou água, sem diluir em volume grande",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número e consistência das evacuações em 24 h",
+          "hidratação e diurese",
+          "vômito e aceitação da via oral",
+          "sinais de constipação excessiva"
+        ],
+        "ajuste_renal": "Evitar em insuficiência renal grave (clearance abaixo de 30 mL/min)",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reduz discretamente o volume das fezes, mas não substitui a reidratação e não deve ser a intervenção principal. Se não houver zinco disponível, a prioridade é garantir a solução de reidratação, não o antissecretor",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "probotico",
+        "agente": "Saccharomyces boulardii",
+        "papel": "alternativa",
+        "indicacao": "diarreia aguda por rotavírus ou diarreia associada a antibiótico, como adjuvante da reidratação",
+        "dose": "250–500 mg/dia (5–10 bilhões de UFC/dia)",
+        "unidade": "mg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia ou dividido em 2 tomadas",
+        "duracao": "5–7 dias",
+        "dose_maxima": "500 mg/dia",
+        "contraindicacoes": [
+          "imunossupressão, neutropenia ou cateter venoso central (risco de fungemia)",
+          "prematuridade e lactente internado com dispositivo invasivo",
+          "hipersensibilidade a leveduras",
+          "diarreia sanguinolenta"
+        ],
+        "efeitos_adversos": [
+          "distensão abdominal e flatulência",
+          "constipação",
+          "fungemia em imunossuprimido",
+          "reação alérgica rara"
+        ],
+        "apresentacoes": [
+          "cápsula 250 mg",
+          "sachê 250 mg",
+          "sachê 500 mg"
+        ],
+        "preparo": "Abrir a cápsula ou diluir o sachê em água ou leite, sem aquecer acima de 37 °C para não inviabilizar o fungo",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número de evacuações e consistência das fezes",
+          "distensão e dor abdominal",
+          "febre nova em criança com cateter ou imunossupressão",
+          "adesão ao curso"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Adjuvante de segunda ordem: reduz cerca de 1 dia de diarreia, o que não justifica priorizá-lo sobre a solução de reidratação e o zinco. Nunca usar em criança com cateter central ou neutropenia pelo risco de fungemia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_macrolideo",
+        "agente": "azitromicina",
+        "papel": "condicional",
+        "indicacao": "disenteria com sangue, febre alta e toxemia, ou diarreia grave por cólera com desidratação importante",
+        "dose": "10 mg/kg no primeiro dia e 5 mg/kg/dia do segundo ao quinto dia; cólera: 20 mg/kg dose única",
+        "unidade": "mg/kg/dia",
+        "via": "VO ou IV",
+        "frequencia": "1x/dia",
+        "duracao": "3 a 5 dias na disenteria; dose única na cólera",
+        "dose_maxima": "500 mg no primeiro dia e 250 mg/dia nos demais; 1 g em dose única na cólera",
+        "contraindicacoes": [
+          "hipersensibilidade a macrolídeo",
+          "prolongamento do intervalo QT",
+          "uso concomitante de ondansetrona em dose repetida (somatório de QT)",
+          "insuficiência hepática grave"
+        ],
+        "efeitos_adversos": [
+          "dor abdominal e vômito",
+          "diarreia paradoxal",
+          "prolongamento do QT",
+          "elevação de transaminases",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 600 mg",
+          "suspensão oral 200 mg/5 mL",
+          "pó para solução injetável 500 mg"
+        ],
+        "preparo": "Suspensão: reconstituir conforme o rótulo e medir com seringa graduada; via IV: diluir o pó em água destilada e depois em soro fisiológico ou glicosado, sem bolus",
+        "tempo_infusao": "não se aplica (via oral); 1 h na via venosa, nunca em bolus",
+        "monitorizacao": [
+          "número de evacuações, sangue nas fezes e febre em 48 h",
+          "coprocultura e antibiograma para descalonar",
+          "função hepática em uso acima de 3 dias",
+          "intervalo QT se houver outro fármaco que o prolongue",
+          "hidratação e diurese durante o tratamento"
+        ],
+        "ajuste_renal": "Sem ajuste em uso curto",
+        "ajuste_hepatico": "Evitar em insuficiência hepática grave; monitorar transaminases",
+        "observacoes": "Não é antibiótico de rotina em diarreia aquosa: só entra com disenteria, cólera ou toxemia. Em infecção por E. coli produtora de toxina Shiga, o antibiótico pode aumentar o risco de síndrome hemolítico-urêmica, o que reforça a necessidade de cultura antes de tratar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "OMS/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antitermico_analgesico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "febre com desconforto que impede a ingestão da solução de reidratação",
+        "dose": "10–15 mg/kg/dose",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "4/4 a 6/6 h, se necessário",
+        "duracao": "até 48–72 h ou enquanto houver febre",
+        "dose_maxima": "75 mg/kg/dia; máximo 4 g/dia",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "hepatopatia grave",
+          "desnutrição grave, com redução da dose"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose excessiva",
+          "náusea e vômito",
+          "rash raro"
+        ],
+        "apresentacoes": [
+          "gotas 200 mg/mL, frasco 15 mL",
+          "solução oral 32 mg/mL, frasco 60 mL",
+          "comprimido 500 mg",
+          "supositório 125 mg"
+        ],
+        "preparo": "Uso direto por via oral, medido com seringa graduada; conferir a concentração da apresentação antes de calcular o volume",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "temperatura 30–60 min após a dose",
+          "dose acumulada em 24 h, incluindo antigripais combinados",
+          "aceitação da solução de reidratação após o efeito",
+          "função hepática se uso acima de 3 dias"
+        ],
+        "ajuste_renal": "Sem ajuste em uso curto; intervalo de 6–8 h na insuficiência renal grave",
+        "ajuste_hepatico": "Reduzir a dose ou evitar em hepatopatia grave",
+        "observacoes": "Não é tratamento da diarreia e não deve ser dado de horário. Dipirona e anti-inflamatório não têm papel na diarreia aguda: o anti-inflamatório agride a mucosa e a dipirona não é primeira escolha em pediatria",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Manter a alimentação durante e após a reidratação",
+        "detalhe": "Não suspender leite materno, fórmula nem dieta habitual: oferecer leite materno em livre demanda entre as colheradas de solução de reidratação e manter arroz, feijão, carne, fruta e legumes. Jejum prolongado piora a diarreia, atrasa a recuperação da mucosa e prolonga a internação"
+      },
+      {
+        "medida": "Oferecer a solução de reidratação em colheradas, com seringa ou colher",
+        "detalhe": "5–10 mL a cada 5–10 min em criança acima de 2 anos e 5 mL a cada 5 min abaixo disso; colher de sopa cheia é 15 mL e seringa de 20 mL permite medir. Oferta rápida é a principal causa de vômito e de falha do plano B"
+      },
+      {
+        "medida": "Pesar a criança na entrada e ao fim de cada etapa de reidratação",
+        "detalhe": "O peso é o único parâmetro objetivo de desidratação e de resposta: perda acima de 9% define plano C, e ganho de 5 a 8% ao fim das 4 h confirma o plano B bem-sucedido. Balança calibrada, criança despida e sempre a mesma balança"
+      },
+      {
+        "medida": "Controle rigoroso de diurese",
+        "detalhe": "Fralda pesada ou sonda vesical em criança internada; registrar volume e horário de cada micção. Diurese abaixo de 1 mL/kg/h por 6 h indica reidratação insuficiente e obriga a reavaliar o plano"
+      },
+      {
+        "medida": "Higiene de mãos, descarte adequado de fraldas e isolamento de contato",
+        "detalhe": "Álcool gel antes e depois da troca de fralda, trocador higienizado e fralda fechada no lixo; em surto hospitalar por rotavírus ou norovírus, quarto privativo e precaução de contato. Reduz a transmissão para os outros pacientes e para a equipe"
+      },
+      {
+        "medida": "Não prescrever antidiarreico, adsorvente, antiespasmódico ou antiemético de horário",
+        "detalhe": "Loperamida e difenoxilato causam íleo, distensão e megacólon tóxico em criança; caulim-pectina e carvão ativado não reduzem perdas e atrapalham a absorção de outros fármacos. Orientar o cuidador a não comprar por conta própria e a não usar remédio guardado de outra ocasião"
+      },
+      {
+        "medida": "Não usar soro caseiro em desidratação moderada nem bebida isotônica esportiva",
+        "detalhe": "Soro caseiro com medida caseira tem sódio e glicose imprevisíveis e não corrige desidratação de 5 a 9%; refrigerante, suco e isotônico esportivo têm osmolaridade alta, pouco sódio e muito açúcar, e pioram a diarreia. Só a solução de reidratação industrializada na diluição do rótulo é aceitável no plano B"
+      },
+      {
+        "medida": "Vacinação contra rotavírus e suplementação de vitamina A quando indicada",
+        "detalhe": "Esquema de rotavírus conforme calendário do Ministério da Saúde, com atenção aos limites de idade; vitamina A em área de deficiência reduz gravidade e mortalidade. É prevenção, não tratamento do episódio atual"
+      },
+      {
+        "medida": "Plano de retorno escrito com sinais de alarme e reavaliação em 24–48 h",
+        "detalhe": "Entregar por escrito: sem urinar por 6 h, vômito bilioso, sangue nas fezes, sonolência, olhos fundos, recusa total de líquido. Conferir se o cuidador entendeu, se tem como preparar a solução e se consegue voltar ao serviço"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Reidratação oral supervisionada (plano B)",
+        "indicacao": "desidratação leve a moderada em criança alerta, capaz de deglutir, sem íleo",
+        "tecnica": "Pesar, calcular 50–100 mL/kg e dividir em ofertas de 5–10 mL a cada 5–10 min, com seringa ou colher, sob observação direta; reavaliar hidratação, diurese e vômito a cada hora e pesar ao fim das 4 h. Se houver vômito, aguardar 10 min e retomar em volume menor",
+        "complicacoes": "Vômito e aspiração por oferta rápida, distensão gástrica, falha da reidratação com necessidade de sonda ou veia, hiponatremia por solução preparada errada e sobrecarga por volume acima do calculado"
+      },
+      {
+        "nome": "Reidratação por sonda nasogástrica",
+        "indicacao": "criança que não bebe ou vomita a colherada, mas está alerta e sem distensão abdominal, íleo ou vômito bilioso",
+        "tecnica": "Medir a sonda da ponta do nariz ao lobo da orelha e ao apêndice xifoide, introduzir pela narina com a cabeça levemente fletida, confirmar posição por ausculta de ar e pH do aspirado, fixar e infundir solução de reidratação a 20 mL/kg/h por 4 h em bomba, ou 20 mL/kg a cada 30 min",
+        "complicacoes": "Posicionamento em via aérea com aspiração, sangramento nasal, vômito e distensão gástrica, deslocamento e obstrução da sonda, aspiração pulmonar em criança com rebaixamento de consciência"
+      },
+      {
+        "nome": "Acesso venoso periférico ou intraósseo para o plano C",
+        "indicacao": "desidratação grave, choque, íleo, rebaixamento de consciência ou falha da via enteral",
+        "tecnica": "Escolher veia calibrosa, preferir cateter curto em criança; em até 2 tentativas frustradas ou choque descompensado, passar imediatamente à via intraóssea na face medial da tíbia proximal, 1–2 cm abaixo da tuberosidade. Fixar, testar refluxo e iniciar cristaloide aquecido",
+        "complicacoes": "Infiltração e necrose, hematoma, punção arterial, tromboflebite, osteomielite e extravasamento na via intraóssea, embolia gordurosa e fratura iatrogênica"
+      },
+      {
+        "nome": "Coleta de coprocultura, leucócitos fecais e teste de toxina",
+        "indicacao": "disenteria, febre alta com toxemia, diarreia após antibiótico, surto hospitalar ou diarreia acima de 7 dias",
+        "tecnica": "Coletar amostra fresca em frasco estéril ou swab retal, sem conservante, e enviar ao laboratório em até 2 h; em suspeita de C. difficile, solicitar toxina A/B ou PCR na fezes líquidas",
+        "complicacoes": "Resultado falso-negativo por coleta inadequada, atraso no envio, contaminação da amostra e tratamento empírico desnecessário por interpretação de flora mista"
+      },
+      {
+        "nome": "Sondagem vesical de alívio para controle de diurese",
+        "indicacao": "choque, desidratação grave ou criança internada que não urina e precisa de balanço rigoroso",
+        "tecnica": "Antissepsia, sonda de calibre adequado à idade, técnica estéril, fixação e sistema fechado; registrar volume, aspecto e densidade a cada micção",
+        "complicacoes": "Infecção do trato urinário associada ao cateter, trauma uretral, hematúria, espasmo e retenção após a retirada"
+      }
+    ],
+    "metas": [
+      "Ganho de 5 a 8% do peso ao fim das 4 h de plano B, com hidratação clínica normalizada",
+      "Diurese de pelo menos 1 mL/kg/h e pelo menos 4 fraldas molhadas em 24 h",
+      "Perfusão normal com enchimento capilar abaixo de 2 s e pulso periférico palpável",
+      "Sódio entre 135 e 145 mEq/L, com correção de no máximo 10–12 mEq/L em 24 h",
+      "Tolerância da via oral com manutenção da dieta e sem vômito por 4 h",
+      "Zinco prescrito por 10 a 14 dias em toda criança menor de 5 anos",
+      "Nenhuma prescrição de loperamida, antidiarreico ou antibiótico sem indicação registrada",
+      "Alta em até 24 h na maioria dos casos, sem retorno por desidratação em 72 h"
+    ],
+    "fluxo": [
+      "Triagem imediata: pesar, medir frequência cardíaca, pressão arterial, enchimento capilar, diurese e estado de consciência; peso é obrigatório para calcular qualquer volume",
+      "Classificar a desidratação em plano A, B ou C pelo peso perdido, pelos olhos, turgor, fontanela, pulso, perfusão e diurese — não pela impressão geral",
+      "Procurar sinal de exclusão antes de hidratar: vômito bilioso, sangue com toxemia, dor localizada com defesa, convulsão — esses casos mudam o destino e não vão para reidratação simples",
+      "Plano A: solução de reidratação oral após cada evacuação, dieta mantida, zinco iniciado hoje e retorno em 24–48 h com plano escrito",
+      "Plano B: internar em observação, 50–100 mL/kg em 4 h em colheradas, ondansetrona 0,15 mg/kg se vomitar, pesar e reavaliar ao fim das 4 h",
+      "Plano B que não tolera via oral: sonda nasogástrica a 20 mL/kg/h por 4 h antes de indicar veia; veia só se houver íleo, distensão, rebaixamento ou choque",
+      "Plano C: acesso venoso ou intraósseo, Ringer lactato 20 mL/kg em 30–60 min, reavaliar perfusão e repetir até 40–60 mL/kg, dosar glicemia e sódio",
+      "Após estabilizar: manutenção isotônica com potássio após diurese, sódio e potássio de controle, e tentativa de via oral a cada 2–4 h",
+      "Iniciar zinco em todos os planos e revisar a prescrição retirando antidiarreico, adsorvente e antibiótico sem indicação",
+      "Antes da alta: peso recuperado, diurese documentada, dieta tolerada, zinco em mãos, sinais de retorno por escrito e reavaliação agendada"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "lactente_menor_6_meses",
+        "ajuste": "manter aleitamento materno em livre demanda durante a reidratação, com solução de reidratação oral complementar e limiar baixo de internação",
+        "alerta": "desidratação rápida, risco de hipoglicemia e de hipernatremia por solução preparada errada"
+      },
+      {
+        "populacao": "desnutrido_grave",
+        "ajuste": "internar, reidratar mais lentamente com solução isotônica, monitorar glicemia e potássio e iniciar alimentação terapêutica em etapas (F-75 e depois F-100), com controle de hipotermia",
+        "alerta": "hipoglicemia, hipocalemia e síndrome de realimentação"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "internar, ampliar investigação etiológica e evitar probiótico com cateter central",
+        "alerta": "diarreia prolongada, sepse por agente oportunista e fungemia por probiótico"
+      },
+      {
+        "populacao": "cardiopata_ou_renal_cronico",
+        "ajuste": "fracionar o bolus em 10 mL/kg, monitorar ausculta, diurese e eletrólitos e evitar solução com potássio antes de diurese",
+        "alerta": "sobrecarga hídrica, edema agudo de pulmão e hipercalemia"
+      },
+      {
+        "populacao": "uso_de_diuretico_ou_ieca",
+        "ajuste": "dosar eletrólitos antes de volume grande e corrigir hiponatremia de forma lenta",
+        "alerta": "distúrbio eletrolítico grave e lesão renal aguda durante a reidratação"
+      },
+      {
+        "populacao": "neonato",
+        "ajuste": "internação obrigatória, reidratação venosa calculada por peso e monitorização contínua; soluções com potássio apenas após diurese",
+        "alerta": "reserva fisiológica mínima, hipoglicemia e desidratação hipernatrêmica"
+      },
+      {
+        "populacao": "adolescente_gestante",
+        "ajuste": "reidratar pela via oral sempre que possível e investigar causa não infecciosa",
+        "alerta": "desidratação com risco fetal e diagnóstico diferencial de hiperêmese"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "peso e avaliação clínica de desidratação",
+          "indicacao": "todos os casos, na primeira avaliação e ao fim de cada etapa",
+          "o_que_muda": "define plano A, B ou C, o volume a infundir e o destino do paciente"
+        },
+        {
+          "nome": "diurese, densidade urinária e balanço hídrico",
+          "indicacao": "criança internada ou em plano B e C",
+          "o_que_muda": "confirma se a reidratação está funcionando e detecta lesão renal precoce"
+        },
+        {
+          "nome": "sódio, potássio, cloro e bicarbonato",
+          "indicacao": "desidratação moderada a grave, convulsão, reidratação acima de 50 mL/kg ou desnutrição",
+          "o_que_muda": "define a velocidade de correção e evita convulsão por hiponatremia ou mielinólise por correção rápida da hipernatremia"
+        },
+        {
+          "nome": "glicemia capilar",
+          "indicacao": "letargia, convulsão, lactente, desnutrido ou recusa alimentar prolongada",
+          "o_que_muda": "detecta hipoglicemia, que se confunde com desidratação e causa convulsão"
+        },
+        {
+          "nome": "hemograma e proteína C reativa",
+          "indicacao": "disenteria, febre alta com toxemia ou suspeita de infecção bacteriana invasiva",
+          "o_que_muda": "apoia a decisão de coprocultura e de antibiótico, sem indicar antibiótico isoladamente"
+        },
+        {
+          "nome": "coprocultura e pesquisa de toxina de C. difficile",
+          "indicacao": "sangue nas fezes, diarreia após antibiótico, surto ou diarreia acima de 7 dias",
+          "o_que_muda": "define o agente, permite descalonar antibiótico e detecta surto hospitalar"
+        },
+        {
+          "nome": "creatinina e ureia",
+          "indicacao": "desidratação grave, choque ou oligúria",
+          "o_que_muda": "identifica lesão renal aguda e ajusta volume e eletrólitos"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "hemograma, eletrólitos e coprocultura de rotina na diarreia aquosa leve sem sinais de gravidade",
+          "motivo": "não mudam a conduta, aumentam punção e custo e atrasam a reidratação, que é o tratamento"
+        },
+        {
+          "exame": "radiografia de abdome de rotina na diarreia aguda",
+          "motivo": "não identifica desidratação nem agente e expõe a radiação sem alterar o plano"
+        },
+        {
+          "exame": "parasitológico de fezes seriado em diarreia aguda de 2 dias",
+          "motivo": "diarreia aguda é viral na maioria; o exame tem baixo rendimento e não muda a conduta imediata"
+        },
+        {
+          "exame": "dosagem de sódio em série sem indicação durante reidratação oral não complicada",
+          "motivo": "punção desnecessária; reservar para convulsão, desidratação moderada a grave ou desnutrição"
+        },
+        {
+          "exame": "ultrassonografia abdominal de rotina",
+          "motivo": "sem achado que mude a conduta na gastroenterite não complicada"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "oferecer solução de reidratação oral em colheradas pequenas e frequentes, com seringa ou colher",
+        "manter o leite materno e a alimentação habitual, sem jejum",
+        "dar zinco todos os dias por 10 a 14 dias, mesmo depois que a diarreia passar",
+        "lavar as mãos antes e depois de trocar fraldas e higienizar o trocador",
+        "pesar a criança e anotar as evacuações, os vômitos e as micções",
+        "voltar ao serviço se não urinar por 6 h, se o vômito for esverdeado ou se aparecer sangue nas fezes"
+      ],
+      "evitar": [
+        "loperamida, antidiarreico, antiespasmódico e remédio para enjoo por conta própria",
+        "soro caseiro com medida caseira em desidratação moderada",
+        "refrigerante, suco industrializado, isotônico esportivo e chá açucarado em grande volume",
+        "suspender a alimentação ou substituir refeição por líquido",
+        "antibiótico guardado de outra ocasião ou comprado sem prescrição",
+        "água pura em grande quantidade para matar a sede de uma criança desidratada"
+      ],
+      "retorno": [
+        "sonolência excessiva, moleza ou dificuldade para acordar",
+        "ausência de urina por 6 h ou fralda seca por mais de 6 h",
+        "olhos muito fundos, boca seca ou choro sem lágrimas",
+        "vômito esverdeado, em jato ou com distensão da barriga",
+        "sangue nas fezes ou febre alta que não cede",
+        "convulsão ou tremor durante a reidratação"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "solução de reidratação oral",
+        "efeitos": ["vômito por oferta rápida", "distensão abdominal", "hiponatremia se diluída errado"],
+        "observacao": "reduzir o volume por oferta e aumentar a frequência; conferir a diluição do sachê com o cuidador"
+      },
+      {
+        "agente": "Ringer lactato e soro fisiológico 0,9%",
+        "efeitos": ["sobrecarga hídrica", "acidose hiperclorêmica", "hipotermia"],
+        "observacao": "reavaliar após cada bolus, aquecer a solução e dosar eletrólitos após 40 mL/kg"
+      },
+      {
+        "agente": "ondansetrona",
+        "efeitos": ["cefaleia", "prolongamento do QT", "aumento das evacuações"],
+        "observacao": "dose única; conferir potássio e magnésio antes de repetir e não associar a outro fármaco que prolongue o QT"
+      },
+      {
+        "agente": "zinco",
+        "efeitos": ["vômito", "náusea", "gosto metálico"],
+        "observacao": "oferecer junto da refeição e manter o curso de 10–14 dias; não suspender por vômito isolado"
+      },
+      {
+        "agente": "racecadotril",
+        "efeitos": ["constipação", "vômito", "sonolência"],
+        "observacao": "suspender se constipação importante; não é substituto da reidratação"
+      },
+      {
+        "agente": "Saccharomyces boulardii",
+        "efeitos": ["distensão", "flatulência", "fungemia em imunossuprimido"],
+        "observacao": "suspender e investigar fungemia se febre nova em criança com cateter central"
+      },
+      {
+        "agente": "azitromicina",
+        "efeitos": ["vômito", "diarreia", "prolongamento do QT"],
+        "observacao": "reavaliar em 48 h com cultura em mãos; suspender se houver piora do quadro abdominal"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a intervenção implicada e registrar hora, dose, via e volume",
+      "Vômito durante a reidratação oral: interromper por 10 min, reofertar em volume menor e mais frequente, e considerar ondansetrona em dose única",
+      "Convulsão durante a reidratação: parar a infusão, dosar sódio e glicemia, tratar hiponatremia sintomática com salina hipertônica 3% em bolus de 2–3 mL/kg (máximo 100 mL) e reduzir a velocidade de correção",
+      "Sinais de sobrecarga com bolus de cristaloide: auscultar, reduzir a velocidade, avaliar diurese e considerar diurético apenas com pressão e perfusão adequadas",
+      "Constipação ou distensão com racecadotril ou probiótico: suspender o adjuvante e manter a reidratação",
+      "Diarreia que piora com antibiótico: reavaliar indicação, solicitar toxina de C. difficile e suspender o antimicrobiano se possível",
+      "Reavaliar a gravidade e reescrever a prescrição antes da alta; não dar alta com efeito adverso em curso"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "solução de reidratação oral (sachê para 1 L)",
+            "dose": "50–100 mL/kg em 4 h se desidratação leve a moderada; 10 mL/kg após cada evacuação",
+            "via": "VO",
+            "frequencia": "colheradas de 5–10 mL a cada 5–10 min",
+            "duracao": "4 h de reidratação e reposição de perdas por 24 h",
+            "condicao": "preparar 1 sachê em 1 L de água potável, sem acrescentar açúcar ou sal; desprezar sobra após 24 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "zinco solução oral 10 mg/mL ou comprimido dispersível 20 mg",
+            "dose": "10 mg/dia abaixo de 6 meses; 20 mg/dia a partir de 6 meses",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "10 a 14 dias, mesmo após a diarreia cessar",
+            "condicao": "toda diarreia aguda em menor de 5 anos; oferecer junto da refeição",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona comprimido orodispersível 4 mg",
+            "dose": "0,15 mg/kg/dose, máximo 4 mg",
+            "via": "VO",
+            "frequencia": "dose única, repetir no máximo uma vez",
+            "duracao": "1 a 2 doses no episódio",
+            "condicao": "somente se o vômito impedir a reidratação oral; não usar de horário",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol gotas 200 mg/mL",
+            "dose": "10–15 mg/kg/dose = ___ gotas (calcular pelo peso)",
+            "via": "VO",
+            "frequencia": "4/4 a 6/6 h se febre com desconforto",
+            "duracao": "até 72 h",
+            "condicao": "febre que impede a ingestão; não associar outro antitérmico de horário",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "orientações escritas de reidratação, dieta e sinais de retorno",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a alta clínica",
+            "condicao": "todo caso, com conferência do entendimento do cuidador",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "Ringer lactato",
+            "dose": "20 mL/kg em 30–60 min, repetir até 40–60 mL/kg",
+            "via": "IV ou intraóssea",
+            "frequencia": "bolus com reavaliação após cada um",
+            "monitorizacao": "perfusão, diurese, ausculta pulmonar, sódio e potássio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "solução de manutenção isotônica (glicose 5% com cloreto de sódio 0,9%)",
+            "dose": "100–50–20 mL/kg/dia conforme o peso, com cloreto de potássio 20 mEq/L após diurese",
+            "via": "IV",
+            "frequencia": "infusão contínua em bomba",
+            "monitorizacao": "sódio, potássio, glicemia e diurese",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "solução de reidratação oral por sonda nasogástrica",
+            "dose": "20 mL/kg/h por 4 h",
+            "via": "sonda nasogástrica",
+            "frequencia": "infusão contínua em bomba",
+            "monitorizacao": "vômito, distensão, diurese e peso",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ondansetrona ampola 4 mg/2 mL",
+            "dose": "0,15 mg/kg/dose, máximo 4 mg",
+            "via": "IV",
+            "frequencia": "dose única, repetir no máximo uma vez",
+            "monitorizacao": "frequência cardíaca, intervalo QT e potássio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "zinco solução oral",
+            "dose": "10 mg/dia abaixo de 6 meses; 20 mg/dia a partir de 6 meses",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "monitorizacao": "aceitação e vômito após a dose",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "azitromicina (somente com disenteria ou cólera)",
+            "dose": "10 mg/kg no primeiro dia e 5 mg/kg/dia do segundo ao quinto dia",
+            "via": "VO ou IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "febre, sangue nas fezes, coprocultura e função hepática",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "peso",
+          "sódio e potássio",
+          "glicemia capilar",
+          "creatinina e ureia",
+          "hemograma e PCR quando disenteria",
+          "coprocultura quando indicada",
+          "toxina de C. difficile quando diarreia pós-antibiótico",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que a criança esteve sob meus cuidados nesta data, com quadro de diarreia e vômitos agudos com desidratação, necessitando de afastamento escolar por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; anexar orientação de reidratação e sinais de retorno"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com peso, percentual de perda, plano aplicado, volume infundido, diurese, sódio e evolução",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Criança de ___ anos, peso ___ kg, com diarreia aquosa há ___ dias e ___ evacuações em 24 h, desidratação de ___% (plano ___), tratada com ___ mL/kg de ___ em ___ h, com diurese de ___ mL/kg/h, sódio de ___ mEq/L, zinco iniciado e alta com plano de retorno escrito."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "número de evacuações líquidas em 24 h e duração em dias",
+        "número de episódios de vômito e tolerância à ingestão",
+        "aspecto das fezes: aquoso, com muco, com sangue",
+        "vômito bilioso ou em jato",
+        "número de micções e volume das fraldas",
+        "peso atual e peso recente para cálculo da perda",
+        "febre e temperatura máxima",
+        "uso prévio de loperamida, antidiarreico, antibiótico, chá ou soro caseiro",
+        "preparo e volume da solução de reidratação já usada",
+        "aleitamento materno e dieta habitual",
+        "comorbidades: desnutrição, imunodeficiência, cardiopatia, doença renal, uso de diurético ou IECA",
+        "contato com casos semelhantes na casa, creche ou escola"
+      ],
+      "texto_template": "Criança de ___ anos, peso ___ kg, com diarreia aquosa há ___ dias, ___ evacuações em 24 h, ___ episódios de vômito, sangue nas fezes ___, vômito bilioso ___, ___ micções em 24 h, peso recente ___ kg, febre ___, uso prévio de ___, solução de reidratação preparada ___, dieta ___, comorbidades ___, contato com casos ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "peso, temperatura e estado geral",
+        "frequência cardíaca, pressão arterial e frequência respiratória",
+        "enchimento capilar, temperatura de extremidades e pulso periférico",
+        "mucosas, língua, olhos e fontanela",
+        "turgor cutâneo no abdome",
+        "nível de consciência e tônus",
+        "abdome: distensão, dor localizada, defesa, ruídos hidroaéreos",
+        "toque retal ou inspeção anal quando houver sangue",
+        "diurese e aspecto da urina"
+      ],
+      "texto_template": "Peso ___ kg (perda de ___%), temperatura ___ °C, frequência cardíaca ___ bpm, pressão arterial ___ mmHg, enchimento capilar ___ s, extremidades ___, mucosas ___, olhos ___, fontanela ___, turgor ___, consciência ___, abdome ___, ruídos hidroaéreos ___, diurese ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de reidratação na emergência pediátrica, critérios de observação, de internação e de alta",
+        "verificar": true
+      },
+      {
+        "tipo": "organizacao_mundial_da_saude",
+        "o_que_verificar": "planos A, B e C, composição da solução de reidratação oral e esquema de zinco por faixa de idade",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "protocolo de doença diarreica aguda, uso de zinco, soro caseiro e calendário de rotavírus",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "indicação de ondansetrona, papel da sonda nasogástrica e contraindicação de antidiarreico",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de solução de reidratação, zinco, ondansetrona e cristaloides disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED03-01",
+        "tipo": "desidratacao_grave",
+        "gatilho": "letargia, pulso fraco, enchimento capilar acima de 3 s, ausência de diurese por 6 h ou perda de peso acima de 9%",
+        "severidade": "grave",
+        "mensagem": "Desidratação grave: plano C imediato com cristaloide isotônico 20 mL/kg.",
+        "acao": "acionar sala de emergência",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED03-02",
+        "tipo": "antidiarreico",
+        "gatilho": "loperamida, difenoxilato, racecadotril como substituto da reidratação ou qualquer antidiarreico prescrito",
+        "severidade": "grave",
+        "mensagem": "Antidiarreico não tem indicação em criança: risco de íleo, distensão e megacólon tóxico.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED03-03",
+        "tipo": "antibiotico_sem_indicacao",
+        "gatilho": "antibiótico prescrito em diarreia aquosa sem disenteria, cólera, toxemia ou imunossupressão",
+        "severidade": "grave",
+        "mensagem": "Antibiótico de rotina não encurta a diarreia e seleciona resistência.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED03-04",
+        "tipo": "bilioso",
+        "gatilho": "vômito bilioso, esverdeado ou em jato com distensão abdominal",
+        "severidade": "grave",
+        "mensagem": "Obstrução intestinal: jejum, sonda de alívio e cirurgia pediátrica.",
+        "acao": "acionar cirurgia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED03-05",
+        "tipo": "soro_caseiro",
+        "gatilho": "soro caseiro prescrito para desidratação moderada, ou refrigerante, suco e isotônico usados como reidratação",
+        "severidade": "precaucao",
+        "mensagem": "Soro caseiro não corrige desidratação moderada; usar solução de reidratação industrializada.",
+        "acao": "alertar e substituir a prescrição",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED03-06",
+        "tipo": "zinco_curto",
+        "gatilho": "zinco prescrito por menos de 10 dias ou suspenso na melhora clínica",
+        "severidade": "precaucao",
+        "mensagem": "Zinco deve ser mantido por 10 a 14 dias, mesmo após a diarreia cessar.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED03-07",
+        "tipo": "alta_de_risco",
+        "gatilho": "alta sem diurese documentada, sem peso reavaliado ou sem plano de retorno escrito",
+        "severidade": "precaucao",
+        "mensagem": "Alta de risco: reavaliar peso e diurese e entregar sinais de retorno por escrito.",
+        "acao": "bloquear alta",
+        "bloqueante": true
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "OMS",
+        "Ministério da Saúde",
+        "SBP",
+        "ANVISA",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral centrada em reidratação: planos A, B e C da OMS com volumes por peso, solução de reidratação oral 50–100 mL/kg em 4 h, via nasogástrica antes da venosa, zinco 10–20 mg/dia por 10–14 dias, ondansetrona 0,15 mg/kg em dose única e regra explícita contra soro caseiro em desidratação moderada. Dez fármacos com apresentações, preparo, tempo de infusão e monitorização, em oito classes terapêuticas. Bloqueios de loperamida e antidiarreico, de antibiótico de rotina e de alta sem diurese documentada; critérios de escolha com o que não se faz e sinais de desidratação grave objetivados por peso e diurese.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

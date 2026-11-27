@@ -1,0 +1,1134 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-12",
+    "area": "Pediatria",
+    "nome": "Escarlatina",
+    "aliases": [
+      "Escarlatina",
+      "febre escarlate",
+      "escarlatina estreptocócica",
+      "escarlatina por estreptococo do grupo A",
+      "faringite estreptocócica com exantema",
+      "exantema escarlatiniforme",
+      "língua em framboesa"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Escarlatina é a faringite por estreptococo do grupo A (Streptococcus pyogenes) acompanhada de exantema, causada por cepas que produzem exotoxina eritrogênica e sem toxina neutralizante prévia no hospedeiro. Não é uma infecção diferente: é a mesma faringite estreptocócica com uma manifestação cutânea que aparece 12 a 48 horas depois da febre. O quadro clássico é febre alta de início súbito, odinofagia, vômitos, exantema punctiforme eritematoso com textura de lixa, que branqueia à pressão, começa no pescoço e no tórax e se espalha para tronco e raízes de membros, com acentuação em dobras (linhas de Pastia), palidez perioral, língua em framboesa, exsudato amigdaliano e adenopatia cervical anterior dolorosa; a descamação de mãos e pés surge em uma a duas semanas e é o último sinal a desaparecer. O diagnóstico é microbiológico — teste rápido de estreptococo e, se negativo com suspeita persistente, cultura de orofaringe — e não clínico: o exantema sozinho não fecha o caso e confunde com sarampo, rubéola, mononucleose, doença de Kawasaki, farmacodermia e síndrome de choque tóxico. O tratamento é simples e resolve a doença quando feito por tempo suficiente: penicilina benzatina em dose única intramuscular, 600.000 UI abaixo de 27 kg e 1.200.000 UI a partir de 27 kg, ou amoxicilina 50 mg/kg/dia por 10 dias; azitromicina 12 mg/kg/dia por 5 dias apenas na alergia imediata verdadeira a beta-lactâmico. O que não se faz: curso de antibiótico curto demais — cinco a sete dias de via oral aumentam falha de erradicação e recidiva — e alta sem confirmação diagnóstica, que transforma um caso tratável em duas complicações evitáveis, febre reumática e glomerulonefrite pós-estreptocócica. As duas complicações não se previnem com o mesmo gesto: a febre reumática é prevenida pelo tratamento adequado do episódio e pela profilaxia secundária com penicilina benzatina a cada 21 a 28 dias; a glomerulonefrite não é prevenida pelo antibiótico e exige vigilância de urina e pressão por duas a três semanas.",
+    "inclusao": [
+      "Criança de 3 a 15 anos com febre, odinofagia, exantema eritematoso punctiforme com textura de lixa e palidez perioral",
+      "Exantema escarlatiniforme com língua em framboesa, linhas de Pastia em dobras e descamação tardia de mãos e pés",
+      "Faringite estreptocócica confirmada por teste rápido ou cultura que evolui com exantema",
+      "Contato domiciliar ou escolar de caso confirmado de escarlatina que apresenta febre e odinofagia",
+      "Escarlatina com sinais de toxemia, desidratação ou dor articular para estabilização e internação",
+      "Criança com febre reumática prévia ou glomerulonefrite pós-estreptocócica que apresenta novo episódio",
+      "Suspeita de escarlatina em lactente ou pré-escolar pequeno, faixa em que a apresentação é atípica e a confirmação microbiológica é obrigatória"
+    ],
+    "exclusao": [
+      {
+        "situacao": "faringite com exsudato e febre sem exantema escarlatiniforme",
+        "fluxo": "PED-07 amigdalite / faringite — mesmo agente, sem a manifestação cutânea"
+      },
+      {
+        "situacao": "febre por mais de 5 dias com conjuntivite não purulenta, lábios fissurados, língua em framboesa, edema de mãos e pés e adenopatia cervical",
+        "fluxo": "doença de Kawasaki — ecocardiograma e imunoglobulina, não antibiótico"
+      },
+      {
+        "situacao": "exantema maculopapular após amoxicilina em adolescente com adenopatia generalizada, esplenomegalia e astenia",
+        "fluxo": "INF-10 mononucleose — suspender o beta-lactâmico e confirmar com sorologia"
+      },
+      {
+        "situacao": "exantema morbiliforme com tosse, coriza, conjuntivite e manchas de Koplik",
+        "fluxo": "sarampo — notificação imediata e isolamento respiratório"
+      },
+      {
+        "situacao": "exantema com petéquias, hipotensão, dor muscular intensa e disfunção de múltiplos órgãos",
+        "fluxo": "síndrome de choque tóxico estreptocócico — UTI, cirurgia para foco e antibiótico de amplo espectro"
+      },
+      {
+        "situacao": "dor intensa desproporcional em membro, eritema endurecido, bolhas e progressão rápida",
+        "fluxo": "fasciíte necrosante — cirurgia imediata e terapia intensiva"
+      },
+      {
+        "situacao": "exantema urticariforme pruriginoso após fármaco, sem odinofagia nem exsudato",
+        "fluxo": "ALG-02 alergia a medicamento — suspender o fármaco e tratar a reação"
+      },
+      {
+        "situacao": "exantema vesicular em diferentes estágios com crostas e febre",
+        "fluxo": "PED-10 varicela — suporte, evitar AINE e vigiar infecção secundária"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "toxemia, prostração, hipotensão, taquicardia desproporcional à febre ou confusão",
+        "por_que": "infecção estreptocócica invasiva ou síndrome de choque tóxico estreptocócico",
+        "acao": "sala vermelha, dois acessos venosos, expansão com cristaloide, hemocultura, antibiótico parenteral de amplo espectro e avaliação cirúrgica de foco",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "recusa hídrica por mais de 12 h, ausência de diurese, boca seca, olhos fundos ou sonolência",
+        "por_que": "desidratação por odinofagia e vômitos, a causa mais comum de internação na escarlatina",
+        "acao": "analgesia plena, reidratação oral fracionada e, se falhar, hidratação venosa com internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "dor articular migratória de grandes articulações, sopro cardíaco novo, taquicardia em repouso ou nodulações subcutâneas duas a quatro semanas após a faringite",
+        "por_que": "febre reumática aguda com cardite, a complicação que deixa sequela valvar permanente",
+        "acao": "hospitalização, eletrocardiograma, ecocardiograma, provas inflamatórias e início de profilaxia secundária com penicilina benzatina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "urina escura cor de coca-cola, edema periorbital matinal, hipertensão ou oligúria uma a três semanas após a escarlatina",
+        "por_que": "glomerulonefrite pós-estreptocócica com risco de edema agudo de pulmão e encefalopatia hipertensiva",
+        "acao": "aferir pressão arterial, exame de urina tipo 1, ureia, creatinina, eletrólitos e avaliação nefrológica imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "trismo, abaulamento unilateral de pilastra amigdaliana, desvio de úvula, voz abafada ou sialorreia",
+        "por_que": "abscesso periamigdaliano com risco de extensão parafaríngea e obstrução de via aérea",
+        "acao": "acesso venoso, antibiótico parenteral, corticoide e drenagem cirúrgica em ambiente hospitalar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "febre que persiste além de 72 h de antibiótico adequado, recidiva após o término ou novo exantema",
+        "por_que": "falha de erradicação, adesão inadequada, curso curto demais ou diagnóstico inicial errado",
+        "acao": "reavaliação presencial, conferir dias efetivamente tomados e colher cultura de orofaringe antes de trocar de antibiótico",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "descamação extensa de mãos e pés com fissuras dolorosas ou prurido intenso que impede o sono",
+        "por_que": "descamação pós-escarlatinosa com risco de infecção secundária e desidratação por dor",
+        "acao": "emoliente, analgesia, hidratação e orientação de não manipular a pele",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "recidiva em criança com tratamento prévio recente ou contato repetido com caso confirmado na mesma casa",
+        "por_que": "reinfecção por contato não tratado ou falha de erradicação com risco cumulativo de febre reumática",
+        "acao": "tratar o novo episódio com confirmação microbiológica e examinar e testar os contactantes sintomáticos",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Qual a idade e o peso da criança? Abaixo de 3 anos a escarlatina é rara e a dose da penicilina benzatina depende do peso.",
+      "O exantema é áspero como lixa, branqueia à pressão e começou no pescoço e no tórax?",
+      "Há palidez ao redor da boca, linhas escuras nas dobras e língua em framboesa?",
+      "A odinofagia e a febre começaram de repente, e há exsudato nas amígdalas?",
+      "Tem tosse, coriza ou conjuntivite? Se sim, o diagnóstico é outro até prova em contrário.",
+      "A criança está bebendo e urinando? Quantas micções nas últimas 12 h?",
+      "Alguém na casa ou na escola teve escarlatina, faringite estreptocócica ou exantema parecido?",
+      "Já usou antibiótico nas últimas 4 semanas? Qual, por quantos dias e completou?",
+      "Tem alergia a penicilina, e qual foi a reação — rash tardio, urticária, angioedema ou anafilaxia?",
+      "Teve febre reumática, sopro cardíaco ou glomerulonefrite em episódio anterior?",
+      "Apareceu urina escura, inchaço nos olhos ou dor nas juntas nas últimas semanas?",
+      "Qual foi o resultado do teste rápido de estreptococo ou da cultura, se já foi feito?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Quadro típico confirmado por teste rápido de estreptococo ou cultura de orofaringe, criança de qualquer peso",
+        "escolha": "Penicilina benzatina 600.000 UI por via intramuscular profunda se peso abaixo de 27 kg e 1.200.000 UI se peso igual ou acima de 27 kg, em dose única",
+        "porque": "Uma aplicação garante 10 dias de cobertura, elimina a dependência da adesão do cuidador e é o esquema com maior certeza de profilaxia primária de febre reumática; não existe opção com menos doses e mesma eficácia"
+      },
+      {
+        "cenario": "Teste rápido ou cultura positivos, criança que aceita via oral, família com adesão documentada e farmácia abastecida",
+        "escolha": "Amoxicilina 50 mg/kg/dia, uma vez ao dia ou dividida de 12/12 h, máximo de 1 g/dia, por 10 dias",
+        "porque": "Eficácia equivalente à penicilina benzatina para erradicação, sem injeção e com melhor aceitação; os 10 dias são obrigatórios e cursos de 5 a 7 dias aumentam falha de erradicação e recidiva"
+      },
+      {
+        "cenario": "Alergia imediata a beta-lactâmico com anafilaxia, angioedema ou broncoespasmo",
+        "escolha": "Azitromicina 12 mg/kg/dia em dose única diária, máximo de 500 mg/dia, por 5 dias; clindamicina 20 mg/kg/dia divididos de 8/8 h por 10 dias como segunda opção",
+        "porque": "Macrolídeo e lincosamida não compartilham o epítopo beta-lactâmico e são seguros na alergia imediata; a resistência do estreptococo do grupo A ao macrolídeo é relevante no Brasil, por isso o uso fica restrito a esse cenário"
+      },
+      {
+        "cenario": "Alergia a penicilina apenas com rash maculopapular tardio, sem anafilaxia",
+        "escolha": "Cefalexina 30 mg/kg/dia divididos de 12/12 h, máximo de 1 g/dia, por 10 dias",
+        "porque": "Cefalosporina de primeira geração é eficaz na faringite estreptocócica e o risco de reação cruzada em reação não imediata leve é baixo; evita o macrolídeo, cuja resistência compromete a erradicação"
+      },
+      {
+        "cenario": "Toxemia, choque, impossibilidade de via oral e intramuscular, suspeita de infecção invasiva ou de fasciíte",
+        "escolha": "Penicilina G cristalina 100.000 a 200.000 UI/kg/dia por via venosa divididas de 4/4 a 6/6 h, com clindamicina associada na suspeita de choque tóxico ou fasciíte, em ambiente hospitalar",
+        "porque": "É a única apresentação que permite titulação rápida e atingir concentração alta em tecido profundo; a clindamicina reduz a produção de toxina e não depende de inoculo bacteriano alto, por isso entra na doença invasiva"
+      },
+      {
+        "cenario": "Exantema com prurido intenso que interfere no sono e na aceitação hídrica",
+        "escolha": "Hidroxizina 1 mg/kg/dia dividida de 8/8 h, máximo de 50 mg/dia, por 3 a 5 dias, associada a emoliente e compressa fria",
+        "porque": "O prurido não é sinal de gravidade, mas controlá-lo evita escoriação, infecção secundária e recusa hídrica; o anti-histamínico não trata a infecção e não substitui antibiótico nem analgesia"
+      },
+      {
+        "cenario": "Dor e febre como sintoma dominante, em qualquer fase do tratamento",
+        "escolha": "Ibuprofeno 10 mg/kg/dose de 6/6 a 8/8 h, ou paracetamol 10 a 15 mg/kg/dose de 4/4 a 6/6 h se o AINE estiver contraindicado",
+        "porque": "A analgesia em horário fixo é o que permite a criança beber e evita a desidratação, que é a principal causa de internação; não há benefício em alternar antitérmicos de forma fixa, e a soma de doses é a causa mais comum de superdose"
+      },
+      {
+        "cenario": "Teste rápido negativo em criança com quadro fortemente sugestivo de escarlatina",
+        "escolha": "Colher cultura de orofaringe e aguardar o resultado antes de prescrever antibiótico, mantendo analgesia e hidratação",
+        "porque": "O teste rápido tem sensibilidade de 85 a 90% e o negativo precisa de confirmação por cultura; tratar todo negativo sem cultura produz antibiótico desnecessário e mascara diagnósticos alternativos como Kawasaki e mononucleose"
+      },
+      {
+        "cenario": "Urina escura, edema ou hipertensão nas semanas seguintes ao episódio",
+        "escolha": "Exame de urina tipo 1, ureia, creatinina, eletrólitos, aferição de pressão e avaliação nefrológica; restrição de sódio e água conforme o edema",
+        "porque": "A glomerulonefrite pós-estreptocócica não é prevenida pelo antibiótico e se manifesta depois do tratamento; o reconhecimento precoce evita edema agudo de pulmão e encefalopatia hipertensiva"
+      },
+      {
+        "cenario": "Confirmação de febre reumática após o episódio",
+        "escolha": "Profilaxia secundária com penicilina benzatina a cada 21 a 28 dias, por no mínimo 5 anos ou até 21 anos na ausência de cardite, e por 10 anos ou até a idade adulta na cardite leve",
+        "porque": "A profilaxia secundária é a única intervenção que evita novo surto e progressão da lesão valvar; interromper cedo devolve o paciente ao risco de cardite recorrente"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "penicilina",
+        "agente": "penicilina benzatina",
+        "papel": "primeira_linha",
+        "indicacao": "escarlatina confirmada por teste rápido ou cultura, e profilaxia primária de febre reumática",
+        "dose": "600.000 UI em criança abaixo de 27 kg; 1.200.000 UI a partir de 27 kg, em dose única",
+        "unidade": "UI",
+        "via": "IM profunda, glúteo ou vasto lateral da coxa",
+        "frequencia": "dose única",
+        "duracao": "1 dia",
+        "dose_maxima": "1.200.000 UI por dose",
+        "contraindicacoes": [
+          "hipersensibilidade imediata a penicilina (anafilaxia, angioedema, broncoespasmo)",
+          "reação prévia grave a beta-lactâmico",
+          "administração por via intravenosa ou intra-arterial"
+        ],
+        "efeitos_adversos": [
+          "dor intensa no local da aplicação",
+          "enduração e abscesso local por técnica inadequada",
+          "rash maculopapular tardio",
+          "anafilaxia em 1 a 5 por 100.000 aplicações",
+          "síndrome de Nicolau se injetada em vaso",
+          "febre e mal-estar nas primeiras 24 h"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 600.000 UI com diluente de 1,2 mL",
+          "frasco-ampola 1.200.000 UI com diluente de 3 mL",
+          "frasco-ampola 300.000 UI com diluente de 1 mL"
+        ],
+        "preparo": "Reconstituir com o diluente próprio do frasco, agitar até dissolução completa e aspirar em seringa de 3 ou 5 mL com agulha 25 x 7 mm; aplicar IM profunda com a criança contida, sem massagem vigorosa, e observar por 30 min",
+        "tempo_infusao": "aplicação intramuscular lenta, em 1 a 2 minutos; não se aplica infusão venosa",
+        "monitorizacao": [
+          "reação alérgica nos primeiros 30 minutos",
+          "dor, enduração e rubor no local por 24 a 48 h",
+          "febre e estado geral em 24 a 48 h",
+          "regressão do exantema e da odinofagia em 48 a 72 h",
+          "dose registrada como observada, sem depender do cuidador"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a primeira escolha de quem quer garantia de 10 dias de cobertura em uma única aplicação; a injeção dói, mas não justifica trocar por via oral quando a adesão é duvidosa. Nunca aplicar por via venosa: a via é só intramuscular profunda",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP/MS",
+        "claim_id": null
+      },
+      {
+        "classe": "aminopenicilina",
+        "agente": "amoxicilina",
+        "papel": "primeira_linha",
+        "indicacao": "escarlatina confirmada em criança que aceita via oral e tem adesão documentada",
+        "dose": "50 mg/kg/dia, uma vez ao dia ou divididos de 12/12 h, máximo de 1 g/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia ou 12/12 h",
+        "duracao": "10 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "alergia imediata a penicilina",
+          "mononucleose infecciosa suspeita ou confirmada",
+          "antecedente de reação cutânea grave a beta-lactâmico"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash maculopapular, sobretudo em mononucleose",
+          "candidíase oral e vulvovaginal",
+          "dor abdominal e náusea",
+          "colite por C. difficile, rara"
+        ],
+        "apresentacoes": [
+          "suspensão oral 250 mg/5 mL, frasco 60, 100 e 150 mL",
+          "suspensão oral 400 mg/5 mL, frasco 60 e 100 mL",
+          "cápsula 500 mg",
+          "comprimido 875 mg",
+          "comprimido 1 g"
+        ],
+        "preparo": "Reconstituir a suspensão acrescentando água filtrada até a marca do frasco, agitar bem e completar; conservar em geladeira por até 7 dias ou em temperatura ambiente por 7 dias conforme a bula, agitando antes de cada dose e medindo com seringa dosadora",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número e consistência das evacuações",
+          "aparecimento de rash e sua relação com o dia de tratamento",
+          "contagem de dias efetivamente tomados na reavaliação",
+          "febre e odinofagia em 48 a 72 h",
+          "lesões orais por candidíase"
+        ],
+        "ajuste_renal": "Reduzir a dose ou ampliar o intervalo se taxa de filtração estimada abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Os 10 dias são obrigatórios: 5 a 7 dias aumentam falha de erradicação e recidiva. O rash que aparece do 5º ao 10º dia em adolescente com adenopatia generalizada deve levantar mononucleose, não alergia — suspender e solicitar sorologia para EBV em vez de rotular a criança como alérgica para sempre",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina",
+        "agente": "penicilina G cristalina",
+        "papel": "condicional",
+        "indicacao": "escarlatina com toxemia, choque, suspeita de infecção invasiva ou impossibilidade de via oral e intramuscular",
+        "dose": "100.000 a 200.000 UI/kg/dia divididas de 4/4 a 6/6 h",
+        "unidade": "UI/kg/dia",
+        "via": "IV",
+        "frequencia": "4/4 a 6/6 h",
+        "duracao": "10 a 14 dias, com transição para via oral quando tolerar",
+        "dose_maxima": "24.000.000 UI/dia",
+        "contraindicacoes": [
+          "alergia imediata a penicilina",
+          "insuficiência renal grave sem ajuste de dose"
+        ],
+        "efeitos_adversos": [
+          "convulsão em dose alta com função renal reduzida",
+          "hipernatremia e hipercalemia pela carga de sal de potássio ou sódio",
+          "flebite no sítio de infusão",
+          "rash e anafilaxia",
+          "neutropenia em uso prolongado"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1.000.000 UI",
+          "frasco-ampola 5.000.000 UI"
+        ],
+        "preparo": "Reconstituir em água destilada conforme o volume indicado no frasco e diluir em 50 a 100 mL de soro fisiológico 0,9% para infusão intermitente",
+        "tempo_infusao": "15 a 30 minutos por dose; infusão rápida em acesso periférico causa flebite",
+        "monitorizacao": [
+          "estado geral, perfusão e pressão arterial",
+          "função renal e diurese",
+          "sódio e potássio em uso de dose alta",
+          "sítio de infusão e sinais de flebite",
+          "nível de consciência e sinais de convulsão em nefropata"
+        ],
+        "ajuste_renal": "Reduzir a dose ou ampliar o intervalo se filtração abaixo de 30 mL/min/1,73 m²; risco de neurotoxicidade",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reservada à doença invasiva e à criança que não pode receber via oral nem intramuscular; assim que houver melhora clínica e aceitação oral, trocar por amoxicilina para completar 10 dias",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_1a_geracao",
+        "agente": "cefalexina",
+        "papel": "alternativa",
+        "indicacao": "escarlatina em criança com alergia não imediata a penicilina (apenas rash tardio)",
+        "dose": "30 mg/kg/dia divididos de 12/12 h, máximo de 1 g/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "10 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "alergia imediata a cefalosporina",
+          "antecedente de anafilaxia a penicilina",
+          "reação cutânea grave prévia a beta-lactâmico"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea e dor abdominal",
+          "rash",
+          "candidíase",
+          "colite por C. difficile, rara"
+        ],
+        "apresentacoes": [
+          "suspensão oral 250 mg/5 mL, frasco 60 e 100 mL",
+          "cápsula 500 mg",
+          "comprimido 500 mg e 1 g"
+        ],
+        "preparo": "Reconstituir a suspensão com água até a marca e agitar; conservar em geladeira por até 14 dias conforme a bula e medir com seringa dosadora",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "diarreia e aceitação alimentar",
+          "rash cutâneo",
+          "febre e odinofagia em 48 a 72 h",
+          "adesão aos 10 dias"
+        ],
+        "ajuste_renal": "Ampliar o intervalo para 12/12 h se filtração entre 10 e 30 mL/min/1,73 m² e para 24/24 h abaixo de 10 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só entra na alergia não imediata leve; não é equivalente à penicilina em garantia de erradicação e não deve ser escolhida por conveniência quando a alergia é duvidosa",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "macrolideo",
+        "agente": "azitromicina",
+        "papel": "alternativa",
+        "indicacao": "escarlatina em criança com alergia imediata a beta-lactâmico",
+        "dose": "12 mg/kg/dia em dose única diária, máximo de 500 mg/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "5 dias",
+        "dose_maxima": "500 mg/dia",
+        "contraindicacoes": [
+          "alergia a macrolídeo",
+          "intervalo QT longo congênito",
+          "uso concomitante de fármacos que prolongam o QT"
+        ],
+        "efeitos_adversos": [
+          "diarreia e dor abdominal",
+          "náusea e vômito",
+          "prolongamento do intervalo QT e arritmia",
+          "elevação de transaminases",
+          "rash"
+        ],
+        "apresentacoes": [
+          "suspensão oral 200 mg/5 mL, frasco 15 e 30 mL",
+          "comprimido 500 mg",
+          "comprimido 600 mg"
+        ],
+        "preparo": "Reconstituir a suspensão com água até a marca, agitar e conservar em temperatura ambiente por até 5 dias; administrar com ou sem alimento, medindo com seringa dosadora",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "frequência cardíaca e eletrocardiograma se cardiopatia ou uso de outro fármaco que prolonga o QT",
+          "diarreia e desidratação",
+          "febre e regressão do exantema em 48 a 72 h",
+          "adesão às 5 doses"
+        ],
+        "ajuste_renal": "Sem ajuste na dose habitual",
+        "ajuste_hepatico": "Reduzir a dose ou evitar em insuficiência hepática grave",
+        "observacoes": "Restrita à alergia imediata verdadeira: a resistência do estreptococo do grupo A ao macrolídeo é relevante no Brasil e a falha de erradicação devolve a criança com recidiva. Não usar como primeira linha por conveniência posológica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "lincosamida",
+        "agente": "clindamicina",
+        "papel": "condicional",
+        "indicacao": "escarlatina com alergia imediata a beta-lactâmico, falha de erradicação ou suspeita de síndrome de choque tóxico e fasciíte",
+        "dose": "20 mg/kg/dia divididos de 8/8 h por via oral; 25 a 40 mg/kg/dia divididos de 8/8 h por via venosa, máximo de 600 mg por dose venosa",
+        "unidade": "mg/kg/dia",
+        "via": "VO ou IV",
+        "frequencia": "8/8 h",
+        "duracao": "10 dias por via oral; 10 a 14 dias por via venosa na doença invasiva",
+        "dose_maxima": "1,8 g/dia por via oral; 2,7 g/dia por via venosa",
+        "contraindicacoes": [
+          "alergia a lincosamida",
+          "antecedente de colite pseudomembranosa"
+        ],
+        "efeitos_adversos": [
+          "diarreia e colite por C. difficile",
+          "gosto metálico",
+          "rash",
+          "elevação de transaminases",
+          "dor e flebite na infusão venosa"
+        ],
+        "apresentacoes": [
+          "cápsula 300 mg",
+          "solução oral 75 mg/5 mL",
+          "ampola 150 mg/mL, 2 e 4 mL"
+        ],
+        "preparo": "Via oral: administrar com copo cheio de água. Via venosa: diluir a dose em 50 a 100 mL de soro fisiológico ou glicosado; nunca infundir sem diluição",
+        "tempo_infusao": "20 a 30 minutos por via venosa; não se aplica por via oral",
+        "monitorizacao": [
+          "diarreia, dor abdominal e febre (colite por C. difficile)",
+          "hemograma se uso prolongado",
+          "sítio de infusão",
+          "enzimas hepáticas",
+          "regressão da febre e do exantema em 48 h"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em insuficiência hepática grave",
+        "observacoes": "Na doença invasiva reduz a produção de exotoxina e não depende de inoculo alto, o que a torna útil no choque tóxico e na fasciíte; na faringite simples não é primeira linha",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "primeira_linha",
+        "indicacao": "febre e odinofagia da escarlatina, analgesia de primeira escolha",
+        "dose": "10 mg/kg/dose, a cada 6 a 8 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "6/6 a 8/8 h",
+        "duracao": "3 a 5 dias, enquanto houver dor e febre",
+        "dose_maxima": "40 mg/kg/dia; 2.400 mg/dia no adolescente",
+        "contraindicacoes": [
+          "desidratação grave ou injúria renal aguda",
+          "úlcera péptica ativa ou sangramento digestivo",
+          "alergia a AINE ou asma induzida por AINE",
+          "suspeita de dengue ou varicela",
+          "terceiro trimestre de gestação"
+        ],
+        "efeitos_adversos": [
+          "dor epigástrica e náusea",
+          "injúria renal aguda em criança desidratada",
+          "sangramento digestivo",
+          "broncoespasmo em asmático sensível",
+          "plaquetopenia transitória"
+        ],
+        "apresentacoes": [
+          "suspensão oral 100 mg/5 mL, frasco 100 mL",
+          "solução oral 50 mg/mL (gotas), frasco 20 mL",
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "comprimido 600 mg"
+        ],
+        "preparo": "Uso direto; agitar a suspensão antes de medir com seringa dosadora e administrar com alimento ou leite para reduzir desconforto gástrico",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "intensidade da dor e aceitação hídrica",
+          "diurese e estado de hidratação",
+          "dor abdominal e melena",
+          "temperatura",
+          "função renal se uso por mais de 3 dias ou desidratação"
+        ],
+        "ajuste_renal": "Evitar em injúria renal aguda e em filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "A analgesia em horário fixo é o que impede a recusa hídrica: criança com dor não bebe e desidrata. Não associar a dipirona e paracetamol em esquema alternado fixo sem necessidade, porque o risco de erro de dose sobe",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "alternativa",
+        "indicacao": "febre e odinofagia quando o AINE é contraindicado ou não tolerado",
+        "dose": "10 a 15 mg/kg/dose, a cada 4 a 6 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "4/4 a 6/6 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "75 mg/kg/dia, sem ultrapassar 4 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "náusea",
+          "rash raro",
+          "trombocitopenia rara"
+        ],
+        "apresentacoes": [
+          "solução oral 200 mg/mL (gotas), frasco 15 mL",
+          "suspensão oral 160 mg/5 mL, frasco 60 e 100 mL",
+          "comprimido 500 mg",
+          "comprimido 750 mg"
+        ],
+        "preparo": "Uso direto; medir sempre com seringa dosadora e conferir a concentração, porque gotas de 200 mg/mL e suspensão de 160 mg/5 mL têm concentrações muito diferentes",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "controle da dor e da temperatura",
+          "dose total diária somada com outros produtos que contenham paracetamol",
+          "enzimas hepáticas em uso prolongado ou desnutrição",
+          "aceitação hídrica"
+        ],
+        "ajuste_renal": "Ampliar o intervalo para 6 a 8 h se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose máxima diária e evitar em hepatopatia grave",
+        "observacoes": "A escolha quando o AINE está contraindicado — desidratação, suspeita de dengue, injúria renal. A soma de antitérmicos diferentes que a família já deu em casa é a causa mais comum de hepatotoxicidade pediátrica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico",
+        "agente": "hidroxizina",
+        "papel": "condicional",
+        "indicacao": "prurido intenso do exantema escarlatiniforme que interfere no sono e na aceitação hídrica",
+        "dose": "1 mg/kg/dia dividida de 8/8 h, máximo de 50 mg/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "50 mg/dia em criança abaixo de 6 anos; 100 mg/dia acima de 6 anos",
+        "contraindicacoes": [
+          "alergia a hidroxizina ou a derivados de piperazina",
+          "intervalo QT longo",
+          "uso concomitante de fármacos que prolongam o QT"
+        ],
+        "efeitos_adversos": [
+          "sonolência",
+          "boca seca",
+          "tontura",
+          "prolongamento do QT",
+          "irritabilidade paradoxal em criança pequena"
+        ],
+        "apresentacoes": [
+          "xarope 2 mg/mL, frasco 120 mL",
+          "comprimido 25 mg"
+        ],
+        "preparo": "Uso direto; medir com seringa dosadora e administrar preferencialmente à noite para aproveitar o efeito sedativo",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "intensidade do prurido e qualidade do sono",
+          "nível de consciência e sonolência diurna",
+          "frequência cardíaca se cardiopatia",
+          "lesões de escoriação e sinais de infecção secundária"
+        ],
+        "ajuste_renal": "Reduzir a dose ou ampliar o intervalo em insuficiência renal moderada a grave",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Não trata a infecção e não substitui antibiótico nem analgesia; entra apenas quando o prurido é o sintoma que domina e atrapalha a hidratação. Preferir emoliente e compressa fria como primeira medida",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Hidratação fracionada e palatável",
+        "detalhe": "Oferecer 5 a 10 mL de líquido a cada 10 a 15 minutos, em colher ou seringa, em vez de exigir um copo cheio; água, água de coco, suco diluído, gelo e picolé de fruta são aceitos melhor que líquidos ácidos ou gasosos. Registrar a diurese: menos de três micções em 24 h significa desidratação e indica reavaliação imediata"
+      },
+      {
+        "medida": "Analgesia em horário fixo nas primeiras 48 a 72 h",
+        "detalhe": "Prescrever ibuprofeno 10 mg/kg de 6/6 h ou 8/8 h nas primeiras 48 h, mesmo antes de a dor piorar, em vez de analgesia se necessário; a dor não controlada é a causa direta da recusa hídrica e da internação"
+      },
+      {
+        "medida": "Afastamento escolar e precaução de gotículas",
+        "detalhe": "Retorno à escola 24 h após o início do antibiótico, se afebril e aceitando líquidos; higiene de mãos, etiqueta respiratória e não compartilhar copos, talheres e garrafas. A escarlatina deixa de ser transmissível após 24 h de antibiótico adequado"
+      },
+      {
+        "medida": "Cuidado da pele e das unhas",
+        "detalhe": "Banho morno e curto, emoliente sem perfume duas vezes ao dia e unhas cortadas; não esfregar a pele nem tentar acelerar a descamação. Na descamação tardia de mãos e pés, hidratar e proteger com meia de algodão para evitar fissuras dolorosas"
+      },
+      {
+        "medida": "Dieta pastosa e fria durante a odinofagia",
+        "detalhe": "Iogurte, purê, sopa morna, banana e pão macio; evitar salgadinho, biscoito seco, suco de laranja e refrigerante, que aumentam a dor e a recusa alimentar. Não há restrição alimentar após o controle da dor"
+      },
+      {
+        "medida": "Adesão aos 10 dias de via oral",
+        "detalhe": "Explicar que a febre cede em 48 h mas o antibiótico continua por 10 dias para erradicar o estreptococo e prevenir febre reumática; contar os dias no calendário e programar a última dose. Quando a adesão é duvidosa, a penicilina benzatina em dose única é a escolha"
+      },
+      {
+        "medida": "Vigilância de urina e pressão por 3 semanas",
+        "detalhe": "Orientar por escrito a observar cor da urina, edema matinal nos olhos e volume urinário; aferir pressão arterial na reavaliação de 2 a 3 semanas. É essa vigilância que detecta a glomerulonefrite, que não é prevenida pelo antibiótico"
+      },
+      {
+        "medida": "Investigação e tratamento dos contactantes sintomáticos",
+        "detalhe": "Examinar e testar quem tem faringite na casa ou na escola; não prescrever antibiótico profilático a contactante assintomático. O contato não tratado é a fonte mais comum de recidiva na mesma família"
+      },
+      {
+        "medida": "Regra de retorno em 48 a 72 h por escrito",
+        "detalhe": "Entregar por escrito: se a febre e a dor não melhorarem em 48 a 72 h, voltar ao mesmo serviço para reavaliação presencial, sem trocar de antibiótico por conta própria. É a regra que detecta abscesso, falha de adesão e diagnóstico alternativo como Kawasaki"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Teste rápido de estreptococo por swab de orofaringe",
+        "indicacao": "toda suspeita de escarlatina, antes de prescrever antibiótico",
+        "tecnica": "Com a criança sentada e a língua abaixada com espátula, friccionar o swab sobre ambas as amígdalas e a parede posterior da faringe, evitando bochecha, língua e úvula; processar imediatamente conforme o kit e ler no tempo especificado pelo fabricante",
+        "complicacoes": "Gag reflex e vômito, falso-negativo por coleta inadequada, falso-positivo por colonização assintomática em contato domiciliar"
+      },
+      {
+        "nome": "Cultura de orofaringe",
+        "indicacao": "teste rápido negativo com suspeita clínica persistente, recidiva precoce e suspeita de falha de erradicação",
+        "tecnica": "Coletar swab estéril em amígdalas e parede posterior da faringe, sem tocar mucosa jugal, acondicionar em meio de transporte e enviar ao laboratório em até 2 h; o resultado leva de 24 a 48 h",
+        "complicacoes": "Desconforto e vômito na coleta, falso-negativo por técnica ou antibioticoterapia prévia, demora do resultado e dificuldade de diferenciar infecção de colonização"
+      },
+      {
+        "nome": "Aplicação de penicilina benzatina intramuscular",
+        "indicacao": "escarlatina confirmada em que se opta por dose única, e profilaxia secundária de febre reumática",
+        "tecnica": "Reconstituir o frasco com o diluente próprio, aspirar com agulha 25 x 7 mm e aplicar no vasto lateral da coxa em menores de 3 anos ou no glúteo em maiores, com a criança contida por dois adultos, tracionando a pele e injetando lentamente; não massagear e observar por 30 min",
+        "complicacoes": "Dor intensa, enduração e abscesso local, síndrome de Nicolau por injeção intravascular, anafilaxia e lesão de nervo ciático por sítio inadequado"
+      },
+      {
+        "nome": "Coleta de urina tipo 1 por jato médio",
+        "indicacao": "triagem de glomerulonefrite pós-estreptocócica em todos os casos, sobretudo com urina escura, edema ou hipertensão",
+        "tecnica": "Realizar higiene local com água e sabão, desprezar o primeiro jato e coletar o jato médio em frasco estéril; em criança não continente, usar saco coletor apenas como triagem e confirmar com amostra por sondagem se houver alteração",
+        "complicacoes": "Contaminação por técnica inadequada e falso-positivo de hematúria e proteinúria, que leva a investigação desnecessária"
+      },
+      {
+        "nome": "Aferição de pressão arterial com manguito adequado",
+        "indicacao": "toda escarlatina na reavaliação de 2 a 3 semanas e imediatamente se houver edema ou urina escura",
+        "tecnica": "Criança sentada e calma por 5 min, manguito com largura de 40% da circunferência do braço e comprimento que cubra 80 a 100%, braço na altura do coração; confirmar valores alterados em duas medidas e comparar com a curva de percentis por idade e estatura",
+        "complicacoes": "Falso-positivo por manguito pequeno ou choro, e falso-negativo que retarda o diagnóstico de hipertensão na glomerulonefrite"
+      },
+      {
+        "nome": "Ecocardiograma transtorácico",
+        "indicacao": "suspeita de febre reumática com sopro novo, artrite migratória, nodulações ou coreia; e seguimento de cardite confirmada",
+        "tecnica": "Exame não invasivo com transdutor pediátrico, avaliando válvula mitral e aórtica, espessura e mobilidade de folhetos, regurgitação e função ventricular; repetir conforme critério cardiológico",
+        "complicacoes": "Exame de baixo risco; o principal problema é a interpretação de achados limítrofes e a criação de ansiedade sem critério diagnóstico"
+      }
+    ],
+    "metas": [
+      "Apirexia e melhora da odinofagia em 48 a 72 h de antibiótico adequado",
+      "Dez dias completos de amoxicilina ou dose única de penicilina benzatina registrada como administrada",
+      "Confirmação microbiológica por teste rápido ou cultura em pelo menos 90% das prescrições de antibiótico",
+      "Nenhuma alta de escarlatina sem confirmação diagnóstica registrada no prontuário",
+      "Nenhum curso de antibiótico oral inferior a 10 dias prescrito para escarlatina",
+      "Pressão arterial e exame de urina tipo 1 verificados na reavaliação de 2 a 3 semanas",
+      "Profilaxia secundária iniciada e registrada em todo caso confirmado de febre reumática",
+      "Nenhuma criança com sinais de toxemia ou desidratação dispensada sem reavaliação presencial"
+    ],
+    "fluxo": [
+      "Classificar gravidade: toxemia, choque, desidratação, sinais de fasciíte ou de abscesso definem sala vermelha e hospital antes de qualquer outra decisão",
+      "Caracterizar o exantema: punctiforme com textura de lixa, que branqueia à pressão, com palidez perioral, linhas de Pastia e língua em framboesa — exantema morbiliforme com tosse e conjuntivite puxa para sarampo",
+      "Confirmar o agente: teste rápido de estreptococo em toda suspeita; se negativo e a suspeita persistir, colher cultura de orofaringe antes de prescrever",
+      "Escolher o esquema: penicilina benzatina em dose única por peso quando a adesão é duvidosa; amoxicilina 50 mg/kg/dia por 10 dias quando a via oral é garantida",
+      "Ajustar na alergia: reação imediata vai para azitromicina 12 mg/kg/dia por 5 dias ou clindamicina; reação tardia leve vai para cefalexina 30 mg/kg/dia por 10 dias",
+      "Prescrever analgesia e hidratação em horário fixo em todos os casos, com reavaliação da aceitação hídrica e da diurese",
+      "Reavaliar em 48 a 72 h: febre persistente exige conferir adesão, examinar a orofaringe e colher cultura antes de trocar de antibiótico",
+      "Vigiar as complicações: dor articular, sopro e taquicardia em 2 a 4 semanas sugerem febre reumática; urina escura, edema e hipertensão em 1 a 3 semanas sugerem glomerulonefrite",
+      "Fechar o caso: alta com retorno escrito, profilaxia secundária quando houver febre reumática, exame de urina e pressão na reavaliação e notificação de contactantes sintomáticos"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "menor_de_3_anos",
+        "ajuste": "apresentação atípica e frequentemente sem exantema típico; confirmar obrigatoriamente por teste rápido ou cultura e calcular a penicilina benzatina pelo peso, 600.000 UI abaixo de 27 kg",
+        "alerta": "escarlatina é rara nessa faixa e o diagnóstico clínico isolado erra com frequência"
+      },
+      {
+        "populacao": "escolar_de_5_a_15_anos",
+        "ajuste": "faixa de maior incidência; preferir penicilina benzatina em dose única quando a adesão aos 10 dias for duvidosa",
+        "alerta": "é a faixa em que a febre reumática ainda é prevenível e o tratamento completo importa"
+      },
+      {
+        "populacao": "alergico_a_penicilina",
+        "ajuste": "reação imediata: azitromicina 12 mg/kg/dia por 5 dias ou clindamicina 20 mg/kg/dia por 10 dias; reação tardia leve: cefalexina 30 mg/kg/dia por 10 dias",
+        "alerta": "confirmar se a alergia não foi rash de mononucleose induzido por amoxicilina, que não contraindica beta-lactâmico"
+      },
+      {
+        "populacao": "febre_reumatica_previa",
+        "ajuste": "tratar o episódio e manter profilaxia secundária com penicilina benzatina a cada 21 a 28 dias, com duração definida pela presença e gravidade da cardite",
+        "alerta": "interromper a profilaxia secundária leva a novo surto de cardite e sequela valvar permanente"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "baixar o limiar de hospitalização, colher hemograma e hemocultura e considerar antibiótico parenteral desde o início",
+        "alerta": "ausência de exantema típico e de febre alta não exclui infecção estreptocócica grave"
+      },
+      {
+        "populacao": "adolescente_gestante",
+        "ajuste": "penicilina benzatina é segura na gestação e é o esquema preferido; evitar AINE no terceiro trimestre e usar paracetamol para dor e febre",
+        "alerta": "febre e infecção não tratadas são risco obstétrico maior que o do antibiótico"
+      },
+      {
+        "populacao": "contato_domiciliar_de_caso",
+        "ajuste": "examinar e testar os contactantes sintomáticos e tratar os confirmados; não prescrever profilaxia a assintomáticos",
+        "alerta": "profilaxia de contactante assintomático não é indicada e seleciona resistência"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "teste rápido de estreptococo por swab de orofaringe",
+          "indicacao": "toda suspeita de escarlatina, antes de prescrever antibiótico",
+          "o_que_muda": "define se há antibiótico, qual esquema e se a criança recebe penicilina benzatina ou amoxicilina"
+        },
+        {
+          "nome": "cultura de orofaringe",
+          "indicacao": "teste rápido negativo com suspeita clínica persistente, recidiva precoce e suspeita de falha de erradicação",
+          "o_que_muda": "confirma o falso-negativo do teste rápido e evita tanto o antibiótico desnecessário quanto a falha de tratamento"
+        },
+        {
+          "nome": "exame de urina tipo 1",
+          "indicacao": "todos os casos na reavaliação de 2 a 3 semanas, e imediatamente se urina escura, edema ou hipertensão",
+          "o_que_muda": "hematúria e proteinúria identificam glomerulonefrite pós-estreptocócica e indicam acompanhamento nefrológico"
+        },
+        {
+          "nome": "hemograma com diferencial e proteína C reativa",
+          "indicacao": "toxemia, febre prolongada, suspeita de mononucleose ou de infecção invasiva",
+          "o_que_muda": "linfocitose com atípicos sugere EBV e contraindica aminopenicilina; neutrofilia com desvio e PCR muito alta reforçam infecção bacteriana invasiva"
+        },
+        {
+          "nome": "ureia, creatinina, eletrólitos e pressão arterial",
+          "indicacao": "suspeita de glomerulonefrite, oligúria, edema ou hipertensão",
+          "o_que_muda": "define gravidade, necessidade de restrição hídrica e de avaliação nefrológica imediata"
+        },
+        {
+          "nome": "antiestreptolisina O e anti-DNase B em fase convalescente",
+          "indicacao": "suspeita de febre reumática ou de glomerulonefrite sem documentação do episódio prévio",
+          "o_que_muda": "documenta infecção estreptocócica recente quando a cultura não foi colhida, mas não serve para decidir antibiótico no episódio agudo"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "antiestreptolisina O na fase aguda para diagnosticar escarlatina",
+          "motivo": "sobe 2 a 3 semanas depois da infecção e não serve para decidir antibiótico no episódio atual"
+        },
+        {
+          "exame": "hemograma e PCR de rotina em escarlatina típica sem toxemia",
+          "motivo": "não distinguem viral de bacteriana com confiabilidade e levam a antibiótico por desvio à esquerda"
+        },
+        {
+          "exame": "hemocultura em escarlatina não complicada",
+          "motivo": "positividade baixíssima, custo e punção sem impacto na conduta"
+        },
+        {
+          "exame": "ecocardiograma de rotina sem critério clínico",
+          "motivo": "achados limítrofes geram ansiedade e repetição desnecessária; o exame tem indicação na suspeita de febre reumática"
+        },
+        {
+          "exame": "painel viral amplo em exantema com faringite confirmada",
+          "motivo": "não muda a conduta, que é antibiótico por 10 dias ou dose única, e atrasa a alta"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "dar o analgésico em horário fixo nas primeiras 48 h, mesmo que a dor esteja fraca",
+        "oferecer líquidos em pequenas quantidades e com frequência, medindo a diurese",
+        "completar os 10 dias de amoxicilina ou comparecer à dose única de penicilina benzatina",
+        "voltar em 48 a 72 h se a febre e a dor não melhorarem, no mesmo serviço",
+        "observar a cor da urina e o inchaço nos olhos e aféri-la pressão na reavaliação de 2 a 3 semanas",
+        "lavar as mãos e não compartilhar copos, talheres e garrafas",
+        "manter a criança em casa por 24 h após o início do antibiótico e enquanto tiver febre"
+      ],
+      "evitar": [
+        "antibiótico por conta própria ou sobra da farmácia para dor de garganta",
+        "interromper o antibiótico quando a febre passar, antes dos 10 dias",
+        "amoxicilina em adolescente com adenopatia generalizada e muito cansaço",
+        "esfregar ou coçar a pele durante a descamação",
+        "corticoide por conta própria para desinflamar a garganta",
+        "retorno ao esporte de contato antes de 4 semanas se houver suspeita de mononucleose ou de cardite"
+      ],
+      "retorno": [
+        "dificuldade para beber, não urinar ou ficar muito sonolento",
+        "dificuldade para respirar, salivação intensa ou inchaço de um lado da garganta",
+        "febre que persiste além de 72 h de antibiótico ou que volta após melhora",
+        "urina escura como coca-cola, inchaço nos olhos ou nos pés",
+        "dor nas juntas, cansaço aos esforços, palpitação ou sopro novo",
+        "descamação extensa com fissuras dolorosas ou feridas na pele"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "penicilina benzatina",
+        "efeitos": ["dor local intensa", "enduração", "rash tardio", "anafilaxia"],
+        "observacao": "observar 30 min após a aplicação e nunca administrar por via venosa"
+      },
+      {
+        "agente": "amoxicilina",
+        "efeitos": ["diarreia", "rash", "candidíase"],
+        "observacao": "rash entre o 5º e o 10º dia em adolescente com adenopatia generalizada sugere mononucleose, não alergia"
+      },
+      {
+        "agente": "penicilina G cristalina",
+        "efeitos": ["convulsão em nefropata", "flebite", "hipernatremia", "anafilaxia"],
+        "observacao": "ajustar à função renal e infundir em 15 a 30 min"
+      },
+      {
+        "agente": "cefalexina",
+        "efeitos": ["diarreia", "rash", "candidíase"],
+        "observacao": "suspender se reação cutânea grave ou anafilaxia"
+      },
+      {
+        "agente": "azitromicina",
+        "efeitos": ["diarreia", "dor abdominal", "prolongamento de QT"],
+        "observacao": "eletrocardiograma se cardiopatia ou uso de outro fármaco que prolonga o QT"
+      },
+      {
+        "agente": "clindamicina",
+        "efeitos": ["diarreia", "colite por C. difficile", "gosto metálico"],
+        "observacao": "diarreia com febre após 5 dias de uso exige suspensão e pesquisa de toxina"
+      },
+      {
+        "agente": "ibuprofeno",
+        "efeitos": ["dor epigástrica", "injúria renal aguda", "sangramento digestivo"],
+        "observacao": "evitar em criança desidratada e em suspeita de dengue ou varicela"
+      },
+      {
+        "agente": "hidroxizina",
+        "efeitos": ["sonolência", "boca seca", "prolongamento de QT"],
+        "observacao": "não associar a outro fármaco que prolonga o QT e evitar em cardiopatia"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose, via e manifestação",
+      "Anafilaxia após penicilina benzatina: adrenalina IM 0,01 mg/kg na face anterolateral da coxa, oxigênio, acesso venoso e observação por 4 a 6 h",
+      "Rash durante amoxicilina: suspender, avaliar mononucleose antes de rotular alergia e registrar a conduta no prontuário",
+      "Diarreia intensa com febre durante clindamicina: suspender, hidratar e pesquisar toxina de C. difficile",
+      "Dor e enduração após penicilina benzatina: compressa fria, analgesia e revisão da técnica de aplicação",
+      "Sonolência excessiva com hidroxizina: suspender, reavaliar a dose e excluir outras causas de rebaixamento",
+      "Reavaliar a necessidade de antibiótico após reação e reescrever a prescrição antes da alta"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "penicilina benzatina",
+            "dose": "600.000 UI abaixo de 27 kg; 1.200.000 UI a partir de 27 kg = ___ UI (calcular pelo peso)",
+            "via": "IM profunda",
+            "frequencia": "dose única",
+            "duracao": "1 dia",
+            "condicao": "escarlatina confirmada por teste rápido ou cultura",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina suspensão 250 mg/5 mL ou 400 mg/5 mL",
+            "dose": "50 mg/kg/dia = ___ mg = ___ mL (máximo 1 g/dia)",
+            "via": "VO",
+            "frequencia": "1x/dia ou 12/12 h",
+            "duracao": "10 dias",
+            "condicao": "alternativa oral à penicilina; completar os 10 dias",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "azitromicina suspensão 200 mg/5 mL",
+            "dose": "12 mg/kg/dia = ___ mg = ___ mL (máximo 500 mg/dia)",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "5 dias",
+            "condicao": "somente alergia imediata a beta-lactâmico",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ibuprofeno suspensão 100 mg/5 mL",
+            "dose": "10 mg/kg/dose = ___ mg = ___ mL",
+            "via": "VO",
+            "frequencia": "6/6 a 8/8 h",
+            "duracao": "3 a 5 dias",
+            "condicao": "febre e dor; administrar com alimento e manter hidratação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "orientação escrita de retorno em 48 a 72 h e de vigilância de urina e pressão",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a reavaliação de 3 semanas",
+            "condicao": "entregar em toda alta, com sinais de alarme descritos",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "penicilina G cristalina",
+            "dose": "100.000 a 200.000 UI/kg/dia divididas de 4/4 a 6/6 h",
+            "via": "IV",
+            "frequencia": "4/4 a 6/6 h",
+            "monitorizacao": "função renal, sódio e potássio, sítio de infusão, convulsão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "clindamicina",
+            "dose": "25 a 40 mg/kg/dia divididos de 8/8 h, máximo 600 mg por dose",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "diarreia, colite por C. difficile, sítio de infusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "soro fisiológico 0,9% para reidratação",
+            "dose": "20 mL/kg em bolus, reavaliando necessidade",
+            "via": "IV",
+            "frequencia": "conforme resposta",
+            "monitorizacao": "diurese, peso, sódio e estado de hidratação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ibuprofeno ou paracetamol",
+            "dose": "ibuprofeno 10 mg/kg/dose ou paracetamol 10 a 15 mg/kg/dose",
+            "via": "VO ou IV",
+            "frequencia": "6/6 a 8/8 h",
+            "monitorizacao": "dor, temperatura, diurese",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "teste rápido de estreptococo",
+          "cultura de orofaringe",
+          "hemograma com linfócitos atípicos",
+          "exame de urina tipo 1",
+          "ureia e creatinina",
+          "antiestreptolisina O e anti-DNase B",
+          "ecocardiograma",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que a criança esteve sob meus cuidados nesta data, com quadro de escarlatina, necessitando de afastamento escolar por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; anexar a regra de retorno em 48 h"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com idade, peso, duração, exantema, teste rápido, antibiótico usado, adesão e resposta",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Criança de ___ anos e ___ kg com escarlatina iniciada há ___, febre ___, exantema com textura de lixa ___, palidez perioral ___, língua em framboesa ___, exsudato ___, com teste rápido de estreptococo ___ e cultura ___, tratada com ___ na dose de ___ por ___, analgesia com ___, com resposta ___ e retorno agendado em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "idade e peso",
+        "início e duração da febre e da odinofagia",
+        "ordem de aparecimento do exantema em relação à febre",
+        "presença de tosse, coriza, conjuntivite e manchas de Koplik",
+        "aspecto da língua e da boca",
+        "aceitação hídrica e número de micções nas últimas 12 h",
+        "antibiótico prévio nas últimas 4 semanas e adesão",
+        "alergia a penicilina com descrição da reação",
+        "contato com caso confirmado na casa ou na escola",
+        "episódios prévios documentados de escarlatina ou faringite",
+        "antecedente de febre reumática, sopro cardíaco ou glomerulonefrite",
+        "dor articular, urina escura, edema e hipertensão nas últimas semanas"
+      ],
+      "texto_template": "Criança de ___ anos e ___ kg, com febre e odinofagia há ___, exantema surgido ___ após a febre, com textura de lixa ___, palidez perioral ___, língua em framboesa ___, tosse ___, coriza ___, conjuntivite ___, aceitação hídrica ___ com ___ micções, antibiótico prévio ___, alergia a penicilina ___, contato com caso ___, antecedente de febre reumática ___, dor articular ___, urina escura ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "peso, temperatura, frequência cardíaca e frequência respiratória",
+        "estado geral, perfusão e hidratação",
+        "exantema: distribuição, textura, branqueamento à pressão, palidez perioral e linhas de Pastia",
+        "língua em framboesa e aspecto da mucosa oral",
+        "orofaringe: exsudato, edema, petéquias no palato e desvio de úvula",
+        "adenopatia cervical anterior e submandibular",
+        "ausculta cardíaca com pesquisa de sopro",
+        "articulações: dor, edema e limitação",
+        "pressão arterial e edema periorbital ou de membros",
+        "descamação de mãos, pés e tronco"
+      ],
+      "texto_template": "Peso ___ kg, temperatura ___ °C, frequência cardíaca ___ bpm, frequência respiratória ___ rpm, estado geral ___, hidratação ___, exantema com distribuição ___, textura ___, palidez perioral ___, linhas de Pastia ___, língua em framboesa ___, orofaringe com exsudato ___, adenopatia cervical ___, ausculta cardíaca com sopro ___, articulações ___, pressão arterial ___, edema ___, descamação ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de exantema febril na emergência pediátrica, disponibilidade de teste rápido e regra de retorno em 48 h",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "dose de penicilina benzatina por peso, amoxicilina 50 mg/kg/dia por 10 dias e esquema de azitromicina na alergia",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_faringite_estreptococica",
+        "o_que_verificar": "indicação de confirmação microbiológica, duração obrigatória de 10 dias por via oral e alternativas na alergia",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "protocolo de febre reumática, critérios de profilaxia secundária e dispensação de penicilina benzatina",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de penicilina benzatina, penicilina cristalina, amoxicilina, azitromicina, cefalexina, clindamicina e hidroxizina disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED12-01",
+        "tipo": "alta_sem_confirmacao",
+        "gatilho": "alta de escarlatina sem teste rápido ou cultura de orofaringe registrados",
+        "severidade": "grave",
+        "mensagem": "Escarlatina não se diagnostica pelo exantema: confirmar com teste rápido ou cultura antes da alta.",
+        "acao": "bloquear alta e solicitar confirmação microbiológica",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED12-02",
+        "tipo": "curso_curto",
+        "gatilho": "amoxicilina prescrita por menos de 10 dias ou penicilina benzatina em dose fracionada",
+        "severidade": "grave",
+        "mensagem": "Curso curto de via oral falha em erradicar o estreptococo e aumenta o risco de febre reumática: 10 dias ou dose única.",
+        "acao": "bloquear item e corrigir a duração",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED12-03",
+        "tipo": "toxemia",
+        "gatilho": "hipotensão, prostração, dor desproporcional em membro ou sinais de fasciíte",
+        "severidade": "grave",
+        "mensagem": "Suspeita de infecção estreptocócica invasiva: sala vermelha, antibiótico parenteral e cirurgia.",
+        "acao": "acionar emergência e terapia intensiva",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED12-04",
+        "tipo": "alergia_penicilina",
+        "gatilho": "penicilina benzatina prescrita em criança com alergia imediata a beta-lactâmico",
+        "severidade": "grave",
+        "mensagem": "Alergia imediata: usar azitromicina ou clindamicina e ter adrenalina disponível.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED12-05",
+        "tipo": "complicacao_renal",
+        "gatilho": "urina escura, edema ou hipertensão registrados após escarlatina",
+        "severidade": "grave",
+        "mensagem": "Suspeita de glomerulonefrite pós-estreptocócica: exame de urina, função renal e pressão agora.",
+        "acao": "alertar e acionar nefrologia",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED12-06",
+        "tipo": "complicacao_reumatica",
+        "gatilho": "dor articular, sopro novo ou taquicardia em repouso após o episódio",
+        "severidade": "grave",
+        "mensagem": "Suspeita de febre reumática: ecocardiograma e profilaxia secundária com penicilina benzatina.",
+        "acao": "alertar e acionar cardiologia",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED12-07",
+        "tipo": "retorno",
+        "gatilho": "alta sem retorno em 48 a 72 h e sem vigilância de urina e pressão registrados",
+        "severidade": "precaucao",
+        "mensagem": "Sem reavaliação, a falha terapêutica e a glomerulonefrite passam despercebidas.",
+        "acao": "alertar e incluir orientação escrita",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED12-08",
+        "tipo": "adesao",
+        "gatilho": "histórico de abandono de tratamento ou dificuldade de acesso à farmácia",
+        "severidade": "informativo",
+        "mensagem": "Nesse perfil, a penicilina benzatina em dose única é a escolha para garantir 10 dias de cobertura.",
+        "acao": "sugerir troca de esquema",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBP",
+        "Ministério da Saúde",
+        "literatura",
+        "diretriz de faringite estreptocócica"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

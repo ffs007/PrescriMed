@@ -1,0 +1,579 @@
+{
+  "id": "ws-go_03",
+  "nome": "Pré-eclâmpsia / eclâmpsia",
+  "cat": "Emergência",
+  "alias": "pre eclampsia eclampsia pre eclampsia eclampsia hipertensao na gestacao hellp sindrome hellp pre eclampsia grave iminencia de eclampsia",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GO-03_preeclampsia.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: esquema de sulfato de magnésio, alvo pressórico e critérios de parto imediato",
+      "[verificar] sociedade_ginecologia: critérios de gravidade, momento do parto e indicação de corticoide",
+      "[verificar] diretriz_obstetrica: manejo da síndrome HELLP e transfusão de plaquetas",
+      "[verificar] organizacao_mundial_de_saude: uso de sulfato de magnésio na eclâmpsia e prevenção de recorrência",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GO-03 em 2026-11-27",
+    "fundido_workspace": "GO-03 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: convulsão -> proteger via aérea, sulfato de magnésio 4-6 g IV imediato e chamar obstetrícia; cefaleia refratária, escotomas, visão turva ou zumbido -> sulfato de magnésio, anti-hipertensivo e unidade de terapia intensiva; dor epigástrica ou em hipocôndrio direito com plaquetas abaixo de 100.000 -> hemograma, LDH, transaminases e bilirrubina em 1 hora e programar o parto; pressão ≥ 160/110 mmHg -> hidralazina, labetalol ou nifedipino e reavaliação em 15 minutos. 1) Confirmar idade gestacional acima de 20 semanas e pressão ≥ 140/90 mmHg em duas medidas 2) Dosar proteinúria, plaquetas, creatinina, transaminases, LDH e bilirrubina e classificar em pré-eclâmpsia sem ou com critério de gravidade e HELLP 3) Avaliar o feto: batimento cardíaco, cardiotocografia, perfil biofísico, doppler e crescimento 4) Iniciar sulfato de magnésio na eclâmpsia, na iminência de eclâmpsia e na pré-eclâmpsia com critério de gravidade 5) Tratar pressão ≥ 160/110 mmHg com hidralazina, labetalol ou nifedipino e reavaliar em 15 a 20 minutos 6) Definir momento e via do parto conforme idade gestacional, critérios de gravidade, HELLP e vitalidade fetal 7) Aplicar corticoide entre 24 e 34 semanas quando o parto não é iminente 8) Puerpério: manter magnésio por 24 horas, controlar pressão por até 6 semanas, liberar IECA e programar AAS na próxima gestação",
+  "redFlags": [
+    "convulsão -> proteger via aérea, sulfato de magnésio 4-6 g IV imediato e chamar obstetrícia",
+    "cefaleia refratária, escotomas, visão turva ou zumbido -> sulfato de magnésio, anti-hipertensivo e unidade de terapia intensiva",
+    "dor epigástrica ou em hipocôndrio direito com plaquetas abaixo de 100.000 -> hemograma, LDH, transaminases e bilirrubina em 1 hora e programar o parto",
+    "pressão ≥ 160/110 mmHg -> hidralazina, labetalol ou nifedipino e reavaliação em 15 minutos",
+    "dispneia, estertores ou saturação abaixo de 94% -> furosemida, ventilação não invasiva e unidade de terapia intensiva",
+    "plaquetas abaixo de 50.000 ou sangramento em sítio de punção -> reservar plaquetas e cesárea com concentrado disponível",
+    "diurese abaixo de 25 mL/h ou creatinina acima de 1,1 mg/dL -> ajustar a manutenção do magnésio, dosar magnesemia e avaliar diálise",
+    "restrição de crescimento, oligoâmnio ou doppler com diástole zero -> corticoide se prematuro e parto conforme idade gestacional em centro terciário"
+  ],
+  "naoUsar": [
+    "miastenia gravis",
+    "insuficiência renal grave ou anúria",
+    "bloqueio atrioventricular",
+    "hipermagnesemia prévia",
+    "hipotensão",
+    "taquicardia acima de 120 bpm",
+    "dissecção de aorta",
+    "síndrome coronariana aguda"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter repouso relativo e comparecer a todas as reavaliações de pressão, exames e cardiotocografia"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "IECA e BRA durante a gestação em qualquer idade gestacional"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Bloqueador de canal de cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "nifedipino",
+            "pos": "10 mg na crise; manutenção 30-60 mg/dia de liberação prolongada. Via VO. 10 mg a cada 20-30 minutos até 3 doses na crise; manutenção 1 vez ao dia. Crise: até 3 doses; manutenção: até o parto e no puerpério.",
+            "posTodas": true,
+            "motivo": "crise hipertensiva quando não há acesso venoso e manutenção da pressão na pré-eclâmpsia (1a linha) manutenção da pressão",
+            "nota": "Uso direto; o comprimido de liberação prolongada é engolido inteiro, nunca partido ou macerado - monitorar: pressão arterial a cada 15-20 minutos na crise; monitorar: frequência cardíaca; monitorar: batimento cardíaco fetal e cardiotocografia; monitorar: cefaleia e rubor; monitorar: edema de membros inferiores · NÃO: pressão sistólica abaixo de 90 mmHg; estenose aórtica grave; disfunção ventricular com fração de ejeção baixa; choque; descolamento prematuro de placenta · Obs: Nunca por via sublingual: a queda brusca e imprevisível causa hipoperfusão placentária e sofrimento fetal. A associação com sulfato de magnésio potencializa…",
+            "dose": {
+              "texto": "10 mg na crise; manutenção 30-60 mg/dia de liberação prolongada; 10 mg a cada 20-30 minutos até 3 doses na crise; manutenção 1 vez ao dia; crise: até 3 doses; manutenção: até o parto e no puerpério; max. 30 mg na primeira hora e 120 mg/dia na manutenção",
+              "status": "ok",
+              "valor": 30,
+              "valor_max": 60,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 20-30 min",
+              "freq_min": 20,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dexametasona",
+            "pos": "6 mg. Via IM. 4 doses com 12 horas de intervalo. 2 dias.",
+            "posTodas": true,
+            "motivo": "maturidade pulmonar quando a betametasona não está disponível (alternativa)",
+            "nota": "Sem diluição; injeção intramuscular profunda - monitorar: glicemia capilar; monitorar: pressão arterial; monitorar: leucograma; monitorar: batimento cardíaco fetal · NÃO: infecção materna grave não tratada; alergia; diabetes descompensada sem controle · Obs: O esquema de 4 doses é equivalente ao de betametasona para maturidade pulmonar. Não é tratamento de HELLP: melhora plaquetas de forma transitória e não altera o desfecho materno",
+            "dose": {
+              "texto": "6 mg; 4 doses com 12 horas de intervalo; 2 dias; max. 24 mg no ciclo",
+              "status": "ok",
+              "valor": 6,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 24,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 2,
+              "duracao_texto": "2 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "leg_betametasona",
+            "pos": "12 mg. Via IM. 2 doses com 24 horas de intervalo. 2 dias.",
+            "posTodas": true,
+            "motivo": "maturidade pulmonar fetal entre 24 e 34 semanas, com extensão até 36 semanas e 6 dias (condicional)",
+            "nota": "Sem diluição; injeção intramuscular profunda no glúteo, alternando o lado entre as doses - monitorar: glicemia capilar 4 vezes ao dia em diabética; monitorar: pressão arterial; monitorar: leucograma antes e depois (leucocitose esperada); monitorar: batimento cardíaco fetal · NÃO: infecção materna grave não tratada; diabetes descompensada sem possibilidade de controle; alergia · Obs: Benefício máximo entre 24 horas e 7 dias após a segunda dose. Não adiar o parto por causa do corticoide quando há indicação materna. Repetir ciclo apenas com nova ameaça e intervalo maior que 14 dias",
+            "dose": {
+              "texto": "12 mg; 2 doses com 24 horas de intervalo; 2 dias; max. 24 mg no ciclo",
+              "status": "ok",
+              "valor": 12,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 24,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 2,
+              "duracao_texto": "2 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Agonista alfa 2 central",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "metildopa",
+            "pos": "250 mg. Via VO. A cada 8 horas, com aumento gradual até 500 mg a cada 8 horas. Até o parto e no puerpério, com desmame.",
+            "posTodas": true,
+            "motivo": "manutenção da pressão na gestação quando nifedipino e labetalol não são opção (alternativa) hipertensão na gestação",
+            "nota": "Uso direto - monitorar: pressão arterial em 4-6 horas e depois semanal; monitorar: nível de consciência e sedação; monitorar: TGO, TGP e hemograma na segunda e na sexta semana; monitorar: humor no puerpério · NÃO: hepatite ativa; cirrose; fenômeno de Raynaud grave; depressão grave; feocromocitoma · Obs: Início lento e efeito máximo em 4 a 6 horas: não serve para crise. É o anti-hipertensivo clássico de manutenção na gestação e compatível com amamentação, mas causa sedação e depressão · Renal: ClCr abaixo de 30 mL/min: espaçar para 12/12 horas",
+            "dose": {
+              "texto": "250 mg; a cada 8 horas, com aumento gradual até 500 mg a cada 8 horas; até o parto e no puerpério, com desmame; max. 2 g/dia (até 3 g/dia em serviços especializados)",
+              "status": "ok",
+              "valor": 250,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "a cada 8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiagregante plaquetário",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "aas",
+            "pos": "100 mg. Via VO. 1 vez ao dia, à noite. Até 36 semanas.",
+            "posTodas": true,
+            "motivo": "profilaxia de pré-eclâmpsia em gestação de alto risco, iniciada entre 12 e 16 semanas (condicional) profilaxia em próxima gestação de alto risco",
+            "nota": "Uso direto, com alimento - monitorar: sangramento e plaquetas; monitorar: dispepsia; monitorar: adesão ao uso diário · NÃO: alergia a salicilato; sangramento ativo; plaquetas abaixo de 50.000; úlcera péptica ativa; asma com sensibilidade a AINE · Obs: É profilaxia e não tratamento: não reverte pré-eclâmpsia instalada. Em gestante que já teve pré-eclâmpsia, iniciar na próxima gestação antes de 16 semanas · Renal: ClCr abaixo de 30 mL/min: evitar",
+            "dose": {
+              "texto": "100 mg; 1 vez ao dia, à noite; até 36 semanas; max. 162 mg/dia",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 162,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anticoagulante heparina de baixo peso molecular",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa preenchida 20 mg/0,2 mL e 40 mg/0,4 mL",
+              "q": "",
+              "pos": "40 mg. Via SC. 1 vez ao dia. 6 semanas no puerpério."
+            },
+            "motivo": "tromboprofilaxia no puerpério de gestante com pré-eclâmpsia e risco tromboembólico alto (condicional) tromboprofilaxia no puerpério de alto risco",
+            "nota": "Uso direto; não expelir a bolha de ar; aplicar no subcutâneo abdominal rodiziando o sítio - monitorar: plaquetas antes do início e no quarto dia; monitorar: sangramento e hematoma; monitorar: função renal; monitorar: potássio em renal crônica · NÃO: sangramento ativo; plaquetas abaixo de 50.000; anestesia neuroaxial nas últimas 4 horas; insuficiência renal grave sem ajuste; trombocitopenia induzida por heparina prévia · Obs: Só após documentar plaquetas acima de 50.000 e hemostasia. Não é rotina em toda pré-eclâmpsia: indicar por escore de risco (cesárea, obesidade, história prévia, HELLP) · Renal: ClCr abaixo de 30 mL/min:…",
+            "dose": {
+              "texto": "40 mg; 1 vez ao dia; 6 semanas no puerpério; max. 40 mg/dia na profilaxia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Internação em unidade com cardiotocografia e unidade neonatal",
+              "ap": "",
+              "q": "",
+              "pos": "Toda pré-eclâmpsia com critério de gravidade, eclâmpsia ou HELLP fica em local com monitorização fetal contínua e condição de cesárea imediata"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Aferição padronizada da pressão",
+              "ap": "",
+              "q": "",
+              "pos": "Manguito de largura adequada, paciente sentada após 5 minutos de repouso, duas medidas com 1 minuto de intervalo; repetir em 15 minutos se alterada"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Balanço hídrico e diurese horária",
+              "ap": "",
+              "q": "",
+              "pos": "Sonda vesical de demora quando há magnésio em infusão, plaquetopenia ou oligúria; registrar volume infundido e urinado a cada hora"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Ambiente protegido durante o sulfato de magnésio",
+              "ap": "",
+              "q": "",
+              "pos": "Grades elevadas, aspiração montada, cânula de Guedel e acesso venoso pérvio ao lado do leito; evitar estímulos sonoros e luminosos intensos"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Repouso em decúbito lateral esquerdo",
+              "ap": "",
+              "q": "",
+              "pos": "Durante as crises e aferições, para reduzir a compressão da veia cava pelo útero e melhorar o retorno venoso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Equipe de neonatologia na sala de parto",
+              "ap": "",
+              "q": "",
+              "pos": "Presença obrigatória quando o parto ocorre abaixo de 34 semanas ou há restrição de crescimento, com sala aquecida e surfactante disponível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Dieta livre, sem restrição rotineira de sal ou de líquido",
+              "ap": "",
+              "q": "",
+              "pos": "Restrição de sal não melhora desfecho e piora a aceitação alimentar; restringir líquido apenas em oligúria ou anúria documentada, com balanço rigoroso"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Orientação por escrito dos sinais de retorno",
+              "ap": "",
+              "q": "",
+              "pos": "Cefaleia refratária, escotomas, dor epigástrica, dispneia e redução de movimentos fetais anotados na alta e explicados à paciente e ao acompanhante"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GO-03"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Anticonvulsivante sal de magnésio",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "sulfato_mg",
+            "motivo": "prevenção e tratamento de convulsão na pré-eclâmpsia com critérios de gravidade e na eclâmpsia (1a linha)",
+            "nota": "Ataque: 4-6 g (40-60 mL da solução a 10% ou 8-12 mL da solução a 50%) diluídos em 100 mL de SF 0,9%. Manutenção: 10-20 g em 500 mL de SF 0,9% em bomba de infusão (20-40 mg/mL) - monitorar: reflexo patelar presente antes de cada aumento de dose; monitorar: frequência respiratória ≥ 12 irpm; monitorar: diurese ≥ 25-30 mL · NÃO: miastenia gravis; insuficiência renal grave ou anúria; bloqueio atrioventricular; hipermagnesemia prévia · Obs: O controle é clínico: reflexo presente, respiração e diurese preservadas. Se houver arreflexia, frequência respiratória abaixo de 12 ou diurese abaixo de 25 mL/h, suspender a infusão e administrar…",
+            "dose": {
+              "texto": "4-6 g no ataque, seguidos de 1-2 g/h; ataque em 20 minutos; manutenção em infusão contínua; 24 horas após o parto ou após a última convulsão; max. 6 g no ataque e 2 g/h na manutenção",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": 6,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 6,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Vasodilatador arteriolar",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "hidralazina_ev",
+            "motivo": "crise hipertensiva na pré-eclâmpsia e na eclâmpsia, com pressão ≥ 160/110 mmHg (1a linha)",
+            "nota": "Diluir 1 mL (20 mg) em 9 mL de SF 0,9% (2 mg/mL) e aplicar 5-10 mg (2,5-5 mL) - monitorar: pressão arterial a cada 10-15 minutos; monitorar: frequência cardíaca; monitorar: batimento cardíaco fetal antes e depois de cada dose; monitorar: reflexos e nível de consciência",
+            "dose": {
+              "texto": "5-10 mg; a cada 20 minutos, até 3 doses; até o controle pressórico; manutenção por via oral depois; max. 30 mg no episódio",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 20 min",
+              "freq_min": 20,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Betabloqueador com ação alfa",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "labetalol",
+              "n": "Labetalol",
+              "ap": "ampola 5 mg/mL (20 mL, 100 mg)",
+              "via": "IV ou VO",
+              "pos": "20 mg no primeiro bolus, depois 20-80 mg. Via IV ou VO. A cada 10-20 minutos até o alvo; manutenção 100-200 mg VO a cada 12 horas. Fase aguda; manutenção até o parto. Bolus em 2 minutos; infusão contínua."
+            },
+            "motivo": "crise hipertensiva na pré-eclâmpsia, sobretudo com taquicardia, ou quando a hidralazina falha (alternativa)",
+            "nota": "IV sem diluição em bolus; para infusão contínua, 100 mg em 100 mL de SF 0,9% (1 mg/mL) a 1-2 mg/min - monitorar: pressão arterial e frequência cardíaca a cada 10 minutos; monitorar: ausculta pulmonar; monitorar: glicemia do recém-nascido nas primeiras 24 horas; monitorar: batimento cardíaco fetal · NÃO: insuficiência cardíaca descompensada; frequência cardíaca abaixo de 50 bpm; bloqueio atrioventricular de 2º ou 3º grau; choque cardiogênico · Obs: Preferir quando há taquicardia materna e evitar em asmática. É a alternativa quando a hidralazina não está disponível ou provocou taquicardia excessiva",
+            "dose": {
+              "texto": "20 mg no primeiro bolus, depois 20-80 mg; a cada 10-20 minutos até o alvo; manutenção 100-200 mg VO a cada 12 horas; fase aguda; manutenção até o parto; max. 300 mg por via IV no episódio e 2.400 mg/dia por via oral",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 80,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 10-20 min",
+              "freq_min": 10,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Diurético de de alça",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "edema agudo de pulmão com hipoxemia na pré-eclâmpsia; nunca para tratar pressão ou edema de membros (condicional)",
+            "nota": "Bolus lento direto em acesso periférico - monitorar: diurese horária; monitorar: pressão arterial; monitorar: potássio, sódio e creatinina; monitorar: saturação e ausculta pulmonar; monitorar: batimento cardíaco fetal · NÃO: hipovolemia; hemoconcentração sem congestão pulmonar; anúria sem sobrecarga; hipocalemia grave · Obs: É a exceção à regra: o diurético é proibido na pré-eclâmpsia sem congestão porque agrava a hemoconcentração e a hipoperfusão placentária. A única indicação é edema agudo de pulmão com hipoxemia, após estabilização · Renal: Doses maiores com ClCr baixo e resposta reduzida",
+            "dose": {
+              "texto": "20-40 mg; bolus; repetir em 1-2 horas se a diurese for insuficiente; até compensar a congestão; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 40,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antídoto",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "gluconato_de_calcio",
+              "n": "Gluconato de cálcio 10%",
+              "ap": "ampola 10% 10 mL (1 g)",
+              "via": "IV",
+              "pos": "1 g (10 mL da solução a 10%). Via IV. Dose única; repetir em 5-10 minutos se persistir. Uma dose, repetida conforme resposta clínica. 10 minutos (5-10 minutos); nunca em bolus rápido."
+            },
+            "motivo": "intoxicação por sulfato de magnésio com arreflexia, depressão respiratória ou bradicardia (resgate)",
+            "nota": "Diluir 10 mL em 100 mL de SG 5% ou SF 0,9%; em emergência extrema, administrar sem diluir em acesso calibroso - monitorar: frequência cardíaca e traçado de ECG; monitorar: pressão arterial; monitorar: reflexo patelar e frequência respiratória após a dose; monitorar: sítio de infusão pelo risco de necrose · NÃO: hipercalcemia; uso de digitálico (infundir lentamente); alergia · Obs: Antídoto do magnésio: a ampola deve ficar separada e identificada ao lado da bomba de sulfato. Não é profilaxia e não deve ser dada junto com a manutenção",
+            "dose": {
+              "texto": "1 g (10 mL da solução a 10%); dose única; repetir em 5-10 minutos se persistir; uma dose, repetida conforme resposta clínica; max. 3 g",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GO-03",
+    "versao": "0.2.0",
+    "arquivo": "GO-03_preeclampsia.json",
+    "area": "Ginecologia/Obstetrícia",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

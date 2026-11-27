@@ -1,0 +1,626 @@
+{
+  "id": "ws-car_01",
+  "nome": "Dor torácica cardiovascular",
+  "cat": "Emergência",
+  "alias": "dor toracica cardiovascular dor toracica dor no peito dor precordial dor anginosa sindrome coronariana aguda sca",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-01_dor_toracica.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: protocolo de dor torácica e fluxo porta-balão",
+      "[verificar] sociedade_cardiologia: critérios de SCA, reperfusão e duplo antiagregante",
+      "[verificar] diretriz_de_dissecção: alvo de pressão e frequência e ordem betabloqueador-vasodilatador",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-01 em 2026-11-27",
+    "fundido_workspace": "CAR-01 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: dor com sudorese fria e náusea -> ECG em 10 min, troponina e monitorização; hipotensão, taquicardia ou confusão -> sala vermelha, acesso calibroso e droga vasoativa; dor súbita transfixante com assimetria de pulsos -> betabloqueador IV, angio-TC e cirurgia vascular; não dar antiagregante; dispneia com hipoxemia e taquicardia -> angio-TC de tórax e anticoagulação. 1) Triagem em até 10 minutos: dor ativa ou recente entra em sala de emergência monitorizada 2) ECG de 12 derivações em até 10 minutos; repetir em 15-30 minutos se o primeiro não for diagnóstico 3) Classificar o eixo: supra de ST, dor isquêmica sem supra, dissecção, tromboembolismo, pericardite ou musculoesquelética 4) Eixo definido: iniciar o fármaco do eixo - AAS no SCA, betabloqueador na dissecção, anticoagulação no TEP, AINE na pericardite 5) Checar contraindicação antes de cada item: inibidor de PDE5 para nitrato, cocaína para betabloqueador, dissecção para antiagregante 6) Estratificar com troponina seriada e escore de risco e definir unidade de destino 7) SCA de alto risco: cateterismo em até 90 minutos no supra e 24 horas no sem supra; transferir se não houver hemodinâmica 8) Alta apenas com ECG e troponina normais, estratificação documentada e orientação de retorno por escrito",
+  "redFlags": [
+    "dor com sudorese fria e náusea -> ECG em 10 min, troponina e monitorização",
+    "hipotensão, taquicardia ou confusão -> sala vermelha, acesso calibroso e droga vasoativa",
+    "dor súbita transfixante com assimetria de pulsos -> betabloqueador IV, angio-TC e cirurgia vascular; não dar antiagregante",
+    "dispneia com hipoxemia e taquicardia -> angio-TC de tórax e anticoagulação",
+    "supra de ST ou bloqueio de ramo esquerdo novo -> reperfusão imediata, cateterismo em até 90 min",
+    "dor pleurítica, atrito pericárdico e hipotensão -> ecocardiograma à beira-leito e pericardiocentese",
+    "uso de cocaína, anfetamina ou energético antes da dor -> benzodiazepínico e nitrato; betabloqueador contraindicado",
+    "dor em repouso por mais de 20 min refratária a nitrato -> cateterismo urgente e antiagregante duplo"
+  ],
+  "naoUsar": [
+    "alergia a salicilato",
+    "sangramento ativo",
+    "suspeita de dissecção de aorta",
+    "úlcera péptica com sangramento recente",
+    "asma com intolerância a AINE",
+    "pressão sistólica < 90 mmHg",
+    "sildenafila nas últimas 24 h ou tadalafila nas últimas 48 h",
+    "infarto de ventrículo direito",
+    "AAS/antiagregante/anticoagulante antes de excluir dissecção de aorta (dor em rasgo, assimetria de pulsos, alargamento de mediastino)",
+    "Anticoagulante se dor + tosse com sangue e fator de TEP sem TC — eco/TC primeiro",
+    "AINE como conduta única em dor torácica não diagnosticada — pode mascarar pericardite em evolução e atrasar ACS real"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "tomar AAS 100 mg 1x/dia se prescrito e não suspender por conta própria"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "esforço físico até liberação"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antiagregante plaquetário",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "aas",
+            "pos": "150-300 mg. Via VO (mastigável). Dose única de ataque; depois 100 mg 1x/dia. Ataque único, manutenção indefinida.",
+            "posTodas": true,
+            "motivo": "suspeita de síndrome coronariana aguda, antes de qualquer exame confirmatório (1a linha) após SCA confirmada",
+            "nota": "Mastigar o comprimido e engolir com água; não usar comprimido revestido no ataque - monitorar: sinais de sangramento; monitorar: dor epigástrica; monitorar: hemograma se sangramento · NÃO: alergia a salicilato; sangramento ativo; suspeita de dissecção de aorta; úlcera péptica com sangramento recente; asma com intolerância a AINE · Obs: Dar na primeira abordagem, sem esperar troponina: o benefício é imediato. Na suspeita de dissecção, segurar o AAS até a angio-TC",
+            "dose": {
+              "texto": "150-300 mg; dose única de ataque; depois 100 mg 1x/dia; ataque único, manutenção indefinida; max. 300 mg no ataque",
+              "status": "ok",
+              "valor": 150,
+              "valor_max": 300,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "leg_clopidogrel",
+            "pos": "300 mg no ataque; manutenção 75 mg. Via VO. Ataque único; manutenção 1x/dia. 12 meses após SCA.",
+            "posTodas": true,
+            "motivo": "SCA confirmada ou de alta probabilidade com estratégia invasiva (condicional) após SCA com ou sem stent",
+            "nota": "Uso direto - monitorar: sangramento; monitorar: plaquetas; monitorar: hemograma se febre ou petéquias",
+            "dose": {
+              "texto": "300 mg no ataque; manutenção 75 mg; ataque único; manutenção 1x/dia; 12 meses após SCA; max. 600 mg no ataque (cateterismo primário)",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 600,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Nitrato",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nitroglicerina_sublingual",
+              "n": "Nitroglicerina sublingual",
+              "ap": "comprimido sublingual 0,5 mg",
+              "q": "",
+              "pos": "0,4-0,5 mg. Via sublingual. A cada 5 min, até 3 doses. 15 minutos."
+            },
+            "motivo": "dor isquêmica com pressão arterial segura (1a linha)",
+            "nota": "Uso direto sob a língua, sem engolir; o comprimido deve causar ardência - monitorar: pressão arterial antes e após cada dose; monitorar: frequência cardíaca; monitorar: intensidade da dor · NÃO: pressão sistólica < 90 mmHg; sildenafila nas últimas 24 h ou tadalafila nas últimas 48 h; infarto de ventrículo direito; hipotensão na dissecção; estenose aórtica grave; aumento de pressão intracraniana · Obs: Se a dor não cede após 3 doses, o quadro é SCA de alto risco e não angina estável: ECG, troponina e cateterismo",
+            "dose": {
+              "texto": "0,4-0,5 mg; a cada 5 min, até 3 doses; 15 minutos; max. 1,5 mg (3 doses)",
+              "status": "ok",
+              "valor": 0.4,
+              "valor_max": 0.5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1.5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 5 min",
+              "freq_min": 5,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anticoagulante heparina baixo peso",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa 20 mg/0,2 mL",
+              "q": "",
+              "pos": "1 mg/kg. Via SC. 12/12 h. Até revascularização ou 8 dias."
+            },
+            "motivo": "SCA sem supra ou TEP confirmado ou de alta probabilidade (1a linha)",
+            "nota": "Uso direto na seringa; não expelir a bolha; aplicar no subcutâneo do abdome - monitorar: plaquetas a cada 48-72 h; monitorar: sinais de sangramento; monitorar: anti-Xa se ClCr < 30 mL/min ou obesidade grave · NÃO: sangramento ativo; suspeita de dissecção de aorta; plaquetas < 50.000/mm³; cirurgia recente de sistema nervoso central; prótese valvar mecânica · Obs: Em SCA com 75 anos ou mais: 0,75 mg/kg 12/12 h. Não usar se a hipótese for dissecção · Renal: ClCr 15–30 mL/min: 1 mg/kg 1x/dia; ClCr < 15: preferir heparina não fracionada",
+            "dose": {
+              "texto": "1 mg/kg; 12/12 h; até revascularização ou 8 dias; max. 100 mg por dose",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 8,
+              "duracao_texto": "8 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antiácido",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "hidroxido_de_aluminio_com_hidroxido_de_m",
+              "n": "Hidróxido de alumínio com hidróxido de magnésio",
+              "ap": "suspensão oral 60 mL e 120 mL",
+              "q": "",
+              "pos": "10-20 mL. Via VO. Após as refeições e ao deitar, ou 1 h antes do AAS. Até controle dos sintomas, máximo 14 dias."
+            },
+            "motivo": "antiácido adjunto para alívio de dispepsia e proteção gástrica quando o paciente não tolera inibidor de bomba de prótons (condicional)",
+            "nota": "Uso direto; agitar a suspensão antes de medir - monitorar: hábito intestinal; monitorar: magnésio e alumínio em renal crônico; monitorar: alívio da dispepsia · NÃO: insuficiência renal grave; obstrução intestinal; hipermagnesemia; hipofosfatemia · Obs: Separar 2 h do AAS e do clopidogrel: o antiácido reduz a absorção. Não substitui o inibidor de bomba na gastroproteção · Renal: Evitar com ClCr < 30 mL/min: alumínio e magnésio se acumulam",
+            "dose": {
+              "texto": "10-20 mL; após as refeições e ao deitar, ou 1 h antes do AAS; até controle dos sintomas, máximo 14 dias; max. 80 mL/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 80,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Repouso absoluto com cabeceira elevada",
+              "ap": "",
+              "q": "",
+              "pos": "30–45° se dispneia; proibir deambulação até a estratificação concluída"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Monitorização cardíaca contínua com desfibrilador ao lado",
+              "ap": "",
+              "q": "",
+              "pos": "Ritmo, oximetria, pressão e frequência; desfibrilador testado em todo paciente com ECG alterado"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Dois acessos venosos periféricos calibrosos",
+              "ap": "",
+              "q": "",
+              "pos": "14–16 G; um exclusivo para infusão titulável"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Oxigênio apenas se saturação abaixo de 90%",
+              "ap": "",
+              "q": "",
+              "pos": "Oxigênio em normoxêmico aumenta a lesão miocárdica; manter saturação entre 94% e 98%"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Dieta zero até definição da estratégia",
+              "ap": "",
+              "q": "",
+              "pos": "Jejum de 6–8 h se cateterismo ou cirurgia provável"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Correção de fatores desencadeantes",
+              "ap": "",
+              "q": "",
+              "pos": "Tratar anemia, febre, taquicardia, hipertensão, abstinência e intoxicação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Cronometragem do tempo porta-ECG",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar hora de chegada e hora do traçado; meta de 10 min auditada mensalmente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Acionamento nominal da hemodinâmica",
+              "ap": "",
+              "q": "",
+              "pos": "Falar diretamente com o plantonista do cateterismo e registrar o horário do contato"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-01"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Betabloqueador",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "metoprolol",
+              "n": "Metoprolol",
+              "ap": "ampola 1 mg/mL (5 mL)",
+              "via": "IV ou VO",
+              "pos": "5 mg IV, repetir a cada 5 min até 3 doses; manutenção 25-50 mg VO 6/6 h. 5/5 min na fase aguda; 6/6 h na manutenção. Até atingir frequência cardíaca alvo, depois manutenção. Bolus lento em 1-2 min."
+            },
+            "motivo": "SCA sem supra com frequência alta e pressão preservada, ou dissecção de aorta (1a linha) após SCA sem contraindicação",
+            "nota": "IV: usar sem diluição, 5 mg em bolus lento; VO: uso direto - monitorar: frequência cardíaca e pressão antes de cada dose; monitorar: ECG contínuo; monitorar: ausculta respiratória · NÃO: uso de cocaína ou anfetamina na fase aguda; frequência cardíaca < 50 bpm; bloqueio atrioventricular de 2º ou 3º grau sem marca-passo; choque cardiogênico; asma grave descompensada; pressão sistólica < 90 mmHg; edema agudo de pulmão com congestão · Obs: Na dissecção, dar betabloqueador antes do vasodilatador. Nunca betabloquear dor por cocaína: primeiro benzodiazepínico e nitrato",
+            "dose": {
+              "texto": "5 mg IV, repetir a cada 5 min até 3 doses; manutenção 25-50 mg VO 6/6 h; 5/5 min na fase aguda; 6/6 h na manutenção; até atingir frequência cardíaca alvo, depois manutenção; max. 15 mg IV na fase aguda",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 50,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 15,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anticoagulante heparina não fracionada",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "heparina_nao_fracionada",
+              "n": "Heparina não fracionada",
+              "ap": "frasco 5.000 UI/mL (5 mL, 25.000 UI)",
+              "via": "IV",
+              "pos": "60 UI/kg em bolus (máximo 4.000 UI), seguido de 12 UI/kg/h (máximo 1.000 UI/h). Via IV. Bolus seguido de infusão contínua. 48 horas ou até revascularização. Bolus IV; infusão contínua."
+            },
+            "motivo": "SCA ou TEP com ClCr < 30 mL/min, instabilidade hemodinâmica ou necessidade de reversão rápida (alternativa)",
+            "nota": "Bolus direto; infusão em 250 mL de SF 0,9% em bomba de infusão - monitorar: TTPa 6 h após o início e a cada ajuste, alvo 1,5-2,5 vezes o controle; monitorar: plaquetas; monitorar: sinais de sangramento · NÃO: sangramento ativo; suspeita de dissecção de aorta; trombocitopenia induzida por heparina prévia; plaquetas < 50.000/mm³; hemorragia intracraniana recente · Obs: Preferível quando é preciso reverter rápido com protamina ou quando há falência renal. Não usar se dissecção",
+            "dose": {
+              "texto": "60 UI/kg em bolus (máximo 4.000 UI), seguido de 12 UI/kg/h (máximo 1.000 UI/h); bolus seguido de infusão contínua; 48 horas ou até revascularização; max. 4.000 UI no bolus e 1.000 UI/h",
+              "status": "ok",
+              "valor": 60,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4000,
+                "unidade": "UI"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Nitrato",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nitroglicerina_intravenosa",
+              "n": "Nitroglicerina intravenosa",
+              "ap": "ampola 5 mg/mL (5 mL, 25 mg)",
+              "via": "IV",
+              "pos": "5-10 mcg/min, titular. Via IV. Infusão contínua. 24-48 horas, conforme controle. Infusão contínua; titular a cada 5 min."
+            },
+            "motivo": "SCA com dor persistente, edema agudo de pulmão ou hipertensão associada (condicional)",
+            "nota": "25 mg em 250 mL de SF 0,9% ou SG 5% (100 mcg/mL); usar equipo de PVC e bomba de infusão - monitorar: pressão arterial a cada 5 min durante a titulação; monitorar: frequência cardíaca; monitorar: cefaleia; monitorar: metahemoglobina se dose alta por mais de 24 h · NÃO: sildenafila nas últimas 24 h ou tadalafila nas últimas 48 h; pressão sistólica < 90 mmHg; infarto de ventrículo direito; hipovolemia não corrigida; aumento de pressão intracraniana · Obs: Não é anti-hipertensivo de primeira escolha fora de SCA ou edema. Suspender se pressão sistólica < 90 mmHg",
+            "dose": {
+              "texto": "5-10 mcg/min, titular; infusão contínua; 24-48 horas, conforme controle; max. 200 mcg/min",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor de bomba de protons",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "omeprazol_ev",
+            "motivo": "gastroproteção adjunta em duplo antiagregante, histórico de úlcera ou sangramento digestivo (condicional)",
+            "nota": "VO: uso direto. IV: reconstituir em 10 mL do diluente e diluir em 100 mL de SF 0,9% - monitorar: sangramento digestivo; monitorar: magnésio se uso acima de 8 semanas; monitorar: resposta antiagregante",
+            "dose": {
+              "texto": "40 mg; 1x/dia; 8 semanas por via oral; durante a internação por via IV; max. 40 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Benzodiazepínico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "diazepam_ev",
+            "motivo": "dor torácica por cocaína ou anfetamina com hipertensão, taquicardia e agitação (condicional)",
+            "nota": "IV: diluir 1 mL (5 mg) em 9 mL de SF 0,9%; administrar lentamente - monitorar: frequência respiratória e saturação; monitorar: pressão arterial; monitorar: nível de consciência · NÃO: depressão respiratória; miastenia gravis; hipotensão não corrigida; apneia do sono grave sem suporte ventilatório · Obs: É a primeira medida na dor por cocaína: corta a descarga adrenérgica e permite usar nitrato com segurança",
+            "dose": {
+              "texto": "5-10 mg; dose única; repetir após 5-10 min se necessário; até controle da agitação e da pressão; max. 20 mg na primeira hora",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "morfina_ev",
+            "motivo": "dor isquêmica refratária a nitrato e betabloqueador (resgate)",
+            "nota": "Diluir 1 mL (10 mg) em 9 mL de SF 0,9% (1 mg/mL) para titulação - monitorar: frequência respiratória e saturação; monitorar: pressão arterial; monitorar: nível de consciência; monitorar: escala de dor",
+            "dose": {
+              "texto": "2-4 mg; a cada 5-15 min, titulada; até controle da dor, máximo 3 doses na primeira hora; max. 10 mg na primeira hora",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": 4,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 5-15 min",
+              "freq_min": 5,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiagregante (após excluir dissecção)",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "aas_mast",
+            "motivo": "Se SCA é possibilidade: 160–325 mg mastigado — mas NÃO dar antes de excluir dissecção de aorta (piora o prognóstico cirúrgico)"
+          }
+        ]
+      },
+      {
+        "nome": "Conforme etiologia (não rotular sem ECG/troponina/imagem)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "esmolol_dissec",
+              "n": "Esmolol (dissecção de aorta)",
+              "ap": "ampola 100 mg/10 mL",
+              "via": "IV",
+              "pos": "Bolus 500 mcg/kg + 50–300 mcg/kg/min — controlar FC < 60 ANTES do vasodilatador; nunca antiagregante/anticoagulante na dissecção"
+            }
+          },
+          {
+            "novo": {
+              "id": "colchicina_peric",
+              "n": "Colchicina (pericardite)",
+              "ap": "comprimido 0,5 mg",
+              "via": "VO",
+              "pos": "0,5 mg VO 12/12 h (3 dias, depois 1x/dia) + AINE (ibuprofeno 600 mg 8/8 h) — com gastrproteção"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ws": {
+    "id": "CAR-01",
+    "versao": "0.2.0",
+    "arquivo": "CAR-01_dor_toracica.json",
+    "area": "Cardiovascular",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

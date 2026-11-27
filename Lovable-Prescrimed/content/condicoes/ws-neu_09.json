@@ -1,0 +1,560 @@
+{
+  "id": "ws-neu_09",
+  "nome": "Confusão mental / rebaixamento",
+  "cat": "Emergência",
+  "alias": "confusao mental rebaixamento confusao mental rebaixamento de consciencia delirium coma",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (NEU-09_confusao.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de rebaixamento, coma e ativação de sala vermelha",
+      "[verificar] sociedade_neurologia: escala de coma, status epilepticus não convulsivo e EEG",
+      "[verificar] sociedade_infectologia: meningite bacteriana e encefalite herpética",
+      "[verificar] diretriz_toxicologia: indicação e titulação de naloxona e flumazenil",
+      "[verificar] anvisa: apresentações, diluições e estabilidade"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "NEU-09 em 2026-11-27",
+    "fundido_workspace": "NEU-09 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: rebaixamento sem glicemia capilar medida -> medir glicemia imediatamente e corrigir antes de qualquer sedativo; Glasgow ≤ 8 ou queda ≥ 2 pontos -> intubação orotraqueal e UTI; pupila assimétrica, midríase fixa ou postura de decorticação -> salina hipertônica e tomografia imediata; febre com rigidez de nuca, petéquias ou cefaleia intensa -> ceftriaxona e dexametasona na primeira hora. 1) Glicemia capilar imediata, oximetria e exame neurológico dirigido 2) Estabilizar: via aérea, oxigênio, acesso venoso calibroso e monitor 3) Registrar Glasgow, pupilas e busca ativa de déficit focal 4) Corrigir o reversível na hora: glicose, tiamina, naloxona e flumazenil com critério 5) Febre ou meningismo: ceftriaxona e dexametasona antes da imagem; comportamento alterado ou convulsão: aciclovir 6) Tomografia de crânio sem contraste e punção lombar quando segura 7) Persistência sem causa e sem déficit: EEG e tratamento de status não convulsivo 8) Causa definida: tratamento específico, reavaliação seriada do Glasgow e da glicemia",
+  "redFlags": [
+    "rebaixamento sem glicemia capilar medida -> medir glicemia imediatamente e corrigir antes de qualquer sedativo",
+    "Glasgow ≤ 8 ou queda ≥ 2 pontos -> intubação orotraqueal e UTI",
+    "pupila assimétrica, midríase fixa ou postura de decorticação -> salina hipertônica e tomografia imediata",
+    "febre com rigidez de nuca, petéquias ou cefaleia intensa -> ceftriaxona e dexametasona na primeira hora",
+    "frequência respiratória < 10 ou SatO2 < 90% -> oxigênio, naloxona titulada e via aérea",
+    "convulsão, mioclonia persistente ou olhar errante -> anticonvulsivante e EEG urgente",
+    "uso de insulina ou sulfonilureia com sudorese e taquicardia -> glicose e infusão contínua de glicose 10%"
+  ],
+  "naoUsar": [
+    "hiperglicemia documentada",
+    "sem acesso venoso pérvio",
+    "hipersensibilidade ao composto",
+    "bradicardia",
+    "bloqueio atrioventricular",
+    "intoxicação por tricíclico",
+    "hipotensão",
+    "hipersensibilidade"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "medir glicemia antes de qualquer sedativo"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "sedar ou conter sem diagnóstico"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Glicemia capilar em todo rebaixamento",
+              "ap": "",
+              "q": "",
+              "pos": "Antes de qualquer sedativo, contenção ou exame; repetir em 15 min após correção e a cada 1 h nas primeiras 4 h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Via aérea e oxigênio",
+              "ap": "",
+              "q": "",
+              "pos": "SatO2 ≥ 94%; intubação orotraqueal se Glasgow ≤ 8, aspiração ou hipoxemia refratária"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Escala de coma de Glasgow e pupilas seriadas",
+              "ap": "",
+              "q": "",
+              "pos": "Registrar Glasgow, pupila e sinal focal na primeira hora a cada 30 min; queda de 2 pontos muda a conduta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Monitorização contínua",
+              "ap": "",
+              "q": "",
+              "pos": "ECG, oximetria, PA e temperatura; acesso venoso calibroso e sonda vesical com controle de diurese"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Ambiente e contenção",
+              "ap": "",
+              "q": "",
+              "pos": "Quarto com luz controlada, menos ruído, acompanhante e orientação repetida; contenção física apenas com risco iminente e reavaliação a cada 2 h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Revisão de fármacos",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender anticolinérgico, benzodiazepínico, opioide e anti-histamínico não essenciais; corrigir dor e retenção urinária"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Prevenção de complicação",
+              "ap": "",
+              "q": "",
+              "pos": "Profilaxia de trombose quando indicada, cabeceira elevada, mudança de decúbito e higiene oral"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "NEU-09"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Glicose",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "glicose50",
+            "motivo": "hipoglicemia confirmada ou rebaixamento com glicemia desconhecida (1a linha)",
+            "nota": "Uso direto na apresentação a 50%; em veia periférica fina, diluir em 100 mL de SF 0,9% ou usar glicose 10% - monitorar: glicemia capilar em 15 min e em 1 h; monitorar: nível de consciência após a correção; monitorar: permeabilidade do acesso e sinais de extravasamento; monitorar: potássio se doses repetidas · NÃO: hiperglicemia documentada; sem acesso venoso pérvio · Obs: Repetir se glicemia permanecer < 70 mg/dL; em hipoglicemia por sulfonilureia ou insulina de ação longa, manter infusão de glicose 10% e observar por 24 h",
+            "dose": {
+              "texto": "50 mL; dose única, repetir conforme glicemia capilar; 1 dose, seguida de infusão de manutenção se necessário; max. 100 mL (50 g) por episódio",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "tiamina_ev",
+            "motivo": "rebaixamento em etilista, desnutrido, hiperêmese ou pós-bariátrica (1a linha) reposição em etilista ou desnutrido após a alta",
+            "nota": "Diluir em 50-100 mL de SF 0,9% ou administrar em bolus lento - monitorar: reação alérgica nos primeiros minutos; monitorar: nível de consciência; monitorar: nistagmo, ataxia e oftalmoplegia; monitorar: glicemia",
+            "dose": {
+              "texto": "100 mg; dose única, depois 100 mg/dia; 3-5 dias ou até a alta; max. 500 mg por dose em encefalopatia de Wernicke suspeita",
+              "status": "ok",
+              "valor": 100,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Anticonvulsivante",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "fenitoina_ev",
+            "motivo": "status epilepticus quando levetiracetam não está disponível (alternativa)",
+            "nota": "Diluir em 100-250 mL de SF 0,9% (nunca em SG 5%, que precipita) - monitorar: ECG contínuo; monitorar: PA a cada 5 min; monitorar: nível sérico 10-20 mcg/mL; monitorar: local da infusão · NÃO: bradicardia; bloqueio atrioventricular; intoxicação por tricíclico; hipotensão · Obs: Exige monitor cardíaco e acesso calibroso; em idoso ou cardiopata, preferir levetiracetam",
+            "dose": {
+              "texto": "20 mg/kg; ataque, depois 100 mg 8/8 h; até controle, com transição oral; max. 50 mg/min de velocidade de infusão",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "levetiracetam",
+              "n": "Levetiracetam",
+              "ap": "frasco 500 mg/5 mL",
+              "via": "IV",
+              "pos": "60 mg/kg. Via IV. Dose de ataque, depois 1.000 mg 12/12 h. Até controle clínico e elétrico, com transição oral. 15 minutos."
+            },
+            "motivo": "status epilepticus não convulsivo ou crise durante o rebaixamento (condicional) transição oral após crise ou status",
+            "nota": "Diluir a dose em 100 mL de SF 0,9% - monitorar: nível de consciência; monitorar: EEG se disponível; monitorar: comportamento e agitação; monitorar: função renal · NÃO: hipersensibilidade; insuficiência renal grave sem ajuste · Obs: Primeira escolha no status não convulsivo pela facilidade de uso e ausência de interação; o EEG confirma o diagnóstico e a resposta · Renal: ClCr < 50: reduzir a manutenção em 50%; em diálise, repor 250–500 mg após a sessão",
+            "dose": {
+              "texto": "60 mg/kg; dose de ataque, depois 1.000 mg 12/12 h; até controle clínico e elétrico, com transição oral; max. 4,5 g no ataque",
+              "status": "ok",
+              "valor": 60,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4.5,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antídoto opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "naloxona",
+            "motivo": "suspeita de intoxicação por opioide com depressão respiratória (condicional)",
+            "nota": "Uso direto IV; para titulação fina, diluir 0,4 mg em 10 mL de SF 0,9% - monitorar: frequência respiratória e SatO2 a cada 5 min; monitorar: nível de consciência; monitorar: sinais de abstinência; monitorar: glicemia",
+            "dose": {
+              "texto": "0,4 mg; repetir a cada 2-3 min até resposta; até reversão; infusão contínua se opioide de ação longa; max. 2 mg por titulação inicial",
+              "status": "ok",
+              "valor": 0.4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 2-3 min",
+              "freq_min": 2,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antídoto benzodiazepínico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "flumazenil",
+              "n": "Flumazenil",
+              "ap": "ampola 0,1 mg/mL (5 mL)",
+              "via": "IV",
+              "pos": "0,2 mg. Via IV. 0,2 mg; se sem resposta, 0,3 mg e depois 0,5 mg a cada 1 min. Dose única titulada. 30 segundos por dose."
+            },
+            "motivo": "sedação por benzodiazepínico isolado, sem intoxicação mista (condicional)",
+            "nota": "Uso direto IV em acesso pérvio; não diluir - monitorar: nível de consciência; monitorar: convulsão; monitorar: FC e PA por 2 h; monitorar: ECG se intoxicação associada · NÃO: intoxicação mista com tricíclico; uso crônico de benzodiazepínico; epilepsia; abstinência alcoólica; arritmia grave · Obs: Usar apenas quando a depressão respiratória é atribuída a benzodiazepínico e o ECG não mostra QRS largo; pode precipitar convulsão refratária e não substitui via aérea",
+            "dose": {
+              "texto": "0,2 mg; 0,2 mg; se sem resposta, 0,3 mg e depois 0,5 mg a cada 1 min; dose única titulada; max. 3 mg",
+              "status": "ok",
+              "valor": 0.2,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 1 min",
+              "freq_min": 1,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antibiótico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "meningite bacteriana suspeita (condicional)",
+            "nota": "Reconstituir em 10 mL de água destilada; diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: nível de consciência e sinais meníngeos; monitorar: temperatura; monitorar: função renal; monitorar: diarreia · NÃO: alergia a cefalosporina; recém-nascido com hiperbilirrubinemia · Obs: Colher hemocultura e iniciar na primeira hora; não atrasar por punção lombar, tomografia ou resultado de exame",
+            "dose": {
+              "texto": "2 g; 12/12 h; 7-14 dias; max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dexametasona_ev",
+            "motivo": "meningite bacteriana suspeita, junto da primeira dose de antibiótico (condicional)",
+            "nota": "Uso direto IV ou diluído em 10 mL de SF 0,9% - monitorar: glicemia; monitorar: PA; monitorar: sangramento digestivo; monitorar: nível de consciência",
+            "dose": {
+              "texto": "10 mg; 6/6 h; 4 dias (2 dias se pneumococo confirmado); max. 40 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 40,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 4,
+              "duracao_texto": "4 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiviral",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "aciclovir",
+              "n": "Aciclovir",
+              "ap": "frasco 250 mg",
+              "via": "IV",
+              "pos": "10 mg/kg. Via IV. 8/8 h. 14-21 dias. 60 minutos."
+            },
+            "motivo": "encefalite herpética suspeita (condicional)",
+            "nota": "Reconstituir em 10 mL de água destilada; diluir em 250 mL de SF 0,9% (concentração ≤ 7 mg/mL) - monitorar: creatinina a cada 48 h; monitorar: débito urinário e hidratação; monitorar: nível de consciência; monitorar: hemograma · NÃO: hipersensibilidade; desidratação grave sem correção · Obs: Iniciar em toda encefalite com febre, cefaleia e alteração de comportamento antes do PCR; não esperar resultado para tratar · Renal: ClCr 25–50: 10 mg/kg 12/12 h; ClCr 10–25: 10 mg/kg 24 h; ClCr < 10: 5 mg/kg 24 h;…",
+            "dose": {
+              "texto": "10 mg/kg; 8/8 h; 14-21 dias; max. 20 mg/kg 8/8 h (usar peso ideal em obesos)",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 21,
+              "duracao_texto": "21 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antipsicótico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "haloperidol_im",
+            "motivo": "delirium hiperativo com risco de auto ou heteroagressão após excluir causas reversíveis (condicional)",
+            "nota": "Uso direto; não diluir para uso IM - monitorar: ECG e QTc; monitorar: potássio e magnésio; monitorar: PA; monitorar: nível de sedação · NÃO: abstinência alcoólica; hepatopatia grave; doença de Parkinson; QTc > 500 ms; hipocalemia · Obs: Nunca é a primeira medida: só após glicemia, oximetria e exame neurológico. Sedar sem diagnóstico mascara hipoglicemia, hipóxia e AVC",
+            "dose": {
+              "texto": "0,5-1 mg; repetir a cada 30-60 min se necessário; até controle do delirium, pelo menor tempo possível; max. 5 mg/24 h em idoso",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": 1,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 30-60 min",
+              "freq_min": 30,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Solução hipertonica",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "salina_hipertonica",
+              "n": "Salina hipertônica 3%",
+              "ap": "frasco 250 mL a 3%",
+              "via": "IV",
+              "pos": "150 mL. Via IV. Bolus único, repetir uma vez se necessário. Dose única. 15-20 minutos em acesso calibroso."
+            },
+            "motivo": "herniação cerebral iminente ou rebaixamento com sinal de tronco (resgate)",
+            "nota": "Solução a 3%: 250 mL de SF 0,9% + 75 mL de NaCl 20%; não administrar NaCl 20% sem diluição - monitorar: sódio a cada 2-4 h; monitorar: pupilas e nível de consciência; monitorar: diurese; monitorar: ausculta pulmonar · NÃO: sobrecarga hídrica; anúria; sódio > 155 mEq/L · Obs: Ponte para tomografia e neurocirurgia; alvo de sódio 145–155 mEq/L e suspensão se > 155 ou piora respiratória · Renal: Cautela em oligúria ou sobrecarga; reduzir o volume",
+            "dose": {
+              "texto": "150 mL; bolus único, repetir uma vez se necessário; dose única; max. 300 mL por episódio",
+              "status": "ok",
+              "valor": 150,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "NEU-09",
+    "versao": "0.2.0",
+    "arquivo": "NEU-09_confusao.json",
+    "area": "Neurológico",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

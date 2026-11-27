@@ -1,0 +1,1068 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-16",
+    "area": "Pediatria",
+    "nome": "Cólica do lactente",
+    "aliases": [
+      "Cólica do lactente",
+      "cólica do bebê",
+      "cólica infantil",
+      "choro excessivo do lactente",
+      "choro inconsolável do lactente",
+      "crise de cólica",
+      "cólica dos três meses",
+      "regra dos três de Wessel"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Cólica do lactente é choro paroxístico e inconsolável em bebê saudável, com menos de 4 a 5 meses, sem causa identificável: pela regra de Wessel, três horas ou mais de choro por dia, em três dias ou mais da semana, por três semanas. É diagnóstico de exclusão e é autolimitado — melhora espontaneamente entre 3 e 4 meses, com pico por volta de 6 semanas. Como não há doença a tratar, a conduta se organiza em três frentes: excluir o que imita cólica, sustentar o cuidador e aliviar o sintoma sem causar dano. Na primeira frente entram vômito bilioso, sangue nas fezes, febre, falha de ganho de peso, distensão abdominal e hérnia encarcerada — qualquer um deles troca o diagnóstico e o destino. Na segunda, o instrumento é o diário de 24 horas, que transforma a impressão do cuidador em padrão verificável, e o acolhimento de quem está exausto, porque choro que não cessa é gatilho conhecido de trauma. Na terceira, medidas não farmacológicas são a base: massagem abdominal, calor local, posicionamento vertical após a mamada, redução de estímulo, contato pele a pele e ajuste da pega. Os fármacos são adjuvantes de evidência fraca: simeticona é o mais prescrito e o menos comprovado; Lactobacillus reuteri DSM 17938 tem evidência limitada e benefício possível apenas no lactente amamentado; fórmula parcialmente hidrolisada só se justifica com critério definido e prazo de teste. O que não se faz: antiespasmódico (dicianomina é contraindicada abaixo de 6 meses por apneia, convulsão e coma), opioide e elixir paragórico (depressão respiratória), anti-histamínico sedativo, e trocar de fórmula a cada consulta sem critério — o que não trata a cólica, piora a aceitação e atrasa o diagnóstico de alergia à proteína do leite de vaca. O erro final é manter tudo isso por meses sem reavaliar: cólica que persiste além de 4 a 5 meses não é cólica.",
+    "inclusao": [
+      "Lactente menor de 5 meses com choro paroxístico por três horas ou mais ao dia, em três dias ou mais da semana, com exame físico normal",
+      "Choro concentrado no fim da tarde e à noite, com flexão de pernas, rubor facial, distensão e eliminação de gases",
+      "Cólica em lactente amamentado exclusivo, em fórmula ou em aleitamento misto",
+      "Família que já trocou de fórmula, usou chá, simeticona ou remédio de outra criança e quer reorganizar a conduta",
+      "Lactente com cólica e cuidador em exaustão, com risco de choro sacudido ou de abandono do aleitamento"
+    ],
+    "exclusao": [
+      {
+        "situacao": "vômito bilioso ou esverdeado, em jato, com distensão abdominal",
+        "fluxo": "obstrução intestinal ou estenose hipertrófica do piloro, cirurgia pediátrica imediata"
+      },
+      {
+        "situacao": "sangue vivo ou muco nas fezes, com ou sem fissura",
+        "fluxo": "invaginação intestinal, alergia à proteína do leite de vaca ou enterocolite, avaliação urgente"
+      },
+      {
+        "situacao": "febre em lactente menor de 3 meses, ou febre com prostração em qualquer idade",
+        "fluxo": "sepse ou infecção urinária, protocolo de febre do lactente"
+      },
+      {
+        "situacao": "falha de ganho de peso, perda de peso ou queda de dois percentis na curva",
+        "fluxo": "avaliação nutricional e investigação de doença orgânica"
+      },
+      {
+        "situacao": "distensão abdominal importante com abdome tenso, ausência de evacuação ou vômito fecaloide",
+        "fluxo": "abdome cirúrgico, emergência"
+      },
+      {
+        "situacao": "hérnia inguinal ou umbilical encarcerada, irredutível ou dolorosa",
+        "fluxo": "cirurgia pediátrica imediata"
+      },
+      {
+        "situacao": "choro de início recente em lactente previamente calmo, com dor à palpação ou massa abdominal",
+        "fluxo": "invaginação intestinal, ultrassonografia urgente"
+      },
+      {
+        "situacao": "fissura anal, disquesia ou constipação com esforço e fezes duras",
+        "fluxo": "constipação do lactente, não é cólica"
+      },
+      {
+        "situacao": "refluxo gastroesofágico com regurgitação frequente, recusa alimentar e esofagite",
+        "fluxo": "doença do refluxo, avaliação específica"
+      },
+      {
+        "situacao": "eczema, urticária, sangue oculto ou vômito após a mamada com suspeita de alergia alimentar",
+        "fluxo": "alergia à proteína do leite de vaca, teste diagnóstico dirigido"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "vômito bilioso, esverdeado ou em jato, com distensão abdominal",
+        "por_que": "obstrução intestinal ou estenose hipertrófica do piloro; não é cólica",
+        "acao": "jejum, sonda de alívio, ultrassonografia e cirurgia pediátrica imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "sangue vivo ou muco nas fezes",
+        "por_que": "invaginação intestinal ou alergia à proteína do leite de vaca com enterocolite",
+        "acao": "exame abdominal, ultrassonografia urgente e avaliação de alergia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "febre acima de 38 °C, sobretudo em lactente menor de 3 meses",
+        "por_que": "infecção urinária, sepse ou meningite podem se manifestar apenas como choro",
+        "acao": "avaliação completa com urocultura, hemograma e punção lombar conforme a idade",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "falha de ganho de peso, perda ponderal ou queda de dois percentis",
+        "por_que": "doença orgânica, hipogalactia, técnica de amamentação inadequada ou alergia alimentar",
+        "acao": "curva de peso, avaliação da mamada e investigação dirigida antes de tratar cólica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "distensão abdominal importante, abdome tenso ou ausência de evacuação por mais de 24 h",
+        "por_que": "obstrução, enterocolite ou sepse abdominal",
+        "acao": "emergência, imagem e cirurgia pediátrica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "letargia, hipotonia, recusa alimentar ou fontanela abaulada",
+        "por_que": "sepse, meningite ou distúrbio metabólico",
+        "acao": "atendimento imediato, acesso venoso e investigação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "hérnia inguinal irredutível, dolorosa ou com alteração de cor",
+        "por_que": "encarceramento com risco de necrose intestinal",
+        "acao": "cirurgia pediátrica imediata; não tentar reduzir em casa",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "choro que começou depois de trauma, queda ou sacudida",
+        "por_que": "trauma craniano ou lesão visceral",
+        "acao": "avaliação hospitalar, exame neurológico e de fundo de olho, notificação quando indicada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "cuidador exausto, com vontade de sacudir o bebê ou de machucá-lo",
+        "por_que": "risco real de trauma por choro sacudido e de negligência",
+        "acao": "acolher sem julgamento, acionar rede de apoio e pactuar plano de pausa segura",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-10",
+        "sinal": "cólica que persiste depois de 5 meses de idade",
+        "por_que": "o diagnóstico de cólica deixa de explicar o choro nessa idade",
+        "acao": "reavaliar diagnóstico, investigar dor, refluxo, alergia e ambiente",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quantas horas por dia o bebê chora e em que horário o choro se concentra?",
+      "O choro começou nas primeiras semanas de vida ou mudou de padrão recentemente?",
+      "Mama no peito, fórmula ou os dois? Quantas mamadas por dia e quanto tempo em cada peito?",
+      "Já trocou de fórmula ou de leite? Quantas vezes e por qual motivo?",
+      "O vômito é em jato ou esverdeado? Há sangue ou muco nas fezes?",
+      "Como está o peso na caderneta e quantos gramas ganhou na última semana?",
+      "Faz força para evacuar, tem fezes duras ou fissura anal?",
+      "Usa chá, simeticona, remédio de outra criança ou gotas caseiras? Qual dose e por quanto tempo?",
+      "Alguém já prescreveu antiespasmódico, sedativo ou elixir para o choro?",
+      "A barriga fica muito distendida e dura? Há hérnia na virilha ou no umbigo?",
+      "A mãe ou o cuidador está dormindo, tem apoio em casa e como está o humor?",
+      "Há febre, recusa das mamadas ou menos fraldas molhadas nos últimos dias?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Lactente menor de 4 meses com choro paroxístico típico, exame físico normal, ganho de peso adequado e nenhum sinal de alarme",
+        "escolha": "Medidas não farmacológicas como base — massagem abdominal, calor local, posicionamento vertical após a mamada, redução de estímulo e contato pele a pele —, diário de 24 h por 3 dias e retorno em 2 semanas; simeticona apenas como adjuvante opcional",
+        "porque": "Cólica é diagnóstico de exclusão e autolimitado: nenhum fármaco reduz o choro de forma consistente e o que muda o desfecho é a família entender o diagnóstico, saber o que esperar e ter plano escrito para os sinais de alarme"
+      },
+      {
+        "cenario": "Lactente amamentado com cólica persistente após 2 semanas de medidas não farmacológicas, sem sinal de alarme e sem suspeita de alergia",
+        "escolha": "Lactobacillus reuteri DSM 17938, 1×10^8 UFC ao dia, por 21 a 28 dias, mantendo as medidas não farmacológicas",
+        "porque": "É o único probiótico com ensaios que sugerem redução do tempo de choro, e o efeito aparece sobretudo no lactente amamentado; a evidência é limitada e o teste precisa de prazo — sem resposta em 3 a 4 semanas, suspende"
+      },
+      {
+        "cenario": "Lactente em fórmula com cólica persistente, história familiar de atopia e nenhum sinal de alergia à proteína do leite de vaca",
+        "escolha": "Fórmula parcialmente hidrolisada por 2 semanas, em troca gradual de 3 a 5 dias, mantendo o volume habitual de 150 mL/kg/dia",
+        "porque": "Pode reduzir sintomas em lactente com risco atópico, mas o benefício é modesto e dependente de indicação; sem resposta objetiva em 2 semanas, a troca não se sustenta e o bebê deve voltar à fórmula anterior"
+      },
+      {
+        "cenario": "Lactente com cólica e sinais de alergia à proteína do leite de vaca — eczema, vômito frequente, sangue oculto nas fezes ou falha de ganho",
+        "escolha": "Fórmula de proteína extensamente hidrolisada por 2 a 4 semanas como teste diagnóstico, com reintrodução provocativa depois da melhora",
+        "porque": "Fórmula parcialmente hidrolisada não trata alergia; a extensamente hidrolisada é teste e tratamento ao mesmo tempo, e a reintrodução é o que confirma o diagnóstico em vez de deixar a dieta restritiva indefinidamente"
+      },
+      {
+        "cenario": "Cólica com fezes ácidas, explosivas, eritema perianal ou teste de hidrogênio expirado positivo para lactose",
+        "escolha": "Lactase 1.000 unidades FCC por 100 mL de leite ordenhado ou 5 gotas antes da mamada, por 2 semanas, ou fórmula sem lactose quando o lactente já usa fórmula",
+        "porque": "Só faz sentido quando há intolerância documentada; intolerância primária à lactose é rara antes dos 3 anos e retirar lactose de todo bebê com cólica troca um diagnóstico por uma suposição"
+      },
+      {
+        "cenario": "Prescrição de antiespasmódico (dicianomina, cimetrópio), opioide, elixir paragórico, anti-histamínico sedativo ou gota com álcool para o choro",
+        "escolha": "Não prescrever e retirar o item da prescrição, registrando o motivo; orientar medidas não farmacológicas e reavaliar em 72 h",
+        "porque": "Dicianomina é contraindicada abaixo de 6 meses por apneia, convulsão e coma; opioide e elixir paragórico causam depressão respiratória e constipação; sedativo mascara o sintoma, impede a avaliação e não trata nada"
+      },
+      {
+        "cenario": "Família que troca de fórmula a cada semana, alterna marcas, usa fórmula espessante ou antiácido para cólica",
+        "escolha": "Suspender a troca sem critério, manter uma única fórmula adequada à idade e definir por escrito qual é o critério e o prazo de qualquer mudança",
+        "porque": "Troca repetida piora a aceitação, provoca diarreia e desorganiza o ganho de peso, além de mascarar alergia verdadeira e atrasar o encaminhamento; antiácido e inibidor de bomba não têm papel em cólica"
+      },
+      {
+        "cenario": "Lactente com refluxo gastroesofágico associado, sem esofagite, apneia ou recusa alimentar",
+        "escolha": "Não usar inibidor de bomba de prótons nem antiácido para o choro; tratar o refluxo apenas com medidas posturais e de volume, reservando fármaco para doença do refluxo comprovada",
+        "porque": "IBP em lactente não reduz choro, aumenta risco de infecção respiratória e de diarreia e não tem indicação em refluxo fisiológico"
+      },
+      {
+        "cenario": "Cólica que não melhora em 3 a 4 semanas de conduta adequada, ou que surge depois dos 5 meses",
+        "escolha": "Reabrir o diagnóstico: urocultura, hemograma, avaliação nutricional, teste de sangue oculto, avaliação de alergia e de refluxo",
+        "porque": "O rótulo de cólica é o principal motivo de atraso diagnóstico em lactente; cólica verdadeira melhora com o tempo, não piora nem recomeça"
+      },
+      {
+        "cenario": "Cuidador exausto, chorando, com ideação de machucar o bebê ou sem dormir há dias",
+        "escolha": "Acolhimento sem julgamento, plano de pausa segura — deixar o bebê no berço em decúbito dorsal e sair por alguns minutos —, acionar rede de apoio e avaliar depressão pós-parto",
+        "porque": "Choro inconsolável é gatilho clássico de trauma por sacudida; a intervenção que mais reduz risco nesse cenário é apoio ao cuidador, não mais um fármaco para o bebê"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antiflatulento_silicone",
+        "agente": "simeticona",
+        "papel": "primeira_linha",
+        "indicacao": "alívio sintomático de distensão e gases no lactente com cólica, como adjuvante das medidas não farmacológicas",
+        "dose": "20 mg (5 gotas da solução 75 mg/mL) por mamada",
+        "unidade": "mg/dose",
+        "via": "VO",
+        "frequencia": "até 4 vezes ao dia, após as mamadas",
+        "duracao": "até 2 semanas, com reavaliação; não manter por rotina",
+        "dose_maxima": "120 mg/dia",
+        "contraindicacoes": [
+          "hipersensibilidade à simeticona ou ao veículo",
+          "suspeita de obstrução intestinal, íleo ou distensão importante antes de excluir abdome cirúrgico",
+          "vômito bilioso ou fecaloide"
+        ],
+        "efeitos_adversos": [
+          "cólica abdominal leve",
+          "náusea",
+          "constipação",
+          "diarreia",
+          "rash cutâneo raro"
+        ],
+        "apresentacoes": [
+          "solução oral gotas 75 mg/mL, frasco 10 mL",
+          "emulsão oral 80 mg/mL, frasco 20 mL",
+          "solução oral 100 mg/mL, frasco 15 mL",
+          "comprimido 40 mg",
+          "cápsula 125 mg"
+        ],
+        "preparo": "Uso direto; medir com conta-gotas ou seringa graduada e oferecer antes da mamada. Não misturar em volume grande de fórmula ou de leite, para não reduzir a aceitação da mamada",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número de crises de choro e de episódios de flatulência por dia, anotados em diário",
+          "aceitação das mamadas e volume ingerido por mamada",
+          "peso e ganho ponderal semanal",
+          "distensão abdominal, ruídos hidroaéreos e eliminação de gases",
+          "aparecimento de vômito, recusa alimentar ou piora do desconforto após a dose"
+        ],
+        "ajuste_renal": "Sem ajuste; não é absorvido de forma significativa",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É o fármaco mais prescrito e o de evidência mais fraca: revisões sistemáticas não mostram redução consistente do choro. O dano é pequeno, mas ele nunca substitui massagem, calor, posicionamento e redução de estímulo, e não deve ser mantido por meses sem reavaliação.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "probotico",
+        "agente": "Lactobacillus reuteri DSM 17938",
+        "papel": "condicional",
+        "indicacao": "lactente amamentado com cólica persistente, sem sinal de alarme, como teste de 21 a 28 dias",
+        "dose": "1×10^8 UFC (5 gotas da solução)",
+        "unidade": "UFC/dia",
+        "via": "VO",
+        "frequencia": "1x/dia, antes da mamada",
+        "duracao": "21 a 28 dias",
+        "dose_maxima": "2×10^8 UFC/dia",
+        "contraindicacoes": [
+          "imunossupressão, neutropenia ou quimioterapia",
+          "cateter venoso central, dreno ou outro dispositivo invasivo",
+          "prematuridade extrema em unidade neonatal",
+          "cardiopatia congênita cianótica com risco de translocação bacteriana",
+          "hipersensibilidade a componentes da formulação"
+        ],
+        "efeitos_adversos": [
+          "flatulência",
+          "distensão abdominal",
+          "alteração transitória do hábito intestinal",
+          "recusa pelo sabor",
+          "bacteremia rara em imunossuprimido"
+        ],
+        "apresentacoes": [
+          "solução oral com conta-gotas 1×10^8 UFC/5 gotas, frasco 5 mL",
+          "solução oral 1×10^8 UFC/5 gotas, frasco 10 mL",
+          "sachê 1×10^8 UFC"
+        ],
+        "preparo": "Agitar o frasco e pingar 5 gotas diretamente na boca ou em colher, antes da mamada; não diluir em líquido quente nem misturar em fórmula aquecida acima de 37 °C, para não inviabilizar a cepa",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "tempo de choro por dia, registrado em diário de 24 h antes e durante o teste",
+          "número de evacuações e consistência das fezes",
+          "distensão abdominal e aceitação das mamadas",
+          "febre nova, recusa alimentar ou prostração em lactente com comorbidade",
+          "ganho de peso ao fim do teste"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "A evidência é limitada: os ensaios são pequenos, com desfechos heterogêneos e resultados melhores justamente no lactente amamentado. Não é primeira linha, não se usa em criança com cateter ou imunossuprimida e deve ser suspenso se não houver redução do choro em 3 a 4 semanas.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "probotico",
+        "agente": "Bifidobacterium animalis subsp. lactis BB-12",
+        "papel": "alternativa",
+        "indicacao": "cólica do lactente quando o Lactobacillus reuteri não está disponível, como alternativa de teste",
+        "dose": "1×10^9 UFC",
+        "unidade": "UFC/dia",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "14 a 21 dias",
+        "dose_maxima": "1×10^9 UFC/dia",
+        "contraindicacoes": [
+          "imunossupressão ou neutropenia",
+          "cateter venoso central ou dispositivo invasivo",
+          "prematuridade com internação prolongada",
+          "hipersensibilidade a componentes da formulação"
+        ],
+        "efeitos_adversos": [
+          "flatulência",
+          "fezes amolecidas",
+          "desconforto abdominal transitório",
+          "recusa pelo sabor",
+          "bacteremia rara em imunossuprimido"
+        ],
+        "apresentacoes": [
+          "cápsula 1×10^9 UFC",
+          "sachê 1×10^9 UFC",
+          "solução oral 1×10^9 UFC/5 mL"
+        ],
+        "preparo": "Abrir a cápsula e diluir o pó em leite materno ordenhado ou em água em temperatura ambiente, oferecendo em colher ou seringa; não usar líquido acima de 37 °C",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "tempo de choro por dia em diário",
+          "número e consistência das evacuações",
+          "distensão abdominal",
+          "aceitação das mamadas e ganho de peso",
+          "febre ou prostração em lactente de risco"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Evidência menor que a do Lactobacillus reuteri e sem demonstração consistente de benefício em cólica. Usar apenas como alternativa quando a cepa principal não está disponível e encerrar se não houver resposta em 3 semanas.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "formula_infantil_especializada",
+        "agente": "fórmula parcialmente hidrolisada de proteína do soro",
+        "papel": "condicional",
+        "indicacao": "lactente em fórmula com cólica persistente e história familiar de atopia, após 2 semanas de medidas não farmacológicas, como teste com prazo definido",
+        "dose": "150 mL/kg/dia, em 6 a 8 mamadas",
+        "unidade": "mL/kg/dia",
+        "via": "VO",
+        "frequencia": "6 a 8 mamadas ao dia, conforme demanda",
+        "duracao": "teste de 2 semanas; manter apenas se houver resposta objetiva documentada",
+        "dose_maxima": "200 mL/kg/dia",
+        "contraindicacoes": [
+          "lactente em aleitamento materno exclusivo — não introduzir fórmula para tratar cólica",
+          "sinais de alergia à proteína do leite de vaca com sangue nas fezes, anafilaxia ou falha de ganho",
+          "galactosemia, conforme o teor de lactose da fórmula",
+          "desnutrição grave sem avaliação nutricional"
+        ],
+        "efeitos_adversos": [
+          "recusa inicial pelo sabor e pela osmolaridade",
+          "fezes mais escuras e de odor diferente",
+          "diarreia transitória durante a troca",
+          "piora do choro nos primeiros 3 a 5 dias",
+          "custo elevado e abandono precoce"
+        ],
+        "apresentacoes": [
+          "lata 400 g de fórmula parcialmente hidrolisada de proteína do soro",
+          "lata 800 g de fórmula parcialmente hidrolisada",
+          "frasco 200 mL pronto para uso"
+        ],
+        "preparo": "Reconstituir na proporção do rótulo, habitualmente 1 medida para 30 mL de água filtrada e fervida, morna; não acrescentar açúcar, cereal, espessante nem óleo. Fazer a troca em 3 a 5 dias, misturando as duas fórmulas de forma gradual",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "peso e comprimento semanal durante o teste",
+          "tempo de choro e de sono em diário de 24 h",
+          "número e consistência das evacuações",
+          "sinais de alergia: eczema, sangue nas fezes, vômito, urticária",
+          "aceitação do volume e sinais de desidratação"
+        ],
+        "ajuste_renal": "Sem ajuste; reduzir o volume apenas em insuficiência renal com restrição hídrica",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só tem sentido com indicação definida e prazo de teste. Trocar fórmula a cada semana, alternar marcas e usar hidrolisado como rotina para todo bebê com cólica é o erro mais comum: não há benefício demonstrado sem atopia e a troca repetida piora a aceitação e o ganho de peso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "formula_infantil_especializada",
+        "agente": "fórmula extensamente hidrolisada de proteína do soro",
+        "papel": "alternativa",
+        "indicacao": "suspeita de alergia à proteína do leite de vaca não IgE mediada, com cólica associada a eczema, vômito, sangue oculto ou falha de ganho, como teste diagnóstico",
+        "dose": "150 mL/kg/dia, em 6 a 8 mamadas",
+        "unidade": "mL/kg/dia",
+        "via": "VO",
+        "frequencia": "6 a 8 mamadas ao dia, conforme demanda",
+        "duracao": "2 a 4 semanas como teste diagnóstico, com reintrodução provocativa após a melhora",
+        "dose_maxima": "200 mL/kg/dia",
+        "contraindicacoes": [
+          "anafilaxia ou sintoma IgE mediado grave — encaminhar e considerar fórmula de aminoácidos",
+          "lactente em aleitamento materno: manter o leite materno e fazer dieta de exclusão materna",
+          "galactosemia",
+          "recusa alimentar com desidratação ou perda de peso"
+        ],
+        "efeitos_adversos": [
+          "sabor amargo com recusa inicial",
+          "fezes amolecidas e esverdeadas",
+          "vômito na transição",
+          "custo elevado",
+          "ganho de peso insuficiente quando o volume não é ajustado"
+        ],
+        "apresentacoes": [
+          "lata 400 g de fórmula extensamente hidrolisada de proteína do soro",
+          "lata 800 g de fórmula extensamente hidrolisada",
+          "frasco 200 mL pronto para uso"
+        ],
+        "preparo": "Reconstituir conforme o rótulo com água fervida morna; não adoçar, não acrescentar espessante nem cereal e introduzir de forma gradual em 3 a 5 dias",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "peso, comprimento e perímetro cefálico semanais",
+          "desaparecimento de eczema, vômito, sangue nas fezes e do choro",
+          "número e consistência das evacuações",
+          "aceitação do volume e tempo de mamada",
+          "reação na reintrodução provocativa, que confirma o diagnóstico"
+        ],
+        "ajuste_renal": "Sem ajuste; ajustar volume em restrição hídrica",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É teste diagnóstico, não tratamento empírico de cólica. Havendo melhora, a reintrodução provocativa confirma a alergia; sem melhora em 2 a 4 semanas, a hipótese cai e a fórmula deve ser suspensa, para não manter dieta restritiva e custo sem diagnóstico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "SBP/ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "enzima_digestiva",
+        "agente": "lactase (beta-galactosidase)",
+        "papel": "alternativa",
+        "indicacao": "cólica com sinais de intolerância à lactose secundária — fezes ácidas e explosivas, eritema perianal — ou teste de hidrogênio expirado positivo",
+        "dose": "1.000 unidades FCC (5 gotas) por 100 mL de leite ordenhado, ou 5 gotas antes da mamada",
+        "unidade": "unidades FCC",
+        "via": "VO",
+        "frequencia": "em cada mamada",
+        "duracao": "2 semanas de teste, com reavaliação do diário de choro",
+        "dose_maxima": "2.000 unidades FCC por 100 mL de leite",
+        "contraindicacoes": [
+          "hipersensibilidade ao produto",
+          "galactosemia",
+          "suspeita de alergia à proteína do leite de vaca — lactase não trata alergia",
+          "diarreia aguda com desidratação"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "dor abdominal",
+          "diarreia",
+          "recusa pelo sabor",
+          "eritema perianal"
+        ],
+        "apresentacoes": [
+          "solução oral com conta-gotas, frasco 5 mL",
+          "solução oral, frasco 15 mL",
+          "cápsula 3.000 unidades FCC"
+        ],
+        "preparo": "Adicionar as gotas ao leite ordenhado em temperatura ambiente ou gelado e aguardar 15 a 30 minutos antes de oferecer; na mamada direta, pingar na boca do bebê imediatamente antes de amamentar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "número e consistência das evacuações",
+          "eritema perianal e choro à evacuação",
+          "distensão e eliminação de gases",
+          "tempo de choro por dia em diário",
+          "peso e ganho ponderal durante o teste"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Intolerância à lactose primária é rara antes dos 3 anos; na maioria dos lactentes com cólica a lactose não é a causa. Tratar sem confirmação e manter por meses troca um diagnóstico por uma suposição e ainda retira um nutriente sem necessidade.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "fitoterapico",
+        "agente": "infusão de erva-doce (Foeniculum vulgare) com camomila",
+        "papel": "alternativa",
+        "indicacao": "uso tradicional para cólica, quando a família já utiliza chá e precisa de orientação de diluição, volume e higiene",
+        "dose": "30 a 60 mL/dia de infusão a 1–2% (1 colher de chá de semente para 150 mL de água)",
+        "unidade": "mL/dia",
+        "via": "VO",
+        "frequencia": "após as mamadas, até 3 vezes ao dia",
+        "duracao": "até 2 semanas",
+        "dose_maxima": "90 mL/dia",
+        "contraindicacoes": [
+          "lactente menor de 1 mês, pelo risco de sobrecarga hídrica e de contaminação",
+          "alergia a plantas da família Apiaceae (aipo, funcho, cenoura, erva-doce)",
+          "infusão preparada ou adoçada com mel em menor de 1 ano, pelo risco de botulismo",
+          "lactente com baixo ganho de peso, quando o chá substitui mamadas"
+        ],
+        "efeitos_adversos": [
+          "reação alérgica cruzada com outras Apiaceae",
+          "fotossensibilidade",
+          "contaminação microbiológica da infusão caseira",
+          "estragol em doses altas e uso prolongado",
+          "redução da ingestão de leite quando substitui mamada"
+        ],
+        "apresentacoes": [
+          "semente seca de funcho para infusão, pacote 30 g",
+          "sachê de chá de camomila",
+          "solução oral fitoterápica pronta com funcho e camomila, frasco 100 mL"
+        ],
+        "preparo": "Infundir 1 colher de chá de sementes em 150 mL de água fervente por 10 minutos, coar e oferecer morno em colheradas; preparar no dia, desprezar a sobra e nunca adoçar",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "volume de chá aceito por dia e recusa das mamadas",
+          "número de fraldas molhadas e ganho de peso",
+          "reação cutânea, vômito ou diarreia após a oferta",
+          "tempo de choro por dia em diário",
+          "higiene do preparo e origem das sementes"
+        ],
+        "ajuste_renal": "Reduzir o volume em insuficiência renal com restrição hídrica",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Evidência fraca, com risco de contaminação e de substituição de mamadas. Se a família já usa, orientar diluição, volume e higiene; o chá não pode ocupar o lugar do leite, e o uso de bebida açucarada ou de gota com álcool é inaceitável.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Massagem abdominal estruturada",
+        "detalhe": "Com o bebê de barriga para cima, após a mamada e com as mãos aquecidas, movimentos circulares no sentido horário ao redor do umbigo por 5 a 10 minutos, seguidos de flexão suave dos joelhos contra o abdome; repetir 2 a 3 vezes ao dia e antes de dormir. Reduz desconforto e dá ao cuidador uma ação concreta no momento da crise"
+      },
+      {
+        "medida": "Calor local",
+        "detalhe": "Compressa morna, não quente, em fralda dobrada sobre o abdome por 5 a 10 minutos, com a mão do cuidador por cima e teste de temperatura no dorso da mão; nunca usar bolsa térmica, saco de água quente, trigo aquecido no micro-ondas ou bolsa de gel, pelo risco de queimadura"
+      },
+      {
+        "medida": "Posicionamento vertical e contato pele a pele",
+        "detalhe": "Manter o bebê na vertical no ombro por 15 a 20 minutos após cada mamada, e usar o contato pele a pele — bebê só de fralda sobre o tórax do cuidador — nos períodos de choro. O contato reduz o choro e a frequência cardíaca em minutos e não tem risco; o decúbito ventral só é permitido com o bebê acordado e supervisionado"
+      },
+      {
+        "medida": "Redução de estímulo",
+        "detalhe": "Durante a crise, baixar a luz, reduzir o som, desligar telas e evitar passar de colo em colo. Manter uma rotina previsível de mamada, banho e sono e evitar visita, passeio e excesso de estímulo no fim da tarde, quando o choro se concentra. Ambiente calmo encurta a crise; excesso de estímulo a prolonga"
+      },
+      {
+        "medida": "Ajuste da pega e da técnica de amamentação",
+        "detalhe": "Avaliar pega ampla com lábio evertido, vedamento e ausência de estalos; verificar frênulo lingual quando houver dor materna e baixo ganho. Em pega adequada, não limitar o tempo de peito e só trocar de lado quando o bebê esvaziar o primeiro, para que receba o leite posterior; se o bebê estiver em fórmula, conferir diluição e volume do rótulo"
+      },
+      {
+        "medida": "Arrotar e evitar engolir ar",
+        "detalhe": "Colocar o bebê para arrotar a cada 5 minutos e ao fim da mamada, com a cabeça acima do estômago; usar bico de mamadeira de fluxo lento e evitar alimentar o bebê chorando, porque a sucção no choro engole ar e piora a distensão"
+      },
+      {
+        "medida": "Sucção não nutritiva e enrolamento",
+        "detalhe": "Oferecer chupeta apenas após a amamentação estar bem estabelecida, ou permitir sucção no dedo do cuidador; enrolar o bebê em fralda de algodão com os braços junto ao corpo, sem apertar o abdome, ajuda a organizar o choro. Não deixar a chupeta adoçada em mel ou açúcar"
+      },
+      {
+        "medida": "Diário de 24 horas de choro, sono e mamadas",
+        "detalhe": "Registrar horário de início e fim de cada crise, sono, mamadas e evacuações por 3 dias, com o mesmo instrumento antes e depois de qualquer intervenção. É o único modo de saber se o tratamento funcionou e de distinguir cólica de outros padrões de choro"
+      },
+      {
+        "medida": "Apoio ao cuidador e plano de pausa segura",
+        "detalhe": "Reconhecer a exaustão, validar o cansaço e dividir turnos com outra pessoa. Ensinar explicitamente: se o choro não cessa e o cuidador estiver perdendo o controle, colocar o bebê de barriga para cima no berço, sem nada solto, sair do quarto por 5 a 10 minutos e chamar alguém — nunca sacudir. Rastrear depressão pós-parto e encaminhar quando indicado"
+      },
+      {
+        "medida": "Não trocar fórmula, não usar antiácido e não restringir dieta sem critério",
+        "detalhe": "Manter uma única fórmula adequada à idade e não alternar marcas; não usar fórmula espessante, antiácido, inibidor de bomba ou simeticona em combinação sem indicação. Dieta de exclusão de leite e derivados só na mãe de bebê amamentado quando há suspeita real de alergia, com prazo e reavaliação — restrição alimentar sem diagnóstico desnutre a mãe e não melhora o choro"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Diário de 24 horas com curva de peso e comprimento",
+        "indicacao": "todo lactente com choro excessivo, na primeira consulta e antes de qualquer intervenção",
+        "tecnica": "Entregar impresso ou aplicativo com colunas de horário, duração do choro, sono, mamadas, evacuações e uso de fármacos; pesar e medir na mesma balança e antropômetro, registrar na caderneta e calcular o ganho em gramas por dia e a variação de percentil. Reavaliar o diário em 2 semanas, comparando o mesmo período",
+        "complicacoes": "Registro incompleto ou preenchido de memória, que superestima o choro; ansiedade do cuidador ao cronometrar cada minuto; interpretação de um único dia como padrão"
+      },
+      {
+        "nome": "Teste terapêutico com fórmula de proteína extensamente hidrolisada",
+        "indicacao": "suspeita de alergia à proteína do leite de vaca não IgE mediada, com cólica, eczema, vômito ou sangue oculto, sem sinal de alarme",
+        "tecnica": "Definir o desfecho antes de começar — tempo de choro, eczema, sangue nas fezes e peso —, trocar a fórmula de forma gradual em 3 a 5 dias, manter por 2 a 4 semanas e, havendo melhora, reintroduzir a fórmula anterior por 2 semanas para confirmar. Registrar a resposta no diário",
+        "complicacoes": "Recusa pelo sabor amargo e perda de peso, teste abandonado antes do prazo, melhora atribuída ao acaso, dieta restritiva mantida sem confirmação e custo alto"
+      },
+      {
+        "nome": "Coleta de urina estéril para urocultura",
+        "indicacao": "febre, choro de início recente, recusa alimentar, vômito ou irritabilidade sem causa aparente em lactente",
+        "tecnica": "Preferir punção suprapúbica guiada por ultrassom ou cateterismo vesical de alívio com antissepsia; saco coletor serve apenas para triagem, e um resultado negativo nele tem valor, enquanto positivo exige confirmação por método estéril. Enviar imediatamente ao laboratório e não iniciar antibiótico antes da coleta quando o lactente estiver estável",
+        "complicacoes": "Contaminação com flora mista e antibiótico desnecessário, punção seca, hematúria, infecção de ferida e atraso do tratamento em lactente instável"
+      },
+      {
+        "nome": "Avaliação estruturada da mamada",
+        "indicacao": "cólica em lactente amamentado, dor materna, baixo ganho de peso ou choro que piora durante a mamada",
+        "tecnica": "Observar uma mamada completa: pega, vedamento, ritmo de sucção e deglutição, dor materna, tempo de cada lado e comportamento do bebê ao fim. Pesar antes e depois da mamada quando houver dúvida de volume, examinar a cavidade oral e o frênulo lingual e corrigir a técnica na mesma consulta",
+        "complicacoes": "Interpretação de uma única mamada, correção de pega que piora a dor, peso antes e depois mal aferido e abandono do aleitamento por orientação inadequada"
+      }
+    ],
+    "metas": [
+      "Redução de pelo menos 50% do tempo diário de choro em 2 a 4 semanas, medida pelo diário de 24 h",
+      "Ganho de peso de 20 a 30 g/dia no primeiro trimestre, com a curva mantida no mesmo percentil",
+      "Pelo menos 5 horas de sono noturno contínuo até 3 a 4 meses, com melhora do sono do cuidador",
+      "Nenhuma prescrição de antiespasmódico, opioide, sedativo ou anti-histamínico para o choro",
+      "Diagnóstico alternativo definido em até 3 semanas quando não há resposta à conduta inicial",
+      "Cuidador com plano escrito, rede de apoio acionada e nenhum episódio de sacudida ou de intenção de machucar",
+      "Aleitamento materno mantido até 2 anos ou mais, quando era a via de alimentação na entrada"
+    ],
+    "fluxo": [
+      "Triagem: idade, peso, temperatura, estado geral e padrão do choro; lactente com sinal de alarme não segue este fluxo",
+      "Excluir o que imita cólica com anamnese dirigida e exame físico completo, incluindo períneo, genitália, hérnias, abdome e cavidade oral",
+      "Confirmar o padrão pela regra de Wessel e pelo diário de 24 h de 3 dias — não pela impressão da consulta",
+      "Verificar ganho de peso e percentil na caderneta; falha de ganho muda o diagnóstico e o destino",
+      "Explicar o diagnóstico: autolimitado, pico em 6 semanas, melhora até 3 a 4 meses, sem sequela — e entregar isso por escrito",
+      "Iniciar as medidas não farmacológicas de forma combinada, com demonstração da massagem e do posicionamento na consulta",
+      "Definir se há indicação de adjuvante: simeticona se distensão; probiótico se amamentado e persistente; fórmula hidrolisada só com critério e prazo",
+      "Retirar da prescrição antiespasmódico, opioide, sedativo e antiácido; registrar o motivo e orientar a família a não comprar por conta própria",
+      "Agendar retorno em 2 a 4 semanas com o diário preenchido e reavaliar resposta, peso e sinais de alarme",
+      "Sem resposta ou cólica além de 5 meses: reabrir o diagnóstico com urocultura, hemograma, avaliação nutricional e de alergia, e encaminhar quando necessário"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "prematuro",
+        "ajuste": "usar idade corrigida até 4 a 5 meses para julgar o padrão de choro, manter aleitamento ou fórmula de prematuro e evitar probiótico em unidade neonatal e em prematuro extremo",
+        "alerta": "imaturidade gastrointestinal, risco de translocação bacteriana com probiótico e de interpretar como cólica um quadro orgânico"
+      },
+      {
+        "populacao": "lactente_amamentado_exclusivo",
+        "ajuste": "não introduzir fórmula para tratar cólica; manter livre demanda, avaliar pega e frênulo, e considerar dieta de exclusão materna apenas com suspeita real de alergia, por prazo definido",
+        "alerta": "risco de desmame precoce e de restrição alimentar materna sem diagnóstico"
+      },
+      {
+        "populacao": "lactente_com_refluxo",
+        "ajuste": "manejo postural, volume por mamada menor e mais frequente e espessante apenas com indicação; não usar inibidor de bomba nem antiácido para o choro",
+        "alerta": "IBP em lactente aumenta infecção respiratória e diarreia e não reduz choro; sinais de esofagite mudam o diagnóstico"
+      },
+      {
+        "populacao": "lactente_com_alergia_a_proteina_do_leite_de_vaca",
+        "ajuste": "fórmula extensamente hidrolisada ou de aminoácidos conforme gravidade, dieta de exclusão materna se amamentado, e reintrodução provocativa para confirmar",
+        "alerta": "anafilaxia, enterocolite e falha de ganho; fórmula parcialmente hidrolisada não trata alergia"
+      },
+      {
+        "populacao": "cuidador_em_vulnerabilidade",
+        "ajuste": "acolhimento, rastreio de depressão pós-parto, rede de apoio e plano de pausa segura explícito; consultas mais frequentes e contato por telefone",
+        "alerta": "risco de trauma por choro sacudido, negligência e abandono do aleitamento"
+      },
+      {
+        "populacao": "lactente_institucionalizado_ou_em_creche",
+        "ajuste": "padronizar o diário de choro entre casa e creche, alinhar a mesma fórmula e as mesmas medidas e evitar troca de conduta a cada turno",
+        "alerta": "exposição a infecções, troca de fórmula por pessoas diferentes e dificuldade de identificar padrão"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "diário de 24 horas de choro, sono e mamadas por 3 dias",
+          "indicacao": "todo lactente com choro excessivo, antes e depois de qualquer intervenção",
+          "o_que_muda": "distingue cólica de outros padrões, quantifica a resposta e evita tratar impressão"
+        },
+        {
+          "nome": "peso, comprimento e perímetro cefálico com curva",
+          "indicacao": "todos, na primeira consulta e no retorno",
+          "o_que_muda": "falha de ganho exclui cólica isolada e obriga a investigar doença orgânica"
+        },
+        {
+          "nome": "exame de urina tipo 1 e urocultura",
+          "indicacao": "febre, choro de início recente, recusa alimentar ou irritabilidade sem causa",
+          "o_que_muda": "infecção urinária é causa clássica de choro e muda o tratamento para antibiótico"
+        },
+        {
+          "nome": "substâncias redutoras nas fezes e teste de hidrogênio expirado",
+          "indicacao": "fezes ácidas e explosivas, eritema perianal ou suspeita de intolerância à lactose",
+          "o_que_muda": "confirma intolerância antes de retirar lactose e evita tratamento empírico prolongado"
+        },
+        {
+          "nome": "hemograma e pesquisa de IgE específica ou teste cutâneo para leite de vaca",
+          "indicacao": "suspeita de alergia IgE mediada, com eczema, urticária ou sintoma imediato após a mamada",
+          "o_que_muda": "orienta a escolha da fórmula, o encaminhamento e a necessidade de teste de provocação"
+        },
+        {
+          "nome": "ultrassonografia abdominal",
+          "indicacao": "vômito, distensão, massa palpável, sangue nas fezes ou dor que não cede",
+          "o_que_muda": "afasta estenose hipertrófica, invaginação e obstrução, que saem do fluxo de cólica"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia simples de abdome de rotina na cólica típica",
+          "motivo": "não distingue cólica de aerofagia e expõe o lactente a radiação sem mudar a conduta"
+        },
+        {
+          "exame": "painel amplo de IgE para múltiplos alimentos sem história dirigida",
+          "motivo": "gera falso-positivo, dietas restritivas desnecessárias e desnutrição materna e infantil"
+        },
+        {
+          "exame": "endoscopia digestiva alta ou pHmetria para cólica isolada",
+          "motivo": "não há lesão a encontrar e o exame exige sedação, sem alterar o manejo"
+        },
+        {
+          "exame": "coprocultura e parasitológico de fezes seriados na cólica sem diarreia",
+          "motivo": "baixo rendimento, sem impacto na conduta e com custo e coleta desconfortáveis"
+        },
+        {
+          "exame": "dosagem de eletrólitos e hemograma de rotina em lactente com cólica típica e ganho adequado",
+          "motivo": "punção desnecessária em bebê saudável; reservar para sinal de alarme ou falha de ganho"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "manter a mamada em livre demanda e não suspender o peito durante a crise",
+        "fazer massagem abdominal circular e compressa morna por 5 a 10 minutos, 2 a 3 vezes ao dia",
+        "manter o bebê na vertical por 15 a 20 minutos após cada mamada e colocá-lo para arrotar",
+        "baixar a luz e o som durante a crise e manter rotina previsível de banho, mamada e sono",
+        "anotar no diário os horários de choro, sono e mamadas, para levar no retorno",
+        "dar simeticona ou probiótico apenas na dose e no prazo combinados, sem aumentar por conta própria",
+        "dividir os turnos da noite com outra pessoa e pedir ajuda quando o cansaço apertar",
+        "comparecer ao retorno em 2 a 4 semanas, mesmo que o bebê esteja melhor"
+      ],
+      "evitar": [
+        "antiespasmódico, remédio para cólica de adulto, elixir paragórico, opioide ou sedativo",
+        "trocar de fórmula a cada semana ou alternar marcas por conta própria",
+        "chá adoçado, mel, caldo, água com açúcar e gota caseira com álcool",
+        "bolsa térmica, saco de água quente ou compressa quente sem testar a temperatura",
+        "deixar o bebê dormir de barriga para baixo ou com almofada e protetor de berço",
+        "sacudir o bebê para fazê-lo parar de chorar, em qualquer situação",
+        "dar antiácido, inibidor de bomba ou fórmula espessante para cólica",
+        "suspender o aleitamento ou iniciar dieta de exclusão sem avaliação"
+      ],
+      "retorno": [
+        "vômito esverdeado, em jato ou com barriga distendida",
+        "sangue ou muco nas fezes, ou fralda com sangue",
+        "febre, prostração, recusa das mamadas ou menos de 6 fraldas molhadas por dia",
+        "não ganhar peso ou perder peso",
+        "choro que piora, não melhora em 3 a 4 semanas ou começa depois dos 5 meses",
+        "hérnia na virilha que não volta para dentro ou fica dolorida",
+        "cuidador sem dormir, chorando muito ou com medo de machucar o bebê"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "simeticona",
+        "efeitos": [
+          "cólica abdominal leve",
+          "náusea",
+          "constipação",
+          "diarreia"
+        ],
+        "observacao": "Suspender se houver piora do desconforto ou vômito após a dose e reavaliar em 48 h; não associar a outro antiflatulento"
+      },
+      {
+        "agente": "Lactobacillus reuteri DSM 17938",
+        "efeitos": [
+          "flatulência",
+          "distensão",
+          "alteração do hábito intestinal",
+          "bacteremia rara"
+        ],
+        "observacao": "Suspender com febre nova, recusa alimentar ou prostração, sobretudo em lactente com cateter ou imunossuprimido, e investigar infecção"
+      },
+      {
+        "agente": "fórmula parcialmente ou extensamente hidrolisada",
+        "efeitos": [
+          "recusa pelo sabor",
+          "fezes amolecidas",
+          "diarreia na troca",
+          "perda de peso"
+        ],
+        "observacao": "Fazer a troca em 3 a 5 dias, manter o volume e reavaliar peso em 1 semana; se houver perda de peso, voltar à fórmula anterior e reavaliar a indicação"
+      },
+      {
+        "agente": "lactase",
+        "efeitos": [
+          "náusea",
+          "dor abdominal",
+          "diarreia",
+          "eritema perianal"
+        ],
+        "observacao": "Suspender se diarreia ou dor piorarem; não manter sem confirmação de intolerância à lactose"
+      },
+      {
+        "agente": "infusão de erva-doce e camomila",
+        "efeitos": [
+          "reação alérgica",
+          "fotossensibilidade",
+          "diarreia",
+          "redução da ingestão de leite"
+        ],
+        "observacao": "Suspender com rash, vômito ou diarreia e conferir se o chá está substituindo mamadas"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a intervenção implicada e registrar agente, dose, horário, via e resposta observada",
+      "Vômito ou piora do desconforto com simeticona: suspender, reavaliar o abdome e o ganho de peso e reforçar as medidas não farmacológicas",
+      "Febre ou prostração em lactente usando probiótico: suspender, examinar, colher hemocultura e urocultura e internar conforme a idade",
+      "Recusa alimentar ou perda de peso com fórmula hidrolisada: voltar à fórmula anterior, reavaliar volume e técnica e redefinir o teste",
+      "Diarreia com lactase ou com chá: suspender, hidratar e reavaliar a indicação antes de reintroduzir",
+      "Rash, edema ou dificuldade respiratória após qualquer produto: tratar como reação alérgica, suspender definitivamente e registrar",
+      "Reavaliar o diagnóstico e reescrever a prescrição a cada retorno; não manter fármaco sem resposta documentada no diário"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "simeticona solução oral gotas 75 mg/mL",
+            "dose": "20 mg = 5 gotas por mamada",
+            "via": "VO",
+            "frequencia": "até 4 vezes ao dia, após as mamadas",
+            "duracao": "até 2 semanas, com reavaliação",
+            "condicao": "apenas se distensão e gases; não substitui massagem, calor e posicionamento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "Lactobacillus reuteri DSM 17938 solução oral 1×10^8 UFC/5 gotas",
+            "dose": "5 gotas (1×10^8 UFC)",
+            "via": "VO",
+            "frequencia": "1x/dia antes da mamada",
+            "duracao": "21 a 28 dias",
+            "condicao": "lactente amamentado, sem cateter e sem imunossupressão; suspender se não houver resposta em 3 a 4 semanas",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "fórmula parcialmente hidrolisada de proteína do soro",
+            "dose": "150 mL/kg/dia, em 6 a 8 mamadas",
+            "via": "VO",
+            "frequencia": "conforme demanda",
+            "duracao": "teste de 2 semanas",
+            "condicao": "somente se houver indicação definida e prazo; troca gradual em 3 a 5 dias; sem resposta, voltar à fórmula anterior",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "orientações escritas de cólica, medidas não farmacológicas e sinais de retorno",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a resolução esperada em 3 a 4 meses",
+            "condicao": "todo caso, com conferência do entendimento do cuidador e plano de pausa segura",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "fórmula extensamente hidrolisada de proteína do soro",
+            "dose": "150 mL/kg/dia, em 6 a 8 mamadas",
+            "via": "VO ou sonda nasogástrica",
+            "frequencia": "conforme demanda",
+            "monitorizacao": "peso diário, aceitação, evacuações, sangue oculto e desidratação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "simeticona solução oral",
+            "dose": "20 mg por mamada, até 4 vezes ao dia",
+            "via": "VO",
+            "frequencia": "após as mamadas",
+            "monitorizacao": "distensão, vômito e aceitação das mamadas",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "solução de reidratação oral",
+            "dose": "50 mL/kg após cada evacuação líquida",
+            "via": "VO ou sonda nasogástrica",
+            "frequencia": "após cada evacuação",
+            "monitorizacao": "peso, diurese e sinais de desidratação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol solução oral 32 mg/mL",
+            "dose": "10 a 15 mg/kg/dose",
+            "via": "VO",
+            "frequencia": "6/6 h se febre ou dor",
+            "monitorizacao": "temperatura, dose acumulada em 24 h e função hepática se uso acima de 3 dias",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "peso, comprimento e percentil",
+          "diário de 24 horas de choro, sono e mamadas",
+          "hemograma quando febre ou falha de ganho",
+          "exame de urina tipo 1 e urocultura quando febre ou choro recente",
+          "substâncias redutoras nas fezes quando fezes ácidas",
+          "IgE específica para leite de vaca quando suspeita de alergia",
+          "ultrassonografia abdominal quando vômito, distensão ou sangue",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o lactente esteve sob meus cuidados nesta data, com quadro de cólica do lactente, diagnóstico de exclusão e evolução autolimitada, necessitando de acompanhamento ambulatorial.",
+        "dias": null,
+        "cid": null,
+        "observacao": "não gera afastamento laboral automático; quando necessário, o atestado do cuidador é decisão médica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com idade, peso, percentil, padrão de choro medido no diário, intervenções já feitas, resposta e sinais de alarme",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Lactente de ___ meses, peso ___ kg (percentil ___), com choro paroxístico de ___ horas por dia em ___ dias da semana, iniciado há ___ semanas, exame físico normal. Diário de 24 h mostra padrão ___. Medidas não farmacológicas instituídas em ___; simeticona ___; probiótico ___; fórmula ___ com indicação ___. Ganho de peso de ___ g/dia. Sem sinais de alarme na data. Plano de retorno em ___ semanas e orientações escritas entregues."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "idade em semanas e idade corrigida se prematuro",
+        "tempo de choro por dia e horário de concentração",
+        "idade de início do choro e mudança recente de padrão",
+        "tipo de alimentação e número de mamadas por dia",
+        "número e motivo de trocas de fórmula",
+        "vômito: volume, aspecto, relação com a mamada e presença de bile",
+        "aspecto das fezes: sangue, muco, consistência, frequência e esforço",
+        "peso atual, peso de nascimento e ganho na última semana",
+        "uso de chá, simeticona, probiótico, antiácido ou remédio de outra criança",
+        "hérnia, cirurgia prévia, internação e uso de antibiótico",
+        "sono do bebê e do cuidador, apoio em casa e humor materno",
+        "febre, recusa alimentar e número de fraldas molhadas"
+      ],
+      "texto_template": "Lactente de ___ semanas (idade corrigida ___), em ___ , com choro de ___ horas por dia, concentrado no período ___, iniciado há ___ semanas, com ___ trocas de fórmula por ___. Vômito ___, fezes ___, peso atual ___ kg e ganho de ___ g na última semana. Uso de ___. Cuidador com apoio ___ e sono ___. Febre ___. Sem sinal de alarme ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "peso, comprimento, perímetro cefálico e percentis na curva",
+        "temperatura e estado geral",
+        "nível de consciência, tônus e fontanela",
+        "mucosas, turgor e perfusão",
+        "abdome: distensão, tensão, dor à palpação, massa e ruídos hidroaéreos",
+        "região inguinal e umbilical: hérnia redutível ou encarcerada",
+        "ânus e períneo: fissura, eritema e sangue",
+        "cavidade oral: frênulo lingual, monilíase e palato",
+        "ausculta cardíaca e pulmonar",
+        "avaliação da mamada em curso, quando amamentado"
+      ],
+      "texto_template": "Peso ___ kg (percentil ___), comprimento ___ cm, perímetro cefálico ___ cm, temperatura ___ °C, estado geral ___, consciência ___, fontanela ___, mucosas ___, perfusão ___. Abdome ___ com ruídos ___, sem massa palpável. Região inguinal ___. Ânus ___. Cavidade oral ___. Ausculta ___. Mamada ___. Sem sinais de alarme na data."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo ambulatorial de choro excessivo no lactente, critérios de retorno, de internação e de encaminhamento à gastroenterologia ou alergia",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "recomendações sobre cólica do lactente, uso de simeticona, probióticos e contraindicação de antiespasmódico abaixo de 6 meses",
+        "verificar": true
+      },
+      {
+        "tipo": "revisao_sistematica",
+        "o_que_verificar": "eficácia de simeticona, Lactobacillus reuteri, fórmula hidrolisada e intervenções comportamentais no choro do lactente",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e concentrações de simeticona, probióticos, fórmulas infantis e lactase disponíveis no serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "guia alimentar para menores de 2 anos, aleitamento materno e regras de rotulagem de fórmula infantil",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED16-01",
+        "tipo": "vomito_bilioso",
+        "gatilho": "vômito bilioso, esverdeado ou em jato, ou distensão abdominal com ausência de evacuação",
+        "severidade": "grave",
+        "mensagem": "Obstrução intestinal ou estenose hipertrófica: este caso não é cólica.",
+        "acao": "bloquear fluxo de cólica e acionar cirurgia pediátrica",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED16-02",
+        "tipo": "sangue_nas_fezes",
+        "gatilho": "sangue vivo ou muco nas fezes em lactente com choro",
+        "severidade": "grave",
+        "mensagem": "Suspeita de invaginação ou alergia à proteína do leite de vaca com enterocolite.",
+        "acao": "acionar avaliação urgente e ultrassonografia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED16-03",
+        "tipo": "farmaco_contraindicado",
+        "gatilho": "prescrição de antiespasmódico, opioide, elixir paragórico, anti-histamínico sedativo ou gota com álcool para cólica",
+        "severidade": "grave",
+        "mensagem": "Antiespasmódico é contraindicado abaixo de 6 meses e sedativo mascara o diagnóstico.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED16-04",
+        "tipo": "febre_no_lactente",
+        "gatilho": "febre acima de 38 °C em lactente menor de 3 meses, ou febre com prostração em qualquer idade",
+        "severidade": "grave",
+        "mensagem": "Febre em lactente jovem exige investigação de sepse e de infecção urinária.",
+        "acao": "bloquear conduta ambulatorial isolada e acionar protocolo de febre",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED16-05",
+        "tipo": "troca_de_formula_sem_criterio",
+        "gatilho": "segunda troca de fórmula em menos de 30 dias, ou troca sem indicação, prazo e desfecho definidos",
+        "severidade": "precaucao",
+        "mensagem": "Troca repetida de fórmula não trata cólica e atrasa o diagnóstico de alergia.",
+        "acao": "alertar e exigir critério e prazo no registro",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED16-06",
+        "tipo": "falha_de_ganho",
+        "gatilho": "perda de peso, ganho abaixo de 20 g/dia ou queda de dois percentis",
+        "severidade": "grave",
+        "mensagem": "Falha de ganho de peso afasta o diagnóstico de cólica isolada.",
+        "acao": "alertar e direcionar para avaliação nutricional",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED16-07",
+        "tipo": "risco_para_o_cuidador",
+        "gatilho": "cuidador exausto, com intenção de sacudir o bebê, ou bebê com choro que não cessa há mais de 3 h",
+        "severidade": "grave",
+        "mensagem": "Risco de trauma por choro sacudido: acionar apoio e plano de pausa segura.",
+        "acao": "alertar e registrar orientação de segurança",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED16-08",
+        "tipo": "persistencia_fora_da_idade",
+        "gatilho": "choro atribuído a cólica depois dos 5 meses de idade",
+        "severidade": "precaucao",
+        "mensagem": "Cólica não explica choro após 5 meses: reavaliar diagnóstico.",
+        "acao": "alertar e sugerir investigação dirigida",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBP",
+        "Ministério da Saúde",
+        "revisões sistemáticas sobre cólica do lactente",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade: cólica como diagnóstico de exclusão e autolimitado, com regra de Wessel, diário de 24 h e curva de peso como instrumentos de decisão; sete fármacos em cinco classes com apresentações, preparo, tempo de infusão, monitorização e ajuste renal, incluindo simeticona, Lactobacillus reuteri com evidência explicitamente limitada, fórmula parcialmente e extensamente hidrolisada com critério e prazo, lactase e fitoterápico; dez medidas não farmacológicas com massagem, calor, posicionamento, redução de estímulo, pega e apoio ao cuidador; bloqueios de antiespasmódico, opioide e sedativo, de troca de fórmula sem critério e de fluxo de cólica diante de vômito bilioso, sangue nas fezes e febre.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

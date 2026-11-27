@@ -1,0 +1,1439 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-20",
+    "area": "Respiratório/ORL",
+    "nome": "Insuficiência respiratória aguda",
+    "aliases": [
+      "Insuficiência respiratória aguda",
+      "insuficiência respiratória aguda",
+      "IRpA",
+      "insuficiência respiratória hipoxêmica",
+      "insuficiência respiratória hipercápnica",
+      "SDRA",
+      "síndrome do desconforto respiratório agudo"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Insuficiência respiratória aguda é a falha do sistema respiratório em manter oxigenação ou eliminação de CO2 em menos de sete dias, e não é uma doença única. O tipo I, hipoxêmico, cursa com PaO2 abaixo de 60 mmHg e PaCO2 normal ou baixa: pneumonia, edema agudo de pulmão, tromboembolismo, atelectasia e síndrome do desconforto respiratório agudo. O tipo II, hipercápnico, cursa com PaCO2 acima de 50 mmHg e pH abaixo de 7,35: exacerbação de DPOC, crise asmática grave, hipoventilação por sedativo, doença neuromuscular e obesidade com hipoventilação. A síndrome do desconforto respiratório agudo é um subtipo do tipo I com início em até sete dias, infiltrado bilateral, relação PaO2/FiO2 abaixo de 300 com PEEP de pelo menos 5 cmH2O e edema não explicado por falência cardíaca; ela muda a conduta porque exige ventilação protetora com volume corrente de 6 mL/kg de peso predito, PEEP titulada, platô abaixo de 30 cmH2O e posição prona por 12 a 16 horas ao dia nos casos graves. A sequência correta é oxigênio titulado com alvo definido, cânula nasal de alto fluxo ou ventilação não invasiva quando há indicação e nenhuma contraindicação, e intubação sem demora quando aparece rebaixamento de consciência, frequência respiratória acima de 35, hipoxemia refratária ao alto fluxo ou fadiga muscular. Insistir na ventilação não invasiva em paciente sonolento, ou ventilar com volume corrente alto por conforto, são os dois erros que produzem lesão pulmonar e morte evitável. Hiperóxia também mata: acima de 98% há vasoconstrição e reabsorção de alvéolos.",
+    "inclusao": [
+      "Dispneia aguda com frequência respiratória acima de 25 por minuto ou uso de musculatura acessória",
+      "Saturação abaixo de 90% em ar ambiente ou PaO2 abaixo de 60 mmHg em gasometria",
+      "PaCO2 acima de 50 mmHg com pH abaixo de 7,35 em gasometria",
+      "Rebaixamento de consciência com hipoventilação ou incapacidade de proteger a via aérea",
+      "Necessidade de suporte ventilatório: cânula nasal de alto fluxo, ventilação não invasiva ou intubação",
+      "Infiltrado bilateral com relação PaO2/FiO2 abaixo de 300 e PEEP de pelo menos 5 cmH2O, sem causa cardíaca predominante"
+    ],
+    "exclusao": [
+      {
+        "situacao": "dispneia crônica estável, sem hipoxemia e sem piora nas últimas 48 horas",
+        "fluxo": "avaliação ambulatorial de pneumologia"
+      },
+      {
+        "situacao": "estridor, rouquidão e desconforto ao deitar, com obstrução de via aérea superior",
+        "fluxo": "via aérea difícil com cirurgia de cabeça e pescoço"
+      },
+      {
+        "situacao": "sibilância leve com saturação acima de 94% e fala em frases completas, sem critério de gravidade",
+        "fluxo": "RESP-12 asma"
+      },
+      {
+        "situacao": "dor torácica com supradesnivelamento de ST e saturação normal",
+        "fluxo": "CAR-01 síndrome coronariana aguda"
+      },
+      {
+        "situacao": "falta de ar com gasometria normal, parestesias e contexto ansioso, sem hipoxemia",
+        "fluxo": "PSQ-04 crise de ansiedade"
+      },
+      {
+        "situacao": "dispneia por anemia grave com saturação normal e sem esforço respiratório",
+        "fluxo": "avaliação hematológica com transfusão"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "frequência respiratória acima de 35 por minuto ou abaixo de 8 por minuto",
+        "por_que": "fadiga da musculatura respiratória e hipoventilação iminente",
+        "acao": "intubação orotraqueal pelo protocolo BOX-02, sem esperar nova gasometria",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "saturação abaixo de 90% apesar de oxigênio acima de 10 L/min ou cânula nasal de alto fluxo com FiO2 acima de 80%",
+        "por_que": "hipoxemia refratária com shunt importante",
+        "acao": "intubação com ventilação protetora e investigar causa reversível",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "rebaixamento de consciência, agitação ou Glasgow abaixo de 9",
+        "por_que": "perda do drive respiratório e do reflexo de proteção de via aérea",
+        "acao": "intubação imediata; ventilação não invasiva é contraindicada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "uso de musculatura acessória, respiração paradoxal, fala entrecortada e incapacidade de completar uma frase",
+        "por_que": "fadiga iminente da musculatura respiratória",
+        "acao": "preparar via aérea definitiva e chamar anestesia antes da parada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "PaCO2 em elevação com pH abaixo de 7,25 apesar de ventilação não invasiva",
+        "por_que": "falha da ventilação não invasiva em corrigir a hipoventilação",
+        "acao": "intubação; não insistir na ventilação não invasiva além de 2 horas sem resposta",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "tórax silencioso em asmático grave, com esforço respiratório reduzido",
+        "por_que": "fluxo aéreo quase nulo e risco de parada respiratória",
+        "acao": "intubação imediata com ventilação de baixa frequência e volume corrente baixo",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "hipotensão após iniciar ventilação não invasiva ou após a intubação",
+        "por_que": "auto-PEEP, sedação excessiva ou pneumotórax por barotrauma",
+        "acao": "desconectar do circuito, reduzir PEEP e volume, examinar tórax e repor volume",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "A falta de ar começou em horas ou em dias? Estava bem antes disso?",
+      "Consegue falar uma frase inteira ou precisa parar para respirar?",
+      "Tem febre, tosse com catarro ou dor no peito?",
+      "Tem história de asma, DPOC, insuficiência cardíaca, obesidade ou doença neuromuscular?",
+      "Usou sedativo, opioide ou álcool nas últimas horas?",
+      "Está com as pernas inchadas, ortopneia ou acordou à noite afogado?",
+      "Foi operado, ficou acamado ou tem câncer ativo?",
+      "Usa oxigênio em casa? Quantos litros e desde quando?",
+      "Já teve intubação difícil, apneia do sono ou usa CPAP?",
+      "Está sonolento, confuso ou mais irritado que o habitual?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Insuficiência respiratória tipo I leve, saturação entre 90% e 94% em ar ambiente, paciente estável e sem esforço importante",
+        "escolha": "Oxigênio por cateter nasal de 2 a 6 L/min com alvo de 94% a 98%, reavaliação em 15 minutos e gasometria se não houver melhora",
+        "porque": "O alvo definido evita hiperóxia e hipóxia, e a reavaliação em 15 minutos identifica quem vai precisar de alto fluxo antes da fadiga"
+      },
+      {
+        "cenario": "Insuficiência respiratória tipo I moderada a grave, saturação abaixo de 92% com esforço respiratório preservado e sem critério de intubação",
+        "escolha": "Cânula nasal de alto fluxo com 40 a 60 L/min, FiO2 titulada para saturação de 94% a 98%, umidificação a 37 graus e reavaliação pelo índice ROX em 1, 2 e 6 horas",
+        "porque": "A alto fluxo entrega fluxo e pressão positiva baixa, reduz o espaço morto e evita intubação em uma parte dos casos; ROX abaixo de 3,85 em 2 horas, 3,47 em 6 horas ou 3,85 em 12 horas prediz falha"
+      },
+      {
+        "cenario": "Edema agudo de pulmão cardiogênico com hipertensão, crepitações e ortopneia",
+        "escolha": "Ventilação não invasiva em CPAP de 8 a 10 cmH2O ou BiPAP, nitroglicerina sublingual e em infusão, furosemida 40 mg IV e morfina 2 a 4 mg IV se houver desconforto intenso",
+        "porque": "A pressão positiva reduz o retorno venoso, recruta alvéolos inundados e abaixa a pré-carga mais rápido que qualquer diurético isolado"
+      },
+      {
+        "cenario": "Insuficiência respiratória tipo II por exacerbação de DPOC com pH entre 7,25 e 7,35 e paciente alerta e colaborativo",
+        "escolha": "Ventilação não invasiva em BiPAP com IPAP inicial de 12 cmH2O titulada até 20 e EPAP de 4 a 6, oxigênio com alvo de 88% a 92%, broncodilatador de ação curta e corticoide sistêmico",
+        "porque": "A ventilação não invasiva reduz a mortalidade e a necessidade de intubação no DPOC exacerbado com acidose, desde que o paciente esteja alerta e proteja a via aérea"
+      },
+      {
+        "cenario": "Insuficiência respiratória tipo II com rebaixamento de consciência, agitação ou incapacidade de remover a máscara",
+        "escolha": "Intubação orotraqueal pelo protocolo BOX-02 e ventilação mecânica com tempo expiratório prolongado e PEEP baixa, corrigindo a acidose sem hiperventilar",
+        "porque": "Ventilação não invasiva em paciente rebaixado falha, aspira e atrasa a via aérea definitiva; a máscara também impede a aspiração de secreção"
+      },
+      {
+        "cenario": "Síndrome do desconforto respiratório agudo leve a moderada, relação PaO2/FiO2 entre 200 e 300",
+        "escolha": "Ventilação protetora com volume corrente de 6 mL/kg de peso predito, PEEP de 8 a 12 cmH2O titulada pela melhor complacência, platô abaixo de 30 cmH2O e driving pressure abaixo de 15",
+        "porque": "O volume corrente calculado pelo peso predito, e não pelo peso real, é o que reduz mortalidade; cada mL/kg acima de 6 aumenta a lesão induzida pela ventilação"
+      },
+      {
+        "cenario": "Síndrome do desconforto respiratório agudo grave, relação PaO2/FiO2 abaixo de 150",
+        "escolha": "Posição prona por 12 a 16 horas ao dia, PEEP alta, bloqueador neuromuscular por 24 a 48 horas e volume corrente de 6 mL/kg de peso predito",
+        "porque": "A prona recruta regiões dorsais colapsadas e reduz a mortalidade em cerca de um quinto nos casos graves; o bloqueador reduz a lesão por esforço e a assincronia"
+      },
+      {
+        "cenario": "Falha de ventilação não invasiva ou de alto fluxo após 1 a 2 horas, com piora do esforço, da saturação ou do pH",
+        "escolha": "Intubação orotraqueal imediata, sem novo teste de suporte não invasivo",
+        "porque": "A intubação tardia em paciente que já falhou o suporte não invasivo aumenta a mortalidade; o atraso é mais perigoso que o procedimento"
+      },
+      {
+        "cenario": "Insuficiência respiratória por broncoespasmo grave com sibilância difusa",
+        "escolha": "Salbutamol 2,5 a 5 mg nebulizado a cada 20 minutos na primeira hora, ipratrópio 0,5 mg associado nas três primeiras doses, metilprednisolona 40 mg IV 12/12 h e sulfato de magnésio 2 g IV em 20 minutos se não houver resposta",
+        "porque": "A combinação de beta-2 com anticolinérgico e corticoide reduz internação e o magnésio atua no músculo liso quando a nebulização isolada falha"
+      },
+      {
+        "cenario": "Hipoventilação por intoxicação por opioide com frequência respiratória baixa e pupilas puntiformes",
+        "escolha": "Suporte de via aérea com bolsa-valva-máscara e naloxona 0,04 a 0,4 mg IV titulada até frequência respiratória acima de 12, com infusão contínua se o opioide for de ação longa",
+        "porque": "A naloxona reverte a hipoventilação em minutos, mas a meia-vida curta exige reavaliação e infusão para evitar renarcotização"
+      },
+      {
+        "cenario": "Obesidade com hipoventilação, sonolência diurna e PaCO2 elevado sem doença pulmonar obstrutiva",
+        "escolha": "Ventilação não invasiva noturna com BiPAP, perda de peso estruturada e avaliação de apneia obstrutiva do sono",
+        "porque": "A hipoventilação da obesidade responde à pressão positiva noturna e o tratamento reduz internação e cor pulmonale"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "gas_medicinal",
+        "agente": "oxigênio",
+        "papel": "primeira_linha",
+        "indicacao": "toda insuficiência respiratória aguda com hipoxemia; titulado por alvo, nunca por fluxo fixo",
+        "dose": "cateter nasal de 2 a 6 L/min ou máscara com reservatório de 10 a 15 L/min, titulando para saturação entre 94% e 98%",
+        "unidade": "L/min",
+        "via": "inalatória",
+        "frequencia": "contínuo",
+        "duracao": "até correção da causa ou desmame do suporte",
+        "dose_maxima": "saturação de 98%; 88% a 92% em DPOC com retenção de CO2",
+        "contraindicacoes": [
+          "DPOC com retenção crônica de CO2 sem controle por gasometria"
+        ],
+        "efeitos_adversos": [
+          "hiperóxia com vasoconstrição",
+          "atelectasia de absorção",
+          "retenção de CO2 em DPOC",
+          "ressecamento de mucosa",
+          "desconforto nasal"
+        ],
+        "apresentacoes": [
+          "cateter nasal tipo óculos",
+          "máscara com reservatório 10–15 L/min",
+          "máscara de Venturi 24–50%",
+          "cânula nasal de alto fluxo",
+          "cilindro medicinal 1 m³"
+        ],
+        "preparo": "Umidificar acima de 4 L/min; na máscara com reservatório, manter o balão inflado antes de posicionar no paciente",
+        "tempo_infusao": "contínuo",
+        "monitorizacao": [
+          "oximetria contínua",
+          "frequência respiratória",
+          "gasometria em DPOC ou hipoxemia refratária",
+          "esforço respiratório e nível de consciência"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Titular por alvo e reavaliar em 15 minutos. Hiperóxia acima de 98% causa vasoconstrição e reabsorção de alvéolos. Em DPOC, o alvo é 88% a 92%",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "broncodilatador_beta2",
+        "agente": "salbutamol",
+        "papel": "primeira_linha",
+        "indicacao": "broncoespasmo com sibilância difusa, asma grave e exacerbação de DPOC",
+        "dose": "2,5 a 5 mg nebulizado ou 4 a 8 jatos de 100 mcg com espaçador",
+        "unidade": "mg",
+        "via": "inalatória",
+        "frequencia": "a cada 20 minutos na primeira hora, depois 1/1 h a 4/4 h conforme resposta",
+        "duracao": "até reversão do broncoespasmo",
+        "dose_maxima": "10 mg/h em nebulização contínua",
+        "contraindicacoes": [
+          "hipersensibilidade ao salbutamol",
+          "arritmia ventricular instável",
+          "miocardiopatia obstrutiva com obstrução grave da via de saída"
+        ],
+        "efeitos_adversos": [
+          "taquicardia",
+          "tremor de extremidades",
+          "hipocalemia",
+          "hiperglicemia",
+          "arritmia",
+          "cefaleia"
+        ],
+        "apresentacoes": [
+          "solução para nebulização 5 mg/mL",
+          "solução para nebulização 1 mg/mL",
+          "aerossol 100 mcg por jato",
+          "comprimido 2 mg",
+          "xarope 2 mg/5 mL"
+        ],
+        "preparo": "Diluir 2,5 a 5 mg em 3 a 5 mL de SF 0,9% para nebulização; no aerossol, agitar e usar espaçador",
+        "tempo_infusao": "nebulização em 10 a 15 minutos; aerossol em segundos",
+        "monitorizacao": [
+          "frequência cardíaca e ritmo",
+          "potássio em uso repetido",
+          "glicemia em diabético",
+          "frequência respiratória e saturação",
+          "tremor"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "A via inalatória é preferida à intravenosa pela menor toxicidade. Nebulização contínua apenas em asma com risco de vida, com monitorização cardíaca",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "broncodilatador_anticolinergico",
+        "agente": "ipratrópio",
+        "papel": "condicional",
+        "indicacao": "associação ao salbutamol na crise asmática grave e na exacerbação de DPOC",
+        "dose": "0,5 mg",
+        "unidade": "mg",
+        "via": "inalatória",
+        "frequencia": "a cada 20 minutos nas três primeiras doses, depois 4/4 h a 6/6 h",
+        "duracao": "até 48 horas",
+        "dose_maxima": "2 mg em 24 horas",
+        "contraindicacoes": [
+          "hipersensibilidade a atropínicos",
+          "glaucoma de ângulo fechado não tratado",
+          "retenção urinária por hiperplasia prostática grave"
+        ],
+        "efeitos_adversos": [
+          "boca seca",
+          "gosto amargo",
+          "retenção urinária",
+          "midríase e dor ocular em contato com os olhos",
+          "taquicardia leve"
+        ],
+        "apresentacoes": [
+          "solução para nebulização 0,25 mg/mL (20 mL)",
+          "aerossol 20 mcg por jato",
+          "solução unitária 0,5 mg/2 mL"
+        ],
+        "preparo": "Diluir 0,5 mg em 3 mL de SF 0,9%; proteger os olhos do paciente durante a nebulização com máscara",
+        "tempo_infusao": "nebulização em 10 a 15 minutos",
+        "monitorizacao": [
+          "retenção urinária",
+          "dor ocular e pupilas",
+          "frequência cardíaca",
+          "resposta clínica ao broncodilatador"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não usar em monoterapia: o efeito é aditivo ao beta-2 nas primeiras horas e depois não acrescenta benefício",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "metilprednisolona",
+        "papel": "condicional",
+        "indicacao": "asma grave, exacerbação de DPOC e inflamação pulmonar com indicação de corticoide sistêmico",
+        "dose": "40 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "12/12 h",
+        "duracao": "5 dias",
+        "dose_maxima": "80 mg/dia",
+        "contraindicacoes": [
+          "infecção fúngica sistêmica não tratada",
+          "hipersensibilidade à metilprednisolona",
+          "vacina de vírus vivo recente",
+          "úlcera péptica sangrante ativa"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipertensão",
+          "insônia e agitação",
+          "infecção oportunista",
+          "fraqueza muscular",
+          "hipocalemia"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 125 mg (pó)",
+          "frasco-ampola 500 mg (pó)",
+          "comprimido 4 mg",
+          "solução injetável 40 mg/mL"
+        ],
+        "preparo": "Reconstituir em 2 mL de diluente próprio e diluir em 50 a 100 mL de SF 0,9%; não administrar em bolus rápido",
+        "tempo_infusao": "20 a 30 minutos",
+        "monitorizacao": [
+          "glicemia",
+          "pressão arterial",
+          "potássio",
+          "sono e agitação",
+          "sinais de infecção"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Cinco dias bastam na maioria dos casos e não exigem desmame. Em DPOC, preferir 40 mg 1x/dia; a via oral é equivalente quando o paciente tolera",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "diuretico_de_alca",
+        "agente": "furosemida",
+        "papel": "condicional",
+        "indicacao": "edema agudo de pulmão cardiogênico com congestão e sobrecarga de volume",
+        "dose": "40 mg em bolus, ou infusão contínua de 5 a 10 mg/h se já usava diurético",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "bolus inicial, repetível em 20 minutos se diurese ausente; depois 12/12 h",
+        "duracao": "até atingir balanço hídrico negativo",
+        "dose_maxima": "160 mg em bolus; individualizado em nefropata",
+        "contraindicacoes": [
+          "hipovolemia",
+          "hipocalemia grave",
+          "anúria por obstrução urinária",
+          "encefalopatia hepática com hipocalemia",
+          "hipersensibilidade a sulfonamidas"
+        ],
+        "efeitos_adversos": [
+          "hipotensão",
+          "hipocalemia",
+          "hipomagnesemia",
+          "lesão renal aguda",
+          "hipovolemia",
+          "ototoxicidade em dose alta"
+        ],
+        "apresentacoes": [
+          "ampola 20 mg/2 mL",
+          "ampola 40 mg/4 mL",
+          "ampola 50 mg/5 mL",
+          "comprimido 40 mg"
+        ],
+        "preparo": "Bolus: uso direto. Infusão: diluir 100 mg em 100 mL de SF 0,9% para 1 mg/mL",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos; infusão contínua",
+        "monitorizacao": [
+          "diurese horária",
+          "potássio e sódio a cada 12 horas",
+          "pressão arterial",
+          "creatinina",
+          "peso e balanço hídrico"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: doses maiores e infusão contínua; resistência ao diurético é comum",
+        "ajuste_hepatico": "Cautela em cirrose com hipocalemia e encefalopatia",
+        "observacoes": "Só depois de garantir perfusão; diurético em paciente hipotenso piora o choque. Na congestão com hipertensão, o vasodilatador é a primeira medida",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vasodilatador_venoso",
+        "agente": "nitroglicerina",
+        "papel": "condicional",
+        "indicacao": "edema agudo de pulmão com pressão arterial elevada ou normal e congestão pulmonar",
+        "dose": "10 a 20 mcg/min em infusão contínua, titulando a cada 5 minutos",
+        "unidade": "mcg/min",
+        "via": "IV",
+        "frequencia": "infusão contínua",
+        "duracao": "até melhora da congestão ou queda da pressão",
+        "dose_maxima": "200 mcg/min, ou pressão arterial média abaixo de 65 mmHg",
+        "contraindicacoes": [
+          "hipotensão com pressão arterial sistólica abaixo de 90 mmHg",
+          "choque cardiogênico com baixo débito",
+          "uso de inibidor de fosfodiesterase nas últimas 48 horas",
+          "estenose aórtica grave",
+          "aumento de pressão intracraniana"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "hipotensão",
+          "taquicardia reflexa",
+          "metemoglobinemia em dose alta",
+          "tolerância em infusão prolongada"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (10 mL)",
+          "ampola 25 mg/5 mL",
+          "comprimido sublingual 0,3 mg",
+          "spray sublingual 0,4 mg por jato"
+        ],
+        "preparo": "Diluir 5 mg em 100 mL de SF 0,9% ou SG 5% para 50 mcg/mL; usar equipo de PVC com sorbitol quando disponível para reduzir adsorção",
+        "tempo_infusao": "contínua em bomba de infusão",
+        "monitorizacao": [
+          "pressão arterial a cada 5 minutos na titulação",
+          "frequência cardíaca",
+          "cefaleia",
+          "saturação",
+          "metahemoglobina se cianose sem hipoxemia"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Preferir quando há hipertensão associada; reduzir ou suspender se a pressão sistólica cair abaixo de 90 mmHg. Não usar em choque com baixo débito",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_betalactamico",
+        "agente": "ceftriaxona",
+        "papel": "condicional",
+        "indicacao": "insuficiência respiratória por pneumonia adquirida na comunidade com indicação de internação",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia; 2 g/dia em pneumonia grave ou suspeita de meningite",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina",
+          "anafilaxia a betalactâmico",
+          "icterícia neonatal por hiperbilirrubinemia"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "colite por Clostridioides difficile",
+          "barro biliar e litíase",
+          "elevação de transaminases"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1 g",
+          "frasco-ampola 500 mg",
+          "solução injetável 1 g em 10 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água estéril e diluir em 100 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "febre e leucograma",
+          "função hepática",
+          "diarreia",
+          "sítio da infusão"
+        ],
+        "ajuste_renal": "Sem ajuste em dose usual; reduzir se houver falência renal associada a falência hepática",
+        "ajuste_hepatico": "Sem ajuste isolado; cautela em hepatopatia grave",
+        "observacoes": "Associar azitromicina ou claritromicina quando houver suspeita de atípico; ajustar ao antibiograma e à epidemiologia local",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vasopressor",
+        "agente": "noradrenalina",
+        "papel": "condicional",
+        "indicacao": "hipotensão persistente após reposição volêmica, com choque associado à insuficiência respiratória",
+        "dose": "0,05 a 0,5 mcg/kg/min, titulando pela pressão arterial média",
+        "unidade": "mcg/kg/min",
+        "via": "IV em acesso central preferencialmente",
+        "frequencia": "infusão contínua",
+        "duracao": "até retirada do suporte vasopressor",
+        "dose_maxima": "2 mcg/kg/min; acima disso associar vasopressina",
+        "contraindicacoes": [
+          "hipovolemia não corrigida",
+          "trombose mesentérica ou periférica",
+          "hipersensibilidade ao metabissulfito da formulação"
+        ],
+        "efeitos_adversos": [
+          "taquiarritmia",
+          "isquemia periférica e digital",
+          "necrose por extravasamento",
+          "hipertensão",
+          "redução do débito cardíaco em cor pulmonale"
+        ],
+        "apresentacoes": [
+          "ampola 2 mg/mL (4 mL)",
+          "ampola 1 mg/mL (2 mL)",
+          "frasco-ampola 4 mg/4 mL"
+        ],
+        "preparo": "Diluir 4 mg em 250 mL de SG 5% ou SF 0,9% para 16 mcg/mL; administrar em bomba e em acesso central quando possível",
+        "tempo_infusao": "contínua em bomba de infusão",
+        "monitorizacao": [
+          "pressão arterial média invasiva quando disponível",
+          "perfusão periférica e diurese",
+          "ritmo cardíaco",
+          "sítio de infusão a cada hora",
+          "lactato"
+        ],
+        "ajuste_renal": "Sem ajuste de dose",
+        "ajuste_hepatico": "Sem ajuste de dose",
+        "observacoes": "Extra vasamento causa necrose: tratar com fentolamina 5 a 10 mg diluídos na área. Em cor pulmonale, avaliar risco de piora do débito pelo aumento da pós-carga direita",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "condicional",
+        "indicacao": "desconforto respiratório intenso e ansiedade no edema agudo de pulmão, com pressão preservada",
+        "dose": "2 a 4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "4/4 h ou a cada 15 minutos titulando pela escala de desconforto",
+        "duracao": "até controle do desconforto",
+        "dose_maxima": "10 mg na primeira hora; individualizado depois",
+        "contraindicacoes": [
+          "rebaixamento de consciência sem via aérea protegida",
+          "depressão respiratória",
+          "hipotensão não corrigida",
+          "uso de IMAO",
+          "asma aguda grave sem suporte"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "sedação",
+          "náusea e vômito",
+          "hipotensão",
+          "prurido",
+          "retenção urinária"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "ampola 2 mg/mL (2 mL)",
+          "solução oral 1 mg/mL",
+          "comprimido de liberação prolongada 10 mg"
+        ],
+        "preparo": "Diluir 1 mL (10 mg) em 9 mL de SF 0,9% e administrar 2 a 4 mg (0,2 a 0,4 mL) por vez",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos",
+        "monitorizacao": [
+          "frequência respiratória e saturação",
+          "escala de sedação",
+          "pressão arterial",
+          "naloxona disponível à beira-leito"
+        ],
+        "ajuste_renal": "Cautela em ClCr abaixo de 30 mL/min: metabólitos ativos acumulam",
+        "ajuste_hepatico": "Reduzir a dose em cirrose",
+        "observacoes": "Uso controverso e reservado ao edema agudo de pulmão com desconforto importante e pressão preservada. Não administrar em paciente com rebaixamento ou hipoventilação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "hipnotico",
+        "agente": "etomidato",
+        "papel": "condicional",
+        "indicacao": "indução na sequência rápida de intubação do paciente com insuficiência respiratória e instabilidade hemodinâmica",
+        "dose": "0,3 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única na indução",
+        "duracao": "indução e intubação",
+        "dose_maxima": "0,3 mg/kg (cerca de 20 mg em adulto de 70 kg)",
+        "contraindicacoes": [
+          "hipersensibilidade ao etomidato",
+          "sepse com instabilidade refratária a vasopressor pela supressão adrenal transitória",
+          "insuficiência adrenal conhecida"
+        ],
+        "efeitos_adversos": [
+          "supressão adrenal transitória por até 24 horas",
+          "mioclonia",
+          "náusea e vômito",
+          "dor na injeção",
+          "hipotensão leve"
+        ],
+        "apresentacoes": [
+          "ampola 2 mg/mL (10 mL)",
+          "ampola 2 mg/mL (20 mL)"
+        ],
+        "preparo": "Uso direto, sem diluição, em acesso venoso com fluxo livre",
+        "tempo_infusao": "bolus em 30 a 60 segundos",
+        "monitorizacao": [
+          "pressão arterial após a indução",
+          "nível de sedação",
+          "glicemia e eletrólitos",
+          "necessidade de vasopressor nas primeiras horas"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Preferir ao propofol no paciente hipotenso. Em choque profundo, cetamina 1 a 2 mg/kg é a alternativa que melhor preserva a pressão",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "bloqueador_neuromuscular",
+        "agente": "rocurônio",
+        "papel": "condicional",
+        "indicacao": "sequência rápida de intubação e bloqueio neuromuscular contínuo na síndrome do desconforto respiratório agudo grave",
+        "dose": "1,2 mg/kg na intubação; 0,3 a 0,6 mg/kg/h em infusão contínua",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única na intubação ou infusão contínua",
+        "duracao": "24 a 48 horas na síndrome do desconforto respiratório agudo grave",
+        "dose_maxima": "1,2 mg/kg em bolus; infusão titulada pelo estimulador de nervo periférico",
+        "contraindicacoes": [
+          "hipersensibilidade ao rocurônio ou ao brometo",
+          "ausência de suporte ventilatório disponível",
+          "miastenia grave sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "paralisia residual prolongada",
+          "bloqueio prolongado em hepatopatia ou uso de magnésio",
+          "taquicardia",
+          "hipertensão",
+          "reação anafilactoide",
+          "atrofia por uso prolongado"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 50 mg/5 mL",
+          "frasco-ampola 100 mg/10 mL",
+          "solução 10 mg/mL"
+        ],
+        "preparo": "Uso direto; para infusão, diluir 100 mg em 100 mL de SF 0,9% para 1 mg/mL",
+        "tempo_infusao": "bolus rápido na intubação; infusão contínua na manutenção",
+        "monitorizacao": [
+          "estimulador de nervo periférico com alvo de 1 a 2 respostas em trem de quatro",
+          "sedação antes de cada dose",
+          "temperatura e eletrólitos",
+          "recuperação neuromuscular antes da extubação"
+        ],
+        "ajuste_renal": "Sem ajuste na dose única; prolonga em infusão prolongada com falência renal",
+        "ajuste_hepatico": "Prolonga o efeito em cirrose; reduzir a infusão",
+        "observacoes": "Nunca usar sem sedação profunda: o bloqueador paralisa e não anestesia. Em intubação difícil prevista, preferir succinilcolina pela duração menor, ou ter sugamadex disponível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "midazolam",
+        "papel": "condicional",
+        "indicacao": "sedação contínua do paciente intubado por insuficiência respiratória aguda",
+        "dose": "0,05 a 0,1 mg/kg em bolus, seguido de 0,02 a 0,1 mg/kg/h",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "infusão contínua com bolus de resgate",
+        "duracao": "até a retirada da ventilação mecânica",
+        "dose_maxima": "0,1 mg/kg/h; reduzir pela metade em idoso",
+        "contraindicacoes": [
+          "hipotensão grave",
+          "depressão respiratória sem suporte ventilatório",
+          "miastenia grave",
+          "insuficiência hepática grave",
+          "hipersensibilidade a benzodiazepínico"
+        ],
+        "efeitos_adversos": [
+          "hipotensão",
+          "sedação prolongada e delirium",
+          "amnésia",
+          "agitação paradoxal",
+          "depressão respiratória",
+          "acúmulo em infusão prolongada"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (1 mL)",
+          "ampola 5 mg/mL (3 mL)",
+          "ampola 1 mg/mL (5 mL)",
+          "comprimido 7,5 mg",
+          "solução oral 2 mg/mL"
+        ],
+        "preparo": "Diluir 15 mg em 100 mL de SF 0,9% para 0,15 mg/mL; usar bomba de infusão",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos; infusão contínua",
+        "monitorizacao": [
+          "escala de Richmond de agitação e sedação com alvo de 0 a menos 2",
+          "pressão arterial",
+          "frequência respiratória",
+          "delirium pelo CAM-ICU",
+          "despertar diário"
+        ],
+        "ajuste_renal": "Cautela em ClCr abaixo de 30 mL/min pelo acúmulo do metabólito ativo",
+        "ajuste_hepatico": "Reduzir a dose pela metade em cirrose Child B ou C",
+        "observacoes": "Preferir propofol ou dexmedetomidina em infusão curta pela menor incidência de delirium; o midazolam acumula e prolonga o desmame",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antagonista_opioide",
+        "agente": "naloxona",
+        "papel": "resgate",
+        "indicacao": "hipoventilação por intoxicação por opioide, com frequência respiratória abaixo de 10 e pupilas puntiformes",
+        "dose": "0,04 a 0,4 mg titulada",
+        "unidade": "mg",
+        "via": "IV, IM ou intranasal",
+        "frequencia": "a cada 2 a 3 minutos até frequência respiratória acima de 12; infusão de 0,4 a 0,8 mg/h se opioide de ação longa",
+        "duracao": "até recuperação do drive respiratório",
+        "dose_maxima": "2 mg na titulação inicial; 2 mg/h em infusão",
+        "contraindicacoes": [
+          "hipersensibilidade à naloxona",
+          "dependência de opioide com risco de abstinência grave e edema pulmonar"
+        ],
+        "efeitos_adversos": [
+          "abstinência aguda com agitação e vômito",
+          "edema pulmonar",
+          "arritmia",
+          "hipertensão",
+          "convulsão",
+          "dor intensa"
+        ],
+        "apresentacoes": [
+          "ampola 0,4 mg/mL (1 mL)",
+          "ampola 0,04 mg/mL (1 mL)",
+          "spray nasal 4 mg/0,1 mL"
+        ],
+        "preparo": "Uso direto; para titulação fina, diluir 1 mL (0,4 mg) em 9 mL de SF para 0,04 mg/mL",
+        "tempo_infusao": "bolus lento em 1 a 2 minutos; infusão contínua na renarcotização",
+        "monitorizacao": [
+          "frequência respiratória e saturação por no mínimo 4 horas",
+          "escala de sedação",
+          "sinais de abstinência",
+          "necessidade de nova dose"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Titular até a frequência respiratória, não até o despertar completo: em dependente de opioide, a reversão total precipita abstinência, vômito e aspiração. A meia-vida curta exige observação prolongada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Oxigenoterapia titulada por alvo definido",
+        "detalhe": "Alvo de 94% a 98% e de 88% a 92% em DPOC com retenção de CO2; reavaliar em 15 minutos e registrar o dispositivo, o fluxo e a saturação obtida"
+      },
+      {
+        "medida": "Cânula nasal de alto fluxo",
+        "detalhe": "Fluxo de 30 a 60 L/min, FiO2 de 21% a 100%, gás aquecido a 37 graus e umidificado, com titulação pela saturação; calcular o índice ROX em 1, 2, 6 e 12 horas e não manter se houver falha"
+      },
+      {
+        "medida": "Ventilação não invasiva com interface adequada",
+        "detalhe": "Máscara oronasal ou nasal, IPAP inicial de 12 cmH2O e EPAP de 4 a 6, com reavaliação clínica e gasométrica em 1 hora; trocar a interface a cada 4 horas para prevenir lesão de pele e não usar se houver rebaixamento, vômito ou instabilidade"
+      },
+      {
+        "medida": "Ventilação protetora com volume corrente pelo peso predito",
+        "detalhe": "6 mL/kg de peso predito, calculado por 50 + 0,91 × (altura em cm − 152,4) em homens e 45,5 + 0,91 × (altura em cm − 152,4) em mulheres; platô abaixo de 30 cmH2O e driving pressure abaixo de 15"
+      },
+      {
+        "medida": "Titulação de PEEP pela melhor complacência",
+        "detalhe": "Iniciar com 5 a 8 cmH2O e subir em passos de 2 até a melhor complacência ou a piora hemodinâmica; evitar PEEP alta em DPOC com auto-PEEP e em hipovolemia"
+      },
+      {
+        "medida": "Posição prona por 12 a 16 horas ao dia",
+        "detalhe": "Na síndrome do desconforto respiratório agudo com PaO2/FiO2 abaixo de 150; proteger olhos, face e proeminências, manter a via aérea e o circuito sem tração, e suspender se houver instabilidade ou piora da oxigenação"
+      },
+      {
+        "medida": "Cabeceira elevada e prevenção de pneumonia associada à ventilação",
+        "detalhe": "Cabeceira a 30 a 45 graus, higiene oral com clorexidina, circuito fechado e pressão do cuff entre 20 e 30 cmH2O"
+      },
+      {
+        "medida": "Sedação leve, despertar diário e protocolo de desmame",
+        "detalhe": "Alvo de Richmond entre 0 e menos 2, interrupção diária da sedação e teste de respiração espontânea com pressão de suporte de 5 a 7 cmH2O por 30 a 120 minutos"
+      },
+      {
+        "medida": "Balanço hídrico negativo e restrição de fluidos",
+        "detalhe": "Na síndrome do desconforto respiratório agudo, manter balanço negativo após a fase de ressuscitação; pesar diariamente e registrar diurese horária"
+      },
+      {
+        "medida": "Fisioterapia respiratória e mobilização precoce",
+        "detalhe": "Higiene brônquica, posicionamento e sedestação fora do leito a partir de 24 a 48 horas, com equipe e dispositivo de suporte preparados"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Intubação orotraqueal em sequência rápida",
+        "indicacao": "rebaixamento de consciência, frequência respiratória acima de 35, hipoxemia refratária ao alto fluxo, fadiga muscular, falha de ventilação não invasiva ou necessidade de proteger a via aérea",
+        "tecnica": "Pré-oxigenação por 3 a 5 minutos com máscara com reservatório ou ventilação não invasiva, etomidato 0,3 mg/kg e rocurônio 1,2 mg/kg, laringoscopia com lâmina e tubo 7,5 a 8,5, confirmação por capnografia e fixação; iniciar ventilação protetora imediatamente",
+        "complicacoes": "Hipoxemia durante a laringoscopia, aspiração, intubação esofágica, hipotensão pós-indução, lesão de via aérea e parada cardíaca",
+        "protocolo": "BOX-02"
+      },
+      {
+        "nome": "Ventilação não invasiva com pressão positiva",
+        "indicacao": "DPOC exacerbado com pH entre 7,25 e 7,35, edema agudo de pulmão cardiogênico e hipoventilação da obesidade, em paciente alerta e colaborativo",
+        "tecnica": "Escolher interface, ajustar IPAP de 12 a 20 cmH2O e EPAP de 4 a 6, com FiO2 para saturação alvo; reavaliar em 1 hora com gasometria e clínica; interromper se não houver melhora do pH ou do esforço",
+        "complicacoes": "Lesão de pele facial, distensão gástrica, aspiração, hipotensão por auto-PEEP, falha com intubação tardia e claustrofobia"
+      },
+      {
+        "nome": "Cânula nasal de alto fluxo",
+        "indicacao": "insuficiência respiratória hipoxêmica moderada a grave sem critério de intubação",
+        "tecnica": "Cânula nasal dedicada com fluxo inicial de 30 a 40 L/min subindo até 60, FiO2 titulada para saturação de 94% a 98%, temperatura de 37 graus; calcular o índice ROX e reavaliar em 2 horas",
+        "complicacoes": "Falha com intubação tardia, desconforto nasal, sangramento nasal, ressecamento e atraso na escalada de suporte"
+      },
+      {
+        "nome": "Ventilação mecânica invasiva protetora",
+        "indicacao": "síndrome do desconforto respiratório agudo e toda insuficiência respiratória sob ventilação mecânica",
+        "tecnica": "Modo controlado a volume ou pressão com volume corrente de 6 mL/kg de peso predito, frequência inicial de 16 a 20 por minuto, PEEP de 8 a 12, platô abaixo de 30 cmH2O e driving pressure abaixo de 15; ajustar a frequência para pH acima de 7,30 aceitando hipercapnia permissiva",
+        "complicacoes": "Volutrauma, atelectrauma, barotrauma com pneumotórax, auto-PEEP, hipotensão e fraqueza do paciente crítico"
+      },
+      {
+        "nome": "Posição prona",
+        "indicacao": "síndrome do desconforto respiratório agudo com PaO2/FiO2 abaixo de 150",
+        "tecnica": "Equipe de pelo menos quatro pessoas, tubo e acessos fixados, proteção de olhos e face com curativo hidrocoloide, giro em bloco para decúbito ventral com cabeça lateralizada, por 12 a 16 horas; retornar a supino para higiene e avaliação",
+        "complicacoes": "Extubação acidental, deslocamento de cateteres, lesão por pressão em face e tórax, vômito e aspiração, e piora hemodinâmica na mobilização"
+      },
+      {
+        "nome": "Traqueostomia percutânea",
+        "indicacao": "ventilação mecânica prolongada por mais de 10 a 14 dias, desmame difícil e necessidade de higiene brônquica prolongada",
+        "tecnica": "Punção percutânea guiada por broncoscopia ou ultrassom entre o segundo e o quarto anel traqueal, com dilatação progressiva e passagem da cânula; confirmar posição por capnografia e radiografia",
+        "complicacoes": "Sangramento, lesão de parede posterior da traqueia, estenose, infecção do estoma, fístula traqueoesofágica e deslocamento da cânula"
+      },
+      {
+        "nome": "Broncoscopia para atelectasia ou tampão mucoso",
+        "indicacao": "atelectasia lobar com hipoxemia refratária e suspeita de tampão mucoso",
+        "tecnica": "Broncoscopia flexível pelo tubo orotraqueal, com FiO2 a 100% e PEEP mantida, aspiração e lavagem com soro fisiológico em alíquotas de 20 mL",
+        "complicacoes": "Hipoxemia, pneumotórax, sangramento, broncoespasmo e instabilidade hemodinâmica durante o procedimento"
+      }
+    ],
+    "metas": [
+      "Saturação entre 94% e 98% (88% a 92% em DPOC com retenção de CO2), sem hiperóxia acima de 98%",
+      "pH acima de 7,30 e PaCO2 em queda progressiva na insuficiência respiratória tipo II",
+      "Volume corrente de 6 mL/kg de peso predito, platô abaixo de 30 cmH2O e driving pressure abaixo de 15",
+      "Relação PaO2/FiO2 acima de 200 em 24 horas de ventilação protetora",
+      "Intubação em menos de 30 minutos a partir do reconhecimento de um critério de via aérea definitiva",
+      "Teste de respiração espontânea iniciado em 24 a 48 horas após a causa estar controlada",
+      "Identificação e tratamento da causa em menos de 6 horas do início do suporte"
+    ],
+    "fluxo": [
+      "ABCDE com atenção à via aérea, frequência respiratória, saturação, esforço muscular e nível de consciência",
+      "Gasometria arterial e oximetria imediatas: separar tipo I (PaO2 abaixo de 60 com PaCO2 normal ou baixa) de tipo II (PaCO2 acima de 50 com pH abaixo de 7,35)",
+      "Oxigênio titulado por alvo definido, com reavaliação em 15 minutos; 88% a 92% em DPOC",
+      "Hipoxemia persistente com esforço preservado: cânula nasal de alto fluxo, com cálculo do índice ROX e reavaliação em 2 horas",
+      "Tipo II com pH entre 7,25 e 7,35 e paciente alerta: ventilação não invasiva, com gasometria de controle em 1 hora",
+      "Verificar critérios de intubação: rebaixamento, frequência respiratória acima de 35, hipoxemia refratária, fadiga, falha de suporte não invasivo ou tórax silencioso",
+      "Intubar pelo protocolo BOX-02 e iniciar ventilação protetora de 6 mL/kg de peso predito com PEEP titulada, no mesmo momento da intubação",
+      "Síndrome do desconforto respiratório agudo com PaO2/FiO2 abaixo de 150: prona por 12 a 16 horas, PEEP alta e bloqueador neuromuscular por 24 a 48 horas",
+      "Tratar a causa em paralelo: broncodilatador e corticoide no broncoespasmo, antibiótico na pneumonia, nitrato e diurético no edema agudo, naloxona na intoxicação, anticoagulação no tromboembolismo",
+      "Despertar diário, teste de respiração espontânea e extubação assim que a causa estiver controlada; falha de extubação indica reavaliar via aérea e suporte"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "dpoc",
+        "ajuste": "oxigênio com alvo de 88% a 92%, gasometria seriada, ventilação não invasiva precoce com EPAP baixa e tempo expiratório prolongado, e broncodilatador de ação curta",
+        "alerta": "oxigênio alto precipita retenção de CO2 e a PEEP alta piora a auto-PEEP e a hipotensão"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "reduzir pela metade a sedação e o etomidato, avaliar fragilidade e delirium, e aceitar metas de saturação menos rígidas com conforto como prioridade",
+        "alerta": "mortalidade e delirium são maiores, e a apresentação pode ser apenas confusão sem dispneia"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "manter saturação acima de 95%, decúbito lateral esquerdo após a 20ª semana, intubação com tubo 0,5 a 1 mm menor e equipe obstétrica presente",
+        "alerta": "a reserva funcional e a capacidade residual são menores, e a dessaturação materna leva a sofrimento fetal em minutos"
+      },
+      {
+        "populacao": "obeso",
+        "ajuste": "calcular o volume corrente pelo peso predito e não pelo peso real, usar PEEP mais alta para vencer o peso da parede torácica e preferir posição rampa na intubação",
+        "alerta": "volume corrente pelo peso real causa volutrauma grave e a via aérea difícil é frequente"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "investigar Pneumocystis, citomegalovírus e fungos com lavado broncoalveolar precoce, e associar tratamento específico ao suporte ventilatório",
+        "alerta": "a mortalidade da síndrome do desconforto respiratório agudo por Pneumocystis em não tratado é muito alta e a piora é rápida"
+      },
+      {
+        "populacao": "neuromuscular",
+        "ajuste": "monitorizar capacidade vital e pressão inspiratória máxima, iniciar ventilação não invasiva quando a capacidade vital cair abaixo de 20 mL/kg e não esperar hipoxemia",
+        "alerta": "a instalação é insidiosa, a hipoxemia aparece tarde e a falha de tosse leva a atelectasia e pneumonia"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "gasometria arterial",
+          "indicacao": "toda suspeita de insuficiência respiratória aguda",
+          "o_que_muda": "separa tipo I de tipo II, quantifica o shunt e define o alvo de oxigênio e a necessidade de ventilação"
+        },
+        {
+          "nome": "oximetria contínua e capnografia",
+          "indicacao": "todo paciente em suporte ventilatório",
+          "o_que_muda": "detecta dessaturação e hipoventilação em tempo real e confirma o posicionamento do tubo"
+        },
+        {
+          "nome": "radiografia de tórax em duas incidências",
+          "indicacao": "primeira avaliação de todo paciente",
+          "o_que_muda": "identifica pneumonia, derrame, edema, pneumotórax e atelectasia"
+        },
+        {
+          "nome": "tomografia de tórax",
+          "indicacao": "dúvida diagnóstica, suspeita de tromboembolismo ou de síndrome do desconforto respiratório agudo",
+          "o_que_muda": "define o padrão de infiltrado, exclui embolia e orienta a PEEP e a prona"
+        },
+        {
+          "nome": "ecografia pulmonar e cardíaca à beira-leito",
+          "indicacao": "hipoxemia de causa indefinida e suspeita de edema cardiogênico",
+          "o_que_muda": "diferencia edema cardiogênico de lesão pulmonar e orienta o uso de diurético ou de PEEP"
+        },
+        {
+          "nome": "eletrocardiograma, troponina e peptídeo natriurético",
+          "indicacao": "suspeita de causa cardíaca ou de tromboembolismo",
+          "o_que_muda": "separa edema agudo cardiogênico de síndrome do desconforto respiratório agudo e indica anticoagulação"
+        },
+        {
+          "nome": "hemograma, proteína C reativa, lactato e culturas",
+          "indicacao": "suspeita de infecção como causa",
+          "o_que_muda": "define o antibiótico, a gravidade e o foco a ser tratado"
+        },
+        {
+          "nome": "angiotomografia de tórax",
+          "indicacao": "suspeita de tromboembolismo pulmonar com insuficiência respiratória",
+          "o_que_muda": "confirma a embolia e indica anticoagulação ou trombólise"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "tomografia de tórax em paciente instável sem suporte ventilatório e sem acompanhamento",
+          "motivo": "o transporte e o exame precipitam parada cardíaca; estabilizar e levar com equipe e monitorização"
+        },
+        {
+          "exame": "gasometria arterial repetida a cada hora sem mudança de suporte",
+          "motivo": "não muda a conduta e acrescenta dor, risco de punção arterial e anemia"
+        },
+        {
+          "exame": "radiografia de tórax diária de rotina em paciente com evolução estável",
+          "motivo": "não altera o manejo e expõe o paciente a radiação desnecessária"
+        },
+        {
+          "exame": "espirometria durante a crise",
+          "motivo": "o esforço agrava o broncoespasmo e o resultado não muda a conduta imediata"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "usar o oxigênio ou o CPAP em casa exatamente no fluxo e nas horas prescritas",
+        "medir a saturação com oximetro de pulso e anotar os valores de manhã e à noite",
+        "comparecer ao retorno com pneumologia em 7 a 14 dias e levar a gasometria e a tomografia",
+        "tomar a medicação inalatória na técnica correta, com espaçador, e lavar a boca após o corticoide",
+        "parar de fumar e procurar o grupo de cessação ainda durante a internação",
+        "fazer a vacinação contra influenza e pneumococo conforme orientação"
+      ],
+      "evitar": [
+        "fumar ou usar cigarro eletrônico",
+        "usar oxigênio em fluxo maior que o prescrito, principalmente com DPOC",
+        "tomar sedativo, opioide ou álcool sem orientação, pelo risco de hipoventilação",
+        "dormir sem o aparelho de pressão positiva quando ele foi prescrito",
+        "esforço físico intenso na primeira semana após a alta",
+        "interromper o corticoide ou o antibiótico antes do prazo prescrito"
+      ],
+      "retorno": [
+        "falta de ar que piora em repouso ou com esforço leve",
+        "saturação abaixo de 88% em duas medidas seguidas",
+        "sonolência, confusão ou dor de cabeça nova",
+        "febre acima de 38 graus ou escarro purulento",
+        "dor torácica ou desmaio",
+        "piora do inchaço de pernas ou ganho de peso acima de 2 kg em 3 dias"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "oxigênio",
+        "efeitos": [
+          "hiperóxia",
+          "atelectasia de absorção",
+          "retenção de CO2 em DPOC"
+        ],
+        "observacao": "titular por alvo e colher gasometria em DPOC"
+      },
+      {
+        "agente": "salbutamol",
+        "efeitos": [
+          "taquicardia",
+          "tremor",
+          "hipocalemia",
+          "hiperglicemia"
+        ],
+        "observacao": "dosar potássio em uso repetido e monitorizar o ritmo"
+      },
+      {
+        "agente": "ipratrópio",
+        "efeitos": [
+          "boca seca",
+          "retenção urinária",
+          "midríase"
+        ],
+        "observacao": "proteger os olhos na nebulização e avaliar retenção urinária"
+      },
+      {
+        "agente": "metilprednisolona",
+        "efeitos": [
+          "hiperglicemia",
+          "hipertensão",
+          "agitação",
+          "infecção"
+        ],
+        "observacao": "monitorar glicemia e não prolongar além de 5 a 7 dias"
+      },
+      {
+        "agente": "furosemida",
+        "efeitos": [
+          "hipocalemia",
+          "hipotensão",
+          "lesão renal"
+        ],
+        "observacao": "dosar eletrólitos e creatinina a cada 12 horas"
+      },
+      {
+        "agente": "nitroglicerina",
+        "efeitos": [
+          "cefaleia",
+          "hipotensão",
+          "taquicardia"
+        ],
+        "observacao": "titular pela pressão e suspender se sistólica abaixo de 90 mmHg"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "diarreia",
+          "colite por C. difficile",
+          "barro biliar"
+        ],
+        "observacao": "suspender se diarreia intensa ou icterícia"
+      },
+      {
+        "agente": "noradrenalina",
+        "efeitos": [
+          "isquemia periférica",
+          "arritmia",
+          "necrose por extravasamento"
+        ],
+        "observacao": "acesso central e inspeção do sítio a cada hora"
+      },
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "depressão respiratória",
+          "sedação",
+          "hipotensão"
+        ],
+        "observacao": "não usar em rebaixamento ou hipoventilação"
+      },
+      {
+        "agente": "etomidato",
+        "efeitos": [
+          "supressão adrenal",
+          "mioclonia",
+          "hipotensão"
+        ],
+        "observacao": "dose única e vigilância hemodinâmica por 24 horas"
+      },
+      {
+        "agente": "rocurônio",
+        "efeitos": [
+          "paralisia residual",
+          "bloqueio prolongado",
+          "anafilaxia"
+        ],
+        "observacao": "estimulador de nervo periférico e sedação profunda antes de cada dose"
+      },
+      {
+        "agente": "midazolam",
+        "efeitos": [
+          "hipotensão",
+          "delirium",
+          "sedação prolongada"
+        ],
+        "observacao": "alvo de Richmond e despertar diário"
+      },
+      {
+        "agente": "naloxona",
+        "efeitos": [
+          "abstinência aguda",
+          "edema pulmonar",
+          "arritmia"
+        ],
+        "observacao": "titular até a frequência respiratória e não até o despertar completo"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender imediatamente o fármaco implicado e registrar hora e última dose",
+      "Hipotensão após a indução ou após aumentar a PEEP: reduzir a PEEP e o volume, repor volume e iniciar noradrenalina se persistir",
+      "Piora súbita da saturação com hipotensão e murmúrio abolido: suspeitar de pneumotórax por barotrauma e descomprimir sem esperar imagem",
+      "Salbutamol com taquicardia e hipocalemia: reduzir a frequência das nebulizações, repor potássio e monitorizar o ritmo",
+      "Midazolam com sedação excessiva e hipotensão: reduzir a infusão, avaliar delirium e considerar troca por propofol ou dexmedetomidina",
+      "Naloxona com abstinência, vômito e agitação: reduzir a dose, proteger a via aérea e tratar sintomas com suporte",
+      "Noradrenalina com extravasamento: interromper o acesso, aspirar e infiltrar fentolamina 5 a 10 mg na área",
+      "Falha de ventilação não invasiva com piora do pH e do esforço: intubar imediatamente, sem novo teste",
+      "Reavaliar a indicação, escolher outra classe e reescrever a prescrição antes de sair do leito"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "salbutamol 100 mcg por jato",
+            "dose": "4 a 8 jatos",
+            "via": "inalatória",
+            "frequencia": "4/4 h a 6/6 h se dispneia",
+            "duracao": "30 dias",
+            "condicao": "broncoespasmo; usar com espaçador",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisona 20 mg",
+            "dose": "40 mg",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "5 dias",
+            "condicao": "asma ou DPOC exacerbado; sem desmame",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "furosemida 40 mg",
+            "dose": "40 mg",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "30 dias",
+            "condicao": "congestão residual; controle de peso diário",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina com clavulanato 875/125 mg",
+            "dose": "875/125 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "pneumonia comunitária com critério de via oral",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "oxigênio",
+            "dose": "titulado para 94% a 98% (88% a 92% no DPOC)",
+            "via": "inalatória",
+            "frequencia": "contínuo",
+            "monitorizacao": "oximetria e gasometria",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "salbutamol",
+            "dose": "2,5 a 5 mg nebulizado",
+            "via": "inalatória",
+            "frequencia": "20/20 min na primeira hora",
+            "monitorizacao": "frequência cardíaca e potássio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ipratrópio",
+            "dose": "0,5 mg nebulizado",
+            "via": "inalatória",
+            "frequencia": "20/20 min por 3 doses",
+            "monitorizacao": "retenção urinária e pupilas",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metilprednisolona",
+            "dose": "40 mg",
+            "via": "IV",
+            "frequencia": "12/12 h",
+            "monitorizacao": "glicemia e potássio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "furosemida",
+            "dose": "40 mg",
+            "via": "IV",
+            "frequencia": "bolus e depois 12/12 h",
+            "monitorizacao": "diurese, potássio e creatinina",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "nitroglicerina",
+            "dose": "10 a 20 mcg/min titulada",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "pressão arterial a cada 5 minutos",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "noradrenalina",
+            "dose": "0,05 a 0,5 mcg/kg/min",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "pressão média e perfusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "etomidato",
+            "dose": "0,3 mg/kg",
+            "via": "IV",
+            "frequencia": "dose única na indução",
+            "monitorizacao": "pressão arterial",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "rocurônio",
+            "dose": "1,2 mg/kg",
+            "via": "IV",
+            "frequencia": "dose única na intubação",
+            "monitorizacao": "estimulador de nervo periférico",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "midazolam",
+            "dose": "0,02 a 0,1 mg/kg/h",
+            "via": "IV",
+            "frequencia": "infusão contínua",
+            "monitorizacao": "escala de Richmond e delirium",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "naloxona",
+            "dose": "0,04 a 0,4 mg titulada",
+            "via": "IV",
+            "frequencia": "a cada 2 a 3 minutos",
+            "monitorizacao": "frequência respiratória",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "gasometria arterial",
+          "radiografia de tórax PA e perfil",
+          "tomografia de tórax",
+          "ecografia pulmonar e cardíaca",
+          "eletrocardiograma",
+          "hemograma",
+          "proteína C reativa",
+          "lactato",
+          "eletrólitos e creatinina",
+          "culturas",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, com quadro de insuficiência respiratória aguda, necessitando de suporte ventilatório, com afastamento das atividades pelo período indicado.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino (pneumologia, terapia intensiva ou cardiologia)",
+          "motivo",
+          "resumo com tipo de insuficiência, suporte utilizado, gasometria e causa",
+          "prioridade",
+          "horário do contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com insuficiência respiratória aguda do tipo ___, gasometria inicial com pH ___, PaO2 ___ e PaCO2 ___, relação PaO2/FiO2 ___, suporte utilizado (oxigênio, alto fluxo, ventilação não invasiva ou invasiva) ___, ventilação protetora com volume corrente de ___ mL/kg de peso predito, PEEP ___, prona ___, bloqueador neuromuscular ___, causa identificada ___ e tratamento específico ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "início e progressão",
+        "febre e tosse",
+        "escarro",
+        "dor torácica",
+        "ortopneia e dispneia paroxística noturna",
+        "história de asma ou DPOC",
+        "insuficiência cardíaca",
+        "obesidade e apneia do sono",
+        "doença neuromuscular",
+        "uso de sedativo, opioide ou álcool",
+        "cirurgia ou imobilização recente",
+        "oxigênio domiciliar e CPAP"
+      ],
+      "texto_template": "Paciente com dispneia iniciada há ___ com progressão ___, febre ___, tosse com escarro ___, dor torácica ___, ortopneia ___, história de asma ou DPOC ___, insuficiência cardíaca ___, obesidade com apneia do sono ___, doença neuromuscular ___, uso de sedativo ou opioide ___, cirurgia ou imobilização recente ___, oxigênio domiciliar ___ e CPAP ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "frequência respiratória e relação com a fala",
+        "saturação e oximetria em ar ambiente",
+        "uso de musculatura acessória e tiragem",
+        "respiração paradoxal",
+        "ausculta pulmonar comparada",
+        "percussão",
+        "nível de consciência",
+        "perfusão e tempo de enchimento capilar",
+        "distensão jugular",
+        "edema de membros inferiores",
+        "capacidade de proteger a via aérea"
+      ],
+      "texto_template": "Sinais vitais, frequência respiratória, saturação em ar ambiente, uso de musculatura acessória, respiração paradoxal, ausculta pulmonar comparada, percussão, nível de consciência, perfusão, distensão jugular, edema de membros inferiores e capacidade de proteger a via aérea."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de suporte ventilatório, disponibilidade de cânula nasal de alto fluxo, ventiladores e protocolo de prona",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_de_terapia_intensiva",
+        "o_que_verificar": "definição de Berlim, ventilação protetora, PEEP, prona e critérios de intubação",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pneumologia",
+        "o_que_verificar": "indicação de ventilação não invasiva no DPOC e manejo da asma grave",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_suporte_avancado_de_vida",
+        "o_que_verificar": "sequência rápida de intubação, drogas e doses",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, concentrações e registro dos fármacos",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-RESP20-01",
+        "tipo": "criterio_de_intubacao",
+        "gatilho": "rebaixamento de consciência, frequência respiratória acima de 35 ou abaixo de 8, hipoxemia refratária ou fadiga muscular",
+        "severidade": "grave",
+        "mensagem": "Critério de via aérea definitiva presente: intubar pelo protocolo BOX-02 agora e iniciar ventilação protetora.",
+        "acao": "acionar anestesia e sala vermelha",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP20-02",
+        "tipo": "vni_em_rebaixamento",
+        "gatilho": "ventilação não invasiva prescrita em paciente com rebaixamento de consciência, agitação, vômito ou incapacidade de remover a máscara",
+        "severidade": "grave",
+        "mensagem": "Ventilação não invasiva é contraindicada com rebaixamento: risco de aspiração e de intubação tardia. Indicar intubação.",
+        "acao": "bloquear prescrição de VNI",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP20-03",
+        "tipo": "volume_corrente_alto",
+        "gatilho": "volume corrente acima de 8 mL/kg de peso predito em paciente com síndrome do desconforto respiratório agudo ou em ventilação mecânica por insuficiência respiratória",
+        "severidade": "grave",
+        "mensagem": "Volume corrente protetor é 6 mL/kg de peso predito: acima de 8 mL/kg há volutrauma e aumento de mortalidade.",
+        "acao": "bloquear parâmetro do ventilador",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP20-04",
+        "tipo": "hiperoxia",
+        "gatilho": "saturação acima de 98% ou FiO2 de 100% mantida sem indicação",
+        "severidade": "precaucao",
+        "mensagem": "Reduzir a FiO2: hiperóxia causa vasoconstrição, atelectasia de absorção e piora de desfecho.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP20-05",
+        "tipo": "oxigenio_dpoc",
+        "gatilho": "oxigênio acima de 4 L/min em DPOC sem gasometria",
+        "severidade": "precaucao",
+        "mensagem": "Titular para 88% a 92% e colher gasometria: risco de retenção de CO2 e acidose.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP20-06",
+        "tipo": "prona_sem_protecao",
+        "gatilho": "posição prona prescrita sem cuidados de proteção de olhos, face, proeminências e fixação do tubo",
+        "severidade": "precaucao",
+        "mensagem": "Prona exige proteção de face e olhos, fixação do tubo e equipe de quatro pessoas para o giro.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "sociedade de terapia intensiva",
+        "sociedade de pneumologia",
+        "diretriz de suporte avançado de vida",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade: separação de tipo I hipoxêmico, tipo II hipercápnico e síndrome do desconforto respiratório agudo; 13 fármacos com apresentações, preparo, tempo de infusão e monitorização; oxigênio titulado por alvo, cânula nasal de alto fluxo com índice ROX, ventilação não invasiva por indicação, ventilação protetora com 6 mL/kg de peso predito, PEEP titulada, prona por 12 a 16 horas e tratamento da causa; critérios explícitos de intubação (rebaixamento, frequência respiratória acima de 35, hipoxemia refratária e fadiga) pelo protocolo BOX-02; bloqueio de ventilação não invasiva em rebaixamento e de volume corrente acima de 8 mL/kg de peso predito.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1372 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-19",
+    "area": "Respiratório/ORL",
+    "nome": "Hemoptise",
+    "aliases": [
+      "Hemoptise",
+      "hemoptise",
+      "hemoptise maciça",
+      "hemoptise leve",
+      "pseudo-hemoptise",
+      "escarro hemoptoico",
+      "sangramento pulmonar"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Hemoptise é a eliminação de sangue originado abaixo da glote, pela tosse. A primeira decisão não é diagnosticar a causa: é separar três quadros que se parecem e se tratam de formas opostas. A hemoptise leve, em geral escarro raiado ou abaixo de 50 mL em 24 horas, permite investigação organizada com tomografia e broncoscopia eletiva. A hemoptise maciça, definida como mais de 400 mL em 24 horas ou mais de 100 mL por hora, é emergência de via aérea: o sangue inunda o alvéolo e o brônquio contralateral, e a morte é por asfixia, não por choque hemorrágico. Nesse cenário a prioridade é isolar o pulmão que sangra com tubo de duplo lúmen ou intubação seletiva, manter o paciente em decúbito lateral do lado do sangramento, aspirar de forma contínua e levar à broncoscopia e à embolização de artéria brônquica. A pseudo-hemoptise, por epistaxe posterior ou hematêmese, é outra doença: sangra da via aérea superior ou do tubo digestivo, não do pulmão, e tratar como hemoptise atrasa o controle da origem certa. O erro que mata é sedar ou induzir anestesia sem proteger a via aérea, e o segundo é aguardar tomografia em paciente que está sangrando ativamente. Broncoscopia define o lado e limpa o brônquio; embolização de artéria brônquica controla a maioria dos sangramentos; cirurgia é o último recurso e exige sangramento localizado e paciente operável.",
+    "inclusao": [
+      "Tosse com sangue vivo, escarro hemoptoico ou sangue rutilante em eliminação pela boca",
+      "Hemoptise volumosa com dispneia, hipoxemia ou instabilidade",
+      "Hemoptise recorrente em paciente com bronquiectasia, tuberculose prévia, aspergiloma ou neoplasia",
+      "Hemoptise em paciente anticoagulado, com plaquetopenia ou coagulopatia",
+      "Sangramento pela boca em que não se consegue definir a origem entre pulmão, via aérea superior e tubo digestivo",
+      "Hemoptise com infiltrado, cavitação ou massa em imagem prévia"
+    ],
+    "exclusao": [
+      {
+        "situacao": "sangramento nasal ou de rinofaringe confirmado à nasofibroscopia, com sangue deglutido e depois tossido",
+        "fluxo": "RESP-07 epistaxe"
+      },
+      {
+        "situacao": "vômito com sangue ou borra de café, com náusea e dor epigástrica como sintoma inicial",
+        "fluxo": "GI-09 sangramento digestivo alto suspeito"
+      },
+      {
+        "situacao": "escarro com raias de sangue em paciente estável, sem volume, sem dispneia e com radiografia normal, em quadro de infecção de via aérea alta",
+        "fluxo": "RESP-11 tosse"
+      },
+      {
+        "situacao": "dispneia súbita com dor pleurítica e murmúrio abolido, sem sangue exteriorizado",
+        "fluxo": "RESP-17 pneumotórax"
+      },
+      {
+        "situacao": "hemorragia de via aérea após trauma de face ou de pescoço, com via aérea comprometida por edema ou hematoma",
+        "fluxo": "via aérea difícil com cirurgia de cabeça e pescoço"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "sangue vivo em volume superior a 100 mL por hora ou mais de 400 mL em 24 horas",
+        "por_que": "hemoptise maciça com risco de asfixia por inundação do pulmão contralateral",
+        "acao": "sala vermelha, decúbito lateral do lado do sangramento, aspiração contínua e intubação com tubo de duplo lúmen pelo protocolo BOX-02",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "saturação abaixo de 90%, dispneia progressiva ou necessidade crescente de oxigênio",
+        "por_que": "shunt por sangue ocupando o alvéolo e perda de superfície de troca",
+        "acao": "oxigênio em alto fluxo, avaliar intubação seletiva e broncoscopia imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "rebaixamento de consciência, agitação ou incapacidade de tossir e proteger a via aérea",
+        "por_que": "risco de aspiração de sangue e asfixia",
+        "acao": "intubação orotraqueal imediata pelo protocolo BOX-02, sem sedar antes de proteger a via aérea",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "hipotensão, taquicardia e perfusão lentificada",
+        "por_que": "choque, geralmente hemorrágico associado ou por lesão de grandes vasos",
+        "acao": "reposição volêmica, tipagem e prova cruzada, hemoderivados e embolização de urgência",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "uso de varfarina, dabigatrana, apixabana, rivaroxabana ou antiagregante",
+        "por_que": "coagulopatia que mantém o sangramento e impede hemostasia",
+        "acao": "suspender o fármaco e reverter conforme o agente, com vitamina K, complexo protrombínico ou idarucizumabe",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "hemoptise recorrente em paciente com tuberculose prévia, cavitação ou aspergiloma",
+        "por_que": "aneurisma de Rasmussen e sangramento arterial brônquico hipertrofiado",
+        "acao": "tomografia com contraste e embolização de artéria brônquica programada; não aguardar novo episódio",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "sangramento que persiste após broncoscopia com instilação de vasoconstritor e tamponamento",
+        "por_que": "artéria brônquica de alto fluxo ou origem não brônquica",
+        "acao": "embolização de artéria brônquica de urgência e avaliação cirúrgica",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "O sangue sai tossindo ou veio com vômito? Teve náusea antes?",
+      "Quanto sangue foi? Uma colher, um copo, mais de meio copo? Em quanto tempo?",
+      "O sangue é vivo e espumoso ou escuro com restos de alimento?",
+      "Tem sangramento pelo nariz, foi operado do nariz ou tem ronco e sangramento posterior?",
+      "Já teve tuberculose, bronquiectasia, pneumonia de repetição ou câncer de pulmão?",
+      "Fuma, usa cigarro eletrônico ou usa cocaína aspirada?",
+      "Usa anticoagulante, AAS, clopidogrel ou tem doença de coagulação?",
+      "Está perdendo peso, com febre à tarde ou suor noturno?",
+      "Já teve episódio parecido antes? Quantas vezes e em quanto tempo?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Hemoptise leve, escarro raiado ou menos de 50 mL em 24 horas, paciente estável, sem hipoxemia e com radiografia sem alteração grosseira",
+        "escolha": "Internação em enfermaria para observação por 24 horas, oxigênio titulado, ácido tranexâmico 1 g IV 8/8 h, tomografia de tórax com contraste e broncoscopia eletiva na mesma internação",
+        "porque": "A leve pode preceder um episódio maciço em até um quinto dos casos, e a tomografia com contraste identifica bronquiectasia, cavitação, aspergiloma e vaso hipertrófico antes do próximo sangramento"
+      },
+      {
+        "cenario": "Hemoptise moderada, entre 50 e 400 mL em 24 horas, com tosse persistente e sem hipoxemia",
+        "escolha": "Internação em unidade monitorizada, decúbito lateral do lado do sangramento, ácido tranexâmico, tomografia de tórax com contraste e broncoscopia precoce em até 24 horas",
+        "porque": "O volume já exige leito monitorizado e a broncoscopia localiza o lado antes de qualquer piora, quando ainda há tempo de planejar embolização"
+      },
+      {
+        "cenario": "Hemoptise maciça, acima de 400 mL em 24 horas ou acima de 100 mL por hora, com hipoxemia, rebaixamento ou incapacidade de tossir",
+        "escolha": "Proteger a via aérea primeiro, pelo protocolo BOX-02, com tubo de duplo lúmen quando disponível ou intubação seletiva do pulmão sadio; decúbito lateral do lado do sangramento; aspiração contínua; broncoscopia e embolização de artéria brônquica em seguida",
+        "porque": "A morte é por asfixia e não por perda volêmica, então via aérea vem antes de imagem, de acesso central e de qualquer outra providência"
+      },
+      {
+        "cenario": "Pseudo-hemoptise por epistaxe posterior, com sangue descendo pela faringe, deglutido e depois tossido",
+        "escolha": "Nasofibroscopia para confirmar a origem, tamponamento nasal posterior, avaliação de otorrinolaringologia e tratamento como epistaxe; não indicar broncoscopia nem embolização brônquica",
+        "porque": "A origem é a artéria esfenopalatina ou etmoidal e o tratamento é nasal; broncoscopia nesse caso apenas atrasa o controle e irradia o paciente"
+      },
+      {
+        "cenario": "Pseudo-hemoptise por hematêmese, com náusea, dor epigástrica e sangue escuro com restos alimentares",
+        "escolha": "Tratar como hemorragia digestiva alta, com IBP em dose alta, vasoconstritor se houver suspeita de varizes e endoscopia digestiva alta; não indicar broncoscopia",
+        "porque": "O sangramento é digestivo e a endoscopia é o exame que trata, enquanto a broncoscopia é inútil e perigosa nesse contexto"
+      },
+      {
+        "cenario": "Hemoptise em paciente anticoagulado com sangramento ativo",
+        "escolha": "Suspender o anticoagulante e reverter conforme o agente: vitamina K 10 mg IV e complexo protrombínico 25 a 50 UI/kg para varfarina, idarucizumabe 5 g para dabigatrana, complexo protrombínico ou andexanet alfa para os inibidores do fator Xa",
+        "porque": "Sem reversão, a hemostasia endoscópica e a embolização falham e o sangramento continua mesmo com o vaso ocluído"
+      },
+      {
+        "cenario": "Hemoptise com bronquiectasia infectada, febre e escarro purulento",
+        "escolha": "Amoxicilina com clavulanato 875/125 mg 12/12 h ou levofloxacino 750 mg 1x/dia por 7 a 10 dias, associado a fisioterapia de higiene brônquica e ao controle do sangramento",
+        "porque": "A infecção mantém a inflamação da mucosa e a hipervascularização que sangra; tratar o agente reduz recidiva enquanto se planeja a embolização"
+      },
+      {
+        "cenario": "Sangramento que persiste após broncoscopia com instilação de adrenalina e tamponamento, ou recidiva precoce após embolização",
+        "escolha": "Embolização de artéria brônquica de urgência; se falhar, nova embolização com identificação de artérias não brônquicas ou cirurgia de salvamento com lobectomia do segmento sangrante",
+        "porque": "A embolização controla inicialmente até nove de cada dez casos, mas a recidiva chega a um quinto e a cirurgia exige sangramento localizado e pulmão contralateral funcionante"
+      },
+      {
+        "cenario": "Hemoptise maciça com instabilidade hemodinâmica e impossibilidade de isolar o lado sangrante",
+        "escolha": "Intubação com tubo de duplo lúmen guiada por broncoscopia, ventilação do pulmão sadio e compressão do brônquio sangrante com cateter de Fogarty; transfusão e embolização em paralelo",
+        "porque": "O tamponamento brônquico compra tempo até a embolização e evita que o sangue inunde o pulmão que ainda troca gás"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "gas_medicinal",
+        "agente": "oxigênio",
+        "papel": "primeira_linha",
+        "indicacao": "toda hemoptise com hipoxemia ou dispneia; oxigênio em alto fluxo durante o sangramento ativo",
+        "dose": "titulado para saturação entre 94% e 98%; máscara com reservatório a 10–15 L/min se hipoxemia grave",
+        "unidade": "L/min",
+        "via": "inalatória",
+        "frequencia": "contínuo",
+        "duracao": "até controle do sangramento e estabilização",
+        "dose_maxima": "saturação de 98%; 88% a 92% em DPOC com retenção de CO2",
+        "contraindicacoes": [
+          "DPOC com retenção crônica de CO2 sem controle por gasometria"
+        ],
+        "efeitos_adversos": [
+          "hiperóxia",
+          "ressecamento de mucosa",
+          "atelectasia de absorção",
+          "retenção de CO2 em DPOC"
+        ],
+        "apresentacoes": [
+          "cateter nasal tipo óculos",
+          "máscara com reservatório 10–15 L/min",
+          "máscara de Venturi 24–50%",
+          "cânula nasal de alto fluxo",
+          "cilindro medicinal 1 m³"
+        ],
+        "preparo": "Umidificar acima de 4 L/min; na máscara com reservatório, manter o balão inflado antes de posicionar no paciente",
+        "tempo_infusao": "contínuo",
+        "monitorizacao": [
+          "oximetria contínua",
+          "frequência respiratória",
+          "gasometria em DPOC ou hipoxemia refratária",
+          "nível de consciência e capacidade de tossir"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Em hemoptise maciça o oxigênio é ponte: não corrige o shunt enquanto o alvéolo estiver cheio de sangue. Não atrasar a intubação seletiva esperando resposta ao cateter nasal",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/protocolo institucional",
+        "claim_id": null
+      },
+      {
+        "classe": "antifibrinolitico",
+        "agente": "ácido tranexâmico",
+        "papel": "primeira_linha",
+        "indicacao": "hemoptise leve e moderada; adjuvante na maciça enquanto se organiza broncoscopia e embolização",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV ou nebulizada",
+        "frequencia": "8/8 h (IV) ou 8/8 h por nebulização",
+        "duracao": "até 5 dias",
+        "dose_maxima": "3 g/dia",
+        "contraindicacoes": [
+          "trombose venosa ou arterial ativa",
+          "antecedente de convulsão",
+          "hemorragia subaracnóidea",
+          "insuficiência renal grave sem ajuste",
+          "hipersensibilidade ao ácido tranexâmico"
+        ],
+        "efeitos_adversos": [
+          "náusea",
+          "diarreia",
+          "hipotensão em infusão rápida",
+          "convulsão em dose alta ou em renal crônico",
+          "trombose",
+          "visão turva"
+        ],
+        "apresentacoes": [
+          "ampola 1 g/10 mL",
+          "ampola 500 mg/5 mL",
+          "comprimido 250 mg",
+          "solução oral 50 mg/mL",
+          "ampola para nebulização 500 mg/5 mL"
+        ],
+        "preparo": "IV: diluir 1 g em 100 mL de SF 0,9%. Nebulização: diluir 500 mg em 5 mL de SF 0,9% e administrar em máscara com nebulizador",
+        "tempo_infusao": "20 minutos na via intravenosa; 10 a 15 minutos na nebulização",
+        "monitorizacao": [
+          "volume e aspecto do sangramento",
+          "sinais de trombose em membros e dispneia nova",
+          "função renal antes de repetir dose",
+          "nível de consciência e tremor em renal crônico"
+        ],
+        "ajuste_renal": "ClCr entre 30 e 60 mL/min: 15 mg/kg 12/12 h; ClCr abaixo de 30 mL/min: 15 mg/kg 1x/dia; dialítico: 10 mg/kg após a sessão",
+        "ajuste_hepatico": "Sem ajuste; cautela em cirrose com coagulopatia e trombose portal prévia",
+        "observacoes": "Reduz o volume do sangramento e a recidiva em hemoptise leve e moderada, mas não substitui broncoscopia, embolização ou cirurgia. A via nebulizada é alternativa quando o acesso venoso ainda não existe",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "opioide",
+        "agente": "morfina",
+        "papel": "condicional",
+        "indicacao": "tosse incoercível e dor que aumentam a pressão intratorácica e mantêm o sangramento, em paciente com via aérea protegida ou vigiado",
+        "dose": "2 a 4 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "4/4 h ou a cada 15 minutos titulando pela escala de dor e pela tosse",
+        "duracao": "até controle da tosse e do sangramento",
+        "dose_maxima": "10 mg na primeira hora; individualizado depois",
+        "contraindicacoes": [
+          "depressão respiratória",
+          "rebaixamento de consciência sem via aérea protegida",
+          "hipotensão não corrigida",
+          "uso de IMAO",
+          "asma aguda grave sem suporte"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "sedação",
+          "náusea e vômito",
+          "prurido",
+          "hipotensão",
+          "retenção urinária",
+          "constipação"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "ampola 2 mg/mL (2 mL)",
+          "solução oral 1 mg/mL",
+          "comprimido de liberação prolongada 10 mg"
+        ],
+        "preparo": "Diluir 1 mL (10 mg) em 9 mL de SF 0,9% e administrar 2 a 4 mg (0,2 a 0,4 mL) por vez",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos",
+        "monitorizacao": [
+          "frequência respiratória e saturação",
+          "escala de sedação",
+          "pressão arterial",
+          "capacidade de tossir e de proteger a via aérea",
+          "naloxona disponível à beira-leito"
+        ],
+        "ajuste_renal": "Cautela em ClCr abaixo de 30 mL/min: metabólitos ativos acumulam e prolongam a sedação",
+        "ajuste_hepatico": "Reduzir a dose em cirrose",
+        "observacoes": "Nunca antes de avaliar a via aérea: a morfina deprime a tosse justamente no paciente que precisa tossir o sangue. Em hemoptise maciça, só depois da intubação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antitussigeno_opioide",
+        "agente": "codeína",
+        "papel": "alternativa",
+        "indicacao": "tosse seca persistente que desencadeia hemoptise leve recorrente, em paciente estável e com via aérea preservada",
+        "dose": "30 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "até 5 dias",
+        "dose_maxima": "120 mg/dia",
+        "contraindicacoes": [
+          "depressão respiratória",
+          "asma aguda grave",
+          "íleo paralítico",
+          "hipersensibilidade a opioide",
+          "gestação no terceiro trimestre sem indicação formal"
+        ],
+        "efeitos_adversos": [
+          "sonolência",
+          "constipação",
+          "náusea",
+          "depressão respiratória em dose alta",
+          "prurido"
+        ],
+        "apresentacoes": [
+          "comprimido 30 mg",
+          "comprimido 60 mg",
+          "solução oral 3 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "frequência respiratória",
+          "nível de sedação",
+          "número de evacuações",
+          "intensidade da tosse e do sangramento"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: aumentar o intervalo para 12/12 h",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Alternativa à morfina quando o objetivo é apenas suprimir a tosse em paciente ambulatorial ou em enfermaria. Não controla dor intensa nem substitui a proteção de via aérea",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "benzodiazepinico",
+        "agente": "midazolam",
+        "papel": "condicional",
+        "indicacao": "sedação para broncoscopia terapêutica ou manutenção de ventilação mecânica, somente depois de via aérea definitiva estabelecida",
+        "dose": "1 a 2 mg em bolus, com reforços de 0,5 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "a cada 3 a 5 minutos até o nível de sedação desejado",
+        "duracao": "procedimento ou período de ventilação mecânica",
+        "dose_maxima": "5 mg no procedimento; 0,05 mg/kg em idoso ou debilitado",
+        "contraindicacoes": [
+          "via aérea não protegida em paciente com sangramento ativo",
+          "hipotensão grave",
+          "depressão respiratória sem suporte ventilatório",
+          "miastenia grave",
+          "insuficiência hepática grave"
+        ],
+        "efeitos_adversos": [
+          "depressão respiratória",
+          "hipotensão",
+          "amnésia",
+          "agitação paradoxal",
+          "sonolência prolongada em idoso",
+          "laringoespasmo"
+        ],
+        "apresentacoes": [
+          "ampola 5 mg/mL (1 mL)",
+          "ampola 5 mg/mL (3 mL)",
+          "ampola 1 mg/mL (5 mL)",
+          "comprimido 7,5 mg",
+          "solução oral 2 mg/mL"
+        ],
+        "preparo": "Uso direto; diluir 1 mL (5 mg) em 4 mL de SF para 1 mg/mL quando se titula em 0,5 mg",
+        "tempo_infusao": "bolus lento em 2 a 3 minutos",
+        "monitorizacao": [
+          "escala de sedação e resposta a estímulo",
+          "frequência respiratória e saturação",
+          "pressão arterial",
+          "presença de sangue na via aérea aspirada",
+          "flumazenil disponível"
+        ],
+        "ajuste_renal": "Cautela em ClCr abaixo de 30 mL/min pelo acúmulo do metabólito ativo",
+        "ajuste_hepatico": "Reduzir a dose pela metade em cirrose Child B ou C",
+        "observacoes": "Sedar hemoptise maciça com via aérea não protegida é o erro que mata por asfixia: o midazolam tira a tosse e o reflexo de deglutição, e o sangue desce para o pulmão sadio. Sempre após a intubação, nunca antes",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "hipnotico",
+        "agente": "etomidato",
+        "papel": "condicional",
+        "indicacao": "indução anestésica na sequência rápida de intubação do paciente com hemoptise e instabilidade hemodinâmica",
+        "dose": "0,3 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única na indução",
+        "duracao": "indução e intubação",
+        "dose_maxima": "0,3 mg/kg (cerca de 20 mg em adulto de 70 kg)",
+        "contraindicacoes": [
+          "hipersensibilidade ao etomidato",
+          "sepse com instabilidade refratária a vasopressor pela supressão adrenal transitória",
+          "insuficiência adrenal conhecida"
+        ],
+        "efeitos_adversos": [
+          "supressão adrenal transitória por até 24 horas",
+          "mioclonia",
+          "náusea e vômito",
+          "dor na injeção",
+          "hipotensão leve"
+        ],
+        "apresentacoes": [
+          "ampola 2 mg/mL (10 mL)",
+          "ampola 2 mg/mL (20 mL)"
+        ],
+        "preparo": "Uso direto, sem diluição; administrar em acesso venoso com fluxo livre",
+        "tempo_infusao": "bolus em 30 a 60 segundos",
+        "monitorizacao": [
+          "pressão arterial após a indução",
+          "nível de sedação",
+          "glicemia e eletrólitos",
+          "necessidade de vasopressor nas primeiras horas"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "Preferido ao propofol no paciente hipotenso porque preserva melhor a pressão arterial. Alternativa em choque: cetamina 1 a 2 mg/kg IV",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "bloqueador_neuromuscular",
+        "agente": "succinilcolina",
+        "papel": "condicional",
+        "indicacao": "bloqueio neuromuscular para sequência rápida de intubação na hemoptise maciça",
+        "dose": "1 a 1,5 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "5 a 10 minutos",
+        "dose_maxima": "1,5 mg/kg (cerca de 100 mg em adulto de 70 kg)",
+        "contraindicacoes": [
+          "hipercalemia",
+          "queimadura com mais de 24 horas de evolução",
+          "lesão medular ou imobilização prolongada",
+          "deficiência de pseudocolinesterase",
+          "rabdomiólise",
+          "glaucoma de ângulo fechado e ferida ocular aberta"
+        ],
+        "efeitos_adversos": [
+          "hipercalemia",
+          "bradicardia",
+          "fasciculações",
+          "aumento da pressão intracraniana e intraocular",
+          "apneia prolongada",
+          "rabdomiólise"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 100 mg (pó)",
+          "ampola 50 mg/mL (2 mL)"
+        ],
+        "preparo": "Reconstituir 100 mg em 10 mL de água estéril para 10 mg/mL; conservar refrigerado e usar em até 24 horas após a reconstituição",
+        "tempo_infusao": "bolus intravenoso rápido, seguido de flush de 10 mL de SF",
+        "monitorizacao": [
+          "potássio antes e depois em paciente de risco",
+          "ritmo cardíaco durante a indução",
+          "bloqueio neuromuscular por estimulador de nervo periférico",
+          "tempo de apneia"
+        ],
+        "ajuste_renal": "Cautela em insuficiência renal pelo risco de hipercalemia",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Quando houver contraindicação, usar rocurônio 1,2 mg/kg. Na hemoptise, a intubação pode ser feita com o paciente acordado e sedação leve se a via aérea for difícil",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vasoconstritor_hemostatico",
+        "agente": "adrenalina (epinefrina) tópica",
+        "papel": "resgate",
+        "indicacao": "instilação endobrônquica no brônquio sangrante durante broncoscopia, ou nebulização em hemoptise difusa sem lesão focal",
+        "dose": "2 a 5 mL de solução 1:20.000 instilados no brônquio sangrante",
+        "unidade": "mL",
+        "via": "instilação endobrônquica ou nebulização",
+        "frequencia": "dose única, repetível uma vez",
+        "duracao": "procedimento",
+        "dose_maxima": "10 mL de solução 1:20.000 por sessão",
+        "contraindicacoes": [
+          "arritmia ventricular instável",
+          "cardiopatia isquêmica descompensada",
+          "uso concomitante de IMAO",
+          "hipertensão grave não controlada"
+        ],
+        "efeitos_adversos": [
+          "taquicardia",
+          "hipertensão",
+          "arritmia",
+          "isquemia miocárdica",
+          "palidez e tremor"
+        ],
+        "apresentacoes": [
+          "ampola 1 mg/mL (1 mL)",
+          "seringa 1 mg/10 mL",
+          "frasco 1 mg/mL (10 mL)"
+        ],
+        "preparo": "Diluir 1 mL (1 mg) em 19 mL de SF 0,9% para obter 1:20.000; nunca instilar a solução concentrada 1:1.000",
+        "tempo_infusao": "instilação lenta sob visão direta, em alíquotas de 1 mL",
+        "monitorizacao": [
+          "eletrocardiograma contínuo",
+          "pressão arterial e frequência cardíaca",
+          "volume do sangramento aspirado",
+          "dor torácica"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É ponte e não tratamento definitivo: controla o sangramento por minutos e permite organizar embolização. Não repetir mais de uma vez sem reavaliar o ritmo cardíaco",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_betalactamico_inibidor",
+        "agente": "amoxicilina com clavulanato",
+        "papel": "condicional",
+        "indicacao": "hemoptise em bronquiectasia infectada ou em infecção respiratória ativa que mantém a inflamação da mucosa",
+        "dose": "875/125 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "12/12 h (VO) ou 8/8 h (IV)",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "1.750 mg de amoxicilina por dia pela via oral; 12 g/dia pela via intravenosa",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "antecedente de hepatite por amoxicilina com clavulanato",
+          "mononucleose infecciosa",
+          "anafilaxia a betalactâmico"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "rash",
+          "colite por Clostridioides difficile",
+          "colestase"
+        ],
+        "apresentacoes": [
+          "comprimido 500/125 mg",
+          "comprimido 875/125 mg",
+          "suspensão 250/62,5 mg por 5 mL",
+          "frasco-ampola 1 g/200 mg"
+        ],
+        "preparo": "VO: uso direto com alimento. IV: reconstituir em 20 mL de água estéril e diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "não se aplica (via oral); 30 minutos na via intravenosa",
+        "monitorizacao": [
+          "febre e leucograma",
+          "aspecto e volume do escarro",
+          "número de evacuações",
+          "função hepática"
+        ],
+        "ajuste_renal": "ClCr entre 10 e 30 mL/min: 500/125 mg 12/12 h; ClCr abaixo de 10 mL/min: 500/125 mg 1x/dia",
+        "ajuste_hepatico": "Evitar em hepatopatia grave; monitorar transaminases",
+        "observacoes": "Não é profilaxia de hemoptise. Tratar a infecção reduz a hipervascularização brônquica e a recidiva enquanto se planeja a embolização",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_fluoroquinolona",
+        "agente": "levofloxacino",
+        "papel": "alternativa",
+        "indicacao": "bronquiectasia com suspeita de Pseudomonas, alergia a betalactâmico ou tratamento de tuberculose com esquema alternativo",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "1x/dia",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "750 mg/dia",
+        "contraindicacoes": [
+          "tendinopatia prévia por quinolona",
+          "miastenia grave",
+          "epilepsia não controlada",
+          "prolongamento de QT",
+          "gestação e amamentação sem indicação formal"
+        ],
+        "efeitos_adversos": [
+          "tendinite e ruptura de tendão",
+          "prolongamento do QT",
+          "neuropatia periférica",
+          "disglicemia",
+          "fotossensibilidade",
+          "náusea",
+          "alteração de humor"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução injetável 5 mg/mL (100 mL)"
+        ],
+        "preparo": "VO: uso direto, sem leite ou antiácido junto. IV: infundir o frasco sem diluição adicional",
+        "tempo_infusao": "não se aplica (via oral); 60 a 90 minutos na via intravenosa",
+        "monitorizacao": [
+          "eletrocardiograma e QTc",
+          "dor ou edema em tendão",
+          "glicemia em diabético",
+          "nível de consciência e humor"
+        ],
+        "ajuste_renal": "ClCr entre 20 e 49 mL/min: 750 mg a cada 48 h; ClCr abaixo de 20 mL/min: 750 mg dose única e depois 500 mg a cada 48 h",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reservar para Pseudomonas confirmada ou alergia a betalactâmico; em tuberculose, nunca usar em monoterapia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "fitomenadiona (vitamina K)",
+        "papel": "condicional",
+        "indicacao": "reversão de varfarina em paciente com hemoptise e INR elevado",
+        "dose": "5 a 10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "1 dose",
+        "dose_maxima": "10 mg",
+        "contraindicacoes": [
+          "hipersensibilidade à fitomenadiona",
+          "reação anafilactoide prévia à vitamina K"
+        ],
+        "efeitos_adversos": [
+          "reação anafilactoide rara",
+          "rubor",
+          "dor no local",
+          "hipotensão em infusão rápida"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL (1 mL)",
+          "comprimido 10 mg"
+        ],
+        "preparo": "Diluir a ampola em 50 mL de SF 0,9% e infundir lentamente; nunca em bolus",
+        "tempo_infusao": "20 a 30 minutos",
+        "monitorizacao": [
+          "INR em 6 e 12 horas",
+          "sinais de reação alérgica durante a infusão",
+          "volume do sangramento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste de dose; resposta reduzida em hepatopatia grave",
+        "observacoes": "O efeito leva de 6 a 12 horas, por isso não é suficiente isolada na hemoptise maciça: associar complexo protrombínico quando houver sangramento ativo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "reversor_anticoagulante",
+        "agente": "complexo protrombínico",
+        "papel": "condicional",
+        "indicacao": "reversão imediata de varfarina ou de inibidor do fator Xa em hemoptise com sangramento ativo",
+        "dose": "25 a 50 UI/kg",
+        "unidade": "UI/kg",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "1 dose",
+        "dose_maxima": "50 UI/kg (cerca de 3.500 UI em adulto de 70 kg)",
+        "contraindicacoes": [
+          "trombose arterial ou venosa recente",
+          "coagulação intravascular disseminada",
+          "hipersensibilidade a proteínas plasmáticas",
+          "antecedente de trombocitopenia induzida por heparina"
+        ],
+        "efeitos_adversos": [
+          "trombose arterial",
+          "coagulação intravascular disseminada",
+          "reação alérgica",
+          "cefaleia",
+          "febre"
+        ],
+        "apresentacoes": [
+          "frasco 250 UI",
+          "frasco 500 UI",
+          "frasco 1.000 UI com diluente próprio"
+        ],
+        "preparo": "Reconstituir com o diluente do próprio kit, homogeneizar sem agitar; aspirar e administrar sem filtro em equipo próprio",
+        "tempo_infusao": "10 a 15 minutos",
+        "monitorizacao": [
+          "INR e TTPa 30 minutos após a infusão",
+          "sinais de trombose em membros e dispneia",
+          "volume do sangramento",
+          "plaquetas em 24 horas"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; eficácia reduzida em hepatopatia grave",
+        "observacoes": "Preferir ao plasma fresco congelado pela rapidez e pela menor sobrecarga de volume. Para dabigatrana, a escolha é idarucizumabe; para apixabana e rivaroxabana, considerar andexanet alfa quando disponível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "reversor_anticoagulante_especifico",
+        "agente": "idarucizumabe",
+        "papel": "resgate",
+        "indicacao": "reversão de dabigatrana em hemoptise com risco de vida, com base em história de uso nas últimas 48 horas",
+        "dose": "5 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "dose única, dividida em dois frascos de 2,5 g",
+        "duracao": "1 administração",
+        "dose_maxima": "5 g",
+        "contraindicacoes": [
+          "hipersensibilidade ao idarucizumabe ou a proteínas de levedura",
+          "uso nas últimas 12 semanas sem nova exposição à dabigatrana"
+        ],
+        "efeitos_adversos": [
+          "trombose",
+          "hipersensibilidade",
+          "febre",
+          "cefaleia",
+          "redução do estado mental"
+        ],
+        "apresentacoes": [
+          "frasco 2,5 g/50 mL (solução pronta)"
+        ],
+        "preparo": "Solução pronta para uso; não diluir. Administrar dois frascos em sequência pelo mesmo acesso",
+        "tempo_infusao": "cada 2,5 g em 5 a 10 minutos",
+        "monitorizacao": [
+          "TTPa e tempo de trombina antes e 30 minutos depois",
+          "sinais de trombose",
+          "volume e aspecto do sangramento",
+          "reação alérgica na infusão"
+        ],
+        "ajuste_renal": "Sem ajuste de dose, inclusive em dialítico, por não ser eliminado por via renal",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não usar em hemoptise leve: o custo e o risco trombótico são altos. Só em sangramento com risco de vida e com dabigatrana comprovadamente em uso",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Decúbito lateral do lado do sangramento",
+        "detalhe": "Deitar o paciente sobre o lado que sangra, com cabeceira elevada a 30 graus; o pulmão sadio fica para cima e o sangue não o inunda. Em sangramento difuso, manter decúbito lateral direito se não houver como definir o lado"
+      },
+      {
+        "medida": "Proteção e isolamento da via aérea",
+        "detalhe": "Intubar pelo protocolo BOX-02 e avançar o tubo para o brônquio principal do pulmão sadio, guiado por broncoscopia; quando disponível, tubo de duplo lúmen com lúmen do lado sangrante aberto para drenagem"
+      },
+      {
+        "medida": "Aspiração contínua e material de aspiração à beira-leito",
+        "detalhe": "Aspirador montado e ligado antes do procedimento, sonda traqueal em linha e frasco de secreção graduado para medir o sangue aspirado a cada 15 minutos"
+      },
+      {
+        "medida": "Acesso venoso calibroso e reserva de hemoderivados",
+        "detalhe": "Dois acessos 14 a 16 G, tipagem e prova cruzada, reserva de concentrado de hemácias e plasma; acesso arterial para gasometria seriada se instável"
+      },
+      {
+        "medida": "Repouso absoluto, contenção do esforço e da tosse vigorosa",
+        "detalhe": "Cabeceira elevada, nada por boca, restrição de fala e de deambulação; tosse orientada apenas para limpar a via aérea, nunca para provar que ainda sangra"
+      },
+      {
+        "medida": "Monitorização contínua com oximetria e capnografia",
+        "detalhe": "Oximetria, frequência cardíaca, pressão arterial e, se intubado, capnografia; reavaliar a cada 15 minutos na primeira hora da hemoptise maciça"
+      },
+      {
+        "medida": "Isolamento respiratório na suspeita de tuberculose",
+        "detalhe": "Máscara cirúrgica no paciente, máscara N95 na equipe e quarto com ventilação adequada até duas baciloscopias negativas; manter durante o transporte e a broncoscopia"
+      },
+      {
+        "medida": "Registro do volume e do aspecto do sangue",
+        "detalhe": "Anotar em planilha o volume por hora, se é vivo ou escuro, se é espumoso e se há coágulos; o volume por hora é o dado que decide entre observação, broncoscopia e embolização"
+      },
+      {
+        "medida": "Contenção da ansiedade sem sedação",
+        "detalhe": "Presença de acompanhante, explicação do passo a passo e ambiente calmo; a sedação farmacológica fica reservada ao paciente com via aérea já protegida"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Intubação orotraqueal com proteção de via aérea",
+        "indicacao": "hemoptise maciça, rebaixamento de consciência, incapacidade de tossir ou hipoxemia refratária",
+        "tecnica": "Sequência rápida pelo protocolo BOX-02: pré-oxigenação, etomidato 0,3 mg/kg e succinilcolina 1 a 1,5 mg/kg, aspiração vigorosa imediatamente após a passagem do tubo e confirmação por capnografia; aspiração contínua do tubo antes de ventilar",
+        "complicacoes": "Asfixia por sangue durante a laringoscopia, intubação esofágica, aspiração para o pulmão sadio, lesão de via aérea e parada cardíaca",
+        "protocolo": "BOX-02"
+      },
+      {
+        "nome": "Intubação seletiva com tubo de duplo lúmen",
+        "indicacao": "hemoptise maciça com lado identificado, quando se deseja isolar o pulmão sangrante e manter o outro ventilado",
+        "tecnica": "Tubo de duplo lúmen 35 a 37 Fr posicionado sob broncoscopia; lúmen do lado sangrante aberto para drenagem e lúmen do lado sadio ventilado; confirmar posição por ausculta e fibra óptica",
+        "complicacoes": "Mau posicionamento, obstrução do lúmen por coágulo, isquemia de mucosa, fístula e dificuldade de aspiração"
+      },
+      {
+        "nome": "Broncoscopia flexível e rígida",
+        "indicacao": "localizar o lado e o segmento sangrante, aspirar coágulos, instilar vasoconstritor e tamponar o brônquio",
+        "tecnica": "Flexível para diagnóstico e aspiração à beira-leito; rígida para coágulo volumoso, tamponamento com cateter de Fogarty e hemostasia; instilar adrenalina 1:20.000 no brônquio sangrante e lavar com soro gelado",
+        "complicacoes": "Hipoxemia durante o procedimento, arritmia, perfuração brônquica, laringoespasmo e piora do sangramento"
+      },
+      {
+        "nome": "Embolização de artéria brônquica",
+        "indicacao": "hemoptise maciça, recidiva após broncoscopia ou sangramento recorrente com vaso hipertrófico na tomografia",
+        "tecnica": "Cateterismo por via femoral, arteriografia para identificar a artéria brônquica hipertrofiada ou o shunt, e embolização com partículas de 300 a 500 micrômetros ou microesferas; pesquisa de artérias não brônquicas (intercostal, mamária interna, subclávia) quando a brônquica é normal",
+        "complicacoes": "Dor torácica, disfagia por isquemia esofágica, isquemia medular com paraplegia rara, dissecção de aorta e recidiva por circulação colateral"
+      },
+      {
+        "nome": "Cirurgia de salvamento",
+        "indicacao": "falha da embolização e da broncoscopia, sangramento localizado, aspergiloma ou aneurisma de Rasmussen em paciente operável",
+        "tecnica": "Lobectomia ou pneumectomia do segmento sangrante, com isolamento brônquico prévio e duplo lúmen; avaliar reserva funcional com espirometria e perfusão antes",
+        "complicacoes": "Fístula broncopleural, empiema, insuficiência respiratória pós-operatória, sangramento e morte operatória em paciente de baixa reserva"
+      },
+      {
+        "nome": "Nasofibroscopia e tamponamento nasal posterior",
+        "indicacao": "suspeita de pseudo-hemoptise por epistaxe posterior com sangue descendo pela faringe",
+        "tecnica": "Nasofibroscopia para identificar o ponto de sangramento em coanas e rinofaringe; tamponamento posterior com sonda de Foley ou gaze e tamponamento anterior com dedo de luva; avaliar otorrinolaringologia",
+        "complicacoes": "Reflexo vagal, aspiração, necrose de palato por pressão excessiva, sinusite e sangramento recorrente na retirada"
+      }
+    ],
+    "metas": [
+      "Saturação entre 94% e 98% (88% a 92% em DPOC com retenção de CO2)",
+      "Via aérea definitiva em menos de 10 minutos na hemoptise maciça com hipoxemia ou rebaixamento",
+      "Controle do sangramento visível em menos de 60 minutos na hemoptise maciça",
+      "Pressão arterial média acima de 65 mmHg e hemoglobina acima de 7 g/dL, individualizando em cardiopata",
+      "INR abaixo de 1,5 em paciente anticoagulado com sangramento ativo, após a reversão",
+      "Embolização de artéria brônquica ou cirurgia em menos de 4 horas quando a broncoscopia não controla o sangramento",
+      "Tomografia de tórax realizada em até 24 horas na hemoptise leve e moderada, com broncoscopia na mesma internação"
+    ],
+    "fluxo": [
+      "ABCDE com atenção à permeabilidade da via aérea, saturação, capacidade de tossir e volume de sangue eliminado",
+      "Separar hemoptise verdadeira de pseudo-hemoptise: perguntar pela origem, examinar nariz e orofaringe e, se dúvida, fazer nasofibroscopia",
+      "Classificar o volume: leve (abaixo de 50 mL em 24 h), moderada (50 a 400 mL) ou maciça (acima de 400 mL em 24 h ou 100 mL por hora)",
+      "Estabilizar: oxigênio titulado, decúbito lateral do lado do sangramento, dois acessos calibrosos, tipagem e prova cruzada",
+      "Maciça: proteger a via aérea pelo protocolo BOX-02, com tubo de duplo lúmen ou intubação seletiva, e aspirar de forma contínua, sem pedir tomografia antes",
+      "Reverter anticoagulação conforme o agente e corrigir plaquetas e fibrinogênio com alvo definido",
+      "Broncoscopia para localizar o lado, aspirar coágulos, instilar adrenalina 1:20.000 e tamponar o brônquio",
+      "Persistência ou recidiva: embolização de artéria brônquica; falha da embolização indica nova arteriografia ou cirurgia de salvamento",
+      "Definido o controle: tomografia de tórax com contraste, tratamento da causa de base (antibiótico, antitabagismo, tratamento de tuberculose ou de neoplasia) e seguimento pneumológico"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "manter saturação acima de 95%, proteger o feto com decúbito lateral esquerdo após a 20ª semana, preferir broncoscopia e embolização com blindagem abdominal e considerar cesárea de emergência se houver sofrimento fetal",
+        "alerta": "hipoxemia materna leva a sofrimento fetal e a embolização de artéria brônquica não é contraindicada na gestação"
+      },
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "suspender o anticoagulante e reverter conforme o agente antes de qualquer procedimento; reiniciar apenas após 48 a 72 horas sem sangramento e com hemostasia confirmada",
+        "alerta": "sem reversão a broncoscopia e a embolização falham e o sangramento continua"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "limiar baixo para internação em unidade monitorizada, ajuste de sedação pela metade, avaliação de fragilidade e de reserva pulmonar antes de cirurgia",
+        "alerta": "mortalidade da hemoptise maciça acima de 70 anos chega a um terço e a apresentação pode ser apenas confusão"
+      },
+      {
+        "populacao": "dpoc",
+        "ajuste": "oxigênio com alvo de 88% a 92%, gasometria seriada, broncodilatador e corticoide se broncoespasmo, e ventilação com PEEP baixa após a intubação",
+        "alerta": "reserva pulmonar mínima: pequeno volume de sangue derruba a oxigenação e a hiperóxia precipita retenção de CO2"
+      },
+      {
+        "populacao": "cirrotico",
+        "ajuste": "corrigir plaquetas para acima de 50.000 e fibrinogênio para acima de 150 mg/dL, evitar vitamina K como única medida e considerar complexo protrombínico",
+        "alerta": "coagulopatia de consumo e plaquetopenia tornam o sangramento refratário a medidas locais"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "ajustar ácido tranexâmico pela creatinina, evitar dose plena em dialítico e vigiar convulsão; idarucizumabe não exige ajuste",
+        "alerta": "acúmulo de tranexâmico causa convulsão e o risco de hipercalemia na indução é maior"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "investigar aspergiloma, tuberculose e infecção fúngica invasiva com tomografia e broncoscopia com lavado; tratar o agente específico",
+        "alerta": "hemoptise por aspergiloma recidiva em mais da metade dos casos sem tratamento cirúrgico ou embolização"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "radiografia de tórax em duas incidências",
+          "indicacao": "todo paciente com hemoptise, na chegada",
+          "o_que_muda": "identifica massa, cavitação, consolidação e derrame; normal não exclui neoplasia e não muda a indicação de tomografia"
+        },
+        {
+          "nome": "tomografia de tórax com contraste",
+          "indicacao": "hemoptise leve ou moderada estável e planejamento de embolização",
+          "o_que_muda": "define bronquiectasia, cavitação, aspergiloma, vaso hipertrófico e a artéria a ser embolizada"
+        },
+        {
+          "nome": "broncoscopia",
+          "indicacao": "hemoptise moderada ou maciça, suspeita de neoplasia endobrônquica e sangramento de lado indefinido",
+          "o_que_muda": "lateraliza o sangramento, permite aspiração, instilação de vasoconstritor e tamponamento"
+        },
+        {
+          "nome": "hemograma, coagulograma, plaquetas e tipagem sanguínea",
+          "indicacao": "toda hemoptise moderada ou maciça, e todo anticoagulado",
+          "o_que_muda": "define transfusão, reversão de coagulopatia e reserva de hemoderivados"
+        },
+        {
+          "nome": "gasometria arterial",
+          "indicacao": "hipoxemia, DPOC, ventilação mecânica ou hemoptise maciça",
+          "o_que_muda": "quantifica o shunt e define o alvo de oxigênio e a necessidade de via aérea definitiva"
+        },
+        {
+          "nome": "baciloscopia, cultura e teste molecular no escarro",
+          "indicacao": "hemoptise com febre vespertina, suor noturno, perda de peso ou cavitação",
+          "o_que_muda": "confirma tuberculose ativa e indica isolamento respiratório e tratamento específico"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "tomografia de tórax antes de proteger a via aérea no sangramento maciço",
+          "motivo": "o transporte e o exame atrasam a intubação seletiva e o paciente morre asfixiado no trajeto"
+        },
+        {
+          "exame": "broncoscopia flexível diagnóstica prolongada sem via aérea protegida em sangramento maciço",
+          "motivo": "o procedimento instila sangue no pulmão sadio e precipita hipoxemia grave"
+        },
+        {
+          "exame": "radiografia de tórax seriada de rotina durante a internação",
+          "motivo": "não acrescenta informação e atrasa a tomografia, que é o exame que muda a conduta"
+        },
+        {
+          "exame": "pesquisa de baciloscopia isolada em paciente com hemoptise maciça e instabilidade",
+          "motivo": "o resultado não muda a conduta imediata e não pode atrasar a hemostasia"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "permanecer em repouso relativo, com a cabeceira elevada, e não fazer esforço físico por 7 dias",
+        "tomar a medicação nos horários prescritos e comparecer ao retorno com pneumologia em 7 a 14 dias",
+        "levar o relatório da internação com o resultado da broncoscopia e da tomografia",
+        "informar qualquer profissional de saúde sobre o episódio antes de cirurgia ou procedimento no tórax",
+        "parar de fumar e procurar o grupo de cessação ainda durante a internação",
+        "medir a temperatura duas vezes ao dia e procurar atendimento se houver febre"
+      ],
+      "evitar": [
+        "fumar ou usar cigarro eletrônico",
+        "cocaína aspirada e qualquer droga inalada",
+        "tosse vigorosa e carregar peso por 7 dias",
+        "voar por 2 semanas após um episódio de hemoptise maciça",
+        "usar AAS ou anti-inflamatório sem liberação",
+        "retomar anticoagulante por conta própria após a reversão"
+      ],
+      "retorno": [
+        "sangue vivo em volume maior que meia xícara",
+        "falta de ar súbita ou dor torácica nova",
+        "febre acima de 38 graus ou escarro purulento",
+        "desmaio, palpitação ou tontura intensa",
+        "perda de peso ou suor noturno",
+        "sangramento pelo nariz que não cessa em 15 minutos de compressão"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "oxigênio",
+        "efeitos": [
+          "hiperóxia",
+          "retenção de CO2 em DPOC",
+          "ressecamento de mucosa"
+        ],
+        "observacao": "titular pela saturação e colher gasometria no DPOC"
+      },
+      {
+        "agente": "ácido tranexâmico",
+        "efeitos": [
+          "náusea",
+          "convulsão",
+          "trombose",
+          "hipotensão em infusão rápida"
+        ],
+        "observacao": "infundir em 20 minutos e ajustar pela creatinina; suspender se convulsão"
+      },
+      {
+        "agente": "morfina",
+        "efeitos": [
+          "depressão respiratória",
+          "sedação",
+          "hipotensão"
+        ],
+        "observacao": "só com via aérea avaliada; naloxona disponível"
+      },
+      {
+        "agente": "codeína",
+        "efeitos": [
+          "sonolência",
+          "constipação",
+          "depressão respiratória"
+        ],
+        "observacao": "suspender se frequência respiratória abaixo de 10 por minuto"
+      },
+      {
+        "agente": "midazolam",
+        "efeitos": [
+          "depressão respiratória",
+          "hipotensão",
+          "agitação paradoxal"
+        ],
+        "observacao": "reduzir em idoso e nunca usar sem via aérea protegida"
+      },
+      {
+        "agente": "etomidato",
+        "efeitos": [
+          "supressão adrenal",
+          "mioclonia",
+          "náusea"
+        ],
+        "observacao": "dose única; vigiar hipotensão nas primeiras 24 horas"
+      },
+      {
+        "agente": "succinilcolina",
+        "efeitos": [
+          "hipercalemia",
+          "bradicardia",
+          "apneia prolongada"
+        ],
+        "observacao": "checar potássio e histórico de imobilização antes da dose"
+      },
+      {
+        "agente": "adrenalina tópica",
+        "efeitos": [
+          "taquicardia",
+          "hipertensão",
+          "arritmia",
+          "isquemia miocárdica"
+        ],
+        "observacao": "usar sempre diluída a 1:20.000 sob monitorização cardíaca"
+      },
+      {
+        "agente": "amoxicilina com clavulanato",
+        "efeitos": [
+          "diarreia",
+          "colite por C. difficile",
+          "colestase"
+        ],
+        "observacao": "suspender se diarreia intensa ou icterícia"
+      },
+      {
+        "agente": "levofloxacino",
+        "efeitos": [
+          "tendinite",
+          "prolongamento do QT",
+          "neuropatia"
+        ],
+        "observacao": "suspender se dor em tendão ou QTc acima de 500 ms"
+      },
+      {
+        "agente": "fitomenadiona",
+        "efeitos": [
+          "reação anafilactoide",
+          "hipotensão"
+        ],
+        "observacao": "infundir em 20 a 30 minutos, nunca em bolus"
+      },
+      {
+        "agente": "complexo protrombínico",
+        "efeitos": [
+          "trombose",
+          "CIVD",
+          "reação alérgica"
+        ],
+        "observacao": "usar a menor dose eficaz e reavaliar INR em 30 minutos"
+      },
+      {
+        "agente": "idarucizumabe",
+        "efeitos": [
+          "trombose",
+          "hipersensibilidade",
+          "febre"
+        ],
+        "observacao": "reservar para sangramento com risco de vida por dabigatrana"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender imediatamente o fármaco implicado e registrar hora e última dose",
+      "Midazolam ou morfina com sedação excessiva: garantir via aérea, ventilar com bolsa-valva-máscara e reverter com flumazenil 0,2 mg ou naloxona 0,04 a 0,4 mg IV titulada",
+      "Ácido tranexâmico com convulsão ou tremor: interromper a infusão, checar creatinina e tratar a crise",
+      "Adrenalina tópica com arritmia ou dor torácica: interromper a instilação, monitorizar e obter eletrocardiograma",
+      "Complexo protrombínico ou idarucizumabe com sinais de trombose: suspender, avaliar com Doppler e iniciar anticoagulação quando o sangramento estiver controlado",
+      "Reação anafilactoide à vitamina K: interromper, adrenalina IM 0,5 mg, corticoide e anti-histamínico",
+      "Sangramento que aumenta após broncoscopia: reavaliar o lado, aspirar o coágulo e antecipar a embolização",
+      "Reavaliar a indicação, escolher outra classe e reescrever a prescrição antes de sair do leito"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "ácido tranexâmico 250 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "8/8 h",
+            "duracao": "5 dias",
+            "condicao": "hemoptise leve residual; máximo 3 g/dia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "codeína 30 mg",
+            "dose": "30 mg",
+            "via": "VO",
+            "frequencia": "8/8 h se tosse",
+            "duracao": "5 dias",
+            "condicao": "tosse seca que desencadeia sangramento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina com clavulanato 875/125 mg",
+            "dose": "875/125 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 dias",
+            "condicao": "bronquiectasia infectada",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "levofloxacino 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "7 dias",
+            "condicao": "alergia a betalactâmico ou suspeita de Pseudomonas",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "oxigênio",
+            "dose": "titulado para 94% a 98%",
+            "via": "inalatória",
+            "frequencia": "contínuo",
+            "monitorizacao": "oximetria e gasometria no DPOC",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ácido tranexâmico",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "sangramento, função renal e convulsão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "morfina",
+            "dose": "2 a 4 mg",
+            "via": "IV",
+            "frequencia": "4/4 h ou titulada",
+            "monitorizacao": "sedação e frequência respiratória",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "etomidato",
+            "dose": "0,3 mg/kg",
+            "via": "IV",
+            "frequencia": "dose única na indução",
+            "monitorizacao": "pressão arterial",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "succinilcolina",
+            "dose": "1 a 1,5 mg/kg",
+            "via": "IV",
+            "frequencia": "dose única",
+            "monitorizacao": "potássio e ritmo",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "midazolam",
+            "dose": "1 a 2 mg",
+            "via": "IV",
+            "frequencia": "titulado após intubação",
+            "monitorizacao": "sedação e saturação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "adrenalina 1:20.000",
+            "dose": "2 a 5 mL instilados no brônquio",
+            "via": "endobrônquica",
+            "frequencia": "dose única, repetível uma vez",
+            "monitorizacao": "eletrocardiograma e pressão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "complexo protrombínico",
+            "dose": "25 a 50 UI/kg",
+            "via": "IV",
+            "frequencia": "dose única",
+            "monitorizacao": "INR 30 minutos após",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "radiografia de tórax PA e perfil",
+          "tomografia de tórax com contraste",
+          "broncoscopia",
+          "hemograma",
+          "coagulograma",
+          "plaquetas",
+          "tipagem sanguínea e prova cruzada",
+          "gasometria arterial",
+          "baciloscopia e cultura de escarro",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve internado sob meus cuidados nesta data, com quadro de hemoptise, submetido a broncoscopia e controle do sangramento, necessitando de afastamento das atividades pelo período indicado.",
+        "dias": null,
+        "cid": null,
+        "observacao": "documento hospitalar"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino (pneumologia, cirurgia torácica ou radiologia intervencionista)",
+          "motivo",
+          "resumo com volume, lado, broncoscopia, embolização e anticoagulação",
+          "prioridade",
+          "horário do contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com hemoptise classificada como ___, volume ___ mL em 24 horas, lado ___ definido por ___, via aérea protegida por ___, broncoscopia com achado ___, embolização de artéria brônquica ___, reversão de anticoagulação com ___, transfusão ___, causa de base ___ e orientações de alta."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "início e duração",
+        "volume estimado",
+        "aspecto do sangue",
+        "tosse versus vômito",
+        "sangramento nasal associado",
+        "tabagismo e cigarro eletrônico",
+        "tuberculose prévia",
+        "bronquiectasia ou pneumonia de repetição",
+        "neoplasia",
+        "anticoagulante e antiagregante",
+        "febre, suor noturno e perda de peso",
+        "episódios anteriores"
+      ],
+      "texto_template": "Paciente com hemoptise iniciada há ___, volume estimado de ___ mL, sangue ___ e ___ (tosse ou vômito), sangramento nasal ___, tabagismo de ___ cigarros/dia, tuberculose prévia ___, bronquiectasia ___, neoplasia ___, uso de anticoagulante ou antiagregante ___, febre, suor noturno e perda de peso ___ e episódios anteriores ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais",
+        "saturação e esforço respiratório",
+        "inspeção da orofaringe e do nariz",
+        "ausculta pulmonar comparada",
+        "presença de sangue em orofaringe",
+        "capacidade de tossir e de proteger a via aérea",
+        "nível de consciência",
+        "baqueteamento digital e sinais de doença crônica",
+        "linfonodos supraclaviculares",
+        "sinais de sangramento ativo em outros sítios"
+      ],
+      "texto_template": "Sinais vitais, saturação, esforço respiratório, inspeção de orofaringe e nariz, ausculta pulmonar comparada, sangue em orofaringe, capacidade de tossir, nível de consciência, baqueteamento, linfonodos e outros sítios de sangramento."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de hemoptise, disponibilidade de tubo de duplo lúmen, broncoscópio rígido e radiologia intervencionista 24 horas",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pneumologia",
+        "o_que_verificar": "definição de hemoptise maciça, indicação de broncoscopia precoce e de embolização de artéria brônquica",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_radiologia_intervencionista",
+        "o_que_verificar": "técnica de embolização, materiais e manejo da recidiva",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_reversao_de_anticoagulacao",
+        "o_que_verificar": "dose de complexo protrombínico, vitamina K e idarucizumabe por agente",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, concentrações e registro dos fármacos",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-RESP19-01",
+        "tipo": "hemoptise_macica",
+        "gatilho": "sangue vivo acima de 100 mL por hora ou acima de 400 mL em 24 horas, com hipoxemia, rebaixamento ou incapacidade de tossir",
+        "severidade": "grave",
+        "mensagem": "Hemoptise maciça: proteger a via aérea agora, com tubo de duplo lúmen ou intubação seletiva, e manter decúbito lateral do lado do sangramento.",
+        "acao": "acionar sala vermelha, anestesia e broncoscopia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP19-02",
+        "tipo": "sedacao_sem_via_aerea",
+        "gatilho": "prescrição de midazolam, morfina, propofol ou qualquer sedativo em paciente com hemoptise ativa e via aérea não protegida",
+        "severidade": "grave",
+        "mensagem": "Não sedar hemoptise ativa sem proteger a via aérea: o paciente perde a tosse e morre asfixiado com o próprio sangue.",
+        "acao": "bloquear item da prescrição",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP19-03",
+        "tipo": "imagem_antes_da_hemostasia",
+        "gatilho": "pedido de tomografia de tórax em paciente com sangramento maciço ativo e via aérea ainda não protegida",
+        "severidade": "grave",
+        "mensagem": "Não aguardar tomografia em sangramento maciço: transporte e exame atrasam a intubação seletiva e a broncoscopia.",
+        "acao": "bloquear pedido de exame",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP19-04",
+        "tipo": "anticoagulacao_nao_revertida",
+        "gatilho": "hemoptise ativa em paciente anticoagulado sem prescrição de reversão",
+        "severidade": "grave",
+        "mensagem": "Reverter a anticoagulação conforme o agente antes de qualquer procedimento.",
+        "acao": "sugerir protocolo de reversão",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP19-05",
+        "tipo": "pseudo_hemoptise",
+        "gatilho": "sangramento pela boca com epistaxe posterior, náusea ou sangue escuro com restos alimentares",
+        "severidade": "precaucao",
+        "mensagem": "Confirmar a origem antes de indicar broncoscopia: epistaxe posterior e hematêmese têm outro fluxo.",
+        "acao": "alertar",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP19-06",
+        "tipo": "broncoscopia_sem_condicao",
+        "gatilho": "broncoscopia prescrita em paciente com hipoxemia grave, sem via aérea protegida e sem suporte de anestesia",
+        "severidade": "precaucao",
+        "mensagem": "Garantir via aérea e suporte ventilatório antes da broncoscopia em paciente instável.",
+        "acao": "alertar",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "sociedade de pneumologia",
+        "diretriz de radiologia intervencionista",
+        "diretriz de reversão de anticoagulação",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade: separação de hemoptise leve, maciça e pseudo-hemoptise; 13 fármacos com apresentações, preparo, tempo de infusão e monitorização; decúbito lateral do lado do sangramento, intubação com tubo de duplo lúmen pelo protocolo BOX-02, ácido tranexâmico, broncoscopia, embolização de artéria brônquica e cirurgia de salvamento; reversão de anticoagulação com vitamina K, complexo protrombínico e idarucizumabe; bloqueio de sedação sem via aérea protegida e de tomografia antes da hemostasia no sangramento maciço.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

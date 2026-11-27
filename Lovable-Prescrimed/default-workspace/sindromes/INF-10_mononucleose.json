@@ -1,0 +1,1092 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "INF-10",
+    "area": "Infectologia",
+    "nome": "Mononucleose",
+    "aliases": [
+      "Mononucleose",
+      "mononucleose infecciosa",
+      "infecção pelo vírus Epstein-Barr",
+      "EBV",
+      "angina monocítica",
+      "síndrome de Pfeiffer",
+      "febre ganglionar"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Mononucleose é a síndrome febril aguda pelo vírus Epstein-Barr, transmitida pela saliva, com febre, faringite exsudativa, adenopatia cervical bilateral e astenia prolongada, acompanhada de linfocitose com linfócitos atípicos e elevação discreta de transaminases. O diagnóstico é clínico-laboratorial: a sorologia heterófila (Monospot) tem sensibilidade de apenas 25% na primeira semana e chega a 90% na terceira, então resultado negativo precoce não exclui; nos casos duvidosos, a sorologia de EBV com VCA IgM positivo e EBNA IgG negativo fecha o diagnóstico e separa a mononucleose por CMV, a amigdalite estreptocócica e o HIV agudo. O tratamento é de suporte: analgesia, antitérmico, hidratação e repouso relativo. Não há antiviral de rotina — aciclovir não encurta a febre, não reduz a astenia e não previne complicação, e por isso não deve ser prescrito como se fosse conduta. Amoxicilina e ampicilina produzem rash maculopapular em 70% a 100% dos pacientes com EBV e não devem ser usadas sem confirmação bacteriana. O desfecho que muda prognóstico é a rotura esplênica: esplenomegalia ocorre em cerca de metade dos casos, o pico é entre a segunda e a terceira semana, e a liberação para esporte de contato só deve ocorrer após 4 a 6 semanas.",
+    "inclusao": [
+      "Febre com faringite exsudativa e adenopatia cervical bilateral em adulto jovem",
+      "Linfocitose com linfócitos atípicos e transaminases elevadas em quadro febril",
+      "Suspeita de mononucleose com sorologia heterófila negativa e necessidade de sorologia para EBV e CMV",
+      "Esplenomegalia dolorosa ou incidental em contexto febril e com faringite",
+      "Amigdalite exsudativa sem resposta a antibiótico ou com rash após aminopenicilina",
+      "Contato próximo de caso confirmado com síndrome compatível"
+    ],
+    "exclusao": [
+      {
+        "situacao": "amigdalite com teste rápido ou cultura positiva para estreptococo e sem sinais de mononucleose",
+        "fluxo": "tratar como faringoamigdalite bacteriana"
+      },
+      {
+        "situacao": "mononucleose por citomegalovírus confirmada (heterófila negativa e CMV IgM positiva)",
+        "fluxo": "mesmo suporte clínico, sem restrição esportiva prolongada"
+      },
+      {
+        "situacao": "síndrome retroviral aguda por HIV com exposição recente",
+        "fluxo": "seguir protocolo de HIV agudo com carga viral"
+      },
+      {
+        "situacao": "adenopatia generalizada com perda de peso, sudorese noturna ou massa mediastinal",
+        "fluxo": "investigar linfoma com hematologia"
+      },
+      {
+        "situacao": "abscesso periamigdaliano ou obstrução de via aérea com trismo",
+        "fluxo": "hospitalar com otorrinolaringologia"
+      },
+      {
+        "situacao": "dor abdominal súbita com instabilidade e esplenomegalia",
+        "fluxo": "hospitalar cirúrgico por suspeita de rotura esplênica"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "dor abdominal súbita em hipocôndrio esquerdo, com ou sem hipotensão",
+        "por_que": "rotura esplênica com hemoperitônio",
+        "acao": "jejum, dois acessos venosos, FAST à beira-leito e cirurgia imediata",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "dispneia, estridor, voz abafada ou sialorreia com amígdalas volumosas",
+        "por_que": "obstrução de via aérea alta por hipertrofia amigdaliana",
+        "acao": "hospitalizar, corticoide sistêmico e avaliação de otorrinolaringologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "palidez intensa, icterícia e taquicardia",
+        "por_que": "anemia hemolítica autoimune desencadeada pelo EBV",
+        "acao": "hemograma, reticulócitos, Coombs e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "petéquias, sangramento de mucosa ou plaquetas abaixo de 50.000",
+        "por_que": "trombocitopenia grave",
+        "acao": "hospitalizar e avaliar corticoide e imunoglobulina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "icterícia, urina escura, vômitos ou encefalopatia",
+        "por_que": "hepatite grave pelo EBV",
+        "acao": "internar, dosar transaminases e bilirrubinas e acompanhar coagulação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "cefaleia intensa, rigidez de nuca, convulsão ou alteração de consciência",
+        "por_que": "meningoencefalite pelo EBV",
+        "acao": "hospitalizar e realizar punção lombar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "vômitos persistentes, boca seca e diurese baixa",
+        "por_que": "desidratação por odinofagia com ingesta insuficiente",
+        "acao": "reidratação e reavaliar necessidade de internação",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "rash extenso após amoxicilina ou ampicilina",
+        "por_que": "exantema por aminopenicilina na mononucleose, que não é alergia verdadeira",
+        "acao": "suspender o antibiótico e registrar como rash por aminopenicilina, sem rotular alergia a penicilina",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Há quantos dias tem febre e dor de garganta?",
+      "Já usou amoxicilina ou ampicilina e apareceu rash?",
+      "Sente dor abdominal, sobretudo no hipocôndrio esquerdo?",
+      "Pratica esporte de contato, musculação ou levantamento de peso?",
+      "Tem dispneia, dificuldade para engolir a própria saliva ou rouquidão?",
+      "Fez teste de estreptococo e qual foi o resultado?",
+      "Teve exposição sexual de risco ou febre com rash nas últimas semanas?",
+      "Tem doença hematológica, usa imunossupressor ou já teve o baço retirado?",
+      "Está gestante ou existe possibilidade de gestação?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Adulto com febre, faringite e adenopatia, sem sinal de alarme",
+        "escolha": "Suporte com paracetamol ou dipirona, hidratação fracionada e repouso relativo, sem antibiótico e sem antiviral",
+        "porque": "A doença é autolimitada; antibiótico não tem alvo e aminopenicilina produz rash, enquanto o antiviral não altera a história natural"
+      },
+      {
+        "cenario": "Amigdalite exsudativa com dúvida entre EBV e estreptococo",
+        "escolha": "Teste rápido de antígeno estreptocócico ou cultura antes de qualquer antibiótico",
+        "porque": "Só o teste separa as duas causas e evita prescrever aminopenicilina em mononucleose; o rash não é alergia, é efeito da infecção pelo EBV"
+      },
+      {
+        "cenario": "Sorologia heterófila negativa na primeira semana de sintomas",
+        "escolha": "Solicitar EBV VCA IgM, VCA IgG, EBNA IgG e CMV IgM",
+        "porque": "A heterófila é negativa em até 75% na primeira semana; a sorologia específica confirma e distingue CMV, que tem manejo parecido e prognóstico esplênico diferente"
+      },
+      {
+        "cenario": "Odinofagia intensa com baixa ingesta e risco de desidratação",
+        "escolha": "Lidocaína gel 2% na orofaringe antes das refeições, associada a analgesia sistêmica e hidratação fracionada",
+        "porque": "Anestesia tópica permite alimentar e hidratar sem analgesia venosa; é a alternativa ao internamento por desidratação"
+      },
+      {
+        "cenario": "Obstrução de via aérea alta ou dor que impede completamente a deglutição",
+        "escolha": "Prednisolona 40 a 60 mg por dia por 3 a 5 dias, com avaliação de otorrinolaringologia",
+        "porque": "O corticoide reduz o edema amigdaliano em 24 a 48 horas; não encurta a doença e não é rotina, sendo reservado para comprometimento de via aérea ou de deglutição"
+      },
+      {
+        "cenario": "Atleta ou trabalhador com exigência de esforço físico e esplenomegalia",
+        "escolha": "Suspender esporte de contato e musculação por 4 semanas no mínimo, 6 semanas se o baço estiver aumentado, e liberar de forma gradual",
+        "porque": "A rotura esplênica ocorre em 0,1% a 0,5% dos casos e quase sempre nas primeiras 4 semanas; a ecografia não substitui o intervalo de segurança"
+      },
+      {
+        "cenario": "Dor abdominal súbita com esplenomegalia e instabilidade",
+        "escolha": "Transferência imediata ao hospital com FAST, tipagem sanguínea e avaliação cirúrgica",
+        "porque": "Rotura esplênica é emergência cirúrgica e não tem tratamento clínico"
+      },
+      {
+        "cenario": "Estreptococo confirmado em paciente com mononucleose",
+        "escolha": "Penicilina V 500 mg a cada 12 horas por 10 dias",
+        "porque": "A penicilina V cobre estreptococo sem o rash das aminopenicilinas; amoxicilina fica reservada para quando o EBV foi excluído"
+      },
+      {
+        "cenario": "Vômitos persistentes com intolerância à via oral",
+        "escolha": "Metoclopramida 10 mg a cada 8 horas e reidratação oral ou venosa",
+        "porque": "Controlar o vômito é o que permite manter hidratação e analgesia por via oral e evita internamento"
+      },
+      {
+        "cenario": "Imunossuprimido com mononucleose grave ou complicada",
+        "escolha": "Internar e discutir com infectologia; aciclovir venoso apenas nesse cenário",
+        "porque": "Em imunossuprimido a replicação do EBV pode causar doença linfoproliferativa; fora daí o antiviral não tem papel"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "febre e odinofagia",
+        "dose": "500 a 1.000 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "4/4 h ou 6/6 h se necessário",
+        "duracao": "até 5 dias, enquanto houver febre ou dor",
+        "dose_maxima": "3 g/dia (4 g/dia apenas em adulto hígido, sem hepatopatia e por até 3 dias)",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição",
+          "uso crônico de álcool",
+          "hipersensibilidade ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "elevação de transaminases",
+          "rash cutâneo raro",
+          "trombocitopenia rara"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL (gotas)",
+          "frasco 32 mg/mL",
+          "solução injetável 10 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral); na apresentação venosa, infundir em 15 minutos",
+        "monitorizacao": [
+          "somar a dose total diária com outros produtos que contenham paracetamol",
+          "transaminases se uso acima de 5 dias",
+          "temperatura e intensidade da dor a cada 6 horas",
+          "ingesta hídrica"
+        ],
+        "ajuste_renal": "Sem ajuste em uso curto; em filtração abaixo de 30 mL/min, espaçar para 6/6 h",
+        "ajuste_hepatico": "Máximo de 2 g/dia em hepatopatia leve a moderada; evitar em Child-Pugh C",
+        "observacoes": "A duplicação por antigripais e analgésicos combinados é a causa mais comum de hepatotoxicidade; conferir todos os produtos em uso antes de prescrever",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "febre e odinofagia quando o paracetamol é insuficiente ou contraindicado",
+        "dose": "500 a 1.000 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "até 5 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a pirazolona",
+          "discrasia sanguínea",
+          "deficiência de glicose-6-fosfato desidrogenase",
+          "porfiria hepática aguda",
+          "primeiro trimestre e último mês de gestação"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "agranulocitose rara",
+          "rash cutâneo",
+          "sudorese intensa"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 1 g",
+          "solução oral 500 mg/mL (gotas)",
+          "ampola 1 g/2 mL",
+          "ampola 500 mg/mL"
+        ],
+        "preparo": "VO: uso direto. IV: diluir 1 g em 10 a 20 mL de água destilada ou SF 0,9%",
+        "tempo_infusao": "não se aplica por via oral; via venosa em 5 minutos, lentamente",
+        "monitorizacao": [
+          "pressão arterial quando usada por via venosa",
+          "hemograma se uso repetido",
+          "temperatura antes e depois da dose",
+          "sudorese e volemia"
+        ],
+        "ajuste_renal": "Reduzir a frequência em filtração abaixo de 30 mL/min",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Segunda escolha pelo risco de agranulocitose e hipotensão; não associar ao paracetamol de forma fixa, apenas quando a monoterapia não controlar",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "alternativa",
+        "indicacao": "dor de garganta e febre quando há necessidade de anti-inflamatório, com função renal e hidratação preservadas",
+        "dose": "400 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "até 3 a 5 dias",
+        "dose_maxima": "1.200 mg/dia",
+        "contraindicacoes": [
+          "doença renal crônica",
+          "úlcera péptica ativa",
+          "insuficiência cardíaca descompensada",
+          "desidratação",
+          "terceiro trimestre de gestação",
+          "alergia a anti-inflamatório não esteroidal"
+        ],
+        "efeitos_adversos": [
+          "gastrite e sangramento digestivo",
+          "lesão renal aguda",
+          "retenção hídrica e elevação pressórica",
+          "broncoespasmo em asmático sensível"
+        ],
+        "apresentacoes": [
+          "comprimido 400 mg",
+          "comprimido 600 mg",
+          "cápsula 200 mg",
+          "suspensão oral 50 mg/mL"
+        ],
+        "preparo": "Uso direto, com alimento para reduzir desconforto gástrico",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor abdominal, melena e dispepsia",
+          "creatinina se uso acima de 3 dias",
+          "diurese e edema",
+          "pressão arterial"
+        ],
+        "ajuste_renal": "Evitar com filtração abaixo de 60 mL/min; contraindicado na insuficiência renal grave",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Cautela: usar apenas com hidratação e função renal preservadas e por poucos dias. Há associação descrita com complicações supurativas de cabeça e pescoço em amigdalite, e o efeito anti-inflamatório não deve mascarar a piora e atrasar a reavaliação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_topico",
+        "agente": "lidocaína gel 2%",
+        "papel": "condicional",
+        "indicacao": "odinofagia intensa com baixa ingesta oral",
+        "dose": "1 a 2 cm de gel por aplicação",
+        "unidade": "aplicação",
+        "via": "tópica, em orofaringe",
+        "frequencia": "até 4 vezes ao dia, antes das refeições",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "4 aplicações ao dia",
+        "contraindicacoes": [
+          "alergia a anestésico do tipo amida",
+          "epilepsia não controlada",
+          "risco de aspiração por disfagia importante"
+        ],
+        "efeitos_adversos": [
+          "gosto amargo",
+          "parestesia da língua e da faringe",
+          "risco de aspiração por anestesia da deglutição",
+          "metemoglobinemia rara"
+        ],
+        "apresentacoes": [
+          "gel 2% frasco 30 g",
+          "solução spray 10% com dose medida"
+        ],
+        "preparo": "Uso direto; aplicar com cotonete na orofaringe, sem engolir o excesso",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "capacidade de deglutição após a aplicação",
+          "ingesta hídrica e alimentar nas refeições seguintes",
+          "dor antes e depois da aplicação"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir a frequência em hepatopatia grave",
+        "observacoes": "Aplicar imediatamente antes das refeições e nunca antes de dormir; não substitui analgesia sistêmica nem hidratação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide",
+        "agente": "prednisolona",
+        "papel": "condicional",
+        "indicacao": "obstrução de via aérea alta ou amigdalite com comprometimento da deglutição",
+        "dose": "40 a 60 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia pela manhã",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "60 mg/dia",
+        "contraindicacoes": [
+          "infecção bacteriana não tratada",
+          "diabetes descompensado",
+          "imunossupressão grave",
+          "úlcera péptica ativa"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "insônia",
+          "alteração de humor",
+          "infecção oportunista em uso prolongado"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 20 mg",
+          "solução oral 3 mg/mL",
+          "fosfato sódico de prednisolona 3 mg/mL"
+        ],
+        "preparo": "Uso direto por via oral, pela manhã",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia",
+          "resposta do edema e da via aérea em 24 a 48 horas",
+          "sono e humor",
+          "pressão arterial"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste em uso curto",
+        "observacoes": "Não é rotina e não encurta a doença; reservar para obstrução de via aérea ou dor que impeça a ingesta. Não usar para acelerar a recuperação da astenia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiemetico",
+        "agente": "metoclopramida",
+        "papel": "condicional",
+        "indicacao": "vômitos com risco de desidratação",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "8/8 h",
+        "duracao": "até 3 dias",
+        "dose_maxima": "30 mg/dia",
+        "contraindicacoes": [
+          "obstrução intestinal",
+          "feocromocitoma",
+          "epilepsia",
+          "doença de Parkinson",
+          "uso concomitante de neuroléptico"
+        ],
+        "efeitos_adversos": [
+          "sonolência",
+          "distonia aguda",
+          "acatisia",
+          "galactorreia"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "solução oral 4 mg/mL",
+          "ampola 5 mg/mL"
+        ],
+        "preparo": "VO: uso direto. IV: diluir em 10 mL de SF 0,9% e infundir lentamente",
+        "tempo_infusao": "não se aplica por via oral; via venosa em 3 a 5 minutos",
+        "monitorizacao": [
+          "sinais extrapiramidais",
+          "aceitação da dieta",
+          "diurese e turgor cutâneo"
+        ],
+        "ajuste_renal": "Reduzir para 5 mg em filtração abaixo de 40 mL/min",
+        "ajuste_hepatico": "Reduzir em Child-Pugh C",
+        "observacoes": "Preferir via oral e pelo menor tempo possível pelo risco de distonia, sobretudo em adulto jovem",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antiviral",
+        "agente": "aciclovir",
+        "papel": "condicional",
+        "indicacao": "apenas em imunossuprimido com doença grave ou complicada por EBV; não é rotina",
+        "dose": "10 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "1.500 mg/dia",
+        "contraindicacoes": [
+          "insuficiência renal sem ajuste",
+          "hipersensibilidade ao aciclovir"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade por cristalúria",
+          "náusea",
+          "neurotoxicidade com confusão e mioclonia",
+          "flebite no local da infusão"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 250 mg",
+          "frasco-ampola 500 mg",
+          "comprimido 200 mg",
+          "comprimido 400 mg"
+        ],
+        "preparo": "Reconstituir em água destilada e diluir em SF 0,9% na concentração máxima de 7 mg/mL",
+        "tempo_infusao": "infusão em 1 hora, com hidratação",
+        "monitorizacao": [
+          "creatinina e diurese",
+          "nível de consciência",
+          "hidratação durante a infusão",
+          "local da punção"
+        ],
+        "ajuste_renal": "Filtração 25 a 50 mL/min: a cada 12 h; 10 a 24 mL/min: a cada 24 h; abaixo de 10 mL/min: metade da dose a cada 24 h",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Explicitamente não é rotina: não reduz a duração da febre, não encurta a astenia e não previne rotura esplênica. Só usar em imunossuprimido com doença grave, com infectologia",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina",
+        "agente": "penicilina V (fenoximetilpenicilina)",
+        "papel": "condicional",
+        "indicacao": "amigdalite estreptocócica confirmada por teste rápido ou cultura",
+        "dose": "500 mg (800.000 UI)",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "10 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "anafilaxia prévia a penicilina",
+          "hipersensibilidade a penicilina"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "candidíase oral",
+          "anafilaxia rara"
+        ],
+        "apresentacoes": [
+          "comprimido 500.000 UI",
+          "comprimido 1.000.000 UI",
+          "solução oral 400.000 UI/5 mL"
+        ],
+        "preparo": "Uso direto por via oral, longe das refeições",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "melhora da febre e da odinofagia em 48 a 72 horas",
+          "diarreia",
+          "rash",
+          "adesão aos 10 dias"
+        ],
+        "ajuste_renal": "Sem ajuste em filtração acima de 30 mL/min; espaçar abaixo disso",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a escolha quando há estreptococo confirmado em paciente com mononucleose, porque não tem o rash das aminopenicilinas; só prescrever com teste positivo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "aminopenicilina",
+        "agente": "amoxicilina",
+        "papel": "condicional",
+        "indicacao": "apenas amigdalite estreptocócica confirmada com mononucleose por EBV excluída",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "10 dias",
+        "dose_maxima": "1,5 g/dia",
+        "contraindicacoes": [
+          "mononucleose por EBV suspeita ou confirmada",
+          "alergia a penicilina"
+        ],
+        "efeitos_adversos": [
+          "rash maculopapular em 70% a 100% dos pacientes com mononucleose por EBV",
+          "diarreia",
+          "candidíase",
+          "anafilaxia"
+        ],
+        "apresentacoes": [
+          "cápsula 500 mg",
+          "comprimido 875 mg",
+          "suspensão oral 250 mg/5 mL",
+          "suspensão oral 400 mg/5 mL"
+        ],
+        "preparo": "Uso direto por via oral, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "aparecimento de rash nas primeiras 72 horas",
+          "diarreia",
+          "sinais de anafilaxia na primeira dose"
+        ],
+        "ajuste_renal": "Intervalo de 12/12 h em filtração entre 10 e 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Na suspeita de mononucleose, não prescrever: o rash por aminopenicilina é esperado e não significa alergia verdadeira. O alerta do sistema bloqueia a prescrição na suspeita de EBV",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Hidratação fracionada",
+        "detalhe": "Ofertar 2 a 3 L por dia em pequenos volumes: água gelada, isotônico, sopa, gelo e frutas; a odinofagia é a causa de desidratação e de internação, e o volume deve ser medido, não estimado"
+      },
+      {
+        "medida": "Repouso relativo, não absoluto",
+        "detalhe": "Manter atividade leve domiciliar e sono adequado, com afastamento de trabalho ou escola enquanto houver febre; repouso no leito por semanas não acelera a recuperação e aumenta o risco de trombose"
+      },
+      {
+        "medida": "Suspensão de esporte de contato e de musculação",
+        "detalhe": "Quatro semanas no mínimo e seis semanas quando há esplenomegalia documentada; retorno gradual, começando por caminhada e cardio leve, sem carga abdominal ou colisão até a liberação registrada em prontuário"
+      },
+      {
+        "medida": "Retirada de álcool e de outros hepatotóxicos",
+        "detalhe": "O EBV causa hepatite leve em cerca de 80% dos casos; álcool, paracetamol em excesso e suplementos hepatotóxicos somam risco e podem transformar elevação discreta de transaminases em lesão relevante"
+      },
+      {
+        "medida": "Orientação sobre transmissão por saliva",
+        "detalhe": "Evitar compartilhar copos, talheres, escova de dentes e beijos durante a fase aguda; a excreção viral persiste por meses, mas não há indicação de isolamento social nem de afastamento prolongado"
+      },
+      {
+        "medida": "Sinais de alarme por escrito",
+        "detalhe": "Entregar lista impressa com dor abdominal súbita, dispneia, sangramento, icterícia e vômitos persistentes, com orientação de retorno imediato; o paciente com dor abdominal que espera o retorno agendado é o caso de rotura esplênica"
+      },
+      {
+        "medida": "Reavaliação programada em 48 a 72 horas",
+        "detalhe": "Reavaliar hidratação, dor, tamanho do baço, aparecimento de rash e necessidade de exames; a mononucleose que não melhora em uma semana obriga a revisar diagnóstico e a procurar complicação"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Teste rápido de antígeno estreptocócico com swab de orofaringe",
+        "indicacao": "amigdalite exsudativa com dúvida entre mononucleose e estreptococo",
+        "tecnica": "Friccionar o swab em ambas as amígdalas e na parede posterior da faringe, evitando língua e bochecha, e processar conforme o kit com leitura em 5 minutos; em adulto, o resultado negativo dispensa cultura na maioria dos serviços",
+        "complicacoes": "falso-negativo por técnica inadequada, desconforto e reflexo emético"
+      },
+      {
+        "nome": "Punção venosa para hemograma, transaminases e sorologias",
+        "indicacao": "todo caso com suspeita diagnóstica ou sinal de alarme",
+        "tecnica": "Coletar hemograma com contagem de atípicos, TGO, TGP, bilirrubinas, sorologia heterófila e, conforme a dúvida, EBV VCA IgM e IgG, EBNA IgG, CMV IgM e teste de HIV; uma única punção para todos os tubos",
+        "complicacoes": "hematoma, dor local, hemólise por garrote prolongado"
+      },
+      {
+        "nome": "Ultrassonografia de abdome total",
+        "indicacao": "esplenomegalia suspeita, dor no hipocôndrio esquerdo ou dúvida sobre liberação esportiva",
+        "tecnica": "Medida do baço pelo eixo longitudinal com transdutor convexo; baço acima de 13 cm no eixo longitudinal é esplenomegalia e deve ser registrado no prontuário",
+        "complicacoes": "achado incidental sem repercussão, limitação técnica em obesos e em pacientes com muitos gases"
+      },
+      {
+        "nome": "Ultrassonografia à beira-leito (FAST) em dor abdominal súbita",
+        "indicacao": "suspeita de rotura esplênica com dor ou instabilidade",
+        "tecnica": "Buscar líquido livre em peri-esplênico, espaço de Morrison, pelve e pericárdio; líquido livre em paciente com esplenomegalia e dor súbita é indicação cirúrgica",
+        "complicacoes": "falso-negativo em pequeno volume de hemoperitônio, dependência de operador"
+      },
+      {
+        "nome": "Avaliação otorrinolaringológica com nasofibrolaringoscopia",
+        "indicacao": "obstrução de via aérea, voz abafada, trismo ou suspeita de abscesso periamigdaliano",
+        "tecnica": "Exame com fibroscópio flexível para avaliar volume amigdaliano, permeabilidade da via aérea e coleção periamigdaliana; associar avaliação de deglutição",
+        "complicacoes": "desconforto, sangramento de mucosa, aspiração em paciente com deglutição comprometida"
+      }
+    ],
+    "metas": [
+      "Febre e dor controladas em 48 a 72 horas com analgésico simples",
+      "Ingesta oral acima de 1,5 L por dia mantida sem necessidade de hidratação venosa",
+      "Nenhuma prescrição de aminopenicilina na suspeita de mononucleose",
+      "Esporte de contato suspenso por no mínimo 4 semanas, com liberação registrada em prontuário",
+      "Diagnóstico diferencial resolvido com teste de estreptococo, sorologia de EBV e teste de HIV quando indicado",
+      "Sinais de alarme entregues por escrito e retorno agendado em 48 a 72 horas"
+    ],
+    "fluxo": [
+      "Confirmar o quadro clínico: febre, faringite, adenopatia cervical bilateral e astenia em adulto jovem",
+      "Excluir estreptococo com teste rápido ou cultura antes de qualquer antibiótico",
+      "Colher hemograma com atípicos, transaminases e bilirrubinas; solicitar heterófila e, se negativa ou em dúvida, VCA IgM, EBNA IgG e CMV IgM",
+      "Pesquisar sinais de alarme: dor abdominal, dispneia, sangramento, icterícia e alteração neurológica",
+      "Tratar sintomas com paracetamol ou dipirona; ibuprofeno apenas com hidratação e função renal preservadas e por poucos dias",
+      "Manter hidratação fracionada e dieta branda; lidocaína gel antes das refeições se a odinofagia impedir a ingesta",
+      "Corticoide curto apenas em obstrução de via aérea ou dor que impeça a deglutição",
+      "Não prescrever aciclovir de rotina nem aminopenicilina; se estreptococo confirmado, penicilina V",
+      "Suspender esporte de contato por 4 a 6 semanas, avaliar esplenomegalia e reavaliar em 48 a 72 horas",
+      "Encaminhar ao hospital se dor abdominal súbita, instabilidade, dispneia, sangramento, icterícia ou alteração neurológica"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "gestante",
+        "ajuste": "Suporte clínico com paracetamol e hidratação; evitar ibuprofeno no terceiro trimestre e dipirona no primeiro e no último mês; investigar CMV e toxoplasmose",
+        "alerta": "O EBV não é teratogênico e não há antiviral indicado, mas febre prolongada na gestação exige excluir outras causas e acompanhar transaminases"
+      },
+      {
+        "populacao": "atleta",
+        "ajuste": "Suspender contato e musculação por 4 a 6 semanas e liberar de forma progressiva, com registro em prontuário",
+        "alerta": "Rotura esplênica ocorre quase sempre nas primeiras 4 semanas e o retorno precoce é o erro que mata"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "Internar, discutir com infectologia e considerar aciclovir venoso apenas em doença grave ou linfoproliferativa",
+        "alerta": "Risco de replicação descontrolada do EBV, síndrome hemofagocítica e linfoma; a apresentação pode ser atípica e sem adenopatia exuberante"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "Avaliar linfoma e doença hematológica antes de fechar o diagnóstico, com hemograma, desidrogenase lática e imagem de tórax",
+        "alerta": "Adenopatia e febre no idoso raramente são mononucleose e a investigação de neoplasia não pode ser adiada"
+      },
+      {
+        "populacao": "hepatopata",
+        "ajuste": "Limitar paracetamol a 2 g/dia, suspender álcool e dosar transaminases e coagulação",
+        "alerta": "Hepatite pelo EBV sobre hepatopatia prévia pode descompensar e evoluir com encefalopatia"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "hemograma com contagem de linfócitos atípicos",
+          "indicacao": "todo caso suspeito",
+          "o_que_muda": "linfocitose acima de 50% com mais de 10% de atípicos sugere EBV; leucocitose com neutrofilia desloca o diagnóstico para bacteriano"
+        },
+        {
+          "nome": "sorologia heterófila (Monospot)",
+          "indicacao": "quadro típico a partir da segunda semana",
+          "o_que_muda": "positiva confirma e dispensa sorologia específica; negativa na primeira semana não exclui nada"
+        },
+        {
+          "nome": "EBV VCA IgM e IgG e EBNA IgG",
+          "indicacao": "heterófila negativa, dúvida diagnóstica ou doença atípica",
+          "o_que_muda": "VCA IgM positiva com EBNA IgG negativa confirma infecção aguda; EBNA IgG positiva indica infecção prévia e afasta o quadro atual"
+        },
+        {
+          "nome": "CMV IgM e IgG",
+          "indicacao": "mononucleose com heterófila negativa",
+          "o_que_muda": "confirma mononucleose por CMV, que tem o mesmo suporte e menor risco esplênico"
+        },
+        {
+          "nome": "TGO, TGP e bilirrubinas",
+          "indicacao": "todos",
+          "o_que_muda": "elevação de duas a três vezes o normal é esperada; acima de cinco vezes muda conduta e exige investigação de hepatite grave"
+        },
+        {
+          "nome": "teste rápido de HIV",
+          "indicacao": "todo adulto com síndrome febril e adenopatia, sobretudo com exposição sexual",
+          "o_que_muda": "síndrome retroviral aguda é o principal diferencial e muda completamente o tratamento e o seguimento"
+        },
+        {
+          "nome": "ultrassonografia de abdome",
+          "indicacao": "esplenomegalia palpável, dor no hipocôndrio esquerdo ou decisão sobre esporte",
+          "o_que_muda": "documenta esplenomegalia e define o prazo de restrição esportiva"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "prescrever amoxicilina ou ampicilina por amigdalite exsudativa sem teste de estreptococo",
+          "motivo": "rash em 70% a 100% dos pacientes com EBV, que é confundido com alergia e rotula o paciente erroneamente"
+        },
+        {
+          "exame": "repetir sorologia heterófila em 48 ou 72 horas",
+          "motivo": "a janela não fecha em dias e a repetição precoce gera falso-negativo e falsa segurança"
+        },
+        {
+          "exame": "dosar carga viral de EBV no sangue periférico de rotina",
+          "motivo": "não distingue infecção latente de doença ativa, não muda conduta e induz tratamento desnecessário"
+        },
+        {
+          "exame": "tomografia computadorizada de abdome de rotina",
+          "motivo": "a ultrassonografia resolve a esplenomegalia; a tomografia fica reservada para trauma e suspeita de rotura"
+        },
+        {
+          "exame": "aciclovir profilático para encurtar a fadiga",
+          "motivo": "não há evidência de benefício e o uso cria efeito adverso renal sem alterar a história natural"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "beber 2 a 3 litros de líquido por dia, em pequenos volumes, mesmo sem sede",
+        "tomar o analgésico no horário e não esperar a dor piorar para se alimentar",
+        "avisar imediatamente se aparecer dor abdominal súbita, falta de ar ou sangramento",
+        "ficar em casa enquanto houver febre e dormir o suficiente",
+        "voltar em 48 a 72 horas para reavaliação",
+        "retomar a atividade física de forma gradual e somente após liberação, se pratica esporte de contato"
+      ],
+      "evitar": [
+        "amoxicilina, ampicilina e antibiótico sem teste de estreptococo",
+        "aciclovir por conta própria para tratar a mononucleose",
+        "álcool e bebidas energéticas durante a fase aguda",
+        "esporte de contato, musculação e abdominal antes de 4 semanas",
+        "compartilhar copos, talheres e escova de dentes",
+        "repouso absoluto no leito por semanas"
+      ],
+      "retorno": [
+        "dor abdominal súbita ou dor no ombro esquerdo",
+        "falta de ar, rouquidão intensa ou dificuldade para engolir saliva",
+        "sangramento, petéquias ou urina escura",
+        "febre que persiste por mais de 10 dias ou retorna após melhora",
+        "vômitos que impedem a ingesta de líquidos",
+        "confusão, convulsão ou dor de cabeça intensa"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade",
+          "elevação de transaminases",
+          "rash"
+        ],
+        "observacao": "somar todas as fontes de paracetamol; suspender se transaminases subirem acima de três vezes o valor basal"
+      },
+      {
+        "agente": "dipirona",
+        "efeitos": [
+          "hipotensão",
+          "agranulocitose",
+          "rash"
+        ],
+        "observacao": "infundir lentamente por via venosa e colher hemograma se uso repetido"
+      },
+      {
+        "agente": "ibuprofeno",
+        "efeitos": [
+          "gastrite",
+          "lesão renal",
+          "retenção hídrica"
+        ],
+        "observacao": "suspender se dor epigástrica, melena ou queda de diurese"
+      },
+      {
+        "agente": "prednisolona",
+        "efeitos": [
+          "hiperglicemia",
+          "insônia",
+          "alteração de humor"
+        ],
+        "observacao": "uso máximo de 5 dias e nunca como tratamento da fadiga"
+      },
+      {
+        "agente": "amoxicilina",
+        "efeitos": [
+          "rash maculopapular",
+          "diarreia",
+          "candidíase"
+        ],
+        "observacao": "rash em mononucleose não é alergia; registrar o evento e evitar novas aminopenicilinas apenas durante o quadro"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Rash após amoxicilina ou ampicilina: suspender o antibiótico, tratar sintomas e registrar como rash por aminopenicilina na mononucleose, sem rotular alergia a penicilina",
+      "Náusea ou vômito com metoclopramida: reduzir a dose, espaçar as tomadas e suspender se surgirem movimentos involuntários ou acatisia",
+      "Distonia aguda por metoclopramida: suspender, aplicar difenidramina ou biperideno conforme protocolo e registrar a reação",
+      "Hiperglicemia ou insônia com prednisolona: reduzir para 3 dias, orientar tomada pela manhã e suspender ao fim do curso curto",
+      "Dor epigástrica ou melena com ibuprofeno: suspender, prescrever inibidor de bomba de prótons e reavaliar necessidade de endoscopia",
+      "Piora da odinofagia com dispneia durante o seguimento: reavaliar via aérea imediatamente e encaminhar para hospital",
+      "Persistência de febre além de 10 dias ou reaparecimento após melhora: reabrir diagnóstico e pesquisar complicação supurativa, hemofagocitose ou outra infecção"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol 500 mg",
+            "dose": "1 comprimido",
+            "via": "VO",
+            "frequencia": "6/6 h se dor ou febre",
+            "duracao": "5 dias",
+            "condicao": "febre e odinofagia",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dipirona 500 mg",
+            "dose": "1 comprimido",
+            "via": "VO",
+            "frequencia": "6/6 h se necessário",
+            "duracao": "5 dias",
+            "condicao": "febre e dor quando o paracetamol não controla",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lidocaína gel 2%",
+            "dose": "1 a 2 cm",
+            "via": "tópica em orofaringe",
+            "frequencia": "antes das refeições, até 4 vezes ao dia",
+            "duracao": "5 dias",
+            "condicao": "odinofagia intensa com baixa ingesta",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisolona 20 mg",
+            "dose": "2 a 3 comprimidos",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "3 a 5 dias",
+            "condicao": "obstrução de via aérea ou deglutição comprometida",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "dipirona 1 g",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "pressão arterial e temperatura",
+            "condicao": "febre com via oral indisponível",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metoclopramida 10 mg",
+            "dose": "10 mg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "sinais extrapiramidais",
+            "condicao": "vômitos com risco de desidratação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisolona 3 mg/mL",
+            "dose": "40 a 60 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "monitorizacao": "via aérea e glicemia",
+            "condicao": "obstrução de via aérea alta",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "aciclovir 500 mg",
+            "dose": "10 mg/kg",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "creatinina, diurese e nível de consciência",
+            "condicao": "imunossuprimido com doença grave por EBV, com infectologia",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma com atípicos",
+          "TGO e TGP",
+          "bilirrubinas",
+          "sorologia heterófila",
+          "EBV VCA IgM e IgG",
+          "EBNA IgG",
+          "CMV IgM e IgG",
+          "teste rápido de HIV",
+          "teste rápido de estreptococo",
+          "ultrassonografia de abdome",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com diagnóstico de mononucleose infecciosa, necessitando de afastamento de suas atividades por ___ dias e de suspensão de esporte de contato por 4 a 6 semanas.",
+        "dias": null,
+        "cid": null,
+        "observacao": "registrar a restrição esportiva separadamente, porque ela é a medida que previne rotura esplênica"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com data de início, febre, faringite, adenopatia, esplenomegalia, exames colhidos e restrição esportiva",
+          "prioridade",
+          "contato"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com mononucleose infecciosa iniciada em ___, com febre, faringite e adenopatia, hemograma com ___ linfócitos atípicos, transaminases ___, sorologia ___, esplenomegalia ___, tratado com suporte e orientado a suspender esporte de contato por ___ semanas."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "data de início da febre e da odinofagia",
+        "uso prévio de amoxicilina ou ampicilina e aparecimento de rash",
+        "dor abdominal e localização",
+        "prática de esporte de contato e carga de treino",
+        "dispneia, rouquidão e dificuldade de deglutição",
+        "contato com caso confirmado",
+        "exposição sexual de risco e sintomas de síndrome retroviral",
+        "doenças hematológicas, imunossupressão e esplenectomia",
+        "gestação e contracepção",
+        "medicamentos em uso, sobretudo analgésicos combinados e fitoterápicos"
+      ],
+      "texto_template": "Paciente com febre e odinofagia iniciadas em ___, uso prévio de aminopenicilina ___, rash ___, dor abdominal ___, prática de esporte de contato ___, dispneia ___, contato com caso ___, exposição sexual ___, imunossupressão ___, gestação ___ e medicamentos em uso ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "temperatura e estado geral",
+        "hidratação, mucosas e diurese",
+        "orofaringe com exsudato, edema amigdaliano e permeabilidade da via aérea",
+        "linfonodos cervicais, axilares e inguinais",
+        "palpação abdominal com medida do baço e do fígado",
+        "pele em busca de rash, petéquias e icterícia",
+        "ausculta pulmonar e sinais de derrame",
+        "exame neurológico e sinais de irritação meníngea"
+      ],
+      "texto_template": "Temperatura ___ °C, hidratação ___, orofaringe com ___, linfonodos ___, baço palpável a ___ cm do rebordo costal, fígado ___, pele com ___, ausculta pulmonar ___, exame neurológico ___."
+    },
+    "referencias": [
+      {
+        "tipo": "sociedade_infectologia",
+        "o_que_verificar": "diagnóstico sorológico da mononucleose por EBV, interpretação de VCA e EBNA e diferenciais com CMV",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "risco e janela de rotura esplênica, prazo de restrição esportiva e critérios de retorno",
+        "verificar": true
+      },
+      {
+        "tipo": "literatura",
+        "o_que_verificar": "rash por aminopenicilina na mononucleose, frequência e interpretação como reação não alérgica",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de teste rápido de estreptococo e critérios de internação por desidratação ou obstrução de via aérea",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações e diluições dos analgésicos, corticoide e anestésico tópico disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-INF10-01",
+        "tipo": "aminopenicilina_em_mononucleose",
+        "gatilho": "amoxicilina ou ampicilina prescrita em paciente com suspeita ou confirmação de mononucleose",
+        "severidade": "grave",
+        "mensagem": "Aminopenicilina na mononucleose causa rash em 70% a 100% dos casos.",
+        "acao": "bloquear a prescrição e sugerir penicilina V se houver estreptococo confirmado",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF10-02",
+        "tipo": "liberacao_esportiva_precoce",
+        "gatilho": "liberação para esporte de contato registrada antes de 4 semanas do início dos sintomas",
+        "severidade": "grave",
+        "mensagem": "Risco de rotura esplênica: manter suspenso por no mínimo 4 semanas.",
+        "acao": "bloquear a liberação e exigir reavaliação com data",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF10-03",
+        "tipo": "rotura_esplenica",
+        "gatilho": "dor abdominal súbita em hipocôndrio esquerdo com esplenomegalia ou instabilidade",
+        "severidade": "grave",
+        "mensagem": "Suspeita de rotura esplênica: emergência cirúrgica.",
+        "acao": "bloquear a alta, acionar cirurgia e solicitar FAST",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF10-04",
+        "tipo": "obstrucao_via_aerea",
+        "gatilho": "dispneia, estridor ou sialorreia em mononucleose",
+        "severidade": "grave",
+        "mensagem": "Obstrução de via aérea alta exige hospitalização e corticoide.",
+        "acao": "bloquear a alta e solicitar avaliação de otorrinolaringologia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-INF10-05",
+        "tipo": "aciclovir_de_rotina",
+        "gatilho": "aciclovir prescrito em mononucleose de paciente imunocompetente",
+        "severidade": "precaucao",
+        "mensagem": "Aciclovir não é rotina: não encurta a doença nem previne complicação.",
+        "acao": "alertar e sugerir retirada do item",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF10-06",
+        "tipo": "paracetamol_duplicado",
+        "gatilho": "paracetamol prescrito com dose diária acima de 3 g ou associado a produto que já o contenha",
+        "severidade": "precaucao",
+        "mensagem": "Somar todas as fontes de paracetamol antes de prescrever.",
+        "acao": "alertar e recalcular a dose total",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF10-07",
+        "tipo": "antibiotico_sem_teste",
+        "gatilho": "antibiótico prescrito para amigdalite sem teste rápido de estreptococo ou cultura registrados",
+        "severidade": "precaucao",
+        "mensagem": "Confirmar estreptococo antes de antibiótico.",
+        "acao": "alertar e incluir o teste no pedido",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-INF10-08",
+        "tipo": "rash_rotulado_como_alergia",
+        "gatilho": "alergia a penicilina registrada após rash por aminopenicilina durante mononucleose",
+        "severidade": "informativo",
+        "mensagem": "Rash por aminopenicilina na mononucleose não é alergia verdadeira.",
+        "acao": "orientar a registrar o evento como reação da infecção",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "protocolo institucional"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

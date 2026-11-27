@@ -1,0 +1,165 @@
+{
+  "id": "febre-dor",
+  "nome": "Febre e dor inespecíficas (sintomáticos)",
+  "cat": "Geral",
+  "alias": "febre dor sintomatico antitermico analgesico corpo",
+  "cid": [
+    [
+      "R509",
+      "Febre não especificada"
+    ],
+    [
+      "R529",
+      "Dor não especificada"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "MS/SBP — febre; NICE — dor"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Febre é sintoma, não diagnóstico: procurar FOCO (garganta, ouvido, pele, urina, pulmão, abdome, SNC) e avaliar sinais de alarme antes de tratar como 'virose'. Dengue sazonal: NS1/sorologia conforme protocolo local e NÃO AINE/AAS até excluir. Analgésico não é diagnóstico: alívio não exclui causa grave.",
+  "redFlags": [
+    "Febre + hipotensão, confusão ou taquipneia — sepse: protocolo Sepse",
+    "Febre + rigidez de nuca/petequias — meningite: ATB imediato",
+    "Dor intensa de início súbito ('pior da vida') — vascular até excluir",
+    "Febre > 72 h sem foco ou recorrente — investigar (hemocultura, exames)",
+    "Imunossuprimido/neutropênico febril — emergência: ATB em 1 h",
+    "Criança < 3 meses com febre — sempre risco alto: avaliação completa"
+  ],
+  "naoUsar": [
+    "AINE/AAS se suspeita de dengue ou varicela (sangramento)",
+    "Dipirona + paracetamol alternados de rotina (escolher um)",
+    "Antibiótico para 'virose'"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Analgésico-antitérmico (1ª linha)",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dipirona",
+            "pos": "500 mg a 1 g VO a cada 6 h SE dor ou febre — máximo 4 g/dia",
+            "ped": "10–15 mg/kg/dose a cada 6 h (máx 4 doses/dia)",
+            "motivo": "1ª linha; eficácia antitérmica superior"
+          },
+          {
+            "base": "paracetamol",
+            "pos": "750 mg a 1 g VO a cada 6 h — máx 4 g/dia (3 g se idoso, < 50 kg ou hepatopatia)",
+            "ped": "10–15 mg/kg/dose a cada 6 h",
+            "motivo": "Alternativa; preferir se risco hemorrágico"
+          },
+          {
+            "base": "cetorolaco",
+            "pos": "10 mg VO a cada 8 h por até 3 dias (dengue/varicela EXCLUÍDAS)",
+            "motivo": "Dor inflamatória definida e curta"
+          },
+          {
+            "base": "codeina_paracetamol",
+            "pos": "1 comprimido VO a cada 6 h se dor moderada-grave curta",
+            "ped": "< 12 anos: codeína contraindicada",
+            "motivo": "Dor refratária de curtíssima duração"
+          }
+        ]
+      },
+      {
+        "nome": "AINE — somente com causa inflamatória definida e sem contraindicação",
+        "semPreset": true,
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "400 a 600 mg VO a cada 8 h após alimento, por até 5 dias",
+            "ped": "5–10 mg/kg/dose a cada 8 h (> 6 meses)",
+            "motivo": "AINE de escolha; anti-térmico adicional"
+          },
+          {
+            "base": "naproxeno",
+            "pos": "500 mg VO a cada 12 h após alimento, por até 5 dias",
+            "motivo": "AINE 12/12 h"
+          },
+          {
+            "base": "diclofenaco",
+            "pos": "50 mg VO a cada 8 h após alimento, por até 5 dias",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "nimesulida",
+            "pos": "100 mg VO a cada 12 h por até 5 dias — hepatotoxicidade: evitar em idosos/hepatopatas e uso prolongado",
+            "motivo": "Uso restrito e consciente"
+          },
+          {
+            "base": "meloxicam",
+            "pos": "15 mg VO 1x/dia por até 5 dias",
+            "motivo": "AINE 1x/dia"
+          },
+          {
+            "base": "tenoxicam",
+            "pos": "20 mg VO 1x/dia por até 5 dias",
+            "motivo": "AINE 1x/dia"
+          },
+          {
+            "base": "aceclofenaco",
+            "pos": "100 mg VO a cada 12 h por até 5 dias",
+            "motivo": "Alternativa"
+          },
+          {
+            "base": "cetorolaco",
+            "pos": "10 mg VO a cada 8 h por até 3 dias (uso MUITO curto)",
+            "motivo": "AINE potente de resgate"
+          },
+          {
+            "base": "piroxicam",
+            "pos": "20 mg VO 1x/dia por até 5 dias",
+            "motivo": "Alternativa 1x/dia"
+          },
+          {
+            "base": "celecoxibe",
+            "pos": "200 mg VO 1x/dia por até 5 dias",
+            "motivo": "Se risco gastrointestinal e sem evento cardiovascular"
+          },
+          {
+            "base": "etoricoxibe",
+            "pos": "90 mg VO 1x/dia por até 5 dias (dor aguda)",
+            "motivo": "Coxib potente"
+          }
+        ]
+      },
+      {
+        "nome": "Orientações",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Retorno se",
+              "ap": "",
+              "pos": "Febre > 3 dias, febre que volta, piora da dor, manchas na pele, vômitos persistentes, confusão, falta de ar, diminuição de urina — PS de novo. Roupas leves, hidratação generosa, banho morno (não álcool/gelo). Anotar horários das doses para não ultrapassar o máximo diário."
+            },
+            "motivo": "Rede de segurança"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Dengue na região",
+              "ap": "",
+              "pos": "Em época de dengue: sem AINE e sem AAS até o médico excluir (usar só dipirona/paracetamol); procurar se dor abdominal persistente, vômitos, sangramento de gengiva, manchas roxas ou 'inquietação' (sinais de alarme)."
+            },
+            "motivo": "Sazonal"
+          }
+        ]
+      }
+    ]
+  }
+}

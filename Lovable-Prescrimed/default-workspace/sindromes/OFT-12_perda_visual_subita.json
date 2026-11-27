@@ -1,0 +1,1145 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "OFT-12",
+    "area": "Oftalmo/Otorrino",
+    "nome": "Perda visual súbita",
+    "aliases": [
+      "Perda visual súbita",
+      "amaurose súbita",
+      "cegueira súbita",
+      "perda de visão monocular súbita",
+      "oclusão de artéria central da retina",
+      "OACR",
+      "neurite óptica",
+      "amaurose fugaz"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Perda visual súbita é perda de visão instalada em minutos a horas, quase sempre monocular e, na maioria das vezes, indolor — e é emergência oftalmológica e neurológica, porque retina e nervo óptico toleram isquemia por cerca de 90 a 120 minutos. A conduta se organiza por compartimento. Na retina: a oclusão de artéria central da retina, com palidez retiniana e mancha vermelho-cereja, é equivalente a um AVC e implica massagem ocular, redução imediata da pressão intraocular com acetazolamida, timolol, latanoprosta, manitol ou paracentese de câmara anterior, além de investigação de carótida e coração; a oclusão venosa chega com hemorragia em chama de vela e edema de disco e é urgência de horas, não de minutos; o descolamento de retina traz flashes, moscas volantes e cortina e se opera; a hemorragia vítrea apaga o fundo de olho do diabético. No nervo óptico: a neurite óptica dói à movimentação, reduz a visão de cores e produz reflexo pupilar aferente relativo, e o corticoide acelera a recuperação sem alterar o resultado final. No cérebro: o AVC occipital causa hemianopsia homônima com acuidade preservada e exige protocolo de AVC, não colírio. Na câmara anterior: o glaucoma agudo de ângulo fechado é doloroso, com halo, náusea, pupila médio-fixa e córnea edemaciada. O que não se faz: prescrever colírio lubrificante e mandar para casa, tranquilizar sem fundoscopia e atribuir o quadro a estresse ou cansaço — quem faz isso perde a janela em que a visão ainda era recuperável. Encaminha-se em minutos, com acuidade visual, reflexo pupilar, pressão intraocular e fundoscopia registrados.",
+    "inclusao": [
+      "Perda de visão unilateral de instalação súbita, em minutos ou horas",
+      "Amaurose fugaz com recuperação espontânea, mesmo que já resolvida no momento do exame",
+      "Perda visual súbita com dor à movimentação ocular ou alteração da visão de cores",
+      "Perda de campo visual com acuidade preservada, compatível com hemianopsia",
+      "Perda visual súbita em diabético, hipertenso, anticoagulado ou com fibrilação atrial",
+      "Perda visual após esforço, trauma mínimo, alta miopia ou cirurgia ocular recente"
+    ],
+    "exclusao": [
+      {
+        "situacao": "olho vermelho doloroso com secreção e acuidade visual preservada",
+        "fluxo": "olho vermelho — OFT-01"
+      },
+      {
+        "situacao": "perda visual progressiva ao longo de semanas ou meses, indolor",
+        "fluxo": "investigação ambulatorial de catarata, glaucoma crônico e maculopatia"
+      },
+      {
+        "situacao": "diplopia isolada, sem queda de acuidade visual",
+        "fluxo": "neuro-oftalmologia e protocolo de AVC"
+      },
+      {
+        "situacao": "trauma ocular penetrante ou queimadura química",
+        "fluxo": "trauma ocular — emergência cirúrgica"
+      },
+      {
+        "situacao": "escotoma cintilante com cefaleia, duração de 15 a 30 minutos e resolução completa",
+        "fluxo": "enxaqueca com aura — ambulatorial"
+      },
+      {
+        "situacao": "perda visual binocular com rebaixamento de consciência ou trauma craniano",
+        "fluxo": "emergência neurológica e neurocirurgia"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "palidez retiniana difusa com mancha vermelho-cereja na mácula",
+        "por_que": "oclusão de artéria central da retina, com morte de fotorreceptores em 90 a 120 minutos",
+        "acao": "massagem ocular, reduzir pressão intraocular e acionar oftalmologia imediatamente",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "amaurose fugaz recorrente ou perda visual com sopro carotídeo",
+        "por_que": "isquemia retiniana transitória por estenose carotídea ou êmbolo cardíaco, com risco de AVC",
+        "acao": "internar, duplex de carótida, ECG e avaliação neurológica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "hemianopsia homônima, afasia, hemiparesia, disartria ou desvio de rima",
+        "por_que": "AVC occipital ou de circulação posterior",
+        "acao": "acionar protocolo de AVC, tomografia e avaliar trombólise",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "flashes, moscas volantes e sensação de cortina avançando sobre o campo visual",
+        "por_que": "descolamento de retina, com perda definitiva se a mácula descolar",
+        "acao": "oftalmologia imediata e cirurgia de retina",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "dor ocular intensa com halo, náusea, vômito e pupila médio-fixa",
+        "por_que": "glaucoma agudo de ângulo fechado com pressão intraocular acima de 40 mmHg",
+        "acao": "baixar a pressão intraocular na hora e acionar oftalmologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "idade acima de 50 anos com cefaleia temporal, claudicação de mandíbula, polimialgia ou VHS muito elevado",
+        "por_que": "arterite de células gigantes, que cega o outro olho em dias se não tratada",
+        "acao": "metilprednisolona intravenosa imediata, sem aguardar biópsia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "papiledema bilateral, cefaleia e vômitos em jato",
+        "por_que": "hipertensão intracraniana, trombose venosa cerebral ou massa expansiva",
+        "acao": "neuroimagem urgente e avaliação de fundo de olho seriada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "dor e queda visual após cirurgia ocular recente",
+        "por_que": "endoftalmite, com perda visual em horas",
+        "acao": "contato imediato com o cirurgião e injeção intravítrea de antibiótico",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quando a visão caiu: de repente, em minutos, ou piorou ao longo do dia?",
+      "Foi um olho ou os dois? O outro olho está normal?",
+      "A perda foi completa ou sobrou uma parte do campo visual?",
+      "Dói para movimentar o olho, ou o olho está apenas embaçado e indolor?",
+      "Vê flashes, moscas volantes, cortina ou uma sombra que avança?",
+      "A visão voltou sozinha em minutos e depois caiu de novo?",
+      "Tem diabetes, hipertensão, fibrilação atrial, sopro no pescoço ou doença valvar?",
+      "Teve fraqueza, dormência, dificuldade para falar ou desequilíbrio junto?",
+      "Usa anticoagulante ou antiagregante? Qual e em que dose?",
+      "Tem dor de cabeça nova, dor na mandíbula ao mastigar ou dor muscular nos ombros?",
+      "Fez cirurgia ocular, injetou substância no olho ou teve trauma recente?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Oclusão de artéria central da retina com palidez retiniana, mancha vermelho-cereja e perda visual indolor instalada há menos de algumas horas",
+        "escolha": "Massagem ocular digital por 10 a 15 segundos com descompressão, acetazolamida 500 mg intravenosa, timolol 0,5% e latanoprosta 0,005%, manitol 20% ou paracentese de câmara anterior, com oftalmologia imediatamente",
+        "porque": "O objetivo é deslocar o êmbolo para um ramo periférico e baixar a pressão intraocular para melhorar a perfusão; cada minuto de isquemia custa fotorreceptores, e nenhuma medida funciona depois de 4 a 6 horas"
+      },
+      {
+        "cenario": "Oclusão arterial com suspeita de arterite de células gigantes: idade acima de 50 anos, cefaleia temporal, claudicação de mandíbula, VHS ou PCR elevados",
+        "escolha": "Metilprednisolona 1 g intravenosa ao dia por 3 dias, seguida de prednisona 1 mg/kg/dia, associada a ácido acetilsalicílico 100 mg e biópsia de artéria temporal",
+        "porque": "O corticoide em dose alta interrompe a arterite e protege o outro olho; esperar a biópsia para tratar é o erro que cega o segundo olho"
+      },
+      {
+        "cenario": "Oclusão de veia central da retina com hemorragia em chama de vela, edema de disco e visão de contar dedos",
+        "escolha": "Controle rigoroso de pressão arterial e glicemia, oftalmologia em 24 a 48 horas e avaliação para anti-VEGF no edema macular",
+        "porque": "Não há trombo para desfazer: o dano é por congestão e edema, e o tratamento que recupera visão é o anti-VEGF, que não se aplica na sala de emergência"
+      },
+      {
+        "cenario": "Neurite óptica: dor à movimentação ocular, redução da visão de cores, reflexo pupilar aferente relativo e disco normal ou edemaciado",
+        "escolha": "Metilprednisolona 1 g intravenosa ao dia por 3 dias, seguida de prednisona 1 mg/kg/dia com desmame em 2 a 4 semanas, e ressonância de crânio e órbitas",
+        "porque": "O corticoide acelera a recuperação visual em dias, embora não mude o resultado final; a ressonância define risco de esclerose múltipla e afasta neuromielite, que exige outro tratamento"
+      },
+      {
+        "cenario": "Descolamento de retina com cortina, flashes e moscas volantes, com mácula ainda aplicada",
+        "escolha": "Oftalmologia e cirurgia de retina em até 24 horas, repouso relativo e orientação para evitar esforço; nenhum colírio",
+        "porque": "Enquanto a mácula está aplicada a visão central pode ser preservada, e a cirurgia é a única conduta que recoloca a retina; colírio não tem papel"
+      },
+      {
+        "cenario": "Hemorragia vítrea com fundo de olho não visível em diabético ou anticoagulado",
+        "escolha": "Ultrassom ocular para excluir descolamento, controle de glicemia e pressão, revisão da anticoagulação com quem prescreveu e oftalmologia em 24 horas",
+        "porque": "A hemorragia isolada se reabsorve, mas descolamento associado exige cirurgia e não pode ser excluído sem imagem"
+      },
+      {
+        "cenario": "AVC occipital com hemianopsia homônima e acuidade preservada",
+        "escolha": "Protocolo de AVC com tomografia, avaliação de NIHSS e trombólise com alteplase se dentro de 4,5 horas e sem contraindicação",
+        "porque": "O problema é cerebral, não ocular; o colírio não muda nada e a trombólise é a única terapia que reverte o déficit"
+      },
+      {
+        "cenario": "Glaucoma agudo de ângulo fechado com dor, halo, náusea, córnea edemaciada e pressão intraocular acima de 40 mmHg",
+        "escolha": "Acetazolamida 500 mg intravenosa, timolol 0,5%, pilocarpina 2%, manitol 20% se necessário e iridotomia periférica a laser assim que a córnea clarear",
+        "porque": "Baixar a pressão em minutos evita lesão do nervo óptico, e a iridotomia é o tratamento definitivo que previne a recidiva no outro olho"
+      },
+      {
+        "cenario": "Serviço sem oftalmologista e sem tonômetro",
+        "escolha": "Transferir em minutos para centro com oftalmologia, mantendo acesso venoso e sem prescrever colírio; registrar acuidade visual e reflexo pupilar",
+        "porque": "A janela de isquemia é de horas e nenhum tratamento ocular útil se inicia sem exame; colírio dado às cegas cria falsa sensação de conduta e atrasa a transferência"
+      },
+      {
+        "cenario": "Amaurose fugaz que já resolveu, com exame normal no momento",
+        "escolha": "Tratar como isquemia retiniana transitória: internação ou avaliação urgente, duplex de carótida, ECG, Holter e ecocardiograma, com antiagregante e anticoagulação se fibrilação atrial",
+        "porque": "O olho voltou ao normal, mas o risco de AVC nos dias seguintes é alto e a janela de prevenção é agora"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "inibidor_anidrase_carbonica",
+        "agente": "acetazolamida 500 mg injetável",
+        "papel": "primeira_linha",
+        "indicacao": "oclusão de artéria central da retina e glaucoma agudo de ângulo fechado, para reduzir a pressão intraocular",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única na oclusão arterial; 6/6 h no glaucoma agudo",
+        "duracao": "até 24 a 48 horas, até a avaliação especializada",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "alergia a sulfonamida",
+          "insuficiência renal grave",
+          "acidose metabólica",
+          "cirrose com encefalopatia",
+          "hipocalemia grave"
+        ],
+        "efeitos_adversos": [
+          "parestesia de extremidades",
+          "acidose metabólica",
+          "hipocalemia",
+          "sonolência",
+          "cálculo renal"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg (pó liofilizado)",
+          "comprimido 250 mg"
+        ],
+        "preparo": "Reconstituir o frasco em 5 mL de água destilada e diluir em 100 mL de SF 0,9%",
+        "tempo_infusao": "5 a 10 minutos (bolus lento) ou 15 minutos",
+        "monitorizacao": [
+          "pressão intraocular antes e 30 minutos após",
+          "potássio e bicarbonato",
+          "diurese",
+          "parestesias e nível de consciência"
+        ],
+        "ajuste_renal": "Contraindicada em ClCr abaixo de 30; reduzir em ClCr de 30 a 60",
+        "ajuste_hepatico": "Evitar em cirrose com encefalopatia",
+        "observacoes": "É ponte, não tratamento definitivo: reduz a produção de humor aquoso em 30 a 60 minutos e ganha tempo para a paracentese, o manitol ou a iridotomia. Nunca prescrever e liberar o paciente.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "betabloqueador_topico",
+        "agente": "timolol 0,5% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "redução rápida da pressão intraocular na oclusão arterial retiniana e no glaucoma agudo",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "dose única na oclusão arterial; 12/12 h no glaucoma agudo",
+        "duracao": "até a avaliação especializada",
+        "dose_maxima": "1 gota 12/12 h no olho afetado",
+        "contraindicacoes": [
+          "asma e DPOC grave",
+          "bloqueio atrioventricular de 2º ou 3º grau",
+          "bradicardia abaixo de 50 bpm",
+          "insuficiência cardíaca descompensada"
+        ],
+        "efeitos_adversos": [
+          "bradicardia",
+          "broncoespasmo",
+          "hipotensão",
+          "ardência ocular"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 0,25%",
+          "frasco 5 mL a 0,5%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 1 minuto para reduzir a absorção sistêmica",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "frequência cardíaca e pressão arterial",
+          "pico de fluxo em asmático",
+          "pressão intraocular em 30 a 60 minutos"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Baixa a pressão intraocular em 30 a 60 minutos e é a medida mais rápida disponível na sala de emergência. Evitar em asmático e em bloqueio cardíaco, situações comuns no idoso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analogo_prostaglandina",
+        "agente": "latanoprosta 0,005% colírio",
+        "papel": "alternativa",
+        "indicacao": "redução adicional da pressão intraocular quando timolol e acetazolamida não bastam",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1 vez ao dia à noite",
+        "duracao": "até a iridotomia ou a reavaliação especializada",
+        "dose_maxima": "1 gota ao dia no olho afetado",
+        "contraindicacoes": [
+          "hipersensibilidade a análogo de prostaglandina",
+          "uveíte ativa",
+          "edema macular cistoide prévio",
+          "gestação"
+        ],
+        "efeitos_adversos": [
+          "hiperemia conjuntival",
+          "crescimento e escurecimento dos cílios",
+          "irritação ocular",
+          "escurecimento da íris"
+        ],
+        "apresentacoes": [
+          "frasco 2,5 mL a 0,005%",
+          "unidose 0,2 mL a 0,005%"
+        ],
+        "preparo": "Uso direto; retirar a lente de contato e recolocar após 15 minutos",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular em 3 a 4 horas",
+          "hiperemia conjuntival",
+          "dor ocular"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Potente, mas de início lento: não é a droga que resolve a crise em 30 minutos. Serve para manter a pressão baixa enquanto se organiza a iridotomia e nos quadros refratários.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "diuretico_osmotico",
+        "agente": "manitol 20% solução injetável",
+        "papel": "resgate",
+        "indicacao": "glaucoma agudo com pressão intraocular muito elevada e oclusão arterial sem resposta às medidas iniciais",
+        "dose": "1 a 2 g/kg",
+        "unidade": "g/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir em 6 a 8 horas se necessário",
+        "duracao": "24 a 48 horas",
+        "dose_maxima": "2 g/kg por dose",
+        "contraindicacoes": [
+          "anúria",
+          "insuficiência cardíaca descompensada",
+          "edema agudo de pulmão",
+          "hipovolemia grave",
+          "hemorragia intracraniana ativa"
+        ],
+        "efeitos_adversos": [
+          "sobrecarga de volume e edema pulmonar",
+          "hipotensão transitória",
+          "distúrbio hidroeletrolítico",
+          "insuficiência renal aguda",
+          "cefaleia e calafrio"
+        ],
+        "apresentacoes": [
+          "frasco 250 mL a 20%",
+          "frasco 500 mL a 20%"
+        ],
+        "preparo": "Não diluir; usar equipo com filtro e manter o frasco aquecido a 37 °C se houver cristalização",
+        "tempo_infusao": "30 a 45 minutos, com diurese estabelecida antes de iniciar",
+        "monitorizacao": [
+          "pressão intraocular",
+          "diurese horária",
+          "sódio, potássio e osmolaridade",
+          "ausculta pulmonar e pressão arterial"
+        ],
+        "ajuste_renal": "Contraindicado em anúria; reduzir ou evitar em ClCr abaixo de 30",
+        "observacoes": "Reservar para crise com pressão muito alta ou para quando não há acesso à paracentese. Só funciona se o rim eliminar o osmótico, e é justamente o rim que costuma estar comprometido no idoso.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "miotico",
+        "agente": "pilocarpina 2% colírio",
+        "papel": "condicional",
+        "indicacao": "glaucoma agudo de ângulo fechado após iniciar a redução da pressão intraocular",
+        "dose": "1 gota",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "1 gota a cada 15 minutos por 2 doses, depois 6/6 h",
+        "duracao": "até a iridotomia periférica a laser",
+        "dose_maxima": "1 gota 4 vezes ao dia no olho afetado",
+        "contraindicacoes": [
+          "oclusão de artéria ou veia da retina",
+          "uveíte anterior",
+          "ceratite herpética",
+          "córnea muito edemaciada sem visão da câmara anterior"
+        ],
+        "efeitos_adversos": [
+          "crise de dor por contração do músculo ciliar",
+          "miose intensa com baixa visual no escuro",
+          "cefaleia",
+          "descolamento de retina raro"
+        ],
+        "apresentacoes": [
+          "frasco 10 mL a 2%",
+          "frasco 10 mL a 1%"
+        ],
+        "preparo": "Uso direto; comprimir o ponto lacrimal por 1 minuto",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "pressão intraocular a cada 30 minutos na primeira hora",
+          "dor ocular e cefaleia",
+          "diâmetro pupilar"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "observacoes": "Só tem sentido quando o ângulo está fechado e a íris precisa ser tracionada. Não usar em oclusão arterial ou venosa da retina: não melhora a perfusão e induz miose que piora a visão.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "metilprednisolona 1 g injetável",
+        "papel": "primeira_linha",
+        "indicacao": "neurite óptica e suspeita de arterite de células gigantes com perda visual",
+        "dose": "1 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1 vez ao dia",
+        "duracao": "3 dias, seguidos de prednisona oral",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "infecção sistêmica não controlada",
+          "hipersensibilidade ao fármaco",
+          "psicose ativa grave",
+          "úlcera péptica sangrante"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "hipertensão arterial",
+          "hipocalemia",
+          "insônia e agitação",
+          "infecção oportunista",
+          "arritmia e morte súbita em infusão rápida"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água destilada e diluir em 250 mL de SF 0,9% ou SG 5%",
+        "tempo_infusao": "30 a 60 minutos; nunca em bolus",
+        "monitorizacao": [
+          "glicemia capilar",
+          "pressão arterial e frequência cardíaca",
+          "potássio",
+          "sinais de infecção",
+          "acuidade visual e visão de cores antes e depois"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste para cursos curtos",
+        "observacoes": "Na arterite de células gigantes, iniciar antes da biópsia: o exame não muda em 2 semanas de corticoide e a espera custa o segundo olho. Na neurite óptica, acelera a recuperação, mas não altera o resultado final.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_sistemico",
+        "agente": "prednisona 1 mg/kg comprimido",
+        "papel": "alternativa",
+        "indicacao": "manutenção após pulsoterapia na neurite óptica e na arterite de células gigantes, ou quando não há metilprednisolona intravenosa",
+        "dose": "1 mg/kg/dia",
+        "unidade": "mg/kg",
+        "via": "VO",
+        "frequencia": "1 vez ao dia pela manhã",
+        "duracao": "2 a 4 semanas na neurite, com desmame; 6 a 12 meses na arterite",
+        "dose_maxima": "60 mg/dia na neurite; até 80 mg/dia na arterite de células gigantes",
+        "contraindicacoes": [
+          "infecção sistêmica não controlada",
+          "diabetes descompensado sem controle",
+          "úlcera péptica ativa",
+          "psicose grave"
+        ],
+        "efeitos_adversos": [
+          "hiperglicemia",
+          "aumento de peso e retenção hídrica",
+          "insônia",
+          "osteoporose em uso prolongado",
+          "supressão do eixo adrenal na retirada abrupta"
+        ],
+        "apresentacoes": [
+          "comprimido 5 mg",
+          "comprimido 20 mg",
+          "solução oral 3 mg/mL"
+        ],
+        "preparo": "Uso direto com alimento, pela manhã",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "glicemia e pressão arterial",
+          "acuidade visual e campo visual",
+          "densitometria e proteção gástrica em uso prolongado",
+          "desmame gradual, nunca interrupção abrupta"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste relevante em cursos curtos",
+        "observacoes": "Na neurite óptica, prednisona oral isolada não é primeira escolha: o estudo que sustenta o corticoide mostrou mais recidiva com o esquema oral sem pulso intravenoso. Na arterite, a dose alta é obrigatória e o desmame é guiado por sintoma e VHS.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "trombolitico",
+        "agente": "alteplase 50 mg injetável",
+        "papel": "condicional",
+        "indicacao": "AVC isquêmico occipital com perda de campo visual dentro da janela de 4,5 horas",
+        "dose": "0,9 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "10% da dose em bolus e o restante em 60 minutos, dose única",
+        "duracao": "infusão única de 60 minutos",
+        "dose_maxima": "90 mg",
+        "contraindicacoes": [
+          "hemorragia intracraniana na tomografia",
+          "pressão arterial acima de 185/110 mmHg refratária",
+          "plaquetas abaixo de 100.000",
+          "INR acima de 1,7 ou anticoagulação plena",
+          "cirurgia de grande porte ou trauma nos últimos 14 dias",
+          "AVC ou infarto nos últimos 3 meses"
+        ],
+        "efeitos_adversos": [
+          "hemorragia intracraniana sintomática",
+          "transformação hemorrágica",
+          "angioedema orolingual",
+          "hematoma no sítio de punção"
+        ],
+        "apresentacoes": [
+          "frasco 50 mg (pó liofilizado)",
+          "frasco 100 mg (pó liofilizado)"
+        ],
+        "preparo": "Reconstituir em 50 mL de água estéril e diluir em 100 mL de SF 0,9%; aspirar o volume da dose calculada e descartar o excedente",
+        "tempo_infusao": "10% em bolus em 1 minuto e 90% em 60 minutos",
+        "monitorizacao": [
+          "escala de AVC seriada e exame neurológico",
+          "pressão arterial a cada 15 minutos nas primeiras 2 horas",
+          "tomografia de controle em 24 horas",
+          "sangramento em sítios de punção e sinais de angioedema"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Avaliar coagulopatia antes; contraindicado se INR acima de 1,7",
+        "observacoes": "Só prescrever dentro do protocolo de AVC e com tomografia sem sangramento. Nunca para oclusão de artéria central da retina fora de protocolo de pesquisa, e nunca em bolus único.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antiagregante",
+        "agente": "ácido acetilsalicílico 100 mg comprimido",
+        "papel": "condicional",
+        "indicacao": "arterite de células gigantes como adjuvante do corticoide e prevenção secundária na isquemia retiniana de origem aterotrombótica",
+        "dose": "100 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1 vez ao dia",
+        "duracao": "contínuo enquanto durar a indicação",
+        "dose_maxima": "300 mg/dia; dose de ataque de 300 mg apenas no AVC isquêmico sem trombólise",
+        "contraindicacoes": [
+          "sangramento digestivo ativo",
+          "alergia a salicilato",
+          "plaquetopenia grave",
+          "hemorragia intracraniana",
+          "asma induzida por AINE"
+        ],
+        "efeitos_adversos": [
+          "dispepsia e dor epigástrica",
+          "sangramento digestivo",
+          "broncoespasmo em asmático sensível",
+          "equimose"
+        ],
+        "apresentacoes": [
+          "comprimido 100 mg",
+          "comprimido 500 mg"
+        ],
+        "preparo": "Uso direto com alimento; comprimido revestido não deve ser triturado",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "sinais de sangramento e hemograma",
+          "dor epigástrica",
+          "adesão e associação com outro antiagregante ou anticoagulante"
+        ],
+        "ajuste_renal": "Evitar em ClCr abaixo de 30 por risco de sangramento",
+        "ajuste_hepatico": "Evitar em hepatopatia com coagulopatia",
+        "observacoes": "Na arterite de células gigantes, o AAS reduz eventos isquêmicos enquanto o corticoide faz efeito. Na isquemia retiniana, a decisão é da neurologia, sobretudo se houver fibrilação atrial, quando a anticoagulação substitui o antiagregante.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Massagem ocular digital imediata na oclusão arterial",
+        "detalhe": "Com o olho fechado, comprimir o globo por 10 a 15 segundos e descomprimir por 10 a 15 segundos, repetindo por 3 a 5 minutos; a variação de pressão pode deslocar o êmbolo para um ramo periférico e melhorar o campo visual"
+      },
+      {
+        "medida": "Posicionar a cabeça e evitar compressão do globo fora da massagem indicada",
+        "detalhe": "Manter o paciente sentado ou com a cabeceira elevada a 30 graus no glaucoma agudo, e nunca comprimir o olho em suspeita de perfuração ou de cirurgia recente"
+      },
+      {
+        "medida": "Não prescrever colírio antes do exame",
+        "detalhe": "Nenhum lubrificante, antibiótico ou corticoide antes da fundoscopia e da tonometria; colírio dado antes apaga sinais, cria falsa conduta e atrasa a transferência"
+      },
+      {
+        "medida": "Acionar o oftalmologista e o centro regulador em minutos",
+        "detalhe": "Registrar hora do início da perda visual, acuidade visual dos dois olhos, reflexo pupilar e pressão intraocular, e transferir com essas informações por escrito; a janela útil é de 90 a 120 minutos"
+      },
+      {
+        "medida": "Protocolo de AVC quando há déficit associado",
+        "detalhe": "Glicemia capilar, acesso venoso, tomografia sem contraste, controle de pressão e avaliação de trombólise; não tratar como problema ocular isolado"
+      },
+      {
+        "medida": "Controle glicêmico e pressórico no diabético e no hipertenso",
+        "detalhe": "Meta de pressão abaixo de 140/90 mmHg e glicemia controlada na internação; a hipertensão grave é o principal fator de risco para oclusão venosa e para hemorragia vítrea"
+      },
+      {
+        "medida": "Repouso relativo e restrição de esforço no descolamento de retina",
+        "detalhe": "Evitar carregar peso, inclinar-se e atividades de impacto até a cirurgia, e orientar sobre posicionamento específico quando o descolamento é inferior"
+      },
+      {
+        "medida": "Orientação sobre risco de recidiva e de AVC",
+        "detalhe": "Explicar por escrito que amaurose fugaz é sinal de risco cerebral, que a perda visual pode ser permanente e que o retorno imediato é obrigatório em novo episódio"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Massagem ocular digital",
+        "indicacao": "suspeita de oclusão de artéria central da retina nas primeiras horas",
+        "tecnica": "Com o olho fechado, compressão do globo com a polpa dos dedos por 10 a 15 segundos, seguida de descompressão de 10 a 15 segundos, repetida por 3 a 5 minutos, com reavaliação da acuidade visual entre os ciclos",
+        "complicacoes": "Desconforto, bradicardia vagal, deslocamento de êmbolo para ramo ainda mais crítico e lesão do globo em olho operado ou com ceratocone"
+      },
+      {
+        "nome": "Paracentese de câmara anterior",
+        "indicacao": "oclusão de artéria central da retina e glaucoma agudo com pressão intraocular refratária",
+        "tecnica": "Antissepsia, anestésico tópico, blefarostato, punção na periferia da córnea com agulha 27 a 30 G ou lâmina, drenagem de 0,1 a 0,2 mL de humor aquoso e reavaliação imediata da pressão intraocular",
+        "complicacoes": "Endoftalmite, lesão do cristalino ou da íris, hifema, hipotonia, descolamento de retina e perfuração do globo"
+      },
+      {
+        "nome": "Fundoscopia com midríase farmacológica",
+        "indicacao": "toda perda visual súbita, para distinguir oclusão arterial, oclusão venosa, descolamento, hemorragia vítrea e neurite",
+        "tecnica": "Tropicamida 1% e fenilefrina 2,5%, aguardar 20 minutos e examinar com oftalmoscópio direto ou indireto; registrar palidez retiniana, mancha vermelho-cereja, hemorragia, relação escavação-disco e edema de disco",
+        "complicacoes": "Crise de glaucoma agudo em ângulo fechado, midríase prolongada, reação sistêmica à fenilefrina em cardiopata"
+      },
+      {
+        "nome": "Iridotomia periférica a laser",
+        "indicacao": "glaucoma agudo de ângulo fechado, assim que a córnea estiver transparente, e profilaxia no olho contralateral",
+        "tecnica": "Anestesia tópica, lente de iridotomia, disparos de laser de 0,5 a 1 mJ na periferia da íris até a permeabilidade, seguida de nova medida da pressão intraocular",
+        "complicacoes": "Sangramento da íris, fechamento do orifício, picos de pressão, inflamação e desconforto"
+      },
+      {
+        "nome": "Vitrectomia posterior via pars plana",
+        "indicacao": "descolamento de retina com mácula comprometida, hemorragia vítrea não esclarecida e endoftalmite",
+        "tecnica": "Vitrectomia 23 ou 25 G com três portas, remoção do vítreo, reaplicação da retina e tamponamento com óleo de silicone ou gás",
+        "complicacoes": "Catarata, hipertensão ocular, hemorragia, descolamento recorrente, endoftalmite e baixa visual permanente"
+      }
+    ],
+    "metas": [
+      "Avaliação oftalmológica iniciada em até 30 minutos da chegada na oclusão arterial e no glaucoma agudo",
+      "Pressão intraocular abaixo de 22 mmHg após as primeiras medidas e abaixo de 15 mmHg no glaucoma agudo",
+      "Nenhum colírio prescrito antes do exame de fundo de olho e da tonometria",
+      "Cirurgia do descolamento com mácula aplicada em até 24 horas",
+      "Trombólise iniciada em até 60 minutos da chegada no AVC occipital com janela aberta",
+      "Corticoide iniciado em até 1 hora na suspeita de arterite de células gigantes",
+      "Acuidade visual, reflexo pupilar, pressão intraocular e fundoscopia registrados em todo atendimento"
+    ],
+    "fluxo": [
+      "Registrar a hora exata do início da perda visual e medir a acuidade visual dos dois olhos antes de qualquer colírio",
+      "Testar reflexo pupilar e pesquisar defeito pupilar aferente relativo, e medir a pressão intraocular",
+      "Fazer fundoscopia com midríase, se não houver suspeita de glaucoma agudo, e classificar pelo compartimento: retina, nervo, cérebro ou câmara anterior",
+      "Na oclusão arterial: massagem ocular, acetazolamida, timolol, latanoprosta e manitol ou paracentese, com oftalmologia imediatamente",
+      "Na suspeita de arterite de células gigantes: metilprednisolona intravenosa na primeira hora, sem esperar biópsia nem VHS",
+      "No glaucoma agudo: acetazolamida, timolol e pilocarpina, manitol se necessário e iridotomia a laser",
+      "No déficit de campo visual ou neurológico: acionar protocolo de AVC com tomografia e avaliação de trombólise",
+      "No descolamento de retina e na hemorragia vítrea: oftalmologia e cirurgia de retina, sem colírio e sem alta",
+      "Sem oftalmologista no serviço: transferir em minutos com resumo escrito e acesso venoso mantido",
+      "Após estabilizar: investigar carótida, coração, pressão, glicemia e risco cardiovascular antes da alta"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "considerar arterite de células gigantes em toda perda visual súbita acima de 50 anos e iniciar corticoide sem esperar exames",
+        "alerta": "cegueira do segundo olho em dias se a arterite não for tratada"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "considerar hemorragia vítrea e oclusão venosa, com ultrassom ocular e controle glicêmico intensificado",
+        "alerta": "hemorragia vítrea pode mascarar descolamento de retina"
+      },
+      {
+        "populacao": "hipertenso",
+        "ajuste": "controlar pressão com meta abaixo de 140/90 mmHg e investigar oclusão venosa e encefalopatia hipertensiva",
+        "alerta": "crise hipertensiva com papiledema e perda visual"
+      },
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "revisar indicação e intensidade da anticoagulação com quem prescreveu, dosando INR e função renal antes de qualquer reversão",
+        "alerta": "hemorragia vítrea e subconjuntival extensa, com risco de sangramento intracraniano associado"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "evitar acetazolamida, manitol e latanoprosta sem especialista; investigar pré-eclâmpsia e trombose venosa cerebral",
+        "alerta": "perda visual na gestação pode ser pré-eclâmpsia grave ou síndrome de vasoconstrição cerebral reversível"
+      },
+      {
+        "populacao": "monocular",
+        "ajuste": "prioridade máxima, limiar mais baixo para exames e internação, e discussão precoce com a oftalmologia",
+        "alerta": "cegueira funcional definitiva em um paciente que já depende do único olho útil"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "acuidade visual com optotipo de Snellen e visão de cores",
+          "indicacao": "todos",
+          "o_que_muda": "quantifica a perda e separa neurite óptica, que altera cores, de oclusão arterial, que poupa a percepção cromática até estágios avançados"
+        },
+        {
+          "nome": "fundoscopia com midríase",
+          "indicacao": "todos, após medida da pressão intraocular",
+          "o_que_muda": "identifica palidez retiniana, mancha vermelho-cereja, hemorragia em chama de vela, descolamento e edema de disco, e define o compartimento"
+        },
+        {
+          "nome": "pressão intraocular por tonometria",
+          "indicacao": "todos",
+          "o_que_muda": "confirma glaucoma agudo e orienta a redução de pressão na oclusão arterial"
+        },
+        {
+          "nome": "tomografia de crânio sem contraste",
+          "indicacao": "hemianopsia, déficit neurológico ou suspeita de AVC",
+          "o_que_muda": "afasta hemorragia e libera o paciente para trombólise"
+        },
+        {
+          "nome": "ressonância de crânio e órbitas com contraste",
+          "indicacao": "neurite óptica, suspeita de neuromielite ou de massa",
+          "o_que_muda": "define risco de esclerose múltipla, detecta neurite retrobulbar e afasta compressão"
+        },
+        {
+          "nome": "duplex de carótida, ECG, Holter e ecocardiograma",
+          "indicacao": "isquemia retiniana, amaurose fugaz e oclusão arterial",
+          "o_que_muda": "identifica a fonte embólica e define anticoagulação ou revascularização"
+        },
+        {
+          "nome": "hemograma, VHS, proteína C reativa, glicemia e perfil lipídico",
+          "indicacao": "oclusão arterial e suspeita de arterite de células gigantes",
+          "o_que_muda": "apoia o diagnóstico de arterite e o controle de fatores de risco cardiovascular"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "angiografia fluoresceínica na sala de emergência",
+          "motivo": "não muda a conduta nas primeiras horas e consome o tempo da janela terapêutica"
+        },
+        {
+          "exame": "dilatação pupilar sem avaliar a câmara anterior na suspeita de glaucoma agudo",
+          "motivo": "midríase precipita e agrava a crise de ângulo fechado"
+        },
+        {
+          "exame": "paracentese de câmara anterior sem oftalmologista",
+          "motivo": "risco de endoftalmite, lesão de cristalino e perfuração sem ganho visual comprovado"
+        },
+        {
+          "exame": "campimetria manual em paciente agitado ou com rebaixamento",
+          "motivo": "resultado não confiável que atrasa o exame que importa, a fundoscopia"
+        },
+        {
+          "exame": "tomografia de crânio antes de acionar a oftalmologia na oclusão arterial isolada",
+          "motivo": "a investigação de AVC é feita em paralelo e não deve atrasar a massagem e a redução da pressão intraocular"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "procurar atendimento imediatamente em nova perda visual, mesmo que a visão tenha voltado",
+        "informar a hora exata do início da perda visual em todo atendimento",
+        "manter controle de pressão, glicemia e colesterol após a alta",
+        "usar antiagregante ou anticoagulação conforme a causa definida, sem interrupção por conta própria",
+        "comparecer à reavaliação oftalmológica e à investigação de carótida e coração",
+        "retornar imediatamente se surgirem flashes, moscas volantes ou sombra no campo visual"
+      ],
+      "evitar": [
+        "esperar a visão voltar sozinha em casa",
+        "usar colírio por conta própria ou de outra pessoa",
+        "atrasar a ida ao serviço por achar que é cansaço, estresse ou vista cansada",
+        "dormir com lente de contato ou usar colírio com corticoide sem prescrição",
+        "interromper antiagregante ou anticoagulante sem orientação",
+        "esforço físico e levantamento de peso no pós-operatório de retina"
+      ],
+      "retorno": [
+        "nova perda visual ou piora da visão do olho afetado",
+        "perda visual no olho contralateral",
+        "dor ocular intensa com halo ou náusea",
+        "flashes, moscas volantes ou sombra que avança",
+        "cefaleia nova, dor na mandíbula ou dor muscular nos ombros",
+        "fraqueza, dormência, dificuldade para falar ou desequilíbrio"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "acetazolamida",
+        "efeitos": [
+          "parestesia",
+          "acidose metabólica",
+          "hipocalemia",
+          "sonolência"
+        ],
+        "observacao": "dosar eletrólitos e bicarbonato se uso passar de 48 horas"
+      },
+      {
+        "agente": "timolol",
+        "efeitos": [
+          "bradicardia",
+          "broncoespasmo",
+          "hipotensão"
+        ],
+        "observacao": "evitar em asmático e em bloqueio atrioventricular"
+      },
+      {
+        "agente": "latanoprosta",
+        "efeitos": [
+          "hiperemia conjuntival",
+          "irritação",
+          "escurecimento da íris"
+        ],
+        "observacao": "não usar em uveíte ativa"
+      },
+      {
+        "agente": "manitol",
+        "efeitos": [
+          "sobrecarga de volume",
+          "edema pulmonar",
+          "distúrbio eletrolítico",
+          "insuficiência renal"
+        ],
+        "observacao": "controlar diurese, ausculta e eletrólitos"
+      },
+      {
+        "agente": "pilocarpina",
+        "efeitos": [
+          "cefaleia",
+          "dor por contração ciliar",
+          "miose com baixa visual no escuro"
+        ],
+        "observacao": "não usar em oclusão vascular da retina"
+      },
+      {
+        "agente": "metilprednisolona",
+        "efeitos": [
+          "hiperglicemia",
+          "hipertensão",
+          "hipocalemia",
+          "agitação",
+          "infecção"
+        ],
+        "observacao": "infundir em 30 a 60 minutos; bolus rápido causa arritmia"
+      },
+      {
+        "agente": "prednisona",
+        "efeitos": [
+          "hiperglicemia",
+          "retenção hídrica",
+          "insônia",
+          "osteoporose"
+        ],
+        "observacao": "desmame gradual e proteção gástrica em uso prolongado"
+      },
+      {
+        "agente": "alteplase",
+        "efeitos": [
+          "hemorragia intracraniana",
+          "transformação hemorrágica",
+          "angioedema orolingual"
+        ],
+        "observacao": "suspender a infusão e repetir tomografia em qualquer piora neurológica"
+      },
+      {
+        "agente": "ácido acetilsalicílico",
+        "efeitos": [
+          "dispepsia",
+          "sangramento digestivo",
+          "broncoespasmo"
+        ],
+        "observacao": "avaliar risco hemorrágico antes de associar a anticoagulante"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender a infusão ou o fármaco implicado e registrar a reação na evolução",
+      "Acetazolamida com parestesia intensa, acidose ou hipocalemia: suspender, hidratar e dosar eletrólitos e bicarbonato",
+      "Timolol com bradicardia ou broncoespasmo: suspender, monitorar frequência cardíaca e trocar de classe",
+      "Manitol com dispneia ou creptação pulmonar: interromper, tratar sobrecarga e manter o paciente sentado",
+      "Metilprednisolona com agitação, hiperglicemia ou hipertensão: reduzir a velocidade de infusão e tratar sintoma",
+      "Alteplase com piora neurológica ou cefaleia súbita: interromper a infusão, tomografia imediata e reversão conforme protocolo",
+      "AAS com sangramento digestivo: suspender, proteger a mucosa e reavaliar a necessidade do antiagregante",
+      "Reação alérgica ao colírio: trocar para unidose sem conservante e registrar",
+      "Comunicar a equipe e reavaliar a indicação na consulta seguinte"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "ácido acetilsalicílico 100 mg",
+            "dose": "100 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "uso contínuo",
+            "condicao": "arterite de células gigantes ou prevenção secundária",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "prednisona 20 mg",
+            "dose": "1 mg/kg/dia",
+            "via": "VO",
+            "frequencia": "1x/dia pela manhã",
+            "duracao": "conforme a causa, com desmame",
+            "condicao": "manutenção de neurite óptica ou arterite de células gigantes",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "latanoprosta 0,005% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "1x/dia à noite",
+            "duracao": "até a reavaliação",
+            "condicao": "glaucoma agudo em resolução",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "acetazolamida 500 mg injetável",
+            "dose": "500 mg",
+            "via": "IV",
+            "frequencia": "dose única e depois 6/6 h no glaucoma",
+            "monitorizacao": "pressão intraocular, potássio, bicarbonato e diurese",
+            "condicao": "oclusão arterial da retina ou glaucoma agudo",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "timolol 0,5% colírio",
+            "dose": "1 gota",
+            "via": "ocular",
+            "frequencia": "dose única e depois 12/12 h",
+            "monitorizacao": "frequência cardíaca, pressão e broncoespasmo",
+            "condicao": "redução de pressão intraocular",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "metilprednisolona 1 g injetável",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "1x/dia por 3 dias",
+            "monitorizacao": "glicemia, pressão, potássio e infecção",
+            "condicao": "neurite óptica ou arterite de células gigantes",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "manitol 20%",
+            "dose": "1 a 2 g/kg",
+            "via": "IV",
+            "frequencia": "dose única, repetir em 6 a 8 h se necessário",
+            "monitorizacao": "diurese, sódio, osmolaridade e ausculta pulmonar",
+            "condicao": "glaucoma agudo refratário",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "alteplase 50 mg",
+            "dose": "0,9 mg/kg, máximo 90 mg",
+            "via": "IV",
+            "frequencia": "dose única em protocolo de AVC",
+            "monitorizacao": "exame neurológico, pressão arterial e tomografia em 24 h",
+            "condicao": "AVC occipital dentro de 4,5 horas",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "acuidade visual",
+          "fundoscopia com midríase",
+          "pressão intraocular",
+          "tomografia de crânio",
+          "ressonância de crânio e órbitas",
+          "duplex de carótida",
+          "eletrocardiograma e ecocardiograma",
+          "hemograma, VHS e proteína C reativa",
+          "glicemia e perfil lipídico",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de perda visual súbita em olho ___, em investigação e tratamento, necessitando de afastamento das atividades por dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica e dependem da acuidade visual residual e da atividade exercida"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "hora de início da perda visual",
+          "acuidade visual dos dois olhos",
+          "reflexo pupilar",
+          "pressão intraocular",
+          "achados de fundoscopia",
+          "suspeita diagnóstica",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com perda visual súbita em olho ___ iniciada às ___, acuidade visual ___ em olho direito e ___ em olho esquerdo, reflexo pupilar ___, pressão intraocular ___, fundoscopia com ___, suspeita de ___, conduta ___ e destino ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "hora de início",
+        "lateralidade",
+        "dor ocular",
+        "dor à movimentação",
+        "visão de cores",
+        "flashes e moscas volantes",
+        "amaurose fugaz prévia",
+        "déficit neurológico",
+        "diabetes e hipertensão",
+        "anticoagulação",
+        "cirurgia ocular e trauma"
+      ],
+      "texto_template": "Paciente com perda visual súbita em olho ___ iniciada há ___, dor ___, dor à movimentação ___, alteração de cores ___, flashes ___, moscas volantes ___, episódios prévios de amaurose fugaz ___, déficit neurológico ___, diabetes ___, hipertensão ___, anticoagulação ___ e cirurgia ou trauma ocular ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "acuidade visual dos dois olhos",
+        "reflexo pupilar e defeito pupilar aferente relativo",
+        "motilidade ocular e exame neurológico sumário",
+        "biomicroscopia da câmara anterior",
+        "pressão intraocular",
+        "fundoscopia com midríase",
+        "campo visual por confrontação",
+        "pressão arterial e glicemia capilar"
+      ],
+      "texto_template": "Acuidade visual ___ em olho direito e ___ em olho esquerdo, reflexo pupilar ___, defeito pupilar aferente ___, motilidade ocular ___, câmara anterior ___, pressão intraocular ___, fundoscopia ___, campo visual por confrontação ___, pressão arterial ___ e glicemia capilar ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de perda visual súbita e critérios de transferência em minutos",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_oftalmologia",
+        "o_que_verificar": "oclusão arterial e venosa da retina, descolamento de retina e neurite óptica",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_avc",
+        "o_que_verificar": "janela de trombólise, critérios de inclusão e exclusão e manejo da pressão arterial",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_reumatologia",
+        "o_que_verificar": "arterite de células gigantes, dose de corticoide e momento da biópsia",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de acetazolamida, manitol, metilprednisolona, prednisona e alteplase",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-OFT12-01",
+        "tipo": "perda_visual_sem_oftalmologista",
+        "gatilho": "perda visual súbita em serviço sem oftalmologista",
+        "severidade": "grave",
+        "mensagem": "Perda visual súbita é emergência: a janela de isquemia é de 90 a 120 minutos.",
+        "acao": "bloquear alta e acionar transferência imediata",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT12-02",
+        "tipo": "colirio_sem_diagnostico",
+        "gatilho": "colírio prescrito em perda visual súbita sem exame de fundo de olho",
+        "severidade": "grave",
+        "mensagem": "Colírio não trata nenhuma causa de perda visual súbita e atrasa o diagnóstico.",
+        "acao": "bloquear o item até a fundoscopia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT12-03",
+        "tipo": "oclusao_arterial",
+        "gatilho": "palidez retiniana com mancha vermelho-cereja ou amaurose fugaz",
+        "severidade": "grave",
+        "mensagem": "Oclusão de artéria central da retina: equivalente a AVC, com janela de minutos.",
+        "acao": "bloquear alta e sugerir massagem ocular, acetazolamida e timolol",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT12-04",
+        "tipo": "avc_associado",
+        "gatilho": "hemianopsia, afasia, hemiparesia, disartria ou desvio de rima",
+        "severidade": "grave",
+        "mensagem": "Déficit de campo visual com sinal neurológico é AVC occipital, não problema ocular.",
+        "acao": "bloquear como quadro ocular e acionar protocolo de AVC",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT12-05",
+        "tipo": "arterite_celulas_gigantes",
+        "gatilho": "perda visual em maior de 50 anos com claudicação de mandíbula, cefaleia temporal ou VHS elevado",
+        "severidade": "grave",
+        "mensagem": "Arterite de células gigantes cega o segundo olho em dias; corticoide não espera biópsia.",
+        "acao": "bloquear a espera e sugerir metilprednisolona intravenosa imediata",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT12-06",
+        "tipo": "tranquilizar_sem_exame",
+        "gatilho": "registro de quadro emocional ou cansaço visual em perda visual súbita sem exame",
+        "severidade": "grave",
+        "mensagem": "Não tranquilizar sem fundoscopia e reflexo pupilar: a perda visual súbita tem causa orgânica até prova contrária.",
+        "acao": "bloquear o diagnóstico e exigir exame registrado",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-OFT12-07",
+        "tipo": "midriase_sem_angulo",
+        "gatilho": "dilatação pupilar em suspeita de glaucoma agudo de ângulo fechado",
+        "severidade": "precaucao",
+        "mensagem": "Midríase em ângulo fechado precipita crise de pressão intraocular.",
+        "acao": "alertar e avaliar a câmara anterior antes",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-OFT12-08",
+        "tipo": "descolamento_de_retina",
+        "gatilho": "flashes, moscas volantes ou cortina no campo visual",
+        "severidade": "grave",
+        "mensagem": "Descolamento de retina com mácula aplicada tem janela cirúrgica de horas.",
+        "acao": "sugerir oftalmologia imediata e cirurgia em 24 h",
+        "bloqueante": true
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura",
+        "protocolo institucional"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

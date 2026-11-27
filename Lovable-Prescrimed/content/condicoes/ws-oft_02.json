@@ -1,0 +1,673 @@
+{
+  "id": "ws-oft_02",
+  "nome": "Trauma ocular",
+  "cat": "Emergência",
+  "alias": "trauma ocular trauma ocular corpo estranho ocular queimadura ocular ferimento ocular",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (OFT-02_trauma_ocular.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de trauma ocular e critérios de cirurgia imediata",
+      "[verificar] sociedade_oftalmologia: queimadura química, corpo estranho, abrasão e hifema",
+      "[verificar] diretriz_oftalmologia: controle da pressão intraocular no hifema e uso de corticoide no trauma",
+      "[verificar] ministerio_da_saude: profilaxia antitetânica, esquema vacinal e imunoglobulina",
+      "[verificar] anvisa: apresentações, conservantes e posologia dos colírios"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "OFT-02 em 2026-11-27",
+    "fundido_workspace": "OFT-02 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: queimadura por álcali, cal, cimento, amônia ou soda cáustica -> irrigar 30 minutos imediatamente, remover partículas e encaminhar; queda de acuidade visual em relação ao outro olho -> registrar acuidade e encaminhar imediatamente; pupila deformada, câmara anterior rasa, hipotonia ou íris prolapsada -> escudo protetor, não pressionar, antibiótico intravenoso e cirurgia; sangue na câmara anterior, com nível visível -> cabeceira elevada, suspender AINE, controlar pressão e encaminhar. 1) Identificar o mecanismo e o horário: químico, corpo estranho, contuso, perfurante ou explosão 2) Se químico, irrigar imediatamente por 20 a 30 minutos antes de qualquer exame, remover partículas e medir o pH conjuntival 3) Medir a acuidade visual e inspecionar pálpebra, conjuntiva, córnea, pupila e câmara anterior 4) Se câmara rasa, pupila deformada, íris prolapsada ou Seidel positivo: escudo sem pressão, nada de colírio, antibiótico intravenoso e cirurgia 5) Se corpo estranho: remover apenas o superficial sob magnificação; profundo ou intraocular não se toca e vai para tomografia e cirurgia 6) Se abrasão: lubrificante, antibiótico tópico e analgesia; não ocluir quando há lente de contato, terra ou material orgânico 7) Se hifema: cabeceira a 30 graus, suspender AINE e AAS, controlar pressão intraocular e encaminhar 8) Conferir o esquema antitetânico, prescrever o que faltar e agendar reavaliação oftalmológica conforme a gravidade",
+  "redFlags": [
+    "queimadura por álcali, cal, cimento, amônia ou soda cáustica -> irrigar 30 minutos imediatamente, remover partículas e encaminhar",
+    "queda de acuidade visual em relação ao outro olho -> registrar acuidade e encaminhar imediatamente",
+    "pupila deformada, câmara anterior rasa, hipotonia ou íris prolapsada -> escudo protetor, não pressionar, antibiótico intravenoso e cirurgia",
+    "sangue na câmara anterior, com nível visível -> cabeceira elevada, suspender AINE, controlar pressão e encaminhar",
+    "dor intensa desproporcional ou que piora após 24 h -> reavaliar com fluoresceína e encaminhar no mesmo dia",
+    "história de esmerilhamento, martelamento ou solda com dor e corpo estranho -> não remover, tomografia de órbita e oftalmologia imediata",
+    "ferida palpebral com margem comprometida ou ptose traumática -> reparo cirúrgico em até 24 h por oftalmologia",
+    "trauma por explosão, estilhaço ou acidente com vidro -> proteger o olho, tomografia e cirurgia"
+  ],
+  "naoUsar": [
+    "solução aberta há mais de 24 h ou com aspecto turvo",
+    "hipersensibilidade a aminoglicosídeo",
+    "suspeita de perfuração sem avaliação cirúrgica",
+    "hipersensibilidade ao conservante",
+    "globo aberto sem avaliação cirúrgica",
+    "hepatopatia grave",
+    "desnutrição grave",
+    "alcoolismo crônico"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "lavar o olho com água corrente por 20 a 30 minutos em caso de produto químico, antes de vir ao serviço"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "esfregar ou coçar o olho"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Antibiótico tópico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "tobramicina_col",
+            "pos": "1 gota. Via ocular. 4/4 h enquanto acordado. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "abrasão corneal e profilaxia de infecção após trauma fechado (1a linha) abrasão e profilaxia",
+            "nota": "Uso direto; ocluir o ponto lacrimal por 30 segundos após a instilação - monitorar: dor e fotofobia; monitorar: infiltrado corneal ou secreção nova; monitorar: reepitelização com fluoresceína em 48 a 72 h · NÃO: hipersensibilidade a aminoglicosídeo; suspeita de perfuração sem avaliação cirúrgica · Obs: Profilaxia de escolha na abrasão simples. Não instilar em globo com suspeita de perfuração antes da avaliação cirúrgica",
+            "dose": {
+              "texto": "1 gota; 4/4 h enquanto acordado; 5 a 7 dias; max. 1 gota 6x/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          },
+          {
+            "linha": 2,
+            "base": "ciprofloxacino",
+            "pos": "1 gota. Via ocular. 4/4 h nos primeiros 2 dias, depois 4x/dia. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "abrasão em usuário de lente de contato, trauma com material orgânico ou falha da tobramicina (alternativa)",
+            "nota": "Uso direto; não tocar a ponta do frasco no olho - monitorar: dor e fotofobia; monitorar: infiltrado corneal; monitorar: resposta em 48 a 72 h · NÃO: hipersensibilidade a quinolona; suspeita de perfuração ocular sem avaliação cirúrgica · Obs: Cobertura para Pseudomonas no trauma com terra, vegetal ou lente de contato. Não associar corticoide no trauma agudo: mascara infecção e retarda a reepitelização",
+            "dose": {
+              "texto": "1 gota; 4/4 h nos primeiros 2 dias, depois 4x/dia; 5 a 7 dias; max. 1 gota de 2/2 h",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 2,
+              "duracao_texto": "2 dias",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          },
+          {
+            "linha": 2,
+            "base": "epitezan",
+            "pos": "1 gota. Via ocular. 4/4 h enquanto acordado. 5 a 7 dias.",
+            "posTodas": true,
+            "motivo": "profilaxia de abrasão quando não há aminoglicosídeo nem quinolona disponíveis (alternativa)",
+            "nota": "Uso direto no olho afetado - monitorar: reepitelização com fluoresceína; monitorar: secreção e dor; monitorar: hemograma se uso acima de 7 dias",
+            "dose": {
+              "texto": "1 gota; 4/4 h enquanto acordado; 5 a 7 dias; max. 1 gota 6x/dia",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ]
+      },
+      {
+        "nome": "Solução irrigacao",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "soro_fisiologico_para_irrigacao_ocular",
+              "n": "Soro fisiológico 0,9% para irrigação ocular",
+              "ap": "frasco 500 mL",
+              "q": "",
+              "pos": "1.000 a 2.000 mL por olho. Via irrigação ocular. Contínua até pH entre 7,0 e 7,4; repetir o ciclo se o pH voltar a subir. 20 a 30 minutos na primeira irrigação, com repetição conforme o pH. 20 a 30 minutos de irrigação contínua, no mínimo, mantendo até o pH conjuntival ficar entre 7,0 e 7,4."
+            },
+            "motivo": "queimadura química ocular e lavagem inicial de corpo estranho (1a linha) queimadura química",
+            "nota": "Usar solução a temperatura ambiente, acoplar equipo de soro e evertar as pálpebras para alcançar o fundo de saco; remover partículas sólidas com cotonete durante a lavagem - monitorar: pH da conjuntiva com fita indicadora antes e depois de cada ciclo; monitorar: dor e fotofobia; monitorar: opacidade corneal e isquemia  · NÃO: solução aberta há mais de 24 h ou com aspecto turvo · Obs: A irrigação começa no local do acidente e é a única medida que muda o prognóstico da queimadura química. Lavar alguns minutos e parar não é irrigação: o mínimo é 20 a 30 minutos, com medição de pH",
+            "dose": {
+              "texto": "1.000 a 2.000 mL por olho; contínua até pH entre 7,0 e 7,4; repetir o ciclo se o pH voltar a subir; 20 a 30 minutos na primeira irrigação, com repetição conforme o pH; max. até 2.000 mL por olho na primeira hora, sem limite rígido enquanto o pH estiver alterado",
+              "status": "ok",
+              "valor": 1000,
+              "valor_max": 2000,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ]
+      },
+      {
+        "nome": "Lubrificante ocular",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "carboximetilcelulose_colirio",
+              "n": "Carboximetilcelulose 0,5% colírio",
+              "ap": "frasco 10 mL a 0,5%",
+              "q": "",
+              "pos": "1 gota. Via ocular. A cada 4 h, até 2/2 h nas primeiras 48 h. 7 a 14 dias, até a reepitelização completa."
+            },
+            "motivo": "abrasão corneal, desconforto após remoção de corpo estranho e falha de fechamento palpebral (1a linha) abrasão corneal",
+            "nota": "Uso direto no olho afetado; não tocar a ponta no olho - monitorar: dor em escala 0 a 10; monitorar: reepitelização com fluoresceína; monitorar: frequência real de instilação · NÃO: hipersensibilidade ao conservante; globo aberto sem avaliação cirúrgica · Obs: A abrasão dói porque a terminação nervosa está exposta: lubrificante frequente é analgesia mecânica e reduz o atrito da pálpebra sobre a lesão",
+            "dose": {
+              "texto": "1 gota; a cada 4 h, até 2/2 h nas primeiras 48 h; 7 a 14 dias, até a reepitelização completa; max. 1 gota de 1/1 h no olho afetado",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 2,
+              "freq_texto": "2/2 h",
+              "freq_min": null,
+              "duracao_dias": 14,
+              "duracao_texto": "14 dias",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ]
+      },
+      {
+        "nome": "Analgésico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "paracetamol",
+            "pos": "750 mg. Via VO. 6/6 h. 3 a 5 dias.",
+            "posTodas": true,
+            "motivo": "dor do trauma ocular, inclusive no hifema (1a linha) dor",
+            "nota": "Uso direto - monitorar: dor em escala 0 a 10; monitorar: dose total diária somada a outros produtos; monitorar: função hepática se uso acima de 5 dias · NÃO: hepatopatia grave; desnutrição grave; alcoolismo crônico · Obs: Primeira escolha no trauma porque não interfere na coagulação, o que é decisivo no hifema · Renal: ClCr abaixo de 30: intervalo de 8 h",
+            "dose": {
+              "texto": "750 mg; 6/6 h; 3 a 5 dias; max. 3 g/dia",
+              "status": "ok",
+              "valor": 750,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 3,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ]
+      },
+      {
+        "nome": "AINE",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "ibuprofeno",
+            "pos": "400 mg. Via VO. 8/8 h. 3 dias.",
+            "posTodas": true,
+            "motivo": "dor e inflamação do trauma contuso fechado sem hifema (alternativa)",
+            "nota": "Uso direto, com alimento - monitorar: dor; monitorar: sangramento conjuntival ou novo hifema; monitorar: função renal; monitorar: dor epigástrica · NÃO: hifema; suspeita de sangramento intraocular; úlcera péptica; insuficiência renal; uso de anticoagulante · Obs: Contraindicado no hifema: AINE inibe a agregação plaquetária e aumenta o ressangramento. Serve apenas para trauma contuso fechado sem sangramento intraocular · Renal: Evitar em ClCr abaixo de 30",
+            "dose": {
+              "texto": "400 mg; 8/8 h; 3 dias; max. 1.200 mg/dia",
+              "status": "ok",
+              "valor": 400,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 3,
+              "duracao_texto": "3 dias",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anestésico tópico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "proximetacaina_colirio",
+              "n": "Proximetacaína 0,5% colírio",
+              "ap": "frasco 5 mL a 0,5%",
+              "q": "",
+              "pos": "1 gota. Via ocular. Até 2 instilações durante o procedimento. Restrito ao atendimento; nunca para uso domiciliar."
+            },
+            "motivo": "procedimentos: irrigação, remoção de corpo estranho, tonometria e avaliação com lâmpada de fenda (condicional)",
+            "nota": "Uso direto no olho afetado imediatamente antes do procedimento - monitorar: tempo de procedimento; monitorar: dor após o efeito passar; monitorar: córnea com fluoresceína ao final · NÃO: prescrição para uso domiciliar; hipersensibilidade ao grupo éster; globo aberto com suspeita de perfuração · Obs: Uso restrito ao procedimento. Nunca prescrever para casa: o anestésico repetido causa toxicidade epitelial, ceratite e perfuração, além de mascarar a dor de úlcera que sinaliza piora",
+            "dose": {
+              "texto": "1 gota; até 2 instilações durante o procedimento; restrito ao atendimento; nunca para uso domiciliar; max. 2 gotas por atendimento, no olho afetado",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vacina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "toxoide_tetanico",
+              "n": "Toxoide tetânico (dT)",
+              "ap": "frasco-ampola 0,5 mL",
+              "q": "",
+              "pos": "0,5 mL. Via IM. Dose única, com reforço conforme o calendário. Dose única no atendimento."
+            },
+            "motivo": "profilaxia antitetânica em ferimento ocular ou palpebral com solução de continuidade (condicional) esquema antitetânico incompleto",
+            "nota": "Uso direto no deltoide, sem diluição - monitorar: observação por 20 minutos após a aplicação; monitorar: local da injeção; monitorar: registro no cartão vacinal · NÃO: reação anafilática prévia a componente da vacina; febre alta no momento da aplicação · Obs: Ferimento ocular penetrante, com terra ou material orgânico é considerado contaminado: conferir o esquema e vacinar quando incompleto ou desconhecido",
+            "dose": {
+              "texto": "0,5 mL; dose única, com reforço conforme o calendário; dose única no atendimento; max. 0,5 mL",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": null,
+              "unidade": "ml",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.5,
+                "unidade": "mL"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Imunoglobulina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "imunoglobulina_antitetanica_humana",
+              "n": "Imunoglobulina antitetânica humana 250 UI",
+              "ap": "ampola 250 UI",
+              "q": "",
+              "pos": "250 UI. Via IM. Dose única."
+            },
+            "motivo": "ferimento contaminado em paciente não vacinado ou com esquema incompleto (condicional)",
+            "nota": "Aplicar em sítio anatômico diferente do local da vacina, sem diluição - monitorar: observação por 30 minutos; monitorar: sinais de anafilaxia; monitorar: registro no prontuário · NÃO: hipersensibilidade a imunoglobulina humana; deficiência de IgA com anticorpos anti-IgA · Obs: Não substitui a vacinação, que deve ser iniciada no mesmo dia; a imunoglobulina confere proteção passiva imediata enquanto o toxoide induz resposta ativa",
+            "dose": {
+              "texto": "250 UI; dose única; dose única; max. 500 UI em ferimento grave ou muito contaminado",
+              "status": "ok",
+              "valor": 250,
+              "valor_max": null,
+              "unidade": "ui",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 500,
+                "unidade": "UI"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor anidrase carbonica",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "acetazolamida",
+              "n": "Acetazolamida 250 mg",
+              "ap": "comprimido 250 mg",
+              "q": "",
+              "pos": "250 mg. Via VO. 6/6 h. Até o controle da pressão, geralmente 3 a 5 dias."
+            },
+            "motivo": "hipertensão ocular no hifema traumático (condicional) hifema com hipertensão ocular",
+            "nota": "Uso direto, com alimento - monitorar: pressão intraocular; monitorar: potássio e bicarbonato; monitorar: parestesias; monitorar: dor abdominal · NÃO: alergia a sulfonamida; insuficiência renal grave; acidose metabólica; anemia falciforme · Obs: No hifema, pressão acima de 21 mmHg ou acima de 24 mmHg persistente exige tratamento. Evitar em anemia falciforme, em que a hipóxia da câmara anterior agrava a falcização · Renal: Contraindicada em ClCr abaixo de 30; reduzir em ClCr 30 a 60",
+            "dose": {
+              "texto": "250 mg; 6/6 h; até o controle da pressão, geralmente 3 a 5 dias; max. 1 g/dia",
+              "status": "ok",
+              "valor": 250,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Betabloqueador tópico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "timolol_colirio",
+              "n": "Timolol 0,5% colírio",
+              "ap": "frasco 5 mL a 0,25%",
+              "q": "",
+              "pos": "1 gota. Via ocular. 12/12 h. Até a reabsorção do hifema."
+            },
+            "motivo": "hipertensão ocular no hifema e no trauma contuso (condicional) hifema com hipertensão ocular",
+            "nota": "Uso direto; comprimir o ponto lacrimal por 1 minuto para reduzir a absorção sistêmica - monitorar: frequência cardíaca e pressão arterial; monitorar: pico de fluxo em asmático; monitorar: pressão intraocular · NÃO: asma e DPOC grave; bloqueio atrioventricular de 2º ou 3º grau; bradicardia; insuficiência cardíaca descompensada · Obs: Primeira escolha tópica para baixar a pressão no hifema; checar frequência cardíaca e evitar em asmático e em bloqueio atrioventricular",
+            "dose": {
+              "texto": "1 gota; 12/12 h; até a reabsorção do hifema; max. 1 gota 12/12 h no olho afetado",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Opioide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "tramadol",
+            "pos": "50 mg. Via VO. 6/6 h. 24 a 48 h.",
+            "posTodas": true,
+            "motivo": "dor intensa refratária a paracetamol no trauma ocular fechado (resgate)",
+            "nota": "Uso direto - monitorar: dor em escala 0 a 10; monitorar: náusea e vômito; monitorar: nível de consciência; monitorar: função renal · NÃO: uso de IMAO; epilepsia não controlada; depressão respiratória; intoxicação por depressores do sistema nervoso central · Obs: Resgate de curto prazo; causa náusea e vômito, indesejáveis no hifema e no pós-operatório, e o esforço do vômito pode elevar a pressão intraocular. Associar antiemético se necessário · Renal: ClCr abaixo de 30: 50 mg 12/12 h",
+            "dose": {
+              "texto": "50 mg; 6/6 h; 24 a 48 h; max. 400 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 400,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            },
+            "ped": "avaliar coerência entre a história e o mecanismo e considerar trauma não acidental"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Irrigação no local do acidente",
+              "ap": "",
+              "q": "",
+              "pos": "Em queimadura química, lavar com água corrente ou soro por 20 a 30 minutos antes de sair de casa ou do trabalho, retirando roupas e substância da pele e das pálpebras"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Não remover objeto encravado",
+              "ap": "",
+              "q": "",
+              "pos": "Estabilizar com copo descartável, escudo de Fox ou gaze sem pressão e transportar sem compressão; tentar retirar pode aprofundar a perfuração"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Repouso com cabeceira elevada a 30 graus",
+              "ap": "",
+              "q": "",
+              "pos": "Manter durante todo o hifema, evitar esforço físico, agachar e Valsava, porque o aumento de pressão venosa favorece o ressangramento"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Suspender lente de contato e descartar o estoque",
+              "ap": "",
+              "q": "",
+              "pos": "Não recolocar até 24 h após a reepitelização completa e sempre com avaliação oftalmológica prévia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Proteção ocular rígida",
+              "ap": "",
+              "q": "",
+              "pos": "Escudo de plástico rígido ou óculos de proteção, sem curativo compressivo; não ocluir com gaze em olho com secreção ou ferida aberta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Compressa fria no trauma contuso fechado",
+              "ap": "",
+              "q": "",
+              "pos": "Gelo embrulhado em pano por 15 minutos nas primeiras 24 h, para edema e dor; nunca em ferida aberta ou suspeita de perfuração"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Notificação do acidente de trabalho e prevenção",
+              "ap": "",
+              "q": "",
+              "pos": "Emitir CAT, orientar uso de óculos de proteção em esmerilhamento, solda e manuseio de químicos, e registrar o agente causal"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Não dirigir e não operar máquinas",
+              "ap": "",
+              "q": "",
+              "pos": "Com acuidade reduzida, pupilas dilatadas ou uso de tramadol, o paciente não deve conduzir veículo ou trabalhar em altura"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "OFT-02"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": []
+  },
+  "ws": {
+    "id": "OFT-02",
+    "versao": "0.2.0",
+    "arquivo": "OFT-02_trauma_ocular.json",
+    "area": "Oftalmo/Otorrino",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

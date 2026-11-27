@@ -1,0 +1,1181 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "PED-13",
+    "area": "Pediatria",
+    "nome": "ITU pediátrica",
+    "aliases": [
+      "ITU pediátrica",
+      "infecção do trato urinário na criança",
+      "infecção urinária na infância",
+      "pielonefrite pediátrica",
+      "cistite na criança",
+      "febre sem foco no lactente",
+      "bacteriúria febril"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "pediatrico"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Infecção do trato urinário na criança é a infecção bacteriana grave mais comum da infância e a principal causa de febre sem foco no lactente: toda criança pequena com febre sem explicação tem ITU até que uma urocultura adequada diga o contrário. O diagnóstico não se faz com urina tipo 1, e sim com urocultura colhida por método confiável — jato médio na criança continente, sondagem vesical de alívio no lactente, punção suprapúbica quando a bexiga está cheia e a coleta limpa é impossível. Saco coletor serve para triagem, não para diagnóstico: a contaminação é alta e um resultado positivo precisa de confirmação por método estéril. A regra que organiza a conduta é simples e não admite atalho: colher a urocultura antes do antibiótico sempre que possível, e nunca atrasar o antibiótico na criança toxemiada — nesse caso colhe-se e trata-se na mesma hora. A idade decide o sítio e a via: abaixo de 3 meses, febre é pielonefrite e sepse até prova contrária, com internação, hemocultura e antibiótico venoso; de 3 meses a 2 anos, o quadro febril é tratado como pielonefrite com ceftriaxona ou gentamicina; acima de 2 anos, disúria e polaciúria sem febre são cistite e permitem via oral com cefalexina. O agente predominante é Escherichia coli, e o antibiótico empírico precisa refletir a resistência local — por isso o antibiograma manda mais que a tradição. Duas falhas mudam o desfecho: tratar sem urocultura, que transforma contaminação em diagnóstico e diagnóstico em resistência, e não investigar a recorrência, que deixa passar refluxo vesicoureteral, válvula de uretra posterior e cicatriz renal. A investigação por imagem segue idade e recorrência — ultrassonografia em toda ITU febril, cistouretrografia miccional abaixo de 2 anos ou na recorrência e cintilografia com DMSA quatro a seis meses depois para medir cicatriz.",
+    "inclusao": [
+      "Lactente abaixo de 3 meses com febre sem foco definido",
+      "Criança de 3 meses a 2 anos com febre sem foco e urina tipo 1 sugestiva",
+      "Criança com disúria, polaciúria, urgência, dor suprapúbica ou enurese de início recente",
+      "Febre com dor lombar, punho-percussão dolorosa, calafrios ou vômitos sugerindo pielonefrite",
+      "Urocultura positiva por método confiável com ou sem sintomas",
+      "Recorrência de ITU febril ou segundo episódio no mesmo ano",
+      "Suspeita de pielonefrite complicada com toxemia para internação e antibiótico venoso",
+      "Malformação urinária conhecida, hidronefrose prenatal ou antecedente familiar de refluxo vesicoureteral"
+    ],
+    "exclusao": [
+      {
+        "situacao": "corrimento vaginal, prurido vulvar e disúria externa com urina tipo 1 sem leucocitúria",
+        "fluxo": "URO-07 vulvovaginite — tratamento local e higiene, sem antibiótico sistêmico"
+      },
+      {
+        "situacao": "dor e edema de prepúcio ou de glande com dificuldade de expor a glande",
+        "fluxo": "balanopostite — higiene, corticoide tópico e avaliação cirúrgica se fimose importante"
+      },
+      {
+        "situacao": "hematúria macroscópica com edema, hipertensão ou proteinúria após infecção de vias aéreas",
+        "fluxo": "glomerulonefrite pós-estreptocócica — avaliação nefrológica"
+      },
+      {
+        "situacao": "dor abdominal migratória para fossa ilíaca direita com defesa e febre",
+        "fluxo": "GI-14 apendicite — avaliação cirúrgica, não urina isolada"
+      },
+      {
+        "situacao": "cólica lombar intensa com hematúria e sem febre",
+        "fluxo": "URO-03 cólica renal — imagem e analgesia"
+      },
+      {
+        "situacao": "febre com tosse, taquipneia e ausculta alterada",
+        "fluxo": "PED-14 pneumonia pediátrica — radiografia de tórax"
+      },
+      {
+        "situacao": "jato urinário fraco, gotejamento contínuo e bexiga palpável em lactente do sexo masculino",
+        "fluxo": "válvula de uretra posterior — sondagem de alívio imediata e avaliação urológica de urgência"
+      },
+      {
+        "situacao": "enurese noturna isolada sem sintomas urinários, sem febre e com urina normal",
+        "fluxo": "enurese monossintomática — manejo comportamental, sem antibiótico nem imagem"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "lactente abaixo de 3 meses com febre, mesmo sem qualquer outro sinal",
+        "por_que": "pielonefrite com risco de bacteremia e meningite nessa faixa etária",
+        "acao": "internação, urocultura por sondagem, hemocultura, punção lombar se abaixo de 1 mês ou toxemia, antibiótico venoso imediato",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "toxemia, prostração, hipotensão, perfusão lentificada ou taquicardia desproporcional à febre",
+        "por_que": "sepse com foco urinário, sobretudo em lactente e em imunossuprimido",
+        "acao": "sala vermelha, dois acessos, expansão com cristaloide, hemocultura e antibiótico venoso na primeira hora",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "vômitos incoercíveis, recusa hídrica ou incapacidade de manter o antibiótico por via oral",
+        "por_que": "desidratação e falha de tratamento oral com progressão para pielonefrite complicada",
+        "acao": "hidratação venosa, antibiótico parenteral e internação",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "jato urinário fraco, gotejamento contínuo, bexiga palpável ou retenção em lactente do sexo masculino",
+        "por_que": "válvula de uretra posterior ou outra obstrução com risco de injúria renal aguda",
+        "acao": "sondagem vesical de alívio imediata, creatinina, ultrassonografia e urologia de urgência",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "dor lombar intensa com febre alta persistente por mais de 72 h de antibiótico adequado",
+        "por_que": "abscesso renal ou perinefrético, ou obstrução com pielonefrite complicada",
+        "acao": "ultrassonografia e tomografia se necessário, ajuste de antibiótico e avaliação urológica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "oligúria, edema, hipertensão ou creatinina em ascensão",
+        "por_que": "injúria renal aguda por pielonefrite, obstrução ou nefrotoxicidade de aminoglicosídeo",
+        "acao": "suspender nefrotóxico, ajustar doses à função renal, controle de volume e avaliação nefrológica",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "recorrência de ITU febril, segundo episódio no mesmo ano ou ITU por germe não habitual",
+        "por_que": "refluxo vesicoureteral, disfunção miccional ou malformação ainda não investigada",
+        "acao": "ultrassonografia, cistouretrografia miccional e avaliação nefrológica ou urológica",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "febre sem foco em lactente sem urocultura colhida antes do antibiótico",
+        "por_que": "perda da oportunidade diagnóstica e tratamento empírico sem confirmação",
+        "acao": "colher urocultura por método estéril antes de iniciar o antibiótico, sempre que possível",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Qual a idade? Abaixo de 3 meses, febre é pielonefrite e sepse até prova contrária e exige internação.",
+      "A febre tem quantas horas e qual a temperatura máxima medida?",
+      "A criança está toxemiada, hipoativa, com perfusão ruim ou recusando líquidos?",
+      "Há disúria, polaciúria, urgência, dor suprapúbica ou enurese de início recente?",
+      "Há dor lombar, vômitos ou punho-percussão dolorosa?",
+      "A criança é continente? Isso define se a coleta é por jato médio ou por sondagem.",
+      "Foi colhida urocultura antes do antibiótico? Qual foi o método, o resultado e o antibiograma?",
+      "Já usou antibiótico nas últimas 4 semanas ou recebeu quimioprofilaxia?",
+      "Quantas ITUs nos últimos 12 meses e qual foi o agente de cada uma?",
+      "Há ultrassonografia pré-natal alterada, hidronefrose, refluxo conhecido ou antecedente familiar de refluxo?",
+      "Perde urina durante o dia, faz força para urinar ou tem constipação associada?",
+      "É menino não circuncidado? Isso aumenta o risco de contaminação e de recorrência."
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Lactente abaixo de 3 meses com febre sem foco",
+        "escolha": "Internação, urocultura por sondagem vesical, hemocultura, punção lombar se abaixo de 1 mês ou toxemia e antibiótico venoso com ampicilina associada a gentamicina ou ceftriaxona",
+        "porque": "Nessa faixa a disseminação hematogênica é a regra e a cobertura precisa alcançar enterococo e Listeria no neonato; tratamento ambulatorial nessa idade é a causa mais evitável de sepse por ITU"
+      },
+      {
+        "cenario": "Criança de 3 meses a 2 anos com febre sem foco e urina tipo 1 com leucocitúria ou nitrito",
+        "escolha": "Colher urocultura por sondagem ou saco coletor com confirmação por método estéril, ultrassonografia de vias urinárias e antibiótico empírico venoso com ceftriaxona 50 a 75 mg/kg/dia uma vez ao dia",
+        "porque": "Nessa idade a febre indica acometimento do parênquima renal e a via oral tem absorção imprevisível no lactente que vomita; a ceftriaxona em dose única diária cobre E. coli e permite alta precoce com seguimento"
+      },
+      {
+        "cenario": "Pielonefrite em criança acima de 3 meses, sem toxemia, aceitando via oral e com boa adesão",
+        "escolha": "Cefalexina 50 mg/kg/dia divididos de 6/6 h por 10 dias, ou cefuroxima axetil 30 mg/kg/dia divididos de 12/12 h, guiados pelo antibiograma",
+        "porque": "A via oral é equivalente à venosa na pielonefrite não complicada quando a criança tolera e o germe é sensível; a escolha depende da resistência local e do antibiograma, não da preferência do serviço"
+      },
+      {
+        "cenario": "Cistite em criança continente, sem febre e sem dor lombar",
+        "escolha": "Cefalexina 50 mg/kg/dia de 6/6 h por 5 dias, ou nitrofurantoína 5 a 7 mg/kg/dia de 6/6 h por 5 dias, com urocultura prévia",
+        "porque": "Cistite é infecção de mucosa e responde a cursos curtos; a nitrofurantoína atinge concentração alta na bexiga mas não no parênquima renal, por isso serve à cistite e é proibida na pielonefrite"
+      },
+      {
+        "cenario": "Alergia imediata a beta-lactâmico com pielonefrite",
+        "escolha": "Gentamicina 5 a 7,5 mg/kg/dia em dose única diária por via venosa, ajustada à função renal e com monitorização de níveis, ou aztreonam conforme disponibilidade",
+        "porque": "Aminoglicosídeo não compartilha o epítopo beta-lactâmico, tem ação bactericida rápida e concentração renal alta; a dose única diária é menos nefrotóxica que o esquema fracionado"
+      },
+      {
+        "cenario": "Neonato com suspeita de ITU e necessidade de cobertura de enterococo",
+        "escolha": "Ampicilina 50 a 75 mg/kg/dia divididos de 8/8 a 12/12 h associada a gentamicina, por via venosa",
+        "porque": "A ampicilina cobre Enterococcus e Listeria, que a cefalosporina de terceira geração não alcança, e a associação com aminoglicosídeo é sinérgica; a monoterapia com ceftriaxona deixa essa lacuna no período neonatal"
+      },
+      {
+        "cenario": "Toxemia, impossibilidade de via oral ou suspeita de bacteremia",
+        "escolha": "Ceftriaxona 50 a 75 mg/kg/dia por via venosa uma vez ao dia, ou cefotaxima 100 a 150 mg/kg/dia divididos de 6/6 a 8/8 h, após colher urocultura e hemocultura",
+        "porque": "A coleta imediata preserva o diagnóstico e o antibiótico não pode esperar; a cefotaxima é a alternativa quando há hiperbilirrubinemia ou neonato em que a ceftriaxona desloca a bilirrubina"
+      },
+      {
+        "cenario": "Recorrência de ITU febril ou segundo episódio no ano",
+        "escolha": "Ultrassonografia de vias urinárias e cistouretrografia miccional, com cintilografia renal com DMSA quatro a seis meses após o episódio",
+        "porque": "Recorrência é o principal marcador de refluxo vesicoureteral e de cicatriz renal; sem imagem, a criança segue em profilaxia empírica ou em risco de novas pielonefrites"
+      },
+      {
+        "cenario": "Primeira ITU febril em criança abaixo de 2 anos",
+        "escolha": "Ultrassonografia de vias urinárias em todos e cistouretrografia miccional conforme protocolo institucional, especialmente se ultrassom alterado, germe não E. coli, antecedente familiar de refluxo ou pielonefrite grave",
+        "porque": "Abaixo de 2 anos a prevalência de refluxo e de malformação é maior e a cicatriz renal se forma mais rápido; a indicação de cistouretrografia nesse grupo é decisão protocolada e não pode ser esquecida"
+      },
+      {
+        "cenario": "Refluxo vesicoureteral diagnosticado com infecções recorrentes",
+        "escolha": "Quimioprofilaxia com sulfametoxazol-trimetoprima 2 mg/kg/dia de trimetoprima ou nitrofurantoína 1 a 2 mg/kg/dia à noite, associada a correção de constipação e de disfunção miccional",
+        "porque": "A profilaxia reduz recorrência febril em refluxo de grau moderado a grave e em bexiga neurogênica; sem tratar a constipação e a disfunção miccional, a profilaxia falha e a criança continua tendo infecção"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "cefalosporina_3a_geracao",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "pielonefrite em criança acima de 3 meses, febre sem foco com necessidade de via venosa e suspeita de bacteremia",
+        "dose": "50 a 75 mg/kg/dia em dose única diária",
+        "unidade": "mg/kg/dia",
+        "via": "IV ou IM",
+        "frequencia": "1x/dia",
+        "duracao": "7 a 10 dias na pielonefrite; 10 a 14 dias no lactente abaixo de 3 meses",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "alergia imediata a cefalosporina",
+          "neonato com hiperbilirrubinemia ou em uso de solução com cálcio",
+          "antecedente de anafilaxia a penicilina"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "elevação de transaminases",
+          "barro biliar e colelitíase, com uso prolongado",
+          "reação local no sítio de infusão"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção e diluir em 50 a 100 mL de soro fisiológico 0,9% ou glicosado 5%; não misturar com soluções que contenham cálcio no mesmo equipo",
+        "tempo_infusao": "30 minutos por via venosa; 1 a 2 minutos por via intramuscular profunda",
+        "monitorizacao": [
+          "apirexia em 48 a 72 h",
+          "diarreia e sinais de colite",
+          "sítio de infusão",
+          "função hepática se uso prolongado",
+          "diurese e função renal"
+        ],
+        "ajuste_renal": "Sem ajuste na dose habitual; não exceder 2 g/dia, com acúmulo apenas em disfunção renal grave associada a disfunção hepática",
+        "ajuste_hepatico": "Reduzir a dose em insuficiência hepática grave associada a disfunção renal",
+        "observacoes": "Dose única diária permite alta precoce com seguimento ambulatorial na pielonefrite não complicada. Não usar em neonato com icterícia pela competição com a bilirrubina na albumina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "aminoglicosideo",
+        "agente": "gentamicina",
+        "papel": "primeira_linha",
+        "indicacao": "pielonefrite e febre sem foco no lactente, sobretudo quando há alergia a beta-lactâmico ou necessidade de cobertura sinérgica",
+        "dose": "5 a 7,5 mg/kg/dia em dose única diária",
+        "unidade": "mg/kg/dia",
+        "via": "IV ou IM",
+        "frequencia": "1x/dia",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "400 mg/dia",
+        "contraindicacoes": [
+          "alergia a aminoglicosídeo",
+          "insuficiência renal com filtração abaixo de 30 mL/min/1,73 m² sem ajuste",
+          "miastenia gravis",
+          "uso concomitante de outro nefrotóxico sem necessidade"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade, sobretudo em uso prolongado",
+          "ototoxicidade coclear e vestibular",
+          "bloqueio neuromuscular em dose alta",
+          "hipomagnesemia e hipocalemia",
+          "dor no local da aplicação"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL, 2 mL",
+          "ampola 40 mg/mL, 2 mL",
+          "ampola 80 mg/2 mL"
+        ],
+        "preparo": "Diluir a dose em 50 a 100 mL de soro fisiológico 0,9% para infusão em 30 minutos; nunca administrar em bolus",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "creatinina e diurese a cada 48 a 72 h",
+          "níveis séricos de vale em uso acima de 5 dias ou em disfunção renal",
+          "audição e equilíbrio em uso prolongado",
+          "magnésio e potássio",
+          "apirexia em 48 a 72 h"
+        ],
+        "ajuste_renal": "Ampliar o intervalo para 24 a 36 h se filtração entre 30 e 60 mL/min/1,73 m² e para 48 h abaixo de 30, guiado por nível sérico",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "A dose única diária é tão eficaz quanto o esquema fracionado e menos nefrotóxica. Suspender assim que o antibiograma permitir um beta-lactâmico sensível",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_3a_geracao",
+        "agente": "cefotaxima",
+        "papel": "alternativa",
+        "indicacao": "pielonefrite em neonato com hiperbilirrubinemia e alternativa à ceftriaxona",
+        "dose": "100 a 150 mg/kg/dia divididos de 6/6 a 8/8 h",
+        "unidade": "mg/kg/dia",
+        "via": "IV",
+        "frequencia": "6/6 a 8/8 h",
+        "duracao": "7 a 10 dias; 10 a 14 dias no neonato",
+        "dose_maxima": "200 mg/kg/dia; 12 g/dia",
+        "contraindicacoes": [
+          "alergia imediata a cefalosporina",
+          "antecedente de anafilaxia a penicilina"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "flebite",
+          "elevação de transaminases",
+          "candidíase"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g"
+        ],
+        "preparo": "Reconstituir em água para injeção e diluir em 50 a 100 mL de soro fisiológico 0,9% ou glicosado 5%",
+        "tempo_infusao": "20 a 30 minutos",
+        "monitorizacao": [
+          "sítio de infusão",
+          "diarreia",
+          "função renal",
+          "apirexia em 48 a 72 h"
+        ],
+        "ajuste_renal": "Reduzir a dose ou ampliar o intervalo se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Escolha no neonato ictérico porque não desloca a bilirrubina da albumina como a ceftriaxona; exige mais doses por dia, o que pesa na internação",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_1a_geracao",
+        "agente": "cefalexina",
+        "papel": "primeira_linha",
+        "indicacao": "cistite e pielonefrite não complicada em criança que tolera via oral, guiada por antibiograma",
+        "dose": "50 mg/kg/dia divididos de 6/6 h, máximo de 2 g/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "6/6 h",
+        "duracao": "5 dias na cistite; 7 a 10 dias na pielonefrite",
+        "dose_maxima": "2 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina",
+          "antecedente de anafilaxia a penicilina",
+          "reação cutânea grave prévia a beta-lactâmico"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea e dor abdominal",
+          "rash",
+          "candidíase",
+          "colite por C. difficile, rara"
+        ],
+        "apresentacoes": [
+          "suspensão oral 250 mg/5 mL, frasco 60 e 100 mL",
+          "cápsula 500 mg",
+          "comprimido 500 mg e 1 g"
+        ],
+        "preparo": "Reconstituir a suspensão com água até a marca e agitar; conservar em geladeira por até 14 dias conforme a bula e medir com seringa dosadora",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "apirexia em 48 a 72 h",
+          "diarreia e aceitação alimentar",
+          "rash cutâneo",
+          "adesão aos dias prescritos",
+          "controle da disúria e da frequência urinária"
+        ],
+        "ajuste_renal": "Ampliar o intervalo para 12/12 h se filtração entre 10 e 30 mL/min/1,73 m² e para 24/24 h abaixo de 10 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não cobre Enterococcus nem Pseudomonas; é opção de pielonefrite comunitária por E. coli sensível e de cistite. Não serve para profilaxia em refluxo",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "cefalosporina_2a_geracao",
+        "agente": "cefuroxima axetil",
+        "papel": "alternativa",
+        "indicacao": "pielonefrite não complicada em criança acima de 3 meses com boa aceitação oral",
+        "dose": "30 mg/kg/dia divididos de 12/12 h, máximo de 1 g/dia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "1 g/dia",
+        "contraindicacoes": [
+          "alergia a cefalosporina",
+          "antecedente de anafilaxia a penicilina"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "rash",
+          "candidíase",
+          "elevação de transaminases, rara"
+        ],
+        "apresentacoes": [
+          "suspensão oral 250 mg/5 mL, frasco 50 e 100 mL",
+          "comprimido 250 mg",
+          "comprimido 500 mg"
+        ],
+        "preparo": "Reconstituir a suspensão com água até a marca e agitar; conservar em geladeira por até 10 dias e administrar com alimento para melhorar a absorção",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "apirexia em 48 a 72 h",
+          "diarreia",
+          "adesão ao esquema de 12/12 h",
+          "função renal"
+        ],
+        "ajuste_renal": "Reduzir a dose ou ampliar o intervalo se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Boa opção oral para pielonefrite por E. coli sensível, com posologia cômoda; o comprimido é grande para pré-escolar, o que limita o uso fora da suspensão",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "aminopenicilina_com_inibidor",
+        "agente": "amoxicilina-clavulanato",
+        "papel": "alternativa",
+        "indicacao": "pielonefrite ou cistite por germe produtor de beta-lactamase, e falha de cefalexina com sensibilidade documentada",
+        "dose": "30 a 45 mg/kg/dia do componente amoxicilina, divididos de 12/12 h, máximo de 875 mg de amoxicilina por dose",
+        "unidade": "mg/kg/dia",
+        "via": "VO ou IV",
+        "frequencia": "12/12 h",
+        "duracao": "7 a 10 dias",
+        "dose_maxima": "1.750 mg/dia de amoxicilina",
+        "contraindicacoes": [
+          "alergia imediata a penicilina",
+          "hepatite colestática prévia por amoxicilina-clavulanato",
+          "mononucleose infecciosa"
+        ],
+        "efeitos_adversos": [
+          "diarreia, mais intensa que com amoxicilina isolada",
+          "náusea e vômito",
+          "hepatite colestática, rara e tardia",
+          "candidíase",
+          "rash"
+        ],
+        "apresentacoes": [
+          "suspensão oral 400 mg/57 mg por 5 mL, frasco 70 mL",
+          "suspensão oral 250 mg/62,5 mg por 5 mL, frasco 75 mL",
+          "comprimido 875 mg/125 mg",
+          "frasco-ampola 1 g/200 mg para uso venoso"
+        ],
+        "preparo": "Suspensão: reconstituir com água até a marca e agitar; conservar em geladeira por 7 dias. Via venosa: reconstituir o frasco em 20 mL de água destilada e diluir em 50 a 100 mL de soro fisiológico",
+        "tempo_infusao": "30 minutos por via venosa; não se aplica por via oral",
+        "monitorizacao": [
+          "diarreia e desidratação",
+          "enzimas hepáticas se icterícia ou colúria",
+          "apirexia em 48 a 72 h",
+          "sítio de infusão venosa"
+        ],
+        "ajuste_renal": "Ajustar o intervalo para 12/12 h se filtração entre 10 e 30 mL/min e evitar abaixo de 10 mL/min sem diálise",
+        "ajuste_hepatico": "Evitar em hepatopatia ativa e em antecedente de icterícia colestática pelo fármaco",
+        "observacoes": "Cobre beta-lactamase e amplia espectro, mas custa mais diarreia; não é primeira linha empírica de ITU comunitária, em que a resistência a ampicilina é alta",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "aminopenicilina",
+        "agente": "amoxicilina",
+        "papel": "condicional",
+        "indicacao": "neonato com suspeita de ITU, em associação com gentamicina para cobertura de Enterococcus e Listeria",
+        "dose": "50 a 75 mg/kg/dia divididos de 8/8 a 12/12 h conforme a idade pós-natal",
+        "unidade": "mg/kg/dia",
+        "via": "IV",
+        "frequencia": "8/8 a 12/12 h",
+        "duracao": "7 a 14 dias, conforme evolução e hemocultura",
+        "dose_maxima": "200 mg/kg/dia",
+        "contraindicacoes": [
+          "alergia imediata a penicilina",
+          "mononucleose infecciosa"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash",
+          "candidíase",
+          "irritabilidade e distensão abdominal no neonato",
+          "convulsão em dose alta com disfunção renal"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "suspensão oral 250 mg/5 mL"
+        ],
+        "preparo": "Reconstituir o frasco em água para injeção e diluir em 20 a 50 mL de soro fisiológico 0,9% para infusão intermitente",
+        "tempo_infusao": "15 a 30 minutos",
+        "monitorizacao": [
+          "função renal e diurese",
+          "sódio e potássio",
+          "sítio de infusão",
+          "apirexia e ganho de peso",
+          "hemocultura e urocultura de controle quando indicadas"
+        ],
+        "ajuste_renal": "Ampliar o intervalo conforme a idade pós-natal e a filtração; no neonato o ajuste é por idade gestacional e dias de vida",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não é esquema de ITU comunitária fora do período neonatal pela alta resistência de E. coli à ampicilina; aqui ela existe para cobrir o que a cefalosporina não cobre",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "nitrofurano",
+        "agente": "nitrofurantoína",
+        "papel": "condicional",
+        "indicacao": "cistite baixa e quimioprofilaxia de refluxo, nunca em pielonefrite",
+        "dose": "5 a 7 mg/kg/dia divididos de 6/6 h para tratamento; 1 a 2 mg/kg/dia em dose única noturna para profilaxia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "6/6 h para tratamento; 1x/dia à noite para profilaxia",
+        "duracao": "5 dias na cistite; profilaxia por 6 a 12 meses conforme o refluxo",
+        "dose_maxima": "400 mg/dia para tratamento; 100 mg/dia para profilaxia",
+        "contraindicacoes": [
+          "pielonefrite ou suspeita de acometimento do parênquima renal",
+          "menor de 1 mês de idade",
+          "deficiência de glicose-6-fosfato desidrogenase",
+          "insuficiência renal com filtração abaixo de 30 mL/min/1,73 m²",
+          "gestação a termo ou próxima do parto"
+        ],
+        "efeitos_adversos": [
+          "náusea e vômito",
+          "dor abdominal",
+          "rash",
+          "neuropatia periférica em uso prolongado",
+          "anemia hemolítica em deficiência de G6PD",
+          "hepatotoxicidade rara"
+        ],
+        "apresentacoes": [
+          "suspensão oral 25 mg/5 mL, frasco 120 mL",
+          "cápsula 50 mg",
+          "cápsula 100 mg"
+        ],
+        "preparo": "Uso direto, com alimento para melhorar a tolerância; agitar a suspensão e medir com seringa dosadora",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "controle dos sintomas urinários em 48 a 72 h",
+          "náusea e aceitação alimentar",
+          "hemograma em uso prolongado",
+          "função hepática se sintomas",
+          "recorrência de febre durante a profilaxia"
+        ],
+        "ajuste_renal": "Contraindicada com filtração abaixo de 30 mL/min/1,73 m², porque não atinge concentração urinária eficaz",
+        "ajuste_hepatico": "Evitar em hepatopatia ativa",
+        "observacoes": "Concentra-se na bexiga e não trata rim: usar na cistite e na profilaxia, nunca na pielonefrite. A urina escurecida e a dor abdominal são sinais de alerta para suspender",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "sulfonamida",
+        "agente": "sulfametoxazol-trimetoprima",
+        "papel": "condicional",
+        "indicacao": "quimioprofilaxia de refluxo vesicoureteral e cistite por germe sensível",
+        "dose": "8 a 12 mg/kg/dia do componente trimetoprima divididos de 12/12 h para tratamento; 2 mg/kg/dia em dose única noturna para profilaxia",
+        "unidade": "mg/kg/dia",
+        "via": "VO",
+        "frequencia": "12/12 h para tratamento; 1x/dia à noite para profilaxia",
+        "duracao": "7 dias no tratamento; profilaxia por 6 a 12 meses",
+        "dose_maxima": "320 mg/dia de trimetoprima para tratamento; 80 mg/dia para profilaxia",
+        "contraindicacoes": [
+          "menor de 2 meses de idade",
+          "deficiência de glicose-6-fosfato desidrogenase",
+          "alergia a sulfonamida",
+          "insuficiência renal grave sem ajuste",
+          "gestação no terceiro trimestre"
+        ],
+        "efeitos_adversos": [
+          "rash cutâneo, incluindo síndrome de Stevens-Johnson",
+          "náusea e vômito",
+          "cristalúria",
+          "anemia megaloblástica em uso prolongado",
+          "fotossensibilidade",
+          "hiperpotassemia"
+        ],
+        "apresentacoes": [
+          "suspensão oral 40 mg/200 mg por 5 mL, frasco 100 mL",
+          "comprimido 80 mg/400 mg",
+          "comprimido 160 mg/800 mg"
+        ],
+        "preparo": "Uso direto, com copo cheio de água e de preferência com alimento; manter hidratação para reduzir cristalúria",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "rash e lesões de mucosa",
+          "hemograma em uso prolongado",
+          "potássio em nefropata",
+          "função renal",
+          "recorrência de febre durante a profilaxia"
+        ],
+        "ajuste_renal": "Reduzir a dose pela metade se filtração entre 15 e 30 mL/min/1,73 m² e evitar abaixo de 15 mL/min",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "Resistência de E. coli ao sulfametoxazol-trimetoprima é alta no Brasil, o que limita o uso empírico; na profilaxia, a escolha entre ele e a nitrofurantoína depende do antibiograma do episódio índice",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antitermico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "febre e desconforto da ITU, analgesia de escolha",
+        "dose": "10 a 15 mg/kg/dose, a cada 4 a 6 h",
+        "unidade": "mg/kg/dose",
+        "via": "VO",
+        "frequencia": "4/4 a 6/6 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "75 mg/kg/dia, sem ultrapassar 4 g/dia",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em superdose",
+          "náusea",
+          "rash raro",
+          "trombocitopenia rara"
+        ],
+        "apresentacoes": [
+          "solução oral 200 mg/mL (gotas), frasco 15 mL",
+          "suspensão oral 160 mg/5 mL, frasco 60 e 100 mL",
+          "comprimido 500 mg",
+          "comprimido 750 mg"
+        ],
+        "preparo": "Uso direto; medir com seringa dosadora e conferir a concentração, porque gotas de 200 mg/mL e suspensão de 160 mg/5 mL têm concentrações muito diferentes",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "controle da temperatura e do desconforto",
+          "dose total diária somada com outros produtos que contenham paracetamol",
+          "aceitação hídrica",
+          "enzimas hepáticas em uso prolongado ou desnutrição"
+        ],
+        "ajuste_renal": "Ampliar o intervalo para 6 a 8 h se filtração abaixo de 30 mL/min/1,73 m²",
+        "ajuste_hepatico": "Reduzir a dose máxima diária e evitar em hepatopatia grave",
+        "observacoes": "Preferir paracetamol ao AINE na ITU: a criança pode estar desidratada e o AINE aumenta o risco de injúria renal sobre um rim já acometido",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/SBP",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Coleta de urina antes de qualquer antibiótico",
+        "detalhe": "Colher a urocultura antes da primeira dose sempre que o estado da criança permitir; na toxemia, colher imediatamente e iniciar o antibiótico na mesma hora. Antibiótico iniciado antes da cultura reduz a sensibilidade do exame e transforma o caso em tratamento empírico sem prova"
+      },
+      {
+        "medida": "Hidratação ampla e oferta fracionada",
+        "detalhe": "Oferecer 5 a 10 mL/kg de líquido ao longo do dia, em pequenas quantidades e com frequência, sobretudo nas primeiras 48 h; a diurese abundante reduz a estase urinária e ajuda na tolerância do antimicrobiano. Em lactente com vômitos, considerar sonda nasogástrica antes de indicar internação apenas por via"
+      },
+      {
+        "medida": "Micção frequente e esvaziamento completo",
+        "detalhe": "Orientar micção a cada 2 a 3 h durante o dia e não postergar; na criança continente, usar apoio para os pés e posição confortável, porque a postura inadequada deixa resíduo e favorece recorrência. Não usar vaso sanitário com assento alto demais"
+      },
+      {
+        "medida": "Tratamento da constipação e da disfunção miccional",
+        "detalhe": "Constipação e bexiga hiperativa funcional mantêm a ITU recorrente mesmo com antibiótico correto; prescrever desimpactação, fibra e água, e treino miccional com diário de 48 h. Sem tratar isso, a profilaxia falha"
+      },
+      {
+        "medida": "Higiene perineal sem excesso",
+        "detalhe": "Higiene de frente para trás na menina, troca frequente de fralda no lactente, banho diário com água e sabão neutro e evitar sabonete antisséptico e banho de espuma. Não usar duchas vaginais nem esfregar a mucosa"
+      },
+      {
+        "medida": "Retirada precoce de sonda vesical",
+        "detalhe": "Cada dia de sonda acrescenta risco de bacteriúria e de sepse; revisar a indicação diariamente e retirar assim que possível. Em bexiga neurogênica, usar cateterismo intermitente limpo em vez de sonda de demora"
+      },
+      {
+        "medida": "Adesão ao tempo total de tratamento",
+        "detalhe": "Explicar que a febre cede em 48 a 72 h mas o antibiótico continua pelo tempo prescrito; contar os dias no calendário, programar a última dose e conferir na reavaliação. A interrupção precoce é a principal causa de recidiva por seleção de resistência"
+      },
+      {
+        "medida": "Acompanhamento de crescimento e pressão arterial",
+        "detalhe": "Pesar e medir a pressão em toda consulta de seguimento de ITU de repetição; cicatriz renal extensa se manifesta por perda de função, hipertensão e falha de crescimento, e é assintomática até avançar"
+      },
+      {
+        "medida": "Orientação escrita sobre sinais de alarme",
+        "detalhe": "Entregar por escrito que febre alta persistente, vômitos, dor lombar, jato fraco, urina escura ou diminuição da diurese exigem retorno imediato. A mesma orientação deve ser dada à creche e à escola, que identificam a mudança de comportamento antes da família"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Coleta de urina por sondagem vesical de alívio",
+        "indicacao": "lactente e criança não continente com suspeita de ITU, e confirmação de resultado positivo em saco coletor",
+        "tecnica": "Com técnica asséptica, higiene com clorexidina aquosa ou água e sabão, cateter uretral de calibre adequado à idade, desprezar os primeiros mililitros e coletar 5 a 10 mL em frasco estéril; retirar a sonda imediatamente após a coleta",
+        "complicacoes": "Trauma uretral, sangramento, introdução de bactéria com bacteriúria iatrogênica, falso-positivo por contaminação e desconforto"
+      },
+      {
+        "nome": "Coleta de urina por jato médio",
+        "indicacao": "criança continente e colaborativa com sintomas urinários",
+        "tecnica": "Higiene local com água e sabão, desprezar o primeiro jato e coletar o jato médio em frasco estéril, sem tocar na borda; orientar a criança sobre o procedimento antes, para não perder a amostra",
+        "complicacoes": "Contaminação por técnica inadequada, amostra insuficiente e necessidade de repetir a coleta, o que atrasa o início do tratamento"
+      },
+      {
+        "nome": "Coleta de urina por saco coletor",
+        "indicacao": "triagem de lactente não continente quando a sondagem não é possível de imediato",
+        "tecnica": "Higiene local, fixar o saco coletor estéril sem creme ou talco, trocar a cada 30 minutos e processar a amostra imediatamente após a micção; nunca usar resultado positivo como diagnóstico definitivo",
+        "complicacoes": "Contaminação alta com falso-positivo, dermatite de contato pela adesivo, atraso do diagnóstico e antibiótico desnecessário"
+      },
+      {
+        "nome": "Punção suprapúbica",
+        "indicacao": "lactente com bexiga cheia em que a sondagem é inviável ou houve contaminação repetida, e neonato com necessidade de amostra confiável",
+        "tecnica": "Com bexiga palpável ou confirmada por ultrassonografia, antissepsia, agulha 22 G na linha média 1 a 2 cm acima da sínfise púbica, aspiração suave; qualquer crescimento é significativo",
+        "complicacoes": "Punção de alça intestinal, hematúria macroscópica, hematoma, infecção do sítio e falha de coleta por bexiga vazia"
+      },
+      {
+        "nome": "Ultrassonografia de vias urinárias",
+        "indicacao": "toda primeira ITU febril, recorrência, hidronefrose pré-natal e suspeita de obstrução",
+        "tecnica": "Exame não invasivo com avaliação de rins, pelve renal, ureteres, bexiga e resíduo pós-miccional; realizar após a fase aguda na ITU não complicada e imediatamente se houver suspeita de obstrução ou abscesso",
+        "complicacoes": "Exame de baixo risco; achados inespecíficos levam a exames adicionais e a dilatação leve transitória pode ser interpretada como obstrução"
+      },
+      {
+        "nome": "Cistouretrografia miccional",
+        "indicacao": "criança abaixo de 2 anos com ITU febril, recorrência em qualquer idade, ultrassonografia alterada, germe não E. coli e antecedente familiar de refluxo",
+        "tecnica": "Cateterismo vesical com contraste iodado sob fluoroscopia, com avaliação de refluxo durante o enchimento e a micção e radiografia pós-miccional; profilaxia antibiótica conforme protocolo do serviço",
+        "complicacoes": "ITU iatrogênica, desconforto e trauma uretral, reação ao contraste e exposição à radiação"
+      },
+      {
+        "nome": "Cintilografia renal com DMSA",
+        "indicacao": "avaliação de cicatriz renal quatro a seis meses após pielonefrite, sobretudo em recorrência e em refluxo de grau alto",
+        "tecnica": "Injeção venosa de ácido dimercaptossuccínico marcado com tecnécio, aquisição de imagens em 2 a 4 h; comparar com exame prévio para distinguir cicatriz de defeito transitório",
+        "complicacoes": "Exposição à radiação, acesso venoso difícil em lactente e achado de defeito transitório interpretado como cicatriz se feito na fase aguda"
+      }
+    ],
+    "metas": [
+      "Urocultura colhida antes do antibiótico em pelo menos 90% dos casos, com método e resultado registrados",
+      "Apirexia em 48 a 72 h de antibiótico adequado ao antibiograma",
+      "Nenhuma pielonefrite em lactente abaixo de 3 meses manejada em regime ambulatorial",
+      "Nenhuma ITU tratada apenas com urina tipo 1 ou com cultura de saco coletor como prova definitiva",
+      "Tempo total de tratamento cumprido: 5 dias na cistite e 7 a 10 dias na pielonefrite",
+      "Ultrassonografia de vias urinárias realizada em toda primeira ITU febril, com laudo no prontuário",
+      "Investigação de refluxo registrada em toda criança abaixo de 2 anos com ITU febril e em toda recorrência",
+      "Cintilografia com DMSA realizada quatro a seis meses após pielonefrite em criança com recorrência ou refluxo",
+      "Nenhuma alta sem orientação escrita de sinais de alarme e retorno precoce"
+    ],
+    "fluxo": [
+      "Classificar idade e estado geral: abaixo de 3 meses, toxemia, vômitos incoercíveis ou jato fraco definem internação antes de qualquer outra decisão",
+      "Colher a urina antes do antibiótico: sondagem no lactente, jato médio na criança continente, punção suprapúbica quando a coleta limpa é impossível; saco coletor apenas como triagem",
+      "Interpretar a urina tipo 1 com nitrito e leucocitúria, sabendo que ela sugere mas não confirma ITU e que nitrito negativo não exclui em criança pequena",
+      "Confirmar com urocultura e iniciar antibiótico empírico conforme idade e gravidade: ceftriaxona ou gentamicina na pielonefrite e no lactente, cefalexina na cistite",
+      "Ajustar ao antibiograma em 48 a 72 h e reavaliar a via: trocar para oral quando houver apirexia e aceitação, completando o tempo total",
+      "Reavaliar em 48 a 72 h: febre persistente exige ultrassonografia para abscesso ou obstrução e revisão do antibiótico, não apenas troca às cegas",
+      "Investigar por imagem conforme idade e recorrência: ultrassonografia em todos, cistouretrografia miccional abaixo de 2 anos ou na recorrência e DMSA quatro a seis meses depois",
+      "Decidir profilaxia apenas com refluxo documentado, recorrência febril ou bexiga neurogênica, e sempre associada a tratar constipação e disfunção miccional",
+      "Alta com tempo total de antibiótico escrito, sinais de alarme explicados e consulta de seguimento agendada com pressão arterial e crescimento"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "lactente_menor_de_3_meses",
+        "ajuste": "internação obrigatória, urocultura por sondagem, hemocultura, punção lombar se abaixo de 1 mês ou toxemia, ampicilina com gentamicina ou ceftriaxona por via venosa e 10 a 14 dias de tratamento",
+        "alerta": "nessa faixa a ITU é sepse potencial e o manejo ambulatorial é a falha mais grave"
+      },
+      {
+        "populacao": "lactente_de_3_a_24_meses",
+        "ajuste": "tratar como pielonefrite mesmo sem sinais focais, preferir via venosa na primeira fase e completar por via oral; ultrassonografia em todos e avaliar cistouretrografia",
+        "alerta": "febre sem foco nessa idade é ITU até que a urocultura exclua"
+      },
+      {
+        "populacao": "crianca_continente",
+        "ajuste": "jato médio, curso curto na cistite, investigar disfunção miccional e constipação antes de rotular como recorrência",
+        "alerta": "tratar disúria sem urocultura confunde vulvovaginite e uretrite com ITU"
+      },
+      {
+        "populacao": "menino_nao_circuncidado",
+        "ajuste": "maior risco de colonização e de recorrência; reforçar higiene, considerar circuncisão apenas em recorrência com indicação urológica",
+        "alerta": "a coleta por saco coletor tem contaminação ainda maior nesse grupo"
+      },
+      {
+        "populacao": "refluxo_vesicoureteral",
+        "ajuste": "profilaxia com nitrofurantoína ou sulfametoxazol-trimetoprima, controle de constipação e seguimento urológico; cirurgia apenas em graus altos com infecções de repetição",
+        "alerta": "profilaxia sem tratar disfunção miccional falha e seleciona resistência"
+      },
+      {
+        "populacao": "bexiga_neurogenica",
+        "ajuste": "cateterismo intermitente limpo, profilaxia contínua e vigilância de pielonefrite e de cálculos",
+        "alerta": "sonda de demora crônica aumenta bacteriúria e sepse"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "baixar o limiar de internação e de antibiótico venoso, colher hemocultura e considerar cobertura mais ampla",
+        "alerta": "leucocitúria pode estar ausente e a febre ser o único sinal"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "urina tipo 1 com nitrito e leucocitúria",
+          "indicacao": "toda suspeita de ITU, antes da cultura",
+          "o_que_muda": "nitrito positivo com leucocitúria tem alta especificidade e sustenta o início empírico; ausência de ambos em criança pequena não exclui ITU"
+        },
+        {
+          "nome": "urocultura com antibiograma",
+          "indicacao": "todos os casos suspeitos, antes do antibiótico",
+          "o_que_muda": "confirma o diagnóstico, define o agente e permite trocar o empírico pelo esquema de menor espectro"
+        },
+        {
+          "nome": "hemograma e proteína C reativa",
+          "indicacao": "febre alta, toxemia e lactente abaixo de 3 meses",
+          "o_que_muda": "ajuda a separar pielonefrite de cistite e a sustentar a decisão de internação, sem substituir a urocultura"
+        },
+        {
+          "nome": "hemocultura",
+          "indicacao": "lactente abaixo de 3 meses, toxemia e suspeita de bacteremia",
+          "o_que_muda": "identifica bacteremia e ajusta o tempo e a via do antibiótico"
+        },
+        {
+          "nome": "ureia, creatinina e eletrólitos",
+          "indicacao": "pielonefrite, uso de aminoglicosídeo, obstrução e oligúria",
+          "o_que_muda": "define ajuste de dose, contraindica nitrofurantoína e detecta injúria renal aguda"
+        },
+        {
+          "nome": "ultrassonografia de vias urinárias",
+          "indicacao": "toda primeira ITU febril, recorrência e hidronefrose pré-natal",
+          "o_que_muda": "identifica hidronefrose, obstrução, abscesso e malformação, e indica cistouretrografia"
+        },
+        {
+          "nome": "cistouretrografia miccional",
+          "indicacao": "abaixo de 2 anos com ITU febril, recorrência e ultrassom alterado",
+          "o_que_muda": "diagnostica refluxo vesicoureteral e define grau, profilaxia e seguimento"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "diagnóstico de ITU apenas com urina tipo 1",
+          "motivo": "leucocitúria e nitrito não identificam o agente nem a resistência, e levam a antibiótico desnecessário ou ao antibiótico errado"
+        },
+        {
+          "exame": "cultura de urina de saco coletor como prova definitiva",
+          "motivo": "contaminação alta produz falso-positivo e tratamento de criança saudável"
+        },
+        {
+          "exame": "ultrassonografia de vias urinárias de rotina em cistite isolada sem recorrência",
+          "motivo": "baixo rendimento e não muda a conduta"
+        },
+        {
+          "exame": "cintilografia com DMSA na fase aguda",
+          "motivo": "defeito de perfusão transitório é interpretado como cicatriz; o exame é feito quatro a seis meses depois"
+        },
+        {
+          "exame": "urocultura de controle após tratamento assintomático",
+          "motivo": "bacteriúria assintomática pós-tratamento não deve ser tratada e leva a ciclos desnecessários de antibiótico"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "dar o antibiótico nos horários e pelo número de dias prescritos, mesmo com a febre já controlada",
+        "oferecer líquidos em pequenas quantidades e com frequência, observando a cor e o volume da urina",
+        "fazer a criança urinar a cada 2 a 3 h durante o dia e não segurar a urina",
+        "tratar a constipação com água, fibra e o esquema prescrito",
+        "comparecer à consulta de seguimento e aos exames de imagem agendados",
+        "levar a urocultura e o antibiograma em toda reavaliação",
+        "manter a higiene de frente para trás e trocar a fralda com frequência"
+      ],
+      "evitar": [
+        "tratar ITU por conta própria ou com sobra de antibiótico de outro episódio",
+        "interromper o antibiótico quando a febre passar",
+        "usar sabonete antisséptico, ducha vaginal ou banho de espuma na região",
+        "segurar a urina por longos períodos na escola",
+        "repetir urocultura de controle em criança assintomática",
+        "postergar a investigação de imagem na recorrência"
+      ],
+      "retorno": [
+        "febre que não cede em 48 a 72 h de antibiótico ou que volta após melhora",
+        "vômitos persistentes, recusa de líquidos ou diminuição da diurese",
+        "dor lombar intensa, calafrios ou prostração",
+        "jato urinário fraco, gotejamento contínuo ou dificuldade para urinar",
+        "urina escura, edema, hipertensão ou convulsão",
+        "sangue na urina ou dor intensa ao urinar que não melhora com analgesia"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "ceftriaxona",
+        "efeitos": ["diarreia", "rash", "elevação de transaminases", "barro biliar"],
+        "observacao": "evitar em neonato ictérico e não misturar com soluções contendo cálcio"
+      },
+      {
+        "agente": "gentamicina",
+        "efeitos": ["nefrotoxicidade", "ototoxicidade", "hipomagnesemia"],
+        "observacao": "creatinina a cada 48 a 72 h e nível de vale se uso acima de 5 dias"
+      },
+      {
+        "agente": "cefalexina",
+        "efeitos": ["diarreia", "rash", "candidíase"],
+        "observacao": "suspender se reação cutânea grave ou anafilaxia"
+      },
+      {
+        "agente": "amoxicilina-clavulanato",
+        "efeitos": ["diarreia intensa", "náusea", "hepatite colestática"],
+        "observacao": "suspender se icterícia ou colúria; evitar em hepatopatia ativa"
+      },
+      {
+        "agente": "nitrofurantoína",
+        "efeitos": ["náusea", "dor abdominal", "neuropatia periférica", "anemia hemolítica"],
+        "observacao": "contraindicada em pielonefrite, menor de 1 mês e deficiência de G6PD"
+      },
+      {
+        "agente": "sulfametoxazol-trimetoprima",
+        "efeitos": ["rash", "Stevens-Johnson", "cristalúria", "hiperpotassemia"],
+        "observacao": "suspender imediatamente se lesão de mucosa ou rash extenso"
+      },
+      {
+        "agente": "paracetamol",
+        "efeitos": ["hepatotoxicidade em superdose", "náusea"],
+        "observacao": "somar todas as fontes de paracetamol que a família já administrou"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose, via e manifestação",
+      "Anafilaxia: adrenalina IM 0,01 mg/kg na face anterolateral da coxa, oxigênio, acesso venoso e observação por 4 a 6 h",
+      "Gentamicina com creatinina em ascensão: suspender, hidratar, dosar nível sérico e trocar por beta-lactâmico sensível",
+      "Rash extenso ou lesão de mucosa com sulfametoxazol-trimetoprima: suspender imediatamente e avaliar síndrome de Stevens-Johnson",
+      "Diarreia intensa com febre durante amoxicilina-clavulanato: suspender, hidratar e pesquisar toxina de C. difficile",
+      "Náusea e dor abdominal com nitrofurantoína: suspender, reavaliar a indicação e trocar por opção com melhor tolerância",
+      "Reavaliar a necessidade do antibiótico após a reação e reescrever a prescrição antes da alta"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "cefalexina suspensão 250 mg/5 mL",
+            "dose": "50 mg/kg/dia = ___ mg = ___ mL (máximo 2 g/dia)",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "5 dias na cistite; 7 a 10 dias na pielonefrite",
+            "condicao": "urocultura colhida antes; ajustar ao antibiograma",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "cefuroxima axetil suspensão 250 mg/5 mL",
+            "dose": "30 mg/kg/dia = ___ mg = ___ mL (máximo 1 g/dia)",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "7 a 10 dias",
+            "condicao": "alternativa oral na pielonefrite não complicada",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "nitrofurantoína suspensão 25 mg/5 mL",
+            "dose": "5 a 7 mg/kg/dia = ___ mg = ___ mL (máximo 400 mg/dia)",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "5 dias",
+            "condicao": "apenas cistite baixa, nunca pielonefrite",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol solução oral 200 mg/mL ou suspensão 160 mg/5 mL",
+            "dose": "10 a 15 mg/kg/dose = ___ mg = ___ mL",
+            "via": "VO",
+            "frequencia": "4/4 a 6/6 h",
+            "duracao": "3 a 5 dias",
+            "condicao": "febre e desconforto",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "orientação escrita de retorno em 48 a 72 h e de coleta de urina antes do antibiótico",
+            "dose": "não se aplica",
+            "via": "orientação escrita",
+            "frequencia": "contínua",
+            "duracao": "até a reavaliação",
+            "condicao": "entregar em toda alta, com sinais de alarme descritos",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona",
+            "dose": "50 a 75 mg/kg/dia em dose única diária, máximo 2 g/dia",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "apirexia, diarreia, sítio de infusão, função hepática",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "gentamicina",
+            "dose": "5 a 7,5 mg/kg/dia em dose única diária",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "creatinina, diurese, nível sérico, audição",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ampicilina",
+            "dose": "50 a 75 mg/kg/dia divididos de 8/8 a 12/12 h",
+            "via": "IV",
+            "frequencia": "8/8 a 12/12 h",
+            "monitorizacao": "função renal, sódio e potássio, sítio de infusão",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "soro fisiológico 0,9% para reidratação",
+            "dose": "20 mL/kg em bolus, reavaliando necessidade",
+            "via": "IV",
+            "frequencia": "conforme resposta",
+            "monitorizacao": "diurese, peso, sódio e estado de hidratação",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "urina tipo 1",
+          "urocultura com antibiograma",
+          "hemograma",
+          "proteína C reativa",
+          "hemocultura",
+          "ureia e creatinina",
+          "ultrassonografia de vias urinárias",
+          "cistouretrografia miccional",
+          "cintilografia renal com DMSA",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que a criança esteve sob meus cuidados nesta data, com quadro de infecção do trato urinário, necessitando de afastamento escolar por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "dias são decisão médica; anexar a orientação de retorno em 48 h"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com idade, peso, febre, sintomas urinários, método de coleta, agente, antibiograma, antibiótico usado e resposta",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Criança de ___ anos e ___ kg com ITU iniciada há ___, febre ___, sintomas urinários ___, método de coleta ___, urina tipo 1 com nitrito ___ e leucócitos ___, urocultura com ___ e antibiograma ___, tratada com ___ na dose de ___ por ___, com resposta ___; ultrassonografia ___, cistouretrografia ___ e seguimento agendado em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "idade, peso e sexo",
+        "temperatura máxima e duração da febre",
+        "sintomas urinários: disúria, polaciúria, urgência, dor suprapúbica, enurese",
+        "dor lombar, vômitos e estado geral",
+        "método de coleta da urina e resultado da urocultura",
+        "antibiótico prévio nas últimas 4 semanas e adesão",
+        "número de ITUs no último ano e agentes identificados",
+        "quimioprofilaxia em uso",
+        "ultrassonografia pré-natal e antecedente familiar de refluxo",
+        "constipação, disfunção miccional e hábito de segurar a urina",
+        "circuncisão e higiene perineal",
+        "alergias e reações prévias a antibiótico"
+      ],
+      "texto_template": "Criança de ___ anos e ___ kg, com febre há ___ e temperatura máxima de ___ °C, disúria ___, polaciúria ___, dor suprapúbica ___, dor lombar ___, vômitos ___, urina colhida por ___ com urocultura ___, antibiótico prévio ___, ___ ITUs no último ano, profilaxia ___, ultrassonografia pré-natal ___, constipação ___, disfunção miccional ___, circuncisão ___, alergia a antibiótico ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "peso, temperatura, frequência cardíaca e frequência respiratória",
+        "estado geral, perfusão e hidratação",
+        "pressão arterial com manguito adequado",
+        "abdome: dor suprapúbica, bexiga palpável e massas",
+        "punho-percussão lombar e dor à palpação de lojas renais",
+        "genitália: fimose, balanopostite, vulvovaginite e higiene",
+        "coluna lombossacra e tônus de esfíncter anal",
+        "marcha, força e sensibilidade de membros inferiores",
+        "curva de crescimento e percentis",
+        "sinais de sepse em lactente: hipotonia, sucção fraca e gemido"
+      ],
+      "texto_template": "Peso ___ kg, temperatura ___ °C, frequência cardíaca ___ bpm, frequência respiratória ___ rpm, estado geral ___, hidratação ___, pressão arterial ___, abdome com dor suprapúbica ___, bexiga palpável ___, punho-percussão lombar ___, genitália ___, coluna lombossacra ___, crescimento ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de coleta de urina, disponibilidade de sondagem e de saco coletor, e protocolo de imagem para ITU febril",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "indicação de ultrassonografia e de cistouretrografia conforme idade e recorrência, e esquema de antibiótico empírico",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_de_itu_pediatrica",
+        "o_que_verificar": "duração do tratamento por sítio, dose de ceftriaxona e de gentamicina e critérios de internação abaixo de 3 meses",
+        "verificar": true
+      },
+      {
+        "tipo": "ministerio_da_saude",
+        "o_que_verificar": "protocolo de febre sem foco no lactente e de investigação de refluxo vesicoureteral",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de ceftriaxona, gentamicina, cefalexina, cefuroxima, amoxicilina-clavulanato, nitrofurantoína e sulfametoxazol-trimetoprima disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-PED13-01",
+        "tipo": "antibiotico_sem_cultura",
+        "gatilho": "antibiótico prescrito para ITU sem urocultura colhida ou sem método de coleta registrado",
+        "severidade": "grave",
+        "mensagem": "ITU não se trata sem urocultura: colher antes do antibiótico, salvo na criança toxemiada, em que se colhe e trata na mesma hora.",
+        "acao": "bloquear prescrição até registrar a coleta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED13-02",
+        "tipo": "lactente_menor_3_meses",
+        "gatilho": "febre em lactente abaixo de 3 meses com conduta ambulatorial",
+        "severidade": "grave",
+        "mensagem": "Febre abaixo de 3 meses é sepse potencial: internação, urocultura por sondagem, hemocultura e antibiótico venoso.",
+        "acao": "bloquear alta e acionar internação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED13-03",
+        "tipo": "nitrofurantoina_em_pielonefrite",
+        "gatilho": "nitrofurantoína prescrita em pielonefrite, febre ou suspeita de acometimento do parênquima renal",
+        "severidade": "grave",
+        "mensagem": "Nitrofurantoína não atinge o parênquima renal e não trata pielonefrite: trocar por cefalosporina ou aminoglicosídeo.",
+        "acao": "bloquear item",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED13-04",
+        "tipo": "coleta_inadequada",
+        "gatilho": "diagnóstico de ITU firmado apenas com cultura de saco coletor ou apenas com urina tipo 1",
+        "severidade": "precaucao",
+        "mensagem": "Saco coletor é triagem e urina tipo 1 não identifica agente: confirmar com amostra estéril.",
+        "acao": "alertar e solicitar nova coleta",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED13-05",
+        "tipo": "recorrencia_sem_investigacao",
+        "gatilho": "segundo episódio de ITU febril no ano sem ultrassonografia e cistouretrografia solicitadas",
+        "severidade": "grave",
+        "mensagem": "Recorrência exige investigação de refluxo: ultrassonografia, cistouretrografia miccional e DMSA em 4 a 6 meses.",
+        "acao": "bloquear alta e solicitar imagem",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-PED13-06",
+        "tipo": "imagem_em_itu_febril",
+        "gatilho": "primeira ITU febril em criança abaixo de 2 anos sem ultrassonografia de vias urinárias solicitada",
+        "severidade": "precaucao",
+        "mensagem": "Ultrassonografia é obrigatória na primeira ITU febril abaixo de 2 anos: ela detecta malformação e indica cistouretrografia.",
+        "acao": "alertar e solicitar exame",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-PED13-07",
+        "tipo": "profilaxia",
+        "gatilho": "quimioprofilaxia iniciada sem refluxo documentado, sem recorrência febril ou sem tratar constipação",
+        "severidade": "informativo",
+        "mensagem": "Profilaxia sem indicação documentada seleciona resistência: reavaliar o critério antes de manter.",
+        "acao": "alertar e revisar indicação",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "SBP",
+        "Ministério da Saúde",
+        "literatura",
+        "diretriz de ITU pediátrica"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

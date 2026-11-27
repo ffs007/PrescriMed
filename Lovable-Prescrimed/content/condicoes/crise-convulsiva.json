@@ -1,0 +1,158 @@
+{
+  "id": "convulsao-aguda",
+  "nome": "Crise convulsiva / estado de mal (atendimento agudo)",
+  "cat": "Emergência",
+  "alias": "convulsao crise epileptica estado de mal epilepsia desmaio com tremor",
+  "cid": [
+    [
+      "G419",
+      "Convulsões não especificadas"
+    ],
+    [
+      "G409",
+      "Epilepsia não especificada"
+    ],
+    [
+      "R568",
+      "Outras convulsões"
+    ]
+  ],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "ZCode",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-04",
+    "fontes": [
+      "ILAE/NEJM — status epilepticus",
+      "SBNeC — crise e estado de mal"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    }
+  },
+  "alerta": "Cronometre! Crise > 5 min ou 2 crises sem despertar = estado de mal. 1) Lateralizar cabeça, não introduzir nada na boca, O2 se SpO2 < 94, aspirar se necessário; 2) GLICEMIA DÍGITAL JÁ (hipoglicemia é a causa reversível mais rápida); 3) 1ª linha benzodiazepínico: diazepam 10 mg EV (2–5 mg/min) ou midazolam 10 mg IM (sem via EV); repetir 1x após 5–10 min; 4) Persistir = 2ª linha JÁ em paralelo: fenitoína 20 mg/kg EV lento (≤ 50 mg/min, monitorar ECG/PA) ou levetiracetam (se disponível); 5) refratário: intubar + midazolam EV contínuo/fenobarbital e anestesia — UTI; 6) investigar causa: glicemia, Na, Ca, Mg, toxícológico, TCE, ETOH (tiamina antes de glicose no alcoolista), eclâmpsia na gestante (sulfato de magnésio 4 g EV + 5 g IM!); 7) 1ª crise não significa iniciar antiepiléptico — decisão individualizada com neurologia.",
+  "redFlags": [
+    "Crise > 5 min ou recorrente sem despertar — estado de mal: escalar 2ª linha sem esperar",
+    "Gestante — ECLÂMPSIA: sulfato de magnésio é o anticonvulsivante, não benzodiazepínico",
+    "Febre + rigidez de nuca — meningite/encefalite: LP e antibiótico/aciclovir após TC",
+    "Foco neurológico novo / trauma — imagem urgente",
+    "Pós-crise que não retorna ao basal em 30–60 min — estado de mal não convulsivo ou causa estrutural",
+    "Alcoolista em abstinência — delirium tremens pode se somar: tiamina 300 mg EV antes da glicose",
+    "Gestante > 20 semanas convulsiva — eclâmpsia: sulfato de magnésio 4–6 g IV (não é benzo primeiro)",
+    "Convulsão que cede mas paciente não acorda (intervalo) — estado de mal não convulsivo: EEG"
+  ],
+  "naoUsar": [
+    "Colher/faca/objeto na boca (fratura dental e aspiração)",
+    "Restringir fortemente os movimentos",
+    "Fenitoína por via rápida (> 50 mg/min — arritmia/hipotensão)",
+    "Antiepiléptico crônico iniciado de rotina na 1ª crise não provocada sem discussão",
+    "Naloxona/flumazenil de rotina no desconhecido sem indicação (convulsão por benzo withdrawal)",
+    "Flumazenil em convulsão por benzodiazepínico/benzo crônico — pode provocar convulsão refratária",
+    "Fenitoína em bradicardia/BAV/instabilidade hemodinâmica — preferir levetiracetam",
+    "Contenção física como tratamento da convulsão — tratar com droga"
+  ],
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "1ª linha — benzodiazepínico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "diazepam_ev",
+            "motivo": "10 mg EV (2–5 mg/min); repetir 1x após 5–10 min"
+          },
+          {
+            "linha": 1,
+            "hosp": "midazolam_im",
+            "motivo": "10 mg IM se sem acesso EV (adulto) — absorção rápida"
+          }
+        ]
+      },
+      {
+        "nome": "2ª linha — estado de mal",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "fenitoina_ev",
+            "motivo": "20 mg/kg EV lento (≤ 50 mg/min) com ECG — não diluir em glicose"
+          },
+          {
+            "linha": 1,
+            "hosp": "fenobarbital_ev",
+            "motivo": "20 mg/kg EV (≤ 100 mg/min) — alternativa/associação"
+          },
+          {
+            "novo": {
+              "id": "levetiracetam_em",
+              "n": "Levetiracetam",
+              "ap": "solução injetável 500 mg/5 mL",
+              "via": "IV",
+              "pos": "60 mg/kg IV (máx 4.500 mg) em 15 min — alternativa à fenitoína, sem interações e sem risco arrítmico"
+            },
+            "motivo": "Alternativa à fenitoína"
+          }
+        ]
+      },
+      {
+        "nome": "Causas reversíveis — drogas-chave",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "glicose50",
+            "motivo": "Hipoglicemia: 40–100 mL EV conforme glicemia dígital"
+          },
+          {
+            "linha": 1,
+            "hosp": "tiamina_ev",
+            "motivo": "300 mg EV ANTES da glicose no alcoolista/desnutrido"
+          },
+          {
+            "linha": 1,
+            "hosp": "sulfato_mg",
+            "motivo": "ECLÂMPSIA: 4 g EV em 10 min + 5 g IM; repetir 2 g/h — e chamar obstetrícia"
+          }
+        ]
+      }
+    ]
+  },
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações pós-crise (sem antiepiléptico de rotina na 1ª crise)",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "orient1",
+              "n": "Proibições temporárias",
+              "ap": "",
+              "pos": "NÃO dirigir, operar máquinas, nadar sozinho, nem tomar banho de tanque/rio por pelo menos 6 meses (legislação/CNH à parte) ou até avaliação neurológica. Acompanhante em escadas e trânsito nos primeiros dias."
+            },
+            "motivo": "Segurança"
+          },
+          {
+            "novo": {
+              "id": "orient2",
+              "n": "Retorno imediato se",
+              "ap": "",
+              "pos": "Nova crise, não voltar ao normal, febre com dor de cabeça, vômitos persistentes, confusão que aumenta. Registrar vídeo da próxima crise se possível (ajuda o neurologista). Sono regular, evitar álcool e fotoriscos conhecidos."
+            },
+            "motivo": "Recorrência e causas"
+          },
+          {
+            "novo": {
+              "id": "orient3",
+              "n": "Se já em antiepiléptico",
+              "ap": "",
+              "pos": "Verificar adesão e níveis (dosagem de fármaco); crises por abstinência de dose são a causa mais comum no epiléptico conhecido — retomar esquema, nunca dobrar sozinho."
+            },
+            "motivo": "Epiléptico conhecido"
+          }
+        ]
+      }
+    ]
+  }
+}

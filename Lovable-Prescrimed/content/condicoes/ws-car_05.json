@@ -1,0 +1,507 @@
+{
+  "id": "ws-car_05",
+  "nome": "Edema de membros inferiores",
+  "cat": "Cardiovascular",
+  "alias": "edema de membros inferiores edema inchaco nas pernas edema de membros inferiores perna inchada",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-05_edema.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de avaliação de edema e critérios de duplex venoso",
+      "[verificar] sociedade_cardiologia: tratamento da insuficiência cardíaca crônica e uso de diurético",
+      "[verificar] sociedade_nefrologia: manejo do edema nefrótico e diurético na doença renal crônica",
+      "[verificar] sociedade_hepatologia: ascite: proporção espironolactona/furosemida e albumina na paracentese",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-05 em 2026-11-27",
+    "fundido_workspace": "CAR-05 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: edema unilateral, doloroso, com empastamento da panturrilha e diferença acima de 3 cm -> duplex venoso em 24 h e anticoagulação se alta probabilidade; não prescrever diurético; dispneia, ortopneia ou estertoração associada ao edema -> encaminhar para CAR-06, BNP, ECG e radiografia de tórax; edema com oligúria, urina espumosa e creatinina em ascensão -> proteinúria de 24 h ou relação albumina/creatinina e avaliação nefrológica; edema com ascite, icterícia, albumina abaixo de 2,5 g/dL e INR alargado -> paracentese se ascite tensa, espironolactona com furosemida e avaliação de hepatologia. 1) Confirmar que é edema: cacifo, distribuição, simetria, perímetro da panturrilha e peso atual 2) Separar unilateral de bilateral; unilateral vai para duplex venoso e avaliação de trombose, sem diurético 3) Bilateral: procurar mecanismo - jugular e ortopneia (cardíaco), proteinúria e creatinina (renal), ascite e albumina (hepático), fármacos em uso, TSH, história de erisipela ou cirurgia (linfático) 4) Retirar ou substituir o fármaco causal antes de prescrever diurético: anlodipino, AINE, corticoide, pioglitazona 5) Avaliar volume real antes do diurético: hipotensão postural, mucosas, sódio e albumina; hipoalbuminemia grave pede albumina e não mais furosemida 6) Prescrever diurético de alça na dose adequada à função renal, com meta de balanço e monitorização de potássio e creatinina em 3-7 dias 7) Resistência: dobrar a dose, associar tiazídico e revisar sódio da dieta e ades",
+  "redFlags": [
+    "edema unilateral, doloroso, com empastamento da panturrilha e diferença acima de 3 cm -> duplex venoso em 24 h e anticoagulação se alta probabilidade; não prescrever diurético",
+    "dispneia, ortopneia ou estertoração associada ao edema -> encaminhar para CAR-06, BNP, ECG e radiografia de tórax",
+    "edema com oligúria, urina espumosa e creatinina em ascensão -> proteinúria de 24 h ou relação albumina/creatinina e avaliação nefrológica",
+    "edema com ascite, icterícia, albumina abaixo de 2,5 g/dL e INR alargado -> paracentese se ascite tensa, espironolactona com furosemida e avaliação de hepatologia",
+    "edema com febre, eritema, calor e dor em placa -> antibiótico e marcação do perímetro do eritema",
+    "edema unilateral com palidez, cianose ou dor desproporcional -> cirurgia vascular imediata",
+    "edema com hipotensão postural, tontura e perda de peso não intencional -> suspender diurético, revisar dose e checar eletrólitos e creatinina"
+  ],
+  "naoUsar": [
+    "hipovolemia ou desidratação",
+    "anúria sem diálise",
+    "hipocalemia abaixo de 3,0 mEq/L",
+    "hiponatremia grave",
+    "hipotensão sintomática",
+    "hiponatremia abaixo de 130 mEq/L",
+    "hipocalemia grave",
+    "alergia a sulfonamida"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "pesar-se todo dia no mesmo horário e anotar"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "tomar diurético por conta própria ou para emagrecer"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Diurético de de alça",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "furosemida",
+            "pos": "40 mg (20-80 mg). Via VO. 1x/dia pela manhã; 2x/dia se necessário, evitando a noite. Até atingir o peso seco e o edema residual menor que 1+/4+.",
+            "posTodas": true,
+            "motivo": "edema por hipervolemia com causa cardíaca, renal ou hepática já definida (1a linha) edema com hipervolemia e causa definida",
+            "nota": "Uso direto, com ou sem alimento - monitorar: peso diário e balanço hídrico; monitorar: diurese e sintomas de congestão; monitorar: potássio, sódio e magnésio em 3-7 dias do início; monitorar: creatinina e ureia; monitorar: pressão arterial em ortostase · NÃO: hipovolemia ou desidratação; anúria sem diálise; hipocalemia abaixo de 3,0 mEq/L; hiponatremia grave; hipotensão sintomática · Obs: A dose é titulada pela diurese e pelo peso, não pela creatinina. Não usar para perda de peso estética nem como prova terapêutica antes de definir a causa · Renal: Na doença renal crônica a dose eficaz é maior: titular até 80–160 mg/dia; não…",
+            "dose": {
+              "texto": "40 mg (20-80 mg); 1x/dia pela manhã; 2x/dia se necessário, evitando a noite; até atingir o peso seco e o edema residual menor que 1+/4+; max. 600 mg/dia, individualizado pela resposta",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 80,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 600,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Diurético tiazidico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "hctz",
+            "pos": "25 mg (12,5-50 mg). Via VO. 1x/dia pela manhã. Enquanto durar a resistência, com reavaliação em 2-4 semanas.",
+            "posTodas": true,
+            "motivo": "edema leve a moderado e resistência diurética em associação com furosemida (alternativa)",
+            "nota": "Uso direto, pela manhã - monitorar: sódio e potássio em 1-2 semanas; monitorar: ácido úrico se história de gota; monitorar: glicemia; monitorar: creatinina; monitorar: pressão arterial · NÃO: anúria; hiponatremia abaixo de 130 mEq/L; hipocalemia grave; alergia a sulfonamida; gota ativa · Obs: Na resistência diurética, administrar 30 min antes da furosemida para bloqueio sequencial do néfron. Não é primeira escolha para edema de causa cardíaca · Renal: Ineficaz com ClCr abaixo de 30 mL/min; nesse cenário manter apenas o diurético de alça",
+            "dose": {
+              "texto": "25 mg (12,5-50 mg); 1x/dia pela manhã; enquanto durar a resistência, com reavaliação em 2-4 semanas; max. 50 mg/dia",
+              "status": "ok",
+              "valor": 12.5,
+              "valor_max": 50,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Venotonico flavonoide",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "diosmina_com_hesperidina",
+              "n": "Diosmina com hesperidina",
+              "ap": "comprimido revestido 450 mg + 50 mg",
+              "q": "",
+              "pos": "450 mg + 50 mg. Via VO. 12/12 h. 8-12 semanas, com reavaliação clínica."
+            },
+            "motivo": "insuficiência venosa crônica e linfedema com peso, dor e turgência (alternativa)",
+            "nota": "Uso direto, com alimento - monitorar: perímetro da panturrilha; monitorar: sintomas de peso e dor; monitorar: sinais de trombose; monitorar: adesão à compressão · NÃO: alergia a flavonoides; primeiro trimestre de gestação; sangramento ativo · Obs: É adjuvante de sintoma; não substitui a compressão elástica, que é a medida que reduz edema e recidiva de úlcera. Não tem papel no edema cardíaco, renal ou por hipoalbuminemia",
+            "dose": {
+              "texto": "450 mg + 50 mg; 12/12 h; 8-12 semanas, com reavaliação clínica; max. 900 mg + 100 mg/dia",
+              "status": "ok",
+              "valor": 450,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 900,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Diurético poupador de potássio",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "espironolactona",
+            "pos": "25 mg (12,5-50 mg); na ascite, 100 mg. Via VO. 1x/dia. Indefinida na insuficiência cardíaca; enquanto houver ascite.",
+            "posTodas": true,
+            "motivo": "ascite cirrótica, edema com hiperaldosteronismo e insuficiência cardíaca com fração de ejeção reduzida (condicional) ascite ou insuficiência cardíaca com fração de ejeção reduzida",
+            "nota": "Uso direto, de preferência com alimento para melhorar a absorção - monitorar: potássio e creatinina em 3 dias, 1 semana e depois mensal; monitorar: ginecomastia e dor mamária; monitorar: pressão arterial e peso; monitorar: sódio na ascite · NÃO: potássio acima de 5,0 mEq/L; ClCr abaixo de 30 mL/min; insuficiência hepática grave (Child C); suplemento de potássio concomitante; doença de Addison · Obs: Na ascite cirrótica, usar na proporção de 100 mg de espironolactona para 40 mg de furosemida. Suspender se potássio acima de 5,5 mEq/L · Renal: Contraindicada com ClCr abaixo de 30 mL/min ou potássio acima de 5,0 mEq/L",
+            "dose": {
+              "texto": "25 mg (12,5-50 mg); na ascite, 100 mg; 1x/dia; indefinida na insuficiência cardíaca; enquanto houver ascite; max. 50 mg/dia na insuficiência cardíaca; até 400 mg/dia na ascite, sempre associada a furosemida",
+              "status": "ok",
+              "valor": 12.5,
+              "valor_max": 50,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Inibidor de sglt2",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dapagliflozina",
+            "pos": "10 mg. Via VO. 1x/dia. Indefinida.",
+            "posTodas": true,
+            "motivo": "insuficiência cardíaca crônica com congestão recorrente, com ou sem diabetes (condicional) insuficiência cardíaca crônica com congestão recorrente",
+            "nota": "Uso direto, com ou sem alimento - monitorar: TFG e creatinina; monitorar: pressão arterial e sintomas de depleção; monitorar: cetonas se náusea, vômito ou dor abdominal; monitorar: glicemia; monitorar: higiene genital · NÃO: diabetes tipo 1; cetoacidose prévia; TFG abaixo de 20 mL/min/1,73 m²; gestação e amamentação; infecção genital ou urinária ativa grave · Obs: Tem efeito diurético leve e reduz hospitalização por insuficiência cardíaca, mas não substitui a alça no edema agudo. Suspender 3 dias antes de cirurgia ou jejum prolongado · Renal: Para insuficiência cardíaca, manter até TFG de 20 mL/min/1,73 m²; para controle…",
+            "dose": {
+              "texto": "10 mg; 1x/dia; indefinida; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anticoagulante heparina baixo peso",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "enoxaparina",
+              "n": "Enoxaparina",
+              "ap": "seringa 20 mg/0,2 mL",
+              "q": "",
+              "pos": "1 mg/kg. Via SC. 12/12 h. Até a transição para anticoagulante oral, com mínimo de 5 dias."
+            },
+            "motivo": "edema unilateral com trombose venosa profunda confirmada ou alta probabilidade clínica (condicional)",
+            "nota": "Uso direto na seringa; não expelir a bolha; aplicar no subcutâneo do abdome - monitorar: plaquetas a cada 48-72 h; monitorar: sinais de sangramento; monitorar: anti-Xa se ClCr abaixo de 30 mL/min ou obesidade grave; monitorar: função renal · NÃO: sangramento ativo; plaquetas abaixo de 50.000/mm³; ClCr abaixo de 15 mL/min sem ajuste; cirurgia recente de sistema nervoso central; prótese valvar mecânica · Obs: Só entra quando a hipótese é trombótica. Edema venoso por trombose não se trata com diurético: o tratamento é anticoagulação. Seguir o fluxo de CAR-07 · Renal: ClCr 15–30 mL/min: 1 mg/kg 1x/dia; abaixo de 15: preferir heparina…",
+            "dose": {
+              "texto": "1 mg/kg; 12/12 h; até a transição para anticoagulante oral, com mínimo de 5 dias; max. 100 mg por dose",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Hormonio tireoidiano",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_levotiroxina",
+            "pos": "1,6 mcg/kg/dia; em cardiopata ou idoso, iniciar com 25-50 mcg. Via VO. 1x/dia em jejum, 30-60 min antes do café. Indefinida.",
+            "posTodas": true,
+            "motivo": "edema por mixedema com hipotireoidismo confirmado (condicional)",
+            "nota": "Uso direto em jejum, separado de cálcio, ferro e inibidor de bomba de prótons por 4 h - monitorar: TSH em 6-8 semanas após cada ajuste; monitorar: frequência cardíaca e ritmo; monitorar: angina em cardiopata; monitorar: peso · NÃO: tireotoxicose; infarto agudo do miocárdio recente sem liberação; insuficiência adrenal não tratada · Obs: No mixedema o edema só resolve com reposição; diurético não corrige e pode causar depleção. Em cardiopata, titular a cada 6 semanas para não precipitar isquemia",
+            "dose": {
+              "texto": "1,6 mcg/kg/dia; em cardiopata ou idoso, iniciar com 25-50 mcg; 1x/dia em jejum, 30-60 min antes do café; indefinida; max. individualizado, geralmente até 200 mcg/dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 50,
+              "unidade": "mcg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Elevação de membros inferiores",
+              "ap": "",
+              "q": "",
+              "pos": "30 cm acima do nível do coração, 3–4 vezes ao dia por 30–60 min; não fazer em insuficiência cardíaca descompensada, dispneia ou doença arterial obstrutiva grave"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Compressão elástica graduada",
+              "ap": "",
+              "q": "",
+              "pos": "Meia 20–30 mmHg para insuficiência venosa e 30–40 mmHg para linfedema, medida pela circunferência da panturrilha; atadura multicamada se não houver meia. Contraindicada em isquemia crítica, índice tornozelo-braquial abaixo de 0,5 e erisipela ativa"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Restrição de sódio",
+              "ap": "",
+              "q": "",
+              "pos": "Menos de 2 g de sódio por dia, cerca de 5 g de sal; orientar leitura de rótulo e retirar embutido, tempero pronto e conserva. Não restringir sódio em paciente em uso de diurético com hiponatremia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Balança e pesagem diária padronizada",
+              "ap": "",
+              "q": "",
+              "pos": "Mesma balança, mesmo horário, em jejum e após urinar; ganho acima de 1 kg em 24 h ou 2 kg em uma semana sinaliza retenção e antecipa a consulta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Revisão da lista de fármacos",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender ou substituir anlodipino, AINE, corticoide e pioglitazona; checar também insulina em dose alta, gabapentina e pregabalina, que causam edema por retenção"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Cuidado de pele e prevenção de erisipela",
+              "ap": "",
+              "q": "",
+              "pos": "Hidratação diária, unha curta, tratamento precoce de micose interdigital; em linfedema, higiene rigorosa e antibioticoterapia imediata ao primeiro sinal de eritema"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Deambulação e exercício",
+              "ap": "",
+              "q": "",
+              "pos": "Caminhada e bomba muscular da panturrilha ativa; repouso prolongado piora o edema venoso e o risco de trombose"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Fisioterapia descongestiva complexa",
+              "ap": "",
+              "q": "",
+              "pos": "Drenagem linfática manual, enfaixamento e exercício supervisionado no linfedema; não usar em trombose ativa, infecção ou insuficiência cardíaca descompensada"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-05"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Diurético de de alça",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "edema grave, anasarca, congestão pulmonar ou paciente que não absorve por via oral (condicional) edema com hipervolemia e causa definida",
+            "nota": "Bolus: diluir a ampola em 10-20 mL de SF 0,9%. Infusão: 100-200 mg em 100 mL de SF 0,9% ou SG 5% em bomba - monitorar: diurese horária, com sonda vesical se anasarca; monitorar: potássio, sódio e magnésio a cada 24 h; monitorar: creatinina e ureia a cada 24-48 h; monitorar: pressão arterial e perfusão periférica; monit · NÃO: hipovolemia ou desidratação; anúria sem diálise; hipocalemia abaixo de 3,0 mEq/L; hiponatremia grave; hipotensão sintomática · Obs: A dose é titulada pela diurese e pelo peso, não pela creatinina. Não usar para perda de peso estética nem como prova terapêutica antes de definir a causa · Renal: Na doença renal…",
+            "dose": {
+              "texto": "40 mg em bolus, ou 1-2 vezes a dose oral em uso prévio; 12/12 h ou infusão contínua de 5-20 mg/h; 48-72 h ou até compensar, com transição para via oral; max. individualizado, até 600 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 20,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Expansor colloidal",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "albumina_humana",
+              "n": "Albumina humana",
+              "ap": "frasco 20% 50 mL (10 g)",
+              "via": "IV",
+              "pos": "0,5-1 g/kg. Via IV. Dose única, repetida conforme albumina e resposta diurética. 1-3 dias. 30-60 min; 1-2 h quando há risco de sobrecarga."
+            },
+            "motivo": "hipoalbuminemia abaixo de 2,5 g/dL com anasarca ou após paracentese de grande volume (condicional)",
+            "nota": "Não diluir a solução a 20%; usar equipo com filtro e acesso venoso calibroso - monitorar: pressão arterial; monitorar: diurese; monitorar: ausculta pulmonar e saturação; monitorar: sódio sérico; monitorar: peso · NÃO: sobrecarga de volume com congestão pulmonar; alergia a albumina; insuficiência cardíaca descompensada · Obs: Não é tratamento de edema por si: corrige a pressão oncótica e melhora a resposta ao diurético em hipoalbuminemia grave. Ignorar albumina de 2,0 g/dL e insistir só em furosemida é conduta que falha",
+            "dose": {
+              "texto": "0,5-1 g/kg; dose única, repetida conforme albumina e resposta diurética; 1-3 dias; max. individualizado",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": 1,
+              "unidade": "g",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "CAR-05",
+    "versao": "0.2.0",
+    "arquivo": "CAR-05_edema.json",
+    "area": "Cardiovascular",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "lacunas": 0
+  }
+}

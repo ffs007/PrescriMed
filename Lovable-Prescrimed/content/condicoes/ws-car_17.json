@@ -1,0 +1,584 @@
+{
+  "id": "ws-car_17",
+  "nome": "Endocardite infecciosa",
+  "cat": "Emergência",
+  "alias": "endocardite infecciosa endocardite infecciosa endocardite bacteriana endocardite ie vegetacao valvar endocardite de protese valvar",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-17_endocardite.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo de hemoculturas e de ecocardiograma transesofágico",
+      "[verificar] sociedade_cardiologia: critérios diagnósticos de Duke modificados e indicação cirúrgica",
+      "[verificar] diretriz_de_infectologia: esquema empírico por cenário e duração por agente",
+      "[verificar] diretriz_de_profilaxia: grupos de alto risco e procedimentos com indicação de profilaxia",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-17 em 2026-11-27",
+    "fundido_workspace": "CAR-17 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: hipotensão, edema agudo de pulmão ou oligúria -> diurético e vasodilatador, ecocardiograma urgente e cirurgia de urgência; sopro novo intenso ou regurgitação grave à beira-leito -> ecocardiograma imediato e avaliação cirúrgica no mesmo dia; déficit neurológico focal ou embolia sistêmica -> tomografia de crânio, ecocardiograma e avaliação de cirurgia precoce; febre persistente após 72 a 96 horas de antibiótico adequado -> repetir hemoculturas, ecocardiograma transesofágico e reavaliar cirurgia. 1) Triagem: febre com sopro, prótese valvar, droga injetável ou bacteremia sem foco entra em investigação de endocardite 2) Estratificar gravidade: instável ou estável; instável vai para leito monitorizado com hemoculturas imediatas e antibiótico em 1 hora 3) Paciente estável: colher três pares de hemoculturas de punções distintas e aguardar antes de iniciar antibiótico 4) Solicitar ecocardiograma transtorácico e transesofágico; repetir o transesofágico em 7 a 10 dias se negativo e suspeita persistente 5) Escolher o esquema empírico pelo cenário: valva nativa, prótese, MRSA, alergia ou risco de gram-negativo 6) Reavaliar em 72 a 96 horas: febre persistente exige repetir culturas, novo ecocardiograma e reavaliação cirúrgica 7) Ajustar para o agente identificado e definir duração: 4 semanas em valva nativa, 6 semanas em prótese e em S. aureus 8) Acionar cirurgia diante de indicação formal, sem esperar o término do antibiótico 9) Alta com plano completo, acesso seguro, re",
+  "redFlags": [
+    "hipotensão, edema agudo de pulmão ou oligúria -> diurético e vasodilatador, ecocardiograma urgente e cirurgia de urgência",
+    "sopro novo intenso ou regurgitação grave à beira-leito -> ecocardiograma imediato e avaliação cirúrgica no mesmo dia",
+    "déficit neurológico focal ou embolia sistêmica -> tomografia de crânio, ecocardiograma e avaliação de cirurgia precoce",
+    "febre persistente após 72 a 96 horas de antibiótico adequado -> repetir hemoculturas, ecocardiograma transesofágico e reavaliar cirurgia",
+    "bloqueio atrioventricular novo ou prolongamento de PR -> ecocardiograma transesofágico urgente e cirurgia",
+    "dor lombar, hematúria ou dor abdominal -> imagem dirigida e manter antibiótico prolongado",
+    "prótese valvar com bacteremia por estafilococo -> vancomicina, gentamicina, rifampicina e ecocardiograma transesofágico",
+    "usuário de droga injetável com dispneia e infiltrado pulmonar -> hemoculturas, ecocardiograma e antibiótico contra estafilococo"
+  ],
+  "naoUsar": [
+    "alergia a penicilina",
+    "endocardite de prótese valvar como monoterapia",
+    "MRSA confirmado",
+    "alergia grave a cefalosporina",
+    "anafilaxia prévia a penicilina",
+    "neonato com hiperbilirrubinemia",
+    "pneumonia como foco",
+    "rabdomiólise em atividade"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "completar todo o tempo de antibiótico, mesmo se a febre passar, sem faltar dose"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "interromper o antibiótico por conta própria"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Lincosamida",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "clindamicina",
+            "pos": "600 mg. Via VO. Dose única 30 a 60 minutos antes do procedimento. Dose única.",
+            "posTodas": true,
+            "motivo": "profilaxia odontológica em paciente com alergia grave a penicilina (alternativa) alergia grave a penicilina",
+            "nota": "Uso direto com um copo de água - monitorar: diarreia nos 30 dias seguintes; monitorar: reação alérgica · NÃO: colite pseudomembranosa prévia; diarreia ativa; alergia a lincosamida · Obs: Risco de colite por C. difficile; quando possível, preferir cefalexina 2 g ou azitromicina 500 mg como alternativa à penicilina",
+            "dose": {
+              "texto": "600 mg; dose única 30 a 60 minutos antes do procedimento; dose única; max. 600 mg",
+              "status": "ok",
+              "valor": 600,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 600,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Penicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "amoxicilina",
+            "pos": "2 g. Via VO. Dose única 30 a 60 minutos antes do procedimento. Dose única.",
+            "posTodas": true,
+            "motivo": "profilaxia de endocardite em procedimento odontológico de alto risco (condicional) prótese valvar, endocardite prévia ou cardiopatia congênita de alto risco",
+            "nota": "Uso direto com água; não é necessário jejum - monitorar: reação alérgica imediata nos primeiros 30 min; monitorar: diarreia · NÃO: alergia a penicilina; uso de amoxicilina nas últimas 4 semanas; procedimento sem indicação de profilaxia · Obs: Só para prótese valvar, endocardite prévia, cardiopatia congênita cianótica não corrigida ou material protético há menos de 6 meses. Não prescrever para procedimento de baixo risco",
+            "dose": {
+              "texto": "2 g; dose única 30 a 60 minutos antes do procedimento; dose única; max. 2 g",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Coleta de três pares de hemoculturas antes do antibiótico em paciente estável",
+              "ap": "",
+              "q": "",
+              "pos": "Punções venosas distintas, 10 mL por frasco, um aeróbio e um anaeróbio por par, com intervalo de 1 a 2 h; registrar local e horário; nunca colher de cateter antigo sem punção periférica associada"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Ecocardiograma transtorácico seguido de transesofágico",
+              "ap": "",
+              "q": "",
+              "pos": "O transesofágico é obrigatório na suspeita com prótese, na suspeita com transtorácico negativo e na suspeita de abscesso; repetir em 7 a 10 dias se o primeiro for negativo e a suspeita persistir"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Acesso venoso seguro para 4 a 6 semanas",
+              "ap": "",
+              "q": "",
+              "pos": "Preferir cateter central de inserção periférica; trocar curativo com técnica asséptica; avaliar antibioticoterapia parenteral domiciliar após 7 a 10 dias afebril"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Avaliação cirúrgica precoce",
+              "ap": "",
+              "q": "",
+              "pos": "Discutir com cirurgia cardíaca nas primeiras 24 a 48 h todo caso com insuficiência cardíaca, vegetação acima de 10 mm, abscesso, prótese ou S. aureus; registrar a decisão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Monitorização com ECG diário e vigilância de bloqueio",
+              "ap": "",
+              "q": "",
+              "pos": "Medir PR a cada 24 h e diante de qualquer bradicardia: bloqueio novo indica abscesso do anel aórtico e muda para cirurgia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Rastreio de foco de entrada",
+              "ap": "",
+              "q": "",
+              "pos": "Exame odontológico, dermatológico e de acesso venoso; investigar lesão de pele, abscesso dentário, droga injetável e procedimento recente"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Controle de foco e retirada de dispositivo infectado",
+              "ap": "",
+              "q": "",
+              "pos": "Remover marca-passo, cardiodesfibrilador ou cateter infectado; a antibioticoterapia isolada falha quando o material permanece"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Avaliação de contato domiciliar e de usuário de droga injetável",
+              "ap": "",
+              "q": "",
+              "pos": "Testar HIV, hepatites B e C; encaminhar para redução de danos e tratar dependência; orientar sobre sinais de recidiva"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-17"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Penicilina antistafilococica",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "oxacilina",
+            "motivo": "endocardite em valva nativa por Staphylococcus aureus sensível à oxacilina (1a linha)",
+            "nota": "Reconstituir em 10 mL de água destilada e diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: hemograma semanal; monitorar: transaminases a cada 2 semanas; monitorar: função renal; monitorar: sítio de infusão · NÃO: alergia a penicilina; endocardite de prótese valvar como monoterapia; MRSA confirmado · Obs: Superior à vancomicina no MSSA. Exige acesso venoso seguro por 4 a 6 semanas; preferir cateter central de inserção periférica para alta precoce",
+            "dose": {
+              "texto": "2 g; 4/4 h; 4 a 6 semanas; max. 12 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Cefalosporina de terceira geração",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ceftriaxona_ev",
+            "motivo": "endocardite por estreptococo do grupo viridans, Streptococcus bovis, HACEK ou enterococo em associação (1a linha)",
+            "nota": "Reconstituir em 10 mL de água e diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: hemograma semanal; monitorar: função hepática; monitorar: diarreia; monitorar: sítio de infusão · NÃO: alergia grave a cefalosporina; anafilaxia prévia a penicilina; neonato com hiperbilirrubinemia · Obs: Permite antibioticoterapia parenteral domiciliar por dose única diária, o que encurta a internação",
+            "dose": {
+              "texto": "2 g; 1x/dia (12/12 h quando associada à ampicilina no enterococo); 4 semanas em valva nativa; 6 semanas em prótese; max. 4 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Lipopeptideo",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "daptomicina",
+              "n": "Daptomicina",
+              "ap": "frasco 350 mg",
+              "via": "IV",
+              "pos": "8-10 mg/kg. Via IV. 1x/dia. 4 a 6 semanas. 30 minutos."
+            },
+            "motivo": "MRSA com falha, intolerância ou resistência à vancomicina, ou bacteremia persistente (alternativa)",
+            "nota": "Reconstituir em 7 mL de SF 0,9% e diluir em 50 mL de SF 0,9%; não usar SG 5% - monitorar: CPK semanal; monitorar: sintomas de mialgia e fraqueza; monitorar: creatinina; monitorar: eosinófilos · NÃO: pneumonia como foco; rabdomiólise em atividade; uso de estatina sem monitorização de CPK · Obs: Inativada pelo surfactante pulmonar: nunca para pneumonia. Suspender estatina durante o tratamento · Renal: ClCr abaixo de 30 mL/min: 6–8 mg/kg 1x/dia, ou após diálise",
+            "dose": {
+              "texto": "8-10 mg/kg; 1x/dia; 4 a 6 semanas; max. 12 mg/kg/dia em infecção de alto inóculo",
+              "status": "ok",
+              "valor": 8,
+              "valor_max": 10,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Aminoglicosídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "gentamicina",
+            "motivo": "sinergia no tratamento de endocardite estafilocócica em valva nativa ou enterocócica (condicional)",
+            "nota": "Diluir em 50-100 mL de SF 0,9% - monitorar: creatinina e ureia a cada 48-72 h; monitorar: nível sérico de vale antes da 3ª dose; monitorar: audiometria se uso acima de 7 dias; monitorar: magnésio",
+            "dose": {
+              "texto": "3 mg/kg 1x/dia (esquema de dose única diária) ou 1 mg/kg 8/8 h; 1x/dia, ou 8/8 h no esquema fracionado; 3 a 5 dias na endocardite estafilocócica; 2 semanas na enterocócica; max. 5 mg/kg/dia",
+              "status": "ok",
+              "valor": 3,
+              "valor_max": null,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Glicopeptideo",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "vancomicina",
+              "n": "Vancomicina",
+              "ap": "frasco 500 mg",
+              "via": "IV",
+              "pos": "15-20 mg/kg. Via IV. 8 a 12 h, ajustada por função renal e nível sérico. 4 a 6 semanas. 60 minutos; não exceder 10 mg/min."
+            },
+            "motivo": "MRSA, alergia grave a penicilina, prótese valvar ou suspeita com risco de resistência (condicional)",
+            "nota": "Reconstituir em 10 mL de água e diluir em 200 mL de SF 0,9% ou SG 5% (máximo 5 mg/mL para veia periférica) - monitorar: vale sérico antes da 4ª dose, alvo 15-20 mcg/mL ou AUC/MIC 400-600; monitorar: creatinina a cada 48-72 h; monitorar: infusão lenta para evitar homem vermelho; monitorar: hemograma · NÃO: alergia grave a vancomicina; insuficiência renal sem ajuste de dose; uso em infecção por MSSA confirmado quando há alternativa · Obs: Não é primeira escolha para MSSA: inferior à oxacilina. Infundir em 60 min ou mais; reação infusional não é alergia · Renal: ClCr 30–60 mL/min: 15 mg/kg 24/24 h; ClCr abaixo de 30: dose de ataque…",
+            "dose": {
+              "texto": "15-20 mg/kg; 8 a 12 h, ajustada por função renal e nível sérico; 4 a 6 semanas; max. 2 g por dose",
+              "status": "ok",
+              "valor": 15,
+              "valor_max": 20,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Aminopenicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ampicilina",
+            "motivo": "endocardite enterocócica, em associação com ceftriaxona ou gentamicina (condicional)",
+            "nota": "Reconstituir em 10 mL de água e diluir em 100 mL de SF 0,9% - monitorar: função renal; monitorar: nível de consciência e convulsão em renal crônico; monitorar: hemograma; monitorar: rash · NÃO: alergia a penicilina; mononucleose infecciosa; insuficiência renal sem ajuste · Obs: Preferir ampicilina + ceftriaxona a ampicilina + gentamicina no enterococo: mesma eficácia com menos nefrotoxicidade · Renal: ClCr 10–30 mL/min: 2 g 8/8 h; ClCr abaixo de 10: 2 g 12/12 h e dosar nível se possível",
+            "dose": {
+              "texto": "2 g; 4/4 h; 4 a 6 semanas; max. 12 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "4/4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Rifamicina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "rifampicina",
+              "n": "Rifampicina",
+              "ap": "cápsula 150 mg",
+              "via": "VO ou IV",
+              "pos": "300 mg. Via VO ou IV. 8/8 h. 4 a 6 semanas, iniciada após 3 a 5 dias de culturas negativas. 30-60 minutos (via IV)."
+            },
+            "motivo": "endocardite de prótese valvar por estafilococo, após redução da bacteremia (condicional)",
+            "nota": "VO uso direto em jejum; IV reconstituir e diluir em 250 mL de SF 0,9% - monitorar: transaminases e bilirrubinas a cada semana; monitorar: hemograma; monitorar: adesão; monitorar: interações com varfarina, anticoncepcional e antirretroviral · NÃO: icterícia; hepatopatia descompensada; uso de anticoagulante com interação não manejável; porfiria · Obs: Nunca usar isolada nem iniciar no primeiro dia da prótese: seleciona resistência. Avisar sobre a coloração alaranjada de urina e lágrima",
+            "dose": {
+              "texto": "300 mg; 8/8 h; 4 a 6 semanas, iniciada após 3 a 5 dias de culturas negativas; max. 1.200 mg/dia",
+              "status": "ok",
+              "valor": 300,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Cefalosporina de quarta geração",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "cefepime",
+              "n": "Cefepime",
+              "ap": "frasco 1 g",
+              "via": "IV",
+              "pos": "2 g. Via IV. 8/8 h. Até identificação do agente, em geral 5 a 7 dias. 30 minutos."
+            },
+            "motivo": "cobertura empírica de bacilos gram-negativos na endocardite de prótese valvar precoce (condicional)",
+            "nota": "Reconstituir em 10 mL de água e diluir em 100 mL de SF 0,9% - monitorar: função renal; monitorar: nível de consciência; monitorar: hemograma · NÃO: alergia grave a cefalosporina; encefalopatia; insuficiência renal sem ajuste · Obs: Sai do esquema assim que o agente é identificado; não manter empírico por semanas · Renal: ClCr 30–60 mL/min: 2 g 12/12 h; ClCr abaixo de 30: 2 g 24/24 h",
+            "dose": {
+              "texto": "2 g; 8/8 h; até identificação do agente, em geral 5 a 7 dias; max. 6 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 6,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Diurético de de alça",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "insuficiência cardíaca congestiva por lesão valvar na endocardite (condicional)",
+            "nota": "Uso direto em bolus lento - monitorar: diurese horária; monitorar: potássio, sódio e creatinina a cada 24 h; monitorar: pressão arterial; monitorar: peso · NÃO: hipovolemia; hipotensão sintomática; hipocalemia grave; anúria sem diálise · Obs: É ponte para a cirurgia valvar: alivia a congestão, mas não corrige a regurgitação · Renal: Manter dose na disfunção renal com congestão; a resposta depende de dose",
+            "dose": {
+              "texto": "40 mg; 12/12 h, dobrando a dose se diurese insuficiente; até compensação ou cirurgia; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "CAR-17",
+    "versao": "0.2.0",
+    "arquivo": "CAR-17_endocardite.json",
+    "area": "Cardiovascular",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

@@ -1,0 +1,582 @@
+{
+  "id": "ws-go_04",
+  "nome": "Trabalho de parto / ameaça de parto prematuro",
+  "cat": "Emergência",
+  "alias": "trabalho de parto ameaca de parto prematuro trabalho de parto parto prematuro ameaca de parto prematuro trabalho de parto prematuro falso trabalho de parto rotura prematura de membranas contracoes uterinas",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GO-04_parto.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: esquema de tocólise, corticoide e critérios de transferência para centro com unidade neonatal",
+      "[verificar] sociedade_ginecologia: indicação e duração da tocólise e limite de idade gestacional da indometacina",
+      "[verificar] diretriz_obstetrica: neuroproteção com sulfato de magnésio antes de 32 semanas",
+      "[verificar] centro_de_controle_de_doencas: profilaxia de estreptococo do grupo B e esquema de penicilina",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GO-04 em 2026-11-27",
+    "fundido_workspace": "GO-04 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: febre acima de 38 °C, taquicardia fetal acima de 160 bpm ou líquido fétido -> antibiótico de amplo espectro e parto; tocólise contraindicada; sangramento vaginal vermelho vivo -> não tocar, ultrassom à beira do leito e cesárea conforme vitalidade; batimento cardíaco fetal abaixo de 110 bpm ou desacelerações tardias -> decúbito lateral, suspender ocitocina e cesárea de emergência; prolapso ou procidência de cordão -> elevar a apresentação e cesárea imediata. 1) Confirmar idade gestacional e vitalidade fetal com cardiotocografia 2) Diferenciar trabalho de parto verdadeiro, falso trabalho de parto e ameaça de parto prematuro pela regularidade das contrações, pelo toque e pelo comprimento cervical 3) Com 37 semanas ou mais: conduzir o parto, sem tocólise 4) Antes de 37 semanas: afastar corioamnionite, descolamento, sofrimento fetal e pré-eclâmpsia grave 5) Elegível para conduta expectante: corticoide, tocólise por 48 horas e magnésio abaixo de 32 semanas 6) Rotura de membranas: antibiótico, pesquisa de estreptococo do grupo B e conduta expectante até 34 semanas se estável 7) Definir o local do parto e transferir a gestante in utero para centro com unidade neonatal quando indicado 8) Reavaliar em 48 horas: se o trabalho progride, suspender a tocólise, assistir o parto e acionar a neonatologia",
+  "redFlags": [
+    "febre acima de 38 °C, taquicardia fetal acima de 160 bpm ou líquido fétido -> antibiótico de amplo espectro e parto; tocólise contraindicada",
+    "sangramento vaginal vermelho vivo -> não tocar, ultrassom à beira do leito e cesárea conforme vitalidade",
+    "batimento cardíaco fetal abaixo de 110 bpm ou desacelerações tardias -> decúbito lateral, suspender ocitocina e cesárea de emergência",
+    "prolapso ou procidência de cordão -> elevar a apresentação e cesárea imediata",
+    "pressão ≥ 160/110 mmHg com proteinúria -> sulfato de magnésio e anti-hipertensivo, sem tocólise",
+    "mais de 5 contrações em 10 minutos ou hipertonia durante a tocólise -> suspender o tocolítico e reavaliar a vitalidade",
+    "idade gestacional abaixo de 32 semanas -> magnésio para neuroproteção, corticoide e transferência para centro com unidade neonatal",
+    "rotura de membranas -> internação, antibiótico, corticoide e cardiotocografia"
+  ],
+  "naoUsar": [
+    "pressão sistólica abaixo de 90 mmHg",
+    "descolamento prematuro de placenta",
+    "corioamnionite",
+    "sofrimento fetal",
+    "estenose aórtica grave",
+    "disfunção ventricular",
+    "miastenia gravis",
+    "insuficiência renal grave"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "voltar imediatamente se as contrações ficarem regulares, se perder líquido ou se houver sangramento"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "tocólise quando há febre, líquido fétido ou sofrimento fetal"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_betametasona",
+            "pos": "12 mg. Via IM. 2 doses com 24 horas de intervalo. 2 dias.",
+            "posTodas": true,
+            "motivo": "maturidade pulmonar fetal entre 24 e 34 semanas, com extensão até 36 semanas e 6 dias (1a linha)",
+            "nota": "Sem diluição; injeção intramuscular profunda no glúteo, alternando o lado entre as doses - monitorar: glicemia capilar 4 vezes ao dia em diabética; monitorar: pressão arterial; monitorar: leucograma antes e depois (leucocitose esperada); monitorar: batimento cardíaco fetal · NÃO: infecção materna grave não tratada; diabetes descompensada sem possibilidade de controle; alergia · Obs: Benefício máximo entre 24 horas e 7 dias após a segunda dose. Não adiar o parto por causa do corticoide quando há indicação materna ou fetal. Repetir ciclo apenas com nova ameaça e intervalo maior que 14 dias",
+            "dose": {
+              "texto": "12 mg; 2 doses com 24 horas de intervalo; 2 dias; max. 24 mg no ciclo",
+              "status": "ok",
+              "valor": 12,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 24,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 2,
+              "duracao_texto": "2 dias",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "base": "dexametasona",
+            "pos": "6 mg. Via IM. 4 doses com 12 horas de intervalo. 2 dias.",
+            "posTodas": true,
+            "motivo": "maturidade pulmonar quando a betametasona não está disponível (alternativa)",
+            "nota": "Sem diluição; injeção intramuscular profunda - monitorar: glicemia capilar; monitorar: pressão arterial; monitorar: leucograma; monitorar: batimento cardíaco fetal · NÃO: infecção materna grave não tratada; alergia; diabetes descompensada sem controle · Obs: O esquema de 4 doses é equivalente ao de betametasona para maturidade pulmonar e é a opção quando a betametasona falta",
+            "dose": {
+              "texto": "6 mg; 4 doses com 12 horas de intervalo; 2 dias; max. 24 mg no ciclo",
+              "status": "ok",
+              "valor": 6,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 24,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": 2,
+              "duracao_texto": "2 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Bloqueador de canal de cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "nifedipino",
+            "pos": "20 mg no ataque, depois 10-20 mg. Via VO. 20 mg, repetir 20 mg após 30 minutos se persistir a contração; manutenção 10-20 mg a cada 6-8 horas. 48 horas.",
+            "posTodas": true,
+            "motivo": "tocólise na ameaça de parto prematuro entre 24 e 34 semanas (1a linha) hipertensão associada na gestação",
+            "nota": "Uso direto; o comprimido de liberação prolongada é engolido inteiro - monitorar: pressão arterial a cada 15 minutos na primeira hora; monitorar: frequência cardíaca materna; monitorar: dinâmica uterina e cardiotocografia; monitorar: batimento cardíaco fetal; monitorar: ausculta pulmonar · NÃO: pressão sistólica abaixo de 90 mmHg; descolamento prematuro de placenta; corioamnionite; sofrimento fetal; estenose aórtica grave; disfunção ventricular · Obs: Primeira escolha por eficácia e via oral. Suspender se hipotensão, taquicardia materna acima de 120 bpm ou hiperestimulação. Não associar a betamimético pelo risco de edema pulmonar",
+            "dose": {
+              "texto": "20 mg no ataque, depois 10-20 mg; 20 mg, repetir 20 mg após 30 minutos se persistir a contração; manutenção 10-20 mg a cada 6-8 horas; 48 horas; max. 160 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 20,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 160,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "a cada 6-8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "AINE inibidor de prostaglandina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "indometacina",
+            "pos": "50-100 mg no ataque, depois 25 mg. Via retal ou VO. Ataque; manutenção de 25 mg a cada 6 horas. Máximo de 48 horas.",
+            "posTodas": true,
+            "motivo": "tocólise entre 24 e 32 semanas, por no máximo 48 horas (condicional)",
+            "nota": "Uso direto; supositório por via retal e cápsula com alimento - monitorar: índice de líquido amniótico a cada 48 horas; monitorar: ecocardiograma fetal se o uso se prolongar; monitorar: diurese e creatinina maternas; monitorar: plaquetas; monitorar: sangramento · NÃO: idade gestacional acima de 32 semanas; oligoâmnio; disfunção renal; plaquetopenia ou coagulopatia; sangramento digestivo; asma com sensibilidade a AINE; corioamnionite · Obs: Tem teto duplo: idade gestacional até 32 semanas e duração máxima de 48 horas. Depois disso o risco de constrição ductal e oligoâmnio supera o benefício. Não é primeira escolha · Renal: Evitar…",
+            "dose": {
+              "texto": "50-100 mg no ataque, depois 25 mg; ataque; manutenção de 25 mg a cada 6 horas; máximo de 48 horas; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": 100,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "a cada 6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Macrolídeo",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "azitromicina",
+            "pos": "1 g. Via VO. Dose única. Uma dose.",
+            "posTodas": true,
+            "motivo": "associação ao betalactâmico na rotura prematura de membranas para prolongar a latência (condicional)",
+            "nota": "Uso direto - monitorar: diarreia; monitorar: ECG em cardiopata ou em uso de fármaco que prolonga QT; monitorar: transaminases se sintomas · NÃO: alergia a macrolídeo; prolongamento do intervalo QT; miastenia gravis; hepatopatia grave · Obs: Substitui a eritromicina do esquema clássico com melhor tolerância e menos interações. Não usar isolada: o benefício vem da associação com o betalactâmico",
+            "dose": {
+              "texto": "1 g; dose única; uma dose; max. 1 g",
+              "status": "ok",
+              "valor": 1,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 1,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Prostaglandina analogo pge1",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "misoprostol",
+              "n": "Misoprostol",
+              "ap": "comprimido 25 mcg",
+              "q": "",
+              "pos": "25 mcg. Via vaginal ou VO. Via vaginal a cada 6 horas; via oral a cada 2 horas. Até 4 doses ou até o início do trabalho de parto."
+            },
+            "motivo": "indução do trabalho de parto com colo desfavorável (condicional)",
+            "nota": "25 mcg no fórnice posterior da vagina; o comprimido de 200 mcg precisa ser fracionado pela farmácia - monitorar: dinâmica uterina e cardiotocografia a cada 30 minutos; monitorar: batimento cardíaco fetal; monitorar: sangramento; monitorar: sinais de rotura uterina · NÃO: cesárea anterior ou cirurgia uterina para a via vaginal; apresentação anômala; placenta prévia; sofrimento fetal; hiperestimulação; alergia a prostaglandina · Obs: A via vaginal é mais segura que a oral em relação a taquissistolia. Nunca por via vaginal em gestante com cesárea anterior: nessa situação preferir ocitocina com monitorização ou cesárea",
+            "dose": {
+              "texto": "25 mcg; via vaginal a cada 6 horas; via oral a cada 2 horas; até 4 doses ou até o início do trabalho de parto; max. 200 mcg no total por via vaginal",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "a cada 6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Observação com hidratação para diferenciar falso trabalho de parto",
+              "ap": "",
+              "q": "",
+              "pos": "500 mL de SF 0,9% em 2 horas, repouso em decúbito lateral esquerdo e reavaliação do toque ao final; se o colo não mudou, alta com orientação"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Restrição de toque vaginal na rotura de membranas",
+              "ap": "",
+              "q": "",
+              "pos": "Toque apenas com indicação obstétrica definida e registro de hora e profissional; cada exame aumenta o risco de corioamnionite"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Transporte materno in utero",
+              "ap": "",
+              "q": "",
+              "pos": "Transferir a gestante para centro com unidade neonatal, mantendo tocólise e cardiotocografia durante o deslocamento; não transferir o recém-nascido após o parto quando o transporte antes é possível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Cardiotocografia contínua durante a tocólise e o trabalho de parto",
+              "ap": "",
+              "q": "",
+              "pos": "Traçado de 20 a 30 minutos antes de cada dose e monitorização contínua na hiperestimulação, na rotura de membranas e no trabalho de parto"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Decúbito lateral esquerdo na hipotensão e na compressão de veia cava",
+              "ap": "",
+              "q": "",
+              "pos": "Reposicionar antes de reduzir a infusão do tocolítico, porque a hipotensão pode ser postural"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Equipe de neonatologia na sala de parto",
+              "ap": "",
+              "q": "",
+              "pos": "Presença obrigatória abaixo de 34 semanas, com sala aquecida, ventilação com pressão positiva e surfactante disponível"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Registro rigoroso de horários",
+              "ap": "",
+              "q": "",
+              "pos": "Anotar hora da primeira e da segunda dose do corticoide, do início da tocólise, do antibiótico e do magnésio; esses horários definem a janela de benefício e a suspensão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Deambulação, bola e banho no trabalho de parto verdadeiro",
+              "ap": "",
+              "q": "",
+              "pos": "Livre deambulação e métodos não farmacológicos de alívio da dor quando a vitalidade fetal é normal, sem amniotomia de rotina"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GO-04"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Neuroprotetor fetal sal de magnésio",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "sulfato_mg",
+            "motivo": "neuroproteção fetal no parto prematuro abaixo de 32 semanas (1a linha)",
+            "nota": "Ataque: 4 g (40 mL da solução a 10%) em 100 mL de SF 0,9%; manutenção: 10 g em 500 mL de SF 0,9% (20 mg/mL) - monitorar: reflexo patelar; monitorar: frequência respiratória ≥ 12 irpm; monitorar: diurese ≥ 25 mL/h; monitorar: pressão arterial; monitorar: batimento cardíaco fetal; monitorar: magnesemia quando disponível · NÃO: miastenia gravis; insuficiência renal grave; bloqueio atrioventricular; hipermagnesemia · Obs: Reduz paralisia cerebral e morte neonatal quando iniciado antes de 32 semanas e mantido por até 24 horas. Não é tocólise: não interrompe o trabalho de parto e não substitui o nifedipino · Renal: ClCr abaixo de 30…",
+            "dose": {
+              "texto": "4 g no ataque, seguidos de 1 g/h; ataque em 20-30 minutos; manutenção em infusão contínua; até 24 horas ou até o parto; max. 4 g no ataque e 2 g/h na manutenção",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Penicilina aminopenicilina",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ampicilina",
+            "motivo": "rotura prematura de membranas pré-termo para prolongar a latência e profilaxia de estreptococo do grupo B (1a linha)",
+            "nota": "Reconstituir em 10 mL de água destilada; diluir em 100 mL de SF 0,9% ou SG 5% - monitorar: sinais de alergia nas primeiras doses; monitorar: função renal; monitorar: diarreia; monitorar: temperatura e dinâmica uterina · NÃO: alergia a penicilina; mononucleose infecciosa; rash prévio por ampicilina · Obs: Na rotura prematura, o esquema de 7 dias com ampicilina e azitromicina prolonga a latência. Na profilaxia de estreptococo do grupo B: 2 g no início e 1 g a cada 4 horas até o parto · Renal: ClCr abaixo de 30 mL/min: 2 g a cada 12 horas; abaixo de 10 mL/min: 2 g a cada 24 horas",
+            "dose": {
+              "texto": "2 g; a cada 6 horas por 48 horas; depois amoxicilina 500 mg por via oral a cada 8 horas; 7 dias no total; max. 12 g/dia",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "a cada 6 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antagonista da ocitocina",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "atosibana",
+              "n": "Atosibana",
+              "ap": "frasco 6,75 mg/0,9 mL (7,5 mg/mL)",
+              "via": "IV",
+              "pos": "6,75 mg em bolus, seguidos de 18 mg/h e depois 6 mg/h. Via IV. Bolus único; infusão contínua em duas fases. Até 48 horas. Bolus em 1 minuto; infusão contínua, com 18 mg/h por 3 horas e depois 6 mg/h."
+            },
+            "motivo": "tocólise em gestante com cardiopatia, hipotensão ou contraindicação ao nifedipino (alternativa)",
+            "nota": "Bolus de 0,9 mL sem diluir em 1 minuto; infusão: 5 mL (37,5 mg) em 500 mL de SF 0,9% ou Ringer lactato (75 mcg/mL) - monitorar: pressão arterial e frequência cardíaca; monitorar: dinâmica uterina e cardiotocografia; monitorar: sódio e glicemia; monitorar: balanço hídrico · NÃO: idade gestacional abaixo de 24 ou acima de 33 semanas; corioamnionite; descolamento prematuro de placenta; pré-eclâmpsia grave; rotura de membranas acima de 30 semanas; óbito fetal · Obs: Perfil cardiovascular melhor que o do betamimético e útil na cardiopata, mas custo alto e disponibilidade restrita. Não é superior ao nifedipino em eficácia",
+            "dose": {
+              "texto": "6,75 mg em bolus, seguidos de 18 mg/h e depois 6 mg/h; bolus único; infusão contínua em duas fases; até 48 horas; max. 18 mg/h na primeira fase e 6 mg/h na manutenção",
+              "status": "ok",
+              "valor": 6.75,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 18,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Penicilina natural",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "penicilina_cristalina",
+              "n": "Penicilina cristalina",
+              "ap": "frasco 1.000.000 UI",
+              "via": "IV",
+              "pos": "5 milhões UI no ataque, depois 2,5-3 milhões UI. Via IV. Ataque; manutenção a cada 4 horas até o parto. Até o parto. 30 minutos."
+            },
+            "motivo": "profilaxia de estreptococo do grupo B em trabalho de parto quando a ampicilina não está disponível (alternativa)",
+            "nota": "Reconstituir em 10 mL de água destilada; diluir em 100 mL de SF 0,9% - monitorar: sinais de alergia; monitorar: função renal; monitorar: potássio pela apresentação potássica; monitorar: nível de consciência · NÃO: alergia a penicilina; histórico de anafilaxia a betalactâmico · Obs: Esquema de referência para estreptococo do grupo B: 5 milhões UI e depois 2,5–3 milhões UI a cada 4 horas. Cada milhão de UI da apresentação potássica contém cerca de 1,7 mEq de potássio · Renal: ClCr abaixo de 10 mL/min: reduzir a dose à metade e espaçar para 6 horas",
+            "dose": {
+              "texto": "5 milhões UI no ataque, depois 2,5-3 milhões UI; ataque; manutenção a cada 4 horas até o parto; até o parto; max. 24 milhões UI/dia",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 4,
+              "freq_texto": "a cada 4 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Uterotonico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ocitocina",
+              "n": "Ocitocina",
+              "ap": "ampola 5 UI/mL (1 mL)",
+              "via": "IV",
+              "pos": "Iniciar 1-2 mUI/min, com aumento de 1-2 mUI/min. Via IV. Infusão contínua, com reajuste a cada 30 minutos. Até o parto. Infusão contínua, titulada a cada 30 minutos."
+            },
+            "motivo": "indução e condução do trabalho de parto verdadeiro com colo favorável ou hipodinamia (condicional)",
+            "nota": "5 UI em 500 mL de SF 0,9% ou Ringer lactato (10 mUI/mL); nunca em bolus - monitorar: dinâmica uterina a cada 30 minutos (alvo de 3 a 5 contrações em 10 minutos); monitorar: cardiotocografia contínua; monitorar: pressão arterial e frequência cardíaca; monitorar: sódio em infusão prolongada; monitorar: sangramento · NÃO: desproporção cefalopélvica; apresentação anômala; placenta prévia; sofrimento fetal; hiperestimulação uterina; cesárea corporal prévia; prolapso de cordão · Obs: É para indução e hipodinamia, não para tocólise. Suspender na hiperestimulação, na alteração da cardiotocografia e no sofrimento fetal",
+            "dose": {
+              "texto": "iniciar 1-2 mUI/min, com aumento de 1-2 mUI/min; infusão contínua, com reajuste a cada 30 minutos; até o parto; max. 20-30 mUI/min",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 30 min",
+              "freq_min": 30,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GO-04",
+    "versao": "0.2.0",
+    "arquivo": "GO-04_parto.json",
+    "area": "Ginecologia/Obstetrícia",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

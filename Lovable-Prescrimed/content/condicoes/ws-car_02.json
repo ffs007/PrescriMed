@@ -1,0 +1,599 @@
+{
+  "id": "ws-car_02",
+  "nome": "Crise hipertensiva (urgência vs emergência)",
+  "cat": "Emergência",
+  "alias": "crise hipertensiva crise hipertensiva emergencia hipertensiva urgencia hipertensiva hipertensao grave pressao alta",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-02_crise_hipertensiva.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: protocolo de crise hipertensiva e alvos por órgão",
+      "[verificar] sociedade_cardiologia: definição de emergência e urgência e velocidade de redução",
+      "[verificar] diretriz_obstetrica: alvo na eclâmpsia e uso de sulfato de magnésio",
+      "[verificar] anvisa: apresentações e concentrações disponíveis no serviço"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-02 em 2026-11-27",
+    "fundido_workspace": "CAR-02 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: confusão, cefaleia intensa, vômitos ou déficit focal -> UTI, nitroprussiato IV e tomografia de crânio; dispneia, estertores e hipoxemia -> nitroglicerina IV, furosemida e ventilação não invasiva; dor torácica ou supra de ST -> protocolo de SCA e cateterismo; dor transfixante com assimetria de pulsos -> betabloqueador IV e angio-TC de aorta. 1) Confirmar a medida com manguito adequado e repetir após 5 min de repouso 2) Procurar lesão de órgão-alvo: neurológico, fundoscopia, ausculta pulmonar, dor torácica, urina e creatinina 3) Sem lesão de órgão-alvo: urgência - via oral, observação de 1-2 h e alta com retorno em 7 dias 4) Com lesão de órgão-alvo: emergência - unidade de terapia intensiva, acesso calibroso e droga intravenosa titulável 5) Escolher a droga pelo órgão lesado: nitroprussiato na encefalopatia, nitroglicerina no edema e na coronária, betabloqueador na dissecção, hidralazina na eclâmpsia 6) Definir alvo por escrito antes de iniciar a infusão e reavaliar a cada 5-15 min 7) Investigar causa secundária e má adesão: rim, renal, apneia do sono, cocaína, suspensão de droga 8) Transição para via oral em 6-12 h, retirar a infusão de forma escalonada e agendar seguimento em 7 dias",
+  "redFlags": [
+    "confusão, cefaleia intensa, vômitos ou déficit focal -> UTI, nitroprussiato IV e tomografia de crânio",
+    "dispneia, estertores e hipoxemia -> nitroglicerina IV, furosemida e ventilação não invasiva",
+    "dor torácica ou supra de ST -> protocolo de SCA e cateterismo",
+    "dor transfixante com assimetria de pulsos -> betabloqueador IV e angio-TC de aorta",
+    "gestante com cefaleia, escotomas e dor epigástrica -> hidralazina, sulfato de magnésio e obstetrícia",
+    "perda visual com papiledema ou hemorragia retiniana -> emergência com controle gradual e fundoscopia seriada",
+    "oligúria, hematúria ou creatinina em ascensão -> ajustar droga, suspender nefrotóxico e avaliar diálise",
+    "cefaleia súbita intensa com rebaixamento -> tomografia imediata e redução suave da pressão"
+  ],
+  "naoUsar": [
+    "gestação",
+    "dissecção de aorta como droga isolada",
+    "insuficiência cardíaca com baixo débito e hipotensão",
+    "insuficiência hepática grave",
+    "anemia grave",
+    "hipovolemia não corrigida",
+    "sildenafila nas últimas 24 h ou tadalafila nas últimas 48 h",
+    "pressão sistólica < 90 mmHg"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "manter o anti-hipertensivo oral todos os dias, mesmo assintomático"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "nifedipino sublingual de ação rápida"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Inibidor da eca",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "captopril",
+            "pos": "25 mg. Via VO. Dose única; reavaliar em 1-2 h. Dose única na urgência; manutenção 12/12 h.",
+            "posTodas": true,
+            "motivo": "urgência hipertensiva sem lesão de órgão-alvo (1a linha)",
+            "nota": "Uso direto - monitorar: pressão em 1 e 2 h; monitorar: creatinina e potássio em 7 dias; monitorar: diurese · NÃO: gestação; estenose bilateral de artéria renal; hipercalemia; angioedema prévio por IECA; lesão renal aguda · Obs: Eficaz na urgência, mas não repetir de hora em hora: queda de 25% em 1 h já é o suficiente. Não usar na emergência · Renal: ClCr < 30 mL/min: iniciar 6,25 mg; evitar se a creatinina estiver em ascensão",
+            "dose": {
+              "texto": "25 mg; dose única; reavaliar em 1-2 h; dose única na urgência; manutenção 12/12 h; max. 50 mg na primeira hora",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 50,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Bloqueador de canal de cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_anlodipino",
+            "pos": "5 mg. Via VO. 1x/dia. Uso contínuo.",
+            "posTodas": true,
+            "motivo": "urgência hipertensiva, sobretudo em idosos e em pacientes negros (alternativa) controle de pressão",
+            "nota": "Uso direto - monitorar: pressão em 24 h e em 7 dias; monitorar: edema de membros inferiores; monitorar: frequência cardíaca",
+            "dose": {
+              "texto": "5 mg; 1x/dia; uso contínuo; max. 10 mg/dia",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Agonista alfa 2 central",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "clonidina",
+              "n": "Clonidina",
+              "ap": "comprimido 0,1 mg e 0,15 mg",
+              "q": "",
+              "pos": "0,1-0,2 mg. Via VO. Dose única; repetir 0,1 mg após 1 h se necessário. Dose única na urgência; manutenção 12/12 h."
+            },
+            "motivo": "urgência hipertensiva com ansiedade, tremor ou abstinência de anti-hipertensivo de ação central (alternativa)",
+            "nota": "Uso direto - monitorar: pressão e frequência em 1 e 2 h; monitorar: nível de consciência; monitorar: sinais de rebote em 24-48 h · NÃO: bradicardia; bloqueio atrioventricular; hipotensão; depressão grave; uso concomitante de IMAO · Obs: Nunca suspender de forma abrupta: a retirada causa crise de rebote mais grave que a inicial · Renal: ClCr < 30 mL/min: reduzir dose e espaçar intervalo",
+            "dose": {
+              "texto": "0,1-0,2 mg; dose única; repetir 0,1 mg após 1 h se necessário; dose única na urgência; manutenção 12/12 h; max. 0,3 mg na primeira hora",
+              "status": "ok",
+              "valor": 0.1,
+              "valor_max": 0.2,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.3,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Repouso de 5 minutos antes da medida e manguito adequado",
+              "ap": "",
+              "q": "",
+              "pos": "Largura da bolsa de 40% da circunferência do braço; braço apoiado na altura do coração"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Medida nos dois braços na primeira avaliação",
+              "ap": "",
+              "q": "",
+              "pos": "Diferença acima de 20 mmHg sugere doença vascular ou dissecção e muda a conduta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Ambiente calmo e silencioso",
+              "ap": "",
+              "q": "",
+              "pos": "Sem tabagismo, cafeína ou exercício nos 30 minutos anteriores; bexiga vazia"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Retirada de drogas pressoras",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender descongestionante nasal, AINE, corticoide, eritropoetina, IMAO e cocaína"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Restrição de sódio e dieta adequada",
+              "ap": "",
+              "q": "",
+              "pos": "Menos de 5 g de sal por dia, com orientação nutricional na alta"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Ventilação não invasiva no edema agudo",
+              "ap": "",
+              "q": "",
+              "pos": "CPAP de 5–10 cmH2O ou BIPAP se hipoxemia e esforço respiratório, com reavaliação em 30 min"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Sonda vesical para diurese horária",
+              "ap": "",
+              "q": "",
+              "pos": "Indicada quando se usa furosemida ou vasodilatador em emergência com oligúria"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Transição planejada de via venosa para oral",
+              "ap": "",
+              "q": "",
+              "pos": "Iniciar anti-hipertensivo oral em 6–12 h e retirar a infusão de forma escalonada, com medida a cada 15 min"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-02"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Vasodilatador arterial venoso",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nitroprussiato_de_sodio",
+              "n": "Nitroprussiato de sódio",
+              "ap": "frasco 50 mg/2 mL (25 mg/mL)",
+              "via": "IV",
+              "pos": "0,3-0,5 mcg/kg/min, titular. Via IV. Infusão contínua. Até 24-48 horas, com transição para via oral. Infusão contínua; titular a cada 5 min."
+            },
+            "motivo": "emergência hipertensiva com lesão de órgão-alvo, exceto gestação e dissecção como monoterapia (1a linha)",
+            "nota": "50 mg em 250 mL de SG 5% (200 mcg/mL); proteger da luz com papel alumínio e usar bomba de infusão - monitorar: pressão arterial invasiva se infusão acima de 30 min; monitorar: frequência cardíaca; monitorar: lactato e gasometria a cada 6 h se dose acima de 4 mcg/kg/min ou uso acima de 24 h; monitorar: nível de consciên · NÃO: gestação; dissecção de aorta como droga isolada; insuficiência cardíaca com baixo débito e hipotensão; insuficiência hepática grave; anemia grave; hipovolemia não corrigida · Obs: Primeira escolha na encefalopatia. Não passar de 10 mcg/kg/min: se não atingir o alvo, associar outra droga. Suspender de forma…",
+            "dose": {
+              "texto": "0,3-0,5 mcg/kg/min, titular; infusão contínua; até 24-48 horas, com transição para via oral; max. 10 mcg/kg/min",
+              "status": "ok",
+              "valor": 0.3,
+              "valor_max": 0.5,
+              "unidade": "mcg/kg/min",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 10,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Nitrato",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nitroglicerina_intravenosa",
+              "n": "Nitroglicerina intravenosa",
+              "ap": "ampola 5 mg/mL (5 mL, 25 mg)",
+              "via": "IV",
+              "pos": "5-10 mcg/min, titular. Via IV. Infusão contínua. Até 48 horas. Infusão contínua; titular a cada 5 min."
+            },
+            "motivo": "edema agudo de pulmão hipertensivo, síndrome coronariana aguda e dissecção após betabloqueador (1a linha)",
+            "nota": "25 mg em 250 mL de SF 0,9% ou SG 5% (100 mcg/mL); bomba de infusão dedicada - monitorar: pressão arterial a cada 5 min durante a titulação; monitorar: frequência cardíaca; monitorar: cefaleia; monitorar: saturação · NÃO: sildenafila nas últimas 24 h ou tadalafila nas últimas 48 h; pressão sistólica < 90 mmHg; infarto de ventrículo direito; hipovolemia; aumento de pressão intracraniana · Obs: Preferida no edema agudo e na síndrome coronariana; menos eficaz como monoterapia na encefalopatia",
+            "dose": {
+              "texto": "5-10 mcg/min, titular; infusão contínua; até 48 horas; max. 200 mcg/min",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mcg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Vasodilatador arteriolar",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "hidralazina_ev",
+            "motivo": "eclâmpsia e pré-eclâmpsia grave (1a linha)",
+            "nota": "Diluir 1 mL (20 mg) em 9 mL de SF 0,9% (2 mg/mL) e administrar 5-10 mg - monitorar: pressão a cada 10-15 min; monitorar: frequência cardíaca; monitorar: batimento cardíaco fetal e vitalidade fetal na gestante",
+            "dose": {
+              "texto": "5-10 mg; a cada 20-30 min, até 3 doses; até atingir a pressão alvo; depois manutenção por via oral; max. 30 mg no episódio",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 20-30 min",
+              "freq_min": 20,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Betabloqueador de ação ultracurta",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "esmolol",
+              "n": "Esmolol",
+              "ap": "ampola 250 mg/10 mL (25 mg/mL)",
+              "via": "IV",
+              "pos": "500 mcg/kg em bolus, seguido de 50 mcg/kg/min. Via IV. Infusão contínua, titular de 25 em 25 mcg/kg/min. 24-48 horas, até controle. Bolus em 1 min; infusão contínua."
+            },
+            "motivo": "dissecção de aorta e taquiarritmia com hipertensão quando é preciso titular minuto a minuto (alternativa)",
+            "nota": "Diluir 2,5 g em 250 mL de SF 0,9% ou SG 5% (10 mg/mL); via exclusiva, nunca em acesso compartilhado - monitorar: pressão e frequência a cada 5 min; monitorar: ECG contínuo; monitorar: sítio de infusão, pois extravasamento causa necrose · NÃO: cocaína ou anfetamina; frequência cardíaca < 50 bpm; bloqueio atrioventricular de 2º ou 3º grau; asma grave; choque cardiogênico · Obs: Meia-vida de 9 minutos: é a melhor escolha quando há instabilidade, porque a hipotensão reverte rápido ao suspender",
+            "dose": {
+              "texto": "500 mcg/kg em bolus, seguido de 50 mcg/kg/min; infusão contínua, titular de 25 em 25 mcg/kg/min; 24-48 horas, até controle; max. 300 mcg/kg/min",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mcg/kg",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Betabloqueador com ação alfa",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "labetalol",
+              "n": "Labetalol",
+              "ap": "ampola 5 mg/mL (20 mL, 100 mg)",
+              "via": "IV",
+              "pos": "20 mg IV em 2 min, depois 20-80 mg a cada 10 min. A cada 10 min até o alvo. Fase aguda; manutenção 100-200 mg VO 12/12 h. Bolus em 2 min; infusão contínua de 0,5-2 mg/min."
+            },
+            "motivo": "eclâmpsia e pré-eclâmpsia grave quando a hidralazina falha ou quando há taquicardia (alternativa)",
+            "nota": "IV sem diluição em bolus; para infusão contínua, 100 mg em 100 mL de SF (1 mg/mL) - monitorar: pressão e frequência a cada 10 min; monitorar: ausculta pulmonar; monitorar: glicemia do recém-nascido nas primeiras 24 h · NÃO: frequência cardíaca < 50 bpm; insuficiência cardíaca descompensada; bloqueio atrioventricular; cocaína · Obs: Opção obstétrica quando a hidralazina não está disponível; não é a melhor escolha na dissecção, que exige titulação mais fina",
+            "dose": {
+              "texto": "20 mg IV em 2 min, depois 20-80 mg a cada 10 min; a cada 10 min até o alvo; fase aguda; manutenção 100-200 mg VO 12/12 h; max. 300 mg por via IV no episódio",
+              "status": "ok",
+              "valor": 20,
+              "valor_max": 80,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 300,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 12,
+              "freq_texto": "12/12 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Betabloqueador",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "metoprolol",
+              "n": "Metoprolol",
+              "ap": "ampola 1 mg/mL (5 mL)",
+              "via": "IV ou VO",
+              "pos": "5 mg IV a cada 5 min, até 3 doses; manutenção 25-50 mg VO 6/6 h. 5/5 min na fase aguda. Fase aguda, com transição para via oral em 24-48 h. Bolus lento em 1-2 min."
+            },
+            "motivo": "dissecção de aorta, síndrome coronariana associada e taquicardia com pressão elevada (condicional) cardiopatia associada",
+            "nota": "IV: usar sem diluição em bolus lento; VO: uso direto - monitorar: frequência cardíaca e pressão antes de cada dose; monitorar: ECG contínuo; monitorar: ausculta respiratória · NÃO: cocaína ou anfetamina na fase aguda; frequência cardíaca < 50 bpm; bloqueio atrioventricular de 2º ou 3º grau; asma grave descompensada; insuficiência cardíaca descompensada; pressão sistólica < 90 mmHg · Obs: Na dissecção é a primeira droga: só depois de bloquear a frequência se inicia o vasodilatador",
+            "dose": {
+              "texto": "5 mg IV a cada 5 min, até 3 doses; manutenção 25-50 mg VO 6/6 h; 5/5 min na fase aguda; fase aguda, com transição para via oral em 24-48 h; max. 15 mg IV na fase aguda",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": 50,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 15,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Diurético de de alça",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "furosemida_ev",
+            "motivo": "edema agudo de pulmão com sobrecarga de volume e oligúria (condicional)",
+            "nota": "Bolus lento direto; para infusão contínua, 100 mg em 100 mL de SF (1 mg/mL) - monitorar: diurese horária; monitorar: peso diário; monitorar: potássio, sódio e creatinina a cada 12-24 h; monitorar: ausculta pulmonar · NÃO: hipovolemia; anúria sem sobrecarga; hipocalemia grave; encefalopatia hepática · Obs: Só na sobrecarga; não é anti-hipertensivo de rotina e não substitui o vasodilatador no edema agudo · Renal: Doses maiores com ClCr baixo; efeito reduzido, considerar ultrafiltração",
+            "dose": {
+              "texto": "40-80 mg; bolus; repetir em 1-2 h se diurese insuficiente; até compensação da congestão; max. 200 mg por dose",
+              "status": "ok",
+              "valor": 40,
+              "valor_max": 80,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Benzodiazepínico",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "diazepam_ev",
+            "motivo": "crise hipertensiva por cocaína, anfetamina ou abstinência alcoólica (condicional)",
+            "nota": "Diluir 1 mL (5 mg) em 9 mL de SF 0,9%; administrar lentamente - monitorar: frequência respiratória e saturação; monitorar: pressão arterial; monitorar: nível de consciência · NÃO: depressão respiratória; miastenia gravis; hipotensão não corrigida; apneia do sono grave sem suporte · Obs: Trata a causa, que é a descarga simpática, antes de escalar o vasodilatador",
+            "dose": {
+              "texto": "5-10 mg; dose única; repetir após 5-10 min se necessário; até controle da agitação e da pressão; max. 20 mg na primeira hora",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "CAR-02",
+    "versao": "0.2.0",
+    "arquivo": "CAR-02_crise_hipertensiva.json",
+    "area": "Cardiovascular",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

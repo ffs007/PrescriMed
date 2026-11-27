@@ -1,0 +1,534 @@
+{
+  "id": "ws-car_14",
+  "nome": "Taquicardia supraventricular",
+  "cat": "Emergência",
+  "alias": "taquicardia supraventricular taquicardia supraventricular tsv taquicardia paroxistica supraventricular tpsv taquicardia de qrs estreito regular taquicardia por reentrada nodal avnrt taquicardia por reentrada atrioventricular avrt",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (CAR-14_tsv.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: protocolo de taquiarritmia e fluxo de sala vermelha",
+      "[verificar] sociedade_cardiologia: diretriz de taquicardia supraventricular e uso de adenosina",
+      "[verificar] acls: algoritmo de taquicardia de QRS estreito e energias de cardioversão",
+      "[verificar] anvisa: apresentações, diluições e estabilidade das ampolas"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "CAR-14 em 2026-11-27",
+    "fundido_workspace": "CAR-14 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: PAS menor que 90 mmHg, choque ou necessidade de vasopressor -> cardioversão sincronizada imediata, sem atrasar por exames; rebaixamento de consciência, síncope ou convulsão -> cardioversão sincronizada e sala vermelha; dor torácica isquêmica ou alteração de ST -> cardioversão e protocolo de SCA em paralelo; dispneia, ortopneia ou crepitações pulmonares -> cardioversão imediata, oxigênio e ventilação. 1) ABC, monitor cardíaco, oximetria, dois acessos e ECG de 12 derivações em até 10 minutos 2) Instável (PAS menor que 90, rebaixamento, dor isquêmica ou edema pulmonar): cardioversão sincronizada imediata (BOX-11), sem atrasar por exames 3) Estável: confirmar QRS estreito (menor que 120 ms) e ritmo regular; QRS largo segue o fluxo de taquicardia ventricular 4) QRS estreito e regular: manobra vagal modificada; se falhar, adenosina 6 mg em bolus rápido com flush de 20 mL, depois 12 mg 5) Sem conversão: metoprolol IV ou diltiazem IV (diltiazem se asma); reavaliar PA e ritmo após cada dose 6) Refratária ou recorrente: amiodarona ou procainamida; se pré-excitação, não usar bloqueador do nó AV 7) Buscar e corrigir causa reversível: tireoide, eletrólitos, anemia, hipovolemia, sepse e fármacos 8) Após conversão: ECG, eletrólitos, TSH, ecocardiograma e encaminhamento para ablação se recorrente",
+  "redFlags": [
+    "PAS menor que 90 mmHg, choque ou necessidade de vasopressor -> cardioversão sincronizada imediata, sem atrasar por exames",
+    "rebaixamento de consciência, síncope ou convulsão -> cardioversão sincronizada e sala vermelha",
+    "dor torácica isquêmica ou alteração de ST -> cardioversão e protocolo de SCA em paralelo",
+    "dispneia, ortopneia ou crepitações pulmonares -> cardioversão imediata, oxigênio e ventilação",
+    "QRS com 120 ms ou mais na taquicardia -> não tratar como TSV; cardioversão se instável, amiodarona se estável",
+    "onda delta, PR curto ou história de WPW -> evitar adenosina, diltiazem, verapamil e digoxina",
+    "FC acima de 220 bpm com QRS estreito em repouso -> monitor contínuo e cardioversão precoce se instabilidade",
+    "asma grave, broncoespasmo ativo ou DPOC exacerbado -> usar diltiazem ou cardioversão; não usar adenosina"
+  ],
+  "naoUsar": [
+    "asma grave ou broncoespasmo ativo",
+    "pré-excitação (WPW) com taquicardia antidrômica ou fibrilação atrial pré-excitada",
+    "bloqueio AV de 2º grau Mobitz II ou de 3º grau sem marca-passo",
+    "hipotensão ou choque",
+    "hipersensibilidade à adenosina",
+    "insuficiência cardíaca descompensada",
+    "bradicardia com FC menor que 50 bpm",
+    "bloqueio AV de 2º ou 3º grau"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "Fazer o ECG e levar o traçado ao retorno ou à consulta de cardiologia"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "Dirigir ou operar máquinas após síncope até avaliação"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Monitorização cardíaca contínua",
+              "ap": "",
+              "q": "",
+              "pos": "ECG contínuo com alarme para FC acima de 150 bpm, pausa maior que 3 segundos e QRS largo, desde a chegada e por no mínimo 4 horas após a conversão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Dois acessos venosos calibrosos",
+              "ap": "",
+              "q": "",
+              "pos": "18 G ou maior, um deles em veia antecubital, para o bolus de adenosina e para a sedação da cardioversão"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Posição e execução correta da manobra vagal",
+              "ap": "",
+              "q": "",
+              "pos": "Paciente sentado, 15 segundos de expiração forçada contra a glote fechada; deitar imediatamente e elevar as pernas por 15 segundos, com monitor e acesso prontos"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Oxigênio apenas se saturação menor que 90%",
+              "ap": "",
+              "q": "",
+              "pos": "Hiperóxia não traz benefício e resseca a mucosa; manter oximetria contínua"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Retirada de estimulantes e revisão de fármacos",
+              "ap": "",
+              "q": "",
+              "pos": "Suspender cafeína, energético, álcool, cocaína e anfetamina; revisar descongestionantes, teofilina, dipiridamol e fármacos que prolongam QT"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Desfibrilador e material de via aérea à beira do leito",
+              "ap": "",
+              "q": "",
+              "pos": "Antes de qualquer bolus de adenosina e antes da sedação para cardioversão, com pás conectadas e testadas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Registro da tira de ritmo",
+              "ap": "",
+              "q": "",
+              "pos": "Imprimir o traçado durante a pausa da adenosina: revela se o mecanismo é AVNRT, AVRT, flutter ou taquicardia atrial"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_8",
+              "n": "Restrição de direção e esforço",
+              "ap": "",
+              "q": "",
+              "pos": "Orientar não dirigir nem operar máquinas até a avaliação eletrofisiológica, principalmente após síncope ou pré-síncope"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "CAR-14"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antiarrítmico nucleosideo",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "adenosina",
+              "n": "Adenosina",
+              "ap": "frasco 3 mg/mL - 2 mL (6 mg)",
+              "via": "IV",
+              "pos": "6 mg. Via IV. Bolus rápido; se não converter em 1-2 min, 12 mg; repetir 12 mg uma vez. 1 a 3 doses. Bolus em 1-2 segundos (meia-vida menor que 10 segundos)."
+            },
+            "motivo": "TSV de QRS estreito, regular e estável, após falha da manobra vagal; também serve de teste diagnóstico, pois a pausa transitória revela flutter ou taquicardia atrial (1a linha)",
+            "nota": "Não diluir. Aplicar em acesso venoso calibroso o mais próximo do tórax (antecubital), em bolus de 1-2 s, seguido imediatamente de flush de 20 mL de SF 0,9% pela mesma seringa ou por torneira de três vias - monitorar: ECG contínuo durante e após o bolus, com tira de ritmo registrada; monitorar: PA a cada 2 minutos; moni · NÃO: asma grave ou broncoespasmo ativo; pré-excitação (WPW) com taquicardia antidrômica ou fibrilação atrial pré-excitada; bloqueio AV de 2º grau Mobitz II ou de 3º grau sem marca-passo; hipotensão ou choque; hipersensibilidade à adenosina · Obs: Avisar o paciente do rubor e do aperto torácico transitório antes do…",
+            "dose": {
+              "texto": "6 mg; bolus rápido; se não converter em 1-2 min, 12 mg; repetir 12 mg uma vez; 1 a 3 doses; max. 12 mg por dose; até 30 mg no episódio (6 + 12 + 12)",
+              "status": "ok",
+              "valor": 6,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 12,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Betabloqueador",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "metoprolol",
+              "n": "Metoprolol",
+              "ap": "ampola 1 mg/mL (5 mL)",
+              "via": "IV",
+              "pos": "2,5 a 5 mg. Via IV. A cada 5 minutos, até 3 doses. 15 minutos. Bolus lento em 1-2 minutos."
+            },
+            "motivo": "TSV não convertida ou recorrente após adenosina; controle de frequência e prevenção de recidiva precoce (alternativa) prevenção de recidiva de TSV após conversão",
+            "nota": "Uso direto IV; não diluir - monitorar: FC e ritmo; monitorar: PA após cada dose; monitorar: broncoespasmo e saturação; monitorar: crepitações pulmonares; monitorar: perfusão periférica · NÃO: asma grave ou broncoespasmo ativo; insuficiência cardíaca descompensada; bradicardia com FC menor que 50 bpm; bloqueio AV de 2º ou 3º grau; choque cardiogênico; pré-excitação com fibrilação atrial; intoxicação por cocaína · Obs: Não associar a diltiazem ou verapamil IV: a soma de efeitos negativos causa bradicardia e hipotensão graves. Não usar em pré-excitação.",
+            "dose": {
+              "texto": "2,5 a 5 mg; a cada 5 minutos, até 3 doses; 15 minutos; max. 15 mg",
+              "status": "ok",
+              "valor": 2.5,
+              "valor_max": 5,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 15,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 5 min",
+              "freq_min": 5,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "esmolol",
+              "n": "Esmolol",
+              "ap": "ampola 10 mg/mL (10 mL - 100 mg)",
+              "via": "IV",
+              "pos": "500 mcg/kg em bolus, seguido de 50 mcg/kg/min. Via IV. Bolus único e infusão contínua titulada a cada 4 minutos. Até 24 horas. Bolus em 1 minuto; infusão contínua."
+            },
+            "motivo": "TSV em que é preciso titulação rápida e desmame imediato, ou quando há dúvida sobre a tolerância hemodinâmica (alternativa)",
+            "nota": "Bolus sem diluir; infusão de 100 mg em 100 mL de SF (1 mg/mL) ou 2,5 g em 250 mL (10 mg/mL) em bomba de infusão - monitorar: FC e ritmo; monitorar: PA a cada 5 minutos na titulação; monitorar: broncoespasmo; monitorar: local da infusão · NÃO: asma grave ou broncoespasmo ativo; insuficiência cardíaca descompensada; bradicardia grave; bloqueio AV avançado sem marca-passo; choque cardiogênico; pré-excitação com fibrilação atrial · Obs: Meia-vida de cerca de 9 minutos: é a escolha quando o paciente tem reserva cardíaca limítrofe, porque o efeito desaparece logo após suspender.",
+            "dose": {
+              "texto": "500 mcg/kg em bolus, seguido de 50 mcg/kg/min; bolus único e infusão contínua titulada a cada 4 minutos; até 24 horas; max. 200 mcg/kg/min",
+              "status": "ok",
+              "valor": 500,
+              "valor_max": null,
+              "unidade": "mcg/kg",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mcg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": "a cada 4 min",
+              "freq_min": 4,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Bloqueador canal cálcio",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "diltiazem",
+              "n": "Diltiazem",
+              "ap": "ampola 5 mg/mL (2 mL)",
+              "via": "IV",
+              "pos": "0,25 mg/kg (usual 20 mg). Via IV. Repetir 0,35 mg/kg após 15 min se necessário; manutenção 5-15 mg/h. Bolus e infusão por até 24 horas. Bolus em 2 minutos; infusão contínua."
+            },
+            "motivo": "TSV estável quando o betabloqueador é contraindicado (asma, broncoespasmo) ou insuficiente (alternativa) prevenção de recidiva quando betabloqueador é contraindicado",
+            "nota": "Bolus direto ou diluído em 20 mL de SF, infundido em 2 min; infusão de 25 mg em 250 mL de SF (0,1 mg/mL) ou 125 mg em 500 mL - monitorar: PA e FC a cada 5 minutos após o bolus; monitorar: ECG contínuo; monitorar: sinais de congestão pulmonar; monitorar: função hepática · NÃO: insuficiência cardíaca descompensada com fração de ejeção reduzida; pré-excitação (WPW) ou fibrilação atrial pré-excitada; hipotensão com PAS menor que 90 mmHg; bloqueio AV avançado sem marca-passo; choque cardiogênico · Obs: Nunca em pré-excitação: o bloqueio do nó AV acelera a condução pelo feixe acessório e pode degenerar em fibrilação ventricular. Não…",
+            "dose": {
+              "texto": "0,25 mg/kg (usual 20 mg); repetir 0,35 mg/kg após 15 min se necessário; manutenção 5-15 mg/h; bolus e infusão por até 24 horas; max. 0,35 mg/kg ou 20 mg por bolus; 15 mg/h",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 15,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.35,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "verapamil",
+              "n": "Verapamil",
+              "ap": "ampola 2,5 mg/mL (2 mL)",
+              "via": "IV",
+              "pos": "5 a 10 mg (0,075 a 0,15 mg/kg). Via IV. Repetir 10 mg após 15-30 min se necessário. 1 a 2 doses. 2 a 3 minutos (não exceder 5 mg/min em idoso)."
+            },
+            "motivo": "TSV estável quando o diltiazem não está disponível (alternativa)",
+            "nota": "Diluir em 10 mL de SF 0,9% - monitorar: PA e FC a cada 5 minutos; monitorar: ECG contínuo; monitorar: sinais de congestão; monitorar: nível de consciência · NÃO: insuficiência cardíaca com fração de ejeção reduzida; pré-excitação (WPW) ou fibrilação atrial pré-excitada; hipotensão; bloqueio AV avançado sem marca-passo; uso concomitante de betabloqueador IV · Obs: Mais hipotensor e mais depressor da contratilidade que o diltiazem; evitar em idoso e em fração de ejeção reduzida.",
+            "dose": {
+              "texto": "5 a 10 mg (0,075 a 0,15 mg/kg); repetir 10 mg após 15-30 min se necessário; 1 a 2 doses; max. 20 mg",
+              "status": "ok",
+              "valor": 5,
+              "valor_max": 10,
+              "unidade": "mg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 20,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiarrítmico classe iii",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "amiodarona",
+              "n": "Amiodarona",
+              "ap": "ampola 50 mg/mL (3 mL)",
+              "via": "IV",
+              "pos": "150 mg. Via IV. Em 10 min; repetir até 3 vezes; manutenção 1 mg/min por 6 h e 0,5 mg/min por 18 h. 24 horas. Bolus em 10 minutos; infusão contínua de 6 a 24 horas."
+            },
+            "motivo": "TSV refratária a adenosina, betabloqueador e diltiazem, ou quando não se pode excluir taquicardia ventricular (condicional)",
+            "nota": "Diluir 150 mg em 100 mL de SG 5% (não usar SF: precipita); preferir acesso venoso central - monitorar: PA durante o bolus; monitorar: FC e QTc; monitorar: função hepática; monitorar: TSH e T4 livre; monitorar: flebite no acesso · NÃO: bradicardia grave; bloqueio AV sem marca-passo; tireotoxicose não controlada; gestação; choque cardiogênico · Obs: Não é primeira linha na TSV. Suspender se QTc maior que 500 ms. Não associar a outros fármacos que prolongam QT.",
+            "dose": {
+              "texto": "150 mg; em 10 min; repetir até 3 vezes; manutenção 1 mg/min por 6 h e 0,5 mg/min por 18 h; 24 horas; max. 2,2 g em 24 horas",
+              "status": "ok",
+              "valor": 150,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 2.2,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antiarrítmico classe ia",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "procainamida",
+              "n": "Procainamida",
+              "ap": "ampola 100 mg/mL (10 mL - 1 g)",
+              "via": "IV",
+              "pos": "10 a 15 mg/kg. Via IV. Infusão; manutenção 1 a 4 mg/min. Até 24 horas. 25 a 30 minutos."
+            },
+            "motivo": "TSV com pré-excitação (taquicardia antidrômica ou fibrilação atrial pré-excitada) e TSV refratária sem cardiopatia estrutural (condicional)",
+            "nota": "Diluir em 100 a 250 mL de SF 0,9%; infundir em bomba de infusão - monitorar: PA a cada 5 minutos; monitorar: ECG contínuo com QTc e largura do QRS; monitorar: perfusão periférica; monitorar: nível de consciência · NÃO: QT longo; hipotensão; insuficiência cardíaca descompensada; bloqueio AV avançado sem marca-passo; miastenia gravis · Obs: Suspender se o QRS alargar mais de 50% do basal ou o QTc passar de 500 ms. É a opção farmacológica na fibrilação atrial pré-excitada quando não se faz cardioversão. · Renal: Reduzir a dose de manutenção se TFG menor que 30 mL/min",
+            "dose": {
+              "texto": "10 a 15 mg/kg; infusão; manutenção 1 a 4 mg/min; até 24 horas; max. 17 mg/kg ou 1 g na dose de ataque",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": 15,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": true,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 17,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": null,
+              "freq_texto": null,
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem frequencia nem duracao reconhecida"
+              ]
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Sedativo hipnotico",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "etomidato",
+              "n": "Etomidato",
+              "ap": "ampola 2 mg/mL (10 mL - 20 mg)",
+              "via": "IV",
+              "pos": "0,15 a 0,3 mg/kg. Via IV. Dose única; metade da dose em idoso, hipovolêmico ou cardiopata grave. 1 dose. Bolus em 30 a 60 segundos."
+            },
+            "motivo": "sedação para cardioversão elétrica sincronizada em paciente consciente (condicional)",
+            "nota": "Uso direto IV; não diluir - monitorar: saturação e capnografia; monitorar: PA; monitorar: nível de consciência; monitorar: via aérea e padrão respiratório · NÃO: via aérea não controlada ou sem material de intubação disponível; hipovolemia grave não corrigida; hipersensibilidade ao etomidato · Obs: Alternativa: midazolam 2–5 mg com fentanil 50–100 mcg, titulados. Sedação para cardioversão sempre com aspiração, oxigênio e material de via aérea prontos.",
+            "dose": {
+              "texto": "0,15 a 0,3 mg/kg; dose única; metade da dose em idoso, hipovolêmico ou cardiopata grave; 1 dose; max. 0,3 mg/kg ou 20 mg",
+              "status": "ok",
+              "valor": 0.15,
+              "valor_max": 0.3,
+              "unidade": "mg/kg",
+              "por_kg": true,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 0.3,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Eletrólito",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "sulfato_mg",
+            "motivo": "TSV refratária com hipomagnesemia documentada ou como adjuvante antes de nova dose de antiarrítmico (condicional)",
+            "nota": "Diluir 2 g em 100 mL de SF 0,9% - monitorar: reflexo patelar; monitorar: frequência respiratória; monitorar: PA; monitorar: magnésio sérico; monitorar: potássio · NÃO: hipermagnesemia; insuficiência renal grave sem diálise; bloqueio AV avançado; miastenia gravis · Obs: Evidência fraca como antiarrítmico isolado na TSV; o valor é corrigir o eletrólito que perpetua a arritmia antes de escalar antiarrítmico. · Renal: Metade da dose se TFG menor que 30 mL/min; evitar em anúria sem diálise",
+            "dose": {
+              "texto": "2 g; dose única; repetir uma vez se hipomagnesemia persistir; 1 a 2 doses; max. 4 g",
+              "status": "ok",
+              "valor": 2,
+              "valor_max": null,
+              "unidade": "g",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 4,
+                "unidade": "g"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1 vez ao dia",
+              "freq_min": null,
+              "duracao_dias": 0,
+              "duracao_texto": "dose única",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "CAR-14",
+    "versao": "0.2.0",
+    "arquivo": "CAR-14_tsv.json",
+    "area": "Cardiovascular",
+    "risco": "A",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

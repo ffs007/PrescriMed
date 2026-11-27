@@ -1,0 +1,529 @@
+{
+  "id": "ws-gi_03",
+  "nome": "Náuseas e vômitos inespecíficos",
+  "cat": "Gastrointestinal",
+  "alias": "nauseas e vomitos inespecificos nausea vomito enjoo emese",
+  "cid": [],
+  "status": "aprovado",
+  "meta": {
+    "redigido": "import default-workspace (GI-03_nauseas_vomitos.json, v0.2.0)",
+    "revisao": "Dr. Felipe — APROVADO em 2026-11-06",
+    "data": "2026-11-06",
+    "fontes": [
+      "[verificar] protocolo_institucional: fluxo local de antieméticos e disponibilidade de apresentações",
+      "[verificar] anvisa: bulas de ondansetrona, metoclopramida, domperidona e prometazina",
+      "[verificar] ms: reidratação e manejo de vômitos na gestação",
+      "[verificar] sociedade_gastroenterologia: síndrome de vômito cíclico e hiperêmese canabinoide"
+    ],
+    "assinatura": {
+      "nome": "Dr. Felipe",
+      "crm": "CRM-DF 34266 · CRM-GO 28469",
+      "data": "2026-11-06",
+      "escopo": "aprovação registrada em chat"
+    },
+    "enriquecido": "contraindicações/observações/ajuste renal do default-workspace (2026-11-06)",
+    "medidas_adicionadas": "GI-03 em 2026-11-27",
+    "fundido_workspace": "GI-03 em 2026-11-27"
+  },
+  "alerta": "Sinais de alarme: vômito bilioso ou fecal -> jejum, sonda nasogástrica, imagem e avaliação cirúrgica; dor abdominal intensa ou localizada com defesa -> avaliação cirúrgica imediata; cefaleia súbita, rigidez de nuca, papiledema ou déficit focal -> tomografia de crânio antes de qualquer antiemético; hipotensão, taquicardia, oligúria ou confusão -> reidratação venosa e sala vermelha. 1) Avaliar gravidade: hidratação, pressão arterial, diurese, nível de consciência 2) Classificar a origem: central, vestibular, gastrointestinal, metabólica, gestacional ou medicamentosa 3) Excluir alarme antes do antiemético: sinal neurológico, obstrução, gestação, hemorragia 4) Hidratar e corrigir distúrbio metabólico (glicemia, sódio, potássio, cálcio) 5) Escolher antiemético pelo mecanismo identificado 6) Reavaliar em 2-4 h; sem resposta após 2 doses, internar e ampliar investigação 7) Alta com causa provável, plano de hidratação e sinais de retorno por escrito",
+  "redFlags": [
+    "vômito bilioso ou fecal -> jejum, sonda nasogástrica, imagem e avaliação cirúrgica",
+    "dor abdominal intensa ou localizada com defesa -> avaliação cirúrgica imediata",
+    "cefaleia súbita, rigidez de nuca, papiledema ou déficit focal -> tomografia de crânio antes de qualquer antiemético",
+    "hipotensão, taquicardia, oligúria ou confusão -> reidratação venosa e sala vermelha",
+    "hematêmese ou melena -> estabilização e endoscopia",
+    "vômito em jato -> neuroimagem urgente",
+    "gestação com dor pélvica ou sangramento -> avaliação obstétrica e ultrassom",
+    "vômitos recorrentes com perda de peso -> endoscopia e investigação ambulatorial prioritária"
+  ],
+  "naoUsar": [
+    "síndrome do QT longo",
+    "uso concomitante de apomorfina",
+    "hipersensibilidade",
+    "obstrução intestinal",
+    "perfuração",
+    "feocromocitoma",
+    "parkinsonismo",
+    "epilepsia não controlada"
+  ],
+  "ambulatorial": {
+    "classes": [
+      {
+        "nome": "Orientações e retorno",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "ori_fazer_1",
+              "n": "Orientação ao paciente",
+              "ap": "",
+              "q": "",
+              "pos": "beber líquidos em pequenos goles"
+            },
+            "motivo": "cuidados e plano de ação"
+          },
+          {
+            "novo": {
+              "id": "ori_evitar_1",
+              "n": "Não fazer",
+              "ap": "",
+              "q": "",
+              "pos": "alimentos gordurosos e álcool"
+            },
+            "motivo": "evitar erro de manejo"
+          }
+        ]
+      },
+      {
+        "nome": "Fenotiazina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "prometazina",
+            "pos": "25 mg. Via IM. 6/6 h se necessário. Até 72 h. 15 minutos (IV diluído); IM não se aplica.",
+            "posTodas": true,
+            "motivo": "vômito vestibular e vômito refratário quando dimenidrinato indisponível (alternativa)",
+            "nota": "IM profunda no quadrante superior externo; se IV, diluir em 20 mL de SF e infundir muito lentamente - monitorar: sedação e pressão arterial; monitorar: extravasamento e lesão tecidual; monitorar: sintomas extrapiramidais",
+            "dose": {
+              "texto": "25 mg; 6/6 h se necessário; até 72 h; max. 100 mg/dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            },
+            "ped": "Ondansetrona 0,15 mg/kg IV (máximo 4 mg); evitar metoclopramida de rotina e proibir prometazina abaixo de 2 anos"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antagonista dopaminergico periferico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "domperidona",
+            "pos": "10 mg. Via VO. 8/8 h antes das refeições. Até 7 dias.",
+            "posTodas": true,
+            "motivo": "gastroparesia diabética e náusea com esvaziamento gástrico lentificado (condicional) gastroparesia",
+            "nota": "Uso direto, 15-30 min antes das refeições - monitorar: ECG e QT em cardiopata; monitorar: potássio e magnésio; monitorar: prolactina · NÃO: QT longo; insuficiência hepática moderada ou grave; distúrbio eletrolítico; tumor hipofisário; uso de fármacos que prolongam QT · Obs: Atravessa pouco a barreira hematoencefálica, por isso menos extrapiramidal que metoclopramida; usar a menor dose pelo menor tempo por risco de arritmia · Renal: Cautela em insuficiência renal grave",
+            "dose": {
+              "texto": "10 mg; 8/8 h antes das refeições; até 7 dias; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "Ondansetrona 0,15 mg/kg IV (máximo 4 mg); evitar metoclopramida de rotina e proibir prometazina abaixo de 2 anos"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Antidepressivo tricíclico",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "leg_amitriptilina",
+            "pos": "25 mg. Via VO. 1x/dia à noite. 3-6 meses.",
+            "posTodas": true,
+            "motivo": "profilaxia da síndrome de vômito cíclico (condicional)",
+            "nota": "Uso direto à noite - monitorar: ECG antes de iniciar em maior de 40 anos; monitorar: humor e ideação suicida; monitorar: efeitos anticolinérgicos · NÃO: infarto recente; arritmia; glaucoma de ângulo fechado; uso de IMAO; retenção urinária · Obs: É profilaxia, não tratamento da crise; resposta leva 4–8 semanas e a retirada deve ser gradual",
+            "dose": {
+              "texto": "25 mg; 1x/dia à noite; 3-6 meses; max. 150 mg/dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 150,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 24,
+              "freq_texto": "1x/dia",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": null,
+              "motivos": []
+            },
+            "ped": "Ondansetrona 0,15 mg/kg IV (máximo 4 mg); evitar metoclopramida de rotina e proibir prometazina abaixo de 2 anos"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Agonista trpv1",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "capsaicina_topica",
+              "n": "Capsaicina tópica 0,075%",
+              "ap": "creme 0,075% (tubo 30 g e 60 g)",
+              "q": "",
+              "pos": "1-2 cm de creme. Via tópica. 8/8 h. Até 48 h."
+            },
+            "motivo": "hiperêmese por canabinoides (condicional)",
+            "nota": "Aplicar com luva na região epigástrica ou no antebraço, sem oclusão - monitorar: ardor local e tolerância; monitorar: resposta em 24-48 h; monitorar: pele íntegra · NÃO: pele lesionada; hipersensibilidade à capsaicina · Obs: O ardor é esperado e limita a adesão; orientar lavar as mãos após aplicar e não tocar os olhos",
+            "dose": {
+              "texto": "1-2 cm de creme; 8/8 h; até 48 h; max. 3 aplicações/dia",
+              "status": "falha",
+              "valor": null,
+              "valor_max": null,
+              "unidade": null,
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": null,
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": [
+                "sem valor numerico com unidade"
+              ]
+            },
+            "ped": "Ondansetrona 0,15 mg/kg IV (máximo 4 mg); evitar metoclopramida de rotina e proibir prometazina abaixo de 2 anos"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Vitamina",
+        "itens": [
+          {
+            "linha": 1,
+            "base": "dimenidrinato",
+            "pos": "25 mg. Via VO. 8/8 h. Até 7 dias.",
+            "posTodas": true,
+            "motivo": "náusea e vômito da gestação, associada ao dimenidrinato (condicional) náusea da gestação",
+            "nota": "Uso direto - monitorar: resposta em 48-72 h; monitorar: sintomas de neuropatia em uso prolongado",
+            "dose": {
+              "texto": "25 mg; 8/8 h; até 7 dias; max. 100 mg/dia",
+              "status": "ok",
+              "valor": 25,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 100,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 7,
+              "duracao_texto": "7 dias",
+              "motivos": []
+            },
+            "ped": "Ondansetrona 0,15 mg/kg IV (máximo 4 mg); evitar metoclopramida de rotina e proibir prometazina abaixo de 2 anos"
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Medidas não farmacológicas",
+        "itens": [
+          {
+            "linha": 1,
+            "novo": {
+              "id": "nf_1",
+              "n": "Hidratação oral fracionada",
+              "ap": "",
+              "q": "",
+              "pos": "5–10 mL de água ou solução de reidratação a cada 5–10 min; suspender se vomitar e reiniciar após 10 min"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_2",
+              "n": "Dieta leve e seca",
+              "ap": "",
+              "q": "",
+              "pos": "Bolacha de água e sal, arroz, banana e torrada em pequenas porções; evitar gordura, leite e temperos fortes"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_3",
+              "n": "Ambiente calmo e sem odores",
+              "ap": "",
+              "q": "",
+              "pos": "Reduzir luz, ruído e cheiro de comida no vômito vestibular; evitar movimento brusco da cabeça"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_4",
+              "n": "Suspender o canabinoide",
+              "ap": "",
+              "q": "",
+              "pos": "Orientar abstinência; na hiperêmese canabinoide a melhora costuma ocorrer em 24–48 h, com risco de recaída se retomar"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_5",
+              "n": "Revisar medicamentos",
+              "ap": "",
+              "q": "",
+              "pos": "Opioide, GLP-1, digoxina, quimioterápico, ferro e antibiótico são gatilhos frequentes; ajustar ou substituir"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_6",
+              "n": "Controle de transmissão em gastroenterite",
+              "ap": "",
+              "q": "",
+              "pos": "Higiene de mãos e superfícies; afastar manipulador de alimentos até 48 h sem sintomas"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          },
+          {
+            "linha": 2,
+            "novo": {
+              "id": "nf_7",
+              "n": "Não dirigir nem operar máquinas",
+              "ap": "",
+              "q": "",
+              "pos": "Antieméticos sedativos (dimenidrinato, prometazina, metoclopramida) comprometem atenção por até 8 h"
+            },
+            "motivo": "medida não farmacológica da síndrome"
+          }
+        ],
+        "origem": "workspace",
+        "fonte": "GI-03"
+      }
+    ]
+  },
+  "hospitalar": {
+    "classes": [
+      {
+        "nome": "Antagonista 5ht3",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "ondansetrona_ev",
+            "motivo": "vômito agudo, pós-operatório, induzido por quimioterapia ou gastroenterite (1a linha) náusea e vômito",
+            "nota": "IV direto ou diluído em 50 mL de SF 0,9%; VO sem preparo - monitorar: ECG se cardiopata ou QT longo; monitorar: potássio e magnésio; monitorar: cefaleia e constipação",
+            "dose": {
+              "texto": "4 mg; 8/8 h se necessário; até 72 h; max. 16 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 16,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ]
+      },
+      {
+        "nome": "Antagonista dopaminergico procinético",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "metoclopramida_ev",
+            "motivo": "vômito com estase gástrica ou gastroparesia, sem obstrução (alternativa) estase gástrica sem obstrução",
+            "nota": "IV lento, sem diluição obrigatória - monitorar: sintomas extrapiramidais; monitorar: sonolência; monitorar: prolactina em uso prolongado",
+            "dose": {
+              "texto": "10 mg; 8/8 h; até 5 dias; max. 30 mg/dia",
+              "status": "ok",
+              "valor": 10,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 30,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 8,
+              "freq_texto": "8/8 h",
+              "freq_min": null,
+              "duracao_dias": 5,
+              "duracao_texto": "5 dias",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Anti-histaminico H1",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dimenidrinato_ev",
+            "motivo": "vômito vestibular e náusea da gestação (alternativa) causa vestibular ou gestação",
+            "nota": "IV diluído em 10 mL de SF, infundir lentamente; IM sem diluição - monitorar: nível de consciência; monitorar: retenção urinária em idoso; monitorar: pressão arterial",
+            "dose": {
+              "texto": "50 mg; 6/6 h; até 72 h; max. 200 mg/dia",
+              "status": "ok",
+              "valor": 50,
+              "valor_max": null,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 200,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Corticoide",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "dexametasona_ev",
+            "motivo": "hipertensão intracraniana, hiperêmese canabinoide e vômito refratário (condicional)",
+            "nota": "IV direto ou diluído em 20 mL de SF - monitorar: glicemia; monitorar: pressão arterial; monitorar: sódio e potássio; monitorar: sangramento digestivo",
+            "dose": {
+              "texto": "4-8 mg; 6/6 h ou 12/12 h; até 48 h; max. 24 mg/dia",
+              "status": "ok",
+              "valor": 4,
+              "valor_max": 8,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 24,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      },
+      {
+        "nome": "Butirofenona",
+        "itens": [
+          {
+            "linha": 1,
+            "hosp": "haloperidol_im",
+            "motivo": "vômito refratário e hiperêmese por canabinoides (resgate) vômito refratário ou hiperêmese canabinoide",
+            "nota": "IV direto lento ou diluído em 10 mL de SF - monitorar: ECG e QT; monitorar: sintomas extrapiramidais; monitorar: temperatura e rigidez · NÃO: doença de Parkinson; QT longo; depressão de consciência; hipocalemia · Obs: Resgate em vômito refratário; na hiperêmese canabinoide, 0,5–1 mg IV é eficaz e evita internação prolongada",
+            "dose": {
+              "texto": "0,5-1 mg; 6/6 h se necessário; até 48 h; max. 5 mg/dia",
+              "status": "ok",
+              "valor": 0.5,
+              "valor_max": 1,
+              "unidade": "mg",
+              "por_kg": false,
+              "por_min": false,
+              "por_h": false,
+              "dose_maxima": {
+                "valor": 5,
+                "unidade": "mg"
+              },
+              "ped": null,
+              "freq_h": 6,
+              "freq_texto": "6/6 h",
+              "freq_min": null,
+              "duracao_dias": null,
+              "duracao_texto": "até estabilização",
+              "motivos": []
+            }
+          }
+        ],
+        "semPreset": true
+      }
+    ]
+  },
+  "ws": {
+    "id": "GI-03",
+    "versao": "0.2.0",
+    "arquivo": "GI-03_nauseas_vomitos.json",
+    "area": "Gastrointestinal",
+    "risco": "B",
+    "populacao": [
+      "adulto"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "lacunas": 0
+  }
+}

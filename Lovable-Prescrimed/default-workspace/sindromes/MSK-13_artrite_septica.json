@@ -1,0 +1,1268 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "MSK-13",
+    "area": "Musculoesquelético",
+    "nome": "Artrite séptica",
+    "aliases": [
+      "Artrite séptica",
+      "artrite séptica",
+      "artrite infecciosa",
+      "artrite bacteriana",
+      "artrite purulenta",
+      "artrite supurada",
+      "joelho séptico",
+      "infecção articular",
+      "empiema articular",
+      "artrite gonocócica",
+      "artrite periprotética"
+    ],
+    "contexto": [
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "A",
+    "versao": "0.2.0",
+    "visao_geral": "Artrite séptica é a infecção bacteriana do espaço articular, com destruição de cartilagem que começa em 24 a 48 horas e não regride com antibiótico isolado. O diagnóstico não é clínico nem radiológico: é a artrocentese. Articulação quente, derrame, dor intensa e incapacidade de apoiar aumentam a probabilidade, mas até metade dos casos chega sem febre, e o idoso, o imunossuprimido e o usuário de droga injetável podem ter quadro oligossintomático. A análise do líquido separa os diagnósticos: leucócitos acima de 50.000/mm3 com predomínio de polimorfonucleares, Gram positivo ou aspecto purulento sustentam infecção; a cultura define o agente; cristais não excluem infecção, porque gota e séptica coexistem em cerca de 5% dos casos. Staphylococcus aureus é o agente mais frequente, seguido por Streptococcus e, em adulto jovem sexualmente ativo, Neisseria gonorrhoeae. O tratamento é ceftriaxona 2 g 1x/dia associada à vancomicina quando há risco de MRSA, oxacilina quando o MSSA é confirmado, drenagem articular por punção seriada ou artroscopia e duração total de 3 a 4 semanas. Prótese articular muda tudo: exige punção, ortopedia no mesmo dia e esquema combinado com rifampicina. Dois erros custam a articulação e a vida: infiltrar corticoide antes de excluir infecção e aguardar a cultura para iniciar antibiótico em paciente séptico.",
+    "inclusao": [
+      "Monoartrite aguda com dor intensa, derrame e limitação funcional, com ou sem febre",
+      "Articulação quente com sinais flogísticos e incapacidade de apoiar o peso",
+      "Prótese articular com dor nova, derrame ou febre, mesmo sem sinais flogísticos exuberantes",
+      "Monoartrite aguda em imunossuprimido, diabético, usuário de droga injetável ou em diálise",
+      "Monoartrite aguda em adulto jovem sexualmente ativo com tenossinovite, uretrite ou lesão cutânea",
+      "Monoartrite aguda em que é preciso separar artrite séptica de gota, pseudogota e artrite inflamatória",
+      "Derrame articular que reacumula em 24 a 48 horas após punção, com febre persistente"
+    ],
+    "exclusao": [
+      {
+        "situacao": "trauma com deformidade, instabilidade ou suspeita de fratura articular",
+        "fluxo": "TRA-05 fratura e avaliação ortopédica"
+      },
+      {
+        "situacao": "luxação articular com bloqueio de movimento ou déficit neurovascular",
+        "fluxo": "TRA-07 luxação com redução e ortopedia"
+      },
+      {
+        "situacao": "gota ou pseudogota confirmada por cristais, sem sinais de infecção no líquido",
+        "fluxo": "MSK-03 dor articular aguda"
+      },
+      {
+        "situacao": "bursite ou tendinite periarticular sem derrame articular e sem febre",
+        "fluxo": "MSK-03 dor articular aguda"
+      },
+      {
+        "situacao": "celulite ou erisipela com porta de entrada cutânea, sem derrame articular",
+        "fluxo": "DERM-01 celulite"
+      },
+      {
+        "situacao": "hipotensão, confusão ou lactato elevado sem foco definido",
+        "fluxo": "INF-01 sepse"
+      },
+      {
+        "situacao": "febre com sopro novo ou regurgitação valvar recente e bacteremia",
+        "fluxo": "CAR-17 endocardite infecciosa"
+      },
+      {
+        "situacao": "dor articular crônica de mais de 6 semanas, poliarticular, sem sinais sistêmicos",
+        "fluxo": "reumatologia e MSK-10 osteoartrite"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "articulação quente, dolorosa e com derrame, com ou sem febre",
+        "por_que": "artrite séptica destrói cartilagem em 24 a 48 horas",
+        "acao": "artrocentese imediata e antibiótico após a coleta; não infiltrar e não liberar",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "prótese articular com dor nova, derrame ou febre",
+        "por_que": "infecção periprotética com risco de falha do implante e sepse",
+        "acao": "punção da prótese com cultura e celularidade, ortopedia no mesmo dia; nunca infiltrar corticoide",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "hipotensão, confusão, oligúria ou lactato acima de 2 mmol/L",
+        "por_que": "sepse com foco articular e mortalidade alta",
+        "acao": "ressuscitação, hemoculturas e antibiótico em até 1 hora, sem aguardar cultura",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "imunossupressão, corticoide crônico, quimioterapia, HIV avançado, transplante, diabetes descompensado ou uso de drogas injetáveis",
+        "por_que": "séptica oligossintomática, com germe atípico, gram-negativo ou MRSA",
+        "acao": "punção precoce mesmo sem febre, internação e cobertura ampliada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "dor desproporcional, parestesia, dor à mobilização passiva ou compartimento tenso",
+        "por_que": "síndrome compartimental ou lesão neurovascular",
+        "acao": "avaliação cirúrgica imediata e medida de pressão compartimental",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "febre persistente, dor e PCR em ascensão após 48 a 72 horas de antibiótico e drenagem",
+        "por_que": "drenagem inadequada, abscesso, germe não coberto ou prótese infectada",
+        "acao": "repetir punção, imagem e reavaliar drenagem antes de trocar antibiótico",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "bacteremia por Staphylococcus aureus documentada",
+        "por_que": "risco de endocardite e de foco secundário",
+        "acao": "ecocardiograma, busca de foco e duração prolongada de antibiótico",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "dor noturna contínua, perda de peso e idade acima de 50 anos com monoartrite arrastada",
+        "por_que": "metástase óssea ou sinovite neoplásica",
+        "acao": "radiografia, ressonância e investigação oncológica",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Quando começou a dor e em quanto tempo a articulação ficou quente e inchada?",
+      "Teve febre, calafrio ou mal-estar nas últimas 48 horas?",
+      "Consegue apoiar o peso e dar quatro passos? Consegue elevar o braço?",
+      "Tem prótese articular, material de síntese ou cirurgia articular recente?",
+      "Tem diabetes, usa corticoide, quimioterapia, imunobiológico ou tem HIV ou transplante?",
+      "Usa drogas injetáveis? Está em diálise?",
+      "Teve uretrite, corrimento, lesão genital ou relação sexual desprotegida recente?",
+      "Já teve gota, cálculo renal ou usa diurético?",
+      "Usou antibiótico nas últimas 4 semanas? Qual e por quanto tempo?",
+      "Usa anticoagulante ou tem sangramento fácil, plaquetopenia ou hepatopatia?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Monoartrite aguda com suspeita de artrite séptica, em paciente estável",
+        "escolha": "Artrocentese imediata antes de qualquer antibiótico, com celularidade e diferencial, Gram, cultura e antibiograma, pesquisa de cristais, glicose e proteína; duas hemoculturas de sítios distintos antes da primeira dose",
+        "porque": "É a punção que fecha o diagnóstico e define o agente. Uma dose prévia de antibiótico esteriliza o líquido em parte dos casos e impede o descalonamento. No paciente estável, a coleta precede o tratamento sem prejuízo clínico"
+      },
+      {
+        "cenario": "Líquido purulento, Gram positivo ou acima de 50.000 leucócitos/mm3",
+        "escolha": "Internação, ceftriaxona 2 g IV 1x/dia e vancomicina 15 a 20 mg/kg 8/8 a 12/12 h quando há risco de MRSA, após as coletas, mais drenagem articular",
+        "porque": "Staphylococcus aureus e Streptococcus são os agentes mais comuns, e a vancomicina cobre MRSA em usuário de droga injetável, hospitalização recente, prótese e diálise. A drenagem reduz a carga bacteriana, que o antibiótico isolado não controla"
+      },
+      {
+        "cenario": "Cultura com MSSA confirmado",
+        "escolha": "Trocar vancomicina por oxacilina 2 g IV 4/4 h",
+        "porque": "Oxacilina é superior à vancomicina no MSSA: melhor penetração articular, ação bactericida mais rápida e menor nefrotoxicidade"
+      },
+      {
+        "cenario": "Cultura com MRSA confirmado, ou vancomicina com CIM acima de 2 mg/L e bacteremia persistente",
+        "escolha": "Manter vancomicina com vale de 15 a 20 mg/L ou AUC/MIC de 400 a 600; trocar para linezolida 600 mg 12/12 h ou daptomicina 8 a 10 mg/kg 1x/dia na falha ou intolerância",
+        "porque": "MRSA com CIM alta responde mal à vancomicina, e a bacteremia persistente exige fármaco alternativo com boa penetração articular e óssea"
+      },
+      {
+        "cenario": "Alergia grave a beta-lactâmico (anafilaxia, angioedema, broncoespasmo)",
+        "escolha": "Aztreonam 2 g IV 8/8 h associado à vancomicina; clindamicina 600 mg IV 8/8 h como alternativa quando o agente é sensível",
+        "porque": "Aztreonam não tem reação cruzada relevante com penicilina e cobre gram-negativos, mas não cobre gram-positivos, e por isso entra com vancomicina. Clindamicina cobre gram-positivos e penetra bem na articulação"
+      },
+      {
+        "cenario": "Prótese articular com suspeita de infecção periprotética",
+        "escolha": "Punção da prótese com cultura e celularidade, ortopedia no mesmo dia, vancomicina e ceftriaxona, e rifampicina 600 mg 1x/dia associada ao esquema após a definição cirúrgica e o controle da bacteremia",
+        "porque": "Rifampicina é o fármaco com ação sobre biofilme estafilocócico em prótese, mas não pode ser usada isolada nem antes da drenagem cirúrgica, pelo risco de selecionar resistência. Prótese infectada exige cirurgia, não apenas antibiótico"
+      },
+      {
+        "cenario": "Adulto jovem sexualmente ativo com tenossinovite, uretrite e artrite",
+        "escolha": "Ceftriaxona 1 g IV ou IM 1x/dia por 7 dias, teste de amplificação para gonococo, tratamento do parceiro e rastreio de outras infecções sexualmente transmissíveis",
+        "porque": "Artrite gonocócica costuma ser poliarticular e migratória, com tenossinovite e lesões cutâneas; hemoculturas e líquido articular frequentemente são negativos, e tratar o parceiro evita reinfecção"
+      },
+      {
+        "cenario": "Líquido sinovial com cristais, mas com Gram positivo, aspecto purulento ou acima de 50.000 leucócitos/mm3",
+        "escolha": "Tratar como artrite séptica; a presença de cristais não exclui infecção",
+        "porque": "Gota e infecção coexistem em cerca de 5% das crises, e atribuir o quadro a cristais é uma das causas mais frequentes de atraso no tratamento da séptica"
+      },
+      {
+        "cenario": "Paciente em choque séptico ou com instabilidade hemodinâmica",
+        "escolha": "Colher hemoculturas e artrocentese sem atrasar a primeira dose: antibiótico em até 1 hora com ceftriaxona e vancomicina, e ressuscitação volêmica",
+        "porque": "Em choque, o atraso do antibiótico aumenta a mortalidade; a coleta é feita no mesmo momento da punção e não é pré-requisito para tratar"
+      },
+      {
+        "cenario": "Falha clínica em 48 a 72 horas, com febre persistente, dor, derrame ou PCR em ascensão",
+        "escolha": "Repetir artrocentese, ultrassom ou ressonância, reavaliar a drenagem e a indicação de artroscopia ou artrotomia; revisar a cobertura conforme a cultura",
+        "porque": "Falha precoce significa drenagem inadequada, germe não coberto, abscesso ou prótese infectada, e não apenas antibiótico errado"
+      },
+      {
+        "cenario": "Pedido de corticoide intra-articular em articulação quente ainda não puncionada",
+        "escolha": "Não infiltrar: puncionar primeiro e só considerar corticoide com líquido claro, Gram negativo e cultura negativa",
+        "porque": "Corticoide em articulação infectada agrava a infecção, suprime a resposta local e retarda o diagnóstico; é o erro iatrogênico mais grave desta síndrome"
+      },
+      {
+        "cenario": "Dúvida entre gota e artrite séptica em serviço sem artrocentese disponível",
+        "escolha": "Tratar como séptica, colher hemoculturas, iniciar ceftriaxona e transferir para serviço com punção e ortopedia",
+        "porque": "O custo de tratar gota como séptica é uma noite de antibiótico; o custo de tratar séptica como gota é cartilagem destruída, sepse e morte"
+      },
+      {
+        "cenario": "Definição de duração e de alta",
+        "escolha": "3 a 4 semanas totais na articulação nativa, com 2 semanas venosas e complemento oral guiado por cultura; 6 semanas ou mais na prótese, conforme cirurgia e agente",
+        "porque": "Curso curto recidiva e curso longo sem critério expõe a efeitos adversos. A via oral só entra com agente sensível, boa biodisponibilidade e controle clínico documentado"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antibiotico_cefalosporina",
+        "agente": "ceftriaxona",
+        "papel": "primeira_linha",
+        "indicacao": "artrite séptica empírica após artrocentese e hemoculturas, cobrindo Staphylococcus aureus, Streptococcus e Neisseria gonorrhoeae",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "3 a 4 semanas no total, com 2 semanas venosas e complemento oral guiado por cultura",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia grave a cefalosporina",
+          "neonato com hiperbilirrubinemia",
+          "infusão concomitante com solução contendo cálcio",
+          "história de anafilaxia a penicilina com teste cutâneo positivo não avaliado"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "colite por Clostridioides difficile",
+          "lama biliar",
+          "cristalúria",
+          "neutropenia",
+          "anemia hemolítica imune"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g",
+          "solução injetável 1 g em 50 mL",
+          "solução injetável 2 g em 100 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "hemograma e creatinina semanais",
+          "diarreia e sinais de colite",
+          "dor, derrame e temperatura em 48 a 72 h",
+          "cultura e antibiograma para descalonar",
+          "enzimas hepáticas em uso prolongado"
+        ],
+        "ajuste_renal": "Sem ajuste, inclusive em diálise",
+        "ajuste_hepatico": "Sem ajuste; monitorar transaminases e fosfatase alcalina em uso prolongado",
+        "observacoes": "Não atrasar a primeira dose após a coleta. Em artrite gonocócica a dose é 1 g 1x/dia por 7 dias. Não infundir junto com soluções contendo cálcio em neonato",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_glicopeptideo",
+        "agente": "vancomicina",
+        "papel": "primeira_linha",
+        "indicacao": "cobertura empírica de MRSA na artrite séptica com prótese, drogas injetáveis, hospitalização recente, diálise ou risco de resistência",
+        "dose": "15 a 20 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "8/8 h a 12/12 h, guiado por função renal e nível sérico",
+        "duracao": "3 a 4 semanas, conforme cultura; na prótese, 6 semanas ou mais",
+        "dose_maxima": "2 g por dose",
+        "contraindicacoes": [
+          "alergia grave a glicopeptídeo",
+          "insuficiência renal sem ajuste de dose",
+          "uso concomitante de outros nefrotóxicos sem monitorização"
+        ],
+        "efeitos_adversos": [
+          "nefrotoxicidade",
+          "síndrome do homem vermelho",
+          "neutropenia",
+          "ototoxicidade",
+          "flebite",
+          "trombocitopenia"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "frasco-ampola 1 g com diluente",
+          "solução injetável 1 g em 200 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção; diluir 1 g em 200 mL de soro fisiológico 0,9% ou glicose 5%, com concentração máxima de 5 mg/mL",
+        "tempo_infusao": "60 minutos por grama (2 g em 120 minutos)",
+        "monitorizacao": [
+          "vale sérico antes da 4ª dose (alvo 15 a 20 mg/L) ou AUC/MIC de 400 a 600",
+          "creatinina a cada 48 h",
+          "rubor, prurido e hipotensão durante a infusão",
+          "hemograma se uso acima de 7 dias",
+          "audiometria se uso prolongado e queixa auditiva"
+        ],
+        "ajuste_renal": "ClCr 30 a 60 mL/min: 15 mg/kg 24/24 h; ClCr 15 a 30 mL/min: dose guiada por vale; diálise: ataque de 20 mg/kg e redose pelo nível sérico",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Associar à ceftriaxona na suspeita de MRSA e descalonar para oxacilina quando a cultura mostrar MSSA. Não usar como monoterapia empírica na séptica comunitária",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_penicilinico",
+        "agente": "oxacilina",
+        "papel": "condicional",
+        "indicacao": "MSSA confirmado em cultura, com descalonamento e retirada da vancomicina",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "4/4 h",
+        "duracao": "3 a 4 semanas",
+        "dose_maxima": "12 g/dia",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "insuficiência renal com ClCr abaixo de 10 mL/min sem ajuste",
+          "hepatopatia grave com transaminases acima de 5 vezes o limite"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade",
+          "neutropenia",
+          "flebite",
+          "rash",
+          "nefrite intersticial",
+          "convulsão em dose alta com disfunção renal"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "30 a 60 minutos",
+        "monitorizacao": [
+          "TGO, TGP e fosfatase alcalina semanais",
+          "hemograma semanal",
+          "creatinina",
+          "flebite no local da punção",
+          "sinais de convulsão em dose alta e função renal baixa"
+        ],
+        "ajuste_renal": "Sem ajuste; com ClCr abaixo de 30 mL/min, espaçar para 6/6 h",
+        "ajuste_hepatico": "Monitorar transaminases; reduzir dose em hepatopatia grave",
+        "observacoes": "Preferir à vancomicina quando o agente é MSSA: melhor penetração articular e menor nefrotoxicidade. Aguardar a cultura quando o paciente está estável",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_rifamicina",
+        "agente": "rifampicina",
+        "papel": "condicional",
+        "indicacao": "infecção periprotética estafilocócica com implante mantido ou troca em dois tempos, sempre em combinação com outro antimicrobiano ativo",
+        "dose": "600 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "1x/dia, 1 hora antes da refeição",
+        "duracao": "6 semanas na prótese com retenção do implante; até 12 semanas conforme cirurgia",
+        "dose_maxima": "900 mg/dia; 10 mg/kg em paciente acima de 70 kg",
+        "contraindicacoes": [
+          "monoterapia",
+          "hepatopatia grave com icterícia",
+          "porfiria aguda intermitente",
+          "uso de antirretroviral com interação maior sem ajuste",
+          "hipersensibilidade a rifamicina"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade",
+          "coloração alaranjada de urina e lágrima",
+          "náusea",
+          "trombocitopenia",
+          "nefrite intersticial",
+          "indução enzimática com falha de contraceptivo e de anticoagulante"
+        ],
+        "apresentacoes": [
+          "cápsula 150 mg",
+          "cápsula 300 mg",
+          "comprimido 600 mg",
+          "frasco-ampola 600 mg para infusão"
+        ],
+        "preparo": "Via oral: uso direto em jejum. Via IV: reconstituir em 10 mL de água e diluir em 100 mL de glicose 5%",
+        "tempo_infusao": "30 a 60 minutos na via intravenosa",
+        "monitorizacao": [
+          "TGO, TGP e bilirrubina a cada 2 semanas",
+          "hemograma e plaquetas",
+          "creatinina",
+          "INR em uso de varfarina",
+          "adesão e tolerância gastrointestinal"
+        ],
+        "ajuste_renal": "Sem ajuste; com ClCr abaixo de 30 mL/min, monitorar níveis e sinais de toxicidade",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia Child B e C; contraindicar em hepatite aguda ou icterícia",
+        "observacoes": "Nunca usar isolada: monoterapia seleciona resistência em dias. Só iniciar após drenagem cirúrgica e controle de bacteremia. Revisar todos os fármacos de uso contínuo por indução enzimática",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_lincosamida",
+        "agente": "clindamicina",
+        "papel": "alternativa",
+        "indicacao": "alergia grave a beta-lactâmico, infecção por gram-positivo sensível e complemento oral após fase venosa",
+        "dose": "600 mg IV ou 450 mg VO",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "8/8 h na via venosa; 6/6 h na via oral",
+        "duracao": "3 a 4 semanas, conforme o esquema",
+        "dose_maxima": "2.700 mg/dia IV; 1.800 mg/dia VO",
+        "contraindicacoes": [
+          "colite prévia por Clostridioides difficile",
+          "hipersensibilidade a lincosamida",
+          "meningite",
+          "lactente com menos de 1 mês"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "colite por Clostridioides difficile",
+          "rash",
+          "elevação de transaminases",
+          "gosto metálico",
+          "neutropenia rara"
+        ],
+        "apresentacoes": [
+          "cápsula 150 mg",
+          "cápsula 300 mg",
+          "solução oral 75 mg/5 mL",
+          "ampola 300 mg/2 mL",
+          "ampola 600 mg/4 mL"
+        ],
+        "preparo": "Via oral: uso direto com água. Via IV: diluir a ampola em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "30 minutos na via intravenosa",
+        "monitorizacao": [
+          "número de evacuações e diarreia",
+          "dor abdominal e febre",
+          "TGO e TGP",
+          "hemograma",
+          "resposta articular em 48 a 72 h"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave; monitorar transaminases",
+        "observacoes": "Boa penetração articular e opção de via oral. Suspender imediatamente se diarreia aquosa ou cólica com febre. Não usar como primeira escolha empírica na suspeita de MRSA sem cultura",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_oxazolidinona",
+        "agente": "linezolida",
+        "papel": "alternativa",
+        "indicacao": "MRSA resistente ou intolerância à vancomicina, com necessidade de via oral e boa penetração articular e óssea",
+        "dose": "600 mg",
+        "unidade": "mg",
+        "via": "IV ou VO",
+        "frequencia": "12/12 h",
+        "duracao": "3 a 4 semanas; na prótese, conforme protocolo cirúrgico",
+        "dose_maxima": "1.200 mg/dia",
+        "contraindicacoes": [
+          "uso de inibidor da monoaminoxidase",
+          "trombocitopenia prévia",
+          "hipersensibilidade a oxazolidinona",
+          "síndrome serotoninérgica em uso de serotonérgico sem controle"
+        ],
+        "efeitos_adversos": [
+          "trombocitopenia",
+          "anemia",
+          "neuropatia periférica",
+          "neuropatia óptica",
+          "acidose láctica",
+          "síndrome serotoninérgica",
+          "diarreia"
+        ],
+        "apresentacoes": [
+          "comprimido 600 mg",
+          "solução injetável 600 mg em 300 mL",
+          "solução oral 100 mg/5 mL"
+        ],
+        "preparo": "Via oral: uso direto. Via IV: infundir o frasco pronto, sem diluição adicional",
+        "tempo_infusao": "30 a 120 minutos na via intravenosa",
+        "monitorizacao": [
+          "hemograma com plaquetas 2 vezes por semana",
+          "sintomas de neuropatia e alteração visual",
+          "lactato se acidose ou taquipneia",
+          "sinais de síndrome serotoninérgica",
+          "função hepática"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; monitorar transaminases em hepatopatia",
+        "observacoes": "Alternativa quando vancomicina falha ou não pode ser usada. Não associar a serotonérgicos sem vigilância. Suspender se plaquetas caírem abaixo de 100.000/mm3",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_lipopeptideo",
+        "agente": "daptomicina",
+        "papel": "resgate",
+        "indicacao": "bacteremia e infecção articular por MRSA com falha, intolerância ou CIM alta à vancomicina",
+        "dose": "8 a 10 mg/kg",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "1x/dia",
+        "duracao": "3 a 4 semanas; bacteremia prolongada conforme resposta",
+        "dose_maxima": "12 mg/kg/dia em indicação especializada",
+        "contraindicacoes": [
+          "pneumonia, porque é inativado pelo surfactante pulmonar",
+          "rabdomiólise prévia com creatinofosfoquinase elevada",
+          "hipersensibilidade a lipopeptídeo",
+          "insuficiência renal sem ajuste de intervalo"
+        ],
+        "efeitos_adversos": [
+          "miopatia com elevação de creatinofosfoquinase",
+          "rabdomiólise",
+          "eosinofilia pulmonar",
+          "neuropatia periférica",
+          "rash",
+          "flebite"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 350 mg",
+          "frasco-ampola 500 mg"
+        ],
+        "preparo": "Reconstituir em 7 mL de soro fisiológico 0,9%; diluir em 50 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "2 a 30 minutos, conforme a concentração utilizada",
+        "monitorizacao": [
+          "creatinofosfoquinase semanal e a cada nova dose",
+          "dor muscular e fraqueza",
+          "creatinina",
+          "hemograma e eosinófilos",
+          "culturas de controle até negativação"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: 8 mg/kg a cada 48 h ou dose guiada por nível; diálise: administrar após a sessão",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reservar para falha ou intolerância à vancomicina. Não usar em pneumonia. Suspender se creatinofosfoquinase acima de 5 vezes o limite ou dor muscular",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_monobactamico",
+        "agente": "aztreonam",
+        "papel": "alternativa",
+        "indicacao": "alergia grave a beta-lactâmico com necessidade de cobertura de gram-negativos, em associação à vancomicina",
+        "dose": "2 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "3 a 4 semanas, conforme cultura",
+        "dose_maxima": "8 g/dia",
+        "contraindicacoes": [
+          "hipersensibilidade a aztreonam",
+          "alergia grave a ceftazidima",
+          "insuficiência renal sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "rash",
+          "diarreia",
+          "elevação de transaminases",
+          "neutropenia",
+          "flebite",
+          "convulsão em disfunção renal sem ajuste"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "frasco-ampola 2 g"
+        ],
+        "preparo": "Reconstituir em 10 mL de água para injeção; diluir em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "função renal e ajuste de intervalo",
+          "hemograma",
+          "transaminases",
+          "resposta articular e temperatura",
+          "flebite"
+        ],
+        "ajuste_renal": "ClCr 30 a 60 mL/min: 1 g 8/8 h; ClCr 10 a 30 mL/min: 1 g 12/12 h; ClCr abaixo de 10 mL/min: 500 mg 12/12 h",
+        "ajuste_hepatico": "Reduzir dose em hepatopatia grave; monitorar transaminases",
+        "observacoes": "Não cobre gram-positivos: sempre associar vancomicina na suspeita de séptica. Alternativa segura na anafilaxia a penicilina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_fluoroquinolona",
+        "agente": "ciprofloxacino",
+        "papel": "condicional",
+        "indicacao": "complemento oral em artrite séptica por gram-negativo sensível, após fase venosa e com antibiograma",
+        "dose": "750 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "12/12 h",
+        "duracao": "2 semanas de complemento, dentro das 3 a 4 semanas totais",
+        "dose_maxima": "1.500 mg/dia",
+        "contraindicacoes": [
+          "tendinopatia prévia por quinolona",
+          "prolongamento de QT",
+          "miastenia gravis",
+          "gestação e amamentação",
+          "idade abaixo de 18 anos"
+        ],
+        "efeitos_adversos": [
+          "tendinite e ruptura de tendão",
+          "prolongamento de QT",
+          "neuropatia periférica",
+          "diarreia",
+          "fotossensibilidade",
+          "cristalúria",
+          "alteração de glicemia"
+        ],
+        "apresentacoes": [
+          "comprimido 250 mg",
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução injetável 400 mg em 200 mL"
+        ],
+        "preparo": "Via oral: uso direto com água, sem leite ou antiácido junto",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor e edema de tendão",
+          "eletrocardiograma se risco de QT",
+          "função renal",
+          "glicemia em diabético",
+          "resposta clínica e PCR"
+        ],
+        "ajuste_renal": "ClCr 30 a 60 mL/min: 500 mg 12/12 h; ClCr abaixo de 30 mL/min: 500 mg 24/24 h",
+        "ajuste_hepatico": "Sem ajuste em hepatopatia leve a moderada; evitar em grave",
+        "observacoes": "Só após antibiograma, nunca empírico na séptica. Não associar a antiácido, cálcio ou ferro no mesmo horário. Suspender se dor tendínea",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico",
+        "agente": "paracetamol",
+        "papel": "condicional",
+        "indicacao": "analgesia adjuvante e controle de dor e febre durante o tratamento antibiótico e a drenagem",
+        "dose": "750 mg a 1 g",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "5 a 7 dias, com reavaliação diária",
+        "dose_maxima": "4 g/dia; 3 g/dia em hepatopatia, alcoolismo ou desnutrição",
+        "contraindicacoes": [
+          "hepatopatia grave",
+          "desnutrição grave",
+          "alergia ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade em dose alta",
+          "náusea",
+          "rash"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "solução oral 200 mg/mL",
+          "frasco IV 10 mg/mL (500 mg/50 mL e 1.000 mg/100 mL)"
+        ],
+        "preparo": "Via oral: uso direto. Via IV: não diluir, infundir o frasco diretamente",
+        "tempo_infusao": "15 minutos na via intravenosa",
+        "monitorizacao": [
+          "soma da dose diária de todas as fontes, incluindo associações",
+          "TGO, TGP e INR se uso acima de 3 dias ou hepatopatia",
+          "intensidade da dor"
+        ],
+        "ajuste_renal": "Sem ajuste; espaçar para 6/6 h com ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Máximo 2 g/dia em hepatopatia grave",
+        "observacoes": "Não substitui a drenagem nem a artrocentese. Não usar AINE como analgésico na artrite séptica: mascara o sinal e agrava a lesão renal",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Repouso articular com descarga total",
+        "detalhe": "Muletas sem apoio do lado acometido e tipoia no ombro até o controle da infecção; retomar carga de forma progressiva quando dor e PCR caírem, com supervisão de fisioterapia"
+      },
+      {
+        "medida": "Imobilização curta em posição funcional",
+        "detalhe": "Órtese ou tala por 24 a 72 horas apenas para conforto e prevenção de contratura; retirar cedo e iniciar mobilização passiva para não perder amplitude"
+      },
+      {
+        "medida": "Mobilização passiva e isometria precoces",
+        "detalhe": "Exercícios passivos suaves e isometria desde 24 a 48 horas, com fisioterapia motora diária durante a internação para preservar amplitude e evitar atrofia"
+      },
+      {
+        "medida": "Crioterapia e elevação do membro",
+        "detalhe": "Gelo por 15 a 20 minutos, 3 a 4 vezes ao dia, com pano entre a pele e a bolsa; membro elevado nas primeiras 48 a 72 horas para reduzir edema"
+      },
+      {
+        "medida": "Controle glicêmico perioperatório",
+        "detalhe": "Meta de glicemia entre 140 e 180 mg/dL no diabético durante a internação; hiperglicemia sustenta a infecção e aumenta recidiva"
+      },
+      {
+        "medida": "Reavaliação seriada estruturada",
+        "detalhe": "Exame da articulação, temperatura, hemograma e PCR a cada 48 a 72 horas, com registro de amplitude e capacidade de apoio para decidir sobre nova drenagem"
+      },
+      {
+        "medida": "Cuidado com ferida e porta de entrada",
+        "detalhe": "Curativo estéril diário em ferida cirúrgica, rastreio de foco dentário, urinário e cutâneo, e proibição de puncionar articulação com celulite no trajeto da agulha"
+      },
+      {
+        "medida": "Organização da antibioticoterapia parenteral ambulatorial",
+        "detalhe": "Alta apenas com agente definido, acesso seguro, cuidador treinado, exames semanais e retorno programado; sem essas condições, manter internação"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Artrocentese diagnóstica e terapêutica",
+        "indicacao": "toda monoartrite aguda com suspeita de infecção, antes do antibiótico e antes de qualquer infiltração de corticoide",
+        "tecnica": "Assepsia e campos estéreis, anestesia local na pele, portal superolateral ou medial no joelho com agulha 18 a 20 G, aspiração até esvaziar; enviar celularidade com diferencial, Gram, cultura e antibiograma, pesquisa de cristais por luz polarizada, glicose, proteína e LDH",
+        "complicacoes": "Infecção iatrogênica, hemartrose, dor, lesão de cartilagem, punção seca, fístula persistente"
+      },
+      {
+        "nome": "Artrocentese seriada para drenagem",
+        "indicacao": "derrame que reacumula em 24 a 48 horas, articulação acessível como joelho, ombro e tornozelo, sem sinais de síndrome compartimental",
+        "tecnica": "Repetir a punção a cada 24 a 48 horas com assepsia rigorosa e mesmo portal; nova amostra para cultura se febre persistir; associar imobilização curta e analgesia",
+        "complicacoes": "Infecção iatrogênica, hemartrose, lesão de cartilagem, punção seca, desconforto repetido"
+      },
+      {
+        "nome": "Artroscopia com lavagem e sinovectomia",
+        "indicacao": "falha de drenagem por punção em 48 a 72 horas, articulação com septos ou grande carga bacteriana, artrite gonocócica com derrame volumoso",
+        "tecnica": "Dois portais, lavagem com 5 a 10 litros de soro fisiológico sob visão direta, sinovectomia parcial e coleta de material para cultura; dreno por 24 a 48 horas conforme o volume",
+        "complicacoes": "Lesão de cartilagem, infecção do portal, trombose, síndrome compartimental por extravasamento, rigidez pós-operatória"
+      },
+      {
+        "nome": "Artrotomia com drenagem e desbridamento aberto",
+        "indicacao": "quadril e ombro profundo com abscesso, articulação com necrose, falha de artroscopia e prótese infectada",
+        "tecnica": "Acesso cirúrgico, drenagem completa, desbridamento de tecido necrótico e sinovectomia; cultura de múltiplos sítios e drenagem fechada por 24 a 72 horas",
+        "complicacoes": "Sangramento, lesão neurovascular, instabilidade, rigidez, infecção da ferida operatória"
+      },
+      {
+        "nome": "Punção de prótese articular com múltiplas amostras",
+        "indicacao": "prótese com dor nova, derrame ou febre, antes de antibiótico e antes da cirurgia",
+        "tecnica": "Assepsia rigorosa, punção guiada por ultrassom quando possível, envio para celularidade, Gram, cultura e antibiograma; na cirurgia, colher 3 a 5 amostras de tecidos diferentes e suspender antibiótico por pelo menos 2 semanas quando o quadro permitir",
+        "complicacoes": "Infecção iatrogênica, hemartrose, punção seca, fístula, desconforto"
+      },
+      {
+        "nome": "Ultrassonografia articular point-of-care",
+        "indicacao": "confirmar derrame, diferenciar bursa de articulação, localizar abscesso e guiar punção em ombro e quadril",
+        "tecnica": "Transdutor linear de alta frequência em joelho, ombro e tornozelo e convexo em quadril; cortes longitudinal e transversal, comparação com o lado sadio e marcação do sítio de punção",
+        "complicacoes": "Dependência do operador, resultado falso-negativo em derrame pequeno, não define o agente infeccioso"
+      }
+    ],
+    "metas": [
+      "Artrocentese realizada em até 2 horas da suspeita e antibiótico iniciado na primeira hora após a coleta",
+      "Antibiótico iniciado em até 1 hora no paciente em choque, sem aguardar cultura",
+      "Nenhuma infiltração de corticoide em articulação quente antes de excluir infecção",
+      "Agente identificado com cultura e antibiograma em até 72 horas na maioria dos casos",
+      "Drenagem articular efetiva em 24 a 48 horas, com redução de dor e de derrame",
+      "Afebril em 72 horas e PCR em queda de pelo menos 50% em 7 dias",
+      "Duração total de 3 a 4 semanas na articulação nativa e de 6 semanas ou mais na prótese",
+      "Descalonamento para oxacilina em até 72 horas após o antibiograma no MSSA",
+      "Retorno à carga e à função prévia em 4 a 6 semanas"
+    ],
+    "fluxo": [
+      "Triagem: monoartrite aguda — pesquisar febre, prótese, cirurgia ou injeção recente, imunossupressão, diabetes, drogas injetáveis, diálise e exposição sexual",
+      "Estabilizar e colher duas hemoculturas de sítios distintos antes da primeira dose; não atrasar a punção por exames de imagem",
+      "Artrocentese imediata com celularidade e diferencial, Gram, cultura e antibiograma, cristais, glicose e proteína",
+      "Ler o líquido: purulento, Gram positivo ou acima de 50.000 leucócitos/mm3 indica artrite séptica; cristais não excluem infecção",
+      "Internar e iniciar ceftriaxona 2 g 1x/dia; associar vancomicina se risco de MRSA; oxacilina se MSSA já conhecido; aztreonam com vancomicina se alergia grave",
+      "Drenar: punção seriada a cada 24 a 48 horas ou artroscopia em 24 a 48 horas; prótese exige ortopedia no mesmo dia",
+      "Reavaliar em 48 a 72 horas: febre, dor, derrame, hemograma e PCR; falha indica nova drenagem, imagem e revisão da cobertura",
+      "Descalonar com o antibiograma: oxacilina no MSSA, vancomicina ou linezolida no MRSA, ceftriaxona ou ciprofloxacino no gram-negativo sensível; rifampicina apenas na prótese e sempre em combinação",
+      "Completar 3 a 4 semanas na articulação nativa e 6 semanas ou mais na prótese, com alta em antibioticoterapia parenteral ambulatorial, fisioterapia e reavaliação semanal"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "idoso",
+        "ajuste": "punção precoce mesmo sem febre; ceftriaxona sem ajuste; vancomicina guiada por nível; avaliar função renal antes da primeira dose e preferir drenagem menos invasiva",
+        "alerta": "apresentação oligossintomática, delirium como único sinal, lesão renal por vancomicina e risco de descompensação por imobilização"
+      },
+      {
+        "populacao": "renal_cronico",
+        "ajuste": "ceftriaxona sem ajuste; vancomicina e daptomicina com dose e intervalo por função renal; oxacilina espaçada; aztreonam com ajuste; evitar AINE",
+        "alerta": "nefrotoxicidade por vancomicina, acúmulo de fármacos e convulsão por oxacilina em dose alta"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "ceftriaxona, oxacilina e clindamicina são seguras; evitar ciprofloxacino, linezolida sem indicação e rifampicina isolada; drenagem não deve ser postergada",
+        "alerta": "sepse materna com risco fetal, parto prematuro e transmissão de gonococo no parto"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "punção imediata e cobertura ampliada para gram-negativos, fungos e micobactérias conforme o perfil; internação e culturas de múltiplos sítios",
+        "alerta": "séptica sem febre e com evolução rápida, germe atípico e mortalidade alta"
+      },
+      {
+        "populacao": "diabetico",
+        "ajuste": "controle glicêmico intensivo, punção precoce e revisão de feridas nos pés como porta de entrada; monitorar glicemia durante a infecção",
+        "alerta": "maior risco de infecção por gram-negativo, evolução para osteomielite e recidiva"
+      },
+      {
+        "populacao": "protese_articular",
+        "ajuste": "punção com cultura e celularidade, ortopedia no mesmo dia, esquema com rifampicina associada após definição cirúrgica e acompanhamento conjunto por 6 semanas ou mais",
+        "alerta": "biofilme, falha do implante e necessidade de troca em dois tempos"
+      },
+      {
+        "populacao": "usuario_drogas_injetaveis",
+        "ajuste": "cobrir MRSA com vancomicina, colher hemoculturas, procurar endocardite e tromboflebite, e tratar a porta de entrada",
+        "alerta": "bacteremia por S. aureus, endocardite e infecção metastática"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "artrocentese com celularidade e diferencial, Gram, cultura, antibiograma e cristais",
+          "indicacao": "toda monoartrite aguda com suspeita de infecção",
+          "o_que_muda": "separa séptica de gota e de inflamatória, define o agente e permite descalonar"
+        },
+        {
+          "nome": "hemoculturas de dois sítios distintos",
+          "indicacao": "febre, calafrio ou suspeita de séptica, antes do antibiótico",
+          "o_que_muda": "identifica o agente quando o líquido é estéril, detecta bacteremia e indica necessidade de ecocardiograma"
+        },
+        {
+          "nome": "hemograma, PCR e VHS",
+          "indicacao": "todo primeiro episódio e seguimento",
+          "o_que_muda": "sustenta a suspeita, acompanha resposta e detecta falha em 48 a 72 horas"
+        },
+        {
+          "nome": "creatinina, ureia e eletrólitos",
+          "indicacao": "antes de vancomicina, daptomicina e aztreonam",
+          "o_que_muda": "define ajuste de dose e contraindica AINE"
+        },
+        {
+          "nome": "radiografia da articulação",
+          "indicacao": "primeiro episódio, trauma e suspeita de artropatia",
+          "o_que_muda": "detecta fratura, calcificação condrocalcinosa e sinais de lesão prévia"
+        },
+        {
+          "nome": "ultrassonografia articular",
+          "indicacao": "derrame duvidoso, diferenciação de bursa, abscesso e guia de punção",
+          "o_que_muda": "confirma líquido, localiza coleção e aumenta o sucesso da punção em ombro e quadril"
+        },
+        {
+          "nome": "ecocardiograma transtorácico ou transesofágico",
+          "indicacao": "bacteremia por Staphylococcus aureus, prótese valvar ou febre persistente",
+          "o_que_muda": "identifica endocardite, muda a duração do antibiótico e indica cirurgia"
+        },
+        {
+          "nome": "ressonância magnética da articulação",
+          "indicacao": "suspeita de osteomielite, abscesso, prótese infectada ou monoartrite sem diagnóstico após 4 semanas",
+          "o_que_muda": "define extensão óssea, coleção e necessidade de cirurgia ou biópsia"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "aguardar a cultura para iniciar antibiótico em paciente séptico ou instável",
+          "motivo": "o atraso aumenta mortalidade e perda de cartilagem; a coleta é feita no mesmo momento e não é pré-requisito para tratar"
+        },
+        {
+          "exame": "ácido úrico sérico para excluir artrite séptica",
+          "motivo": "não exclui infecção, fica normal na crise e induz a tratar séptica como gota"
+        },
+        {
+          "exame": "ressonância magnética antes da artrocentese",
+          "motivo": "atrasa a punção, que é o exame que muda a conduta"
+        },
+        {
+          "exame": "radiografia isolada para excluir artrite séptica",
+          "motivo": "é normal na fase inicial e dá falsa segurança"
+        },
+        {
+          "exame": "fator reumatoide, FAN e anti-CCP na monoartrite aguda",
+          "motivo": "não ajudam no quadro agudo e desviam do diagnóstico infeccioso"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "retornar imediatamente se febre, calafrio, piora da dor ou incapacidade de mover o membro",
+        "manter isometria e mobilização passiva desde o primeiro dia, conforme orientação da fisioterapia",
+        "usar gelo por 15 a 20 minutos, 3 a 4 vezes ao dia, com proteção da pele",
+        "comparecer a todas as doses e exames semanais do antibiótico",
+        "manter a ferida cirúrgica limpa e seca, com troca de curativo conforme orientação",
+        "informar qualquer diarreia, dor muscular, plaquetas baixas ou alteração visual"
+      ],
+      "evitar": [
+        "infiltrar corticoide ou receber injeção na articulação antes de excluir infecção",
+        "tratar articulação quente apenas com analgésico e ir para casa",
+        "usar AINE por conta própria durante o tratamento",
+        "interromper o antibiótico por melhora antes do prazo prescrito",
+        "massagem vigorosa, calor intenso e carga completa na fase aguda"
+      ],
+      "retorno": [
+        "febre acima de 38 °C ou calafrio",
+        "piora da dor, do derrame ou da incapacidade de apoiar",
+        "vermelhidão que se espalha ou secreção no local da punção",
+        "diarreia aquosa, cólica abdominal ou febre durante o antibiótico",
+        "dor muscular, urina escura ou fraqueza",
+        "falta de ar, dor no peito ou confusão"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "diarreia",
+          "colite por Clostridioides difficile",
+          "rash",
+          "lama biliar",
+          "anemia hemolítica"
+        ],
+        "observacao": "monitorar diarreia e enzimas hepáticas em uso prolongado; suspender se anemia ou icterícia"
+      },
+      {
+        "agente": "vancomicina",
+        "efeitos": [
+          "nefrotoxicidade",
+          "síndrome do homem vermelho",
+          "neutropenia",
+          "ototoxicidade"
+        ],
+        "observacao": "infundir em 60 minutos por grama, dosar nível sérico e creatinina a cada 48 horas"
+      },
+      {
+        "agente": "oxacilina",
+        "efeitos": [
+          "hepatotoxicidade",
+          "neutropenia",
+          "flebite",
+          "nefrite intersticial",
+          "convulsão"
+        ],
+        "observacao": "transaminases semanais e ajuste em disfunção renal; suspender se icterícia"
+      },
+      {
+        "agente": "rifampicina",
+        "efeitos": [
+          "hepatotoxicidade",
+          "trombocitopenia",
+          "nefrite intersticial",
+          "coloração alaranjada de secreções",
+          "indução enzimática"
+        ],
+        "observacao": "nunca usar isolada; revisar anticoagulante, contraceptivo, estatina e antirretroviral"
+      },
+      {
+        "agente": "linezolida",
+        "efeitos": [
+          "trombocitopenia",
+          "neuropatia periférica",
+          "neuropatia óptica",
+          "acidose láctica",
+          "síndrome serotoninérgica"
+        ],
+        "observacao": "hemograma duas vezes por semana e suspender se plaquetas abaixo de 100.000/mm3 ou alteração visual"
+      },
+      {
+        "agente": "daptomicina",
+        "efeitos": [
+          "miopatia",
+          "rabdomiólise",
+          "eosinofilia pulmonar",
+          "neuropatia periférica"
+        ],
+        "observacao": "creatinofosfoquinase semanal e suspender se acima de 5 vezes o limite ou dor muscular"
+      },
+      {
+        "agente": "clindamicina",
+        "efeitos": [
+          "diarreia",
+          "colite por Clostridioides difficile",
+          "rash",
+          "elevação de transaminases"
+        ],
+        "observacao": "suspender imediatamente se diarreia aquosa ou cólica com febre"
+      },
+      {
+        "agente": "aztreonam",
+        "efeitos": [
+          "rash",
+          "diarreia",
+          "elevação de transaminases",
+          "neutropenia"
+        ],
+        "observacao": "ajustar intervalo pela função renal e monitorar hemograma"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar hora, dose, sintoma e gravidade",
+      "Vancomicina: dosar creatinina e vale, hidratar, reduzir dose ou trocar para linezolida ou daptomicina",
+      "Oxacilina: dosar transaminases e hemograma; trocar para cefazolina ou vancomicina se hepatotoxicidade ou neutropenia",
+      "Rifampicina: suspender se icterícia ou plaquetopenia; revisar interações e nunca manter em monoterapia",
+      "Linezolida: suspender se plaquetas abaixo de 100.000/mm3, neuropatia, acidose láctica ou sinais serotoninérgicos",
+      "Daptomicina: suspender se creatinofosfoquinase acima de 5 vezes o limite ou dor muscular",
+      "Clindamicina: suspender se diarreia aquosa, cólica ou febre e pesquisar toxina de Clostridioides difficile",
+      "Reavaliar se o sintoma é efeito adverso ou sinal de falha terapêutica não reconhecida"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "rifampicina 600 mg",
+            "dose": "600 mg",
+            "via": "VO",
+            "frequencia": "1x/dia em jejum",
+            "duracao": "6 semanas",
+            "condicao": "prótese articular com implante mantido, sempre em combinação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "clindamicina 450 mg",
+            "dose": "450 mg",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "2 semanas",
+            "condicao": "complemento oral de gram-positivo sensível",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ciprofloxacino 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "2 semanas",
+            "condicao": "complemento oral de gram-negativo sensível por antibiograma",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "7 dias",
+            "condicao": "analgesia adjuvante, máximo 3 g/dia",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona 2 g",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "1x/dia",
+            "monitorizacao": "função renal, hemograma e resposta articular em 48 a 72 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "vancomicina 1 g",
+            "dose": "15 a 20 mg/kg",
+            "via": "IV",
+            "frequencia": "12/12 h com ajuste renal",
+            "monitorizacao": "vale sérico, creatinina e infusão em 60 minutos por grama",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "oxacilina 2 g",
+            "dose": "2 g",
+            "via": "IV",
+            "frequencia": "4/4 h",
+            "monitorizacao": "transaminases, hemograma e creatinina",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 1 g",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "dose total diária e função hepática",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "artrocentese com celularidade e diferencial",
+          "Gram do líquido sinovial",
+          "cultura e antibiograma do líquido sinovial",
+          "pesquisa de cristais por luz polarizada",
+          "glicose e proteína do líquido sinovial",
+          "duas hemoculturas de sítios distintos",
+          "hemograma",
+          "PCR",
+          "VHS",
+          "creatinina",
+          "eletrólitos",
+          "glicemia",
+          "radiografia da articulação",
+          "ultrassom articular",
+          "ecocardiograma",
+          "teste de amplificação para gonococo",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de artrite séptica em ___, submetido a artrocentese e antibioticoterapia parenteral, necessitando de afastamento das atividades por ___ dias, com reavaliação e fisioterapia programadas.",
+        "dias": null,
+        "cid": null,
+        "observacao": "o número de dias é decisão médica e depende da articulação, do agente e da necessidade de cirurgia"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo com diagnóstico e resultado do líquido sinovial",
+          "resumo com antibiótico em uso e data da primeira dose",
+          "necessidade de drenagem ou cirurgia",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com artrite séptica de ___ há ___, febre ___, fator de risco ___, líquido sinovial com ___ leucócitos, Gram ___, cultura ___, cristais ___, antibiótico instituído em ___ e drenagem realizada em ___, com resposta clínica e laboratorial em 48 a 72 horas."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "articulação acometida",
+        "tempo de evolução e velocidade de instalação",
+        "febre e calafrio",
+        "prótese, material de síntese ou cirurgia articular recente",
+        "injeção articular recente",
+        "imunossupressão, diabetes, HIV e transplante",
+        "uso de drogas injetáveis e diálise",
+        "exposição sexual, uretrite e lesão genital",
+        "crises prévias de gota e uso de diurético",
+        "antibiótico recente",
+        "anticoagulante e coagulopatia",
+        "trauma e porta de entrada cutânea"
+      ],
+      "texto_template": "Paciente com monoartrite de ___ há ___, febre ___, prótese ou cirurgia articular ___, injeção recente ___, imunossupressão ___, diabetes ___, uso de drogas injetáveis ___, diálise ___, exposição sexual ou uretrite ___, gota prévia ___, antibiótico recente ___, anticoagulante ___, trauma ___, porta de entrada ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "temperatura e sinais vitais com perfusão",
+        "inspeção comparativa das articulações",
+        "palpação de derrame e de calor local",
+        "amplitude ativa e passiva",
+        "dor à mobilização passiva e à carga",
+        "força, sensibilidade e pulsos distais",
+        "pele e porta de entrada",
+        "prótese, cicatriz cirúrgica e ferida",
+        "exame de quadril e ombro com rotação e bloqueio"
+      ],
+      "texto_template": "Temperatura ___, perfusão ___, inspeção comparativa ___, derrame ___, calor e rubor ___, amplitude ativa ___ e passiva ___, dor à mobilização passiva ___, força e sensibilidade distais ___, pulsos ___, porta de entrada cutânea ___, cicatriz ou prótese ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de monoartrite aguda, disponibilidade de artrocentese em 2 horas e de artroscopia em 24 a 48 horas",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_infectologia",
+        "o_que_verificar": "esquema empírico para MRSA, duração da antibioticoterapia e manejo de infecção periprotética",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_ortopedia",
+        "o_que_verificar": "indicação de artroscopia, artrotomia e troca de prótese em dois tempos",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_reumatologia",
+        "o_que_verificar": "critérios de interpretação do líquido sinovial e coexistência de cristais e infecção",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações, concentrações e diluentes disponíveis no serviço",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-MSK13-01",
+        "tipo": "artrocentese_ausente",
+        "gatilho": "suspeita de artrite séptica com antibiótico prescrito sem artrocentese registrada",
+        "severidade": "grave",
+        "mensagem": "Artrite séptica exige artrocentese antes do antibiótico: puncionar e coletar celularidade, Gram, cultura e cristais.",
+        "acao": "bloquear o antibiótico e exigir artrocentese, exceto em choque",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK13-02",
+        "tipo": "corticoide_sem_excluir_infeccao",
+        "gatilho": "prescrição de corticoide intra-articular sem resultado de líquido sinovial",
+        "severidade": "grave",
+        "mensagem": "Não infiltrar corticoide em articulação quente antes de excluir infecção.",
+        "acao": "bloquear o item e sugerir artrocentese",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK13-03",
+        "tipo": "choque_sem_antibiotico",
+        "gatilho": "hipotensão, confusão ou lactato elevado com suspeita de artrite séptica e antibiótico não iniciado",
+        "severidade": "grave",
+        "mensagem": "Em quadro séptico, não aguardar cultura: coletar e iniciar antibiótico em até 1 hora.",
+        "acao": "liberar a primeira dose imediatamente, mesmo sem cultura",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK13-04",
+        "tipo": "protese",
+        "gatilho": "prótese articular com dor nova, derrame ou febre",
+        "severidade": "grave",
+        "mensagem": "Infecção periprotética: puncionar, acionar ortopedia e nunca infiltrar corticoide.",
+        "acao": "bloquear alta e acionar ortopedia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK13-05",
+        "tipo": "aine_na_septica",
+        "gatilho": "AINE prescrito para monoartrite quente antes da artrocentese",
+        "severidade": "grave",
+        "mensagem": "AINE não trata artrite séptica e mascara o quadro.",
+        "acao": "bloquear o item e sugerir punção e analgesia com paracetamol",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-MSK13-06",
+        "tipo": "duracao_curta",
+        "gatilho": "antibiótico programado por menos de 3 semanas na artrite séptica nativa",
+        "severidade": "precaucao",
+        "mensagem": "Duração menor que 3 semanas aumenta recidiva.",
+        "acao": "alertar e revisar a duração",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-MSK13-07",
+        "tipo": "vancomicina_sem_nivel",
+        "gatilho": "vancomicina em uso por mais de 48 horas sem vale sérico ou AUC registrado",
+        "severidade": "precaucao",
+        "mensagem": "Dosar vale antes da 4ª dose para evitar nefrotoxicidade e subdose.",
+        "acao": "alertar e solicitar nível sérico",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-MSK13-08",
+        "tipo": "rifampicina_monoterapia",
+        "gatilho": "rifampicina prescrita isolada em infecção articular",
+        "severidade": "grave",
+        "mensagem": "Rifampicina isolada seleciona resistência em dias.",
+        "acao": "bloquear e exigir combinação com outro fármaco ativo",
+        "bloqueante": true
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "sociedade de infectologia",
+        "sociedade de ortopedia",
+        "sociedade de reumatologia",
+        "literatura"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Criação do registro a partir do catálogo mestre.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Primeira versão no padrão de diversidade.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

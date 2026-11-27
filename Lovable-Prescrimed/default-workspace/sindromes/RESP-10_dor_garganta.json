@@ -1,0 +1,1089 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-10",
+    "area": "Respiratório/ORL",
+    "nome": "Dor de garganta inespecífica",
+    "aliases": [
+      "dor de garganta",
+      "odinofagia",
+      "garganta inflamada",
+      "faringite viral",
+      "dor de garganta sem exsudato",
+      "odinofagia inespecífica"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Dor de garganta sem critério claro de infecção estreptocócica é, na grande maioria, viral, e o tratamento é sintomático. O registro existe para duas decisões: provar que não há indicação de antibiótico e provar que a via aérea está segura. O escore de McIsaac organiza a primeira decisão — febre acima de 38 °C, ausência de tosse, adenopatia cervical anterior dolorosa, exsudato ou edema amigdaliano e a faixa de idade somam pontos; abaixo de 3 pontos o antibiótico não está indicado e nem a cultura é necessária, e acima disso a confirmação por teste rápido ou cultura evita tratar 60% a 70% dos casos com etiologia viral. O antibiótico só entra com McIsaac de 3 a 4 pontos confirmado por teste rápido positivo, ou com escore 4 e quadro típico, e nunca por conveniência, por pedido do paciente ou por cor da secreção. A analgesia é o tratamento de verdade: paracetamol, dipirona e ibuprofeno em dose plena e em horário fixo, associados a spray ou pastilha com anestésico tópico para a odinofagia que impede a deglutição, com hidratação, gargarejo morno e repouso vocal. O que muda o diagnóstico e o destino do paciente são cinco sinais: disfagia que impede engolir a própria saliva, sialorreia, trismo, voz abafada e estridor. Eles apontam para abscesso periamigdaliano ou retrofaríngeo, epiglotite ou angina de Ludwig, tiram o caso do ambulatorial e exigem via aérea, imagem e cirurgia. O erro caro é prescrever amoxicilina para todo mundo e não olhar a garganta de quem está babando.",
+    "inclusao": [
+      "Odinofagia de início recente, sem exsudato ou com exsudato sem critério de estreptococo",
+      "Quadro acompanhado de tosse, coriza, rouquidão ou conjuntivite, típico de etiologia viral",
+      "Dor de garganta com febre baixa e sem sinais de gravidade",
+      "Odinofagia intensa que limita a deglutição, sem sinais de abscesso ou de obstrução de via aérea",
+      "Dor de garganta recorrente sem sinais de alarme, para revisão de indicação de antibiótico",
+      "Paciente que procura atendimento pedindo antibiótico sem critério clínico, para decisão documentada"
+    ],
+    "exclusao": [
+      {
+        "situacao": "disfagia com sialorreia, incapacidade de engolir saliva, trismo, voz abafada ou abaulamento amigdaliano",
+        "fluxo": "abscesso periamigdaliano ou retrofaríngeo — avaliação cirúrgica e de via aérea imediata"
+      },
+      {
+        "situacao": "estridor, bradipneia, postura de tripé ou dispneia com rouquidão de instalação rápida",
+        "fluxo": "epiglotite, angina de Ludwig ou obstrução de via aérea — sala de emergência, sem examinar a garganta à força"
+      },
+      {
+        "situacao": "exsudato com febre, ausência de tosse e teste rápido positivo ou McIsaac 3 a 4",
+        "fluxo": "RESP-03 faringoamigdalite estreptocócica — antibiótico conforme critério"
+      },
+      {
+        "situacao": "febre alta, odinofagia intensa, linfadenopatia generalizada, esplenomegalia e astenia arrastada",
+        "fluxo": "mononucleose infecciosa — evitar amoxicilina pelo rash"
+      },
+      {
+        "situacao": "odinofagia arrastada, rouquidão progressiva, tabagismo ou etilismo com perda de peso ou massa cervical",
+        "fluxo": "neoplasia de orofaringe ou laringe — otorrinolaringologia com nasofibroscopia"
+      },
+      {
+        "situacao": "placas esbranquiçadas removíveis com eritema e fator de risco para candidíase",
+        "fluxo": "candidíase orofaríngea — antifúngico tópico ou sistêmico"
+      },
+      {
+        "situacao": "dor de garganta com pirose, regurgitação e piora em decúbito",
+        "fluxo": "doença do refluxo gastroesofágico — tratamento próprio, não antibiótico"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "disfagia importante ou incapacidade de engolir a própria saliva",
+        "por_que": "abscesso periamigdaliano ou retrofaríngeo com risco de obstrução e sepse",
+        "acao": "avaliação cirúrgica imediata, imagem de pescoço e drenagem; via aérea protegida",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "sialorreia com a boca entreaberta e incapacidade de deglutir",
+        "por_que": "obstrução iminente de via aérea superior por abscesso ou epiglotite",
+        "acao": "sala de emergência, preparo de via aérea difícil e anestesiologista",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "trismo, dor à abertura da boca ou abaulamento de pilar amigdaliano",
+        "por_que": "abscesso periamigdaliano",
+        "acao": "punção ou drenagem cirúrgica e antibiótico parenteral",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "voz abafada, de batata quente, ou voz rouca de instalação rápida",
+        "por_que": "edema de epiglote ou coleção em espaço profundo do pescoço",
+        "acao": "não examinar a garganta à força, chamar cirurgia e anestesia, e encaminhar ao centro com via aérea",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "estridor, tiragem, taquipneia ou postura de tripé",
+        "por_que": "obstrução de via aérea superior",
+        "acao": "sala vermelha com via aérea difícil, sem sedação e sem decúbito forçado",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "edema submandibular ou submentoniano bilateral com elevação da língua",
+        "por_que": "angina de Ludwig, infecção do assoalho da boca",
+        "acao": "cirurgia imediata, antibiótico de amplo espectro por via parenteral e suporte de via aérea",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "febre persistente acima de 72 h sem melhora com analgesia adequada",
+        "por_que": "infecção bacteriana complicada ou coleção não drenada",
+        "acao": "reexame da orofaringe, palpação cervical e imagem se houver assimetria",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "odinofagia que piora progressivamente após 5 a 7 dias ou unilateral com desvio de úvula",
+        "por_que": "abscesso em formação, corpo estranho ou neoplasia",
+        "acao": "otorrinolaringologia com nasofibroscopia, não repetir antibiótico empírico",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "criança com recusa alimentar, voz molhada ou dificuldade respiratória",
+        "por_que": "epiglotite ou abscesso retrofaríngeo em via aérea de pequeno calibre",
+        "acao": "emergência pediátrica, sem exame invasivo de orofaringe antes da sala cirúrgica",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Há quantos dias a dor começou e está piorando, igual ou melhorando?",
+      "Consegue engolir saliva ou está babando? Consegue abrir a boca por completo?",
+      "A voz está normal, abafada ou rouca?",
+      "Tem tosse, coriza, rouquidão ou conjuntivite junto?",
+      "Tem febre, e qual a temperatura medida?",
+      "A dor é dos dois lados ou de um lado só, com abaulamento?",
+      "Já usou antibiótico nos últimos 3 meses? Qual e por quanto tempo?",
+      "Tem alergia a penicilina, já teve anafilaxia ou reação grave a betalactâmico?",
+      "As vacinas estão em dia, incluindo Haemophilus influenzae tipo b e pneumococo?",
+      "Há imunossupressão, diabetes, uso de corticoide ou quimioterapia?",
+      "Tabagista ou etilista com rouquidão arrastada, perda de peso ou massa no pescoço?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Quadro viral típico: tosse, coriza, rouquidão, febre baixa e exsudato ausente, com McIsaac de 0 a 2 pontos",
+        "escolha": "Analgésico em horário fixo, hidratação e medidas locais, sem antibiótico e sem cultura",
+        "porque": "A etiologia é viral, a resolução é espontânea em 5 a 7 dias e o antibiótico não encurta a dor, além de selecionar resistência e causar diarreia e rash"
+      },
+      {
+        "cenario": "McIsaac de 3 a 4 pontos, ou teste rápido de antígeno positivo",
+        "escolha": "Amoxicilina 500 mg 8/8 h por 10 dias",
+        "porque": "A penicilina é o único antibiótico com benefício comprovado em faringite estreptocócica, previne febre reumática e o esquema de 10 dias erradica o estreptococo do grupo A"
+      },
+      {
+        "cenario": "McIsaac de 3 a 4 pontos com teste rápido negativo, em adulto",
+        "escolha": "Não prescrever antibiótico, tratar a dor e reavaliar em 48 a 72 h se não houver melhora",
+        "porque": "O teste rápido tem especificidade alta; em adulto, o resultado negativo dispensa cultura de confirmação e evita antibiótico desnecessário"
+      },
+      {
+        "cenario": "Odinofagia intensa que impede deglutição, sem sinais de abscesso ou de via aérea",
+        "escolha": "Associar paracetamol e ibuprofeno em esquema alternado, mais anestésico tópico antes das refeições",
+        "porque": "A associação de analgésicos com mecanismos diferentes controla melhor a dor do que dobrar a dose de um só, e o tópico reduz a dor da deglutição em minutos"
+      },
+      {
+        "cenario": "Contraindicação ou intolerância a AINE: úlcera, doença renal crônica, terceiro trimestre, asma induzida por AINE",
+        "escolha": "Paracetamol com dipirona em esquema alternado, sem AINE",
+        "porque": "Mantém a analgesia com classes sem toxicidade gastrintestinal e renal, que são o limite do AINE nesses perfis"
+      },
+      {
+        "cenario": "Alergia a penicilina sem anafilaxia, em paciente com critério de tratamento",
+        "escolha": "Azitromicina 500 mg 1x/dia por 3 dias ou cefalexina 500 mg 6/6 h por 10 dias se a alergia não for grave",
+        "porque": "Cobre o estreptococo quando a penicilina não pode ser usada; a cefalosporina é aceitável quando a reação prévia foi exantema e não anafilaxia"
+      },
+      {
+        "cenario": "Suspeita de abscesso periamigdaliano, retrofaríngeo ou epiglotite",
+        "escolha": "Sair do fluxo ambulatorial: via aérea, imagem de pescoço, antibiótico parenteral e drenagem cirúrgica",
+        "porque": "O problema deixou de ser faringite e passou a ser coleção em espaço profundo, com risco de obstrução de via aérea e sepse"
+      },
+      {
+        "cenario": "Falha de melhora após 5 a 7 dias de tratamento adequado",
+        "escolha": "Reexaminar a orofaringe e o pescoço, considerar mononucleose, candidíase, refluxo, corpo estranho e neoplasia",
+        "porque": "Repetir antibiótico sem novo exame atrasa o diagnóstico de abscesso, mononucleose e tumor, que são as causas que realmente mudam o prognóstico"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "analgesico_antipiretico",
+        "agente": "paracetamol",
+        "papel": "primeira_linha",
+        "indicacao": "dor de garganta e febre, primeira escolha por segurança gástrica e renal",
+        "dose": "500 a 1.000 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "4/4 h a 6/6 h, em horário fixo",
+        "duracao": "até 5 dias",
+        "dose_maxima": "4 g/dia; 3 g/dia em hepatopatia, etilismo, desnutrição ou idoso frágil",
+        "contraindicacoes": [
+          "hepatite ativa ou insuficiência hepática grave",
+          "desnutrição grave e depleção de glutationa",
+          "hipersensibilidade ao paracetamol"
+        ],
+        "efeitos_adversos": [
+          "hepatotoxicidade dose-dependente",
+          "rash cutâneo",
+          "trombocitopenia rara",
+          "elevação de transaminases em uso prolongado"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 750 mg",
+          "comprimido 1 g",
+          "solução oral 32 mg/mL",
+          "gotas 200 mg/mL",
+          "supositório 750 mg",
+          "solução intravenosa 10 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento; somar toda a dose diária de paracetamol presente em associações e antigripais antes de prescrever",
+        "tempo_infusao": "não se aplica (via oral); na via intravenosa, infundir em 15 minutos",
+        "monitorizacao": [
+          "intensidade da dor em escala de 0 a 10 antes e depois da dose",
+          "temperatura axilar",
+          "dose total diária somada de todos os produtos em uso",
+          "transaminases se uso acima de 5 dias ou em hepatopata"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: manter a dose e aumentar o intervalo para 6/6 h ou 8/8 h",
+        "ajuste_hepatico": "Child-Pugh B ou C: máximo de 2 a 3 g/dia, com intervalo de 6 a 8 h",
+        "observacoes": "É o analgésico de escolha quando há contraindicação a AINE e na suspeita de dengue. Pediatria: 10 a 15 mg/kg por dose, 4/4 h a 6/6 h, máximo de 75 mg/kg/dia ou 4 g/dia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analgesico_antipiretico",
+        "agente": "dipirona",
+        "papel": "alternativa",
+        "indicacao": "dor de garganta de intensidade média a intensa e febre, quando o paracetamol é insuficiente ou indisponível",
+        "dose": "1.000 mg",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "6/6 h",
+        "duracao": "até 5 dias",
+        "dose_maxima": "4 g/dia",
+        "contraindicacoes": [
+          "alergia a pirazolonas, incluindo fenilbutazona",
+          "agranulocitose ou discrasia sanguínea prévia com o fármaco",
+          "porfiria hepática aguda",
+          "deficiência de glicose-6-fosfato desidrogenase sem avaliação",
+          "terceiro trimestre de gestação",
+          "menores de 3 meses"
+        ],
+        "efeitos_adversos": [
+          "hipotensão em infusão rápida",
+          "agranulocitose rara e grave",
+          "rash e urticária",
+          "anafilaxia rara",
+          "dor no local da injeção"
+        ],
+        "apresentacoes": [
+          "comprimido 500 mg",
+          "comprimido 1 g",
+          "gotas 500 mg/mL",
+          "solução oral 50 mg/mL",
+          "ampola 1 g/2 mL",
+          "ampola 500 mg/mL"
+        ],
+        "preparo": "Via oral direta. Via intravenosa: diluir 1 g em 10 a 20 mL de água destilada ou soro fisiológico e infundir lentamente, com o paciente deitado",
+        "tempo_infusao": "5 minutos na via intravenosa; a infusão rápida causa hipotensão",
+        "monitorizacao": [
+          "pressão arterial e frequência cardíaca na via intravenosa",
+          "dor e temperatura",
+          "hemograma se uso acima de 7 dias ou febre com odinofagia prolongada",
+          "sinais de reação cutânea"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: aumentar o intervalo para 8/8 h ou 12/12 h e evitar uso prolongado",
+        "ajuste_hepatico": "Reduzir a dose e evitar em hepatopatia grave",
+        "observacoes": "Não é preenchimento: entra quando há dor real e quando a via intravenosa é necessária. Suspender de imediato se aparecer febre alta com odinofagia e leucopenia, que sugerem agranulocitose. Pediatria: 10 a 20 mg/kg por dose, 6/6 h, máximo de 60 mg/kg/dia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "aine",
+        "agente": "ibuprofeno",
+        "papel": "primeira_linha",
+        "indicacao": "odinofagia com componente inflamatório importante, em paciente sem contraindicação a AINE",
+        "dose": "400 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "6/6 h a 8/8 h, com alimento",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "1.200 mg/dia por conta própria; até 2.400 mg/dia sob prescrição e vigilância",
+        "contraindicacoes": [
+          "úlcera péptica ativa ou sangramento digestivo prévio",
+          "doença renal crônica com ClCr abaixo de 30 mL/min",
+          "insuficiência cardíaca descompensada",
+          "asma induzida por AINE ou alergia a AAS",
+          "terceiro trimestre de gestação",
+          "suspeita de dengue ou de arbovirose",
+          "uso concomitante de anticoagulante em dose plena"
+        ],
+        "efeitos_adversos": [
+          "dispepsia e náusea",
+          "sangramento digestivo",
+          "lesão renal aguda em desidratação",
+          "broncoespasmo em asmático sensível",
+          "elevação da pressão arterial"
+        ],
+        "apresentacoes": [
+          "comprimido 200 mg",
+          "comprimido 400 mg",
+          "comprimido 600 mg",
+          "cápsula mole 200 mg",
+          "suspensão oral 50 mg/mL",
+          "gotas 50 mg/mL"
+        ],
+        "preparo": "Uso direto, sempre com alimento ou após a refeição, para reduzir dispepsia",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "dor antes e depois da dose",
+          "dispepsia, dor epigástrica e sinais de sangramento digestivo",
+          "pressão arterial e edema",
+          "creatinina e diurese se uso acima de 3 dias em idoso ou desidratado"
+        ],
+        "ajuste_renal": "Evitar com ClCr abaixo de 30 mL/min; entre 30 e 59 mL/min, usar a menor dose pelo menor tempo",
+        "ajuste_hepatico": "Sem ajuste em hepatopatia leve; evitar em cirrose descompensada pelo risco de sangramento e de síndrome hepatorrenal",
+        "observacoes": "Não associar dois AINEs e não associar AINE a corticoide em dose plena, pelo risco de sangramento digestivo. Pediatria: 10 mg/kg por dose, 6/6 h a 8/8 h, apenas acima de 6 meses e nunca em suspeita de dengue.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_topico",
+        "agente": "lidocaína 10% spray orofaríngeo",
+        "papel": "condicional",
+        "indicacao": "odinofagia intensa que dificulta a deglutição, como analgesia local antes das refeições",
+        "dose": "1 a 3 jatos de 10 mg na orofaringe",
+        "unidade": "jato",
+        "via": "orofaríngea",
+        "frequencia": "até 3x/dia, antes das refeições",
+        "duracao": "máximo 3 dias",
+        "dose_maxima": "6 aplicações por dia e 200 mg/dia",
+        "contraindicacoes": [
+          "crianças abaixo de 6 anos, pelo risco de aspiração e laringoespasmo",
+          "disfagia com risco de aspiração ou reflexo de deglutição comprometido",
+          "alergia a anestésicos do tipo amida",
+          "insuficiência hepática grave",
+          "epilepsia não controlada",
+          "uso concomitante de antiarrítmico da classe I"
+        ],
+        "efeitos_adversos": [
+          "dormência da língua e da faringe",
+          "sensação de engasgo e aspiração",
+          "perda transitória do reflexo de deglutição",
+          "tontura, zumbido e gosto metálico em dose alta",
+          "convulsão em superdosagem"
+        ],
+        "apresentacoes": [
+          "spray 10% frasco 50 mL, 10 mg por jato",
+          "gel oromucoso 2%, bisnaga 30 g",
+          "solução 2% frasco 100 mL para uso hospitalar"
+        ],
+        "preparo": "Aplicar diretamente na orofaringe, apontando para a amígdala, sem ultrapassar a úvula e sem engolir o excesso; não usar antes de exame de via aérea",
+        "tempo_infusao": "não se aplica (via orofaríngea)",
+        "monitorizacao": [
+          "alívio da dor e capacidade de deglutir",
+          "engasgo, tosse e aspiração após a aplicação",
+          "dormência excessiva e dificuldade para falar",
+          "sinais de toxicidade: tontura, zumbido, gosto metálico e tremores"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "ajuste_hepatico": "Reduzir a exposição em hepatopatia grave, porque o metabolismo de primeira passagem está comprometido",
+        "observacoes": "Alivia a dor da deglutição em 1 a 3 minutos, com efeito de 20 a 30 minutos. Avisar que a anestesia da faringe facilita engasgo: não comer nem beber por 30 minutos após a aplicação. Nunca prescrever para criança pequena nem para paciente com disfagia ou rebaixamento de consciência.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_topico",
+        "agente": "benzocaína 4 mg pastilha",
+        "papel": "alternativa",
+        "indicacao": "odinofagia leve a média, em paciente acima de 6 anos que consegue dissolver a pastilha sem risco de engasgo",
+        "dose": "1 pastilha",
+        "unidade": "pastilha",
+        "via": "orofaríngea",
+        "frequencia": "3/3 h a 6/6 h, no máximo 8 pastilhas por dia",
+        "duracao": "máximo 3 dias",
+        "dose_maxima": "8 pastilhas/dia, equivalentes a 32 mg/dia",
+        "contraindicacoes": [
+          "crianças abaixo de 2 anos, pelo risco de metahemoglobinemia",
+          "alergia a anestésicos do tipo éster",
+          "metahemoglobinemia prévia ou deficiência de G6PD",
+          "disfagia ou risco de aspiração",
+          "uso concomitante de outro anestésico tópico"
+        ],
+        "efeitos_adversos": [
+          "dormência da boca e da língua",
+          "metahemoglobinemia com cianose, rara e grave em criança pequena",
+          "engasgo e aspiração",
+          "irritação local e alteração do paladar"
+        ],
+        "apresentacoes": [
+          "pastilha 4 mg",
+          "pastilha 5 mg",
+          "spray orofaríngeo 15%"
+        ],
+        "preparo": "Deixar dissolver lentamente na boca, sem mastigar e sem engolir inteira; não comer nem beber por 30 minutos após o uso",
+        "tempo_infusao": "não se aplica (via orofaríngea)",
+        "monitorizacao": [
+          "alívio da dor",
+          "engasgo e tosse durante a dissolução",
+          "cianose ou dispneia, que sugerem metahemoglobinemia",
+          "número de pastilhas usadas por dia"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "ajuste_hepatico": "Sem ajuste por via tópica",
+        "observacoes": "Serve para dor leve, não para odinofagia intensa. O risco de metahemoglobinemia é o motivo de proibir em menores de 2 anos e de limitar a 3 dias. Não associar com lidocaína, para não somar anestesia de faringe e reflexo de deglutição.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_inflamatorio_topico",
+        "agente": "flurbiprofeno 8,75 mg pastilha",
+        "papel": "alternativa",
+        "indicacao": "odinofagia com inflamação local importante, como alternativa ao anestésico tópico em adulto e adolescente acima de 12 anos",
+        "dose": "1 pastilha",
+        "unidade": "pastilha",
+        "via": "orofaríngea",
+        "frequencia": "3/3 h a 6/6 h",
+        "duracao": "3 a 7 dias",
+        "dose_maxima": "5 pastilhas/dia, equivalentes a 43,75 mg/dia",
+        "contraindicacoes": [
+          "úlcera péptica ativa ou sangramento digestivo prévio",
+          "asma induzida por AINE",
+          "insuficiência renal grave",
+          "terceiro trimestre de gestação",
+          "menores de 12 anos",
+          "suspeita de dengue"
+        ],
+        "efeitos_adversos": [
+          "irritação e ardência na boca",
+          "dormência local",
+          "dispepsia",
+          "broncoespasmo em asmático sensível",
+          "edema e reação de hipersensibilidade raros"
+        ],
+        "apresentacoes": [
+          "pastilha 8,75 mg sabor mel e limão",
+          "pastilha 8,75 mg sabor menta",
+          "spray orofaríngeo 0,075%"
+        ],
+        "preparo": "Deixar dissolver na boca por 10 a 15 minutos, sem mastigar; usar após a refeição para reduzir desconforto gástrico",
+        "tempo_infusao": "não se aplica (via orofaríngea)",
+        "monitorizacao": [
+          "dor em escala antes e depois",
+          "ardência e irritação local",
+          "dispepsia e dor epigástrica",
+          "sinais de broncoespasmo em asmático"
+        ],
+        "ajuste_renal": "Evitar com ClCr abaixo de 30 mL/min; cautela entre 30 e 59 mL/min",
+        "ajuste_hepatico": "Evitar em hepatopatia grave",
+        "observacoes": "A absorção sistêmica é baixa, mas não nula: respeitar as mesmas contraindicações do AINE oral. Não associar com ibuprofeno em dose plena, porque a associação soma efeito gastrintestinal sem ganho analgésico relevante.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "betalactamico_penicilina",
+        "agente": "amoxicilina",
+        "papel": "condicional",
+        "indicacao": "faringite estreptocócica confirmada por teste rápido ou com McIsaac de 3 a 4 pontos, nunca por presunção clínica isolada",
+        "dose": "500 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "8/8 h",
+        "duracao": "10 dias",
+        "dose_maxima": "1,5 g/dia",
+        "contraindicacoes": [
+          "alergia a penicilina com anafilaxia ou angioedema prévio",
+          "mononucleose infecciosa, pelo rash generalizado",
+          "antecedente de reação grave a betalactâmico"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "rash cutâneo, sobretudo em mononucleose",
+          "candidíase oral ou vaginal",
+          "anafilaxia rara",
+          "colite por Clostridioides difficile"
+        ],
+        "apresentacoes": [
+          "cápsula 500 mg",
+          "comprimido 875 mg",
+          "comprimido dispersível 500 mg",
+          "suspensão oral 250 mg/5 mL",
+          "suspensão oral 400 mg/5 mL",
+          "pó para solução 50 mg/mL"
+        ],
+        "preparo": "Cápsula por via oral direta. Suspensão: reconstituir com água filtrada até a marca, agitar e manter refrigerada por no máximo 7 dias; medir com seringa dosadora",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "queda da febre e da dor em 48 a 72 h",
+          "rash, diarreia e candidíase",
+          "adesão aos 10 dias completos, que é o que previne febre reumática",
+          "sinais de anafilaxia na primeira dose"
+        ],
+        "ajuste_renal": "ClCr entre 10 e 30 mL/min: 250 a 500 mg 12/12 h; ClCr abaixo de 10 mL/min: 250 a 500 mg 1x/dia",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só prescrever com critério documentado no prontuário: escore de McIsaac e resultado do teste rápido. Encurtar para 5 dias, como se faz em outros países, reduz a erradicação e a prevenção de febre reumática. Pediatria: 50 mg/kg/dia, 1x/dia ou 12/12 h, máximo de 1 g por dose.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "betalactamico_penicilina",
+        "agente": "penicilina benzatina",
+        "papel": "alternativa",
+        "indicacao": "faringite estreptocócica com critério confirmado e adesão incerta ao esquema oral de 10 dias",
+        "dose": "1.200.000 UI",
+        "unidade": "UI",
+        "via": "IM profunda",
+        "frequencia": "dose única",
+        "duracao": "dose única",
+        "dose_maxima": "1.200.000 UI por dose; 600.000 UI se peso abaixo de 27 kg",
+        "contraindicacoes": [
+          "alergia a penicilina com anafilaxia prévia",
+          "antecedente de reação grave a betalactâmico",
+          "trombocitopenia grave com risco de hematoma",
+          "injeção intravenosa ou intra-arterial, que é proibida"
+        ],
+        "efeitos_adversos": [
+          "dor local intensa e endurecimento glúteo",
+          "reação de Hoigne com alucinação e agitação transitória",
+          "anafilaxia",
+          "febre e exantema",
+          "necrose tecidual se aplicada por via incorreta"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 1.200.000 UI com diluente de 4 mL",
+          "frasco-ampola 600.000 UI com diluente de 2 mL"
+        ],
+        "preparo": "Reconstituir o pó com o diluente próprio, agitando até suspensão homogênea; aplicar em glúteo com agulha longa, aspirando antes de injetar; nunca usar via intravenosa",
+        "tempo_infusao": "não se aplica (via intramuscular); injetar lentamente em 1 a 2 minutos",
+        "monitorizacao": [
+          "observação por 30 minutos após a aplicação, pelo risco de anafilaxia",
+          "dor e endurecimento no local",
+          "febre e exantema nas primeiras 24 h",
+          "adesão, já que é dose única e não depende de retorno"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a opção quando o paciente não vai completar 10 dias de amoxicilina, porque garante o tratamento em uma aplicação. Manter adrenalina e material de suporte disponíveis no local. Não usar para profilaxia de febre reumática aqui, que tem esquema próprio a cada 3 ou 4 semanas.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Hidratação frequente e em pequenos volumes",
+        "detalhe": "Oferecer 100 a 200 mL de água, água morna ou solução de reidratação a cada 30 a 60 minutos, em vez de grandes volumes de uma vez, porque a odinofagia faz o paciente evitar beber e chegar desidratado. Água morna com mel e limão alivia; mel não pode ser dado a menor de 1 ano."
+      },
+      {
+        "medida": "Gargarejo com água salgada morna",
+        "detalhe": "Dissolver meia colher de chá de sal em 240 mL de água morna e gargarejar por 30 segundos, 3 a 4 vezes ao dia, sem engolir; reduz edema e desconforto local e não tem risco sistêmico. Não indicar em criança que ainda não sabe gargarejar sem engolir."
+      },
+      {
+        "medida": "Repouso vocal e retirada de irritantes",
+        "detalhe": "Evitar falar alto, cantar e sussurrar por 48 a 72 h; proibir cigarro, incluindo o de terceiros, álcool, café quente e ambientes com ar-condicionado seco. Sussurrar força mais a laringe do que falar em tom normal."
+      },
+      {
+        "medida": "Alimentos frios, moles e não ácidos",
+        "detalhe": "Preferir sorvete, iogurte gelado, purê, sopa morna e frutas não ácidas; evitar suco de laranja, limão, tomate, fritura, pimenta e alimento duro, que traumatizam a mucosa já inflamada. O frio tem efeito anestésico local."
+      },
+      {
+        "medida": "Higiene de mãos e etiqueta respiratória",
+        "detalhe": "Lavar as mãos por 20 segundos e usar lenço descartável; a faringite viral é transmitida por gotículas e por contato, e a orientação reduz transmissão domiciliar e escolar."
+      },
+      {
+        "medida": "Afastamento de escola ou trabalho conforme o quadro",
+        "detalhe": "Manter afastamento enquanto houver febre e dor importante; na faringite estreptocócica tratada, liberar após 24 horas de antibiótico e 24 horas sem febre. Fornecer atestado com o período declarado."
+      },
+      {
+        "medida": "Umidificação do ar e higiene nasal",
+        "detalhe": "Usar umidificador ou bacia de água no quarto e lavagem nasal com soro fisiológico quando houver obstrução, porque a respiração bucal por nariz obstruído resseca a faringe e piora a dor."
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Exame sistemático da orofaringe com abaixador e palpação cervical",
+        "indicacao": "todo paciente com odinofagia, para confirmar exsudato, assimetria, abaulamento e adenopatia",
+        "tecnica": "Iluminar bem, pedir para abrir a boca e dizer ah, deprimir a língua com abaixador descartável, inspecionar pilares, amígdalas, úvula e parede posterior; palpar cadeias cervicais anteriores e pesquisar trismo medindo a abertura bucal",
+        "complicacoes": "Reflexo de vômito, desconforto e risco de laringoespasmo se houver epiglotite, situação em que o exame deve ser interrompido"
+      },
+      {
+        "nome": "Escore de McIsaac e teste rápido de antígeno para estreptococo",
+        "indicacao": "McIsaac de 3 a 4 pontos ou dúvida diagnóstica com necessidade de decisão sobre antibiótico",
+        "tecnica": "Calcular o escore somando febre, ausência de tosse, adenopatia cervical dolorosa, exsudato e faixa de idade; colher swab de amígdala e parede posterior da faringe, sem tocar língua e bochecha, e processar conforme o kit",
+        "complicacoes": "Falso-negativo por coleta inadequada, desconforto e resultado positivo em portador assintomático, que não deve ser tratado fora do surto"
+      },
+      {
+        "nome": "Cultura de orofaringe",
+        "indicacao": "criança com teste rápido negativo e alta suspeita clínica, surto, suspeita de resistência ou de agente incomum",
+        "tecnica": "Swab de amígdala e parede posterior, transporte em meio adequado e semeadura em ágar sangue; resultado em 24 a 48 horas",
+        "complicacoes": "Atraso terapêutico se usado como única ferramenta e dificuldade de distinguir infecção de colonização"
+      },
+      {
+        "nome": "Punção aspirativa ou drenagem de abscesso periamigdaliano",
+        "indicacao": "abaulamento amigdaliano, desvio de úvula, trismo e odinofagia unilateral intensa",
+        "tecnica": "Anestesia tópica e infiltrativa, agulha conectada a seringa no ponto de maior abaulamento, acima e lateral à amígdala, aspirando a coleção; drenagem por incisão quando há coleção volumosa, com antibioticoterapia parenteral associada",
+        "complicacoes": "Punção de carótida interna, aspiração de pus, sangramento, recidiva e necessidade de amigdalectomia de urgência em obstrução de via aérea"
+      },
+      {
+        "nome": "Nasofibroscopia ou laringoscopia indireta",
+        "indicacao": "voz abafada, estridor, rouquidão arrastada, suspeita de epiglotite, massa ou corpo estranho",
+        "tecnica": "Anestesia tópica nasal, endoscópio flexível pela fossa nasal até a faringe e laringe, com avaliação de epiglote, pregas vocais e espaços profundos; em suspeita de epiglotite, realizar somente em ambiente com via aérea pronta",
+        "complicacoes": "Laringoespasmo, obstrução completa de via aérea em epiglotite, sangramento e síncope vasovagal"
+      }
+    ],
+    "metas": [
+      "Dor controlada para 3 ou menos em 10 em 24 a 48 horas de analgesia em horário fixo",
+      "Nenhuma prescrição de antibiótico sem escore de McIsaac de 3 a 4 pontos ou teste rápido positivo registrado",
+      "Deglutição preservada, sem sialorreia e sem trismo em todas as reavaliações",
+      "Ausência dos cinco sinais de alarme, documentada no prontuário a cada atendimento",
+      "Alta com analgesia em horário fixo, hidratação orientada e plano de retorno por escrito",
+      "Abscesso identificado e drenado em menos de 24 horas do primeiro atendimento",
+      "Febre resolvida em 72 horas quando há tratamento antibiótico correto; persistência obriga reexame"
+    ],
+    "fluxo": [
+      "Primeiro, segurança: procurar disfagia com sialorreia, trismo, voz abafada, estridor e edema submandibular; qualquer um deles sai do fluxo ambulatorial e vai para via aérea, imagem e cirurgia",
+      "Depois, caracterizar o quadro: tempo de evolução, febre, tosse, coriza, exsudato, unilateralidade e abaulamento",
+      "Calcular o escore de McIsaac e, se 3 a 4 pontos, colher teste rápido de antígeno; registrar o escore e o resultado no prontuário",
+      "Tratar a dor: paracetamol em horário fixo, associando ibuprofeno ou dipirona em esquema alternado se a dor for intensa; anestésico tópico antes das refeições",
+      "Explicar a etiologia viral e a evolução esperada, e por que não há antibiótico; entregar orientação escrita do retorno",
+      "Prescrever amoxicilina por 10 dias apenas com critério confirmado; penicilina benzatina se a adesão oral for incerta",
+      "Reavaliar em 48 a 72 horas se não houver melhora, e em 5 a 7 dias se a odinofagia persistir, com novo exame da orofaringe",
+      "Persistência, unilateralidade nova, abaulamento ou voz alterada: imagem de pescoço, otorrinolaringologia e afastar abscesso, corpo estranho e neoplasia",
+      "Alta com analgesia, hidratação, sinais de alarme por escrito e retorno definido"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "pediatria",
+        "ajuste": "paracetamol 10 a 15 mg/kg e ibuprofeno 10 mg/kg por dose; amoxicilina 50 mg/kg/dia; evitar spray e pastilha anestésica abaixo de 6 anos e benzocaína abaixo de 2 anos",
+        "alerta": "risco de engasgo e laringoespasmo com anestésico tópico; criança com sialorreia e voz molhada tem epiglotite até prova em contrário"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "paracetamol é o analgésico de escolha; dipirona e ibuprofeno apenas em situações pontuais, e o AINE é proibido no terceiro trimestre; amoxicilina e penicilina benzatina são seguras",
+        "alerta": "o AINE no terceiro trimestre fecha o ducto arterial e reduz o líquido amniótico; a faringite estreptocócica não tratada tem risco materno-fetal"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "preferir paracetamol; evitar AINE pela função renal e pelo risco de sangramento, e revisar interações com anticoagulante; avaliar disfagia e risco de aspiração antes de indicar anestésico tópico",
+        "alerta": "odinofagia arrastada em idoso tabagista exige nasofibroscopia para afastar neoplasia"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "limiar baixo para exames, imagem e antibiótico parenteral; internar se neutropenia, febre alta ou candidíase extensa",
+        "alerta": "faringite em neutropênico é emergência infecciosa e pode evoluir para sepse em horas"
+      },
+      {
+        "populacao": "alergico_a_penicilina",
+        "ajuste": "se a reação prévia foi exantema, usar cefalexina 500 mg 6/6 h por 10 dias; se foi anafilaxia, usar azitromicina 500 mg 1x/dia por 3 dias",
+        "alerta": "o risco de reação cruzada com cefalosporina é baixo, mas anafilaxia prévia proíbe betalactâmico sem avaliação especializada"
+      },
+      {
+        "populacao": "nefropata_cronico",
+        "ajuste": "evitar AINE; paracetamol mantém a dose com intervalo ampliado; amoxicilina com ajuste conforme ClCr",
+        "alerta": "AINE em doença renal crônica precipita lesão renal aguda e hipercalemia"
+      },
+      {
+        "populacao": "asmático",
+        "ajuste": "evitar AINE se houver história de asma induzida por AAS; usar paracetamol e dipirona",
+        "alerta": "broncoespasmo grave pode ocorrer em minutos após o primeiro comprimido, inclusive com AINE tópico"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "teste rápido de antígeno para estreptococo do grupo A",
+          "indicacao": "McIsaac de 3 a 4 pontos ou dúvida clínica com decisão de antibiótico",
+          "o_que_muda": "positivo autoriza amoxicilina; negativo em adulto dispensa antibiótico e evita prescrição desnecessária"
+        },
+        {
+          "nome": "cultura de orofaringe",
+          "indicacao": "criança com teste rápido negativo e alta suspeita, surto, falha terapêutica ou suspeita de agente incomum",
+          "o_que_muda": "confirma estreptococo quando o teste rápido é negativo e identifica agente em caso refratário"
+        },
+        {
+          "nome": "hemograma com pesquisa de linfocitose atípica e teste de mononucleose",
+          "indicacao": "odinofagia arrastada com linfadenopatia generalizada, esplenomegalia e astenia",
+          "o_que_muda": "afasta mononucleose, contraindicando amoxicilina e mudando o tempo de afastamento e o risco de ruptura esplênica"
+        },
+        {
+          "nome": "tomografia de pescoço com contraste",
+          "indicacao": "trismo, abaulamento, voz abafada, edema submandibular ou suspeita de coleção profunda",
+          "o_que_muda": "identifica abscesso periamigdaliano, retrofaríngeo ou angina de Ludwig e define drenagem cirúrgica imediata"
+        },
+        {
+          "nome": "nasofibroscopia",
+          "indicacao": "voz abafada, estridor, rouquidão arrastada, suspeita de epiglotite ou massa",
+          "o_que_muda": "confirma edema de epiglote, massa ou corpo estranho e tira o paciente do tratamento ambulatorial"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "hemograma e provas inflamatórias de rotina na odinofagia típica",
+          "motivo": "não distinguem viral de bacteriana de forma confiável, não mudam a conduta e criam falsa segurança para prescrever antibiótico"
+        },
+        {
+          "exame": "ASLO (antiestreptolisina O)",
+          "motivo": "marca exposição pregressa e não serve para diagnosticar faringite aguda; resultado positivo leva a antibiótico indevido"
+        },
+        {
+          "exame": "radiografia de pescoço ou de partes moles",
+          "motivo": "sensibilidade baixa para abscesso e para epiglotite; quando há suspeita de coleção ou de via aérea, a tomografia ou a nasofibroscopia resolvem"
+        },
+        {
+          "exame": "cultura de orofaringe de rotina em adulto com teste rápido negativo",
+          "motivo": "não altera a conduta, aumenta custo e atrasa a alta, porque o resultado negativo já é suficiente para não prescrever antibiótico"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "tomar o analgésico em horário fixo, antes que a dor volte, e não só quando estiver insuportável",
+        "beber líquido em pequenos volumes ao longo do dia, mesmo sem sede, para não desidratar",
+        "gargarejar com água salgada morna 3 a 4 vezes ao dia, se souber gargarejar sem engolir",
+        "preferir alimento frio, mole e não ácido nas primeiras 48 horas",
+        "falar pouco e evitar sussurrar, que força mais a garganta do que a voz normal",
+        "lavar as mãos com frequência e usar lenço descartável",
+        "voltar ao serviço se não melhorar em 72 horas ou se aparecer qualquer sinal de alarme"
+      ],
+      "evitar": [
+        "tomar antibiótico por conta própria ou guardado de outra ocasião",
+        "insistir em antibiótico quando o escore de McIsaac é baixo: não encurta a dor e causa diarreia e resistência",
+        "fumar, beber álcool e tomar bebida muito quente",
+        "comer fritura, pimenta, suco de limão ou laranja e alimento duro",
+        "usar spray ou pastilha anestésica em criança pequena ou antes de comer, pelo risco de engasgo",
+        "associar dois AINEs ou AINE com corticoide em dose plena",
+        "ignorar dificuldade para engolir saliva, voz abafada ou febre que não cede"
+      ],
+      "retorno": [
+        "dificuldade para engolir saliva, babar ou não conseguir abrir a boca",
+        "voz abafada, rouca ou chiado ao respirar",
+        "dificuldade para respirar, respiração rápida ou postura inclinada para frente",
+        "inchaço no pescoço ou sob o queixo",
+        "febre que não cede em 72 horas ou que volta após melhora",
+        "dor que piora depois do quinto dia ou que passou a ser de um lado só",
+        "manchas brancas na boca ou dor de garganta que dura mais de 2 semanas"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "paracetamol",
+        "efeitos": [
+          "hepatotoxicidade dose-dependente",
+          "rash",
+          "trombocitopenia rara"
+        ],
+        "observacao": "somar toda a dose diária de antigripais e associações antes de prescrever; hepatotoxicidade é a causa de morte evitável mais comum com esse fármaco"
+      },
+      {
+        "agente": "dipirona",
+        "efeitos": [
+          "hipotensão",
+          "agranulocitose",
+          "rash",
+          "anafilaxia"
+        ],
+        "observacao": "infundir lentamente na via intravenosa; suspender e pedir hemograma se aparecer febre alta com odinofagia e leucopenia durante o uso"
+      },
+      {
+        "agente": "ibuprofeno e flurbiprofeno",
+        "efeitos": [
+          "dispepsia",
+          "sangramento digestivo",
+          "lesão renal aguda",
+          "broncoespasmo"
+        ],
+        "observacao": "suspender ao primeiro sinal de dor epigástrica, melena ou redução da diurese; não associar a outro AINE nem a anticoagulante em dose plena"
+      },
+      {
+        "agente": "lidocaína e benzocaína tópicas",
+        "efeitos": [
+          "dormência de faringe",
+          "engasgo",
+          "aspiração",
+          "metahemoglobinemia com benzocaína"
+        ],
+        "observacao": "orientar a não comer nem beber por 30 minutos; cianose ou dispneia após benzocaína pede avaliação imediata e dosagem de metahemoglobina"
+      },
+      {
+        "agente": "amoxicilina",
+        "efeitos": [
+          "diarreia",
+          "rash",
+          "candidíase",
+          "anafilaxia",
+          "colite por Clostridioides difficile"
+        ],
+        "observacao": "rash em paciente com mononucleose é esperado e não é alergia verdadeira; diarreia com sangue após antibiótico pede investigação de C. difficile"
+      },
+      {
+        "agente": "penicilina benzatina",
+        "efeitos": [
+          "dor local intensa",
+          "reação de Hoigne",
+          "anafilaxia",
+          "febre"
+        ],
+        "observacao": "observar 30 minutos após a aplicação; reação de Hoigne é autolimitada e não contraindica dose futura"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado e registrar no prontuário a dose, o horário e o sintoma",
+      "Dor epigástrica ou melena com AINE: suspender, prescrever inibidor de bomba de prótons e avaliar sangramento digestivo",
+      "Cianose ou dispneia após benzocaína: suspender, avaliar metahemoglobina e tratar com azul de metileno se confirmado",
+      "Engasgo ou aspiração após anestésico tópico: suspender a via tópica, manter jejum por 2 horas e avaliar via aérea",
+      "Rash com amoxicilina: suspender, diferenciar reação alérgica de rash da mononucleose e registrar o agente como suspeito",
+      "Anafilaxia com penicilina: adrenalina intramuscular imediata, suporte e notificação de reação adversa, com registro definitivo da alergia"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg",
+            "via": "VO",
+            "frequencia": "6/6 h, em horário fixo",
+            "duracao": "5 dias",
+            "condicao": "dor e febre; primeiro analgésico em todos os casos",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ibuprofeno 400 mg",
+            "dose": "400 mg",
+            "via": "VO",
+            "frequencia": "8/8 h, com alimento",
+            "duracao": "3 a 5 dias",
+            "condicao": "dor inflamatória, sem contraindicação a AINE; não usar em dengue",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dipirona 1 g",
+            "dose": "1 g",
+            "via": "VO",
+            "frequencia": "6/6 h",
+            "duracao": "5 dias",
+            "condicao": "dor intensa não controlada pelo paracetamol isolado",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "lidocaína 10% spray orofaríngeo",
+            "dose": "1 a 3 jatos",
+            "via": "orofaríngea",
+            "frequencia": "até 3x/dia, antes das refeições",
+            "duracao": "máximo 3 dias",
+            "condicao": "odinofagia intensa em adulto; não comer por 30 minutos após o uso",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "flurbiprofeno 8,75 mg pastilha",
+            "dose": "1 pastilha",
+            "via": "orofaríngea",
+            "frequencia": "3/3 h a 6/6 h",
+            "duracao": "3 a 7 dias",
+            "condicao": "dor local em maior de 12 anos, sem contraindicação a AINE",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina 500 mg",
+            "dose": "500 mg",
+            "via": "VO",
+            "frequencia": "8/8 h",
+            "duracao": "10 dias",
+            "condicao": "somente com McIsaac de 3 a 4 pontos confirmado por teste rápido positivo ou cultura",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "dipirona 1 g",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "pressão arterial durante a infusão lenta e intensidade da dor",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 1 g",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "6/6 h",
+            "monitorizacao": "dose diária total, função hepática e temperatura",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina 1 g",
+            "dose": "1 g",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "resposta da febre em 48 a 72 h e sinais de reação alérgica",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "dexametasona 4 mg",
+            "dose": "4 mg",
+            "via": "IV",
+            "frequencia": "dose única, apenas em edema de via aérea com avaliação de cirurgia e anestesia",
+            "monitorizacao": "via aérea, saturação e necessidade de intubação; não substitui drenagem",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "teste rápido de antígeno para estreptococo do grupo A",
+          "cultura de orofaringe",
+          "hemograma com pesquisa de linfocitose atípica",
+          "teste de mononucleose",
+          "tomografia de pescoço com contraste",
+          "justificativa clínica com escore de McIsaac",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de odinofagia, necessitando de afastamento de suas atividades por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "o número de dias é decisão médica; na faringite estreptocócica tratada, liberar após 24 horas de antibiótico e 24 horas sem febre"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino (otorrinolaringologia, cirurgia de cabeça e pescoço ou infectologia)",
+          "motivo com o sinal de alarme ou a falha terapêutica que justifica",
+          "resumo com tempo de evolução, escore de McIsaac, antibióticos já usados e exame da orofaringe",
+          "prioridade (imediata, mesmo dia ou eletiva)"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com odinofagia há ___, com febre ___, tosse ___, exsudato ___ e adenopatia cervical ___. Escore de McIsaac ___ e teste rápido ___. Sem sialorreia, trismo, voz abafada ou estridor. Ao exame: orofaringe ___, amígdalas ___, úvula ___, abertura bucal ___ cm. Conduta: analgesia com ___, ausência ou presença de indicação de antibiótico por ___, orientação e retorno em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tempo de evolução e curva de intensidade",
+        "febre medida e duração",
+        "tosse, coriza e rouquidão",
+        "disfagia, sialorreia e trismo",
+        "alteração da voz",
+        "unilateralidade e abaulamento percebido",
+        "antibiótico prévio nos últimos 3 meses",
+        "alergia a penicilina e gravidade da reação",
+        "imunossupressão, diabetes e uso de corticoide",
+        "tabagismo, etilismo e perda de peso",
+        "vacinação e contato com caso semelhante"
+      ],
+      "texto_template": "Paciente com odinofagia há ___, de intensidade ___, associada a febre de ___ °C, tosse ___, coriza ___, rouquidão ___. Consegue engolir saliva ___, abre a boca por completo ___, voz ___. Dor unilateral ___. Usou antibiótico ___ nos últimos 3 meses. Alergia a penicilina ___. Comorbidades ___ e tabagismo ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais, saturação e frequência respiratória",
+        "estado geral, hidratação e toxemia",
+        "voz e presença de estridor",
+        "abertura bucal medida em centímetros",
+        "orofaringe: amígdalas, exsudato, úvula e pilares",
+        "simetria e abaulamento de parede posterior",
+        "palpação cervical: adenopatia e dor",
+        "assoalho da boca e região submandibular",
+        "ausculta pulmonar e esforço respiratório"
+      ],
+      "texto_template": "Sinais vitais ___, saturação ___%, sem estridor, voz ___. Abertura bucal ___ cm, sem trismo. Orofaringe com amígdalas ___, exsudato ___, úvula ___, pilares ___, sem abaulamento. Palpação cervical com adenopatia ___ dolorosa. Assoalho da boca ___ e região submandibular ___. Ausculta pulmonar ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de odinofagia, disponibilidade de teste rápido de estreptococo e critério local de prescrição de antibiótico",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_internacional",
+        "o_que_verificar": "escore de McIsaac, indicação de teste rápido por faixa de idade e duração de 10 dias do tratamento estreptocócico",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_otorrinolaringologia",
+        "o_que_verificar": "conduta em abscesso periamigdaliano e retrofaríngeo, indicação de drenagem e de amigdalectomia",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_pediatria",
+        "o_que_verificar": "dose pediátrica de analgésicos, proibição de anestésico tópico em criança pequena e conduta na epiglotite",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de analgésicos, pastilhas e sprays disponíveis no mercado brasileiro e seus limites de dose",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-RESP10-01",
+        "tipo": "via_aerea",
+        "gatilho": "estridor, sialorreia, voz abafada, trismo ou edema submandibular",
+        "severidade": "grave",
+        "mensagem": "Sinal de alarme para abscesso profundo ou epiglotite: via aérea, imagem e cirurgia imediatos.",
+        "acao": "bloquear conduta ambulatorial e acionar cirurgia e anestesia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP10-02",
+        "tipo": "antibiotico_sem_criterio",
+        "gatilho": "prescrição de antibiótico sem escore de McIsaac de 3 a 4 pontos ou teste rápido positivo registrado",
+        "severidade": "grave",
+        "mensagem": "Antibiótico sem critério expõe a efeitos adversos, seleciona resistência e não melhora a dor.",
+        "acao": "bloquear o item e exigir escore ou teste rápido documentado",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP10-03",
+        "tipo": "anestesico_topico_crianca",
+        "gatilho": "spray ou pastilha anestésica prescrita para menor de 6 anos, ou benzocaína para menor de 2 anos",
+        "severidade": "grave",
+        "mensagem": "Anestésico tópico em criança pequena causa engasgo, aspiração e metahemoglobinemia.",
+        "acao": "bloquear o item e sugerir analgesia sistêmica",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP10-04",
+        "tipo": "aine_em_dengue",
+        "gatilho": "AINE prescrito com suspeita de dengue, arbovirose ou plaquetopenia",
+        "severidade": "grave",
+        "mensagem": "AINE em dengue aumenta o risco de sangramento.",
+        "acao": "bloquear o item e trocar por paracetamol ou dipirona",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP10-05",
+        "tipo": "amoxicilina_em_mononucleose",
+        "gatilho": "amoxicilina prescrita com suspeita de mononucleose infecciosa",
+        "severidade": "precaucao",
+        "mensagem": "Amoxicilina em mononucleose causa rash generalizado e não trata a doença.",
+        "acao": "alertar e suspender o antibiótico",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP10-06",
+        "tipo": "falha_terapeutica",
+        "gatilho": "odinofagia sem melhora após 5 a 7 dias de tratamento adequado",
+        "severidade": "precaucao",
+        "mensagem": "Reexaminar a orofaringe: abscesso, mononucleose, corpo estranho ou neoplasia.",
+        "acao": "sugerir reavaliação e nasofibroscopia",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP10-07",
+        "tipo": "associacao_de_aine",
+        "gatilho": "dois AINEs prescritos juntos ou AINE associado a corticoide em dose plena",
+        "severidade": "precaucao",
+        "mensagem": "Associação de AINE não acrescenta analgesia e multiplica o risco digestivo e renal.",
+        "acao": "alertar e ajustar a prescrição",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "diretrizes de faringite estreptocócica",
+        "literatura otorrinolaringológica"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita com regra explícita de não prescrever antibiótico sem critério de McIsaac, analgesia em horário fixo com paracetamol, dipirona e ibuprofeno, spray e pastilha com anestésico, critérios de escolha por cenário, apresentações, preparo, monitorização e ajuste renal de cada fármaco, e sinais de alarme que mudam o diagnóstico para abscesso, angina de Ludwig ou epiglotite.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

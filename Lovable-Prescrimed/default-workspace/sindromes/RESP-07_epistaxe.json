@@ -1,0 +1,1191 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-07",
+    "area": "Respiratório/ORL",
+    "nome": "Epistaxe",
+    "aliases": [
+      "sangramento nasal",
+      "epistaxe",
+      "sangramento do nariz",
+      "hemorragia nasal",
+      "epistaxe anterior",
+      "epistaxe recorrente"
+    ],
+    "contexto": [
+      "ambulatorial",
+      "hospitalar"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "B",
+    "versao": "0.2.0",
+    "visao_geral": "Epistaxe é sangramento nasal e a primeira decisão é topográfica, não hemostática. Cerca de 90% são anteriores, nascidas no plexo de Kiesselbach, na porção anterior do septo, e param com compressão digital contínua de 10 a 15 minutos, vasoconstritor tópico e cauterização com nitrato de prata quando existe ponto visível. A epistaxe posterior vem dos ramos da artéria esfenopalatina, o sangue escorre para a garganta, a compressão não alcança o ponto, o paciente engole sangue e vomita: exige tamponamento posterior com sonda de Foley, internação e otorrinolaringologista. A terceira categoria é a de causa sistêmica — anticoagulante, antiagregante, plaquetopenia, coagulopatia, uremia, hepatopatia e telangiectasia hemorrágica hereditária — em que o nariz é apenas o lugar onde o distúrbio apareceu, e a conduta inclui corrigir ou reverter o distúrbio, não só tampar. Quatro erros custam caro: inclinar a cabeça para trás e deixar o sangue descer para a faringe, tampar sem plano e sem data de retirada, usar vasoconstritor sem critério no hipertenso e cauterizar mucosa sadia quando não se identifica o ponto. Tamponamento é ponte, não tratamento: tem prazo, tem reavaliação e tem retirada programada.",
+    "inclusao": [
+      "Sangramento nasal ativo anterior, com ou sem ponto visível ao exame",
+      "Sangramento que escorre para a garganta, com vômito de sangue ou deglutição repetida",
+      "Epistaxe recorrente, três ou mais episódios em três meses, sem causa definida",
+      "Epistaxe em paciente anticoagulado, antiagregado, plaquetopênico ou com coagulopatia",
+      "Epistaxe após trauma nasal leve, cirurgia nasal recente ou corpo estranho",
+      "Epistaxe com instabilidade hemodinâmica, síncope ou queda de hemoglobina"
+    ],
+    "exclusao": [
+      {
+        "situacao": "sangue vivo com tosse, origem traqueobrônquica, sem sangramento nasal",
+        "fluxo": "hemoptise — investigação respiratória"
+      },
+      {
+        "situacao": "vômito com sangue ou borra de café, sem sangramento nasal ativo",
+        "fluxo": "hemorragia digestiva alta — GI-09"
+      },
+      {
+        "situacao": "trauma facial grave, fratura de face, afundamento de malar ou rinorreia liquórica",
+        "fluxo": "cirurgia bucomaxilofacial e neurocirurgia"
+      },
+      {
+        "situacao": "massa nasal unilateral com obstrução progressiva e epistaxe recorrente em adulto",
+        "fluxo": "otorrinolaringologia com nasofibroscopia e imagem — suspeita de neoplasia"
+      },
+      {
+        "situacao": "epistaxe posterior volumosa com instabilidade ou tamponamento já instalado",
+        "fluxo": "OFT-04 — epistaxe posterior, hospitalar"
+      },
+      {
+        "situacao": "sangramento nasal por corpo estranho ou por lesão traumática do meato",
+        "fluxo": "RESP-08 — corpo estranho de ouvido e nariz"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "sangue escorrendo pela garganta, deglutição repetida ou vômito de sangue",
+        "por_que": "sangramento posterior, fora do alcance da compressão e do tamponamento anterior, com risco de aspiração",
+        "acao": "tamponamento posterior com sonda de Foley, internação, cabeceira elevada e otorrinolaringologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "hipotensão, taquicardia, palidez, sudorese ou síncope",
+        "por_que": "choque hipovolêmico por sangramento não contido ou sangue deglutido",
+        "acao": "sala vermelha, dois acessos calibrosos, cristaloide, tipagem e transfusão se necessário",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "uso de anticoagulante ou antiagregante com sangramento que não cessa em 15 a 20 minutos de compressão",
+        "por_que": "hemostasia primária bloqueada, com sangramento difuso e recidiva precoce",
+        "acao": "manter compressão e tamponamento, dosar INR e plaquetas e reverter apenas conforme gravidade",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "plaquetas abaixo de 50.000/mm³, INR acima de 3 ou tempo de tromboplastina alargado",
+        "por_que": "coagulopatia que impede a hemostasia local e transforma tamponamento em sangramento contínuo",
+        "acao": "corrigir o distúrbio, transfundir plaquetas se abaixo de 50.000 com sangramento e acionar hematologia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "hemoglobina abaixo de 8 g/dL ou queda de 2 g/dL em relação ao basal",
+        "por_que": "perda significativa com sangue deglutido e sangramento oculto persistente",
+        "acao": "internação, tipagem, transfusão e monitorização de hemoglobina seriada",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "epistaxe bilateral recorrente com telangiectasias em lábios, língua, face e polpas digitais",
+        "por_que": "telangiectasia hemorrágica hereditária, com sangramento crônico e anemia",
+        "acao": "ácido tranexâmico, cauterização parcimoniosa, sulfato ferroso e encaminhamento especializado",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "epistaxe recorrente com petéquias, equimoses, adenomegalia, febre ou perda de peso",
+        "por_que": "discrasia sanguínea, leucemia ou neoplasia de cavidade nasal",
+        "acao": "hemograma com urgência, avaliação hematológica e nasofibroscopia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "uso de cocaína, descongestionante nasal contínuo ou corticoide nasal em dose alta",
+        "por_que": "necrose de mucosa e perfuração septal como causa do sangramento",
+        "acao": "suspender o agente, inspecionar o septo e tratar a mucosa",
+        "severidade": "precaucao"
+      }
+    ],
+    "perguntas_rapidas": [
+      "O sangue escorre para frente ou pela garganta? Engoliu sangue? Vomitou?",
+      "Há quanto tempo sangra, quanto sangrou e quantos episódios nas últimas 24 horas?",
+      "Usa anticoagulante, antiagregante ou AINE? Qual, qual a última dose e o último INR?",
+      "Tem pressão alta? Mediu a pressão agora? Tem cefaleia ou visão turva?",
+      "Bateu o nariz, assoou com força, colocou o dedo, usou cotonete ou objeto?",
+      "Tem doença do fígado, do rim, câncer, ou já precisou de transfusão por sangramento?",
+      "Sangra fácil em outros locais ou tem familiar com sangramento nasal frequente?",
+      "Usa cocaína, descongestionante nasal há mais de três dias ou corticoide nasal?",
+      "Criança: mexe no nariz, ambiente com ar-condicionado, unha comprida, sangramento na escola?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Epistaxe anterior leve, ponto sangrante visível no septo anterior, sem anticoagulante e sem instabilidade",
+        "escolha": "Compressão digital contínua por 10 a 15 minutos com a cabeça levemente para frente; se persistir, oximetazolina 0,05% uma a duas aplicações, anestesia com lidocaína 2% e cauterização com nitrato de prata no ponto visível",
+        "porque": "É o conjunto que resolve a maioria dos casos anteriores: a compressão interrompe o fluxo, o vasoconstritor permite ver o ponto e a cauterização sela o vaso. Cauterizar sem ver o ponto queima mucosa sadia e cria escara que volta a sangrar"
+      },
+      {
+        "cenario": "Epistaxe anterior que não para após compressão correta e duas tentativas de cauterização",
+        "escolha": "Tamponamento nasal anterior com gaze lubrificada em camadas ou esponja expansível, ácido tranexâmico tópico sob a gaze, retirada programada em 24 a 48 horas, com data e hora registradas",
+        "porque": "A gaze faz pressão direta no ponto e o tranexâmico estabiliza o coágulo. O prazo é parte da conduta: tampão esquecido acima de 72 horas causa sinéquia, sinusite e, raramente, síndrome do choque tóxico"
+      },
+      {
+        "cenario": "Epistaxe posterior: sangue pela garganta, vômito de sangue ou sangramento que continua apesar do tamponamento anterior",
+        "escolha": "Sonda de Foley 10 a 14 Fr pela narina até a coana, balão inflado com 10 a 15 mL de soro, tração leve e fixação com proteção da columela; internação, cabeceira elevada, oximetria e otorrinolaringologia em até 24 horas",
+        "porque": "O tamponamento anterior não alcança o ramo esfenopalatino: o balão oclui a coana e impede o sangue de descer. A tração excessiva necrosa a columela, e o paciente com tampão posterior bilateral hipoventila e precisa de monitorização"
+      },
+      {
+        "cenario": "Anticoagulado com epistaxe controlada por compressão e cauterização, sem repercussão",
+        "escolha": "Não reverter de rotina: controlar localmente e manter a anticoagulação, com reavaliação em 24 a 48 horas",
+        "porque": "Reverter anticoagulação por sangramento nasal controlado troca um risco pequeno de recidiva por um risco real de trombose, principalmente em fibrilação atrial mecânica, prótese valvar e tromboembolismo recente"
+      },
+      {
+        "cenario": "Anticoagulado com epistaxe grave, refratária ou com comprometimento de via aérea",
+        "escolha": "Reverter conforme o fármaco: varfarina com vitamina K 10 mg IV mais complexo protrombínico 25 a 50 UI/kg; dabigatrana com idarucizumabe 5 g; apixabana e rivaroxabana com complexo protrombínico 50 UI/kg, com andexanet alfa se disponível; heparina com protamina",
+        "porque": "A reversão é específica por fármaco: complexo protrombínico não reverte dabigatrana e idarucizumabe não reverte anti-Xa. Reverter errado atrasa a hemostasia e expõe o paciente a trombose sem benefício"
+      },
+      {
+        "cenario": "Hipertensão arterial com epistaxe e pressão muito elevada",
+        "escolha": "Tratar o sangramento local primeiro e reduzir a pressão de forma titulada, cerca de 20 a 25% da pressão média na primeira hora, com captopril 25 mg por via oral ou anti-hipertensivo de ação titulável; não usar vasoconstritor sistêmico nem descongestionante repetido",
+        "porque": "A pressão alta não é a causa da epistaxe, mas atrapalha a hemostasia e a recidiva. Queda brusca provoca isquemia cerebral, coronariana e renal, e vasoconstritor sistêmico não trata epistaxe: eleva a pressão e reduz a perfusão de órgão-alvo"
+      },
+      {
+        "cenario": "Telangiectasia hemorrágica hereditária com epistaxe recorrente e anemia",
+        "escolha": "Ácido tranexâmico tópico e oral, cauterização parcimoniosa de no máximo um ponto por sessão, umidificação, sulfato ferroso e encaminhamento a serviço de otorrinolaringologia experiente",
+        "porque": "A mucosa é frágil e a cauterização ampla cria novas telangiectasias e perfuração; o tratamento é controlar o sangramento e a anemia sem destruir a mucosa. Embolização e terapia antifibrinolítica sistêmica ficam para falha"
+      },
+      {
+        "cenario": "Criança com epistaxe recorrente, exame sem ponto visível e sem sinais sistêmicos",
+        "escolha": "Orientar compressão correta, umidificação, corte de unha e higiene nasal com soro; investigar coagulopatia apenas se sangramento em outros sítios, história familiar, mais de um episódio por semana ou exame com petéquias",
+        "porque": "A causa mais comum é trauma digital e mucosa ressecada, e o coagulograma de rotina em criança com epistaxe leve tem baixo rendimento e gera ansiedade e custo sem mudar a conduta"
+      },
+      {
+        "cenario": "Gestante com epistaxe",
+        "escolha": "Compressão, oximetazolina tópica em dose única, cauterização com nitrato de prata quando há ponto visível e umidificação; ácido tranexâmico apenas em sangramento com risco de vida",
+        "porque": "A hiperemia e o edema de mucosa da gestação favorecem o sangramento anterior, que responde ao tratamento local. A via tópica tem absorção desprezível e evita exposição fetal desnecessária"
+      },
+      {
+        "cenario": "Quando internar",
+        "escolha": "Internar em epistaxe posterior, tamponamento posterior ou bilateral, instabilidade hemodinâmica, hemoglobina abaixo de 8 g/dL, necessidade de reversão de anticoagulação, falha de dois tamponamentos anteriores, suspeita de neoplasia e paciente sem condição de retornar para reavaliação",
+        "porque": "Esses são os grupos em que o sangramento recorrente fora do hospital mata: o tampão pode deslocar, a via aérea pode obstruir e a anemia pode progredir sem ninguém olhar"
+      },
+      {
+        "cenario": "O que não fazer",
+        "escolha": "Não inclinar a cabeça para trás, não tampar sem data de retirada, não usar vasoconstritor sistêmico nem descongestionante repetido no hipertenso sem critério, não cauterizar sem ver o ponto e não mandar para casa com tampão e sem retorno agendado",
+        "porque": "Cada uma dessas condutas troca um problema controlável por outro maior: sangue deglutido e vômito, tampão esquecido com necrose e infecção, crise pressórica e perfuração septal"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "antifibrinolitico",
+        "agente": "ácido tranexâmico tópico",
+        "papel": "primeira_linha",
+        "indicacao": "epistaxe anterior que persiste após compressão de 10 a 15 minutos, sobretudo em anticoagulado, antiagregado e telangiectasia hemorrágica hereditária",
+        "dose": "500 mg embebido em gaze no adulto; criança 2 a 3 mL da solução 50 mg/mL",
+        "unidade": "mg",
+        "via": "tópica nasal",
+        "frequencia": "a cada tamponamento; repetir uma vez após 10 minutos se persistir",
+        "duracao": "até 48 horas, enquanto durar o tamponamento",
+        "dose_maxima": "1 g por aplicação e 3 g por dia",
+        "contraindicacoes": [
+          "hipersensibilidade ao ácido tranexâmico",
+          "trombose venosa ou arterial ativa",
+          "histórico de convulsão com uso sistêmico",
+          "insuficiência renal grave sem ajuste na forma sistêmica"
+        ],
+        "efeitos_adversos": [
+          "ardor nasal transitório",
+          "gosto amargo",
+          "náusea",
+          "risco teórico de trombose com absorção sistêmica"
+        ],
+        "apresentacoes": [
+          "solução injetável 50 mg/mL ampola 5 mL (250 mg)",
+          "solução injetável 100 mg/mL ampola 5 mL (500 mg)",
+          "comprimido 250 mg",
+          "comprimido 500 mg"
+        ],
+        "preparo": "Embeber gaze ou esponja com 500 mg, ou seja, 5 mL da solução 100 mg/mL, e aplicar diretamente sobre o ponto sangrante sob visão; não diluir e não injetar",
+        "tempo_infusao": "não se aplica (uso tópico); manter a gaze comprimida por 10 minutos",
+        "monitorizacao": [
+          "cessação do sangramento em 10 minutos",
+          "recidiva nas primeiras 24 horas",
+          "ardor e irritação da mucosa",
+          "sinais de trombose em paciente de risco"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica; na via sistêmica, reduzir a dose com ClCr abaixo de 30 mL/min",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reduz o tempo de sangramento e a recidiva em 24 horas e é a adição mais útil ao tamponamento anterior. Não substitui compressão nem cauterização, e não precisa de via intravenosa no caso anterior comum",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vasoconstritor_topico",
+        "agente": "oximetazolina 0,05% nasal",
+        "papel": "primeira_linha",
+        "indicacao": "epistaxe anterior ativa, para reduzir o fluxo e permitir visualizar o ponto de sangramento antes da cauterização",
+        "dose": "1 a 2 jatos em cada narina",
+        "unidade": "jato",
+        "via": "nasal",
+        "frequencia": "dose única; repetir uma vez após 10 minutos se persistir",
+        "duracao": "uma aplicação por atendimento",
+        "dose_maxima": "2 aplicações por narina em 24 horas",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "hipertensão grave não controlada, com uso apenas de dose única e sob monitorização",
+          "glaucoma de ângulo fechado",
+          "uso de inibidor da monoaminoxidase nos últimos 14 dias",
+          "uso contínuo por mais de 3 dias, pelo risco de rinite medicamentosa"
+        ],
+        "efeitos_adversos": [
+          "ardor e ressecamento nasal",
+          "congestão de rebote",
+          "cefaleia",
+          "elevação transitória da pressão arterial e taquicardia por absorção sistêmica"
+        ],
+        "apresentacoes": [
+          "solução nasal 0,05% frasco 15 mL",
+          "spray nasal 0,05%",
+          "solução nasal 0,025% infantil"
+        ],
+        "preparo": "Aplicar na narina afetada com a cabeça levemente para frente; não diluir e não instilar com o paciente deitado",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "pressão arterial e frequência cardíaca 10 minutos após a aplicação no hipertenso",
+          "cessação do sangramento",
+          "congestão de rebote se repetir a dose"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Serve para ver o ponto e reduzir o fluxo, não como tratamento isolado. No hipertenso, uma aplicação tópica única é aceitável com pressão monitorizada; o que não se faz é repetir jatos nem usar vasoconstritor sistêmico para tratar epistaxe",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "cauterizante_quimico",
+        "agente": "nitrato de prata",
+        "papel": "primeira_linha",
+        "indicacao": "epistaxe anterior com ponto sangrante visível no septo anterior, em paciente cooperativo",
+        "dose": "1 a 2 aplicações de 5 a 10 segundos sobre o ponto",
+        "unidade": "aplicação",
+        "via": "tópica nasal",
+        "frequencia": "sessão única",
+        "duracao": "uma sessão; reavaliar em 7 a 14 dias se recorrer",
+        "dose_maxima": "um ponto por narina, com no máximo 5 mm de diâmetro por sessão",
+        "contraindicacoes": [
+          "sangramento posterior",
+          "cauterização bilateral na mesma sessão",
+          "área maior que 5 mm ou dois pontos no mesmo lado",
+          "criança não cooperativa sem contenção adequada",
+          "suspeita de neoplasia ou de telangiectasia extensa"
+        ],
+        "efeitos_adversos": [
+          "ardor intenso no momento da aplicação",
+          "perfuração de septo por cauterização ampla ou bilateral",
+          "sinéquia entre septo e concha",
+          "mancha acinzentada da mucosa por alguns dias",
+          "recidiva por cauterização insuficiente"
+        ],
+        "apresentacoes": [
+          "bastão de nitrato de prata 75% com aplicador",
+          "lápis de nitrato de prata 75%"
+        ],
+        "preparo": "Anestesiar e vasoconstrição prévias com lidocaína 2% com vasoconstritor, secar o ponto com gaze, umedecer levemente a ponta do bastão em soro e aplicar por 5 a 10 segundos, com aspiração de fumos ao lado",
+        "tempo_infusao": "não se aplica (aplicação tópica)",
+        "monitorizacao": [
+          "cessação do sangramento",
+          "dor após a aplicação",
+          "mancha branca ou necrose de mucosa na reavaliação",
+          "sangramento recorrente em 7 a 14 dias"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Só se cauteriza o que se vê: sem ponto identificado, a cauterização é queimadura de mucosa sadia. Nunca bilateral na mesma sessão, pelo risco de perfuração septal. Se falhar duas vezes, o próximo passo é tamponamento anterior e otorrinolaringologia, não mais cauterização",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anestesico_local",
+        "agente": "lidocaína 2% gel",
+        "papel": "condicional",
+        "indicacao": "anestesia da mucosa nasal antes da cauterização com nitrato de prata ou de instrumentação",
+        "dose": "1 a 2 mL no adulto; 0,1 mL/kg na criança",
+        "unidade": "mL",
+        "via": "tópica nasal",
+        "frequencia": "dose única antes do procedimento",
+        "duracao": "uma aplicação",
+        "dose_maxima": "3 mg/kg, com máximo de 200 mg no adulto",
+        "contraindicacoes": [
+          "hipersensibilidade a anestésico do tipo amida",
+          "porfiria",
+          "aplicação em área extensa ou sobre sangramento volumoso, pela absorção rápida"
+        ],
+        "efeitos_adversos": [
+          "ardor e gosto amargo",
+          "engasgo por anestesia da faringe",
+          "zumbido, gosto metálico e convulsão em dose alta",
+          "metemoglobinemia rara"
+        ],
+        "apresentacoes": [
+          "gel 2% bisnaga 30 g",
+          "gel 2% seringa 5 mL",
+          "spray 10%",
+          "solução 2% frasco 20 mL"
+        ],
+        "preparo": "Aplicar com algodão ou gaze sobre a mucosa e aguardar 3 a 5 minutos; não injetar",
+        "tempo_infusao": "não se aplica (uso tópico)",
+        "monitorizacao": [
+          "nível de consciência e sinais de toxicidade, como zumbido e gosto metálico",
+          "engasgo e aspiração após anestesiar a faringe",
+          "eficácia anestésica em 5 minutos"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "ajuste_hepatico": "Reduzir a dose em hepatopatia grave",
+        "observacoes": "A anestesia é o que permite cauterizar sem dor e sem movimento. Não usar lidocaína com adrenalina em cardiopatia grave descompensada nem em hipertensão não controlada, porque a absorção de adrenalina pode precipitar arritmia e crise pressórica",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antifibrinolitico",
+        "agente": "ácido tranexâmico intravenoso",
+        "papel": "condicional",
+        "indicacao": "epistaxe persistente em anticoagulado, telangiectasia hemorrágica hereditária, plaquetopenia ou coagulopatia, quando a via tópica não controla",
+        "dose": "1 g no adulto; 10 a 15 mg/kg na criança",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "8/8 h",
+        "duracao": "3 a 5 dias",
+        "dose_maxima": "3 g por dia",
+        "contraindicacoes": [
+          "trombose venosa ou arterial ativa",
+          "histórico de convulsão",
+          "coagulação intravascular disseminada",
+          "insuficiência renal grave sem ajuste"
+        ],
+        "efeitos_adversos": [
+          "náusea e vômito",
+          "hipotensão com infusão rápida",
+          "convulsão em dose alta e em renal crônico",
+          "trombose"
+        ],
+        "apresentacoes": [
+          "ampola 50 mg/mL 5 mL (250 mg)",
+          "ampola 100 mg/mL 5 mL (500 mg)"
+        ],
+        "preparo": "Diluir 1 g em 100 mL de soro fisiológico 0,9% ou glicose 5%",
+        "tempo_infusao": "20 a 30 minutos",
+        "monitorizacao": [
+          "sangramento",
+          "função renal",
+          "sinais de trombose",
+          "convulsão em renal crônico"
+        ],
+        "ajuste_renal": "ClCr entre 30 e 60 mL/min: 15 mg/kg 12/12 h; ClCr abaixo de 30 mL/min: 15 mg/kg 1x/dia ou 10 mg/kg",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "A via sistêmica é exceção, não rotina: reservar para falha do tópico, anticoagulado com sangramento difuso e telangiectasia hemorrágica hereditária. A evidência mais forte é da via tópica e da oral",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "vitamina",
+        "agente": "fitomenadiona (vitamina K)",
+        "papel": "condicional",
+        "indicacao": "reversão de varfarina em epistaxe grave ou refratária, com INR alargado",
+        "dose": "5 a 10 mg",
+        "unidade": "mg",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "uma dose",
+        "dose_maxima": "10 mg",
+        "contraindicacoes": [
+          "hipersensibilidade",
+          "reação anafilactoide prévia à vitamina K"
+        ],
+        "efeitos_adversos": [
+          "reação anafilactoide rara com infusão rápida",
+          "dor no local da injeção",
+          "flebite"
+        ],
+        "apresentacoes": [
+          "ampola 10 mg/mL 1 mL",
+          "comprimido 10 mg"
+        ],
+        "preparo": "Diluir em 50 mL de soro fisiológico 0,9% e infundir lentamente; nunca em bolus",
+        "tempo_infusao": "20 a 30 minutos",
+        "monitorizacao": [
+          "INR em 6 a 12 horas",
+          "reação alérgica durante a infusão",
+          "sangramento"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste; a resposta é reduzida em hepatopatia grave",
+        "observacoes": "Em sangramento grave por varfarina, associar complexo protrombínico, porque a vitamina K isolada leva 6 a 12 horas para corrigir o INR. Em epistaxe leve controlada, não reverter de rotina",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "reversor_de_anticoagulante",
+        "agente": "complexo protrombínico de quatro fatores",
+        "papel": "resgate",
+        "indicacao": "epistaxe grave ou refratária em uso de varfarina, com INR acima de 2 e sangramento ativo",
+        "dose": "25 a 50 UI/kg conforme INR e peso",
+        "unidade": "UI/kg",
+        "via": "IV",
+        "frequencia": "dose única, com INR de controle em 30 minutos",
+        "duracao": "uma dose",
+        "dose_maxima": "5.000 UI",
+        "contraindicacoes": [
+          "trombose recente",
+          "coagulação intravascular disseminada",
+          "hipersensibilidade a componentes ou à heparina do concentrado",
+          "síndrome coronariana aguda nas últimas duas semanas"
+        ],
+        "efeitos_adversos": [
+          "tromboembolismo",
+          "coagulação intravascular disseminada",
+          "reação alérgica",
+          "sobrecarga de volume"
+        ],
+        "apresentacoes": [
+          "frasco 500 UI",
+          "frasco 1.000 UI",
+          "frasco 2.000 UI"
+        ],
+        "preparo": "Reconstituir com o diluente do fabricante e infundir em acesso calibroso, sem filtrar",
+        "tempo_infusao": "10 a 20 minutos",
+        "monitorizacao": [
+          "INR 30 minutos após a infusão",
+          "sinais de trombose",
+          "sangramento",
+          "hemograma"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a reversão rápida da varfarina. Quando não houver no serviço, a alternativa é plasma fresco congelado 10 a 15 mL/kg, que corrige mais devagar e sobrecarrega volume, sobretudo no cardiopata e no renal crônico",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antidoto",
+        "agente": "idarucizumabe",
+        "papel": "resgate",
+        "indicacao": "epistaxe grave, com risco de via aérea, em uso de dabigatrana",
+        "dose": "5 g, equivalentes a dois frascos de 2,5 g",
+        "unidade": "g",
+        "via": "IV",
+        "frequencia": "dose única",
+        "duracao": "uma dose",
+        "dose_maxima": "5 g",
+        "contraindicacoes": [
+          "hipersensibilidade ao fármaco",
+          "situação em que a anticoagulação não deve ser revertida, como trombose ativa sem sangramento"
+        ],
+        "efeitos_adversos": [
+          "reação infusiona",
+          "cefaleia",
+          "hipotensão"
+        ],
+        "apresentacoes": [
+          "frasco 2,5 g em 50 mL"
+        ],
+        "preparo": "Uso direto, dois frascos em sequência, sem diluir, em acesso calibroso",
+        "tempo_infusao": "5 a 10 minutos por frasco",
+        "monitorizacao": [
+          "sangramento",
+          "tempo de trombina ou tempo de ecarina",
+          "pressão arterial"
+        ],
+        "ajuste_renal": "Sem ajuste; mantém eficácia mesmo em diálise",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Reverte apenas dabigatrana e não tem efeito sobre varfarina, apixabana ou rivaroxabana. Custo alto e disponibilidade restrita; na indisponibilidade, controlar com tamponamento e considerar diálise, que remove a dabigatrana",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "analogo_de_vasopressina",
+        "agente": "desmopressina",
+        "papel": "condicional",
+        "indicacao": "epistaxe em telangiectasia hemorrágica hereditária, disfunção plaquetária urêmica e doença de von Willebrand leve",
+        "dose": "0,3 mcg/kg",
+        "unidade": "mcg/kg",
+        "via": "IV",
+        "frequencia": "dose única; repetir 12/12 h se necessário",
+        "duracao": "1 a 3 doses",
+        "dose_maxima": "0,3 mcg/kg por dose, com máximo de 20 mcg por dose",
+        "contraindicacoes": [
+          "hiponatremia",
+          "insuficiência cardíaca descompensada",
+          "doença de von Willebrand tipo 2B",
+          "hipersensibilidade"
+        ],
+        "efeitos_adversos": [
+          "hiponatremia e convulsão",
+          "rubor facial",
+          "cefaleia",
+          "taquicardia e hipotensão",
+          "taquifilaxia após 2 a 3 doses"
+        ],
+        "apresentacoes": [
+          "solução injetável 4 mcg/mL ampola 1 mL",
+          "solução injetável 15 mcg/mL frasco 1 mL",
+          "spray nasal 150 mcg por dose"
+        ],
+        "preparo": "Diluir a dose em 30 a 50 mL de soro fisiológico 0,9%; a via intranasal, 150 mcg em cada narina, é alternativa",
+        "tempo_infusao": "30 minutos",
+        "monitorizacao": [
+          "sódio antes e 24 horas após",
+          "pressão arterial e frequência cardíaca",
+          "diurese",
+          "eficácia no sangramento"
+        ],
+        "ajuste_renal": "Cautela, com maior risco de hiponatremia e controle obrigatório do sódio",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Efeito em 30 a 60 minutos e taquifilaxia após 2 a 3 doses. Não é tratamento de primeira linha da epistaxe comum: entra quando há distúrbio plaquetário ou de von Willebrand documentado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "penicilina_com_inibidor_de_betalactamase",
+        "agente": "amoxicilina-clavulanato",
+        "papel": "condicional",
+        "indicacao": "profilaxia de síndrome do choque tóxico e de sinusite em tamponamento posterior prolongado, sobretudo em diabético e imunossuprimido",
+        "dose": "875/125 mg no adulto; 50 mg/kg/dia na criança",
+        "unidade": "mg",
+        "via": "VO ou IV",
+        "frequencia": "12/12 h",
+        "duracao": "enquanto o tampão permanecer, até 5 dias",
+        "dose_maxima": "3 g por dia de amoxicilina",
+        "contraindicacoes": [
+          "alergia a penicilina",
+          "hepatite colestática prévia pelo fármaco",
+          "mononucleose infecciosa"
+        ],
+        "efeitos_adversos": [
+          "diarreia",
+          "náusea",
+          "rash cutâneo",
+          "hepatite colestática",
+          "candidíase"
+        ],
+        "apresentacoes": [
+          "comprimido 500/125 mg",
+          "comprimido 875/125 mg",
+          "suspensão 400/57 mg por 5 mL",
+          "frasco 1 g/200 mg para uso intravenoso"
+        ],
+        "preparo": "Via oral: uso direto, no início da refeição. Via intravenosa: reconstituir em 10 mL de água e diluir em 100 mL de soro fisiológico 0,9%",
+        "tempo_infusao": "não se aplica (via oral); via intravenosa em 30 minutos",
+        "monitorizacao": [
+          "febre",
+          "diarreia",
+          "dor facial e secreção, que sugerem sinusite",
+          "função hepática se houver icterícia"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: usar apenas a apresentação de 500/125 mg e espaçar; em diálise, dose após a sessão",
+        "ajuste_hepatico": "Cautela; contraindicado se hepatite colestática prévia pelo fármaco",
+        "observacoes": "A profilaxia antibiótica no tamponamento nasal não é consenso: a síndrome do choque tóxico é rara e o antibiótico tem custo e efeito adverso. Reservar para tamponamento posterior acima de 24 a 48 horas, diabético, imunossuprimido e mucosa lesada",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "suplemento_de_ferro",
+        "agente": "sulfato ferroso",
+        "papel": "condicional",
+        "indicacao": "anemia ferropriva após epistaxe recorrente ou sangramento volumoso, depois do controle do sangramento",
+        "dose": "200 mg, equivalentes a 65 mg de ferro elementar, no adulto; 3 a 6 mg/kg/dia de ferro elementar na criança",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia no adulto; 1 a 2 tomadas na criança",
+        "duracao": "3 a 6 meses, até normalizar a hemoglobina e repor estoques",
+        "dose_maxima": "200 mg de ferro elementar por dia",
+        "contraindicacoes": [
+          "hemocromatose",
+          "sobrecarga de ferro",
+          "anemia não ferropriva sem investigação",
+          "úlcera péptica ativa"
+        ],
+        "efeitos_adversos": [
+          "constipação",
+          "náusea",
+          "dor epigástrica",
+          "fezes escuras",
+          "diarreia"
+        ],
+        "apresentacoes": [
+          "comprimido 40 mg de ferro elementar",
+          "comprimido 60 mg de ferro elementar",
+          "solução oral 25 mg/mL de ferro elementar",
+          "xarope 5 mg/mL de ferro elementar"
+        ],
+        "preparo": "Uso direto, uma hora antes das refeições ou com vitamina C; não tomar com leite, chá, café ou antiácido",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "hemoglobina em 4 a 8 semanas",
+          "tolerância digestiva",
+          "adesão ao tratamento",
+          "ferritina ao final"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não repõe sangue e não trata sangramento ativo: entra só depois do controle. Em adulto com ferropenia, investigar a causa, sobretudo sangramento digestivo associado",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Compressão digital correta por 10 a 15 minutos",
+        "detalhe": "Pinçar a parte mole do nariz contra o septo, na altura da cartilagem, com o polegar e o indicador, boca aberta e respiração pela boca; usar relógio e não soltar para espiar, porque cada alívio reinicia o sangramento. Compressão de 2 minutos e olhadelas não conta como compressão"
+      },
+      {
+        "medida": "Posição sentada com a cabeça levemente fletida para frente",
+        "detalhe": "O sangue deve sair pela narina e ser visto. Inclinar a cabeça para trás faz o sangue descer para a faringe, ser deglutido e provocar vômito, além de esconder a quantidade real de sangramento"
+      },
+      {
+        "medida": "Não assoar, não fungar e não espirrar de boca fechada por 24 a 48 horas",
+        "detalhe": "A pressão positiva desloca o coágulo recém-formado. Espirrar com a boca aberta e assoar suave, um lado por vez, apenas depois de 48 horas"
+      },
+      {
+        "medida": "Umidificação da mucosa nasal",
+        "detalhe": "Soro fisiológico nasal duas a três vezes ao dia, gel de vaselina na porção anterior do septo à noite, umidificador no quarto e evitar ar-condicionado direto no rosto; mucosa ressecada sangra de novo em poucos dias"
+      },
+      {
+        "medida": "Suspender AINE, ácido acetilsalicílico e álcool durante 7 a 10 dias",
+        "detalhe": "AINE e álcool interferem na função plaquetária e na vasodilatação. Em anticoagulado, não suspender por conta própria: a decisão é da equipe que acompanha a anticoagulação"
+      },
+      {
+        "medida": "Retirada programada do tampão, com data e hora registradas",
+        "detalhe": "Tampão anterior em 24 a 48 horas, no máximo 72 horas; posterior em 24 a 48 horas. Registrar no prontuário e entregar por escrito ao paciente. Tampão esquecido causa sinéquia, sinusite, necrose e síndrome do choque tóxico"
+      },
+      {
+        "medida": "Cuidados com a criança que sangra de repetição",
+        "detalhe": "Unha curta, retirar o hábito de enfiar o dedo no nariz, evitar brincadeira de colocar objeto, manter o quarto úmido e avisar a escola sobre o que fazer. Não usar cotonete nem algodão seco no nariz"
+      },
+      {
+        "medida": "Repouso relativo e cabeceira elevada nas primeiras 24 horas",
+        "detalhe": "Evitar esforço físico, banho muito quente, sauna e abaixar a cabeça; dormir com a cabeceira elevada a 30 graus. A elevação reduz a pressão venosa na mucosa nasal"
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Compressão digital guiada e identificação do ponto de sangramento",
+        "indicacao": "todo paciente com epistaxe, antes de qualquer instrumento",
+        "tecnica": "Sentar o paciente, inclinar a cabeça para frente, comprimir a parte mole do nariz contra o septo por 10 a 15 minutos sem interrupção, com relógio; depois, com boa iluminação, aspirar o coágulo, vasoconstrição com oximetazolina e inspeção do septo anterior e do assoalho com espéculo nasal ou otoscópio",
+        "complicacoes": "Compressão inadequada que não controla o sangramento, síncope em paciente ansioso, lesão de mucosa por aspiração vigorosa"
+      },
+      {
+        "nome": "Cauterização química com nitrato de prata",
+        "indicacao": "epistaxe anterior recorrente com ponto sangrante visível, em paciente cooperativo",
+        "tecnica": "Anestesia com lidocaína 2% com vasoconstritor, secagem do ponto, aplicação do bastão de nitrato de prata por 5 a 10 segundos em uma área de até 5 mm, apenas de um lado do septo, com aspiração dos fumos; reavaliar após 7 a 14 dias se recorrer",
+        "complicacoes": "Perfuração septal por cauterização ampla ou bilateral, sinéquia, dor intensa, recidiva por cauterização insuficiente, queimadura de mucosa sadia quando o ponto não foi identificado"
+      },
+      {
+        "nome": "Tamponamento nasal anterior com gaze lubrificada ou esponja expansível",
+        "indicacao": "epistaxe anterior que não cessa com compressão e cauterização, ou sangramento difuso de mucosa",
+        "tecnica": "Anestesia e vasoconstrição, aspiração do coágulo e pregueamento de gaze com vaselina ou pomada lubrificante em camadas de baixo para cima, preenchendo toda a fossa nasal sem ultrapassar a coana; na esponja expansível, inserir e expandir com soro. Fixar, prescrever analgesia e registrar a data de retirada em 24 a 48 horas",
+        "complicacoes": "Deslocamento do tampão, obstrução nasal e hipoxemia em tamponamento bilateral, sinusite, sinéquia, necrose de mucosa, síndrome do choque tóxico em tampão esquecido"
+      },
+      {
+        "nome": "Tamponamento posterior com sonda de Foley",
+        "indicacao": "epistaxe posterior, sangue pela garganta ou sangramento persistente apesar do tamponamento anterior",
+        "tecnica": "Lubrificar sonda de Foley 10 a 14 Fr, introduzir pela narina até sentir a resistência da coana, inflar o balão com 10 a 15 mL de soro, tracionar suavemente até o balão apoiar na coana, proteger a columela com gaze e fixar com tração leve na testa ou na narina; internação, cabeceira elevada, oximetria e otorrinolaringologia em 24 horas",
+        "complicacoes": "Necrose de columela e de asa nasal pela tração excessiva, obstrução da tuba auditiva com otite, sinusite, hipoxemia e apneia do sono em tamponamento bilateral, aspiração, deslocamento para a faringe com obstrução de via aérea"
+      },
+      {
+        "nome": "Cauterização endoscópica, ligadura arterial ou embolização",
+        "indicacao": "epistaxe posterior ou anterior refratária a tamponamento, sangramento de origem esfenopalatina e telangiectasia extensa",
+        "tecnica": "Nasoendoscopia com identificação do vaso, cauterização bipolar ou ligadura da artéria esfenopalatina; na falha ou em paciente de alto risco cirúrgico, arteriografia com embolização por radiologia intervencionista",
+        "complicacoes": "Ressangramento, sinéquia, necrose de mucosa, lesão de órbita ou de base de crânio, isquemia de território da carótida externa, acidente vascular na embolização"
+      }
+    ],
+    "metas": [
+      "Sangramento controlado em até 15 minutos de compressão digital na epistaxe anterior",
+      "Paciente sem sangramento ativo ao final do atendimento e sem recidiva nas primeiras 24 horas",
+      "Todo tamponamento com data e hora de retirada registradas no prontuário e entregues por escrito ao paciente",
+      "Epistaxe posterior com tamponamento, internação e avaliação de otorrinolaringologia em até 24 horas",
+      "Anticoagulação revertida somente quando indicada, com INR de controle em 30 minutos e sem evento trombótico",
+      "Hemoglobina acima de 8 g/dL, sem transfusão desnecessária e com investigação da ferropenia",
+      "Epistaxe recorrente encaminhada à otorrinolaringologia em até 7 dias, com nasofibroscopia"
+    ],
+    "fluxo": [
+      "Triagem: sangramento nasal entra como via aérea e circulação, com sinais vitais, oximetria e pergunta obrigatória sobre sangue pela garganta e vômito de sangue",
+      "Instabilidade, síncope ou hemoglobina muito baixa: sala vermelha, dois acessos calibrosos, cristaloide, tipagem, transfusão e compressão contínua durante toda a ressuscitação",
+      "Localizar a origem: anterior, com ponto visível ou sangramento difuso do septo, ou posterior, com sangue descendo pela faringe e sem ponto na fossa nasal anterior",
+      "Anterior: compressão de 10 a 15 minutos, oximetazolina, anestesia e cauterização com nitrato de prata se houver ponto; se não houver ponto ou falhar, tamponamento anterior com gaze ou esponja e retirada programada",
+      "Posterior: tamponamento com sonda de Foley, cabeceira elevada, oximetria, internação e otorrinolaringologia; não insistir em tamponamento anterior repetido",
+      "Em paralelo, estratificar causa sistêmica: anticoagulante, antiagregante, plaquetas, INR, ureia, creatinina, hepatopatia, telangiectasia e drogas nasais",
+      "Anticoagulado: não reverter se o sangramento está controlado; reverter conforme o fármaco se grave ou refratário, com INR e clínica",
+      "Hipertenso: tratar o nariz e reduzir a pressão de forma titulada, sem vasoconstritor sistêmico e sem descongestionante repetido",
+      "Refratário a dois tamponamentos ou suspeita de neoplasia: nasofibroscopia, tomografia e encaminhamento para cauterização endoscópica, ligadura ou embolização",
+      "Alta apenas com sangramento controlado, tampão com retirada agendada, analgesia, umidificação, orientação escrita e sinais de retorno"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "anticoagulado",
+        "ajuste": "manter a anticoagulação se o sangramento está controlado; reverter apenas em sangramento grave ou refratário, conforme o fármaco, com vitamina K e complexo protrombínico para varfarina e idarucizumabe para dabigatrana",
+        "alerta": "reverter por sangramento leve troca risco pequeno de recidiva por trombose em prótese valvar, fibrilação atrial e tromboembolismo recente"
+      },
+      {
+        "populacao": "hipertenso",
+        "ajuste": "tratar o sangramento local e reduzir a pressão de forma titulada, com queda de cerca de 20 a 25% na primeira hora; uma aplicação tópica única de oximetazolina é aceitável com pressão monitorizada",
+        "alerta": "vasoconstritor repetido ou sistêmico e queda brusca de pressão: crise hipertensiva, isquemia cerebral, coronariana e renal"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "rever anticoagulante, antiagregante, AINE e comorbidades; baixar o limiar de internação e de reversão e investigar neoplasia em sangramento unilateral recorrente",
+        "alerta": "sangramento com anemia silenciosa, queda de hemoglobina sem taquicardia e maior risco de trombose na reversão"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "tratamento local com compressão, oximetazolina tópica em dose única e cauterização; ácido tranexâmico apenas em sangramento com risco de vida",
+        "alerta": "hiperemia e edema de mucosa da gestação favorecem recidiva, e a anemia agrava a intolerância à perda"
+      },
+      {
+        "populacao": "crianca",
+        "ajuste": "compressão guiada pelo adulto, contenção adequada, cauterização apenas com cooperação, soro nasal e umidificação; investigar coagulopatia somente com sinais sistêmicos, história familiar ou sangramento semanal",
+        "alerta": "coagulograma de rotina em epistaxe leve tem baixo rendimento; o risco real é criança com plaquetopenia não reconhecida e sangramento que não cessa"
+      },
+      {
+        "populacao": "renal_cronico e cirrotico",
+        "ajuste": "corrigir uremia e disfunção plaquetária com desmopressina e diálise no renal, corrigir coagulopatia no cirrótico e evitar tamponamento prolongado",
+        "alerta": "sangramento difuso de mucosa, anemia crônica e maior risco de trombose e de infecção do tampão"
+      },
+      {
+        "populacao": "telangiectasia hemorrágica hereditária",
+        "ajuste": "ácido tranexâmico tópico e oral, cauterização parcimoniosa de um ponto por sessão, sulfato ferroso e encaminhamento especializado",
+        "alerta": "cauterização ampla cria novas telangiectasias, perfuração septal e piora do sangramento a longo prazo"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "hemograma completo",
+          "indicacao": "todo sangramento volumoso, recorrente ou com suspeita de discrasia",
+          "o_que_muda": "define anemia, plaquetopenia e leucemia; hemoglobina abaixo de 8 g/dL indica internação e transfusão"
+        },
+        {
+          "nome": "INR, tempo de tromboplastina e plaquetas",
+          "indicacao": "anticoagulado, cirrótico, uso de AINE, sangramento refratário e suspeita de coagulopatia",
+          "o_que_muda": "define se há coagulopatia a corrigir e qual reversor usar; INR acima de 3 em sangramento ativo muda a conduta para reversão"
+        },
+        {
+          "nome": "ureia e creatinina",
+          "indicacao": "sangramento importante, renal crônico e investigação de causa sistêmica",
+          "o_que_muda": "uremia causa disfunção plaquetária e indica desmopressina; a função renal também define o ajuste do ácido tranexâmico"
+        },
+        {
+          "nome": "nasofibroscopia ou endoscopia nasal",
+          "indicacao": "suspeita de epistaxe posterior, sangramento refratário, massa nasal e epistaxe recorrente sem ponto anterior",
+          "o_que_muda": "localiza o vaso, afasta neoplasia e permite cauterização ou ligadura dirigida"
+        },
+        {
+          "nome": "angiotomografia ou arteriografia",
+          "indicacao": "sangramento refratário a tamponamento, suspeita de lesão vascular, angiofibroma ou indicação de embolização",
+          "o_que_muda": "define o território arterial e a via de embolização, e identifica tumor vascular"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "radiografia de seios da face na epistaxe",
+          "motivo": "não localiza o ponto de sangramento nem muda a conduta, e atrasa o controle"
+        },
+        {
+          "exame": "tomografia em epistaxe anterior leve já controlada",
+          "motivo": "não altera o tratamento e expõe a radiação sem indicação"
+        },
+        {
+          "exame": "coagulograma de rotina em criança com epistaxe anterior leve isolada",
+          "motivo": "baixo rendimento, custo e ansiedade sem mudar a conduta; reservar para sinais sistêmicos ou história familiar"
+        },
+        {
+          "exame": "hemograma seriado de hora em hora em sangramento já controlado",
+          "motivo": "não muda conduta e atrasa a alta; repetir apenas se houver sangramento ativo ou instabilidade"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "comprimir a parte mole do nariz contra o septo por 10 a 15 minutos, sem soltar para ver, com a cabeça levemente para frente",
+        "sentar e respirar pela boca durante o sangramento, sem deitar e sem jogar a cabeça para trás",
+        "usar soro fisiológico nasal e manter o quarto úmido, com gel de vaselina na parte anterior do septo à noite",
+        "voltar para retirar o tampão na data marcada, mesmo sem sangramento",
+        "tomar o analgésico prescrito e evitar AINE e ácido acetilsalicílico por 7 a 10 dias",
+        "manter a unha da criança curta e avisar a escola sobre como comprimir o nariz",
+        "informar na próxima consulta se usa anticoagulante, e não suspender por conta própria"
+      ],
+      "evitar": [
+        "inclinar a cabeça para trás ou deitar durante o sangramento",
+        "assoar com força, fungar ou espirrar de boca fechada nas primeiras 48 horas",
+        "usar cotonete, papel ou algodão seco dentro do nariz",
+        "repetir descongestionante nasal por mais de três dias ou usar vasoconstritor sem orientação",
+        "beber álcool, fumar ou fazer esforço físico nas primeiras 24 a 48 horas",
+        "retirar o tampão em casa, por conta própria",
+        "usar cocaína ou produtos nasais não prescritos"
+      ],
+      "retorno": [
+        "sangramento que não para após 15 minutos de compressão contínua",
+        "sangue descendo pela garganta, vômito de sangue ou fezes escuras",
+        "tontura, palidez, sudorese ou desmaio",
+        "febre, dor facial ou secreção purulenta com o tampão no lugar",
+        "sangramento de novo após a retirada do tampão",
+        "obstrução nasal unilateral progressiva, perda de olfato ou dormência facial"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "nitrato de prata",
+        "efeitos": [
+          "perfuração septal",
+          "sinéquia",
+          "dor intensa"
+        ],
+        "observacao": "só cauterizar ponto visível, um lado por sessão e área de até 5 mm; suspender se surgir necrose extensa"
+      },
+      {
+        "agente": "oximetazolina",
+        "efeitos": [
+          "congestão de rebote",
+          "cefaleia",
+          "elevação da pressão arterial"
+        ],
+        "observacao": "dose única por atendimento; suspender se pressão subir de forma significativa no hipertenso"
+      },
+      {
+        "agente": "ácido tranexâmico",
+        "efeitos": [
+          "náusea",
+          "hipotensão com infusão rápida",
+          "convulsão em renal crônico",
+          "trombose"
+        ],
+        "observacao": "infundir em 20 a 30 minutos e ajustar à função renal na via sistêmica"
+      },
+      {
+        "agente": "complexo protrombínico",
+        "efeitos": [
+          "tromboembolismo",
+          "reação alérgica",
+          "sobrecarga de volume"
+        ],
+        "observacao": "usar apenas com indicação de reversão e reavaliar sinais de trombose nas primeiras 24 horas"
+      },
+      {
+        "agente": "desmopressina",
+        "efeitos": [
+          "hiponatremia",
+          "cefaleia",
+          "taquifilaxia"
+        ],
+        "observacao": "controlar sódio e não repetir mais de três doses"
+      },
+      {
+        "agente": "tamponamento nasal",
+        "efeitos": [
+          "sinusite",
+          "sinéquia",
+          "hipoxemia noturna",
+          "síndrome do choque tóxico"
+        ],
+        "observacao": "retirar em 24 a 48 horas, no máximo 72 horas, e reavaliar febre e dor facial"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o fármaco implicado, registrar hora, dose e via e manter a compressão nasal",
+      "Tamponamento com febre, dor facial e toxemia: retirar o tampão, colher cultura, iniciar antibiótico e internar por suspeita de síndrome do choque tóxico",
+      "Necrose de columela por tração da sonda de Foley: aliviar a tração imediatamente, proteger com gaze e acionar otorrinolaringologia",
+      "Perfuração septal após cauterização: encaminhar à otorrinolaringologia, manter umidificação e evitar nova cauterização no local",
+      "Hiponatremia ou convulsão após desmopressina: suspender, dosar sódio, restringir água e tratar a convulsão",
+      "Sinais de trombose após complexo protrombínico ou ácido tranexâmico: suspender, investigar com imagem e avaliar anticoagulação com a especialidade",
+      "Hipoxemia com tamponamento bilateral: elevar a cabeceira, ofertar oxigênio e avaliar retirada de um dos lados",
+      "Reação alérgica ao fármaco: suspender, tratar conforme gravidade e trocar de classe na próxima prescrição"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "soro fisiológico 0,9% nasal",
+            "dose": "2 a 3 jatos ou 5 mL por narina",
+            "via": "nasal",
+            "frequencia": "2 a 3 vezes ao dia",
+            "duracao": "14 dias",
+            "condicao": "umidificação da mucosa e prevenção de recidiva",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ácido tranexâmico 250 mg comprimido",
+            "dose": "500 mg (dois comprimidos)",
+            "via": "VO",
+            "frequencia": "8/8 h",
+            "duracao": "5 dias",
+            "condicao": "epistaxe recorrente em telangiectasia hemorrágica hereditária ou anticoagulado, após controle",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "sulfato ferroso 40 mg de ferro elementar",
+            "dose": "1 comprimido (ou 200 mg de sulfato ferroso)",
+            "via": "VO",
+            "frequencia": "1x/dia em jejum",
+            "duracao": "3 meses",
+            "condicao": "anemia ferropriva após sangramento controlado",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "paracetamol 750 mg",
+            "dose": "750 mg (criança 15 mg/kg/dose)",
+            "via": "VO",
+            "frequencia": "6/6 h se dor",
+            "duracao": "3 dias",
+            "condicao": "dor após cauterização ou tamponamento; substitui AINE",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina-clavulanato 875/125 mg",
+            "dose": "875/125 mg (criança 50 mg/kg/dia)",
+            "via": "VO",
+            "frequencia": "12/12 h",
+            "duracao": "5 dias",
+            "condicao": "tamponamento posterior prolongado em diabético ou imunossuprimido",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ácido tranexâmico",
+            "dose": "1 g (criança 10 a 15 mg/kg)",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "função renal, sangramento e sinais de trombose",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "fitomenadiona (vitamina K)",
+            "dose": "10 mg",
+            "via": "IV",
+            "frequencia": "dose única",
+            "monitorizacao": "INR em 6 a 12 h e reação alérgica",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "complexo protrombínico de quatro fatores",
+            "dose": "25 a 50 UI/kg",
+            "via": "IV",
+            "frequencia": "dose única",
+            "monitorizacao": "INR em 30 min, trombose e sangramento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "soro fisiológico 0,9%",
+            "dose": "500 a 1.000 mL",
+            "via": "IV",
+            "frequencia": "conforme pressão e perda estimada",
+            "monitorizacao": "pressão, diurese e ausculta pulmonar",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "amoxicilina-clavulanato",
+            "dose": "1 g/200 mg (criança 50 mg/kg/dia)",
+            "via": "IV",
+            "frequencia": "8/8 h",
+            "monitorizacao": "febre, diarreia e função hepática",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "hemograma completo",
+          "plaquetas e INR",
+          "tempo de tromboplastina",
+          "ureia e creatinina",
+          "tipagem sanguínea",
+          "nasofibroscopia",
+          "angiotomografia quando refratário",
+          "justificativa",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de epistaxe ___, tendo sido submetido(a) a ___ e necessitando de afastamento por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "o número de dias é decisão médica e depende do controle do sangramento, do tipo de tamponamento e da exposição laboral a poeira e esforço"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino",
+          "motivo",
+          "resumo com lado, origem anterior ou posterior, tamponamento realizado, data de retirada, anticoagulante em uso e hemoglobina",
+          "prioridade"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com epistaxe ___, à direita ou à esquerda, de origem ___, com sangramento ___ mL estimados, hemoglobina ___, tamponamento ___, reversão de anticoagulação ___, controle ___ e retirada programada para ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "tempo de sangramento e número de episódios",
+        "lado e trajeto do sangue, pela narina ou pela garganta",
+        "volume estimado, sangue deglutido e vômito",
+        "anticoagulante, antiagregante ou AINE e última dose",
+        "pressão arterial habitual e medida atual",
+        "trauma nasal, cirurgia, corpo estranho ou manipulação digital",
+        "doença hepática, renal, hematológica ou neoplasia",
+        "história familiar de sangramento e telangiectasias",
+        "uso de cocaína, descongestionante e corticoide nasal",
+        "tentativas de controle já feitas em casa"
+      ],
+      "texto_template": "Paciente com epistaxe ___ há ___ horas, à direita ou à esquerda, com sangue ___ pela narina e ___ pela garganta, volume estimado ___, vômito de sangue ___, uso de anticoagulante ___, pressão arterial ___, trauma ___, cirurgia nasal ___, doença hepática ou renal ___, história familiar ___, descongestionante ___, cocaína ___ e tentativas de controle ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "sinais vitais, oximetria e pressão arterial nos dois braços",
+        "avaliação de perfusão, tempo de enchimento capilar e nível de consciência",
+        "inspeção da narina com boa iluminação e aspiração do coágulo",
+        "identificação do ponto de sangramento no septo anterior e no assoalho",
+        "inspeção da orofaringe e da parede posterior da faringe em busca de sangue",
+        "avaliação de massa, perfuração septal, telangiectasia e crosta",
+        "palpação de face e pesquisa de crepitação ou afundamento",
+        "ausculta pulmonar e abdominal em suspeita de aspiração ou sangue deglutido",
+        "pesquisa de petéquias, equimoses e adenomegalia"
+      ],
+      "texto_template": "Sinais vitais ___, pressão arterial ___, oximetria ___, perfusão ___, consciência ___, ponto de sangramento ___, septo ___, orofaringe ___, massa ___, telangiectasia ___, trauma facial ___, ausculta pulmonar ___ e pele ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de epistaxe, disponibilidade de otoscópio, espéculo, sonda de Foley e esponja nasal, e rotina de retirada de tampão",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_internacional",
+        "o_que_verificar": "indicação de tamponamento anterior e posterior, uso de ácido tranexâmico tópico e critérios de internação em epistaxe",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_otorrinolaringologia",
+        "o_que_verificar": "técnica de cauterização, limites de área e lateralidade, e indicação de ligadura e embolização",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de oximetazolina, nitrato de prata, ácido tranexâmico, complexo protrombínico e idarucizumabe disponíveis no serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "protocolo_anticoagulacao",
+        "o_que_verificar": "esquema de reversão por fármaco e metas de INR no paciente com prótese valvar e fibrilação atrial",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-RESP07-01",
+        "tipo": "epistaxe_posterior",
+        "gatilho": "sangue pela garganta, vômito de sangue ou sangramento persistente após tamponamento anterior",
+        "severidade": "grave",
+        "mensagem": "Epistaxe posterior: tamponamento com sonda de Foley, internação e otorrinolaringologia. Não liberar para casa.",
+        "acao": "bloquear alta e acionar otorrinolaringologia",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP07-02",
+        "tipo": "instabilidade",
+        "gatilho": "hipotensão, taquicardia, síncope ou hemoglobina abaixo de 8 g/dL",
+        "severidade": "grave",
+        "mensagem": "Choque ou anemia grave por epistaxe: ressuscitação, tipagem e transfusão antes de qualquer alta.",
+        "acao": "acionar sala vermelha e bloquear alta",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP07-03",
+        "tipo": "anticoagulante",
+        "gatilho": "anticoagulante em uso com sangramento ativo e sem avaliação de reversão registrada",
+        "severidade": "grave",
+        "mensagem": "Anticoagulado com sangramento ativo exige INR, plaquetas e decisão de reversão registrada.",
+        "acao": "bloquear conduta até registrar INR e plano de reversão",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP07-04",
+        "tipo": "aine",
+        "gatilho": "AINE ou ácido acetilsalicílico prescrito em paciente com epistaxe ativa ou recente",
+        "severidade": "grave",
+        "mensagem": "AINE e AAS prolongam o sangramento nasal: trocar por paracetamol.",
+        "acao": "bloquear item e sugerir paracetamol",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP07-05",
+        "tipo": "tampao_sem_retirada",
+        "gatilho": "tamponamento nasal sem data e hora de retirada registradas, ou tampão mantido acima de 72 horas",
+        "severidade": "precaucao",
+        "mensagem": "Tampão sem plano de retirada causa sinéquia, sinusite e síndrome do choque tóxico.",
+        "acao": "bloquear alta até registrar a data de retirada",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP07-06",
+        "tipo": "vasoconstritor_hipertenso",
+        "gatilho": "vasoconstritor sistêmico, ou descongestionante nasal repetido, em hipertenso sem controle pressórico registrado",
+        "severidade": "precaucao",
+        "mensagem": "Vasoconstritor sem critério no hipertenso eleva a pressão e não trata a epistaxe.",
+        "acao": "alertar e registrar pressão antes e após a aplicação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP07-07",
+        "tipo": "orientacao_incorreta",
+        "gatilho": "orientação para inclinar a cabeça para trás ou deitar durante o sangramento",
+        "severidade": "informativo",
+        "mensagem": "Cabeça para trás faz o sangue descer para a faringe e provocar vômito e aspiração.",
+        "acao": "corrigir a orientação no prontuário",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "literatura de otorrinolaringologia",
+        "diretriz de epistaxe",
+        "protocolo institucional"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita integral: separação explícita entre epistaxe anterior, posterior e de causa sistêmica; compressão digital de 10 a 15 minutos como primeira medida, cauterização com nitrato de prata restrita a ponto visível e um lado por sessão, tamponamento anterior com gaze ou esponja e retirada programada, tamponamento posterior com sonda de Foley, ácido tranexâmico tópico e sistêmico; 11 fármacos de 10 classes, com apresentações, preparo, tempo de infusão, monitorização e ajuste renal; anticoagulado com regra de não reverter sangramento controlado e reversão específica por fármaco, incluindo vitamina K, complexo protrombínico e idarucizumabe; hipertenso com controle titulado e proibição de vasoconstritor sem critério; critérios explícitos de internação; 8 sinais de alarme; 5 procedimentos; bloqueios de alta em epistaxe posterior, de tampão sem data de retirada e de AINE em sangramento ativo.",
+          "data": null
+        }
+      ]
+    }
+  }
+}

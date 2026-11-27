@@ -1,0 +1,1104 @@
+{
+  "schema_version": "1.0.0",
+  "sindrome": {
+    "id": "RESP-09",
+    "area": "Respiratório/ORL",
+    "nome": "Conjuntivite",
+    "aliases": [
+      "conjuntivite",
+      "olho vermelho",
+      "remela",
+      "conjuntivite bacteriana",
+      "conjuntivite viral",
+      "conjuntivite alérgica",
+      "conjuntivite neonatal",
+      "secreção ocular"
+    ],
+    "contexto": [
+      "ambulatorial"
+    ],
+    "populacao": [
+      "adulto"
+    ],
+    "status": "estruturado_em_revisao",
+    "risk_class": "C",
+    "versao": "0.2.0",
+    "visao_geral": "Conjuntivite é a inflamação da conjuntiva, e o olho vermelho é o sintoma que traz o paciente. A maioria é viral ou alérgica, autolimitada, e não precisa de antibiótico; a bacteriana é minoria e nem sempre justifica tratamento antimicrobiano. O que decide a conduta não é a cor da secreção, e sim quatro perguntas: dói ou apenas coça, a visão está preservada, é unilateral ou bilateral, e há lente de contato ou trauma. Dor intensa, fotofobia, baixa visual, halos coloridos em torno da luz, pupila média e fixa, náusea com dor ocular ou trauma tiram o caso do ambulatorial e exigem oftalmologista no mesmo dia, porque glaucoma agudo, uveíte, ceratite e corpo estranho podem deixar sequela visual permanente em poucas horas. Fora desses sinais, o tratamento é de suporte: lavagem com soro fisiológico, colírio lubrificante, compressa fria e higiene das mãos. Antibiótico tópico fica para a bacteriana provável, com secreção purulenta, unilateral e sem prurido, por 5 a 7 dias, com tobramicina ou ciprofloxacino. A alérgica responde a anti-histamínico tópico, tendo a olopatadina como primeira escolha, e à loratadina oral quando há rinite associada. O que não se faz: corticoide tópico sem lâmpada de fenda, colírio com vasoconstrictor por tempo prolongado e oclusão do olho com secreção. A conjuntivite neonatal é outra doença: qualquer recém-nascido com secreção ocular é emergência, porque gonococo perfura a córnea em 24 a 48 h, e o tratamento é sistêmico com ceftriaxona, com internação e cultura.",
+    "inclusao": [
+      "Olho vermelho com secreção, lacrimejamento ou prurido, sem dor intensa e com visão preservada",
+      "Quadro bilateral com coriza, espirros ou contato com pessoa com conjuntivite",
+      "Prurido ocular intenso com histórico de atopia, sazonalidade ou exposição a alérgeno",
+      "Secreção purulenta unilateral sem sinais de gravidade e sem lente de contato",
+      "Conjuntivite que não melhora em 7 dias de tratamento tópico adequado",
+      "Recém-nascido com secreção ocular, para triagem e encaminhamento imediato"
+    ],
+    "exclusao": [
+      {
+        "situacao": "dor ocular intensa, fotofobia ou sensação de corpo estranho que não passa",
+        "fluxo": "ceratite, uveíte ou corpo estranho — oftalmologia no mesmo dia, sem colírio antes da lâmpada de fenda"
+      },
+      {
+        "situacao": "baixa visual, visão turva que não limpa ao piscar ou halos coloridos",
+        "fluxo": "glaucoma agudo, uveíte ou ceratite — oftalmologia no mesmo dia"
+      },
+      {
+        "situacao": "dor ocular em usuário de lente de contato",
+        "fluxo": "ceratite por Pseudomonas — suspender a lente e oftalmologia imediata"
+      },
+      {
+        "situacao": "trauma ocular, queimadura química ou suspeita de perfuração",
+        "fluxo": "oftalmologia de urgência, sem irrigar antes de estabilizar a suspeita de perfuração"
+      },
+      {
+        "situacao": "recém-nascido com secreção ocular",
+        "fluxo": "conjuntivite neonatal — internação, cultura e ceftriaxona sistêmica"
+      },
+      {
+        "situacao": "vesículas em pálpebra ou lesão dendrítica na córnea",
+        "fluxo": "ceratite herpética — oftalmologia, proibido corticoide tópico"
+      }
+    ],
+    "sinais_alarme": [
+      {
+        "id": "AL-01",
+        "sinal": "baixa visual ou visão turva que não melhora ao piscar",
+        "por_que": "comprometimento de córnea, câmara anterior ou nervo óptico, e não de conjuntiva",
+        "acao": "oftalmologista no mesmo dia, com acuidade visual registrada antes e depois",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-02",
+        "sinal": "dor ocular intensa ou fotofobia importante",
+        "por_que": "ceratite, uveíte ou glaucoma agudo, todas com risco de perda visual",
+        "acao": "encaminhar no mesmo dia; não prescrever colírio sintomático nem ocluir o olho",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-03",
+        "sinal": "olho vermelho com halos coloridos, náusea, vômito e pupila média e fixa",
+        "por_que": "glaucoma agudo de ângulo fechado, emergência com perda visual em horas",
+        "acao": "oftalmologia imediata; não usar midriático nem esperar consulta eletiva",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-04",
+        "sinal": "trauma ocular, queimadura química ou sensação de corpo estranho persistente",
+        "por_que": "corpo estranho, úlcera ou perfuração ocular",
+        "acao": "avaliação com lâmpada de fenda e remoção; não irrigar se houver suspeita de perfuração",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-05",
+        "sinal": "uso de lente de contato com dor, fotofobia ou opacidade corneal",
+        "por_que": "ceratite microbiana, sobretudo Pseudomonas",
+        "acao": "suspender a lente, não prescrever colírio por telefone e encaminhar imediatamente",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-06",
+        "sinal": "recém-nascido com secreção ocular, edema palpebral ou secreção purulenta abundante",
+        "por_que": "conjuntivite gonocócica, com risco de perfuração corneal e sepse",
+        "acao": "internação, cultura e ceftriaxona sistêmica no mesmo dia",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-07",
+        "sinal": "vesículas periorbitárias, úlcera corneal ou história de herpes ocular",
+        "por_que": "ceratite herpética, que piora drasticamente com corticoide",
+        "acao": "oftalmologia e antiviral; corticoide tópico contraindicado",
+        "severidade": "grave"
+      },
+      {
+        "id": "AL-08",
+        "sinal": "uso de colírio com vasoconstrictor por mais de 5 dias com piora da hiperemia",
+        "por_que": "hiperemia de rebote por vasoconstrictor tópico",
+        "acao": "suspender o vasoconstrictor e trocar por lubrificante e compressa fria",
+        "severidade": "precaucao"
+      },
+      {
+        "id": "AL-09",
+        "sinal": "secreção purulenta com edema palpebral intenso, febre ou dor à movimentação ocular",
+        "por_que": "celulite orbitária ou infecção bacteriana profunda",
+        "acao": "avaliação hospitalar, imagem e antibiótico sistêmico",
+        "severidade": "grave"
+      }
+    ],
+    "perguntas_rapidas": [
+      "Um olho ou os dois, e o quadro começou em qual olho?",
+      "Dói, arde ou apenas coça? A dor piora com a luz?",
+      "A visão está normal, ou está embaçada mesmo depois de piscar?",
+      "Usa lente de contato, dorme com ela ou usa água de torneira para limpar?",
+      "Houve trauma, produto químico, solda, areia ou corpo estranho?",
+      "A secreção é clara e aquosa ou purulenta e amarelada, e volta logo após limpar?",
+      "Tem coriza, espirros, coceira no nariz ou histórico de rinite e asma?",
+      "Alguém em casa, na escola ou no trabalho está com o olho vermelho?",
+      "Já usou colírio, qual e por quantos dias? Usou colírio com vasoconstrictor?",
+      "Tem febre, dor de garganta ou secreção nasal purulenta associada?"
+    ],
+    "criterios_escolha": [
+      {
+        "cenario": "Conjuntivite viral provável: bilateral, secreção clara e aquosa, coriza, faringite ou contato com caso semelhante",
+        "escolha": "Soro fisiológico para higiene, colírio lubrificante e compressa fria, sem antibiótico",
+        "porque": "É autolimitada em 7 a 10 dias e o antibiótico não encurta a evolução, não previne complicação e seleciona resistência"
+      },
+      {
+        "cenario": "Conjuntivite bacteriana provável: secreção purulenta, unilateral ou assimétrica, sem prurido e sem sinais de gravidade",
+        "escolha": "Tobramicina 0,3% colírio, 1 gota 4/4 h enquanto acordado, por 5 a 7 dias",
+        "porque": "Cobre os cocos gram-positivos habituais com custo baixo; a via tópica atinge concentração alta na conjuntiva"
+      },
+      {
+        "cenario": "Usuário de lente de contato com suspeita bacteriana ou falha de aminoglicosídeo",
+        "escolha": "Suspender a lente e usar ciprofloxacino 0,3% colírio, com avaliação de córnea antes",
+        "porque": "A fluoroquinolona cobre Pseudomonas, que é o patógeno da ceratite relacionada a lente; aminoglicosídeo isolado é insuficiente"
+      },
+      {
+        "cenario": "Conjuntivite alérgica: prurido intenso, bilateral, com lacrimejamento e histórico de atopia ou sazonalidade",
+        "escolha": "Olopatadina 0,1% colírio 12/12 h, associada a compressa fria e lubrificante",
+        "porque": "O anti-histamínico tópico de dupla ação bloqueia o receptor H1 e estabiliza o mastócito, aliviando prurido em minutos"
+      },
+      {
+        "cenario": "Conjuntivite alérgica com rinite, urticária ou sintoma nasal associado",
+        "escolha": "Associar loratadina 10 mg VO 1x/dia à olopatadina tópica",
+        "porque": "O anti-histamínico oral cobre o componente sistêmico e nasal que o colírio não alcança, sem sedação relevante"
+      },
+      {
+        "cenario": "Conjuntivite alérgica grave, refratária ao anti-histamínico tópico, com quemose importante",
+        "escolha": "Avaliar corticoide tópico apenas com lâmpada de fenda e acompanhamento oftalmológico",
+        "porque": "O corticoide alivia rápido, mas sem exame corneal pode agravar herpes, fungo ou infecção bacteriana e elevar a pressão intraocular"
+      },
+      {
+        "cenario": "Conjuntivite neonatal, qualquer idade abaixo de 28 dias",
+        "escolha": "Cultura e ceftriaxona sistêmica com internação; não tratar só com colírio",
+        "porque": "O gonococo invade a córnea e causa sepse; colírio não atinge a conjuntiva profunda e não trata doença sistêmica"
+      },
+      {
+        "cenario": "Olho vermelho com dor, baixa visual, halos ou trauma",
+        "escolha": "Encaminhar ao oftalmologista no mesmo dia, sem colírio antes da avaliação",
+        "porque": "O diagnóstico diferencial inclui glaucoma agudo, uveíte, ceratite e corpo estranho, que mudam completamente o tratamento e têm janela curta"
+      }
+    ],
+    "medicamentos": [
+      {
+        "classe": "solucao_salina",
+        "agente": "soro fisiológico 0,9%",
+        "papel": "primeira_linha",
+        "indicacao": "higiene ocular e remoção de secreção em qualquer tipo de conjuntivite, antes de instilar colírio",
+        "dose": "5 a 10 mL por olho, em jato suave",
+        "unidade": "mL",
+        "via": "ocular (irrigação conjuntival)",
+        "frequencia": "3 a 4x/dia e sempre que houver secreção acumulada",
+        "duracao": "enquanto houver secreção, em geral 5 a 7 dias",
+        "dose_maxima": "sem dose máxima; limitar pelo conforto e pela tolerância",
+        "contraindicacoes": [
+          "suspeita de perfuração ocular ou ferida penetrante",
+          "queimadura química grave antes da estabilização",
+          "alergia a conservantes em apresentações de frasco multidose"
+        ],
+        "efeitos_adversos": [
+          "ardência transitória",
+          "lacrimejamento reflexo",
+          "ressecamento conjuntival com uso excessivo",
+          "contaminação do frasco se a ponta tocar o olho"
+        ],
+        "apresentacoes": [
+          "frasco 500 mL de soro fisiológico 0,9% estéril",
+          "frasco 250 mL",
+          "ampola 10 mL",
+          "monodose 5 mL sem conservante",
+          "spray ocular 0,9%"
+        ],
+        "preparo": "Usar sempre solução estéril; irrigar da região medial para a lateral com gaze descartável, uma gaze para cada olho; nunca usar água de torneira nem soro caseiro no olho",
+        "tempo_infusao": "não se aplica (irrigação ocular)",
+        "monitorizacao": [
+          "quantidade e aspecto da secreção antes e depois da irrigação",
+          "hiperemia conjuntival",
+          "conforto e ardência durante a lavagem",
+          "acuidade visual antes e depois, para detectar piora"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a base do tratamento em todas as formas: remove secreção, alérgeno e mediadores inflamatórios. Em criança pequena, deitar a cabeça de lado e irrigar com seringa sem agulha. Não compartilhar o frasco entre pacientes.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "lubrificante_ocular",
+        "agente": "carmelose 0,5% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "conforto ocular, sensação de areia, ardência e ressecamento em conjuntivite viral ou alérgica",
+        "dose": "1 gota em cada olho",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "4x/dia; até 6 a 8x/dia se desconforto importante",
+        "duracao": "7 a 14 dias, enquanto durar o desconforto",
+        "dose_maxima": "8 aplicações por dia",
+        "contraindicacoes": [
+          "hipersensibilidade a carmelose ou aos conservantes",
+          "infecção ocular purulenta não tratada, que exige antimicrobiano",
+          "uso de lente de contato com apresentação conservada"
+        ],
+        "efeitos_adversos": [
+          "ardência leve na instilação",
+          "borramento visual transitório por 1 a 2 minutos",
+          "embaçamento da lente de contato",
+          "reação alérgica de contato rara"
+        ],
+        "apresentacoes": [
+          "frasco 10 mL a 0,5%",
+          "frasco 15 mL a 0,5%",
+          "monodose 0,4 mL sem conservante",
+          "gel oftálmico 0,5%"
+        ],
+        "preparo": "Não diluir; instilar 1 gota no saco conjuntival inferior, puxando a pálpebra inferior, sem encostar a ponta do frasco no olho ou nos cílios",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "alívio do desconforto em 24 a 48 h",
+          "ardência e borramento após a instilação",
+          "hiperemia conjuntival",
+          "necessidade real de manter, para não prolongar sem indicação"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Substitui o colírio com vasoconstrictor no alívio do desconforto, sem rebote. Se o paciente usa outro colírio, aguardar 5 minutos entre as instilações. Preferir monodose em pós-operatório e em olho com lesão corneal.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "lubrificante_ocular",
+        "agente": "hialuronato de sódio 0,2% colírio",
+        "papel": "alternativa",
+        "indicacao": "conjuntivite com ressecamento importante, ceratoconjuntivite seca associada ou intolerância à carmelose",
+        "dose": "1 gota em cada olho",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "3 a 4x/dia",
+        "duracao": "7 a 14 dias",
+        "dose_maxima": "6 aplicações por dia",
+        "contraindicacoes": [
+          "hipersensibilidade ao hialuronato",
+          "infecção ocular ativa sem antimicrobiano",
+          "uso com lente de contato em apresentação com conservante"
+        ],
+        "efeitos_adversos": [
+          "ardência transitória",
+          "borramento visual breve",
+          "sensação de corpo estranho",
+          "conjuntivite de contato rara"
+        ],
+        "apresentacoes": [
+          "frasco 10 mL a 0,2%",
+          "frasco 10 mL a 0,15%",
+          "monodose 0,4 mL a 0,2%",
+          "gel 0,3%"
+        ],
+        "preparo": "Não diluir; instilar 1 gota no fundo de saco conjuntival, com as mãos lavadas, sem tocar a ponta no olho",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "melhora da sensação de areia em 48 h",
+          "tempo de permanência do alívio",
+          "ardência e borramento",
+          "sinais de infecção sobreposta, que mudam a conduta"
+        ],
+        "ajuste_renal": "Sem ajuste",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Tem maior tempo de permanência na superfície ocular que a carmelose e é útil quando há ressecamento associado. Custo mais alto é o principal limitador no SUS.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_topico_aminoglicosideo",
+        "agente": "tobramicina 0,3% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "conjuntivite bacteriana provável, com secreção purulenta e sem sinais de gravidade",
+        "dose": "1 gota no olho afetado",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "4/4 h enquanto acordado; nos primeiros 2 dias, até 6x/dia",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "1 gota 6x/dia",
+        "contraindicacoes": [
+          "alergia a aminoglicosídeo",
+          "suspeita de ceratite fúngica",
+          "perfuração ocular",
+          "uso prolongado acima de 10 dias"
+        ],
+        "efeitos_adversos": [
+          "ardência e hiperemia na instilação",
+          "ceratite tóxica em uso prolongado",
+          "dermatite de contato palpebral",
+          "superinfecção fúngica em uso crônico"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 0,3%",
+          "frasco 5 mL a 0,3% com sistema de dose única",
+          "pomada oftálmica 3,5 g a 0,3%"
+        ],
+        "preparo": "Não diluir; instilar 1 gota no saco conjuntival inferior; se houver outro colírio, aguardar 5 minutos; pomada à noite quando a adesão às gotas é baixa",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "redução da secreção em 48 a 72 h",
+          "hiperemia e dor, que devem diminuir",
+          "sinais de toxicidade: ardor persistente, piora da hiperemia e da visão",
+          "uso além de 7 dias sem melhora, que exige reavaliação"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Não tratar conjuntivite viral com aminoglicosídeo: não há benefício e há risco de toxicidade epitelial. Em criança, usar a mesma dose por gota; o número de gotas é o mesmo do adulto.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_topico_fluoroquinolona",
+        "agente": "ciprofloxacino 0,3% colírio",
+        "papel": "alternativa",
+        "indicacao": "conjuntivite bacteriana em usuário de lente de contato, falha ou intolerância à tobramicina, e suspeita de Pseudomonas",
+        "dose": "1 gota no olho afetado",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "4/4 h enquanto acordado; em quadro grave, 1/1 h nas primeiras 6 h e depois 4/4 h",
+        "duracao": "5 a 7 dias",
+        "dose_maxima": "1 gota 8x/dia",
+        "contraindicacoes": [
+          "alergia a quinolona",
+          "suspeita de ceratite fúngica",
+          "perfuração ocular",
+          "menores de 1 ano sem avaliação oftalmológica"
+        ],
+        "efeitos_adversos": [
+          "ardência e gosto amargo por drenagem nasolacrimal",
+          "hiperemia conjuntival",
+          "precipitado corneal branco em uso prolongado",
+          "tendinite e reação de hipersensibilidade, raras por via tópica"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 0,3%",
+          "monodose 0,5 mL a 0,3%",
+          "pomada oftálmica 3,5 g a 0,3%"
+        ],
+        "preparo": "Não diluir; instilar 1 gota no saco conjuntival inferior; comprimir o canto medial por 1 minuto para reduzir a drenagem e o gosto amargo",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "melhora da secreção e da hiperemia em 48 a 72 h",
+          "dor e fotofobia, que obrigam avaliação de córnea",
+          "precipitado corneal em uso acima de 7 dias",
+          "resolução antes de retomar a lente de contato"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É a escolha quando há lente de contato, porque cobre Pseudomonas. Não é primeira linha em conjuntivite bacteriana simples, para preservar a classe. Retomar a lente apenas 48 h após a resolução completa dos sintomas.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_topico",
+        "agente": "olopatadina 0,1% colírio",
+        "papel": "primeira_linha",
+        "indicacao": "conjuntivite alérgica com prurido, lacrimejamento e hiperemia, sazonal ou perene",
+        "dose": "1 gota em cada olho",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "12/12 h; a apresentação 0,2% é 1x/dia",
+        "duracao": "2 a 4 semanas na sazonal; até 6 semanas na perene, com reavaliação",
+        "dose_maxima": "2 aplicações por dia",
+        "contraindicacoes": [
+          "hipersensibilidade a olopatadina",
+          "uso de lente de contato durante a instilação",
+          "infecção ocular bacteriana ou viral concomitante não tratada"
+        ],
+        "efeitos_adversos": [
+          "ardência ou picada na instilação",
+          "cefaleia",
+          "boca seca",
+          "borramento visual transitório",
+          "sensação de corpo estranho"
+        ],
+        "apresentacoes": [
+          "frasco 5 mL a 0,1%",
+          "frasco 2,5 mL a 0,2%",
+          "monodose 0,4 mL a 0,2%",
+          "solução oftálmica 0,1% sem conservante"
+        ],
+        "preparo": "Não diluir; retirar a lente de contato antes e recolocar 15 minutos depois; instilar 1 gota em cada olho, sem tocar a ponta no olho",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "redução do prurido em 15 a 30 minutos",
+          "hiperemia e quemose",
+          "ardência e cefaleia",
+          "controle do sintoma nasal associado"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "Tem ação dupla: antagoniza H1 e estabiliza o mastócito, o que a torna superior ao vasoconstrictor e ao anti-histamínico simples no prurido. Não usar vasoconstrictor junto para 'potencializar': o rebote piora o quadro. Em criança acima de 3 anos, mesma concentração e posologia.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "anti_histaminico_oral",
+        "agente": "loratadina",
+        "papel": "alternativa",
+        "indicacao": "conjuntivite alérgica com rinite, urticária ou sintoma nasal associado, ou prurido refratário ao colírio",
+        "dose": "10 mg",
+        "unidade": "mg",
+        "via": "VO",
+        "frequencia": "1x/dia",
+        "duracao": "2 a 4 semanas, com reavaliação",
+        "dose_maxima": "10 mg/dia",
+        "contraindicacoes": [
+          "alergia a loratadina ou desloratadina",
+          "insuficiência hepática grave sem ajuste",
+          "lactente abaixo de 2 anos"
+        ],
+        "efeitos_adversos": [
+          "cefaleia",
+          "boca seca",
+          "fadiga",
+          "sonolência leve em minoria dos pacientes",
+          "aumento do apetite"
+        ],
+        "apresentacoes": [
+          "comprimido 10 mg",
+          "comprimido desintegrável 10 mg",
+          "xarope 1 mg/mL",
+          "solução oral 1 mg/mL"
+        ],
+        "preparo": "Uso direto, com ou sem alimento",
+        "tempo_infusao": "não se aplica (via oral)",
+        "monitorizacao": [
+          "redução do prurido e da coceira nasal em 24 a 72 h",
+          "sonolência e desempenho em direção",
+          "boca seca e cefaleia",
+          "necessidade de manter além de 4 semanas"
+        ],
+        "ajuste_renal": "ClCr abaixo de 30 mL/min: 10 mg em dias alternados",
+        "ajuste_hepatico": "Child-Pugh B ou C: 10 mg em dias alternados",
+        "observacoes": "Não substitui o colírio no controle do prurido ocular imediato; serve para o componente sistêmico e nasal. Pediatria: 5 mg/dia de 2 a 6 anos e 10 mg/dia acima de 6 anos.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/ARIA",
+        "claim_id": null
+      },
+      {
+        "classe": "corticoide_topico",
+        "agente": "prednisolona 1% colírio",
+        "papel": "condicional",
+        "indicacao": "conjuntivite alérgica grave com quemose e refratária ao anti-histamínico tópico, somente após lâmpada de fenda e com acompanhamento oftalmológico",
+        "dose": "1 gota no olho afetado",
+        "unidade": "gota",
+        "via": "ocular",
+        "frequencia": "4x/dia",
+        "duracao": "no máximo 2 semanas, com reavaliação oftalmológica obrigatória",
+        "dose_maxima": "1 gota 4x/dia",
+        "contraindicacoes": [
+          "prescrição sem lâmpada de fenda prévia",
+          "ceratite herpética ou história de herpes ocular",
+          "ceratite fúngica",
+          "suspeita de glaucoma ou pressão intraocular elevada",
+          "infecção ocular bacteriana não tratada",
+          "perfuração ou afilamento corneal"
+        ],
+        "efeitos_adversos": [
+          "elevação da pressão intraocular",
+          "catarata subcapsular posterior em uso prolongado",
+          "agravamento de infecção herpética ou fúngica",
+          "mascaramento de ceratite bacteriana",
+          "retardo de cicatrização corneal"
+        ],
+        "apresentacoes": [
+          "suspensão oftálmica 1%, frasco 5 mL",
+          "suspensão oftálmica 1%, frasco 10 mL",
+          "pomada oftálmica 1%"
+        ],
+        "preparo": "Agitar a suspensão antes de usar; instilar 1 gota no saco conjuntival inferior, sem tocar a ponta no olho; nunca manipular ou diluir",
+        "tempo_infusao": "não se aplica (via ocular)",
+        "monitorizacao": [
+          "acuidade visual e pressão intraocular antes de iniciar",
+          "dor, fotofobia e hiperemia, que devem regredir",
+          "pressão intraocular a cada 2 semanas em uso prolongado",
+          "aparecimento de lesão corneal nova"
+        ],
+        "ajuste_renal": "Sem ajuste por via tópica",
+        "ajuste_hepatico": "Sem ajuste",
+        "observacoes": "É o item mais perigoso da lista quando usado sem exame: prescrição por telefone ou por foto é proibida. Só iniciar com lâmpada de fenda, fluoresceína e tonometria, e sempre com retorno oftalmológico definido. Não é tratamento de conjuntivite viral nem de olho vermelho inespecífico.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/literatura",
+        "claim_id": null
+      },
+      {
+        "classe": "antibiotico_sistemico_cefalosporina",
+        "agente": "ceftriaxona",
+        "papel": "condicional",
+        "indicacao": "conjuntivite neonatal por gonococo suspeita ou confirmada, com internação e coleta de cultura",
+        "dose": "25 a 50 mg/kg em dose única",
+        "unidade": "mg/kg",
+        "via": "IV",
+        "frequencia": "dose única; 1x/dia por 3 dias se houver bacteremia ou doença disseminada",
+        "duracao": "dose única na conjuntivite localizada; 3 a 7 dias na doença disseminada",
+        "dose_maxima": "125 mg por dose",
+        "contraindicacoes": [
+          "hiperbilirrubinemia neonatal",
+          "uso concomitante de solução intravenosa contendo cálcio em neonato",
+          "alergia a cefalosporina com anafilaxia prévia"
+        ],
+        "efeitos_adversos": [
+          "flebite no acesso venoso",
+          "diarreia",
+          "rash cutâneo",
+          "precipitação com cálcio em neonato",
+          "elevação de bilirrubina"
+        ],
+        "apresentacoes": [
+          "frasco-ampola 500 mg",
+          "frasco-ampola 1 g",
+          "solução injetável 1 g/10 mL"
+        ],
+        "preparo": "Reconstituir em 10 mL de água estéril; diluir em 5 a 10 mL de soro glicosado 5% ou soro fisiológico; nunca diluir em Ringer lactato ou solução com cálcio em neonato",
+        "tempo_infusao": "5 a 10 minutos em bolus lento no neonato; 30 minutos em infusão",
+        "monitorizacao": [
+          "resposta da secreção ocular em 24 a 48 h",
+          "bilirrubina e sinais de icterícia",
+          "febre e sinais de sepse",
+          "resultado da cultura e do Gram, que confirmam o agente",
+          "avaliação oftalmológica diária até a resolução"
+        ],
+        "ajuste_renal": "Sem ajuste; eliminação mista, com predomínio biliar",
+        "ajuste_hepatico": "Cautela em hiperbilirrubinemia e em prematuro",
+        "observacoes": "Não existe tratamento tópico suficiente para conjuntivite gonocócica: o colírio não esteriliza a conjuntiva e a córnea pode perfurar em 24 a 48 h. Internar, colher cultura e Gram, tratar com ceftriaxona e tratar também a mãe e o parceiro. Profilaxia ocular ao nascer com povidona-iodo, eritromicina ou nitrato de prata não substitui o tratamento da doença instalada.",
+        "confirmar_apresentacao_local": true,
+        "fonte": "ANVISA/CDC",
+        "claim_id": null
+      }
+    ],
+    "nao_farmacologico": [
+      {
+        "medida": "Compressa fria sobre as pálpebras fechadas",
+        "detalhe": "Gaze limpa umedecida em água fria por 5 a 10 minutos, 3 a 4 vezes ao dia, trocando a gaze a cada aplicação; reduz edema, prurido e hiperemia na conjuntivite alérgica e na viral. Nunca usar gelo direto na pele nem compressa quente em olho com secreção purulenta."
+      },
+      {
+        "medida": "Higiene da secreção com soro fisiológico",
+        "detalhe": "Limpar da região medial para a lateral, com gaze descartável, uma gaze para cada olho, e descartar no lixo; limpar antes de instilar o colírio, porque secreção acumulada dilui e remove o medicamento."
+      },
+      {
+        "medida": "Higiene das mãos e etiqueta respiratória",
+        "detalhe": "Lavar as mãos com água e sabão por 20 segundos antes e depois de tocar o olho, de aplicar colírio e de limpar secreção; tossir no antebraço e usar lenço descartável; a conjuntivite viral é altamente contagiosa por contato."
+      },
+      {
+        "medida": "Suspensão da lente de contato e descarte do estojo",
+        "detalhe": "Retirar a lente no mesmo dia e não recolocar até 48 horas após a resolução completa; descartar a lente em uso, a solução do estojo e o próprio estojo, porque o biofilme mantém a Pseudomonas e reinfesta a córnea."
+      },
+      {
+        "medida": "Não compartilhar toalha, fronha, maquiagem e colírio",
+        "detalhe": "Trocar fronha e toalha de rosto diariamente durante o quadro; suspender rímel, lápis e alongamento de cílios até a resolução; cada frasco de colírio pertence a um único paciente."
+      },
+      {
+        "medida": "Afastamento de escola, creche e trabalho",
+        "detalhe": "Manter afastamento enquanto houver secreção e lacrimejamento intenso, em geral 3 a 5 dias na viral; na bacteriana, liberar após 24 horas de antibiótico e melhora da secreção. Fornecer atestado com o período declarado."
+      },
+      {
+        "medida": "Controle do gatilho alérgico",
+        "detalhe": "Identificar e reduzir exposição a pólen, ácaro, pelo de animal e mofo; manter janelas fechadas no período de polinização, usar óculos de sol na rua e lavar o rosto ao chegar em casa para retirar alérgeno da pálpebra."
+      },
+      {
+        "medida": "Não coçar os olhos",
+        "detalhe": "O ato de coçar libera histamina e piora o prurido, além de transportar secreção de um olho para o outro e de introduzir bactéria da pele; orientar compressa fria como substituto do ato de coçar."
+      }
+    ],
+    "procedimentos": [
+      {
+        "nome": "Biomicroscopia com lâmpada de fenda",
+        "indicacao": "todo olho vermelho com dor, baixa visual, fotofobia, trauma, uso de lente de contato ou falha de tratamento em 7 dias",
+        "tecnica": "Instilar anestésico tópico, examinar pálpebra, conjuntiva, córnea, câmara anterior e reflexo pupilar; repetir após fluoresceína para pesquisar ulceração e infiltrado",
+        "complicacoes": "Ceratite por toxicidade do anestésico em uso repetido, reação alérgica ao corante e transmissão de infecção por contato inadequado do aparelho"
+      },
+      {
+        "nome": "Teste com fluoresceína e luz azul de cobalto",
+        "indicacao": "suspeita de ceratite, úlcera corneal, corpo estranho ou abrasão após trauma",
+        "tecnica": "Instilar 1 gota de fluoresceína 1% ou tocar a fita no fórnice, pedir que o paciente pisque e examinar com lâmpada de fenda e filtro azul; área verde indica perda epitelial",
+        "complicacoes": "Contaminação da solução, coloração de lente de contato e reação alérgica rara"
+      },
+      {
+        "nome": "Eversão palpebral e remoção de corpo estranho",
+        "indicacao": "sensação de corpo estranho persistente, história de areia, solda ou inseto, mesmo com conjuntiva aparentemente normal",
+        "tecnica": "Anestesiar, evertar a pálpebra superior sobre um aplicador e inspecionar o fórnice; remover corpo estranho com gaze, cotonete ou agulha estéril sob lâmpada de fenda; corpo estranho incrustado na córnea é removido pelo oftalmologista",
+        "complicacoes": "Abrasão corneal, úlcera, infecção secundária e perfuração em remoção inadvertida de corpo estranho profundo"
+      },
+      {
+        "nome": "Raspado e cultura conjuntival com coloração de Gram",
+        "indicacao": "conjuntivite neonatal, quadro grave, imunossuprimido, falha de tratamento ou suspeita de agente incomum",
+        "tecnica": "Coletar secreção e raspado do fórnice inferior com swab estéril ou espátula, sem anestésico; enviar para Gram, cultura bacteriana e, quando indicado, cultura viral e pesquisa de Chlamydia por PCR",
+        "complicacoes": "Sangramento discreto, desconforto, resultado falso-negativo por coleta inadequada e atraso terapêutico se o exame for supervalorizado"
+      },
+      {
+        "nome": "Tonometria",
+        "indicacao": "dor ocular com halos, olho vermelho com córnea turva, uso de corticoide tópico por mais de 2 semanas e suspeita de glaucoma",
+        "tecnica": "Anestesiar a córnea e medir a pressão intraocular com tonômetro de aplanação, registrando o valor e comparando com o olho contralateral",
+        "complicacoes": "Abrasão corneal por técnica inadequada, transmissão de infecção sem higienização do tonômetro e leitura falsa em córnea irregular"
+      }
+    ],
+    "metas": [
+      "Resolução da secreção em 5 a 7 dias na conjuntivite bacteriana e em 7 a 10 dias na viral",
+      "Acuidade visual igual à do olho contralateral ou à basal do paciente em 24 horas de tratamento",
+      "Nenhuma prescrição de corticoide tópico sem lâmpada de fenda registrada no prontuário",
+      "Nenhum colírio com vasoconstrictor prescrito por mais de 5 dias",
+      "Recém-nascido com conjuntivite avaliado e tratado no mesmo dia da primeira consulta, com cultura colhida",
+      "Ausência de dor e de fotofobia ao final do tratamento; se persistirem, reavaliação oftalmológica obrigatória",
+      "Retorno em 48 a 72 horas para todo quadro com dor, lente de contato, trauma ou baixa visual"
+    ],
+    "fluxo": [
+      "Confirmar que é olho vermelho de origem conjuntival e não ocular grave: checar dor, fotofobia, acuidade visual, pupila, halos e trauma",
+      "Presença de qualquer sinal de gravidade, trauma, lente de contato ou baixa visual: oftalmologista no mesmo dia, sem colírio antes da avaliação",
+      "Classificar o padrão: viral (bilateral, aquosa, com IVAS), bacteriana (purulenta, unilateral, sem prurido) ou alérgica (prurido intenso, bilateral, atopia)",
+      "Iniciar a base em todos: higiene com soro fisiológico, lubrificante e compressa fria, com orientação de não coçar e não compartilhar objetos",
+      "Viral: manter só a base, explicar a evolução autolimitada e marcar retorno se não melhorar em 7 dias",
+      "Bacteriana: tobramicina 4/4 h por 5 a 7 dias; se usuário de lente de contato ou falha, ciprofloxacino e suspensão da lente",
+      "Alérgica: olopatadina 12/12 h, associando loratadina oral se houver rinite; corticoide tópico só com lâmpada de fenda e oftalmologia",
+      "Sem melhora em 72 horas ou piora em qualquer momento: reavaliar com lâmpada de fenda e considerar ceratite, corpo estranho, herpes ou glaucoma",
+      "Recém-nascido com secreção: internação, cultura, ceftriaxona sistêmica e tratamento da mãe e do parceiro"
+    ],
+    "populacoes_especiais": [
+      {
+        "populacao": "neonato",
+        "ajuste": "qualquer secreção ocular abaixo de 28 dias exige cultura e ceftriaxona sistêmica com internação; colírio isolado não trata",
+        "alerta": "gonococo perfura a córnea em 24 a 48 h e pode causar sepse; não há espaço para tratamento ambulatorial empírico"
+      },
+      {
+        "populacao": "pediatria",
+        "ajuste": "mesma dose por gota do adulto; soro fisiológico morno e compressa fria com supervisão; evitar colírio com vasoconstrictor e corticoide sem oftalmologista",
+        "alerta": "criança pequena não tolera oclusão e coça muito, o que perpetua a infecção e facilita ceratite"
+      },
+      {
+        "populacao": "usuario_de_lente_de_contato",
+        "ajuste": "suspender a lente no mesmo dia, descartar lente, estojo e solução, e usar ciprofloxacino se houver suspeita bacteriana",
+        "alerta": "ceratite por Pseudomonas é a complicação que mais causa perda visual; dor em usuário de lente nunca é conjuntivite simples"
+      },
+      {
+        "populacao": "gestante",
+        "ajuste": "soro fisiológico, carmelose, tobramicina e olopatadina são aceitáveis por via tópica; loratadina é a opção oral preferida",
+        "alerta": "evitar corticoide tópico sem oftalmologista e evitar vasoconstrictor prolongado; absorção sistêmica por via ocular é mínima, mas não nula"
+      },
+      {
+        "populacao": "idoso",
+        "ajuste": "avaliar acuidade visual basal e pressão intraocular antes de qualquer colírio; revisar quem instila a medicação, pela dificuldade motora e visual",
+        "alerta": "dor ocular em idoso com halos e náusea é glaucoma agudo até prova em contrário, e não conjuntivite"
+      },
+      {
+        "populacao": "imunossuprimido",
+        "ajuste": "limiar baixo para lâmpada de fenda, cultura e avaliação oftalmológica precoce; evitar corticoide tópico",
+        "alerta": "ceratite fúngica e por herpes vírus se apresentam de forma atípica e evoluem rápido nesse grupo"
+      }
+    ],
+    "exames": {
+      "comuns": [
+        {
+          "nome": "biomicroscopia com lâmpada de fenda",
+          "indicacao": "dor, fotofobia, baixa visual, trauma, lente de contato ou falha de tratamento",
+          "o_que_muda": "separa conjuntivite de ceratite, uveíte e corpo estranho, e é o exame que autoriza ou proíbe o corticoide tópico"
+        },
+        {
+          "nome": "teste de fluoresceína",
+          "indicacao": "suspeita de úlcera corneal, abrasão ou corpo estranho",
+          "o_que_muda": "identifica perda epitelial e contraindica corticoide, além de mudar para antibiótico de cobertura e acompanhamento diário"
+        },
+        {
+          "nome": "cultura e Gram de secreção conjuntival",
+          "indicacao": "neonato, quadro grave, imunossuprimido, falha de tratamento ou suspeita de agente incomum",
+          "o_que_muda": "confirma gonococo, Pseudomonas ou fungo e permite trocar o antibiótico empírico pelo dirigido"
+        },
+        {
+          "nome": "tonometria",
+          "indicacao": "dor com halos, córnea turva, suspeita de glaucoma ou uso de corticoide tópico prolongado",
+          "o_que_muda": "diagnostica glaucoma agudo e detecta elevação da pressão intraocular induzida por corticoide"
+        }
+      ],
+      "evitar": [
+        {
+          "exame": "cultura de secreção em conjuntivite leve e típica",
+          "motivo": "não altera a conduta, atrasa o tratamento e aumenta custo; a decisão nesses casos é clínica"
+        },
+        {
+          "exame": "tomografia de órbita ou de seios da face na conjuntivite sem sinais de celulite",
+          "motivo": "não acrescenta nada ao diagnóstico conjuntival e expõe a radiação desnecessária"
+        },
+        {
+          "exame": "hemograma e provas inflamatórias de rotina",
+          "motivo": "conjuntivite não bacteriana não altera esses exames e o resultado normal não exclui gravidade ocular"
+        },
+        {
+          "exame": "pesquisa viral de swab conjuntival de rotina",
+          "motivo": "o resultado não muda a conduta, porque não há antiviral tópico indicado na conjuntivite viral comum"
+        }
+      ]
+    },
+    "orientacoes": {
+      "fazer": [
+        "limpar a secreção com soro fisiológico e gaze, de dentro para fora, uma gaze para cada olho, antes de pingar o colírio",
+        "aplicar compressa fria por 5 a 10 minutos, 3 a 4 vezes ao dia, para reduzir o inchaço e a coceira",
+        "lavar as mãos antes e depois de tocar o olho e de aplicar o colírio",
+        "usar o colírio até o fim do período prescrito, mesmo que o olho melhore antes, principalmente na bacteriana",
+        "guardar o frasco fechado, em local limpo, e não encostar a ponta no olho",
+        "retirar a lente de contato no mesmo dia e só recolocar 48 horas após a melhora completa",
+        "voltar ao serviço se a visão piorar, se aparecer dor forte ou se não houver melhora em 72 horas"
+      ],
+      "evitar": [
+        "usar colírio com vasoconstrictor por mais de 5 dias, porque causa rebote e piora a vermelhidão",
+        "usar colírio de corticoide por conta própria ou por orientação sem exame com lâmpada de fenda",
+        "ocluir o olho com gaze ou tampão quando há secreção, porque retém bactéria e favorece infecção profunda",
+        "coçar os olhos, compartilhar toalha, fronha, maquiagem ou colírio",
+        "usar soro caseiro, água de torneira, chá ou leite materno no olho",
+        "voltar a usar lente de contato antes de 48 horas após a resolução dos sintomas",
+        "tomar antibiótico por via oral para conjuntivite sem complicação, porque a via tópica é suficiente"
+      ],
+      "retorno": [
+        "dor ocular forte, fotofobia ou sensação de areia que piora",
+        "perda ou embaçamento da visão que não melhora ao piscar",
+        "halos coloridos em volta da luz, náusea ou vômito",
+        "secreção que aumenta e fica esverdeada, com inchaço da pálpebra",
+        "piora ou ausência de melhora após 72 horas de tratamento",
+        "trauma, produto químico ou corpo estranho no olho",
+        "recém-nascido com qualquer secreção ocular"
+      ]
+    },
+    "efeitos_adversos": [
+      {
+        "agente": "tobramicina e ciprofloxacino (colírios)",
+        "efeitos": [
+          "ardência",
+          "hiperemia",
+          "ceratite tóxica",
+          "dermatite de contato palpebral"
+        ],
+        "observacao": "ardência que piora a cada instilação e hiperemia persistente sugerem toxicidade: suspender e reavaliar com lâmpada de fenda antes de trocar de antibiótico"
+      },
+      {
+        "agente": "olopatadina",
+        "efeitos": [
+          "ardência",
+          "cefaleia",
+          "boca seca",
+          "borramento transitório"
+        ],
+        "observacao": "efeitos costumam ser leves e passageiros; se houver piora da hiperemia com uso associado de vasoconstrictor, suspender o vasoconstrictor, e não a olopatadina"
+      },
+      {
+        "agente": "loratadina",
+        "efeitos": [
+          "sonolência leve",
+          "boca seca",
+          "cefaleia",
+          "fadiga"
+        ],
+        "observacao": "trocar por fexofenadina em motorista profissional ou em quem apresentar sonolência; não associar dois anti-histamínicos orais"
+      },
+      {
+        "agente": "prednisolona 1% colírio",
+        "efeitos": [
+          "elevação da pressão intraocular",
+          "catarata",
+          "agravamento de herpes ou fungo",
+          "mascaramento de infecção bacteriana"
+        ],
+        "observacao": "qualquer piora de visão ou dor em uso de corticoide tópico exige suspensão imediata e oftalmologista no mesmo dia; medir a pressão intraocular em uso acima de 2 semanas"
+      },
+      {
+        "agente": "ceftriaxona",
+        "efeitos": [
+          "flebite",
+          "diarreia",
+          "rash",
+          "precipitação com cálcio",
+          "hiperbilirrubinemia"
+        ],
+        "observacao": "em neonato, nunca infundir junto de solução com cálcio; monitorar bilirrubina e acesso venoso a cada dose"
+      },
+      {
+        "agente": "vasoconstrictor tópico (uso indevido)",
+        "efeitos": [
+          "hiperemia de rebote",
+          "midríase",
+          "taquicardia",
+          "elevação da pressão arterial"
+        ],
+        "observacao": "não é fármaco do protocolo: quando o paciente relata uso prolongado, suspender e tratar com lubrificante e compressa fria, avisando que a vermelhidão piora por alguns dias"
+      }
+    ],
+    "conduta_efeito_adverso": [
+      "Suspender o colírio implicado e registrar no prontuário o horário, a dose e o sintoma",
+      "Ardência intensa ou hiperemia progressiva com antibiótico tópico: suspender, lavar com soro fisiológico e reavaliar com lâmpada de fenda para ceratite tóxica",
+      "Reação alérgica palpebral com edema e prurido: suspender o colírio, trocar de classe e considerar apresentação sem conservante",
+      "Dor ou piora da visão em uso de corticoide tópico: suspender de imediato, encaminhar ao oftalmologista no mesmo dia e medir pressão intraocular",
+      "Hiperemia de rebote por vasoconstrictor: suspender, iniciar lubrificante e compressa fria e avisar que a piora dura de 3 a 7 dias",
+      "Reação sistêmica com ceftriaxona: interromper a infusão, tratar conforme gravidade e registrar notificação de suspeita de reação adversa"
+    ],
+    "documentos": {
+      "receita_ambulatorial": {
+        "itens": [
+          {
+            "item": "soro fisiológico 0,9% estéril para irrigação ocular",
+            "dose": "5 a 10 mL por olho",
+            "via": "ocular",
+            "frequencia": "3 a 4x/dia",
+            "duracao": "5 a 7 dias",
+            "condicao": "todos os casos, para higiene da secreção antes do colírio",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "carmelose 0,5% colírio",
+            "dose": "1 gota em cada olho",
+            "via": "ocular",
+            "frequencia": "4x/dia",
+            "duracao": "7 a 14 dias",
+            "condicao": "conjuntivite viral ou alérgica com desconforto e ressecamento",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "tobramicina 0,3% colírio",
+            "dose": "1 gota no olho afetado",
+            "via": "ocular",
+            "frequencia": "4/4 h enquanto acordado",
+            "duracao": "5 a 7 dias",
+            "condicao": "conjuntivite bacteriana provável, com secreção purulenta e sem sinais de gravidade",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "ciprofloxacino 0,3% colírio",
+            "dose": "1 gota no olho afetado",
+            "via": "ocular",
+            "frequencia": "4/4 h enquanto acordado",
+            "duracao": "5 a 7 dias",
+            "condicao": "usuário de lente de contato ou falha de tobramicina; suspender a lente",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "olopatadina 0,1% colírio",
+            "dose": "1 gota em cada olho",
+            "via": "ocular",
+            "frequencia": "12/12 h",
+            "duracao": "2 a 4 semanas",
+            "condicao": "conjuntivite alérgica com prurido e hiperemia; retirar a lente antes",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "loratadina 10 mg",
+            "dose": "10 mg",
+            "via": "VO",
+            "frequencia": "1x/dia",
+            "duracao": "2 a 4 semanas",
+            "condicao": "rinite ou urticária associada à conjuntivite alérgica",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "receita_hospitalar": {
+        "itens": [
+          {
+            "item": "ceftriaxona",
+            "dose": "25 a 50 mg/kg em dose única, máximo 125 mg",
+            "via": "IV",
+            "frequencia": "dose única; 1x/dia por 3 dias se doença disseminada",
+            "monitorizacao": "bilirrubina, sinais de sepse, cultura e resposta da secreção em 24 a 48 h",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "soro fisiológico 0,9% estéril para irrigação conjuntival",
+            "dose": "5 a 10 mL por olho",
+            "via": "ocular",
+            "frequencia": "4x/dia",
+            "monitorizacao": "aspecto da secreção e tolerância à irrigação",
+            "confirmar_apresentacao_local": true
+          },
+          {
+            "item": "carmelose 0,5% colírio monodose",
+            "dose": "1 gota em cada olho",
+            "via": "ocular",
+            "frequencia": "4x/dia",
+            "monitorizacao": "conforto e sinais de infecção sobreposta",
+            "confirmar_apresentacao_local": true
+          }
+        ]
+      },
+      "pedido_exames": {
+        "campos": [
+          "biomicroscopia com lâmpada de fenda",
+          "teste de fluoresceína",
+          "cultura e Gram de secreção conjuntival",
+          "tonometria",
+          "justificativa clínica com acuidade visual e lado acometido",
+          "prioridade"
+        ]
+      },
+      "atestado": {
+        "texto_template": "Atesto que o(a) paciente esteve sob meus cuidados nesta data, com quadro de conjuntivite, necessitando de afastamento de suas atividades por ___ dias.",
+        "dias": null,
+        "cid": null,
+        "observacao": "o número de dias é decisão médica; na forma viral contagiosa, considerar 3 a 5 dias, e na bacteriana liberar após 24 horas de antibiótico com melhora da secreção"
+      },
+      "encaminhamento": {
+        "campos": [
+          "destino (oftalmologia, pediatria ou infectologia)",
+          "motivo com descrição do sinal de gravidade",
+          "resumo com acuidade visual, lados acometidos, uso de lente, colírios já usados e tempo",
+          "prioridade (mesmo dia ou eletiva)"
+        ]
+      },
+      "relatorio": {
+        "texto_template": "Paciente com olho vermelho à ___ há ___, uni ou bilateral, com secreção ___, dor ___, prurido ___ e acuidade visual ___. Uso de lente de contato ___ e trauma ___. Ao exame: conjuntiva ___, córnea ___, pupila ___, secreção ___. Suspeita: conjuntivite ___. Conduta: ___ e reavaliação em ___."
+      }
+    },
+    "anamnese": {
+      "campos": [
+        "lado acometido e cronologia",
+        "dor, prurido e fotofobia",
+        "acuidade visual e embaçamento",
+        "aspecto e volume da secreção",
+        "uso de lente de contato e higiene",
+        "trauma, corpo estranho e exposição química",
+        "contato com caso semelhante e surto",
+        "atopia, rinite e asma",
+        "colírios e medicamentos já usados, com tempo",
+        "comorbidades: herpes ocular, glaucoma, imunossupressão"
+      ],
+      "texto_template": "Paciente com olho vermelho em ___ há ___, com dor ___, prurido ___, fotofobia ___, visão ___, secreção ___ de aspecto ___. Usa lente de contato ___. Trauma ou corpo estranho ___. Contato com caso semelhante ___. Atopia ___. Já usou colírio ___, por ___ dias. História de herpes ocular ou glaucoma ___."
+    },
+    "exame_fisico": {
+      "itens": [
+        "acuidade visual com correção, comparando os dois olhos",
+        "inspeção de pálpebra, cílios e borda palpebral",
+        "conjuntiva bulbar e tarsal, com pesquisa de quemose e folículos",
+        "córnea com fluoresceína e lâmpada de fenda",
+        "pupila, reflexo fotomotor e câmara anterior",
+        "pressão intraocular quando houver dor ou suspeita de glaucoma",
+        "secreção: aspecto, quantidade e unilateralidade",
+        "palpação de linfonodos pré-auriculares e cervicais",
+        "pele periorbitária: celulite e vesículas"
+      ],
+      "texto_template": "Acuidade visual ___ em olho direito e ___ em olho esquerdo. Pálpebra ___, conjuntiva ___ com hiperemia ___ e quemose ___, córnea ___ sem ou com lesão em fluoresceína, pupila ___ e fotorreativa, câmara anterior ___, pressão intraocular ___, secreção ___ de aspecto ___. Linfonodos ___."
+    },
+    "referencias": [
+      {
+        "tipo": "protocolo_institucional",
+        "o_que_verificar": "fluxo de olho vermelho, disponibilidade de lâmpada de fenda e de oftalmologista de retaguarda no serviço",
+        "verificar": true
+      },
+      {
+        "tipo": "diretriz_internacional",
+        "o_que_verificar": "indicação de antibiótico tópico apenas na conjuntivite bacteriana provável e o prazo esperado de resolução por etiologia",
+        "verificar": true
+      },
+      {
+        "tipo": "sociedade_oftalmologia",
+        "o_que_verificar": "restrição do corticoide tópico a exame com lâmpada de fenda e conduta na ceratite por lente de contato",
+        "verificar": true
+      },
+      {
+        "tipo": "cdc",
+        "o_que_verificar": "protocolo de conjuntivite neonatal por gonococo, dose de ceftriaxona e profilaxia ocular do recém-nascido",
+        "verificar": true
+      },
+      {
+        "tipo": "anvisa",
+        "o_que_verificar": "apresentações de colírios disponíveis no mercado brasileiro e limites de conservantes por apresentação",
+        "verificar": true
+      }
+    ],
+    "alertas_sistema": [
+      {
+        "id": "SA-RESP09-01",
+        "tipo": "baixa_visual_ou_dor",
+        "gatilho": "baixa visual, dor ocular intensa, fotofobia ou halos coloridos",
+        "severidade": "grave",
+        "mensagem": "Sinal de gravidade ocular: encaminhar ao oftalmologista no mesmo dia e não prescrever colírio sintomático antes da avaliação.",
+        "acao": "bloquear a prescrição sintomática e abrir encaminhamento de mesma data",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP09-02",
+        "tipo": "corticoide_sem_lampada",
+        "gatilho": "prescrição de corticoide tópico sem registro de lâmpada de fenda, fluoresceína e tonometria",
+        "severidade": "grave",
+        "mensagem": "Corticoide tópico sem lâmpada de fenda pode agravar herpes, fungo e ceratite bacteriana e elevar a pressão intraocular.",
+        "acao": "bloquear o item e exigir exame oftalmológico prévio",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP09-03",
+        "tipo": "oclusao_com_secrecao",
+        "gatilho": "prescrição de tampão ou oclusão ocular em olho com secreção",
+        "severidade": "grave",
+        "mensagem": "Ocluir olho com secreção retém bactéria e favorece infecção profunda.",
+        "acao": "bloquear a orientação de oclusão e reforçar higiene com soro",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP09-04",
+        "tipo": "conjuntivite_neonatal",
+        "gatilho": "secreção ocular em menor de 28 dias",
+        "severidade": "grave",
+        "mensagem": "Conjuntivite neonatal é emergência: cultura e ceftriaxona sistêmica com internação.",
+        "acao": "acionar protocolo neonatal e internação",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP09-05",
+        "tipo": "lente_de_contato_com_dor",
+        "gatilho": "dor ocular em usuário de lente de contato",
+        "severidade": "grave",
+        "mensagem": "Suspeita de ceratite por Pseudomonas: suspender a lente e avaliar com lâmpada de fenda.",
+        "acao": "suspender a lente e sugerir avaliação imediata",
+        "bloqueante": true
+      },
+      {
+        "id": "SA-RESP09-06",
+        "tipo": "antibiotico_em_viral",
+        "gatilho": "antibiótico tópico prescrito em quadro bilateral, aquoso, com coriza e sem secreção purulenta",
+        "severidade": "precaucao",
+        "mensagem": "Conjuntivite viral não se trata com antibiótico: não há benefício e há toxicidade epitelial.",
+        "acao": "alertar e sugerir lubrificante com higiene",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP09-07",
+        "tipo": "vasoconstrictor_prolongado",
+        "gatilho": "colírio com vasoconstrictor prescrito por mais de 5 dias",
+        "severidade": "precaucao",
+        "mensagem": "Vasoconstrictor acima de 5 dias causa hiperemia de rebote.",
+        "acao": "alertar e ajustar o item da receita",
+        "bloqueante": false
+      },
+      {
+        "id": "SA-RESP09-08",
+        "tipo": "falha_terapeutica",
+        "gatilho": "ausência de melhora após 72 horas de tratamento adequado",
+        "severidade": "precaucao",
+        "mensagem": "Reavaliar com lâmpada de fenda: ceratite, corpo estranho, herpes ou glaucoma.",
+        "acao": "sugerir reavaliação oftalmológica",
+        "bloqueante": false
+      }
+    ],
+    "auditoria": {
+      "autor": null,
+      "revisor_clinico": null,
+      "fontes": [
+        "ANVISA",
+        "CDC",
+        "literatura oftalmológica"
+      ],
+      "proxima_revisao": null,
+      "changelog": [
+        {
+          "versao": "0.1.0",
+          "descricao": "Estrutura inicial.",
+          "data": null
+        },
+        {
+          "versao": "0.2.0",
+          "descricao": "Reescrita com separação entre viral, bacteriana, alérgica e causas graves, critérios de escolha por cenário, apresentações, preparo, monitorização e ajuste renal de cada fármaco, anti-histamínico tópico com olopatadina, compressa fria, conjuntivite neonatal, regra de encaminhamento no mesmo dia em baixa visual ou dor e lista explícita do que não fazer.",
+          "data": null
+        }
+      ]
+    }
+  }
+}
